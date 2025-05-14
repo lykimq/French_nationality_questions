@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Animated, Pressable, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
 
@@ -19,7 +19,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     language = 'fr',  // Default to French if not specified
 }) => {
     const [expanded, setExpanded] = useState(false);
-    const [animation] = useState(new Animated.Value(0));
     const [showBothLanguages, setShowBothLanguages] = useState(true);  // Toggle to show both languages
 
     // Check if we have multilingual text
@@ -67,29 +66,11 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     };
 
     const toggleExpand = () => {
-        const toValue = expanded ? 0 : 1;
-
-        Animated.timing(animation, {
-            toValue,
-            duration: 300,
-            useNativeDriver: false,
-        }).start();
-
         setExpanded(!expanded);
     };
 
     const toggleLanguage = () => {
         setShowBothLanguages(!showBothLanguages);
-    };
-
-    const heightInterpolate = animation.interpolate({
-        inputRange: [0, 1],
-        outputRange: [0, expanded ? 600 : 0],  // Increase height when expanded
-    });
-
-    const animatedStyle = {
-        height: heightInterpolate,
-        opacity: animation,
     };
 
     return (
@@ -124,57 +105,74 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 </View>
             </Pressable>
 
-            <Animated.View style={[styles.expandedContent, animatedStyle]}>
-                {expanded && isMultilingual && (
-                    <Pressable
-                        style={styles.languageToggle}
-                        onPress={toggleLanguage}
-                    >
-                        <Text style={styles.languageToggleText}>
-                            {showBothLanguages ? "Afficher une seule langue" : "Afficher les deux langues"}
-                        </Text>
-                    </Pressable>
-                )}
+            {expanded && (
+                <TouchableWithoutFeedback onPress={toggleExpand}>
+                    <View style={styles.expandedContent}>
+                        {isMultilingual && (
+                            <Pressable
+                                style={styles.languageToggle}
+                                onPress={(e) => {
+                                    e.stopPropagation();
+                                    toggleLanguage();
+                                }}
+                            >
+                                <Text style={styles.languageToggleText}>
+                                    {showBothLanguages ? "Afficher une seule langue" : "Afficher les deux langues"}
+                                </Text>
+                            </Pressable>
+                        )}
 
-                {answer && (
-                    <View style={styles.section}>
-                        <Text style={styles.sectionTitle}>Réponse:</Text>
-                        <Text style={styles.sectionContent}>{getAnswerText('fr')}</Text>
+                        {answer && (
+                            <View style={styles.section}>
+                                <Text style={styles.sectionTitle}>Réponse:</Text>
+                                <Text style={styles.sectionContent}>{getAnswerText('fr')}</Text>
 
-                        {isMultilingual && showBothLanguages && language === 'vi' && (
-                            <>
-                                <Text style={styles.sectionTitle}>Trả lời:</Text>
-                                <Text style={styles.sectionContent}>{getAnswerText('vi')}</Text>
-                            </>
+                                {isMultilingual && showBothLanguages && language === 'vi' && (
+                                    <>
+                                        <Text style={styles.sectionTitle}>Trả lời:</Text>
+                                        <Text style={styles.sectionContent}>{getAnswerText('vi')}</Text>
+                                    </>
+                                )}
+                            </View>
+                        )}
+
+                        {getExplanationText('fr') !== "" && (
+                            <ScrollView
+                                style={styles.explanationScrollView}
+                                contentContainerStyle={styles.scrollContent}
+                                showsVerticalScrollIndicator={true}
+                                nestedScrollEnabled={true}
+                                onTouchStart={(e) => e.stopPropagation()}
+                            >
+                                <View style={styles.section}>
+                                    <Text style={styles.sectionTitle}>Explication:</Text>
+                                    <Text style={[styles.sectionContent, styles.explanationText]}>
+                                        {formatExplanation(getExplanationText('fr'))}
+                                    </Text>
+
+                                    {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
+                                        <>
+                                            <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
+                                            <Text style={[styles.sectionContent, styles.explanationText]}>
+                                                {formatExplanation(getExplanationText('vi'))}
+                                            </Text>
+                                        </>
+                                    )}
+                                </View>
+                            </ScrollView>
                         )}
                     </View>
-                )}
+                </TouchableWithoutFeedback>
+            )}
 
-                {getExplanationText('fr') !== "" && (
-                    <ScrollView
-                        style={[styles.explanationScrollView, { maxHeight: expanded ? undefined : 250 }]}
-                        contentContainerStyle={styles.scrollContent}
-                        showsVerticalScrollIndicator={true}
-                        nestedScrollEnabled={true}
-                    >
-                        <View style={styles.section}>
-                            <Text style={styles.sectionTitle}>Explication:</Text>
-                            <Text style={[styles.sectionContent, styles.explanationText]}>
-                                {formatExplanation(getExplanationText('fr'))}
-                            </Text>
-
-                            {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
-                                <>
-                                    <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
-                                    <Text style={[styles.sectionContent, styles.explanationText]}>
-                                        {formatExplanation(getExplanationText('vi'))}
-                                    </Text>
-                                </>
-                            )}
-                        </View>
-                    </ScrollView>
-                )}
-            </Animated.View>
+            {/* Add a clickable overlay to the unexpanded card */}
+            {!expanded && (
+                <Pressable
+                    style={styles.overlay}
+                    onPress={toggleExpand}
+                    android_ripple={{ color: '#E8EAF6', borderless: true }}
+                />
+            )}
         </View>
     );
 };
@@ -291,6 +289,10 @@ const styles = StyleSheet.create({
         color: '#3F51B5',
         fontWeight: '500',
     },
+    overlay: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: 'transparent',
+    }
 });
 
 export default QuestionCard;
