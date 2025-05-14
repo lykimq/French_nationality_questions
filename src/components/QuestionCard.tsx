@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Animated, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Animated, Pressable, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
 
@@ -47,6 +47,25 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         return explanation[lang];
     };
 
+    // Format explanation text to highlight key points
+    const formatExplanation = (text: string) => {
+        if (!text) return '';
+
+        // Break long text into paragraphs
+        let formatted = text
+            // Split longer paragraphs at natural points (after sentences)
+            .replace(/\. /g, '. \n\n')
+            .replace(/\! /g, '! \n\n')
+            .replace(/\? /g, '? \n\n')
+            // Highlight important information in brackets
+            .replace(/\[(.*?)\]/g, '\n→ $1 ←\n')
+            // Clean up excess new lines
+            .replace(/\n\n+/g, '\n\n')
+            .trim();
+
+        return formatted;
+    };
+
     const toggleExpand = () => {
         const toValue = expanded ? 0 : 1;
 
@@ -65,7 +84,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
     const heightInterpolate = animation.interpolate({
         inputRange: [0, 1],
-        outputRange: [0, 500],  // You might need to adjust this value
+        outputRange: [0, expanded ? 600 : 0],  // Increase height when expanded
     });
 
     const animatedStyle = {
@@ -132,17 +151,28 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 )}
 
                 {getExplanationText('fr') !== "" && (
-                    <View style={styles.section}>
-                        <Text style={styles.sectionTitle}>Explication:</Text>
-                        <Text style={styles.sectionContent}>{getExplanationText('fr')}</Text>
+                    <ScrollView
+                        style={[styles.explanationScrollView, { maxHeight: expanded ? undefined : 250 }]}
+                        contentContainerStyle={styles.scrollContent}
+                        showsVerticalScrollIndicator={true}
+                        nestedScrollEnabled={true}
+                    >
+                        <View style={styles.section}>
+                            <Text style={styles.sectionTitle}>Explication:</Text>
+                            <Text style={[styles.sectionContent, styles.explanationText]}>
+                                {formatExplanation(getExplanationText('fr'))}
+                            </Text>
 
-                        {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
-                            <>
-                                <Text style={styles.sectionTitle}>Giải thích:</Text>
-                                <Text style={styles.sectionContent}>{getExplanationText('vi')}</Text>
-                            </>
-                        )}
-                    </View>
+                            {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
+                                <>
+                                    <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
+                                    <Text style={[styles.sectionContent, styles.explanationText]}>
+                                        {formatExplanation(getExplanationText('vi'))}
+                                    </Text>
+                                </>
+                            )}
+                        </View>
+                    </ScrollView>
                 )}
             </Animated.View>
         </View>
@@ -224,10 +254,31 @@ const styles = StyleSheet.create({
         color: '#3F51B5',
         marginBottom: 4,
     },
+    secondLanguageTitle: {
+        marginTop: 12,
+        paddingTop: 12,
+        borderTopWidth: 1,
+        borderTopColor: '#E0E0FF',
+    },
     sectionContent: {
         fontSize: 14,
         color: '#444',
-        lineHeight: 20,
+        lineHeight: 22,
+    },
+    explanationText: {
+        backgroundColor: '#F8F9FF',
+        padding: 12,
+        borderRadius: 6,
+        marginVertical: 4,
+    },
+    explanationScrollView: {
+        borderWidth: 1,
+        borderColor: '#E0E0FF',
+        borderRadius: 8,
+        marginBottom: 8,
+    },
+    scrollContent: {
+        padding: 10,
     },
     languageToggle: {
         padding: 8,
