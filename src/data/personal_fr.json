@@ -1,0 +1,26 @@
+{
+  "id": "personal",
+  "title": "Informations personnelles",
+  "icon": "person",
+  "description": "Questions 1 à 24 sur la vie personnelle",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Pourquoi voulez-vous devenir Français ?",
+      "explanation": "La réponse à cette question peut sembler facile, mais il faut garder en tête que vous devez prouver et montrer votre implication, vous devez bien préparer la réponse à cette question car elle est très importante. Vous devez expliquer clairement pourquoi vous sentez que vous êtes devenu Français/Française et expliquer qu'au jour d'aujourd'hui vous vous sentez plus Français/Française que votre nationalité d'origine et montrer clairement que vous n'avez plus aucune alternative. Vous devez citer également les valeurs de la France auxquelles vous adhérez : En démontrant par exemple que vous avez un projet personnel ou professionnel que vous êtes en train de construire ou que vous voudriez construire en France. Vous devez expliquer votre mode de vie actuel (à la Française) et que vous appréciez beaucoup. Vous devez également expliquer que vous admirez la place de la France sur le paysage mondial : La France est la 3ème économie mondiale, le leader aéronautique avec l'Allemagne, l'agroalimentaire, l'industrie du luxe etc… Enfin vous pouvez citer le patrimoine culturel Français en citant la richesse culturelle de la France : science, Arts, littérature.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+      "explanation": "Attention à bien répondre à cette question en donnant si possible un chiffre exact, et surtout soyez le plus honnête possible car n'oubliez pas que l'administration a votre passeport avec tous les cachets d'entrées/Sorties du territoire Français.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+      "explanation": "Si vous êtes célibataire et seul la réponse est évidente…. Si vous êtes marié ou pacsé répondez par oui en précisant depuis combien de temps.",
+      "image": null
+    }
+  ]
+}

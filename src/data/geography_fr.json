@@ -1,0 +1,29 @@
+{
+  "id": "geography",
+  "title": "Géographie et administration",
+  "icon": "map",
+  "description": "Questions 25 à 35 sur la géographie et l'administration de la France",
+  "questions": [
+    {
+      "id": 25,
+      "question": "Citez les trois plus grandes villes Françaises",
+      "answer": "Paris, Marseille et Lyon.",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "Citez trois départements Français",
+      "answer": "Haut-Rhin, Bas-Rhin, Haute-Garonne.",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "Citez trois départements d’outre-mer",
+      "answer": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion.",
+      "explanation": "",
+      "image": null
+    }
+  ]
+}

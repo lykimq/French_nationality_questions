@@ -1,0 +1,25 @@
+{
+    "id": "history",
+    "title": "Lịch sử và Văn hóa",
+    "icon": "book",
+    "description": "Câu hỏi về lịch sử và văn hóa Pháp (36-99)",
+    "questions": [
+      {
+        "id": 36,
+        "question": "Ai là thị trưởng của tỉnh bạn?",
+        "explanation": "Hãy chắc chắn rằng bạn biết rõ tên của thị trưởng của mình cũng như khuynh hướng chính trị của họ (đảng phái chính trị), ví dụ đối với thành phố Paris, đó là Anne Hidalgo và bà ấy thuộc Cánh tả [PS]."
+      },
+      {
+        "id": 37,
+        "question": "Kể tên ba vị vua của nước Pháp",
+        "answer": "Charlemagne, François Ier, Henri IV, Louis XVI v.v...",
+        "explanation": ""
+      },
+      {
+        "id": 38,
+        "question": "Kể tên 3 Nữ hoàng của nước Pháp",
+        "answer": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche v.v...",
+        "explanation": ""
+      }
+    ]
+}

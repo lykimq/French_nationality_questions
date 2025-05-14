@@ -1,0 +1,29 @@
+{
+  "id": "geography",
+  "title": "Địa lý và Hành chính",
+  "icon": "map",
+  "description": "Câu hỏi về địa lý và hành chính Pháp (25-35)",
+  "questions": [
+    {
+      "id": 25,
+      "question": "Hãy liệt kê ba thành phố lớn nhất của Pháp",
+      "answer": "Paris, Marseille và Lyon.",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 26,
+      "question": "Hãy liệt kê ba tỉnh của Pháp",
+      "answer": "Haut-Rhin, Bas-Rhin, Haute-Garonne.",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 27,
+      "question": "Hãy liệt kê ba tỉnh hải ngoại của Pháp",
+      "answer": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion.",
+      "explanation": "",
+      "image": null
+    }
+  ]
+}

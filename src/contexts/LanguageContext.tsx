@@ -1,9 +1,31 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
-import frenchQuestionsData from '../data/questions-fr.json';
-import vietnameseQuestionsData from '../data/questions-vi.json';
+// Import the split JSON files
+import history_fr from '../data/history_fr.json';
+import history_vi from '../data/history_vi.json';
+import geography_fr from '../data/geography_fr.json';
+import geography_vi from '../data/geography_vi.json';
+import personal_fr from '../data/personal_fr.json';
+import personal_vi from '../data/personal_vi.json';
 
 // Define the language type and context type
 export type Language = 'fr' | 'vi';
+
+// Interfaces for the actual structure of our JSON files
+interface JsonQuestion {
+    id: number;
+    question: string;
+    answer?: string;
+    explanation: string;
+    image?: string | null;
+}
+
+interface JsonCategory {
+    id: string;
+    title: string;
+    icon: string;
+    description: string;
+    questions: JsonQuestion[];
+}
 
 // Types for French questions data
 export type FrenchQuestion = {
@@ -11,6 +33,7 @@ export type FrenchQuestion = {
     question: string;
     answer?: string;
     explanation: string;
+    image?: string | null;
 };
 
 export type FrenchCategory = {
@@ -36,6 +59,7 @@ export type MultiLangQuestion = {
     question: MultiLangText;
     answer?: MultiLangText;
     explanation: MultiLangText;
+    image?: string | null;
 };
 
 export type MultiLangCategory = {
@@ -65,7 +89,7 @@ const LanguageContext = createContext<LanguageContextType>({
     language: 'fr',
     setLanguage: () => { },
     toggleLanguage: () => { },
-    questionsData: frenchQuestionsData as FrenchQuestionsData,
+    questionsData: { categories: [] } as FrenchQuestionsData,
     isTranslationLoaded: false,
 });
 
@@ -77,47 +101,135 @@ type LanguageProviderProps = {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
     const [language, setLanguage] = useState<Language>('fr');
     const [questionsData, setQuestionsData] = useState<FrenchQuestionsData | MultiLangQuestionsData>(
-        frenchQuestionsData as FrenchQuestionsData
+        { categories: [] } as FrenchQuestionsData
     );
     const [isTranslationLoaded, setIsTranslationLoaded] = useState(false);
 
     // When language changes, update the questions data
     useEffect(() => {
         if (language === 'fr') {
-            setQuestionsData(frenchQuestionsData as FrenchQuestionsData);
+            // Combine all French category data
+            const frenchData: FrenchQuestionsData = {
+                categories: [
+                    personal_fr as unknown as FrenchCategory,
+                    history_fr as unknown as FrenchCategory,
+                    geography_fr as unknown as FrenchCategory,
+                ]
+            };
+            setQuestionsData(frenchData);
             setIsTranslationLoaded(false);
         } else {
-            // Merge French and Vietnamese data when Vietnamese is selected
-            const frData = frenchQuestionsData as FrenchQuestionsData;
-            const viData = vietnameseQuestionsData as FrenchQuestionsData;
+            // Safety casting our JSON data to ensure correct types
+            const personalFr = personal_fr as unknown as JsonCategory;
+            const personalVi = personal_vi as unknown as JsonCategory;
+            const historyFr = history_fr as unknown as JsonCategory;
+            const historyVi = history_vi as unknown as JsonCategory;
+            const geographyFr = geography_fr as unknown as JsonCategory;
+            const geographyVi = geography_vi as unknown as JsonCategory;
 
+            // Merge French and Vietnamese data
             const mergedData: MultiLangQuestionsData = {
-                categories: frData.categories.map((frCategory, index) => {
-                    const viCategory = viData.categories[index];
-                    return {
-                        ...frCategory,
-                        title_vi: viCategory.title,
-                        description_vi: viCategory.description,
-                        questions: frCategory.questions.map((frQuestion, qIndex) => {
-                            const viQuestion = viCategory.questions[qIndex];
-                            return {
+                categories: [
+                    {
+                        ...personalFr,
+                        title_vi: personalVi.title,
+                        description_vi: personalVi.description,
+                        questions: personalFr.questions.map((frQuestion, qIndex) => {
+                            const viQuestion = personalVi.questions[qIndex];
+                            const multiLangQuestion: MultiLangQuestion = {
                                 id: frQuestion.id,
                                 question: {
                                     fr: frQuestion.question,
                                     vi: viQuestion.question
                                 },
-                                answer: frQuestion.answer && viQuestion.answer ? {
-                                    fr: frQuestion.answer,
-                                    vi: viQuestion.answer
-                                } : undefined,
                                 explanation: {
                                     fr: frQuestion.explanation,
                                     vi: viQuestion.explanation
                                 }
                             };
+
+                            // Conditionally add optional properties
+                            if (frQuestion.answer && viQuestion.answer) {
+                                multiLangQuestion.answer = {
+                                    fr: frQuestion.answer,
+                                    vi: viQuestion.answer
+                                };
+                            }
+
+                            if (frQuestion.image !== undefined) {
+                                multiLangQuestion.image = frQuestion.image;
+                            }
+
+                            return multiLangQuestion;
                         })
-                    };
-                })
+                    },
+                    {
+                        ...historyFr,
+                        title_vi: historyVi.title,
+                        description_vi: historyVi.description,
+                        questions: historyFr.questions.map((frQuestion, qIndex) => {
+                            const viQuestion = historyVi.questions[qIndex];
+                            const multiLangQuestion: MultiLangQuestion = {
+                                id: frQuestion.id,
+                                question: {
+                                    fr: frQuestion.question,
+                                    vi: viQuestion.question
+                                },
+                                explanation: {
+                                    fr: frQuestion.explanation,
+                                    vi: viQuestion.explanation
+                                }
+                            };
+
+                            // Conditionally add optional properties
+                            if (frQuestion.answer && viQuestion.answer) {
+                                multiLangQuestion.answer = {
+                                    fr: frQuestion.answer,
+                                    vi: viQuestion.answer
+                                };
+                            }
+
+                            if (frQuestion.image !== undefined) {
+                                multiLangQuestion.image = frQuestion.image;
+                            }
+
+                            return multiLangQuestion;
+                        })
+                    },
+                    {
+                        ...geographyFr,
+                        title_vi: geographyVi.title,
+                        description_vi: geographyVi.description,
+                        questions: geographyFr.questions.map((frQuestion, qIndex) => {
+                            const viQuestion = geographyVi.questions[qIndex];
+                            const multiLangQuestion: MultiLangQuestion = {
+                                id: frQuestion.id,
+                                question: {
+                                    fr: frQuestion.question,
+                                    vi: viQuestion.question
+                                },
+                                explanation: {
+                                    fr: frQuestion.explanation,
+                                    vi: viQuestion.explanation
+                                }
+                            };
+
+                            // Conditionally add optional properties
+                            if (frQuestion.answer && viQuestion.answer) {
+                                multiLangQuestion.answer = {
+                                    fr: frQuestion.answer,
+                                    vi: viQuestion.answer
+                                };
+                            }
+
+                            if (frQuestion.image !== undefined) {
+                                multiLangQuestion.image = frQuestion.image;
+                            }
+
+                            return multiLangQuestion;
+                        })
+                    }
+                ]
             };
 
             setQuestionsData(mergedData);
