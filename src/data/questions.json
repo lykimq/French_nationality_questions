@@ -1,0 +1,87 @@
+{
+  "categories": [
+    {
+      "id": "personal",
+      "title": "Informations Personnelles",
+      "icon": "person",
+      "description": "Questions sur les informations personnelles (1-24)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Pourquoi voulez-vous devenir Français / Française ?",
+          "translation": "Tại sao bạn muốn trở thành người Pháp?",
+          "explanation": "La réponse à cette question peut sembler facile, mais il faut garder en tête que vous devez prouver et montrer votre implication, vous devez bien préparer la réponse à cette question car elle est très importante. Vous devez expliquer clairement pourquoi vous sentez que vous êtes devenu Français/Française et expliquer qu'au jour d'aujourd'hui vous vous sentez plus Français/Française que votre nationalité d'origine et montrer clairement que vous n'avez plus aucune alternative. Vous devez citer également les valeurs de la France auxquelles vous adhérez : En démontrant par exemple que vous avez un projet personnel ou professionnel que vous êtes en train de construire ou que vous voudriez construire en France. Vous devez expliquer votre mode de vie actuel (à la Française) et que vous appréciez beaucoup. Vous devez également expliquer que vous admirez la place de la France sur le paysage mondial : La France est la 3ème économie mondiale, le leader aéronautique avec l'Allemagne, l'agroalimentaire, l'industrie du luxe etc… Enfin vous pouvez citer le patrimoine culturel Français en citant la richesse culturelle de la France : science, Arts, littérature."
+        },
+        {
+          "id": 2,
+          "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+          "translation": "Bạn trở về quốc gia gốc của mình bao nhiêu lần một năm?",
+          "explanation": "Attention à bien répondre à cette question en donnant si possible un chiffre exact, et surtout soyez le plus honnête possible car n'oubliez pas que l'administration a votre passeport avec tous les cachets d'entrées/Sorties du territoire Français."
+        },
+        {
+          "id": 3,
+          "question": "Etes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+          "translation": "Bạn đã kết hôn chưa? Bạn có bạn trai/bạn gái, chồng/vợ không?",
+          "explanation": "Si vous êtes célibataire et seul la réponse est évidente…. Si vous êtes marié ou pacsé répondez par oui en précisant depuis combien de temps."
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "title": "Géographie et Administration",
+      "icon": "map",
+      "description": "Questions sur la géographie et l'administration française (25-35)",
+      "questions": [
+        {
+          "id": 25,
+          "question": "Citez les trois plus grandes villes Françaises",
+          "translation": "Hãy liệt kê ba thành phố lớn nhất của Pháp",
+          "answer": "Paris, Marseille et Lyon.",
+          "explanation": ""
+        },
+        {
+          "id": 26,
+          "question": "Citez trois départements Français",
+          "translation": "Hãy liệt kê ba tỉnh của Pháp",
+          "answer": "Le Haut-Rhin, le Bas-Rhin, la Haute-Garonne.",
+          "explanation": ""
+        },
+        {
+          "id": 27,
+          "question": "Citez trois départements d'outre-mer",
+          "translation": "Hãy liệt kê ba tỉnh hải ngoại của Pháp",
+          "answer": "La Guadeloupe, Mayotte, la Martinique, la Guyane, la Réunion.",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "Histoire et Culture",
+      "icon": "book",
+      "description": "Questions sur l'histoire et la culture française (36-99)",
+      "questions": [
+        {
+          "id": 36,
+          "question": "Qui est le/la maire de votre département ?",
+          "translation": "Ai là thị trưởng của tỉnh bạn?",
+          "explanation": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche [PS]."
+        },
+        {
+          "id": 37,
+          "question": "Citez trois rois de France",
+          "translation": "Kể tên ba vị vua của nước Pháp",
+          "answer": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+          "explanation": ""
+        },
+        {
+          "id": 38,
+          "question": "Citez des Reines de France",
+          "translation": "Kể tên 3 Nữ hoàng của nước Pháp",
+          "answer": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}
