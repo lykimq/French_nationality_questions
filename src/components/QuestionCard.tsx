@@ -2,24 +2,30 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, Animated, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+type MultiLangText = {
+    fr: string;
+    vi: string;
+};
+
 type QuestionCardProps = {
     id: number;
-    question: string;
-    translation: string;
-    answer?: string;
-    explanation: string;
+    question: MultiLangText;
+    answer?: MultiLangText;
+    explanation: MultiLangText;
+    language?: 'fr' | 'vi';  // Added language prop to control which language to display
 };
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
     question,
-    translation,
     answer,
     explanation,
+    language = 'fr',  // Default to French if not specified
 }) => {
     const [expanded, setExpanded] = useState(false);
     const [animation] = useState(new Animated.Value(0));
     const [pressed, setPressed] = useState(false);
+    const [showBothLanguages, setShowBothLanguages] = useState(true);  // Toggle to show both languages
 
     const toggleExpand = () => {
         const toValue = expanded ? 0 : 1;
@@ -31,6 +37,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         }).start();
 
         setExpanded(!expanded);
+    };
+
+    const toggleLanguage = () => {
+        setShowBothLanguages(!showBothLanguages);
     };
 
     const heightInterpolate = animation.interpolate({
@@ -60,10 +70,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 </View>
                 <View style={styles.questionContainer}>
                     <Text style={styles.question} numberOfLines={expanded ? 0 : 2}>
-                        {question}
+                        {question.fr}
                     </Text>
                     <Text style={styles.translation} numberOfLines={expanded ? 0 : 1}>
-                        {translation}
+                        {question.vi}
                     </Text>
                 </View>
                 <View style={styles.iconContainer}>
@@ -76,17 +86,42 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             </Pressable>
 
             <Animated.View style={[styles.expandedContent, animatedStyle]}>
+                {expanded && (
+                    <Pressable
+                        style={styles.languageToggle}
+                        onPress={toggleLanguage}
+                    >
+                        <Text style={styles.languageToggleText}>
+                            {showBothLanguages ? "Afficher une seule langue" : "Afficher les deux langues"}
+                        </Text>
+                    </Pressable>
+                )}
+
                 {answer && (
                     <View style={styles.section}>
                         <Text style={styles.sectionTitle}>Réponse:</Text>
-                        <Text style={styles.sectionContent}>{answer}</Text>
+                        <Text style={styles.sectionContent}>{answer.fr}</Text>
+
+                        {showBothLanguages && (
+                            <>
+                                <Text style={styles.sectionTitle}>Trả lời:</Text>
+                                <Text style={styles.sectionContent}>{answer.vi}</Text>
+                            </>
+                        )}
                     </View>
                 )}
 
-                {explanation !== "" && (
+                {explanation.fr !== "" && (
                     <View style={styles.section}>
                         <Text style={styles.sectionTitle}>Explication:</Text>
-                        <Text style={styles.sectionContent}>{explanation}</Text>
+                        <Text style={styles.sectionContent}>{explanation.fr}</Text>
+
+                        {showBothLanguages && explanation.vi !== "" && (
+                            <>
+                                <Text style={styles.sectionTitle}>Giải thích:</Text>
+                                <Text style={styles.sectionContent}>{explanation.vi}</Text>
+                            </>
+                        )}
                     </View>
                 )}
             </Animated.View>
@@ -173,6 +208,17 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#444',
         lineHeight: 20,
+    },
+    languageToggle: {
+        padding: 8,
+        marginBottom: 8,
+        backgroundColor: '#F0F2FF',
+        borderRadius: 4,
+        alignItems: 'center',
+    },
+    languageToggleText: {
+        color: '#3F51B5',
+        fontWeight: '500',
     },
 });
 

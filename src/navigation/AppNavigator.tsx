@@ -10,8 +10,10 @@ import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import { RootStackParamList } from './types';
+import { LanguageProvider } from '../contexts/LanguageContext';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+// Create navigators
+const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 // Set StatusBar for Android
@@ -32,63 +34,98 @@ const HomeStack = () => (
     </Stack.Navigator>
 );
 
-const AppTabs = () => (
-    <Tab.Navigator
-        screenOptions={({ route }) => ({
-            headerShown: false,
-            tabBarShowLabel: true,
-            tabBarIcon: ({ focused, color, size }) => {
-                let iconName;
+// Translations for tab labels
+const tabLabels = {
+    fr: {
+        home: 'Accueil',
+        search: 'Rechercher',
+        settings: 'Paramètres'
+    },
+    vi: {
+        home: 'Trang chủ',
+        search: 'Tìm kiếm',
+        settings: 'Cài đặt'
+    }
+};
 
-                if (route.name === 'HomeTab') {
-                    iconName = focused ? 'home' : 'home-outline';
-                } else if (route.name === 'SearchTab') {
-                    iconName = focused ? 'search' : 'search-outline';
-                } else if (route.name === 'SettingsTab') {
-                    iconName = focused ? 'settings' : 'settings-outline';
-                }
+// Define types for the route and navigation icon props
+type TabBarIconProps = {
+    focused: boolean;
+    color: string;
+    size: number;
+};
 
-                return <Ionicons name={iconName as any} size={size} color={color} />;
-            },
-            tabBarActiveTintColor: '#3F51B5',
-            tabBarInactiveTintColor: 'gray',
-            tabBarLabelStyle: {
-                fontSize: 12,
-                fontWeight: '500',
-            },
-            tabBarStyle: {
-                backgroundColor: '#fff',
-                borderTopColor: '#f1f1f1',
-                paddingVertical: 5,
-                height: 60,
-                elevation: 8,
-                shadowOpacity: 0.1,
-                shadowRadius: 3,
-                shadowOffset: { width: 0, height: -3 },
-            },
-        })}
-    >
-        <Tab.Screen
-            name="HomeTab"
-            component={HomeStack}
-            options={{ title: 'Accueil' }}
-        />
-        <Tab.Screen
-            name="SearchTab"
-            component={SearchScreen}
-            options={{ title: 'Rechercher' }}
-        />
-        <Tab.Screen
-            name="SettingsTab"
-            component={SettingsScreen}
-            options={{ title: 'Paramètres' }}
-        />
-    </Tab.Navigator>
-);
+type RouteType = {
+    name: string;
+};
+
+const AppTabs = () => {
+    // We'll use the LanguageContext in individual screens instead of here
+    // For navigation tabs, we'll just use French for now
+    const language = 'fr';
+
+    return (
+        <Tab.Navigator
+            screenOptions={({ route }: { route: RouteType }) => ({
+                headerShown: false,
+                tabBarShowLabel: true,
+                tabBarIcon: ({ focused, color, size }: TabBarIconProps) => {
+                    let iconName: string;
+
+                    if (route.name === 'HomeTab') {
+                        iconName = focused ? 'home' : 'home-outline';
+                    } else if (route.name === 'SearchTab') {
+                        iconName = focused ? 'search' : 'search-outline';
+                    } else if (route.name === 'SettingsTab') {
+                        iconName = focused ? 'settings' : 'settings-outline';
+                    } else {
+                        iconName = 'help-circle-outline'; // Default icon
+                    }
+
+                    return <Ionicons name={iconName as any} size={size} color={color} />;
+                },
+                tabBarActiveTintColor: '#3F51B5',
+                tabBarInactiveTintColor: 'gray',
+                tabBarLabelStyle: {
+                    fontSize: 12,
+                    fontWeight: '500',
+                },
+                tabBarStyle: {
+                    backgroundColor: '#fff',
+                    borderTopColor: '#f1f1f1',
+                    paddingVertical: 5,
+                    height: 60,
+                    elevation: 8,
+                    shadowOpacity: 0.1,
+                    shadowRadius: 3,
+                    shadowOffset: { width: 0, height: -3 },
+                },
+            })}
+        >
+            <Tab.Screen
+                name="HomeTab"
+                component={HomeStack}
+                options={{ title: tabLabels[language].home }}
+            />
+            <Tab.Screen
+                name="SearchTab"
+                component={SearchScreen}
+                options={{ title: tabLabels[language].search }}
+            />
+            <Tab.Screen
+                name="SettingsTab"
+                component={SettingsScreen}
+                options={{ title: tabLabels[language].settings }}
+            />
+        </Tab.Navigator>
+    );
+};
 
 const AppNavigator = () => (
     <NavigationContainer>
-        <AppTabs />
+        <LanguageProvider>
+            <AppTabs />
+        </LanguageProvider>
     </NavigationContainer>
 );
 

@@ -12,25 +12,30 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { useLanguage } from '../contexts/LanguageContext';
 
 type SettingItemProps = {
     title: string;
+    titleVi?: string;
     icon: string;
     iconColor: string;
     isSwitch?: boolean;
     value?: boolean;
     onValueChange?: (value: boolean) => void;
     onPress?: () => void;
+    language?: 'fr' | 'vi';
 };
 
 const SettingItem: React.FC<SettingItemProps> = ({
     title,
+    titleVi,
     icon,
     iconColor,
     isSwitch = false,
     value,
     onValueChange,
     onPress,
+    language = 'fr',
 }) => (
     <TouchableOpacity
         style={styles.settingItem}
@@ -41,7 +46,9 @@ const SettingItem: React.FC<SettingItemProps> = ({
         <View style={[styles.iconContainer, { backgroundColor: iconColor + '20' }]}>
             <Ionicons name={icon as any} size={20} color={iconColor} />
         </View>
-        <Text style={styles.settingTitle}>{title}</Text>
+        <Text style={styles.settingTitle}>
+            {language === 'fr' ? title : (titleVi || title)}
+        </Text>
         {isSwitch ? (
             <Switch
                 value={value}
@@ -58,11 +65,16 @@ const SettingItem: React.FC<SettingItemProps> = ({
 const SettingsScreen = () => {
     const [showTranslation, setShowTranslation] = useState(true);
     const [darkMode, setDarkMode] = useState(false);
+    const { language, toggleLanguage } = useLanguage();
 
     const shareApp = async () => {
         try {
+            const message = language === 'fr'
+                ? 'Découvrez cette application de préparation à l\'entretien de naturalisation française!'
+                : 'Khám phá ứng dụng này để chuẩn bị cho buổi phỏng vấn nhập quốc tịch Pháp!';
+
             await Share.share({
-                message: 'Découvrez cette application de préparation à l\'entretien de naturalisation française!',
+                message,
             });
         } catch (error) {
             console.error('Error sharing:', error);
@@ -71,7 +83,11 @@ const SettingsScreen = () => {
 
     const rateApp = () => {
         // This would normally open the app store but for now we'll just show a link
-        alert('Cette fonctionnalité ouvrira le Play Store/App Store dans la version finale');
+        const message = language === 'fr'
+            ? 'Cette fonctionnalité ouvrira le Play Store/App Store dans la version finale'
+            : 'Tính năng này sẽ mở Play Store/App Store trong phiên bản cuối cùng';
+
+        alert(message);
     };
 
     const openPrivacyPolicy = () => {
@@ -85,56 +101,84 @@ const SettingsScreen = () => {
 
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Paramètres</Text>
+                    <Text style={styles.title}>
+                        {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
+                    </Text>
+                    <View style={styles.languageSelector}>
+                        <Text style={styles.languageLabel}>FR</Text>
+                        <Switch
+                            value={language === 'vi'}
+                            onValueChange={toggleLanguage}
+                            thumbColor="#fff"
+                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                        />
+                        <Text style={styles.languageLabel}>VI</Text>
+                    </View>
                 </View>
             </SafeAreaView>
 
             <ScrollView style={styles.scrollView}>
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>Préférences</Text>
+                    <Text style={styles.sectionTitle}>
+                        {language === 'fr' ? 'Préférences' : 'Tùy chọn'}
+                    </Text>
                     <SettingItem
                         title="Afficher les traductions"
+                        titleVi="Hiển thị bản dịch"
                         icon="language"
                         iconColor="#3F51B5"
                         isSwitch
                         value={showTranslation}
                         onValueChange={setShowTranslation}
+                        language={language}
                     />
                     <SettingItem
                         title="Mode sombre"
+                        titleVi="Chế độ tối"
                         icon="moon"
                         iconColor="#5C6BC0"
                         isSwitch
                         value={darkMode}
                         onValueChange={setDarkMode}
+                        language={language}
                     />
                 </View>
 
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>À propos</Text>
+                    <Text style={styles.sectionTitle}>
+                        {language === 'fr' ? 'À propos' : 'Giới thiệu'}
+                    </Text>
                     <SettingItem
                         title="Partager l'application"
+                        titleVi="Chia sẻ ứng dụng"
                         icon="share-social"
                         iconColor="#FF9800"
                         onPress={shareApp}
+                        language={language}
                     />
                     <SettingItem
                         title="Évaluer l'application"
+                        titleVi="Đánh giá ứng dụng"
                         icon="star"
                         iconColor="#FFC107"
                         onPress={rateApp}
+                        language={language}
                     />
                     <SettingItem
                         title="Politique de confidentialité"
+                        titleVi="Chính sách bảo mật"
                         icon="shield-checkmark"
                         iconColor="#4CAF50"
                         onPress={openPrivacyPolicy}
+                        language={language}
                     />
                     <SettingItem
                         title="Version de l'application"
+                        titleVi="Phiên bản ứng dụng"
                         icon="information-circle"
                         iconColor="#9C27B0"
                         onPress={() => { }}
+                        language={language}
                     />
                 </View>
             </ScrollView>
@@ -151,6 +195,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#3F51B5',
     },
     header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         paddingTop: 10,
         paddingHorizontal: 20,
         paddingBottom: 15,
@@ -160,6 +207,15 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
+    },
+    languageSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    languageLabel: {
+        color: '#fff',
+        marginHorizontal: 5,
+        fontWeight: '600',
     },
     scrollView: {
         flex: 1,

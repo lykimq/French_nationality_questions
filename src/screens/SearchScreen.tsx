@@ -7,24 +7,32 @@ import {
     ScrollView,
     TouchableOpacity,
     StatusBar,
+    Switch,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import QuestionCard from '../components/QuestionCard';
 import questionsData from '../data/questions.json';
+import { useLanguage } from '../contexts/LanguageContext';
+
+// Define the MultiLangText type to match our new structure
+type MultiLangText = {
+    fr: string;
+    vi: string;
+};
 
 interface Question {
     id: number;
-    question: string;
-    translation: string;
-    answer?: string;
-    explanation: string;
+    question: MultiLangText;
+    answer?: MultiLangText;
+    explanation: MultiLangText;
     categoryId: string;
 }
 
 const SearchScreen = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<Question[]>([]);
+    const { language, toggleLanguage } = useLanguage();
 
     // Flatten all questions from all categories and add categoryId
     const allQuestions = questionsData.categories.flatMap(category =>
@@ -44,10 +52,12 @@ const SearchScreen = () => {
 
         const results = allQuestions.filter(
             item =>
-                item.question.toLowerCase().includes(normalizedQuery) ||
-                item.translation.toLowerCase().includes(normalizedQuery) ||
-                (item.answer && item.answer.toLowerCase().includes(normalizedQuery)) ||
-                item.explanation.toLowerCase().includes(normalizedQuery) ||
+                item.question.fr.toLowerCase().includes(normalizedQuery) ||
+                item.question.vi.toLowerCase().includes(normalizedQuery) ||
+                (item.answer && item.answer.fr.toLowerCase().includes(normalizedQuery)) ||
+                (item.answer && item.answer.vi.toLowerCase().includes(normalizedQuery)) ||
+                item.explanation.fr.toLowerCase().includes(normalizedQuery) ||
+                item.explanation.vi.toLowerCase().includes(normalizedQuery) ||
                 item.id.toString() === normalizedQuery
         );
 
@@ -65,7 +75,19 @@ const SearchScreen = () => {
 
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Rechercher</Text>
+                    <Text style={styles.title}>
+                        {language === 'fr' ? 'Rechercher' : 'Tìm kiếm'}
+                    </Text>
+                    <View style={styles.languageSelector}>
+                        <Text style={styles.languageLabel}>FR</Text>
+                        <Switch
+                            value={language === 'vi'}
+                            onValueChange={toggleLanguage}
+                            thumbColor="#fff"
+                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                        />
+                        <Text style={styles.languageLabel}>VI</Text>
+                    </View>
                 </View>
             </SafeAreaView>
 
@@ -74,7 +96,7 @@ const SearchScreen = () => {
                     <Ionicons name="search" size={20} color="#666" />
                     <TextInput
                         style={styles.input}
-                        placeholder="Rechercher une question..."
+                        placeholder={language === 'fr' ? "Rechercher une question..." : "Tìm kiếm câu hỏi..."}
                         value={searchQuery}
                         onChangeText={setSearchQuery}
                         placeholderTextColor="#999"
@@ -95,29 +117,36 @@ const SearchScreen = () => {
                 {searchResults.length > 0 ? (
                     <>
                         <Text style={styles.resultsTitle}>
-                            {searchResults.length} {searchResults.length === 1 ? 'résultat' : 'résultats'}
+                            {searchResults.length} {language === 'fr' ?
+                                (searchResults.length === 1 ? 'résultat' : 'résultats') :
+                                'kết quả'}
                         </Text>
                         {searchResults.map(question => (
                             <QuestionCard
                                 key={question.id}
                                 id={question.id}
                                 question={question.question}
-                                translation={question.translation}
                                 answer={question.answer}
                                 explanation={question.explanation}
+                                language={language}
                             />
                         ))}
                     </>
                 ) : searchQuery !== '' ? (
                     <View style={styles.noResults}>
                         <Ionicons name="search-outline" size={50} color="#ccc" />
-                        <Text style={styles.noResultsText}>Aucun résultat trouvé</Text>
+                        <Text style={styles.noResultsText}>
+                            {language === 'fr' ? 'Aucun résultat trouvé' : 'Không tìm thấy kết quả nào'}
+                        </Text>
                     </View>
                 ) : (
                     <View style={styles.noResults}>
                         <Ionicons name="search" size={50} color="#ccc" />
                         <Text style={styles.noResultsText}>
-                            Entrez un terme de recherche pour trouver des questions
+                            {language === 'fr'
+                                ? 'Entrez un terme de recherche pour trouver des questions'
+                                : 'Nhập từ khóa tìm kiếm để tìm câu hỏi'
+                            }
                         </Text>
                     </View>
                 )}
@@ -135,6 +164,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#3F51B5',
     },
     header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         paddingTop: 10,
         paddingHorizontal: 20,
         paddingBottom: 15,
@@ -144,6 +176,15 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
+    },
+    languageSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    languageLabel: {
+        color: '#fff',
+        marginHorizontal: 5,
+        fontWeight: '600',
     },
     searchContainer: {
         padding: 15,

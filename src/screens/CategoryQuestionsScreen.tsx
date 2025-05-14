@@ -1,11 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, StatusBar, Switch } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import QuestionCard from '../components/QuestionCard';
+import { useLanguage } from '../contexts/LanguageContext';
 
 import questionsData from '../data/questions.json';
 
@@ -15,7 +16,15 @@ type CategoryQuestionsNavigationProp = NativeStackNavigationProp<RootStackParamL
 const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
-    const { categoryId } = route.params;
+    const { categoryId, language: initialLanguage } = route.params;
+    const { language, setLanguage, toggleLanguage } = useLanguage();
+
+    // Sync language from route params when the screen mounts
+    useEffect(() => {
+        if (initialLanguage && initialLanguage !== language) {
+            setLanguage(initialLanguage);
+        }
+    }, [initialLanguage]);
 
     const category = questionsData.categories.find(c => c.id === categoryId);
 
@@ -26,6 +35,11 @@ const CategoryQuestionsScreen = () => {
             </View>
         );
     }
+
+    const displayTitle = language === 'fr' ? category.title : (category.title_vi || category.title);
+    const questionsCount = language === 'fr'
+        ? `${category.questions.length} questions`
+        : `${category.questions.length} câu hỏi`;
 
     return (
         <View style={styles.container}>
@@ -40,8 +54,18 @@ const CategoryQuestionsScreen = () => {
                         <Ionicons name="arrow-back" size={24} color="#fff" />
                     </TouchableOpacity>
                     <View style={styles.headerTextContainer}>
-                        <Text style={styles.title}>{category.title}</Text>
-                        <Text style={styles.count}>{category.questions.length} questions</Text>
+                        <Text style={styles.title}>{displayTitle}</Text>
+                        <Text style={styles.count}>{questionsCount}</Text>
+                    </View>
+                    <View style={styles.languageSelector}>
+                        <Text style={styles.languageLabel}>FR</Text>
+                        <Switch
+                            value={language === 'vi'}
+                            onValueChange={toggleLanguage}
+                            thumbColor="#fff"
+                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                        />
+                        <Text style={styles.languageLabel}>VI</Text>
                     </View>
                 </View>
             </SafeAreaView>
@@ -56,9 +80,9 @@ const CategoryQuestionsScreen = () => {
                         key={question.id}
                         id={question.id}
                         question={question.question}
-                        translation={question.translation}
                         answer={question.answer}
                         explanation={question.explanation}
+                        language={language}
                     />
                 ))}
             </ScrollView>
@@ -97,6 +121,17 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#E8EAF6',
         marginTop: 2,
+    },
+    languageSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 10,
+    },
+    languageLabel: {
+        color: '#fff',
+        marginHorizontal: 5,
+        fontWeight: '600',
+        fontSize: 12,
     },
     scrollView: {
         flex: 1,
