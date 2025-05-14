@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 type CategoryCardProps = {
@@ -18,7 +18,14 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     onPress,
 }) => {
     return (
-        <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.7}>
+        <Pressable
+            style={({ pressed }) => [
+                styles.card,
+                pressed && styles.cardPressed
+            ]}
+            onPress={onPress}
+            android_ripple={{ color: '#E8EAF6' }}
+        >
             <View style={styles.iconContainer}>
                 <Ionicons name={icon as any} size={32} color="#3F51B5" />
             </View>
@@ -31,7 +38,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                     <Text style={styles.count}>{count} questions</Text>
                 </View>
             </View>
-        </TouchableOpacity>
+            <Ionicons name="chevron-forward" size={24} color="#3F51B5" style={styles.arrowIcon} />
+        </Pressable>
     );
 };
 
@@ -47,6 +55,10 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 3,
+        alignItems: 'center',
+    },
+    cardPressed: {
+        backgroundColor: '#F5F7FF',
     },
     iconContainer: {
         width: 60,
@@ -82,6 +94,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: '#3F51B5',
         fontWeight: '600',
+    },
+    arrowIcon: {
+        marginLeft: 8,
     },
 });
 
