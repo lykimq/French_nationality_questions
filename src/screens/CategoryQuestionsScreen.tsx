@@ -83,6 +83,7 @@ const CategoryQuestionsScreen = () => {
                         answer={question.answer}
                         explanation={question.explanation}
                         language={language}
+                        image={question.image}
                     />
                 ))}
             </ScrollView>

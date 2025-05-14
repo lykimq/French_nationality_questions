@@ -8,19 +8,19 @@
       "id": 1,
       "question": "Tại sao bạn muốn trở thành người Pháp?",
       "explanation": "Câu trả lời cho câu hỏi này có vẻ dễ dàng, nhưng bạn cần nhớ rằng bạn phải chứng minh và thể hiện sự cam kết của mình, bạn phải chuẩn bị câu trả lời cho câu hỏi này vì nó rất quan trọng. Bạn cần giải thích rõ ràng tại sao bạn cảm thấy mình đã trở thành người Pháp và giải thích rằng hiện nay bạn cảm thấy mình là người Pháp hơn là quốc tịch gốc của mình và cho thấy rõ ràng rằng bạn không còn lựa chọn thay thế nào khác. Bạn cũng cần đề cập đến các giá trị của Pháp mà bạn tán thành như : Bằng cách chứng minh rằng bạn có một dự án cá nhân hoặc nghề nghiệp mà bạn đang xây dựng hoặc muốn xây dựng tại Pháp. Bạn cần giải thích lối sống hiện tại của mình (theo phong cách Pháp) và bạn rất đánh giá cao điều đó. Bạn cũng cần giải thích rằng bạn ngưỡng mộ vị thế của Pháp trên cương vị thế giới: Pháp là nền kinh tế lớn thứ 3 trên thế giới, là lãnh đạo trong ngành hàng không cùng với Đức, ngành thực phẩm công nghiệp, ngành công nghiệp xa xỉ v.v… Cuối cùng, bạn có thể đề cập đến di sản văn hóa Pháp bằng cách nêu ra sự giàu có trong văn hóa của Pháp: khoa học, nghệ thuật, văn học.",
-      "image": null
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png"
     },
     {
       "id": 2,
       "question": "Bạn trở về quốc gia gốc của mình bao nhiêu lần một năm?",
       "explanation": "Lưu ý trả lời câu hỏi này bằng cách cung cấp một con số cụ thể nếu có thể, và hãy cố gắng trung thực nhất có thể, đừng quên rằng cơ quan quản lý có hộ chiếu của bạn với tất cả các dấu nhập/xuất cảnh vào lãnh thổ Pháp.",
-      "image": null
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Passport_France.jpg"
     },
     {
       "id": 3,
       "question": "Bạn đã kết hôn chưa? Bạn có bạn trai/bạn gái, chồng/vợ không?",
-      "explanation": "Nếu bạn độc thân và không có người phụ thuộc , câu trả lời là rõ ràng… Nếu bạn đã kết hôn hoặc có hợp đồng sống chung (pacsé), hãy trả lời là “có” và cho biết đã bao lâu.",
-      "image": null
+      "explanation": "Nếu bạn độc thân và không có người phụ thuộc , câu trả lời là rõ ràng… Nếu bạn đã kết hôn hoặc có hợp đồng sống chung (pacsé), hãy trả lời là \"có\" và cho biết đã bao lâu.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Marriage_in_Paris.jpg"
     }
   ]
 }

@@ -6,6 +6,7 @@ import geography_fr from '../data/geography_fr.json';
 import geography_vi from '../data/geography_vi.json';
 import personal_fr from '../data/personal_fr.json';
 import personal_vi from '../data/personal_vi.json';
+import { preloadImages } from '../utils/imageUtils';
 
 // Define the language type and context type
 export type Language = 'fr' | 'vi';
@@ -118,6 +119,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
             };
             setQuestionsData(frenchData);
             setIsTranslationLoaded(false);
+
+            // Preload images when data changes
+            preloadImages(frenchData);
         } else {
             // Safety casting our JSON data to ensure correct types
             const personalFr = personal_fr as unknown as JsonCategory;
@@ -234,6 +238,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
             setQuestionsData(mergedData);
             setIsTranslationLoaded(true);
+
+            // Preload images when data changes
+            preloadImages(mergedData);
         }
     }, [language]);
 

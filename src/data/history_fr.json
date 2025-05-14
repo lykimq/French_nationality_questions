@@ -7,19 +7,22 @@
       {
         "id": 36,
         "question": "Qui est le/la maire de votre département ?",
-        "explanation": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche [PS]."
+        "explanation": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche [PS].",
+        "image": null
       },
       {
         "id": 37,
         "question": "Citez trois rois de France",
         "answer": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
-        "explanation": ""
+        "explanation": "",
+        "image": null
       },
       {
         "id": 38,
         "question": "Citez des Reines de France",
         "answer": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
-        "explanation": ""
+        "explanation": "",
+        "image": "../assets/Marie_Antoinette_Adult.jpg"
       }
     ]
 }

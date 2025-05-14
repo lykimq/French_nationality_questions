@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
+import { getImageSource as loadImageSource } from '../utils/imageUtils';
 
 type QuestionCardProps = {
     id: number;
@@ -9,6 +10,7 @@ type QuestionCardProps = {
     answer?: string | MultiLangText;
     explanation: string | MultiLangText;
     language?: 'fr' | 'vi';  // Added language prop to control which language to display
+    image?: string | null;  // Added image prop
 };
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
@@ -17,9 +19,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     answer,
     explanation,
     language = 'fr',  // Default to French if not specified
+    image,
 }) => {
     const [expanded, setExpanded] = useState(false);
     const [showBothLanguages, setShowBothLanguages] = useState(true);  // Toggle to show both languages
+    const [imageError, setImageError] = useState(false);
+    const [imageLoading, setImageLoading] = useState(true);
 
     // Check if we have multilingual text
     const isMultilingual = typeof question !== 'string';
@@ -67,10 +72,41 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
     const toggleExpand = () => {
         setExpanded(!expanded);
+        // Reset image state when expanding/collapsing
+        if (!expanded && image) {
+            setImageLoading(true);
+            setImageError(false);
+        }
     };
 
     const toggleLanguage = () => {
         setShowBothLanguages(!showBothLanguages);
+    };
+
+    const handleImageError = () => {
+        console.log('Image failed to load:', image);
+        setImageError(true);
+        setImageLoading(false);
+    };
+
+    const handleImageLoad = () => {
+        setImageLoading(false);
+    };
+
+    // Replace the hardcoded image source function with the utility function
+    // Determine if the image is a local asset or a remote URL
+    const getImageSource = () => {
+        try {
+            const source = image ? loadImageSource(image) : null;
+            if (!source) {
+                setImageError(true);
+            }
+            return source;
+        } catch (error) {
+            console.error('Error loading image:', error);
+            setImageError(true);
+            return null;
+        }
     };
 
     return (
@@ -120,6 +156,34 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                     {showBothLanguages ? "Afficher une seule langue" : "Afficher les deux langues"}
                                 </Text>
                             </Pressable>
+                        )}
+
+                        {/* Display image if available */}
+                        {image && !imageError && (
+                            <View style={styles.imageContainer}>
+                                {imageLoading && (
+                                    <View style={styles.imageLoading}>
+                                        <ActivityIndicator size="large" color="#3F51B5" />
+                                    </View>
+                                )}
+                                <Image
+                                    source={getImageSource()}
+                                    style={[styles.image, imageLoading && styles.hiddenImage]}
+                                    resizeMode="contain"
+                                    onError={handleImageError}
+                                    onLoad={handleImageLoad}
+                                />
+                            </View>
+                        )}
+
+                        {/* Display fallback if image fails to load */}
+                        {image && imageError && (
+                            <View style={styles.imageFallback}>
+                                <Ionicons name="image-outline" size={40} color="#CCCCCC" />
+                                <Text style={styles.imageFallbackText}>
+                                    {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
+                                </Text>
+                            </View>
                         )}
 
                         {answer && (
@@ -292,6 +356,50 @@ const styles = StyleSheet.create({
     overlay: {
         ...StyleSheet.absoluteFillObject,
         backgroundColor: 'transparent',
+    },
+    imageContainer: {
+        marginBottom: 12,
+        borderRadius: 8,
+        overflow: 'hidden',
+        borderWidth: 1,
+        borderColor: '#E0E0FF',
+        backgroundColor: '#F8F9FF',
+        height: 200,
+        position: 'relative',
+    },
+    image: {
+        width: '100%',
+        height: 200,
+        backgroundColor: 'transparent',
+    },
+    hiddenImage: {
+        opacity: 0,
+    },
+    imageLoading: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1,
+    },
+    imageFallback: {
+        marginBottom: 12,
+        borderRadius: 8,
+        overflow: 'hidden',
+        borderWidth: 1,
+        borderColor: '#E0E0FF',
+        backgroundColor: '#F8F9FF',
+        height: 150,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    imageFallbackText: {
+        color: '#888888',
+        marginTop: 8,
+        fontSize: 14,
     }
 });
 

@@ -21,6 +21,7 @@ interface SearchResultQuestion {
     answer?: string | MultiLangText;
     explanation: string | MultiLangText;
     categoryId: string;
+    image?: string | null;
 }
 
 const SearchScreen = () => {
@@ -142,6 +143,7 @@ const SearchScreen = () => {
                                 answer={question.answer}
                                 explanation={question.explanation}
                                 language={language}
+                                image={question.image}
                             />
                         ))}
                     </>
