@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Animated, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Animated, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
-type MultiLangText = {
-    fr: string;
-    vi: string;
-};
+import { MultiLangText } from '../contexts/LanguageContext';
 
 type QuestionCardProps = {
     id: number;
-    question: MultiLangText;
-    answer?: MultiLangText;
-    explanation: MultiLangText;
+    question: string | MultiLangText;
+    answer?: string | MultiLangText;
+    explanation: string | MultiLangText;
     language?: 'fr' | 'vi';  // Added language prop to control which language to display
 };
 
@@ -24,8 +20,32 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 }) => {
     const [expanded, setExpanded] = useState(false);
     const [animation] = useState(new Animated.Value(0));
-    const [pressed, setPressed] = useState(false);
     const [showBothLanguages, setShowBothLanguages] = useState(true);  // Toggle to show both languages
+
+    // Check if we have multilingual text
+    const isMultilingual = typeof question !== 'string';
+
+    const getQuestionText = (lang: 'fr' | 'vi') => {
+        if (typeof question === 'string') {
+            return question;
+        }
+        return question[lang];
+    };
+
+    const getAnswerText = (lang: 'fr' | 'vi') => {
+        if (!answer) return '';
+        if (typeof answer === 'string') {
+            return answer;
+        }
+        return answer[lang];
+    };
+
+    const getExplanationText = (lang: 'fr' | 'vi') => {
+        if (typeof explanation === 'string') {
+            return explanation;
+        }
+        return explanation[lang];
+    };
 
     const toggleExpand = () => {
         const toValue = expanded ? 0 : 1;
@@ -62,19 +82,19 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 ]}
                 onPress={toggleExpand}
                 android_ripple={{ color: '#E8EAF6' }}
-                onPressIn={() => setPressed(true)}
-                onPressOut={() => setPressed(false)}
             >
                 <View style={styles.idContainer}>
                     <Text style={styles.id}>{id}</Text>
                 </View>
                 <View style={styles.questionContainer}>
                     <Text style={styles.question} numberOfLines={expanded ? 0 : 2}>
-                        {question.fr}
+                        {getQuestionText('fr')}
                     </Text>
-                    <Text style={styles.translation} numberOfLines={expanded ? 0 : 1}>
-                        {question.vi}
-                    </Text>
+                    {isMultilingual && language === 'vi' && (
+                        <Text style={styles.translation} numberOfLines={expanded ? 0 : 1}>
+                            {getQuestionText('vi')}
+                        </Text>
+                    )}
                 </View>
                 <View style={styles.iconContainer}>
                     <Ionicons
@@ -86,7 +106,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             </Pressable>
 
             <Animated.View style={[styles.expandedContent, animatedStyle]}>
-                {expanded && (
+                {expanded && isMultilingual && (
                     <Pressable
                         style={styles.languageToggle}
                         onPress={toggleLanguage}
@@ -100,26 +120,26 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 {answer && (
                     <View style={styles.section}>
                         <Text style={styles.sectionTitle}>Réponse:</Text>
-                        <Text style={styles.sectionContent}>{answer.fr}</Text>
+                        <Text style={styles.sectionContent}>{getAnswerText('fr')}</Text>
 
-                        {showBothLanguages && (
+                        {isMultilingual && showBothLanguages && language === 'vi' && (
                             <>
                                 <Text style={styles.sectionTitle}>Trả lời:</Text>
-                                <Text style={styles.sectionContent}>{answer.vi}</Text>
+                                <Text style={styles.sectionContent}>{getAnswerText('vi')}</Text>
                             </>
                         )}
                     </View>
                 )}
 
-                {explanation.fr !== "" && (
+                {getExplanationText('fr') !== "" && (
                     <View style={styles.section}>
                         <Text style={styles.sectionTitle}>Explication:</Text>
-                        <Text style={styles.sectionContent}>{explanation.fr}</Text>
+                        <Text style={styles.sectionContent}>{getExplanationText('fr')}</Text>
 
-                        {showBothLanguages && explanation.vi !== "" && (
+                        {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
                             <>
                                 <Text style={styles.sectionTitle}>Giải thích:</Text>
-                                <Text style={styles.sectionContent}>{explanation.vi}</Text>
+                                <Text style={styles.sectionContent}>{getExplanationText('vi')}</Text>
                             </>
                         )}
                     </View>

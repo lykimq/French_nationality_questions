@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Platform, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -9,8 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import { RootStackParamList } from './types';
-import { LanguageProvider } from '../contexts/LanguageContext';
+import LanguageContext, { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
 
 // Create navigators
 const Stack = createNativeStackNavigator();
@@ -60,9 +59,8 @@ type RouteType = {
 };
 
 const AppTabs = () => {
-    // We'll use the LanguageContext in individual screens instead of here
-    // For navigation tabs, we'll just use French for now
-    const language = 'fr';
+    // Use the language context to get the current language
+    const { language } = useLanguage();
 
     return (
         <Tab.Navigator
@@ -121,6 +119,7 @@ const AppTabs = () => {
     );
 };
 
+// We need to create a wrapper for AppTabs to access the language context
 const AppNavigator = () => (
     <NavigationContainer>
         <LanguageProvider>

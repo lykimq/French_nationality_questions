@@ -12,27 +12,21 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import QuestionCard from '../components/QuestionCard';
-import questionsData from '../data/questions.json';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage, MultiLangText } from '../contexts/LanguageContext';
 
-// Define the MultiLangText type to match our new structure
-type MultiLangText = {
-    fr: string;
-    vi: string;
-};
-
-interface Question {
+// Define the search result question type
+interface SearchResultQuestion {
     id: number;
-    question: MultiLangText;
-    answer?: MultiLangText;
-    explanation: MultiLangText;
+    question: string | MultiLangText;
+    answer?: string | MultiLangText;
+    explanation: string | MultiLangText;
     categoryId: string;
 }
 
 const SearchScreen = () => {
     const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState<Question[]>([]);
-    const { language, toggleLanguage } = useLanguage();
+    const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
+    const { language, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
 
     // Flatten all questions from all categories and add categoryId
     const allQuestions = questionsData.categories.flatMap(category =>
@@ -50,19 +44,38 @@ const SearchScreen = () => {
 
         const normalizedQuery = searchQuery.toLowerCase().trim();
 
-        const results = allQuestions.filter(
-            item =>
-                item.question.fr.toLowerCase().includes(normalizedQuery) ||
-                item.question.vi.toLowerCase().includes(normalizedQuery) ||
-                (item.answer && item.answer.fr.toLowerCase().includes(normalizedQuery)) ||
-                (item.answer && item.answer.vi.toLowerCase().includes(normalizedQuery)) ||
-                item.explanation.fr.toLowerCase().includes(normalizedQuery) ||
-                item.explanation.vi.toLowerCase().includes(normalizedQuery) ||
-                item.id.toString() === normalizedQuery
-        );
+        const results = allQuestions.filter(item => {
+            // Handle both French-only and multilingual question formats
+            if (isTranslationLoaded) {
+                const q = item.question as MultiLangText;
+                const a = item.answer as MultiLangText | undefined;
+                const e = item.explanation as MultiLangText;
+
+                return (
+                    q.fr.toLowerCase().includes(normalizedQuery) ||
+                    q.vi.toLowerCase().includes(normalizedQuery) ||
+                    (a && a.fr.toLowerCase().includes(normalizedQuery)) ||
+                    (a && a.vi.toLowerCase().includes(normalizedQuery)) ||
+                    e.fr.toLowerCase().includes(normalizedQuery) ||
+                    e.vi.toLowerCase().includes(normalizedQuery) ||
+                    item.id.toString() === normalizedQuery
+                );
+            } else {
+                const q = item.question as string;
+                const a = item.answer as string | undefined;
+                const e = item.explanation as string;
+
+                return (
+                    q.toLowerCase().includes(normalizedQuery) ||
+                    (a && a.toLowerCase().includes(normalizedQuery)) ||
+                    e.toLowerCase().includes(normalizedQuery) ||
+                    item.id.toString() === normalizedQuery
+                );
+            }
+        });
 
         setSearchResults(results);
-    }, [searchQuery]);
+    }, [searchQuery, questionsData, isTranslationLoaded]);
 
     const clearSearch = () => {
         setSearchQuery('');

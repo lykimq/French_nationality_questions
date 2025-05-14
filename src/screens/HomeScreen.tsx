@@ -5,15 +5,13 @@ import CategoryCard from '../components/CategoryCard';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
-import { useLanguage } from '../contexts/LanguageContext';
-
-import questionsData from '../data/questions.json';
+import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
-    const { language, toggleLanguage } = useLanguage();
+    const { language, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
 
     const categories = questionsData.categories;
 
@@ -54,19 +52,25 @@ const HomeScreen = () => {
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
-                {categories.map((category) => (
-                    <CategoryCard
-                        key={category.id}
-                        title={category.title}
-                        title_vi={category.title_vi}
-                        description={category.description}
-                        description_vi={category.description_vi}
-                        icon={category.icon}
-                        count={category.questions.length}
-                        onPress={() => navigateToCategory(category.id)}
-                        language={language}
-                    />
-                ))}
+                {categories.map((category) => {
+                    // Safe casting for multilingual categories when Vietnamese is selected
+                    const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
+                    const description_vi = isTranslationLoaded ? (category as MultiLangCategory).description_vi : undefined;
+
+                    return (
+                        <CategoryCard
+                            key={category.id}
+                            title={category.title}
+                            title_vi={title_vi}
+                            description={category.description}
+                            description_vi={description_vi}
+                            icon={category.icon}
+                            count={category.questions.length}
+                            onPress={() => navigateToCategory(category.id)}
+                            language={language}
+                        />
+                    );
+                })}
             </ScrollView>
         </View>
     );

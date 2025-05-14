@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "id": "personal",
+      "title": "Thông tin cá nhân",
+      "icon": "person",
+      "description": "Câu hỏi về thông tin cá nhân (1-24)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Tại sao bạn muốn trở thành người Pháp?",
+          "explanation": "Câu trả lời cho câu hỏi này có vẻ đơn giản, nhưng bạn cần nhớ rằng bạn phải chứng minh và thể hiện sự cam kết của mình, bạn cần chuẩn bị kỹ câu trả lời cho câu hỏi này vì nó rất quan trọng. Bạn cần giải thích rõ ràng tại sao bạn cảm thấy mình đã trở thành người Pháp và giải thích rằng hiện tại bạn cảm thấy mình là người Pháp hơn là quốc tịch gốc của bạn và thể hiện rõ ràng rằng bạn không còn lựa chọn nào khác. Bạn cũng cần đề cập đến các giá trị của Pháp mà bạn tuân theo: Ví dụ, bằng cách chứng minh rằng bạn có một dự án cá nhân hoặc chuyên môn mà bạn đang xây dựng hoặc muốn xây dựng ở Pháp. Bạn nên giải thích lối sống hiện tại của bạn (kiểu Pháp) và bạn rất yêu thích nó. Bạn cũng nên giải thích rằng bạn ngưỡng mộ vị trí của Pháp trên trường quốc tế: Pháp là nền kinh tế lớn thứ 3 thế giới, là nhà lãnh đạo hàng không vũ trụ cùng với Đức, ngành thực phẩm nông nghiệp, công nghiệp hàng xa xỉ, v.v... Cuối cùng, bạn có thể đề cập đến di sản văn hóa Pháp bằng cách trích dẫn sự phong phú về văn hóa của Pháp: khoa học, nghệ thuật, văn học."
+        },
+        {
+          "id": 2,
+          "question": "Bạn trở về quốc gia gốc của mình bao nhiêu lần một năm?",
+          "explanation": "Hãy chú ý trả lời câu hỏi này bằng cách đưa ra con số chính xác nếu có thể, và đặc biệt là hãy trung thực nhất có thể vì đừng quên rằng cơ quan hành chính có hộ chiếu của bạn với tất cả các dấu nhập cảnh/xuất cảnh từ lãnh thổ Pháp."
+        },
+        {
+          "id": 3,
+          "question": "Bạn đã kết hôn chưa? Bạn có bạn trai/bạn gái, chồng/vợ không?",
+          "explanation": "Nếu bạn độc thân thì câu trả lời rất rõ ràng.... Nếu bạn đã kết hôn hoặc đã đăng ký hợp đồng sống chung dân sự (PACS), hãy trả lời có và nêu rõ thời gian."
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "title": "Địa lý và Hành chính",
+      "icon": "map",
+      "description": "Câu hỏi về địa lý và hành chính Pháp (25-35)",
+      "questions": [
+        {
+          "id": 25,
+          "question": "Hãy liệt kê ba thành phố lớn nhất của Pháp",
+          "answer": "Paris, Marseille và Lyon.",
+          "explanation": ""
+        },
+        {
+          "id": 26,
+          "question": "Hãy liệt kê ba tỉnh của Pháp",
+          "answer": "Haut-Rhin, Bas-Rhin, Haute-Garonne.",
+          "explanation": ""
+        },
+        {
+          "id": 27,
+          "question": "Hãy liệt kê ba tỉnh hải ngoại của Pháp",
+          "answer": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion.",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "Lịch sử và Văn hóa",
+      "icon": "book",
+      "description": "Câu hỏi về lịch sử và văn hóa Pháp (36-99)",
+      "questions": [
+        {
+          "id": 36,
+          "question": "Ai là thị trưởng của tỉnh bạn?",
+          "explanation": "Hãy chắc chắn rằng bạn biết rõ tên của thị trưởng của mình cũng như khuynh hướng chính trị của họ (đảng phái chính trị), ví dụ đối với thành phố Paris, đó là Anne Hidalgo và bà ấy thuộc Cánh tả [PS]."
+        },
+        {
+          "id": 37,
+          "question": "Kể tên ba vị vua của nước Pháp",
+          "answer": "Charlemagne, François Ier, Henri IV, Louis XVI v.v...",
+          "explanation": ""
+        },
+        {
+          "id": 38,
+          "question": "Kể tên 3 Nữ hoàng của nước Pháp",
+          "answer": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche v.v...",
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}

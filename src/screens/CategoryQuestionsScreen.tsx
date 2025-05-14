@@ -6,9 +6,7 @@ import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import QuestionCard from '../components/QuestionCard';
-import { useLanguage } from '../contexts/LanguageContext';
-
-import questionsData from '../data/questions.json';
+import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
 
 type CategoryQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryQuestions'>;
 type CategoryQuestionsNavigationProp = NativeStackNavigationProp<RootStackParamList, 'CategoryQuestions'>;
@@ -17,7 +15,7 @@ const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
     const { categoryId, language: initialLanguage } = route.params;
-    const { language, setLanguage, toggleLanguage } = useLanguage();
+    const { language, setLanguage, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
 
     // Sync language from route params when the screen mounts
     useEffect(() => {
@@ -36,7 +34,9 @@ const CategoryQuestionsScreen = () => {
         );
     }
 
-    const displayTitle = language === 'fr' ? category.title : (category.title_vi || category.title);
+    // Safely access multilingual properties
+    const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
+    const displayTitle = language === 'fr' ? category.title : (title_vi || category.title);
     const questionsCount = language === 'fr'
         ? `${category.questions.length} questions`
         : `${category.questions.length} câu hỏi`;
