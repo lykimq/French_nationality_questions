@@ -7,8 +7,6 @@ import {
     ScrollView,
     TouchableOpacity,
     Share,
-    Linking,
-    StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -62,9 +60,9 @@ const SettingItem: React.FC<SettingItemProps> = ({
     </TouchableOpacity>
 );
 
-// Add new context for display settings
+// Remove the DisplaySettingsContext since we'll only use slide mode
 export const DisplaySettingsContext = React.createContext({
-    isSlideMode: false,
+    isSlideMode: true, // Always true now
     toggleSlideMode: () => { },
 });
 
@@ -75,8 +73,9 @@ interface DisplaySettingsProviderProps {
 }
 
 export const DisplaySettingsProvider: React.FC<DisplaySettingsProviderProps> = ({ children }) => {
-    const [isSlideMode, setIsSlideMode] = useState(false);
-    const toggleSlideMode = () => setIsSlideMode(prev => !prev);
+    // Always use slide mode
+    const isSlideMode = true;
+    const toggleSlideMode = () => { }; // No-op since we always use slide mode
 
     return (
         <DisplaySettingsContext.Provider value={{ isSlideMode, toggleSlideMode }}>
@@ -86,8 +85,6 @@ export const DisplaySettingsProvider: React.FC<DisplaySettingsProviderProps> = (
 };
 
 const SettingsScreen = () => {
-    const [showTranslation, setShowTranslation] = useState(true);
-    const [darkMode, setDarkMode] = useState(false);
     const { language, toggleLanguage } = useLanguage();
     const { isSlideMode, toggleSlideMode } = useDisplaySettings();
 
@@ -114,70 +111,15 @@ const SettingsScreen = () => {
         alert(message);
     };
 
-    const openPrivacyPolicy = () => {
-        // Replace with your actual privacy policy URL
-        Linking.openURL('https://example.com/privacy-policy');
-    };
-
     return (
-        <View style={styles.container}>
-            <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
-
-            <SafeAreaView style={styles.safeArea} edges={['top']}>
-                <View style={styles.header}>
-                    <Text style={styles.title}>
-                        {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
-                    </Text>
-                    <View style={styles.languageSelector}>
-                        <Text style={styles.languageLabel}>FR</Text>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor="#fff"
-                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
-                        />
-                        <Text style={styles.languageLabel}>VI</Text>
-                    </View>
-                </View>
-            </SafeAreaView>
+        <SafeAreaView style={styles.container} edges={['top']}>
+            <View style={styles.header}>
+                <Text style={styles.title}>
+                    {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
+                </Text>
+            </View>
 
             <ScrollView style={styles.scrollView}>
-                <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>
-                        {language === 'fr' ? 'Préférences' : 'Tùy chọn'}
-                    </Text>
-                    <SettingItem
-                        title="Mode diaporama pour les questions"
-                        titleVi="Chế độ trình chiếu cho câu hỏi"
-                        icon="swap-horizontal"
-                        iconColor="#3F51B5"
-                        isSwitch
-                        value={isSlideMode}
-                        onValueChange={toggleSlideMode}
-                        language={language}
-                    />
-                    <SettingItem
-                        title="Afficher les traductions"
-                        titleVi="Hiển thị bản dịch"
-                        icon="language"
-                        iconColor="#3F51B5"
-                        isSwitch
-                        value={showTranslation}
-                        onValueChange={setShowTranslation}
-                        language={language}
-                    />
-                    <SettingItem
-                        title="Mode sombre"
-                        titleVi="Chế độ tối"
-                        icon="moon"
-                        iconColor="#5C6BC0"
-                        isSwitch
-                        value={darkMode}
-                        onValueChange={setDarkMode}
-                        language={language}
-                    />
-                </View>
-
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>
                         {language === 'fr' ? 'À propos' : 'Giới thiệu'}
@@ -199,14 +141,6 @@ const SettingsScreen = () => {
                         language={language}
                     />
                     <SettingItem
-                        title="Politique de confidentialité"
-                        titleVi="Chính sách bảo mật"
-                        icon="shield-checkmark"
-                        iconColor="#4CAF50"
-                        onPress={openPrivacyPolicy}
-                        language={language}
-                    />
-                    <SettingItem
                         title="Version de l'application"
                         titleVi="Phiên bản ứng dụng"
                         icon="information-circle"
@@ -216,7 +150,7 @@ const SettingsScreen = () => {
                     />
                 </View>
             </ScrollView>
-        </View>
+        </SafeAreaView>
     );
 };
 

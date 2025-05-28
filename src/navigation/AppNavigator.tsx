@@ -9,7 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import LanguageContext, { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
+import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
 
 // Create navigators
 const Stack = createNativeStackNavigator();

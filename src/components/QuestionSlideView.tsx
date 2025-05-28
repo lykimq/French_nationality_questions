@@ -1,13 +1,12 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import QuestionCard from './QuestionCard';
 import { Question } from '../types/questions';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25; // Reduced threshold for easier swipe
-const VELOCITY_THRESHOLD = 400; // Reduced velocity threshold
+const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.3;
 
 interface QuestionSlideViewProps {
     questions: Question[];
@@ -23,7 +22,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
         if (currentIndex > 0) {
             Animated.timing(translateX, {
                 toValue: SCREEN_WIDTH,
-                duration: 200,
+                duration: 0,
                 useNativeDriver: true,
             }).start(() => {
                 setCurrentIndex(currentIndex - 1);
@@ -36,7 +35,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
         if (currentIndex < questions.length - 1) {
             Animated.timing(translateX, {
                 toValue: -SCREEN_WIDTH,
-                duration: 200,
+                duration: 0,
                 useNativeDriver: true,
             }).start(() => {
                 setCurrentIndex(currentIndex + 1);
@@ -55,7 +54,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
             const { translationX, velocityX } = event.nativeEvent;
 
             // Determine if the swipe was fast enough or far enough to trigger navigation
-            const shouldNavigate = Math.abs(translationX) > SWIPE_THRESHOLD || Math.abs(velocityX) > VELOCITY_THRESHOLD;
+            const shouldNavigate = Math.abs(translationX) > SWIPE_THRESHOLD || Math.abs(velocityX) > 500;
 
             if (shouldNavigate) {
                 if (translationX > 0 && currentIndex > 0) {
@@ -69,10 +68,8 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                     Animated.spring(translateX, {
                         toValue: 0,
                         useNativeDriver: true,
-                        tension: 50,
-                        friction: 8,
-                        restDisplacementThreshold: 0.01,
-                        restSpeedThreshold: 0.01,
+                        tension: 40,
+                        friction: 7
                     }).start();
                 }
             } else {
@@ -80,10 +77,8 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                 Animated.spring(translateX, {
                     toValue: 0,
                     useNativeDriver: true,
-                    tension: 50,
-                    friction: 8,
-                    restDisplacementThreshold: 0.01,
-                    restSpeedThreshold: 0.01,
+                    tension: 40,
+                    friction: 7
                 }).start();
             }
         }
@@ -139,8 +134,6 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                 ref={panRef}
                 onGestureEvent={onGestureEvent}
                 onHandlerStateChange={onHandlerStateChange}
-                activeOffsetX={[-10, 10]} // Start gesture recognition earlier
-                failOffsetY={[-20, 20]} // Allow more vertical movement before failing
             >
                 <Animated.View
                     style={[
@@ -150,23 +143,16 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                         }
                     ]}
                 >
-                    <ScrollView
-                        style={styles.scrollView}
-                        contentContainerStyle={styles.scrollContent}
-                        showsVerticalScrollIndicator={true}
-                        bounces={true}
-                    >
-                        <QuestionCard
-                            key={currentQuestion.id}
-                            id={currentQuestion.id}
-                            question={getLocalizedQuestion(currentQuestion)}
-                            answer={getLocalizedAnswer(currentQuestion)}
-                            explanation={currentQuestion.explanation || ''}
-                            image={currentQuestion.image}
-                            language={language}
-                            alwaysExpanded={true}
-                        />
-                    </ScrollView>
+                    <QuestionCard
+                        key={currentQuestion.id}
+                        id={currentQuestion.id}
+                        question={getLocalizedQuestion(currentQuestion)}
+                        answer={getLocalizedAnswer(currentQuestion)}
+                        explanation={currentQuestion.explanation || ''}
+                        image={currentQuestion.image}
+                        language={language}
+                        alwaysExpanded={true}
+                    />
                 </Animated.View>
             </PanGestureHandler>
         </View>
@@ -187,7 +173,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderBottomWidth: 1,
         borderBottomColor: '#eee',
-        zIndex: 1,
     },
     navButton: {
         padding: 10,
@@ -199,14 +184,7 @@ const styles = StyleSheet.create({
     },
     content: {
         flex: 1,
-    },
-    scrollView: {
-        flex: 1,
-    },
-    scrollContent: {
         paddingHorizontal: 20,
-        paddingVertical: 10,
-        flexGrow: 1,
     }
 });
 

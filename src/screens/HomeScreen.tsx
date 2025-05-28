@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from '../components/CategoryCard';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/types';
+import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;

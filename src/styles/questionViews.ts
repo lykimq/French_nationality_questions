@@ -47,15 +47,6 @@ export const commonStyles = StyleSheet.create({
     },
 });
 
-export const listViewStyles = StyleSheet.create({
-    scrollView: {
-        flex: 1,
-    },
-    contentContainer: {
-        padding: 20,
-    },
-});
-
 export const slideViewStyles = StyleSheet.create({
     container: {
         flex: 1,

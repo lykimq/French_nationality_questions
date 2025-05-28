@@ -4,10 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/types';
+import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
-import { useDisplaySettings } from './SettingsScreen';
-import QuestionListView from '../components/QuestionListView';
 import QuestionSlideView from '../components/QuestionSlideView';
 import { commonStyles as styles } from '../styles/questionViews';
 import { Question } from '../types/questions';
@@ -20,7 +18,6 @@ const CategoryQuestionsScreen = () => {
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
     const { categoryId, language: initialLanguage } = route.params;
     const { language, setLanguage, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
-    const { isSlideMode } = useDisplaySettings();
 
     useEffect(() => {
         if (initialLanguage && initialLanguage !== language) {
@@ -73,11 +70,7 @@ const CategoryQuestionsScreen = () => {
                 </View>
             </SafeAreaView>
 
-            {isSlideMode ? (
-                <QuestionSlideView questions={category.questions as Question[]} language={language} />
-            ) : (
-                <QuestionListView questions={category.questions as Question[]} language={language} />
-            )}
+            <QuestionSlideView questions={category.questions as Question[]} language={language} />
         </View>
     );
 };

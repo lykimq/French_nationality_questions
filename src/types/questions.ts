@@ -2,15 +2,18 @@ import { MultiLangText } from '../contexts/LanguageContext';
 
 export interface BaseQuestion {
     id: number;
-    question: string;
-    answer: string;
+    question: string | MultiLangText;
+    answer?: string | MultiLangText;
     explanation?: string | MultiLangText;
-    image?: string;
+    image?: string | null;
 }
 
-export interface MultiLangQuestion extends BaseQuestion {
+export interface MultiLangQuestion extends Omit<BaseQuestion, 'question' | 'answer' | 'explanation'> {
+    question: string;
     question_vi: string;
-    answer_vi: string;
+    answer?: string;
+    answer_vi?: string;
+    explanation?: string;
     explanation_vi?: string;
 }
 
