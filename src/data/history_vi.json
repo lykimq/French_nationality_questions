@@ -7,22 +7,411 @@
       {
         "id": 36,
         "question": "Ai là thị trưởng của tỉnh bạn?",
-        "explanation": "Hãy chắc chắn rằng bạn biết rõ tên của thị trưởng của mình cũng như khuynh hướng chính trị của họ (đảng phái chính trị), ví dụ đối với thành phố Paris, đó là Anne Hidalgo và bà ấy thuộc Cánh tả [PS].",
+        "explanation": "Hãy chắc chắn rằng bạn biết rõ tên của thị trưởng của mình cũng như khuynh hướng chính trị của họ (đảng phái chính trị), ví dụ đối với thành phố Paris, đó là Anne Hidalgo và bà ấy thuộc Cánh tả.",
         "image": null
       },
       {
         "id": 37,
         "question": "Kể tên ba vị vua của nước Pháp",
-        "answer": "Charlemagne, François Ier, Henri IV, Louis XVI v.v...",
-        "explanation": "",
+        "explanation": "Charlemagne, François Ier, Henri IV, Louis XVI v.v...",
         "image": null
       },
       {
         "id": 38,
         "question": "Kể tên 3 Nữ hoàng của nước Pháp",
-        "answer": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche v.v...",
-        "explanation": "",
+        "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche v.v...",
         "image": "../assets/Marie_Antoinette_Adult.jpg"
+      },
+      {
+        "id": 39,
+        "question": "Louis XIV (Louis 14) được biết đến nhiều nhất vì điều gì và tại sao?",
+        "explanation": "Louis XIV được biết đến nhiều nhất vì ông là một nhà cách mạng Pháp và đã tạo ra nhiều thay đổi quan trọng trong lịch sử nước Pháp. Tuy nhiên, sau chiến thắng của nhân dân, ông đã bị lật đổ.",
+        "image": "null"
+      },
+      {
+        "id": 40,
+        "question": "Ai là vua của Pháp trong thời kỳ cách mạng?",
+        "explanation": "Đó là Vua Louis XVI (Louis 16). Nhân dân đã nổi dậy chống lại quyền lực của vua và tuyên bố Cộng hòa. Gia đình hoàng gia bị giam cầm. Vua bị xét xử và kết án tử hình vì các Cách mạng muốn ngăn chặn việc quay trở lại vương quyền. Louis XVI đã bị đưa ra xử bằng cưa đầu vào ngày 21 tháng 1 năm 1793.",
+        "image": "null"
+      },
+      {
+        "id": 41,
+        "question": "Ngày cụ thể nào đã xảy ra Cách mạng Pháp?",
+        "explanation": "Cách mạng Pháp đã diễn ra vào ngày 5 tháng 5 năm 1789 với việc mở cửa Tổng đại hội và kết thúc vào ngày 9 tháng 11 năm 1799 với cuộc đảo chính của ngày 18 Brumaire của Napoleon Bonaparte.",
+        "image": "null"
+      },
+      {
+        "id": 42,
+        "question": "Sự kiện nào trong Cách mạng đã ảnh hưởng đến bạn nhiều nhất?",
+        "explanation": "Hãy nói về Cách mạng Pháp, ví dụ như một sự kiện quan trọng của Cách mạng đã xảy ra vào ngày 14 tháng 7 năm 1789 và đã đánh dấu việc chiếm đóng nhà tù Bastille, một sự kiện mở đầu của Cách mạng. Nó xảy ra sau một cuộc khủng hoảng nông nghiệp dẫn đến một cuộc khủng hoảng kinh tế lớn và một mức lạm phát lớn đối mặt với các quyết định tăng thuế được quyết định bởi vua thời đó Louis XVI.",
+        "image": "null"
+      },
+      {
+        "id": 43,
+        "question": "Sự kiện lịch sử của Pháp nào đã ảnh hưởng đến bạn nhiều nhất?",
+        "explanation": "Để trả lời các câu hỏi phỏng vấn về tự nhiên hóa Pháp và đặc biệt là câu hỏi này, bạn có thể kể ra bất kỳ sự kiện nào (thể thao, văn hóa, lịch sử), điều quan trọng là phải giải thích lý do chọn lựa của bạn!",
+        "image": "null"
+      },
+      {
+        "id": 44,
+        "question": "Vai trò của Bastille trước khi bị phá hủy là gì?",
+        "explanation": "Nhà tù Bastille được sử dụng làm nhà tù nhà nước trong đó đã bị giam cầm nhiều người nổi tiếng của thời đại như Voltaire, Sade v.v…",
+        "image": "null"
+      },
+      {
+        "id": 45,
+        "question": "Khi nào Thông cáo Nhân quyền và Công dân được thông qua?",
+        "explanation": "Nó đã được thông qua vào ngày 26 tháng 8 năm 1789. (Đây là một trong những câu hỏi phỏng vấn tự nhiên hóa Pháp phổ biến nhất), bạn có thể tải xuống Chứng nhận Nhân quyền và Công dân dưới dạng PDF để chuẩn bị cho cuộc phỏng vấn tự nhiên hóa Pháp của mình.",
+        "image": "null"
+      },
+      {
+        "id": 46,
+        "question": "Ai đã lập ra Bộ luật Dân sự ở Pháp?",
+        "explanation": "Bộ luật Dân sự ở Pháp đã được lập ra bởi Napoleon Bonaparte.",
+        "image": "null"
+      },
+      {
+        "id": 47,
+        "question": "Có biết ngày của hai cuộc chiến tranh thế giới gần đây nhất không?",
+        "explanation": "Chiến tranh thế giới thứ nhất diễn ra từ ngày 28 tháng 7 năm 1914 đến ngày 11 tháng 11 năm 1918 (được biết đến với tên gọi là Chiến tranh Thế giới lần thứ nhất hoặc Chiến tranh 14-18). Chiến tranh thế giới thứ hai diễn ra từ ngày 1 tháng 9 năm 1939 đến ngày 2 tháng 9 năm 1945.",
+        "image": "null"
+      },
+      {
+        "id": 48,
+        "question": "Bạn có biết Jean Moulin không? Tại sao ông được biết đến?",
+        "explanation": "Jean Moulin là biểu tượng của phong trào kháng chiến Pháp trong Chiến tranh thế giới thứ hai. Ông đã được Tổng tư lệnh Charles De Gaulle gửi đến Pháp để phối hợp và thống nhất các phong trào kháng chiến Pháp, nhưng đáng tiếc ông đã bị bắt bởi Gestapo và bị tra tấn. Ông đã chết vì những vết thương của mình trong chuyến tàu đưa ông đến Đức.",
+        "image": "null"
+      },
+      {
+        "id": 49,
+        "question": "Ai là Charles de Gaulle?",
+        "explanation": "Nó đã được thông qua vào ngày 26 tháng 8 năm 1789. [Đây là một trong những câu hỏi phỏng vấn tự nhiên hóa Pháp phổ biến nhất], bạn có thể tải xuống Chứng nhận Nhân quyền và Công dân dưới dạng PDF để chuẩn bị cho cuộc phỏng vấn tự nhiên hóa Pháp của mình.",
+        "image": "null"
+      },
+      {
+        "id": 50,
+        "question": "Kể tên ba di sản lịch sử của Pháp mà bạn biết?",
+        "explanation": "Tháp Eiffel. Cổng khải hoàn. Cung điện Versailles. Lâu đài Vincennes. Louvre. Lâu đài Loire. Lâu đài Chambord. Cầu Gard v.v…",
+        "image": "null"
+      },
+      {
+        "id": 51,
+        "question": "Nền cộng hoà thứ năm được thiết lập khi nào?",
+        "explanation": "Nền cộng hoà thứ 5 được thiết lập bởi hiến pháp vào ngày 4 tháng 10 năm 1958",
+        "image": "null"
+      },
+      {
+        "id": 52,
+        "question": "Nền cộng hoà thứ 5 đánh dấu điều gì?",
+        "explanation": "Nó đánh dấu sự phân chia giữa quyền lực hành pháp, lập pháp và tư pháp.",
+        "image": "null"
+      },
+      {
+        "id": 53,
+        "question": "Sự phân ly giữa giáo hội và nhà nước diễn ra khi nào?",
+        "explanation": "Diễn ra vào ngày 9/12/1905",
+        "image": "null"
+      },
+      {
+        "id": 54,
+        "question": "Bạn ấn tượng nhất với nhân vật lịch sử nào của Pháp?",
+        "explanation": "Charles de Gaules, Napoléon etc…",
+        "image": "null"
+      },
+      {
+        "id": 55,
+        "question": "Tại sao ngày 1 tháng 5 là ngày nghỉ?",
+        "explanation": "Vì đó là ngày quốc tế lao động",
+        "image": "null"
+      },
+      {
+        "id": 56,
+        "question": "Tại sao ngày 11/11 lại là ngày nghỉ?",
+        "explanation": "Ngày 11/11 là ngày đánh dấu sự chấm dứt của thế chiến thứ nhất. Là ngày mà thoả thuận ngừng bắn giữa các bên được ký kết vào năm 1918",
+        "image": "null"
+      },
+      {
+        "id": 57,
+        "question": "Chúng ta kỷ niệm gì vào ngày 14/7?",
+        "explanation": "Đó là quốc khánh Pháp, ngày 14/7 thường gắn liền với sự kiện phá ngục Bastille vào năm 1789. Ngày 14/7/1790 còn là ngày lễ liên hiệp, đã được kỷ niệm tại pháp hơn 1 thập kỷ qua",
+        "image": "null"
+      },
+      {
+        "id": 58,
+        "question": "Nhà thờ theo kiến trúc Gothic được xây dựng vào thời kỳ nào?",
+        "explanation": "Được xây dựng vào thời trung đại",
+        "image": "null"
+      },
+      {
+        "id": 59,
+        "question": "“hôtel de ville” là gì?",
+        "explanation": "Là toà thị chính của 1 thành phố lớn hoặc 1 thành phố quan trọng",
+        "image": "null"
+      },
+      {
+        "id": 60,
+        "question": "Bạn đã ăn đặc sản địa phương khi du lịch Pháp chưa?",
+        "explanation": "Liệt kê ra các đặc sản ở những vùng mà bạn đã ghé thăm.",
+        "image": "null"
+      },
+      {
+        "id": 61,
+        "question": "Bạn biết những món ăn truyền thống nào của Pháp?",
+        "explanation": " La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L’aligot etc…",
+        "image": "null"
+      },
+      {
+        "id": 62,
+        "question": "Nêu 1 vài nhân vật văn học Pháp nổi tiếng",
+        "explanation": "Thénardier, jean valjean (Những người khốn khổ), Rémy (Không gia đình), hoàng tử bé,…",
+        "image": "null"
+      },
+      {
+        "id": 63,
+        "question": "Nêu các hoạ sĩ Pháp nổi tiếng:",
+        "explanation": "Cézanne, Delacroix, Monet etc…",
+        "image": "null"
+      },
+      {
+        "id": 64,
+        "question": "Kể tên các nhân vật nhập tịch Pháp",
+        "explanation": "Marie Curie, Joséphine Baker",
+        "image": "null"
+      },
+      {
+        "id": 65,
+        "question": "Kể tên 1 vài nghệ sĩ người Pháp nổi tiếng",
+        "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel",
+        "image": "null"
+      },
+      {
+        "id": 66,
+        "question": "Kể tên 1 vài nhà văn Pháp nổi tiếng",
+        "explanation": "Beaumarchais, Molière, Victor Hugo",
+        "image": "null"
+      },
+      {
+        "id": 67,
+        "question": "Kể tên các tác phẩm văn học nổi tiếng",
+        "explanation": "Nhà thờ đức bà Paris, Người bệnh tưởng, Hôn nhân của Figaro",
+        "image": "null"
+      },
+      {
+        "id": 68,
+        "question": "Ai đã viết Ba người lính ngự lâm?",
+        "explanation": "Alexandre Dumas và Auguste Maquet.",
+        "image": "null"
+      },
+      {
+        "id": 69,
+        "question": "Ai là Voltaire?",
+        "explanation": "Tên thật François-Marie Arouet, Voltaire là một nhà văn và triết gia người Pháp thế kỷ 18.",
+        "image": "null"
+      },
+      {
+        "id": 70,
+        "question": "Voltaire thuộc trường phái nào?",
+        "explanation": "Ông thuộc trường phái triết học ánh sáng và là 1 trong những đại diện nổi tiếng nhất của trường phái này",
+        "image": "null"
+      },
+      {
+        "id": 71,
+        "question": "Bạn biết sự kiện thể thao nổi tiếng nào ở Pháp?",
+        "explanation": "Tour de France (giải xe đạp), le tournois de Roland Garos (giải tennis), les 24h du Mans (đua xe oto), Le Marathon de Paris (giải chạy)",
+        "image": "null"
+      },
+      {
+        "id": 72,
+        "question": "Ở Pháp chúng ta có quyền đeo biểu tượng tôn giáo ở nơi công cộng không?",
+        "explanation": "Có, nhưng không phải ở trong trường học",
+        "image": "null"
+      },
+      {
+        "id": 73,
+        "question": "Luật năm 2004 là gì?",
+        "explanation": "Luật năm 2004 và chính xác hơn là điều L141-5-1 quy định rằng ở các trường công lập, cao đẳng và trung học, việc đeo biển hiệu hoặc trang phục để học sinh có vẻ thể hiện mình theo tôn giáo đều bị cấm.",
+        "image": "null"
+      },
+      {
+        "id": 74,
+        "question": "Bạn có biết Brigitte Bardot không?",
+        "explanation": "Brigitte Bardot là một nữ diễn viên điện ảnh, ca sĩ và nhà hoạt động vì quyền động vật. Cô có một số tác phẩm nghệ thuật và văn hóa được ghi nhận, trong đó nổi tiếng nhất là “Moi je joue và “Harley Davidson”.",
+        "image": "null"
+      },
+      {
+        "id": 75,
+        "question": "Kể tên những nhà triết học nổi tiếng của Kì Ánh sáng?",
+        "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+        "image": "null"
+      },
+      {
+        "id": 76,
+        "question": "Triết lý của thời kỳ Ánh Sáng Là gì?",
+        "explanation": "Đó là một phong trào văn hóa, triết học, văn học và trí tuệ nổi lên vào nửa sau thế kỷ 17 với một số triết gia như Voltaire, Rousseau, v.v… và những người thông qua cam kết chống lại sự áp bức tôn giáo và chính trị, coi mình là một tầng lớp tiên tiến làm việc vì sự tiến bộ trên thế giới. Chống lại sự phi lý, độc đoán, mù mờ và “mê tín” của các thế kỷ trước, họ tiến hành đổi mới kiến ​​thức, đạo đức và thẩm mỹ của thời đại mình. Ảnh hưởng của các bài viết của họ có tính quyết định trong các sự kiện lớn vào cuối thế kỷ 18: Tuyên ngôn Độc lập của Hoa Kỳ và Cách mạng Pháp.)",
+        "image": "null"
+      },
+      {
+        "id": 77,
+        "question": "Bạn có biết vận động viên người Pháp nào không?",
+        "explanation": "Trong bóng đá: Michel Platini, Zinedine Zidane. Ở môn đua xe đạp: Richard Virenque. Trong quần vợt: Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Trong Judo: Teddy Riner.",
+        "image": "null"
+      },
+      {
+        "id": 78,
+        "question": "Kể tên các món ăn vùng/Thành phố của bạn ",
+        "explanation": "Ở đây, bạn phải thể hiện trong cuộc phỏng vấn nhập tịch Pháp rằng bạn là người nhập cư và bạn biết ít nhất một hoặc hai món ăn đặc trưng của vùng/thành phố/vùng của bạn, do đó bạn sẽ phải điều chỉnh câu trả lời của mình tùy theo câu hỏi.",
+        "image": "null"
+      },
+      {
+        "id": 79,
+        "question": "Chế độ nô lệ bị bãi bỏ ở Pháp vào năm nào?",
+        "explanation": "Ở Pháp, chế độ nô lệ bị bãi bỏ vào ngày 27 tháng 4 năm 1848.",
+        "image": "null"
+      },
+      {
+        "id": 80,
+        "question": "Lớp học có phải là bắt buộc ở Pháp không?",
+        "explanation": "Giáo dục là miễn phí và bắt buộc đối với tất cả trẻ em, người Pháp và người nước ngoài, từ 3 tuổi đến 16 tuổi (độ tuổi tối thiểu đã giảm từ 6 xuống 3 tuổi kể từ năm 2019)",
+        "image": "null"
+      },
+      {
+        "id": 81,
+        "question": "Việc đi học ở Pháp là bắt buộc từ khi nào?",
+        "explanation": "Giáo dục là bắt buộc kể từ ngày 28 tháng 3 năm 1882.",
+        "image": "null"
+      },
+      {
+        "id": 82,
+        "question": "Ai đã đưa ra luật bắt buộc đi học ở Pháp? ",
+        "explanation": "Là cựu thị trưởng Paris Jules Ferry.",
+        "image": "null"
+      },
+      {
+        "id": 83,
+        "question": "Phụ nữ có quyền bỏ phiếu ở Pháp không?",
+        "explanation": "Có",
+        "image": "null"
+      },
+      {
+        "id": 84,
+        "question": "Phụ nữ có quyền bầu cử ở Pháp từ khi nào?",
+        "explanation": "Kể từ ngày 21 tháng 4 năm 1944.",
+        "image": "null"
+      },
+      {
+        "id": 85,
+        "question": "Ai cho xây dựng cung điện Versailles?",
+        "explanation": "Vua Louis 14",
+        "image": "null"
+      },
+      {
+        "id": 86,
+        "question": "Khải Hoàn Môn do ai cho xây dựng?",
+        "explanation": "Vua Napoléon 1er.",
+        "image": "null"
+      },
+      {
+        "id": 87,
+        "question": "Đâu là công trình nổi bật ở Pháp?",
+        "explanation": "Đó là tháp Eiffel",
+        "image": "null"
+      },
+      {
+        "id": 88,
+        "question": "Ai xây dựng tháp Eiffel?",
+        "explanation": "Gustave Eiffel.",
+        "image": "null"
+      },
+      {
+        "id": 89,
+        "question": "Tháp Eiffel được xây dựng khi nào và tại sự kiện nào?",
+        "explanation": "Năm 1889 trong Triển lãm toàn cầu ở Paris.",
+        "image": "null"
+      },
+      {
+        "id": 90,
+        "question": "Kể tên 1 vài người dẫn chương trình bạn biết ?",
+        "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
+        "image": "null"
+      },
+      {
+        "id": 91,
+        "question": "Kể tên 1 vài ca sĩ Pháp bạn biết ?",
+        "explanation": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
+        "image": "null"
+      },
+      {
+        "id": 92,
+        "question": "Kể tên 1 vài nhà báo Pháp nổi tiếng",
+        "explanation": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
+        "image": "null"
+      },
+      {
+        "id": 93,
+        "question": "Kể tên 1 vài diễn viên Pháp nổi tiếng",
+        "explanation": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
+        "image": "null"
+      },
+      {
+        "id": 94,
+        "question": "Kể tên các thuộc địa cũ của Pháp?",
+        "explanation": "Algeria, Sénégal, Mali, Bờ Biển Ngà.",
+        "image": "null"
+      },
+      {
+        "id": 95,
+        "question": "Cuộc chiến 100 năm là cuộc chiến nào?",
+        "explanation": "Đó là một cuộc chiến bắt nguồn từ sự xung đột giữa các vị vua của Pháp và các vị vua của nước Anh trong thời Trung Cổ. Chính xác thì cuộc xung đột kéo dài hàng thế kỷ này đã kéo dài 116 năm!",
+        "image": "null"
+      },
+      {
+        "id": 96,
+        "question": "Bạn có biết  về trận đánh Verdun không?",
+        "explanation": "Trận Verdun diễn ra vào năm 1916 giữa quân đội Pháp và quân đội Đức ở Lorraine trong Thế chiến thứ nhất. Cuộc chiến này gây ra nhiều thương vong cho cả hai bên mà không phân ra được người chiến thắng!",
+        "image": "null"
+      },
+      {
+        "id": 97,
+        "question": "Biệt danh của lính Pháp trong Thế chiến thứ nhất là gì?",
+        "explanation": "Đó là những người Poilus.",
+        "image": "null"
+      },
+      {
+        "id": 98,
+        "question": "Chiến tranh thế giới thứ 1 đã diễn ra khi nào ?",
+        "explanation": "28/7/1914 – 11/11/1918",
+        "image": "null"
+      },
+      {
+        "id": 99,
+        "question": "Chiến tranh thế giới thứ 2 đã diễn ra khi nào ?",
+        "explanation": "1/9/1939 – 02/9/1945",
+        "image": "null"
+      },
+      {
+        "id": 100,
+        "question": "Ai là đồng minh trong Thế chiến thứ nhất?",
+        "explanation": "Pháp, Anh, Nga và Hoa Kỳ (Mỹ).",
+        "image": "null"
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ]
 }

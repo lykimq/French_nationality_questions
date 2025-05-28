@@ -7,7 +7,6 @@ import { getImageSource as loadImageSource } from '../utils/imageUtils';
 type QuestionCardProps = {
     id: number;
     question: string | MultiLangText;
-    answer?: string | MultiLangText;
     explanation: string | MultiLangText;
     language?: 'fr' | 'vi';
     image?: string | null;
@@ -17,7 +16,6 @@ type QuestionCardProps = {
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
     question,
-    answer,
     explanation,
     language = 'fr',
     image,
@@ -35,14 +33,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             return question;
         }
         return question[lang];
-    };
-
-    const getAnswerText = (lang: 'fr' | 'vi') => {
-        if (!answer) return '';
-        if (typeof answer === 'string') {
-            return answer;
-        }
-        return answer[lang];
     };
 
     const getExplanationText = (lang: 'fr' | 'vi') => {
@@ -176,20 +166,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                 <Text style={styles.imageFallbackText}>
                                     {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
                                 </Text>
-                            </View>
-                        )}
-
-                        {answer && (
-                            <View style={styles.section}>
-                                <Text style={styles.sectionTitle}>Réponse:</Text>
-                                <Text style={styles.sectionContent}>{getAnswerText('fr')}</Text>
-
-                                {isMultilingual && showBothLanguages && language === 'vi' && (
-                                    <>
-                                        <Text style={styles.sectionTitle}>Trả lời:</Text>
-                                        <Text style={styles.sectionContent}>{getAnswerText('vi')}</Text>
-                                    </>
-                                )}
                             </View>
                         )}
 

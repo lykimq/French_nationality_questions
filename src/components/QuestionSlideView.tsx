@@ -160,7 +160,6 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                             key={currentQuestion.id}
                             id={currentQuestion.id}
                             question={getLocalizedQuestion(currentQuestion)}
-                            answer={getLocalizedAnswer(currentQuestion)}
                             explanation={currentQuestion.explanation || ''}
                             image={currentQuestion.image}
                             language={language}

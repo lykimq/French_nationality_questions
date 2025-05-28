@@ -7,22 +7,67 @@
     {
       "id": 25,
       "question": "Hãy liệt kê ba thành phố lớn nhất của Pháp",
-      "answer": "Paris, Marseille và Lyon.",
-      "explanation": "",
+      "explanation": "Paris, Marseille và Lyon là ba thành phố lớn nhất của Pháp.",
       "image": null
     },
     {
       "id": 26,
       "question": "Hãy liệt kê ba tỉnh của Pháp",
-      "answer": "Haut-Rhin, Bas-Rhin, Haute-Garonne.",
-      "explanation": "",
+      "explanation": "Haut-Rhin, Bas-Rhin, Haute-Garonne là ba tỉnh của Pháp.",
       "image": null
     },
     {
       "id": 27,
       "question": "Hãy liệt kê ba tỉnh hải ngoại của Pháp",
-      "answer": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion.",
-      "explanation": "",
+      "explanation": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion là ba tỉnh hải ngoại của Pháp.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "Hãy liệt kê ba vùng của Pháp: ",
+      "explanation": "Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d’Azur, Occitanie v.v…)",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "Hãy liệt kê ba loại cơ quan địa phương của Pháp.Có ba loại cơ quan địa phương tại Pháp: ",
+      "explanation": "1. Các đô thị: Có 36.000 đô thị ở Pháp. 2. Các vùng: Pháp có 12 vùng ở đại lục cộng với Corse (không phải là một vùng mà có các chức năng của một vùng) cùng với 5 vùng hải ngoại. 3. Các tỉnh: Pháp có 101 tỉnh, trong đó có 96 tỉnh ở đại lục và 5 tỉnh ở hải ngoại.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "Kể tên những con sông ở Pháp mà bạn biết",
+      "explanation": "Sông Loire, sông Rhône, sông Seine, sông Rhine, sông Garonne, sông Marne, sông Dordogne…",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "Kể tên những dãy núi ở Pháp mà bạn biết",
+      "explanation": "Massif Central, dãy Alps, Pyrenees, Vosges, Jura.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "Ở Pháp điểm địa lý cao nhất là gì?",
+      "explanation": "Đây là Mont Blanc [với độ cao 4809m, nó nằm giữa Pháp và Ý]",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "Những nước nào giáp biên giới Pháp?",
+      "explanation": "Tây Ban Nha, Ý, Thụy Sĩ, Đức, Luxembourg Andorra, Monaco và Bỉ.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "Chúng ta đang ở vùng nào?",
+      "explanation": "Xin vui lòng chỉ tên khu vực của bạn.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "Chúng ta đang ở bang nào? [đơn vị hành chính cấp dưới, tương đương với tỉnh]",
+      "explanation": "Vui lòng chỉ tên bang của bạn.",
       "image": null
     }
   ]

@@ -7,22 +7,67 @@
     {
       "id": 25,
       "question": "Citez les trois plus grandes villes Françaises",
-      "answer": "Paris, Marseille et Lyon.",
-      "explanation": "",
+      "explanation": "Paris, Marseille et Lyon sont les trois plus grandes villes de France.",
       "image": null
     },
     {
       "id": 26,
       "question": "Citez trois départements Français",
-      "answer": "Haut-Rhin, Bas-Rhin, Haute-Garonne.",
-      "explanation": "",
+      "explanation": "Haut-Rhin, Bas-Rhin, Haute-Garonne sont les trois départements de France.",
       "image": null
     },
     {
       "id": 27,
       "question": "Citez trois départements d'outre-mer",
-      "answer": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion.",
-      "explanation": "",
+      "explanation": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion sont les cinq départements d'outre-mer de France.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "question": "Citez trois régions Françaises",
+      "explanation": "Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d’Azur, Occitanie v.v…",
+      "image": null
+    },
+    {
+      "id": 29,
+      "question": "Enumérez les trois types de collectivités Françaises",
+      "explanation": "Il y a trois types de collectivités en France. 1. Les communes : Il y a 36 000 communes en France. 2. Les régions : La France compte 12 régions en Métropole en plus de la corse (qui n’est pas une région en soit mais qui en a les compétences) ainsi que 5 régions en outre-mer. 3. Les Départements : La France compte 101 département s, 96 département se trouvent en métropole et 5 en Outre-mer.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "question": "Citez des fleuves Français que vous connaissez",
+      "explanation": "La Loire, le Rhône, La Seine, le Rhin, la Garonne, La Marne, La Dordogne…",
+      "image": null
+    },
+    {
+      "id": 31,
+      "question": "Citez des chaines de montagne en France que vous connaissez",
+      "explanation": "Le Massif central, les Alpes, les Pyrénées, les Vosges, le Jura.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "question": "En France quel est le point culminant ?",
+      "explanation": "C’est le Mont-Blanc [avec une altitude de 4809m il se trouve entre la France et l’Italie].",
+      "image": null
+    },
+    {
+      "id": 33,
+      "question": "Quels sont les pays frontaliers ou limitrophes avec la France ?",
+      "explanation": "L’Espagne, L’Italie, la Suisse, L’Allemagne, le Luxembourg Andorre, Monaco et la Belgique.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "question": "Dans quelle région sommes-nous ?",
+      "explanation": "Donnez le nom de votre région.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "question": "Dans quel département sommes-nous ?",
+      "explanation": "Donnez le nom de votre département.",
       "image": null
     }
   ]
