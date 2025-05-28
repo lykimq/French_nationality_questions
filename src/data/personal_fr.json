@@ -27,7 +27,131 @@
       "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
       "explanation": "Assurez-vous de répondre correctement à cette question en répondant que oui, n'oubliez pas que votre conjoint ou partenaire doit vivre avec vous et en France ! Si ce n'est pas le cas, il y a des chances que votre demande de naturalisation Française vous soit refusée car on vous reprochera d’avoir des attaches à l’étranger.",
       "image": null
+    },
+    {
+      "id": 5,
+      "question": "Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?",
+      "explanation": "Parlez des activités sportives et culturelles, de vos sorties le weekend, de vos vacances etc…",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "Avez-vous des enfants ? Comptez-vous en avoir prochainement ?",
+      "explanation": "Répondez selon votre situation, veillez juste à préciser que les enfants seront en France.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "Qui s’occupe des enfants ? Qui s’occupe des tâches ménagères ?",
+      "explanation": "L’agent cherchera à voir que les tâches sont réparties de manière égale. Ne dites pas « j’aide ma femme » mais plutôt « nous participons ensemble et à part égale aux tâches ménagères et à la garde des enfants ».",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "Avez-vous vos liens personnels et familiaux en France ?",
+      "explanation": "Citez vos liens familiaux (cousins, grands-parents, parents, amis). L'objectif est de montrer que vous êtes bien intégré(e) et que vous avez des attaches solides en France.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Quelle langue utilisez-vous au travail et à la maison ?",
+      "explanation": "J’utilise la langue Française pour tous mes échanges au travail et dans la vie de tous les jours.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Faites-vous partie d’une association ? Si oui, laquelle et depuis quand ?",
+      "explanation": "Ce n’est pas obligatoire, mais cela représente un point positif. Attention : faire des dons ne signifie pas que vous êtes membre de l’association.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "DOu se trouve le siège de cette association ?",
+      "explanation": "Répondez le plus honnêtement possible car il y a eu une enquête sur vous.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Pratiquez vous une religion ?",
+      "explanation": "Quelles qu’elles soient citez la ou les religions que vous pratiquez.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "Quels sont vos loisirs ?",
+      "explanation": "Citez tous vos loisirs de tous les jours, la marche, la lecture, le foot, la natation, la musique, le cinéma etc…",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "Pourquoi êtes-vous venu en France la toute première fois ?",
+      "explanation": "Pour vos études, pour le travail, pour rejoindre votre famille en France, répondez selon votre cas.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Qu’avez-vous en France que vous n’avez pas dans votre pays d’origine ?",
+      "explanation": "Ici aussi répondez selon votre cas en valorisant la France, citez par exemple la démocratie, la liberté, la culture, la science etc…",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Ou avez-vous appris le Français ?",
+      "explanation": "À l’école, dans mon pays d’origine, dans un centre culturel Français, cours particuliers, cours en ligne, voyage linguistique, etc…",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Pendant combien de temps avez-vous étudier le Français ?",
+      "explanation": "Il faudra justifier d’un niveau suffisant de Français (niveau minimum B1) pour réussir votre entretien de naturalisation Française, si vous prenez des cours n’hésitez pas à le mentionner tout en mettant l’accent sur le fait que vous prenez des cours pour atteindre rapidement le niveau B2.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "Utilisez vous la langue Française au travail ?",
+      "explanation": "Oui. Si vous n’utilisez pas le Français au travail il est important d’expliquer pourquoi et de parler d’un projet en particulier durant lequel vous avez utilisé le Français.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Parlez-vous d’autres langues ? Si oui, lesquelles ?",
+      "explanation": "Citez votre langue maternelle par exemple, ainsi que toutes les autres langues étrangères que vous connaissez en plus du Français.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Quelle langue vous parait la plus facile ? Pourquoi ?",
+      "explanation": "Le Français, car c’est la langue que j’utilise dans la vie de tous les jours.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "Envoyez vous de l’argent dans votre pays d’origine ? Si oui à qui ?",
+      "explanation": "Il est préférable de ne pas envoyer de l’argent dans votre pays d’origine mais c’est le cas ce n’est pas un problème si c’est juste occasionnel. De préférence aussi il faut que ce soit envoyé à vos parents ou grands-parents plutôt qu’à votre femme /mari et vos enfants [qui eux doivent être avec vous en France].",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "Avez-vous de la famille proche ou lointaine dans votre pays d’origine ? Si oui comptez-vous les faire venir en France ?",
+      "explanation": "Attention ceci est une question piège, vos oncles, cousins grands-parents etc… n’ont pas le droit de s’installer en France juste parce que vous êtes Français, donc si vous avez encore de la famille dans votre pays d’origine répondez par “Oui mais je ne compte pas les faire venir en France”. L’agent ne doit surtout pas comprendre que vous voulez acquérir la nationalité Française uniquement pour le passeport Français ou afin de gagner de l’argent pour vivre confortablement dans votre pays d’origine. Vous pouvez garder vos liens avec votre pays d’origine mais il ne faut pas que ces derniers soient plus importants que vos liens qui vous rattachent à la France.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "Ou passez vous vos vacances ?",
+      "explanation": "Basez vous surtout sur les villes Française que vous avez visitées, on citera par exemple Nice, Paris, Lille, Brest, Marseille etc…",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "Quelles sont les nationalités des personnes de votre entourage ?",
+      "explanation": "Vous devez montrer que la majorité des personnes qui vous entourent sont Français et que vous n’êtes pas fan du communautarisme. La deuxième partie ou deuxième axe concerne la France, son histoire sa géographie et sa culture.",
+      "image": null
     }
+
+
+
+
 
   ]
 }

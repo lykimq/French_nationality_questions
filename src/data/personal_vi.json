@@ -27,6 +27,128 @@
       "question": "Bạn có sống cùng ai không?",
       "explanation": "Đảm bảo bạn trả lời câu hỏi này một cách chính xác bằng cách nói “có”, đừng quên rằng bạn đời hoặc người sống chung phải sống cùng bạn và đang ở Pháp! Nếu không, có khả năng yêu cầu xin quốc tịch Pháp của bạn sẽ bị từ chối.",
       "image": null
+    },
+    {
+      "id": 5,
+      "question": "Bạn thực hiện những hoạt động gì với người sống cùng/bạn đời?",
+      "explanation": "Nói về các hoạt động thể thao và văn hóa, các hoạt động cuối tuần của bạn, kỳ nghỉ của bạn v.v…",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "Bạn có con không? Bạn có dự định có con trong tương lai gần không?",
+      "explanation": "Trả lời theo tình hình của bạn, chỉ cần chú ý rằng các em bé sẽ sống ở Pháp.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "Ai chăm sóc con? Ai làm công việc nhà?",
+      "explanation": "Không chỉ đơn giản là giúp đỡ; người phỏng vấn muốn biết công việc được phân chia công bằng. Vì vậy, bạn nên nói 'chúng tôi cùng chia sẻ và có trách nhiệm ngang nhau trong việc chăm sóc con và việc nhà'.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "Bạn có các mối quan hệ cá nhân và gia đình ở Pháp không?",
+      "explanation": "Hãy liệt kê tất cả các mối quan hệ gia đình và bạn bè của bạn ở Pháp. Điều này giúp chứng minh bạn đã hoà nhập và có các mối quan hệ bền chặt tại Pháp.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Bạn sử dụng ngôn ngữ nào trong công việc và tại nhà?",
+      "explanation": "Tôi sử dụng ngôn ngữ Pháp trong tất cả các trao đổi của mình trong công việc và trong cuộc sống hàng ngày.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Bạn có là thành viên của một tổ chức nào không? Nếu có, là tổ chức nào và từ bao giờ?",
+      "explanation": "Bạn không bắt buộc phải là thành viên của một tổ chức, nhưng nếu bạn đã hoặc đang tham gia, điều này sẽ là một điểm cộng trong buổi phỏng vấn nhập quốc tịch Pháp! Lưu ý: quyên góp không đồng nghĩa với là thành viên.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "Trụ sở của tổ chức này ở đâu?",
+      "explanation": "Trả lời một cách trung thực nhất có thể vì đã có một cuộc điều tra về bạn..",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Bạn có tôn giáo không?",
+      "explanation": "Dù là bất kỳ tôn giáo nào, hãy nêu ra tôn giáo bạn đang theo. Nếu bạn không có tôn giáo, hãy nói rằng bạn không có tôn giáo.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "Sở thích của bạn là gì?",
+      "explanation": "Nêu ra tất cả các sở thích hàng ngày của bạn, đi bộ, đọc sách, bóng đá, bơi, âm nhạc, điện ảnh v.v…",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "Tại sao bạn đến Pháp lần đầu tiên?",
+      "explanation": "Để học, để làm việc, để tham gia gia đình bạn ở Pháp, hãy trả lời theo tình huống của bạn.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Có điều gì ở Pháp mà bạn thấy đặc biệt hoặc không có so với quốc gia gốc của mình không?",
+      "explanation": "Ở đây cũng trả lời theo tình huống của bạn bằng cách đánh giá cao Pháp, nêu ví dụ như dân chủ, tự do, văn hóa, khoa học v.v…",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Bạn đã học tiếng Pháp ở đâu?",
+      "explanation": "Ở trường, ở quốc gia gốc của bạn, ở trung tâm văn hóa Pháp, học riêng, học trực tuyến, du lịch học ngôn ngữ v.v…)",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Bạn đã học tiếng Pháp trong bao lâu?",
+      "explanation": "2 năm, 5 năm, 10 năm v.v… Bạn sẽ phải chứng minh một mức độ đủ tiếng Pháp (tối thiểu cấp độ B1) để vượt qua cuộc phỏng vấn nhận quốc tịch Pháp, nếu bạn đang học, đừng ngần ngại đề cập đến điều đó nhưng tập trung vào việc bạn đang học để nhanh chóng đạt được cấp độ B2.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "Bạn sử dụng tiếng Pháp trong công việc không?",
+      "explanation": "Có. Nếu bạn không sử dụng tiếng Pháp trong công việc, quan trọng là phải giải thích tại sao và nói về một dự án cụ thể mà trong đó bạn đã sử dụng tiếng Pháp",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Bạn có biết thêm ngôn ngữ nào không? Nếu có, đó là ngôn ngữ gì?",
+      "explanation": "Nêu ra ngôn ngữ mẹ đẻ của bạn ví dụ, cũng như tất cả các ngôn ngữ nước ngoài khác mà bạn biết ngoài tiếng Pháp.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Ngôn ngữ nào bạn cảm thấy dễ sử dụng hơn? Tại sao?",
+      "explanation": "Tiếng Pháp, bởi vì đó là ngôn ngữ mà tôi sử dụng hàng ngày trong cuộc sống.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "Bạn có gửi tiền về quê hương không? Nếu có, gửi cho ai?",
+      "explanation": "Tốt nhất là không gửi tiền về quê hương, nhưng nếu có thì không phải là vấn đề, miễn là đó chỉ là điều đôi khi. Nếu có, thì tốt nhất là gửi cho bố mẹ hoặc ông bà hơn là vợ/chồng và con cái của bạn [những người phải ở cùng bạn tại Pháp]",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "Có gia đình/ họ hàng gần hoặc xa ở quốc gia gốc của bạn không? Nếu có, bạn có dự định đưa họ đến Pháp không?",
+      "explanation": "Lưu ý rằng đây là một câu hỏi rất cẩn trọng, bởi vì các bác, anh chị em họ, ông bà, v.v… không có quyền định cư tại Pháp chỉ vì bạn là người Pháp. Vì vậy, nếu bạn vẫn còn gia đình ở quê hương của mình, hãy trả lời “Có, nhưng tôi không có kế hoạch đưa họ đến Pháp”. Quan trọng là không để nhân viên chính phủ hiểu lầm rằng bạn muốn có quốc tịch Pháp chỉ để có hộ chiếu Pháp hoặc để kiếm tiền sống thoải mái ở quê hương của bạn. Bạn có thể duy trì các mối liên kết với quê hương của mình, nhưng không được để những mối liên kết này quan trọng hơn những mối liên kết kết nối bạn với Pháp.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "Bạn thường đi nghỉ ở đâu?",
+      "explanation": "Chủ yếu dựa trên các thành phố Pháp mà bạn đã thăm, chẳng hạn như Nice, Paris, Lille, Brest, Marseille v.v…",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "Quốc tịch của những người trong mối quan hệ xung quanh của bạn là gì?",
+      "explanation": "Bạn cần chỉ ra rằng hầu hết những người xung quanh bạn là người Pháp và bạn không ủng hộ sự tách biệt cộng đồng.",
+      "image": null
     }
+
+
   ]
 }
