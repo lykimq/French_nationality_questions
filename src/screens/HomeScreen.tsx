@@ -5,7 +5,8 @@ import CategoryCard from '../components/CategoryCard';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
-import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
+import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
+import historyData from '../data/history_subcategories_fr.json';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -19,6 +20,17 @@ const HomeScreen = () => {
         navigation.navigate('CategoryQuestions', { categoryId, language });
     };
 
+    const navigateToHistoryQuestions = () => {
+        navigation.navigate('CategoryBasedQuestions', {
+            categories: historyData.subcategories.map(subcategory => ({
+                id: subcategory.id,
+                title: subcategory.title,
+                questions: subcategory.questions
+            })),
+            title: historyData.title
+        });
+    };
+
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
@@ -26,14 +38,13 @@ const HomeScreen = () => {
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View style={styles.header}>
                     <Text style={styles.title}>
-                        {language === 'fr' ? 'Questions Nationalité Française' : 'Câu hỏi Quốc tịch Pháp'}
+                        {language === 'fr' ? 'Questions de Naturalisation' : 'Câu hỏi Nhập tịch'}
                     </Text>
                     <Text style={styles.subtitle}>
                         {language === 'fr'
-                            ? 'Préparation pour l\'entretien de naturalisation'
-                            : 'Chuẩn bị cho buổi phỏng vấn nhập quốc tịch'}
+                            ? 'Préparez votre entretien de naturalisation'
+                            : 'Chuẩn bị cho cuộc phỏng vấn nhập tịch của bạn'}
                     </Text>
-
                     <View style={styles.languageSelector}>
                         <Text style={styles.languageLabel}>FR</Text>
                         <Switch
@@ -52,8 +63,17 @@ const HomeScreen = () => {
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
-                {categories.map((category) => {
-                    // Safe casting for multilingual categories when Vietnamese is selected
+                <CategoryCard
+                    key="history"
+                    title={historyData.title}
+                    description={historyData.description}
+                    icon={historyData.icon}
+                    count={historyData.subcategories.reduce((total, subcategory) => total + subcategory.questions.length, 0)}
+                    onPress={navigateToHistoryQuestions}
+                    language={language}
+                />
+
+                {categories.map((category: FrenchCategory | MultiLangCategory) => {
                     const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
                     const description_vi = isTranslationLoaded ? (category as MultiLangCategory).description_vi : undefined;
 

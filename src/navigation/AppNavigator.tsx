@@ -7,9 +7,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 import HomeScreen from '../screens/HomeScreen';
 import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
+import CategoryBasedQuestionsScreen from '../screens/CategoryBasedQuestionsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
+import { RootStackParamList } from '../types/types';
 
 // Create navigators
 const Stack = createNativeStackNavigator();
@@ -30,6 +32,7 @@ const HomeStack = () => (
     >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="CategoryQuestions" component={CategoryQuestionsScreen} />
+        <Stack.Screen name="CategoryBasedQuestions" component={CategoryBasedQuestionsScreen} />
     </Stack.Navigator>
 );
 

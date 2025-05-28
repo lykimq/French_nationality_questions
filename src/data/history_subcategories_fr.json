@@ -1,0 +1,454 @@
+{
+    "id": "history",
+    "title": "Histoire et Culture",
+    "icon": "book",
+    "description": "Questions sur l'histoire et la culture française",
+    "subcategories": [
+        {
+            "id": "local_gov",
+            "title": "Administration Locale",
+            "icon": "business",
+            "description": "Questions sur l'administration locale et la vie civique",
+            "questions": [
+                {
+                    "id": 36,
+                    "question": "Qui est le/la maire de votre département ?",
+                    "explanation": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche.",
+                    "image": null
+                },
+                {
+                    "id": 59,
+                    "question": "Qu'est-ce que l'hôtel de ville ?",
+                    "explanation": "C'est la mairie principale d'une grande ville ou d'une ville importante.",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "monarchy",
+            "title": "Monarchie & Royauté",
+            "icon": "crown",
+            "description": "Questions sur les rois et reines de France",
+            "questions": [
+                {
+                    "id": 37,
+                    "question": "Citez trois rois de France",
+                    "explanation": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+                    "image": null
+                },
+                {
+                    "id": 38,
+                    "question": "Citez des Reines de France",
+                    "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+                    "image": "../assets/Marie_Antoinette_Adult.jpg"
+                },
+                {
+                    "id": 39,
+                    "question": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
+                    "explanation": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+                    "image": null
+                },
+                {
+                    "id": 40,
+                    "question": "Qui été le Roi de France durant la révolution Française ?",
+                    "explanation": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
+                    "image": null
+                },
+                {
+                    "id": 85,
+                    "question": "Qui a été à l'origine du château de Versailles ?",
+                    "explanation": "C'est Louis XIV (Louis 14).",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "revolution",
+            "title": "Révolution Française",
+            "icon": "flag",
+            "description": "La période révolutionnaire et ses événements majeurs",
+            "questions": [
+                {
+                    "id": 41,
+                    "question": "À quelle date précise a eu lieu la révolution Française ?",
+                    "explanation": "La révolution Française a eu lieu le 05 Mai 1789 avec l'ouverture des états généraux et s'est terminée le 09 Novembre 1799 avec le coup d'état du 18 brumaire de Napoléon Bonaparte.",
+                    "image": null
+                },
+                {
+                    "id": 42,
+                    "question": "Quel événement de la Révolution vous a-t-il le plus marqué ?",
+                    "explanation": "Parlez de la révolution Française, citez par exemple un évènement important de la révolution qui s'est produit le 14 Juillet 1789 et qui a marqué la prise de la prison de la Bastille, un événement inaugural du début de la Révolution. Elle a eu lieu suite à une crise agricole qui a donné lieu à une grande crise économique et une inflation importante qui se confrontait à des décisions de hausse des impôts décidées par le roi de l'époque Louis XVI.",
+                    "image": null
+                },
+                {
+                    "id": 44,
+                    "question": "Quel été le rôle de la Bastille avant sa démolition ?",
+                    "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
+                    "image": null
+                },
+                {
+                    "id": 45,
+                    "question": "Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?",
+                    "explanation": "Elle a été adoptée le 26 Aout 1789. (c'est l'une des questions entretien de naturalisation Française les plus fréquentes), téléchargez ici la charte des droits de l'homme et du citoyen au format PDF pour bien préparer votre entretien de naturalisation Française.",
+                    "image": null
+                },
+                {
+                    "id": 46,
+                    "question": "Qui a instauré le code civil en France ?",
+                    "explanation": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "wars",
+            "title": "Guerres & Résistance",
+            "icon": "shield",
+            "description": "Les guerres mondiales et la résistance française",
+            "questions": [
+                {
+                    "id": 47,
+                    "question": "Quelles sont les dates des deux dernières guerres mondiales ?",
+                    "explanation": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18). La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
+                    "image": null
+                },
+                {
+                    "id": 48,
+                    "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
+                    "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+                    "image": null
+                },
+                {
+                    "id": 49,
+                    "question": "Qui est Charles de Gaulle ?",
+                    "explanation": "Le Général De Gaulle est un miliaire, un résistant et un homme politique Français, il est le fondateur de la 5éme république et l'un des principaux architectes de la résistance Française et a été président de la république Française sous la 5éme république en 1959 et 1969.",
+                    "image": null
+                },
+                {
+                    "id": 95,
+                    "question": "Qu'est-ce que la guerre de 100 ans ?",
+                    "explanation": "C'est une guerre résultant d'un conflit entre les rois de France et les rois d'Angleterre durant le Moyen-Age. Ce conflit d'un siècle a en réalité duré 116 ans plus exactement !",
+                    "image": null
+                },
+                {
+                    "id": 96,
+                    "question": "Connaissez-vous la bataille de Verdun ?",
+                    "explanation": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
+                    "image": null
+                },
+                {
+                    "id": 97,
+                    "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
+                    "explanation": "On les appelés les Poilus.",
+                    "image": null
+                },
+                {
+                    "id": 98,
+                    "question": "Quand a eu lieu la première guerre mondiale ?",
+                    "explanation": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 novembre 1918",
+                    "image": null
+                },
+                {
+                    "id": 99,
+                    "question": "Quand a eu lieu la seconde guerre mondiale ?",
+                    "explanation": "La seconde guerre mondiale a eu lieu du 1er septembre 1939 au 02 septembre 1945",
+                    "image": null
+                },
+                {
+                    "id": 100,
+                    "question": "Qui sont les alliés durant la première guerre mondiale ?",
+                    "explanation": "La France, l'Angleterre, la Russie et les USA (États-Unis d'Amérique).",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "republic",
+            "title": "République & Institutions",
+            "icon": "business",
+            "description": "La République française et ses institutions",
+            "questions": [
+                {
+                    "id": 51,
+                    "question": "Quand est-ce qu'a été instituée la 5éme république ?",
+                    "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+                    "image": null
+                },
+                {
+                    "id": 52,
+                    "question": "Quel a été le fait marquant de la 5éme république ?",
+                    "explanation": "Elle a marqué définitivement la séparation entre le pouvoir exécutif, législatif et judiciaire.",
+                    "image": null
+                },
+                {
+                    "id": 53,
+                    "question": "Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?",
+                    "explanation": "Elle a eu lieu le 09 Décembre 1905.",
+                    "image": null
+                },
+                {
+                    "id": 72,
+                    "question": "Avons-nous le droit en France de porter des signes religieux dans l'espace public ?",
+                    "explanation": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
+                    "image": null
+                },
+                {
+                    "id": 73,
+                    "question": "Qu'est-ce que la loi de 2004 ?",
+                    "explanation": "La loi de 2004 et plus précisément l'article L141-5-1 stipule que dans les écoles, les collèges et les lycées publics, le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse est interdit.",
+                    "image": null
+                },
+                {
+                    "id": 79,
+                    "question": "En quelle année a été aboli l'esclavage en France ?",
+                    "explanation": "En France l'esclavage a été aboli le 27 Avril 1848.",
+                    "image": null
+                },
+                {
+                    "id": 80,
+                    "question": "L'école est-elle obligatoire en France ?",
+                    "explanation": "L'instruction est gratuite et obligatoire pour tous les enfants, français et étrangers, à partir de l'âge de 3 ans et jusqu'à l'âge de 16 ans révolus (l'âge minimum a été abaissée de 6 ans à 3 ans depuis 2019).",
+                    "image": null
+                },
+                {
+                    "id": 81,
+                    "question": "Depuis quand l'école est-elle obligatoire en France ?",
+                    "explanation": "L'instruction est obligatoire depuis le 28 mars 1882.",
+                    "image": null
+                },
+                {
+                    "id": 82,
+                    "question": "Qui a rendu l'école obligatoire en France ?",
+                    "explanation": "C'est l'ancien maire de Paris Jules Ferry.",
+                    "image": null
+                },
+                {
+                    "id": 83,
+                    "question": "Les femmes ont elles e droit de vote en France ?",
+                    "explanation": "Oui",
+                    "image": null
+                },
+                {
+                    "id": 84,
+                    "question": "Depuis quand les femmes ont elles le droit de vote en France ?",
+                    "explanation": "Depuis le 21 avril 1944.",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "culture",
+            "title": "Culture & Patrimoine",
+            "icon": "museum",
+            "description": "Monuments historiques et culture française",
+            "questions": [
+                {
+                    "id": 50,
+                    "question": "Citez des monuments historiques Français que vous connaissez ?",
+                    "explanation": "La tour Eiffel. L'arc de triomphe. Le château de Versailles. Le château de Vincennes. Le Louvre. Le château de la Loire. Le château de Chambord. Le pont du Gard etc…",
+                    "image": null
+                },
+                {
+                    "id": 58,
+                    "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
+                    "explanation": "Elles ont été bâties au moyen-âge.",
+                    "image": null
+                },
+                {
+                    "id": 60,
+                    "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
+                    "explanation": "Oui. Citez les plats locaux des endroits que vous avez visités",
+                    "image": null
+                },
+                {
+                    "id": 61,
+                    "question": "Quels sont les plats typiques Français que vous connaissez ?",
+                    "explanation": "La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L'aligot etc…",
+                    "image": null
+                },
+                {
+                    "id": 78,
+                    "question": "Citez des plats de votre région/Ville/Département",
+                    "explanation": "Ici vous devez montrer lors de votre entretien de naturalisation Française que vous êtes intégré et que vous connaissez à minima un ou deux plats typiques de votre région/ville/département, vous devrez donc en fonction des questions adapter vos réponses.",
+                    "image": null
+                },
+                {
+                    "id": 86,
+                    "question": "Qui a été à l'origine de l'Arc de triomphe ?",
+                    "explanation": "C'est Napoléon 1er.",
+                    "image": null
+                },
+                {
+                    "id": 87,
+                    "question": "Quel est le monument principal en France ?",
+                    "explanation": "C'est la tour Eiffel à Paris.",
+                    "image": null
+                },
+                {
+                    "id": 88,
+                    "question": "Qui a construit la tour Eiffel ?",
+                    "explanation": "C'est Gustave Eiffel.",
+                    "image": null
+                },
+                {
+                    "id": 89,
+                    "question": "Quand la tour Eiffel a été construite et à quel évènement ?",
+                    "explanation": "En 1889 lors de l'exposition universelle de Paris.",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "arts",
+            "title": "Arts & Littérature",
+            "icon": "brush",
+            "description": "Artistes, écrivains et œuvres célèbres",
+            "questions": [
+                {
+                    "id": 62,
+                    "question": "Citez des personnages littéraires Français célèbres",
+                    "explanation": "Thénardier, jean valjean (Les misérables), Rémy (Sans famille), le petit prince,…",
+                    "image": null
+                },
+                {
+                    "id": 63,
+                    "question": "Citez des peintres Français célèbres",
+                    "explanation": "Cézanne, Delacroix, Monet etc…",
+                    "image": null
+                },
+                {
+                    "id": 65,
+                    "question": "Citez des artistes Français connus",
+                    "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+                    "image": null
+                },
+                {
+                    "id": 66,
+                    "question": "Citez des écrivains Français Célèbres",
+                    "explanation": "Beaumarchais, Molière, Victor Hugo etc…",
+                    "image": null
+                },
+                {
+                    "id": 67,
+                    "question": "Citez des œuvres littéraires célèbres",
+                    "explanation": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+                    "image": null
+                },
+                {
+                    "id": 68,
+                    "question": "Qui a écrit les trois mousquetaires ?",
+                    "explanation": "Alexandre Dumas et Auguste Maquet.",
+                    "image": null
+                },
+                {
+                    "id": 69,
+                    "question": "Qui était Voltaire ?",
+                    "explanation": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+                    "image": null
+                },
+                {
+                    "id": 70,
+                    "question": "À Quel mouvement voltaire appartient-il ?",
+                    "explanation": "Il appartenait au mouvement de la philosophie des lumières et il en est l'un des représentants les plus connus.",
+                    "image": null
+                },
+                {
+                    "id": 75,
+                    "question": "Citez des philosophes connus des lumières ?",
+                    "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+                    "image": null
+                },
+                {
+                    "id": 76,
+                    "question": "Qu'est-ce que la philosophie des lumières ?",
+                    "explanation": "C'est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du xviie siècle avec plusieurs philosophes comme voltaire, rousseau etc… et qui par leur engagement contre les oppressions religieuses et politiques, se voyaient comme une élite avancée œuvrant pour un progrès du monde. Combattant l'irrationnel, l'arbitraire, l'obscurantisme et la « superstition » des siècles passés, ils ont procédé au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. L'influence de leurs écrits a été déterminante dans les grands événements de la fin du xviiie siècle que sont la Déclaration d'indépendance des États-Unis et la Révolution française.",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "celebrities",
+            "title": "Personnalités & Médias",
+            "icon": "people",
+            "description": "Personnalités françaises célèbres et médias",
+            "questions": [
+                {
+                    "id": 74,
+                    "question": "Connaissez-vous Brigitte Bardot ?",
+                    "explanation": "Brigitte Bardot est une actrice de cinéma, chanteuse et militante pour la cause animale. Elle a plusieurs œuvres artistiques et culturelles à son actif dont les plus connus sont \"Moi je joue\" et \"Harley Davidson\".",
+                    "image": null
+                },
+                {
+                    "id": 90,
+                    "question": "Citez des animateurs de télévision Français que vous connaissez ?",
+                    "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
+                    "image": null
+                },
+                {
+                    "id": 91,
+                    "question": "Citez des chanteurs Français connus ?",
+                    "explanation": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
+                    "image": null
+                },
+                {
+                    "id": 92,
+                    "question": "Citez des journalistes Français(e)s connus ?",
+                    "explanation": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
+                    "image": null
+                },
+                {
+                    "id": 93,
+                    "question": "Citez des acteurs/actrices Français(e)s que vous connaissez ?",
+                    "explanation": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "sports",
+            "title": "Sports",
+            "icon": "football",
+            "description": "Sports et événements sportifs français",
+            "questions": [
+                {
+                    "id": 71,
+                    "question": "Quel grand évènement sportif Français connaissez-vous ?",
+                    "explanation": "Vous pouvez citer une épreuve cycliste comme le tour de France. Une épreuve de tennis comme le tournois de Roland Garos. Une compétition de course automobile comme les 24h du Mans. Une course comme Le Marathon de Paris.",
+                    "image": null
+                },
+                {
+                    "id": 77,
+                    "question": "Connaissez-vous des sportifs Français(e)s ?",
+                    "explanation": "Dans le Football : Michel Platini, Zinedine Zidane. Dans le cyclisme : Richard Virenque. Dans le tennis : Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Dans le Judo : Teddy Riner.",
+                    "image": null
+                }
+            ]
+        },
+        {
+            "id": "holidays",
+            "title": "Jours Fériés",
+            "icon": "calendar",
+            "description": "Les jours fériés et leurs significations",
+            "questions": [
+                {
+                    "id": 55,
+                    "question": "Pourquoi le 1er Mai est-il férié ?",
+                    "explanation": "Nous fêtons la fête du Travail.",
+                    "image": null
+                },
+                {
+                    "id": 56,
+                    "question": "Pourquoi le 11 Novembre est-il férié ?",
+                    "explanation": "Le 11 novembre marque la fin de la première guerre mondiale, c'est ce qu'on appelle l'Armistice signée en 1918",
+                    "image": null
+                },
+                {
+                    "id": 57,
+                    "question": "Que fête-on le 14 juillet ?",
+                    "explanation": "C'est la fête nationale en France, le 14 juillet est généralement associé à la prise de la Bastille en 1789, c'est dans les faits le 14 juillet 1790, la fête de la Fédération, qui est officiellement commémoré en France depuis plus d'un siècle.",
+                    "image": null
+                }
+            ]
+        }
+    ]
+}
