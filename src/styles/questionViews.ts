@@ -64,6 +64,7 @@ export const slideViewStyles = StyleSheet.create({
     slideContent: {
         flex: 1,
         paddingHorizontal: 20,
+        position: 'relative',
     },
     navigationIndicator: {
         flexDirection: 'row',
@@ -82,5 +83,30 @@ export const slideViewStyles = StyleSheet.create({
         fontSize: 16,
         color: '#666',
         fontWeight: '600',
+    },
+    middleNavigation: {
+        position: 'absolute',
+        top: '50%',
+        left: 0,
+        right: 0,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        zIndex: 1,
+        transform: [{ translateY: -20 }],
+    },
+    middleNavButton: {
+        padding: 10,
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        borderRadius: 25,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+    },
+    middleNavButtonDisabled: {
+        opacity: 0.5,
     },
 });

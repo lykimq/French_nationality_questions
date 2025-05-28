@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Animated, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { PanGestureHandler, State, PanGestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import QuestionCard from './QuestionCard';
 import { slideViewStyles as styles } from '../styles/questionViews';
 import { Question } from '../types/questions';
@@ -15,31 +14,13 @@ interface QuestionSlideViewProps {
 
 const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, language }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const translateX = new Animated.Value(0);
 
-    const handleGestureEvent = Animated.event(
-        [{ nativeEvent: { translationX: translateX } }],
-        { useNativeDriver: true }
-    );
+    const navigateToPrevious = () => {
+        setCurrentIndex(Math.max(0, currentIndex - 1));
+    };
 
-    const handleStateChange = (event: PanGestureHandlerGestureEvent) => {
-        if (event.nativeEvent.state === State.END) {
-            const { translationX, velocityX } = event.nativeEvent;
-
-            if (Math.abs(translationX) > SCREEN_WIDTH * 0.4 || Math.abs(velocityX) > 500) {
-                const direction = translationX > 0 ? -1 : 1;
-                const nextIndex = Math.max(0, Math.min(questions.length - 1, currentIndex + direction));
-
-                if (nextIndex !== currentIndex) {
-                    setCurrentIndex(nextIndex);
-                }
-            }
-
-            Animated.spring(translateX, {
-                toValue: 0,
-                useNativeDriver: true,
-            }).start();
-        }
+    const navigateToNext = () => {
+        setCurrentIndex(Math.min(questions.length - 1, currentIndex + 1));
     };
 
     const getLocalizedQuestion = (question: Question) => {
@@ -63,7 +44,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
             <View style={styles.navigationIndicator}>
                 <TouchableOpacity
                     style={styles.navButton}
-                    onPress={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
+                    onPress={navigateToPrevious}
                     disabled={currentIndex === 0}
                 >
                     <Ionicons
@@ -77,7 +58,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                 </Text>
                 <TouchableOpacity
                     style={styles.navButton}
-                    onPress={() => setCurrentIndex(Math.min(questions.length - 1, currentIndex + 1))}
+                    onPress={navigateToNext}
                     disabled={currentIndex === questions.length - 1}
                 >
                     <Ionicons
@@ -87,29 +68,45 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                     />
                 </TouchableOpacity>
             </View>
-            <PanGestureHandler
-                onGestureEvent={handleGestureEvent}
-                onHandlerStateChange={handleStateChange}
-            >
-                <Animated.View
-                    style={[
-                        styles.slideContent,
-                        {
-                            transform: [{ translateX }]
-                        }
-                    ]}
-                >
-                    <QuestionCard
-                        key={currentQuestion.id}
-                        id={currentQuestion.id}
-                        question={getLocalizedQuestion(currentQuestion)}
-                        answer={getLocalizedAnswer(currentQuestion)}
-                        explanation={currentQuestion.explanation || ''}
-                        image={currentQuestion.image}
-                        language={language}
-                    />
-                </Animated.View>
-            </PanGestureHandler>
+
+            <View style={styles.slideContent}>
+                <View style={styles.middleNavigation}>
+                    <TouchableOpacity
+                        style={[styles.middleNavButton, currentIndex === 0 && styles.middleNavButtonDisabled]}
+                        onPress={navigateToPrevious}
+                        disabled={currentIndex === 0}
+                    >
+                        <Ionicons
+                            name="chevron-back-circle"
+                            size={40}
+                            color={currentIndex === 0 ? '#ccc' : '#3F51B5'}
+                        />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={[styles.middleNavButton, currentIndex === questions.length - 1 && styles.middleNavButtonDisabled]}
+                        onPress={navigateToNext}
+                        disabled={currentIndex === questions.length - 1}
+                    >
+                        <Ionicons
+                            name="chevron-forward-circle"
+                            size={40}
+                            color={currentIndex === questions.length - 1 ? '#ccc' : '#3F51B5'}
+                        />
+                    </TouchableOpacity>
+                </View>
+
+                <QuestionCard
+                    key={currentQuestion.id}
+                    id={currentQuestion.id}
+                    question={getLocalizedQuestion(currentQuestion)}
+                    answer={getLocalizedAnswer(currentQuestion)}
+                    explanation={currentQuestion.explanation || ''}
+                    image={currentQuestion.image}
+                    language={language}
+                    alwaysExpanded={true}
+                />
+            </View>
         </View>
     );
 };

@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ScrollView, Image, ActivityIndicator, Dimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
 import { getImageSource as loadImageSource } from '../utils/imageUtils';
+
+const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
 type QuestionCardProps = {
     id: number;
     question: string | MultiLangText;
     answer?: string | MultiLangText;
     explanation: string | MultiLangText;
-    language?: 'fr' | 'vi';  // Added language prop to control which language to display
-    image?: string | null;  // Added image prop
+    language?: 'fr' | 'vi';
+    image?: string | null;
+    alwaysExpanded?: boolean;
 };
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
@@ -18,52 +21,46 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     question,
     answer,
     explanation,
-    language = 'fr',  // Default to French if not specified
+    language = 'fr',
     image,
+    alwaysExpanded = false,
 }) => {
-    const [expanded, setExpanded] = useState(false);
-    const [showBothLanguages, setShowBothLanguages] = useState(true);  // Toggle to show both languages
+    const [expanded, setExpanded] = useState(alwaysExpanded);
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
 
-    // Check if we have multilingual text
-    const isMultilingual = typeof question !== 'string';
+    const isMultilingual = typeof question === 'object' || typeof answer === 'object' || typeof explanation === 'object';
 
     const getQuestionText = (lang: 'fr' | 'vi') => {
-        if (typeof question === 'string') {
-            return question;
+        if (typeof question === 'object') {
+            return lang === 'fr' ? question.fr : question.vi;
         }
-        return question[lang];
+        return question;
     };
 
     const getAnswerText = (lang: 'fr' | 'vi') => {
         if (!answer) return '';
-        if (typeof answer === 'string') {
-            return answer;
+        if (typeof answer === 'object') {
+            return lang === 'fr' ? answer.fr : answer.vi;
         }
-        return answer[lang];
+        return answer;
     };
 
     const getExplanationText = (lang: 'fr' | 'vi') => {
-        if (typeof explanation === 'string') {
-            return explanation;
+        if (typeof explanation === 'object') {
+            return lang === 'fr' ? explanation.fr : explanation.vi;
         }
-        return explanation[lang];
+        return explanation;
     };
 
-    // Format explanation text to highlight key points
     const formatExplanation = (text: string) => {
         if (!text) return '';
 
-        // Break long text into paragraphs
         let formatted = text
-            // Split longer paragraphs at natural points (after sentences)
             .replace(/\. /g, '. \n\n')
             .replace(/\! /g, '! \n\n')
             .replace(/\? /g, '? \n\n')
-            // Highlight important information in brackets
             .replace(/\[(.*?)\]/g, '\n→ $1 ←\n')
-            // Clean up excess new lines
             .replace(/\n\n+/g, '\n\n')
             .trim();
 
@@ -71,16 +68,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     };
 
     const toggleExpand = () => {
-        setExpanded(!expanded);
-        // Reset image state when expanding/collapsing
-        if (!expanded && image) {
-            setImageLoading(true);
-            setImageError(false);
+        if (!alwaysExpanded) {
+            setExpanded(!expanded);
         }
-    };
-
-    const toggleLanguage = () => {
-        setShowBothLanguages(!showBothLanguages);
     };
 
     const handleImageError = () => {
@@ -93,8 +83,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         setImageLoading(false);
     };
 
-    // Replace the hardcoded image source function with the utility function
-    // Determine if the image is a local asset or a remote URL
     const getImageSource = () => {
         try {
             const source = image ? loadImageSource(image) : null;
@@ -109,55 +97,71 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         }
     };
 
+    const shouldShowContent = expanded || alwaysExpanded;
+
+    const renderContent = (lang: 'fr' | 'vi', showTitle: boolean = true) => (
+        <View style={styles.contentSection}>
+            {showTitle && (
+                <View style={styles.languageHeader}>
+                    <Text style={styles.languageTitle}>
+                        {lang === 'fr' ? 'Français' : 'Tiếng Việt'}
+                    </Text>
+                </View>
+            )}
+            <Text style={styles.question}>
+                {getQuestionText(lang)}
+            </Text>
+            {answer && (
+                <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>
+                        {lang === 'fr' ? 'Réponse:' : 'Trả lời:'}
+                    </Text>
+                    <Text style={styles.sectionContent}>{getAnswerText(lang)}</Text>
+                </View>
+            )}
+            {getExplanationText(lang) !== "" && (
+                <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>
+                        {lang === 'fr' ? 'Explication:' : 'Giải thích:'}
+                    </Text>
+                    <Text style={[styles.sectionContent, styles.explanationText]}>
+                        {formatExplanation(getExplanationText(lang))}
+                    </Text>
+                </View>
+            )}
+        </View>
+    );
+
     return (
-        <View style={[styles.card, expanded && styles.cardExpanded]}>
-            <Pressable
-                style={({ pressed }) => [
-                    styles.header,
-                    pressed && styles.headerPressed
-                ]}
-                onPress={toggleExpand}
-                android_ripple={{ color: '#E8EAF6' }}
-            >
+        <View style={[styles.card, shouldShowContent && styles.cardExpanded]}>
+            <View style={[styles.header, !alwaysExpanded && styles.clickableHeader]}>
                 <View style={styles.idContainer}>
                     <Text style={styles.id}>{id}</Text>
                 </View>
                 <View style={styles.questionContainer}>
-                    <Text style={styles.question} numberOfLines={expanded ? 0 : 2}>
-                        {getQuestionText('fr')}
+                    <Text style={styles.question} numberOfLines={shouldShowContent ? 0 : 2}>
+                        {getQuestionText(language)}
                     </Text>
-                    {isMultilingual && language === 'vi' && (
-                        <Text style={styles.translation} numberOfLines={expanded ? 0 : 1}>
-                            {getQuestionText('vi')}
-                        </Text>
-                    )}
                 </View>
-                <View style={styles.iconContainer}>
-                    <Ionicons
-                        name={expanded ? 'chevron-up' : 'chevron-down'}
-                        size={24}
-                        color="#3F51B5"
-                    />
-                </View>
-            </Pressable>
+                {!alwaysExpanded && (
+                    <Pressable style={styles.iconContainer} onPress={toggleExpand}>
+                        <Ionicons
+                            name={expanded ? 'chevron-up' : 'chevron-down'}
+                            size={24}
+                            color="#3F51B5"
+                        />
+                    </Pressable>
+                )}
+            </View>
 
-            {expanded && (
-                <TouchableWithoutFeedback onPress={toggleExpand}>
-                    <View style={styles.expandedContent}>
-                        {isMultilingual && (
-                            <Pressable
-                                style={styles.languageToggle}
-                                onPress={(e) => {
-                                    e.stopPropagation();
-                                    toggleLanguage();
-                                }}
-                            >
-                                <Text style={styles.languageToggleText}>
-                                    {showBothLanguages ? "Afficher une seule langue" : "Afficher les deux langues"}
-                                </Text>
-                            </Pressable>
-                        )}
-
+            {shouldShowContent && (
+                <View style={styles.expandedContent}>
+                    <ScrollView
+                        style={styles.contentScrollView}
+                        contentContainerStyle={styles.contentScrollViewContainer}
+                        showsVerticalScrollIndicator={true}
+                        nestedScrollEnabled={true}
+                    >
                         {/* Display image if available */}
                         {image && !imageError && (
                             <View style={styles.imageContainer}>
@@ -186,51 +190,21 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             </View>
                         )}
 
-                        {answer && (
-                            <View style={styles.section}>
-                                <Text style={styles.sectionTitle}>Réponse:</Text>
-                                <Text style={styles.sectionContent}>{getAnswerText('fr')}</Text>
-
-                                {isMultilingual && showBothLanguages && language === 'vi' && (
-                                    <>
-                                        <Text style={styles.sectionTitle}>Trả lời:</Text>
-                                        <Text style={styles.sectionContent}>{getAnswerText('vi')}</Text>
-                                    </>
-                                )}
-                            </View>
+                        {language === 'vi' && isMultilingual ? (
+                            <>
+                                {renderContent('fr', true)}
+                                <View style={styles.languageDivider} />
+                                {renderContent('vi', true)}
+                            </>
+                        ) : (
+                            renderContent('fr', false)
                         )}
-
-                        {getExplanationText('fr') !== "" && (
-                            <ScrollView
-                                style={styles.explanationScrollView}
-                                contentContainerStyle={styles.scrollContent}
-                                showsVerticalScrollIndicator={true}
-                                nestedScrollEnabled={true}
-                                onTouchStart={(e) => e.stopPropagation()}
-                            >
-                                <View style={styles.section}>
-                                    <Text style={styles.sectionTitle}>Explication:</Text>
-                                    <Text style={[styles.sectionContent, styles.explanationText]}>
-                                        {formatExplanation(getExplanationText('fr'))}
-                                    </Text>
-
-                                    {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
-                                        <>
-                                            <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
-                                            <Text style={[styles.sectionContent, styles.explanationText]}>
-                                                {formatExplanation(getExplanationText('vi'))}
-                                            </Text>
-                                        </>
-                                    )}
-                                </View>
-                            </ScrollView>
-                        )}
-                    </View>
-                </TouchableWithoutFeedback>
+                    </ScrollView>
+                </View>
             )}
 
             {/* Add a clickable overlay to the unexpanded card */}
-            {!expanded && (
+            {!alwaysExpanded && !expanded && (
                 <Pressable
                     style={styles.overlay}
                     onPress={toggleExpand}
@@ -252,21 +226,25 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 2,
         overflow: 'hidden',
+        flex: 1,
     },
     cardExpanded: {
         elevation: 3,
         shadowOpacity: 0.15,
         shadowRadius: 3,
         shadowOffset: { width: 0, height: 2 },
+        maxHeight: SCREEN_HEIGHT - 120, // Account for header and padding
     },
     header: {
         flexDirection: 'row',
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#eee',
     },
-    headerPressed: {
-        backgroundColor: '#F5F7FF',
+    clickableHeader: {
+        cursor: 'pointer',
     },
     idContainer: {
         width: 36,
@@ -290,12 +268,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
         color: '#333',
-        marginBottom: 4,
-    },
-    translation: {
-        fontSize: 14,
-        color: '#666',
-        fontStyle: 'italic',
+        marginBottom: 12,
     },
     iconContainer: {
         width: 30,
@@ -303,24 +276,37 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     expandedContent: {
-        overflow: 'hidden',
-        paddingHorizontal: 16,
-        paddingBottom: 16,
+        flex: 1,
+    },
+    contentScrollView: {
+        flex: 1,
+    },
+    contentScrollViewContainer: {
+        padding: 16,
+    },
+    contentSection: {
+        marginBottom: 16,
+    },
+    languageHeader: {
+        backgroundColor: '#F0F2FF',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderRadius: 4,
+        marginBottom: 12,
+    },
+    languageTitle: {
+        color: '#3F51B5',
+        fontWeight: '600',
+        fontSize: 14,
     },
     section: {
-        marginBottom: 12,
+        marginBottom: 16,
     },
     sectionTitle: {
         fontSize: 15,
         fontWeight: '600',
         color: '#3F51B5',
         marginBottom: 4,
-    },
-    secondLanguageTitle: {
-        marginTop: 12,
-        paddingTop: 12,
-        borderTopWidth: 1,
-        borderTopColor: '#E0E0FF',
     },
     sectionContent: {
         fontSize: 14,
@@ -333,25 +319,10 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         marginVertical: 4,
     },
-    explanationScrollView: {
-        borderWidth: 1,
-        borderColor: '#E0E0FF',
-        borderRadius: 8,
-        marginBottom: 8,
-    },
-    scrollContent: {
-        padding: 10,
-    },
-    languageToggle: {
-        padding: 8,
-        marginBottom: 8,
-        backgroundColor: '#F0F2FF',
-        borderRadius: 4,
-        alignItems: 'center',
-    },
-    languageToggleText: {
-        color: '#3F51B5',
-        fontWeight: '500',
+    languageDivider: {
+        height: 1,
+        backgroundColor: '#E0E0FF',
+        marginVertical: 16,
     },
     overlay: {
         ...StyleSheet.absoluteFillObject,
