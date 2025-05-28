@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     StyleSheet,
     Text,
@@ -62,10 +62,34 @@ const SettingItem: React.FC<SettingItemProps> = ({
     </TouchableOpacity>
 );
 
+// Add new context for display settings
+export const DisplaySettingsContext = React.createContext({
+    isSlideMode: false,
+    toggleSlideMode: () => { },
+});
+
+export const useDisplaySettings = () => useContext(DisplaySettingsContext);
+
+interface DisplaySettingsProviderProps {
+    children: React.ReactNode;
+}
+
+export const DisplaySettingsProvider: React.FC<DisplaySettingsProviderProps> = ({ children }) => {
+    const [isSlideMode, setIsSlideMode] = useState(false);
+    const toggleSlideMode = () => setIsSlideMode(prev => !prev);
+
+    return (
+        <DisplaySettingsContext.Provider value={{ isSlideMode, toggleSlideMode }}>
+            {children}
+        </DisplaySettingsContext.Provider>
+    );
+};
+
 const SettingsScreen = () => {
     const [showTranslation, setShowTranslation] = useState(true);
     const [darkMode, setDarkMode] = useState(false);
     const { language, toggleLanguage } = useLanguage();
+    const { isSlideMode, toggleSlideMode } = useDisplaySettings();
 
     const shareApp = async () => {
         try {
@@ -122,6 +146,16 @@ const SettingsScreen = () => {
                     <Text style={styles.sectionTitle}>
                         {language === 'fr' ? 'Préférences' : 'Tùy chọn'}
                     </Text>
+                    <SettingItem
+                        title="Mode diaporama pour les questions"
+                        titleVi="Chế độ trình chiếu cho câu hỏi"
+                        icon="swap-horizontal"
+                        iconColor="#3F51B5"
+                        isSwitch
+                        value={isSlideMode}
+                        onValueChange={toggleSlideMode}
+                        language={language}
+                    />
                     <SettingItem
                         title="Afficher les traductions"
                         titleVi="Hiển thị bản dịch"

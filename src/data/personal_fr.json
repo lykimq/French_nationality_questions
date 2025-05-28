@@ -21,6 +21,13 @@
       "question": "Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
       "explanation": "Si vous êtes célibataire et seul la réponse est évidente…. Si vous êtes marié ou pacsé répondez par oui en précisant depuis combien de temps.",
       "image": null
+    },
+    {
+      "id": 4,
+      "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
+      "explanation": "Assurez-vous de répondre correctement à cette question en répondant que oui, n'oubliez pas que votre conjoint ou partenaire doit vivre avec vous et en France ! Si ce n'est pas le cas, il y a des chances que votre demande de naturalisation Française vous soit refusée car on vous reprochera d’avoir des attaches à l’étranger.",
+      "image": null
     }
+
   ]
 }

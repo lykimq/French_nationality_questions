@@ -21,6 +21,12 @@
       "question": "Bạn đã kết hôn chưa? Bạn có bạn trai/bạn gái, chồng/vợ không?",
       "explanation": "Nếu bạn độc thân và không có người phụ thuộc , câu trả lời là rõ ràng… Nếu bạn đã kết hôn hoặc có hợp đồng sống chung (pacsé), hãy trả lời là \"có\" và cho biết đã bao lâu.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Marriage_in_Paris.jpg"
+    },
+    {
+      "id": 4,
+      "question": "Bạn có sống cùng ai không?",
+      "explanation": "Đảm bảo bạn trả lời câu hỏi này một cách chính xác bằng cách nói “có”, đừng quên rằng bạn đời hoặc người sống chung phải sống cùng bạn và đang ở Pháp! Nếu không, có khả năng yêu cầu xin quốc tịch Pháp của bạn sẽ bị từ chối.",
+      "image": null
     }
   ]
 }
