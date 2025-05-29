@@ -132,7 +132,11 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
     };
 
     const getLocalizedTitle = (category: { title: string; title_vi?: string }) => {
-        return language === 'vi' && category.title_vi ? category.title_vi : category.title;
+        if (language === 'fr') {
+            return category.title;
+        } else {
+            return category.title_vi ? `${category.title_vi}\n${category.title}` : category.title;
+        }
     };
 
     return (

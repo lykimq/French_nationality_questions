@@ -41,8 +41,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             </View>
             <View style={styles.content}>
                 <Text style={styles.title}>{displayTitle}</Text>
-                {title_vi && language === 'fr' && (
-                    <Text style={styles.titleTranslation}>{title_vi}</Text>
+                {title_vi && language === 'vi' && (
+                    <Text style={styles.titleTranslation}>{title}</Text>
                 )}
                 <Text style={styles.description} numberOfLines={2}>
                     {displayDescription}
