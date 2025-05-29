@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, View, TouchableOpacity, StatusBar, Switch } from 'react-native';
+import { Text, View, TouchableOpacity, StatusBar, Switch, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
@@ -7,7 +7,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
 import QuestionSlideView from '../components/QuestionSlideView';
-import { commonStyles as styles } from '../styles/questionViews';
 import { Question } from '../types/questions';
 
 type CategoryQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryQuestions'>;
@@ -76,3 +75,49 @@ const CategoryQuestionsScreen = () => {
 };
 
 export default CategoryQuestionsScreen;
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#F5F5F5',
+    },
+    safeArea: {
+        backgroundColor: '#3F51B5',
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingTop: 10,
+        paddingHorizontal: 20,
+        paddingBottom: 15,
+        backgroundColor: '#3F51B5',
+    },
+    backButton: {
+        marginRight: 16,
+    },
+    headerTextContainer: {
+        flex: 1,
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#fff',
+    },
+    count: {
+        fontSize: 14,
+        color: '#E8EAF6',
+        marginTop: 2,
+    },
+    languageSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 10,
+    },
+    languageLabel: {
+        color: '#fff',
+        marginHorizontal: 5,
+        fontWeight: '600',
+        fontSize: 12,
+    },
+});

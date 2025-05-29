@@ -10,7 +10,7 @@ type CategoryCardProps = {
     icon: string;
     count: number;
     onPress: () => void;
-    language?: 'fr' | 'vi';  // Added language prop to control which language to display
+    language?: 'fr' | 'vi';
 };
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
