@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, StatusBar, Switch, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, StatusBar, Switch } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from '../components/CategoryCard';
 import { useNavigation } from '@react-navigation/native';
@@ -19,6 +19,23 @@ import artsData from '../data/subcategories/arts.json';
 import celebritiesData from '../data/subcategories/celebrities.json';
 import sportsData from '../data/subcategories/sports.json';
 import holidaysData from '../data/subcategories/holidays.json';
+
+interface HistoryCategory {
+    id: string;
+    title: string;
+    title_vi: string;
+    icon: string;
+    description: string;
+    description_vi: string;
+    subcategories: Array<{
+        id: string;
+        title: string;
+        title_vi: string;
+        icon: string;
+        description: string;
+        description_vi: string;
+    }>;
+}
 
 type HistorySubcategory = {
     id: string;
@@ -62,20 +79,27 @@ const HomeScreen = () => {
 
     const navigateToHistoryQuestions = () => {
         navigation.navigate('CategoryBasedQuestions', {
-            categories: historyData.subcategories.map(subcategory => {
+            categories: (historyData as HistoryCategory).subcategories.map(subcategory => {
                 const subcategoryData = subcategoryDataMap[subcategory.id];
                 return {
                     id: subcategory.id,
                     title: subcategory.title,
+                    title_vi: subcategory.title_vi,
+                    description: subcategory.description,
+                    description_vi: subcategory.description_vi,
+                    icon: subcategory.icon,
                     questions: (subcategoryData?.questions || []).map(q => ({
                         id: q.id,
-                        question: language === 'fr' ? q.question_fr : q.question_vi,
-                        explanation: language === 'fr' ? q.explanation_fr : q.explanation_vi,
+                        question_fr: q.question_fr,
+                        question_vi: q.question_vi,
+                        explanation_fr: q.explanation_fr || '',
+                        explanation_vi: q.explanation_vi || '',
                         image: q.image
                     }))
                 };
             }),
-            title: historyData.title
+            title: (historyData as HistoryCategory).title,
+            title_vi: (historyData as HistoryCategory).title_vi
         });
     };
 

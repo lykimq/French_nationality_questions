@@ -3,17 +3,27 @@ import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollV
 import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import QuestionCard from './QuestionCard';
-import { Question } from '../types/questions';
+import { MultiLangText } from '../contexts/LanguageContext';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
 
+interface MultilingualQuestion {
+    id: number;
+    question_fr: string;
+    question_vi: string;
+    explanation_fr?: string;
+    explanation_vi?: string;
+    image?: string | null;
+}
+
 interface CategorySlideViewProps {
     categories: Array<{
         id: string;
         title: string;
-        questions: Question[];
+        title_vi?: string;
+        questions: MultilingualQuestion[];
     }>;
     language: 'fr' | 'vi';
 }
@@ -107,11 +117,22 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
         }
     };
 
-    const getLocalizedQuestion = (question: Question) => {
-        if (language === 'vi' && 'question_vi' in question) {
-            return question.question_vi;
-        }
-        return question.question;
+    const getLocalizedQuestion = (question: MultilingualQuestion): MultiLangText => {
+        return {
+            fr: question.question_fr,
+            vi: question.question_vi
+        };
+    };
+
+    const getLocalizedExplanation = (question: MultilingualQuestion): MultiLangText => {
+        return {
+            fr: question.explanation_fr || '',
+            vi: question.explanation_vi || ''
+        };
+    };
+
+    const getLocalizedTitle = (category: { title: string; title_vi?: string }) => {
+        return language === 'vi' && category.title_vi ? category.title_vi : category.title;
     };
 
     return (
@@ -129,7 +150,7 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
                     />
                 </TouchableOpacity>
                 <View style={styles.navigationInfo}>
-                    <Text style={styles.categoryTitle}>{currentCategory?.title}</Text>
+                    <Text style={styles.categoryTitle}>{currentCategory ? getLocalizedTitle(currentCategory) : ''}</Text>
                     <Text style={styles.pageIndicator}>
                         {currentQuestionIndex + 1} / {totalQuestions}
                     </Text>
@@ -173,7 +194,7 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
                                 key={currentQuestion.id}
                                 id={currentQuestion.id}
                                 question={getLocalizedQuestion(currentQuestion)}
-                                explanation={currentQuestion.explanation || ''}
+                                explanation={getLocalizedExplanation(currentQuestion)}
                                 image={currentQuestion.image}
                                 language={language}
                                 alwaysExpanded={true}

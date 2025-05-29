@@ -5,14 +5,21 @@ export type RootStackParamList = {
         categories: Array<{
             id: string;
             title: string;
+            title_vi?: string;
+            description?: string;
+            description_vi?: string;
+            icon?: string;
             questions: Array<{
                 id: number;
-                question: string;
-                explanation?: string;
+                question_fr: string;
+                question_vi: string;
+                explanation_fr?: string;
+                explanation_vi?: string;
                 image?: string | null;
             }>;
         }>;
         title: string;
+        title_vi?: string;
     };
     QuestionDetail: { categoryId: string; questionId: number; language?: 'fr' | 'vi' };
     Search: undefined;

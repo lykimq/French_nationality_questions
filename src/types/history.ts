@@ -1,7 +1,9 @@
 export interface Question {
     id: number;
-    question: string;
-    explanation: string;
+    question_fr: string;
+    question_vi: string;
+    explanation_fr: string;
+    explanation_vi: string;
     image: string | null;
 }
 

@@ -33,9 +33,10 @@ const CategoryBasedQuestionsScreen = () => {
 
     const getCurrentTitle = () => {
         if (selectedCategoryIndex !== null) {
-            return categories[selectedCategoryIndex].title;
+            const category = categories[selectedCategoryIndex];
+            return language === 'vi' && category.title_vi ? category.title_vi : category.title;
         }
-        return title;
+        return language === 'vi' && route.params.title_vi ? route.params.title_vi : route.params.title;
     };
 
     const getCurrentCount = () => {

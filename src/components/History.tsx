@@ -2,8 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 import { historyStyles as styles } from '../styles/historyStyles';
 import HistorySubcategories from './HistorySubcategories';
-import historyDataFr from '../data/history_subcategories_fr.json';
-import historyDataVi from '../data/history_subcategories_vi.json';
+import historyDataFr from '../data/history_categories.json';
+import historyDataVi from '../data/history_categories.json';
 import { Language } from '../types/history';
 
 interface HistoryProps {
@@ -20,7 +20,7 @@ const History: React.FC<HistoryProps> = ({
     return (
         <View style={styles.container}>
             <HistorySubcategories
-                subcategories={historyData.subcategories}
+                subcategories={historyData.categories}
                 language={language}
                 onBack={onBack}
             />

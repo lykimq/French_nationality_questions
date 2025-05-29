@@ -6,12 +6,16 @@ interface CategorySelectionViewProps {
     categories: Array<{
         id: string;
         title: string;
+        title_vi?: string;
         icon?: string;
         description?: string;
+        description_vi?: string;
         questions: Array<{
             id: number;
-            question: string;
-            explanation?: string;
+            question_fr: string;
+            question_vi: string;
+            explanation_fr?: string;
+            explanation_vi?: string;
             image?: string | null;
         }>;
     }>;
@@ -34,7 +38,9 @@ const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
                 <CategoryCard
                     key={category.id}
                     title={category.title}
+                    title_vi={category.title_vi}
                     description={category.description || ''}
+                    description_vi={category.description_vi}
                     icon={category.icon || 'book'}
                     count={category.questions.length}
                     onPress={() => onSelectCategory(index)}

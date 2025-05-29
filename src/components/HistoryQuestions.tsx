@@ -18,7 +18,6 @@ const HistoryQuestions: React.FC<HistoryQuestionsProps> = ({
 }) => {
     const {
         currentQuestion,
-        answeredQuestions,
         progress,
         getNextQuestion,
         markQuestionAsAnswered
