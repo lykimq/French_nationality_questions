@@ -1,8 +1,10 @@
 {
     "id": "monarchy",
     "title": "Monarchie & Royauté",
+    "title_vi": "Quốc hoàng & Vương quốc",
     "icon": "crown",
     "description": "Questions sur les rois et reines de France",
+    "description_vi": "Câu hỏi về vương quốc và hoàng tử Pháp",
     "questions": [
         {
             "id": 37,

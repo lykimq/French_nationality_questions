@@ -1,8 +1,10 @@
 {
     "id": "wars",
     "title": "Guerres & Résistance",
+    "title_vi": "Chiến tranh & Kháng chiến",
     "icon": "shield",
     "description": "Les guerres mondiales et la résistance française",
+    "description_vi": "Chiến tranh và kháng chiến Pháp",
     "questions": [
         {
             "id": 47,

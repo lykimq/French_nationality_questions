@@ -1,8 +1,10 @@
 {
     "id": "revolution",
     "title": "Révolution Française",
+    "title_vi": "Cách mạng Pháp",
     "icon": "flag",
     "description": "La période révolutionnaire et ses événements majeurs",
+    "description_vi": "Thời kỳ cách mạng Pháp và các sự kiện quan trọng",
     "questions": [
         {
             "id": 41,

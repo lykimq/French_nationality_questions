@@ -1,8 +1,10 @@
 {
     "id": "local_gov",
     "title": "Administration Locale",
+    "title_vi": "Quản lý địa phương",
     "icon": "business",
     "description": "Questions sur l'administration locale et la vie civique",
+    "description_vi": "Câu hỏi về quản lý địa phương và các tổ chức",
     "questions": [
         {
             "id": 36,

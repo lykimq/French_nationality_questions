@@ -1,8 +1,10 @@
 {
     "id": "holidays",
     "title": "Jours Fériés",
+    "title_vi": "Ngày lễ & Ngày nghỉ",
     "icon": "calendar",
     "description": "Les jours fériés et leurs significations",
+    "description_vi": "Ngày lễ và ngày nghỉ Pháp",
     "questions": [
         {
             "id": 55,

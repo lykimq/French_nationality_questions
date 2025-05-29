@@ -1,8 +1,10 @@
 {
     "id": "sports",
     "title": "Sports",
+    "title_vi": "Thể thao",
     "icon": "football",
     "description": "Sports et événements sportifs français",
+    "description_vi": "Thể thao và các sự kiện thể thao Pháp",
     "questions": [
         {
             "id": 71,

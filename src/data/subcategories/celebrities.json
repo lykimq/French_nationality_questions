@@ -1,8 +1,10 @@
 {
     "id": "celebrities",
     "title": "Personnalités & Médias",
+    "title_vi": "Nhân vật & Trung tâm thông tin",
     "icon": "people",
     "description": "Personnalités françaises célèbres et médias",
+    "description_vi": "Nhân vật và trung tâm thông tin Pháp",
     "questions": [
         {
             "id": 64,

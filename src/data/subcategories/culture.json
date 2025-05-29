@@ -1,8 +1,10 @@
 {
     "id": "culture",
     "title": "Culture & Patrimoine",
+    "title_vi": "Văn hóa & Di sản",
     "icon": "museum",
     "description": "Monuments historiques et culture française",
+    "description_vi": "Di sản lịch sử và văn hóa Pháp",
     "questions": [
         {
             "id": 50,

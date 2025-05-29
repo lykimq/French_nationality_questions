@@ -1,8 +1,10 @@
 {
     "id": "republic",
     "title": "République & Institutions",
+    "title_vi": "Cộng hòa & Các tổ chức",
     "icon": "business",
     "description": "La République française et ses institutions",
+    "description_vi": "Nền Cộng hòa Pháp và các tổ chức",
     "questions": [
         {
             "id": 51,

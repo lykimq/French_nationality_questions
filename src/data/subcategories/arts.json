@@ -1,8 +1,10 @@
 {
     "id": "arts",
     "title": "Arts & Littérature",
+    "title_vi": "Nghệ thuật & Văn học",
     "icon": "brush",
     "description": "Artistes, écrivains et œuvres célèbres",
+    "description_vi": "Nghệ sĩ, nhà văn và tác phẩm nổi tiếng Pháp",
     "questions": [
         {
             "id": 62,
