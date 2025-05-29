@@ -84,18 +84,6 @@ const HomeScreen = () => {
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
-                <CategoryCard
-                    key="history"
-                    title={historyCategories.title}
-                    title_vi={historyCategories.title_vi}
-                    description={historyCategories.description}
-                    description_vi={historyCategories.description_vi}
-                    icon={historyCategories.icon}
-                    count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
-                    onPress={navigateToHistoryQuestions}
-                    language={language}
-                />
-
                 {categories.map((category: FrenchCategory | MultiLangCategory) => {
                     const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
                     const description_vi = isTranslationLoaded ? (category as MultiLangCategory).description_vi : undefined;
@@ -114,6 +102,18 @@ const HomeScreen = () => {
                         />
                     );
                 })}
+
+                <CategoryCard
+                    key="history"
+                    title={historyCategories.title}
+                    title_vi={historyCategories.title_vi}
+                    description={historyCategories.description}
+                    description_vi={historyCategories.description_vi}
+                    icon={historyCategories.icon}
+                    count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
+                    onPress={navigateToHistoryQuestions}
+                    language={language}
+                />
             </ScrollView>
         </View>
     );

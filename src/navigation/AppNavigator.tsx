@@ -11,7 +11,6 @@ import CategoryBasedQuestionsScreen from '../screens/CategoryBasedQuestionsScree
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
-import { RootStackParamList } from '../types/types';
 
 // Create navigators
 const Stack = createNativeStackNavigator();

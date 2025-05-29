@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 // Import the split JSON files
-import history_fr_vi from '../data/history_fr_vi.json';
 import geography_fr_vi from '../data/geography_fr_vi.json';
 import personal_fr_vi from '../data/personal_fr_vi.json';
 import historyData from '../data/history_categories.json';
@@ -175,7 +174,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
             const frenchData: FrenchQuestionsData = {
                 categories: [
                     personal_fr_vi as unknown as FrenchCategory,
-                    history_fr_vi as unknown as FrenchCategory,
                     geography_fr_vi as unknown as FrenchCategory,
                 ]
             };
@@ -187,7 +185,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         } else {
             // Safety casting our JSON data to ensure correct types
             const personalFr = personal_fr_vi as unknown as JsonCategory;
-            const historyFr = history_fr_vi as unknown as JsonCategory;
             const geographyFr = geography_fr_vi as unknown as JsonCategory;
 
             // Merge French and Vietnamese data
@@ -198,30 +195,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                         title_vi: personalFr.title_vi,
                         description_vi: personalFr.description_vi,
                         questions: personalFr.questions.map((question) => {
-                            const multiLangQuestion: MultiLangQuestion = {
-                                id: question.id,
-                                question: {
-                                    fr: question.question,
-                                    vi: question.question_vi || ''
-                                },
-                                explanation: {
-                                    fr: question.explanation,
-                                    vi: question.explanation_vi || ''
-                                }
-                            };
-
-                            if (question.image !== undefined) {
-                                multiLangQuestion.image = question.image;
-                            }
-
-                            return multiLangQuestion;
-                        })
-                    },
-                    {
-                        ...historyFr,
-                        title_vi: historyFr.title_vi,
-                        description_vi: historyFr.description_vi,
-                        questions: historyFr.questions.map((question) => {
                             const multiLangQuestion: MultiLangQuestion = {
                                 id: question.id,
                                 question: {
