@@ -6,6 +6,16 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AppNavigator from './src/navigation/AppNavigator';
 import { DisplaySettingsProvider } from './src/screens/SettingsScreen';
 
+// Suppress React 19 useInsertionEffect warnings for icon libraries
+const originalConsoleWarn = console.warn;
+console.warn = (...args) => {
+  const message = args[0];
+  if (typeof message === 'string' && message.includes('useInsertionEffect must not schedule updates')) {
+    return; // Suppress this specific warning
+  }
+  originalConsoleWarn.apply(console, args);
+};
+
 export default function App() {
   return (
     <GestureHandlerRootView style={styles.container}>
