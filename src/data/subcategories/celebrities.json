@@ -19,14 +19,14 @@
             "question": "Connaissez-vous Brigitte Bardot ?",
             "explanation": "Brigitte Bardot est une actrice de cinéma, chanteuse et militante pour la cause animale. Elle a plusieurs œuvres artistiques et culturelles à son actif dont les plus connus sont \"Moi je joue\" et \"Harley Davidson\".",
             "question_vi": "Bạn có biết Brigitte Bardot không?",
-            "explanation_vi": "Brigitte Bardot là một nữ diễn viên điện ảnh, ca sĩ và nhà hoạt động bảo vệ động vật. Cô có nhiều tác phẩm nghệ thuật và văn hóa, trong đó nổi tiếng nhất là \"Moi je joue\" và \"Harley Davidson\".",
+            "explanation_vi": "Brigitte Bardot là một nữ diễn viên điện ảnh, ca sĩ và nhà hoạt động vì quyền động vật. Cô có một số tác phẩm nghệ thuật và văn hóa được ghi nhận, trong đó nổi tiếng nhất là \"Moi je joue\" và \"Harley Davidson\".",
             "image": null
         },
         {
             "id": 90,
             "question": "Citez des animateurs de télévision Français que vous connaissez ?",
             "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
-            "question_vi": "Hãy kể tên các người dẫn chương trình truyền hình Pháp mà bạn biết?",
+            "question_vi": "Kể tên 1 vài người dẫn chương trình bạn biết ?",
             "explanation_vi": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault, v.v...",
             "image": null
         },
@@ -34,7 +34,7 @@
             "id": 91,
             "question": "Citez des chanteurs Français connus ?",
             "explanation": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
-            "question_vi": "Hãy kể tên các ca sĩ nổi tiếng của Pháp?",
+            "question_vi": "Kể tên 1 vài ca sĩ Pháp bạn biết ?",
             "explanation_vi": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François, v.v...",
             "image": null
         },
@@ -42,7 +42,7 @@
             "id": 92,
             "question": "Citez des journalistes Français(e)s connus ?",
             "explanation": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
-            "question_vi": "Hãy kể tên các nhà báo nổi tiếng của Pháp?",
+            "question_vi": "Kể tên 1 vài nhà báo Pháp bạn biết ?",
             "explanation_vi": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
             "image": null
         },
@@ -50,8 +50,16 @@
             "id": 93,
             "question": "Citez des acteurs/actrices Français(e)s que vous connaissez ?",
             "explanation": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
-            "question_vi": "Hãy kể tên các nam/nữ diễn viên Pháp mà bạn biết?",
+            "question_vi": "Kể tên 1 vài diễn viên Pháp bạn biết ?",
             "explanation_vi": "Jean Dujardin, Gérard Depardieu, Marion Cotillard, v.v...",
+            "image": null
+        },
+        {
+            "id": 200,
+            "question": "Citez des femmes politique que vous connaissez ?",
+            "explanation": "Simone Veil, Agnès Buzyn, Ségolène Royal etc…",
+            "question_vi": "Hãy kể tên một số nữ chính trị gia bạn biết?",
+            "explanation_vi": "Simone Veil, Agnès Buzyn, Ségolène Royal, v.v...",
             "image": null
         }
     ]

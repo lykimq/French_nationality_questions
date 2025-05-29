@@ -1,0 +1,341 @@
+QUESTIONS DE NATIONALITÉ FRANÇAISE - CATÉGORIES HISTOIRE/CULTURE
+============================================================
+
+Question 36: Qui est le/la maire de votre département ?
+
+Question 37: Citez trois rois de France
+
+Question 38: Citez des Reines de France
+
+Question 39: En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?
+
+Question 40: Qui été le Roi de France durant la révolution Française ?
+
+Question 41: À quelle date précise a eu lieu la révolution Française ?
+
+Question 42: Quel événement de la Révolution vous a-t-il le plus marqué ?
+
+Question 43: Quel évènement Historique de la France vous a-t-il le plus marqué ?
+
+Question 44: Quel été le rôle de la Bastille avant sa démolition ?
+
+Question 45: Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?
+
+Question 46: Qui a instauré le code civil en France ?
+
+Question 47: Quelles sont les dates des deux dernières guerres mondiales ?
+
+Question 48: Connaissez vous Jean Moulin ? pourquoi est-il connu ?
+
+Question 49: Qui est Charles de Gaulle ?
+
+Question 50: Citez des monuments historiques Français que vous connaissez ?
+
+Question 51: Quand est-ce qu'a été instituée la 5éme république ?
+
+Question 52: Quel a été le fait marquant de la 5éme république ?
+
+Question 53: Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?
+
+Question 54: Quelles personnages de l'histoire de France vous ont le plus marqué et marqué l'histoire ?
+
+Question 55: Pourquoi le 1er Mai est-il férié ?
+
+Question 56: Pourquoi le 11 Novembre est-il férié ?
+
+Question 57: Que fête-on le 14 juillet ?
+
+Question 58: À quelle époque ont été bâties les cathédrales gothiques ?
+
+Question 59: Qu'est-ce que l'hôtel de ville ?
+
+Question 60: Avez-vous manger des spécialités locales lors de vos voyages en France ?
+
+Question 61: Quels sont les plats typiques Français que vous connaissez ?
+
+Question 62: Citez des personnages littéraires Français célèbres
+
+Question 63: Citez des peintres Français célèbres
+
+Question 64: Citez des personnes naturalisées Français(e)
+
+Question 65: Citez des artistes Français connus
+
+Question 66: Citez des écrivains Français Célèbres
+
+Question 67: Citez des œuvres littéraires célèbres
+
+Question 68: Qui a écrit les trois mousquetaires ?
+
+Question 69: Qui était Voltaire ?
+
+Question 70: À Quel mouvement voltaire appartient-il ?
+
+Question 71: Quel grand évènement sportif Français connaissez-vous ?
+
+Question 72: Avons-nous le droit en France de porter des signes religieux dans l'espace public ?
+
+Question 73: Qu'est-ce que la loi de 2004 ?
+
+Question 74: Connaissez-vous Brigitte Bardot ?
+
+Question 75: Citez des philosophes connus des lumières ?
+
+Question 76: Qu'est-ce que la philosophie des lumières ?
+
+Question 77: Connaissez-vous des sportifs Français(e)s ?
+
+Question 78: Citez des plats de votre région/Ville/Département
+
+Question 79: En quelle année a été aboli l'esclavage en France ?
+
+Question 80: L'école est-elle obligatoire en France ?
+
+Question 81: Depuis quand l'école est-elle obligatoire en France ?
+
+Question 82: Qui a rendu l'école obligatoire en France ?
+
+Question 83: Les femmes ont elles e droit de vote en France ?
+
+Question 84: Depuis quand les femmes ont elles le droit de vote en France ?
+
+Question 85: Qui a été à l'origine du château de Versailles ?
+
+Question 86: Qui a été à l'origine de l'Arc de triomphe ?
+
+Question 87: Quel est le monument principal en France ?
+
+Question 88: Qui a construit la tour Eiffel ?
+
+Question 89: Quand la tour Eiffel a été construite et à quel évènement ?
+
+Question 90: Citez des animateurs de télévision Français que vous connaissez ?
+
+Question 91: Citez des chanteurs Français connus ?
+
+Question 92: Citez des journalistes Français(e)s connus ?
+
+Question 93: Citez des acteurs/actrices Français(e)s que vous connaissez ?
+
+Question 94: Kể tên các thuộc địa cũ của Pháp?
+
+Question 95: Qu'est-ce que la guerre de 100 ans ?
+
+Question 96: Connaissez-vous la bataille de Verdun ?
+
+Question 97: Quel été le surnom des soldats Français durant la première guerre mondiale ?
+
+Question 98: Quand a eu lieu la première guerre mondiale ?
+
+Question 99: Quand a eu lieu la seconde guerre mondiale ?
+
+Question 100: Qui sont les alliés durant la première guerre mondiale ?
+
+101: Qui sont les allies durant la seconde guerre mondiale? (missing)
+La France, L'angleterre, L'urss (union sovietique), les USA.
+
+Question 102: Quand a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?
+
+Question 103: Où a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?
+
+Question 104: Quels sont les valeurs (ou la devise) de la république Française ?
+
+Question 105: Si l'on devait rajouter une valeur quelle sera-t-elle selon vous ?
+
+Question 106: Qu'est-ce que la laïcité ?
+
+Question 107: Qu'est-ce que pour vous la démocratie ?
+
+Question 108: Quelles sont les formes de la démocratie ?
+
+Question 109: Êtes-vous d'accord avec le régime démocratique ?
+
+Question 110: Quelles formes libertés sont garanties en démocratie ?
+
+Question 111: Pensez-vous que la liberté d'expression est absolue ?
+
+Question 112: Quels sont les droits et devoirs du citoyen Français ?
+
+Question 113: Quels sont les symboles de la république Française ?
+
+Question 114: Quelles sont les couleurs du drapeau Français ?
+
+Question 115: Que représentent les couleurs du drapeau Français ?
+
+Question 116: Qui est Marianne ?
+
+Question 117: Qui est aujourd'hui le président de la république ?
+
+Question 118: Qui était président de la république avant lui ?
+
+Question 119: Qui est le premier ministre actuel ?
+
+Question 120: Qui était premier ministre avant lui/Elle ?
+
+Question 121: Dans quelle république sommes nous ?
+
+Question 122: Quand sont les dates des républiques précédentes?
+
+Question 123: Qui a instauré la cinquième république ?
+
+Question 124: Ou se trouve le siège de la présidence de la république ?
+
+Question 125: Citez dans l'ordre les présidents de la cinquième république.
+
+Question 126: Citez trois anciens premiers ministres Français de la cinquième république.
+
+Question 127: Citez trois ministres du gouvernement actuel.
+
+Question 128: Pour combien de temps est élu le président de la république ?
+
+Question 129: Par quel scrutin et pour combien de mandats peut être élu le président de la république ?
+
+Question 130: Qui a le droit de voter aux élections ?
+
+Question 131: Quel est l'âge de la majorité en France ?
+
+Question 132: Qu'est-ce que le parlement ?
+
+Question 133: Quel est le rôle exact du parlement ?
+
+Question 134: Citez les différentes institutions politiques en France ?
+
+Question 135: Qu'est-ce que le pouvoir Exécutif et quel est son rôle ?
+
+Question 136: Qu'est-ce que le pouvoir législatif et quel est son rôle ?
+
+Question 137: Qu'est-ce que le pouvoir judiciaire et quel est son rôle ?
+
+Question 138: Comment sont élus les députés ?
+
+Question 139: Pour combien d'années sont élus les députés ?
+
+Question 140: Ou se trouve le siège de l'assemblée nationale ?
+
+Question 141: Qui est le député (ou la députée) de votre département ?
+
+Question 142: Qui constitue le gouvernement ?
+
+Question 143: Qui est le président de l'assemblée Nationale ?
+
+Question 144: Pour combien d'année est son mandat ?
+
+Question 145: Qu'est-ce que la chambre basse ?
+
+Question 146: Qu'est-ce que la chambre haute ?
+
+Question 147: Qu'est-ce que le Sénat ?
+
+Question 148: Comment sont élus les sénateurs ?
+
+Question 149: Pour combien d'années sont élus les sénateurs ?
+
+Question 150: Quelle est la différence entre un député et un sénateur ?
+
+Question 151: Constitutionnellement qui a le pouvoir de diriger le pays en cas de décès du président de la république ?
+
+Question 152: Qui est le président actuel du Sénat ?
+
+Question 153: Qu'est-ce que le conseil constitutionnel ?
+
+Question 154: Qui est le président du conseil constitutionnel ?
+
+Question 155: Quelle est la dernière loi votée à l'assemblée nationale ?
+
+Question 156: Savez vous ce qu'est la cohabitation politique ?
+
+Question 157: Citez un exemple de cohabitation politique en France ?
+
+Question 158: Qui nomme les ministres ?
+
+Question 159: Qui nomme le premier ministre ?
+
+Question 160: Ou se trouvent les bureaux du premier ministre ?
+
+Question 161: Qui est le maire de votre ville ?
+
+Question 162: Qu'est-ce que les élections municipales ?
+
+
+Question 163: Quelle est l'hymne de la France ?
+
+Question 164: Qui a écrit la Marseillaise ?
+
+
+Question 165: Connaissez vous le premier couplet de la Marseillaise ?
+
+Question 166: À quelle occasion la Marseillaise a-t-elle été écrite ?
+
+167: Quelle est la monnaie actualle de la France? (missing)
+C'est l'Euro
+
+Question 168: Quelle est la devise de l'union européenne ?
+
+Question 169: Connaissez vous l'hymne de l'union européenne ?
+
+Question 170: Combien de pays compte l'union européenne ?
+
+Question 171: Dans quel intérêt les pays européens rejoignent l'union européenne ?
+
+Question 172: Ou se trouve le siège du parlement Européen ?
+
+Question 173: Ou se trouve le siège de la commission européenne ?
+
+Question 174: Quel pays détient la présidence de l'union européenne cette année ?
+
+Question 175: Combien d'étoiles comporte-t-il ?
+
+Question 176: Que symbolisent ces étoiles ?
+
+Question 177: Que représente la journée du 09 Mai ?
+
+Question 178: Quels sont les symboles de l'union européenne ?
+
+Question 179: Que connaissez vous sur le traité de Rome ? et quand a-il-eu lieu ?
+
+180: Qui est Jeanne d'Arc? (missing)
+C'est une jeune paysanne Francaise qui a conduit les troupes Francaise a la liberation d'une partie du territoire Francais durant la guerre es 100 ans.
+
+Question 181: Qu'est-ce que la Loi Veil ?
+
+Question 182: Que pensez vous de la loi Veil ?
+
+
+Question 183: Que pensez vous de la parité hommes femmes ?
+
+Question 184: Avons-nous atteint cette parité dans tous les domaines ?
+
+Question 185: Quels seront les prochaines élections ?
+
+Question 186: Qui décidera de vous octroyer ou non la nationalité française ?
+
+Question 187: Quel ministre gère les relations entre l'état et les institutions religieuses ?
+
+188: Qu'est-ce que la discrimination pour vous? (missing)
+La discrimination c'est par exemple de ne pas recruter quelqu'un a cause de son origine, ou de son apparttenance a une ethnie ou une religion ou meme de son sexe, le seul et unique critere d'embauche doit etre la competence.
+
+198: La discrimination est-elle legale en France?
+Non pas du tout, c'est un delit passible de graves et lourdes sanctions judiciaires.
+
+Question 190: En quelle année les citoyens Français sont-ils devenus Européens ?
+
+Question 191: Qui a le droit d'accéder à l'emploi public ?
+
+Question 192: En cas de conflit armé qui pourra être appelé à défendre la patrie ?
+
+Question 193: Qu'est-ce que le système de sécurité sociale ?
+
+Question 194: Par qui est-il financé ?
+
+Question 195: Qui finance les services publics ?
+
+Question 196: Etes-vous obligé de payer vos impôts ?
+
+Question 197: Si vous obtenez la nationalité Française comptez-vous vivre en France ?
+
+Question 198: Les citoyens sont-ils toujours satisfaits des choix du gouvernement ?
+
+Question 199: Comment manifestent ils leur désaccord ?
+
+Question 200: Citez des femmes politique que vous connaissez ?
+

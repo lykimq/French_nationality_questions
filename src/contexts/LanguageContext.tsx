@@ -10,6 +10,8 @@ import monarchyData from '../data/subcategories/monarchy.json';
 import revolutionData from '../data/subcategories/revolution.json';
 import warsData from '../data/subcategories/wars.json';
 import republicData from '../data/subcategories/republic.json';
+import democracyData from '../data/subcategories/democracy.json';
+import economyData from '../data/subcategories/economy.json';
 import cultureData from '../data/subcategories/culture.json';
 import artsData from '../data/subcategories/arts.json';
 import celebritiesData from '../data/subcategories/celebrities.json';
@@ -57,6 +59,8 @@ const subcategoryDataMap: { [key: string]: HistorySubcategory } = {
     revolution: revolutionData,
     wars: warsData,
     republic: republicData,
+    democracy: democracyData,
+    economy: economyData,
     culture: cultureData,
     arts: artsData,
     celebrities: celebritiesData,

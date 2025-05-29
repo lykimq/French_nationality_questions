@@ -18,16 +18,16 @@
             "id": 58,
             "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
             "explanation": "Elles ont été bâties au moyen-âge.",
-            "question_vi": "Các nhà thờ Gothic được xây dựng vào thời kỳ nào?",
-            "explanation_vi": "Chúng được xây dựng vào thời Trung cổ.",
+            "question_vi": "Nhà thờ theo kiến trúc Gothic được xây dựng vào thời kỳ nào?",
+            "explanation_vi": "Được xây dựng vào thời trung đại",
             "image": null
         },
         {
             "id": 60,
             "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
-            "explanation": "Oui. Citez les plats locaux des endroits que vous avez visités",
-            "question_vi": "Bạn đã thử các món ăn đặc sản địa phương trong các chuyến du lịch ở Pháp chưa?",
-            "explanation_vi": "Có. Hãy kể tên các món ăn địa phương của những nơi bạn đã đến thăm",
+            "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
+            "question_vi": "Bạn đã ăn đặc sản địa phương khi du lịch Pháp chưa?",
+            "explanation_vi": "Có. Bò nghiền Bourguignon, Gà nướng với rượu, Cà rốt nghiền, Bánh quiche Lorraine, Bánh crêpe Breton, Bò tái kiểu Pháp steak-tartare, Khoai tây nghiền phô mai aligot, v.v...",
             "image": null
         },
         {
@@ -41,16 +41,16 @@
         {
             "id": 78,
             "question": "Citez des plats de votre région/Ville/Département",
-            "explanation": "Ici vous devez montrer lors de votre entretien de naturalisation Française que vous êtes intégré et que vous connaissez à minima un ou deux plats typiques de votre région/ville/département, vous devrez donc en fonction des questions adapter vos réponses.",
-            "question_vi": "Hãy kể tên các món ăn của vùng/thành phố/tỉnh của bạn",
-            "explanation_vi": "Trong buổi phỏng vấn nhập quốc tịch Pháp, bạn cần thể hiện rằng bạn đã hòa nhập và biết ít nhất một hoặc hai món ăn đặc trưng của vùng/thành phố/tỉnh của bạn, vì vậy bạn cần điều chỉnh câu trả lời tùy theo câu hỏi.",
+            "explanation": "Baguette, Croissant, Soupe à l’oignon, Quiche Lorraine, Steak frites, Tarte Tatin, Île flottante, Brie de Meaux, Pâté en croûte, Escargots de Bourgogne, Crêpes, Galettes, Macarons, Chausson aux pommes",
+            "question_vi": "Kể tên các món ăn vùng/Thành phố của bạn ",
+            "explanation_vi": "Bánh mì baguette, Bánh sừng bò (Croissant), Súp hành kiểu Pháp, Bánh mặn Quiche Lorraine, Bít tết và khoai tây chiên, Bánh táo nướng ngược (Tarte Tatin), Món tráng miệng Île flottante, Phô mai Brie de Meaux, Pâté nướng, Ốc sên nướng bơ tỏi, Bánh crêpes ngọt, Bánh galettes mặn, Bánh macarons, Bánh táo Chausson aux pommes",
             "image": null
         },
         {
             "id": 86,
             "question": "Qui a été à l'origine de l'Arc de triomphe ?",
             "explanation": "C'est Napoléon 1er.",
-            "question_vi": "Ai là người khởi xướng xây dựng Khải Hoàn Môn?",
+            "question_vi": "Khải Hoàn Môn do ai cho xây dựng?",
             "explanation_vi": "Đó là Napoléon Đệ Nhất.",
             "image": null
         },
@@ -58,7 +58,7 @@
             "id": 87,
             "question": "Quel est le monument principal en France ?",
             "explanation": "C'est la tour Eiffel à Paris.",
-            "question_vi": "Di tích chính của Pháp là gì?",
+            "question_vi": "Đâu là công trình nổi bật ở Pháp?",
             "explanation_vi": "Đó là tháp Eiffel ở Paris.",
             "image": null
         },
@@ -66,7 +66,7 @@
             "id": 88,
             "question": "Qui a construit la tour Eiffel ?",
             "explanation": "C'est Gustave Eiffel.",
-            "question_vi": "Ai đã xây dựng tháp Eiffel?",
+            "question_vi": "Ai xây dựng tháp Eiffel",
             "explanation_vi": "Đó là Gustave Eiffel.",
             "image": null
         },
@@ -74,7 +74,7 @@
             "id": 89,
             "question": "Quand la tour Eiffel a été construite et à quel évènement ?",
             "explanation": "En 1889 lors de l'exposition universelle de Paris.",
-            "question_vi": "Tháp Eiffel được xây dựng khi nào và nhân sự kiện gì?",
+            "question_vi": "Tháp Eiffel được xây dựng khi nào và tại sự kiện nào?",
             "explanation_vi": "Vào năm 1889 nhân dịp Triển lãm Quốc tế Paris.",
             "image": null
         }

@@ -47,6 +47,22 @@
             "description_vi": "Quốc hội và các tổ chức Pháp"
         },
         {
+            "id": "democracy",
+            "title": "Démocratie & Citoyenneté",
+            "title_vi": "Dân chủ & Quyền công dân",
+            "icon": "people",
+            "description": "La démocratie française et les droits et devoirs des citoyens",
+            "description_vi": "Nền dân chủ Pháp và quyền lợi nghĩa vụ của công dân"
+        },
+        {
+            "id": "economy",
+            "title": "Économie & Monnaie",
+            "title_vi": "Kinh tế & Tiền tệ",
+            "icon": "cash",
+            "description": "L'économie française et le système monétaire",
+            "description_vi": "Kinh tế Pháp và hệ thống tiền tệ"
+        },
+        {
             "id": "culture",
             "title": "Culture & Patrimoine",
             "title_vi": "Văn hóa & Di sản",

@@ -9,17 +9,17 @@
         {
             "id": 71,
             "question": "Quel grand évènement sportif Français connaissez-vous ?",
-            "explanation": "Vous pouvez citer une épreuve cycliste comme le tour de France. Une épreuve de tennis comme le tournois de Roland Garos. Une compétition de course automobile comme les 24h du Mans. Une course comme Le Marathon de Paris.",
+            "explanation": "- Vous pouvez citer une épreuve cycliste comme le tour de France. \n\n - Une épreuve de tennis comme le tournois de Roland Garos.\n\n - Une compétition de course automobile comme les 24h du Mans. \n\n - Une course comme Le Marathon de Paris.",
             "question_vi": "Bạn biết những sự kiện thể thao lớn nào của Pháp?",
-            "explanation_vi": "Bạn có thể kể đến các giải đua xe đạp như Tour de France. Giải đấu quần vợt như Roland Garros. Giải đua xe như 24 giờ Le Mans. Các cuộc đua như Marathon Paris.",
+            "explanation_vi": "- Bạn có thể kể đến các giải đua xe đạp như Tour de France. \n\n - Giải đấu quần vợt như Roland Garros. \n\n - Giải đua xe như 24 giờ Le Mans. \n\n - Các cuộc đua như Marathon Paris.",
             "image": null
         },
         {
             "id": 77,
             "question": "Connaissez-vous des sportifs Français(e)s ?",
-            "explanation": "Dans le Football : Michel Platini, Zinedine Zidane. Dans le cyclisme : Richard Virenque. Dans le tennis : Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Dans le Judo : Teddy Riner.",
+            "explanation": "- Dans le Football : Michel Platini, Zinedine Zidane. \n\n - Dans le cyclisme : Richard Virenque. \n\n - Dans le tennis : Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. \n\n - Dans le Judo : Teddy Riner.",
             "question_vi": "Bạn có biết các vận động viên Pháp nào không?",
-            "explanation_vi": "Trong bóng đá: Michel Platini, Zinedine Zidane. Trong đua xe đạp: Richard Virenque. Trong quần vợt: Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Trong Judo: Teddy Riner.",
+            "explanation_vi": "- Trong bóng đá: Michel Platini, Zinedine Zidane. \n\n - Trong đua xe đạp: Richard Virenque. \n\n - Trong quần vợt: Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. \n\n - Trong Judo: Teddy Riner.",
             "image": null
         }
     ]

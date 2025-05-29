@@ -9,9 +9,9 @@
         {
             "id": 36,
             "question": "Qui est le/la maire de votre département ?",
-            "explanation": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche.",
-            "question_vi": "Thị trưởng của quận/huyện bạn là ai?",
-            "explanation_vi": "Hãy chắc chắn rằng bạn biết tên của thị trưởng của mình cũng như xu hướng chính trị của họ (đảng phái chính trị), ví dụ như ở thành phố Paris là Anne Hidalgo và bà ấy thuộc cánh Tả.",
+            "explanation": "Assurez-vous de bien connaître le nom de votre maire ainsi que son orientation politique (parti politique). Par exemple, pour la ville de Boulogne-Billancourt (92100), le maire est Pierre-Christophe Baguet, membre du parti Les Républicains (LR). En mars 2025, il s'est temporairement mis en retrait de ses fonctions.",
+            "question_vi": "Ai là thị trưởng của tỉnh bạn?",
+            "explanation_vi": "Hãy chắc chắn rằng bạn biết tên của thị trưởng của mình cũng như xu hướng chính trị của họ (đảng phái chính trị). Ví dụ, ở thành phố Boulogne-Billancourt (92100), thị trưởng là ông Pierre-Christophe Baguet, thành viên đảng Les Républicains (LR). Vào tháng 3 năm 2025, ông đã tạm thời rút lui khỏi chức vụ của mình.",
             "image": null
         },
         {
@@ -19,7 +19,23 @@
             "question": "Qu'est-ce que l'hôtel de ville ?",
             "explanation": "C'est la mairie principale d'une grande ville ou d'une ville importante.",
             "question_vi": "Tòa thị chính (Hôtel de ville) là gì?",
-            "explanation_vi": "Đó là trụ sở chính của thành phố lớn hoặc một thành phố quan trọng.",
+            "explanation_vi": "Là toà thị chính của 1 thành phố lớn hoặc 1 thành phố quan trọng",
+            "image": null
+        },
+        {
+            "id": 162,
+            "question": "Qu'est-ce que les élections municipales ?",
+            "explanation": "Si vous ne savez pas, cherchez sur internet",
+            "question_vi": "Ai là thị trưởng thành phố của bạn?",
+            "explanation_vi": "Nếu bạn không biết, hãy tìm trên internet",
+            "image": null
+        },
+        {
+            "id": 163,
+            "question": "Quelle est l'hymne de la France ?",
+            "explanation": "Ce sont des élections qui permettent d'élire les membres du conseil municipal de chaque commune et qui sont appelés les conseillers municipaux, c'est eux ensuite qui élisent le maire et ces adjoints.",
+            "question_vi": "Bầu cử thành phố là gì?",
+            "explanation_vi": "Đó là những cuộc bầu cử cho phép bầu ra các thành viên hội đồng thành phố của mỗi xã và được gọi là nghị viên thành phố, chính họ sau đó bầu ra thị trưởng và các phó thị trưởng.",
             "image": null
         }
     ]
