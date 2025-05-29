@@ -6,70 +6,19 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
-import historyData from '../data/history_categories.json';
-
-// Import all subcategory data
-import localGovData from '../data/subcategories/local_gov.json';
-import monarchyData from '../data/subcategories/monarchy.json';
-import revolutionData from '../data/subcategories/revolution.json';
-import warsData from '../data/subcategories/wars.json';
-import republicData from '../data/subcategories/republic.json';
-import cultureData from '../data/subcategories/culture.json';
-import artsData from '../data/subcategories/arts.json';
-import celebritiesData from '../data/subcategories/celebrities.json';
-import sportsData from '../data/subcategories/sports.json';
-import holidaysData from '../data/subcategories/holidays.json';
-
-interface HistoryCategory {
-    id: string;
-    title: string;
-    title_vi: string;
-    icon: string;
-    description: string;
-    description_vi: string;
-    subcategories: Array<{
-        id: string;
-        title: string;
-        title_vi: string;
-        icon: string;
-        description: string;
-        description_vi: string;
-    }>;
-}
-
-type HistorySubcategory = {
-    id: string;
-    title: string;
-    icon: string;
-    description: string;
-    questions?: Array<{
-        id: number;
-        question_fr: string;
-        explanation_fr: string;
-        question_vi: string;
-        explanation_vi: string;
-        image: string | null;
-    }>;
-};
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-const subcategoryDataMap: { [key: string]: HistorySubcategory } = {
-    local_gov: localGovData,
-    monarchy: monarchyData,
-    revolution: revolutionData,
-    wars: warsData,
-    republic: republicData,
-    culture: cultureData,
-    arts: artsData,
-    celebrities: celebritiesData,
-    sports: sportsData,
-    holidays: holidaysData,
-};
-
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
-    const { language, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
+    const {
+        language,
+        toggleLanguage,
+        questionsData,
+        isTranslationLoaded,
+        historyCategories,
+        historySubcategories
+    } = useLanguage();
 
     const categories = questionsData.categories;
 
@@ -79,8 +28,8 @@ const HomeScreen = () => {
 
     const navigateToHistoryQuestions = () => {
         navigation.navigate('CategoryBasedQuestions', {
-            categories: (historyData as HistoryCategory).subcategories.map(subcategory => {
-                const subcategoryData = subcategoryDataMap[subcategory.id];
+            categories: historyCategories.subcategories.map(subcategory => {
+                const subcategoryData = historySubcategories[subcategory.id];
                 return {
                     id: subcategory.id,
                     title: subcategory.title,
@@ -90,16 +39,16 @@ const HomeScreen = () => {
                     icon: subcategory.icon,
                     questions: (subcategoryData?.questions || []).map(q => ({
                         id: q.id,
-                        question_fr: q.question_fr,
+                        question: q.question,
                         question_vi: q.question_vi,
-                        explanation_fr: q.explanation_fr || '',
-                        explanation_vi: q.explanation_vi || '',
+                        explanation: q.explanation,
+                        explanation_vi: q.explanation_vi,
                         image: q.image
                     }))
                 };
             }),
-            title: (historyData as HistoryCategory).title,
-            title_vi: (historyData as HistoryCategory).title_vi
+            title: historyCategories.title,
+            title_vi: historyCategories.title_vi
         });
     };
 
@@ -137,10 +86,12 @@ const HomeScreen = () => {
             >
                 <CategoryCard
                     key="history"
-                    title={historyData.title}
-                    description={historyData.description}
-                    icon={historyData.icon}
-                    count={Object.values(subcategoryDataMap).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
+                    title={historyCategories.title}
+                    title_vi={historyCategories.title_vi}
+                    description={historyCategories.description}
+                    description_vi={historyCategories.description_vi}
+                    icon={historyCategories.icon}
+                    count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
                     onPress={navigateToHistoryQuestions}
                     language={language}
                 />

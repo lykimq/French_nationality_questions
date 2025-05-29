@@ -18,7 +18,7 @@
             "id": "monarchy",
             "title": "Monarchie & Royauté",
             "title_vi": "Vương quốc & Vương triều",
-            "icon": "crown",
+            "icon": "star",
             "description": "Questions sur les rois et reines de France",
             "description_vi": "Câu hỏi về vương quốc và vương triều Pháp"
         },
@@ -50,7 +50,7 @@
             "id": "culture",
             "title": "Culture & Patrimoine",
             "title_vi": "Văn hóa & Di sản",
-            "icon": "museum",
+            "icon": "library",
             "description": "Monuments historiques et culture française",
             "description_vi": "Di sản và văn hóa Pháp"
         },

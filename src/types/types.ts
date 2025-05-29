@@ -1,3 +1,5 @@
+import { MultiLangText } from '../contexts/LanguageContext';
+
 export type RootStackParamList = {
     Home: undefined;
     CategoryQuestions: { categoryId: string; language?: 'fr' | 'vi' };
@@ -11,9 +13,9 @@ export type RootStackParamList = {
             icon?: string;
             questions: Array<{
                 id: number;
-                question_fr: string;
+                question: string;
                 question_vi: string;
-                explanation_fr?: string;
+                explanation?: string;
                 explanation_vi?: string;
                 image?: string | null;
             }>;

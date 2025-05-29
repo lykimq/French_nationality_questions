@@ -35,7 +35,9 @@ const CategoryQuestionsScreen = () => {
     }
 
     const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
-    const displayTitle = language === 'fr' ? category.title : (title_vi || category.title);
+    const displayTitle = language === 'fr'
+        ? category.title
+        : `${title_vi || category.title}\n${category.title}`;
     const questionsCount = language === 'fr'
         ? `${category.questions.length} questions`
         : `${category.questions.length} câu hỏi`;
@@ -103,6 +105,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: '#fff',
+        textAlign: 'left',
     },
     count: {
         fontSize: 14,

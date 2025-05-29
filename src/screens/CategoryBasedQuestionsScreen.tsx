@@ -33,9 +33,13 @@ const CategoryBasedQuestionsScreen = () => {
     const getCurrentTitle = () => {
         if (selectedCategoryIndex !== null) {
             const category = categories[selectedCategoryIndex];
-            return language === 'vi' && category.title_vi ? category.title_vi : category.title;
+            return language === 'fr'
+                ? category.title
+                : `${category.title_vi || category.title}\n${category.title}`;
         }
-        return language === 'vi' && route.params.title_vi ? route.params.title_vi : route.params.title;
+        return language === 'fr'
+            ? route.params.title
+            : `${route.params.title_vi || route.params.title}\n${route.params.title}`;
     };
 
     const getCurrentCount = () => {
@@ -123,6 +127,7 @@ export const commonStyles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: '#fff',
+        textAlign: 'left',
     },
     count: {
         fontSize: 14,

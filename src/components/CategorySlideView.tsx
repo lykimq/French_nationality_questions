@@ -11,9 +11,9 @@ const VELOCITY_THRESHOLD = 400;
 
 interface MultilingualQuestion {
     id: number;
-    question_fr: string;
+    question: string;
     question_vi: string;
-    explanation_fr?: string;
+    explanation?: string;
     explanation_vi?: string;
     image?: string | null;
 }
@@ -119,14 +119,14 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
 
     const getLocalizedQuestion = (question: MultilingualQuestion): MultiLangText => {
         return {
-            fr: question.question_fr,
+            fr: question.question,
             vi: question.question_vi
         };
     };
 
     const getLocalizedExplanation = (question: MultilingualQuestion): MultiLangText => {
         return {
-            fr: question.explanation_fr || '',
+            fr: question.explanation || '',
             vi: question.explanation_vi || ''
         };
     };

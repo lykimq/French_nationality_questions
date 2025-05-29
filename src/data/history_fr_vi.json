@@ -1,397 +1,529 @@
 {
     "id": "history",
     "title": "Histoire et Culture",
+    "title_vi": "Lịch sử và văn hóa",
     "icon": "book",
     "description": "Questions sur l'histoire et la culture française (36-99)",
+    "description_vi": "Câu hỏi về lịch sử và văn hóa Pháp (36-99)",
     "questions": [
       {
         "id": 36,
         "question": "Qui est le/la maire de votre département ?",
         "explanation": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche.",
+        "question_vi": "Ai là bí thư của địa phương của bạn?",
+        "explanation_vi": "Đảm bảo bạn biết tên và chủng tộc của người trưởng thành của địa phương của bạn. Ví dụ, ở Paris, đó là Anne Hidalgo và cô ấy là một người từ các tộc người Pháp.",
         "image": null
       },
       {
         "id": 37,
         "question": "Citez trois rois de France",
         "explanation": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+        "question_vi": "Kể tên 3 vua của nước Pháp",
+        "explanation_vi": "Charlemagne, François Ier, Henri IV, Louis XVI v.v...",
         "image": null
       },
       {
         "id": 38,
         "question": "Citez des Reines de France",
         "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+        "question_vi": "Kể tên 3 Nữ hoàng của nước Pháp",
+        "explanation_vi": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche v.v...",
         "image": "../assets/Marie_Antoinette_Adult.jpg"
       },
       {
         "id": 39,
         "question": "En Quoi et pourquoi Louis XIV [Louis 14] est-il le plus connu ?",
         "explanation": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l’histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+        "question_vi": "Louis XIV (Louis 14) được biết đến nhiều nhất vì điều gì và tại sao?",
+        "explanation_vi": "Louis XIV được biết đến nhiều nhất vì ông là một nhà cách mạng Pháp và đã tạo ra nhiều thay đổi quan trọng trong lịch sử nước Pháp. Tuy nhiên, sau chiến thắng của nhân dân, ông đã bị lật đổ.",
         "image": null
       },
       {
         "id": 40,
         "question": "Qui été le Roi de France durant la révolution Française ?",
         "explanation": "C’était le Roi Louis XVI (Louis 16), Le peuple s’est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
+        "question_vi": "Ai là vua của nước Pháp trong thời kỳ cách mạng?",
+        "explanation_vi": "Đó là Vua Louis XVI (Louis 16). Nhân dân đã nổi dậy chống lại quyền lực của vua và tuyên bố Cộng hòa. Gia đình hoàng gia bị giam cầm. Vua bị xét xử và kết án tử hình vì các Cách mạng muốn ngăn chặn việc quay trở lại vương quyền. Louis XVI đã bị đưa ra xử bằng cưa đầu vào ngày 21 tháng 1 năm 1793.",
         "image": null
       },
       {
         "id": 41,
         "question": "À quelle date précise a eu lieu la révolution Française ?",
         "explanation": "La révolution Française a eu lieu le 05 Mai 1789 avec l’ouverture des états généraux et s’est terminée le 09 Novembre 1799 avec le coup d’état du 18 brumaire de Napoléon Bonaparte.",
+        "question_vi": "Ngày cụ thể nào đã xảy ra Cách mạng Pháp?",
+        "explanation_vi": "Cách mạng Pháp diễn ra vào ngày 5 tháng 5 năm 1789 với sự mở cửa của các tổng thống từ các tỉnh và kết thúc vào ngày 9 tháng 11 năm 1799 với cuộc cải cách của Napoléon Bonaparte.",
         "image": null
       },
       {
         "id": 42,
         "question": "Quel événement de la Révolution vous a-t-il le plus marqué ?",
         "explanation": "Parlez de la révolution Française, citez par exemple un évènement important de la révolution qui s’est produit le 14 Juillet 1789 et qui a marqué la prise de la prison de la Bastille, un événement inaugural du début de la Révolution. Elle a eu lieu suite à une crise agricole qui a donné lieu à une grande crise économique et une inflation importante qui se confrontait à des décisions de hausse des impôts décidées par le roi de l’époque Louis XVI.",
+        "question_vi": "Sự kiện nào trong Cách mạng Pháp đã làm cho bạn nhớ nhất?",
+        "explanation_vi": "Nói về Cách mạng Pháp, bạn có thể nhắc đến một sự kiện quan trọng trong Cách mạng đã xảy ra vào ngày 14 tháng 7 năm 1789 và đã đánh dấu việc lấy cờ của Bắc Mê Linh, một sự kiện khởi đầu của Cách mạng. Nó đã xảy ra sau khi có một cuộc khủng hoảng nông nghiệp lớn, dẫn đến một cuộc khủng hoảng kinh tế và lạm phát lớn, đối mặt với quyết định của vua thời kỳ Louis XVI để tăng thuế.",
         "image": null
       },
       {
         "id": 43,
         "question": "Quel évènement Historique de la France vous a-t-il le plus marqué ?",
         "explanation": "Pour répondre à ces questions entretien de naturalisation Française et principalement celle-ci vous pouvez citer n’importe quel évènement (sportif, culturel, historique) la seule contrainte c’est de devoir justifier votre choix !",
+        "question_vi": "Sự kiện lịch sử nào của nước Pháp đã làm cho bạn nhớ nhất?",
+        "explanation_vi": "Để trả lời câu hỏi này, bạn có thể nhắc đến bất kỳ sự kiện lịch sử nào (thể thao, văn hóa, lịch sử) chỉ cần chứng minh lý do của bạn!",
         "image": null
       },
       {
         "id": 44,
         "question": "Quel été le rôle de la Bastille avant sa démolition ?",
         "explanation": "La prison de la Bastille servait de prison d’état dans laquelle ont été emprisonnés plusieurs célébrités de l’époque tel que Voltaire, Sade etc…",
+        "question_vi": "Vai trò của Bastille trước khi bị phá hủy là gì?",
+        "explanation_vi": "Nhà tù Bastille được sử dụng làm nhà tù nhà nước trong đó đã bị giam cầm nhiều người nổi tiếng của thời đại như Voltaire, Sade v.v…",
         "image": null
       },
       {
         "id": 45,
         "question": "Quand est-ce qu’a été adoptée la déclaration des droits de l’homme et du citoyen ?",
         "explanation": "Elle a été adoptée le 26 Aout 1789. (c’est l’une des questions entretien de naturalisation Française les plus fréquentes), téléchargez ici la charte des droits de l’homme et du citoyen au format PDF pour bien préparer votre entretien de naturalisation Française.",
+        "question_vi": "Khi nào Thông cáo Nhân quyền và Công dân được thông qua?",
+        "explanation_vi": "Nó đã được thông qua vào ngày 26 tháng 8 năm 1789. (Đây là một trong những câu hỏi phỏng vấn tự nhiên hóa Pháp phổ biến nhất), bạn có thể tải xuống Chứng nhận Nhân quyền và Công dân dưới dạng PDF để chuẩn bị cho cuộc phỏng vấn tự nhiên hóa Pháp của mình.",
         "image": null
       },
       {
         "id": 46,
         "question": "Qui a instauré le code civil en France ?",
         "explanation": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
+        "question_vi": "Ai đã lập ra Bộ luật Dân sự ở Pháp?",
+        "explanation_vi": "Bộ luật Dân sự ở Pháp đã được lập ra bởi Napoleon Bonaparte.",
         "image": null
       },
       {
         "id": 47,
         "question": "Quelles sont les dates des deux dernières guerres mondiales ?",
         "explanation": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18). La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
+        "question_vi": "Có biết ngày của hai cuộc chiến tranh thế giới gần đây nhất không?",
+        "explanation_vi": "Chiến tranh thế giới thứ nhất diễn ra từ ngày 28 tháng 7 năm 1914 đến ngày 11 tháng 11 năm 1918 (được biết đến với tên gọi là Chiến tranh Thế giới lần thứ nhất hoặc Chiến tranh 14-18). Chiến tranh thế giới thứ hai diễn ra từ ngày 1 tháng 9 năm 1939 đến ngày 2 tháng 9 năm 1945.",
         "image": null
       },
       {
         "id": 48,
         "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
         "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+        "question_vi": "Bạn có biết Jean Moulin không? Tại sao ông lại nổi tiếng?",
+        "explanation_vi": "Jean Moulin là một biểu tượng của sự cách mạng Pháp trong thời kỳ chiến tranh thế giới thứ hai, ông đã được gửi đến Pháp bởi Tổng tư lệnh Charles De Gaulle để điều hành và hợp nhất các nhóm cách mạng Pháp, ông đã thật không may bị bắt bởi Gestapo và sau đó bị đánh bại, ông đã chết vì những thương tích trong tàu đưa ông đi đến Đức.",
         "image": null
       },
       {
         "id": 49,
         "question": "Qui est Charles de Gaulle ?",
         "explanation": "Le Général De Gaulle est un miliaire, un résistant et un homme politique Français, il est le fondateur de la 5éme république et l’un des principaux architectes de la résistance Française et a été président de la république Française sous la 5éme république en 1959 et 1969.",
+        "question_vi": "Ai là Charles de Gaulle?",
+        "explanation_vi": "",
         "image": null
       },
       {
         "id": 50,
         "question": "Citez des monuments historiques Français que vous connaissez ?",
         "explanation": "La tour Eiffel. L’arc de triomphe. Le château de Versailles. Le château de Vincennes. Le Louvre. Le château de la Loire. Le château de Chambord. Le pont du Gard etc…",
+        "question_vi": "Kể tên ba di sản lịch sử của Pháp mà bạn biết?",
+        "explanation_vi": "Tháp Eiffel. Cổng khải hoàn. Cung điện Versailles. Lâu đài Vincennes. Louvre. Lâu đài Loire. Lâu đài Chambord. Cầu Gard v.v…",
         "image": null
       },
       {
         "id": 51,
         "question": "Quand est-ce qu’a été instituée la 5éme république ?",
         "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+        "question_vi": "Nền cộng hoà thứ năm được thiết lập khi nào?",
+        "explanation_vi": "Nền cộng hoà thứ 5 được thiết lập bởi hiến pháp vào ngày 4 tháng 10 năm 1958",
         "image": null
       },
       {
         "id": 52,
         "question": "Quel a été le fait marquant de la 5éme république ?",
         "explanation": "Elle a marqué définitivement la séparation entre le pouvoir exécutif, législatif et judiciaire.",
+        "question_vi": "Sự kiện nào đã làm cho Nền cộng hoà thứ năm được thiết lập?",
+        "explanation_vi": "Nó đã đánh dấu sự phân tách cuối cùng giữa quyền lực thực hiện, quyền lực lập pháp và quyền lực tòa án.",
         "image": null
       },
       {
         "id": 53,
         "question": "Quand est-ce qu’a eu lieu la séparation de l’église et de l’état ?",
         "explanation": "Elle a eu lieu le 09 Décembre 1905.",
+        "question_vi": "Khi nào sự phân tách giữa tôn giáo và nhà nước đã xảy ra?",
+        "explanation_vi": "Nó đã xảy ra vào ngày 9 tháng 12 năm 1905.",
         "image": null
       },
       {
         "id": 54,
         "question": "Quelles personnages de l’histoire de France vous ont le plus marqué et marqué l’histoire ?",
         "explanation": "Charles de Gaules, Napoléon etc…",
+        "question_vi": "Bạn ấn tượng nhất với nhân vật lịch sử nào của Pháp?",
+        "explanation_vi": "Charles de Gaules, Napoléon etc…",
         "image": null
       },
       {
         "id": 55,
         "question": "Pourquoi le 1er Mai est-il férié ?",
         "explanation": "Nous fêtons la fête du Travail.",
+        "question_vi": "Tại sao ngày 1 tháng 5 là ngày nghỉ?",
+        "explanation_vi": "Vì đó là ngày quốc tế lao động",
         "image": null
       },
       {
         "id": 56,
         "question": "Pourquoi le 11 Novembre est-il férié ?",
         "explanation": "Le 11 novembre marque la fin de la première guerre mondiale, c’est ce qu’on appelle l’Armistice signée en 1918",
+        "question_vi": "Tại sao ngày 11 tháng 11 là ngày nghỉ?",
+        "explanation_vi": "Vì đó là ngày kết thúc chiến tranh thế giới thứ nhất, được gọi là Hiệp ước được ký vào năm 1918",
         "image": null
       },
       {
         "id": 57,
         "question": "Que fête-on le 14 juillet ?",
         "explanation": "C’est la fête nationale en France, le 14 juillet est généralement associé à la prise de la Bastille en 1789, c’est dans les faits le 14 juillet 1790, la fête de la Fédération, qui est officiellement commémoré en France depuis plus d’un siècle.",
+        "question_vi": "Ngày 14 tháng 7 là ngày gì?",
+        "explanation_vi": "Đó là ngày lễ quốc gia ở Pháp, ngày 14 tháng 7 thường được liên kết với việc lấy cờ của Bắc Mê Linh vào năm 1789, thực tế là ngày 14 tháng 7 năm 1790, lễ Fédération, được tổ chức chính thức tại Pháp từ hơn một thế kỷ trước.",
         "image": null
       },
       {
         "id": 58,
         "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
         "explanation": "Elles ont été bâties au moyen-âge.",
+        "question_vi": "Thời kỳ nào đã xây dựng các nhà thờ Gothic?",
+        "explanation_vi": "Chúng đã được xây dựng vào thời Trung cổ.",
         "image": null
       },
       {
         "id": 59,
         "question": "Qu’est-ce que l’hôtel de ville ?",
         "explanation": "C’est la mairie principale d’une grande ville ou d’une ville importante.",
+        "question_vi": "“hôtel de ville” là gì?",
+        "explanation_vi": "Là toà thị chính của 1 thành phố lớn hoặc 1 thành phố quan trọng",
         "image": null
       },
       {
         "id": 60,
         "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
         "explanation": "Oui. Citez les plats locaux des endroits que vous avez visités",
+        "question_vi": "Bạn đã ăn đặc sản địa phương khi du lịch Pháp chưa?",
+        "explanation_vi": "Liệt kê ra các đặc sản ở những vùng mà bạn đã ghé thăm.",
         "image": null
       },
       {
         "id": 61,
         "question": "Quels sont les plats typiques Français que vous connaissez ?",
         "explanation": "La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L’aligot etc…",
+        "question_vi": "Bạn có biết những món ăn đặc sản của Pháp mà bạn biết?",
+        "explanation_vi": "Bouillabaisse, Pot-au-feu, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot v.v…",
         "image": null
       },
       {
         "id": 62,
         "question": "Citez des personnages littéraires Français célèbres",
         "explanation": "Thénardier, jean valjean (Les misérables), Rémy (Sans famille), le petit prince,…",
+        "question_vi": "Kể tên ba nhân vật văn học nổi tiếng của Pháp?",
+        "explanation_vi": "Thénardier, Jean Valjean (Les Misérables), Rémy (Sans famille), le petit prince,…",
         "image": null
       },
       {
         "id": 63,
         "question": "Citez des peintres Français célèbres",
         "explanation": "Cézanne, Delacroix, Monet etc…",
+        "question_vi": "Kể tên ba nhà vẽ nổi tiếng của Pháp?",
+        "explanation_vi": "Cézanne, Delacroix, Monet v.v…",
         "image": null
       },
       {
         "id": 64,
         "question": "Citez des personnes naturalisées Français(e)",
         "explanation": "Marie Curie, Joséphine Baker etc…",
+        "question_vi": "Kể tên ba người được tự nhiên hóa Pháp?",
+        "explanation_vi": "Marie Curie, Joséphine Baker v.v…",
         "image": null
       },
       {
         "id": 65,
         "question": "Citez des artistes Français connus",
         "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+        "question_vi": "Kể tên ba nhà sáng tạo nổi tiếng của Pháp?",
+        "explanation_vi": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel v.v…",
         "image": null
       },
       {
         "id": 66,
         "question": "Citez des écrivains Français Célèbres",
         "explanation": "Beaumarchais, Molière, Victor Hugo etc…",
+        "question_vi": "Kể tên ba nhà văn nổi tiếng của Pháp?",
+        "explanation_vi": "Beaumarchais, Molière, Victor Hugo v.v…",
         "image": null
       },
       {
         "id": 67,
         "question": "Citez des œuvres littéraires célèbres",
         "explanation": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+        "question_vi": "Kể tên ba tác phẩm văn học nổi tiếng của Pháp?",
+        "explanation_vi": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro v.v…",
         "image": null
       },
       {
         "id": 68,
         "question": "Qui a écrit les trois mousquetaires ?",
         "explanation": "Alexandre Dumas et Auguste Maquet.",
+        "question_vi": "Ai đã viết ba quốc tước?",
+        "explanation_vi": "Alexandre Dumas và Auguste Maquet.",
         "image": null
       },
       {
         "id": 69,
         "question": "Qui était Voltaire ?",
         "explanation": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+        "question_vi": "Ai là Voltaire?",
+        "explanation_vi": "Tên thật François-Marie Arouet, Voltaire là một nhà văn và triết gia người Pháp thế kỷ 18",
         "image": null
       },
       {
         "id": 70,
         "question": "À Quel mouvement voltaire appartient-il ?",
         "explanation": "Il appartenait au mouvement de la philosophie des lumières et il en est l’un des représentants les plus connus.",
+        "question_vi": "Voltaire thuộc trường phái nào?",
+        "explanation_vi": "Ông thuộc trường phái triết học ánh sáng và là 1 trong những đại diện nổi tiếng nhất của trường phái này",
         "image": null
       },
       {
         "id": 71,
         "question": "Quel grand évènement sportif Français connaissez-vous ?",
         "explanation": "Vous pouvez citer une épreuve cycliste comme le tour de France. Une épreuve de tennis comme le tournois de Roland Garos. Une compétition de course automobile comme les 24h du Mans. Une course comme Le Marathon de Paris.",
+        "question_vi": "Bạn biết sự kiện thể thao nổi tiếng nào ở Pháp?",
+        "explanation_vi": "Tour de France (giải xe đạp), le tournois de Roland Garos (giải tennis), les 24h du Mans (đua xe oto), Le Marathon de Paris (giải chạy)",
         "image": null
       },
       {
         "id": 72,
         "question": "Avons-nous le droit en France de porter des signes religieux dans l’espace public ?",
         "explanation": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
+        "question_vi": "Chúng ta có quyền mang dấu hiệu tôn giáo trong không gian công cộng ở Pháp không?",
+        "explanation_vi": "Có, nhưng không phải trong các trường học, trường trung học và trường trung học phổ thông công cộng.",
         "image": null
       },
       {
         "id": 73,
         "question": "Qu’est-ce que la loi de 2004 ?",
         "explanation": "La loi de 2004 et plus précisément l’article L141-5-1 stipule que dans les écoles, les collèges et les lycées publics, le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse est interdit.",
+        "question_vi": "Loi 2004 là gì?",
+        "explanation_vi": "Là một đoạn trong bộ luật Pháp, cụ thể là một đoạn trong bộ luật Pháp về giáo dục, được viết vào năm 2004, cụ thể là đoạn L141-5-1 quy định rằng trong các trường học, trường trung học và trường trung học phổ thông công cộng, việc mang dấu hiệu tôn giáo hoặc đeo trang phục bởi các học sinh để biểu hiện rõ ràng sự thuộc về tôn giáo là bị cấm.",
         "image": null
       },
       {
         "id": 74,
         "question": "Connaissez-vous Brigitte Bardot ?",
         "explanation": "Brigitte Bardot est une actrice de cinéma, chanteuse et militante pour la cause animale. Elle a plusieurs œuvres artistiques et culturelles à son actif dont les plus connus sont “Moi je joue” et “Harley Davidson”.",
+        "question_vi": "Bạn có biết Brigitte Bardot không? Tại sao cô ấy nổi tiếng?",
+        "explanation_vi": "Brigitte Bardot là một diễn viên, ca sĩ và người phát động cho các vấn đề về động vật. Cô ấy có nhiều tác phẩm nghệ thuật và văn hóa trong số đó, các tác phẩm nổi tiếng nhất là “Moi je joue” và “Harley Davidson”.",
         "image": null
       },
       {
         "id": 75,
         "question": "Citez des philosophes connus des lumières ?",
         "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+        "question_vi": "Kể tên ba triết gia nổi tiếng của Pháp?",
+        "explanation_vi": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes v.v…",
         "image": null
       },
       {
         "id": 76,
         "question": "Qu’est-ce que la philosophie des lumières ?",
         "explanation": "C’est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du xviie siècle avec plusieurs philosophes comme voltaire, rousseau etc… et qui par leur engagement contre les oppressions religieuses et politiques, se voyaient comme une élite avancée œuvrant pour un progrès du monde. Combattant l’irrationnel, l’arbitraire, l’obscurantisme et la « superstition » des siècles passés, ils ont procédé au renouvellement du savoir, de l’éthique et de l’esthétique de leur temps. L’influence de leurs écrits a été déterminante dans les grands événements de la fin du xviiie siècle que sont la Déclaration d’indépendance des États-Unis et la Révolution française.",
+        "question_vi": "Triết lý của thời kỳ Ánh Sáng Là gì?",
+        "explanation_vi": "Đó là một phong trào văn hóa, triết học, văn học và trí tuệ nổi lên vào nửa sau thế kỷ 17 với một số triết gia như Voltaire, Rousseau, v.v… và những người thông qua cam kết chống lại sự áp bức tôn giáo và chính trị, coi mình là một tầng lớp tiên tiến làm việc vì sự tiến bộ trên thế giới. Chống lại sự phi lý, độc đoán, mù mờ và “mê tín” của các thế kỷ trước, họ tiến hành đổi mới kiến ​​thức, đạo đức và thẩm mỹ của thời đại mình. Ảnh hưởng của các bài viết của họ có tính quyết định trong các sự kiện lớn vào cuối thế kỷ 18: Tuyên ngôn Độc lập của Hoa Kỳ và Cách mạng Pháp.)",
         "image": null
       },
       {
         "id": 77,
         "question": "Connaissez-vous des sportifs Français(e)s ?",
         "explanation": "Dans le Football : Michel Platini, Zinedine Zidane. Dans le cyclisme : Richard Virenque. Dans le tennis : Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Dans le Judo : Teddy Riner.",
+        "question_vi": "Kể tên ba vận động viên thể thao nổi tiếng của Pháp?",
+        "explanation_vi": "Trong bóng đá: Michel Platini, Zinedine Zidane. Trong đua xe đạp: Richard Virenque. Trong bóng tennis: Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Trong Judo: Teddy Riner.",
         "image": null
       },
       {
         "id": 78,
         "question": "Citez des plats de votre région/Ville/Département",
         "explanation": "Ici vous devez montrer lors de votre entretien de naturalisation Française que vous êtes intégré et que vous connaissez à minima un ou deux plats typiques de votre région/ville/département, vous devrez donc en fonction des questions adapter vos réponses.",
+        "question_vi": "Kể tên ba món ăn đặc sản của vùng/thành phố/tỉnh mà bạn đã ghé thăm?",
+        "explanation_vi": "Ở đây, bạn phải thể hiện trong cuộc phỏng vấn nhập tịch Pháp rằng bạn là người nhập cư và bạn biết ít nhất một hoặc hai món ăn đặc trưng của vùng/thành phố/vùng của bạn, do đó bạn sẽ phải điều chỉnh câu trả lời của mình tùy theo câu hỏi.",
         "image": null
       },
       {
         "id": 79,
         "question": "En quelle année a été aboli l’esclavage en France ?",
         "explanation": "En France l’esclavage a été aboli le 27 Avril 1848.",
+        "question_vi": "Chế độ nô lệ bị bãi bỏ ở Pháp vào năm nào?",
+        "explanation_vi": "Ở Pháp, những người nhập cư đã bị hủy bỏ vào ngày 27 tháng 4 năm 1848.",
         "image": null
       },
       {
         "id": 80,
         "question": "L’école est-elle obligatoire en France ?",
         "explanation": "L’instruction est gratuite et obligatoire pour tous les enfants, français et étrangers, à partir de l’âge de 3 ans et jusqu’à l‘âge de 16 ans révolus (l’âge minimum a été abaissée de 6 ans à 3 ans depuis 2019).",
+        "question_vi": "Lớp học có phải là bắt buộc ở Pháp không?",
+        "explanation_vi": "Giáo dục là miễn phí và bắt buộc đối với tất cả trẻ em, người Pháp và người nước ngoài, từ 3 tuổi đến 16 tuổi (độ tuổi tối thiểu đã giảm từ 6 xuống 3 tuổi kể từ năm 2019)",
         "image": null
       },
       {
         "id": 81,
         "question": "Depuis quand l’école est-elle obligatoire en France ?",
         "explanation": "L’instruction est obligatoire depuis le 28 mars 1882.",
+        "question_vi": "Việc đi học ở Pháp là bắt buộc từ khi nào?",
+        "explanation_vi": "Giáo dục là bắt buộc kể từ ngày 28 tháng 3 năm 1882.",
         "image": null
       },
       {
         "id": 82,
         "question": "Qui a rendu l’école obligatoire en France ?",
         "explanation": "C’est l’ancien maire de Paris Jules Ferry.",
+        "question_vi": "Ai đã đưa ra luật bắt buộc đi học ở Pháp? ",
+        "explanation_vi": "Là cựu thị trưởng Paris Jules Ferry.",
         "image": null
       },
       {
         "id": 83,
         "question": "Les femmes ont elles e droit de vote en France ?",
         "explanation": "Oui",
+        "question_vi": "Phụ nữ có quyền bỏ phiếu ở Pháp không?",
+        "explanation_vi": "Có",
         "image": null
       },
       {
         "id": 84,
         "question": "Depuis quand les femmes ont elles le droit de vote en France ?",
         "explanation": "Depuis le 21 avril 1944.",
+        "question_vi": "Phụ nữ có quyền bỏ phiếu ở Pháp từ khi nào?",
+        "explanation_vi": "Từ ngày 21 tháng 4 năm 1944.",
         "image": null
       },
       {
         "id": 85,
         "question": "Qui a été à l’origine du château de Versailles ?",
         "explanation": "C’est Louis XIV (Louis 14).",
+        "question_vi": "Ai là tác giả của château de Versailles?",
+        "explanation_vi": "Là Louis XIV (Louis 14).",
         "image": null
       },
       {
         "id": 86,
         "question": "Qui a été à l’origine de l’Arc de triomphe ?",
         "explanation": "C’est Napoléon 1er.",
+        "question_vi": "Ai là tác giả của Arc de triomphe?",
+        "explanation_vi": "Là Napoléon 1er.",
         "image": null
       },
       {
         "id": 87,
         "question": "Quel est le monument principal en France ?",
         "explanation": "C’est la tour Eiffel à Paris.",
+        "question_vi": "Đâu là công trình nổi bật ở Pháp?",
+        "explanation_vi": "Đó là tháp Eiffel",
         "image": null
       },
       {
         "id": 88,
         "question": "Qui a construit la tour Eiffel ?",
         "explanation": "C’est Gustave Eiffel.",
+        "question_vi": "Ai xây dựng tháp Eiffel?",
+        "explanation_vi": "Gustave Eiffel.",
         "image": null
       },
       {
         "id": 89,
         "question": "Quand la tour Eiffel a été construite et à quel évènement ?",
         "explanation": "En 1889 lors de l’exposition universelle de Paris.",
+        "question_vi": "Tháp Eiffel được xây dựng khi nào và tại sự kiện nào?",
+        "explanation_vi": "Năm 1889 trong Triển lãm toàn cầu ở Paris.",
         "image": null
       },
       {
         "id": 90,
         "question": "Citez des animateurs de télévision Français que vous connaissez ?",
         "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
+        "question_vi": "Kể tên 1 vài người dẫn chương trình bạn biết ?",
+        "explanation_vi": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
         "image": null
       },
       {
         "id": 91,
         "question": "Citez des chanteurs Français connus ?",
         "explanation": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
+        "question_vi": "Kể tên 1 vài ca sĩ Pháp bạn biết ?",
+        "explanation_vi": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
         "image": null
       },
       {
         "id": 92,
         "question": "Citez des journalistes Français(e)s connus ?",
         "explanation": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
+        "question_vi": "Kể tên 1 vài nhà báo Pháp nổi tiếng",
+        "explanation_vi": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
         "image": null
       },
       {
         "id": 93,
         "question": "Citez des acteurs/actrices Français(e)s que vous connaissez ?",
         "explanation": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
+        "question_vi": "Kể tên 1 vài diễn viên Pháp nổi tiếng",
+        "explanation_vi": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
         "image": null
       },
       {
         "id": 94,
         "question": "Citez des anciennes colonies Françaises ?",
         "explanation": "Algérie, Sénégal, Mali, Cote d’Ivoire.",
+        "question_vi": "Kể tên các thuộc địa cũ của Pháp?",
+        "explanation_vi": "Algeria, Sénégal, Mali, Bờ Biển Ngà.",
         "image": null
       },
       {
         "id": 95,
         "question": "Qu’est-ce que la guerre de 100 ans ?",
         "explanation": "C’est une guerre résultant d’un conflit entre les rois de France et les rois d’Angleterre durant le Moyen-Age. Ce conflit d’un siècle a en réalité duré 116 ans plus exactement !",
+        "question_vi": "Cuộc chiến 100 năm là cuộc chiến nào?",
+        "explanation_vi": "Đó là một cuộc chiến bắt nguồn từ sự xung đột giữa các vị vua của Pháp và các vị vua của nước Anh trong thời Trung Cổ. Chính xác thì cuộc xung đột kéo dài hàng thế kỷ này đã kéo dài 116 năm!",
         "image": null
       },
       {
         "id": 96,
         "question": "Connaissez-vous la bataille de Verdun ?",
         "explanation": "La bataille de Verdun a eu lieu en 1916 entre l’armée française et l’armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
+        "question_vi": "Bạn có biết  về trận đánh Verdun không?",
+        "explanation_vi": "Trận Verdun diễn ra vào năm 1916 giữa quân đội Pháp và quân đội Đức ở Lorraine trong Thế chiến thứ nhất. Cuộc chiến này gây ra nhiều thương vong cho cả hai bên mà không phân ra được người chiến thắng!",
         "image": null
       },
       {
         "id": 97,
         "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
         "explanation": "On les appelés les Poilus.",
+        "question_vi": "Biệt danh của lính Pháp trong Thế chiến thứ nhất là gì?",
+        "explanation_vi": "Đó là những người Poilus.",
         "image": null
       },
       {
         "id": 98,
         "question": "Quand a eu lieu la première guerre mondiale ?",
         "explanation": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 novembre 1918",
+        "question_vi": "Chiến tranh thế giới thứ 1 đã diễn ra khi nào ?",
+        "explanation_vi": "28/7/1914 – 11/11/1918",
         "image": null
       },
       {
         "id": 99,
         "question": "Quand a eu lieu la seconde guerre mondiale ?",
         "explanation": "La seconde guerre mondiale a eu lieu du 1er septembre 1939 au 02 septembre 1945",
+        "question_vi": "Chiến tranh thế giới thứ 2 đã diễn ra khi nào ?",
+        "explanation_vi": "1/9/1939 – 02/9/1945",
         "image": null
       },
       {
         "id": 100,
         "question": "Qui sont les alliés durant la première guerre mondiale ?",
         "explanation": "La France, l’Angleterre, la Russie et les USA (États-Unis d’Amérique).",
+        "question_vi": "Ai là đồng minh trong Thế chiến thứ nhất?",
+        "explanation_vi": "Pháp, Anh, Nga và Hoa Kỳ (Mỹ).",
         "image": null
       }
       ]

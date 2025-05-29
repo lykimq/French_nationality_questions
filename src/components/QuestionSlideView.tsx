@@ -96,13 +96,6 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
         return question.question;
     };
 
-    const getLocalizedAnswer = (question: Question) => {
-        if (language === 'vi' && 'answer_vi' in question) {
-            return question.answer_vi;
-        }
-        return question.answer;
-    };
-
     const currentQuestion = questions[currentIndex];
 
     return (

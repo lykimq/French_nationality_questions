@@ -18,7 +18,6 @@ import { useLanguage, MultiLangText } from '../contexts/LanguageContext';
 interface SearchResultQuestion {
     id: number;
     question: string | MultiLangText;
-    answer?: string | MultiLangText;
     explanation: string | MultiLangText;
     categoryId: string;
     image?: string | null;
@@ -49,26 +48,21 @@ const SearchScreen = () => {
             // Handle both French-only and multilingual question formats
             if (isTranslationLoaded) {
                 const q = item.question as MultiLangText;
-                const a = item.answer as MultiLangText | undefined;
                 const e = item.explanation as MultiLangText;
 
                 return (
                     q.fr.toLowerCase().includes(normalizedQuery) ||
                     q.vi.toLowerCase().includes(normalizedQuery) ||
-                    (a && a.fr.toLowerCase().includes(normalizedQuery)) ||
-                    (a && a.vi.toLowerCase().includes(normalizedQuery)) ||
                     e.fr.toLowerCase().includes(normalizedQuery) ||
                     e.vi.toLowerCase().includes(normalizedQuery) ||
                     item.id.toString() === normalizedQuery
                 );
             } else {
                 const q = item.question as string;
-                const a = item.answer as string | undefined;
                 const e = item.explanation as string;
 
                 return (
                     q.toLowerCase().includes(normalizedQuery) ||
-                    (a && a.toLowerCase().includes(normalizedQuery)) ||
                     e.toLowerCase().includes(normalizedQuery) ||
                     item.id.toString() === normalizedQuery
                 );
@@ -140,7 +134,6 @@ const SearchScreen = () => {
                                 key={question.id}
                                 id={question.id}
                                 question={question.question}
-                                answer={question.answer}
                                 explanation={question.explanation}
                                 language={language}
                                 image={question.image}

@@ -12,9 +12,9 @@ interface CategorySelectionViewProps {
         description_vi?: string;
         questions: Array<{
             id: number;
-            question_fr: string;
+            question: string;
             question_vi: string;
-            explanation_fr?: string;
+            explanation?: string;
             explanation_vi?: string;
             image?: string | null;
         }>;

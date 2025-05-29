@@ -8,48 +8,48 @@
     "questions": [
         {
             "id": 41,
-            "question_fr": "À quelle date précise a eu lieu la révolution Française ?",
-            "explanation_fr": "La révolution Française a eu lieu le 05 Mai 1789 avec l'ouverture des états généraux et s'est terminée le 09 Novembre 1799 avec le coup d'état du 18 brumaire de Napoléon Bonaparte.",
+            "question": "À quelle date précise a eu lieu la révolution Française ?",
+            "explanation": "La révolution Française a eu lieu le 05 Mai 1789 avec l'ouverture des états généraux et s'est terminée le 09 Novembre 1799 avec le coup d'état du 18 brumaire de Napoléon Bonaparte.",
             "question_vi": "Cuộc Cách mạng Pháp diễn ra vào ngày nào?",
             "explanation_vi": "Cách mạng Pháp bắt đầu vào ngày 5 tháng 5 năm 1789 với việc khai mạc Hội nghị Đẳng cấp và kết thúc vào ngày 9 tháng 11 năm 1799 với cuộc đảo chính 18 Brumaire của Napoléon Bonaparte.",
             "image": null
         },
         {
             "id": 42,
-            "question_fr": "Quel événement de la Révolution vous a-t-il le plus marqué ?",
-            "explanation_fr": "Parlez de la révolution Française, citez par exemple un évènement important de la révolution qui s'est produit le 14 Juillet 1789 et qui a marqué la prise de la prison de la Bastille, un événement inaugural du début de la Révolution. Elle a eu lieu suite à une crise agricole qui a donné lieu à une grande crise économique et une inflation importante qui se confrontait à des décisions de hausse des impôts décidées par le roi de l'époque Louis XVI.",
+            "question": "Quel événement de la Révolution vous a-t-il le plus marqué ?",
+            "explanation": "Parlez de la révolution Française, citez par exemple un évènement important de la révolution qui s'est produit le 14 Juillet 1789 et qui a marqué la prise de la prison de la Bastille, un événement inaugural du début de la Révolution. Elle a eu lieu suite à une crise agricole qui a donné lieu à une grande crise économique et une inflation importante qui se confrontait à des décisions de hausse des impôts décidées par le roi de l'époque Louis XVI.",
             "question_vi": "Sự kiện nào trong Cách mạng Pháp gây ấn tượng nhất với bạn?",
             "explanation_vi": "Hãy nói về Cách mạng Pháp, ví dụ như sự kiện quan trọng xảy ra vào ngày 14 tháng 7 năm 1789 - cuộc tấn công nhà ngục Bastille, sự kiện khởi đầu của Cách mạng. Sự kiện này xảy ra sau một cuộc khủng hoảng nông nghiệp dẫn đến khủng hoảng kinh tế lớn và lạm phát cao, cùng với quyết định tăng thuế của vua Louis XVI.",
             "image": null
         },
         {
             "id": 43,
-            "question_fr": "Quels sont les trois ordres de la société française avant la Révolution ?",
-            "explanation_fr": "La société française était divisée en trois ordres : le clergé (Premier ordre), la noblesse (Deuxième ordre) et le tiers état (Troisième ordre qui représentait 98% de la population).",
+            "question": "Quels sont les trois ordres de la société française avant la Révolution ?",
+            "explanation": "La société française était divisée en trois ordres : le clergé (Premier ordre), la noblesse (Deuxième ordre) et le tiers état (Troisième ordre qui représentait 98% de la population).",
             "question_vi": "Ba đẳng cấp trong xã hội Pháp trước Cách mạng là gì?",
             "explanation_vi": "Xã hội Pháp được chia thành ba đẳng cấp: giới tăng lữ (Đẳng cấp thứ nhất), quý tộc (Đẳng cấp thứ hai) và đẳng cấp thứ ba (chiếm 98% dân số).",
             "image": null
         },
         {
             "id": 44,
-            "question_fr": "Quel été le rôle de la Bastille avant sa démolition ?",
-            "explanation_fr": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
+            "question": "Quel été le rôle de la Bastille avant sa démolition ?",
+            "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
             "question_vi": "Nhà ngục Bastille có vai trò gì trước khi bị phá hủy?",
             "explanation_vi": "Nhà ngục Bastille là một nhà tù quốc gia, nơi giam giữ nhiều nhân vật nổi tiếng thời bấy giờ như Voltaire, Sade, v.v...",
             "image": null
         },
         {
             "id": 45,
-            "question_fr": "Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?",
-            "explanation_fr": "Elle a été adoptée le 26 Aout 1789. (c'est l'une des questions entretien de naturalisation Française les plus fréquentes), téléchargez ici la charte des droits de l'homme et du citoyen au format PDF pour bien préparer votre entretien de naturalisation Française.",
+            "question": "Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?",
+            "explanation": "Elle a été adoptée le 26 Aout 1789. (c'est l'une des questions entretien de naturalisation Française les plus fréquentes), téléchargez ici la charte des droits de l'homme et du citoyen au format PDF pour bien préparer votre entretien de naturalisation Française.",
             "question_vi": "Tuyên ngôn Nhân quyền và Dân quyền được thông qua khi nào?",
             "explanation_vi": "Tuyên ngôn được thông qua vào ngày 26 tháng 8 năm 1789. (Đây là một trong những câu hỏi thường gặp nhất trong phỏng vấn nhập quốc tịch Pháp). Bạn có thể tải Tuyên ngôn Nhân quyền và Dân quyền dưới dạng PDF để chuẩn bị tốt cho buổi phỏng vấn nhập quốc tịch Pháp.",
             "image": null
         },
         {
             "id": 46,
-            "question_fr": "Qui a instauré le code civil en France ?",
-            "explanation_fr": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
+            "question": "Qui a instauré le code civil en France ?",
+            "explanation": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
             "question_vi": "Ai là người thiết lập Bộ luật Dân sự ở Pháp?",
             "explanation_vi": "Bộ luật Dân sự Pháp được thiết lập bởi Napoléon Bonaparte.",
             "image": null

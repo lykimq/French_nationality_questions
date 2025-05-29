@@ -8,16 +8,16 @@
     "questions": [
         {
             "id": 71,
-            "question_fr": "Quel grand évènement sportif Français connaissez-vous ?",
-            "explanation_fr": "Vous pouvez citer une épreuve cycliste comme le tour de France. Une épreuve de tennis comme le tournois de Roland Garos. Une compétition de course automobile comme les 24h du Mans. Une course comme Le Marathon de Paris.",
+            "question": "Quel grand évènement sportif Français connaissez-vous ?",
+            "explanation": "Vous pouvez citer une épreuve cycliste comme le tour de France. Une épreuve de tennis comme le tournois de Roland Garos. Une compétition de course automobile comme les 24h du Mans. Une course comme Le Marathon de Paris.",
             "question_vi": "Bạn biết những sự kiện thể thao lớn nào của Pháp?",
             "explanation_vi": "Bạn có thể kể đến các giải đua xe đạp như Tour de France. Giải đấu quần vợt như Roland Garros. Giải đua xe như 24 giờ Le Mans. Các cuộc đua như Marathon Paris.",
             "image": null
         },
         {
             "id": 77,
-            "question_fr": "Connaissez-vous des sportifs Français(e)s ?",
-            "explanation_fr": "Dans le Football : Michel Platini, Zinedine Zidane. Dans le cyclisme : Richard Virenque. Dans le tennis : Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Dans le Judo : Teddy Riner.",
+            "question": "Connaissez-vous des sportifs Français(e)s ?",
+            "explanation": "Dans le Football : Michel Platini, Zinedine Zidane. Dans le cyclisme : Richard Virenque. Dans le tennis : Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Dans le Judo : Teddy Riner.",
             "question_vi": "Bạn có biết các vận động viên Pháp nào không?",
             "explanation_vi": "Trong bóng đá: Michel Platini, Zinedine Zidane. Trong đua xe đạp: Richard Virenque. Trong quần vợt: Jo-Wilfried TSONGA, Gaël Monfils, Yannick Noah. Trong Judo: Teddy Riner.",
             "image": null

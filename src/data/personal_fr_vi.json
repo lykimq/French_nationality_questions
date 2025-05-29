@@ -1,0 +1,207 @@
+{
+  "id": "personal",
+  "title": "Informations personnelles",
+  "title_vi": "Thông tin cá nhân",
+  "icon": "person",
+  "description": "Questions 1 à 24 sur la vie personnelle",
+  "description_vi": "Câu hỏi 1-24 về thông tin cá nhân",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Pourquoi voulez-vous devenir Français ?",
+      "explanation": "La réponse à cette question peut sembler facile, mais il faut garder en tête que vous devez prouver et montrer votre implication, vous devez bien préparer la réponse à cette question car elle est très importante. Vous devez expliquer clairement pourquoi vous sentez que vous êtes devenu Français/Française et expliquer qu'au jour d'aujourd'hui vous vous sentez plus Français/Française que votre nationalité d'origine et montrer clairement que vous n'avez plus aucune alternative. Vous devez citer également les valeurs de la France auxquelles vous adhérez : En démontrant par exemple que vous avez un projet personnel ou professionnel que vous êtes en train de construire ou que vous voudriez construire en France. Vous devez expliquer votre mode de vie actuel (à la Française) et que vous appréciez beaucoup. Vous devez également expliquer que vous admirez la place de la France sur le paysage mondial : La France est la 3ème économie mondiale, le leader aéronautique avec l'Allemagne, l'agroalimentaire, l'industrie du luxe etc… Enfin vous pouvez citer le patrimoine culturel Français en citant la richesse culturelle de la France : science, Arts, littérature.",
+      "question_vi": "Tại sao bạn muốn trở thành người Pháp?",
+      "explanation_vi": "Câu trả lời cho câu hỏi này có vẻ dễ dàng, nhưng bạn cần nhớ rằng bạn phải chứng minh và thể hiện sự cam kết của mình, bạn phải chuẩn bị câu trả lời cho câu hỏi này vì nó rất quan trọng. Bạn cần giải thích rõ ràng tại sao bạn cảm thấy mình đã trở thành người Pháp và giải thích rằng hiện nay bạn cảm thấy mình là người Pháp hơn là quốc tịch gốc của mình và cho thấy rõ ràng rằng bạn không còn lựa chọn thay thế nào khác. Bạn cũng cần đề cập đến các giá trị của Pháp mà bạn tán thành như : Bằng cách chứng minh rằng bạn có một dự án cá nhân hoặc nghề nghiệp mà bạn đang xây dựng hoặc muốn xây dựng tại Pháp. Bạn cần giải thích lối sống hiện tại của mình (theo phong cách Pháp) và bạn rất đánh giá cao điều đó. Bạn cũng cần giải thích rằng bạn ngưỡng mộ vị thế của Pháp trên cương vị thế giới: Pháp là nền kinh tế lớn thứ 3 trên thế giới, là lãnh đạo trong ngành hàng không cùng với Đức, ngành thực phẩm công nghiệp, ngành công nghiệp xa xỉ v.v… Cuối cùng, bạn có thể đề cập đến di sản văn hóa Pháp bằng cách nêu ra sự giàu có trong văn hóa của Pháp: khoa học, nghệ thuật, văn học.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+      "explanation": "Attention à bien répondre à cette question en donnant si possible un chiffre exact, et surtout soyez le plus honnête possible car n'oubliez pas que l'administration a votre passeport avec tous les cachets d'entrées/Sorties du territoire Français.",
+      "question_vi": "Bạn trở về quốc gia gốc của mình bao nhiêu lần một năm?",
+      "explanation_vi": "Lưu ý trả lời câu hỏi này bằng cách cung cấp một con số cụ thể nếu có thể, và hãy cố gắng trung thực nhất có thể, đừng quên rằng cơ quan quản lý có hộ chiếu của bạn với tất cả các dấu nhập/xuất cảnh vào lãnh thổ Pháp.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+      "explanation": "Si vous êtes célibataire et seul la réponse est évidente…. Si vous êtes marié ou pacsé répondez par oui en précisant depuis combien de temps.",
+      "question_vi": "Bạn đã kết hôn chưa? Bạn có bạn trai/bạn gái, chồng/vợ không?",
+      "explanation_vi": "Nếu bạn độc thân và không có người phụ thuộc , câu trả lời là rõ ràng… Nếu bạn đã kết hôn hoặc có hợp đồng sống chung (pacsé), hãy trả lời là \"có\" và cho biết đã bao lâu.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
+      "explanation": "Assurez-vous de répondre correctement à cette question en répondant que oui, n'oubliez pas que votre conjoint ou partenaire doit vivre avec vous et en France ! Si ce n'est pas le cas, il y a des chances que votre demande de naturalisation Française vous soit refusée car on vous reprochera d’avoir des attaches à l’étranger.",
+      "question_vi": "Bạn có sống cùng ai không?",
+      "explanation_vi": "Đảm bảo bạn trả lời câu hỏi này một cách chính xác bằng cách nói “có”, đừng quên rằng bạn đời hoặc người sống chung phải sống cùng bạn và đang ở Pháp! Nếu không, có khả năng yêu cầu xin quốc tịch Pháp của bạn sẽ bị từ chối.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?",
+      "explanation": "Parlez des activités sportives et culturelles, de vos sorties le weekend, de vos vacances etc…",
+      "question_vi": "Bạn thực hiện những hoạt động gì với người sống cùng/bạn đời?",
+      "explanation_vi": "Nói về các hoạt động thể thao và văn hóa, các hoạt động cuối tuần của bạn, kỳ nghỉ của bạn v.v…",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "Avez-vous des enfants ? Comptez-vous en avoir prochainement ?",
+      "explanation": "Répondez selon votre situation, veillez juste à préciser que les enfants seront en France.",
+      "question_vi": "Bạn có con không? Bạn có dự định có con trong tương lai gần không?",
+      "explanation_vi": "Trả lời theo tình hình của bạn, chỉ cần chú ý rằng các em bé sẽ sống ở Pháp.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "Qui s’occupe des enfants ? Qui s’occupe des tâches ménagères ?",
+      "explanation": "L’agent cherchera à voir que les tâches sont réparties de manière égale. Ne dites pas « j’aide ma femme » mais plutôt « nous participons ensemble et à part égale aux tâches ménagères et à la garde des enfants ».",
+      "question_vi": "Ai chăm sóc con? Ai làm công việc nhà?",
+      "explanation_vi": "Không chỉ đơn giản là giúp đỡ; người phỏng vấn muốn biết công việc được phân chia công bằng. Vì vậy, bạn nên nói 'chúng tôi cùng chia sẻ và có trách nhiệm ngang nhau trong việc chăm sóc con và việc nhà'.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "Avez-vous vos liens personnels et familiaux en France ?",
+      "explanation": "Citez vos liens familiaux (cousins, grands-parents, parents, amis). L'objectif est de montrer que vous êtes bien intégré(e) et que vous avez des attaches solides en France.",
+      "question_vi": "Bạn có các mối quan hệ cá nhân và gia đình ở Pháp không?",
+      "explanation_vi": "Hãy liệt kê tất cả các mối quan hệ gia đình và bạn bè của bạn ở Pháp. Điều này giúp chứng minh bạn đã hoà nhập và có các mối quan hệ bền chặt tại Pháp.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Quelle langue utilisez-vous au travail et à la maison ?",
+      "explanation": "J’utilise la langue Française pour tous mes échanges au travail et dans la vie de tous les jours.",
+      "question_vi": "Bạn sử dụng ngôn ngữ nào trong công việc và tại nhà?",
+      "explanation_vi": "Tôi sử dụng ngôn ngữ Pháp trong tất cả các trao đổi của mình trong công việc và trong cuộc sống hàng ngày.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Faites-vous partie d’une association ? Si oui, laquelle et depuis quand ?",
+      "explanation": "Ce n’est pas obligatoire, mais cela représente un point positif. Attention : faire des dons ne signifie pas que vous êtes membre de l’association.",
+      "question_vi": "Bạn có là thành viên của một tổ chức nào không? Nếu có, là tổ chức nào và từ bao giờ?",
+      "explanation_vi": "Bạn không bắt buộc phải là thành viên của một tổ chức, nhưng nếu bạn đã hoặc đang tham gia, điều này sẽ là một điểm cộng trong buổi phỏng vấn nhập quốc tịch Pháp! Lưu ý: quyên góp không đồng nghĩa với là thành viên.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "DOu se trouve le siège de cette association ?",
+      "explanation": "Répondez le plus honnêtement possible car il y a eu une enquête sur vous.",
+      "question_vi": "Trụ sở của tổ chức này ở đâu?",
+      "explanation_vi": "Trả lời một cách trung thực nhất có thể vì đã có một cuộc điều tra về bạn.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Pratiquez vous une religion ?",
+      "explanation": "Quelles qu’elles soient citez la ou les religions que vous pratiquez.",
+      "question_vi": "Bạn có tôn giáo không?",
+      "explanation_vi": "Dù là bất kỳ tôn giáo nào, hãy nêu ra tôn giáo bạn đang theo. Nếu bạn không có tôn giáo, hãy nói rằng bạn không có tôn giáo.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "Quels sont vos loisirs ?",
+      "explanation": "Citez tous vos loisirs de tous les jours, la marche, la lecture, le foot, la natation, la musique, le cinéma etc…",
+      "question_vi": "Sở thích của bạn là gì?",
+      "explanation_vi": "Nêu ra tất cả các sở thích hàng ngày của bạn, đi bộ, đọc sách, bóng đá, bơi, âm nhạc, điện ảnh v.v…",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "Pourquoi êtes-vous venu en France la toute première fois ?",
+      "explanation": "Pour vos études, pour le travail, pour rejoindre votre famille en France, répondez selon votre cas.",
+      "question_vi": "Tại sao bạn đến Pháp lần đầu tiên?",
+      "explanation_vi": "Để học, để làm việc, để tham gia gia đình bạn ở Pháp, hãy trả lời theo tình huống của bạn.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Qu’avez-vous en France que vous n’avez pas dans votre pays d’origine ?",
+      "explanation": "Ici aussi répondez selon votre cas en valorisant la France, citez par exemple la démocratie, la liberté, la culture, la science etc…",
+      "question_vi": "Có điều gì ở Pháp mà bạn thấy đặc biệt hoặc không có so với quốc gia gốc của mình không?",
+      "explanation_vi": "Ở đây cũng trả lời theo tình huống của bạn bằng cách đánh giá cao Pháp, nêu ví dụ như dân chủ, tự do, văn hóa, khoa học v.v…",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Ou avez-vous appris le Français ?",
+      "explanation": "À l’école, dans mon pays d’origine, dans un centre culturel Français, cours particuliers, cours en ligne, voyage linguistique, etc…",
+      "question_vi": "Bạn đã học tiếng Pháp ở đâu?",
+      "explanation_vi": "Ở trường, ở quốc gia gốc của bạn, ở trung tâm văn hóa Pháp, học riêng, học trực tuyến, du lịch học ngôn ngữ v.v…)",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Pendant combien de temps avez-vous étudier le Français ?",
+      "explanation": "Il faudra justifier d’un niveau suffisant de Français (niveau minimum B1) pour réussir votre entretien de naturalisation Française, si vous prenez des cours n’hésitez pas à le mentionner tout en mettant l’accent sur le fait que vous prenez des cours pour atteindre rapidement le niveau B2.",
+      "question_vi": "Bạn đã học tiếng Pháp trong bao lâu?",
+      "explanation_vi": "2 năm, 5 năm, 10 năm v.v… Bạn sẽ phải chứng minh một mức độ đủ tiếng Pháp (tối thiểu cấp độ B1) để vượt qua cuộc phỏng vấn nhận quốc tịch Pháp, nếu bạn đang học, đừng ngần ngại đề cập đến điều đó nhưng tập trung vào việc bạn đang học để nhanh chóng đạt được cấp độ B2.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "Utilisez vous la langue Française au travail ?",
+      "explanation": "Oui. Si vous n’utilisez pas le Français au travail il est important d’expliquer pourquoi et de parler d’un projet en particulier durant lequel vous avez utilisé le Français.",
+      "question_vi": "Bạn sử dụng tiếng Pháp trong công việc không?",
+      "explanation_vi": "Có. Nếu bạn không sử dụng tiếng Pháp trong công việc, quan trọng là phải giải thích tại sao và nói về một dự án cụ thể mà trong đó bạn đã sử dụng tiếng Pháp",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Parlez-vous d’autres langues ? Si oui, lesquelles ?",
+      "explanation": "Citez votre langue maternelle par exemple, ainsi que toutes les autres langues étrangères que vous connaissez en plus du Français.",
+      "question_vi": "Bạn có biết thêm ngôn ngữ nào không? Nếu có, đó là ngôn ngữ gì?",
+      "explanation_vi": "Nêu ra ngôn ngữ mẹ đẻ của bạn ví dụ, cũng như tất cả các ngôn ngữ nước ngoài khác mà bạn biết ngoài tiếng Pháp.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Quelle langue vous parait la plus facile ? Pourquoi ?",
+      "explanation": "Le Français, car c’est la langue que j’utilise dans la vie de tous les jours.",
+      "question_vi": "Ngôn ngữ nào bạn cảm thấy dễ sử dụng hơn? Tại sao?",
+      "explanation_vi": "Tiếng Pháp, bởi vì đó là ngôn ngữ mà tôi sử dụng hàng ngày trong cuộc sống.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "question": "Envoyez vous de l’argent dans votre pays d’origine ? Si oui à qui ?",
+      "explanation": "Il est préférable de ne pas envoyer de l’argent dans votre pays d’origine mais c’est le cas ce n’est pas un problème si c’est juste occasionnel. De préférence aussi il faut que ce soit envoyé à vos parents ou grands-parents plutôt qu’à votre femme /mari et vos enfants (qui eux doivent être avec vous en France).",
+      "question_vi": "Bạn có gửi tiền về quê hương không? Nếu có, gửi cho ai?",
+      "explanation_vi": "Tốt nhất là không gửi tiền về quê hương, nhưng nếu có thì không phải là vấn đề, miễn là đó chỉ là điều đôi khi. Nếu có, thì tốt nhất là gửi cho bố mẹ hoặc ông bà hơn là vợ/chồng và con cái của bạn (những người phải ở cùng bạn tại Pháp)",
+      "image": null
+    },
+    {
+      "id": 22,
+      "question": "Avez-vous de la famille proche ou lointaine dans votre pays d’origine ? Si oui comptez-vous les faire venir en France ?",
+      "explanation": "Attention ceci est une question piège, vos oncles, cousins grands-parents etc… n’ont pas le droit de s’installer en France juste parce que vous êtes Français, donc si vous avez encore de la famille dans votre pays d’origine répondez par “Oui mais je ne compte pas les faire venir en France”. L’agent ne doit surtout pas comprendre que vous voulez acquérir la nationalité Française uniquement pour le passeport Français ou afin de gagner de l’argent pour vivre confortablement dans votre pays d’origine. Vous pouvez garder vos liens avec votre pays d’origine mais il ne faut pas que ces derniers soient plus importants que vos liens qui vous rattachent à la France.",
+      "question_vi": "Có gia đình/ họ hàng gần hoặc xa ở quốc gia gốc của bạn không? Nếu có, bạn có dự định đưa họ đến Pháp không?",
+      "explanation_vi": "Lưu ý rằng đây là một câu hỏi rất cẩn trọng, bởi vì các bác, anh chị em họ, ông bà, v.v… không có quyền định cư tại Pháp chỉ vì bạn là người Pháp. Vì vậy, nếu bạn vẫn còn gia đình ở quê hương của mình, hãy trả lời “Có, nhưng tôi không có kế hoạch đưa họ đến Pháp”. Quan trọng là không để nhân viên chính phủ hiểu lầm rằng bạn muốn có quốc tịch Pháp chỉ để có hộ chiếu Pháp hoặc để kiếm tiền sống thoải mái ở quê hương của bạn. Bạn có thể duy trì các mối liên kết với quê hương của mình, nhưng không được để những mối liên kết này quan trọng hơn những mối liên kết kết nối bạn với Pháp.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "question": "Ou passez vous vos vacances ?",
+      "explanation": "Basez vous surtout sur les villes Française que vous avez visitées, on citera par exemple Nice, Paris, Lille, Brest, Marseille etc…",
+      "question_vi": "Bạn thường đi nghỉ ở đâu?",
+      "explanation_vi": "Chủ yếu dựa trên các thành phố Pháp mà bạn đã thăm, chẳng hạn như Nice, Paris, Lille, Brest, Marseille v.v…",
+      "image": null
+    },
+    {
+      "id": 24,
+      "question": "Quelles sont les nationalités des personnes de votre entourage ?",
+      "explanation": "Vous devez montrer que la majorité des personnes qui vous entourent sont Français et que vous n’êtes pas fan du communautarisme. La deuxième partie ou deuxième axe concerne la France, son histoire sa géographie et sa culture.",
+      "question_vi": "Quốc tịch của những người trong mối quan hệ xung quanh của bạn là gì?",
+      "explanation_vi": "Bạn cần chỉ ra rằng hầu hết những người xung quanh bạn là người Pháp và bạn không ủng hộ sự tách biệt cộng đồng.",
+      "image": null
+    }
+
+
+
+
+
+  ]
+}
