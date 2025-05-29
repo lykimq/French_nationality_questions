@@ -8,11 +8,9 @@ export interface BaseQuestion {
     image?: string | null;
 }
 
-export interface MultiLangQuestion extends Omit<BaseQuestion, 'question' | 'answer' | 'explanation'> {
+export interface MultiLangQuestion extends Omit<BaseQuestion, 'question' | 'explanation'> {
     question: string;
     question_vi: string;
-    answer?: string;
-    answer_vi?: string;
     explanation?: string;
     explanation_vi?: string;
 }
