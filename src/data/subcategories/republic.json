@@ -1,0 +1,104 @@
+{
+    "id": "republic",
+    "title": "République & Institutions",
+    "icon": "business",
+    "description": "La République française et ses institutions",
+    "questions": [
+        {
+            "id": 51,
+            "question_fr": "Quand est-ce qu'a été instituée la 5éme république ?",
+            "explanation_fr": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "question_vi": "Nền Đệ ngũ Cộng hòa được thành lập khi nào?",
+            "explanation_vi": "Nền Đệ ngũ Cộng hòa được thành lập bởi Hiến pháp ngày 4 tháng 10 năm 1958.",
+            "image": null
+        },
+        {
+            "id": 52,
+            "question_fr": "Quel a été le fait marquant de la 5éme république ?",
+            "explanation_fr": "Elle a marqué définitivement la séparation entre le pouvoir exécutif, législatif et judiciaire.",
+            "question_vi": "Điểm nổi bật của nền Đệ ngũ Cộng hòa là gì?",
+            "explanation_vi": "Nó đã đánh dấu sự phân chia rõ ràng giữa quyền hành pháp, lập pháp và tư pháp.",
+            "image": null
+        },
+        {
+            "id": 53,
+            "question_fr": "Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?",
+            "explanation_fr": "Elle a eu lieu le 09 Décembre 1905.",
+            "question_vi": "Sự tách biệt giữa nhà thờ và nhà nước diễn ra khi nào?",
+            "explanation_vi": "Nó diễn ra vào ngày 9 tháng 12 năm 1905.",
+            "image": null
+        },
+        {
+            "id": 54,
+            "question_fr": "Quelles sont les couleurs du drapeau français et que symbolisent-elles ?",
+            "explanation_fr": "Le drapeau français est bleu, blanc et rouge (tricolore). Le bleu et le rouge sont les couleurs de Paris, et le blanc était la couleur du roi. Ces trois couleurs symbolisent aussi les valeurs de la République : Liberté, Égalité, Fraternité.",
+            "question_vi": "Quốc kỳ Pháp có những màu gì và chúng tượng trưng cho điều gì?",
+            "explanation_vi": "Quốc kỳ Pháp có màu xanh, trắng và đỏ (tam sắc). Màu xanh và đỏ là màu của Paris, còn màu trắng là màu của nhà vua. Ba màu này cũng tượng trưng cho các giá trị của nền Cộng hòa: Tự do, Bình đẳng, Bác ái.",
+            "image": null
+        },
+        {
+            "id": 72,
+            "question_fr": "Avons-nous le droit en France de porter des signes religieux dans l'espace public ?",
+            "explanation_fr": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
+            "question_vi": "Ở Pháp, chúng ta có được phép đeo các biểu tượng tôn giáo ở nơi công cộng không?",
+            "explanation_vi": "Có, nhưng không được phép trong các trường tiểu học, trung học cơ sở và trung học phổ thông công lập.",
+            "image": null
+        },
+        {
+            "id": 73,
+            "question_fr": "Qu'est-ce que la loi de 2004 ?",
+            "explanation_fr": "La loi de 2004 et plus précisément l'article L141-5-1 stipule que dans les écoles, les collèges et les lycées publics, le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse est interdit.",
+            "question_vi": "Luật năm 2004 là gì?",
+            "explanation_vi": "Luật năm 2004, cụ thể là điều L141-5-1, quy định rằng trong các trường tiểu học, trung học cơ sở và trung học phổ thông công lập, học sinh không được phép mang các biểu tượng hoặc trang phục thể hiện rõ ràng về việc thuộc một tôn giáo nào đó.",
+            "image": null
+        },
+        {
+            "id": 79,
+            "question_fr": "En quelle année a été aboli l'esclavage en France ?",
+            "explanation_fr": "En France l'esclavage a été aboli le 27 Avril 1848.",
+            "question_vi": "Chế độ nô lệ được bãi bỏ ở Pháp vào năm nào?",
+            "explanation_vi": "Ở Pháp, chế độ nô lệ được bãi bỏ vào ngày 27 tháng 4 năm 1848.",
+            "image": null
+        },
+        {
+            "id": 80,
+            "question_fr": "L'école est-elle obligatoire en France ?",
+            "explanation_fr": "L'instruction est gratuite et obligatoire pour tous les enfants, français et étrangers, à partir de l'âge de 3 ans et jusqu'à l'âge de 16 ans révolus (l'âge minimum a été abaissée de 6 ans à 3 ans depuis 2019).",
+            "question_vi": "Giáo dục có bắt buộc ở Pháp không?",
+            "explanation_vi": "Giáo dục là miễn phí và bắt buộc cho tất cả trẻ em, cả người Pháp và người nước ngoài, từ 3 tuổi đến 16 tuổi (độ tuổi tối thiểu đã được hạ từ 6 tuổi xuống 3 tuổi kể từ năm 2019).",
+            "image": null
+        },
+        {
+            "id": 81,
+            "question_fr": "Depuis quand l'école est-elle obligatoire en France ?",
+            "explanation_fr": "L'instruction est obligatoire depuis le 28 mars 1882.",
+            "question_vi": "Giáo dục bắt buộc ở Pháp bắt đầu từ khi nào?",
+            "explanation_vi": "Giáo dục bắt buộc được áp dụng từ ngày 28 tháng 3 năm 1882.",
+            "image": null
+        },
+        {
+            "id": 82,
+            "question_fr": "Qui a rendu l'école obligatoire en France ?",
+            "explanation_fr": "C'est l'ancien maire de Paris Jules Ferry.",
+            "question_vi": "Ai là người đã làm cho giáo dục trở thành bắt buộc ở Pháp?",
+            "explanation_vi": "Đó là cựu thị trưởng Paris Jules Ferry.",
+            "image": null
+        },
+        {
+            "id": 83,
+            "question_fr": "Les femmes ont elles e droit de vote en France ?",
+            "explanation_fr": "Oui",
+            "question_vi": "Phụ nữ có quyền bầu cử ở Pháp không?",
+            "explanation_vi": "Có",
+            "image": null
+        },
+        {
+            "id": 84,
+            "question_fr": "Depuis quand les femmes ont elles le droit de vote en France ?",
+            "explanation_fr": "Depuis le 21 avril 1944.",
+            "question_vi": "Phụ nữ có quyền bầu cử ở Pháp từ khi nào?",
+            "explanation_vi": "Từ ngày 21 tháng 4 năm 1944.",
+            "image": null
+        }
+    ]
+}

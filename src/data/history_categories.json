@@ -1,0 +1,68 @@
+{
+    "id": "history",
+    "title": "Histoire et Culture",
+    "icon": "book",
+    "description": "Questions sur l'histoire et la culture française",
+    "subcategories": [
+        {
+            "id": "local_gov",
+            "title": "Administration Locale",
+            "icon": "business",
+            "description": "Questions sur l'administration locale et la vie civique"
+        },
+        {
+            "id": "monarchy",
+            "title": "Monarchie & Royauté",
+            "icon": "crown",
+            "description": "Questions sur les rois et reines de France"
+        },
+        {
+            "id": "revolution",
+            "title": "Révolution Française",
+            "icon": "flag",
+            "description": "La période révolutionnaire et ses événements majeurs"
+        },
+        {
+            "id": "wars",
+            "title": "Guerres & Résistance",
+            "icon": "shield",
+            "description": "Les guerres mondiales et la résistance française"
+        },
+        {
+            "id": "republic",
+            "title": "République & Institutions",
+            "icon": "business",
+            "description": "La République française et ses institutions"
+        },
+        {
+            "id": "culture",
+            "title": "Culture & Patrimoine",
+            "icon": "museum",
+            "description": "Monuments historiques et culture française"
+        },
+        {
+            "id": "arts",
+            "title": "Arts & Littérature",
+            "icon": "brush",
+            "description": "Artistes, écrivains et œuvres célèbres"
+        },
+        {
+            "id": "celebrities",
+            "title": "Personnalités & Médias",
+            "icon": "people",
+            "description": "Personnalités françaises célèbres et médias"
+        },
+        {
+            "id": "sports",
+            "title": "Sports",
+            "icon": "football",
+            "description": "Sports et événements sportifs français"
+        },
+        {
+            "id": "holidays",
+            "title": "Jours Fériés",
+            "icon": "calendar",
+            "description": "Les jours fériés et leurs significations"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "id": "monarchy",
+    "title": "Monarchie & Royauté",
+    "icon": "crown",
+    "description": "Questions sur les rois et reines de France",
+    "questions": [
+        {
+            "id": 37,
+            "question_fr": "Citez trois rois de France",
+            "explanation_fr": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+            "question_vi": "Hãy kể tên ba vị vua của Pháp",
+            "explanation_vi": "Charlemagne, François Đệ Nhất, Henri Đệ Tứ, Louis XVI, v.v...",
+            "image": null
+        },
+        {
+            "id": 38,
+            "question_fr": "Citez des Reines de France",
+            "explanation_fr": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+            "question_vi": "Hãy kể tên các nữ hoàng của Pháp",
+            "explanation_vi": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche, v.v...",
+            "image": "../assets/Marie_Antoinette_Adult.jpg"
+        },
+        {
+            "id": 39,
+            "question_fr": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
+            "explanation_fr": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+            "question_vi": "Louis XIV (Louis 14) nổi tiếng về điều gì và tại sao?",
+            "explanation_vi": "Louis XIV nổi tiếng chủ yếu vì thời gian trị vì của ông là dài nhất trong lịch sử nước Pháp, ông cũng là biểu tượng của chế độ quân chủ chuyên chế (một dạng độc tài quân chủ) mà sau này đã bị cuộc cách mạng Pháp chống lại và bị loại bỏ sau chiến thắng của nhân dân.",
+            "image": null
+        },
+        {
+            "id": 40,
+            "question_fr": "Qui été le Roi de France durant la révolution Française ?",
+            "explanation_fr": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
+            "question_vi": "Ai là vua của Pháp trong thời kỳ Cách mạng Pháp?",
+            "explanation_vi": "Đó là vua Louis XVI (Louis 16). Nhân dân đã nổi dậy chống lại quyền lực của nhà vua và tuyên bố thành lập nền Cộng hòa. Hoàng gia bị bắt giam. Nhà vua bị xét xử và kết án tử hình vì những người cách mạng muốn ngăn chặn sự trở lại của chế độ quân chủ. Louis XVI bị hành quyết bằng máy chém vào ngày 21 tháng 1 năm 1793.",
+            "image": null
+        },
+        {
+            "id": 85,
+            "question_fr": "Qui a été à l'origine du château de Versailles ?",
+            "explanation_fr": "C'est Louis XIV (Louis 14).",
+            "question_vi": "Ai là người khởi xướng xây dựng cung điện Versailles?",
+            "explanation_vi": "Đó là Louis XIV (Louis 14).",
+            "image": null
+        }
+    ]
+}

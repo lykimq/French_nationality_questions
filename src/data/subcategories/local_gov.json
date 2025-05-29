@@ -1,0 +1,24 @@
+{
+    "id": "local_gov",
+    "title": "Administration Locale",
+    "icon": "business",
+    "description": "Questions sur l'administration locale et la vie civique",
+    "questions": [
+        {
+            "id": 36,
+            "question_fr": "Qui est le/la maire de votre département ?",
+            "explanation_fr": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (partie politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche.",
+            "question_vi": "Thị trưởng của quận/huyện bạn là ai?",
+            "explanation_vi": "Hãy chắc chắn rằng bạn biết tên của thị trưởng của mình cũng như xu hướng chính trị của họ (đảng phái chính trị), ví dụ như ở thành phố Paris là Anne Hidalgo và bà ấy thuộc cánh Tả.",
+            "image": null
+        },
+        {
+            "id": 59,
+            "question_fr": "Qu'est-ce que l'hôtel de ville ?",
+            "explanation_fr": "C'est la mairie principale d'une grande ville ou d'une ville importante.",
+            "question_vi": "Tòa thị chính (Hôtel de ville) là gì?",
+            "explanation_vi": "Đó là trụ sở chính của thành phố lớn hoặc một thành phố quan trọng.",
+            "image": null
+        }
+    ]
+}

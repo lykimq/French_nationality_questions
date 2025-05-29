@@ -6,9 +6,49 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
-import historyData from '../data/history_subcategories_fr.json';
+import historyData from '../data/history_categories.json';
+
+// Import all subcategory data
+import localGovData from '../data/subcategories/local_gov.json';
+import monarchyData from '../data/subcategories/monarchy.json';
+import revolutionData from '../data/subcategories/revolution.json';
+import warsData from '../data/subcategories/wars.json';
+import republicData from '../data/subcategories/republic.json';
+import cultureData from '../data/subcategories/culture.json';
+import artsData from '../data/subcategories/arts.json';
+import celebritiesData from '../data/subcategories/celebrities.json';
+import sportsData from '../data/subcategories/sports.json';
+import holidaysData from '../data/subcategories/holidays.json';
+
+type HistorySubcategory = {
+    id: string;
+    title: string;
+    icon: string;
+    description: string;
+    questions?: Array<{
+        id: number;
+        question_fr: string;
+        explanation_fr: string;
+        question_vi: string;
+        explanation_vi: string;
+        image: string | null;
+    }>;
+};
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
+const subcategoryDataMap: { [key: string]: HistorySubcategory } = {
+    local_gov: localGovData,
+    monarchy: monarchyData,
+    revolution: revolutionData,
+    wars: warsData,
+    republic: republicData,
+    culture: cultureData,
+    arts: artsData,
+    celebrities: celebritiesData,
+    sports: sportsData,
+    holidays: holidaysData,
+};
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
@@ -22,11 +62,19 @@ const HomeScreen = () => {
 
     const navigateToHistoryQuestions = () => {
         navigation.navigate('CategoryBasedQuestions', {
-            categories: historyData.subcategories.map(subcategory => ({
-                id: subcategory.id,
-                title: subcategory.title,
-                questions: subcategory.questions
-            })),
+            categories: historyData.subcategories.map(subcategory => {
+                const subcategoryData = subcategoryDataMap[subcategory.id];
+                return {
+                    id: subcategory.id,
+                    title: subcategory.title,
+                    questions: (subcategoryData?.questions || []).map(q => ({
+                        id: q.id,
+                        question: language === 'fr' ? q.question_fr : q.question_vi,
+                        explanation: language === 'fr' ? q.explanation_fr : q.explanation_vi,
+                        image: q.image
+                    }))
+                };
+            }),
             title: historyData.title
         });
     };
@@ -68,7 +116,7 @@ const HomeScreen = () => {
                     title={historyData.title}
                     description={historyData.description}
                     icon={historyData.icon}
-                    count={historyData.subcategories.reduce((total, subcategory) => total + subcategory.questions.length, 0)}
+                    count={Object.values(subcategoryDataMap).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
                     onPress={navigateToHistoryQuestions}
                     language={language}
                 />

@@ -1,0 +1,88 @@
+{
+    "id": "wars",
+    "title": "Guerres & Résistance",
+    "icon": "shield",
+    "description": "Les guerres mondiales et la résistance française",
+    "questions": [
+        {
+            "id": 47,
+            "question_fr": "Quelles sont les dates des deux dernières guerres mondiales ?",
+            "explanation_fr": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18). La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
+            "question_vi": "Hai cuộc Thế chiến gần đây nhất diễn ra vào thời gian nào?",
+            "explanation_vi": "Thế chiến thứ nhất diễn ra từ ngày 28 tháng 7 năm 1914 đến ngày 11 tháng 11 năm 1918 (còn được gọi là chiến tranh 14-18). Thế chiến thứ hai diễn ra từ ngày 1 tháng 9 năm 1939 đến ngày 2 tháng 9 năm 1945.",
+            "image": null
+        },
+        {
+            "id": 48,
+            "question_fr": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
+            "explanation_fr": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+            "question_vi": "Bạn có biết Jean Moulin không? Tại sao ông ấy nổi tiếng?",
+            "explanation_vi": "Jean Moulin là biểu tượng của phong trào Kháng chiến Pháp trong Thế chiến thứ hai. Ông được Tướng Charles De Gaulle cử về Pháp để điều phối và thống nhất các phong trào kháng chiến Pháp. Không may, ông bị Gestapo bắt giữ và tra tấn, và đã qua đời vì vết thương trên chuyến tàu đang chở ông đến Đức.",
+            "image": null
+        },
+        {
+            "id": 49,
+            "question_fr": "Qui est Charles de Gaulle ?",
+            "explanation_fr": "Le Général De Gaulle est un miliaire, un résistant et un homme politique Français, il est le fondateur de la 5éme république et l'un des principaux architectes de la résistance Française et a été président de la république Française sous la 5éme république en 1959 et 1969.",
+            "question_vi": "Charles de Gaulle là ai?",
+            "explanation_vi": "Tướng De Gaulle là một quân nhân, chiến sĩ kháng chiến và chính trị gia Pháp. Ông là người sáng lập nền Đệ ngũ Cộng hòa và là một trong những kiến trúc sư chính của phong trào Kháng chiến Pháp. Ông đã làm Tổng thống Pháp dưới thời Đệ ngũ Cộng hòa từ năm 1959 đến 1969.",
+            "image": null
+        },
+        {
+            "id": 94,
+            "question_fr": "Kể tên các thuộc địa cũ của Pháp?",
+            "explanation_fr": "Algeria, Sénégal, Mali, Bờ Biển Ngà.",
+            "question_vi": "Kể tên các thuộc địa cũ của Pháp?",
+            "explanation_vi": "Algeria, Sénégal, Mali, Bờ Biển Ngà.",
+            "image": null
+        },
+        {
+            "id": 95,
+            "question_fr": "Qu'est-ce que la guerre de 100 ans ?",
+            "explanation_fr": "C'est une guerre résultant d'un conflit entre les rois de France et les rois d'Angleterre durant le Moyen-Age. Ce conflit d'un siècle a en réalité duré 116 ans plus exactement !",
+            "question_vi": "Chiến tranh Trăm năm là gì?",
+            "explanation_vi": "Đây là cuộc chiến tranh xuất phát từ xung đột giữa các vua Pháp và các vua Anh trong thời Trung cổ. Cuộc xung đột kéo dài một thế kỷ này thực tế đã kéo dài chính xác 116 năm!",
+            "image": null
+        },
+        {
+            "id": 96,
+            "question_fr": "Connaissez-vous la bataille de Verdun ?",
+            "explanation_fr": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
+            "question_vi": "Bạn có biết về trận Verdun không?",
+            "explanation_vi": "Trận Verdun diễn ra vào năm 1916 giữa quân đội Pháp và quân đội Đức ở Lorraine trong Thế chiến thứ nhất. Trận chiến này đã gây ra nhiều thương vong cho cả hai bên mà không có bên nào giành được chiến thắng!",
+            "image": null
+        },
+        {
+            "id": 97,
+            "question_fr": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
+            "explanation_fr": "On les appelés les Poilus.",
+            "question_vi": "Biệt danh của các binh sĩ Pháp trong Thế chiến thứ nhất là gì?",
+            "explanation_vi": "Họ được gọi là les Poilus (những người râu ria).",
+            "image": null
+        },
+        {
+            "id": 98,
+            "question_fr": "Quand a eu lieu la première guerre mondiale ?",
+            "explanation_fr": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 novembre 1918",
+            "question_vi": "Thế chiến thứ nhất diễn ra khi nào?",
+            "explanation_vi": "Thế chiến thứ nhất diễn ra từ ngày 28 tháng 7 năm 1914 đến ngày 11 tháng 11 năm 1918",
+            "image": null
+        },
+        {
+            "id": 99,
+            "question_fr": "Quand a eu lieu la seconde guerre mondiale ?",
+            "explanation_fr": "La seconde guerre mondiale a eu lieu du 1er septembre 1939 au 02 septembre 1945",
+            "question_vi": "Thế chiến thứ hai diễn ra khi nào?",
+            "explanation_vi": "Thế chiến thứ hai diễn ra từ ngày 1 tháng 9 năm 1939 đến ngày 2 tháng 9 năm 1945",
+            "image": null
+        },
+        {
+            "id": 100,
+            "question_fr": "Qui sont les alliés durant la première guerre mondiale ?",
+            "explanation_fr": "La France, l'Angleterre, la Russie et les USA (États-Unis d'Amérique).",
+            "question_vi": "Các nước Đồng minh trong Thế chiến thứ nhất là những nước nào?",
+            "explanation_vi": "Pháp, Anh, Nga và Hoa Kỳ (Hợp chủng quốc Hoa Kỳ).",
+            "image": null
+        }
+    ]
+}
