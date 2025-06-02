@@ -25,15 +25,15 @@
         {
             "id": 49,
             "question": "Qui est Charles de Gaulle ?",
-            "explanation": "Le Général De Gaulle est un miliaire, un résistant et un homme politique Français, il est le fondateur de la 5éme république et l'un des principaux architectes de la résistance Française et a été président de la république Française sous la 5éme république en 1959 et 1969.",
+            "explanation": "Le Général De Gaulle est un militaire, un résistant et un homme politique français, il est le fondateur de la 5ème République et l'un des principaux architectes de la résistance française. Il a été président de la République française sous la 5ème République de 1959 à 1969.",
             "question_vi": "Charles de Gaulle là ai?",
             "explanation_vi": "Tướng De Gaulle là một quân nhân, chiến sĩ kháng chiến và chính trị gia Pháp. Ông là người sáng lập nền Đệ ngũ Cộng hòa và là một trong những kiến trúc sư chính của phong trào Kháng chiến Pháp. Ông đã làm Tổng thống Pháp dưới thời Đệ ngũ Cộng hòa từ năm 1959 đến 1969.",
             "image": null
         },
         {
             "id": 94,
-            "question": "Kể tên các thuộc địa cũ của Pháp?",
-            "explanation": "Algeria, Sénégal, Mali, Bờ Biển Ngà.",
+            "question": "Citez des anciennes colonies Françaises?",
+            "explanation": "Algérie, Sénégal, Mali, Côte d'Ivoire.",
             "question_vi": "Kể tên các thuộc địa cũ của Pháp?",
             "explanation_vi": "Algeria, Sénégal, Mali, Bờ Biển Ngà.",
             "image": null
@@ -65,7 +65,7 @@
         {
             "id": 97,
             "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
-            "explanation": "On les appelés les Poilus.",
+            "explanation": "On les appelait les Poilus.",
             "question_vi": "Biệt danh của lính Pháp trong Thế chiến thứ nhất là gì?",
             "explanation_vi": "Họ được gọi là les Poilus (những người râu ria).",
             "image": null
