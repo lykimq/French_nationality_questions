@@ -103,14 +103,24 @@ const JsonIconSelector: React.FC<JsonIconSelectorProps> = ({
                                 }
                             };
 
+                            // Vibrant colors for preview
+                            const iconColors = {
+                                map: '#00B4D8',        // Ocean blue for geography
+                                person: '#9D4EDD',     // Purple for personal
+                                book: '#F77F00',       // Orange for history/books
+                                star: '#FFD60A',       // Gold for monarchy/star
+                                shield: '#118AB2',     // Navy blue for wars/shield
+                            };
+
                             const iconName = iconSets[item.id][iconKey as keyof typeof iconSets.filled];
+                            const iconColor = iconColors[iconKey as keyof typeof iconColors];
 
                             return (
                                 <Ionicons
                                     key={index}
                                     name={iconName as any}
                                     size={20}
-                                    color={theme.colors.primary}
+                                    color={iconColor}
                                 />
                             );
                         })}
@@ -150,8 +160,8 @@ const JsonIconSelector: React.FC<JsonIconSelectorProps> = ({
                 <View style={styles.selectorRight}>
                     {/* Preview current JSON icons */}
                     <View style={styles.previewIcons}>
-                        <Ionicons name={jsonIcons.map as any} size={16} color={theme.colors.primary} />
-                        <Ionicons name={jsonIcons.star as any} size={16} color={theme.colors.primary} />
+                        <Ionicons name={jsonIcons.map as any} size={16} color="#00B4D8" />
+                        <Ionicons name={jsonIcons.star as any} size={16} color="#FFD60A" />
                     </View>
                     <Ionicons name="chevron-forward" size={20} color={theme.colors.textMuted} />
                 </View>

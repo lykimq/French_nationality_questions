@@ -57,6 +57,24 @@ export interface JsonIconMapping {
     default: string;       // fallback icon
 }
 
+// Vibrant color mapping for JSON category icons
+export interface JsonIconColorMapping {
+    map: string;           // geography - blue/teal
+    person: string;        // personal - purple/pink
+    book: string;          // history - amber/orange
+    business: string;      // local_gov, republic - green
+    star: string;          // monarchy - gold/yellow
+    flag: string;          // revolution - red
+    shield: string;        // wars - dark blue/navy
+    people: string;        // democracy, celebrities - pink/magenta
+    cash: string;          // economy - green/emerald
+    library: string;       // culture - purple
+    brush: string;         // arts - rainbow/creative colors
+    football: string;      // sports - energetic orange/red
+    calendar: string;      // holidays - festive colors
+    default: string;       // fallback color
+}
+
 // Icon set configurations for UI elements
 const iconSets: Record<IconSetType, IconMapping> = {
     filled: {
@@ -221,6 +239,24 @@ const jsonIconSets: Record<IconSetType, JsonIconMapping> = {
     },
 };
 
+// Vibrant colors for JSON category icons - modern and Gen Z friendly
+const jsonIconColors: JsonIconColorMapping = {
+    map: '#00B4D8',        // Ocean blue for geography
+    person: '#9D4EDD',     // Purple for personal
+    book: '#F77F00',       // Orange for history/books
+    business: '#06D6A0',   // Emerald for business/government
+    star: '#FFD60A',       // Gold for monarchy/star
+    flag: '#EF476F',       // Red/pink for revolution
+    shield: '#118AB2',     // Navy blue for wars/shield
+    people: '#F72585',     // Hot pink for democracy/people
+    cash: '#43AA8B',       // Green for economy/money
+    library: '#7209B7',    // Deep purple for culture/library
+    brush: '#FF006E',      // Bright magenta for arts/creativity
+    football: '#FB5607',   // Energetic orange for sports
+    calendar: '#8338EC',   // Purple for holidays/events
+    default: '#6C757D',    // Gray for fallback
+};
+
 // Icon set metadata for display
 export interface IconSetInfo {
     id: IconSetType;
@@ -276,6 +312,7 @@ interface IconContextType {
     setJsonIconSet: (iconSet: IconSetType) => void;
     getIconName: (iconKey: keyof IconMapping) => string;
     getJsonIconName: (iconKey: keyof JsonIconMapping | string) => string;
+    getJsonIconColor: (iconKey: keyof JsonIconMapping | string) => string;
 }
 
 // Create context
@@ -366,6 +403,16 @@ export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
         return jsonIconSets[jsonIconSet].default;
     };
 
+    // Get vibrant color for JSON category icons
+    const getJsonIconColor = (iconKey: keyof JsonIconMapping | string): string => {
+        // If the iconKey exists in our color mapping, use it
+        if (iconKey in jsonIconColors) {
+            return jsonIconColors[iconKey as keyof JsonIconMapping];
+        }
+        // Otherwise, return the default fallback color
+        return jsonIconColors.default;
+    };
+
     const value: IconContextType = {
         iconSet,
         icons: iconSets[iconSet],
@@ -375,6 +422,7 @@ export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
         setJsonIconSet,
         getIconName,
         getJsonIconName,
+        getJsonIconColor,
     };
 
     // Don't render children until icon sets are loaded

@@ -21,6 +21,7 @@
     "expo": "~53.0.9",
     "expo-dev-client": "~5.1.8",
     "expo-font": "^13.3.1",
+    "expo-linear-gradient": "^14.1.4",
     "expo-status-bar": "~2.2.3",
     "expo-vector-icons": "^10.0.1",
     "firebase": "^11.8.1",

@@ -20,6 +20,7 @@ import SliderSetting from '../components/SliderSetting';
 import FontSelector from '../components/FontSelector';
 import IconSelector from '../components/IconSelector';
 import JsonIconSelector from '../components/JsonIconSelector';
+import ColorThemeSelector from '../components/ColorThemeSelector';
 import FormattedText from '../components/FormattedText';
 
 type SettingItemProps = {
@@ -101,7 +102,7 @@ export const DisplaySettingsProvider: React.FC<DisplaySettingsProviderProps> = (
 const SettingsScreen = () => {
     const { language, toggleLanguage } = useLanguage();
     const { isSlideMode, toggleSlideMode } = useDisplaySettings();
-    const { theme, themeMode, setThemeMode } = useTheme();
+    const { theme, themeMode, colorTheme, setThemeMode, setColorTheme } = useTheme();
     const { iconSet, setIconSet, jsonIconSet, setJsonIconSet } = useIcons();
     const {
         settings,
@@ -195,6 +196,15 @@ const SettingsScreen = () => {
                         {language === 'fr' ? 'Apparence' : 'Giao diện'}
                     </FormattedText>
 
+                    {/* Color Theme Selector */}
+                    <ColorThemeSelector
+                        title="Thème de couleur"
+                        titleVi="Chủ đề màu sắc"
+                        language={language}
+                        value={colorTheme}
+                        onValueChange={setColorTheme}
+                    />
+
                     {/* Theme Selector */}
                     <View style={[styles.themeSelector, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
                         <View style={styles.themeSelectorLeft}>
@@ -202,7 +212,7 @@ const SettingsScreen = () => {
                                 <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={22} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
                             </View>
                             <FormattedText style={[styles.themeSelectorTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Thème d\'affichage' : 'Chủ đề hiển thị'}
+                                {language === 'fr' ? 'Mode d\'affichage' : 'Chế độ hiển thị'}
                             </FormattedText>
                         </View>
 

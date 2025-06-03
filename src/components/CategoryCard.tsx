@@ -27,27 +27,36 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     language = 'fr',  // Default to French if not specified
 }) => {
     const { theme } = useTheme();
-    const { getJsonIconName, getIconName } = useIcons();
+    const { getJsonIconName, getJsonIconColor, getIconName } = useIcons();
 
     // Determine which language to display
     const displayTitle = language === 'fr' ? title : (title_vi || title);
     const displayDescription = language === 'fr' ? description : (description_vi || description);
 
-    // Get the mapped icon name based on the current JSON icon set
+    // Get the mapped icon name and vibrant color based on the current JSON icon set
     const mappedIconName = getJsonIconName(icon);
+    const iconColor = getJsonIconColor(icon);
 
     return (
         <Pressable
             style={({ pressed }) => [
                 styles.card,
-                { backgroundColor: theme.colors.card },
-                pressed && [styles.cardPressed, { backgroundColor: theme.colors.primary + '10' }]
+                {
+                    backgroundColor: theme.colors.card,
+                    borderColor: iconColor + '20',
+                    borderWidth: 1,
+                },
+                pressed && [styles.cardPressed, { backgroundColor: iconColor + '10' }]
             ]}
             onPress={onPress}
-            android_ripple={{ color: theme.colors.primary + '20' }}
+            android_ripple={{ color: iconColor + '20' }}
         >
-            <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '20' }]}>
-                <Ionicons name={mappedIconName as keyof typeof Ionicons.glyphMap} size={32} color={theme.colors.primary} />
+            <View style={[styles.iconContainer, { backgroundColor: iconColor + '15' }]}>
+                <Ionicons
+                    name={mappedIconName as keyof typeof Ionicons.glyphMap}
+                    size={32}
+                    color={iconColor}
+                />
             </View>
             <View style={styles.content}>
                 <FormattedText style={[styles.title, { color: theme.colors.text }]}>{displayTitle}</FormattedText>
@@ -57,11 +66,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]} numberOfLines={2}>
                     {displayDescription}
                 </FormattedText>
-                <View style={[styles.countContainer, { backgroundColor: theme.colors.primary + '20' }]}>
-                    <FormattedText style={[styles.count, { color: theme.colors.primary }]}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
+                <View style={[styles.countContainer, { backgroundColor: iconColor + '15' }]}>
+                    <FormattedText style={[styles.count, { color: iconColor }]}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
                 </View>
             </View>
-            <Ionicons name={getIconName('chevronForward') as keyof typeof Ionicons.glyphMap} size={24} color={theme.colors.primary} style={styles.arrowIcon} />
+            <Ionicons name={getIconName('chevronForward') as keyof typeof Ionicons.glyphMap} size={24} color={iconColor} style={styles.arrowIcon} />
         </Pressable>
     );
 };
@@ -71,14 +80,14 @@ export default CategoryCard;
 const styles = StyleSheet.create({
     card: {
         flexDirection: 'row',
-        borderRadius: 10,
+        borderRadius: 12,
         padding: 16,
         marginBottom: 15,
         elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
-        shadowRadius: 3,
+        shadowRadius: 4,
         alignItems: 'center',
     },
     cardPressed: {
