@@ -27,6 +27,8 @@ const HomeScreen = () => {
     };
 
     const navigateToHistoryQuestions = () => {
+        if (!historyCategories) return;
+
         navigation.navigate('CategoryBasedQuestions', {
             categories: historyCategories.subcategories.map(subcategory => {
                 const subcategoryData = historySubcategories[subcategory.id];
@@ -103,17 +105,19 @@ const HomeScreen = () => {
                     );
                 })}
 
-                <CategoryCard
-                    key="history"
-                    title={historyCategories.title}
-                    title_vi={historyCategories.title_vi}
-                    description={historyCategories.description}
-                    description_vi={historyCategories.description_vi}
-                    icon={historyCategories.icon}
-                    count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
-                    onPress={navigateToHistoryQuestions}
-                    language={language}
-                />
+                {historyCategories && (
+                    <CategoryCard
+                        key="history"
+                        title={historyCategories.title}
+                        title_vi={historyCategories.title_vi}
+                        description={historyCategories.description}
+                        description_vi={historyCategories.description_vi}
+                        icon={historyCategories.icon}
+                        count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
+                        onPress={navigateToHistoryQuestions}
+                        language={language}
+                    />
+                )}
             </ScrollView>
         </View>
     );

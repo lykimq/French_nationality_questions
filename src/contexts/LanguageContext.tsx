@@ -1,22 +1,6 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
-// Import the split JSON files
-import geography_fr_vi from '../data/geography_fr_vi.json';
-import personal_fr_vi from '../data/personal_fr_vi.json';
-import historyData from '../data/history_categories.json';
-
-// Import all subcategory data
-import localGovData from '../data/subcategories/local_gov.json';
-import monarchyData from '../data/subcategories/monarchy.json';
-import revolutionData from '../data/subcategories/revolution.json';
-import warsData from '../data/subcategories/wars.json';
-import republicData from '../data/subcategories/republic.json';
-import democracyData from '../data/subcategories/democracy.json';
-import economyData from '../data/subcategories/economy.json';
-import cultureData from '../data/subcategories/culture.json';
-import artsData from '../data/subcategories/arts.json';
-import celebritiesData from '../data/subcategories/celebrities.json';
-import sportsData from '../data/subcategories/sports.json';
-import holidaysData from '../data/subcategories/holidays.json';
+// Import the data loading utilities
+import { loadMainQuestionData, loadHistoryData, loadSubcategoryData, preloadAllData } from '../utils/dataUtils';
 import { preloadImages } from '../utils/imageUtils';
 
 // Define types for history categories
@@ -51,22 +35,6 @@ export interface HistorySubcategory {
         image: string | null;
     }>;
 }
-
-// Map of subcategory data
-const subcategoryDataMap: { [key: string]: HistorySubcategory } = {
-    local_gov: localGovData,
-    monarchy: monarchyData,
-    revolution: revolutionData,
-    wars: warsData,
-    republic: republicData,
-    democracy: democracyData,
-    economy: economyData,
-    culture: cultureData,
-    arts: artsData,
-    celebrities: celebritiesData,
-    sports: sportsData,
-    holidays: holidaysData,
-};
 
 // Define the language type and context type
 export type Language = 'fr' | 'vi';
@@ -144,8 +112,10 @@ type LanguageContextType = {
     toggleLanguage: () => void;
     questionsData: FrenchQuestionsData | MultiLangQuestionsData;
     isTranslationLoaded: boolean;
-    historyCategories: HistoryCategory;
+    historyCategories: HistoryCategory | null;
     historySubcategories: { [key: string]: HistorySubcategory };
+    isDataLoading: boolean;
+    dataLoadingError: string | null;
 };
 
 // Create the context with a default value
@@ -155,8 +125,10 @@ const LanguageContext = createContext<LanguageContextType>({
     toggleLanguage: () => { },
     questionsData: { categories: [] } as FrenchQuestionsData,
     isTranslationLoaded: false,
-    historyCategories: historyData as HistoryCategory,
-    historySubcategories: subcategoryDataMap,
+    historyCategories: null,
+    historySubcategories: {},
+    isDataLoading: true,
+    dataLoadingError: null,
 });
 
 // Create a provider component that will wrap the app
@@ -170,16 +142,82 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         { categories: [] } as FrenchQuestionsData
     );
     const [isTranslationLoaded, setIsTranslationLoaded] = useState(false);
+    const [historyCategories, setHistoryCategories] = useState<HistoryCategory | null>(null);
+    const [historySubcategories, setHistorySubcategories] = useState<{ [key: string]: HistorySubcategory }>({});
+    const [isDataLoading, setIsDataLoading] = useState(true);
+    const [dataLoadingError, setDataLoadingError] = useState<string | null>(null);
 
-    // When language changes, update the questions data
+    // Load initial data from Firebase Storage
     useEffect(() => {
-        const loadQuestionsData = async () => {
-            if (language === 'fr') {
+        const loadInitialData = async () => {
+            try {
+                setIsDataLoading(true);
+                setDataLoadingError(null);
+
+                console.log('Loading initial data from Firebase Storage...');
+
+                // Load all data from Firebase Storage
+                const result = await preloadAllData();
+
+                if (!result.mainData) {
+                    throw new Error('Failed to load main question data');
+                }
+
+                // Set history data
+                if (result.historyData) {
+                    setHistoryCategories(result.historyData as HistoryCategory);
+                } else {
+                    console.warn('History data not loaded');
+                }
+
+                // Set subcategory data
+                setHistorySubcategories(result.subcategoryData);
+
+                // Process main data based on current language
+                await processMainData(result.mainData, language);
+
+                console.log('Initial data loading completed successfully');
+            } catch (error) {
+                console.error('Error loading initial data:', error);
+                setDataLoadingError(error instanceof Error ? error.message : 'Unknown error loading data');
+            } finally {
+                setIsDataLoading(false);
+            }
+        };
+
+        loadInitialData();
+    }, []); // Only run once on mount
+
+    // Process main data when language changes
+    useEffect(() => {
+        const handleLanguageChange = async () => {
+            if (isDataLoading) return; // Don't process if initial loading is still happening
+
+            try {
+                console.log(`Processing data for language: ${language}`);
+
+                // Try to get cached data first
+                const mainData = await loadMainQuestionData();
+                if (mainData) {
+                    await processMainData(mainData, language);
+                }
+            } catch (error) {
+                console.error('Error processing data for language change:', error);
+            }
+        };
+
+        handleLanguageChange();
+    }, [language, isDataLoading]);
+
+    // Helper function to process main data
+    const processMainData = async (mainData: any, currentLanguage: Language) => {
+        try {
+            if (currentLanguage === 'fr') {
                 // Combine all French category data
                 const frenchData: FrenchQuestionsData = {
                     categories: [
-                        personal_fr_vi as unknown as FrenchCategory,
-                        geography_fr_vi as unknown as FrenchCategory,
+                        mainData.personal_fr_vi as unknown as FrenchCategory,
+                        mainData.geography_fr_vi as unknown as FrenchCategory,
                     ]
                 };
                 setQuestionsData(frenchData);
@@ -194,8 +232,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                 }
             } else {
                 // Safety casting our JSON data to ensure correct types
-                const personalFr = personal_fr_vi as unknown as JsonCategory;
-                const geographyFr = geography_fr_vi as unknown as JsonCategory;
+                const personalFr = mainData.personal_fr_vi as unknown as JsonCategory;
+                const geographyFr = mainData.geography_fr_vi as unknown as JsonCategory;
 
                 // Merge French and Vietnamese data
                 const mergedData: MultiLangQuestionsData = {
@@ -262,10 +300,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                     console.error('Error preloading multilingual images:', error);
                 }
             }
-        };
-
-        loadQuestionsData();
-    }, [language]);
+        } catch (error) {
+            console.error('Error processing main data:', error);
+            throw error;
+        }
+    };
 
     const toggleLanguage = () => {
         setLanguage(prev => (prev === 'fr' ? 'vi' : 'fr'));
@@ -278,8 +317,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
             toggleLanguage,
             questionsData,
             isTranslationLoaded,
-            historyCategories: historyData as HistoryCategory,
-            historySubcategories: subcategoryDataMap
+            historyCategories,
+            historySubcategories,
+            isDataLoading,
+            dataLoadingError,
         }}>
             {children}
         </LanguageContext.Provider>

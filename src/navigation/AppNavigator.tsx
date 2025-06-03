@@ -10,6 +10,7 @@ import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
 import CategoryBasedQuestionsScreen from '../screens/CategoryBasedQuestionsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import DataLoadingScreen from '../components/DataLoadingScreen';
 import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
 
 // Create navigators
@@ -61,8 +62,13 @@ type RouteType = {
 };
 
 const AppTabs = () => {
-    // Use the language context to get the current language
-    const { language } = useLanguage();
+    // Use the language context to get the current language and loading state
+    const { language, isDataLoading, dataLoadingError } = useLanguage();
+
+    // Show loading screen while data is being loaded
+    if (isDataLoading || dataLoadingError) {
+        return <DataLoadingScreen error={dataLoadingError} />;
+    }
 
     return (
         <Tab.Navigator
