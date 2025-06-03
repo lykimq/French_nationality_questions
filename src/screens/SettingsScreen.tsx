@@ -7,6 +7,7 @@ import {
     ScrollView,
     TouchableOpacity,
     Share,
+    StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -112,12 +113,26 @@ const SettingsScreen = () => {
     };
 
     return (
-        <SafeAreaView style={styles.container} edges={['top']}>
-            <View style={styles.header}>
-                <Text style={styles.title}>
-                    {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
-                </Text>
-            </View>
+        <View style={styles.container}>
+            <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
+
+            <SafeAreaView style={styles.safeArea} edges={['top']}>
+                <View style={styles.header}>
+                    <Text style={styles.title}>
+                        {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
+                    </Text>
+                    <View style={styles.languageSelector}>
+                        <Text style={styles.languageLabel}>FR</Text>
+                        <Switch
+                            value={language === 'vi'}
+                            onValueChange={toggleLanguage}
+                            thumbColor="#fff"
+                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                        />
+                        <Text style={styles.languageLabel}>VI</Text>
+                    </View>
+                </View>
+            </SafeAreaView>
 
             <ScrollView style={styles.scrollView}>
                 <View style={styles.section}>
@@ -150,7 +165,7 @@ const SettingsScreen = () => {
                     />
                 </View>
             </ScrollView>
-        </SafeAreaView>
+        </View>
     );
 };
 
@@ -187,6 +202,7 @@ const styles = StyleSheet.create({
     },
     scrollView: {
         flex: 1,
+        backgroundColor: '#F5F5F5',
     },
     section: {
         backgroundColor: '#fff',
