@@ -13,6 +13,7 @@ import { DisplaySettingsProvider } from './src/screens/SettingsScreen';
 import { TextFormattingProvider } from './src/contexts/TextFormattingContext';
 import { ThemeProvider } from './src/contexts/ThemeContext';
 import { IconProvider } from './src/contexts/IconContext';
+import { LanguageProvider } from './src/contexts/LanguageContext';
 
 // Suppress React 19 useInsertionEffect warnings for icon libraries
 const originalConsoleWarn = console.warn;
@@ -38,15 +39,17 @@ export default function App() {
   return (
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaProvider>
-        <IconProvider>
-          <ThemeProvider>
-            <TextFormattingProvider>
-              <DisplaySettingsProvider>
-                <AppNavigator />
-              </DisplaySettingsProvider>
-            </TextFormattingProvider>
-          </ThemeProvider>
-        </IconProvider>
+        <LanguageProvider>
+          <IconProvider>
+            <ThemeProvider>
+              <TextFormattingProvider>
+                <DisplaySettingsProvider>
+                  <AppNavigator />
+                </DisplaySettingsProvider>
+              </TextFormattingProvider>
+            </ThemeProvider>
+          </IconProvider>
+        </LanguageProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );

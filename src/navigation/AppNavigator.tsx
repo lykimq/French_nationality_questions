@@ -11,7 +11,7 @@ import CategoryBasedQuestionsScreen from '../screens/CategoryBasedQuestionsScree
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import DataLoadingScreen from '../components/DataLoadingScreen';
-import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 
 // Create navigators
@@ -133,12 +133,10 @@ const AppTabs = () => {
     );
 };
 
-// We need to create a wrapper for AppTabs to access the language context
+// Simplified AppNavigator without LanguageProvider since it's now in App.tsx
 const AppNavigator = () => (
     <NavigationContainer>
-        <LanguageProvider>
-            <AppTabs />
-        </LanguageProvider>
+        <AppTabs />
     </NavigationContainer>
 );
 

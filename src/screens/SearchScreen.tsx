@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
     StyleSheet,
     Text,
@@ -22,7 +22,9 @@ interface SearchResultQuestion {
     question: string | MultiLangText;
     explanation: string | MultiLangText;
     categoryId: string;
+    categoryTitle?: string;
     image?: string | null;
+    matchScore?: number;
 }
 
 const SearchScreen = () => {
@@ -31,54 +33,199 @@ const SearchScreen = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
 
-    // Flatten all questions from all categories and add categoryId
-    const allQuestions = questionsData.categories.flatMap(category =>
-        category.questions.map(question => ({
-            ...question,
-            categoryId: category.id,
-        }))
-    );
+    // Create a comprehensive list of all questions including history questions
+    const allQuestions = useMemo(() => {
+        const questions: SearchResultQuestion[] = [];
 
-    useEffect(() => {
-        if (searchQuery.trim() === '') {
+        // Add main category questions
+        questionsData.categories.forEach(category => {
+            category.questions.forEach(question => {
+                questions.push({
+                    ...question,
+                    categoryId: category.id,
+                    categoryTitle: isTranslationLoaded
+                        ? (language === 'vi' ? (category as any).title_vi || category.title : category.title)
+                        : category.title,
+                });
+            });
+        });
+
+        // Add history questions from subcategories
+        if (historyCategories && historySubcategories) {
+            Object.values(historySubcategories).forEach(subcategory => {
+                if (subcategory.questions) {
+                    subcategory.questions.forEach(question => {
+                        const searchQuestion: SearchResultQuestion = {
+                            id: question.id,
+                            categoryId: subcategory.id,
+                            categoryTitle: subcategory.title,
+                            question: '', // Initialize with empty values first
+                            explanation: '', // Initialize with empty values first
+                        };
+
+                        if (isTranslationLoaded) {
+                            searchQuestion.question = {
+                                fr: question.question,
+                                vi: question.question_vi || question.question
+                            };
+                            searchQuestion.explanation = {
+                                fr: question.explanation,
+                                vi: question.explanation_vi || question.explanation
+                            };
+                        } else {
+                            searchQuestion.question = question.question;
+                            searchQuestion.explanation = question.explanation;
+                        }
+
+                        if (question.image) {
+                            searchQuestion.image = question.image;
+                        }
+
+                        questions.push(searchQuestion);
+                    });
+                }
+            });
+        }
+
+        return questions;
+    }, [questionsData, historyCategories, historySubcategories, isTranslationLoaded, language]);
+
+    // Enhanced search function with better matching
+    const performSearch = (query: string) => {
+        if (query.trim() === '') {
             setSearchResults([]);
             return;
         }
 
-        const normalizedQuery = searchQuery.toLowerCase().trim();
+        const normalizedQuery = query.toLowerCase().trim();
 
-        const results = allQuestions.filter(item => {
-            // Handle both French-only and multilingual question formats
+        const results = allQuestions.map(item => {
+            let matchScore = 0;
+            let matches = [];
+
+            // Check if searching by ID
+            if (item.id.toString() === normalizedQuery) {
+                matchScore = 1000; // Highest priority for exact ID match
+                matches.push('ID');
+            }
+
+            // Get text content based on language and translation status
+            let questionText = '';
+            let explanationText = '';
+            let categoryText = item.categoryTitle || '';
+
             if (isTranslationLoaded) {
                 const q = item.question as MultiLangText;
                 const e = item.explanation as MultiLangText;
 
-                return (
-                    q.fr.toLowerCase().includes(normalizedQuery) ||
-                    q.vi.toLowerCase().includes(normalizedQuery) ||
-                    e.fr.toLowerCase().includes(normalizedQuery) ||
-                    e.vi.toLowerCase().includes(normalizedQuery) ||
-                    item.id.toString() === normalizedQuery
-                );
-            } else {
-                const q = item.question as string;
-                const e = item.explanation as string;
+                if (language === 'vi') {
+                    questionText = q.vi || q.fr;
+                    explanationText = e.vi || e.fr;
+                } else {
+                    questionText = q.fr;
+                    explanationText = e.fr;
+                }
 
-                return (
-                    q.toLowerCase().includes(normalizedQuery) ||
-                    e.toLowerCase().includes(normalizedQuery) ||
-                    item.id.toString() === normalizedQuery
-                );
+                // Also search in both languages for comprehensive results
+                const questionTextFr = q.fr.toLowerCase();
+                const questionTextVi = (q.vi || '').toLowerCase();
+                const explanationTextFr = e.fr.toLowerCase();
+                const explanationTextVi = (e.vi || '').toLowerCase();
+
+                // Exact phrase match (highest score)
+                if (questionTextFr.includes(normalizedQuery) || questionTextVi.includes(normalizedQuery)) {
+                    matchScore += 100;
+                    matches.push('question_exact');
+                }
+                if (explanationTextFr.includes(normalizedQuery) || explanationTextVi.includes(normalizedQuery)) {
+                    matchScore += 80;
+                    matches.push('explanation_exact');
+                }
+
+                // Word-based matching
+                const queryWords = normalizedQuery.split(/\s+/);
+                queryWords.forEach(word => {
+                    if (word.length > 2) { // Only search for words longer than 2 characters
+                        if (questionTextFr.includes(word) || questionTextVi.includes(word)) {
+                            matchScore += 50;
+                            matches.push('question_word');
+                        }
+                        if (explanationTextFr.includes(word) || explanationTextVi.includes(word)) {
+                            matchScore += 30;
+                            matches.push('explanation_word');
+                        }
+                    }
+                });
+            } else {
+                questionText = (item.question as string).toLowerCase();
+                explanationText = (item.explanation as string).toLowerCase();
+
+                // Exact phrase match
+                if (questionText.includes(normalizedQuery)) {
+                    matchScore += 100;
+                    matches.push('question_exact');
+                }
+                if (explanationText.includes(normalizedQuery)) {
+                    matchScore += 80;
+                    matches.push('explanation_exact');
+                }
+
+                // Word-based matching
+                const queryWords = normalizedQuery.split(/\s+/);
+                queryWords.forEach(word => {
+                    if (word.length > 2) {
+                        if (questionText.includes(word)) {
+                            matchScore += 50;
+                            matches.push('question_word');
+                        }
+                        if (explanationText.includes(word)) {
+                            matchScore += 30;
+                            matches.push('explanation_word');
+                        }
+                    }
+                });
             }
-        });
+
+            // Category name matching
+            if (categoryText.toLowerCase().includes(normalizedQuery)) {
+                matchScore += 20;
+                matches.push('category');
+            }
+
+            return {
+                ...item,
+                matchScore,
+                matches
+            };
+        }).filter(item => item.matchScore > 0)
+            .sort((a, b) => b.matchScore - a.matchScore); // Sort by relevance
 
         setSearchResults(results);
-    }, [searchQuery, questionsData, isTranslationLoaded]);
+    };
+
+    useEffect(() => {
+        // Debounce search to avoid too many operations
+        const timeoutId = setTimeout(() => {
+            performSearch(searchQuery);
+        }, 300);
+
+        return () => clearTimeout(timeoutId);
+    }, [searchQuery, allQuestions, isTranslationLoaded, language]);
 
     const clearSearch = () => {
         setSearchQuery('');
         setSearchResults([]);
     };
+
+    const getSearchStats = () => {
+        const totalQuestions = allQuestions.length;
+        const mainQuestions = questionsData.categories.reduce((sum, cat) => sum + cat.questions.length, 0);
+        const historyQuestions = totalQuestions - mainQuestions;
+
+        return { totalQuestions, mainQuestions, historyQuestions };
+    };
+
+    const { totalQuestions, mainQuestions, historyQuestions } = getSearchStats();
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -111,12 +258,24 @@ const SearchScreen = () => {
                         value={searchQuery}
                         onChangeText={setSearchQuery}
                         placeholderTextColor={theme.colors.textMuted}
+                        autoCorrect={false}
+                        autoCapitalize="none"
                     />
                     {searchQuery !== '' && (
                         <TouchableOpacity onPress={clearSearch}>
                             <Ionicons name="close-circle" size={20} color={theme.colors.textMuted} />
                         </TouchableOpacity>
                     )}
+                </View>
+
+                {/* Search Statistics */}
+                <View style={styles.statsContainer}>
+                    <FormattedText style={[styles.statsText, { color: theme.colors.textMuted }]}>
+                        {language === 'fr'
+                            ? `${totalQuestions} questions disponibles (${mainQuestions} principales + ${historyQuestions} histoire)`
+                            : `${totalQuestions} câu hỏi có sẵn (${mainQuestions} chính + ${historyQuestions} lịch sử)`
+                        }
+                    </FormattedText>
                 </View>
             </View>
 
@@ -128,6 +287,11 @@ const SearchScreen = () => {
                             ? 'Tapez votre question pour commencer la recherche'
                             : 'Nhập câu hỏi của bạn để bắt đầu tìm kiếm'}
                     </FormattedText>
+                    <FormattedText style={[styles.searchHintText, { color: theme.colors.textMuted }]}>
+                        {language === 'fr'
+                            ? 'Vous pouvez rechercher par mots-clés, numéro de question, ou contenu'
+                            : 'Bạn có thể tìm kiếm theo từ khóa, số câu hỏi, hoặc nội dung'}
+                    </FormattedText>
                 </View>
             ) : (
                 <ScrollView
@@ -137,20 +301,31 @@ const SearchScreen = () => {
                 >
                     {searchResults.length > 0 ? (
                         <>
-                            <FormattedText style={[styles.resultsTitle, { color: theme.colors.text }]}>
-                                {language === 'fr'
-                                    ? `${searchResults.length} résultat${searchResults.length > 1 ? 's' : ''} trouvé${searchResults.length > 1 ? 's' : ''}`
-                                    : `Tìm thấy ${searchResults.length} kết quả`}
-                            </FormattedText>
+                            <View style={styles.resultsHeader}>
+                                <FormattedText style={[styles.resultsTitle, { color: theme.colors.text }]}>
+                                    {language === 'fr'
+                                        ? `${searchResults.length} résultat${searchResults.length > 1 ? 's' : ''} trouvé${searchResults.length > 1 ? 's' : ''}`
+                                        : `Tìm thấy ${searchResults.length} kết quả`}
+                                </FormattedText>
+                                <FormattedText style={[styles.sortedByText, { color: theme.colors.textMuted }]}>
+                                    {language === 'fr' ? 'Trié par pertinence' : 'Sắp xếp theo độ liên quan'}
+                                </FormattedText>
+                            </View>
                             {searchResults.map((result) => (
-                                <QuestionCard
-                                    key={result.id}
-                                    id={result.id}
-                                    question={result.question}
-                                    explanation={result.explanation}
-                                    image={result.image}
-                                    language={language}
-                                />
+                                <View key={`${result.categoryId}-${result.id}`} style={styles.resultItem}>
+                                    <View style={styles.categoryLabel}>
+                                        <FormattedText style={[styles.categoryLabelText, { color: theme.colors.primary }]}>
+                                            {result.categoryTitle}
+                                        </FormattedText>
+                                    </View>
+                                    <QuestionCard
+                                        id={result.id}
+                                        question={result.question}
+                                        explanation={result.explanation}
+                                        image={result.image}
+                                        language={language}
+                                    />
+                                </View>
                             ))}
                         </>
                     ) : (
@@ -160,6 +335,11 @@ const SearchScreen = () => {
                                 {language === 'fr'
                                     ? 'Aucune question trouvée pour votre recherche'
                                     : 'Không tìm thấy câu hỏi nào cho tìm kiếm của bạn'}
+                            </FormattedText>
+                            <FormattedText style={[styles.searchHintText, { color: theme.colors.textMuted }]}>
+                                {language === 'fr'
+                                    ? 'Essayez avec d\'autres mots-clés ou vérifiez l\'orthographe'
+                                    : 'Hãy thử với các từ khóa khác hoặc kiểm tra chính tả'}
                             </FormattedText>
                         </View>
                     )}
@@ -218,6 +398,14 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         fontSize: 16,
     },
+    statsContainer: {
+        marginTop: 8,
+        paddingHorizontal: 5,
+    },
+    statsText: {
+        fontSize: 12,
+        textAlign: 'center',
+    },
     scrollView: {
         flex: 1,
     },
@@ -226,10 +414,27 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBottom: 20,
     },
+    resultsHeader: {
+        marginBottom: 15,
+    },
     resultsTitle: {
         fontSize: 16,
         fontWeight: '600',
+        marginBottom: 2,
+    },
+    sortedByText: {
+        fontSize: 12,
+    },
+    resultItem: {
         marginBottom: 15,
+    },
+    categoryLabel: {
+        marginBottom: 5,
+    },
+    categoryLabelText: {
+        fontSize: 12,
+        fontWeight: '600',
+        textTransform: 'uppercase',
     },
     noResults: {
         flex: 1,
@@ -242,6 +447,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 15,
         lineHeight: 24,
+    },
+    searchHintText: {
+        fontSize: 14,
+        textAlign: 'center',
+        marginTop: 10,
+        lineHeight: 20,
     },
 });
 
