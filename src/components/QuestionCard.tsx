@@ -6,6 +6,7 @@ import { getImageSource as loadImageSource, getCachedImageSource } from '../util
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
 import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 type QuestionCardProps = {
     id: number;
@@ -31,6 +32,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
     const { settings } = useTextFormatting();
+    const { theme } = useTheme();
 
     const isMultilingual = typeof question !== 'string';
 
@@ -171,45 +173,50 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     // Don't auto-close modal on image change - let user control it manually
 
     return (
-        <View style={[styles.card, expanded && styles.cardExpanded]}>
+        <View style={[
+            styles.card,
+            { backgroundColor: theme.colors.questionCardBackground, borderColor: theme.colors.questionCardBorder },
+            expanded && styles.cardExpanded
+        ]}>
             <Pressable
                 style={({ pressed }) => [
                     styles.header,
-                    pressed && styles.headerPressed
+                    { backgroundColor: theme.colors.questionCardBackground },
+                    pressed && [styles.headerPressed, { backgroundColor: theme.colors.primary + '10' }]
                 ]}
                 onPress={toggleExpand}
-                android_ripple={{ color: '#E8EAF6' }}
+                android_ripple={{ color: theme.colors.primary + '20' }}
             >
-                <View style={styles.idContainer}>
-                    <FormattedText style={styles.id}>{id}</FormattedText>
+                <View style={[styles.idContainer, { backgroundColor: theme.colors.primary }]}>
+                    <FormattedText style={[styles.id, { color: theme.colors.buttonText }]}>{id}</FormattedText>
                 </View>
                 <View style={styles.questionContainer}>
-                    <FormattedText style={styles.question} numberOfLines={expanded ? 0 : 2}>
+                    <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={expanded ? 0 : 2}>
                         {getQuestionText('fr')}
                     </FormattedText>
                     {isMultilingual && language === 'vi' && (
-                        <FormattedText style={styles.translation} numberOfLines={expanded ? 0 : 1}>
+                        <FormattedText style={[styles.translation, { color: theme.colors.textSecondary }]} numberOfLines={expanded ? 0 : 1}>
                             {getQuestionText('vi')}
                         </FormattedText>
                     )}
                 </View>
                 <View style={styles.iconContainer}>
                     <Ionicons
-                        name={expanded ? 'chevron-up' : 'chevron-down'}
+                        name={expanded ? theme.icons.chevronUp as any : theme.icons.chevronDown as any}
                         size={24}
-                        color="#3F51B5"
+                        color={theme.colors.primary}
                     />
                 </View>
             </Pressable>
 
             {expanded && (
-                <View style={styles.expandedContent}>
+                <View style={[styles.expandedContent, { backgroundColor: theme.colors.questionCardBackground }]}>
                     {isMultilingual}
 
                     {/* Display image if available */}
                     {image && !imageError && (
                         <TouchableOpacity
-                            style={styles.imageContainer}
+                            style={[styles.imageContainer, { borderColor: theme.colors.border }]}
                             onPress={() => {
                                 console.log('🔥 TOUCH EVENT DETECTED on image container');
                                 handleImagePress();
@@ -226,9 +233,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             activeOpacity={0.9}
                         >
                             {imageLoading && (
-                                <View style={styles.imageLoading}>
-                                    <ActivityIndicator size="large" color="#3F51B5" />
-                                    <FormattedText style={styles.loadingText}>
+                                <View style={[styles.imageLoading, { backgroundColor: theme.colors.surface }]}>
+                                    <ActivityIndicator size="large" color={theme.colors.primary} />
+                                    <FormattedText style={[styles.loadingText, { color: theme.colors.text }]}>
                                         {language === 'fr' ? "Chargement de l'image..." : "Đang tải hình ảnh..."}
                                     </FormattedText>
                                 </View>
@@ -244,7 +251,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                         onLoad={handleImageLoad}
                                     />
                                     <View style={styles.imageOverlay}>
-                                        <Ionicons name="expand-outline" size={24} color="#FFFFFF" />
+                                        <Ionicons name={theme.icons.expand as any} size={24} color="#FFFFFF" />
                                     </View>
                                 </>
                             )}
@@ -253,9 +260,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
                     {/* Display fallback if image fails to load */}
                     {image && imageError && (
-                        <View style={styles.imageFallback}>
-                            <Ionicons name="image-outline" size={40} color="#CCCCCC" />
-                            <FormattedText style={styles.imageFallbackText}>
+                        <View style={[styles.imageFallback, { backgroundColor: theme.colors.surface }]}>
+                            <Ionicons name={theme.icons.image as any} size={40} color={theme.colors.textMuted} />
+                            <FormattedText style={[styles.imageFallbackText, { color: theme.colors.textMuted }]}>
                                 {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
                             </FormattedText>
                         </View>
@@ -270,15 +277,15 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             onTouchStart={(e) => e.stopPropagation()}
                         >
                             <View style={styles.section}>
-                                <FormattedText style={styles.sectionTitle}>Explication:</FormattedText>
-                                <FormattedText style={[styles.sectionContent, styles.explanationText]}>
+                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
+                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
                                     {formatExplanation(getExplanationText('fr'))}
                                 </FormattedText>
 
                                 {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
                                     <>
-                                        <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</FormattedText>
-                                        <FormattedText style={[styles.sectionContent, styles.explanationText]}>
+                                        <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle, { color: theme.colors.primary }]}>Giải thích:</FormattedText>
+                                        <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
                                             {formatExplanation(getExplanationText('vi'))}
                                         </FormattedText>
                                     </>
@@ -294,7 +301,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 <Pressable
                     style={styles.overlay}
                     onPress={toggleExpand}
-                    android_ripple={{ color: '#E8EAF6', borderless: true }}
+                    android_ripple={{ color: theme.colors.primary + '20', borderless: true }}
                 />
             )}
 
@@ -311,7 +318,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: '#fff',
         borderRadius: 10,
         marginBottom: 15,
         elevation: 2,
@@ -320,6 +326,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 2,
         overflow: 'hidden',
+        borderWidth: 1,
     },
     cardExpanded: {
         elevation: 3,
@@ -331,166 +338,117 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         padding: 16,
-        backgroundColor: '#fff',
     },
     headerPressed: {
-        backgroundColor: '#F5F7FF',
+        // backgroundColor will be set dynamically
     },
     idContainer: {
         width: 36,
         height: 36,
         borderRadius: 18,
-        backgroundColor: '#3F51B5',
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 12,
     },
     id: {
-        color: '#fff',
         fontWeight: 'bold',
         fontSize: 16,
     },
     questionContainer: {
         flex: 1,
-        paddingRight: 8,
+        marginRight: 8,
     },
     question: {
         fontSize: 16,
         fontWeight: '600',
-        color: '#333',
-        marginBottom: 4,
+        lineHeight: 22,
     },
     translation: {
         fontSize: 14,
-        color: '#666',
+        marginTop: 4,
         fontStyle: 'italic',
+        lineHeight: 20,
     },
     iconContainer: {
-        width: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
+        padding: 4,
     },
     expandedContent: {
-        overflow: 'hidden',
         paddingHorizontal: 16,
         paddingBottom: 16,
     },
-    section: {
-        marginBottom: 12,
-    },
-    sectionTitle: {
-        fontSize: 15,
-        fontWeight: '600',
-        color: '#3F51B5',
-        marginBottom: 4,
-    },
-    secondLanguageTitle: {
-        marginTop: 12,
-        paddingTop: 12,
-        borderTopWidth: 1,
-        borderTopColor: '#E0E0FF',
-    },
-    sectionContent: {
-        fontSize: 14,
-        color: '#444',
-        lineHeight: 22,
-    },
-    explanationText: {
-        backgroundColor: '#F8F9FF',
-        padding: 12,
-        borderRadius: 6,
-        marginVertical: 4,
-    },
-    explanationScrollView: {
-        borderWidth: 1,
-        borderColor: '#E0E0FF',
-        borderRadius: 8,
-        marginBottom: 8,
-    },
-    scrollContent: {
-        padding: 10,
-    },
-    languageToggle: {
-        padding: 8,
-        marginBottom: 8,
-        backgroundColor: '#F0F2FF',
-        borderRadius: 4,
-        alignItems: 'center',
-    },
-    languageToggleText: {
-        color: '#3F51B5',
-        fontWeight: '500',
-    },
-    overlay: {
-        ...StyleSheet.absoluteFillObject,
-        backgroundColor: 'transparent',
-    },
     imageContainer: {
-        marginBottom: 12,
         borderRadius: 8,
         overflow: 'hidden',
+        marginBottom: 16,
         borderWidth: 1,
-        borderColor: '#E0E0FF',
-        backgroundColor: '#F8F9FF',
-        height: 200,
         position: 'relative',
     },
     image: {
         width: '100%',
         height: 200,
-        backgroundColor: 'transparent',
+        backgroundColor: '#f5f5f5',
     },
     hiddenImage: {
         opacity: 0,
-    },
-    imageLoading: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: 1,
-    },
-    loadingText: {
-        color: '#3F51B5',
-        fontSize: 14,
-        marginTop: 8,
-    },
-    imageFallback: {
-        marginBottom: 12,
-        padding: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#F5F5F5',
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: '#E0E0E0',
-        height: 120,
-    },
-    imageFallbackText: {
-        marginTop: 8,
-        color: '#999',
-        fontSize: 14,
-        textAlign: 'center',
     },
     imageOverlay: {
         position: 'absolute',
         top: 8,
         right: 8,
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        borderRadius: 20,
+        padding: 8,
+    },
+    imageLoading: {
+        width: '100%',
+        height: 200,
         justifyContent: 'center',
         alignItems: 'center',
-        opacity: 1,
-        elevation: 5,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
+        borderRadius: 8,
+    },
+    loadingText: {
+        marginTop: 8,
+        fontSize: 14,
+    },
+    imageFallback: {
+        width: '100%',
+        height: 120,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 16,
+        borderRadius: 8,
+    },
+    imageFallbackText: {
+        marginTop: 8,
+        fontSize: 14,
+        textAlign: 'center',
+    },
+    explanationScrollView: {
+        maxHeight: 300,
+    },
+    scrollContent: {
+        paddingBottom: 4,
+    },
+    section: {
+        marginBottom: 12,
+    },
+    sectionTitle: {
+        fontSize: 16,
+        fontWeight: '600',
+        marginBottom: 8,
+    },
+    secondLanguageTitle: {
+        marginTop: 16,
+    },
+    sectionContent: {
+        fontSize: 14,
+        lineHeight: 20,
+    },
+    explanationText: {
+        textAlign: 'justify',
+    },
+    overlay: {
+        ...StyleSheet.absoluteFillObject,
     },
 });
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
+import { useTheme } from '../contexts/ThemeContext';
 import CategoryCard from './CategoryCard';
 
 interface CategorySelectionViewProps {
@@ -28,9 +29,11 @@ const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
     language,
     onSelectCategory
 }) => {
+    const { theme } = useTheme();
+
     return (
         <ScrollView
-            style={styles.container}
+            style={[styles.container, { backgroundColor: theme.colors.background }]}
             contentContainerStyle={styles.contentContainer}
             showsVerticalScrollIndicator={false}
         >
@@ -54,7 +57,6 @@ const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     contentContainer: {
         padding: 20,

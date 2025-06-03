@@ -12,6 +12,7 @@ import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import DataLoadingScreen from '../components/DataLoadingScreen';
 import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 // Create navigators
 const Stack = createNativeStackNavigator();
@@ -23,18 +24,22 @@ if (Platform.OS === 'android') {
     StatusBar.setBackgroundColor('transparent');
 }
 
-const HomeStack = () => (
-    <Stack.Navigator
-        screenOptions={{
-            headerShown: false,
-            contentStyle: { backgroundColor: '#F5F5F5' }
-        }}
-    >
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="CategoryQuestions" component={CategoryQuestionsScreen} />
-        <Stack.Screen name="CategoryBasedQuestions" component={CategoryBasedQuestionsScreen} />
-    </Stack.Navigator>
-);
+const HomeStack = () => {
+    const { theme } = useTheme();
+
+    return (
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+                contentStyle: { backgroundColor: theme.colors.background }
+            }}
+        >
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="CategoryQuestions" component={CategoryQuestionsScreen} />
+            <Stack.Screen name="CategoryBasedQuestions" component={CategoryBasedQuestionsScreen} />
+        </Stack.Navigator>
+    );
+};
 
 // Translations for tab labels
 const tabLabels = {
@@ -64,6 +69,7 @@ type RouteType = {
 const AppTabs = () => {
     // Use the language context to get the current language and loading state
     const { language, isDataLoading, dataLoadingError } = useLanguage();
+    const { theme } = useTheme();
 
     // Show loading screen while data is being loaded
     if (isDataLoading || dataLoadingError) {
@@ -79,26 +85,26 @@ const AppTabs = () => {
                     let iconName: string;
 
                     if (route.name === 'HomeTab') {
-                        iconName = focused ? 'home' : 'home-outline';
+                        iconName = focused ? theme.icons.home : theme.icons.home;
                     } else if (route.name === 'SearchTab') {
-                        iconName = focused ? 'search' : 'search-outline';
+                        iconName = focused ? theme.icons.search : theme.icons.search;
                     } else if (route.name === 'SettingsTab') {
-                        iconName = focused ? 'settings' : 'settings-outline';
+                        iconName = focused ? theme.icons.settings : theme.icons.settings;
                     } else {
                         iconName = 'help-circle-outline'; // Default icon
                     }
 
                     return <Ionicons name={iconName as any} size={size} color={color} />;
                 },
-                tabBarActiveTintColor: '#3F51B5',
-                tabBarInactiveTintColor: 'gray',
+                tabBarActiveTintColor: theme.colors.primary,
+                tabBarInactiveTintColor: theme.colors.textMuted,
                 tabBarLabelStyle: {
                     fontSize: 12,
                     fontWeight: '500',
                 },
                 tabBarStyle: {
-                    backgroundColor: '#fff',
-                    borderTopColor: '#f1f1f1',
+                    backgroundColor: theme.colors.surface,
+                    borderTopColor: theme.colors.border,
                     paddingVertical: 5,
                     height: 60,
                     elevation: 8,

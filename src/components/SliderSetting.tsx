@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface SliderSettingProps {
     title: string;
@@ -35,6 +36,7 @@ const SliderSetting: React.FC<SliderSettingProps> = ({
 }) => {
     const trackRef = useRef<View>(null);
     const [isPressed, setIsPressed] = useState(false);
+    const { theme } = useTheme();
 
     const decrease = () => {
         const newValue = Math.max(minimumValue, value - step);
@@ -91,61 +93,80 @@ const SliderSetting: React.FC<SliderSettingProps> = ({
     const progressPercentage = ((value - minimumValue) / (maximumValue - minimumValue)) * 100;
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
             <View style={styles.headerRow}>
-                <FormattedText style={styles.title}>
+                <FormattedText style={[styles.title, { color: theme.colors.text }]}>
                     {language === 'fr' ? title : (titleVi || title)}
                 </FormattedText>
-                <FormattedText style={styles.valueText}>
+                <FormattedText style={[styles.valueText, { color: theme.colors.primary }]}>
                     {formatValue(value)}
                 </FormattedText>
             </View>
 
             <View style={styles.controlsRow}>
                 <TouchableOpacity
-                    style={[styles.button, value <= minimumValue && styles.buttonDisabled]}
+                    style={[
+                        styles.button,
+                        { backgroundColor: theme.colors.border },
+                        value <= minimumValue && [styles.buttonDisabled, { backgroundColor: theme.colors.divider }]
+                    ]}
                     onPress={decrease}
                     disabled={value <= minimumValue}
                 >
                     <Ionicons
                         name="remove"
                         size={20}
-                        color={value <= minimumValue ? '#ccc' : '#3F51B5'}
+                        color={value <= minimumValue ? theme.colors.textMuted : theme.colors.primary}
                     />
                 </TouchableOpacity>
 
                 <View style={styles.trackContainer}>
                     <View
                         ref={trackRef}
-                        style={[styles.track, isPressed && styles.trackPressed]}
+                        style={[
+                            styles.track,
+                            { backgroundColor: theme.colors.border },
+                            isPressed && [styles.trackPressed, { backgroundColor: theme.colors.textMuted }]
+                        ]}
                         {...panResponder.panHandlers}
                     >
                         <View
                             style={[
                                 styles.trackFill,
-                                { width: `${progressPercentage}%` },
-                                isPressed && styles.trackFillPressed
+                                {
+                                    width: `${progressPercentage}%`,
+                                    backgroundColor: theme.colors.primary
+                                },
+                                isPressed && [styles.trackFillPressed, { backgroundColor: theme.colors.primaryLight }]
                             ]}
                         />
                         <View
                             style={[
                                 styles.thumb,
-                                { left: `${Math.max(0, progressPercentage - 2)}%` },
-                                isPressed && styles.thumbPressed
+                                {
+                                    left: `${Math.max(0, progressPercentage - 2)}%`,
+                                    backgroundColor: theme.colors.primary,
+                                    borderColor: theme.colors.card
+                                },
+                                isPressed && [styles.thumbPressed, { backgroundColor: theme.colors.primaryLight }]
                             ]}
                         />
                     </View>
                 </View>
 
                 <TouchableOpacity
-                    style={[styles.button, value >= maximumValue && styles.buttonDisabled]}
+                    style={[
+                        styles.button,
+                        { backgroundColor: theme.colors.border },
+                        value >= maximumValue && [styles.buttonDisabled, { backgroundColor: theme.colors.divider }]
+                    ]}
                     onPress={increase}
                     disabled={value >= maximumValue}
                 >
                     <Ionicons
                         name="add"
                         size={20}
-                        color={value >= maximumValue ? '#ccc' : '#3F51B5'}
+                        color={value >= maximumValue ? theme.colors.textMuted : theme.colors.primary}
                     />
                 </TouchableOpacity>
             </View>
@@ -157,9 +178,7 @@ const styles = StyleSheet.create({
     container: {
         paddingVertical: 15,
         paddingHorizontal: 15,
-        backgroundColor: '#fff',
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
     },
     headerRow: {
         flexDirection: 'row',
@@ -169,12 +188,10 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        color: '#333',
         fontWeight: '500',
     },
     valueText: {
         fontSize: 16,
-        color: '#3F51B5',
         fontWeight: '600',
     },
     controlsRow: {
@@ -186,12 +203,11 @@ const styles = StyleSheet.create({
         width: 36,
         height: 36,
         borderRadius: 18,
-        backgroundColor: '#f0f0f0',
         justifyContent: 'center',
         alignItems: 'center',
     },
     buttonDisabled: {
-        backgroundColor: '#f8f8f8',
+        // backgroundColor will be set dynamically
     },
     trackContainer: {
         flex: 1,
@@ -200,26 +216,23 @@ const styles = StyleSheet.create({
     },
     track: {
         height: 6,
-        backgroundColor: '#E0E0E0',
         borderRadius: 3,
         position: 'relative',
     },
     trackFill: {
         height: 6,
-        backgroundColor: '#3F51B5',
         borderRadius: 3,
         position: 'absolute',
     },
     trackPressed: {
-        backgroundColor: '#D0D0D0',
+        // backgroundColor will be set dynamically
     },
     trackFillPressed: {
-        backgroundColor: '#5C6BC0',
+        // backgroundColor will be set dynamically
     },
     thumb: {
         width: 20,
         height: 20,
-        backgroundColor: '#3F51B5',
         borderRadius: 10,
         position: 'absolute',
         top: -7,
@@ -229,10 +242,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 3,
         borderWidth: 2,
-        borderColor: '#fff',
     },
     thumbPressed: {
-        backgroundColor: '#5C6BC0',
         transform: [{ scale: 1.1 }],
     },
 });

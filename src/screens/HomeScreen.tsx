@@ -6,12 +6,14 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from '../components/FormattedText';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
+    const { theme, themeMode } = useTheme();
     const {
         language,
         toggleLanguage,
@@ -56,34 +58,34 @@ const HomeScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
-            <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
 
-            <SafeAreaView style={styles.safeArea} edges={['top']}>
-                <View style={styles.header}>
-                    <FormattedText style={styles.title}>
+            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
+                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
+                    <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
                         {language === 'fr' ? 'Questions de Naturalisation' : 'Câu hỏi Nhập tịch'}
                     </FormattedText>
-                    <FormattedText style={styles.subtitle}>
+                    <FormattedText style={[styles.subtitle, { color: theme.colors.headerText + 'B3' }]}>
                         {language === 'fr'
                             ? 'Préparez votre entretien de naturalisation'
                             : 'Chuẩn bị cho cuộc phỏng vấn nhập tịch của bạn'}
                     </FormattedText>
                     <View style={styles.languageSelector}>
-                        <FormattedText style={styles.languageLabel}>FR</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
-                            thumbColor="#fff"
-                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                            thumbColor={theme.colors.switchThumb}
+                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
                         />
-                        <FormattedText style={styles.languageLabel}>VI</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>
 
             <ScrollView
-                style={styles.scrollView}
+                style={[styles.scrollView, { backgroundColor: theme.colors.background }]}
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
@@ -127,25 +129,21 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     safeArea: {
-        backgroundColor: '#3F51B5',
+        // backgroundColor will be set dynamically
     },
     header: {
         paddingHorizontal: 20,
         paddingBottom: 15,
         paddingTop: 10,
-        backgroundColor: '#3F51B5',
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#fff',
     },
     subtitle: {
         fontSize: 16,
-        color: '#E8EAF6',
         marginTop: 5,
     },
     languageSelector: {
@@ -155,7 +153,6 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end',
     },
     languageLabel: {
-        color: '#fff',
         marginHorizontal: 5,
         fontWeight: '600',
     },

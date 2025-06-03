@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
+import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
 import { MultiLangText } from '../contexts/LanguageContext';
 import FormattedText from './FormattedText';
@@ -30,6 +31,7 @@ interface CategorySlideViewProps {
 }
 
 const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, language }) => {
+    const { theme } = useTheme();
     const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const translateX = useRef(new Animated.Value(0)).current;
@@ -140,37 +142,40 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
         }
     };
 
+    const isPreviousDisabled = currentCategoryIndex === 0 && currentQuestionIndex === 0;
+    const isNextDisabled = currentCategoryIndex === categories.length - 1 && currentQuestionIndex === totalQuestions - 1;
+
     return (
-        <View style={styles.container}>
-            <View style={styles.navigationBar}>
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <View style={[styles.navigationBar, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
                 <TouchableOpacity
                     style={styles.navButton}
                     onPress={navigateToPrevious}
-                    disabled={currentCategoryIndex === 0 && currentQuestionIndex === 0}
+                    disabled={isPreviousDisabled}
                 >
                     <Ionicons
                         name="chevron-back"
                         size={24}
-                        color={currentCategoryIndex === 0 && currentQuestionIndex === 0 ? '#ccc' : '#3F51B5'}
+                        color={isPreviousDisabled ? theme.colors.textMuted : theme.colors.primary}
                     />
                 </TouchableOpacity>
                 <View style={styles.navigationInfo}>
-                    <FormattedText style={styles.categoryTitle}>
+                    <FormattedText style={[styles.categoryTitle, { color: theme.colors.text }]}>
                         {language === 'fr' ? currentCategory.title : currentCategory.title_vi || currentCategory.title}
                     </FormattedText>
-                    <FormattedText style={styles.pageIndicator}>
+                    <FormattedText style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}>
                         {currentQuestionIndex + 1} / {totalQuestions}
                     </FormattedText>
                 </View>
                 <TouchableOpacity
                     style={styles.navButton}
                     onPress={navigateToNext}
-                    disabled={currentCategoryIndex === categories.length - 1 && currentQuestionIndex === totalQuestions - 1}
+                    disabled={isNextDisabled}
                 >
                     <Ionicons
                         name="chevron-forward"
                         size={24}
-                        color={currentCategoryIndex === categories.length - 1 && currentQuestionIndex === totalQuestions - 1 ? '#ccc' : '#3F51B5'}
+                        color={isNextDisabled ? theme.colors.textMuted : theme.colors.primary}
                     />
                 </TouchableOpacity>
             </View>
@@ -217,7 +222,6 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     navigationBar: {
         flexDirection: 'row',
@@ -225,10 +229,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 10,
         paddingHorizontal: 20,
-        backgroundColor: '#fff',
         borderBottomWidth: 1,
-        borderBottomColor: '#eee',
         zIndex: 1,
+    },
+    navButton: {
+        padding: 10,
     },
     navigationInfo: {
         flex: 1,
@@ -236,17 +241,14 @@ const styles = StyleSheet.create({
     },
     categoryTitle: {
         fontSize: 16,
-        fontWeight: 'bold',
-        color: '#3F51B5',
-        marginBottom: 4,
-    },
-    navButton: {
-        padding: 10,
+        fontWeight: '600',
+        textAlign: 'center',
+        marginBottom: 2,
     },
     pageIndicator: {
         fontSize: 14,
-        color: '#666',
-        fontWeight: '600',
+        fontWeight: '500',
+        textAlign: 'center',
     },
     content: {
         flex: 1,
@@ -256,9 +258,9 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         paddingHorizontal: 20,
-        paddingVertical: 10,
-        flexGrow: 1,
-    }
+        paddingTop: 20,
+        paddingBottom: 40,
+    },
 });
 
 export default CategorySlideView;

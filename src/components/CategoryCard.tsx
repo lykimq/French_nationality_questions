@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from './FormattedText';
 
 type CategoryCardProps = {
@@ -24,6 +25,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     onPress,
     language = 'fr',  // Default to French if not specified
 }) => {
+    const { theme } = useTheme();
+
     // Determine which language to display
     const displayTitle = language === 'fr' ? title : (title_vi || title);
     const displayDescription = language === 'fr' ? description : (description_vi || description);
@@ -32,38 +35,37 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <Pressable
             style={({ pressed }) => [
                 styles.card,
-                pressed && styles.cardPressed
+                { backgroundColor: theme.colors.card },
+                pressed && [styles.cardPressed, { backgroundColor: theme.colors.primary + '10' }]
             ]}
             onPress={onPress}
-            android_ripple={{ color: '#E8EAF6' }}
+            android_ripple={{ color: theme.colors.primary + '20' }}
         >
-            <View style={styles.iconContainer}>
-                <Ionicons name={icon as any} size={32} color="#3F51B5" />
+            <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '20' }]}>
+                <Ionicons name={icon as any} size={32} color={theme.colors.primary} />
             </View>
             <View style={styles.content}>
-                <FormattedText style={styles.title}>{displayTitle}</FormattedText>
+                <FormattedText style={[styles.title, { color: theme.colors.text }]}>{displayTitle}</FormattedText>
                 {title_vi && language === 'vi' && (
-                    <FormattedText style={styles.titleTranslation}>{title}</FormattedText>
+                    <FormattedText style={[styles.titleTranslation, { color: theme.colors.textSecondary }]}>{title}</FormattedText>
                 )}
-                <FormattedText style={styles.description} numberOfLines={2}>
+                <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]} numberOfLines={2}>
                     {displayDescription}
                 </FormattedText>
-                <View style={styles.countContainer}>
-                    <FormattedText style={styles.count}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
+                <View style={[styles.countContainer, { backgroundColor: theme.colors.primary + '20' }]}>
+                    <FormattedText style={[styles.count, { color: theme.colors.primary }]}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
                 </View>
             </View>
-            <Ionicons name="chevron-forward" size={24} color="#3F51B5" style={styles.arrowIcon} />
+            <Ionicons name="chevron-forward" size={24} color={theme.colors.primary} style={styles.arrowIcon} />
         </Pressable>
     );
 };
 
 export default CategoryCard;
 
-
 const styles = StyleSheet.create({
     card: {
         flexDirection: 'row',
-        backgroundColor: '#fff',
         borderRadius: 10,
         padding: 16,
         marginBottom: 15,
@@ -75,13 +77,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     cardPressed: {
-        backgroundColor: '#F5F7FF',
+        // backgroundColor will be set dynamically
     },
     iconContainer: {
         width: 60,
         height: 60,
         borderRadius: 30,
-        backgroundColor: '#E8EAF6',
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 16,
@@ -92,30 +93,25 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#333',
         marginBottom: 2,
     },
     titleTranslation: {
         fontSize: 14,
         fontStyle: 'italic',
-        color: '#666',
         marginBottom: 4,
     },
     description: {
         fontSize: 14,
-        color: '#666',
         marginBottom: 8,
     },
     countContainer: {
         alignSelf: 'flex-start',
-        backgroundColor: '#E8EAF6',
         paddingVertical: 4,
         paddingHorizontal: 8,
         borderRadius: 12,
     },
     count: {
         fontSize: 12,
-        color: '#3F51B5',
         fontWeight: '600',
     },
     arrowIcon: {

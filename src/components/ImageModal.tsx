@@ -14,6 +14,7 @@ import {
     PanResponder,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from './FormattedText';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
@@ -25,6 +26,7 @@ type ImageModalProps = {
 };
 
 const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }) => {
+    const { theme, themeMode } = useTheme();
     const [imageLoaded, setImageLoaded] = useState(false);
     const [showZoomHint, setShowZoomHint] = useState(false);
 
@@ -211,18 +213,18 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
             <StatusBar backgroundColor="rgba(0, 0, 0, 0.9)" barStyle="light-content" />
             <SafeAreaView style={styles.modalContainer}>
                 <View
-                    style={styles.modalOverlay}
+                    style={[styles.modalOverlay, { backgroundColor: themeMode === 'dark' ? 'rgba(0, 0, 0, 0.95)' : 'rgba(0, 0, 0, 0.85)' }]}
                     onStartShouldSetResponder={() => true}
                     onResponderRelease={handleBackgroundPress}
                 >
                     {/* Close button */}
-                    <TouchableOpacity style={styles.closeButton} onPress={onClose}>
+                    <TouchableOpacity style={[styles.closeButton, { backgroundColor: theme.colors.primary + '80' }]} onPress={onClose}>
                         <Ionicons name="close" size={30} color="#FFFFFF" />
                     </TouchableOpacity>
 
                     {/* Zoom hint overlay */}
                     {showZoomHint && (
-                        <View style={styles.zoomHint}>
+                        <View style={[styles.zoomHint, { backgroundColor: theme.colors.primary + 'CC' }]}>
                             <FormattedText style={styles.zoomHintText}>Double-tap to zoom • Drag to pan when zoomed</FormattedText>
                         </View>
                     )}
@@ -233,7 +235,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
                         {!imageLoaded && (
                             <ActivityIndicator
                                 size="large"
-                                color="#FFFFFF"
+                                color={theme.colors.primary}
                                 style={styles.loadingIndicator}
                             />
                         )}
@@ -279,7 +281,6 @@ const styles = StyleSheet.create({
     },
     modalOverlay: {
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.9)',
         justifyContent: 'center',
         alignItems: 'center',
     },

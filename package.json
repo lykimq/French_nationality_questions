@@ -9,13 +9,18 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/dancing-script": "^0.4.0",
+    "@expo-google-fonts/kalam": "^0.4.0",
+    "@expo-google-fonts/patrick-hand": "^0.4.0",
     "@expo/vector-icons": "^14.1.0",
+    "@react-native-async-storage/async-storage": "^1.24.0",
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
     "dotenv": "^16.5.0",
     "expo": "~53.0.9",
     "expo-dev-client": "~5.1.8",
+    "expo-font": "^13.3.1",
     "expo-status-bar": "~2.2.3",
     "expo-vector-icons": "^10.0.1",
     "firebase": "^11.8.1",

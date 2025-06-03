@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface FontOption {
     name: string;
@@ -43,6 +44,7 @@ const FontSelector: React.FC<FontSelectorProps> = ({
     onValueChange,
 }) => {
     const [modalVisible, setModalVisible] = useState(false);
+    const { theme } = useTheme();
 
     const currentFont = FONT_OPTIONS.find(font => font.value === value) || FONT_OPTIONS[0];
 
@@ -55,39 +57,43 @@ const FontSelector: React.FC<FontSelectorProps> = ({
         <TouchableOpacity
             style={[
                 styles.fontOption,
-                item.value === value && styles.fontOptionSelected
+                { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider },
+                item.value === value && [styles.fontOptionSelected, { backgroundColor: theme.colors.primary + '10' }]
             ]}
             onPress={() => handleFontSelect(item.value)}
         >
             <View style={styles.fontInfo}>
-                <FormattedText style={[styles.fontName, { fontFamily: item.value === 'System' ? undefined : item.value }]}>
+                <FormattedText style={[styles.fontName, { color: theme.colors.text, fontFamily: item.value === 'System' ? undefined : item.value }]}>
                     {language === 'fr' ? item.name : item.nameVi}
                 </FormattedText>
-                <FormattedText style={[styles.fontPreview, { fontFamily: item.value === 'System' ? undefined : item.value }]}>
+                <FormattedText style={[styles.fontPreview, { color: theme.colors.textSecondary, fontFamily: item.value === 'System' ? undefined : item.value }]}>
                     {item.preview} - {language === 'fr' ? 'Exemple de texte' : 'Văn bản mẫu'}
                 </FormattedText>
             </View>
             {item.value === value && (
-                <Ionicons name="checkmark" size={20} color="#3F51B5" />
+                <Ionicons name="checkmark" size={20} color={theme.colors.primary} />
             )}
         </TouchableOpacity>
     );
 
     return (
         <>
-            <TouchableOpacity style={styles.container} onPress={() => setModalVisible(true)}>
-                <View style={styles.iconContainer}>
-                    <Ionicons name="text" size={20} color="#9C27B0" />
+            <TouchableOpacity
+                style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}
+                onPress={() => setModalVisible(true)}
+            >
+                <View style={[styles.iconContainer, { backgroundColor: '#9C27B020' }]}>
+                    <Ionicons name={theme.icons.textFormat as any} size={20} color="#9C27B0" />
                 </View>
                 <View style={styles.textContainer}>
-                    <FormattedText style={styles.title}>
+                    <FormattedText style={[styles.title, { color: theme.colors.text }]}>
                         {language === 'fr' ? title : (titleVi || title)}
                     </FormattedText>
-                    <FormattedText style={styles.currentValue}>
+                    <FormattedText style={[styles.currentValue, { color: theme.colors.textSecondary }]}>
                         {language === 'fr' ? currentFont.name : currentFont.nameVi}
                     </FormattedText>
                 </View>
-                <Ionicons name="chevron-forward" size={20} color="#ccc" />
+                <Ionicons name={theme.icons.chevronForward as any} size={20} color={theme.colors.textMuted} />
             </TouchableOpacity>
 
             <Modal
@@ -96,14 +102,14 @@ const FontSelector: React.FC<FontSelectorProps> = ({
                 transparent={true}
                 onRequestClose={() => setModalVisible(false)}
             >
-                <View style={styles.modalOverlay}>
-                    <View style={styles.modalContent}>
-                        <View style={styles.modalHeader}>
-                            <FormattedText style={styles.modalTitle}>
+                <View style={[styles.modalOverlay, { backgroundColor: theme.colors.modalOverlay }]}>
+                    <View style={[styles.modalContent, { backgroundColor: theme.colors.modalBackground }]}>
+                        <View style={[styles.modalHeader, { borderBottomColor: theme.colors.divider }]}>
+                            <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
                                 {language === 'fr' ? 'Choisir une police' : 'Chọn phông chữ'}
                             </FormattedText>
                             <TouchableOpacity onPress={() => setModalVisible(false)}>
-                                <Ionicons name="close" size={24} color="#333" />
+                                <Ionicons name={theme.icons.close as any} size={24} color={theme.colors.text} />
                             </TouchableOpacity>
                         </View>
 
@@ -127,14 +133,11 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 15,
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
-        backgroundColor: '#fff',
     },
     iconContainer: {
         width: 36,
         height: 36,
         borderRadius: 18,
-        backgroundColor: '#9C27B020',
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 15,
@@ -144,21 +147,17 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        color: '#333',
         fontWeight: '500',
     },
     currentValue: {
         fontSize: 14,
-        color: '#666',
         marginTop: 2,
     },
     modalOverlay: {
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
         justifyContent: 'flex-end',
     },
     modalContent: {
-        backgroundColor: '#fff',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         maxHeight: '70%',
@@ -170,12 +169,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 15,
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
     },
     modalTitle: {
         fontSize: 18,
         fontWeight: '600',
-        color: '#333',
     },
     fontOption: {
         flexDirection: 'row',
@@ -183,22 +180,19 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 15,
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
     },
     fontOptionSelected: {
-        backgroundColor: '#3F51B510',
+        // backgroundColor will be set dynamically
     },
     fontInfo: {
         flex: 1,
     },
     fontName: {
         fontSize: 16,
-        color: '#333',
         fontWeight: '500',
     },
     fontPreview: {
         fontSize: 14,
-        color: '#666',
         marginTop: 4,
     },
 });

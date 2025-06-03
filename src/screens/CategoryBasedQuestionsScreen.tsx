@@ -6,6 +6,7 @@ import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import CategorySlideView from '../components/CategorySlideView';
 import CategorySelectionView from '../components/CategorySelectionView';
 import FormattedText from '../components/FormattedText';
@@ -15,6 +16,7 @@ type CategoryBasedQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryBa
 const CategoryBasedQuestionsScreen = () => {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
     const route = useRoute<CategoryBasedQuestionsRouteProp>();
+    const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { categories, title } = route.params;
 
@@ -52,30 +54,30 @@ const CategoryBasedQuestionsScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
-            <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
 
-            <SafeAreaView style={commonStyles.safeArea} edges={['top']}>
-                <View style={commonStyles.header}>
+            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
+                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <TouchableOpacity
-                        style={commonStyles.backButton}
+                        style={styles.backButton}
                         onPress={handleBack}
                     >
-                        <Ionicons name="arrow-back" size={24} color="#fff" />
+                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
-                    <View style={commonStyles.headerTextContainer}>
-                        <FormattedText style={commonStyles.title}>{getCurrentTitle()}</FormattedText>
-                        <FormattedText style={commonStyles.count}>{getCurrentCount()}</FormattedText>
+                    <View style={styles.headerTextContainer}>
+                        <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>{getCurrentTitle()}</FormattedText>
+                        <FormattedText style={[styles.count, { color: theme.colors.headerText + 'B3' }]}>{getCurrentCount()}</FormattedText>
                     </View>
-                    <View style={commonStyles.languageSelector}>
-                        <FormattedText style={commonStyles.languageLabel}>FR</FormattedText>
+                    <View style={styles.languageSelector}>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
-                            thumbColor="#fff"
-                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                            thumbColor={theme.colors.switchThumb}
+                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
                         />
-                        <FormattedText style={commonStyles.languageLabel}>VI</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>
@@ -98,17 +100,16 @@ const CategoryBasedQuestionsScreen = () => {
 
 export default CategoryBasedQuestionsScreen;
 
-
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-
-export const commonStyles = StyleSheet.create({
+// These styles are used by other components, so we'll keep them as a function that takes the theme
+export const getCommonStyles = (theme: any) => StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
+        backgroundColor: theme.colors.background,
     },
     safeArea: {
-        backgroundColor: '#3F51B5',
+        backgroundColor: theme.colors.headerBackground,
     },
     header: {
         flexDirection: 'row',
@@ -116,7 +117,7 @@ export const commonStyles = StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 20,
         paddingBottom: 15,
-        backgroundColor: '#3F51B5',
+        backgroundColor: theme.colors.headerBackground,
     },
     backButton: {
         marginRight: 16,
@@ -127,12 +128,12 @@ export const commonStyles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#fff',
+        color: theme.colors.headerText,
         textAlign: 'left',
     },
     count: {
         fontSize: 14,
-        color: '#E8EAF6',
+        color: theme.colors.headerText + 'B3',
         marginTop: 2,
     },
     languageSelector: {
@@ -141,7 +142,7 @@ export const commonStyles = StyleSheet.create({
         marginLeft: 10,
     },
     languageLabel: {
-        color: '#fff',
+        color: theme.colors.headerText,
         marginHorizontal: 5,
         fontWeight: '600',
         fontSize: 12,
@@ -151,7 +152,41 @@ export const commonStyles = StyleSheet.create({
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
+    },
+    safeArea: {
+        // backgroundColor will be set dynamically
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingTop: 10,
+        paddingHorizontal: 20,
+        paddingBottom: 15,
+    },
+    backButton: {
+        marginRight: 16,
+    },
+    headerTextContainer: {
+        flex: 1,
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'left',
+    },
+    count: {
+        fontSize: 14,
+        marginTop: 2,
+    },
+    languageSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 10,
+    },
+    languageLabel: {
+        marginHorizontal: 5,
+        fontWeight: '600',
+        fontSize: 12,
     },
     slideContent: {
         flex: 1,
@@ -164,16 +199,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 10,
         paddingHorizontal: 20,
-        backgroundColor: '#fff',
         borderBottomWidth: 1,
-        borderBottomColor: '#eee',
     },
     navButton: {
         padding: 10,
     },
     pageIndicator: {
         fontSize: 16,
-        color: '#666',
         fontWeight: '600',
     },
     middleNavigation: {
@@ -197,32 +229,5 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-    },
-    middleNavButtonDisabled: {
-        opacity: 0.5,
-    },
-
-
-
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#fff',
-    },
-    count: {
-        fontSize: 14,
-        color: '#E8EAF6',
-        marginTop: 2,
-    },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: 10,
-    },
-    languageLabel: {
-        color: '#fff',
-        marginHorizontal: 5,
-        fontWeight: '600',
-        fontSize: 12,
     },
 });

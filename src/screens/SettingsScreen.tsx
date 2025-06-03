@@ -14,6 +14,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
+import { useTheme } from '../contexts/ThemeContext';
 import SliderSetting from '../components/SliderSetting';
 import FontSelector from '../components/FontSelector';
 import FormattedText from '../components/FormattedText';
@@ -40,27 +41,35 @@ const SettingItem: React.FC<SettingItemProps> = ({
     onValueChange,
     onPress,
     language = 'fr',
-}) => (
-    <TouchableOpacity style={styles.settingItem} onPress={onPress} disabled={isSwitch}>
-        <View style={[styles.iconContainer, { backgroundColor: iconColor + '20' }]}>
-            <Ionicons name={icon as any} size={20} color={iconColor} />
-        </View>
-        <FormattedText style={styles.settingTitle}>
-            {language === 'fr' ? title : (titleVi || title)}
-        </FormattedText>
-        {isSwitch && (
-            <Switch
-                value={value}
-                onValueChange={onValueChange}
-                thumbColor="#fff"
-                trackColor={{ false: '#ccc', true: '#4CAF50' }}
-            />
-        )}
-        {!isSwitch && (
-            <Ionicons name="chevron-forward" size={20} color="#ccc" />
-        )}
-    </TouchableOpacity>
-);
+}) => {
+    const { theme } = useTheme();
+
+    return (
+        <TouchableOpacity
+            style={[styles.settingItem, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}
+            onPress={onPress}
+            disabled={isSwitch}
+        >
+            <View style={[styles.iconContainer, { backgroundColor: iconColor + '20' }]}>
+                <Ionicons name={icon as any} size={20} color={iconColor} />
+            </View>
+            <FormattedText style={[styles.settingTitle, { color: theme.colors.text }]}>
+                {language === 'fr' ? title : (titleVi || title)}
+            </FormattedText>
+            {isSwitch && (
+                <Switch
+                    value={value}
+                    onValueChange={onValueChange}
+                    thumbColor={theme.colors.switchThumb}
+                    trackColor={{ false: theme.colors.switchTrack, true: theme.colors.success }}
+                />
+            )}
+            {!isSwitch && (
+                <Ionicons name={theme.icons.chevronForward as any} size={20} color={theme.colors.textMuted} />
+            )}
+        </TouchableOpacity>
+    );
+};
 
 // Remove the DisplaySettingsContext since we'll only use slide mode
 export const DisplaySettingsContext = React.createContext({
@@ -89,6 +98,7 @@ export const DisplaySettingsProvider: React.FC<DisplaySettingsProviderProps> = (
 const SettingsScreen = () => {
     const { language, toggleLanguage } = useLanguage();
     const { isSlideMode, toggleSlideMode } = useDisplaySettings();
+    const { theme, themeMode, setThemeMode } = useTheme();
     const {
         settings,
         updateFontSize,
@@ -147,48 +157,118 @@ const SettingsScreen = () => {
         );
     };
 
-    return (
-        <View style={styles.container}>
-            <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
+    const toggleTheme = () => {
+        const newMode = themeMode === 'light' ? 'dark' : 'light';
+        setThemeMode(newMode);
+    };
 
-            <SafeAreaView style={styles.safeArea} edges={['top']}>
-                <View style={styles.header}>
-                    <FormattedText style={styles.title}>
+    return (
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
+
+            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
+                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
+                    <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
                         {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
                     </FormattedText>
                     <View style={styles.languageSelector}>
-                        <FormattedText style={styles.languageLabel}>FR</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
-                            thumbColor="#fff"
-                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                            thumbColor={theme.colors.switchThumb}
+                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
                         />
-                        <FormattedText style={styles.languageLabel}>VI</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>
 
-            <ScrollView style={styles.scrollView}>
+            <ScrollView style={[styles.scrollView, { backgroundColor: theme.colors.background }]}>
+                {/* Theme Section */}
+                <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
+                    <FormattedText style={[styles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
+                        {language === 'fr' ? 'Apparence' : 'Giao diện'}
+                    </FormattedText>
+
+                    {/* Theme Selector */}
+                    <View style={[styles.themeSelector, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+                        <View style={styles.themeSelectorLeft}>
+                            <View style={[styles.themeIconContainer, { backgroundColor: (themeMode === 'dark' ? '#FFA726' : '#FFB74D') + '15' }]}>
+                                <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={22} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
+                            </View>
+                            <FormattedText style={[styles.themeSelectorTitle, { color: theme.colors.text }]}>
+                                {language === 'fr' ? 'Thème d\'affichage' : 'Chủ đề hiển thị'}
+                            </FormattedText>
+                        </View>
+
+                        <View style={[styles.themeToggleWrapper, { backgroundColor: theme.colors.background }]}>
+                            <TouchableOpacity
+                                style={[
+                                    styles.themeOption,
+                                    themeMode === 'light' && [styles.themeOptionActive, { backgroundColor: theme.colors.primary }]
+                                ]}
+                                onPress={() => setThemeMode('light')}
+                                activeOpacity={0.7}
+                            >
+                                <Ionicons
+                                    name="sunny"
+                                    size={16}
+                                    color={themeMode === 'light' ? '#FFFFFF' : theme.colors.textMuted}
+                                    style={styles.themeOptionIcon}
+                                />
+                                <FormattedText style={[
+                                    styles.themeOptionText,
+                                    { color: themeMode === 'light' ? '#FFFFFF' : theme.colors.textMuted }
+                                ]}>
+                                    {language === 'fr' ? 'Clair' : 'Sáng'}
+                                </FormattedText>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                style={[
+                                    styles.themeOption,
+                                    themeMode === 'dark' && [styles.themeOptionActive, { backgroundColor: theme.colors.primary }]
+                                ]}
+                                onPress={() => setThemeMode('dark')}
+                                activeOpacity={0.7}
+                            >
+                                <Ionicons
+                                    name="moon"
+                                    size={16}
+                                    color={themeMode === 'dark' ? '#FFFFFF' : theme.colors.textMuted}
+                                    style={styles.themeOptionIcon}
+                                />
+                                <FormattedText style={[
+                                    styles.themeOptionText,
+                                    { color: themeMode === 'dark' ? '#FFFFFF' : theme.colors.textMuted }
+                                ]}>
+                                    {language === 'fr' ? 'Sombre' : 'Tối'}
+                                </FormattedText>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+
                 {/* Text Formatting Section */}
-                <View style={styles.section}>
-                    <FormattedText style={styles.sectionTitle}>
+                <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
+                    <FormattedText style={[styles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
                         {language === 'fr' ? 'Formatage du texte' : 'Định dạng văn bản'}
                     </FormattedText>
 
                     {/* Text Preview */}
-                    <View style={styles.previewContainer}>
-                        <FormattedText style={styles.previewLabel}>
+                    <View style={[styles.previewContainer, { backgroundColor: theme.colors.background, borderBottomColor: theme.colors.divider }]}>
+                        <FormattedText style={[styles.previewLabel, { color: theme.colors.textSecondary }]}>
                             {language === 'fr' ? 'Aperçu :' : 'Xem trước:'}
                         </FormattedText>
 
                         {/* Question Style Preview */}
-                        <View style={styles.questionPreview}>
+                        <View style={[styles.questionPreview, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
                             <View style={styles.previewQuestionHeader}>
-                                <View style={styles.previewIdContainer}>
-                                    <FormattedText style={styles.previewId}>42</FormattedText>
+                                <View style={[styles.previewIdContainer, { backgroundColor: theme.colors.primary }]}>
+                                    <FormattedText style={[styles.previewId, { color: theme.colors.buttonText }]}>42</FormattedText>
                                 </View>
-                                <FormattedText style={styles.previewQuestion}>
+                                <FormattedText style={[styles.previewQuestion, { color: theme.colors.text }]}>
                                     {language === 'fr'
                                         ? 'Quelle est la devise de la République française ?'
                                         : 'Khẩu hiệu của Cộng hòa Pháp là gì?'
@@ -198,7 +278,11 @@ const SettingsScreen = () => {
                         </View>
 
                         {/* General Text Preview */}
-                        <FormattedText style={[styles.previewText, getTextStyles(settings)]}>
+                        <FormattedText style={[styles.previewText, getTextStyles(settings), {
+                            color: theme.colors.text,
+                            backgroundColor: theme.colors.card,
+                            borderColor: theme.colors.border
+                        }]}>
                             {language === 'fr'
                                 ? 'Ceci est un exemple de texte avec vos paramètres de formatage. Vous pouvez voir comment la taille de police, la police, l\'espacement des lignes et l\'espacement des lettres affectent l\'apparence du texte dans l\'application.'
                                 : 'Đây là một ví dụ về văn bản với cài đặt định dạng của bạn. Bạn có thể thấy cách kích thước phông chữ, phông chữ, khoảng cách dòng và khoảng cách chữ cái ảnh hưởng đến giao diện của văn bản trong ứng dụng.'
@@ -253,29 +337,29 @@ const SettingsScreen = () => {
                     <SettingItem
                         title="Réinitialiser les paramètres de texte"
                         titleVi="Đặt lại cài đặt văn bản"
-                        icon="refresh"
-                        iconColor="#FF5722"
+                        icon={theme.icons.refresh}
+                        iconColor={theme.colors.error}
                         onPress={handleResetTextSettings}
                         language={language}
                     />
                 </View>
 
-                <View style={styles.section}>
-                    <FormattedText style={styles.sectionTitle}>
+                <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
+                    <FormattedText style={[styles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
                         {language === 'fr' ? 'Autres options' : 'Tùy chọn khác'}
                     </FormattedText>
                     <SettingItem
                         title="Partager l'application"
                         titleVi="Chia sẻ ứng dụng"
-                        icon="share-social"
-                        iconColor="#FF9800"
+                        icon={theme.icons.share}
+                        iconColor={theme.colors.warning}
                         onPress={shareApp}
                         language={language}
                     />
                     <SettingItem
                         title="Évaluer l'application"
                         titleVi="Đánh giá ứng dụng"
-                        icon="star"
+                        icon={theme.icons.star}
                         iconColor="#FFC107"
                         onPress={rateApp}
                         language={language}
@@ -283,7 +367,7 @@ const SettingsScreen = () => {
                     <SettingItem
                         title="Version de l'application"
                         titleVi="Phiên bản ứng dụng"
-                        icon="information-circle"
+                        icon={theme.icons.info}
                         iconColor="#9C27B0"
                         onPress={() => { }}
                         language={language}
@@ -297,10 +381,9 @@ const SettingsScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     safeArea: {
-        backgroundColor: '#3F51B5',
+        // backgroundColor will be set dynamically
     },
     header: {
         flexDirection: 'row',
@@ -309,28 +392,23 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 20,
         paddingBottom: 15,
-        backgroundColor: '#3F51B5',
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#fff',
     },
     languageSelector: {
         flexDirection: 'row',
         alignItems: 'center',
     },
     languageLabel: {
-        color: '#fff',
         marginHorizontal: 5,
         fontWeight: '600',
     },
     scrollView: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     section: {
-        backgroundColor: '#fff',
         borderRadius: 10,
         marginHorizontal: 15,
         marginTop: 20,
@@ -345,32 +423,80 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 16,
         fontWeight: '600',
-        color: '#666',
         paddingHorizontal: 15,
         paddingVertical: 12,
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
+    },
+    themeSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 16,
+        paddingHorizontal: 15,
+        borderBottomWidth: 1,
+    },
+    themeSelectorLeft: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        flex: 1,
+    },
+    themeIconContainer: {
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 15,
+    },
+    themeSelectorTitle: {
+        fontSize: 16,
+        fontWeight: '600',
+    },
+    themeToggleWrapper: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        padding: 3,
+        borderRadius: 22,
+    },
+    themeOption: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderRadius: 16,
+        marginLeft: 3,
+        minWidth: 70,
+        justifyContent: 'center',
+    },
+    themeOptionActive: {
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+    },
+    themeOptionIcon: {
+        marginRight: 4,
+    },
+    themeOptionText: {
+        fontSize: 13,
+        fontWeight: '600',
     },
     previewContainer: {
         paddingHorizontal: 15,
         paddingVertical: 15,
-        backgroundColor: '#f9f9f9',
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
     },
     previewLabel: {
         fontSize: 14,
         fontWeight: '600',
-        color: '#666',
         marginBottom: 8,
     },
     previewText: {
-        color: '#333',
-        backgroundColor: '#fff',
         padding: 12,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#e0e0e0',
     },
     settingItem: {
         flexDirection: 'row',
@@ -378,8 +504,6 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 15,
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
-        backgroundColor: '#fff',
     },
     iconContainer: {
         width: 36,
@@ -392,13 +516,10 @@ const styles = StyleSheet.create({
     settingTitle: {
         flex: 1,
         fontSize: 16,
-        color: '#333',
     },
     questionPreview: {
         padding: 10,
-        backgroundColor: '#fff',
         borderWidth: 1,
-        borderColor: '#f0f0f0',
         borderRadius: 8,
         marginBottom: 10,
     },
@@ -413,18 +534,15 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f0f0f0',
         marginRight: 10,
     },
     previewId: {
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#333',
     },
     previewQuestion: {
         fontSize: 14,
         fontWeight: '600',
-        color: '#333',
     },
 });
 

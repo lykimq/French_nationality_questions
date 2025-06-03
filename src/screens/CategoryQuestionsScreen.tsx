@@ -6,6 +6,7 @@ import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import QuestionSlideView from '../components/QuestionSlideView';
 import { Question } from '../types/questions';
 import FormattedText from '../components/FormattedText';
@@ -16,6 +17,7 @@ type CategoryQuestionsNavigationProp = NativeStackNavigationProp<RootStackParamL
 const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
+    const { theme, themeMode } = useTheme();
     const { categoryId, language: initialLanguage } = route.params;
     const { language, setLanguage, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
 
@@ -29,8 +31,8 @@ const CategoryQuestionsScreen = () => {
 
     if (!category) {
         return (
-            <View style={styles.container}>
-                <FormattedText>Category not found</FormattedText>
+            <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+                <FormattedText style={{ color: theme.colors.text }}>Category not found</FormattedText>
             </View>
         );
     }
@@ -44,30 +46,30 @@ const CategoryQuestionsScreen = () => {
         : `${category.questions.length} câu hỏi`;
 
     return (
-        <View style={styles.container}>
-            <StatusBar barStyle="light-content" backgroundColor="#3F51B5" />
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
 
-            <SafeAreaView style={styles.safeArea} edges={['top']}>
-                <View style={styles.header}>
+            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
+                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <TouchableOpacity
                         style={styles.backButton}
                         onPress={() => navigation.goBack()}
                     >
-                        <Ionicons name="arrow-back" size={24} color="#fff" />
+                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
                     <View style={styles.headerTextContainer}>
-                        <FormattedText style={styles.title}>{displayTitle}</FormattedText>
-                        <FormattedText style={styles.count}>{questionsCount}</FormattedText>
+                        <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>{displayTitle}</FormattedText>
+                        <FormattedText style={[styles.count, { color: theme.colors.headerText + 'B3' }]}>{questionsCount}</FormattedText>
                     </View>
                     <View style={styles.languageSelector}>
-                        <FormattedText style={styles.languageLabel}>FR</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
-                            thumbColor="#fff"
-                            trackColor={{ false: '#7986CB', true: '#7986CB' }}
+                            thumbColor={theme.colors.switchThumb}
+                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
                         />
-                        <FormattedText style={styles.languageLabel}>VI</FormattedText>
+                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>
@@ -79,14 +81,12 @@ const CategoryQuestionsScreen = () => {
 
 export default CategoryQuestionsScreen;
 
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     safeArea: {
-        backgroundColor: '#3F51B5',
+        // backgroundColor will be set dynamically
     },
     header: {
         flexDirection: 'row',
@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 20,
         paddingBottom: 15,
-        backgroundColor: '#3F51B5',
     },
     backButton: {
         marginRight: 16,
@@ -105,12 +104,10 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#fff',
         textAlign: 'left',
     },
     count: {
         fontSize: 14,
-        color: '#E8EAF6',
         marginTop: 2,
     },
     languageSelector: {
@@ -119,7 +116,6 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     languageLabel: {
-        color: '#fff',
         marginHorizontal: 5,
         fontWeight: '600',
         fontSize: 12,

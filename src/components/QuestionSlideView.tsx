@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
+import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
 import { Question } from '../types/questions';
 import FormattedText from './FormattedText';
@@ -16,6 +17,7 @@ interface QuestionSlideViewProps {
 }
 
 const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, language }) => {
+    const { theme } = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
     const translateX = useRef(new Animated.Value(0)).current;
     const panRef = useRef(null);
@@ -100,8 +102,8 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
     const currentQuestion = questions[currentIndex];
 
     return (
-        <View style={styles.container}>
-            <View style={styles.navigationBar}>
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <View style={[styles.navigationBar, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
                 <TouchableOpacity
                     style={styles.navButton}
                     onPress={navigateToPrevious}
@@ -110,10 +112,10 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                     <Ionicons
                         name="chevron-back"
                         size={24}
-                        color={currentIndex === 0 ? '#ccc' : '#3F51B5'}
+                        color={currentIndex === 0 ? theme.colors.textMuted : theme.colors.primary}
                     />
                 </TouchableOpacity>
-                <FormattedText style={styles.pageIndicator}>
+                <FormattedText style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}>
                     {currentIndex + 1} / {questions.length}
                 </FormattedText>
                 <TouchableOpacity
@@ -124,7 +126,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                     <Ionicons
                         name="chevron-forward"
                         size={24}
-                        color={currentIndex === questions.length - 1 ? '#ccc' : '#3F51B5'}
+                        color={currentIndex === questions.length - 1 ? theme.colors.textMuted : theme.colors.primary}
                     />
                 </TouchableOpacity>
             </View>
@@ -169,7 +171,6 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
     },
     navigationBar: {
         flexDirection: 'row',
@@ -177,9 +178,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 10,
         paddingHorizontal: 20,
-        backgroundColor: '#fff',
         borderBottomWidth: 1,
-        borderBottomColor: '#eee',
         zIndex: 1,
     },
     navButton: {
@@ -187,7 +186,6 @@ const styles = StyleSheet.create({
     },
     pageIndicator: {
         fontSize: 16,
-        color: '#666',
         fontWeight: '600',
     },
     content: {
@@ -198,9 +196,9 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         paddingHorizontal: 20,
-        paddingVertical: 10,
-        flexGrow: 1,
-    }
+        paddingTop: 20,
+        paddingBottom: 40,
+    },
 });
 
 export default QuestionSlideView;
