@@ -162,19 +162,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             {expanded && (
                 <TouchableWithoutFeedback onPress={toggleExpand}>
                     <View style={styles.expandedContent}>
-                        {isMultilingual && (
-                            <Pressable
-                                style={styles.languageToggle}
-                                onPress={(e) => {
-                                    e.stopPropagation();
-                                    toggleLanguage();
-                                }}
-                            >
-                                <Text style={styles.languageToggleText}>
-                                    {showBothLanguages ? "Afficher une seule langue" : "Afficher les deux langues"}
-                                </Text>
-                            </Pressable>
-                        )}
+                        {isMultilingual}
 
                         {/* Display image if available */}
                         {image && !imageError && (
