@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator, TouchableOpacity, Dimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { MultiLangText } from '../contexts/LanguageContext';
 import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
 import ImageModal from './ImageModal';
@@ -31,8 +32,15 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [imageLoading, setImageLoading] = useState(true);
     const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
+    const [explanationHeight, setExplanationHeight] = useState(0);
+    const [shouldUseScrollView, setShouldUseScrollView] = useState(false);
     const { settings } = useTextFormatting();
     const { theme } = useTheme();
+
+    const { height: screenHeight } = Dimensions.get('window');
+    // Use up to 70% of screen height for explanation, providing much more space
+    // This accounts for status bar, navigation, question header, but maximizes content area
+    const maxExplanationHeight = screenHeight * 0.7; // Increased to 70% for better space utilization
 
     const isMultilingual = typeof question !== 'string';
 
@@ -170,6 +178,18 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         console.log(`Modal visibility changed for question ${id}: ${isImageModalVisible}`);
     }, [isImageModalVisible, id]);
 
+    // Reset explanation layout when explanation content changes
+    useEffect(() => {
+        setShouldUseScrollView(false);
+        setExplanationHeight(0);
+    }, [explanation, expanded, showBothLanguages]);
+
+    // Only use scroll view if content is genuinely long (both height and line count considerations)
+    const shouldTriggerScrollView = (contentHeight: number) => {
+        const minHeightForScroll = 200; // Minimum height before considering scroll
+        return contentHeight > maxExplanationHeight && contentHeight > minHeightForScroll;
+    };
+
     // Don't auto-close modal on image change - let user control it manually
 
     return (
@@ -269,29 +289,80 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     )}
 
                     {getExplanationText('fr') !== "" && (
-                        <ScrollView
-                            style={styles.explanationScrollView}
-                            contentContainerStyle={styles.scrollContent}
-                            showsVerticalScrollIndicator={true}
-                            nestedScrollEnabled={true}
-                            onTouchStart={(e) => e.stopPropagation()}
-                        >
-                            <View style={styles.section}>
-                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
-                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                    {formatExplanation(getExplanationText('fr'))}
-                                </FormattedText>
+                        <View style={styles.explanationContainer}>
+                            {shouldUseScrollView ? (
+                                <View style={styles.scrollableContentWrapper}>
+                                    <ScrollView
+                                        style={[styles.explanationScrollView, {
+                                            maxHeight: maxExplanationHeight,
+                                            backgroundColor: theme.colors.questionCardBackground,
+                                            borderColor: theme.colors.border
+                                        }]}
+                                        contentContainerStyle={[styles.scrollContent, { backgroundColor: theme.colors.questionCardBackground }]}
+                                        showsVerticalScrollIndicator={true}
+                                        nestedScrollEnabled={true}
+                                        onTouchStart={(e) => e.stopPropagation()}
+                                        fadingEdgeLength={20}
+                                        indicatorStyle={theme.mode === 'dark' ? 'white' : 'black'}
+                                    >
+                                        <View style={styles.section}>
+                                            <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
+                                            <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
+                                                {formatExplanation(getExplanationText('fr'))}
+                                            </FormattedText>
 
-                                {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
-                                    <>
-                                        <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle, { color: theme.colors.primary }]}>Giải thích:</FormattedText>
+                                            {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
+                                                <>
+                                                    <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle, { color: theme.colors.primary }]}>Giải thích:</FormattedText>
+                                                    <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
+                                                        {formatExplanation(getExplanationText('vi'))}
+                                                    </FormattedText>
+                                                </>
+                                            )}
+                                        </View>
+                                    </ScrollView>
+                                    <LinearGradient
+                                        colors={[
+                                            'transparent',
+                                            `${theme.colors.questionCardBackground}CC`,
+                                            theme.colors.questionCardBackground
+                                        ]}
+                                        style={styles.fadeIndicator}
+                                        pointerEvents="none"
+                                    />
+                                </View>
+                            ) : (
+                                <View
+                                    style={styles.explanationContent}
+                                    onLayout={(event) => {
+                                        const { height } = event.nativeEvent.layout;
+                                        setExplanationHeight(height);
+                                        // Add small delay to prevent rapid switching and ensure stable measurement
+                                        setTimeout(() => {
+                                            if (shouldTriggerScrollView(height)) {
+                                                setShouldUseScrollView(true);
+                                            }
+                                        }, 100);
+                                    }}
+                                >
+                                    <View style={styles.section}>
+                                        <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
                                         <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                            {formatExplanation(getExplanationText('vi'))}
+                                            {formatExplanation(getExplanationText('fr'))}
                                         </FormattedText>
-                                    </>
-                                )}
-                            </View>
-                        </ScrollView>
+
+                                        {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
+                                            <>
+                                                <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle, { color: theme.colors.primary }]}>Giải thích:</FormattedText>
+                                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
+                                                    {formatExplanation(getExplanationText('vi'))}
+                                                </FormattedText>
+                                            </>
+                                        )}
+                                    </View>
+                                </View>
+                            )}
+                        </View>
                     )}
                 </View>
             )}
@@ -423,8 +494,12 @@ const styles = StyleSheet.create({
         fontSize: 14,
         textAlign: 'center',
     },
+    explanationContainer: {
+        marginBottom: 16,
+    },
     explanationScrollView: {
-        maxHeight: 300,
+        borderRadius: 8,
+        borderWidth: 1,
     },
     scrollContent: {
         paddingBottom: 4,
@@ -447,8 +522,21 @@ const styles = StyleSheet.create({
     explanationText: {
         textAlign: 'justify',
     },
+    explanationContent: {
+        // No padding needed here since it's within expandedContent
+    },
     overlay: {
         ...StyleSheet.absoluteFillObject,
+    },
+    scrollableContentWrapper: {
+        position: 'relative',
+    },
+    fadeIndicator: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: 25,
     },
 });
 

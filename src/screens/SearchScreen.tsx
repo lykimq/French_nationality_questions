@@ -222,6 +222,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     contentContainer: {
+        flexGrow: 1,
         paddingHorizontal: 20,
         paddingBottom: 20,
     },
