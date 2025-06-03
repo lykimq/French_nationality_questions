@@ -30,7 +30,7 @@ const CategoryQuestionsScreen = () => {
     if (!category) {
         return (
             <View style={styles.container}>
-                <Text>Category not found</Text>
+                <FormattedText>Category not found</FormattedText>
             </View>
         );
     }
@@ -60,14 +60,14 @@ const CategoryQuestionsScreen = () => {
                         <FormattedText style={styles.count}>{questionsCount}</FormattedText>
                     </View>
                     <View style={styles.languageSelector}>
-                        <Text style={styles.languageLabel}>FR</Text>
+                        <FormattedText style={styles.languageLabel}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
                             thumbColor="#fff"
                             trackColor={{ false: '#7986CB', true: '#7986CB' }}
                         />
-                        <Text style={styles.languageLabel}>VI</Text>
+                        <FormattedText style={styles.languageLabel}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>

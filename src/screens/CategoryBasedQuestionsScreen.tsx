@@ -68,14 +68,14 @@ const CategoryBasedQuestionsScreen = () => {
                         <FormattedText style={commonStyles.count}>{getCurrentCount()}</FormattedText>
                     </View>
                     <View style={commonStyles.languageSelector}>
-                        <Text style={commonStyles.languageLabel}>FR</Text>
+                        <FormattedText style={commonStyles.languageLabel}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
                             thumbColor="#fff"
                             trackColor={{ false: '#7986CB', true: '#7986CB' }}
                         />
-                        <Text style={commonStyles.languageLabel}>VI</Text>
+                        <FormattedText style={commonStyles.languageLabel}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>

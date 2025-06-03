@@ -70,14 +70,14 @@ const HomeScreen = () => {
                             : 'Chuẩn bị cho cuộc phỏng vấn nhập tịch của bạn'}
                     </FormattedText>
                     <View style={styles.languageSelector}>
-                        <Text style={styles.languageLabel}>FR</Text>
+                        <FormattedText style={styles.languageLabel}>FR</FormattedText>
                         <Switch
                             value={language === 'vi'}
                             onValueChange={toggleLanguage}
                             thumbColor="#fff"
                             trackColor={{ false: '#7986CB', true: '#7986CB' }}
                         />
-                        <Text style={styles.languageLabel}>VI</Text>
+                        <FormattedText style={styles.languageLabel}>VI</FormattedText>
                     </View>
                 </View>
             </SafeAreaView>

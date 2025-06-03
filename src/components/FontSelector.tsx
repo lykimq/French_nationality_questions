@@ -22,6 +22,9 @@ const FONT_OPTIONS: FontOption[] = [
     { name: 'Sans Serif', nameVi: 'Sans Serif', value: 'sans-serif', preview: 'Aa' },
     { name: 'Serif', nameVi: 'Serif', value: 'serif', preview: 'Aa' },
     { name: 'Monospace', nameVi: 'Monospace', value: 'monospace', preview: 'Aa' },
+    { name: 'Kalam', nameVi: 'Kalam', value: 'Kalam', preview: 'Aa' },
+    { name: 'Patrick Hand', nameVi: 'Patrick Hand', value: 'PatrickHand', preview: 'Aa' },
+    { name: 'Dancing Script', nameVi: 'Dancing Script', value: 'DancingScript', preview: 'Aa' },
 ];
 
 interface FontSelectorProps {

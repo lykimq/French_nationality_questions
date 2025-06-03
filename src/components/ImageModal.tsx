@@ -12,9 +12,9 @@ import {
     GestureResponderEvent,
     Animated,
     PanResponder,
-    Text,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import FormattedText from './FormattedText';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
@@ -223,7 +223,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
                     {/* Zoom hint overlay */}
                     {showZoomHint && (
                         <View style={styles.zoomHint}>
-                            <Text style={styles.zoomHintText}>Double-tap to zoom • Drag to pan when zoomed</Text>
+                            <FormattedText style={styles.zoomHintText}>Double-tap to zoom • Drag to pan when zoomed</FormattedText>
                         </View>
                     )}
 
