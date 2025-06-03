@@ -1,6 +1,7 @@
 // Components
 export { default as CategoryCard } from './components/CategoryCard';
 export { default as QuestionCard } from './components/QuestionCard';
+export { default as JsonIconSelector } from './components/JsonIconSelector';
 
 // Screens
 export { default as HomeScreen } from './screens/HomeScreen';

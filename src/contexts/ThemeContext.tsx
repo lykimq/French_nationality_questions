@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useIcons } from './IconContext';
 
 // Theme types
 export type ThemeMode = 'light' | 'dark';
@@ -52,47 +53,14 @@ export interface ThemeColors {
     modalOverlay: string;
 }
 
-export interface ThemeIcons {
-    // Navigation icons
-    home: string;
-    search: string;
-    settings: string;
-    categories: string;
-
-    // Action icons
-    chevronDown: string;
-    chevronUp: string;
-    chevronForward: string;
-    chevronBack: string;
-    close: string;
-
-    // Feature icons
-    language: string;
-    textFormat: string;
-    share: string;
-    star: string;
-    info: string;
-    refresh: string;
-
-    // Theme specific icons
-    sun: string;
-    moon: string;
-    palette: string;
-
-    // Question related icons
-    image: string;
-    expand: string;
-    collapse: string;
-}
-
 export interface Theme {
     mode: ThemeMode;
     colors: ThemeColors;
-    icons: ThemeIcons;
+    // Icons are now managed by IconContext, so we include them via a hook
 }
 
 // Light theme configuration
-const lightTheme: Theme = {
+const lightTheme: Omit<Theme, 'icons'> = {
     mode: 'light',
     colors: {
         background: '#F5F5F5',
@@ -131,37 +99,10 @@ const lightTheme: Theme = {
         modalBackground: '#FFFFFF',
         modalOverlay: 'rgba(0, 0, 0, 0.5)',
     },
-    icons: {
-        home: 'home',
-        search: 'search',
-        settings: 'settings',
-        categories: 'grid',
-
-        chevronDown: 'chevron-down',
-        chevronUp: 'chevron-up',
-        chevronForward: 'chevron-forward',
-        chevronBack: 'chevron-back',
-        close: 'close',
-
-        language: 'language',
-        textFormat: 'text',
-        share: 'share-social',
-        star: 'star',
-        info: 'information-circle',
-        refresh: 'refresh',
-
-        sun: 'sunny',
-        moon: 'moon',
-        palette: 'color-palette',
-
-        image: 'image',
-        expand: 'expand',
-        collapse: 'contract',
-    },
 };
 
 // Dark theme configuration
-const darkTheme: Theme = {
+const darkTheme: Omit<Theme, 'icons'> = {
     mode: 'dark',
     colors: {
         background: '#121212',
@@ -200,38 +141,11 @@ const darkTheme: Theme = {
         modalBackground: '#2D2D2D',
         modalOverlay: 'rgba(0, 0, 0, 0.8)',
     },
-    icons: {
-        home: 'home-outline',
-        search: 'search-outline',
-        settings: 'settings-outline',
-        categories: 'grid-outline',
-
-        chevronDown: 'chevron-down-outline',
-        chevronUp: 'chevron-up-outline',
-        chevronForward: 'chevron-forward-outline',
-        chevronBack: 'chevron-back-outline',
-        close: 'close-outline',
-
-        language: 'language-outline',
-        textFormat: 'text-outline',
-        share: 'share-social-outline',
-        star: 'star-outline',
-        info: 'information-circle-outline',
-        refresh: 'refresh-outline',
-
-        sun: 'sunny-outline',
-        moon: 'moon-outline',
-        palette: 'color-palette-outline',
-
-        image: 'image-outline',
-        expand: 'expand-outline',
-        collapse: 'contract-outline',
-    },
 };
 
 // Context interface
 interface ThemeContextType {
-    theme: Theme;
+    theme: Theme & { icons: any }; // Include icons from IconContext
     themeMode: ThemeMode;
     setThemeMode: (mode: ThemeMode) => void;
     toggleTheme: () => void;
@@ -256,9 +170,11 @@ interface ThemeProviderProps {
 
 const THEME_STORAGE_KEY = '@french_app_theme';
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+// Internal theme provider that requires IconContext
+const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
     const [themeMode, setThemeModeState] = useState<ThemeMode>('light');
     const [isLoading, setIsLoading] = useState(true);
+    const { icons } = useIcons(); // Get icons from IconContext
 
     // Load theme from storage on app start
     useEffect(() => {
@@ -298,7 +214,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const currentTheme = themeMode === 'light' ? lightTheme : darkTheme;
 
     const value: ThemeContextType = {
-        theme: currentTheme,
+        theme: {
+            ...currentTheme,
+            icons, // Include icons from IconContext
+        },
         themeMode,
         setThemeMode,
         toggleTheme,
@@ -314,6 +233,15 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
             <StatusBar style={themeMode === 'dark' ? 'light' : 'dark'} />
             {children}
         </ThemeContext.Provider>
+    );
+};
+
+// Wrapper that ensures IconContext is available
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+    return (
+        <ThemeProviderInternal>
+            {children}
+        </ThemeProviderInternal>
     );
 };
 

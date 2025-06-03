@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
+import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
 
 type CategoryCardProps = {
@@ -26,10 +27,14 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     language = 'fr',  // Default to French if not specified
 }) => {
     const { theme } = useTheme();
+    const { getJsonIconName, getIconName } = useIcons();
 
     // Determine which language to display
     const displayTitle = language === 'fr' ? title : (title_vi || title);
     const displayDescription = language === 'fr' ? description : (description_vi || description);
+
+    // Get the mapped icon name based on the current JSON icon set
+    const mappedIconName = getJsonIconName(icon);
 
     return (
         <Pressable
@@ -42,7 +47,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             android_ripple={{ color: theme.colors.primary + '20' }}
         >
             <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '20' }]}>
-                <Ionicons name={icon as any} size={32} color={theme.colors.primary} />
+                <Ionicons name={mappedIconName as keyof typeof Ionicons.glyphMap} size={32} color={theme.colors.primary} />
             </View>
             <View style={styles.content}>
                 <FormattedText style={[styles.title, { color: theme.colors.text }]}>{displayTitle}</FormattedText>
@@ -56,7 +61,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                     <FormattedText style={[styles.count, { color: theme.colors.primary }]}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
                 </View>
             </View>
-            <Ionicons name="chevron-forward" size={24} color={theme.colors.primary} style={styles.arrowIcon} />
+            <Ionicons name={getIconName('chevronForward') as keyof typeof Ionicons.glyphMap} size={24} color={theme.colors.primary} style={styles.arrowIcon} />
         </Pressable>
     );
 };

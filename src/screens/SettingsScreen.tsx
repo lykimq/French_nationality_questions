@@ -15,8 +15,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
 import { useTheme } from '../contexts/ThemeContext';
+import { useIcons } from '../contexts/IconContext';
 import SliderSetting from '../components/SliderSetting';
 import FontSelector from '../components/FontSelector';
+import IconSelector from '../components/IconSelector';
+import JsonIconSelector from '../components/JsonIconSelector';
 import FormattedText from '../components/FormattedText';
 
 type SettingItemProps = {
@@ -99,6 +102,7 @@ const SettingsScreen = () => {
     const { language, toggleLanguage } = useLanguage();
     const { isSlideMode, toggleSlideMode } = useDisplaySettings();
     const { theme, themeMode, setThemeMode } = useTheme();
+    const { iconSet, setIconSet, jsonIconSet, setJsonIconSet } = useIcons();
     const {
         settings,
         updateFontSize,
@@ -248,6 +252,24 @@ const SettingsScreen = () => {
                             </TouchableOpacity>
                         </View>
                     </View>
+
+                    {/* Icon Set Selector */}
+                    <IconSelector
+                        title="Style d'icônes"
+                        titleVi="Kiểu biểu tượng"
+                        language={language}
+                        value={iconSet}
+                        onValueChange={setIconSet}
+                    />
+
+                    {/* JSON Category Icon Set Selector */}
+                    <JsonIconSelector
+                        title="Style des icônes de catégories"
+                        titleVi="Kiểu biểu tượng danh mục"
+                        language={language}
+                        value={jsonIconSet}
+                        onValueChange={setJsonIconSet}
+                    />
                 </View>
 
                 {/* Text Formatting Section */}
