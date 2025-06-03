@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
 import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
+import ImageModal from './ImageModal';
 
 type QuestionCardProps = {
     id: number;
@@ -26,6 +27,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
     const [imageSource, setImageSource] = useState<any>(null);
+    const [isImageModalVisible, setIsImageModalVisible] = useState(false);
 
     const isMultilingual = typeof question !== 'string';
 
@@ -34,6 +36,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         let isMounted = true;
 
         const loadImage = async () => {
+            console.log('Loading image for question', id, ':', image);
+
             if (!image) {
                 setImageSource(null);
                 setImageLoading(false);
@@ -47,25 +51,29 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 // First try to get cached image source for immediate display
                 const cachedSource = getCachedImageSource(image);
                 if (cachedSource && isMounted) {
+                    console.log('Using cached image for question', id, ':', image);
                     setImageSource(cachedSource);
                     setImageLoading(false);
                     return;
                 }
 
                 // If not cached, load from Firebase
+                console.log('Loading image from Firebase for question', id, ':', image);
                 const source = await loadImageSource(image);
                 if (isMounted) {
                     if (source) {
+                        console.log('Successfully loaded image for question', id, ':', image);
                         setImageSource(source);
                         setImageLoading(false);
                     } else {
+                        console.log('Failed to load image for question', id, ':', image);
                         setImageError(true);
                         setImageLoading(false);
                         setImageSource(null);
                     }
                 }
             } catch (error) {
-                console.error('Error loading image:', error);
+                console.error('Error loading image for question', id, ':', image, error);
                 if (isMounted) {
                     setImageError(true);
                     setImageLoading(false);
@@ -79,7 +87,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         return () => {
             isMounted = false;
         };
-    }, [image]);
+    }, [image, id]);
 
     const getQuestionText = (lang: 'fr' | 'vi') => {
         if (typeof question === 'string') {
@@ -127,6 +135,38 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         setImageLoading(false);
     };
 
+    const handleImagePress = () => {
+        console.log('=== IMAGE PRESS DEBUG ===');
+        console.log('Question ID:', id);
+        console.log('Image path:', image);
+        console.log('Image source:', imageSource);
+        console.log('Image error:', imageError);
+        console.log('Image loading:', imageLoading);
+        console.log('Current modal visible:', isImageModalVisible);
+
+        if (imageSource && !imageError && !imageLoading) {
+            console.log('✅ Opening modal for image');
+            setIsImageModalVisible(true);
+        } else {
+            console.log('❌ Cannot open modal - conditions not met');
+            console.log('   - Has imageSource:', !!imageSource);
+            console.log('   - Not in error state:', !imageError);
+            console.log('   - Not loading:', !imageLoading);
+        }
+        console.log('========================');
+    };
+
+    const closeImageModal = () => {
+        setIsImageModalVisible(false);
+    };
+
+    // Debug modal state changes
+    useEffect(() => {
+        console.log(`Modal visibility changed for question ${id}: ${isImageModalVisible}`);
+    }, [isImageModalVisible, id]);
+
+    // Don't auto-close modal on image change - let user control it manually
+
     return (
         <View style={[styles.card, expanded && styles.cardExpanded]}>
             <Pressable
@@ -160,22 +200,39 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             </Pressable>
 
             {expanded && (
-                <TouchableWithoutFeedback onPress={toggleExpand}>
-                    <View style={styles.expandedContent}>
-                        {isMultilingual}
+                <View style={styles.expandedContent}>
+                    {isMultilingual}
 
-                        {/* Display image if available */}
-                        {image && !imageError && (
-                            <View style={styles.imageContainer}>
-                                {imageLoading && (
-                                    <View style={styles.imageLoading}>
-                                        <ActivityIndicator size="large" color="#3F51B5" />
-                                        <Text style={styles.loadingText}>
-                                            {language === 'fr' ? "Chargement de l'image..." : "Đang tải hình ảnh..."}
-                                        </Text>
-                                    </View>
-                                )}
-                                {imageSource && (
+                    {/* Display image if available */}
+                    {image && !imageError && (
+                        <TouchableOpacity
+                            style={styles.imageContainer}
+                            onPress={() => {
+                                console.log('🔥 TOUCH EVENT DETECTED on image container');
+                                handleImagePress();
+                            }}
+                            onPressIn={() => console.log('👆 Press IN detected on container')}
+                            onPressOut={() => {
+                                console.log('👆 Press OUT detected on container');
+                                // Backup: trigger modal opening on press out if onPress doesn't work
+                                setTimeout(() => {
+                                    console.log('🔄 Backup trigger - opening modal from onPressOut');
+                                    handleImagePress();
+                                }, 100);
+                            }}
+                            activeOpacity={0.9}
+                        >
+                            {imageLoading && (
+                                <View style={styles.imageLoading}>
+                                    <ActivityIndicator size="large" color="#3F51B5" />
+                                    <Text style={styles.loadingText}>
+                                        {language === 'fr' ? "Chargement de l'image..." : "Đang tải hình ảnh..."}
+                                    </Text>
+                                </View>
+                            )}
+                            {imageSource && (
+                                <>
+                                    {console.log('🎯 Rendering image for question', id)}
                                     <Image
                                         source={imageSource}
                                         style={[styles.image, imageLoading && styles.hiddenImage]}
@@ -183,47 +240,50 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                         onError={handleImageError}
                                         onLoad={handleImageLoad}
                                     />
+                                    <View style={styles.imageOverlay}>
+                                        <Ionicons name="expand-outline" size={24} color="#FFFFFF" />
+                                    </View>
+                                </>
+                            )}
+                        </TouchableOpacity>
+                    )}
+
+                    {/* Display fallback if image fails to load */}
+                    {image && imageError && (
+                        <View style={styles.imageFallback}>
+                            <Ionicons name="image-outline" size={40} color="#CCCCCC" />
+                            <Text style={styles.imageFallbackText}>
+                                {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
+                            </Text>
+                        </View>
+                    )}
+
+                    {getExplanationText('fr') !== "" && (
+                        <ScrollView
+                            style={styles.explanationScrollView}
+                            contentContainerStyle={styles.scrollContent}
+                            showsVerticalScrollIndicator={true}
+                            nestedScrollEnabled={true}
+                            onTouchStart={(e) => e.stopPropagation()}
+                        >
+                            <View style={styles.section}>
+                                <Text style={styles.sectionTitle}>Explication:</Text>
+                                <Text style={[styles.sectionContent, styles.explanationText]}>
+                                    {formatExplanation(getExplanationText('fr'))}
+                                </Text>
+
+                                {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
+                                    <>
+                                        <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
+                                        <Text style={[styles.sectionContent, styles.explanationText]}>
+                                            {formatExplanation(getExplanationText('vi'))}
+                                        </Text>
+                                    </>
                                 )}
                             </View>
-                        )}
-
-                        {/* Display fallback if image fails to load */}
-                        {image && imageError && (
-                            <View style={styles.imageFallback}>
-                                <Ionicons name="image-outline" size={40} color="#CCCCCC" />
-                                <Text style={styles.imageFallbackText}>
-                                    {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
-                                </Text>
-                            </View>
-                        )}
-
-                        {getExplanationText('fr') !== "" && (
-                            <ScrollView
-                                style={styles.explanationScrollView}
-                                contentContainerStyle={styles.scrollContent}
-                                showsVerticalScrollIndicator={true}
-                                nestedScrollEnabled={true}
-                                onTouchStart={(e) => e.stopPropagation()}
-                            >
-                                <View style={styles.section}>
-                                    <Text style={styles.sectionTitle}>Explication:</Text>
-                                    <Text style={[styles.sectionContent, styles.explanationText]}>
-                                        {formatExplanation(getExplanationText('fr'))}
-                                    </Text>
-
-                                    {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
-                                        <>
-                                            <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
-                                            <Text style={[styles.sectionContent, styles.explanationText]}>
-                                                {formatExplanation(getExplanationText('vi'))}
-                                            </Text>
-                                        </>
-                                    )}
-                                </View>
-                            </ScrollView>
-                        )}
-                    </View>
-                </TouchableWithoutFeedback>
+                        </ScrollView>
+                    )}
+                </View>
             )}
 
             {/* Add a clickable overlay to the unexpanded card */}
@@ -234,6 +294,14 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     android_ripple={{ color: '#E8EAF6', borderless: true }}
                 />
             )}
+
+            {/* Image Modal */}
+            <ImageModal
+                key={image || 'no-image'}
+                visible={isImageModalVisible}
+                imageSource={imageSource}
+                onClose={closeImageModal}
+            />
         </View>
     );
 };
@@ -403,6 +471,23 @@ const styles = StyleSheet.create({
         color: '#999',
         fontSize: 14,
         textAlign: 'center',
+    },
+    imageOverlay: {
+        position: 'absolute',
+        top: 8,
+        right: 8,
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        justifyContent: 'center',
+        alignItems: 'center',
+        opacity: 1,
+        elevation: 5,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
     },
 });
 
