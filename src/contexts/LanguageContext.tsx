@@ -173,84 +173,98 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
     // When language changes, update the questions data
     useEffect(() => {
-        if (language === 'fr') {
-            // Combine all French category data
-            const frenchData: FrenchQuestionsData = {
-                categories: [
-                    personal_fr_vi as unknown as FrenchCategory,
-                    geography_fr_vi as unknown as FrenchCategory,
-                ]
-            };
-            setQuestionsData(frenchData);
-            setIsTranslationLoaded(false);
+        const loadQuestionsData = async () => {
+            if (language === 'fr') {
+                // Combine all French category data
+                const frenchData: FrenchQuestionsData = {
+                    categories: [
+                        personal_fr_vi as unknown as FrenchCategory,
+                        geography_fr_vi as unknown as FrenchCategory,
+                    ]
+                };
+                setQuestionsData(frenchData);
+                setIsTranslationLoaded(false);
 
-            // Preload images when data changes
-            preloadImages(frenchData);
-        } else {
-            // Safety casting our JSON data to ensure correct types
-            const personalFr = personal_fr_vi as unknown as JsonCategory;
-            const geographyFr = geography_fr_vi as unknown as JsonCategory;
+                // Preload images when data changes
+                try {
+                    await preloadImages(frenchData);
+                    console.log('French images preloaded successfully');
+                } catch (error) {
+                    console.error('Error preloading French images:', error);
+                }
+            } else {
+                // Safety casting our JSON data to ensure correct types
+                const personalFr = personal_fr_vi as unknown as JsonCategory;
+                const geographyFr = geography_fr_vi as unknown as JsonCategory;
 
-            // Merge French and Vietnamese data
-            const mergedData: MultiLangQuestionsData = {
-                categories: [
-                    {
-                        ...personalFr,
-                        title_vi: personalFr.title_vi,
-                        description_vi: personalFr.description_vi,
-                        questions: personalFr.questions.map((question) => {
-                            const multiLangQuestion: MultiLangQuestion = {
-                                id: question.id,
-                                question: {
-                                    fr: question.question,
-                                    vi: question.question_vi || ''
-                                },
-                                explanation: {
-                                    fr: question.explanation,
-                                    vi: question.explanation_vi || ''
+                // Merge French and Vietnamese data
+                const mergedData: MultiLangQuestionsData = {
+                    categories: [
+                        {
+                            ...personalFr,
+                            title_vi: personalFr.title_vi,
+                            description_vi: personalFr.description_vi,
+                            questions: personalFr.questions.map((question) => {
+                                const multiLangQuestion: MultiLangQuestion = {
+                                    id: question.id,
+                                    question: {
+                                        fr: question.question,
+                                        vi: question.question_vi || ''
+                                    },
+                                    explanation: {
+                                        fr: question.explanation,
+                                        vi: question.explanation_vi || ''
+                                    }
+                                };
+
+                                if (question.image !== undefined) {
+                                    multiLangQuestion.image = question.image;
                                 }
-                            };
 
-                            if (question.image !== undefined) {
-                                multiLangQuestion.image = question.image;
-                            }
+                                return multiLangQuestion;
+                            })
+                        },
+                        {
+                            ...geographyFr,
+                            title_vi: geographyFr.title_vi,
+                            description_vi: geographyFr.description_vi,
+                            questions: geographyFr.questions.map((question) => {
+                                const multiLangQuestion: MultiLangQuestion = {
+                                    id: question.id,
+                                    question: {
+                                        fr: question.question,
+                                        vi: question.question_vi || ''
+                                    },
+                                    explanation: {
+                                        fr: question.explanation,
+                                        vi: question.explanation_vi || ''
+                                    }
+                                };
 
-                            return multiLangQuestion;
-                        })
-                    },
-                    {
-                        ...geographyFr,
-                        title_vi: geographyFr.title_vi,
-                        description_vi: geographyFr.description_vi,
-                        questions: geographyFr.questions.map((question) => {
-                            const multiLangQuestion: MultiLangQuestion = {
-                                id: question.id,
-                                question: {
-                                    fr: question.question,
-                                    vi: question.question_vi || ''
-                                },
-                                explanation: {
-                                    fr: question.explanation,
-                                    vi: question.explanation_vi || ''
+                                if (question.image !== undefined) {
+                                    multiLangQuestion.image = question.image;
                                 }
-                            };
 
-                            if (question.image !== undefined) {
-                                multiLangQuestion.image = question.image;
-                            }
+                                return multiLangQuestion;
+                            })
+                        }
+                    ]
+                };
 
-                            return multiLangQuestion;
-                        })
-                    }
-                ]
-            };
+                setQuestionsData(mergedData);
+                setIsTranslationLoaded(true);
 
-            setQuestionsData(mergedData);
-            setIsTranslationLoaded(true);
+                // Preload images when data changes
+                try {
+                    await preloadImages(mergedData);
+                    console.log('Multilingual images preloaded successfully');
+                } catch (error) {
+                    console.error('Error preloading multilingual images:', error);
+                }
+            }
+        };
 
-            // Preload images when data changes
-            preloadImages(mergedData);
-        }
+        loadQuestionsData();
     }, [language]);
 
     const toggleLanguage = () => {

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
-import { getImageSource as loadImageSource } from '../utils/imageUtils';
+import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
 
 type QuestionCardProps = {
     id: number;
@@ -25,8 +25,61 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [showBothLanguages, setShowBothLanguages] = useState(true);
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
+    const [imageSource, setImageSource] = useState<any>(null);
 
     const isMultilingual = typeof question !== 'string';
+
+    // Load Firebase image when component mounts or image changes
+    useEffect(() => {
+        let isMounted = true;
+
+        const loadImage = async () => {
+            if (!image) {
+                setImageSource(null);
+                setImageLoading(false);
+                return;
+            }
+
+            setImageLoading(true);
+            setImageError(false);
+
+            try {
+                // First try to get cached image source for immediate display
+                const cachedSource = getCachedImageSource(image);
+                if (cachedSource && isMounted) {
+                    setImageSource(cachedSource);
+                    setImageLoading(false);
+                    return;
+                }
+
+                // If not cached, load from Firebase
+                const source = await loadImageSource(image);
+                if (isMounted) {
+                    if (source) {
+                        setImageSource(source);
+                        setImageLoading(false);
+                    } else {
+                        setImageError(true);
+                        setImageLoading(false);
+                        setImageSource(null);
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading image:', error);
+                if (isMounted) {
+                    setImageError(true);
+                    setImageLoading(false);
+                    setImageSource(null);
+                }
+            }
+        };
+
+        loadImage();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [image]);
 
     const getQuestionText = (lang: 'fr' | 'vi') => {
         if (typeof question === 'string') {
@@ -58,10 +111,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
     const toggleExpand = () => {
         setExpanded(!expanded);
-        if (!expanded && image) {
-            setImageLoading(true);
-            setImageError(false);
-        }
     };
 
     const toggleLanguage = () => {
@@ -69,27 +118,13 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     };
 
     const handleImageError = () => {
-        console.log('Image failed to load:', image);
+        console.log('Image failed to render:', image);
         setImageError(true);
         setImageLoading(false);
     };
 
     const handleImageLoad = () => {
         setImageLoading(false);
-    };
-
-    const getImageSource = () => {
-        try {
-            const source = image ? loadImageSource(image) : null;
-            if (!source) {
-                setImageError(true);
-            }
-            return source;
-        } catch (error) {
-            console.error('Error loading image:', error);
-            setImageError(true);
-            return null;
-        }
     };
 
     return (
@@ -147,15 +182,20 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                 {imageLoading && (
                                     <View style={styles.imageLoading}>
                                         <ActivityIndicator size="large" color="#3F51B5" />
+                                        <Text style={styles.loadingText}>
+                                            {language === 'fr' ? "Chargement de l'image..." : "Đang tải hình ảnh..."}
+                                        </Text>
                                     </View>
                                 )}
-                                <Image
-                                    source={getImageSource()}
-                                    style={[styles.image, imageLoading && styles.hiddenImage]}
-                                    resizeMode="contain"
-                                    onError={handleImageError}
-                                    onLoad={handleImageLoad}
-                                />
+                                {imageSource && (
+                                    <Image
+                                        source={imageSource}
+                                        style={[styles.image, imageLoading && styles.hiddenImage]}
+                                        resizeMode="contain"
+                                        onError={handleImageError}
+                                        onLoad={handleImageLoad}
+                                    />
+                                )}
                             </View>
                         )}
 
@@ -354,22 +394,28 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         zIndex: 1,
     },
+    loadingText: {
+        color: '#3F51B5',
+        fontSize: 14,
+        marginTop: 8,
+    },
     imageFallback: {
         marginBottom: 12,
-        borderRadius: 8,
-        overflow: 'hidden',
-        borderWidth: 1,
-        borderColor: '#E0E0FF',
-        backgroundColor: '#F8F9FF',
-        height: 150,
-        justifyContent: 'center',
+        padding: 20,
         alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#F5F5F5',
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#E0E0E0',
+        height: 120,
     },
     imageFallbackText: {
-        color: '#888888',
         marginTop: 8,
+        color: '#999',
         fontSize: 14,
-    }
+        textAlign: 'center',
+    },
 });
 
 export default QuestionCard;

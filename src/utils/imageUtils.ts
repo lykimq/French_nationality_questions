@@ -1,77 +1,128 @@
-import { Platform } from 'react-native';
+import { ref, getDownloadURL } from 'firebase/storage';
+import { storage } from '../config/firebaseConfig';
 
-// Type for the image registry to allow string indexing
-type ImageRegistryType = {
-    [key: string]: any;
-};
-
-// Static mapping for all local images
-// This allows the bundler to properly include these assets
-const IMAGE_REGISTRY: ImageRegistryType = {
-    // Local assets with various possible path formats
-    "../assets/Marie_Antoinette_Adult.jpg": require("../../assets/Marie_Antoinette_Adult.jpg"),
-    "./assets/Marie_Antoinette_Adult.jpg": require("../../assets/Marie_Antoinette_Adult.jpg"),
-    "assets/Marie_Antoinette_Adult.jpg": require("../../assets/Marie_Antoinette_Adult.jpg"),
-    "../../assets/Marie_Antoinette_Adult.jpg": require("../../assets/Marie_Antoinette_Adult.jpg"),
-    // Add any other images used in your app here
-};
-
-// Cache object for remote images
+// Cache object for Firebase Storage URLs
 type ImageCache = {
     [key: string]: { uri: string };
 };
 
-let remoteImageCache: ImageCache = {};
+let firebaseImageCache: ImageCache = {};
+
+// Cache for failed image loads to avoid repeated attempts
+let failedImageCache: Set<string> = new Set();
 
 /**
- * Gets the image source for either a local or remote image path
+ * Gets the Firebase Storage download URL for an image
+ * @param imagePath - The path to the image (e.g., "Marie_Antoinette_Adult.jpg")
+ * @returns Promise that resolves to the Firebase Storage URL or null if failed
  */
-export const getImageSource = (imagePath: string | null): any => {
-    // If no image path provided, return null
-    if (!imagePath) return null;
-
-    // Handle remote URLs (http/https)
-    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
-        // Cache remote URLs to avoid recreating objects
-        if (!remoteImageCache[imagePath]) {
-            remoteImageCache[imagePath] = { uri: imagePath };
-        }
-        return remoteImageCache[imagePath];
-    }
-
+const getFirebaseImageUrl = async (imagePath: string): Promise<string | null> => {
     try {
-        // Normalize the path for consistency
-        // This handles different formats like ../assets/, ./assets/, etc.
-        const normalizedPath = imagePath
-            .replace(/^\.\.\/assets\//, "../assets/")
-            .replace(/^\.\/assets\//, "./assets/")
-            .replace(/^assets\//, "assets/");
-
-        // Check if we have this image in our registry
-        if (IMAGE_REGISTRY[normalizedPath]) {
-            return IMAGE_REGISTRY[normalizedPath];
+        // If we've already failed to load this image, don't try again
+        if (failedImageCache.has(imagePath)) {
+            console.warn(`Image previously failed to load: ${imagePath}`);
+            return null;
         }
 
-        // For the original path format
-        if (IMAGE_REGISTRY[imagePath]) {
-            return IMAGE_REGISTRY[imagePath];
+        // Check if we have this URL cached
+        if (firebaseImageCache[imagePath]) {
+            return firebaseImageCache[imagePath].uri;
         }
 
-        // If we couldn't find the image, log a warning
-        console.warn(`Image not found in registry: ${imagePath}`);
-        return null;
+        // Create reference to the image in Firebase Storage
+        // Using the structure: French_questions/assets/[filename]
+        const imageRef = ref(storage, `French_questions/assets/${imagePath}`);
+
+        // Get the download URL
+        const downloadURL = await getDownloadURL(imageRef);
+
+        // Cache the URL
+        firebaseImageCache[imagePath] = { uri: downloadURL };
+
+        console.log(`Successfully loaded image from Firebase: ${imagePath}`);
+        return downloadURL;
     } catch (error) {
-        console.error(`Failed to load image: ${imagePath}`, error);
+        console.error(`Failed to load image from Firebase Storage: ${imagePath}`, error);
+
+        // Add to failed cache to avoid repeated attempts
+        failedImageCache.add(imagePath);
+
         return null;
     }
 };
 
 /**
- * Preloads all images from the questions data
- * With the static registry, we don't need to actually preload,
- * but we'll keep this function for logging purposes
+ * Gets the image source for either a Firebase Storage image or remote URL
+ * @param imagePath - The path to the image file or full URL
+ * @returns Promise that resolves to image source object or null
  */
-export const preloadImages = (questionsData: any): void => {
+export const getImageSource = async (imagePath: string | null): Promise<any> => {
+    // If no image path provided, return null
+    if (!imagePath) return null;
+
+    try {
+        // Handle remote URLs (http/https) - return as-is
+        if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+            // Cache remote URLs to avoid recreating objects
+            if (!firebaseImageCache[imagePath]) {
+                firebaseImageCache[imagePath] = { uri: imagePath };
+            }
+            return firebaseImageCache[imagePath];
+        }
+
+        // Extract filename from various possible path formats
+        const filename = imagePath
+            .replace(/^\.\.\/assets\//, "") // Remove ../assets/
+            .replace(/^\.\/assets\//, "")   // Remove ./assets/
+            .replace(/^assets\//, "")       // Remove assets/
+            .replace(/^.*\//, "");          // Remove any other path prefixes
+
+        // Get Firebase Storage URL
+        const firebaseUrl = await getFirebaseImageUrl(filename);
+
+        if (firebaseUrl) {
+            return { uri: firebaseUrl };
+        }
+
+        console.warn(`Image not found in Firebase Storage: ${filename}`);
+        return null;
+    } catch (error) {
+        console.error(`Failed to get image source: ${imagePath}`, error);
+        return null;
+    }
+};
+
+/**
+ * Synchronous version that returns cached URLs or null
+ * Useful for components that need immediate response
+ * @param imagePath - The path to the image file
+ * @returns Cached image source object or null
+ */
+export const getCachedImageSource = (imagePath: string | null): any => {
+    if (!imagePath) return null;
+
+    // Handle remote URLs
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+        return firebaseImageCache[imagePath] || { uri: imagePath };
+    }
+
+    // Extract filename
+    const filename = imagePath
+        .replace(/^\.\.\/assets\//, "")
+        .replace(/^\.\/assets\//, "")
+        .replace(/^assets\//, "")
+        .replace(/^.*\//, "");
+
+    // Return cached Firebase URL if available
+    return firebaseImageCache[filename] || null;
+};
+
+/**
+ * Preloads images from the questions data into the cache
+ * @param questionsData - The questions data structure
+ * @returns Promise that resolves when preloading is complete
+ */
+export const preloadImages = async (questionsData: any): Promise<void> => {
     try {
         // Extract all image paths from the questions data
         const imagePaths: string[] = [];
@@ -88,30 +139,68 @@ export const preloadImages = (questionsData: any): void => {
             });
         }
 
-        // Get unique paths and log them
+        // Get unique paths
         const uniquePaths = [...new Set(imagePaths)];
-        console.log(`Found ${uniquePaths.length} unique images`);
+        console.log(`Starting to preload ${uniquePaths.length} unique images from Firebase Storage`);
 
-        // Log which images are found in the registry and which aren't
-        const foundImages: string[] = [];
-        const missingImages: string[] = [];
+        // Preload images in batches to avoid overwhelming the storage service
+        const batchSize = 5;
+        let loadedCount = 0;
+        let failedCount = 0;
 
-        uniquePaths.forEach(path => {
-            if (!path.startsWith('http://') && !path.startsWith('https://')) {
-                const imageSource = getImageSource(path);
-                if (imageSource) {
-                    foundImages.push(path);
-                } else {
-                    missingImages.push(path);
+        for (let i = 0; i < uniquePaths.length; i += batchSize) {
+            const batch = uniquePaths.slice(i, i + batchSize);
+
+            // Process batch concurrently
+            const batchPromises = batch.map(async (path) => {
+                try {
+                    const imageSource = await getImageSource(path);
+                    if (imageSource) {
+                        loadedCount++;
+                        return { path, success: true };
+                    } else {
+                        failedCount++;
+                        return { path, success: false };
+                    }
+                } catch (error) {
+                    failedCount++;
+                    console.error(`Error preloading image: ${path}`, error);
+                    return { path, success: false };
                 }
-            }
-        });
+            });
 
-        console.log(`Images found in registry: ${foundImages.length}`);
-        if (missingImages.length > 0) {
-            console.warn(`Missing images: ${missingImages.join(', ')}`);
+            await Promise.all(batchPromises);
+
+            // Log progress
+            console.log(`Preloaded batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(uniquePaths.length / batchSize)}`);
+        }
+
+        console.log(`Preloading complete: ${loadedCount} loaded, ${failedCount} failed`);
+
+        if (failedCount > 0) {
+            console.warn(`Failed to load ${failedCount} images. They may not exist in Firebase Storage.`);
         }
     } catch (error) {
-        console.error('Error checking images:', error);
+        console.error('Error during image preloading:', error);
     }
+};
+
+/**
+ * Clears the image cache - useful for memory management
+ */
+export const clearImageCache = (): void => {
+    firebaseImageCache = {};
+    failedImageCache.clear();
+    console.log('Image cache cleared');
+};
+
+/**
+ * Gets cache statistics
+ */
+export const getCacheStats = () => {
+    return {
+        cachedImages: Object.keys(firebaseImageCache).length,
+        failedImages: failedImageCache.size,
+        totalMemoryUsage: JSON.stringify(firebaseImageCache).length
+    };
 };

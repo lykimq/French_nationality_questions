@@ -236,7 +236,7 @@
             "explanation": "- Charles de Gaulle.\n\n- George Pompidou.\n\n- Valérie Giscard d'Estaing.\n\n- François Mitterrand.\n\n- Jacques Chirac.\n\n- Nicolas Sarkozy.\n\n- François Hollande.\n\n- Emmanuel Macron.",
             "question_vi": "Hãy kể tên các Tổng thống của nước Cộng hòa lần thứ 5 theo thứ tự.",
             "explanation_vi": "- Charles de Gaulle.\n\n- George Pompidou.\n\n- Valérie Giscard d'Estaing.\n\n- François Mitterrand.\n\n- Jacques Chirac.\n\n- Nicolas Sarkozy.\n\n- François Hollande.\n\n- Emmanuel Macron.",
-            "image": null
+            "image": "French_questions/assets/le_presidents.png"
         },
         {
             "id": 126,
@@ -252,7 +252,7 @@
             "explanation": "- Gerald Darmanin.\n\n- Bruno Le Maire.\n\n- Eric Dupond-Moretti.",
             "question_vi": "Hãy kể tên ba bộ trưởng trong chính phủ hiện tại của Pháp.",
             "explanation_vi": "- Gerald Darmanin.\n\n- Bruno Le Maire.\n\n- Eric Dupond-Moretti.",
-            "image": null
+            "image": "French_questions/assets/gouvernement.png"
         },
         {
             "id": 128,
@@ -332,7 +332,7 @@
             "explanation": "Le pouvoir judiciaire est exercé par les juges et magistrats. Il veille au respect des lois, sanctionne les infractions et garantit la séparation des pouvoirs.",
             "question_vi": "Quyền tư pháp là gì và vai trò của nó là gì?",
             "explanation_vi": "Quyền tư pháp do các thẩm phán và quan tòa đảm nhiệm. Nó bảo đảm việc thực thi pháp luật, xử lý các vi phạm và duy trì nguyên tắc phân quyền trong nền dân chủ.",
-            "image": null
+            "image": "French_questions/assets/assemblee_nationale.png"
         },
         {
             "id": 138,
@@ -460,7 +460,7 @@
             "explanation": "Le Conseil constitutionnel est une institution française créée par la Constitution de la Cinquième République du 4 octobre 1958. Il se prononce sur la conformité à la Constitution des lois et de certains règlements dont il est saisi. Il veille à la régularité des élections nationales et référendums.",
             "question_vi": "Hội đồng Hiến pháp là gì?",
             "explanation_vi": "Hội đồng Hiến pháp là một tổ chức chính trị của Pháp được thành lập bởi Hiến pháp của Quốc hội Pháp vào ngày 4 tháng 10 năm 1958. Nó được quyền kiểm tra tính hợp pháp của các luật và các quy định của chính phủ, đồng thời giám sát tính hợp pháp của các cuộc bầu cử quốc gia và các cuộc bỏ phiếu.",
-            "image": null
+            "image": "French_questions/assets/V_republique.png"
         },
         {
             "id": 154,
@@ -540,7 +540,7 @@
             "explanation": "Allons enfants de la Patrie, Le jour de gloire est arrivé !\n\nContre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes !\n\nRefrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !",
             "question_vi": "Bạn có biết đoạn đầu tiên của bài Marseillaise không?",
             "explanation_vi": "Đứng lên hỡi con em tổ quốc, Ngày vinh quang đã đến rồi!\n\nChống lại chúng ta của chế độ chuyên chế, Lá cờ đẫm máu được giương lên, (lặp lại) Các bạn có nghe thấy trong vùng nông thôn, Tiếng gầm gừ của những người lính hung dữ không? Chúng đến tận tay bạn, Cắt cổ con trai, bạn đời của bạn!\n\nĐiệp khúc: Lên đường, công dân ơi, Hãy tập hợp các tiểu đoàn, Tiến lên, tiến lên! Cho máu ô uế tưới đẫm luống cày của ta!",
-            "image": null
+            "image": "French_questions/assets/la_marseillaise.png"
         },
         {
             "id": 166,
@@ -620,7 +620,7 @@
             "explanation": "Elles symbolisent les idéaux d'unité, de solidarité et d'harmonie entre les peuples européens.",
             "question_vi": "Những ngôi sao này tượng trưng cho điều gì?",
             "explanation_vi": "Chúng tượng trưng cho lý tưởng thống nhất, đoàn kết và hòa hợp giữa các dân tộc châu Âu.",
-            "image": null
+            "image": "French_questions/assets/euro_symboles.png"
         },
         {
             "id": 177,
