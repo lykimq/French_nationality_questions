@@ -29,4 +29,7 @@ export type RootStackParamList = {
     HomeTab: undefined;
     SearchTab: undefined;
     SettingsTab: undefined;
+    TestTab: undefined;
+    TestQuestion: undefined;
+    TestResult: undefined;
 };

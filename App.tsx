@@ -14,6 +14,7 @@ import { TextFormattingProvider } from './src/contexts/TextFormattingContext';
 import { ThemeProvider } from './src/contexts/ThemeContext';
 import { IconProvider } from './src/contexts/IconContext';
 import { LanguageProvider } from './src/contexts/LanguageContext';
+import { TestProvider } from './src/contexts/TestContext';
 
 // Suppress React 19 useInsertionEffect warnings for icon libraries
 const originalConsoleWarn = console.warn;
@@ -44,7 +45,9 @@ export default function App() {
             <ThemeProvider>
               <TextFormattingProvider>
                 <DisplaySettingsProvider>
-                  <AppNavigator />
+                  <TestProvider>
+                    <AppNavigator />
+                  </TestProvider>
                 </DisplaySettingsProvider>
               </TextFormattingProvider>
             </ThemeProvider>

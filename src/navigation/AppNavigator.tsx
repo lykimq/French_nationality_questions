@@ -10,6 +10,9 @@ import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
 import CategoryBasedQuestionsScreen from '../screens/CategoryBasedQuestionsScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import TestScreen from '../screens/TestScreen';
+import TestQuestionScreen from '../screens/TestQuestionScreen';
+import TestResultScreen from '../screens/TestResultScreen';
 import DataLoadingScreen from '../components/DataLoadingScreen';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
@@ -41,16 +44,35 @@ const HomeStack = () => {
     );
 };
 
+const TestStack = () => {
+    const { theme } = useTheme();
+
+    return (
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+                contentStyle: { backgroundColor: theme.colors.background }
+            }}
+        >
+            <Stack.Screen name="Test" component={TestScreen} />
+            <Stack.Screen name="TestQuestion" component={TestQuestionScreen} />
+            <Stack.Screen name="TestResult" component={TestResultScreen} />
+        </Stack.Navigator>
+    );
+};
+
 // Translations for tab labels
 const tabLabels = {
     fr: {
         home: 'Accueil',
         search: 'Rechercher',
+        test: 'Tests',
         settings: 'Paramètres'
     },
     vi: {
         home: 'Trang chủ',
         search: 'Tìm kiếm',
+        test: 'Bài kiểm tra',
         settings: 'Cài đặt'
     }
 };
@@ -88,6 +110,8 @@ const AppTabs = () => {
                         iconName = focused ? theme.icons.home : theme.icons.home;
                     } else if (route.name === 'SearchTab') {
                         iconName = focused ? theme.icons.search : theme.icons.search;
+                    } else if (route.name === 'TestTab') {
+                        iconName = focused ? 'school' : 'school-outline';
                     } else if (route.name === 'SettingsTab') {
                         iconName = focused ? theme.icons.settings : theme.icons.settings;
                     } else {
@@ -123,6 +147,11 @@ const AppTabs = () => {
                 name="SearchTab"
                 component={SearchScreen}
                 options={{ title: tabLabels[language].search }}
+            />
+            <Tab.Screen
+                name="TestTab"
+                component={TestStack}
+                options={{ title: tabLabels[language].test }}
             />
             <Tab.Screen
                 name="SettingsTab"
