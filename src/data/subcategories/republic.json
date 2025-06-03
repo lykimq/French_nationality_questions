@@ -1,0 +1,770 @@
+{
+    "id": "republic",
+    "title": "République & Institutions",
+    "title_vi": "Cộng hòa & Các tổ chức",
+    "icon": "business",
+    "description": "La République française et ses institutions",
+    "description_vi": "Nền Cộng hòa Pháp và các tổ chức",
+    "questions": [
+        {
+            "id": 51,
+            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
+            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "question_vi": "Nền cộng hoà thứ năm được thiết lập khi nào?",
+            "explanation_vi": "Nền cộng hoà thứ 5 được thiết lập bởi hiến pháp vào ngày 4 tháng 10 năm 1958.",
+            "image": null
+        },
+        {
+            "id": 52,
+            "question": "Quel a été le fait marquant de la 5éme république ?",
+            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
+            "question_vi": "Nền cộng hoà thứ 5 đánh dấu điều gì?",
+            "explanation_vi": "Đây là mốc đánh dấu sự phân chia rõ ràng giữa quyền hành pháp, lập pháp và tư pháp. ",
+            "image": null
+        },
+        {
+            "id": 53,
+            "question": "Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?",
+            "explanation": "Elle a eu lieu le 09 Décembre 1905.",
+            "question_vi": "Sự tách biệt giữa Giáo hội và Nhà nước diễn ra khi nào ?",
+            "explanation_vi": "Vào ngày 9 tháng 12 năm 1905.",
+            "image": null
+        },
+        {
+            "id": 54,
+            "question": "Quelles personnages de l'histoire de France vous ont le plus marqué et marqué l'histoire ?",
+            "explanation": "Charles de Gaulle, Napoléon etc…",
+            "question_vi": "Bạn ấn tượng với nhân vật lịch sử nào của Pháp nhất ?",
+            "explanation_vi": "Charles de Gaulle, Napoléon, v.v",
+            "image": null
+        },
+        {
+            "id": 72,
+            "question": "Avons-nous le droit en France de porter des signes religieux dans l'espace public ?",
+            "explanation": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
+            "question_vi": "Ở Pháp, có được đeo biểu tượng tôn giáo ở nơi công cộng không ?",
+            "explanation_vi": "Có, nhưng không được phép trong các trường học công lập (tiểu học, trung học cơ sở và trung học phổ thông)",
+            "image": null
+        },
+        {
+            "id": 73,
+            "question": "Qu'est-ce que la loi de 2004 ?",
+            "explanation": "Elle interdit le port de signes religieux ostensibles dans les établissements scolaires publics.",
+            "question_vi": "Luật năm 2004 là gì?",
+            "explanation_vi": "Luật này cấm học sinh thể hiện tôn giáo một cách rõ ràng qua trang phục hoặc biểu tượng tại các trường công lập.",
+            "image": null
+        },
+        {
+            "id": 79,
+            "question": "En quelle année a été aboli l'esclavage en France ?",
+            "explanation": "Le 27 avril 1848.",
+            "question_vi": "Chế độ nô lệ ở Pháp bị bãi bỏ vào năm nào ?",
+            "explanation_vi": "Ngày 27 tháng 4 năm 1848. ",
+            "image": null
+        },
+        {
+            "id": 80,
+            "question": "L'école est-elle obligatoire en France ?",
+            "explanation": "Oui, de 3 à 16 ans, pour tous les enfants.",
+            "question_vi": "Trường học có bắt buộc ở Pháp không?",
+            "explanation_vi": "Có. Giáo dục bắt buộc từ 3 đến 16 tuổi cho mọi trẻ em, kể cả người nước ngoài.",
+            "image": null
+        },
+        {
+            "id": 81,
+            "question": "Depuis quand l'école est-elle obligatoire en France ?",
+            "explanation": "Depuis le 28 mars 1882.",
+            "question_vi": "Giáo dục bắt buộc ở Pháp từ khi nào ?",
+            "explanation_vi": "Từ ngày 28 tháng 3 năm 1882.",
+            "image": null
+        },
+        {
+            "id": 82,
+            "question": "Qui a rendu l'école obligatoire en France ?",
+            "explanation": "C'est l'ancien maire de Paris Jules Ferry.",
+            "question_vi": "Ai đã đưa ra luật bắt buộc đi học ở Pháp?",
+            "explanation_vi": "Jules Ferry, cựu Bộ trưởng Giáo dục.",
+            "image": null
+        },
+        {
+            "id": 83,
+            "question": "Les femmes ont-elles le droit de vote en France ?",
+            "explanation": "Oui",
+            "question_vi": "Phụ nữ có quyền bầu cử ở Pháp không?",
+            "explanation_vi": "Có",
+            "image": null
+        },
+        {
+            "id": 84,
+            "question": "Depuis quand les femmes ont elles le droit de vote en France ?",
+            "explanation": "Depuis le 21 avril 1944.",
+            "question_vi": "Phụ nữ ở Pháp có quyền bầu cử từ khi nào ?",
+            "explanation_vi": "Từ ngày 21 tháng 4 năm 1944.",
+            "image": null
+        },
+        {
+            "id": 104,
+            "question": "Quels sont les valeurs (ou la devise) de la république Française ?",
+            "explanation": "Liberté, Egalité, Fraternité.",
+            "question_vi": "Những giá trị của nước Cộng hòa Pháp là gì ?",
+            "explanation_vi": "Tự do, Bình đẳng, Bác ái.",
+            "image": null
+        },
+        {
+            "id": 105,
+            "question": "Si l'on devait rajouter une valeur quelle sera-t-elle selon vous ?",
+            "explanation": "La Laïcité.",
+            "question_vi": "Nếu phải thêm một giá trị nữa thì theo bạn đó sẽ là gì?",
+            "explanation_vi": "Tính thế tục.",
+            "image": null
+        },
+        {
+            "id": 106,
+            "question": "Qu'est-ce que la laïcité ?",
+            "explanation": "La laïcité garantit la liberté de conscience. De celle-ci découle la liberté de manifester ses croyances ou convictions dans les limites du respect de l'ordre public.\n\nLa laïcité implique la neutralité de l'Etat et impose l'égalité de tous devant la loi sans distinction de religion ou conviction.",
+            "question_vi": "Tính thế tục là gì?",
+            "explanation_vi": " Tính thế tục bảo đảm quyền tự do tín ngưỡng và niềm tin, đồng thời yêu cầu Nhà nước giữ trung lập và đối xử công bằng với mọi người, không phân biệt tôn giáo.",
+            "image": null
+        },
+        {
+            "id": 112,
+            "question": "Quels sont les droits et devoirs du citoyen Français ?",
+            "explanation": "Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété.\n\n Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.",
+            "question_vi": "Quyền và nghĩa vụ của công dân Pháp là gì ?",
+            "explanation_vi": "Tất cả công dân có quyền bầu cử, di chuyển, thể hiện quan điểm tôn giáo hoặc không tôn giáo, tạo ra các tổ chức, sở hữu cơ thể của họ và quyền sở hữu bất động sản.\n\nĐối với nghĩa vụ, tất cả công dân phải tuân thủ pháp luật, bảo vệ quyền lợi của người khác và môi trường. Họ cũng phải đóng thuế và thuế, bảo vệ đất nước nếu đất nước đó bị đe dọa.",
+            "image": null
+        },
+        {
+            "id": 113,
+            "question": "Quels sont les symboles de la république Française ?",
+            "explanation": "- Le Drapeau Tricolore.\n\n- La marseillaise.\n\n- Marianne.\n\n- Le bonnet Phrygien.\n\n- La devise \"Liberté, égalité, Fraternité\".\n\n- La fleur de Lys.\n\n- Le 14 Juillet.",
+            "question_vi": "Những biểu tượng của nước Cộng hòa Pháp là gì?",
+            "explanation_vi": "- Lá cờ Ba màu.\n\n- Bài Marseillaise.\n\n- Marianne.\n\n- Mũ Phrygien.\n\n- Phương châm \"Tự do, Bình đẳng, Bác ái\".\n\n- Hoa Lily.\n\n- Ngày 14 tháng 7.",
+            "image": null
+        },
+        {
+            "id": 114,
+            "question": "Quelles sont les couleurs du drapeau Français ?",
+            "explanation": "Bleu, Blanc, Rouge\n\n- Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime.\n\n- Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France.\n\n- Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.",
+            "question_vi": "Lá cờ Pháp có những màu nào?",
+            "explanation_vi": "Xanh dương, Trắng, Đỏ\n\n- Xanh dương: Màu này tượng trưng cho chế độ quân chủ Pháp. Đây là màu của áo choàng hoàng gia có hoa loa kèn dưới Cựu chế độ.\n\n- Trắng: Màu trắng đại diện cho hoàng gia Pháp. Đây là màu của triều đại Bourbon cai trị nước Pháp.\n\n- Đỏ: Màu đỏ là màu truyền thống của thành phố Paris. Nó tượng trưng cho nhân dân Pháp, đặc biệt là từ cuộc Cách mạng Pháp năm 1789.",
+            "image": null
+        },
+        {
+            "id": 115,
+            "question": "Que représentent les couleurs du drapeau Français ?",
+            "explanation": "Le bleu représente la couleur de Paris, le blanc la couleur des Rois, et le rouge (également la couleur de Paris) en référence au sang versé pour la libération du peuple.",
+            "question_vi": "Những màu sắc của lá cờ Pháp đại diện cho điều gì?",
+            "explanation_vi": "Màu xanh dương đại diện cho màu của Paris, màu trắng là màu của các vị Vua, và màu đỏ (cũng là màu của Paris) tượng trưng cho máu đã đổ vì sự giải phóng của nhân dân.",
+            "image": null
+        },
+        {
+            "id": 116,
+            "question": "Qui est Marianne ?",
+            "explanation": "Marianne est le symbole de la République française. Elle est souvent représentée sous les traits d'une femme portant un bonnet phrygien, incarnant les valeurs de « Liberté, Égalité, Fraternité ».",
+            "question_vi": "Marianne là ai?",
+            "explanation_vi": "Là biểu tượng của nước Cộng hòa Pháp, thường được thể hiện dưới hình ảnh người phụ nữ đội mũ Phrygien – tượng trưng cho các giá trị “Tự do, Bình đẳng, Bác ái”.",
+            "image": null
+        },
+        {
+            "id": 117,
+            "question": "Qui est aujourd'hui le président de la république ?",
+            "explanation": "C'est Emmanuel Macron.",
+            "question_vi": "Ai là Tổng thống nước Cộng hòa hiện nay?",
+            "explanation_vi": "Đó là Emmanuel Macron.",
+            "image": null
+        },
+        {
+            "id": 118,
+            "question": "Qui était président de la république avant lui ?",
+            "explanation": "C'était François Hollande.",
+            "question_vi": "Ai là Tổng thống trước ông ấy?",
+            "explanation_vi": "Đó là François Hollande.",
+            "image": null
+        },
+        {
+            "id": 119,
+            "question": "Qui est le premier ministre actuel ?",
+            "explanation": "C'est Gabriel Attal.",
+            "question_vi": "Thủ tướng hiện tại là ai?",
+            "explanation_vi": "Đó là Gabriel Attal.",
+            "image": null
+        },
+        {
+            "id": 120,
+            "question": "Qui était premier ministre avant lui/Elle ?",
+            "explanation": "C'était Elisabeth Borne.",
+            "question_vi": "Ai là Thủ tướng Pháp trước ông/bà ấy?",
+            "explanation_vi": "Đó là Elisabeth Borne.",
+            "image": null
+        },
+        {
+            "id": 121,
+            "question": "Dans quelle république sommes nous ?",
+            "explanation": "Nous sommes dans la cinquième république.",
+            "question_vi": " Hiện tại, chúng ta đang sống dưới nền Cộng hòa thứ mấy?",
+            "explanation_vi": "Chúng ta đang sống dưới nền Cộng hòa thứ năm.",
+            "image": null
+        },
+        {
+            "id": 122,
+            "question": "Quand sont les dates des républiques précédentes?",
+            "explanation": "- La première république : 1792-1804\n\n- La deuxième république : 1848 – 1852\n\n- La troisième république : 1870 – 1940\n\n- La quatrième république : 1946-1958\n\n- La cinquième république : 1958 – aujourd'hui.",
+            "question_vi": "Các cộng hòa trước đó bắt đầu và kết thúc vào những ngày nào?",
+            "explanation_vi": "- Cộng hòa lần thứ nhất: 1792-1804\n\n- Cộng hòa lần thứ hai: 1848 – 1852\n\n- Cộng hòa lần thứ ba: 1870 – 1940\n\n- Cộng hòa lần thứ tư: 1946-1958\n\n- Cộng hòa lần thứ năm: 1958 – ngày nay.",
+            "image": null
+        },
+        {
+            "id": 123,
+            "question": "Qui a instauré la cinquième république ?",
+            "explanation": "C'est le général Charles de Gaule.",
+            "question_vi": "Ai là người đã thành lập nền Cộng hòa thứ năm?",
+            "explanation_vi": "Là Tướng Charles de Gaulle.",
+            "image": null
+        },
+        {
+            "id": 124,
+            "question": "Ou se trouve le siège de la présidence de la république ?",
+            "explanation": "Il se trouve au Palais de l’Élysée.",
+            "question_vi": "Trụ sở của Tổng thống Pháp đặt ở đâu?",
+            "explanation_vi": "Ở Điện Élysée.",
+            "image": null
+        },
+        {
+            "id": 125,
+            "question": "Citez dans l'ordre les présidents de la cinquième république.",
+            "explanation": "- Charles de Gaulle.\n\n- George Pompidou.\n\n- Valérie Giscard d'Estaing.\n\n- François Mitterrand.\n\n- Jacques Chirac.\n\n- Nicolas Sarkozy.\n\n- François Hollande.\n\n- Emmanuel Macron.",
+            "question_vi": "Hãy kể tên các Tổng thống của nước Cộng hòa lần thứ 5 theo thứ tự.",
+            "explanation_vi": "- Charles de Gaulle.\n\n- George Pompidou.\n\n- Valérie Giscard d'Estaing.\n\n- François Mitterrand.\n\n- Jacques Chirac.\n\n- Nicolas Sarkozy.\n\n- François Hollande.\n\n- Emmanuel Macron.",
+            "image": "French_questions/assets/le_presidents.png"
+        },
+        {
+            "id": 126,
+            "question": "Citez trois anciens premiers ministres Français de la cinquième république.",
+            "explanation": "- Edouard Philippe.\n\n- Manuel Valls.\n\n- François Fillon.",
+            "question_vi": "Hãy kể tên 3 cựu Thủ tướng Pháp của nước Cộng hòa lần thứ 5.",
+            "explanation_vi": "- Edouard Philippe.\n\n- Manuel Valls.\n\n- François Fillon.",
+            "image": null
+        },
+        {
+            "id": 127,
+            "question": "Citez trois ministres du gouvernement actuel.",
+            "explanation": "- Gerald Darmanin.\n\n- Bruno Le Maire.\n\n- Eric Dupond-Moretti.",
+            "question_vi": "Hãy kể tên ba bộ trưởng trong chính phủ hiện tại của Pháp.",
+            "explanation_vi": "- Gerald Darmanin.\n\n- Bruno Le Maire.\n\n- Eric Dupond-Moretti.",
+            "image": "French_questions/assets/gouvernement.png"
+        },
+        {
+            "id": 128,
+            "question": "Pour combien de temps est élu le président de la république ?",
+            "explanation": "Le président est élu pour un mandat de 5 ans.",
+            "question_vi": "Tổng thống Pháp được bầu với nhiệm kỳ bao nhiêu năm?",
+            "explanation_vi": "Tổng thống được bầu với nhiệm kỳ 5 năm.",
+            "image": null
+        },
+        {
+            "id": 129,
+            "question": "Par quel scrutin et pour combien de mandats peut être élu le président de la république ?",
+            "explanation": "Le président est élu au suffrage universel direct, à la majorité absolue en deux tours. Il peut faire au maximum deux mandats de cinq ans.",
+            "question_vi": "Tổng thống được bầu theo hình thức bỏ phiếu nào và có bao nhiêu nhiệm kỳ?",
+            "explanation_vi": "Tổng thống được bầu bằng phổ thông đầu phiếu trực tiếp qua hai vòng, theo nguyên tắc đa số tuyệt đối. Ông/bà chỉ có thể đảm nhiệm tối đa hai nhiệm kỳ, mỗi nhiệm kỳ 5 năm.",
+            "image": null
+        },
+        {
+            "id": 130,
+            "question": "Qui a le droit de voter aux élections ?",
+            "explanation": "Tout citoyen Français majeur.",
+            "question_vi": " Ai có quyền bầu cử ở Pháp?",
+            "explanation_vi": "Mọi công dân Pháp đủ 18 tuổi đều có quyền bầu cử.",
+            "image": null
+        },
+        {
+            "id": 131,
+            "question": "Quel est l'âge de la majorité en France ?",
+            "explanation": "18 ans.",
+            "question_vi": "Tuổi thành niên ở Pháp là bao nhiêu?",
+            "explanation_vi": "18 tuổi.",
+            "image": null
+        },
+        {
+            "id": 132,
+            "question": "Qu'est-ce que le parlement ?",
+            "explanation": "Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres: \n\n- La chambre haute (le Sénat).\n\n- La chambre basse (l’Assemblée nationale).",
+            "question_vi": "Nghị viện là gì?",
+            "explanation_vi": "Nghị viện là cơ quan đại diện cho nhân dân do dân bầu ra, gồm hai viện: \n\n- Viện trên (Thượng viện – nơi các thượng nghị sĩ làm việc).\n\n- Viện dưới (Hạ viện – nơi các đại biểu quốc hội làm việc).",
+            "image": null
+        },
+        {
+            "id": 133,
+            "question": "Quel est le rôle exact du parlement ?",
+            "explanation": "Le Parlement en France discute, modifie et vote les lois. Il détient le pouvoir législatif.",
+            "question_vi": "Vai trò chính của Nghị viện là gì?",
+            "explanation_vi": "Nghị viện ở Pháp thảo luận, sửa đổi và thông qua các đạo luật. Đây là cơ quan nắm giữ quyền lập pháp.",
+            "image": null
+        },
+        {
+            "id": 134,
+            "question": "Citez les différentes institutions politiques en France ?",
+            "explanation": "- Le pouvoir exécutif.\n\n- Le pouvoir législatif.\n\n- Le pouvoir judiciaire.",
+            "question_vi": "Các cơ quan quyền lực chính trị ở Pháp gồm những gì?",
+            "explanation_vi": "- Quyền lực hành pháp.\n\n- Quyền lực lập pháp.\n\n- Quyền lực tư pháp.",
+            "image": null
+        },
+        {
+            "id": 135,
+            "question": "Qu'est-ce que le pouvoir Exécutif et quel est son rôle ?",
+            "explanation": "Le pouvoir exécutif est exercé par le président de la République et son gouvernement. Il applique les lois et conduit la politique nationale. Il peut édicter des règlements et dispose de l’administration et de l’armée.",
+            "question_vi": "Quyền hành pháp là gì và vai trò của nó là gì?",
+            "explanation_vi": "Quyền hành pháp được thực thi bởi Tổng thống và chính phủ. Vai trò của nó là thi hành luật pháp và điều hành chính sách quốc gia. Nó có quyền ban hành quy định và kiểm soát bộ máy hành chính cũng như lực lượng vũ trang.",
+            "image": null
+        },
+        {
+            "id": 136,
+            "question": "Qu'est-ce que le pouvoir législatif et quel est son rôle ?",
+            "explanation": "En France, le pouvoir législatif appartient au Sénat et à l’Assemblée nationale. Il rédige, discute et vote les lois, et contrôle l’action du pouvoir exécutif.",
+            "question_vi": "Quyền lập pháp là gì và vai trò của nó là gì?",
+            "explanation_vi": "Ở Pháp, quyền lập pháp do Thượng viện và Hạ viện đảm nhiệm. Họ soạn thảo, thảo luận và thông qua luật, đồng thời giám sát hoạt động của chính phủ.",
+            "image": null
+        },
+        {
+            "id": 137,
+            "question": "Qu'est-ce que le pouvoir judiciaire et quel est son rôle ?",
+            "explanation": "Le pouvoir judiciaire est exercé par les juges et magistrats. Il veille au respect des lois, sanctionne les infractions et garantit la séparation des pouvoirs.",
+            "question_vi": "Quyền tư pháp là gì và vai trò của nó là gì?",
+            "explanation_vi": "Quyền tư pháp do các thẩm phán và quan tòa đảm nhiệm. Nó bảo đảm việc thực thi pháp luật, xử lý các vi phạm và duy trì nguyên tắc phân quyền trong nền dân chủ.",
+            "image": "French_questions/assets/assemblee_nationale.png"
+        },
+        {
+            "id": 138,
+            "question": "Comment sont élus les députés ?",
+            "explanation": "Les députés sont élus au suffrage universel direct uninominal majoritaire à deux tours.",
+            "question_vi": "Đại biểu Quốc hội được bầu như thế nào?",
+            "explanation_vi": "Đại biểu được bầu bằng phổ thông đầu phiếu trực tiếp, theo hình thức đa số một tên trong hai vòng bầu cử.",
+            "image": null
+        },
+        {
+            "id": 139,
+            "question": "Pour combien d'années sont élus les députés ?",
+            "explanation": "Les députés sont élus pour un mandat de cinq ans.",
+            "question_vi": "Đại biểu Quốc hội có nhiệm kỳ bao lâu?",
+            "explanation_vi": "Họ được bầu với nhiệm kỳ 5 năm.",
+            "image": null
+        },
+        {
+            "id": 140,
+            "question": "Ou se trouve le siège de l'assemblée nationale ?",
+            "explanation": "Elle se trouve au palais Bourbon, c’est le nom communément donné au bâtiment qui abrite l’Assemblée nationale française, il est situé sur le quai d’Orsay.",
+            "question_vi": "Trụ sở của Quốc hội ở đâu?",
+            "explanation_vi": "Nó ở Palais Bourbon, đó là tên thông dụng cho tòa nhà mà Quốc hội Pháp sử dụng, nó nằm trên quai d’Orsay.",
+            "image": null
+        },
+        {
+            "id": 141,
+            "question": "Qui est le député (ou la députée) de votre département ?",
+            "explanation": "",
+            "question_vi": "Đại biểu Quốc hội của tỉnh/thành phố bạn là ai?",
+            "explanation_vi": "",
+            "image": null
+        },
+        {
+            "id": 142,
+            "question": "Qui constitue le gouvernement ?",
+            "explanation": "- Le premier ministre.\n\n- Les ministres.\n\n- Les secrétaires d’état.",
+            "question_vi": "Chính phủ bao gồm những ai?",
+            "explanation_vi": "- Thủ tướng.\n\n- Các bộ trưởng.\n\n- Các thứ trưởng.",
+            "image": null
+        },
+        {
+            "id": 143,
+            "question": "Qui est le président de l'assemblée Nationale ?",
+            "explanation": "C’est Yaël Braun-Pivet depuis 2022.",
+            "question_vi": "Ai là Chủ tịch Quốc hội?",
+            "explanation_vi": "Đó là Yaël Braun-Pivet từ năm 2022.",
+            "image": null
+        },
+        {
+            "id": 144,
+            "question": "Pour combien d'année est son mandat ?",
+            "explanation": "Son mandat est de 5 ans.",
+            "question_vi": "Nhiệm kỳ của ông/bà ấy là bao nhiêu năm?",
+            "explanation_vi": "Nhiệm kỳ của ông/bà ấy là 5 năm.",
+            "image": null
+        },
+        {
+            "id": 145,
+            "question": "Qu'est-ce que la chambre basse ?",
+            "explanation": "C’est l’assemblée nationale.",
+            "question_vi": "Viện dưới là gì?",
+            "explanation_vi": "Đó là Quốc hội.",
+            "image": null
+        },
+        {
+            "id": 146,
+            "question": "Qu'est-ce que la chambre haute ?",
+            "explanation": "C’est le Sénat.",
+            "question_vi": "Viện trên là gì?",
+            "explanation_vi": "Đó là Thượng viện.",
+            "image": null
+        },
+        {
+            "id": 147,
+            "question": "Qu'est-ce que le Sénat ?",
+            "explanation": "Le Sénat constitue la chambre haute du Parlement français, c’est là où siègent les sénateurs, il détient le pouvoir législatif avec l’assemblée nationale.",
+            "question_vi": "Thượng viện là gì?",
+            "explanation_vi": "Thượng viện là một trong hai viện của Nghị viện Pháp, nơi các thượng nghị sĩ tham gia, nó nắm giữ quyền lực lập pháp cùng với Quốc hội.",
+            "image": null
+        },
+        {
+            "id": 148,
+            "question": "Comment sont élus les sénateurs ?",
+            "explanation": "Les sénateurs français sont élus au suffrage universel indirect, par un collège de « grands électeurs » 150 000 grands électeurs (maires, conseillers généraux etc…).",
+            "question_vi": "Các nghị sĩ được bầu như thế nào?",
+            "explanation_vi": "Các thượng nghị sĩ Pháp được bầu bằng phổ thông đầu phiếu gián tiếp, thông qua một hội đồng cử tri lớn 150.000 cử tri lớn (thị trưởng, thượng thống đốc, v.v…).",
+            "image": null
+        },
+        {
+            "id": 149,
+            "question": "Pour combien d'années sont élus les sénateurs ?",
+            "explanation": "Le Sénat est renouvelé par moitié tous les trois ans ; la durée totale du mandat est donc de six ans.",
+            "question_vi": "Các nghị sĩ được bầu trong bao nhiêu năm?",
+            "explanation_vi": "Thượng viện được bổ sung một nửa mỗi ba năm; do đó, tổng thời gian của nhiệm kỳ là sáu năm.",
+            "image": null
+        },
+        {
+            "id": 150,
+            "question": "Quelle est la différence entre un député et un sénateur ?",
+            "explanation": "Le rôle du sénateur est d’examiner très en détail les lois et les voter, ainsi que de contrôler l’action du gouvernement. Mais à la différence des députés et de l’Assemblée nationale, les sénateurs et le Sénat défendent en plus les intérêts des communes, des départements et des régions, c’est ce qu’on appelle les “collectivités territoriales",
+            "question_vi": "Sự khác biệt giữa một đại biểu quốc hội và một nghị sĩ là gì?",
+            "explanation_vi": "Vai trò của thượng nghị sĩ là xem xét kỹ lưỡng các luật và biểu quyết chúng, cũng như giám sát hoạt động của chính phủ. Tuy nhiên, khác với các đại biểu quốc hội, các thượng nghị sĩ còn đại diện cho lợi ích của các xã, các tỉnh và các vùng – gọi chung là các “đơn vị hành chính lãnh thổ",
+            "image": null
+        },
+        {
+            "id": 151,
+            "question": "Constitutionnellement qui a le pouvoir de diriger le pays en cas de décès du président de la république ?",
+            "explanation": "C’est le président du Sénat.",
+            "question_vi": "Theo hiến pháp, ai có quyền lãnh đạo đất nước nếu Tổng thống qua đời?",
+            "explanation_vi": "Đó là tổng thống Thượng viện.",
+            "image": null
+        },
+        {
+            "id": 152,
+            "question": "Qui est le président actuel du Sénat ?",
+            "explanation": "C’est Gérard Larcher.",
+            "question_vi": "Chủ tịch Thượng viện hiện nay là ai?",
+            "explanation_vi": "Đó là Gérard Larcher.",
+            "image": null
+        },
+        {
+            "id": 153,
+            "question": "Qu'est-ce que le conseil constitutionnel ?",
+            "explanation": "Le Conseil constitutionnel est une institution française créée par la Constitution de la Cinquième République du 4 octobre 1958. Il se prononce sur la conformité à la Constitution des lois et de certains règlements dont il est saisi. Il veille à la régularité des élections nationales et référendums.",
+            "question_vi": "Hội đồng Hiến pháp là gì?",
+            "explanation_vi": "Hội đồng Hiến pháp là một tổ chức chính trị của Pháp được thành lập bởi Hiến pháp của Quốc hội Pháp vào ngày 4 tháng 10 năm 1958. Nó được quyền kiểm tra tính hợp pháp của các luật và các quy định của chính phủ, đồng thời giám sát tính hợp pháp của các cuộc bầu cử quốc gia và các cuộc bỏ phiếu.",
+            "image": "French_questions/assets/V_republique.png"
+        },
+        {
+            "id": 154,
+            "question": "Qui est le président du conseil constitutionnel ?",
+            "explanation": "En 2024 c’est Laurent Fabius.",
+            "question_vi": "Ai là Chủ tịch Hội đồng Hiến pháp?",
+            "explanation_vi": "Năm 2024 đó là Laurent Fabius.",
+            "image": null
+        },
+        {
+            "id": 155,
+            "question": "Quelle est la dernière loi votée à l'assemblée nationale ?",
+            "explanation": "",
+            "question_vi": "Đạo luật gần đây nhất được thông qua tại Quốc hội là gì?",
+            "explanation_vi": ".",
+            "image": null
+        },
+        {
+            "id": 156,
+                "question": "Savez vous ce qu'est la cohabitation politique ?",
+                "explanation": "La cohabitation politique désigne la coexistence institutionnelle entre un chef de l’État et un chef du gouvernement (issu de la majorité parlementaire) politiquement antagonistes.",
+                "question_vi": "Bạn có biết cohabitation chính trị là gì?",
+                "explanation_vi": "Cohabitation chính trị là tình trạng tồn tại song song giữa một nguyên thủ quốc gia và một người đứng đầu chính phủ có quan điểm chính trị đối lập, thuộc đa số quốc hội.",
+            "image": null
+        },
+        {
+            "id": 157,
+            "question": "Citez un exemple de cohabitation politique en France ?",
+            "explanation": "- Mitterrand (PS) / Chirac (RPR). - Chirac (RPR) / Jospin (PS).",
+            "question_vi": "Cho tôi một ví dụ về cohabitation chính trị ở Pháp?",
+            "explanation_vi": "- Mitterrand (PS) / Chirac (RPR). - Chirac (RPR) / Jospin (PS).",
+            "image": null
+        },
+        {
+            "id": 158,
+            "question": "Qui nomme les ministres ?",
+            "explanation": "C’est le premier ministre qui nomme les ministres et les secrétaires d’état.",
+            "question_vi": "Ai bổ nhiệm các bộ trưởng?",
+            "explanation_vi": "Đó là thủ tướng để bổ nhiệm các bộ trưởng và các thứ trưởng.",
+            "image": null
+        },
+        {
+            "id": 159,
+            "question": "Qui nomme le premier ministre ?",
+            "explanation": "C’est le président de la république.",
+            "question_vi": "Ai bổ nhiệm thủ tướng ?",
+            "explanation_vi": "Đó là tổng thống.",
+            "image": null
+        },
+        {
+            "id": 160,
+            "question": "Où se trouvent les bureaux du premier ministre ?",
+            "explanation": "Ils se trouvent à l’hôtel Matignon à Paris.",
+            "question_vi": "Văn phòng thủ tướng ở đâu ?",
+            "explanation_vi": "Nó ở Hôtel Matignon ở Paris.",
+            "image": null
+        },
+        {
+            "id": 163,
+            "question": "Quelle est l'hymne de la France ?",
+            "explanation": "C'est la Marseillaise.",
+            "question_vi": "Quốc ca của Pháp là gì?",
+            "explanation_vi": "Đó là bài Marseillaise.",
+            "image": null
+        },
+        {
+            "id": 164,
+            "question": "Qui a écrit la Marseillaise ?",
+            "explanation": "C'est Claude Joseph Rouget de Lisle.",
+            "question_vi": "Ai đã viết bài Marseillaise?",
+            "explanation_vi": "Đó là Claude Joseph Rouget de Lisle.",
+            "image": null
+        },
+        {
+            "id": 165,
+            "question": "Connaissez vous le premier couplet de la Marseillaise ?",
+            "explanation": "Allons enfants de la Patrie, Le jour de gloire est arrivé !\n\nContre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes !\n\nRefrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !",
+            "question_vi": "Bạn có biết đoạn đầu tiên của bài Marseillaise không?",
+            "explanation_vi": "Đứng lên hỡi con em tổ quốc, Ngày vinh quang đã đến rồi!\n\nChống lại chúng ta của chế độ chuyên chế, Lá cờ đẫm máu được giương lên, (lặp lại) Các bạn có nghe thấy trong vùng nông thôn, Tiếng gầm gừ của những người lính hung dữ không? Chúng đến tận tay bạn, Cắt cổ con trai, bạn đời của bạn!\n\nĐiệp khúc: Lên đường, công dân ơi, Hãy tập hợp các tiểu đoàn, Tiến lên, tiến lên! Cho máu ô uế tưới đẫm luống cày của ta!",
+            "image": "French_questions/assets/la_marseillaise.png"
+        },
+        {
+            "id": 166,
+            "question": "À quelle occasion la Marseillaise a-t-elle été écrite ?",
+            "explanation": "Dans la nuit du 25 au 26 avril 1792, à la suite de la déclaration de guerre du roi d'Autriche, elle fut composée chez le maire de Strasbourg, dénommé Dietrich, la marseillaise s'intitula \"Chant de guerre pour l'armée du Rhin\".",
+            "question_vi": "Bài Marseillaise được viết trong dịp nào?",
+            "explanation_vi": "Trong đêm từ 25 đến 26 tháng 4 năm 1792, sau tuyên bố chiến tranh của vua Áo, nó được sáng tác tại nhà thị trưởng Strasbourg tên là Dietrich, bài Marseillaise có tên là \"Bài hát chiến tranh cho quân đội Rhine\".",
+            "image": null
+        },
+        {
+            "id": 168,
+            "question": "Quelle est la devise de l'union européenne ?",
+            "explanation": "Unis dans la diversité.",
+            "question_vi": "Phương châm của Liên minh châu Âu là gì?",
+            "explanation_vi": "Đoàn kết trong đa dạng.",
+            "image": null
+        },
+        {
+            "id": 169,
+            "question": "Connaissez vous l'hymne de l'union européenne ?",
+            "explanation": "C'est L'ode de la joie de Beethoven.",
+            "question_vi": "Bạn có biết bài ca của Liên minh châu Âu không?",
+            "explanation_vi": "Đó là Khúc ca vui sướng của Beethoven.",
+            "image": null
+        },
+        {
+            "id": 170,
+            "question": "Combien de pays compte l'union européenne ?",
+            "explanation": "En 2024 l'union Européennes compte 27 états membres. (Le Royaume-Uni a quitté l'union Européenne en 2020 durant le Brexit)",
+            "question_vi": "Liên minh châu Âu có bao nhiêu nước?",
+            "explanation_vi": "Năm 2024 Liên minh châu Âu có 27 quốc gia thành viên. (Vương quốc Anh đã rời khỏi Liên minh châu Âu vào năm 2020 trong Brexit)",
+            "image": null
+        },
+        {
+            "id": 171,
+            "question": "Dans quel intérêt les pays européens rejoignent l'union européenne ?",
+            "explanation": "Pour bénéficier d’un marché commun, assurer la paix, favoriser la coopération économique et politique.",
+            "question_vi": "Các nước châu Âu tham gia Liên minh châu Âu để làm gì?",
+            "explanation_vi": "Để hưởng lợi từ thị trường chung, đảm bảo an ninh, tăng cường hợp tác kinh tế và chính trị.",
+            "image": null
+        },
+        {
+            "id": 172,
+            "question": "Ou se trouve le siège du parlement Européen ?",
+            "explanation": "Il se trouve à Strasbourg en France.",
+            "question_vi": "Trụ sở của Nghị viện châu Âu ở đâu?",
+            "explanation_vi": "Nó nằm ở Strasbourg, Pháp.",
+            "image": null
+        },
+        {
+            "id": 173,
+            "question": "Ou se trouve le siège de la commission européenne ?",
+            "explanation": "Il se trouve à Bruxelles en Belgique.",
+            "question_vi": "Trụ sở của Ủy ban châu Âu ở đâu?",
+            "explanation_vi": "Nó nằm ở Brussels, Bỉ.",
+            "image": null
+        },
+        {
+            "id": 174,
+            "question": "Quel pays détient la présidence de l'union européenne cette année (2025) ?",
+            "explanation": "En 2025, la Pologne détient la présidence tournante du Conseil de l'Union européenne du 1er janvier au 30 juin. Cette présidence vise à renforcer la sécurité européenne et à promouvoir la coopération entre les États membres.",
+            "question_vi": "Nước nào giữ chủ tịch Liên minh châu Âu năm nay (2025)?",
+            "explanation_vi": "Năm 2025, Ba Lan giữ chức Chủ tịch luân phiên Hội đồng Liên minh châu Âu từ ngày 1 tháng 1 đến ngày 30 tháng 6. Nhiệm kỳ này tập trung vào việc tăng cường an ninh châu Âu và thúc đẩy hợp tác giữa các quốc gia thành viên.",
+            "image": null
+        },
+        {
+            "id": 175,
+            "question": "Combien d'étoiles comporte-t-il ?",
+            "explanation": "Il comporte 12 étoiles disposées en cercle.",
+            "question_vi": "Có bao nhiêu ngôi sao trên cờ?",
+            "explanation_vi": "Có 12 ngôi sao được sắp xếp thành vòng tròn.",
+            "image": null
+        },
+        {
+            "id": 176,
+            "question": "Que symbolisent ces étoiles ?",
+            "explanation": "Elles symbolisent les idéaux d'unité, de solidarité et d'harmonie entre les peuples européens.",
+            "question_vi": "Những ngôi sao này tượng trưng cho điều gì?",
+            "explanation_vi": "Chúng tượng trưng cho lý tưởng thống nhất, đoàn kết và hòa hợp giữa các dân tộc châu Âu.",
+            "image": "French_questions/assets/euro_symboles.png"
+        },
+        {
+            "id": 177,
+            "question": "Que représente la journée du 09 Mai ?",
+            "explanation": "C'est la journée de l'Europe qui représente le jour de la paix.",
+            "question_vi": "Ngày 09/05 tượng trưng cho điều gì?",
+            "explanation_vi": "Đó là ngày châu Âu đại diện cho ngày hòa bình.",
+            "image": null
+        },
+        {
+            "id": 178,
+            "question": "Quels sont les symboles de l'union européenne ?",
+            "explanation": "La monnaie européenne : l'euro.\nLe drapeau Européen.\nLa devise de l'Europe.\nL'hymne européen.\nLa journée de l'Europe (9 Mai).",
+            "question_vi": "Những biểu tượng của Liên minh châu Âu là gì?",
+            "explanation_vi": "Đồng tiền châu Âu: euro.\nLá cờ châu Âu.\nPhương châm của châu Âu.\nQuốc ca châu Âu.\nNgày châu Âu (9 tháng 5).",
+            "image": null
+        },
+        {
+            "id": 179,
+            "question": "Que connaissez vous sur le traité de Rome ? et quand a-il-eu lieu ?",
+            "explanation": "Le 25 mars 1957, l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas signent à Rome deux traités : le premier crée la Communauté économique européenne (CEE) ; le second crée la Communauté européenne de l'énergie atomique (CEEA ou Euratom)",
+            "question_vi": "Bạn biết gì về Hiệp ước Roma? Và nó đã diễn ra khi nào?",
+            "explanation_vi": "Ngày 25 tháng 3 năm 1957, Đức, Bỉ, Pháp, Ý, Luxembourg và Hà Lan ký tại Rome hai hiệp ước: hiệp ước đầu tiên thành lập Cộng đồng Kinh tế châu Âu (CEE); hiệp ước thứ hai thành lập Cộng đồng Năng lượng Nguyên tử châu Âu (CEEA hoặc Euratom)",
+            "image": null
+        },
+        {
+            "id": 181,
+            "question": "Qu'est-ce que la Loi Veil ?",
+            "explanation": "C'est la loi qui encadre l'interruption volontaire de grossesse IVG préparée par la ministre de l'époque Simone Veil et votée le 17 Janvier 1975.",
+            "question_vi": "Luật Veil là gì?",
+            "explanation_vi": "Đó là luật quy định về việc phá thai tự nguyện được chuẩn bị bởi bộ trưởng thời đó Simone Veil và được bỏ phiếu thông qua ngày 17 tháng 1 năm 1975.",
+            "image": null
+        },
+        {
+            "id": 182,
+            "question": "Que pensez vous de la loi Veil ?",
+            "explanation": "La loi Veil, qui a légalisé l’interruption volontaire de grossesse en 1975, est une avancée majeure pour les droits des femmes en France. Elle garantit la liberté de choix et protège la santé des femmes, bien qu’elle reste un sujet de débats pour certains.",
+            "question_vi": "Bạn nghĩ gì về luật Veil?",
+            "explanation_vi": "Luật Veil, đã hợp pháp hóa việc đình chỉ thai nghén tự nguyện vào năm 1975, là một bước tiến quan trọng đối với quyền của phụ nữ ở Pháp. Luật đảm bảo quyền tự do lựa chọn và bảo vệ sức khỏe phụ nữ, mặc dù vẫn còn là chủ đề gây tranh luận đối với một số người.",
+            "image": null
+        },
+        {
+            "id": 183,
+            "question": "Que pensez vous de la parité hommes femmes ?",
+            "explanation": "La parité hommes-femmes est un objectif important pour assurer l'égalité des droits et des opportunités entre les sexes. Malgré des progrès significatifs, il reste encore des efforts à faire dans certains domaines, notamment en politique, dans les entreprises et au niveau salarial.",
+            "question_vi": "Bạn nghĩ gì về bình đẳng giới nam nữ?",
+            "explanation_vi": "Bình đẳng giới là một mục tiêu quan trọng để đảm bảo quyền và cơ hội công bằng giữa nam và nữ. Mặc dù đã có tiến bộ đáng kể, vẫn còn nhiều việc phải làm trong một số lĩnh vực, đặc biệt là chính trị, doanh nghiệp và về mức lương.",
+            "image": null
+        },
+        {
+            "id": 184,
+            "question": "Avons-nous atteint cette parité dans tous les domaines ?",
+            "explanation": "Non, la parité hommes-femmes n'est pas encore atteinte dans tous les domaines, notamment en politique, dans certains secteurs professionnels, et en matière de salaires.",
+            "question_vi": "Chúng ta đã đạt được bình đẳng giới trong mọi lĩnh vực chưa?",
+            "explanation_vi": "Chưa, bình đẳng giới chưa đạt được trong tất cả các lĩnh vực, đặc biệt là trong chính trị, một số ngành nghề và vấn đề lương bổng.",
+            "image": null
+        },
+        {
+            "id": 185,
+            "question": "Quels seront les prochaines élections ?",
+            "explanation": "Les prochaines élections seront les élections présidentielles françaises prévues en avril 2027.",
+            "question_vi": "Cuộc bầu cử tiếp theo sẽ là gì?",
+            "explanation_vi": "Cuộc bầu cử tiếp theo là cuộc bầu cử tổng thống Pháp dự kiến vào tháng 4 năm 2027.",
+            "image": null
+        },
+        {
+            "id": 186,
+            "question": "Qui décidera de vous octroyer ou non la nationalité française ?",
+            "explanation": "C’est le ministre de l’Intérieur qui décide de vous accorder ou non la nationalité française.",
+            "question_vi": "VAi sẽ quyết định cấp hay không cấp quốc tịch Pháp cho bạn?",
+            "explanation_vi": " Là Bộ trưởng Nội vụ sẽ quyết định việc cấp hoặc không cấp quốc tịch Pháp cho bạn.",
+            "image": null
+        },
+        {
+            "id": 187,
+            "question": "Quel ministre gère les relations entre l'état et les institutions religieuses ?",
+            "explanation": "C’est le ministre de l’Intérieur qui est en charge des relations entre l’État et les cultes.",
+            "question_vi": "Bộ trưởng nào quản lý mối quan hệ giữa nhà nước và các tổ chức tôn giáo?",
+            "explanation_vi": "Là Bộ trưởng Nội vụ phụ trách quan hệ giữa nhà nước và các tổ chức tôn giáo.",
+            "image": null
+        },
+        {
+            "id": 190,
+            "question": "En quelle année les citoyens Français sont-ils devenus Européens ?",
+            "explanation": "Les citoyens français sont devenus citoyens européens en 1992, avec l'entrée en vigueur du traité de Maastricht.",
+            "question_vi": "Công dân Pháp trở thành công dân châu Âu vào năm nào?",
+            "explanation_vi": "Công dân Pháp trở thành công dân châu Âu vào năm 1992, khi Hiệp ước Maastricht có hiệu lực.",
+            "image": null
+        },
+        {
+            "id": 191,
+            "question": "Qui a le droit d'accéder à l'emploi public ?",
+            "explanation": "Payer ses impôts est obligatoire !",
+            "question_vi": "Bạn có bắt buộc phải đóng thuế không?",
+            "explanation_vi": "Đóng thuế là bắt buộc!",
+            "image": null
+        },
+        {
+            "id": 192,
+            "question": "En cas de conflit armé qui pourra être appelé à défendre la patrie ?",
+            "explanation": "Tous les citoyens français peuvent être appelés à défendre la patrie en cas de conflit armé, notamment par le biais du service national ou de la mobilisation générale.",
+            "question_vi": "Nếu xảy ra xung đột vũ trang, ai có thể được gọi để bảo vệ tổ quốc?",
+            "explanation_vi": "Tất cả công dân Pháp đều có thể được triệu tập để bảo vệ tổ quốc trong trường hợp xảy ra xung đột vũ trang, thông qua nghĩa vụ quốc gia hoặc tổng động viên.",
+            "image": null
+        },
+        {
+            "id": 193,
+            "question": "Qu'est-ce que le système de sécurité sociale ?",
+            "explanation": "Le système de Sécurité sociale se compose d’un ensemble d’institutions qui ont pour fonction de protéger les individus des conséquences de divers événements ou situations, généralement qualifiés de risques sociaux.",
+            "question_vi": "Hệ thống an sinh xã hội là gì?",
+            "explanation_vi": "Hệ thống an sinh xã hội bao gồm một tập hợp các tổ chức có nhiệm vụ bảo vệ các cá nhân khỏi hậu quả của các sự kiện hoặc tình huống, thường được gọi là rủi ro xã hội.",
+            "image": null
+        },
+        {
+            "id": 194,
+            "question": "Par qui est-il financé ?",
+            "explanation": "Il est financé par les entreprises et les gens qui travaillent (c’est une application de la fraternité)",
+            "question_vi": "Nó được tài trợ bởi ai?",
+            "explanation_vi": "Nó được tài trợ bởi các công ty và những người làm việc (đây là một ứng dụng của tình thương)",
+            "image": null
+        },
+        {
+            "id": 195,
+            "question": "Qui finance les services publics ?",
+            "explanation": "Ce sont les gens qui travaillent à travers les impôts.",
+            "question_vi": "Ai tài trợ cho các dịch vụ công?",
+            "explanation_vi": "Đó là những người làm việc thông qua thuế.",
+            "image": null
+        },
+        {
+            "id": 196,
+            "question": "Etes-vous obligé de payer vos impôts ?",
+            "explanation": "C’est l’une des rares questions piège de l’entretien de naturalisation Française. Payer ses impôts est obligatoire !",
+            "question_vi": "Bạn có bắt buộc phải đóng thuế không?",
+            "explanation_vi": "Đây là một trong số ít câu hỏi bẫy trong cuộc phỏng vấn nhập quốc tịch Pháp. Đóng thuế là bắt buộc!",
+            "image": null
+        },
+        {
+            "id": 197,
+            "question": "Si vous obtenez la nationalité Française comptez-vous vivre en France ?",
+            "explanation": "Encore une question piège de l’entretien de naturalisation Française, vous obtenez la nationalité Française pour vivre principalement en France !",
+            "question_vi": "Nếu bạn nhận được quốc tịch Pháp, bạn có dự định sống ở Pháp không?",
+            "explanation_vi": "Lại một câu hỏi bẫy khác trong cuộc phỏng vấn nhập quốc tịch Pháp, bạn có được quốc tịch Pháp để sống chủ yếu ở Pháp!",
+            "image": null
+        }
+    ]
+}

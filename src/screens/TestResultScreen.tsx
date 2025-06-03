@@ -40,7 +40,7 @@ const TestResultScreen = () => {
         const mockResult: TestResult = {
             session: {
                 id: Date.now().toString(),
-                mode: 'standard',
+                mode: 'mock_interview',
                 questions: [],
                 answers: [],
                 startTime: new Date(),
@@ -79,11 +79,20 @@ const TestResultScreen = () => {
     };
 
     const handleRetakeTest = () => {
-        navigation.navigate('TestTab', undefined);
+        // Go back to the test screen and let the user start a new test
+        navigation.goBack();
     };
 
     const handleViewProgress = () => {
-        navigation.navigate('TestTab', undefined);
+        // Go back to the test screen to view progress
+        navigation.goBack();
+    };
+
+    const handleCloseTest = () => {
+        // Go back to the previous screen in the navigation stack
+        // Note: This may go back to TestQuestionScreen instead of TestScreen
+        // depending on the navigation history
+        navigation.goBack();
     };
 
     if (isLoading || !testResult) {
@@ -103,7 +112,7 @@ const TestResultScreen = () => {
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <TouchableOpacity onPress={() => navigation.navigate('TestTab', undefined)} style={styles.closeButton}>
+                    <TouchableOpacity onPress={handleCloseTest} style={styles.closeButton}>
                         <Ionicons name="close" size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
                     <View style={styles.headerCenter}>

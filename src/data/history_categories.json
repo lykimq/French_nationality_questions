@@ -1,0 +1,106 @@
+{
+    "id": "history",
+    "title": "Histoire et Culture",
+    "title_vi": "Lịch sử và Văn hóa",
+    "icon": "book",
+    "description": "Questions sur l'histoire et la culture française",
+    "description_vi": "Câu hỏi về lịch sử và văn hóa Pháp",
+    "subcategories": [
+        {
+            "id": "local_gov",
+            "title": "Administration Locale",
+            "title_vi": "Quản lý địa phương",
+            "icon": "business",
+            "description": "Questions sur l'administration locale et la vie civique",
+            "description_vi": "Câu hỏi về quản lý địa phương và các vấn đề cộng đồng"
+        },
+        {
+            "id": "monarchy",
+            "title": "Monarchie & Royauté",
+            "title_vi": "Vương quốc & Vương triều",
+            "icon": "star",
+            "description": "Questions sur les rois et reines de France",
+            "description_vi": "Câu hỏi về vương quốc và vương triều Pháp"
+        },
+        {
+            "id": "revolution",
+            "title": "Révolution Française",
+            "title_vi": "Chiến tranh Pháp",
+            "icon": "flag",
+            "description": "La période révolutionnaire et ses événements majeurs",
+            "description_vi": "Thời kỳ cách mạng và các sự kiện lớn"
+        },
+        {
+            "id": "wars",
+            "title": "Guerres & Résistance",
+            "title_vi": "Chiến tranh & Kháng chiến",
+            "icon": "shield",
+            "description": "Les guerres mondiales et la résistance française",
+            "description_vi": "Chiến tranh và kháng chiến Pháp"
+        },
+        {
+            "id": "republic",
+            "title": "République & Institutions",
+            "title_vi": "Quốc hội & Các tổ chức",
+            "icon": "business",
+            "description": "La République française et ses institutions",
+            "description_vi": "Quốc hội và các tổ chức Pháp"
+        },
+        {
+            "id": "democracy",
+            "title": "Démocratie & Citoyenneté",
+            "title_vi": "Dân chủ & Quyền công dân",
+            "icon": "people",
+            "description": "La démocratie française et les droits et devoirs des citoyens",
+            "description_vi": "Nền dân chủ Pháp và quyền lợi nghĩa vụ của công dân"
+        },
+        {
+            "id": "economy",
+            "title": "Économie & Monnaie",
+            "title_vi": "Kinh tế & Tiền tệ",
+            "icon": "cash",
+            "description": "L'économie française et le système monétaire",
+            "description_vi": "Kinh tế Pháp và hệ thống tiền tệ"
+        },
+        {
+            "id": "culture",
+            "title": "Culture & Patrimoine",
+            "title_vi": "Văn hóa & Di sản",
+            "icon": "library",
+            "description": "Monuments historiques et culture française",
+            "description_vi": "Di sản và văn hóa Pháp"
+        },
+        {
+            "id": "arts",
+            "title": "Arts & Littérature",
+            "title_vi": "Nghệ thuật & Văn học",
+            "icon": "brush",
+            "description": "Artistes, écrivains et œuvres célèbres",
+            "description_vi": "Nghệ sĩ, nhà văn và tác phẩm nổi tiếng"
+        },
+        {
+            "id": "celebrities",
+            "title": "Personnalités & Médias",
+            "title_vi": "Nhân vật & Trung tâm thông tin",
+            "icon": "people",
+            "description": "Personnalités françaises célèbres et médias",
+            "description_vi": "Nhân vật và trung tâm thông tin Pháp"
+        },
+        {
+            "id": "sports",
+            "title": "Sports",
+            "title_vi": "Thể thao",
+            "icon": "football",
+            "description": "Sports et événements sportifs français",
+            "description_vi": "Thể thao và các sự kiện thể thao Pháp"
+        },
+        {
+            "id": "holidays",
+            "title": "Jours Fériés",
+            "title_vi": "Ngày lễ & Ngày nghỉ",
+            "icon": "calendar",
+            "description": "Les jours fériés et leurs significations",
+            "description_vi": "Ngày lễ và ngày nghỉ Pháp"
+        }
+    ]
+}

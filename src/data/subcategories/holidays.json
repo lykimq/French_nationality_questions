@@ -1,0 +1,34 @@
+{
+    "id": "holidays",
+    "title": "Jours Fériés",
+    "title_vi": "Ngày lễ & Ngày nghỉ",
+    "icon": "calendar",
+    "description": "Les jours fériés et leurs significations",
+    "description_vi": "Ngày lễ và ngày nghỉ Pháp",
+    "questions": [
+        {
+            "id": 55,
+            "question": "Pourquoi le 1er Mai est-il férié ?",
+            "explanation": "Nous fêtons la fête du Travail.",
+            "question_vi": "Tại sao ngày 1 tháng 5 là ngày nghỉ?",
+            "explanation_vi": "Vì đó là ngày quốc tế lao động",
+            "image": null
+        },
+        {
+            "id": 56,
+            "question": "Pourquoi le 11 Novembre est-il férié ?",
+            "explanation": "Le 11 novembre marque la fin de la première guerre mondiale, c'est ce qu'on appelle l'Armistice signée en 1918",
+            "question_vi": "Tại sao ngày 11/11 lại là ngày nghỉ?",
+            "explanation_vi": "Ngày 11/11 là ngày đánh dấu sự chấm dứt của thế chiến thứ nhất. Là ngày mà thoả thuận ngừng bắn giữa các bên được ký kết vào năm 1918",
+            "image": null
+        },
+        {
+            "id": 57,
+            "question": "Que fête-on le 14 juillet ?",
+            "explanation": "C'est la fête nationale en France, le 14 juillet est généralement associé à la prise de la Bastille en 1789, c'est dans les faits le 14 juillet 1790, la fête de la Fédération, qui est officiellement commémoré en France depuis plus d'un siècle.",
+            "question_vi": "Chúng ta kỷ niệm gì vào ngày 14/7?",
+            "explanation_vi": "Đó là quốc khánh Pháp, ngày 14/7 thường gắn liền với sự kiện phá ngục Bastille vào năm 1789. Ngày 14/7/1790 còn là ngày lễ liên hiệp, đã được kỷ niệm tại pháp hơn 1 thập kỷ qua",
+            "image": null
+        }
+    ]
+}

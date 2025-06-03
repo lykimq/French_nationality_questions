@@ -25,16 +25,11 @@ import FormattedText from '../components/FormattedText';
 import { TestAnswer } from '../types/test';
 import { RootStackParamList } from '../types/types';
 import { getCachedImageSource } from '../utils/imageUtils';
+import { testDatabaseIntegration, testQuestionIdUniqueness, logDatabaseStatistics } from '../utils/testDatabaseIntegration';
 
 const { width, height } = Dimensions.get('window');
 
 type TestQuestionScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
-
-interface AnswerOption {
-    text: string;
-    isCorrect: boolean;
-    explanation?: string;
-}
 
 const TestQuestionScreen = () => {
     const navigation = useNavigation<TestQuestionScreenNavigationProp>();
@@ -49,20 +44,89 @@ const TestQuestionScreen = () => {
         cancelTest,
     } = useTest();
 
-    const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-    const [showExplanation, setShowExplanation] = useState(false);
+    const [showAnswer, setShowAnswer] = useState(false);
+    const [userFeedback, setUserFeedback] = useState<'correct' | 'incorrect' | null>(null);
     const [timeLeft, setTimeLeft] = useState<number | null>(null);
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [answerOptions, setAnswerOptions] = useState<AnswerOption[]>([]);
-    const [correctAnswerText, setCorrectAnswerText] = useState<string>('');
+    const [showDebugPanel, setShowDebugPanel] = useState(__DEV__); // Only show in dev mode
 
     const currentQuestion = getCurrentQuestion();
 
+    // Database validation on component mount (only in dev mode)
+    useEffect(() => {
+        if (__DEV__ && currentQuestion) {
+            // Run a quick database validation when the first question loads
+            const validateDatabase = async () => {
+                try {
+                    console.log('🧪 Running database validation...');
+                    await logDatabaseStatistics();
+
+                    // Test the current question's data integrity
+                    console.log('🔍 Current question validation:', {
+                        id: currentQuestion.id,
+                        hasQuestion: !!currentQuestion.question,
+                        hasQuestionVi: !!currentQuestion.question_vi,
+                        hasExplanation: !!currentQuestion.explanation,
+                        hasExplanationVi: !!currentQuestion.explanation_vi,
+                        questionLength: currentQuestion.question?.length || 0,
+                        explanationLength: currentQuestion.explanation?.length || 0,
+                        category: currentQuestion.categoryId,
+                        categoryTitle: currentQuestion.categoryTitle
+                    });
+                } catch (error) {
+                    console.error('❌ Database validation failed:', error);
+                }
+            };
+
+            // Only run validation once per session
+            if (currentQuestionIndex === 0) {
+                validateDatabase();
+            }
+        }
+    }, [currentQuestion, currentQuestionIndex]);
+
+    // Debug logging for current question
+    useEffect(() => {
+        if (currentQuestion) {
+            console.log('📊 Current Question Debug Info:', {
+                id: currentQuestion.id,
+                categoryId: currentQuestion.categoryId,
+                categoryTitle: currentQuestion.categoryTitle,
+                hasQuestion: !!currentQuestion.question,
+                hasQuestionVi: !!currentQuestion.question_vi,
+                hasExplanation: !!currentQuestion.explanation,
+                hasExplanationVi: !!currentQuestion.explanation_vi,
+                questionLength: currentQuestion.question?.length || 0,
+                questionViLength: currentQuestion.question_vi?.length || 0,
+                explanationLength: currentQuestion.explanation?.length || 0,
+                explanationViLength: currentQuestion.explanation_vi?.length || 0,
+                hasImage: !!currentQuestion.image,
+                sessionId: currentSession?.id,
+                sessionMode: currentSession?.mode,
+                questionIndex: currentQuestionIndex,
+                totalQuestions: currentSession?.totalQuestions
+            });
+        }
+    }, [currentQuestion, currentQuestionIndex, currentSession]);
+
     // Initialize timer if test has time limit
     useEffect(() => {
-        if (currentSession?.mode === 'timed' || currentSession?.mode === 'mock_interview') {
-            const timeLimit = currentSession.mode === 'timed' ? 15 * 60 : 45 * 60; // 15 or 45 minutes
+        if (currentSession?.mode === 'geography_only' || currentSession?.mode === 'mock_interview' || currentSession?.mode === 'history_culture_comprehensive') {
+            let timeLimit;
+            switch (currentSession.mode) {
+                case 'geography_only':
+                    timeLimit = 15 * 60; // 15 minutes
+                    break;
+                case 'mock_interview':
+                    timeLimit = 45 * 60; // 45 minutes
+                    break;
+                case 'history_culture_comprehensive':
+                    timeLimit = 120 * 60; // 120 minutes
+                    break;
+                default:
+                    timeLimit = 30 * 60; // 30 minutes default
+            }
             const elapsed = Math.floor((new Date().getTime() - currentSession.startTime.getTime()) / 1000);
             setTimeLeft(Math.max(0, timeLimit - elapsed));
         }
@@ -87,172 +151,30 @@ const TestQuestionScreen = () => {
 
     // Reset state when question changes
     useEffect(() => {
-        setSelectedAnswer(null);
-        setShowExplanation(false);
-        setQuestionStartTime(new Date());
-
-        // Generate answer options for the current question
+        console.log('🔄 Question changed, resetting state. Index:', currentQuestionIndex);
         if (currentQuestion) {
-            const options = generateAnswerOptions(currentQuestion);
-            setAnswerOptions(options);
-            setCorrectAnswerText(options.find(opt => opt.isCorrect)?.text || '');
+            console.log('📝 Current question details:', {
+                id: currentQuestion.id,
+                categoryId: currentQuestion.categoryId,
+                questionFr: currentQuestion.question?.substring(0, 100) + '...' || 'No French question',
+                questionVi: currentQuestion.question_vi?.substring(0, 100) + '...' || 'No Vietnamese translation',
+                hasExplanation: !!currentQuestion.explanation,
+                hasExplanationVi: !!currentQuestion.explanation_vi,
+                categoryTitle: currentQuestion.categoryTitle
+            });
         }
-    }, [currentQuestionIndex, currentQuestion, language]);
+        setShowAnswer(false);
+        setUserFeedback(null);
+        setQuestionStartTime(new Date());
+    }, [currentQuestionIndex, currentQuestion?.id]);
 
-    const generateAnswerOptions = (question: any): AnswerOption[] => {
-        if (!question) return [];
-
-        const explanation = language === 'fr' ?
-            question.explanation :
-            (question.explanation_vi || question.explanation);
-
-        const questionText = language === 'fr' ?
-            question.question :
-            (question.question_vi || question.question);
-
-        // Extract correct answer from explanation or generate based on question type
-        const correctAnswer = extractCorrectAnswer(questionText, explanation, question.categoryId);
-
-        // Generate educational distractors
-        const distractors = generateDistractors(questionText, correctAnswer, question.categoryId);
-
-        // Combine correct answer with distractors and shuffle
-        const options: AnswerOption[] = [
-            { text: correctAnswer, isCorrect: true },
-            ...distractors.map(text => ({ text, isCorrect: false }))
-        ];
-
-        // Shuffle options
-        return shuffleArray(options);
-    };
-
-    const extractCorrectAnswer = (questionText: string, explanation: string, categoryId: string): string => {
-        // Common patterns for extracting answers from explanations
-        const lowerQuestion = questionText.toLowerCase();
-        const lowerExplanation = explanation.toLowerCase();
-
-        // For date questions
-        if (lowerQuestion.includes('quand') || lowerQuestion.includes('année') ||
-            lowerQuestion.includes('khi nào') || lowerQuestion.includes('năm')) {
-            const dateMatch = explanation.match(/(\d{4}|\d{1,2}\/\d{1,2}\/\d{4})/);
-            if (dateMatch) return dateMatch[1];
-
-            // Look for century references
-            const centuryMatch = explanation.match(/(XIXe|XXe|XVIIIe|XVIIe|XVIe) siècle/i);
-            if (centuryMatch) return centuryMatch[0];
-        }
-
-        // For "who" questions
-        if (lowerQuestion.includes('qui') || lowerQuestion.includes('ai')) {
-            // Extract proper names from explanation
-            const nameMatch = explanation.match(/([A-Z][a-z]+ [A-Z][a-z]+|[A-Z][a-z]+)/);
-            if (nameMatch) return nameMatch[1];
-        }
-
-        // For "what" questions
-        if (lowerQuestion.includes('qu\'est-ce que') || lowerQuestion.includes('quoi') ||
-            lowerQuestion.includes('gì là')) {
-            // Extract definition from explanation
-            const sentences = explanation.split(/[.!?]/);
-            if (sentences[0]) {
-                return sentences[0].trim().substring(0, 80) + (sentences[0].length > 80 ? '...' : '');
-            }
-        }
-
-        // For "where" questions
-        if (lowerQuestion.includes('où') || lowerQuestion.includes('ở đâu')) {
-            const locationMatch = explanation.match(/(Paris|Lyon|Marseille|France|Versailles|[A-Z][a-z]+)/);
-            if (locationMatch) return locationMatch[1];
-        }
-
-        // For yes/no questions
-        if (lowerQuestion.includes('est-ce que') || lowerQuestion.includes('có phải') ||
-            lowerQuestion.includes('có')) {
-            if (lowerExplanation.includes('oui') || lowerExplanation.includes('có')) {
-                return language === 'fr' ? 'Oui' : 'Có';
-            } else if (lowerExplanation.includes('non') || lowerExplanation.includes('không')) {
-                return language === 'fr' ? 'Non' : 'Không';
-            }
-        }
-
-        // Default: use first sentence of explanation as answer
-        const firstSentence = explanation.split(/[.!?]/)[0].trim();
-        return firstSentence.substring(0, 100) + (firstSentence.length > 100 ? '...' : '');
-    };
-
-    const generateDistractors = (questionText: string, correctAnswer: string, categoryId: string): string[] => {
-        const lowerQuestion = questionText.toLowerCase();
-
-        // Generate contextually relevant wrong answers based on question type and category
-        const distractors: string[] = [];
-
-        // For date questions
-        if (correctAnswer.match(/\d{4}/)) {
-            const year = parseInt(correctAnswer);
-            distractors.push(
-                (year - 10).toString(),
-                (year + 15).toString(),
-                (year - 25).toString()
-            );
-        }
-        // For century questions
-        else if (correctAnswer.includes('siècle')) {
-            const centuries = ['XVIe siècle', 'XVIIe siècle', 'XVIIIe siècle', 'XIXe siècle', 'XXe siècle'];
-            distractors.push(...centuries.filter(c => c !== correctAnswer).slice(0, 3));
-        }
-        // For yes/no questions
-        else if (correctAnswer === 'Oui' || correctAnswer === 'Có') {
-            distractors.push(language === 'fr' ? 'Non' : 'Không');
-            distractors.push(language === 'fr' ? 'Partiellement' : 'Một phần');
-            distractors.push(language === 'fr' ? 'Cela dépend' : 'Tùy thuộc');
-        }
-        else if (correctAnswer === 'Non' || correctAnswer === 'Không') {
-            distractors.push(language === 'fr' ? 'Oui' : 'Có');
-            distractors.push(language === 'fr' ? 'Seulement dans certains cas' : 'Chỉ trong một số trường hợp');
-            distractors.push(language === 'fr' ? 'Depuis récemment' : 'Từ gần đây');
-        }
-        // For historical figures
-        else if (correctAnswer.match(/^[A-Z][a-z]+ [A-Z][a-z]+$/)) {
-            const historicalFigures = [
-                'Napoléon Bonaparte', 'Louis XIV', 'Charles de Gaulle',
-                'Marie Antoinette', 'Robespierre', 'Voltaire', 'Victor Hugo'
-            ].filter(name => name !== correctAnswer);
-            distractors.push(...historicalFigures.slice(0, 3));
-        }
-        // For locations
-        else if (categoryId.includes('geography') || lowerQuestion.includes('où')) {
-            const locations = [
-                'Paris', 'Lyon', 'Marseille', 'Bordeaux', 'Lille',
-                'Strasbourg', 'Versailles', 'Normandie'
-            ].filter(loc => loc !== correctAnswer);
-            distractors.push(...locations.slice(0, 3));
-        }
-        // Default educational distractors
-        else {
-            const defaultDistractors = [
-                language === 'fr' ? 'Cette information n\'est pas correcte' : 'Thông tin này không chính xác',
-                language === 'fr' ? 'Cela dépend du contexte' : 'Tùy thuộc vào bối cảnh',
-                language === 'fr' ? 'Une autre réponse plus appropriée' : 'Một câu trả lời khác phù hợp hơn'
-            ];
-            distractors.push(...defaultDistractors);
-        }
-
-        // Ensure we have exactly 3 distractors
-        while (distractors.length < 3) {
-            distractors.push(language === 'fr' ? 'Réponse alternative' : 'Câu trả lời thay thế');
-        }
-
-        return distractors.slice(0, 3);
-    };
-
-    const shuffleArray = <T,>(array: T[]): T[] => {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
-    };
+    // Cleanup when component unmounts or session changes
+    useEffect(() => {
+        return () => {
+            setShowAnswer(false);
+            setUserFeedback(null);
+        };
+    }, [currentSession?.id]);
 
     const handleTimeUp = async () => {
         Alert.alert(
@@ -262,41 +184,43 @@ const TestQuestionScreen = () => {
         );
     };
 
-    const handleAnswerSelect = (answer: string) => {
-        if (showExplanation) return;
-        setSelectedAnswer(answer);
+    const handleRevealAnswer = () => {
+        console.log('👁️ Revealing answer for question ID:', currentQuestion?.id);
+        setShowAnswer(true);
     };
 
-    const handleSubmitAnswer = async () => {
-        if (!currentQuestion || !selectedAnswer || isSubmitting) return;
+    const handleUserFeedback = async (feedback: 'correct' | 'incorrect') => {
+        if (!currentQuestion || isSubmitting) return;
+
+        console.log('💭 User feedback for question:', {
+            questionId: currentQuestion.id,
+            questionIndex: currentQuestionIndex,
+            feedback,
+            questionText: currentQuestion.question?.substring(0, 50) + '...' || 'No question text',
+            questionTextVi: currentQuestion.question_vi?.substring(0, 50) + '...' || 'No Vietnamese text',
+            categoryId: currentQuestion.categoryId,
+            categoryTitle: currentQuestion.categoryTitle
+        });
 
         setIsSubmitting(true);
+        setUserFeedback(feedback);
 
         try {
             const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
-            const isCorrect = selectedAnswer === correctAnswerText;
 
             const answer: TestAnswer = {
                 questionId: currentQuestion.id,
-                isCorrect,
-                userAnswer: selectedAnswer,
+                isCorrect: feedback === 'correct',
+                userAnswer: feedback === 'correct' ? 'User marked as correct' : 'User marked as incorrect',
                 timeSpent,
                 timestamp: new Date(),
             };
 
+            console.log('📤 Submitting answer:', answer);
             await submitAnswer(answer);
-            setShowExplanation(true);
-
-            // Auto advance after showing explanation (if not last question)
-            setTimeout(() => {
-                if (currentQuestionIndex < (currentSession?.totalQuestions ?? 0) - 1) {
-                    handleNextQuestion();
-                } else {
-                    handleFinishTest();
-                }
-            }, 3000);
+            console.log('✅ Answer submitted successfully');
         } catch (error) {
-            console.error('Error submitting answer:', error);
+            console.error('❌ Error submitting answer:', error);
             Alert.alert(
                 language === 'fr' ? 'Erreur' : 'Lỗi',
                 language === 'fr' ? 'Erreur lors de la soumission de la réponse' : 'Lỗi khi nộp câu trả lời'
@@ -307,21 +231,25 @@ const TestQuestionScreen = () => {
     };
 
     const handleNextQuestion = () => {
+        console.log('➡️ Moving to next question. Current index:', currentQuestionIndex, 'Total:', currentSession?.totalQuestions);
         if (currentQuestionIndex < (currentSession?.totalQuestions ?? 0) - 1) {
-            // Move to next question handled by context
-            setSelectedAnswer(null);
-            setShowExplanation(false);
+            // Move to next question
+            setShowAnswer(false);
+            setUserFeedback(null);
         } else {
+            console.log('🏁 Finishing test - reached last question');
             handleFinishTest();
         }
     };
 
     const handleFinishTest = async () => {
         try {
+            console.log('🏁 Finishing test...');
             const result = await finishTest();
+            console.log('✅ Test finished successfully, navigating to results');
             navigation.navigate('TestResult', undefined);
         } catch (error) {
-            console.error('Error finishing test:', error);
+            console.error('❌ Error finishing test:', error);
             Alert.alert(
                 language === 'fr' ? 'Erreur' : 'Lỗi',
                 language === 'fr' ? 'Erreur lors de la finalisation du test' : 'Lỗi khi hoàn thành bài kiểm tra'
@@ -338,13 +266,49 @@ const TestQuestionScreen = () => {
                 {
                     text: language === 'fr' ? 'Oui' : 'Có',
                     onPress: () => {
+                        console.log('❌ Cancelling test');
                         cancelTest();
-                        // Use goBack to return to the previous screen (TestScreen)
+                        // Navigate back to the main test screen
                         navigation.goBack();
                     },
                 },
             ]
         );
+    };
+
+    // Debug function to run comprehensive database tests
+    const runDatabaseTests = async () => {
+        try {
+            console.log('🧪 Starting comprehensive database tests...');
+
+            // Run database integration test
+            const integrationResult = await testDatabaseIntegration();
+            console.log('Database Integration Test:', integrationResult);
+
+            // Run ID uniqueness test
+            const uniquenessResult = await testQuestionIdUniqueness();
+            console.log('Question ID Uniqueness Test:', uniquenessResult);
+
+            // Show results to user
+            const message = `Database Tests Complete:
+
+Integration: ${integrationResult.success ? '✅ PASSED' : '❌ FAILED'}
+Total Questions: ${integrationResult.totalQuestions}
+Categories: ${integrationResult.categoriesLoaded.length}
+Subcategories: ${integrationResult.subcategoriesLoaded.length}
+
+ID Uniqueness: ${uniquenessResult.success ? '✅ PASSED' : '❌ FAILED'}
+Unique IDs: ${uniquenessResult.uniqueIds}/${uniquenessResult.totalQuestions}
+Duplicates: ${uniquenessResult.duplicateIds.length}
+
+Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
+
+            Alert.alert('Database Test Results', message);
+
+        } catch (error) {
+            console.error('❌ Database tests failed:', error);
+            Alert.alert('Database Test Error', `Tests failed: ${error}`);
+        }
     };
 
     const formatTime = (seconds: number): string => {
@@ -356,6 +320,38 @@ const TestQuestionScreen = () => {
     const getProgressPercentage = (): number => {
         if (!currentSession) return 0;
         return ((currentQuestionIndex + 1) / currentSession.totalQuestions) * 100;
+    };
+
+    // Helper function to get the correct question text based on language
+    const getQuestionText = (): string => {
+        if (!currentQuestion) return '';
+
+        if (language === 'fr') {
+            return currentQuestion.question || 'Question non disponible';
+        } else {
+            // For Vietnamese, show both French and Vietnamese if available
+            if (currentQuestion.question_vi) {
+                return `🇫🇷 ${currentQuestion.question}\n\n🇻🇳 ${currentQuestion.question_vi}`;
+            } else {
+                return currentQuestion.question || 'Question non disponible';
+            }
+        }
+    };
+
+    // Helper function to get the correct explanation text based on language
+    const getExplanationText = (): string => {
+        if (!currentQuestion) return '';
+
+        if (language === 'fr') {
+            return currentQuestion.explanation || 'Explication non disponible';
+        } else {
+            // For Vietnamese, show both French and Vietnamese if available
+            if (currentQuestion.explanation_vi) {
+                return `🇫🇷 ${currentQuestion.explanation}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
+            } else {
+                return currentQuestion.explanation || 'Explication non disponible';
+            }
+        }
     };
 
     if (!currentSession || !currentQuestion) {
@@ -385,9 +381,23 @@ const TestQuestionScreen = () => {
                             <FormattedText style={[styles.questionCounterText, { color: theme.colors.headerText }]}>
                                 {currentQuestionIndex + 1} / {currentSession.totalQuestions}
                             </FormattedText>
+                            {/* Show question ID for debugging */}
+                            <FormattedText style={[styles.questionIdText, { color: theme.colors.textMuted }]}>
+                                ID: {currentQuestion.id}
+                            </FormattedText>
                         </View>
 
                         <View style={styles.headerRight}>
+                            {/* Debug panel toggle (only in dev mode) */}
+                            {__DEV__ && (
+                                <TouchableOpacity
+                                    onPress={runDatabaseTests}
+                                    style={[styles.debugButton, { backgroundColor: theme.colors.warning }]}
+                                >
+                                    <Ionicons name="bug" size={16} color="white" />
+                                </TouchableOpacity>
+                            )}
+
                             {timeLeft !== null && (
                                 <View style={[styles.timer, { backgroundColor: timeLeft < 60 ? theme.colors.error : theme.colors.primary }]}>
                                     <Ionicons name="time" size={16} color="white" />
@@ -399,7 +409,10 @@ const TestQuestionScreen = () => {
                                 <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
                                 <Switch
                                     value={language === 'vi'}
-                                    onValueChange={toggleLanguage}
+                                    onValueChange={() => {
+                                        console.log('🔄 Language toggle from', language, 'to', language === 'fr' ? 'vi' : 'fr');
+                                        toggleLanguage();
+                                    }}
                                     thumbColor={theme.colors.switchThumb}
                                     trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
                                     style={styles.languageSwitch}
@@ -427,7 +440,7 @@ const TestQuestionScreen = () => {
                     <View style={[styles.questionCard, { backgroundColor: theme.colors.surface }]}>
                         <View style={styles.questionHeader}>
                             <FormattedText style={[styles.questionLabel, { color: theme.colors.textMuted }]}>
-                                {language === 'fr' ? 'Question' : 'Câu hỏi'} {currentQuestionIndex + 1}
+                                {language === 'fr' ? 'Question d\'entretien' : 'Câu hỏi phỏng vấn'} {currentQuestionIndex + 1}
                             </FormattedText>
                             {currentQuestion.categoryTitle && (
                                 <View style={[styles.categoryBadge, { backgroundColor: theme.colors.primaryLight }]}>
@@ -439,7 +452,7 @@ const TestQuestionScreen = () => {
                         </View>
 
                         <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
-                            {language === 'fr' ? currentQuestion.question : (currentQuestion.question_vi || currentQuestion.question)}
+                            {getQuestionText()}
                         </FormattedText>
 
                         {currentQuestion.image && (
@@ -450,106 +463,117 @@ const TestQuestionScreen = () => {
                         )}
                     </View>
 
-                    {/* Answer Options */}
-                    <View style={styles.answersContainer}>
-                        <FormattedText style={[styles.answersLabel, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Choisissez la bonne réponse:' : 'Chọn câu trả lời đúng:'}
-                        </FormattedText>
-
-                        {answerOptions.map((option, index) => (
-                            <TouchableOpacity
-                                key={index}
-                                style={[
-                                    styles.answerOption,
-                                    {
-                                        backgroundColor: theme.colors.surface,
-                                        borderColor: selectedAnswer === option.text ? theme.colors.primary : theme.colors.border,
-                                        borderWidth: selectedAnswer === option.text ? 2 : 1,
-                                    },
-                                    showExplanation && option.isCorrect && styles.correctAnswer,
-                                    showExplanation && selectedAnswer === option.text && !option.isCorrect && styles.incorrectAnswer,
-                                ]}
-                                onPress={() => handleAnswerSelect(option.text)}
-                                disabled={showExplanation}
-                                activeOpacity={0.8}
-                            >
-                                <View style={styles.answerContent}>
-                                    <View style={[
-                                        styles.answerIndicator,
-                                        {
-                                            backgroundColor: selectedAnswer === option.text ? theme.colors.primary : 'transparent',
-                                            borderColor: theme.colors.border
-                                        }
-                                    ]}>
-                                        {selectedAnswer === option.text && (
-                                            <Ionicons name="checkmark" size={16} color="white" />
-                                        )}
-                                    </View>
-                                    <FormattedText style={[styles.answerText, { color: theme.colors.text }]}>
-                                        {option.text}
-                                    </FormattedText>
-                                </View>
-
-                                {showExplanation && option.isCorrect && (
-                                    <Ionicons name="checkmark-circle" size={24} color={theme.colors.success} />
-                                )}
-                                {showExplanation && selectedAnswer === option.text && !option.isCorrect && (
-                                    <Ionicons name="close-circle" size={24} color={theme.colors.error} />
-                                )}
-                            </TouchableOpacity>
-                        ))}
-                    </View>
-
-                    {/* Explanation */}
-                    {showExplanation && currentQuestion.explanation && (
-                        <View style={[styles.explanationCard, { backgroundColor: theme.colors.surface }]}>
-                            <View style={styles.explanationHeader}>
-                                <Ionicons name="information-circle" size={20} color={theme.colors.primary} />
-                                <FormattedText style={[styles.explanationTitle, { color: theme.colors.text }]}>
-                                    {language === 'fr' ? 'Explication' : 'Giải thích'}
+                    {/* Instructions */}
+                    {!showAnswer && (
+                        <View style={[styles.instructionCard, { backgroundColor: theme.colors.surface }]}>
+                            <View style={styles.instructionHeader}>
+                                <Ionicons name="bulb" size={20} color={theme.colors.warning} />
+                                <FormattedText style={[styles.instructionTitle, { color: theme.colors.text }]}>
+                                    {language === 'fr' ? 'Instructions' : 'Hướng dẫn'}
                                 </FormattedText>
                             </View>
-                            <FormattedText style={[styles.explanationText, { color: theme.colors.textMuted }]}>
-                                {language === 'fr' ? currentQuestion.explanation : (currentQuestion.explanation_vi || currentQuestion.explanation)}
+                            <FormattedText style={[styles.instructionText, { color: theme.colors.textMuted }]}>
+                                {language === 'fr'
+                                    ? 'Réfléchissez à votre réponse, puis cliquez sur "Voir la réponse" pour découvrir la réponse attendue et comparer avec vos connaissances.'
+                                    : 'Hãy suy nghĩ về câu trả lời của bạn, sau đó nhấn "Xem đáp án" để khám phá câu trả lời mong đợi và so sánh với kiến thức của bạn.'
+                                }
+                            </FormattedText>
+                        </View>
+                    )}
+
+                    {/* Answer Section */}
+                    {showAnswer && currentQuestion.explanation && (
+                        <View style={[styles.answerCard, { backgroundColor: theme.colors.surface }]}>
+                            <View style={styles.answerHeader}>
+                                <Ionicons name="checkmark-circle" size={20} color={theme.colors.success} />
+                                <FormattedText style={[styles.answerTitle, { color: theme.colors.text }]}>
+                                    {language === 'fr' ? 'Réponse attendue' : 'Đáp án mong đợi'}
+                                </FormattedText>
+                            </View>
+                            <FormattedText style={[styles.answerText, { color: theme.colors.textMuted }]}>
+                                {getExplanationText()}
+                            </FormattedText>
+                        </View>
+                    )}
+
+                    {/* Self-Assessment */}
+                    {showAnswer && userFeedback === null && (
+                        <View style={[styles.assessmentCard, { backgroundColor: theme.colors.surface }]}>
+                            <FormattedText style={[styles.assessmentQuestion, { color: theme.colors.text }]}>
+                                {language === 'fr'
+                                    ? 'Évaluez votre réponse:'
+                                    : 'Đánh giá câu trả lời của bạn:'}
+                            </FormattedText>
+                            <View style={styles.assessmentButtons}>
+                                <TouchableOpacity
+                                    style={[styles.assessmentButton, styles.correctButton, { backgroundColor: theme.colors.success }]}
+                                    onPress={() => handleUserFeedback('correct')}
+                                    disabled={isSubmitting}
+                                >
+                                    <Ionicons name="checkmark" size={20} color="white" />
+                                    <FormattedText style={styles.assessmentButtonText}>
+                                        {language === 'fr' ? 'Je savais' : 'Tôi biết'}
+                                    </FormattedText>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    style={[styles.assessmentButton, styles.incorrectButton, { backgroundColor: theme.colors.error }]}
+                                    onPress={() => handleUserFeedback('incorrect')}
+                                    disabled={isSubmitting}
+                                >
+                                    <Ionicons name="close" size={20} color="white" />
+                                    <FormattedText style={styles.assessmentButtonText}>
+                                        {language === 'fr' ? 'Je ne savais pas' : 'Tôi không biết'}
+                                    </FormattedText>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    )}
+
+                    {/* Feedback Message */}
+                    {userFeedback && (
+                        <View style={[
+                            styles.feedbackCard,
+                            {
+                                backgroundColor: userFeedback === 'correct' ? theme.colors.primaryLight : theme.colors.accent,
+                                borderColor: userFeedback === 'correct' ? theme.colors.success : theme.colors.error
+                            }
+                        ]}>
+                            <Ionicons
+                                name={userFeedback === 'correct' ? "checkmark-circle" : "information-circle"}
+                                size={20}
+                                color={userFeedback === 'correct' ? theme.colors.success : theme.colors.error}
+                            />
+                            <FormattedText style={[styles.feedbackText, { color: theme.colors.text }]}>
+                                {userFeedback === 'correct'
+                                    ? (language === 'fr' ? 'Excellent! Continuez ainsi.' : 'Xuất sắc! Hãy tiếp tục như vậy.')
+                                    : (language === 'fr' ? 'Pas de problème, c\'est ainsi qu\'on apprend!' : 'Không sao, đó là cách chúng ta học hỏi!')
+                                }
                             </FormattedText>
                         </View>
                     )}
                 </ScrollView>
 
                 {/* Action Button */}
-                <View style={[styles.actionContainer, { backgroundColor: theme.colors.surface }]}>
-                    {!showExplanation ? (
+                <View style={[styles.actionContainer, { backgroundColor: theme.colors.surface, borderTopColor: theme.colors.border }]}>
+                    {!showAnswer ? (
                         <TouchableOpacity
-                            style={[
-                                styles.actionButton,
-                                {
-                                    backgroundColor: selectedAnswer ? theme.colors.primary : theme.colors.textMuted,
-                                    opacity: selectedAnswer ? 1 : 0.6
-                                }
-                            ]}
-                            onPress={handleSubmitAnswer}
-                            disabled={!selectedAnswer || isSubmitting}
+                            style={[styles.actionButton, { backgroundColor: theme.colors.primary }]}
+                            onPress={handleRevealAnswer}
                         >
-                            {isSubmitting ? (
-                                <ActivityIndicator color="white" size="small" />
-                            ) : (
-                                <>
-                                    <FormattedText style={styles.actionButtonText}>
-                                        {language === 'fr' ? 'Valider' : 'Xác nhận'}
-                                    </FormattedText>
-                                    <Ionicons name="checkmark" size={20} color="white" />
-                                </>
-                            )}
+                            <FormattedText style={styles.actionButtonText}>
+                                {language === 'fr' ? 'Voir la réponse' : 'Xem đáp án'}
+                            </FormattedText>
+                            <Ionicons name="eye" size={20} color="white" />
                         </TouchableOpacity>
-                    ) : (
+                    ) : userFeedback ? (
                         <TouchableOpacity
                             style={[styles.actionButton, { backgroundColor: theme.colors.primary }]}
                             onPress={currentQuestionIndex < currentSession.totalQuestions - 1 ? handleNextQuestion : handleFinishTest}
                         >
                             <FormattedText style={styles.actionButtonText}>
                                 {currentQuestionIndex < currentSession.totalQuestions - 1
-                                    ? (language === 'fr' ? 'Suivant' : 'Tiếp theo')
-                                    : (language === 'fr' ? 'Terminer' : 'Hoàn thành')
+                                    ? (language === 'fr' ? 'Question suivante' : 'Câu hỏi tiếp theo')
+                                    : (language === 'fr' ? 'Terminer le test' : 'Hoàn thành bài test')
                                 }
                             </FormattedText>
                             <Ionicons
@@ -558,6 +582,12 @@ const TestQuestionScreen = () => {
                                 color="white"
                             />
                         </TouchableOpacity>
+                    ) : (
+                        <View style={[styles.actionButton, { backgroundColor: theme.colors.textMuted, opacity: 0.6 }]}>
+                            <FormattedText style={styles.actionButtonText}>
+                                {language === 'fr' ? 'Évaluez votre réponse ci-dessus' : 'Đánh giá câu trả lời ở trên'}
+                            </FormattedText>
+                        </View>
                     )}
                 </View>
             </SafeAreaView>
@@ -589,6 +619,19 @@ const styles = StyleSheet.create({
     questionCounterText: {
         fontSize: 16,
         fontWeight: '600',
+    },
+    questionIdText: {
+        fontSize: 12,
+        fontWeight: '400',
+        marginTop: 2,
+    },
+    debugButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 8,
+        paddingVertical: 6,
+        borderRadius: 16,
+        marginRight: 8,
     },
     timer: {
         flexDirection: 'row',
@@ -659,51 +702,7 @@ const styles = StyleSheet.create({
         marginTop: 16,
         resizeMode: 'cover',
     },
-    answersContainer: {
-        marginBottom: 24,
-    },
-    answersLabel: {
-        fontSize: 16,
-        fontWeight: '600',
-        marginBottom: 16,
-    },
-    answerOption: {
-        borderRadius: 12,
-        padding: 16,
-        marginBottom: 12,
-        elevation: 1,
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-    },
-    answerContent: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        flex: 1,
-    },
-    answerIndicator: {
-        width: 24,
-        height: 24,
-        borderRadius: 12,
-        borderWidth: 2,
-        marginRight: 12,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    answerText: {
-        flex: 1,
-        fontSize: 16,
-        lineHeight: 22,
-    },
-    correctAnswer: {
-        backgroundColor: '#E8F5E8',
-        borderColor: '#4CAF50',
-    },
-    incorrectAnswer: {
-        backgroundColor: '#FFEBEE',
-        borderColor: '#F44336',
-    },
-    explanationCard: {
+    instructionCard: {
         borderRadius: 16,
         padding: 20,
         marginBottom: 24,
@@ -712,24 +711,101 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 8,
     },
-    explanationHeader: {
+    instructionHeader: {
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 12,
     },
-    explanationTitle: {
+    instructionTitle: {
         fontSize: 16,
         fontWeight: '600',
         marginLeft: 8,
     },
-    explanationText: {
+    instructionText: {
         fontSize: 15,
         lineHeight: 22,
+    },
+    answerCard: {
+        borderRadius: 16,
+        padding: 20,
+        marginBottom: 24,
+        elevation: 2,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+    },
+    answerHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 12,
+    },
+    answerTitle: {
+        fontSize: 16,
+        fontWeight: '600',
+        marginLeft: 8,
+    },
+    answerText: {
+        fontSize: 15,
+        lineHeight: 22,
+    },
+    assessmentCard: {
+        borderRadius: 16,
+        padding: 20,
+        marginBottom: 24,
+        elevation: 2,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+    },
+    assessmentQuestion: {
+        fontSize: 16,
+        fontWeight: '600',
+        marginBottom: 16,
+        textAlign: 'center',
+    },
+    assessmentButtons: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        gap: 12,
+    },
+    assessmentButton: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 16,
+        borderRadius: 12,
+        gap: 8,
+    },
+    correctButton: {
+        // backgroundColor set via theme
+    },
+    incorrectButton: {
+        // backgroundColor set via theme
+    },
+    assessmentButtonText: {
+        color: 'white',
+        fontSize: 14,
+        fontWeight: '600',
+    },
+    feedbackCard: {
+        borderRadius: 12,
+        padding: 16,
+        marginBottom: 24,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 1,
+        gap: 12,
+    },
+    feedbackText: {
+        fontSize: 15,
+        fontWeight: '500',
+        flex: 1,
     },
     actionContainer: {
         padding: 20,
         borderTopWidth: 1,
-        borderTopColor: '#F0F0F0',
     },
     actionButton: {
         flexDirection: 'row',
@@ -737,12 +813,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingVertical: 16,
         borderRadius: 12,
+        gap: 8,
     },
     actionButtonText: {
         color: 'white',
         fontSize: 16,
         fontWeight: '600',
-        marginRight: 8,
     },
     loadingText: {
         fontSize: 16,

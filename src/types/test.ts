@@ -68,14 +68,9 @@ export interface CategoryPerformance {
 }
 
 export type TestMode =
-    | 'quick' // 10 random questions
-    | 'standard' // 25 random questions
-    | 'comprehensive' // 50 random questions
-    | 'category' // All questions from specific category
-    | 'weak_areas' // Focus on user's weak categories
-    | 'review' // Previously incorrect questions
-    | 'timed' // Standard test with time pressure
-    | 'mock_interview'; // Simulation of actual interview
+    | 'geography_only' // 11 geography questions only
+    | 'history_culture_comprehensive' // 165 questions covering history, geography and culture
+    | 'mock_interview'; // 30 questions simulating interview conditions
 
 export interface TestConfig {
     mode: TestMode;

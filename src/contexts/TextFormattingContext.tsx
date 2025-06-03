@@ -115,8 +115,5 @@ export const getTextStyles = (settings: TextFormattingSettings) => {
         letterSpacing: settings.letterSpacing,
     };
 
-    // Debug logging to verify settings are being applied
-    console.log('Text formatting settings applied:', styles);
-
     return styles;
 };

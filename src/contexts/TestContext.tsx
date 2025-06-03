@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useLanguage } from './LanguageContext';
+import { useLanguage, HistorySubcategory } from './LanguageContext';
 import {
     TestSession,
     TestProgress,
@@ -54,7 +54,7 @@ const STORAGE_KEYS = {
 };
 
 export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { questionsData, language } = useLanguage();
+    const { questionsData, language, historySubcategories } = useLanguage();
 
     // State management
     const [currentSession, setCurrentSession] = useState<TestSession | null>(null);
@@ -122,35 +122,84 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     const generateTestQuestions = (config: TestConfig): TestQuestion[] => {
         const allQuestions: TestQuestion[] = [];
+        const seenQuestionIds = new Set<number>();
 
-        // Collect questions from all categories
+        console.log('Starting question generation for config:', config);
+
+        // Collect questions from main categories (geography and personal)
         questionsData.categories.forEach(category => {
             if (config.categoryIds && !config.categoryIds.includes(category.id)) {
                 return;
             }
 
+            console.log(`Processing category: ${category.id}, ${category.questions.length} questions`);
+
             category.questions.forEach(question => {
-                allQuestions.push({
+                // Check for duplicates and log them
+                if (seenQuestionIds.has(question.id)) {
+                    console.warn(`Duplicate question ID found: ${question.id} in category ${category.id}`);
+                    return;
+                }
+                seenQuestionIds.add(question.id);
+
+                const processedQuestion = {
                     id: question.id,
                     question: typeof question.question === 'string' ? question.question : question.question.fr,
-                    question_vi: typeof question.question === 'string' ? undefined : question.question.vi,
+                    question_vi: (question as any).question_vi || (typeof question.question !== 'string' ? question.question.vi : undefined),
                     explanation: typeof question.explanation === 'string' ? question.explanation : question.explanation?.fr || '',
-                    explanation_vi: typeof question.explanation === 'string' ? undefined : question.explanation?.vi,
+                    explanation_vi: (question as any).explanation_vi || (typeof question.explanation !== 'string' ? question.explanation?.vi : undefined),
                     image: question.image,
                     categoryId: category.id,
                     categoryTitle: category.title,
-                });
+                };
+
+                console.log(`Added question ${question.id}: ${processedQuestion.question.substring(0, 50)}...`);
+                allQuestions.push(processedQuestion);
             });
+        });
+
+        // Collect questions from history subcategories
+        Object.values(historySubcategories).forEach((subcategory: HistorySubcategory) => {
+            if (subcategory.questions) {
+                console.log(`Processing history subcategory: ${subcategory.id}, ${subcategory.questions.length} questions`);
+
+                subcategory.questions.forEach(question => {
+                    // Check for duplicates and log them
+                    if (seenQuestionIds.has(question.id)) {
+                        console.warn(`Duplicate question ID found: ${question.id} in history subcategory ${subcategory.id}`);
+                        return;
+                    }
+                    seenQuestionIds.add(question.id);
+
+                    const processedQuestion = {
+                        id: question.id,
+                        question: question.question,
+                        question_vi: question.question_vi,
+                        explanation: question.explanation,
+                        explanation_vi: question.explanation_vi,
+                        image: question.image,
+                        categoryId: subcategory.id,
+                        categoryTitle: subcategory.title,
+                    };
+
+                    console.log(`Added history question ${question.id}: ${processedQuestion.question.substring(0, 50)}...`);
+                    allQuestions.push(processedQuestion);
+                });
+            }
         });
 
         // Filter based on test mode
         let selectedQuestions = [...allQuestions];
 
-        if (config.mode === 'weak_areas') {
-            const weakCategoryIds = getWeakCategories();
-            selectedQuestions = allQuestions.filter(q => weakCategoryIds.includes(q.categoryId));
-        } else if (config.mode === 'review') {
-            selectedQuestions = allQuestions.filter(q => testProgress.incorrectQuestions.includes(q.id));
+        if (config.mode === 'geography_only') {
+            // Only geography questions
+            selectedQuestions = allQuestions.filter(q => q.categoryId === 'geography' || q.categoryId.includes('geography'));
+        } else if (config.mode === 'history_culture_comprehensive') {
+            // Exclude personal info questions, include geography, history, and culture
+            selectedQuestions = allQuestions.filter(q => q.categoryId !== 'personal');
+        } else if (config.mode === 'mock_interview') {
+            // Mix of all categories except personal
+            selectedQuestions = allQuestions.filter(q => q.categoryId !== 'personal');
         }
 
         // Shuffle if required
@@ -158,8 +207,17 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             selectedQuestions = selectedQuestions.sort(() => Math.random() - 0.5);
         }
 
-        // Limit to requested count
-        return selectedQuestions.slice(0, config.questionCount);
+        // Limit to requested count and ensure we don't have duplicates
+        const finalQuestions = selectedQuestions.slice(0, config.questionCount);
+
+        // Log for debugging
+        console.log(`Generated ${finalQuestions.length} questions for ${config.mode} mode`);
+        console.log('Final Question IDs and titles:');
+        finalQuestions.forEach((q, index) => {
+            console.log(`${index}: ID=${q.id}, Title="${q.question.substring(0, 50)}...", Category=${q.categoryId}`);
+        });
+
+        return finalQuestions;
     };
 
     const startTest = async (config: TestConfig): Promise<void> => {
@@ -187,6 +245,30 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     const submitAnswer = async (answer: TestAnswer): Promise<void> => {
         if (!currentSession) return;
+
+        // Validate that the answer matches the current question
+        const currentQuestion = currentSession.questions[currentQuestionIndex];
+        if (!currentQuestion) {
+            console.error('No current question found at index:', currentQuestionIndex);
+            return;
+        }
+
+        if (answer.questionId !== currentQuestion.id) {
+            console.error('Answer question ID mismatch!', {
+                answerQuestionId: answer.questionId,
+                currentQuestionId: currentQuestion.id,
+                currentQuestionIndex,
+                questionTitle: currentQuestion.question.substring(0, 50)
+            });
+            // Still submit but log the error for debugging
+        }
+
+        console.log('Submitting answer:', {
+            questionId: answer.questionId,
+            currentQuestionIndex,
+            isCorrect: answer.isCorrect,
+            questionText: currentQuestion.question.substring(0, 50)
+        });
 
         const updatedSession = {
             ...currentSession,
@@ -270,9 +352,9 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const updateTestStatistics = (session: TestSession): TestStatistics => {
         const newStatistics = { ...testStatistics };
 
-        // Update category performance
-        session.questions.forEach((question, index) => {
-            const answer = session.answers[index];
+        // Update category performance - match answers to questions by ID
+        session.questions.forEach((question) => {
+            const answer = session.answers.find(a => a.questionId === question.id);
             if (!answer) return;
 
             if (!newStatistics.categoryPerformance[question.categoryId]) {

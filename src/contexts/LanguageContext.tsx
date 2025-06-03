@@ -154,33 +154,20 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                 setIsDataLoading(true);
                 setDataLoadingError(null);
 
-                console.log('Loading initial data from Firebase Storage...');
+                const { mainData, historyData, subcategoryData } = await preloadAllData();
 
-                // Load all data from Firebase Storage
-                const result = await preloadAllData();
+                if (mainData) {
+                    setHistoryCategories(historyData as HistoryCategory);
+                    setHistorySubcategories(subcategoryData);
+                    setIsTranslationLoaded(false);
 
-                if (!result.mainData) {
-                    throw new Error('Failed to load main question data');
+                    // Process main data based on current language
+                    await processMainData(mainData, language);
                 }
 
-                // Set history data
-                if (result.historyData) {
-                    setHistoryCategories(result.historyData as HistoryCategory);
-                } else {
-                    console.warn('History data not loaded');
-                }
-
-                // Set subcategory data
-                setHistorySubcategories(result.subcategoryData);
-
-                // Process main data based on current language
-                await processMainData(result.mainData, language);
-
-                console.log('Initial data loading completed successfully');
+                setIsDataLoading(false);
             } catch (error) {
-                console.error('Error loading initial data:', error);
                 setDataLoadingError(error instanceof Error ? error.message : 'Unknown error loading data');
-            } finally {
                 setIsDataLoading(false);
             }
         };
@@ -194,15 +181,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
             if (isDataLoading) return; // Don't process if initial loading is still happening
 
             try {
-                console.log(`Processing data for language: ${language}`);
-
                 // Try to get cached data first
                 const mainData = await loadMainQuestionData();
                 if (mainData) {
                     await processMainData(mainData, language);
                 }
             } catch (error) {
-                console.error('Error processing data for language change:', error);
+                // Silent error handling
             }
         };
 
@@ -226,9 +211,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                 // Preload images when data changes
                 try {
                     await preloadImages(frenchData);
-                    console.log('French images preloaded successfully');
                 } catch (error) {
-                    console.error('Error preloading French images:', error);
+                    // Silent error handling
                 }
             } else {
                 // Safety casting our JSON data to ensure correct types
@@ -295,13 +279,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                 // Preload images when data changes
                 try {
                     await preloadImages(mergedData);
-                    console.log('Multilingual images preloaded successfully');
                 } catch (error) {
-                    console.error('Error preloading multilingual images:', error);
+                    // Silent error handling
                 }
             }
         } catch (error) {
-            console.error('Error processing main data:', error);
             throw error;
         }
     };
