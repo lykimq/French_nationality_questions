@@ -8,6 +8,7 @@ import { RootStackParamList } from '../types/types';
 import { useLanguage } from '../contexts/LanguageContext';
 import CategorySlideView from '../components/CategorySlideView';
 import CategorySelectionView from '../components/CategorySelectionView';
+import FormattedText from '../components/FormattedText';
 
 type CategoryBasedQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryBasedQuestions'>;
 
@@ -63,8 +64,8 @@ const CategoryBasedQuestionsScreen = () => {
                         <Ionicons name="arrow-back" size={24} color="#fff" />
                     </TouchableOpacity>
                     <View style={commonStyles.headerTextContainer}>
-                        <Text style={commonStyles.title}>{getCurrentTitle()}</Text>
-                        <Text style={commonStyles.count}>{getCurrentCount()}</Text>
+                        <FormattedText style={commonStyles.title}>{getCurrentTitle()}</FormattedText>
+                        <FormattedText style={commonStyles.count}>{getCurrentCount()}</FormattedText>
                     </View>
                     <View style={commonStyles.languageSelector}>
                         <Text style={commonStyles.languageLabel}>FR</Text>

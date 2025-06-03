@@ -1,28 +1,43 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import FormattedText from './FormattedText';
 
 interface DataLoadingScreenProps {
     error?: string | null;
     onRetry?: () => void;
+    isLoading?: boolean;
 }
 
-const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry }) => {
+const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry, isLoading }) => {
     if (error) {
         return (
             <View style={styles.container}>
-                <View style={styles.errorContainer}>
-                    <Ionicons name="cloud-offline-outline" size={64} color="#FF6B6B" />
-                    <Text style={styles.errorTitle}>Erreur de chargement</Text>
-                    <Text style={styles.errorMessage}>{error}</Text>
-                    <Text style={styles.errorSubtext}>
-                        Vérifiez votre connexion internet et réessayez.
-                    </Text>
-                    {onRetry && (
-                        <Text style={styles.retryButton} onPress={onRetry}>
-                            Réessayer
-                        </Text>
-                    )}
+                <Ionicons name="warning" size={64} color="#FF5722" />
+                <FormattedText style={styles.errorTitle}>Erreur de chargement</FormattedText>
+                <FormattedText style={styles.errorMessage}>{error}</FormattedText>
+                <FormattedText style={styles.errorSubtext}>
+                    Veuillez vérifier votre connexion internet et réessayer.
+                </FormattedText>
+                <TouchableOpacity style={styles.retryButtonContainer} onPress={onRetry}>
+                    <FormattedText style={styles.retryButton}>
+                        Réessayer
+                    </FormattedText>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+
+    if (isLoading) {
+        return (
+            <View style={styles.container}>
+                <View style={styles.loadingContainer}>
+                    <Ionicons name="cloud-download-outline" size={48} color="#3F51B5" />
+                    <ActivityIndicator size="large" color="#3F51B5" style={styles.spinner} />
+                    <FormattedText style={styles.loadingTitle}>Chargement des données</FormattedText>
+                    <FormattedText style={styles.loadingSubtext}>
+                        Préparation des questions de naturalisation...
+                    </FormattedText>
                 </View>
             </View>
         );
@@ -33,10 +48,10 @@ const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry })
             <View style={styles.loadingContainer}>
                 <Ionicons name="cloud-download-outline" size={48} color="#3F51B5" />
                 <ActivityIndicator size="large" color="#3F51B5" style={styles.spinner} />
-                <Text style={styles.loadingTitle}>Chargement des données</Text>
-                <Text style={styles.loadingSubtext}>
+                <FormattedText style={styles.loadingTitle}>Chargement des données</FormattedText>
+                <FormattedText style={styles.loadingSubtext}>
                     Téléchargement depuis Firebase Storage...
-                </Text>
+                </FormattedText>
             </View>
         </View>
     );
@@ -61,20 +76,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 4,
         minWidth: '80%',
-    },
-    errorContainer: {
-        alignItems: 'center',
-        padding: 32,
-        backgroundColor: '#fff',
-        borderRadius: 16,
-        elevation: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        minWidth: '80%',
-        borderLeftWidth: 4,
-        borderLeftColor: '#FF6B6B',
     },
     spinner: {
         marginTop: 16,
@@ -115,16 +116,18 @@ const styles = StyleSheet.create({
         lineHeight: 18,
         marginBottom: 16,
     },
-    retryButton: {
-        fontSize: 16,
-        fontWeight: '600',
-        color: '#3F51B5',
+    retryButtonContainer: {
         paddingVertical: 12,
         paddingHorizontal: 24,
         backgroundColor: '#E8EAF6',
         borderRadius: 8,
-        textAlign: 'center',
         overflow: 'hidden',
+    },
+    retryButton: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#3F51B5',
+        textAlign: 'center',
     },
 });
 

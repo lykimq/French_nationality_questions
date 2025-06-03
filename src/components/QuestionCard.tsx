@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { MultiLangText } from '../contexts/LanguageContext';
 import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
 import ImageModal from './ImageModal';
+import FormattedText from './FormattedText';
+import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
 
 type QuestionCardProps = {
     id: number;
@@ -28,6 +30,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [imageLoading, setImageLoading] = useState(true);
     const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
+    const { settings } = useTextFormatting();
 
     const isMultilingual = typeof question !== 'string';
 
@@ -178,16 +181,16 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 android_ripple={{ color: '#E8EAF6' }}
             >
                 <View style={styles.idContainer}>
-                    <Text style={styles.id}>{id}</Text>
+                    <FormattedText style={styles.id}>{id}</FormattedText>
                 </View>
                 <View style={styles.questionContainer}>
-                    <Text style={styles.question} numberOfLines={expanded ? 0 : 2}>
+                    <FormattedText style={styles.question} numberOfLines={expanded ? 0 : 2}>
                         {getQuestionText('fr')}
-                    </Text>
+                    </FormattedText>
                     {isMultilingual && language === 'vi' && (
-                        <Text style={styles.translation} numberOfLines={expanded ? 0 : 1}>
+                        <FormattedText style={styles.translation} numberOfLines={expanded ? 0 : 1}>
                             {getQuestionText('vi')}
-                        </Text>
+                        </FormattedText>
                     )}
                 </View>
                 <View style={styles.iconContainer}>
@@ -225,9 +228,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             {imageLoading && (
                                 <View style={styles.imageLoading}>
                                     <ActivityIndicator size="large" color="#3F51B5" />
-                                    <Text style={styles.loadingText}>
+                                    <FormattedText style={styles.loadingText}>
                                         {language === 'fr' ? "Chargement de l'image..." : "Đang tải hình ảnh..."}
-                                    </Text>
+                                    </FormattedText>
                                 </View>
                             )}
                             {imageSource && (
@@ -252,9 +255,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     {image && imageError && (
                         <View style={styles.imageFallback}>
                             <Ionicons name="image-outline" size={40} color="#CCCCCC" />
-                            <Text style={styles.imageFallbackText}>
+                            <FormattedText style={styles.imageFallbackText}>
                                 {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
-                            </Text>
+                            </FormattedText>
                         </View>
                     )}
 
@@ -267,17 +270,17 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             onTouchStart={(e) => e.stopPropagation()}
                         >
                             <View style={styles.section}>
-                                <Text style={styles.sectionTitle}>Explication:</Text>
-                                <Text style={[styles.sectionContent, styles.explanationText]}>
+                                <FormattedText style={styles.sectionTitle}>Explication:</FormattedText>
+                                <FormattedText style={[styles.sectionContent, styles.explanationText]}>
                                     {formatExplanation(getExplanationText('fr'))}
-                                </Text>
+                                </FormattedText>
 
                                 {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
                                     <>
-                                        <Text style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</Text>
-                                        <Text style={[styles.sectionContent, styles.explanationText]}>
+                                        <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle]}>Giải thích:</FormattedText>
+                                        <FormattedText style={[styles.sectionContent, styles.explanationText]}>
                                             {formatExplanation(getExplanationText('vi'))}
-                                        </Text>
+                                        </FormattedText>
                                     </>
                                 )}
                             </View>

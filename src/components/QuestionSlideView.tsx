@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import QuestionCard from './QuestionCard';
 import { Question } from '../types/questions';
+import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25; // Reduced threshold for easier swipe
@@ -112,9 +113,9 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                         color={currentIndex === 0 ? '#ccc' : '#3F51B5'}
                     />
                 </TouchableOpacity>
-                <Text style={styles.pageIndicator}>
+                <FormattedText style={styles.pageIndicator}>
                     {currentIndex + 1} / {questions.length}
-                </Text>
+                </FormattedText>
                 <TouchableOpacity
                     style={styles.navButton}
                     onPress={navigateToNext}

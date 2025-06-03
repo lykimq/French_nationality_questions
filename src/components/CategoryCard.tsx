@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import FormattedText from './FormattedText';
 
 type CategoryCardProps = {
     title: string;
@@ -40,15 +41,15 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 <Ionicons name={icon as any} size={32} color="#3F51B5" />
             </View>
             <View style={styles.content}>
-                <Text style={styles.title}>{displayTitle}</Text>
+                <FormattedText style={styles.title}>{displayTitle}</FormattedText>
                 {title_vi && language === 'vi' && (
-                    <Text style={styles.titleTranslation}>{title}</Text>
+                    <FormattedText style={styles.titleTranslation}>{title}</FormattedText>
                 )}
-                <Text style={styles.description} numberOfLines={2}>
+                <FormattedText style={styles.description} numberOfLines={2}>
                     {displayDescription}
-                </Text>
+                </FormattedText>
                 <View style={styles.countContainer}>
-                    <Text style={styles.count}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</Text>
+                    <FormattedText style={styles.count}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
                 </View>
             </View>
             <Ionicons name="chevron-forward" size={24} color="#3F51B5" style={styles.arrowIcon} />

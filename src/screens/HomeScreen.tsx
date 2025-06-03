@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
+import FormattedText from '../components/FormattedText';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -60,14 +61,14 @@ const HomeScreen = () => {
 
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>
+                    <FormattedText style={styles.title}>
                         {language === 'fr' ? 'Questions de Naturalisation' : 'Câu hỏi Nhập tịch'}
-                    </Text>
-                    <Text style={styles.subtitle}>
+                    </FormattedText>
+                    <FormattedText style={styles.subtitle}>
                         {language === 'fr'
                             ? 'Préparez votre entretien de naturalisation'
                             : 'Chuẩn bị cho cuộc phỏng vấn nhập tịch của bạn'}
-                    </Text>
+                    </FormattedText>
                     <View style={styles.languageSelector}>
                         <Text style={styles.languageLabel}>FR</Text>
                         <Switch

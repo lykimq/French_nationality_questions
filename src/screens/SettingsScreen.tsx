@@ -8,10 +8,15 @@ import {
     TouchableOpacity,
     Share,
     StatusBar,
+    Alert,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
+import SliderSetting from '../components/SliderSetting';
+import FontSelector from '../components/FontSelector';
+import FormattedText from '../components/FormattedText';
 
 type SettingItemProps = {
     title: string;
@@ -36,26 +41,22 @@ const SettingItem: React.FC<SettingItemProps> = ({
     onPress,
     language = 'fr',
 }) => (
-    <TouchableOpacity
-        style={styles.settingItem}
-        onPress={onPress}
-        disabled={isSwitch || !onPress}
-        activeOpacity={0.7}
-    >
+    <TouchableOpacity style={styles.settingItem} onPress={onPress} disabled={isSwitch}>
         <View style={[styles.iconContainer, { backgroundColor: iconColor + '20' }]}>
             <Ionicons name={icon as any} size={20} color={iconColor} />
         </View>
-        <Text style={styles.settingTitle}>
+        <FormattedText style={styles.settingTitle}>
             {language === 'fr' ? title : (titleVi || title)}
-        </Text>
-        {isSwitch ? (
+        </FormattedText>
+        {isSwitch && (
             <Switch
                 value={value}
                 onValueChange={onValueChange}
-                trackColor={{ false: '#d1d1d1', true: '#3F51B5' }}
                 thumbColor="#fff"
+                trackColor={{ false: '#ccc', true: '#4CAF50' }}
             />
-        ) : (
+        )}
+        {!isSwitch && (
             <Ionicons name="chevron-forward" size={20} color="#ccc" />
         )}
     </TouchableOpacity>
@@ -88,6 +89,14 @@ export const DisplaySettingsProvider: React.FC<DisplaySettingsProviderProps> = (
 const SettingsScreen = () => {
     const { language, toggleLanguage } = useLanguage();
     const { isSlideMode, toggleSlideMode } = useDisplaySettings();
+    const {
+        settings,
+        updateFontSize,
+        updateFontFamily,
+        updateLineHeight,
+        updateLetterSpacing,
+        resetToDefaults
+    } = useTextFormatting();
 
     const shareApp = async () => {
         try {
@@ -109,7 +118,33 @@ const SettingsScreen = () => {
             ? 'Cette fonctionnalité ouvrira le Play Store/App Store dans la version finale'
             : 'Tính năng này sẽ mở Play Store/App Store trong phiên bản cuối cùng';
 
-        alert(message);
+        Alert.alert(
+            language === 'fr' ? 'Information' : 'Thông tin',
+            message
+        );
+    };
+
+    const handleResetTextSettings = () => {
+        const title = language === 'fr' ? 'Réinitialisation' : 'Đặt lại';
+        const message = language === 'fr'
+            ? 'Réinitialiser tous les paramètres de texte aux valeurs par défaut ?'
+            : 'Đặt lại tất cả cài đặt văn bản về giá trị mặc định?';
+
+        Alert.alert(
+            title,
+            message,
+            [
+                {
+                    text: language === 'fr' ? 'Annuler' : 'Hủy',
+                    style: 'cancel',
+                },
+                {
+                    text: language === 'fr' ? 'Réinitialiser' : 'Đặt lại',
+                    style: 'destructive',
+                    onPress: resetToDefaults,
+                },
+            ]
+        );
     };
 
     return (
@@ -135,10 +170,100 @@ const SettingsScreen = () => {
             </SafeAreaView>
 
             <ScrollView style={styles.scrollView}>
+                {/* Text Formatting Section */}
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>
-                        {language === 'fr' ? 'À propos' : 'Giới thiệu'}
-                    </Text>
+                    <FormattedText style={styles.sectionTitle}>
+                        {language === 'fr' ? 'Formatage du texte' : 'Định dạng văn bản'}
+                    </FormattedText>
+
+                    {/* Text Preview */}
+                    <View style={styles.previewContainer}>
+                        <FormattedText style={styles.previewLabel}>
+                            {language === 'fr' ? 'Aperçu :' : 'Xem trước:'}
+                        </FormattedText>
+
+                        {/* Question Style Preview */}
+                        <View style={styles.questionPreview}>
+                            <View style={styles.previewQuestionHeader}>
+                                <View style={styles.previewIdContainer}>
+                                    <FormattedText style={styles.previewId}>42</FormattedText>
+                                </View>
+                                <FormattedText style={styles.previewQuestion}>
+                                    {language === 'fr'
+                                        ? 'Quelle est la devise de la République française ?'
+                                        : 'Khẩu hiệu của Cộng hòa Pháp là gì?'
+                                    }
+                                </FormattedText>
+                            </View>
+                        </View>
+
+                        {/* General Text Preview */}
+                        <FormattedText style={[styles.previewText, getTextStyles(settings)]}>
+                            {language === 'fr'
+                                ? 'Ceci est un exemple de texte avec vos paramètres de formatage. Vous pouvez voir comment la taille de police, la police, l\'espacement des lignes et l\'espacement des lettres affectent l\'apparence du texte dans l\'application.'
+                                : 'Đây là một ví dụ về văn bản với cài đặt định dạng của bạn. Bạn có thể thấy cách kích thước phông chữ, phông chữ, khoảng cách dòng và khoảng cách chữ cái ảnh hưởng đến giao diện của văn bản trong ứng dụng.'
+                            }
+                        </FormattedText>
+                    </View>
+
+                    <SliderSetting
+                        title="Taille de police"
+                        titleVi="Kích thước chữ"
+                        language={language}
+                        value={settings.fontSize}
+                        minimumValue={12}
+                        maximumValue={24}
+                        step={1}
+                        onValueChange={updateFontSize}
+                        formatValue={(val) => `${val}px`}
+                    />
+
+                    <FontSelector
+                        title="Police de caractères"
+                        titleVi="Phông chữ"
+                        language={language}
+                        value={settings.fontFamily}
+                        onValueChange={updateFontFamily}
+                    />
+
+                    <SliderSetting
+                        title="Hauteur de ligne"
+                        titleVi="Chiều cao dòng"
+                        language={language}
+                        value={settings.lineHeight}
+                        minimumValue={1.0}
+                        maximumValue={2.0}
+                        step={0.1}
+                        onValueChange={updateLineHeight}
+                        formatValue={(val) => val.toFixed(1)}
+                    />
+
+                    <SliderSetting
+                        title="Espacement des lettres"
+                        titleVi="Khoảng cách chữ"
+                        language={language}
+                        value={settings.letterSpacing}
+                        minimumValue={-1}
+                        maximumValue={3}
+                        step={0.5}
+                        onValueChange={updateLetterSpacing}
+                        formatValue={(val) => `${val}px`}
+                    />
+
+                    <SettingItem
+                        title="Réinitialiser les paramètres de texte"
+                        titleVi="Đặt lại cài đặt văn bản"
+                        icon="refresh"
+                        iconColor="#FF5722"
+                        onPress={handleResetTextSettings}
+                        language={language}
+                    />
+                </View>
+
+                <View style={styles.section}>
+                    <FormattedText style={styles.sectionTitle}>
+                        {language === 'fr' ? 'Autres options' : 'Tùy chọn khác'}
+                    </FormattedText>
                     <SettingItem
                         title="Partager l'application"
                         titleVi="Chia sẻ ứng dụng"
@@ -226,6 +351,27 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#f0f0f0',
     },
+    previewContainer: {
+        paddingHorizontal: 15,
+        paddingVertical: 15,
+        backgroundColor: '#f9f9f9',
+        borderBottomWidth: 1,
+        borderBottomColor: '#f0f0f0',
+    },
+    previewLabel: {
+        fontSize: 14,
+        fontWeight: '600',
+        color: '#666',
+        marginBottom: 8,
+    },
+    previewText: {
+        color: '#333',
+        backgroundColor: '#fff',
+        padding: 12,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
+    },
     settingItem: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -246,6 +392,38 @@ const styles = StyleSheet.create({
     settingTitle: {
         flex: 1,
         fontSize: 16,
+        color: '#333',
+    },
+    questionPreview: {
+        padding: 10,
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        borderColor: '#f0f0f0',
+        borderRadius: 8,
+        marginBottom: 10,
+    },
+    previewQuestionHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 5,
+    },
+    previewIdContainer: {
+        width: 20,
+        height: 20,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#f0f0f0',
+        marginRight: 10,
+    },
+    previewId: {
+        fontSize: 12,
+        fontWeight: 'bold',
+        color: '#333',
+    },
+    previewQuestion: {
+        fontSize: 14,
+        fontWeight: '600',
         color: '#333',
     },
 });

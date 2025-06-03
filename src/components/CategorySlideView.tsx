@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import QuestionCard from './QuestionCard';
 import { MultiLangText } from '../contexts/LanguageContext';
+import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -154,10 +155,12 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
                     />
                 </TouchableOpacity>
                 <View style={styles.navigationInfo}>
-                    <Text style={styles.categoryTitle}>{currentCategory ? getLocalizedTitle(currentCategory) : ''}</Text>
-                    <Text style={styles.pageIndicator}>
+                    <FormattedText style={styles.categoryTitle}>
+                        {language === 'fr' ? currentCategory.title : currentCategory.title_vi || currentCategory.title}
+                    </FormattedText>
+                    <FormattedText style={styles.pageIndicator}>
                         {currentQuestionIndex + 1} / {totalQuestions}
-                    </Text>
+                    </FormattedText>
                 </View>
                 <TouchableOpacity
                     style={styles.navButton}

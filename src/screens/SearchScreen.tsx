@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import QuestionCard from '../components/QuestionCard';
 import { useLanguage, MultiLangText } from '../contexts/LanguageContext';
+import FormattedText from '../components/FormattedText';
 
 // Define the search result question type
 interface SearchResultQuestion {
@@ -24,9 +25,9 @@ interface SearchResultQuestion {
 }
 
 const SearchScreen = () => {
+    const { language, toggleLanguage, questionsData, isTranslationLoaded, historyCategories, historySubcategories } = useLanguage();
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
-    const { language, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
 
     // Flatten all questions from all categories and add categoryId
     const allQuestions = questionsData.categories.flatMap(category =>
@@ -83,9 +84,9 @@ const SearchScreen = () => {
 
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>
+                    <FormattedText style={styles.title}>
                         {language === 'fr' ? 'Rechercher' : 'Tìm kiếm'}
-                    </Text>
+                    </FormattedText>
                     <View style={styles.languageSelector}>
                         <Text style={styles.languageLabel}>FR</Text>
                         <Switch
@@ -117,48 +118,51 @@ const SearchScreen = () => {
                 </View>
             </View>
 
-            <ScrollView
-                style={styles.scrollView}
-                contentContainerStyle={styles.contentContainer}
-                showsVerticalScrollIndicator={false}
-            >
-                {searchResults.length > 0 ? (
-                    <>
-                        <Text style={styles.resultsTitle}>
-                            {searchResults.length} {language === 'fr' ?
-                                (searchResults.length === 1 ? 'résultat' : 'résultats') :
-                                'kết quả'}
-                        </Text>
-                        {searchResults.map(question => (
-                            <QuestionCard
-                                key={question.id}
-                                id={question.id}
-                                question={question.question}
-                                explanation={question.explanation}
-                                language={language}
-                                image={question.image}
-                            />
-                        ))}
-                    </>
-                ) : searchQuery !== '' ? (
-                    <View style={styles.noResults}>
-                        <Ionicons name="search-outline" size={50} color="#ccc" />
-                        <Text style={styles.noResultsText}>
-                            {language === 'fr' ? 'Aucun résultat trouvé' : 'Không tìm thấy kết quả nào'}
-                        </Text>
-                    </View>
-                ) : (
-                    <View style={styles.noResults}>
-                        <Ionicons name="search" size={50} color="#ccc" />
-                        <Text style={styles.noResultsText}>
-                            {language === 'fr'
-                                ? 'Entrez un terme de recherche pour trouver des questions'
-                                : 'Nhập từ khóa tìm kiếm để tìm câu hỏi'
-                            }
-                        </Text>
-                    </View>
-                )}
-            </ScrollView>
+            {searchQuery === '' ? (
+                <View style={styles.noResults}>
+                    <Ionicons name="search-outline" size={64} color="#ccc" />
+                    <FormattedText style={styles.noResultsText}>
+                        {language === 'fr'
+                            ? 'Tapez votre question pour commencer la recherche'
+                            : 'Nhập câu hỏi của bạn để bắt đầu tìm kiếm'}
+                    </FormattedText>
+                </View>
+            ) : (
+                <ScrollView
+                    style={styles.scrollView}
+                    contentContainerStyle={styles.contentContainer}
+                    showsVerticalScrollIndicator={false}
+                >
+                    {searchResults.length > 0 ? (
+                        <>
+                            <FormattedText style={styles.resultsTitle}>
+                                {language === 'fr'
+                                    ? `${searchResults.length} résultat${searchResults.length > 1 ? 's' : ''} trouvé${searchResults.length > 1 ? 's' : ''}`
+                                    : `Tìm thấy ${searchResults.length} kết quả`}
+                            </FormattedText>
+                            {searchResults.map((result) => (
+                                <QuestionCard
+                                    key={result.id}
+                                    id={result.id}
+                                    question={result.question}
+                                    explanation={result.explanation}
+                                    image={result.image}
+                                    language={language}
+                                />
+                            ))}
+                        </>
+                    ) : (
+                        <View style={styles.noResults}>
+                            <Ionicons name="document-text-outline" size={64} color="#ccc" />
+                            <FormattedText style={styles.noResultsText}>
+                                {language === 'fr'
+                                    ? 'Aucune question trouvée pour votre recherche'
+                                    : 'Không tìm thấy câu hỏi nào cho tìm kiếm của bạn'}
+                            </FormattedText>
+                        </View>
+                    )}
+                </ScrollView>
+            )}
         </View>
     );
 };

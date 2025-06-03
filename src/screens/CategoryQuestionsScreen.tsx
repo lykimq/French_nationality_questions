@@ -8,6 +8,7 @@ import { RootStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
 import QuestionSlideView from '../components/QuestionSlideView';
 import { Question } from '../types/questions';
+import FormattedText from '../components/FormattedText';
 
 type CategoryQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryQuestions'>;
 type CategoryQuestionsNavigationProp = NativeStackNavigationProp<RootStackParamList, 'CategoryQuestions'>;
@@ -55,8 +56,8 @@ const CategoryQuestionsScreen = () => {
                         <Ionicons name="arrow-back" size={24} color="#fff" />
                     </TouchableOpacity>
                     <View style={styles.headerTextContainer}>
-                        <Text style={styles.title}>{displayTitle}</Text>
-                        <Text style={styles.count}>{questionsCount}</Text>
+                        <FormattedText style={styles.title}>{displayTitle}</FormattedText>
+                        <FormattedText style={styles.count}>{questionsCount}</FormattedText>
                     </View>
                     <View style={styles.languageSelector}>
                         <Text style={styles.languageLabel}>FR</Text>
