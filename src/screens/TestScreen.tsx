@@ -22,7 +22,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
-import { TestMode, TestConfig } from '../types/test';
+import { TestMode, TestConfig, TestRecommendation } from '../types/test';
 import { TestStackParamList } from '../types/types';
 
 const { width, height } = Dimensions.get('window');
@@ -176,6 +176,118 @@ const TestScreen = () => {
         } finally {
             setIsStartingTest(false);
             setShowModeModal(false);
+        }
+    };
+
+    const handleRecommendationAction = async (recommendation: TestRecommendation) => {
+        try {
+            if (recommendation.type === 'review_questions' && recommendation.questionIds && recommendation.questionIds.length > 0) {
+                // Show information about incorrect questions and suggest using search
+                const questionCount = recommendation.questionIds.length;
+                const sampleIds = recommendation.questionIds.slice(-5).join(', '); // Show last 5 IDs
+
+                Alert.alert(
+                    getLocalizedText('Questions à réviser', 'Câu hỏi cần xem lại'),
+                    getLocalizedText(
+                        `Vous avez ${questionCount} questions à réviser.\n\nQuelques questions récentes: ${sampleIds}\n\nUtilisez la recherche pour trouver des questions spécifiques par numéro.`,
+                        `Bạn có ${questionCount} câu hỏi cần xem lại.\n\nMột số câu hỏi gần đây: ${sampleIds}\n\nSử dụng tìm kiếm để tìm câu hỏi cụ thể theo số.`
+                    ),
+                    [
+                        {
+                            text: getLocalizedText('Aller à la recherche', 'Đi tới tìm kiếm'),
+                            onPress: () => {
+                                // Navigate to Search tab through the main navigator
+                                (navigation as any).navigate('SearchTab');
+                            }
+                        },
+                        {
+                            text: getLocalizedText('Plus tard', 'Để sau'),
+                            style: 'cancel'
+                        }
+                    ]
+                );
+            } else if (recommendation.type === 'study_category' && recommendation.categoryIds && recommendation.categoryIds.length > 0) {
+                // Show category information and suggest using search
+                const categories = recommendation.categoryIds.join(', ');
+                Alert.alert(
+                    getLocalizedText('Étude par catégorie', 'Học theo chủ đề'),
+                    getLocalizedText(
+                        `Catégories à améliorer: ${categories}\n\nUtilisez la recherche pour trouver des questions de ces catégories spécifiques.`,
+                        `Các chủ đề cần cải thiện: ${categories}\n\nSử dụng tìm kiếm để tìm câu hỏi từ các chủ đề này.`
+                    ),
+                    [
+                        {
+                            text: getLocalizedText('Aller à la recherche', 'Đi tới tìm kiếm'),
+                            onPress: () => {
+                                (navigation as any).navigate('SearchTab');
+                            }
+                        },
+                        {
+                            text: getLocalizedText('Annuler', 'Hủy'),
+                            style: 'cancel'
+                        }
+                    ]
+                );
+            } else if (recommendation.type === 'good_job') {
+                // Suggest mock interview for excellent performers
+                const mockInterviewMode = testModes.find(m => m.mode === 'mock_interview');
+                if (mockInterviewMode) {
+                    Alert.alert(
+                        getLocalizedText('Prêt pour un défi ?', 'Sẵn sàng cho thử thách?'),
+                        getLocalizedText(
+                            'Vous performez excellemment ! Voulez-vous essayer un entretien fictif ?',
+                            'Bạn đang thể hiện xuất sắc! Bạn có muốn thử phỏng vấn giả lập không?'
+                        ),
+                        [
+                            {
+                                text: getLocalizedText('Commencer l\'entretien', 'Bắt đầu phỏng vấn'),
+                                onPress: () => {
+                                    setSelectedMode('mock_interview');
+                                    setShowModeModal(true);
+                                }
+                            },
+                            {
+                                text: getLocalizedText('Plus tard', 'Để sau'),
+                                style: 'cancel'
+                            }
+                        ]
+                    );
+                }
+            } else if (recommendation.type === 'practice_more') {
+                // Suggest geography practice for beginners
+                const geographyMode = testModes.find(m => m.mode === 'geography_only');
+                if (geographyMode) {
+                    Alert.alert(
+                        getLocalizedText('Commencer par les bases', 'Bắt đầu từ cơ bản'),
+                        getLocalizedText(
+                            'Nous vous recommandons de commencer par le test de géographie pour établir de bonnes bases.',
+                            'Chúng tôi khuyên bạn nên bắt đầu với bài kiểm tra địa lý để thiết lập nền tảng vững chắc.'
+                        ),
+                        [
+                            {
+                                text: getLocalizedText('Commencer le test', 'Bắt đầu bài test'),
+                                onPress: () => {
+                                    setSelectedMode('geography_only');
+                                    setShowModeModal(true);
+                                }
+                            },
+                            {
+                                text: getLocalizedText('Annuler', 'Hủy'),
+                                style: 'cancel'
+                            }
+                        ]
+                    );
+                }
+            }
+        } catch (error) {
+            console.error('Error handling recommendation action:', error);
+            Alert.alert(
+                getLocalizedText('Erreur', 'Lỗi'),
+                getLocalizedText(
+                    'Une erreur s\'est produite. Veuillez réessayer.',
+                    'Đã xảy ra lỗi. Vui lòng thử lại.'
+                )
+            );
         }
     };
 
@@ -472,23 +584,49 @@ const TestScreen = () => {
                             <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
                                 {getLocalizedText('Recommandations', 'Đề xuất')}
                             </FormattedText>
-                            {recommendations.slice(0, 2).map((rec, index) => (
-                                <View key={index} style={styles.recommendationItem}>
-                                    <Ionicons
-                                        name={rec.type === 'good_job' ? 'trophy' : 'bulb'}
-                                        size={20}
-                                        color={theme.colors.primary}
-                                    />
-                                    <View style={styles.recommendationContent}>
-                                        <FormattedText style={[styles.recommendationTitle, { color: theme.colors.text }]}>
-                                            {getLocalizedText(rec.title_fr, rec.title_vi)}
-                                        </FormattedText>
-                                        <FormattedText style={[styles.recommendationDescription, { color: theme.colors.textMuted }]}>
-                                            {getLocalizedText(rec.description_fr, rec.description_vi)}
-                                        </FormattedText>
-                                    </View>
-                                </View>
-                            ))}
+                            {recommendations.slice(0, 2).map((rec, index) => {
+                                const isActionable = (rec.type === 'review_questions' && rec.questionIds && rec.questionIds.length > 0) ||
+                                    (rec.type === 'study_category' && rec.categoryIds && rec.categoryIds.length > 0) ||
+                                    rec.type === 'good_job' || rec.type === 'practice_more';
+
+                                const RecommendationComponent = isActionable ? TouchableOpacity : View;
+
+                                return (
+                                    <RecommendationComponent
+                                        key={index}
+                                        style={[
+                                            styles.recommendationItem,
+                                            isActionable && styles.recommendationItemTouchable
+                                        ]}
+                                        onPress={isActionable ? () => handleRecommendationAction(rec) : undefined}
+                                        activeOpacity={isActionable ? 0.7 : 1}
+                                    >
+                                        <Ionicons
+                                            name={rec.type === 'good_job' ? 'trophy' :
+                                                rec.type === 'review_questions' ? 'refresh' :
+                                                    rec.type === 'study_category' ? 'book' : 'bulb'}
+                                            size={20}
+                                            color={theme.colors.primary}
+                                        />
+                                        <View style={styles.recommendationContent}>
+                                            <FormattedText style={[styles.recommendationTitle, { color: theme.colors.text }]}>
+                                                {getLocalizedText(rec.title_fr, rec.title_vi)}
+                                            </FormattedText>
+                                            <FormattedText style={[styles.recommendationDescription, { color: theme.colors.textMuted }]}>
+                                                {getLocalizedText(rec.description_fr, rec.description_vi)}
+                                            </FormattedText>
+                                            {isActionable && (
+                                                <FormattedText style={[styles.recommendationAction, { color: theme.colors.primary }]}>
+                                                    {getLocalizedText(rec.actionText_fr, rec.actionText_vi)}
+                                                </FormattedText>
+                                            )}
+                                        </View>
+                                        {isActionable && (
+                                            <Ionicons name="chevron-forward" size={20} color={theme.colors.primary} />
+                                        )}
+                                    </RecommendationComponent>
+                                );
+                            })}
                         </View>
                     )}
 
@@ -615,6 +753,13 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         marginBottom: 12,
     },
+    recommendationItemTouchable: {
+        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+        borderRadius: 12,
+        padding: 12,
+        marginHorizontal: -12,
+        marginVertical: -4,
+    },
     recommendationContent: {
         flex: 1,
         marginLeft: 12,
@@ -627,6 +772,11 @@ const styles = StyleSheet.create({
     recommendationDescription: {
         fontSize: 14,
         lineHeight: 20,
+    },
+    recommendationAction: {
+        fontSize: 14,
+        fontWeight: '500',
+        marginTop: 4,
     },
     modesSection: {
         marginBottom: 20,
