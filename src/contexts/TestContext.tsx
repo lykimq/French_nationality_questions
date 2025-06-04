@@ -83,9 +83,28 @@ export const serializeTestResult = (result: TestResult): SerializableTestResult 
     // Serialize category performance with Date conversion
     const serializedCategoryPerformance: any = {};
     Object.entries(result.statistics.categoryPerformance).forEach(([key, perf]) => {
+        let lastAttemptedISO: string | undefined = undefined;
+
+        // Safely convert lastAttempted to ISO string
+        if (perf.lastAttempted) {
+            try {
+                // Check if it's already a Date object
+                if (perf.lastAttempted instanceof Date) {
+                    lastAttemptedISO = perf.lastAttempted.toISOString();
+                } else if (typeof perf.lastAttempted === 'string') {
+                    // If it's a string, try to parse it as a date
+                    lastAttemptedISO = new Date(perf.lastAttempted).toISOString();
+                } else {
+                    console.warn(`Invalid lastAttempted format for category ${key}:`, perf.lastAttempted);
+                }
+            } catch (error) {
+                console.error(`Error serializing lastAttempted for category ${key}:`, error);
+            }
+        }
+
         serializedCategoryPerformance[key] = {
             ...perf,
-            lastAttempted: perf.lastAttempted?.toISOString()
+            lastAttempted: lastAttemptedISO
         };
     });
 
@@ -192,6 +211,33 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             if (statisticsData) {
                 const parsedStatistics = JSON.parse(statisticsData);
                 console.log('📊 Loading test statistics');
+
+                // Validate and clean up category performance data
+                if (parsedStatistics.categoryPerformance) {
+                    Object.keys(parsedStatistics.categoryPerformance).forEach(categoryId => {
+                        const catPerf = parsedStatistics.categoryPerformance[categoryId];
+
+                        // Clean up lastAttempted field if it's not a valid date
+                        if (catPerf.lastAttempted) {
+                            try {
+                                // If it's a string, try to convert it to a Date
+                                if (typeof catPerf.lastAttempted === 'string') {
+                                    catPerf.lastAttempted = new Date(catPerf.lastAttempted);
+                                }
+
+                                // Validate that it's a valid Date
+                                if (!(catPerf.lastAttempted instanceof Date) || isNaN(catPerf.lastAttempted.getTime())) {
+                                    console.warn(`Invalid lastAttempted date for category ${categoryId}, removing...`);
+                                    delete catPerf.lastAttempted;
+                                }
+                            } catch (error) {
+                                console.warn(`Error parsing lastAttempted for category ${categoryId}:`, error);
+                                delete catPerf.lastAttempted;
+                            }
+                        }
+                    });
+                }
+
                 setTestStatistics(parsedStatistics);
             }
 
@@ -306,6 +352,11 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         } else if (config.mode === 'mock_interview') {
             // Mix of all categories except personal
             selectedQuestions = allQuestions.filter(q => q.categoryId !== 'personal');
+        } else if (config.mode.startsWith('subcategory_')) {
+            // Handle subcategory-specific tests
+            const subcategoryId = config.mode.replace('subcategory_', '');
+            selectedQuestions = allQuestions.filter(q => q.categoryId === subcategoryId);
+            console.log(`Filtering for subcategory: ${subcategoryId}, found ${selectedQuestions.length} questions`);
         }
 
         // Shuffle if required

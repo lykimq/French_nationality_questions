@@ -273,6 +273,10 @@ const TestScreen = () => {
         navigation.navigate('Progress', undefined);
     };
 
+    const handleNavigateToSubcategoryTests = () => {
+        navigation.navigate('SubcategoryTest', undefined);
+    };
+
     const renderProgressCard = () => (
         <TouchableOpacity
             style={[styles.progressCard, { backgroundColor: theme.colors.surface }]}
@@ -614,6 +618,46 @@ const TestScreen = () => {
                         </FormattedText>
                         {testModes.map(renderTestModeCard)}
                     </View>
+
+                    {/* Subcategory Tests Section */}
+                    <TouchableOpacity
+                        style={[styles.subcategoryTestCard, { backgroundColor: theme.colors.surface }]}
+                        onPress={handleNavigateToSubcategoryTests}
+                        activeOpacity={0.8}
+                    >
+                        <View style={[styles.subcategoryIconContainer, { backgroundColor: '#8E44AD20' }]}>
+                            <Ionicons name="library" size={32} color="#8E44AD" />
+                        </View>
+
+                        <View style={styles.subcategoryContent}>
+                            <FormattedText style={[styles.subcategoryTitle, { color: theme.colors.text }]}>
+                                {getLocalizedText('Tests par Catégorie', 'Bài Kiểm Tra Theo Chủ Đề')}
+                            </FormattedText>
+                            <FormattedText style={[styles.subcategoryDescription, { color: theme.colors.textMuted }]}>
+                                {getLocalizedText(
+                                    'Testez vos connaissances sur des sujets spécifiques comme la monarchie, la révolution, les arts, etc.',
+                                    'Kiểm tra kiến thức của bạn về các chủ đề cụ thể như quân chủ, cách mạng, nghệ thuật, v.v.'
+                                )}
+                            </FormattedText>
+
+                            <View style={styles.subcategoryDetails}>
+                                <View style={styles.subcategoryDetail}>
+                                    <Ionicons name="grid" size={16} color={theme.colors.textMuted} />
+                                    <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
+                                        12 {getLocalizedText('catégories', 'chủ đề')}
+                                    </FormattedText>
+                                </View>
+                                <View style={styles.subcategoryDetail}>
+                                    <Ionicons name="flash" size={16} color={theme.colors.textMuted} />
+                                    <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
+                                        {getLocalizedText('Tests courts', 'Bài test ngắn')}
+                                    </FormattedText>
+                                </View>
+                            </View>
+                        </View>
+
+                        <Ionicons name="chevron-forward" size={24} color={theme.colors.textMuted} />
+                    </TouchableOpacity>
                 </ScrollView>
             </SafeAreaView>
 
@@ -929,6 +973,52 @@ const styles = StyleSheet.create({
     viewDetailsText: {
         fontSize: 12,
         fontStyle: 'italic',
+    },
+    subcategoryTestCard: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 20,
+        borderRadius: 16,
+        marginBottom: 16,
+        elevation: 2,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+    },
+    subcategoryIconContainer: {
+        width: 60,
+        height: 60,
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 16,
+    },
+    subcategoryContent: {
+        flex: 1,
+    },
+    subcategoryTitle: {
+        fontSize: 18,
+        fontWeight: '600',
+        marginBottom: 4,
+    },
+    subcategoryDescription: {
+        fontSize: 14,
+        marginBottom: 8,
+        lineHeight: 20,
+    },
+    subcategoryDetails: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
+    subcategoryDetail: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginRight: 16,
+        marginBottom: 4,
+    },
+    subcategoryDetailText: {
+        marginLeft: 4,
+        fontSize: 12,
     },
 });
 

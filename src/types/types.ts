@@ -40,6 +40,7 @@ export type HomeStackParamList = {
 // Test Stack Navigator types
 export type TestStackParamList = {
     Test: undefined;
+    SubcategoryTest: undefined;
     TestQuestion: undefined;
     TestResult: { testResult: SerializableTestResult } | undefined;
     Progress: undefined;

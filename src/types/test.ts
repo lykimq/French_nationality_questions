@@ -70,7 +70,20 @@ export interface CategoryPerformance {
 export type TestMode =
     | 'geography_only' // 11 geography questions only
     | 'history_culture_comprehensive' // 165 questions covering history, geography and culture
-    | 'mock_interview'; // 30 questions simulating interview conditions
+    | 'mock_interview' // 30 questions simulating interview conditions
+    // Subcategory-specific test modes
+    | 'subcategory_local_gov' // Administration Locale
+    | 'subcategory_monarchy' // Monarchie & Royauté
+    | 'subcategory_revolution' // Révolution Française
+    | 'subcategory_wars' // Guerres & Résistance
+    | 'subcategory_republic' // République & Institutions
+    | 'subcategory_democracy' // Démocratie & Citoyenneté
+    | 'subcategory_economy' // Économie & Monnaie
+    | 'subcategory_culture' // Culture & Patrimoine
+    | 'subcategory_arts' // Arts & Littérature
+    | 'subcategory_celebrities' // Personnalités & Médias
+    | 'subcategory_sports' // Sports
+    | 'subcategory_holidays'; // Jours Fériés
 
 export interface TestConfig {
     mode: TestMode;
