@@ -182,30 +182,8 @@ const TestScreen = () => {
     const handleRecommendationAction = async (recommendation: TestRecommendation) => {
         try {
             if (recommendation.type === 'review_questions' && recommendation.questionIds && recommendation.questionIds.length > 0) {
-                // Show information about incorrect questions and suggest using search
-                const questionCount = recommendation.questionIds.length;
-                const sampleIds = recommendation.questionIds.slice(-5).join(', '); // Show last 5 IDs
-
-                Alert.alert(
-                    getLocalizedText('Questions à réviser', 'Câu hỏi cần xem lại'),
-                    getLocalizedText(
-                        `Vous avez ${questionCount} questions à réviser.\n\nQuelques questions récentes: ${sampleIds}\n\nUtilisez la recherche pour trouver des questions spécifiques par numéro.`,
-                        `Bạn có ${questionCount} câu hỏi cần xem lại.\n\nMột số câu hỏi gần đây: ${sampleIds}\n\nSử dụng tìm kiếm để tìm câu hỏi cụ thể theo số.`
-                    ),
-                    [
-                        {
-                            text: getLocalizedText('Aller à la recherche', 'Đi tới tìm kiếm'),
-                            onPress: () => {
-                                // Navigate to Search tab through the main navigator
-                                (navigation as any).navigate('SearchTab');
-                            }
-                        },
-                        {
-                            text: getLocalizedText('Plus tard', 'Để sau'),
-                            style: 'cancel'
-                        }
-                    ]
-                );
+                // Navigate directly to the review screen
+                navigation.navigate('Review', undefined);
             } else if (recommendation.type === 'study_category' && recommendation.categoryIds && recommendation.categoryIds.length > 0) {
                 // Show category information and suggest using search
                 const categories = recommendation.categoryIds.join(', ');

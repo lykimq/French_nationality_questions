@@ -14,6 +14,7 @@ import TestScreen from '../screens/TestScreen';
 import TestQuestionScreen from '../screens/TestQuestionScreen';
 import TestResultScreen from '../screens/TestResultScreen';
 import ProgressScreen from '../screens/ProgressScreen';
+import ReviewScreen from '../screens/ReviewScreen';
 import DataLoadingScreen from '../components/DataLoadingScreen';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
@@ -72,6 +73,7 @@ const TestStack = () => {
                 }}
             />
             <Stack.Screen name="Progress" component={ProgressScreen} />
+            <Stack.Screen name="Review" component={ReviewScreen} />
         </Stack.Navigator>
     );
 };

@@ -43,4 +43,5 @@ export type TestStackParamList = {
     TestQuestion: undefined;
     TestResult: { testResult: SerializableTestResult } | undefined;
     Progress: undefined;
+    Review: undefined;
 };

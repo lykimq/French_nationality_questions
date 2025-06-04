@@ -34,6 +34,7 @@ interface TestContextType {
     getCurrentQuestion: () => TestQuestion | null;
     getNextQuestion: () => TestQuestion | null;
     getPreviousQuestion: () => TestQuestion | null;
+    getIncorrectQuestions: () => TestQuestion[];
 
     // Progress tracking
     refreshProgress: () => Promise<void>;
@@ -579,6 +580,66 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return currentSession.questions[currentQuestionIndex - 1];
     };
 
+    const getIncorrectQuestions = (): TestQuestion[] => {
+        if (testProgress.incorrectQuestions.length === 0) {
+            return [];
+        }
+
+        const allQuestions: TestQuestion[] = [];
+        const seenQuestionIds = new Set<number>();
+
+        // Collect questions from main categories (geography and personal)
+        questionsData.categories.forEach(category => {
+            category.questions.forEach(question => {
+                if (seenQuestionIds.has(question.id)) {
+                    return;
+                }
+                seenQuestionIds.add(question.id);
+
+                const processedQuestion = {
+                    id: question.id,
+                    question: typeof question.question === 'string' ? question.question : question.question.fr,
+                    question_vi: (question as any).question_vi || (typeof question.question !== 'string' ? question.question.vi : undefined),
+                    explanation: typeof question.explanation === 'string' ? question.explanation : question.explanation?.fr || '',
+                    explanation_vi: (question as any).explanation_vi || (typeof question.explanation !== 'string' ? question.explanation?.vi : undefined),
+                    image: question.image,
+                    categoryId: category.id,
+                    categoryTitle: category.title,
+                };
+
+                allQuestions.push(processedQuestion);
+            });
+        });
+
+        // Collect questions from history subcategories
+        Object.values(historySubcategories).forEach((subcategory: HistorySubcategory) => {
+            if (subcategory.questions) {
+                subcategory.questions.forEach(question => {
+                    if (seenQuestionIds.has(question.id)) {
+                        return;
+                    }
+                    seenQuestionIds.add(question.id);
+
+                    const processedQuestion = {
+                        id: question.id,
+                        question: question.question,
+                        question_vi: question.question_vi,
+                        explanation: question.explanation,
+                        explanation_vi: question.explanation_vi,
+                        image: question.image,
+                        categoryId: subcategory.id,
+                        categoryTitle: subcategory.title,
+                    };
+
+                    allQuestions.push(processedQuestion);
+                });
+            }
+        });
+
+        // Filter to only include questions that were answered incorrectly
+        return allQuestions.filter(q => testProgress.incorrectQuestions.includes(q.id));
+    };
+
     const refreshProgress = useCallback(async (): Promise<void> => {
         console.log('🔄 Refreshing progress...');
         await loadTestData();
@@ -662,6 +723,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         getCurrentQuestion,
         getNextQuestion,
         getPreviousQuestion,
+        getIncorrectQuestions,
         refreshProgress,
         getWeakCategories,
         getStrongCategories,
