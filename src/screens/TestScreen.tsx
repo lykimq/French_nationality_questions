@@ -23,11 +23,11 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
 import { TestMode, TestConfig } from '../types/test';
-import { RootStackParamList } from '../types/types';
+import { TestStackParamList } from '../types/types';
 
 const { width, height } = Dimensions.get('window');
 
-type TestScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
+type TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
 interface TestModeOption {
     mode: TestMode;
@@ -147,13 +147,24 @@ const TestScreen = () => {
         }
     };
 
+    const handleViewDetailedProgress = () => {
+        navigation.navigate('Progress', undefined);
+    };
+
     const renderProgressCard = () => (
-        <View style={[styles.progressCard, { backgroundColor: theme.colors.surface }]}>
+        <TouchableOpacity
+            style={[styles.progressCard, { backgroundColor: theme.colors.surface }]}
+            onPress={handleViewDetailedProgress}
+            activeOpacity={0.8}
+        >
             <View style={styles.progressHeader}>
                 <FormattedText style={[styles.progressTitle, { color: theme.colors.text }]}>
                     {language === 'fr' ? 'Votre Progression' : 'Tiến độ của bạn'}
                 </FormattedText>
-                <Ionicons name="analytics" size={24} color={theme.colors.primary} />
+                <View style={styles.progressHeaderRight}>
+                    <Ionicons name="analytics" size={24} color={theme.colors.primary} />
+                    <Ionicons name="chevron-forward" size={20} color={theme.colors.textMuted} style={{ marginLeft: 8 }} />
+                </View>
             </View>
 
             <View style={styles.progressStats}>
@@ -212,7 +223,13 @@ const TestScreen = () => {
                     </FormattedText>
                 </View>
             )}
-        </View>
+
+            <View style={styles.viewDetailsHint}>
+                <FormattedText style={[styles.viewDetailsText, { color: theme.colors.textMuted }]}>
+                    {language === 'fr' ? 'Appuyez pour voir les détails' : 'Nhấn để xem chi tiết'}
+                </FormattedText>
+            </View>
+        </TouchableOpacity>
     );
 
     const renderTestModeCard = (modeOption: TestModeOption) => (
@@ -509,6 +526,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 16,
     },
+    progressHeaderRight: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
     progressTitle: {
         fontSize: 20,
         fontWeight: '600',
@@ -533,6 +554,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: 12,
     },
     trendText: {
         marginLeft: 6,
@@ -734,6 +756,16 @@ const styles = StyleSheet.create({
     },
     loadingText: {
         fontSize: 16,
+    },
+    viewDetailsHint: {
+        alignItems: 'center',
+        paddingTop: 12,
+        borderTopWidth: 1,
+        borderTopColor: '#E0E0E0',
+    },
+    viewDetailsText: {
+        fontSize: 12,
+        fontStyle: 'italic',
     },
 });
 

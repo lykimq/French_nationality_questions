@@ -4,18 +4,18 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../types/types';
+import { HomeStackParamList } from '../types/types';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import CategorySlideView from '../components/CategorySlideView';
 import CategorySelectionView from '../components/CategorySelectionView';
 import FormattedText from '../components/FormattedText';
 
-type CategoryBasedQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryBasedQuestions'>;
+type CategoryBasedQuestionsRouteProp = RouteProp<HomeStackParamList, 'CategoryBasedQuestions'>;
 
 const CategoryBasedQuestionsScreen = () => {
-    const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
     const route = useRoute<CategoryBasedQuestionsRouteProp>();
+    const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>();
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { categories, title } = route.params;

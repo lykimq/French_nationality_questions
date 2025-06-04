@@ -12,7 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../contexts/ThemeContext';
@@ -20,43 +20,52 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
 import { TestResult } from '../types/test';
-import { RootStackParamList } from '../types/types';
+import { TestStackParamList } from '../types/types';
 
 const { width, height } = Dimensions.get('window');
 
-type TestResultScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
+type TestResultScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
+type TestResultScreenRouteProp = RouteProp<TestStackParamList, 'TestResult'>;
 
 const TestResultScreen = () => {
     const navigation = useNavigation<TestResultScreenNavigationProp>();
+    const route = useRoute<TestResultScreenRouteProp>();
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
-    const { testProgress, testStatistics, generateRecommendations } = useTest();
+    const { testProgress, testStatistics, generateRecommendations, cancelTest } = useTest();
 
     const [testResult, setTestResult] = useState<TestResult | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate getting test result - in real implementation this would come from navigation params
-        const mockResult: TestResult = {
-            session: {
-                id: Date.now().toString(),
-                mode: 'mock_interview',
-                questions: [],
-                answers: [],
-                startTime: new Date(),
-                endTime: new Date(),
-                isCompleted: true,
-                score: 85,
-                totalQuestions: 25,
-                correctAnswers: 21,
-            },
-            statistics: testStatistics,
-            recommendations: generateRecommendations(),
-        };
+        // Get test result from navigation params or create a fallback
+        const resultFromParams = route.params?.testResult;
 
-        setTestResult(mockResult);
+        if (resultFromParams) {
+            setTestResult(resultFromParams);
+        } else {
+            // Fallback: create result from current test context data
+            const fallbackResult: TestResult = {
+                session: {
+                    id: Date.now().toString(),
+                    mode: 'mock_interview',
+                    questions: [],
+                    answers: [],
+                    startTime: new Date(),
+                    endTime: new Date(),
+                    isCompleted: true,
+                    score: testProgress.averageScore || 0,
+                    totalQuestions: 25,
+                    correctAnswers: Math.round((testProgress.averageScore || 0) * 25 / 100),
+                },
+                statistics: testStatistics,
+                recommendations: generateRecommendations(),
+            };
+            setTestResult(fallbackResult);
+        }
+
         setIsLoading(false);
-    }, []);
+    }, [route.params, testProgress, testStatistics, generateRecommendations]);
 
     const getScoreColor = (score: number) => {
         if (score >= 80) return theme.colors.success;
@@ -79,20 +88,20 @@ const TestResultScreen = () => {
     };
 
     const handleRetakeTest = () => {
-        // Go back to the test screen and let the user start a new test
-        navigation.goBack();
+        // Reset the test state first
+        cancelTest();
+        // Navigate back to the main test screen (root of test stack)
+        navigation.navigate('Test', undefined);
     };
 
     const handleViewProgress = () => {
-        // Go back to the test screen to view progress
-        navigation.goBack();
+        // Navigate to the dedicated Progress screen
+        navigation.navigate('Progress', undefined);
     };
 
     const handleCloseTest = () => {
-        // Go back to the previous screen in the navigation stack
-        // Note: This may go back to TestQuestionScreen instead of TestScreen
-        // depending on the navigation history
-        navigation.goBack();
+        // Navigate back to the main test screen (root of test stack)
+        navigation.navigate('Test', undefined);
     };
 
     if (isLoading || !testResult) {

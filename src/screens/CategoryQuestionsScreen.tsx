@@ -4,15 +4,15 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../types/types';
+import { HomeStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionSlideView from '../components/QuestionSlideView';
 import { Question } from '../types/questions';
 import FormattedText from '../components/FormattedText';
 
-type CategoryQuestionsRouteProp = RouteProp<RootStackParamList, 'CategoryQuestions'>;
-type CategoryQuestionsNavigationProp = NativeStackNavigationProp<RootStackParamList, 'CategoryQuestions'>;
+type CategoryQuestionsRouteProp = RouteProp<HomeStackParamList, 'CategoryQuestions'>;
+type CategoryQuestionsNavigationProp = NativeStackNavigationProp<HomeStackParamList, 'CategoryQuestions'>;
 
 const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();

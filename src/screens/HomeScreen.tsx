@@ -4,12 +4,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from '../components/CategoryCard';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../types/types';
+import { HomeStackParamList } from '../types/types';
 import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from '../components/FormattedText';
 
-type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
+type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();

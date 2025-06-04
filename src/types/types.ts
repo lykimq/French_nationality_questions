@@ -1,6 +1,16 @@
 import { MultiLangText } from '../contexts/LanguageContext';
+import { TestResult } from './test';
 
-export type RootStackParamList = {
+// Bottom Tab Navigator types
+export type TabParamList = {
+    HomeTab: undefined;
+    SearchTab: undefined;
+    TestTab: undefined;
+    SettingsTab: undefined;
+};
+
+// Home Stack Navigator types
+export type HomeStackParamList = {
     Home: undefined;
     CategoryQuestions: { categoryId: string; language?: 'fr' | 'vi' };
     CategoryBasedQuestions: {
@@ -24,12 +34,12 @@ export type RootStackParamList = {
         title_vi?: string;
     };
     QuestionDetail: { categoryId: string; questionId: number; language?: 'fr' | 'vi' };
-    Search: undefined;
-    Settings: undefined;
-    HomeTab: undefined;
-    SearchTab: undefined;
-    SettingsTab: undefined;
-    TestTab: undefined;
+};
+
+// Test Stack Navigator types
+export type TestStackParamList = {
+    Test: undefined;
     TestQuestion: undefined;
-    TestResult: undefined;
+    TestResult: { testResult: TestResult } | undefined;
+    Progress: undefined;
 };

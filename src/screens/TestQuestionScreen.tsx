@@ -23,13 +23,13 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
 import { TestAnswer } from '../types/test';
-import { RootStackParamList } from '../types/types';
+import { TestStackParamList } from '../types/types';
 import { getCachedImageSource } from '../utils/imageUtils';
 import { testDatabaseIntegration, testQuestionIdUniqueness, logDatabaseStatistics } from '../utils/testDatabaseIntegration';
 
 const { width, height } = Dimensions.get('window');
 
-type TestQuestionScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
+type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
 const TestQuestionScreen = () => {
     const navigation = useNavigation<TestQuestionScreenNavigationProp>();
@@ -247,7 +247,7 @@ const TestQuestionScreen = () => {
             console.log('🏁 Finishing test...');
             const result = await finishTest();
             console.log('✅ Test finished successfully, navigating to results');
-            navigation.navigate('TestResult', undefined);
+            navigation.navigate('TestResult', { testResult: result });
         } catch (error) {
             console.error('❌ Error finishing test:', error);
             Alert.alert(

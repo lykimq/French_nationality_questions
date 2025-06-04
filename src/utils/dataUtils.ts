@@ -108,8 +108,30 @@ export const validateDataStructure = (data: any, dataType: string): {
             return { isValid: false, errors, summary };
         }
 
+        // Check if it's a category metadata structure (like history_categories.json)
+        if (data.id && data.title && data.subcategories && Array.isArray(data.subcategories)) {
+            summary.categoryInfo = `Category Metadata: ${data.id} - ${data.title}`;
+
+            // Validate each subcategory
+            data.subcategories.forEach((subcategory: any, index: number) => {
+                if (!subcategory.id || typeof subcategory.id !== 'string') {
+                    errors.push(`Subcategory at index ${index} missing or invalid ID`);
+                }
+                if (!subcategory.title || typeof subcategory.title !== 'string') {
+                    errors.push(`Subcategory at index ${index} missing title`);
+                }
+                if (!subcategory.icon || typeof subcategory.icon !== 'string') {
+                    errors.push(`Subcategory at index ${index} missing icon`);
+                }
+            });
+
+            // For category metadata, we consider it valid if structure is correct
+            // even without questions (questions are in separate subcategory files)
+            const isValid = errors.length === 0;
+            return { isValid, errors, summary };
+        }
         // Check if it's a category data structure (main categories)
-        if (data.questions && Array.isArray(data.questions)) {
+        else if (data.questions && Array.isArray(data.questions)) {
             summary.categoryInfo = `Category: ${data.id || 'unknown'} - ${data.title || 'no title'}`;
             summary.totalQuestions = data.questions.length;
 
@@ -192,7 +214,10 @@ export const validateDataStructure = (data: any, dataType: string): {
             errors.push(`Unknown data structure for ${dataType}`);
         }
 
-        const isValid = errors.length === 0 && summary.totalQuestions > 0;
+        // For category metadata files, we don't require questions
+        // For question files, we do require at least one question
+        const requiresQuestions = !dataType.includes('categories');
+        const isValid = errors.length === 0 && (!requiresQuestions || summary.totalQuestions > 0);
         return { isValid, errors, summary };
 
     } catch (error) {
