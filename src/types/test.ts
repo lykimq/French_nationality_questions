@@ -83,7 +83,11 @@ export type TestMode =
     | 'subcategory_arts' // Arts & Littérature
     | 'subcategory_celebrities' // Personnalités & Médias
     | 'subcategory_sports' // Sports
-    | 'subcategory_holidays'; // Jours Fériés
+    | 'subcategory_holidays' // Jours Fériés
+    // Part 1 test modes
+    | 'part1_test_personal' // Test personnel
+    | 'part1_test_opinions' // Test opinions
+    | 'part1_test_daily_life'; // Test vie quotidienne
 
 export interface TestConfig {
     mode: TestMode;

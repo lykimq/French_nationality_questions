@@ -364,6 +364,37 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
         }
     };
 
+    // Helper function to get shorter category title for display
+    const getDisplayCategoryTitle = (): string => {
+        if (!currentQuestion?.categoryTitle) return '';
+
+        const title = currentQuestion.categoryTitle;
+
+        // Mapping for shorter, more display-friendly titles
+        const shortTitles: { [key: string]: string } = {
+            'test_personal': language === 'fr' ? 'Personnel' : 'Cá nhân',
+            'test_opinions': language === 'fr' ? 'Opinions' : 'Ý kiến',
+            'test_daily_life': language === 'fr' ? 'Vie quotidienne' : 'Đời sống',
+            'local_gov': language === 'fr' ? 'Administration' : 'Hành chính',
+            'monarchy': language === 'fr' ? 'Monarchie' : 'Quân chủ',
+            'revolution': language === 'fr' ? 'Révolution' : 'Cách mạng',
+            'wars': language === 'fr' ? 'Guerres' : 'Chiến tranh',
+            'republic': language === 'fr' ? 'République' : 'Cộng hòa',
+            'democracy': language === 'fr' ? 'Démocratie' : 'Dân chủ',
+            'economy': language === 'fr' ? 'Économie' : 'Kinh tế',
+            'culture': language === 'fr' ? 'Culture' : 'Văn hóa',
+            'arts': language === 'fr' ? 'Arts' : 'Nghệ thuật',
+            'celebrities': language === 'fr' ? 'Personnalités' : 'Nhân vật',
+            'sports': language === 'fr' ? 'Sports' : 'Thể thao',
+            'holidays': language === 'fr' ? 'Fêtes' : 'Lễ hội',
+            'geography': language === 'fr' ? 'Géographie' : 'Địa lý',
+            'personal': language === 'fr' ? 'Personnel' : 'Cá nhân'
+        };
+
+        // Return short title if available, otherwise truncate the original
+        return shortTitles[title] || (title.length > 20 ? title.substring(0, 20) + '...' : title);
+    };
+
     if (!currentSession || !currentQuestion) {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
@@ -454,8 +485,12 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                             </FormattedText>
                             {currentQuestion.categoryTitle && (
                                 <View style={[styles.categoryBadge, { backgroundColor: theme.colors.primaryLight }]}>
-                                    <FormattedText style={[styles.categoryBadgeText, { color: theme.colors.primary }]}>
-                                        {currentQuestion.categoryTitle}
+                                    <FormattedText
+                                        style={[styles.categoryBadgeText, { color: theme.colors.primary }]}
+                                        numberOfLines={1}
+                                        ellipsizeMode="tail"
+                                    >
+                                        {getDisplayCategoryTitle()}
                                     </FormattedText>
                                 </View>
                             )}
@@ -682,19 +717,21 @@ const styles = StyleSheet.create({
         shadowRadius: 8,
     },
     questionHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: 'column',
         marginBottom: 16,
+        gap: 8,
     },
     questionLabel: {
         fontSize: 14,
         fontWeight: '500',
+        alignSelf: 'flex-start',
     },
     categoryBadge: {
         paddingHorizontal: 12,
         paddingVertical: 6,
         borderRadius: 12,
+        alignSelf: 'flex-start',
+        maxWidth: '100%',
     },
     categoryBadgeText: {
         fontSize: 12,

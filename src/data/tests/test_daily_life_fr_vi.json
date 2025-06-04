@@ -1,0 +1,170 @@
+{
+  "id": "test_daily_life",
+  "title": "Première partie : Parlons de vous - Vie quotidienne (travail/loisirs)",
+  "title_vi": "Phần một: Nói về bạn - Cuộc sống hàng ngày (công việc/giải trí)",
+  "icon": "briefcase",
+  "description": "Questions test sur la vie quotidienne, le travail et les loisirs",
+  "description_vi": "Câu hỏi test về cuộc sống hàng ngày, công việc và giải trí",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Est-ce que vous faites partie d'une association ? Est-ce que vous y avez des responsabilités ?",
+      "explanation": "Non, je ne fais actuellement partie d'aucune association et je n'y ai donc pas de responsabilités.",
+      "question_vi": "Bạn có tham gia hiệp hội nào không? Bạn có trách nhiệm gì trong đó không?",
+      "explanation_vi": "Hiện tại tôi không tham gia vào hiệp hội nào nên tôi cũng không có trách nhiệm gì trong đó.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "question": "Qu'est-ce que vous faites dans la vie ?",
+      "explanation": "Je suis ingénieur de recherche en informatique. Je travaille sur des projets liés à la technologie, à l'innovation et au développement de solutions informatiques avancées.",
+      "question_vi": "Bạn làm nghề gì?",
+      "explanation_vi": "Tôi là kỹ sư nghiên cứu trong lĩnh vực khoa học máy tính. Tôi làm việc trong các dự án liên quan đến công nghệ, đổi mới và phát triển các giải pháp tin học tiên tiến.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "question": "À quelle fréquence (combien de fois) retournez-vous dans votre pays ?",
+      "explanation": "Je retourne dans mon pays environ une fois par an, généralement pour une durée d'un mois. C'est l'occasion de passer du temps avec ma famille et de maintenir les liens avec mes proches.",
+      "question_vi": "Bạn về nước với tần suất như thế nào (bao nhiêu lần)?",
+      "explanation_vi": "Tôi về nước khoảng một lần mỗi năm, thường là trong khoảng một tháng. Đây là dịp để tôi dành thời gian cho gia đình và giữ mối liên hệ với những người thân yêu.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "question": "Quels sont vos loisirs / centres d'intérêt ?",
+      "explanation": "J'aime beaucoup voyager pour découvrir de nouvelles cultures et paysages. Je prends aussi plaisir à déguster de bons plats, à passer du temps avec mes amis et ma famille. La lecture fait partie de mes habitudes, notamment des ouvrages sur la science, la technologie et le développement personnel. En outre, je m'intéresse à la photographie, ce qui me permet de capturer mes souvenirs de voyage, ainsi qu'à la pratique du sport pour rester en forme, comme la randonnée et le vélo.",
+      "question_vi": "Sở thích / mối quan tâm của bạn là gì?",
+      "explanation_vi": "Tôi rất thích đi du lịch để khám phá những nền văn hóa và cảnh quan mới. Tôi cũng thích thưởng thức các món ăn ngon và dành thời gian với bạn bè cùng gia đình. Việc đọc sách là thói quen của tôi, đặc biệt là những cuốn sách về khoa học, công nghệ và phát triển bản thân. Bên cạnh đó, tôi quan tâm đến nhiếp ảnh, giúp tôi ghi lại những kỷ niệm trong các chuyến đi, cũng như việc tập thể thao để giữ sức khỏe như đi bộ đường dài và đạp xe.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "question": "Quel est votre projet professionnel ?",
+      "explanation": "Mon projet professionnel est de continuer à évoluer en tant que chercheur et ingénieur en informatique. Je souhaite approfondir mes compétences, contribuer à des projets innovants, et participer à des travaux de recherche appliquée ou académique, en collaboration avec des équipes internationales.",
+      "question_vi": "Dự án nghề nghiệp của bạn là gì?",
+      "explanation_vi": "Dự án nghề nghiệp của tôi là tiếp tục phát triển với vai trò nhà nghiên cứu và kỹ sư trong lĩnh vực khoa học máy tính. Tôi mong muốn nâng cao chuyên môn, đóng góp vào các dự án đổi mới và tham gia vào các hoạt động nghiên cứu ứng dụng hoặc học thuật, đặc biệt là trong môi trường quốc tế.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "question": "Est-ce que vous avez voyagé en France ? En Europe ?",
+      "explanation": "Oui, j'ai voyagé en France ainsi que dans plusieurs pays européens. En France, j'ai visité de nombreuses régions. En Europe, j'ai eu l'occasion de découvrir les Pays-Bas, l'Italie, l'Allemagne, Bruxelles (Belgique), l'Espagne, le Portugal, entre autres. Ces voyages m'ont permis d'élargir ma perspective culturelle et personnelle.",
+      "question_vi": "Bạn đã du lịch ở Pháp chưa? Ở châu Âu?",
+      "explanation_vi": "Vâng, tôi đã từng du lịch ở Pháp cũng như ở nhiều nước châu Âu. Ở Pháp, tôi đã đến thăm nhiều vùng khác nhau. Còn ở châu Âu, tôi đã có cơ hội đến Hà Lan, Ý, Đức, Bruxelles (Bỉ), Tây Ban Nha, Bồ Đào Nha, v.v. Những chuyến đi này giúp tôi mở rộng hiểu biết về văn hóa và cuộc sống.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "question": "Quels lieux avez-vous visité en France ?",
+      "explanation": "J'ai eu l'occasion de visiter plusieurs régions en France, notamment Nice, Bordeaux, Lyon, Marseille, Strasbourg, la Normandie, ainsi que différentes villes autour de l'Île-de-France. Cela m'a permis de mieux découvrir la richesse culturelle et la diversité du pays.",
+      "question_vi": "Bạn đã thăm những địa điểm nào ở Pháp?",
+      "explanation_vi": "Tôi đã có cơ hội tham quan nhiều nơi ở Pháp như Nice, Bordeaux, Lyon, Marseille, Strasbourg, vùng Normandie và các khu vực xung quanh Île-de-France. Những chuyến đi này giúp tôi hiểu rõ hơn về sự đa dạng văn hóa và vẻ đẹp của nước Pháp.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "question": "Quel est votre plus haut niveau de qualification ?",
+      "explanation": "J'ai obtenu un doctorat à l'Université Grenoble-Alpes après avoir terminé un stage de master à Bordeaux.",
+      "question_vi": "Trình độ học vấn cao nhất của bạn là gì?",
+      "explanation_vi": "Tôi đã có bằng tiến sĩ tại Đại học Grenoble-Alpes sau khi hoàn thành thực tập thạc sĩ tại Bordeaux.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "question": "Où avez-vous appris le français ?",
+      "explanation": "J'apprends le français depuis plus de dix ans, de manière non continue, mais je continue à apprendre régulièrement depuis mon arrivée en France en 2009.",
+      "question_vi": "Bạn học tiếng Pháp ở đâu?",
+      "explanation_vi": "Tôi đã học tiếng Pháp hơn mười năm, không học liên tục, nhưng tôi vẫn tiếp tục học đều đặn kể từ khi tôi đến Pháp vào năm 2009.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "question": "Quel est votre parcours scolaire ?",
+      "explanation": "J'ai effectué un stage de master à Bordeaux en 2009 pendant cinq mois, puis après l'obtention de mon diplôme, j'ai poursuivi un doctorat à l'Université Grenoble-Alpes.",
+      "question_vi": "Quá trình học tập của bạn như thế nào?",
+      "explanation_vi": "Tôi đã thực hiện thực tập thạc sĩ tại Bordeaux vào năm 2009 trong năm tháng, sau đó sau khi tốt nghiệp, tôi tiếp tục học tiến sĩ tại Đại học Grenoble-Alpes.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "question": "Quels sont vos projets personnels prévus ?",
+      "explanation": "La France est devenue ma maison, mon pays d'adoption où je veux m'investir pleinement. Je n'ai pas d'enfants et je ne prévois pas d'en avoir dans un avenir proche.",
+      "question_vi": "Những dự án cá nhân đã lên kế hoạch của bạn là gì?",
+      "explanation_vi": "Pháp đã trở thành ngôi nhà của tôi, quê hương thứ hai nơi tôi muốn cống hiến hết mình. Tôi không có con và không dự định có con trong tương lai gần.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "question": "Est-ce que vous travaillez à distance ?",
+      "explanation": "Oui, j'ai déjà travaillé à distance auparavant. Actuellement, je travaille en mode hybride, c'est-à-dire partiellement à distance et partiellement sur site.",
+      "question_vi": "Bạn có làm việc từ xa không?",
+      "explanation_vi": "Vâng, trước đây tôi đã từng làm việc từ xa. Hiện tại, tôi làm việc theo hình thức kết hợp, tức là một phần từ xa và một phần tại văn phòng.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "question": "Combien de langues parlez-vous ?",
+      "explanation": "Je parle plusieurs langues : le vietnamien (ma langue maternelle), le français que j'apprends depuis plus de dix ans, et probablement l'anglais pour mes études et mon travail académique.",
+      "question_vi": "Bạn nói được bao nhiêu thứ tiếng?",
+      "explanation_vi": "Tôi nói được nhiều thứ tiếng: tiếng Việt (tiếng mẹ đẻ), tiếng Pháp mà tôi đã học hơn mười năm, và có thể là tiếng Anh cho việc học tập và công việc học thuật.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "question": "Avez-vous le permis de conduire ?",
+      "explanation": "Non, je n'ai pas encore le permis de conduire, mais je prévois de le passer prochainement.",
+      "question_vi": "Bạn có bằng lái xe không?",
+      "explanation_vi": "Không, tôi chưa có bằng lái xe, nhưng tôi dự định sẽ học và thi trong thời gian tới.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "question": "Pratiquez-vous une religion ?",
+      "explanation": "Oui, je pratique la religion chrétienne.",
+      "question_vi": "Bạn có theo tôn giáo nào không?",
+      "explanation_vi": "Vâng, tôi theo tôn giáo Tin Lành.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "question": "Avez-vous des relations avec l'armée vénézuélienne, le consulat, les partis politiques ou l'autorité religieuse ?",
+      "explanation": "Non, je n'ai pas de lien direct avec l'armée vénézuélienne, le consulat, les partis politiques ou l'autorité religieuse pour le moment.",
+      "question_vi": "Bạn có mối quan hệ với quân đội Venezuela, lãnh sự quán, các đảng chính trị hoặc cơ quan tôn giáo không?",
+      "explanation_vi": "Không, hiện tại tôi không có mối liên hệ trực tiếp nào với quân đội Venezuela, lãnh sự quán, các đảng chính trị hoặc cơ quan tôn giáo.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "question": "Avez-vous des liens avec les autorités françaises ?",
+      "explanation": "Non, je n'ai pas de lien direct avec les autorités françaises pour le moment.",
+      "question_vi": "Bạn có mối liên hệ với chính quyền Pháp không?",
+      "explanation_vi": "Không, hiện tại tôi không có mối liên hệ trực tiếp nào với chính quyền Pháp.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "question": "Est-ce que vous louez votre appartement ou vous l'avez acheté ?",
+      "explanation": "Actuellement, je loue mon appartement, mais j'ai l'intention d'acheter dans le futur lorsque les conditions seront favorables.",
+      "question_vi": "Bạn thuê căn hộ hay đã mua?",
+      "explanation_vi": "Hiện tại tôi đang thuê căn hộ, nhưng tôi dự định sẽ mua trong tương lai khi điều kiện cho phép.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "question": "Des voyages en dehors de l'Europe ? Pourquoi ?",
+      "explanation": "Oui, j'ai voyagé en dehors de l'Europe. J'ai eu l'occasion d'aller aux États-Unis dans le cadre d'un déplacement professionnel. En dehors du travail, j'ai également voyagé pour le plaisir en Afrique du Sud, au Japon, en Asie du Sud-Est, à Dubaï, aux Émirats arabes unis, en Chine, etc. Ces voyages m'ont permis de découvrir de nouvelles cultures, d'élargir mes horizons et d'enrichir ma vision du monde.",
+      "question_vi": "Những chuyến du lịch ngoài châu Âu? Tại sao?",
+      "explanation_vi": "Vâng, tôi đã từng đi du lịch ngoài châu Âu. Tôi đã có cơ hội đến Mỹ trong một chuyến công tác. Ngoài ra, tôi cũng đã đi du lịch đến Nam Phi, Nhật Bản, Đông Nam Á, Dubai, Các Tiểu vương quốc Ả Rập Thống nhất, Trung Quốc, v.v. Những chuyến đi này giúp tôi khám phá những nền văn hóa mới, mở rộng tầm nhìn và làm phong phú thêm trải nghiệm sống của mình.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "question": "Quel est votre projet professionnel pour les années à venir ?",
+      "explanation": "Mon projet professionnel pour les années à venir est de continuer à travailler en tant que chercheur et ingénieur en informatique. J'ai déjà acquis une solide expérience dans ce domaine, et je souhaite approfondir mes compétences, contribuer à des projets innovants, et participer activement à l'avancement de la recherche technologique.",
+      "question_vi": "Dự án nghề nghiệp của bạn trong những năm tới là gì?",
+      "explanation_vi": "Dự án nghề nghiệp của tôi trong những năm tới là tiếp tục làm việc với vai trò nhà nghiên cứu và kỹ sư trong lĩnh vực khoa học máy tính. Tôi đã có nhiều kinh nghiệm trong lĩnh vực này và mong muốn tiếp tục phát triển kỹ năng, đóng góp vào các dự án đổi mới và tham gia tích cực vào sự phát triển của nghiên cứu công nghệ.",
+      "image": null
+    }
+  ]
+}

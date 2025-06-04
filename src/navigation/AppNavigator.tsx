@@ -12,6 +12,7 @@ import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import TestScreen from '../screens/TestScreen';
 import SubcategoryTestScreen from '../screens/SubcategoryTestScreen';
+import Part1TestScreen from '../screens/Part1TestScreen';
 import TestQuestionScreen from '../screens/TestQuestionScreen';
 import TestResultScreen from '../screens/TestResultScreen';
 import ProgressScreen from '../screens/ProgressScreen';
@@ -59,6 +60,7 @@ const TestStack = () => {
         >
             <Stack.Screen name="Test" component={TestScreen} />
             <Stack.Screen name="SubcategoryTest" component={SubcategoryTestScreen} />
+            <Stack.Screen name="Part1Test" component={Part1TestScreen} />
             <Stack.Screen
                 name="TestQuestion"
                 component={TestQuestionScreen}

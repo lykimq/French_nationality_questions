@@ -277,6 +277,10 @@ const TestScreen = () => {
         navigation.navigate('SubcategoryTest', undefined);
     };
 
+    const handleNavigateToPart1Tests = () => {
+        navigation.navigate('Part1Test', undefined);
+    };
+
     const renderProgressCard = () => (
         <TouchableOpacity
             style={[styles.progressCard, { backgroundColor: theme.colors.surface }]}
@@ -651,6 +655,46 @@ const TestScreen = () => {
                                     <Ionicons name="flash" size={16} color={theme.colors.textMuted} />
                                     <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
                                         {getLocalizedText('Tests courts', 'Bài test ngắn')}
+                                    </FormattedText>
+                                </View>
+                            </View>
+                        </View>
+
+                        <Ionicons name="chevron-forward" size={24} color={theme.colors.textMuted} />
+                    </TouchableOpacity>
+
+                    {/* Part 1 Tests Section */}
+                    <TouchableOpacity
+                        style={[styles.subcategoryTestCard, { backgroundColor: theme.colors.surface }]}
+                        onPress={handleNavigateToPart1Tests}
+                        activeOpacity={0.8}
+                    >
+                        <View style={[styles.subcategoryIconContainer, { backgroundColor: '#3498DB20' }]}>
+                            <Ionicons name="book" size={32} color="#3498DB" />
+                        </View>
+
+                        <View style={styles.subcategoryContent}>
+                            <FormattedText style={[styles.subcategoryTitle, { color: theme.colors.text }]}>
+                                {getLocalizedText('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                            </FormattedText>
+                            <FormattedText style={[styles.subcategoryDescription, { color: theme.colors.textMuted }]}>
+                                {getLocalizedText(
+                                    'Tests de conversation et questions personnelles pour préparer l\'entretien de naturalisation.',
+                                    'Bài kiểm tra hội thoại và câu hỏi cá nhân để chuẩn bị cho cuộc phỏng vấn nhập quốc tịch.'
+                                )}
+                            </FormattedText>
+
+                            <View style={styles.subcategoryDetails}>
+                                <View style={styles.subcategoryDetail}>
+                                    <Ionicons name="people" size={16} color={theme.colors.textMuted} />
+                                    <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
+                                        3 {getLocalizedText('sous-catégories', 'danh mục con')}
+                                    </FormattedText>
+                                </View>
+                                <View style={styles.subcategoryDetail}>
+                                    <Ionicons name="chatbox" size={16} color={theme.colors.textMuted} />
+                                    <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
+                                        {getLocalizedText('Format conversation', 'Định dạng hội thoại')}
                                     </FormattedText>
                                 </View>
                             </View>

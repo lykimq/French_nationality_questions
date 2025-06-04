@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLanguage, HistorySubcategory } from './LanguageContext';
+import { preloadAllPart1TestData } from '../utils/dataUtils';
 import {
     TestSession,
     TestProgress,
@@ -160,6 +161,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     // State management
     const [currentSession, setCurrentSession] = useState<TestSession | null>(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [part1TestSubcategories, setPart1TestSubcategories] = useState<{ [key: string]: any }>({});
     const [testProgress, setTestProgress] = useState<TestProgress>({
         totalTestsTaken: 0,
         averageScore: 0,
@@ -241,6 +243,9 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 setTestStatistics(parsedStatistics);
             }
 
+            // Load Part 1 test data as part of main loading
+            await loadPart1TestData();
+
         } catch (error) {
             console.error('❌ Error loading test data:', error);
         } finally {
@@ -248,6 +253,23 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             setIsLoading(false);
         }
     }, []);
+
+    // Load Part 1 test data
+    const loadPart1TestData = async () => {
+        try {
+            console.log('🔄 Loading Part 1 test data in TestContext...');
+            const { part1SubcategoryTestData } = await preloadAllPart1TestData();
+            console.log('📊 Part 1 test data loaded:', {
+                subcategoryKeys: Object.keys(part1SubcategoryTestData),
+                totalQuestions: Object.values(part1SubcategoryTestData).reduce((total, subcategory: any) => {
+                    return total + (subcategory?.questions?.length || 0);
+                }, 0)
+            });
+            setPart1TestSubcategories(part1SubcategoryTestData);
+        } catch (error) {
+            console.error('❌ Error loading Part 1 test data:', error);
+        }
+    };
 
     const saveTestData = async (
         progressToSave?: TestProgress,
@@ -278,6 +300,50 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         console.log('Starting question generation for config:', config);
 
+        // Handle Part 1 tests separately to avoid ID conflicts
+        if (config.mode.startsWith('part1_')) {
+            const part1TestId = config.mode.replace('part1_', '');
+            console.log(`🎯 Part 1 test mode detected: ${part1TestId}`);
+
+            // Only collect questions from Part 1 test subcategories for Part 1 tests
+            console.log('📊 Part 1 test subcategories state:', {
+                keys: Object.keys(part1TestSubcategories),
+                totalQuestions: Object.values(part1TestSubcategories).reduce((total, subcategory: any) => {
+                    return total + (subcategory?.questions?.length || 0);
+                }, 0)
+            });
+
+            Object.values(part1TestSubcategories).forEach((subcategory: any) => {
+                if (subcategory.questions && subcategory.id === part1TestId) {
+                    console.log(`Processing Part 1 test subcategory: ${subcategory.id}, ${subcategory.questions.length} questions`);
+
+                    subcategory.questions.forEach((question: any, index: number) => {
+                        // Create unique IDs for Part 1 questions by adding offset
+                        const uniqueId = question.id + 10000 + (subcategory.id === 'test_personal' ? 0 :
+                            subcategory.id === 'test_opinions' ? 1000 : 2000);
+
+                        const processedQuestion = {
+                            id: uniqueId,
+                            question: question.question,
+                            question_vi: question.question_vi,
+                            explanation: question.explanation || 'No explanation provided',
+                            explanation_vi: question.explanation_vi || question.explanation || 'No explanation provided',
+                            image: question.image,
+                            categoryId: subcategory.id,
+                            categoryTitle: subcategory.title || subcategory.id,
+                        };
+
+                        console.log(`Added Part 1 test question ${uniqueId} (original: ${question.id}): ${processedQuestion.question.substring(0, 50)}...`);
+                        allQuestions.push(processedQuestion);
+                    });
+                }
+            });
+
+            console.log(`Generated ${allQuestions.length} questions for Part 1 test: ${part1TestId}`);
+            return allQuestions;
+        }
+
+        // For non-Part 1 tests, collect questions from main categories and history subcategories
         // Collect questions from main categories (geography and personal)
         questionsData.categories.forEach(category => {
             if (config.categoryIds && !config.categoryIds.includes(category.id)) {
@@ -340,7 +406,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             }
         });
 
-        // Filter based on test mode
+        // Filter based on test mode (for non-Part 1 tests)
         let selectedQuestions = [...allQuestions];
 
         if (config.mode === 'geography_only') {

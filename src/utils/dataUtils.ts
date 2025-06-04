@@ -487,3 +487,162 @@ export const getDataCacheStats = () => {
         cacheSize: JSON.stringify(firebaseDataCache).length
     };
 };
+
+/**
+ * Loads Part 1 test categories data from Firebase Storage
+ * @returns Promise that resolves to part 1 test categories data
+ */
+export const loadPart1TestData = async (): Promise<any> => {
+    try {
+        console.log('🔄 Loading Part 1 test categories data from Firebase Storage...');
+
+        // Create a virtual category structure based on the existing test files
+        const part1TestData = {
+            id: "test_part1",
+            title: "Première partie : Tests de connaissances",
+            title_vi: "Phần một: Bài kiểm tra kiến thức",
+            icon: "book",
+            description: "Première partie des tests divisée en trois sous-catégories",
+            description_vi: "Phần một của bài kiểm tra được chia thành ba chủ đề con",
+            subcategories: [
+                {
+                    id: "test_personal",
+                    title: "Informations personnelles",
+                    title_vi: "Thông tin cá nhân",
+                    icon: "person",
+                    description: "Questions sur la vie personnelle et l'entourage",
+                    description_vi: "Câu hỏi về thông tin cá nhân và người thân"
+                },
+                {
+                    id: "test_opinions",
+                    title: "Vos opinions",
+                    title_vi: "Ý kiến của bạn",
+                    icon: "chatbox",
+                    description: "Questions sur vos opinions concernant la France",
+                    description_vi: "Câu hỏi về ý kiến của bạn liên quan đến Pháp"
+                },
+                {
+                    id: "test_daily_life",
+                    title: "Vie quotidienne",
+                    title_vi: "Cuộc sống hàng ngày",
+                    icon: "calendar",
+                    description: "Questions sur la vie quotidienne, le travail et les loisirs",
+                    description_vi: "Câu hỏi về cuộc sống hàng ngày, công việc và giải trí"
+                }
+            ]
+        };
+
+        console.log('📊 Part 1 Test Categories loaded:', {
+            categoriesCount: part1TestData.subcategories?.length || 0,
+            title: part1TestData.title || 'No title',
+            hasSubcategories: !!part1TestData.subcategories
+        });
+
+        return part1TestData;
+    } catch (error) {
+        console.error('❌ Error loading Part 1 test data:', error);
+        return null;
+    }
+};
+
+/**
+ * Loads all Part 1 subcategory test data from Firebase Storage
+ * @returns Promise that resolves to subcategory test data map
+ */
+export const loadPart1SubcategoryTestData = async (): Promise<{ [key: string]: any }> => {
+    try {
+        console.log('🔄 Loading Part 1 subcategory test data from Firebase Storage...');
+
+        const subcategoryFiles = [
+            'test_personal_fr_vi.json',
+            'test_opinions_fr_vi.json',
+            'test_daily_life_fr_vi.json'
+        ];
+
+        // Load all subcategory files in parallel
+        const subcategoryPromises = subcategoryFiles.map(async (filename) => {
+            const key = filename.replace('_fr_vi.json', '');
+            const data = await getFirebaseJsonData(`tests/${filename}`);
+            return { key, data };
+        });
+
+        const results = await Promise.all(subcategoryPromises);
+
+        // Build the subcategory data map
+        const subcategoryDataMap: { [key: string]: any } = {};
+        let loadedCount = 0;
+        let failedCount = 0;
+        let totalQuestionsLoaded = 0;
+
+        results.forEach(({ key, data }) => {
+            if (data) {
+                subcategoryDataMap[key] = data;
+                loadedCount++;
+
+                // Log details about this subcategory
+                logQuestionDetails(data, `Part 1 Test Subcategory: ${key}`);
+
+                if (data.questions && Array.isArray(data.questions)) {
+                    totalQuestionsLoaded += data.questions.length;
+                }
+            } else {
+                failedCount++;
+                console.warn(`⚠️ Failed to load Part 1 test subcategory: ${key}`);
+            }
+        });
+
+        console.log(`📊 Part 1 test subcategory loading summary:`, {
+            totalFiles: subcategoryFiles.length,
+            loaded: loadedCount,
+            failed: failedCount,
+            totalQuestions: totalQuestionsLoaded
+        });
+
+        return subcategoryDataMap;
+    } catch (error) {
+        console.error('❌ Error loading Part 1 subcategory test data:', error);
+        return {};
+    }
+};
+
+/**
+ * Preloads all Part 1 test JSON data files for better performance
+ * @returns Promise that resolves when preloading is complete
+ */
+export const preloadAllPart1TestData = async (): Promise<{
+    part1TestData: any;
+    part1SubcategoryTestData: any;
+}> => {
+    try {
+        console.log('🚀 Starting to preload all Part 1 test JSON data from Firebase Storage...');
+
+        // Load all data in parallel
+        const [part1TestData, part1SubcategoryTestData] = await Promise.all([
+            loadPart1TestData(),
+            loadPart1SubcategoryTestData()
+        ]);
+
+        // Calculate total questions loaded
+        let totalQuestions = 0;
+
+        Object.values(part1SubcategoryTestData).forEach((subcategory: any) => {
+            if (subcategory?.questions) {
+                totalQuestions += subcategory.questions.length;
+            }
+        });
+
+        console.log('🎉 All Part 1 test JSON data preloaded successfully!', {
+            part1TestDataLoaded: !!part1TestData,
+            subcategoriesLoaded: Object.keys(part1SubcategoryTestData).length,
+            totalQuestionsAvailable: totalQuestions
+        });
+
+        return {
+            part1TestData,
+            part1SubcategoryTestData
+        };
+    } catch (error) {
+        console.error('❌ Error during Part 1 test data preloading:', error);
+        throw error;
+    }
+};
