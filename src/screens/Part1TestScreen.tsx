@@ -18,6 +18,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
+import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestStackParamList } from '../types/types';
 import { TestConfig, TestMode } from '../types/test';
@@ -42,6 +43,7 @@ const Part1TestScreen = () => {
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { startTest } = useTest();
+    const { getIconName, getJsonIconName } = useIcons();
 
     const [isStartingTest, setIsStartingTest] = useState(false);
     const [isDataLoading, setIsDataLoading] = useState(true);
@@ -195,7 +197,7 @@ const Part1TestScreen = () => {
                     {/* Left: Icon and Title */}
                     <View style={styles.cardLeft}>
                         <View style={[styles.iconContainer, { backgroundColor: testMode.color }]}>
-                            <Ionicons name={testMode.icon as any} size={24} color="white" />
+                            <Ionicons name={getJsonIconName(testMode.icon) as any} size={24} color="white" />
                         </View>
                         <View style={styles.titleContainer}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]} numberOfLines={2}>
@@ -214,7 +216,7 @@ const Part1TestScreen = () => {
                                 {testMode.questionCount}
                             </FormattedText>
                         </View>
-                        <Ionicons name="chevron-forward" size={20} color={theme.colors.textMuted} style={{ marginTop: 8 }} />
+                        <Ionicons name={getIconName('chevronForward') as any} size={20} color={theme.colors.textMuted} style={{ marginTop: 8 }} />
                     </View>
                 </View>
 
@@ -227,13 +229,13 @@ const Part1TestScreen = () => {
                     {testMode.questionCount > 0 && (
                         <View style={styles.testInfo}>
                             <View style={styles.testInfoItem}>
-                                <Ionicons name="time" size={14} color={testMode.color} />
+                                <Ionicons name={getIconName('time') as any} size={14} color={testMode.color} />
                                 <FormattedText style={[styles.testInfoText, { color: testMode.color }]}>
                                     ~{Math.ceil(testMode.questionCount * 2)} {language === 'fr' ? 'min' : 'phút'}
                                 </FormattedText>
                             </View>
                             <View style={styles.testInfoItem}>
-                                <Ionicons name="chatbox" size={14} color={testMode.color} />
+                                <Ionicons name={getIconName('chatbox') as any} size={14} color={testMode.color} />
                                 <FormattedText style={[styles.testInfoText, { color: testMode.color }]}>
                                     {language === 'fr' ? 'Conversation' : 'Hội thoại'}
                                 </FormattedText>
@@ -261,7 +263,7 @@ const Part1TestScreen = () => {
                             style={styles.backButton}
                             onPress={() => navigation.goBack()}
                         >
-                            <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                            <Ionicons name={getIconName('arrowBack') as any} size={24} color={theme.colors.headerText} />
                         </TouchableOpacity>
                         <View style={styles.headerTextContainer}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
@@ -290,7 +292,7 @@ const Part1TestScreen = () => {
                             style={styles.backButton}
                             onPress={() => navigation.goBack()}
                         >
-                            <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                            <Ionicons name={getIconName('arrowBack') as any} size={24} color={theme.colors.headerText} />
                         </TouchableOpacity>
                         <View style={styles.headerTextContainer}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
@@ -300,7 +302,7 @@ const Part1TestScreen = () => {
                     </View>
                 </SafeAreaView>
                 <View style={styles.errorContainer}>
-                    <Ionicons name="alert-circle" size={48} color={theme.colors.error} />
+                    <Ionicons name={getIconName('alertCircle') as any} size={48} color={theme.colors.error} />
                     <FormattedText style={[styles.errorText, { color: theme.colors.error }]}>
                         {getLocalizedText('Erreur de chargement', 'Lỗi tải dữ liệu')}
                     </FormattedText>
@@ -322,7 +324,7 @@ const Part1TestScreen = () => {
                         style={styles.backButton}
                         onPress={() => navigation.goBack()}
                     >
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                        <Ionicons name={getIconName('arrowBack') as any} size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
 
                     <View style={styles.headerTextContainer}>

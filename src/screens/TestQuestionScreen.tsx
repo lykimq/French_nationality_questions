@@ -26,6 +26,7 @@ import { TestAnswer } from '../types/test';
 import { TestStackParamList } from '../types/types';
 import { getCachedImageSource } from '../utils/imageUtils';
 import { testDatabaseIntegration, testQuestionIdUniqueness, logDatabaseStatistics } from '../utils/testDatabaseIntegration';
+import { useIcons } from '../contexts/IconContext';
 
 const { width, height } = Dimensions.get('window');
 
@@ -35,6 +36,7 @@ const TestQuestionScreen = () => {
     const navigation = useNavigation<TestQuestionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
+    const { getIconName } = useIcons();
     const {
         currentSession,
         currentQuestionIndex,
@@ -364,37 +366,6 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
         }
     };
 
-    // Helper function to get shorter category title for display
-    const getDisplayCategoryTitle = (): string => {
-        if (!currentQuestion?.categoryTitle) return '';
-
-        const title = currentQuestion.categoryTitle;
-
-        // Mapping for shorter, more display-friendly titles
-        const shortTitles: { [key: string]: string } = {
-            'test_personal': language === 'fr' ? 'Personnel' : 'Cá nhân',
-            'test_opinions': language === 'fr' ? 'Opinions' : 'Ý kiến',
-            'test_daily_life': language === 'fr' ? 'Vie quotidienne' : 'Đời sống',
-            'local_gov': language === 'fr' ? 'Administration' : 'Hành chính',
-            'monarchy': language === 'fr' ? 'Monarchie' : 'Quân chủ',
-            'revolution': language === 'fr' ? 'Révolution' : 'Cách mạng',
-            'wars': language === 'fr' ? 'Guerres' : 'Chiến tranh',
-            'republic': language === 'fr' ? 'République' : 'Cộng hòa',
-            'democracy': language === 'fr' ? 'Démocratie' : 'Dân chủ',
-            'economy': language === 'fr' ? 'Économie' : 'Kinh tế',
-            'culture': language === 'fr' ? 'Culture' : 'Văn hóa',
-            'arts': language === 'fr' ? 'Arts' : 'Nghệ thuật',
-            'celebrities': language === 'fr' ? 'Personnalités' : 'Nhân vật',
-            'sports': language === 'fr' ? 'Sports' : 'Thể thao',
-            'holidays': language === 'fr' ? 'Fêtes' : 'Lễ hội',
-            'geography': language === 'fr' ? 'Géographie' : 'Địa lý',
-            'personal': language === 'fr' ? 'Personnel' : 'Cá nhân'
-        };
-
-        // Return short title if available, otherwise truncate the original
-        return shortTitles[title] || (title.length > 20 ? title.substring(0, 20) + '...' : title);
-    };
-
     if (!currentSession || !currentQuestion) {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
@@ -415,7 +386,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <View style={styles.headerTop}>
                         <TouchableOpacity onPress={handleCancelTest} style={styles.cancelButton}>
-                            <Ionicons name="close" size={24} color={theme.colors.headerText} />
+                            <Ionicons name={getIconName('close') as any} size={24} color={theme.colors.headerText} />
                         </TouchableOpacity>
 
                         <View style={styles.questionCounter}>
@@ -435,13 +406,13 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                                     onPress={runDatabaseTests}
                                     style={[styles.debugButton, { backgroundColor: theme.colors.warning }]}
                                 >
-                                    <Ionicons name="bug" size={16} color="white" />
+                                    <Ionicons name={getIconName('bug') as any} size={16} color="white" />
                                 </TouchableOpacity>
                             )}
 
                             {timeLeft !== null && (
                                 <View style={[styles.timer, { backgroundColor: timeLeft < 60 ? theme.colors.error : theme.colors.primary }]}>
-                                    <Ionicons name="time" size={16} color="white" />
+                                    <Ionicons name={getIconName('time') as any} size={16} color="white" />
                                     <FormattedText style={styles.timerText}>{formatTime(timeLeft)}</FormattedText>
                                 </View>
                             )}
@@ -510,7 +481,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                     {!showAnswer && (
                         <View style={[styles.instructionCard, { backgroundColor: theme.colors.surface }]}>
                             <View style={styles.instructionHeader}>
-                                <Ionicons name="bulb" size={20} color={theme.colors.warning} />
+                                <Ionicons name={getIconName('bulb') as any} size={20} color={theme.colors.warning} />
                                 <FormattedText style={[styles.instructionTitle, { color: theme.colors.text }]}>
                                     {language === 'fr' ? 'Instructions' : 'Hướng dẫn'}
                                 </FormattedText>
@@ -528,7 +499,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                     {showAnswer && currentQuestion.explanation && (
                         <View style={[styles.answerCard, { backgroundColor: theme.colors.surface }]}>
                             <View style={styles.answerHeader}>
-                                <Ionicons name="checkmark-circle" size={20} color={theme.colors.success} />
+                                <Ionicons name={getIconName('checkmarkCircle') as any} size={20} color={theme.colors.success} />
                                 <FormattedText style={[styles.answerTitle, { color: theme.colors.text }]}>
                                     {language === 'fr' ? 'Réponse attendue' : 'Đáp án mong đợi'}
                                 </FormattedText>
@@ -553,7 +524,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                                     onPress={() => handleUserFeedback('correct')}
                                     disabled={isSubmitting}
                                 >
-                                    <Ionicons name="checkmark" size={20} color="white" />
+                                    <Ionicons name={getIconName('checkmark') as any} size={20} color="white" />
                                     <FormattedText style={styles.assessmentButtonText}>
                                         {language === 'fr' ? 'Je savais' : 'Tôi biết'}
                                     </FormattedText>
@@ -563,7 +534,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                                     onPress={() => handleUserFeedback('incorrect')}
                                     disabled={isSubmitting}
                                 >
-                                    <Ionicons name="close" size={20} color="white" />
+                                    <Ionicons name={getIconName('close') as any} size={20} color="white" />
                                     <FormattedText style={styles.assessmentButtonText}>
                                         {language === 'fr' ? 'Je ne savais pas' : 'Tôi không biết'}
                                     </FormattedText>
@@ -606,7 +577,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                             <FormattedText style={styles.actionButtonText}>
                                 {language === 'fr' ? 'Voir la réponse' : 'Xem đáp án'}
                             </FormattedText>
-                            <Ionicons name="eye" size={20} color="white" />
+                            <Ionicons name={getIconName('eye') as any} size={20} color="white" />
                         </TouchableOpacity>
                     ) : userFeedback ? (
                         <TouchableOpacity

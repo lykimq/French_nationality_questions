@@ -18,6 +18,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
+import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestStackParamList } from '../types/types';
 import { TestConfig, TestMode } from '../types/test';
@@ -41,6 +42,7 @@ const SubcategoryTestScreen = () => {
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage, historyCategories, historySubcategories } = useLanguage();
     const { startTest } = useTest();
+    const { getIconName, getJsonIconName } = useIcons();
 
     const [isStartingTest, setIsStartingTest] = useState(false);
 
@@ -149,7 +151,7 @@ const SubcategoryTestScreen = () => {
         >
             <View style={[styles.cardHeader, { backgroundColor: testMode.color + '20' }]}>
                 <View style={[styles.iconContainer, { backgroundColor: testMode.color }]}>
-                    <Ionicons name={testMode.icon as any} size={24} color="white" />
+                    <Ionicons name={getJsonIconName(testMode.icon) as any} size={24} color="white" />
                 </View>
                 <View style={styles.questionCountBadge}>
                     <FormattedText style={[styles.questionCountText, { color: testMode.color }]}>
@@ -196,7 +198,7 @@ const SubcategoryTestScreen = () => {
                         style={styles.backButton}
                         onPress={() => navigation.goBack()}
                     >
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                        <Ionicons name={getIconName('arrowBack') as any} size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
 
                     <View style={styles.headerTextContainer}>

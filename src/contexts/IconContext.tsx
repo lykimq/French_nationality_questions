@@ -36,6 +36,26 @@ export interface IconMapping {
     image: string;
     expand: string;
     collapse: string;
+
+    // Test screen specific icons
+    analytics: string;
+    helpCircle: string;
+    time: string;
+    checkmark: string;
+    checkmarkCircle: string;
+    play: string;
+    trophy: string;
+    eye: string;
+    bulb: string;
+    alertCircle: string;
+    trendingUp: string;
+    shuffle: string;
+    bug: string;
+    grid: string;
+    flash: string;
+    people: string;
+    chatbox: string;
+    arrowBack: string;
 }
 
 // JSON Category icon mapping interface - for Firebase JSON file icons
@@ -99,6 +119,24 @@ const iconSets: Record<IconSetType, IconMapping> = {
         image: 'image',
         expand: 'expand',
         collapse: 'contract',
+        analytics: 'analytics',
+        helpCircle: 'help-circle',
+        time: 'time',
+        checkmark: 'checkmark',
+        checkmarkCircle: 'checkmark-circle',
+        play: 'play',
+        trophy: 'trophy',
+        eye: 'eye',
+        bulb: 'bulb',
+        alertCircle: 'alert-circle',
+        trendingUp: 'trending-up',
+        shuffle: 'shuffle',
+        bug: 'bug',
+        grid: 'grid',
+        flash: 'flash',
+        people: 'people',
+        chatbox: 'chatbox',
+        arrowBack: 'arrow-back',
     },
     outlined: {
         home: 'home-outline',
@@ -122,6 +160,24 @@ const iconSets: Record<IconSetType, IconMapping> = {
         image: 'image-outline',
         expand: 'expand-outline',
         collapse: 'contract-outline',
+        analytics: 'analytics-outline',
+        helpCircle: 'help-circle-outline',
+        time: 'time-outline',
+        checkmark: 'checkmark-outline',
+        checkmarkCircle: 'checkmark-circle-outline',
+        play: 'play-outline',
+        trophy: 'trophy-outline',
+        eye: 'eye-outline',
+        bulb: 'bulb-outline',
+        alertCircle: 'alert-circle-outline',
+        trendingUp: 'trending-up-outline',
+        shuffle: 'shuffle-outline',
+        bug: 'bug-outline',
+        grid: 'grid-outline',
+        flash: 'flash-outline',
+        people: 'people-outline',
+        chatbox: 'chatbox-outline',
+        arrowBack: 'arrow-back-outline',
     },
     rounded: {
         home: 'home',
@@ -145,6 +201,24 @@ const iconSets: Record<IconSetType, IconMapping> = {
         image: 'camera',
         expand: 'resize',
         collapse: 'contract',
+        analytics: 'analytics',
+        helpCircle: 'help-circle',
+        time: 'time',
+        checkmark: 'checkmark',
+        checkmarkCircle: 'checkmark-circle',
+        play: 'play',
+        trophy: 'trophy',
+        eye: 'eye',
+        bulb: 'bulb',
+        alertCircle: 'alert-circle',
+        trendingUp: 'trending-up',
+        shuffle: 'shuffle',
+        bug: 'bug',
+        grid: 'grid',
+        flash: 'flash',
+        people: 'people-circle',
+        chatbox: 'chatbox',
+        arrowBack: 'arrow-back',
     },
     sharp: {
         home: 'home-sharp',
@@ -168,6 +242,24 @@ const iconSets: Record<IconSetType, IconMapping> = {
         image: 'image-sharp',
         expand: 'expand-sharp',
         collapse: 'contract-sharp',
+        analytics: 'analytics-sharp',
+        helpCircle: 'help-circle-sharp',
+        time: 'time-sharp',
+        checkmark: 'checkmark-sharp',
+        checkmarkCircle: 'checkmark-circle-sharp',
+        play: 'play-sharp',
+        trophy: 'trophy-sharp',
+        eye: 'eye-sharp',
+        bulb: 'bulb-sharp',
+        alertCircle: 'alert-circle-sharp',
+        trendingUp: 'trending-up-sharp',
+        shuffle: 'shuffle-sharp',
+        bug: 'bug-sharp',
+        grid: 'grid-sharp',
+        flash: 'flash-sharp',
+        people: 'people-sharp',
+        chatbox: 'chatbox-sharp',
+        arrowBack: 'arrow-back-sharp',
     },
 };
 

@@ -21,6 +21,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
+import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestMode, TestConfig, TestRecommendation } from '../types/test';
 import { TestStackParamList } from '../types/types';
@@ -47,6 +48,7 @@ const TestScreen = () => {
     const untypedNavigation = useNavigation(); // For event listeners
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
+    const { getIconName, getJsonIconName } = useIcons();
     const {
         testProgress,
         testStatistics,
@@ -292,8 +294,8 @@ const TestScreen = () => {
                     {getLocalizedText('Votre Progression', 'Tiến độ của bạn')}
                 </FormattedText>
                 <View style={styles.progressHeaderRight}>
-                    <Ionicons name="analytics" size={24} color={theme.colors.primary} />
-                    <Ionicons name="chevron-forward" size={20} color={theme.colors.textMuted} style={{ marginLeft: 8 }} />
+                    <Ionicons name={getIconName('analytics') as any} size={24} color={theme.colors.primary} />
+                    <Ionicons name={getIconName('chevronForward') as any} size={20} color={theme.colors.textMuted} style={{ marginLeft: 8 }} />
                 </View>
             </View>
 
@@ -330,7 +332,7 @@ const TestScreen = () => {
                 <View style={styles.trendContainer}>
                     <Ionicons
                         name={
-                            testStatistics.improvementTrend === 'improving' ? 'trending-up' :
+                            testStatistics.improvementTrend === 'improving' ? getIconName('trendingUp') as any :
                                 testStatistics.improvementTrend === 'declining' ? 'trending-down' : 'remove'
                         }
                         size={16}
@@ -388,7 +390,7 @@ const TestScreen = () => {
             )}
 
             <View style={[styles.modeIconContainer, { backgroundColor: modeOption.color + '20' }]}>
-                <Ionicons name={modeOption.icon as any} size={32} color={modeOption.color} />
+                <Ionicons name={getJsonIconName(modeOption.icon) as any} size={32} color={modeOption.color} />
             </View>
 
             <View style={styles.modeContent}>
@@ -401,7 +403,7 @@ const TestScreen = () => {
 
                 <View style={styles.modeDetails}>
                     <View style={styles.modeDetail}>
-                        <Ionicons name="help-circle" size={16} color={theme.colors.textMuted} />
+                        <Ionicons name={getIconName('helpCircle') as any} size={16} color={theme.colors.textMuted} />
                         <FormattedText style={[styles.modeDetailText, { color: theme.colors.textMuted }]}>
                             {modeOption.questionCount} {getLocalizedText('questions', 'câu hỏi')}
                         </FormattedText>
@@ -409,7 +411,7 @@ const TestScreen = () => {
 
                     {modeOption.timeLimit && (
                         <View style={styles.modeDetail}>
-                            <Ionicons name="time" size={16} color={theme.colors.textMuted} />
+                            <Ionicons name={getIconName('time') as any} size={16} color={theme.colors.textMuted} />
                             <FormattedText style={[styles.modeDetailText, { color: theme.colors.textMuted }]}>
                                 {modeOption.timeLimit} {getLocalizedText('min', 'phút')}
                             </FormattedText>
@@ -418,7 +420,7 @@ const TestScreen = () => {
                 </View>
             </View>
 
-            <Ionicons name="chevron-forward" size={24} color={theme.colors.textMuted} />
+            <Ionicons name={getIconName('chevronForward') as any} size={24} color={theme.colors.textMuted} />
         </TouchableOpacity>
     );
 
@@ -440,7 +442,7 @@ const TestScreen = () => {
                             style={styles.modalHeader}
                         >
                             <View style={[styles.modalIconContainer, { backgroundColor: modeOption.color }]}>
-                                <Ionicons name={modeOption.icon as any} size={40} color="white" />
+                                <Ionicons name={getJsonIconName(modeOption.icon) as any} size={40} color="white" />
                             </View>
                             <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
                                 {getLocalizedModeTitle(modeOption)}
@@ -453,7 +455,7 @@ const TestScreen = () => {
                         <View style={styles.modalBody}>
                             <View style={styles.modalDetails}>
                                 <View style={styles.modalDetailRow}>
-                                    <Ionicons name="help-circle" size={20} color={theme.colors.primary} />
+                                    <Ionicons name={getIconName('helpCircle') as any} size={20} color={theme.colors.primary} />
                                     <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
                                         {getLocalizedText('Questions:', 'Số câu hỏi:')}
                                     </FormattedText>
@@ -464,7 +466,7 @@ const TestScreen = () => {
 
                                 {modeOption.timeLimit && (
                                     <View style={styles.modalDetailRow}>
-                                        <Ionicons name="time" size={20} color={theme.colors.primary} />
+                                        <Ionicons name={getIconName('time') as any} size={20} color={theme.colors.primary} />
                                         <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
                                             {getLocalizedText('Durée:', 'Thời gian:')}
                                         </FormattedText>
@@ -475,11 +477,11 @@ const TestScreen = () => {
                                 )}
 
                                 <View style={styles.modalDetailRow}>
-                                    <Ionicons name="shuffle" size={20} color={theme.colors.primary} />
+                                    <Ionicons name={getIconName('shuffle') as any} size={20} color={theme.colors.primary} />
                                     <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
                                         {getLocalizedText('Questions mélangées', 'Câu hỏi ngẫu nhiên')}
                                     </FormattedText>
-                                    <Ionicons name="checkmark" size={20} color={theme.colors.success} />
+                                    <Ionicons name={getIconName('checkmark') as any} size={20} color={theme.colors.success} />
                                 </View>
                             </View>
 
@@ -502,7 +504,7 @@ const TestScreen = () => {
                                         <ActivityIndicator color="white" size="small" />
                                     ) : (
                                         <>
-                                            <Ionicons name="play" size={20} color="white" />
+                                            <Ionicons name={getIconName('play') as any} size={20} color="white" />
                                             <FormattedText style={styles.modalStartButtonText}>
                                                 {getLocalizedText('Commencer', 'Bắt đầu')}
                                             </FormattedText>
@@ -588,9 +590,9 @@ const TestScreen = () => {
                                         activeOpacity={isActionable ? 0.7 : 1}
                                     >
                                         <Ionicons
-                                            name={rec.type === 'good_job' ? 'trophy' :
-                                                rec.type === 'review_questions' ? 'refresh' :
-                                                    rec.type === 'study_category' ? 'book' : 'bulb'}
+                                            name={rec.type === 'good_job' ? getIconName('trophy') as any :
+                                                rec.type === 'review_questions' ? getIconName('refresh') as any :
+                                                    rec.type === 'study_category' ? getJsonIconName('book') as any : getIconName('bulb') as any}
                                             size={20}
                                             color={theme.colors.primary}
                                         />
@@ -608,7 +610,7 @@ const TestScreen = () => {
                                             )}
                                         </View>
                                         {isActionable && (
-                                            <Ionicons name="chevron-forward" size={20} color={theme.colors.primary} />
+                                            <Ionicons name={getIconName('chevronForward') as any} size={20} color={theme.colors.primary} />
                                         )}
                                     </RecommendationComponent>
                                 );
@@ -630,7 +632,7 @@ const TestScreen = () => {
                         activeOpacity={0.8}
                     >
                         <View style={[styles.subcategoryIconContainer, { backgroundColor: '#8E44AD20' }]}>
-                            <Ionicons name="library" size={32} color="#8E44AD" />
+                            <Ionicons name={getJsonIconName('library') as any} size={32} color="#8E44AD" />
                         </View>
 
                         <View style={styles.subcategoryContent}>
@@ -646,13 +648,13 @@ const TestScreen = () => {
 
                             <View style={styles.subcategoryDetails}>
                                 <View style={styles.subcategoryDetail}>
-                                    <Ionicons name="grid" size={16} color={theme.colors.textMuted} />
+                                    <Ionicons name={getIconName('grid') as any} size={16} color={theme.colors.textMuted} />
                                     <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
                                         12 {getLocalizedText('catégories', 'chủ đề')}
                                     </FormattedText>
                                 </View>
                                 <View style={styles.subcategoryDetail}>
-                                    <Ionicons name="flash" size={16} color={theme.colors.textMuted} />
+                                    <Ionicons name={getIconName('flash') as any} size={16} color={theme.colors.textMuted} />
                                     <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
                                         {getLocalizedText('Tests courts', 'Bài test ngắn')}
                                     </FormattedText>
@@ -660,7 +662,7 @@ const TestScreen = () => {
                             </View>
                         </View>
 
-                        <Ionicons name="chevron-forward" size={24} color={theme.colors.textMuted} />
+                        <Ionicons name={getIconName('chevronForward') as any} size={24} color={theme.colors.textMuted} />
                     </TouchableOpacity>
 
                     {/* Part 1 Tests Section */}
@@ -670,7 +672,7 @@ const TestScreen = () => {
                         activeOpacity={0.8}
                     >
                         <View style={[styles.subcategoryIconContainer, { backgroundColor: '#3498DB20' }]}>
-                            <Ionicons name="book" size={32} color="#3498DB" />
+                            <Ionicons name={getJsonIconName('book') as any} size={32} color="#3498DB" />
                         </View>
 
                         <View style={styles.subcategoryContent}>
@@ -686,13 +688,13 @@ const TestScreen = () => {
 
                             <View style={styles.subcategoryDetails}>
                                 <View style={styles.subcategoryDetail}>
-                                    <Ionicons name="people" size={16} color={theme.colors.textMuted} />
+                                    <Ionicons name={getIconName('people') as any} size={16} color={theme.colors.textMuted} />
                                     <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
                                         3 {getLocalizedText('sous-catégories', 'danh mục con')}
                                     </FormattedText>
                                 </View>
                                 <View style={styles.subcategoryDetail}>
-                                    <Ionicons name="chatbox" size={16} color={theme.colors.textMuted} />
+                                    <Ionicons name={getIconName('chatbox') as any} size={16} color={theme.colors.textMuted} />
                                     <FormattedText style={[styles.subcategoryDetailText, { color: theme.colors.textMuted }]}>
                                         {getLocalizedText('Format conversation', 'Định dạng hội thoại')}
                                     </FormattedText>
@@ -700,7 +702,7 @@ const TestScreen = () => {
                             </View>
                         </View>
 
-                        <Ionicons name="chevron-forward" size={24} color={theme.colors.textMuted} />
+                        <Ionicons name={getIconName('chevronForward') as any} size={24} color={theme.colors.textMuted} />
                     </TouchableOpacity>
                 </ScrollView>
             </SafeAreaView>

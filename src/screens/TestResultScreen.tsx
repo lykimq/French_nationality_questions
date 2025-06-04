@@ -18,6 +18,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest, deserializeTestResult } from '../contexts/TestContext';
+import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestResult } from '../types/test';
 import { TestStackParamList } from '../types/types';
@@ -33,6 +34,7 @@ const TestResultScreen = () => {
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { testProgress, testStatistics, generateRecommendations, cancelTest, currentSession } = useTest();
+    const { getIconName } = useIcons();
 
     const [testResult, setTestResult] = useState<TestResult | null>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -159,7 +161,7 @@ const TestResultScreen = () => {
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <TouchableOpacity onPress={handleCloseTest} style={styles.closeButton}>
-                        <Ionicons name="close" size={24} color={theme.colors.headerText} />
+                        <Ionicons name={getIconName('close') as any} size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
                     <View style={styles.headerCenter}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
@@ -190,7 +192,7 @@ const TestResultScreen = () => {
                         style={[styles.scoreCard, { backgroundColor: theme.colors.surface }]}
                     >
                         <View style={styles.scoreHeader}>
-                            <Ionicons name="trophy" size={32} color={getScoreColor(testResult.session.score)} />
+                            <Ionicons name={getIconName('trophy') as any} size={32} color={getScoreColor(testResult.session.score)} />
                             <FormattedText style={[styles.scoreMessage, { color: getScoreColor(testResult.session.score) }]}>
                                 {getScoreMessage(testResult.session.score)}
                             </FormattedText>
@@ -214,7 +216,7 @@ const TestResultScreen = () => {
 
                         <View style={styles.statsGrid}>
                             <View style={styles.statItem}>
-                                <Ionicons name="time" size={20} color={theme.colors.primary} />
+                                <Ionicons name={getIconName('time') as any} size={20} color={theme.colors.primary} />
                                 <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'Temps moyen' : 'Thời gian TB'}
                                 </FormattedText>
@@ -224,7 +226,7 @@ const TestResultScreen = () => {
                             </View>
 
                             <View style={styles.statItem}>
-                                <Ionicons name="trending-up" size={20} color={theme.colors.success} />
+                                <Ionicons name={getIconName('trendingUp') as any} size={20} color={theme.colors.success} />
                                 <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'Tendance' : 'Xu hướng'}
                                 </FormattedText>
@@ -240,7 +242,7 @@ const TestResultScreen = () => {
                             </View>
 
                             <View style={styles.statItem}>
-                                <Ionicons name="checkmark-circle" size={20} color={theme.colors.success} />
+                                <Ionicons name={getIconName('checkmarkCircle') as any} size={20} color={theme.colors.success} />
                                 <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'Maîtrisées' : 'Đã thành thạo'}
                                 </FormattedText>
@@ -250,7 +252,7 @@ const TestResultScreen = () => {
                             </View>
 
                             <View style={styles.statItem}>
-                                <Ionicons name="alert-circle" size={20} color={theme.colors.warning} />
+                                <Ionicons name={getIconName('alertCircle') as any} size={20} color={theme.colors.warning} />
                                 <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'À revoir' : 'Cần xem lại'}
                                 </FormattedText>
@@ -272,7 +274,7 @@ const TestResultScreen = () => {
                                 <View key={index} style={styles.recommendationItem}>
                                     <View style={styles.recommendationHeader}>
                                         <Ionicons
-                                            name={rec.type === 'good_job' ? 'trophy' : 'bulb'}
+                                            name={rec.type === 'good_job' ? getIconName('trophy') as any : getIconName('bulb') as any}
                                             size={20}
                                             color={theme.colors.primary}
                                         />
@@ -331,7 +333,7 @@ const TestResultScreen = () => {
                         style={[styles.actionButton, styles.secondaryButton, { borderColor: theme.colors.border }]}
                         onPress={handleViewProgress}
                     >
-                        <Ionicons name="analytics" size={20} color={theme.colors.primary} />
+                        <Ionicons name={getIconName('analytics') as any} size={20} color={theme.colors.primary} />
                         <FormattedText style={[styles.secondaryButtonText, { color: theme.colors.primary }]}>
                             {language === 'fr' ? 'Voir Progression' : 'Xem tiến độ'}
                         </FormattedText>
@@ -341,7 +343,7 @@ const TestResultScreen = () => {
                         style={[styles.actionButton, styles.primaryButton, { backgroundColor: theme.colors.primary }]}
                         onPress={handleRetakeTest}
                     >
-                        <Ionicons name="refresh" size={20} color="white" />
+                        <Ionicons name={getIconName('refresh') as any} size={20} color="white" />
                         <FormattedText style={styles.primaryButtonText}>
                             {language === 'fr' ? 'Nouveau Test' : 'Làm bài mới'}
                         </FormattedText>
