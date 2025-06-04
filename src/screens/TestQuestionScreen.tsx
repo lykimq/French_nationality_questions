@@ -487,10 +487,8 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                                 <View style={[styles.categoryBadge, { backgroundColor: theme.colors.primaryLight }]}>
                                     <FormattedText
                                         style={[styles.categoryBadgeText, { color: theme.colors.primary }]}
-                                        numberOfLines={1}
-                                        ellipsizeMode="tail"
                                     >
-                                        {getDisplayCategoryTitle()}
+                                        {currentQuestion.categoryTitle}
                                     </FormattedText>
                                 </View>
                             )}
@@ -728,14 +726,17 @@ const styles = StyleSheet.create({
     },
     categoryBadge: {
         paddingHorizontal: 12,
-        paddingVertical: 6,
+        paddingVertical: 8,
         borderRadius: 12,
         alignSelf: 'flex-start',
         maxWidth: '100%',
+        flexShrink: 1,
     },
     categoryBadgeText: {
         fontSize: 12,
         fontWeight: '600',
+        lineHeight: 16,
+        textAlign: 'center',
     },
     questionText: {
         fontSize: 18,
