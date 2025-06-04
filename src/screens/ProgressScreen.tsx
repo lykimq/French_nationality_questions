@@ -183,45 +183,6 @@ const ProgressScreen = () => {
                         </View>
                     </View>
 
-                    {/* Time Statistics */}
-                    <View style={[styles.timeCard, { backgroundColor: theme.colors.surface }]}>
-                        <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Statistiques de Temps', 'Thống kê thời gian')}
-                        </FormattedText>
-
-                        <View style={styles.timeStats}>
-                            <View style={styles.timeStat}>
-                                <Ionicons name="time" size={24} color={theme.colors.primary} />
-                                <FormattedText style={[styles.timeValue, { color: theme.colors.text }]}>
-                                    {Math.round(testStatistics.timeStats?.averageTimePerQuestion || 0)}s
-                                </FormattedText>
-                                <FormattedText style={[styles.timeLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Temps moyen', 'Thời gian TB')}
-                                </FormattedText>
-                            </View>
-
-                            <View style={styles.timeStat}>
-                                <Ionicons name="flash" size={24} color={theme.colors.success} />
-                                <FormattedText style={[styles.timeValue, { color: theme.colors.text }]}>
-                                    {Math.round(testStatistics.timeStats?.fastestTime || 0)}s
-                                </FormattedText>
-                                <FormattedText style={[styles.timeLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Plus rapide', 'Nhanh nhất')}
-                                </FormattedText>
-                            </View>
-
-                            <View style={styles.timeStat}>
-                                <Ionicons name="hourglass" size={24} color={theme.colors.warning} />
-                                <FormattedText style={[styles.timeValue, { color: theme.colors.text }]}>
-                                    {Math.round(testStatistics.timeStats?.slowestTime || 0)}s
-                                </FormattedText>
-                                <FormattedText style={[styles.timeLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Plus lent', 'Chậm nhất')}
-                                </FormattedText>
-                            </View>
-                        </View>
-                    </View>
-
                     {/* Category Performance */}
                     {Object.keys(testStatistics.categoryPerformance).length > 0 && (
                         <View style={[styles.categoryCard, { backgroundColor: theme.colors.surface }]}>
@@ -417,32 +378,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '500',
         marginLeft: 8,
-    },
-    timeCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
-    },
-    timeStats: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-    },
-    timeStat: {
-        alignItems: 'center',
-        flex: 1,
-    },
-    timeValue: {
-        fontSize: 18,
-        fontWeight: '600',
-        marginVertical: 8,
-    },
-    timeLabel: {
-        fontSize: 12,
-        textAlign: 'center',
     },
     categoryCard: {
         borderRadius: 16,
