@@ -1,5 +1,6 @@
 import { MultiLangText } from '../contexts/LanguageContext';
 import { TestResult } from './test';
+import { SerializableTestResult } from '../contexts/TestContext';
 
 // Bottom Tab Navigator types
 export type TabParamList = {
@@ -40,6 +41,6 @@ export type HomeStackParamList = {
 export type TestStackParamList = {
     Test: undefined;
     TestQuestion: undefined;
-    TestResult: { testResult: TestResult } | undefined;
+    TestResult: { testResult: SerializableTestResult } | undefined;
     Progress: undefined;
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
     StyleSheet,
     Text,
@@ -44,6 +44,7 @@ interface TestModeOption {
 
 const TestScreen = () => {
     const navigation = useNavigation<TestScreenNavigationProp>();
+    const untypedNavigation = useNavigation(); // For event listeners
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const {
@@ -54,16 +55,28 @@ const TestScreen = () => {
         isLoading,
         generateRecommendations,
         refreshProgress,
+        cancelTest,
     } = useTest();
 
     const [selectedMode, setSelectedMode] = useState<TestMode | null>(null);
     const [showModeModal, setShowModeModal] = useState(false);
     const [isStartingTest, setIsStartingTest] = useState(false);
 
-    // Refresh data when screen is focused
+    // Refresh data when screen mounts and when it comes into focus
     useEffect(() => {
+        console.log('🔄 TestScreen mounted - refreshing progress data');
         refreshProgress();
-    }, []);
+    }, []); // Run once on mount
+
+    // Listen for navigation focus events to refresh data when coming back to this screen
+    useEffect(() => {
+        const unsubscribe = untypedNavigation.addListener('focus', () => {
+            console.log('🔄 TestScreen focused - refreshing progress data');
+            refreshProgress();
+        });
+
+        return unsubscribe;
+    }, [untypedNavigation, refreshProgress]);
 
     const testModes: TestModeOption[] = [
         {
@@ -104,16 +117,34 @@ const TestScreen = () => {
         },
     ];
 
+    // Helper functions to get localized text with dual language support
+    const getLocalizedText = (textFr: string, textVi: string): string => {
+        if (language === 'fr') {
+            return textFr;
+        } else {
+            return `${textVi}\n${textFr}`;
+        }
+    };
+
+    const getLocalizedModeTitle = (modeOption: TestModeOption): string => {
+        return getLocalizedText(modeOption.title_fr, modeOption.title_vi);
+    };
+
+    const getLocalizedModeDescription = (modeOption: TestModeOption): string => {
+        return getLocalizedText(modeOption.description_fr, modeOption.description_vi);
+    };
+
     const handleStartTest = async (mode: TestMode) => {
         const modeOption = testModes.find(m => m.mode === mode);
         if (!modeOption) return;
 
         if (modeOption.questionCount === 0) {
             Alert.alert(
-                language === 'fr' ? 'Aucune question disponible' : 'Không có câu hỏi',
-                language === 'fr'
-                    ? 'Il n\'y a pas de questions disponibles pour ce mode de test.'
-                    : 'Không có câu hỏi nào có sẵn cho chế độ kiểm tra này.'
+                getLocalizedText('Aucune question disponible', 'Không có câu hỏi'),
+                getLocalizedText(
+                    'Il n\'y a pas de questions disponibles pour ce mode de test.',
+                    'Không có câu hỏi nào có sẵn cho chế độ kiểm tra này.'
+                )
             );
             return;
         }
@@ -136,10 +167,11 @@ const TestScreen = () => {
         } catch (error) {
             console.error('Error starting test:', error);
             Alert.alert(
-                language === 'fr' ? 'Erreur' : 'Lỗi',
-                language === 'fr'
-                    ? 'Impossible de démarrer le test. Veuillez réessayer.'
-                    : 'Không thể bắt đầu bài kiểm tra. Vui lòng thử lại.'
+                getLocalizedText('Erreur', 'Lỗi'),
+                getLocalizedText(
+                    'Impossible de démarrer le test. Veuillez réessayer.',
+                    'Không thể bắt đầu bài kiểm tra. Vui lòng thử lại.'
+                )
             );
         } finally {
             setIsStartingTest(false);
@@ -159,7 +191,7 @@ const TestScreen = () => {
         >
             <View style={styles.progressHeader}>
                 <FormattedText style={[styles.progressTitle, { color: theme.colors.text }]}>
-                    {language === 'fr' ? 'Votre Progression' : 'Tiến độ của bạn'}
+                    {getLocalizedText('Votre Progression', 'Tiến độ của bạn')}
                 </FormattedText>
                 <View style={styles.progressHeaderRight}>
                     <Ionicons name="analytics" size={24} color={theme.colors.primary} />
@@ -173,7 +205,7 @@ const TestScreen = () => {
                         {testProgress.totalTestsTaken}
                     </FormattedText>
                     <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
-                        {language === 'fr' ? 'Tests' : 'Bài test'}
+                        {getLocalizedText('Tests', 'Bài test')}
                     </FormattedText>
                 </View>
 
@@ -182,7 +214,7 @@ const TestScreen = () => {
                         {testProgress.averageScore}%
                     </FormattedText>
                     <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
-                        {language === 'fr' ? 'Moyenne' : 'Trung bình'}
+                        {getLocalizedText('Moyenne', 'Trung bình')}
                     </FormattedText>
                 </View>
 
@@ -191,7 +223,7 @@ const TestScreen = () => {
                         {testProgress.bestScore}%
                     </FormattedText>
                     <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
-                        {language === 'fr' ? 'Meilleur' : 'Cao nhất'}
+                        {getLocalizedText('Meilleur', 'Cao nhất')}
                     </FormattedText>
                 </View>
             </View>
@@ -217,8 +249,11 @@ const TestScreen = () => {
                             testStatistics.improvementTrend === 'improving' ? 'En progression' :
                                 testStatistics.improvementTrend === 'declining' ? 'En baisse' : 'Stable'
                         ) : (
-                            testStatistics.improvementTrend === 'improving' ? 'Đang tiến bộ' :
-                                testStatistics.improvementTrend === 'declining' ? 'Đang giảm' : 'Ổn định'
+                            testStatistics.improvementTrend === 'improving' ?
+                                getLocalizedText('En progression', 'Đang tiến bộ') :
+                                testStatistics.improvementTrend === 'declining' ?
+                                    getLocalizedText('En baisse', 'Đang giảm') :
+                                    getLocalizedText('Stable', 'Ổn định')
                         )}
                     </FormattedText>
                 </View>
@@ -226,7 +261,7 @@ const TestScreen = () => {
 
             <View style={styles.viewDetailsHint}>
                 <FormattedText style={[styles.viewDetailsText, { color: theme.colors.textMuted }]}>
-                    {language === 'fr' ? 'Appuyez pour voir les détails' : 'Nhấn để xem chi tiết'}
+                    {getLocalizedText('Appuyez pour voir les détails', 'Nhấn để xem chi tiết')}
                 </FormattedText>
             </View>
         </TouchableOpacity>
@@ -249,7 +284,7 @@ const TestScreen = () => {
             {modeOption.isRecommended && (
                 <View style={[styles.recommendedBadge, { backgroundColor: theme.colors.primary }]}>
                     <FormattedText style={styles.recommendedText}>
-                        {language === 'fr' ? 'Recommandé' : 'Được đề xuất'}
+                        {getLocalizedText('Recommandé', 'Được đề xuất')}
                     </FormattedText>
                 </View>
             )}
@@ -260,17 +295,17 @@ const TestScreen = () => {
 
             <View style={styles.modeContent}>
                 <FormattedText style={[styles.modeTitle, { color: theme.colors.text }]}>
-                    {language === 'fr' ? modeOption.title_fr : modeOption.title_vi}
+                    {getLocalizedModeTitle(modeOption)}
                 </FormattedText>
                 <FormattedText style={[styles.modeDescription, { color: theme.colors.textMuted }]}>
-                    {language === 'fr' ? modeOption.description_fr : modeOption.description_vi}
+                    {getLocalizedModeDescription(modeOption)}
                 </FormattedText>
 
                 <View style={styles.modeDetails}>
                     <View style={styles.modeDetail}>
                         <Ionicons name="help-circle" size={16} color={theme.colors.textMuted} />
                         <FormattedText style={[styles.modeDetailText, { color: theme.colors.textMuted }]}>
-                            {modeOption.questionCount} {language === 'fr' ? 'questions' : 'câu hỏi'}
+                            {modeOption.questionCount} {getLocalizedText('questions', 'câu hỏi')}
                         </FormattedText>
                     </View>
 
@@ -278,7 +313,7 @@ const TestScreen = () => {
                         <View style={styles.modeDetail}>
                             <Ionicons name="time" size={16} color={theme.colors.textMuted} />
                             <FormattedText style={[styles.modeDetailText, { color: theme.colors.textMuted }]}>
-                                {modeOption.timeLimit} {language === 'fr' ? 'min' : 'phút'}
+                                {modeOption.timeLimit} {getLocalizedText('min', 'phút')}
                             </FormattedText>
                         </View>
                     )}
@@ -310,10 +345,10 @@ const TestScreen = () => {
                                 <Ionicons name={modeOption.icon as any} size={40} color="white" />
                             </View>
                             <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? modeOption.title_fr : modeOption.title_vi}
+                                {getLocalizedModeTitle(modeOption)}
                             </FormattedText>
                             <FormattedText style={[styles.modalDescription, { color: theme.colors.textMuted }]}>
-                                {language === 'fr' ? modeOption.description_fr : modeOption.description_vi}
+                                {getLocalizedModeDescription(modeOption)}
                             </FormattedText>
                         </LinearGradient>
 
@@ -322,7 +357,7 @@ const TestScreen = () => {
                                 <View style={styles.modalDetailRow}>
                                     <Ionicons name="help-circle" size={20} color={theme.colors.primary} />
                                     <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
-                                        {language === 'fr' ? 'Questions:' : 'Số câu hỏi:'}
+                                        {getLocalizedText('Questions:', 'Số câu hỏi:')}
                                     </FormattedText>
                                     <FormattedText style={[styles.modalDetailValue, { color: theme.colors.textMuted }]}>
                                         {modeOption.questionCount}
@@ -333,10 +368,10 @@ const TestScreen = () => {
                                     <View style={styles.modalDetailRow}>
                                         <Ionicons name="time" size={20} color={theme.colors.primary} />
                                         <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
-                                            {language === 'fr' ? 'Durée:' : 'Thời gian:'}
+                                            {getLocalizedText('Durée:', 'Thời gian:')}
                                         </FormattedText>
                                         <FormattedText style={[styles.modalDetailValue, { color: theme.colors.textMuted }]}>
-                                            {modeOption.timeLimit} {language === 'fr' ? 'minutes' : 'phút'}
+                                            {modeOption.timeLimit} {getLocalizedText('minutes', 'phút')}
                                         </FormattedText>
                                     </View>
                                 )}
@@ -344,7 +379,7 @@ const TestScreen = () => {
                                 <View style={styles.modalDetailRow}>
                                     <Ionicons name="shuffle" size={20} color={theme.colors.primary} />
                                     <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
-                                        {language === 'fr' ? 'Questions mélangées' : 'Câu hỏi ngẫu nhiên'}
+                                        {getLocalizedText('Questions mélangées', 'Câu hỏi ngẫu nhiên')}
                                     </FormattedText>
                                     <Ionicons name="checkmark" size={20} color={theme.colors.success} />
                                 </View>
@@ -356,7 +391,7 @@ const TestScreen = () => {
                                     onPress={() => setShowModeModal(false)}
                                 >
                                     <FormattedText style={[styles.modalButtonText, { color: theme.colors.textMuted }]}>
-                                        {language === 'fr' ? 'Annuler' : 'Hủy'}
+                                        {getLocalizedText('Annuler', 'Hủy')}
                                     </FormattedText>
                                 </TouchableOpacity>
 
@@ -371,7 +406,7 @@ const TestScreen = () => {
                                         <>
                                             <Ionicons name="play" size={20} color="white" />
                                             <FormattedText style={styles.modalStartButtonText}>
-                                                {language === 'fr' ? 'Commencer' : 'Bắt đầu'}
+                                                {getLocalizedText('Commencer', 'Bắt đầu')}
                                             </FormattedText>
                                         </>
                                     )}
@@ -391,7 +426,7 @@ const TestScreen = () => {
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {language === 'fr' ? 'Chargement...' : 'Đang tải...'}
+                    {getLocalizedText('Chargement...', 'Đang tải...')}
                 </FormattedText>
             </View>
         );
@@ -406,10 +441,10 @@ const TestScreen = () => {
                     <View style={styles.headerContent}>
                         <View style={styles.headerText}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {language === 'fr' ? 'Tests de Préparation' : 'Bài kiểm tra chuẩn bị'}
+                                {getLocalizedText('Tests de Préparation', 'Bài kiểm tra chuẩn bị')}
                             </FormattedText>
                             <FormattedText style={[styles.headerSubtitle, { color: theme.colors.headerText + 'B3' }]}>
-                                {language === 'fr' ? 'Testez vos connaissances' : 'Kiểm tra kiến thức của bạn'}
+                                {getLocalizedText('Testez vos connaissances', 'Kiểm tra kiến thức của bạn')}
                             </FormattedText>
                         </View>
                         <View style={styles.languageSelector}>
@@ -435,7 +470,7 @@ const TestScreen = () => {
                     {recommendations.length > 0 && (
                         <View style={[styles.recommendationsSection, { backgroundColor: theme.colors.surface }]}>
                             <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Recommandations' : 'Đề xuất'}
+                                {getLocalizedText('Recommandations', 'Đề xuất')}
                             </FormattedText>
                             {recommendations.slice(0, 2).map((rec, index) => (
                                 <View key={index} style={styles.recommendationItem}>
@@ -446,10 +481,10 @@ const TestScreen = () => {
                                     />
                                     <View style={styles.recommendationContent}>
                                         <FormattedText style={[styles.recommendationTitle, { color: theme.colors.text }]}>
-                                            {language === 'fr' ? rec.title_fr : rec.title_vi}
+                                            {getLocalizedText(rec.title_fr, rec.title_vi)}
                                         </FormattedText>
                                         <FormattedText style={[styles.recommendationDescription, { color: theme.colors.textMuted }]}>
-                                            {language === 'fr' ? rec.description_fr : rec.description_vi}
+                                            {getLocalizedText(rec.description_fr, rec.description_vi)}
                                         </FormattedText>
                                     </View>
                                 </View>
@@ -459,7 +494,7 @@ const TestScreen = () => {
 
                     <View style={styles.modesSection}>
                         <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Modes de Test' : 'Chế độ kiểm tra'}
+                            {getLocalizedText('Modes de Test', 'Chế độ kiểm tra')}
                         </FormattedText>
                         {testModes.map(renderTestModeCard)}
                     </View>

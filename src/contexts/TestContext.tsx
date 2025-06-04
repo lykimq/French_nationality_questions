@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLanguage, HistorySubcategory } from './LanguageContext';
 import {
@@ -53,6 +53,87 @@ const STORAGE_KEYS = {
     TEST_STATISTICS: 'test_statistics',
 };
 
+// Serializable versions for navigation
+export interface SerializableTestResult {
+    session: {
+        id: string;
+        mode: TestMode;
+        questions: TestQuestion[];
+        answers: {
+            questionId: number;
+            isCorrect: boolean;
+            userAnswer?: string;
+            timeSpent: number;
+            timestamp: string; // ISO string instead of Date
+        }[];
+        startTime: string; // ISO string instead of Date
+        endTime?: string; // ISO string instead of Date
+        isCompleted: boolean;
+        score: number;
+        totalQuestions: number;
+        correctAnswers: number;
+    };
+    statistics: TestStatistics;
+    recommendations: TestRecommendation[];
+}
+
+// Utility functions for serialization
+export const serializeTestResult = (result: TestResult): SerializableTestResult => {
+    // Serialize category performance with Date conversion
+    const serializedCategoryPerformance: any = {};
+    Object.entries(result.statistics.categoryPerformance).forEach(([key, perf]) => {
+        serializedCategoryPerformance[key] = {
+            ...perf,
+            lastAttempted: perf.lastAttempted?.toISOString()
+        };
+    });
+
+    return {
+        session: {
+            ...result.session,
+            answers: result.session.answers.map(answer => ({
+                ...answer,
+                timestamp: answer.timestamp.toISOString()
+            })),
+            startTime: result.session.startTime.toISOString(),
+            endTime: result.session.endTime?.toISOString()
+        },
+        statistics: {
+            ...result.statistics,
+            categoryPerformance: serializedCategoryPerformance
+        },
+        recommendations: result.recommendations
+    };
+};
+
+export const deserializeTestResult = (serialized: SerializableTestResult): TestResult => {
+    // Deserialize category performance with Date conversion
+    const deserializedCategoryPerformance: any = {};
+    Object.entries(serialized.statistics.categoryPerformance).forEach(([key, perf]) => {
+        deserializedCategoryPerformance[key] = {
+            ...perf,
+            lastAttempted: perf.lastAttempted ? new Date(perf.lastAttempted) : undefined
+        };
+    });
+
+    return {
+        session: {
+            ...serialized.session,
+            answers: serialized.session.answers.map(answer => ({
+                ...answer,
+                timestamp: new Date(answer.timestamp)
+            })),
+            startTime: new Date(serialized.session.startTime),
+            endTime: serialized.session.endTime ? new Date(serialized.session.endTime) : undefined
+        },
+        statistics: {
+            ...serialized.statistics,
+            categoryPerformance: deserializedCategoryPerformance
+        },
+        recommendations: serialized.recommendations
+    };
+};
+
 export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const { questionsData, language, historySubcategories } = useLanguage();
 
@@ -88,35 +169,59 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         loadTestData();
     }, []);
 
-    const loadTestData = async () => {
+    const loadTestData = useCallback(async () => {
         try {
+            console.log('📖 Loading test data...');
             setIsLoading(true);
 
             // Load progress
             const progressData = await AsyncStorage.getItem(STORAGE_KEYS.TEST_PROGRESS);
             if (progressData) {
-                setTestProgress(JSON.parse(progressData));
+                const parsedProgress = JSON.parse(progressData);
+                console.log('📖 Loading test progress:', {
+                    totalTestsTaken: parsedProgress.totalTestsTaken,
+                    averageScore: parsedProgress.averageScore,
+                    bestScore: parsedProgress.bestScore
+                });
+                setTestProgress(parsedProgress);
             }
 
             // Load statistics
             const statisticsData = await AsyncStorage.getItem(STORAGE_KEYS.TEST_STATISTICS);
             if (statisticsData) {
-                setTestStatistics(JSON.parse(statisticsData));
+                const parsedStatistics = JSON.parse(statisticsData);
+                console.log('📊 Loading test statistics');
+                setTestStatistics(parsedStatistics);
             }
 
         } catch (error) {
-            console.error('Error loading test data:', error);
+            console.error('❌ Error loading test data:', error);
         } finally {
+            console.log('✅ Finished loading test data');
             setIsLoading(false);
         }
-    };
+    }, []);
 
-    const saveTestData = async () => {
+    const saveTestData = async (
+        progressToSave?: TestProgress,
+        statisticsToSave?: TestStatistics
+    ) => {
         try {
-            await AsyncStorage.setItem(STORAGE_KEYS.TEST_PROGRESS, JSON.stringify(testProgress));
-            await AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(testStatistics));
+            const progressData = progressToSave || testProgress;
+            const statisticsData = statisticsToSave || testStatistics;
+
+            console.log('💾 Saving test data:', {
+                totalTestsTaken: progressData.totalTestsTaken,
+                averageScore: progressData.averageScore,
+                bestScore: progressData.bestScore
+            });
+
+            await AsyncStorage.setItem(STORAGE_KEYS.TEST_PROGRESS, JSON.stringify(progressData));
+            await AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(statisticsData));
+
+            console.log('✅ Test data saved successfully');
         } catch (error) {
-            console.error('Error saving test data:', error);
+            console.error('❌ Error saving test data:', error);
         }
     };
 
@@ -320,8 +425,18 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             lastTestDate: new Date(),
         };
 
+        console.log('📊 Test Progress Update:', {
+            previousTotalTests: testProgress.totalTestsTaken,
+            newTotalTests: updatedProgress.totalTestsTaken,
+            previousAverageScore: testProgress.averageScore,
+            newAverageScore: updatedProgress.averageScore,
+            currentScore: score,
+            correctAnswers,
+            totalQuestions: finishedSession.totalQuestions
+        });
+
         // Update statistics
-        const updatedStatistics = updateTestStatistics(finishedSession);
+        const updatedStatistics = updateTestStatistics(finishedSession, updatedProgress);
 
         // Update weak/strong categories
         updatedProgress.weakCategories = Object.entries(updatedStatistics.categoryPerformance)
@@ -337,8 +452,8 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setCurrentSession(null);
         setCurrentQuestionIndex(0);
 
-        // Save to storage
-        await saveTestData();
+        // Save to storage with the updated values
+        await saveTestData(updatedProgress, updatedStatistics);
 
         const result: TestResult = {
             session: finishedSession,
@@ -349,7 +464,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return result;
     };
 
-    const updateTestStatistics = (session: TestSession): TestStatistics => {
+    const updateTestStatistics = (session: TestSession, updatedProgress: TestProgress): TestStatistics => {
         const newStatistics = { ...testStatistics };
 
         // Update category performance - match answers to questions by ID
@@ -411,27 +526,37 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             }
         });
 
-        // Update improvement trend
-        if (testProgress.recentScores.length >= 3) {
-            const recentAvg = testProgress.recentScores.slice(-3).reduce((sum, score) => sum + score, 0) / 3;
-            const olderAvg = testProgress.recentScores.slice(-6, -3).reduce((sum, score) => sum + score, 0) / 3;
+        // Update improvement trend using the updated progress data
+        if (updatedProgress.recentScores.length >= 3) {
+            const recentAvg = updatedProgress.recentScores.slice(-3).reduce((sum, score) => sum + score, 0) / 3;
 
-            if (recentAvg > olderAvg + 5) {
-                newStatistics.improvementTrend = 'improving';
-            } else if (recentAvg < olderAvg - 5) {
-                newStatistics.improvementTrend = 'declining';
+            if (updatedProgress.recentScores.length >= 6) {
+                const olderAvg = updatedProgress.recentScores.slice(-6, -3).reduce((sum, score) => sum + score, 0) / 3;
+
+                if (recentAvg > olderAvg + 5) {
+                    newStatistics.improvementTrend = 'improving';
+                } else if (recentAvg < olderAvg - 5) {
+                    newStatistics.improvementTrend = 'declining';
+                } else {
+                    newStatistics.improvementTrend = 'stable';
+                }
             } else {
+                // Not enough data for trend comparison, default to stable
                 newStatistics.improvementTrend = 'stable';
             }
+        } else {
+            // Not enough recent scores to determine trend
+            newStatistics.improvementTrend = 'stable';
         }
 
         return newStatistics;
     };
 
-    const cancelTest = () => {
+    const cancelTest = useCallback(() => {
+        console.log('🛑 Cancelling test session');
         setCurrentSession(null);
         setCurrentQuestionIndex(0);
-    };
+    }, []);
 
     const getCurrentQuestion = (): TestQuestion | null => {
         if (!currentSession || currentQuestionIndex >= currentSession.questions.length) {
@@ -454,9 +579,10 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return currentSession.questions[currentQuestionIndex - 1];
     };
 
-    const refreshProgress = async (): Promise<void> => {
+    const refreshProgress = useCallback(async (): Promise<void> => {
+        console.log('🔄 Refreshing progress...');
         await loadTestData();
-    };
+    }, [loadTestData]);
 
     const getWeakCategories = (): string[] => {
         return testProgress.weakCategories;

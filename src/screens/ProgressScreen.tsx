@@ -32,6 +32,15 @@ const ProgressScreen = () => {
 
     const [isRefreshing, setIsRefreshing] = useState(false);
 
+    // Helper function to get localized text with dual language support
+    const getLocalizedText = (textFr: string, textVi: string): string => {
+        if (language === 'fr') {
+            return textFr;
+        } else {
+            return `${textVi}\n${textFr}`;
+        }
+    };
+
     useEffect(() => {
         // Refresh progress when screen loads
         handleRefresh();
@@ -53,8 +62,9 @@ const ProgressScreen = () => {
     };
 
     const getPerformanceColor = (accuracy: number) => {
-        if (accuracy >= 80) return theme.colors.success;
-        if (accuracy >= 60) return theme.colors.warning;
+        const safeAccuracy = accuracy || 0;
+        if (safeAccuracy >= 80) return theme.colors.success;
+        if (safeAccuracy >= 60) return theme.colors.warning;
         return theme.colors.error;
     };
 
@@ -79,7 +89,7 @@ const ProgressScreen = () => {
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {language === 'fr' ? 'Chargement des statistiques...' : 'Đang tải thống kê...'}
+                    {getLocalizedText('Chargement des statistiques...', 'Đang tải thống kê...')}
                 </FormattedText>
             </View>
         );
@@ -96,7 +106,7 @@ const ProgressScreen = () => {
                     </TouchableOpacity>
                     <View style={styles.headerCenter}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                            {language === 'fr' ? 'Progression' : 'Tiến độ'}
+                            {getLocalizedText('Progression', 'Tiến độ')}
                         </FormattedText>
                     </View>
                     <View style={styles.languageSelector}>
@@ -120,51 +130,54 @@ const ProgressScreen = () => {
                     {/* Overall Progress */}
                     <View style={[styles.overallCard, { backgroundColor: theme.colors.surface }]}>
                         <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Progression Globale' : 'Tiến độ tổng thể'}
+                            {getLocalizedText('Progression Globale', 'Tiến độ tổng thể')}
                         </FormattedText>
 
                         <View style={styles.progressStats}>
                             <View style={styles.progressStat}>
                                 <FormattedText style={[styles.progressValue, { color: theme.colors.primary }]}>
-                                    {testProgress.totalTestsTaken}
+                                    {testProgress.totalTestsTaken || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Tests effectués' : 'Bài test đã làm'}
+                                    {getLocalizedText('Tests effectués', 'Bài test đã làm')}
                                 </FormattedText>
                             </View>
 
                             <View style={styles.progressStat}>
                                 <FormattedText style={[styles.progressValue, { color: theme.colors.success }]}>
-                                    {testProgress.averageScore}%
+                                    {Math.round(testProgress.averageScore || 0)}%
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Score moyen' : 'Điểm trung bình'}
+                                    {getLocalizedText('Score moyen', 'Điểm trung bình')}
                                 </FormattedText>
                             </View>
 
                             <View style={styles.progressStat}>
                                 <FormattedText style={[styles.progressValue, { color: theme.colors.warning }]}>
-                                    {testProgress.bestScore}%
+                                    {Math.round(testProgress.bestScore || 0)}%
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Meilleur score' : 'Điểm cao nhất'}
+                                    {getLocalizedText('Meilleur score', 'Điểm cao nhất')}
                                 </FormattedText>
                             </View>
                         </View>
 
                         <View style={styles.trendContainer}>
                             <Ionicons
-                                name={getTrendIcon(testStatistics.improvementTrend)}
+                                name={getTrendIcon(testStatistics.improvementTrend || 'stable')}
                                 size={20}
-                                color={getTrendColor(testStatistics.improvementTrend)}
+                                color={getTrendColor(testStatistics.improvementTrend || 'stable')}
                             />
-                            <FormattedText style={[styles.trendText, { color: getTrendColor(testStatistics.improvementTrend) }]}>
+                            <FormattedText style={[styles.trendText, { color: getTrendColor(testStatistics.improvementTrend || 'stable') }]}>
                                 {language === 'fr' ? (
-                                    testStatistics.improvementTrend === 'improving' ? 'En progression' :
-                                        testStatistics.improvementTrend === 'declining' ? 'En baisse' : 'Stable'
+                                    (testStatistics.improvementTrend || 'stable') === 'improving' ? 'En progression' :
+                                        (testStatistics.improvementTrend || 'stable') === 'declining' ? 'En baisse' : 'Stable'
                                 ) : (
-                                    testStatistics.improvementTrend === 'improving' ? 'Đang tiến bộ' :
-                                        testStatistics.improvementTrend === 'declining' ? 'Đang giảm' : 'Ổn định'
+                                    (testStatistics.improvementTrend || 'stable') === 'improving' ?
+                                        getLocalizedText('En progression', 'Đang tiến bộ') :
+                                        (testStatistics.improvementTrend || 'stable') === 'declining' ?
+                                            getLocalizedText('En baisse', 'Đang giảm') :
+                                            getLocalizedText('Stable', 'Ổn định')
                                 )}
                             </FormattedText>
                         </View>
@@ -173,37 +186,37 @@ const ProgressScreen = () => {
                     {/* Time Statistics */}
                     <View style={[styles.timeCard, { backgroundColor: theme.colors.surface }]}>
                         <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Statistiques de Temps' : 'Thống kê thời gian'}
+                            {getLocalizedText('Statistiques de Temps', 'Thống kê thời gian')}
                         </FormattedText>
 
                         <View style={styles.timeStats}>
                             <View style={styles.timeStat}>
                                 <Ionicons name="time" size={24} color={theme.colors.primary} />
                                 <FormattedText style={[styles.timeValue, { color: theme.colors.text }]}>
-                                    {testStatistics.timeStats.averageTimePerQuestion}s
+                                    {Math.round(testStatistics.timeStats?.averageTimePerQuestion || 0)}s
                                 </FormattedText>
                                 <FormattedText style={[styles.timeLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Temps moyen' : 'Thời gian TB'}
+                                    {getLocalizedText('Temps moyen', 'Thời gian TB')}
                                 </FormattedText>
                             </View>
 
                             <View style={styles.timeStat}>
                                 <Ionicons name="flash" size={24} color={theme.colors.success} />
                                 <FormattedText style={[styles.timeValue, { color: theme.colors.text }]}>
-                                    {testStatistics.timeStats.fastestTime}s
+                                    {Math.round(testStatistics.timeStats?.fastestTime || 0)}s
                                 </FormattedText>
                                 <FormattedText style={[styles.timeLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Plus rapide' : 'Nhanh nhất'}
+                                    {getLocalizedText('Plus rapide', 'Nhanh nhất')}
                                 </FormattedText>
                             </View>
 
                             <View style={styles.timeStat}>
                                 <Ionicons name="hourglass" size={24} color={theme.colors.warning} />
                                 <FormattedText style={[styles.timeValue, { color: theme.colors.text }]}>
-                                    {testStatistics.timeStats.slowestTime}s
+                                    {Math.round(testStatistics.timeStats?.slowestTime || 0)}s
                                 </FormattedText>
                                 <FormattedText style={[styles.timeLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Plus lent' : 'Chậm nhất'}
+                                    {getLocalizedText('Plus lent', 'Chậm nhất')}
                                 </FormattedText>
                             </View>
                         </View>
@@ -213,7 +226,7 @@ const ProgressScreen = () => {
                     {Object.keys(testStatistics.categoryPerformance).length > 0 && (
                         <View style={[styles.categoryCard, { backgroundColor: theme.colors.surface }]}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Performance par Catégorie' : 'Thành tích theo danh mục'}
+                                {getLocalizedText('Performance par Catégorie', 'Thành tích theo danh mục')}
                             </FormattedText>
 
                             {Object.values(testStatistics.categoryPerformance).map((category, index) => (
@@ -223,16 +236,16 @@ const ProgressScreen = () => {
                                             {category.categoryTitle}
                                         </FormattedText>
                                         <FormattedText
-                                            style={[styles.categoryAccuracy, { color: getPerformanceColor(category.accuracy) }]}
+                                            style={[styles.categoryAccuracy, { color: getPerformanceColor(category.accuracy || 0) }]}
                                         >
-                                            {category.accuracy}%
+                                            {Math.round(category.accuracy || 0)}%
                                         </FormattedText>
                                     </View>
 
                                     <View style={styles.categoryStats}>
                                         <FormattedText style={[styles.categoryStatsText, { color: theme.colors.textMuted }]}>
-                                            {category.correctAnswers}/{category.questionsAttempted} {language === 'fr' ? 'correctes' : 'đúng'} •
-                                            {category.averageTime}s {language === 'fr' ? 'moy.' : 'TB'}
+                                            {category.correctAnswers || 0}/{category.questionsAttempted || 0} {getLocalizedText('correctes', 'đúng')} •
+                                            {Math.round(category.averageTime || 0)}s {getLocalizedText('moy.', 'TB')}
                                         </FormattedText>
                                     </View>
 
@@ -241,8 +254,8 @@ const ProgressScreen = () => {
                                             style={[
                                                 styles.progressBarFill,
                                                 {
-                                                    width: `${category.accuracy}%`,
-                                                    backgroundColor: getPerformanceColor(category.accuracy),
+                                                    width: `${Math.min(100, Math.max(0, category.accuracy || 0))}%`,
+                                                    backgroundColor: getPerformanceColor(category.accuracy || 0),
                                                 }
                                             ]}
                                         />
@@ -256,7 +269,7 @@ const ProgressScreen = () => {
                     {testProgress.recentScores.length > 0 && (
                         <View style={[styles.scoresCard, { backgroundColor: theme.colors.surface }]}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Scores Récents' : 'Điểm gần đây'}
+                                {getLocalizedText('Scores Récents', 'Điểm gần đây')}
                             </FormattedText>
 
                             <View style={styles.scoresContainer}>
@@ -265,11 +278,11 @@ const ProgressScreen = () => {
                                         key={index}
                                         style={[
                                             styles.scoreItem,
-                                            { backgroundColor: getPerformanceColor(score) + '20' }
+                                            { backgroundColor: getPerformanceColor(score || 0) + '20' }
                                         ]}
                                     >
-                                        <FormattedText style={[styles.scoreText, { color: getPerformanceColor(score) }]}>
-                                            {score}%
+                                        <FormattedText style={[styles.scoreText, { color: getPerformanceColor(score || 0) }]}>
+                                            {Math.round(score || 0)}%
                                         </FormattedText>
                                     </View>
                                 ))}
@@ -280,37 +293,37 @@ const ProgressScreen = () => {
                     {/* Question Analysis */}
                     <View style={[styles.analysisCard, { backgroundColor: theme.colors.surface }]}>
                         <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Analyse des Questions' : 'Phân tích câu hỏi'}
+                            {getLocalizedText('Analyse des Questions', 'Phân tích câu hỏi')}
                         </FormattedText>
 
                         <View style={styles.analysisStats}>
                             <View style={styles.analysisStat}>
                                 <Ionicons name="checkmark-circle" size={20} color={theme.colors.success} />
                                 <FormattedText style={[styles.analysisValue, { color: theme.colors.success }]}>
-                                    {testStatistics.masteredQuestions.length}
+                                    {testStatistics.masteredQuestions?.length || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.analysisLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Maîtrisées' : 'Đã thành thạo'}
+                                    {getLocalizedText('Maîtrisées', 'Đã thành thạo')}
                                 </FormattedText>
                             </View>
 
                             <View style={styles.analysisStat}>
                                 <Ionicons name="alert-circle" size={20} color={theme.colors.warning} />
                                 <FormattedText style={[styles.analysisValue, { color: theme.colors.warning }]}>
-                                    {testStatistics.strugglingQuestions.length}
+                                    {testStatistics.strugglingQuestions?.length || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.analysisLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'À revoir' : 'Cần xem lại'}
+                                    {getLocalizedText('À revoir', 'Cần xem lại')}
                                 </FormattedText>
                             </View>
 
                             <View style={styles.analysisStat}>
                                 <Ionicons name="bar-chart" size={20} color={theme.colors.primary} />
                                 <FormattedText style={[styles.analysisValue, { color: theme.colors.primary }]}>
-                                    {testProgress.questionsAnswered}
+                                    {testProgress.questionsAnswered || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.analysisLabel, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Total répondues' : 'Tổng đã trả lời'}
+                                    {getLocalizedText('Total répondues', 'Tổng đã trả lời')}
                                 </FormattedText>
                             </View>
                         </View>

@@ -56,8 +56,21 @@ const TestStack = () => {
             }}
         >
             <Stack.Screen name="Test" component={TestScreen} />
-            <Stack.Screen name="TestQuestion" component={TestQuestionScreen} />
-            <Stack.Screen name="TestResult" component={TestResultScreen} />
+            <Stack.Screen
+                name="TestQuestion"
+                component={TestQuestionScreen}
+                options={{
+                    gestureEnabled: false,
+                }}
+            />
+            <Stack.Screen
+                name="TestResult"
+                component={TestResultScreen}
+                options={{
+                    gestureEnabled: false,
+                    headerLeft: () => null, // Disable the back button
+                }}
+            />
             <Stack.Screen name="Progress" component={ProgressScreen} />
         </Stack.Navigator>
     );

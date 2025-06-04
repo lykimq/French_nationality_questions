@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
     StyleSheet,
     View,
@@ -13,11 +13,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
+import { useTest, deserializeTestResult } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
 import { TestResult } from '../types/test';
 import { TestStackParamList } from '../types/types';
@@ -32,55 +32,82 @@ const TestResultScreen = () => {
     const route = useRoute<TestResultScreenRouteProp>();
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
-    const { testProgress, testStatistics, generateRecommendations, cancelTest } = useTest();
+    const { testProgress, testStatistics, generateRecommendations, cancelTest, currentSession } = useTest();
 
     const [testResult, setTestResult] = useState<TestResult | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const cleanupCalledRef = useRef(false);
 
     useEffect(() => {
         // Get test result from navigation params or create a fallback
         const resultFromParams = route.params?.testResult;
 
         if (resultFromParams) {
-            setTestResult(resultFromParams);
+            // Deserialize the test result from navigation params
+            const deserializedResult = deserializeTestResult(resultFromParams);
+            setTestResult(deserializedResult);
         } else {
             // Fallback: create result from current test context data
-            const fallbackResult: TestResult = {
-                session: {
-                    id: Date.now().toString(),
-                    mode: 'mock_interview',
-                    questions: [],
-                    answers: [],
-                    startTime: new Date(),
-                    endTime: new Date(),
-                    isCompleted: true,
-                    score: testProgress.averageScore || 0,
-                    totalQuestions: 25,
-                    correctAnswers: Math.round((testProgress.averageScore || 0) * 25 / 100),
-                },
-                statistics: testStatistics,
-                recommendations: generateRecommendations(),
-            };
-            setTestResult(fallbackResult);
+            // This should only happen if there's an issue with navigation
+            // The proper flow should always pass testResult through navigation params
+
+            // Check if we have a valid current session or recent completed test data
+            const currentSessionData = currentSession;
+
+            if (currentSessionData && currentSessionData.isCompleted) {
+                // Use the completed session data
+                const fallbackResult: TestResult = {
+                    session: currentSessionData,
+                    statistics: testStatistics,
+                    recommendations: generateRecommendations(),
+                };
+                setTestResult(fallbackResult);
+            } else {
+                // Create a minimal fallback if no session data is available
+                // This indicates an error in the test flow
+                console.warn('TestResultScreen: No test result provided and no completed session found');
+
+                const fallbackResult: TestResult = {
+                    session: {
+                        id: Date.now().toString(),
+                        mode: 'mock_interview',
+                        questions: [],
+                        answers: [],
+                        startTime: new Date(),
+                        endTime: new Date(),
+                        isCompleted: true,
+                        score: testProgress.averageScore || 0,
+                        totalQuestions: testProgress.totalTestsTaken > 0 ?
+                            Math.round(testProgress.questionsAnswered / testProgress.totalTestsTaken) : 0,
+                        correctAnswers: testProgress.totalTestsTaken > 0 ?
+                            Math.round((testProgress.averageScore || 0) * testProgress.questionsAnswered / (testProgress.totalTestsTaken * 100)) : 0,
+                    },
+                    statistics: testStatistics,
+                    recommendations: generateRecommendations(),
+                };
+                setTestResult(fallbackResult);
+            }
         }
 
         setIsLoading(false);
-    }, [route.params, testProgress, testStatistics, generateRecommendations]);
+    }, [route.params, testProgress, testStatistics, generateRecommendations, currentSession]);
 
     const getScoreColor = (score: number) => {
-        if (score >= 80) return theme.colors.success;
-        if (score >= 60) return theme.colors.warning;
+        const safeScore = score || 0;
+        if (safeScore >= 80) return theme.colors.success;
+        if (safeScore >= 60) return theme.colors.warning;
         return theme.colors.error;
     };
 
     const getScoreMessage = (score: number) => {
-        if (score >= 90) {
+        const safeScore = score || 0;
+        if (safeScore >= 90) {
             return language === 'fr' ? 'Excellent!' : 'Xuất sắc!';
-        } else if (score >= 80) {
+        } else if (safeScore >= 80) {
             return language === 'fr' ? 'Très bien!' : 'Rất tốt!';
-        } else if (score >= 70) {
+        } else if (safeScore >= 70) {
             return language === 'fr' ? 'Bien!' : 'Tốt!';
-        } else if (score >= 60) {
+        } else if (safeScore >= 60) {
             return language === 'fr' ? 'Passable' : 'Đạt';
         } else {
             return language === 'fr' ? 'À améliorer' : 'Cần cải thiện';
@@ -88,21 +115,31 @@ const TestResultScreen = () => {
     };
 
     const handleRetakeTest = () => {
-        // Reset the test state first
-        cancelTest();
-        // Navigate back to the main test screen (root of test stack)
+        // Navigate directly to Test screen with explicit params
         navigation.navigate('Test', undefined);
     };
 
     const handleViewProgress = () => {
-        // Navigate to the dedicated Progress screen
         navigation.navigate('Progress', undefined);
     };
 
     const handleCloseTest = () => {
-        // Navigate back to the main test screen (root of test stack)
+        // Navigate directly to Test screen with explicit params
         navigation.navigate('Test', undefined);
     };
+
+    // Cleanup effect - only clear test state if there's an incomplete/active session
+    useEffect(() => {
+        return () => {
+            // Only cleanup if we have an active (incomplete) test session
+            // A completed test should not be cancelled
+            if (!cleanupCalledRef.current && currentSession && !currentSession.isCompleted) {
+                console.log('🧹 TestResultScreen: Cleaning up incomplete test session on unmount');
+                cleanupCalledRef.current = true;
+                cancelTest();
+            }
+        };
+    }, []); // Empty dependency array to avoid re-running
 
     if (isLoading || !testResult) {
         return (
@@ -161,10 +198,10 @@ const TestResultScreen = () => {
 
                         <View style={styles.scoreMain}>
                             <FormattedText style={[styles.scoreValue, { color: getScoreColor(testResult.session.score) }]}>
-                                {testResult.session.score}%
+                                {Math.round(testResult.session.score || 0)}%
                             </FormattedText>
                             <FormattedText style={[styles.scoreDetails, { color: theme.colors.textMuted }]}>
-                                {testResult.session.correctAnswers} / {testResult.session.totalQuestions} {language === 'fr' ? 'correctes' : 'đúng'}
+                                {testResult.session.correctAnswers || 0} / {testResult.session.totalQuestions || 0} {language === 'fr' ? 'correctes' : 'đúng'}
                             </FormattedText>
                         </View>
                     </LinearGradient>
@@ -182,7 +219,7 @@ const TestResultScreen = () => {
                                     {language === 'fr' ? 'Temps moyen' : 'Thời gian TB'}
                                 </FormattedText>
                                 <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
-                                    {testStatistics.timeStats.averageTimePerQuestion}s
+                                    {Math.round(testResult.statistics.timeStats?.averageTimePerQuestion || 0)}s
                                 </FormattedText>
                             </View>
 
@@ -193,11 +230,11 @@ const TestResultScreen = () => {
                                 </FormattedText>
                                 <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
                                     {language === 'fr' ? (
-                                        testStatistics.improvementTrend === 'improving' ? 'Progression' :
-                                            testStatistics.improvementTrend === 'declining' ? 'Baisse' : 'Stable'
+                                        testResult.statistics.improvementTrend === 'improving' ? 'Progression' :
+                                            testResult.statistics.improvementTrend === 'declining' ? 'Baisse' : 'Stable'
                                     ) : (
-                                        testStatistics.improvementTrend === 'improving' ? 'Tiến bộ' :
-                                            testStatistics.improvementTrend === 'declining' ? 'Giảm' : 'Ổn định'
+                                        testResult.statistics.improvementTrend === 'improving' ? 'Tiến bộ' :
+                                            testResult.statistics.improvementTrend === 'declining' ? 'Giảm' : 'Ổn định'
                                     )}
                                 </FormattedText>
                             </View>
@@ -208,7 +245,7 @@ const TestResultScreen = () => {
                                     {language === 'fr' ? 'Maîtrisées' : 'Đã thành thạo'}
                                 </FormattedText>
                                 <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
-                                    {testStatistics.masteredQuestions.length}
+                                    {testResult.statistics.masteredQuestions?.length || 0}
                                 </FormattedText>
                             </View>
 
@@ -218,7 +255,7 @@ const TestResultScreen = () => {
                                     {language === 'fr' ? 'À revoir' : 'Cần xem lại'}
                                 </FormattedText>
                                 <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
-                                    {testStatistics.strugglingQuestions.length}
+                                    {testResult.statistics.strugglingQuestions?.length || 0}
                                 </FormattedText>
                             </View>
                         </View>
@@ -260,7 +297,7 @@ const TestResultScreen = () => {
                         <View style={styles.progressStats}>
                             <View style={styles.progressStat}>
                                 <FormattedText style={[styles.progressValue, { color: theme.colors.primary }]}>
-                                    {testProgress.totalTestsTaken}
+                                    {testProgress.totalTestsTaken || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'Tests effectués' : 'Bài test đã làm'}
@@ -269,7 +306,7 @@ const TestResultScreen = () => {
 
                             <View style={styles.progressStat}>
                                 <FormattedText style={[styles.progressValue, { color: theme.colors.success }]}>
-                                    {testProgress.averageScore}%
+                                    {Math.round(testProgress.averageScore || 0)}%
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'Score moyen' : 'Điểm trung bình'}
@@ -278,7 +315,7 @@ const TestResultScreen = () => {
 
                             <View style={styles.progressStat}>
                                 <FormattedText style={[styles.progressValue, { color: theme.colors.warning }]}>
-                                    {testProgress.bestScore}%
+                                    {Math.round(testProgress.bestScore || 0)}%
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
                                     {language === 'fr' ? 'Meilleur score' : 'Điểm cao nhất'}

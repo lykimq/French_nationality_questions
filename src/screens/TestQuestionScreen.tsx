@@ -20,7 +20,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
+import { useTest, serializeTestResult } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
 import { TestAnswer } from '../types/test';
 import { TestStackParamList } from '../types/types';
@@ -52,6 +52,15 @@ const TestQuestionScreen = () => {
     const [showDebugPanel, setShowDebugPanel] = useState(__DEV__); // Only show in dev mode
 
     const currentQuestion = getCurrentQuestion();
+
+    // Check if session is completed or invalid and redirect to Test screen
+    useEffect(() => {
+        if (!currentSession || currentSession.isCompleted) {
+            console.log('⚠️ TestQuestionScreen: Session is completed or missing, redirecting to Test screen');
+            navigation.navigate('Test', undefined);
+            return;
+        }
+    }, [currentSession, navigation]);
 
     // Database validation on component mount (only in dev mode)
     useEffect(() => {
@@ -247,7 +256,8 @@ const TestQuestionScreen = () => {
             console.log('🏁 Finishing test...');
             const result = await finishTest();
             console.log('✅ Test finished successfully, navigating to results');
-            navigation.navigate('TestResult', { testResult: result });
+            const serializedResult = serializeTestResult(result);
+            navigation.navigate('TestResult', { testResult: serializedResult });
         } catch (error) {
             console.error('❌ Error finishing test:', error);
             Alert.alert(
