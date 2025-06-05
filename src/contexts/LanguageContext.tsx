@@ -6,8 +6,6 @@ import type {
     Language,
     HistoryCategory,
     HistorySubcategory,
-    JsonQuestion,
-    JsonCategory,
     FrenchQuestion,
     FrenchCategory,
     FrenchQuestionsData,
@@ -15,19 +13,11 @@ import type {
     MultiLangQuestion,
     MultiLangCategory,
     MultiLangQuestionsData,
-} from '../types/language';
-
-type LanguageContextType = {
-    language: Language;
-    setLanguage: (lang: Language) => void;
-    toggleLanguage: () => void;
-    questionsData: FrenchQuestionsData | MultiLangQuestionsData;
-    isTranslationLoaded: boolean;
-    historyCategories: HistoryCategory | null;
-    historySubcategories: { [key: string]: HistorySubcategory };
-    isDataLoading: boolean;
-    dataLoadingError: string | null;
-};
+    isFrenchQuestionsData,
+    isMultiLangQuestionsData,
+    LanguageContextType,
+    LanguageProviderProps,
+} from '../types';
 
 // Create the context with a default value
 const LanguageContext = createContext<LanguageContextType>({
@@ -41,11 +31,6 @@ const LanguageContext = createContext<LanguageContextType>({
     isDataLoading: true,
     dataLoadingError: null,
 });
-
-// Create a provider component that will wrap the app
-type LanguageProviderProps = {
-    children: ReactNode;
-};
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
     const [language, setLanguage] = useState<Language>('fr');
@@ -127,8 +112,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                 }
             } else {
                 // Safety casting our JSON data to ensure correct types
-                const personalFr = mainData.personal_fr_vi as unknown as JsonCategory;
-                const geographyFr = mainData.geography_fr_vi as unknown as JsonCategory;
+                const personalFr = mainData.personal_fr_vi as unknown as FrenchCategory;
+                const geographyFr = mainData.geography_fr_vi as unknown as FrenchCategory;
 
                 // Merge French and Vietnamese data
                 const mergedData: MultiLangQuestionsData = {
@@ -137,9 +122,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                             ...personalFr,
                             title_vi: personalFr.title_vi,
                             description_vi: personalFr.description_vi,
-                            questions: personalFr.questions.map((question) => {
+                            questions: personalFr.questions.map((question: any) => {
                                 const multiLangQuestion: MultiLangQuestion = {
-                                    id: question.id,
+                                    ...question,
                                     question: {
                                         fr: question.question,
                                         vi: question.question_vi || ''
@@ -147,12 +132,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                                     explanation: {
                                         fr: question.explanation,
                                         vi: question.explanation_vi || ''
-                                    }
+                                    },
+                                    image: question.image || null
                                 };
-
-                                if (question.image !== undefined) {
-                                    multiLangQuestion.image = question.image;
-                                }
 
                                 return multiLangQuestion;
                             })
@@ -161,9 +143,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                             ...geographyFr,
                             title_vi: geographyFr.title_vi,
                             description_vi: geographyFr.description_vi,
-                            questions: geographyFr.questions.map((question) => {
+                            questions: geographyFr.questions.map((question: any) => {
                                 const multiLangQuestion: MultiLangQuestion = {
-                                    id: question.id,
+                                    ...question,
                                     question: {
                                         fr: question.question,
                                         vi: question.question_vi || ''
@@ -171,12 +153,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                                     explanation: {
                                         fr: question.explanation,
                                         vi: question.explanation_vi || ''
-                                    }
+                                    },
+                                    image: question.image || null
                                 };
-
-                                if (question.image !== undefined) {
-                                    multiLangQuestion.image = question.image;
-                                }
 
                                 return multiLangQuestion;
                             })

@@ -7,6 +7,9 @@ export * from './core';
 // Domain business logic types
 export * from './domain';
 
+// Language-specific types
+export * from './language';
+
 // UI component types
 export * from './ui';
 

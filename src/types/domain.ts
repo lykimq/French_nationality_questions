@@ -1,4 +1,4 @@
-import type { BaseEntity, MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from './core';
+import type { MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from './core';
 
 // ==================== QUESTION DOMAIN ====================
 
@@ -50,62 +50,15 @@ export type CategoryType = Category | CategoryWithSubcategories;
 // Category collections
 export type CategoryCollection = readonly Category[];
 
-// ==================== JSON DATA STRUCTURES ====================
+// ==================== HISTORY DATA STRUCTURES ====================
 
-// For data loading from JSON files - separate from domain models
-export interface JsonQuestion {
-    readonly id: number;
-    readonly question: string;
-    readonly question_vi?: string;
-    readonly explanation: string;
-    readonly explanation_vi?: string;
-    readonly image?: string | null;
+// Modern history category structure using composition
+export interface HistoryCategory extends Category {
+    readonly subcategories: readonly Category[];
 }
 
-export interface JsonCategory {
-    readonly id: string;
-    readonly title: string;
-    readonly title_vi: string;
-    readonly icon: string;
-    readonly description: string;
-    readonly description_vi: string;
-    readonly questions: readonly JsonQuestion[];
-}
-
-// ==================== LEGACY DATA STRUCTURES ====================
-
-// For backwards compatibility - consider deprecating these
-export interface HistoryCategory {
-    readonly id: string;
-    readonly title: string;
-    readonly title_vi: string;
-    readonly icon: string;
-    readonly description: string;
-    readonly description_vi: string;
-    readonly subcategories: readonly {
-        readonly id: string;
-        readonly title: string;
-        readonly title_vi: string;
-        readonly icon: string;
-        readonly description: string;
-        readonly description_vi: string;
-    }[];
-}
-
-export interface HistorySubcategory {
-    readonly id: string;
-    readonly title: string;
-    readonly icon: string;
-    readonly description: string;
-    readonly questions?: readonly {
-        readonly id: number;
-        readonly question: string;
-        readonly explanation: string;
-        readonly question_vi: string;
-        readonly explanation_vi: string;
-        readonly image: string | null;
-    }[];
-}
+// History subcategory is just a regular Category
+export type HistorySubcategory = Category;
 
 // ==================== TYPE GUARDS ====================
 

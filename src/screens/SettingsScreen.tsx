@@ -22,18 +22,7 @@ import IconSelector from '../components/IconSelector';
 import JsonIconSelector from '../components/JsonIconSelector';
 import ColorThemeSelector from '../components/ColorThemeSelector';
 import FormattedText from '../components/FormattedText';
-
-type SettingItemProps = {
-    title: string;
-    title_vi?: string;
-    icon: string;
-    iconColor: string;
-    isSwitch?: boolean;
-    value?: boolean;
-    onValueChange?: (value: boolean) => void;
-    onPress?: () => void;
-    language?: 'fr' | 'vi';
-};
+import type { SettingItemProps } from '../types';
 
 const SettingItem: React.FC<SettingItemProps> = ({
     title,
@@ -412,7 +401,7 @@ const SettingsScreen = () => {
                         maximumValue={24}
                         step={1}
                         onValueChange={updateFontSize}
-                        formatValue={(val) => `${val}px`}
+                        formatValue={(val: number) => `${val}px`}
                     />
 
                     <FontSelector
@@ -432,7 +421,7 @@ const SettingsScreen = () => {
                         maximumValue={2.0}
                         step={0.1}
                         onValueChange={updateLineHeight}
-                        formatValue={(val) => val.toFixed(1)}
+                        formatValue={(val: number) => val.toFixed(1)}
                     />
 
                     <SliderSetting
@@ -444,7 +433,7 @@ const SettingsScreen = () => {
                         maximumValue={3}
                         step={0.5}
                         onValueChange={updateLetterSpacing}
-                        formatValue={(val) => `${val}px`}
+                        formatValue={(val: number) => `${val}px`}
                     />
 
                     <SettingItem

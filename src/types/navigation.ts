@@ -92,3 +92,17 @@ export interface ScreenProps<T extends Record<string, any>, K extends keyof T> {
         readonly canGoBack: () => boolean;
     };
 }
+
+// ==================== TAB NAVIGATION HELPER TYPES ====================
+
+// Tab bar icon props
+export interface TabBarIconProps {
+    readonly focused: boolean;
+    readonly color: string;
+    readonly size: number;
+}
+
+// Route type for tab navigation
+export interface RouteType {
+    readonly name: string;
+}

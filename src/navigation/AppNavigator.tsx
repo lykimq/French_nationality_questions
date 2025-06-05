@@ -98,16 +98,7 @@ const tabLabels = {
     }
 };
 
-// Define types for the route and navigation icon props
-type TabBarIconProps = {
-    focused: boolean;
-    color: string;
-    size: number;
-};
-
-type RouteType = {
-    name: string;
-};
+import type { TabBarIconProps, RouteType } from '../types';
 
 const AppTabs = () => {
     // Use the language context to get the current language and loading state

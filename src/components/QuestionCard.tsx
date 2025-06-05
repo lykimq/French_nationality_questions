@@ -86,16 +86,16 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
     const getQuestionText = (lang: 'fr' | 'vi') => {
         if (typeof question === 'string') {
-            return question;
+            return question || '';
         }
-        return question[lang];
+        return (question && question[lang]) ? String(question[lang]) : '';
     };
 
     const getExplanationText = (lang: 'fr' | 'vi') => {
         if (typeof explanation === 'string') {
-            return explanation;
+            return explanation || '';
         }
-        return explanation[lang];
+        return (explanation && explanation[lang]) ? String(explanation[lang]) : '';
     };
 
     const formatExplanation = (text: string) => {

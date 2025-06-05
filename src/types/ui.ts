@@ -140,6 +140,46 @@ export interface HOCProps<P extends Record<string, any> = {}> {
     readonly additionalProps?: Partial<P>;
 }
 
+// ==================== CONTEXT TYPES ====================
+
+// Language context type (import from domain/language types for full typing)
+export interface LanguageContextType {
+    readonly language: Language;
+    readonly setLanguage: (lang: Language) => void;
+    readonly toggleLanguage: () => void;
+    readonly questionsData: any; // FrenchQuestionsData | MultiLangQuestionsData - avoiding circular import
+    readonly isTranslationLoaded: boolean;
+    readonly historyCategories: any; // HistoryCategory | null - avoiding circular import
+    readonly historySubcategories: Record<string, any>; // Record<string, HistorySubcategory> - avoiding circular import
+    readonly isDataLoading: boolean;
+    readonly dataLoadingError: string | null;
+}
+
+// Language provider props
+export interface LanguageProviderProps {
+    readonly children: React.ReactNode;
+}
+
+// Settings item props
+export interface SettingItemProps {
+    readonly title: string;
+    readonly title_vi?: string;
+    readonly icon: string;
+    readonly iconColor: string;
+    readonly isSwitch?: boolean;
+    readonly value?: boolean;
+    readonly onValueChange?: (value: boolean) => void;
+    readonly onPress?: () => void;
+    readonly language?: 'fr' | 'vi';
+}
+
+// Image modal props
+export interface ImageModalProps {
+    readonly visible: boolean;
+    readonly imageSource: any;
+    readonly onClose: () => void;
+}
+
 // ==================== UTILITY TYPES ====================
 
 // Extract component props type

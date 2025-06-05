@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
-import { Question, QuestionSlideViewProps } from '../types';
+import { Question, QuestionSlideViewProps, MultiLangText } from '../types';
 import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -87,16 +87,36 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
         }
     };
 
-    const getLocalizedQuestion = (question: Question) => {
-        if (language === 'vi' && 'question_vi' in question) {
-            return question.question_vi || question.question;
+    const getLocalizedQuestion = (question: Question): string | MultiLangText => {
+        if (language === 'vi') {
+            // Check if question is already a MultiLangText object
+            if (typeof question.question === 'object' && question.question !== null) {
+                return question.question; // Already a MultiLangText object
+            }
+            // If it's a string, create MultiLangText object with question_vi
+            else if ('question_vi' in question) {
+                return {
+                    fr: String(question.question || ''),
+                    vi: String((question as any).question_vi || '')
+                };
+            }
         }
-        return question.question;
+        return question.question || '';
     };
 
-    const getLocalizedExplanation = (question: Question) => {
-        if (language === 'vi' && 'explanation_vi' in question) {
-            return question.explanation_vi || question.explanation || '';
+    const getLocalizedExplanation = (question: Question): string | MultiLangText => {
+        if (language === 'vi') {
+            // Check if explanation is already a MultiLangText object
+            if (typeof question.explanation === 'object' && question.explanation !== null) {
+                return question.explanation; // Already a MultiLangText object
+            }
+            // If it's a string, create MultiLangText object with explanation_vi
+            else if ('explanation_vi' in question) {
+                return {
+                    fr: String(question.explanation || ''),
+                    vi: String((question as any).explanation_vi || '')
+                };
+            }
         }
         return question.explanation || '';
     };
