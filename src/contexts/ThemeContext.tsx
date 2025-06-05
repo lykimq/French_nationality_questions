@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useIcons } from './IconContext';
 import type { ThemeMode, ColorTheme, Theme } from '../types';
 import type { IconMapping } from '../types/icons';
-import { colorThemes, colorThemeInfo } from '../data/colorThemes';
+import { colorThemes, colorThemeInfo } from '../utils/colorThemes';
 
 // Context interface
 interface ThemeContextType {
