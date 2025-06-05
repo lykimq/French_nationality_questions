@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
-import { CategoryCardProps } from '../types/questions';
+import { CategoryCardProps } from '../types';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,
@@ -24,8 +24,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     const displayDescription = language === 'fr' ? description : (description_vi || description);
 
     // Get the mapped icon name and vibrant color based on the current JSON icon set
-    const mappedIconName = getJsonIconName(icon);
-    const iconColor = getJsonIconColor(icon);
+    const mappedIconName = getJsonIconName(icon || 'default');
+    const iconColor = getJsonIconColor(icon || 'default');
 
     return (
         <Pressable

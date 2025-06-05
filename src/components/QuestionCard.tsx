@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Pressable, ScrollView, TouchableWithoutFeedback, Image, ActivityIndicator, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import { MultiLangText } from '../contexts/LanguageContext';
 import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
-import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
+import { useTextFormatting } from '../contexts/TextFormattingContext';
 import { useTheme } from '../contexts/ThemeContext';
-import { QuestionCardProps } from '../types/questions';
+import { QuestionCardProps } from '../types';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -24,7 +22,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [imageLoading, setImageLoading] = useState(true);
     const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
-    const { settings } = useTextFormatting();
     const { theme } = useTheme();
 
     const isMultilingual = typeof question !== 'string';

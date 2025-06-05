@@ -21,13 +21,10 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest, serializeTestResult } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
-import { TestAnswer } from '../types/test';
-import { TestStackParamList } from '../types/types';
+import { TestAnswer, TestStackParamList } from '../types';
 import { getCachedImageSource } from '../utils/imageUtils';
 import { testDatabaseIntegration, testQuestionIdUniqueness, logDatabaseStatistics } from '../utils/testDatabaseIntegration';
 import { useIcons } from '../contexts/IconContext';
-
-const { width, height } = Dimensions.get('window');
 
 type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

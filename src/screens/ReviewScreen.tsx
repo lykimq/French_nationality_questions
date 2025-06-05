@@ -6,7 +6,6 @@ import {
     TouchableOpacity,
     StatusBar,
     Image,
-    Dimensions,
     ActivityIndicator,
     Switch,
 } from 'react-native';
@@ -20,11 +19,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
-import { TestQuestion } from '../types/test';
-import { TestStackParamList } from '../types/types';
+import { TestQuestion, TestStackParamList } from '../types';
 import { getCachedImageSource } from '../utils/imageUtils';
-
-const { width, height } = Dimensions.get('window');
 
 type ReviewScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -67,14 +63,18 @@ const ReviewScreen = () => {
         const currentQuestion = incorrectQuestions[currentQuestionIndex];
         if (!currentQuestion) return '';
 
+        const questionText = typeof currentQuestion.question === 'string'
+            ? currentQuestion.question
+            : currentQuestion.question?.fr || '';
+
         if (language === 'fr') {
-            return currentQuestion.question || 'Question non disponible';
+            return questionText || 'Question non disponible';
         } else {
             // For Vietnamese, show both French and Vietnamese if available
             if (currentQuestion.question_vi) {
-                return `🇫🇷 ${currentQuestion.question}\n\n🇻🇳 ${currentQuestion.question_vi}`;
+                return `🇫🇷 ${questionText}\n\n🇻🇳 ${currentQuestion.question_vi}`;
             } else {
-                return currentQuestion.question || 'Question non disponible';
+                return questionText || 'Question non disponible';
             }
         }
     };
@@ -83,14 +83,18 @@ const ReviewScreen = () => {
         const currentQuestion = incorrectQuestions[currentQuestionIndex];
         if (!currentQuestion) return '';
 
+        const explanationText = typeof currentQuestion.explanation === 'string'
+            ? currentQuestion.explanation
+            : currentQuestion.explanation?.fr || '';
+
         if (language === 'fr') {
-            return currentQuestion.explanation || 'Explication non disponible';
+            return explanationText || 'Explication non disponible';
         } else {
             // For Vietnamese, show both French and Vietnamese if available
             if (currentQuestion.explanation_vi) {
-                return `🇫🇷 ${currentQuestion.explanation}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
+                return `🇫🇷 ${explanationText}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
             } else {
-                return currentQuestion.explanation || 'Explication non disponible';
+                return explanationText || 'Explication non disponible';
             }
         }
     };

@@ -4,11 +4,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { HomeStackParamList } from '../types/types';
-import { useLanguage, MultiLangCategory } from '../contexts/LanguageContext';
+import { HomeStackParamList, MultiLangCategory, Question } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionSlideView from '../components/QuestionSlideView';
-import { Question } from '../types/questions';
 import FormattedText from '../components/FormattedText';
 
 type CategoryQuestionsRouteProp = RouteProp<HomeStackParamList, 'CategoryQuestions'>;

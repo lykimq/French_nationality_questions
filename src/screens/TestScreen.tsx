@@ -22,8 +22,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
-import { TestMode, TestConfig, TestRecommendation, MainTestModeOption } from '../types/test';
-import { TestStackParamList } from '../types/types';
+import { TestMode, TestConfig, TestRecommendation, MainTestModeOption, TestStackParamList } from '../types';
 
 const { width, height } = Dimensions.get('window');
 
@@ -39,7 +38,6 @@ const TestScreen = () => {
         testProgress,
         testStatistics,
         startTest,
-        isTestActive,
         isLoading,
         generateRecommendations,
         refreshProgress,
@@ -150,7 +148,7 @@ const TestScreen = () => {
                 showProgress: true,
             };
 
-            await startTest(config);
+            await startTest(config as any);
             navigation.navigate('TestQuestion', undefined);
         } catch (error) {
             console.error('Error starting test:', error);

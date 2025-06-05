@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import {
     StyleSheet,
-    Text,
     View,
     Switch,
     ScrollView,
@@ -10,7 +9,6 @@ import {
     StatusBar,
     Alert,
     Modal,
-    Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';

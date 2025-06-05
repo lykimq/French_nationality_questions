@@ -5,12 +5,12 @@ import {
     TouchableOpacity,
     Modal,
     FlatList,
-    Dimensions,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
-import { useIcons, IconSetType, IconSetInfo, iconSetOptions } from '../contexts/IconContext';
+import { useIcons, iconSetOptions } from '../contexts/IconContext';
+import type { IconSetType, IconSetInfo } from '../types/icons';
 import { SettingsComponentWithValueProps } from '../types/questions';
 
 // Import the icon sets directly
@@ -44,8 +44,6 @@ const iconSets = {
         share: 'share-social-sharp',
     },
 };
-
-const { width: screenWidth } = Dimensions.get('window');
 
 const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,

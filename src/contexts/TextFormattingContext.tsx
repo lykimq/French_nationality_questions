@@ -1,12 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-export interface TextFormattingSettings {
-    fontSize: number;
-    fontFamily: string;
-    lineHeight: number;
-    letterSpacing: number;
-}
+import type { TextFormattingSettings } from '../types';
 
 interface TextFormattingContextType {
     settings: TextFormattingSettings;

@@ -19,8 +19,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
-import { TestStackParamList } from '../types/types';
-import { TestConfig, TestMode, SubcategoryTestModeOption } from '../types/test';
+import { TestStackParamList, TestConfig, TestMode, SubcategoryTestModeOption } from '../types';
 
 type SubcategoryTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -106,7 +105,7 @@ const SubcategoryTestScreen = () => {
                 showProgress: true,
             };
 
-            await startTest(config);
+            await startTest(config as any);
             navigation.navigate('TestQuestion', undefined);
         } catch (error) {
             console.error('Error starting subcategory test:', error);

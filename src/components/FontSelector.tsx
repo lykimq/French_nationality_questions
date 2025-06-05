@@ -9,7 +9,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
-import { SettingsComponentWithValueProps } from '../types/questions';
+import { SettingsComponentProps } from '../types';
 
 interface FontOption {
     name: string;
@@ -28,7 +28,7 @@ const FONT_OPTIONS: FontOption[] = [
     { name: 'Dancing Script', nameVi: 'Dancing Script', value: 'DancingScript', preview: 'Aa' },
 ];
 
-const FontSelector: React.FC<SettingsComponentWithValueProps> = ({
+const FontSelector: React.FC<SettingsComponentProps> = ({
     title,
     title_vi,
     language,

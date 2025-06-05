@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import {
     View,
-    Text,
     TouchableOpacity,
     Modal,
     FlatList,
     StyleSheet,
-    Dimensions,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
-import { useIcons, IconSetType, JsonIconMapping, iconSetOptions, IconSetInfo } from '../contexts/IconContext';
+import { useIcons, iconSetOptions } from '../contexts/IconContext';
+import type { IconSetType, IconSetInfo } from '../types/icons';
 import FormattedText from './FormattedText';
 import { SettingsComponentWithValueProps } from '../types/questions';
-
-const { width: screenWidth } = Dimensions.get('window');
 
 const JsonIconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,

@@ -18,9 +18,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
-import { TestStackParamList } from '../types/types';
-
-const { width, height } = Dimensions.get('window');
+import { TestStackParamList } from '../types';
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

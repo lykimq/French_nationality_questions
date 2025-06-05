@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
+import { View, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
-import { Question, QuestionSlideViewProps } from '../types/questions';
+import { Question, QuestionSlideViewProps } from '../types';
 import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -89,9 +89,16 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
 
     const getLocalizedQuestion = (question: Question) => {
         if (language === 'vi' && 'question_vi' in question) {
-            return question.question_vi;
+            return question.question_vi || question.question;
         }
         return question.question;
+    };
+
+    const getLocalizedExplanation = (question: Question) => {
+        if (language === 'vi' && 'explanation_vi' in question) {
+            return question.explanation_vi || question.explanation || '';
+        }
+        return question.explanation || '';
     };
 
     const currentQuestion = questions[currentIndex];
@@ -151,8 +158,8 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                             key={currentQuestion.id}
                             id={currentQuestion.id}
                             question={getLocalizedQuestion(currentQuestion)}
-                            explanation={currentQuestion.explanation || ''}
-                            image={currentQuestion.image}
+                            explanation={getLocalizedExplanation(currentQuestion)}
+                            image={currentQuestion.image || null}
                             language={language}
                             alwaysExpanded={true}
                         />

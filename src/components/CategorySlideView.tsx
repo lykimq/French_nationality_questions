@@ -4,9 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
-import { MultiLangText } from '../contexts/LanguageContext';
+import type { MultiLangText, MultilingualQuestion, CategorySlideViewProps } from '../types';
 import FormattedText from './FormattedText';
-import { MultilingualQuestion, CategorySlideViewProps } from '../types/questions';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;

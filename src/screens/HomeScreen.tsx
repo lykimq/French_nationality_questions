@@ -4,8 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from '../components/CategoryCard';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { HomeStackParamList } from '../types/types';
-import { useLanguage, MultiLangCategory, FrenchCategory } from '../contexts/LanguageContext';
+import { HomeStackParamList, MultiLangCategory, FrenchCategory } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from '../components/FormattedText';
 

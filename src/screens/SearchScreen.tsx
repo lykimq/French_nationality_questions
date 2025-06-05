@@ -11,7 +11,8 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import QuestionCard from '../components/QuestionCard';
-import { useLanguage, MultiLangText } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import type { MultiLangText } from '../types';
 import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from '../components/FormattedText';
 

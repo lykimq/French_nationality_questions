@@ -1,110 +1,21 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 // Import the data loading utilities
-import { loadMainQuestionData, loadHistoryData, loadSubcategoryData, preloadAllData } from '../utils/dataUtils';
+import { loadMainQuestionData, preloadAllData } from '../utils/dataUtils';
 import { preloadImages } from '../utils/imageUtils';
-
-// Define types for history categories
-export interface HistoryCategory {
-    id: string;
-    title: string;
-    title_vi: string;
-    icon: string;
-    description: string;
-    description_vi: string;
-    subcategories: Array<{
-        id: string;
-        title: string;
-        title_vi: string;
-        icon: string;
-        description: string;
-        description_vi: string;
-    }>;
-}
-
-export interface HistorySubcategory {
-    id: string;
-    title: string;
-    icon: string;
-    description: string;
-    questions?: Array<{
-        id: number;
-        question: string;
-        explanation: string;
-        question_vi: string;
-        explanation_vi: string;
-        image: string | null;
-    }>;
-}
-
-// Define the language type and context type
-export type Language = 'fr' | 'vi';
-
-// Interfaces for the actual structure of our JSON files
-interface JsonQuestion {
-    id: number;
-    question: string;
-    question_vi?: string;
-    explanation: string;
-    explanation_vi?: string;
-    image?: string | null;
-}
-
-interface JsonCategory {
-    id: string;
-    title: string;
-    title_vi: string;
-    icon: string;
-    description: string;
-    description_vi: string;
-    questions: JsonQuestion[];
-}
-
-// Types for French questions data
-export type FrenchQuestion = {
-    id: number;
-    question: string;
-    explanation: string;
-    image?: string | null;
-};
-
-export type FrenchCategory = {
-    id: string;
-    title: string;
-    icon: string;
-    description: string;
-    questions: FrenchQuestion[];
-};
-
-export type FrenchQuestionsData = {
-    categories: FrenchCategory[];
-};
-
-// Types for multilingual questions data
-export type MultiLangText = {
-    fr: string;
-    vi: string;
-};
-
-export type MultiLangQuestion = {
-    id: number;
-    question: MultiLangText;
-    explanation: MultiLangText;
-    image?: string | null;
-};
-
-export type MultiLangCategory = {
-    id: string;
-    title: string;
-    title_vi: string;
-    icon: string;
-    description: string;
-    description_vi: string;
-    questions: MultiLangQuestion[];
-};
-
-export type MultiLangQuestionsData = {
-    categories: MultiLangCategory[];
-};
+import type {
+    Language,
+    HistoryCategory,
+    HistorySubcategory,
+    JsonQuestion,
+    JsonCategory,
+    FrenchQuestion,
+    FrenchCategory,
+    FrenchQuestionsData,
+    MultiLangText,
+    MultiLangQuestion,
+    MultiLangCategory,
+    MultiLangQuestionsData,
+} from '../types/language';
 
 type LanguageContextType = {
     language: Language;

@@ -19,8 +19,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
-import { TestStackParamList } from '../types/types';
-import { TestConfig, TestMode, Part1TestModeOption } from '../types/test';
+import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../types';
 import { preloadAllPart1TestData } from '../utils/dataUtils';
 
 type Part1TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
@@ -147,7 +146,7 @@ const Part1TestScreen = () => {
                 showProgress: true,
             };
 
-            await startTest(config);
+            await startTest(config as any);
             navigation.navigate('TestQuestion', undefined);
         } catch (error) {
             console.error('Error starting Part 1 test:', error);

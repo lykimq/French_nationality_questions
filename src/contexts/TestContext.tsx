@@ -1,8 +1,10 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useLanguage, HistorySubcategory } from './LanguageContext';
+import { useLanguage } from './LanguageContext';
 import { preloadAllPart1TestData } from '../utils/dataUtils';
-import {
+import { serializeTestResult, deserializeTestResult } from '../utils/testSerialization';
+import type { HistorySubcategory } from '../types';
+import type {
     TestSession,
     TestProgress,
     TestStatistics,
@@ -12,6 +14,7 @@ import {
     TestConfig,
     TestResult,
     TestRecommendation,
+    SerializableTestResult,
 } from '../types/test';
 
 interface TestContextType {
@@ -54,105 +57,10 @@ const STORAGE_KEYS = {
     TEST_STATISTICS: 'test_statistics',
 };
 
-// Serializable versions for navigation
-export interface SerializableTestResult {
-    session: {
-        id: string;
-        mode: TestMode;
-        questions: TestQuestion[];
-        answers: {
-            questionId: number;
-            isCorrect: boolean;
-            userAnswer?: string;
-            timeSpent: number;
-            timestamp: string; // ISO string instead of Date
-        }[];
-        startTime: string; // ISO string instead of Date
-        endTime?: string; // ISO string instead of Date
-        isCompleted: boolean;
-        score: number;
-        totalQuestions: number;
-        correctAnswers: number;
-    };
-    statistics: TestStatistics;
-    recommendations: TestRecommendation[];
-}
+// Serializable versions for navigation - using imported type
 
-// Utility functions for serialization
-export const serializeTestResult = (result: TestResult): SerializableTestResult => {
-    // Serialize category performance with Date conversion
-    const serializedCategoryPerformance: any = {};
-    Object.entries(result.statistics.categoryPerformance).forEach(([key, perf]) => {
-        let lastAttemptedISO: string | undefined = undefined;
-
-        // Safely convert lastAttempted to ISO string
-        if (perf.lastAttempted) {
-            try {
-                // Check if it's already a Date object
-                if (perf.lastAttempted instanceof Date) {
-                    lastAttemptedISO = perf.lastAttempted.toISOString();
-                } else if (typeof perf.lastAttempted === 'string') {
-                    // If it's a string, try to parse it as a date
-                    lastAttemptedISO = new Date(perf.lastAttempted).toISOString();
-                } else {
-                    console.warn(`Invalid lastAttempted format for category ${key}:`, perf.lastAttempted);
-                }
-            } catch (error) {
-                console.error(`Error serializing lastAttempted for category ${key}:`, error);
-            }
-        }
-
-        serializedCategoryPerformance[key] = {
-            ...perf,
-            lastAttempted: lastAttemptedISO
-        };
-    });
-
-    return {
-        session: {
-            ...result.session,
-            answers: result.session.answers.map(answer => ({
-                ...answer,
-                timestamp: answer.timestamp.toISOString()
-            })),
-            startTime: result.session.startTime.toISOString(),
-            endTime: result.session.endTime?.toISOString()
-        },
-        statistics: {
-            ...result.statistics,
-            categoryPerformance: serializedCategoryPerformance
-        },
-        recommendations: result.recommendations
-    };
-};
-
-export const deserializeTestResult = (serialized: SerializableTestResult): TestResult => {
-    // Deserialize category performance with Date conversion
-    const deserializedCategoryPerformance: any = {};
-    Object.entries(serialized.statistics.categoryPerformance).forEach(([key, perf]) => {
-        deserializedCategoryPerformance[key] = {
-            ...perf,
-            lastAttempted: perf.lastAttempted ? new Date(perf.lastAttempted) : undefined
-        };
-    });
-
-    return {
-        session: {
-            ...serialized.session,
-            answers: serialized.session.answers.map(answer => ({
-                ...answer,
-                timestamp: new Date(answer.timestamp)
-            })),
-            startTime: new Date(serialized.session.startTime),
-            endTime: serialized.session.endTime ? new Date(serialized.session.endTime) : undefined
-        },
-        statistics: {
-            ...serialized.statistics,
-            categoryPerformance: deserializedCategoryPerformance
-        },
-        recommendations: serialized.recommendations
-    };
-};
+// Re-export utility functions for backward compatibility
+export { serializeTestResult, deserializeTestResult } from '../utils/testSerialization';
 
 export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const { questionsData, language, historySubcategories } = useLanguage();

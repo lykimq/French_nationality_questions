@@ -5,7 +5,6 @@ import {
     ScrollView,
     TouchableOpacity,
     StatusBar,
-    Dimensions,
     ActivityIndicator,
     Switch,
 } from 'react-native';
@@ -20,10 +19,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest, deserializeTestResult } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
-import { TestResult } from '../types/test';
-import { TestStackParamList } from '../types/types';
-
-const { width, height } = Dimensions.get('window');
+import { TestResult, TestStackParamList } from '../types';
 
 type TestResultScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 type TestResultScreenRouteProp = RouteProp<TestStackParamList, 'TestResult'>;
@@ -46,7 +42,7 @@ const TestResultScreen = () => {
 
         if (resultFromParams) {
             // Deserialize the test result from navigation params
-            const deserializedResult = deserializeTestResult(resultFromParams);
+            const deserializedResult = deserializeTestResult(resultFromParams as any);
             setTestResult(deserializedResult);
         } else {
             // Fallback: create result from current test context data
