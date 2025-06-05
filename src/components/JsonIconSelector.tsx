@@ -9,9 +9,8 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcons, iconSetOptions } from '../contexts/IconContext';
-import type { IconSetType, IconSetInfo } from '../types/icons';
+import type { IconSetType, IconSetInfo, SettingsComponentWithValueProps } from '../types';
 import FormattedText from './FormattedText';
-import { SettingsComponentWithValueProps } from '../types/questions';
 
 const JsonIconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,

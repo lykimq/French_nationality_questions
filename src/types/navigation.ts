@@ -1,4 +1,4 @@
-import type { Language } from './core';
+import type { Language, MultiLangText } from './core';
 import type { SerializableTestResult } from './testing';
 
 // ==================== TAB NAVIGATION ====================
@@ -13,12 +13,12 @@ export type TabParamList = Readonly<{
 
 // ==================== HOME STACK NAVIGATION ====================
 
-// Question structure for navigation params
+// Question structure for navigation params - supports both string and MultiLangText
 interface NavigationQuestion {
     readonly id: number;
-    readonly question: string;
-    readonly question_vi: string;
-    readonly explanation?: string;
+    readonly question: string | MultiLangText;
+    readonly question_vi?: string;
+    readonly explanation?: string | MultiLangText;
     readonly explanation_vi?: string;
     readonly image?: string | null;
 }

@@ -13,6 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 import QuestionCard from '../components/QuestionCard';
 import { useLanguage } from '../contexts/LanguageContext';
 import type { MultiLangText } from '../types';
+import { getTextFromMultiLang } from '../types';
 import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from '../components/FormattedText';
 
@@ -95,16 +96,16 @@ const SearchScreen = () => {
 
                         if (isTranslationLoaded) {
                             searchQuestion.question = {
-                                fr: question.question,
-                                vi: question.question_vi || question.question
+                                fr: getTextFromMultiLang(question.question, 'fr'),
+                                vi: question.question_vi || getTextFromMultiLang(question.question, 'fr')
                             };
                             searchQuestion.explanation = {
-                                fr: question.explanation,
-                                vi: question.explanation_vi || question.explanation
+                                fr: getTextFromMultiLang(question.explanation || '', 'fr'),
+                                vi: question.explanation_vi || getTextFromMultiLang(question.explanation || '', 'fr')
                             };
                         } else {
-                            searchQuestion.question = question.question;
-                            searchQuestion.explanation = question.explanation;
+                            searchQuestion.question = getTextFromMultiLang(question.question, 'fr');
+                            searchQuestion.explanation = question.explanation ? getTextFromMultiLang(question.explanation, 'fr') : '';
                         }
 
                         if (question.image) {

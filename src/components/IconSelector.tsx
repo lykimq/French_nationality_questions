@@ -10,8 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcons, iconSetOptions } from '../contexts/IconContext';
-import type { IconSetType, IconSetInfo } from '../types/icons';
-import { SettingsComponentWithValueProps } from '../types/questions';
+import type { IconSetType, IconSetInfo, SettingsComponentWithValueProps } from '../types';
 
 // Import the icon sets directly
 const iconSets = {

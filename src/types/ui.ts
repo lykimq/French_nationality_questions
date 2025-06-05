@@ -68,6 +68,9 @@ export interface ValueComponentProps<T = string> extends LanguageAwareProps {
 // Settings component props - extends value component
 export interface SettingsComponentProps<T = string> extends ValueComponentProps<T>, MultilingualProps { }
 
+// Settings component with value support - for icon selectors and similar components
+export interface SettingsComponentWithValueProps<T = string> extends ValueComponentProps<T>, MultilingualProps { }
+
 // Extended settings component with additional props
 export type ExtendedSettingsComponent<T = string, P extends Record<string, any> = {}> =
     SettingsComponentProps<T> & Readonly<P>;

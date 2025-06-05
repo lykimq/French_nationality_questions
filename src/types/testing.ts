@@ -88,47 +88,60 @@ export interface SerializableTestSession {
 
 // Category performance analytics
 export interface CategoryPerformance extends TimestampedEntity {
-    readonly categoryId: string;
-    readonly categoryTitle: string;
-    readonly questionsAttempted: number;
-    readonly correctAnswers: number;
-    readonly accuracy: number; // percentage
-    readonly averageTime: number;
+    categoryId: string;
+    categoryTitle: string;
+    questionsAttempted: number;
+    correctAnswers: number;
+    accuracy: number; // percentage
+    averageTime: number;
+    lastAttempted?: Date;
 }
 
 // Time-based statistics
 export interface TimeStatistics {
-    readonly averageTimePerQuestion: number;
-    readonly fastestTime: number;
-    readonly slowestTime: number;
+    averageTimePerQuestion: number;
+    fastestTime: number;
+    slowestTime: number;
 }
 
 // Improvement trend analysis
 export type ImprovementTrend = 'improving' | 'stable' | 'declining';
 
-// Comprehensive test statistics
+// ==================== PROGRESS TRACKING ====================
+
+// Overall test progress - mutable for internal operations, immutable for external API
+export interface TestProgress extends TimestampedEntity {
+    totalTestsTaken: number;
+    averageScore: number;
+    bestScore: number;
+    weakCategories: string[];
+    strongCategories: string[];
+    questionsAnswered: number;
+    correctAnswersTotal: number;
+    incorrectQuestions: number[];
+    recentScores: number[]; // Last 10 test scores
+}
+
+// Read-only version for external consumption
+export type ReadonlyTestProgress = Readonly<TestProgress>;
+
+// Comprehensive test statistics - mutable for internal operations
 export interface TestStatistics {
+    categoryPerformance: Record<string, CategoryPerformance>;
+    timeStats: TimeStatistics;
+    improvementTrend: ImprovementTrend;
+    masteredQuestions: number[]; // Questions answered correctly multiple times
+    strugglingQuestions: number[]; // Questions answered incorrectly multiple times
+}
+
+// Read-only version for external consumption
+export type ReadonlyTestStatistics = Readonly<{
     readonly categoryPerformance: Readonly<Record<string, CategoryPerformance>>;
     readonly timeStats: TimeStatistics;
     readonly improvementTrend: ImprovementTrend;
-    readonly masteredQuestions: readonly number[]; // Questions answered correctly multiple times
-    readonly strugglingQuestions: readonly number[]; // Questions answered incorrectly multiple times
-}
-
-// ==================== PROGRESS TRACKING ====================
-
-// Overall test progress - immutable state
-export interface TestProgress extends TimestampedEntity {
-    readonly totalTestsTaken: number;
-    readonly averageScore: number;
-    readonly bestScore: number;
-    readonly weakCategories: readonly string[];
-    readonly strongCategories: readonly string[];
-    readonly questionsAnswered: number;
-    readonly correctAnswersTotal: number;
-    readonly incorrectQuestions: readonly number[];
-    readonly recentScores: readonly number[]; // Last 10 test scores
-}
+    readonly masteredQuestions: readonly number[];
+    readonly strugglingQuestions: readonly number[];
+}>;
 
 // ==================== RECOMMENDATIONS ====================
 

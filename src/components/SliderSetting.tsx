@@ -8,7 +8,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
-import { ExtendedSettingsComponent } from '../types/questions';
+import { ExtendedSettingsComponent } from '../types';
 
 interface SliderSettingAdditionalProps {
     minimumValue: number;

@@ -7,6 +7,23 @@ export type MultiLangText = Readonly<{
     readonly vi: string;
 }>;
 
+// Utility functions for MultiLangText handling
+export const getTextFromMultiLang = (text: string | MultiLangText, language: Language = 'fr'): string => {
+    if (typeof text === 'string') {
+        return text;
+    }
+    return text[language];
+};
+
+export const getTextPreview = (text: string | MultiLangText, maxLength: number = 50): string => {
+    const textString = typeof text === 'string' ? text : text.fr;
+    return textString.length > maxLength ? textString.substring(0, maxLength) + '...' : textString;
+};
+
+export const isMultiLangText = (text: string | MultiLangText): text is MultiLangText => {
+    return typeof text === 'object' && text !== null && 'fr' in text && 'vi' in text;
+};
+
 // Base entity structure - foundational pattern for all entities
 export interface BaseEntity {
     readonly id: string;

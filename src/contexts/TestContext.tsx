@@ -4,6 +4,7 @@ import { useLanguage } from './LanguageContext';
 import { preloadAllPart1TestData } from '../utils/dataUtils';
 import { serializeTestResult, deserializeTestResult } from '../utils/testSerialization';
 import type { HistorySubcategory } from '../types';
+import { getTextPreview } from '../types';
 import type {
     TestSession,
     TestProgress,
@@ -15,7 +16,7 @@ import type {
     TestResult,
     TestRecommendation,
     SerializableTestResult,
-} from '../types/test';
+} from '../types';
 
 interface TestContextType {
     // Current test session
@@ -307,7 +308,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                         categoryTitle: subcategory.title,
                     };
 
-                    console.log(`Added history question ${question.id}: ${processedQuestion.question.substring(0, 50)}...`);
+                    console.log(`Added history question ${question.id}: ${getTextPreview(processedQuestion.question)}`);
                     allQuestions.push(processedQuestion);
                 });
             }
@@ -344,7 +345,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         console.log(`Generated ${finalQuestions.length} questions for ${config.mode} mode`);
         console.log('Final Question IDs and titles:');
         finalQuestions.forEach((q, index) => {
-            console.log(`${index}: ID=${q.id}, Title="${q.question.substring(0, 50)}...", Category=${q.categoryId}`);
+            console.log(`${index}: ID=${q.id}, Title="${getTextPreview(q.question)}", Category=${q.categoryId}`);
         });
 
         return finalQuestions;
@@ -388,7 +389,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 answerQuestionId: answer.questionId,
                 currentQuestionId: currentQuestion.id,
                 currentQuestionIndex,
-                questionTitle: currentQuestion.question.substring(0, 50)
+                questionTitle: getTextPreview(currentQuestion.question)
             });
             // Still submit but log the error for debugging
         }
@@ -397,7 +398,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             questionId: answer.questionId,
             currentQuestionIndex,
             isCorrect: answer.isCorrect,
-            questionText: currentQuestion.question.substring(0, 50)
+            questionText: getTextPreview(currentQuestion.question)
         });
 
         const updatedSession = {
@@ -447,7 +448,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                     .filter(a => !a.isCorrect)
                     .map(a => a.questionId)
             ],
-            lastTestDate: new Date(),
+
         };
 
         console.log('📊 Test Progress Update:', {

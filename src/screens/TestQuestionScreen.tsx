@@ -22,6 +22,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest, serializeTestResult } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
 import { TestAnswer, TestStackParamList } from '../types';
+import { getTextFromMultiLang, getTextPreview } from '../types';
 import { getCachedImageSource } from '../utils/imageUtils';
 import { testDatabaseIntegration, testQuestionIdUniqueness, logDatabaseStatistics } from '../utils/testDatabaseIntegration';
 import { useIcons } from '../contexts/IconContext';
@@ -76,8 +77,8 @@ const TestQuestionScreen = () => {
                         hasQuestionVi: !!currentQuestion.question_vi,
                         hasExplanation: !!currentQuestion.explanation,
                         hasExplanationVi: !!currentQuestion.explanation_vi,
-                        questionLength: currentQuestion.question?.length || 0,
-                        explanationLength: currentQuestion.explanation?.length || 0,
+                        questionLength: getTextFromMultiLang(currentQuestion.question || '', 'fr').length,
+                        explanationLength: getTextFromMultiLang(currentQuestion.explanation || '', 'fr').length,
                         category: currentQuestion.categoryId,
                         categoryTitle: currentQuestion.categoryTitle
                     });
@@ -104,9 +105,9 @@ const TestQuestionScreen = () => {
                 hasQuestionVi: !!currentQuestion.question_vi,
                 hasExplanation: !!currentQuestion.explanation,
                 hasExplanationVi: !!currentQuestion.explanation_vi,
-                questionLength: currentQuestion.question?.length || 0,
+                questionLength: getTextFromMultiLang(currentQuestion.question || '', 'fr').length,
                 questionViLength: currentQuestion.question_vi?.length || 0,
-                explanationLength: currentQuestion.explanation?.length || 0,
+                explanationLength: getTextFromMultiLang(currentQuestion.explanation || '', 'fr').length,
                 explanationViLength: currentQuestion.explanation_vi?.length || 0,
                 hasImage: !!currentQuestion.image,
                 sessionId: currentSession?.id,
@@ -163,7 +164,7 @@ const TestQuestionScreen = () => {
             console.log('📝 Current question details:', {
                 id: currentQuestion.id,
                 categoryId: currentQuestion.categoryId,
-                questionFr: currentQuestion.question?.substring(0, 100) + '...' || 'No French question',
+                questionFr: getTextPreview(currentQuestion.question || '', 100),
                 questionVi: currentQuestion.question_vi?.substring(0, 100) + '...' || 'No Vietnamese translation',
                 hasExplanation: !!currentQuestion.explanation,
                 hasExplanationVi: !!currentQuestion.explanation_vi,
@@ -203,7 +204,7 @@ const TestQuestionScreen = () => {
             questionId: currentQuestion.id,
             questionIndex: currentQuestionIndex,
             feedback,
-            questionText: currentQuestion.question?.substring(0, 50) + '...' || 'No question text',
+            questionText: getTextPreview(currentQuestion.question || ''),
             questionTextVi: currentQuestion.question_vi?.substring(0, 50) + '...' || 'No Vietnamese text',
             categoryId: currentQuestion.categoryId,
             categoryTitle: currentQuestion.categoryTitle
@@ -335,13 +336,13 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
         if (!currentQuestion) return '';
 
         if (language === 'fr') {
-            return currentQuestion.question || 'Question non disponible';
+            return getTextFromMultiLang(currentQuestion.question || '', 'fr') || 'Question non disponible';
         } else {
             // For Vietnamese, show both French and Vietnamese if available
             if (currentQuestion.question_vi) {
-                return `🇫🇷 ${currentQuestion.question}\n\n🇻🇳 ${currentQuestion.question_vi}`;
+                return `🇫🇷 ${getTextFromMultiLang(currentQuestion.question || '', 'fr')}\n\n🇻🇳 ${currentQuestion.question_vi}`;
             } else {
-                return currentQuestion.question || 'Question non disponible';
+                return getTextFromMultiLang(currentQuestion.question || '', 'fr') || 'Question non disponible';
             }
         }
     };
@@ -351,13 +352,13 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
         if (!currentQuestion) return '';
 
         if (language === 'fr') {
-            return currentQuestion.explanation || 'Explication non disponible';
+            return getTextFromMultiLang(currentQuestion.explanation || '', 'fr') || 'Explication non disponible';
         } else {
             // For Vietnamese, show both French and Vietnamese if available
             if (currentQuestion.explanation_vi) {
-                return `🇫🇷 ${currentQuestion.explanation}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
+                return `🇫🇷 ${getTextFromMultiLang(currentQuestion.explanation || '', 'fr')}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
             } else {
-                return currentQuestion.explanation || 'Explication non disponible';
+                return getTextFromMultiLang(currentQuestion.explanation || '', 'fr') || 'Explication non disponible';
             }
         }
     };
