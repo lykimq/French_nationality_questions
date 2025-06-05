@@ -1,21 +1,17 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLanguage } from './LanguageContext';
 import { preloadAllPart1TestData } from '../utils/dataUtils';
-import { serializeTestResult, deserializeTestResult } from '../utils/testSerialization';
 import type { HistorySubcategory } from '../types';
-import { getTextPreview } from '../types';
 import type {
     TestSession,
     TestProgress,
     TestStatistics,
     TestQuestion,
     TestAnswer,
-    TestMode,
     TestConfig,
     TestResult,
     TestRecommendation,
-    SerializableTestResult,
 } from '../types';
 
 interface TestContextType {
@@ -56,47 +52,169 @@ const STORAGE_KEYS = {
     TEST_PROGRESS: 'test_progress',
     TEST_SESSIONS: 'test_sessions',
     TEST_STATISTICS: 'test_statistics',
+} as const;
+
+// Constants for better maintainability
+const DEFAULT_TEST_PROGRESS: TestProgress = {
+    totalTestsTaken: 0,
+    averageScore: 0,
+    bestScore: 0,
+    weakCategories: [],
+    strongCategories: [],
+    questionsAnswered: 0,
+    correctAnswersTotal: 0,
+    incorrectQuestions: [],
+    recentScores: [],
 };
 
-// Serializable versions for navigation - using imported type
+const DEFAULT_TEST_STATISTICS: TestStatistics = {
+    categoryPerformance: {},
+    timeStats: {
+        averageTimePerQuestion: 30,
+        fastestTime: 5,
+        slowestTime: 120,
+    },
+    improvementTrend: 'stable',
+    masteredQuestions: [],
+    strugglingQuestions: [],
+};
+
+// Part 1 test ID mapping for better maintainability
+const PART1_ID_OFFSETS = {
+    test_personal: 10000,
+    test_opinions: 11000,
+    test_general: 12000,
+} as const;
 
 // Re-export utility functions for backward compatibility
 export { serializeTestResult, deserializeTestResult } from '../utils/testSerialization';
 
+// Helper function to safely process questions - reduces duplicate code
+const processQuestionData = (
+    question: any,
+    categoryId: string,
+    categoryTitle: string,
+    idOffset: number = 0
+): TestQuestion => {
+    const finalId = question.id + idOffset;
+
+    return {
+        id: finalId,
+        question: typeof question.question === 'string'
+            ? question.question
+            : question.question?.fr || question.question || '',
+        question_vi: question.question_vi ||
+            (typeof question.question !== 'string' ? question.question?.vi : undefined),
+        explanation: typeof question.explanation === 'string'
+            ? question.explanation
+            : question.explanation?.fr || question.explanation || 'No explanation provided',
+        explanation_vi: question.explanation_vi ||
+            (typeof question.explanation !== 'string' ? question.explanation?.vi : undefined) ||
+            (typeof question.explanation === 'string' ? question.explanation : 'No explanation provided'),
+        image: question.image,
+        categoryId,
+        categoryTitle: categoryTitle || categoryId,
+    };
+};
+
+// Helper function to safely parse dates
+const safeParseDate = (dateValue: any): Date | undefined => {
+    if (!dateValue) return undefined;
+
+    try {
+        if (dateValue instanceof Date) {
+            return isNaN(dateValue.getTime()) ? undefined : dateValue;
+        }
+
+        if (typeof dateValue === 'string') {
+            const parsed = new Date(dateValue);
+            return isNaN(parsed.getTime()) ? undefined : parsed;
+        }
+
+        return undefined;
+    } catch {
+        return undefined;
+    }
+};
+
+// Helper function to safely calculate averages
+const safeAverage = (values: number[]): number => {
+    if (!values.length) return 0;
+    return values.reduce((sum, val) => sum + (val || 0), 0) / values.length;
+};
+
 export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const { questionsData, language, historySubcategories } = useLanguage();
 
-    // State management
+    // State management with better initial values
     const [currentSession, setCurrentSession] = useState<TestSession | null>(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [part1TestSubcategories, setPart1TestSubcategories] = useState<{ [key: string]: any }>({});
-    const [testProgress, setTestProgress] = useState<TestProgress>({
-        totalTestsTaken: 0,
-        averageScore: 0,
-        bestScore: 0,
-        weakCategories: [],
-        strongCategories: [],
-        questionsAnswered: 0,
-        correctAnswersTotal: 0,
-        incorrectQuestions: [],
-        recentScores: [],
-    });
-    const [testStatistics, setTestStatistics] = useState<TestStatistics>({
-        categoryPerformance: {},
-        timeStats: {
-            averageTimePerQuestion: 30,
-            fastestTime: 5,
-            slowestTime: 120,
-        },
-        improvementTrend: 'stable',
-        masteredQuestions: [],
-        strugglingQuestions: [],
-    });
+    const [part1TestSubcategories, setPart1TestSubcategories] = useState<Record<string, any>>({});
+    const [testProgress, setTestProgress] = useState<TestProgress>(DEFAULT_TEST_PROGRESS);
+    const [testStatistics, setTestStatistics] = useState<TestStatistics>(DEFAULT_TEST_STATISTICS);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Load saved data on mount
+    // Memoized question collections to avoid reprocessing
+    const allProcessedQuestions = useMemo(() => {
+        const questions: TestQuestion[] = [];
+        const seenIds = new Set<number>();
+
+        // Safety check
+        if (!questionsData?.categories) {
+            console.warn('questionsData.categories is not available');
+            return questions;
+        }
+
+        // Process main categories
+        questionsData.categories.forEach(category => {
+            if (!category?.questions) return;
+
+            category.questions.forEach(question => {
+                if (seenIds.has(question.id)) {
+                    console.warn(`Duplicate question ID: ${question.id} in category ${category.id}`);
+                    return;
+                }
+                seenIds.add(question.id);
+
+                questions.push(processQuestionData(question, category.id, category.title));
+            });
+        });
+
+        // Process history subcategories with safety check
+        if (historySubcategories) {
+            Object.values(historySubcategories).forEach((subcategory: HistorySubcategory) => {
+                if (!subcategory?.questions) return;
+
+                subcategory.questions.forEach(question => {
+                    if (seenIds.has(question.id)) {
+                        console.warn(`Duplicate question ID: ${question.id} in history subcategory ${subcategory.id}`);
+                        return;
+                    }
+                    seenIds.add(question.id);
+
+                    questions.push(processQuestionData(question, subcategory.id, subcategory.title));
+                });
+            });
+        }
+
+        return questions;
+    }, [questionsData, historySubcategories]);
+
+    // Load saved data on mount with cleanup
     useEffect(() => {
-        loadTestData();
+        let isMounted = true;
+
+        const loadData = async () => {
+            if (isMounted) {
+                await loadTestData();
+            }
+        };
+
+        loadData();
+
+        return () => {
+            isMounted = false;
+        };
     }, []);
 
     const loadTestData = useCallback(async () => {
@@ -104,82 +222,86 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             console.log('📖 Loading test data...');
             setIsLoading(true);
 
-            // Load progress
-            const progressData = await AsyncStorage.getItem(STORAGE_KEYS.TEST_PROGRESS);
-            if (progressData) {
-                const parsedProgress = JSON.parse(progressData);
-                console.log('📖 Loading test progress:', {
-                    totalTestsTaken: parsedProgress.totalTestsTaken,
-                    averageScore: parsedProgress.averageScore,
-                    bestScore: parsedProgress.bestScore
-                });
-                setTestProgress(parsedProgress);
-            }
-
-            // Load statistics
-            const statisticsData = await AsyncStorage.getItem(STORAGE_KEYS.TEST_STATISTICS);
-            if (statisticsData) {
-                const parsedStatistics = JSON.parse(statisticsData);
-                console.log('📊 Loading test statistics');
-
-                // Validate and clean up category performance data
-                if (parsedStatistics.categoryPerformance) {
-                    Object.keys(parsedStatistics.categoryPerformance).forEach(categoryId => {
-                        const catPerf = parsedStatistics.categoryPerformance[categoryId];
-
-                        // Clean up lastAttempted field if it's not a valid date
-                        if (catPerf.lastAttempted) {
-                            try {
-                                // If it's a string, try to convert it to a Date
-                                if (typeof catPerf.lastAttempted === 'string') {
-                                    catPerf.lastAttempted = new Date(catPerf.lastAttempted);
-                                }
-
-                                // Validate that it's a valid Date
-                                if (!(catPerf.lastAttempted instanceof Date) || isNaN(catPerf.lastAttempted.getTime())) {
-                                    console.warn(`Invalid lastAttempted date for category ${categoryId}, removing...`);
-                                    delete catPerf.lastAttempted;
-                                }
-                            } catch (error) {
-                                console.warn(`Error parsing lastAttempted for category ${categoryId}:`, error);
-                                delete catPerf.lastAttempted;
-                            }
-                        }
-                    });
+            // Load progress with error handling
+            try {
+                const progressData = await AsyncStorage.getItem(STORAGE_KEYS.TEST_PROGRESS);
+                if (progressData) {
+                    const parsedProgress = JSON.parse(progressData);
+                    // Validate and sanitize progress data
+                    const validatedProgress = {
+                        ...DEFAULT_TEST_PROGRESS,
+                        ...parsedProgress,
+                        // Ensure arrays exist and are valid
+                        weakCategories: Array.isArray(parsedProgress.weakCategories) ? parsedProgress.weakCategories : [],
+                        strongCategories: Array.isArray(parsedProgress.strongCategories) ? parsedProgress.strongCategories : [],
+                        incorrectQuestions: Array.isArray(parsedProgress.incorrectQuestions) ? parsedProgress.incorrectQuestions : [],
+                        recentScores: Array.isArray(parsedProgress.recentScores) ? parsedProgress.recentScores : [],
+                    };
+                    setTestProgress(validatedProgress);
                 }
-
-                setTestStatistics(parsedStatistics);
+            } catch (error) {
+                console.error('Error loading test progress:', error);
             }
 
-            // Load Part 1 test data as part of main loading
+            // Load statistics with better error handling
+            try {
+                const statisticsData = await AsyncStorage.getItem(STORAGE_KEYS.TEST_STATISTICS);
+                if (statisticsData) {
+                    const parsedStatistics = JSON.parse(statisticsData);
+
+                    // Clean and validate category performance data
+                    if (parsedStatistics.categoryPerformance) {
+                        Object.keys(parsedStatistics.categoryPerformance).forEach(categoryId => {
+                            const catPerf = parsedStatistics.categoryPerformance[categoryId];
+
+                            // Clean up lastAttempted field safely
+                            if (catPerf.lastAttempted) {
+                                catPerf.lastAttempted = safeParseDate(catPerf.lastAttempted);
+                            }
+                        });
+                    }
+
+                    // Validate and set default values
+                    const validatedStatistics = {
+                        ...DEFAULT_TEST_STATISTICS,
+                        ...parsedStatistics,
+                        categoryPerformance: parsedStatistics.categoryPerformance || {},
+                        masteredQuestions: Array.isArray(parsedStatistics.masteredQuestions) ? parsedStatistics.masteredQuestions : [],
+                        strugglingQuestions: Array.isArray(parsedStatistics.strugglingQuestions) ? parsedStatistics.strugglingQuestions : [],
+                    };
+
+                    setTestStatistics(validatedStatistics);
+                }
+            } catch (error) {
+                console.error('Error loading test statistics:', error);
+            }
+
+            // Load Part 1 test data
             await loadPart1TestData();
 
         } catch (error) {
             console.error('❌ Error loading test data:', error);
         } finally {
-            console.log('✅ Finished loading test data');
             setIsLoading(false);
         }
     }, []);
 
-    // Load Part 1 test data
-    const loadPart1TestData = async () => {
+    // Load Part 1 test data with better error handling
+    const loadPart1TestData = useCallback(async () => {
         try {
-            console.log('🔄 Loading Part 1 test data in TestContext...');
+            console.log('🔄 Loading Part 1 test data...');
             const { part1SubcategoryTestData } = await preloadAllPart1TestData();
-            console.log('📊 Part 1 test data loaded:', {
-                subcategoryKeys: Object.keys(part1SubcategoryTestData),
-                totalQuestions: Object.values(part1SubcategoryTestData).reduce((total, subcategory: any) => {
-                    return total + (subcategory?.questions?.length || 0);
-                }, 0)
-            });
-            setPart1TestSubcategories(part1SubcategoryTestData);
+
+            if (part1SubcategoryTestData) {
+                setPart1TestSubcategories(part1SubcategoryTestData);
+                console.log('✅ Part 1 test data loaded successfully');
+            }
         } catch (error) {
             console.error('❌ Error loading Part 1 test data:', error);
         }
-    };
+    }, []);
 
-    const saveTestData = async (
+    const saveTestData = useCallback(async (
         progressToSave?: TestProgress,
         statisticsToSave?: TestStatistics
     ) => {
@@ -187,171 +309,86 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             const progressData = progressToSave || testProgress;
             const statisticsData = statisticsToSave || testStatistics;
 
-            console.log('💾 Saving test data:', {
-                totalTestsTaken: progressData.totalTestsTaken,
-                averageScore: progressData.averageScore,
-                bestScore: progressData.bestScore
-            });
-
-            await AsyncStorage.setItem(STORAGE_KEYS.TEST_PROGRESS, JSON.stringify(progressData));
-            await AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(statisticsData));
+            await Promise.all([
+                AsyncStorage.setItem(STORAGE_KEYS.TEST_PROGRESS, JSON.stringify(progressData)),
+                AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(statisticsData))
+            ]);
 
             console.log('✅ Test data saved successfully');
         } catch (error) {
             console.error('❌ Error saving test data:', error);
+            throw error; // Re-throw to handle in calling code
         }
-    };
+    }, [testProgress, testStatistics]);
 
-    const generateTestQuestions = (config: TestConfig): TestQuestion[] => {
-        const allQuestions: TestQuestion[] = [];
-        const seenQuestionIds = new Set<number>();
-
+    const generateTestQuestions = useCallback((config: TestConfig): TestQuestion[] => {
         console.log('Starting question generation for config:', config);
 
-        // Handle Part 1 tests separately to avoid ID conflicts
+        // Handle Part 1 tests
         if (config.mode.startsWith('part1_')) {
-            const part1TestId = config.mode.replace('part1_', '');
-            console.log(`🎯 Part 1 test mode detected: ${part1TestId}`);
-
-            // Only collect questions from Part 1 test subcategories for Part 1 tests
-            console.log('📊 Part 1 test subcategories state:', {
-                keys: Object.keys(part1TestSubcategories),
-                totalQuestions: Object.values(part1TestSubcategories).reduce((total, subcategory: any) => {
-                    return total + (subcategory?.questions?.length || 0);
-                }, 0)
-            });
-
-            Object.values(part1TestSubcategories).forEach((subcategory: any) => {
-                if (subcategory.questions && subcategory.id === part1TestId) {
-                    console.log(`Processing Part 1 test subcategory: ${subcategory.id}, ${subcategory.questions.length} questions`);
-
-                    subcategory.questions.forEach((question: any, index: number) => {
-                        // Create unique IDs for Part 1 questions by adding offset
-                        const uniqueId = question.id + 10000 + (subcategory.id === 'test_personal' ? 0 :
-                            subcategory.id === 'test_opinions' ? 1000 : 2000);
-
-                        const processedQuestion = {
-                            id: uniqueId,
-                            question: question.question,
-                            question_vi: question.question_vi,
-                            explanation: question.explanation || 'No explanation provided',
-                            explanation_vi: question.explanation_vi || question.explanation || 'No explanation provided',
-                            image: question.image,
-                            categoryId: subcategory.id,
-                            categoryTitle: subcategory.title || subcategory.id,
-                        };
-
-                        console.log(`Added Part 1 test question ${uniqueId} (original: ${question.id}): ${processedQuestion.question.substring(0, 50)}...`);
-                        allQuestions.push(processedQuestion);
-                    });
-                }
-            });
-
-            console.log(`Generated ${allQuestions.length} questions for Part 1 test: ${part1TestId}`);
-            return allQuestions;
+            return generatePart1Questions(config);
         }
 
-        // For non-Part 1 tests, collect questions from main categories and history subcategories
-        // Collect questions from main categories (geography and personal)
-        questionsData.categories.forEach(category => {
-            if (config.categoryIds && !config.categoryIds.includes(category.id)) {
-                return;
-            }
+        // Handle regular tests
+        return generateRegularQuestions(config);
+    }, [allProcessedQuestions, part1TestSubcategories]);
 
-            console.log(`Processing category: ${category.id}, ${category.questions.length} questions`);
+    const generatePart1Questions = useCallback((config: TestConfig): TestQuestion[] => {
+        const part1TestId = config.mode.replace('part1_', '');
+        const questions: TestQuestion[] = [];
 
-            category.questions.forEach(question => {
-                // Check for duplicates and log them
-                if (seenQuestionIds.has(question.id)) {
-                    console.warn(`Duplicate question ID found: ${question.id} in category ${category.id}`);
-                    return;
-                }
-                seenQuestionIds.add(question.id);
+        Object.values(part1TestSubcategories).forEach((subcategory: any) => {
+            if (subcategory?.questions && subcategory.id === part1TestId) {
+                const offset = PART1_ID_OFFSETS[subcategory.id as keyof typeof PART1_ID_OFFSETS] || 10000;
 
-                const processedQuestion = {
-                    id: question.id,
-                    question: typeof question.question === 'string' ? question.question : question.question.fr,
-                    question_vi: (question as any).question_vi || (typeof question.question !== 'string' ? question.question.vi : undefined),
-                    explanation: typeof question.explanation === 'string' ? question.explanation : question.explanation?.fr || '',
-                    explanation_vi: (question as any).explanation_vi || (typeof question.explanation !== 'string' ? question.explanation?.vi : undefined),
-                    image: question.image,
-                    categoryId: category.id,
-                    categoryTitle: category.title,
-                };
-
-                console.log(`Added question ${question.id}: ${processedQuestion.question.substring(0, 50)}...`);
-                allQuestions.push(processedQuestion);
-            });
-        });
-
-        // Collect questions from history subcategories
-        Object.values(historySubcategories).forEach((subcategory: HistorySubcategory) => {
-            if (subcategory.questions) {
-                console.log(`Processing history subcategory: ${subcategory.id}, ${subcategory.questions.length} questions`);
-
-                subcategory.questions.forEach(question => {
-                    // Check for duplicates and log them
-                    if (seenQuestionIds.has(question.id)) {
-                        console.warn(`Duplicate question ID found: ${question.id} in history subcategory ${subcategory.id}`);
-                        return;
-                    }
-                    seenQuestionIds.add(question.id);
-
-                    const processedQuestion = {
-                        id: question.id,
-                        question: question.question,
-                        question_vi: question.question_vi,
-                        explanation: question.explanation,
-                        explanation_vi: question.explanation_vi,
-                        image: question.image,
-                        categoryId: subcategory.id,
-                        categoryTitle: subcategory.title,
-                    };
-
-                    console.log(`Added history question ${question.id}: ${getTextPreview(processedQuestion.question)}`);
-                    allQuestions.push(processedQuestion);
+                subcategory.questions.forEach((question: any) => {
+                    questions.push(processQuestionData(
+                        question,
+                        subcategory.id,
+                        subcategory.title || subcategory.id,
+                        offset
+                    ));
                 });
             }
         });
 
-        // Filter based on test mode (for non-Part 1 tests)
-        let selectedQuestions = [...allQuestions];
+        return questions;
+    }, [part1TestSubcategories]);
 
+    const generateRegularQuestions = useCallback((config: TestConfig): TestQuestion[] => {
+        let selectedQuestions = [...allProcessedQuestions];
+
+        // Apply filters based on mode
         if (config.mode === 'geography_only') {
-            // Only geography questions
-            selectedQuestions = allQuestions.filter(q => q.categoryId === 'geography' || q.categoryId.includes('geography'));
+            selectedQuestions = selectedQuestions.filter(q =>
+                q.categoryId === 'geography' || q.categoryId.includes('geography')
+            );
         } else if (config.mode === 'history_culture_comprehensive') {
-            // Exclude personal info questions, include geography, history, and culture
-            selectedQuestions = allQuestions.filter(q => q.categoryId !== 'personal');
+            selectedQuestions = selectedQuestions.filter(q => q.categoryId !== 'personal');
         } else if (config.mode === 'mock_interview') {
-            // Mix of all categories except personal
-            selectedQuestions = allQuestions.filter(q => q.categoryId !== 'personal');
+            selectedQuestions = selectedQuestions.filter(q => q.categoryId !== 'personal');
         } else if (config.mode.startsWith('subcategory_')) {
-            // Handle subcategory-specific tests
             const subcategoryId = config.mode.replace('subcategory_', '');
-            selectedQuestions = allQuestions.filter(q => q.categoryId === subcategoryId);
-            console.log(`Filtering for subcategory: ${subcategoryId}, found ${selectedQuestions.length} questions`);
+            selectedQuestions = selectedQuestions.filter(q => q.categoryId === subcategoryId);
+        }
+
+        // Apply category filter if specified
+        if (config.categoryIds?.length) {
+            selectedQuestions = selectedQuestions.filter(q =>
+                config.categoryIds!.includes(q.categoryId)
+            );
         }
 
         // Shuffle if required
         if (config.shuffleQuestions) {
-            selectedQuestions = selectedQuestions.sort(() => Math.random() - 0.5);
+            selectedQuestions = [...selectedQuestions].sort(() => Math.random() - 0.5);
         }
 
-        // Limit to requested count and ensure we don't have duplicates
-        const finalQuestions = selectedQuestions.slice(0, config.questionCount);
+        // Limit to requested count
+        return selectedQuestions.slice(0, config.questionCount);
+    }, [allProcessedQuestions]);
 
-        // Log for debugging
-        console.log(`Generated ${finalQuestions.length} questions for ${config.mode} mode`);
-        console.log('Final Question IDs and titles:');
-        finalQuestions.forEach((q, index) => {
-            console.log(`${index}: ID=${q.id}, Title="${getTextPreview(q.question)}", Category=${q.categoryId}`);
-        });
-
-        return finalQuestions;
-    };
-
-    const startTest = async (config: TestConfig): Promise<void> => {
+    const startTest = useCallback(async (config: TestConfig): Promise<void> => {
         const questions = generateTestQuestions(config);
 
         if (questions.length === 0) {
@@ -372,36 +409,26 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         setCurrentSession(newSession);
         setCurrentQuestionIndex(0);
-    };
+    }, [generateTestQuestions]);
 
-    const submitAnswer = async (answer: TestAnswer): Promise<void> => {
-        if (!currentSession) return;
+    const submitAnswer = useCallback(async (answer: TestAnswer): Promise<void> => {
+        if (!currentSession) {
+            throw new Error('No active test session');
+        }
 
-        // Validate that the answer matches the current question
         const currentQuestion = currentSession.questions[currentQuestionIndex];
         if (!currentQuestion) {
-            console.error('No current question found at index:', currentQuestionIndex);
-            return;
+            throw new Error(`No current question found at index: ${currentQuestionIndex}`);
         }
 
+        // Strict validation - throw error instead of just logging
         if (answer.questionId !== currentQuestion.id) {
-            console.error('Answer question ID mismatch!', {
-                answerQuestionId: answer.questionId,
-                currentQuestionId: currentQuestion.id,
-                currentQuestionIndex,
-                questionTitle: getTextPreview(currentQuestion.question)
-            });
-            // Still submit but log the error for debugging
+            throw new Error(
+                `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
+            );
         }
 
-        console.log('Submitting answer:', {
-            questionId: answer.questionId,
-            currentQuestionIndex,
-            isCorrect: answer.isCorrect,
-            questionText: getTextPreview(currentQuestion.question)
-        });
-
-        const updatedSession = {
+        const updatedSession: TestSession = {
             ...currentSession,
             answers: [...currentSession.answers, answer],
         };
@@ -410,11 +437,11 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         // Move to next question
         if (currentQuestionIndex < currentSession.questions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
+            setCurrentQuestionIndex(prev => prev + 1);
         }
-    };
+    }, [currentSession, currentQuestionIndex]);
 
-    const finishTest = async (): Promise<TestResult> => {
+    const finishTest = useCallback(async (): Promise<TestResult> => {
         if (!currentSession) {
             throw new Error('No active test session');
         }
@@ -430,15 +457,49 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             correctAnswers,
         };
 
-        // Update progress
-        const updatedProgress: TestProgress = {
+        // Calculate updated progress
+        const updatedProgress = calculateUpdatedProgress(finishedSession, score, correctAnswers);
+        const updatedStatistics = updateTestStatistics(finishedSession, updatedProgress);
+
+        // Update weak/strong categories
+        updatedProgress.weakCategories = Object.entries(updatedStatistics.categoryPerformance)
+            .filter(([_, perf]) => (perf.accuracy || 0) < 60)
+            .map(([catId, _]) => catId);
+
+        updatedProgress.strongCategories = Object.entries(updatedStatistics.categoryPerformance)
+            .filter(([_, perf]) => (perf.accuracy || 0) >= 80)
+            .map(([catId, _]) => catId);
+
+        // Update state
+        setTestProgress(updatedProgress);
+        setTestStatistics(updatedStatistics);
+        setCurrentSession(null);
+        setCurrentQuestionIndex(0);
+
+        // Save to storage
+        await saveTestData(updatedProgress, updatedStatistics);
+
+        return {
+            session: finishedSession,
+            statistics: updatedStatistics,
+            recommendations: generateRecommendations(),
+        };
+    }, [currentSession, testProgress, testStatistics, saveTestData]);
+
+    const calculateUpdatedProgress = useCallback((
+        finishedSession: TestSession,
+        score: number,
+        correctAnswers: number
+    ): TestProgress => {
+        const newTotalTests = testProgress.totalTestsTaken + 1;
+
+        return {
             ...testProgress,
-            totalTestsTaken: testProgress.totalTestsTaken + 1,
+            totalTestsTaken: newTotalTests,
             questionsAnswered: testProgress.questionsAnswered + finishedSession.totalQuestions,
             correctAnswersTotal: testProgress.correctAnswersTotal + correctAnswers,
             averageScore: Math.round(
-                ((testProgress.averageScore * testProgress.totalTestsTaken) + score) /
-                (testProgress.totalTestsTaken + 1)
+                ((testProgress.averageScore * testProgress.totalTestsTaken) + score) / newTotalTests
             ),
             bestScore: Math.max(testProgress.bestScore, score),
             recentScores: [...testProgress.recentScores.slice(-9), score],
@@ -447,53 +508,19 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 ...finishedSession.answers
                     .filter(a => !a.isCorrect)
                     .map(a => a.questionId)
-            ],
-
+            ].slice(-100), // Limit to last 100 to prevent memory issues
+            weakCategories: [], // Will be updated after statistics calculation
+            strongCategories: [], // Will be updated after statistics calculation
         };
+    }, [testProgress]);
 
-        console.log('📊 Test Progress Update:', {
-            previousTotalTests: testProgress.totalTestsTaken,
-            newTotalTests: updatedProgress.totalTestsTaken,
-            previousAverageScore: testProgress.averageScore,
-            newAverageScore: updatedProgress.averageScore,
-            currentScore: score,
-            correctAnswers,
-            totalQuestions: finishedSession.totalQuestions
-        });
-
-        // Update statistics
-        const updatedStatistics = updateTestStatistics(finishedSession, updatedProgress);
-
-        // Update weak/strong categories
-        updatedProgress.weakCategories = Object.entries(updatedStatistics.categoryPerformance)
-            .filter(([_, perf]) => perf.accuracy < 60)
-            .map(([catId, _]) => catId);
-
-        updatedProgress.strongCategories = Object.entries(updatedStatistics.categoryPerformance)
-            .filter(([_, perf]) => perf.accuracy >= 80)
-            .map(([catId, _]) => catId);
-
-        setTestProgress(updatedProgress);
-        setTestStatistics(updatedStatistics);
-        setCurrentSession(null);
-        setCurrentQuestionIndex(0);
-
-        // Save to storage with the updated values
-        await saveTestData(updatedProgress, updatedStatistics);
-
-        const result: TestResult = {
-            session: finishedSession,
-            statistics: updatedStatistics,
-            recommendations: generateRecommendations(),
-        };
-
-        return result;
-    };
-
-    const updateTestStatistics = (session: TestSession, updatedProgress: TestProgress): TestStatistics => {
+    const updateTestStatistics = useCallback((
+        session: TestSession,
+        updatedProgress: TestProgress
+    ): TestStatistics => {
         const newStatistics = { ...testStatistics };
 
-        // Update category performance - match answers to questions by ID
+        // Update category performance
         session.questions.forEach((question) => {
             const answer = session.answers.find(a => a.questionId === question.id);
             if (!answer) return;
@@ -514,27 +541,26 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             if (answer.isCorrect) catPerf.correctAnswers += 1;
             catPerf.accuracy = Math.round((catPerf.correctAnswers / catPerf.questionsAttempted) * 100);
             catPerf.averageTime = Math.round(
-                ((catPerf.averageTime * (catPerf.questionsAttempted - 1)) + answer.timeSpent) /
-                catPerf.questionsAttempted
+                safeAverage([...Array(catPerf.questionsAttempted - 1).fill(catPerf.averageTime), answer.timeSpent])
             );
             catPerf.lastAttempted = new Date();
         });
 
-        // Update time statistics
-        const allTimes = session.answers.map(a => a.timeSpent);
-        newStatistics.timeStats.averageTimePerQuestion = Math.round(
-            allTimes.reduce((sum, time) => sum + time, 0) / allTimes.length
-        );
-        newStatistics.timeStats.fastestTime = Math.min(newStatistics.timeStats.fastestTime, ...allTimes);
-        newStatistics.timeStats.slowestTime = Math.max(newStatistics.timeStats.slowestTime, ...allTimes);
+        // Update time statistics safely
+        const allTimes = session.answers.map(a => a.timeSpent).filter(time => time > 0);
+        if (allTimes.length > 0) {
+            newStatistics.timeStats.averageTimePerQuestion = Math.round(safeAverage(allTimes));
+            newStatistics.timeStats.fastestTime = Math.min(newStatistics.timeStats.fastestTime, ...allTimes);
+            newStatistics.timeStats.slowestTime = Math.max(newStatistics.timeStats.slowestTime, ...allTimes);
+        }
 
-        // Update mastered/struggling questions
+        // Update mastered/struggling questions with limits
         session.answers.forEach(answer => {
             if (answer.isCorrect) {
                 if (!newStatistics.masteredQuestions.includes(answer.questionId)) {
                     newStatistics.masteredQuestions.push(answer.questionId);
                 }
-                // Remove from struggling if it was there
+                // Remove from struggling
                 const strugglingIndex = newStatistics.strugglingQuestions.indexOf(answer.questionId);
                 if (strugglingIndex > -1) {
                     newStatistics.strugglingQuestions.splice(strugglingIndex, 1);
@@ -543,7 +569,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 if (!newStatistics.strugglingQuestions.includes(answer.questionId)) {
                     newStatistics.strugglingQuestions.push(answer.questionId);
                 }
-                // Remove from mastered if it was there
+                // Remove from mastered
                 const masteredIndex = newStatistics.masteredQuestions.indexOf(answer.questionId);
                 if (masteredIndex > -1) {
                     newStatistics.masteredQuestions.splice(masteredIndex, 1);
@@ -551,31 +577,31 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             }
         });
 
-        // Update improvement trend using the updated progress data
-        if (updatedProgress.recentScores.length >= 3) {
-            const recentAvg = updatedProgress.recentScores.slice(-3).reduce((sum, score) => sum + score, 0) / 3;
+        // Limit array sizes to prevent memory issues
+        newStatistics.masteredQuestions = newStatistics.masteredQuestions.slice(-500);
+        newStatistics.strugglingQuestions = newStatistics.strugglingQuestions.slice(-200);
 
-            if (updatedProgress.recentScores.length >= 6) {
-                const olderAvg = updatedProgress.recentScores.slice(-6, -3).reduce((sum, score) => sum + score, 0) / 3;
-
-                if (recentAvg > olderAvg + 5) {
-                    newStatistics.improvementTrend = 'improving';
-                } else if (recentAvg < olderAvg - 5) {
-                    newStatistics.improvementTrend = 'declining';
-                } else {
-                    newStatistics.improvementTrend = 'stable';
-                }
-            } else {
-                // Not enough data for trend comparison, default to stable
-                newStatistics.improvementTrend = 'stable';
-            }
-        } else {
-            // Not enough recent scores to determine trend
-            newStatistics.improvementTrend = 'stable';
-        }
+        // Update improvement trend
+        newStatistics.improvementTrend = calculateImprovementTrend(updatedProgress.recentScores);
 
         return newStatistics;
-    };
+    }, [testStatistics]);
+
+    const calculateImprovementTrend = useCallback((recentScores: number[]) => {
+        if (recentScores.length < 3) return 'stable';
+
+        const recentAvg = safeAverage(recentScores.slice(-3));
+
+        if (recentScores.length >= 6) {
+            const olderAvg = safeAverage(recentScores.slice(-6, -3));
+            const difference = recentAvg - olderAvg;
+
+            if (difference > 5) return 'improving';
+            if (difference < -5) return 'declining';
+        }
+
+        return 'stable';
+    }, []);
 
     const cancelTest = useCallback(() => {
         console.log('🛑 Cancelling test session');
@@ -583,104 +609,54 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setCurrentQuestionIndex(0);
     }, []);
 
-    const getCurrentQuestion = (): TestQuestion | null => {
+    const getCurrentQuestion = useCallback((): TestQuestion | null => {
         if (!currentSession || currentQuestionIndex >= currentSession.questions.length) {
             return null;
         }
         return currentSession.questions[currentQuestionIndex];
-    };
+    }, [currentSession, currentQuestionIndex]);
 
-    const getNextQuestion = (): TestQuestion | null => {
+    const getNextQuestion = useCallback((): TestQuestion | null => {
         if (!currentSession || currentQuestionIndex + 1 >= currentSession.questions.length) {
             return null;
         }
         return currentSession.questions[currentQuestionIndex + 1];
-    };
+    }, [currentSession, currentQuestionIndex]);
 
-    const getPreviousQuestion = (): TestQuestion | null => {
+    const getPreviousQuestion = useCallback((): TestQuestion | null => {
         if (!currentSession || currentQuestionIndex <= 0) {
             return null;
         }
         return currentSession.questions[currentQuestionIndex - 1];
-    };
+    }, [currentSession, currentQuestionIndex]);
 
-    const getIncorrectQuestions = (): TestQuestion[] => {
+    const getIncorrectQuestions = useCallback((): TestQuestion[] => {
         if (testProgress.incorrectQuestions.length === 0) {
             return [];
         }
 
-        const allQuestions: TestQuestion[] = [];
-        const seenQuestionIds = new Set<number>();
-
-        // Collect questions from main categories (geography and personal)
-        questionsData.categories.forEach(category => {
-            category.questions.forEach(question => {
-                if (seenQuestionIds.has(question.id)) {
-                    return;
-                }
-                seenQuestionIds.add(question.id);
-
-                const processedQuestion = {
-                    id: question.id,
-                    question: typeof question.question === 'string' ? question.question : question.question.fr,
-                    question_vi: (question as any).question_vi || (typeof question.question !== 'string' ? question.question.vi : undefined),
-                    explanation: typeof question.explanation === 'string' ? question.explanation : question.explanation?.fr || '',
-                    explanation_vi: (question as any).explanation_vi || (typeof question.explanation !== 'string' ? question.explanation?.vi : undefined),
-                    image: question.image,
-                    categoryId: category.id,
-                    categoryTitle: category.title,
-                };
-
-                allQuestions.push(processedQuestion);
-            });
-        });
-
-        // Collect questions from history subcategories
-        Object.values(historySubcategories).forEach((subcategory: HistorySubcategory) => {
-            if (subcategory.questions) {
-                subcategory.questions.forEach(question => {
-                    if (seenQuestionIds.has(question.id)) {
-                        return;
-                    }
-                    seenQuestionIds.add(question.id);
-
-                    const processedQuestion = {
-                        id: question.id,
-                        question: question.question,
-                        question_vi: question.question_vi,
-                        explanation: question.explanation,
-                        explanation_vi: question.explanation_vi,
-                        image: question.image,
-                        categoryId: subcategory.id,
-                        categoryTitle: subcategory.title,
-                    };
-
-                    allQuestions.push(processedQuestion);
-                });
-            }
-        });
-
-        // Filter to only include questions that were answered incorrectly
-        return allQuestions.filter(q => testProgress.incorrectQuestions.includes(q.id));
-    };
+        return allProcessedQuestions.filter(q =>
+            testProgress.incorrectQuestions.includes(q.id)
+        );
+    }, [allProcessedQuestions, testProgress.incorrectQuestions]);
 
     const refreshProgress = useCallback(async (): Promise<void> => {
         console.log('🔄 Refreshing progress...');
         await loadTestData();
     }, [loadTestData]);
 
-    const getWeakCategories = (): string[] => {
+    const getWeakCategories = useCallback((): string[] => {
         return testProgress.weakCategories;
-    };
+    }, [testProgress.weakCategories]);
 
-    const getStrongCategories = (): string[] => {
+    const getStrongCategories = useCallback((): string[] => {
         return testProgress.strongCategories;
-    };
+    }, [testProgress.strongCategories]);
 
-    const generateRecommendations = (): TestRecommendation[] => {
+    const generateRecommendations = useCallback((): TestRecommendation[] => {
         const recommendations: TestRecommendation[] = [];
 
-        // Check performance level
+        // Performance-based recommendations
         if (testProgress.averageScore >= 85) {
             recommendations.push({
                 type: 'good_job',
@@ -703,7 +679,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             });
         }
 
-        // Weak categories
+        // Weak categories recommendation
         if (testProgress.weakCategories.length > 0) {
             recommendations.push({
                 type: 'study_category',
@@ -727,14 +703,15 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 description_fr: 'Révisez les questions auxquelles vous avez répondu incorrectement précédemment.',
                 actionText_vi: 'Xem lại câu hỏi',
                 actionText_fr: 'Réviser les Questions',
-                questionIds: testProgress.incorrectQuestions.slice(-20), // Last 20 incorrect
+                questionIds: testProgress.incorrectQuestions.slice(-20),
             });
         }
 
         return recommendations;
-    };
+    }, [testProgress]);
 
-    const contextValue: TestContextType = {
+    // Memoize context value to prevent unnecessary re-renders
+    const contextValue = useMemo((): TestContextType => ({
         currentSession,
         isTestActive: currentSession !== null,
         currentQuestionIndex,
@@ -753,7 +730,25 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         getStrongCategories,
         generateRecommendations,
         isLoading,
-    };
+    }), [
+        currentSession,
+        currentQuestionIndex,
+        testProgress,
+        testStatistics,
+        startTest,
+        submitAnswer,
+        finishTest,
+        cancelTest,
+        getCurrentQuestion,
+        getNextQuestion,
+        getPreviousQuestion,
+        getIncorrectQuestions,
+        refreshProgress,
+        getWeakCategories,
+        getStrongCategories,
+        generateRecommendations,
+        isLoading,
+    ]);
 
     return (
         <TestContext.Provider value={contextValue}>
