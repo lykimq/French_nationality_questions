@@ -4,17 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
-
-type CategoryCardProps = {
-    title: string;
-    title_vi?: string;
-    description: string;
-    description_vi?: string;
-    icon: string;
-    count: number;
-    onPress: () => void;
-    language?: 'fr' | 'vi';
-};
+import { CategoryCardProps } from '../types/questions';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,

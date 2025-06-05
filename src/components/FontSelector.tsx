@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
     View,
-    Text,
     StyleSheet,
     TouchableOpacity,
     Modal,
@@ -10,6 +9,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
+import { SettingsComponentWithValueProps } from '../types/questions';
 
 interface FontOption {
     name: string;
@@ -28,17 +28,9 @@ const FONT_OPTIONS: FontOption[] = [
     { name: 'Dancing Script', nameVi: 'Dancing Script', value: 'DancingScript', preview: 'Aa' },
 ];
 
-interface FontSelectorProps {
-    title: string;
-    titleVi?: string;
-    language: 'fr' | 'vi';
-    value: string;
-    onValueChange: (value: string) => void;
-}
-
-const FontSelector: React.FC<FontSelectorProps> = ({
+const FontSelector: React.FC<SettingsComponentWithValueProps> = ({
     title,
-    titleVi,
+    title_vi,
     language,
     value,
     onValueChange,
@@ -87,7 +79,7 @@ const FontSelector: React.FC<FontSelectorProps> = ({
                 </View>
                 <View style={styles.textContainer}>
                     <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                        {language === 'fr' ? title : (titleVi || title)}
+                        {language === 'fr' ? title : (title_vi || title)}
                     </FormattedText>
                     <FormattedText style={[styles.currentValue, { color: theme.colors.textSecondary }]}>
                         {language === 'fr' ? currentFont.name : currentFont.nameVi}

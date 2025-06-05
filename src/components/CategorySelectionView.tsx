@@ -1,28 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import CategoryCard from './CategoryCard';
-
-interface CategorySelectionViewProps {
-    categories: Array<{
-        id: string;
-        title: string;
-        title_vi?: string;
-        icon?: string;
-        description?: string;
-        description_vi?: string;
-        questions: Array<{
-            id: number;
-            question: string;
-            question_vi: string;
-            explanation?: string;
-            explanation_vi?: string;
-            image?: string | null;
-        }>;
-    }>;
-    language: 'fr' | 'vi';
-    onSelectCategory: (categoryIndex: number) => void;
-}
+import { CategorySelectionViewProps } from '../types/questions';
 
 const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
     categories,

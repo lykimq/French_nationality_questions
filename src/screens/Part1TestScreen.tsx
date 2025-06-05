@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
     StyleSheet,
-    Text,
     View,
     ScrollView,
     TouchableOpacity,
@@ -21,22 +20,10 @@ import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestStackParamList } from '../types/types';
-import { TestConfig, TestMode } from '../types/test';
+import { TestConfig, TestMode, Part1TestModeOption } from '../types/test';
 import { preloadAllPart1TestData } from '../utils/dataUtils';
 
 type Part1TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
-
-interface Part1TestMode {
-    mode: TestMode;
-    subcategoryId: string;
-    title_fr: string;
-    title_vi: string;
-    description_fr: string;
-    description_vi: string;
-    icon: string;
-    color: string;
-    questionCount: number;
-}
 
 const Part1TestScreen = () => {
     const navigation = useNavigation<Part1TestScreenNavigationProp>();
@@ -87,7 +74,7 @@ const Part1TestScreen = () => {
     };
 
     // Create subcategory test modes from the Part 1 test data
-    const part1TestModes: Part1TestMode[] = React.useMemo(() => {
+    const part1TestModes: Part1TestModeOption[] = React.useMemo(() => {
         if (!part1TestCategories || !part1TestSubcategories) return [];
 
         return part1TestCategories.subcategories.map((subcategory: any) => {
@@ -135,7 +122,7 @@ const Part1TestScreen = () => {
         }
     };
 
-    const handleStartTest = async (testMode: Part1TestMode) => {
+    const handleStartTest = async (testMode: Part1TestModeOption) => {
         if (testMode.questionCount === 0) {
             Alert.alert(
                 getLocalizedText('Aucune question disponible', 'Không có câu hỏi'),
@@ -176,7 +163,7 @@ const Part1TestScreen = () => {
         }
     };
 
-    const renderTestCard = (testMode: Part1TestMode) => {
+    const renderTestCard = (testMode: Part1TestModeOption) => {
         const shortTitle = getShortTitle(testMode.subcategoryId);
 
         return (

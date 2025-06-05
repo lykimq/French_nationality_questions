@@ -27,7 +27,7 @@ import FormattedText from '../components/FormattedText';
 
 type SettingItemProps = {
     title: string;
-    titleVi?: string;
+    title_vi?: string;
     icon: string;
     iconColor: string;
     isSwitch?: boolean;
@@ -39,7 +39,7 @@ type SettingItemProps = {
 
 const SettingItem: React.FC<SettingItemProps> = ({
     title,
-    titleVi,
+    title_vi,
     icon,
     iconColor,
     isSwitch = false,
@@ -60,7 +60,7 @@ const SettingItem: React.FC<SettingItemProps> = ({
                 <Ionicons name={icon as any} size={20} color={iconColor} />
             </View>
             <FormattedText style={[styles.settingTitle, { color: theme.colors.text }]}>
-                {language === 'fr' ? title : (titleVi || title)}
+                {language === 'fr' ? title : (title_vi || title)}
             </FormattedText>
             {isSwitch && (
                 <Switch
@@ -282,7 +282,7 @@ const SettingsScreen = () => {
                     {/* Color Theme Selector */}
                     <ColorThemeSelector
                         title="Thème de couleur"
-                        titleVi="Chủ đề màu sắc"
+                        title_vi="Chủ đề màu sắc"
                         language={language}
                         value={colorTheme}
                         onValueChange={setColorTheme}
@@ -349,7 +349,7 @@ const SettingsScreen = () => {
                     {/* Icon Set Selector */}
                     <IconSelector
                         title="Style d'icônes"
-                        titleVi="Kiểu biểu tượng"
+                        title_vi="Kiểu biểu tượng"
                         language={language}
                         value={iconSet}
                         onValueChange={setIconSet}
@@ -358,7 +358,7 @@ const SettingsScreen = () => {
                     {/* JSON Category Icon Set Selector */}
                     <JsonIconSelector
                         title="Style des icônes de catégories"
-                        titleVi="Kiểu biểu tượng danh mục"
+                        title_vi="Kiểu biểu tượng danh mục"
                         language={language}
                         value={jsonIconSet}
                         onValueChange={setJsonIconSet}
@@ -407,7 +407,7 @@ const SettingsScreen = () => {
 
                     <SliderSetting
                         title="Taille de police"
-                        titleVi="Kích thước chữ"
+                        title_vi="Kích thước chữ"
                         language={language}
                         value={settings.fontSize}
                         minimumValue={12}
@@ -419,7 +419,7 @@ const SettingsScreen = () => {
 
                     <FontSelector
                         title="Police de caractères"
-                        titleVi="Phông chữ"
+                        title_vi="Phông chữ"
                         language={language}
                         value={settings.fontFamily}
                         onValueChange={updateFontFamily}
@@ -427,7 +427,7 @@ const SettingsScreen = () => {
 
                     <SliderSetting
                         title="Hauteur de ligne"
-                        titleVi="Chiều cao dòng"
+                        title_vi="Chiều cao dòng"
                         language={language}
                         value={settings.lineHeight}
                         minimumValue={1.0}
@@ -439,7 +439,7 @@ const SettingsScreen = () => {
 
                     <SliderSetting
                         title="Espacement des lettres"
-                        titleVi="Khoảng cách chữ"
+                        title_vi="Khoảng cách chữ"
                         language={language}
                         value={settings.letterSpacing}
                         minimumValue={-1}
@@ -451,7 +451,7 @@ const SettingsScreen = () => {
 
                     <SettingItem
                         title="Réinitialiser les paramètres de texte"
-                        titleVi="Đặt lại cài đặt văn bản"
+                        title_vi="Đặt lại cài đặt văn bản"
                         icon={theme.icons.refresh}
                         iconColor={theme.colors.error}
                         onPress={handleResetTextSettings}
@@ -465,7 +465,7 @@ const SettingsScreen = () => {
                     </FormattedText>
                     <SettingItem
                         title="Partager l'application"
-                        titleVi="Chia sẻ ứng dụng"
+                        title_vi="Chia sẻ ứng dụng"
                         icon={theme.icons.share}
                         iconColor={theme.colors.warning}
                         onPress={shareApp}
@@ -473,7 +473,7 @@ const SettingsScreen = () => {
                     />
                     <SettingItem
                         title="Évaluer l'application"
-                        titleVi="Đánh giá ứng dụng"
+                        title_vi="Đánh giá ứng dụng"
                         icon={theme.icons.star}
                         iconColor="#FFC107"
                         onPress={rateApp}

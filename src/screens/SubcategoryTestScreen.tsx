@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
     StyleSheet,
-    Text,
     View,
     ScrollView,
     TouchableOpacity,
@@ -21,21 +20,9 @@ import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestStackParamList } from '../types/types';
-import { TestConfig, TestMode } from '../types/test';
+import { TestConfig, TestMode, SubcategoryTestModeOption } from '../types/test';
 
 type SubcategoryTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
-
-interface SubcategoryTestMode {
-    mode: TestMode;
-    subcategoryId: string;
-    title_fr: string;
-    title_vi: string;
-    description_fr: string;
-    description_vi: string;
-    icon: string;
-    color: string;
-    questionCount: number;
-}
 
 const SubcategoryTestScreen = () => {
     const navigation = useNavigation<SubcategoryTestScreenNavigationProp>();
@@ -65,7 +52,7 @@ const SubcategoryTestScreen = () => {
     };
 
     // Create subcategory test modes from the history categories data
-    const subcategoryTestModes: SubcategoryTestMode[] = React.useMemo(() => {
+    const subcategoryTestModes: SubcategoryTestModeOption[] = React.useMemo(() => {
         if (!historyCategories || !historySubcategories) return [];
 
         return historyCategories.subcategories.map(subcategory => {
@@ -94,7 +81,7 @@ const SubcategoryTestScreen = () => {
         }
     };
 
-    const handleStartTest = async (testMode: SubcategoryTestMode) => {
+    const handleStartTest = async (testMode: SubcategoryTestModeOption) => {
         if (testMode.questionCount === 0) {
             Alert.alert(
                 getLocalizedText('Aucune question disponible', 'Không có câu hỏi'),
@@ -135,7 +122,7 @@ const SubcategoryTestScreen = () => {
         }
     };
 
-    const renderSubcategoryCard = (testMode: SubcategoryTestMode) => (
+    const renderSubcategoryCard = (testMode: SubcategoryTestModeOption) => (
         <TouchableOpacity
             key={testMode.subcategoryId}
             style={[

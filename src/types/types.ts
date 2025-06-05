@@ -1,5 +1,3 @@
-import { MultiLangText } from '../contexts/LanguageContext';
-import { TestResult } from './test';
 import { SerializableTestResult } from '../contexts/TestContext';
 
 // Bottom Tab Navigator types

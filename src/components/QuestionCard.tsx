@@ -8,15 +8,7 @@ import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
 import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
 import { useTheme } from '../contexts/ThemeContext';
-
-type QuestionCardProps = {
-    id: number;
-    question: string | MultiLangText;
-    explanation: string | MultiLangText;
-    language?: 'fr' | 'vi';
-    image?: string | null;
-    alwaysExpanded?: boolean;
-};
+import { QuestionCardProps } from '../types/questions';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {
     StyleSheet,
-    Text,
     View,
     ScrollView,
     TouchableOpacity,
@@ -23,25 +22,12 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
-import { TestMode, TestConfig, TestRecommendation } from '../types/test';
+import { TestMode, TestConfig, TestRecommendation, MainTestModeOption } from '../types/test';
 import { TestStackParamList } from '../types/types';
 
 const { width, height } = Dimensions.get('window');
 
 type TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
-
-interface TestModeOption {
-    mode: TestMode;
-    title_vi: string;
-    title_fr: string;
-    description_vi: string;
-    description_fr: string;
-    icon: string;
-    questionCount: number;
-    timeLimit?: number;
-    color: string;
-    isRecommended?: boolean;
-}
 
 const TestScreen = () => {
     const navigation = useNavigation<TestScreenNavigationProp>();
@@ -80,7 +66,7 @@ const TestScreen = () => {
         return unsubscribe;
     }, [untypedNavigation, refreshProgress]);
 
-    const testModes: TestModeOption[] = [
+    const testModes: MainTestModeOption[] = [
         {
             mode: 'geography_only',
             title_vi: 'Kiểm tra Địa lý',
@@ -128,11 +114,11 @@ const TestScreen = () => {
         }
     };
 
-    const getLocalizedModeTitle = (modeOption: TestModeOption): string => {
+    const getLocalizedModeTitle = (modeOption: MainTestModeOption): string => {
         return getLocalizedText(modeOption.title_fr, modeOption.title_vi);
     };
 
-    const getLocalizedModeDescription = (modeOption: TestModeOption): string => {
+    const getLocalizedModeDescription = (modeOption: MainTestModeOption): string => {
         return getLocalizedText(modeOption.description_fr, modeOption.description_vi);
     };
 
@@ -367,7 +353,7 @@ const TestScreen = () => {
         </TouchableOpacity>
     );
 
-    const renderTestModeCard = (modeOption: TestModeOption) => (
+    const renderTestModeCard = (modeOption: MainTestModeOption) => (
         <TouchableOpacity
             key={modeOption.mode}
             style={[

@@ -12,20 +12,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcons, IconSetType, JsonIconMapping, iconSetOptions, IconSetInfo } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
-
-interface JsonIconSelectorProps {
-    title: string;
-    titleVi: string;
-    language: 'fr' | 'vi';
-    value: IconSetType;
-    onValueChange: (iconSet: IconSetType) => void;
-}
+import { SettingsComponentWithValueProps } from '../types/questions';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const JsonIconSelector: React.FC<JsonIconSelectorProps> = ({
+const JsonIconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,
-    titleVi,
+    title_vi,
     language,
     value,
     onValueChange,
@@ -149,7 +142,7 @@ const JsonIconSelector: React.FC<JsonIconSelectorProps> = ({
                     </View>
                     <View style={styles.textContainer}>
                         <FormattedText style={[styles.selectorTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? title : titleVi}
+                            {language === 'fr' ? title : title_vi}
                         </FormattedText>
                         <FormattedText style={[styles.selectorSubtitle, { color: theme.colors.textSecondary }]}>
                             {currentIconSet ? (language === 'fr' ? currentIconSet.name : currentIconSet.nameVi) : ''}

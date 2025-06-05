@@ -12,7 +12,6 @@ import {
     TestConfig,
     TestResult,
     TestRecommendation,
-    CategoryPerformance
 } from '../types/test';
 
 interface TestContextType {
@@ -594,7 +593,6 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 newStatistics.categoryPerformance[question.categoryId] = {
                     categoryId: question.categoryId,
                     categoryTitle: question.categoryTitle,
-                    totalQuestions: 0,
                     questionsAttempted: 0,
                     correctAnswers: 0,
                     accuracy: 0,

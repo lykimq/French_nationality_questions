@@ -6,29 +6,11 @@ import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
 import { MultiLangText } from '../contexts/LanguageContext';
 import FormattedText from './FormattedText';
+import { MultilingualQuestion, CategorySlideViewProps } from '../types/questions';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
-
-interface MultilingualQuestion {
-    id: number;
-    question: string;
-    question_vi: string;
-    explanation?: string;
-    explanation_vi?: string;
-    image?: string | null;
-}
-
-interface CategorySlideViewProps {
-    categories: Array<{
-        id: string;
-        title: string;
-        title_vi?: string;
-        questions: MultilingualQuestion[];
-    }>;
-    language: 'fr' | 'vi';
-}
 
 const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, language }) => {
     const { theme } = useTheme();

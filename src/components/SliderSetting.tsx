@@ -1,31 +1,25 @@
 import React, { useRef, useState } from 'react';
 import {
     View,
-    Text,
     StyleSheet,
     TouchableOpacity,
     PanResponder,
-    Dimensions,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
+import { ExtendedSettingsComponent } from '../types/questions';
 
-interface SliderSettingProps {
-    title: string;
-    titleVi?: string;
-    language: 'fr' | 'vi';
-    value: number;
+interface SliderSettingAdditionalProps {
     minimumValue: number;
     maximumValue: number;
     step?: number;
-    onValueChange: (value: number) => void;
     formatValue?: (value: number) => string;
 }
 
-const SliderSetting: React.FC<SliderSettingProps> = ({
+const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdditionalProps>> = ({
     title,
-    titleVi,
+    title_vi,
     language,
     value,
     minimumValue,
@@ -96,7 +90,7 @@ const SliderSetting: React.FC<SliderSettingProps> = ({
         <View style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
             <View style={styles.headerRow}>
                 <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                    {language === 'fr' ? title : (titleVi || title)}
+                    {language === 'fr' ? title : (title_vi || title)}
                 </FormattedText>
                 <FormattedText style={[styles.valueText, { color: theme.colors.primary }]}>
                     {formatValue(value)}

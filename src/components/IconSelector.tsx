@@ -11,6 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcons, IconSetType, IconSetInfo, iconSetOptions } from '../contexts/IconContext';
+import { SettingsComponentWithValueProps } from '../types/questions';
 
 // Import the icon sets directly
 const iconSets = {
@@ -44,19 +45,11 @@ const iconSets = {
     },
 };
 
-interface IconSelectorProps {
-    title: string;
-    titleVi: string;
-    language: 'fr' | 'vi';
-    value: IconSetType;
-    onValueChange: (iconSet: IconSetType) => void;
-}
-
 const { width: screenWidth } = Dimensions.get('window');
 
-const IconSelector: React.FC<IconSelectorProps> = ({
+const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,
-    titleVi,
+    title_vi,
     language,
     value,
     onValueChange,
@@ -140,7 +133,7 @@ const IconSelector: React.FC<IconSelectorProps> = ({
                     </View>
                     <View style={styles.selectorContent}>
                         <FormattedText style={[styles.selectorTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? title : titleVi}
+                            {language === 'fr' ? title : title_vi}
                         </FormattedText>
                         <FormattedText style={[styles.currentValue, { color: theme.colors.textSecondary }]}>
                             {language === 'fr' ? currentIconSet?.name : currentIconSet?.nameVi}

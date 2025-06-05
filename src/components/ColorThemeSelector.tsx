@@ -9,18 +9,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme, ColorTheme, colorThemeInfo } from '../contexts/ThemeContext';
 import FormattedText from './FormattedText';
+import { SettingsComponentWithValueProps } from '../types/questions';
 
-interface ColorThemeSelectorProps {
-    title: string;
-    titleVi: string;
-    language: 'fr' | 'vi';
-    value: ColorTheme;
-    onValueChange: (theme: ColorTheme) => void;
-}
-
-const ColorThemeSelector: React.FC<ColorThemeSelectorProps> = ({
+const ColorThemeSelector: React.FC<SettingsComponentWithValueProps<ColorTheme>> = ({
     title,
-    titleVi,
+    title_vi,
     language,
     value,
     onValueChange,
@@ -89,7 +82,7 @@ const ColorThemeSelector: React.FC<ColorThemeSelectorProps> = ({
                 </View>
                 <View style={styles.headerText}>
                     <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                        {language === 'fr' ? title : titleVi}
+                        {language === 'fr' ? title : title_vi}
                     </FormattedText>
                     <FormattedText style={[styles.subtitle, { color: theme.colors.textSecondary }]}>
                         {language === 'fr' ? selectedThemeInfo.name : selectedThemeInfo.nameVi}

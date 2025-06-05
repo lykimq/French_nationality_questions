@@ -1,16 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import {
     StyleSheet,
-    Text,
     View,
     TextInput,
     ScrollView,
     TouchableOpacity,
     StatusBar,
     Switch,
-    Modal,
-    FlatList,
-    Pressable,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';

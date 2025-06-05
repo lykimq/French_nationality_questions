@@ -4,17 +4,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
-import { Question } from '../types/questions';
+import { Question, QuestionSlideViewProps } from '../types/questions';
 import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25; // Reduced threshold for easier swipe
 const VELOCITY_THRESHOLD = 400; // Reduced velocity threshold
-
-interface QuestionSlideViewProps {
-    questions: Question[];
-    language: 'fr' | 'vi';
-}
 
 const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, language }) => {
     const { theme } = useTheme();

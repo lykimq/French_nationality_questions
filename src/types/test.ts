@@ -7,7 +7,6 @@ export interface TestQuestion {
     image?: string | null;
     categoryId: string;
     categoryTitle: string;
-    difficulty?: 'easy' | 'medium' | 'hard'; // Based on user performance
 }
 
 export interface TestAnswer {
@@ -59,7 +58,6 @@ export interface TestStatistics {
 export interface CategoryPerformance {
     categoryId: string;
     categoryTitle: string;
-    totalQuestions: number;
     questionsAttempted: number;
     correctAnswers: number;
     accuracy: number; // percentage
@@ -116,4 +114,30 @@ export interface TestRecommendation {
     actionText_fr: string;
     categoryIds?: string[];
     questionIds?: number[];
+}
+
+// Base interface for test mode options used across different test screens
+export interface BaseTestModeOption {
+    mode: TestMode;
+    title_fr: string;
+    title_vi: string;
+    description_fr: string;
+    description_vi: string;
+    icon: string;
+    color: string;
+    questionCount: number;
+}
+
+// Extended interfaces for specific test screens
+export interface Part1TestModeOption extends BaseTestModeOption {
+    subcategoryId: string;
+}
+
+export interface SubcategoryTestModeOption extends BaseTestModeOption {
+    subcategoryId: string;
+}
+
+export interface MainTestModeOption extends BaseTestModeOption {
+    timeLimit?: number;
+    isRecommended?: boolean;
 }
