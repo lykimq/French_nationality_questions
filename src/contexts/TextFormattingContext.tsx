@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { TextFormattingSettings } from '../types';
 
@@ -20,6 +20,18 @@ const defaultSettings: TextFormattingSettings = {
 
 const STORAGE_KEY = '@text_formatting_settings';
 
+// Helper function to validate loaded settings
+const isValidSettings = (settings: any): settings is TextFormattingSettings => {
+    return (
+        typeof settings === 'object' &&
+        settings !== null &&
+        typeof settings.fontSize === 'number' &&
+        typeof settings.fontFamily === 'string' &&
+        typeof settings.lineHeight === 'number' &&
+        typeof settings.letterSpacing === 'number'
+    );
+};
+
 const TextFormattingContext = createContext<TextFormattingContextType | undefined>(undefined);
 
 export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -27,22 +39,33 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
 
     // Load settings from storage on mount
     useEffect(() => {
+        let isMounted = true;
+
+        const loadSettings = async () => {
+            try {
+                const storedSettings = await AsyncStorage.getItem(STORAGE_KEY);
+                if (storedSettings && isMounted) {
+                    const parsedSettings = JSON.parse(storedSettings);
+                    if (isValidSettings(parsedSettings)) {
+                        setSettings(parsedSettings);
+                    } else {
+                        console.warn('Invalid settings format in storage, using defaults');
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load text formatting settings:', error);
+            }
+        };
+
         loadSettings();
+
+        // Cleanup function to prevent state updates after unmount
+        return () => {
+            isMounted = false;
+        };
     }, []);
 
-    const loadSettings = async () => {
-        try {
-            const storedSettings = await AsyncStorage.getItem(STORAGE_KEY);
-            if (storedSettings) {
-                const parsedSettings = JSON.parse(storedSettings);
-                setSettings(parsedSettings);
-            }
-        } catch (error) {
-            console.error('Failed to load text formatting settings:', error);
-        }
-    };
-
-    const saveSettings = async (newSettings: TextFormattingSettings) => {
+    const saveSettings = useCallback(async (newSettings: TextFormattingSettings) => {
         try {
             await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newSettings));
             setSettings(newSettings);
@@ -51,31 +74,36 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
             // Still update the state even if storage fails
             setSettings(newSettings);
         }
-    };
+    }, []);
 
-    const updateFontSize = (size: number) => {
-        const newSettings = { ...settings, fontSize: size };
+    // Generic update function to eliminate code duplication
+    const updateSetting = useCallback(<K extends keyof TextFormattingSettings>(
+        key: K,
+        value: TextFormattingSettings[K]
+    ) => {
+        const newSettings = { ...settings, [key]: value };
         saveSettings(newSettings);
-    };
+    }, [settings, saveSettings]);
 
-    const updateFontFamily = (family: string) => {
-        const newSettings = { ...settings, fontFamily: family };
-        saveSettings(newSettings);
-    };
+    const updateFontSize = useCallback((size: number) => {
+        updateSetting('fontSize', size);
+    }, [updateSetting]);
 
-    const updateLineHeight = (height: number) => {
-        const newSettings = { ...settings, lineHeight: height };
-        saveSettings(newSettings);
-    };
+    const updateFontFamily = useCallback((family: string) => {
+        updateSetting('fontFamily', family);
+    }, [updateSetting]);
 
-    const updateLetterSpacing = (spacing: number) => {
-        const newSettings = { ...settings, letterSpacing: spacing };
-        saveSettings(newSettings);
-    };
+    const updateLineHeight = useCallback((height: number) => {
+        updateSetting('lineHeight', height);
+    }, [updateSetting]);
 
-    const resetToDefaults = () => {
+    const updateLetterSpacing = useCallback((spacing: number) => {
+        updateSetting('letterSpacing', spacing);
+    }, [updateSetting]);
+
+    const resetToDefaults = useCallback(() => {
         saveSettings(defaultSettings);
-    };
+    }, [saveSettings]);
 
     const value: TextFormattingContextType = {
         settings,
