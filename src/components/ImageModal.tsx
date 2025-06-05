@@ -250,7 +250,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
                                 ]}
                             >
                                 <Image
-                                    key={imageSource.uri || imageSource}
+                                    key={JSON.stringify(imageSource)}
                                     source={imageSource}
                                     style={[styles.photo, !imageLoaded && styles.hiddenImage]}
                                     resizeMode="contain"
