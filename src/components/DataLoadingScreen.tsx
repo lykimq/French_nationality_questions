@@ -3,12 +3,7 @@ import { StyleSheet, View, ActivityIndicator, TouchableOpacity } from 'react-nat
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from './FormattedText';
-
-interface DataLoadingScreenProps {
-    error?: string | null;
-    onRetry?: () => void;
-    isLoading?: boolean;
-}
+import { DataLoadingScreenProps } from '../types/components';
 
 const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry, isLoading }) => {
     const { theme } = useTheme();

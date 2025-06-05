@@ -1,12 +1,7 @@
 import React from 'react';
-import { Text, TextStyle, StyleProp, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
-
-interface FormattedTextProps {
-    children: React.ReactNode;
-    style?: StyleProp<TextStyle>;
-    [key: string]: any; // Allow other Text props
-}
+import { FormattedTextProps } from '../types/components';
 
 const FormattedText: React.FC<FormattedTextProps> = ({
     children,
