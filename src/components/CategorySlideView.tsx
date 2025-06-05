@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
-import type { MultiLangText, MultilingualQuestion, CategorySlideViewProps } from '../types';
+import type { MultiLangText, MultilingualQuestion, CategorySlideViewProps, NavigationQuestion } from '../types';
 import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -101,18 +101,27 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
         }
     };
 
-    const getLocalizedQuestion = (question: MultilingualQuestion): MultiLangText => {
-        return {
-            fr: question.question,
-            vi: question.question_vi
-        };
+    const getLocalizedQuestion = (question: MultilingualQuestion | NavigationQuestion): MultiLangText => {
+        if (typeof question.question === 'string') {
+            return {
+                fr: question.question,
+                vi: question.question_vi || question.question
+            };
+        } else {
+            return question.question;
+        }
     };
 
-    const getLocalizedExplanation = (question: MultilingualQuestion): MultiLangText => {
-        return {
-            fr: question.explanation || '',
-            vi: question.explanation_vi || ''
-        };
+    const getLocalizedExplanation = (question: MultilingualQuestion | NavigationQuestion): MultiLangText => {
+        const explanation = question.explanation || '';
+        if (typeof explanation === 'string') {
+            return {
+                fr: explanation,
+                vi: question.explanation_vi || explanation
+            };
+        } else {
+            return explanation;
+        }
     };
 
     const getLocalizedTitle = (category: { title: string; title_vi?: string }) => {

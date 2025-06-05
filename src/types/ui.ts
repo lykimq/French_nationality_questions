@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
-import type { Language, MultiLangText } from './core';
+import type { Language, MultiLangText, MultilingualEntity, VisualEntity } from './core';
 import type { Question, MultilingualQuestion, CategoryType, HistoryCategory, HistorySubcategory } from './domain';
 import type { FrenchQuestionsData, MultiLangQuestionsData } from './language';
+import type { NavigationQuestion } from './navigation';
 
 // ==================== COMPONENT BASE PATTERNS ====================
 
@@ -115,8 +116,8 @@ export interface QuestionSlideViewProps extends LanguageAwareProps {
 
 // Category slide view props
 export interface CategorySlideViewProps extends LanguageAwareProps {
-    readonly categories: readonly (CategoryType & {
-        readonly questions: readonly MultilingualQuestion[];
+    readonly categories: readonly (MultilingualEntity & VisualEntity & {
+        readonly questions: readonly (MultilingualQuestion | NavigationQuestion)[];
     })[];
 }
 

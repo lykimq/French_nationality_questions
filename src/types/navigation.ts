@@ -14,7 +14,7 @@ export type TabParamList = Readonly<{
 // ==================== HOME STACK NAVIGATION ====================
 
 // Question structure for navigation params - supports both string and MultiLangText
-interface NavigationQuestion {
+export interface NavigationQuestion {
     readonly id: number;
     readonly question: string | MultiLangText;
     readonly question_vi?: string;
@@ -24,7 +24,7 @@ interface NavigationQuestion {
 }
 
 // Category structure for navigation params
-interface NavigationCategory {
+export interface NavigationCategory {
     readonly id: string;
     readonly title: string;
     readonly title_vi?: string;
