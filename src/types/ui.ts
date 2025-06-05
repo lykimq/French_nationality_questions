@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { StyleProp, TextStyle } from 'react-native';
+import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
 import type { Language, MultiLangText } from './core';
-import type { Question, MultilingualQuestion, CategoryType } from './domain';
+import type { Question, MultilingualQuestion, CategoryType, HistoryCategory, HistorySubcategory } from './domain';
+import type { FrenchQuestionsData, MultiLangQuestionsData } from './language';
 
 // ==================== COMPONENT BASE PATTERNS ====================
 
@@ -147,10 +148,10 @@ export interface LanguageContextType {
     readonly language: Language;
     readonly setLanguage: (lang: Language) => void;
     readonly toggleLanguage: () => void;
-    readonly questionsData: any; // FrenchQuestionsData | MultiLangQuestionsData - avoiding circular import
+    readonly questionsData: FrenchQuestionsData | MultiLangQuestionsData;
     readonly isTranslationLoaded: boolean;
-    readonly historyCategories: any; // HistoryCategory | null - avoiding circular import
-    readonly historySubcategories: Record<string, any>; // Record<string, HistorySubcategory> - avoiding circular import
+    readonly historyCategories: HistoryCategory | null;
+    readonly historySubcategories: Record<string, HistorySubcategory>;
     readonly isDataLoading: boolean;
     readonly dataLoadingError: string | null;
 }
@@ -170,13 +171,13 @@ export interface SettingItemProps {
     readonly value?: boolean;
     readonly onValueChange?: (value: boolean) => void;
     readonly onPress?: () => void;
-    readonly language?: 'fr' | 'vi';
+    readonly language?: Language;
 }
 
 // Image modal props
 export interface ImageModalProps {
     readonly visible: boolean;
-    readonly imageSource: any;
+    readonly imageSource: ImageSourcePropType;
     readonly onClose: () => void;
 }
 
