@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
-import {
-    View,
-    TouchableOpacity,
-    Modal,
-    FlatList,
-    StyleSheet,
-} from 'react-native';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
-import { useIcons, iconSetOptions } from '../contexts/IconContext';
-import type { IconSetType, IconSetInfo, SettingsComponentWithValueProps } from '../types';
+import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
+import { BaseIconSelector } from './BaseIconSelector';
+import { sharedStyles } from '../utils/sharedStyles';
+import { jsonIconSets, iconSetOptions } from '../config/iconConfig';
+import type { SettingsComponentWithValueProps, IconSetType, IconSetInfo } from '../types';
 
 const JsonIconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,
@@ -19,263 +16,164 @@ const JsonIconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> =
     value,
     onValueChange,
 }) => {
-    const [modalVisible, setModalVisible] = useState(false);
     const { theme } = useTheme();
-    const { jsonIcons } = useIcons();
+    const { getJsonIconName, getJsonIconColor } = useIcons();
 
-    const currentIconSet = iconSetOptions.find(set => set.id === value);
-
-    const handleSelect = (iconSet: IconSetType) => {
-        onValueChange(iconSet);
-        setModalVisible(false);
+    const renderPreview = (iconSetType: IconSetType) => {
+        return (
+            <View style={styles.previewRow}>
+                <Ionicons
+                    name={getJsonIconName('map') as any}
+                    size={16}
+                    color={getJsonIconColor('map')}
+                />
+                <Ionicons
+                    name={getJsonIconName('person') as any}
+                    size={16}
+                    color={getJsonIconColor('person')}
+                />
+                <Ionicons
+                    name={getJsonIconName('star') as any}
+                    size={16}
+                    color={getJsonIconColor('star')}
+                />
+            </View>
+        );
     };
 
-    const renderIconSetOption = ({ item }: { item: IconSetInfo }) => {
-        const isSelected = item.id === value;
-
-        // Sample icons to preview the JSON icon set - using actual JSON file icons
-        const sampleJsonIcons = ['map', 'person', 'book', 'star', 'shield'];
+    const renderOption = (item: IconSetInfo, isSelected: boolean) => {
+        const previewIcons = jsonIconSets[item.id];
 
         return (
-            <TouchableOpacity
-                style={[
-                    styles.optionItem,
-                    {
-                        backgroundColor: theme.colors.card,
-                        borderColor: isSelected ? theme.colors.primary : theme.colors.border,
-                        borderWidth: isSelected ? 2 : 1,
-                    }
-                ]}
-                onPress={() => handleSelect(item.id)}
-                activeOpacity={0.7}
-            >
-                <View style={styles.optionContent}>
-                    <FormattedText style={[styles.optionTitle, { color: theme.colors.text }]}>
-                        {language === 'fr' ? item.name : item.nameVi}
-                    </FormattedText>
-                    <FormattedText style={[styles.optionDescription, { color: theme.colors.textSecondary }]}>
-                        {language === 'fr' ? item.description : item.descriptionVi}
-                    </FormattedText>
-
-                    {/* Preview of category icons */}
-                    <View style={[styles.iconPreviewRow, { borderTopColor: theme.colors.border }]}>
-                        {sampleJsonIcons.map((iconKey, index) => {
-                            // Get the icon mapping for this specific set
-                            const iconSets = {
-                                filled: {
-                                    map: 'map',
-                                    person: 'person',
-                                    book: 'book',
-                                    star: 'star',
-                                    shield: 'shield',
-                                },
-                                outlined: {
-                                    map: 'map-outline',
-                                    person: 'person-outline',
-                                    book: 'book-outline',
-                                    star: 'star-outline',
-                                    shield: 'shield-outline',
-                                },
-                                rounded: {
-                                    map: 'location',
-                                    person: 'person-circle',
-                                    book: 'library',
-                                    star: 'star',
-                                    shield: 'medal',
-                                },
-                                sharp: {
-                                    map: 'map-sharp',
-                                    person: 'person-sharp',
-                                    book: 'book-sharp',
-                                    star: 'star-sharp',
-                                    shield: 'shield-sharp',
-                                }
-                            };
-
-                            // Vibrant colors for preview
-                            const iconColors = {
-                                map: '#00B4D8',        // Ocean blue for geography
-                                person: '#9D4EDD',     // Purple for personal
-                                book: '#F77F00',       // Orange for history/books
-                                star: '#FFD60A',       // Gold for monarchy/star
-                                shield: '#118AB2',     // Navy blue for wars/shield
-                            };
-
-                            const iconName = iconSets[item.id][iconKey as keyof typeof iconSets.filled];
-                            const iconColor = iconColors[iconKey as keyof typeof iconColors];
-
-                            return (
-                                <Ionicons
-                                    key={index}
-                                    name={iconName as any}
-                                    size={20}
-                                    color={iconColor}
-                                />
-                            );
-                        })}
+            <View style={[
+                styles.optionCard,
+                {
+                    backgroundColor: isSelected ? theme.colors.primary + '10' : theme.colors.card,
+                    borderColor: isSelected ? theme.colors.primary : theme.colors.border,
+                }
+            ]}>
+                <View style={styles.optionHeader}>
+                    <View style={styles.optionLeft}>
+                        <View style={[
+                            styles.optionIconContainer,
+                            { backgroundColor: theme.colors.primary + '15' }
+                        ]}>
+                            <Ionicons
+                                name={(previewIcons?.book || 'book') as any}
+                                size={24}
+                                color={theme.colors.primary}
+                            />
+                        </View>
+                        <View style={styles.optionContent}>
+                            <FormattedText style={[
+                                styles.optionTitle,
+                                { color: theme.colors.text }
+                            ]}>
+                                {language === 'fr' ? item.name : item.nameVi}
+                            </FormattedText>
+                            <FormattedText style={[
+                                styles.optionDescription,
+                                { color: theme.colors.textSecondary }
+                            ]}>
+                                {language === 'fr' ? item.description : item.descriptionVi}
+                            </FormattedText>
+                        </View>
                     </View>
+                    {isSelected && (
+                        <View style={[
+                            styles.selectedBadge,
+                            { backgroundColor: theme.colors.primary }
+                        ]}>
+                            <Ionicons name="checkmark" size={12} color="white" />
+                        </View>
+                    )}
                 </View>
 
-                {isSelected && (
-                    <View style={[styles.selectedIndicator, { backgroundColor: theme.colors.primary }]}>
-                        <Ionicons name="checkmark" size={12} color="white" />
-                    </View>
-                )}
-            </TouchableOpacity>
+                {/* Icon preview row */}
+                <View style={[
+                    styles.iconPreviewRow,
+                    { borderTopColor: theme.colors.divider }
+                ]}>
+                    <Ionicons
+                        name={(previewIcons?.map || 'map') as any}
+                        size={18}
+                        color={getJsonIconColor('map')}
+                    />
+                    <Ionicons
+                        name={(previewIcons?.person || 'person') as any}
+                        size={18}
+                        color={getJsonIconColor('person')}
+                    />
+                    <Ionicons
+                        name={(previewIcons?.book || 'book') as any}
+                        size={18}
+                        color={getJsonIconColor('book')}
+                    />
+                    <Ionicons
+                        name={(previewIcons?.star || 'star') as any}
+                        size={18}
+                        color={getJsonIconColor('star')}
+                    />
+                    <Ionicons
+                        name={(previewIcons?.shield || 'shield') as any}
+                        size={18}
+                        color={getJsonIconColor('shield')}
+                    />
+                </View>
+            </View>
         );
     };
 
     return (
-        <View>
-            <TouchableOpacity
-                style={[styles.selector, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}
-                onPress={() => setModalVisible(true)}
-                activeOpacity={0.7}
-            >
-                <View style={styles.selectorLeft}>
-                    <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '15' }]}>
-                        <Ionicons name="shapes" size={22} color={theme.colors.primary} />
-                    </View>
-                    <View style={styles.textContainer}>
-                        <FormattedText style={[styles.selectorTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? title : title_vi}
-                        </FormattedText>
-                        <FormattedText style={[styles.selectorSubtitle, { color: theme.colors.textSecondary }]}>
-                            {currentIconSet ? (language === 'fr' ? currentIconSet.name : currentIconSet.nameVi) : ''}
-                        </FormattedText>
-                    </View>
-                </View>
-
-                <View style={styles.selectorRight}>
-                    {/* Preview current JSON icons */}
-                    <View style={styles.previewIcons}>
-                        <Ionicons name={jsonIcons.map as any} size={16} color="#00B4D8" />
-                        <Ionicons name={jsonIcons.star as any} size={16} color="#FFD60A" />
-                    </View>
-                    <Ionicons name="chevron-forward" size={20} color={theme.colors.textMuted} />
-                </View>
-            </TouchableOpacity>
-
-            <Modal
-                visible={modalVisible}
-                animationType="slide"
-                presentationStyle="pageSheet"
-                onRequestClose={() => setModalVisible(false)}
-            >
-                <View style={[styles.modalContainer, { backgroundColor: theme.colors.background }]}>
-                    <View style={[styles.modalHeader, { backgroundColor: theme.colors.headerBackground, borderBottomColor: theme.colors.border }]}>
-                        <FormattedText style={[styles.modalTitle, { color: theme.colors.headerText }]}>
-                            {language === 'fr' ? 'Style des icônes de catégories' : 'Kiểu biểu tượng danh mục'}
-                        </FormattedText>
-                        <TouchableOpacity
-                            style={styles.closeButton}
-                            onPress={() => setModalVisible(false)}
-                        >
-                            <Ionicons name="close" size={24} color={theme.colors.headerText} />
-                        </TouchableOpacity>
-                    </View>
-
-                    <FlatList
-                        data={iconSetOptions}
-                        keyExtractor={(item) => item.id}
-                        renderItem={renderIconSetOption}
-                        contentContainerStyle={styles.optionsList}
-                        showsVerticalScrollIndicator={false}
-                    />
-                </View>
-            </Modal>
-        </View>
+        <BaseIconSelector
+            title={title}
+            title_vi={title_vi || title}
+            language={language}
+            value={value}
+            onValueChange={onValueChange}
+            options={iconSetOptions}
+            renderPreview={renderPreview}
+            renderOption={renderOption}
+            modalTitle="Choisir un style d'icônes JSON"
+            modalTitleVi="Chọn kiểu biểu tượng JSON"
+        />
     );
 };
 
 const styles = StyleSheet.create({
-    selector: {
+    previewRow: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingVertical: 16,
-        paddingHorizontal: 15,
-        borderBottomWidth: 1,
-    },
-    selectorLeft: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        flex: 1,
-    },
-    iconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 15,
-    },
-    textContainer: {
-        flex: 1,
-    },
-    selectorTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        marginBottom: 2,
-    },
-    selectorSubtitle: {
-        fontSize: 14,
-    },
-    selectorRight: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-    previewIcons: {
-        flexDirection: 'row',
-        marginRight: 8,
         gap: 6,
     },
-    modalContainer: {
-        flex: 1,
-    },
-    modalHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 20,
-        paddingVertical: 16,
-        borderBottomWidth: 1,
-    },
-    modalTitle: {
-        fontSize: 18,
-        fontWeight: '600',
-    },
-    closeButton: {
-        padding: 4,
-    },
-    optionsList: {
-        padding: 20,
-    },
-    optionItem: {
+    optionCard: {
         borderRadius: 12,
         padding: 16,
-        marginBottom: 12,
-        position: 'relative',
-        elevation: 1,
+        borderWidth: 1,
+        elevation: 2,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.1,
         shadowRadius: 2,
     },
-    selectedIndicator: {
-        position: 'absolute',
-        bottom: -2,
-        right: -2,
-        width: 20,
-        height: 20,
-        borderRadius: 10,
+    optionHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginBottom: 16,
+    },
+    optionLeft: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        flex: 1,
+    },
+    optionIconContainer: {
+        width: 48,
+        height: 48,
+        borderRadius: 24,
         justifyContent: 'center',
         alignItems: 'center',
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
+        marginRight: 16,
     },
     optionContent: {
         flex: 1,
@@ -289,11 +187,23 @@ const styles = StyleSheet.create({
         fontSize: 14,
         lineHeight: 20,
     },
+    selectedBadge: {
+        width: 24,
+        height: 24,
+        borderRadius: 12,
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+    },
     iconPreviewRow: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        paddingTop: 12,
+        paddingTop: 16,
         borderTopWidth: 1,
     },
 });

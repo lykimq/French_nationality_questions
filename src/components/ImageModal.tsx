@@ -63,7 +63,10 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
 
             // Show zoom hint for 3 seconds
             setShowZoomHint(true);
-            setTimeout(() => setShowZoomHint(false), 3000);
+            const hintTimeout = setTimeout(() => setShowZoomHint(false), 3000);
+
+            // Cleanup function to clear timeout
+            return () => clearTimeout(hintTimeout);
         }
     }, [visible, imageSource]);
 

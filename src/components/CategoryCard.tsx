@@ -5,6 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
 import { CategoryCardProps } from '../types';
+import { sharedStyles } from '../utils/sharedStyles';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,
@@ -31,6 +32,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <Pressable
             style={({ pressed }) => [
                 styles.card,
+                sharedStyles.mediumShadow,
                 {
                     backgroundColor: theme.colors.card,
                     borderColor: iconColor + '20',
@@ -41,7 +43,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             onPress={onPress}
             android_ripple={{ color: iconColor + '20' }}
         >
-            <View style={[styles.iconContainer, { backgroundColor: iconColor + '15' }]}>
+            <View style={[sharedStyles.largeIconContainer, { backgroundColor: iconColor + '15' }]}>
                 <Ionicons
                     name={mappedIconName as keyof typeof Ionicons.glyphMap}
                     size={32}
@@ -73,23 +75,10 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         padding: 16,
         marginBottom: 15,
-        elevation: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
         alignItems: 'center',
     },
     cardPressed: {
         // backgroundColor will be set dynamically
-    },
-    iconContainer: {
-        width: 60,
-        height: 60,
-        borderRadius: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 16,
     },
     content: {
         flex: 1,

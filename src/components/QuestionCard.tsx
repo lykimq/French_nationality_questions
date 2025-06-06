@@ -6,6 +6,7 @@ import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { QuestionCardProps } from '../types';
+import { sharedStyles } from '../utils/sharedStyles';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -131,7 +132,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     return (
         <View style={[
             styles.card,
-            { backgroundColor: theme.colors.questionCardBackground, borderColor: theme.colors.questionCardBorder },
+            sharedStyles.mediumShadow,
+            {
+                backgroundColor: theme.colors.card,
+                borderColor: theme.colors.questionCardBorder,
+                borderWidth: 1,
+            },
             expanded && styles.cardExpanded
         ]}>
             <Pressable
@@ -255,15 +261,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
 const styles = StyleSheet.create({
     card: {
-        borderRadius: 10,
-        marginBottom: 15,
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        overflow: 'hidden',
-        borderWidth: 1,
+        borderRadius: 12,
+        padding: 16,
+        marginBottom: 12,
     },
     cardExpanded: {
         elevation: 3,
@@ -273,8 +273,9 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 16,
+        marginBottom: 12,
     },
     headerPressed: {
         // backgroundColor will be set dynamically
