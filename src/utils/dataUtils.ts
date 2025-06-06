@@ -229,16 +229,6 @@ export const getCachedJsonData = (dataPath: string): any => {
 };
 
 /**
- * Logs detailed information about loaded questions for debugging
- * @param data - The loaded data
- * @param dataName - Name for logging
- */
-export const logQuestionDetails = (data: any, dataName: string): void => {
-    // This function is kept for backward compatibility but does nothing
-    // All debug logging has been removed to reduce console output
-};
-
-/**
  * Loads main question data files from Firebase Storage
  * @returns Promise that resolves to the loaded data structure
  */

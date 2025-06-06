@@ -3,7 +3,7 @@
  * This file contains utilities to test and verify that the database is properly integrated
  */
 
-import { preloadAllData, validateDataStructure, logQuestionDetails } from './dataUtils';
+import { preloadAllData, validateDataStructure } from './dataUtils';
 
 interface DatabaseTestResult {
     success: boolean;
