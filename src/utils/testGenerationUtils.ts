@@ -80,8 +80,6 @@ export const generateTestQuestions = (
     allProcessedQuestions: TestQuestion[],
     part1TestSubcategories: Record<string, any>
 ): TestQuestion[] => {
-    console.log('Starting question generation for config:', config);
-
     // Handle Part 1 tests
     if (config.mode.startsWith('part1_')) {
         return generatePart1Questions(config, part1TestSubcategories);

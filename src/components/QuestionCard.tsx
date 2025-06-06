@@ -4,7 +4,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
-import { useTextFormatting } from '../contexts/TextFormattingContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { QuestionCardProps } from '../types';
 
@@ -31,8 +30,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         let isMounted = true;
 
         const loadImage = async () => {
-            console.log('Loading image for question', id, ':', image);
-
             if (!image) {
                 setImageSource(null);
                 setImageLoading(false);
@@ -46,22 +43,18 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 // First try to get cached image source for immediate display
                 const cachedSource = getCachedImageSource(image);
                 if (cachedSource && isMounted) {
-                    console.log('Using cached image for question', id, ':', image);
                     setImageSource(cachedSource);
                     setImageLoading(false);
                     return;
                 }
 
                 // If not cached, load from Firebase
-                console.log('Loading image from Firebase for question', id, ':', image);
                 const source = await loadImageSource(image);
                 if (isMounted) {
                     if (source) {
-                        console.log('Successfully loaded image for question', id, ':', image);
                         setImageSource(source);
                         setImageLoading(false);
                     } else {
-                        console.log('Failed to load image for question', id, ':', image);
                         setImageError(true);
                         setImageLoading(false);
                         setImageSource(null);
@@ -116,12 +109,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         setExpanded(!expanded);
     };
 
-    const toggleLanguage = () => {
-        setShowBothLanguages(!showBothLanguages);
-    };
-
     const handleImageError = () => {
-        console.log('Image failed to render:', image);
         setImageError(true);
         setImageLoading(false);
     };
@@ -131,34 +119,14 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     };
 
     const handleImagePress = () => {
-        console.log('=== IMAGE PRESS DEBUG ===');
-        console.log('Question ID:', id);
-        console.log('Image path:', image);
-        console.log('Image source:', imageSource);
-        console.log('Image error:', imageError);
-        console.log('Image loading:', imageLoading);
-        console.log('Current modal visible:', isImageModalVisible);
-
         if (imageSource && !imageError && !imageLoading) {
-            console.log('✅ Opening modal for image');
             setIsImageModalVisible(true);
-        } else {
-            console.log('❌ Cannot open modal - conditions not met');
-            console.log('   - Has imageSource:', !!imageSource);
-            console.log('   - Not in error state:', !imageError);
-            console.log('   - Not loading:', !imageLoading);
         }
-        console.log('========================');
     };
 
     const closeImageModal = () => {
         setIsImageModalVisible(false);
     };
-
-    // Debug modal state changes
-    useEffect(() => {
-        console.log(`Modal visibility changed for question ${id}: ${isImageModalVisible}`);
-    }, [isImageModalVisible, id]);
 
     return (
         <View style={[
@@ -205,19 +173,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     {image && !imageError && (
                         <TouchableOpacity
                             style={[styles.imageContainer, { borderColor: theme.colors.border }]}
-                            onPress={() => {
-                                console.log('🔥 TOUCH EVENT DETECTED on image container');
-                                handleImagePress();
-                            }}
-                            onPressIn={() => console.log('👆 Press IN detected on container')}
-                            onPressOut={() => {
-                                console.log('👆 Press OUT detected on container');
-                                // Backup: trigger modal opening on press out if onPress doesn't work
-                                setTimeout(() => {
-                                    console.log('🔄 Backup trigger - opening modal from onPressOut');
-                                    handleImagePress();
-                                }, 100);
-                            }}
+                            onPress={handleImagePress}
                             activeOpacity={0.9}
                         >
                             {imageLoading && (
@@ -230,7 +186,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             )}
                             {imageSource && (
                                 <>
-                                    {console.log('🎯 Rendering image for question', id)}
                                     <Image
                                         source={imageSource}
                                         style={[styles.image, imageLoading && styles.hiddenImage]}

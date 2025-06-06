@@ -26,11 +26,8 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
 
         // Check if we have this data cached
         if (firebaseDataCache[dataPath]) {
-            console.log(`📋 Using cached data for: ${dataPath}`);
             return firebaseDataCache[dataPath];
         }
-
-        console.log(`🔄 Loading data from Firebase Storage: ${dataPath}`);
 
         // Create reference to the JSON file in Firebase Storage
         // Using the structure: French_questions/data/[dataPath]
@@ -51,14 +48,10 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
         const validationResult = validateDataStructure(jsonData, dataPath);
         if (!validationResult.isValid) {
             console.error(`❌ Data validation failed for ${dataPath}:`, validationResult.errors);
-        } else {
-            console.log(`✅ Data validation passed for ${dataPath}:`, validationResult.summary);
         }
 
         // Cache the data
         firebaseDataCache[dataPath] = jsonData;
-
-        console.log(`✅ Successfully loaded JSON data from Firebase: ${dataPath}`);
         return jsonData;
     } catch (error) {
         console.error(`❌ Failed to load JSON data from Firebase Storage: ${dataPath}`, error);
@@ -241,47 +234,8 @@ export const getCachedJsonData = (dataPath: string): any => {
  * @param dataName - Name for logging
  */
 export const logQuestionDetails = (data: any, dataName: string): void => {
-    if (!data) {
-        console.warn(`⚠️ No data to log for ${dataName}`);
-        return;
-    }
-
-    console.log(`📊 Question Details for ${dataName}:`);
-
-    const questions = data.questions || [];
-    if (questions.length === 0) {
-        console.warn(`⚠️ No questions found in ${dataName}`);
-        return;
-    }
-
-    // Log first few questions for debugging
-    const samplesToLog = Math.min(3, questions.length);
-    console.log(`📝 Sample questions (first ${samplesToLog} of ${questions.length}):`);
-
-    for (let i = 0; i < samplesToLog; i++) {
-        const question = questions[i];
-        console.log(`Question ${i + 1}:`, {
-            id: question.id,
-            questionFr: question.question?.substring(0, 100) + '...' || 'No French text',
-            questionVi: question.question_vi?.substring(0, 100) + '...' || 'No Vietnamese text',
-            explanationFr: question.explanation?.substring(0, 100) + '...' || 'No French explanation',
-            explanationVi: question.explanation_vi?.substring(0, 100) + '...' || 'No Vietnamese explanation',
-            hasImage: !!question.image,
-        });
-    }
-
-    // Log ID distribution
-    const ids = questions.map((q: any) => q.id).filter((id: any) => typeof id === 'number');
-    const minId = Math.min(...ids);
-    const maxId = Math.max(...ids);
-    const duplicateIds = ids.filter((id: number, index: number) => ids.indexOf(id) !== index);
-
-    console.log(`🔢 ID Statistics for ${dataName}:`, {
-        totalQuestions: questions.length,
-        validIds: ids.length,
-        idRange: `${minId} - ${maxId}`,
-        duplicateIds: duplicateIds.length > 0 ? duplicateIds : 'None',
-    });
+    // This function is kept for backward compatibility but does nothing
+    // All debug logging has been removed to reduce console output
 };
 
 /**
@@ -293,8 +247,6 @@ export const loadMainQuestionData = async (): Promise<{
     geography_fr_vi: any;
 } | null> => {
     try {
-        console.log('🔄 Loading main question data from Firebase Storage...');
-
         const [personal_fr_vi, geography_fr_vi] = await Promise.all([
             getFirebaseJsonData('personal_fr_vi.json'),
             getFirebaseJsonData('geography_fr_vi.json')
@@ -305,11 +257,6 @@ export const loadMainQuestionData = async (): Promise<{
             return null;
         }
 
-        // Log detailed information about loaded data
-        logQuestionDetails(personal_fr_vi, 'Personal Questions');
-        logQuestionDetails(geography_fr_vi, 'Geography Questions');
-
-        console.log('✅ Main question data loaded successfully');
         return {
             personal_fr_vi,
             geography_fr_vi
@@ -326,17 +273,7 @@ export const loadMainQuestionData = async (): Promise<{
  */
 export const loadHistoryData = async (): Promise<any> => {
     try {
-        console.log('🔄 Loading history categories data from Firebase Storage...');
         const data = await getFirebaseJsonData('history_categories.json');
-
-        if (data) {
-            console.log('📊 History Categories loaded:', {
-                categoriesCount: data.subcategories?.length || 0,
-                title: data.title || 'No title',
-                hasSubcategories: !!data.subcategories
-            });
-        }
-
         return data;
     } catch (error) {
         console.error('❌ Error loading history data:', error);
@@ -350,8 +287,6 @@ export const loadHistoryData = async (): Promise<any> => {
  */
 export const loadSubcategoryData = async (): Promise<{ [key: string]: any }> => {
     try {
-        console.log('🔄 Loading subcategory data from Firebase Storage...');
-
         const subcategoryFiles = [
             'local_gov.json',
             'monarchy.json',
@@ -378,32 +313,13 @@ export const loadSubcategoryData = async (): Promise<{ [key: string]: any }> => 
 
         // Build the subcategory data map
         const subcategoryDataMap: { [key: string]: any } = {};
-        let loadedCount = 0;
-        let failedCount = 0;
-        let totalQuestionsLoaded = 0;
 
         results.forEach(({ key, data }) => {
             if (data) {
                 subcategoryDataMap[key] = data;
-                loadedCount++;
-
-                // Log details about this subcategory
-                logQuestionDetails(data, `Subcategory: ${key}`);
-
-                if (data.questions && Array.isArray(data.questions)) {
-                    totalQuestionsLoaded += data.questions.length;
-                }
             } else {
-                failedCount++;
                 console.warn(`⚠️ Failed to load subcategory: ${key}`);
             }
-        });
-
-        console.log(`📊 Subcategory loading summary:`, {
-            totalFiles: subcategoryFiles.length,
-            loaded: loadedCount,
-            failed: failedCount,
-            totalQuestions: totalQuestionsLoaded
         });
 
         return subcategoryDataMap;
@@ -423,39 +339,12 @@ export const preloadAllData = async (): Promise<{
     subcategoryData: any;
 }> => {
     try {
-        console.log('🚀 Starting to preload all JSON data from Firebase Storage...');
-
         // Load all data in parallel
         const [mainData, historyData, subcategoryData] = await Promise.all([
             loadMainQuestionData(),
             loadHistoryData(),
             loadSubcategoryData()
         ]);
-
-        // Calculate total questions loaded
-        let totalQuestions = 0;
-
-        if (mainData) {
-            if (mainData.personal_fr_vi?.questions) {
-                totalQuestions += mainData.personal_fr_vi.questions.length;
-            }
-            if (mainData.geography_fr_vi?.questions) {
-                totalQuestions += mainData.geography_fr_vi.questions.length;
-            }
-        }
-
-        Object.values(subcategoryData).forEach((subcategory: any) => {
-            if (subcategory?.questions) {
-                totalQuestions += subcategory.questions.length;
-            }
-        });
-
-        console.log('🎉 All JSON data preloaded successfully!', {
-            mainDataLoaded: !!mainData,
-            historyDataLoaded: !!historyData,
-            subcategoriesLoaded: Object.keys(subcategoryData).length,
-            totalQuestionsAvailable: totalQuestions
-        });
 
         return {
             mainData,
@@ -474,7 +363,6 @@ export const preloadAllData = async (): Promise<{
 export const clearDataCache = (): void => {
     firebaseDataCache = {};
     failedDataCache.clear();
-    console.log('Data cache cleared');
 };
 
 /**
@@ -494,8 +382,6 @@ export const getDataCacheStats = () => {
  */
 export const loadPart1TestData = async (): Promise<any> => {
     try {
-        console.log('🔄 Loading Part 1 test categories data from Firebase Storage...');
-
         // Create a virtual category structure based on the existing test files
         const part1TestData = {
             id: "test_part1",
@@ -532,12 +418,6 @@ export const loadPart1TestData = async (): Promise<any> => {
             ]
         };
 
-        console.log('📊 Part 1 Test Categories loaded:', {
-            categoriesCount: part1TestData.subcategories?.length || 0,
-            title: part1TestData.title || 'No title',
-            hasSubcategories: !!part1TestData.subcategories
-        });
-
         return part1TestData;
     } catch (error) {
         console.error('❌ Error loading Part 1 test data:', error);
@@ -551,8 +431,6 @@ export const loadPart1TestData = async (): Promise<any> => {
  */
 export const loadPart1SubcategoryTestData = async (): Promise<{ [key: string]: any }> => {
     try {
-        console.log('🔄 Loading Part 1 subcategory test data from Firebase Storage...');
-
         const subcategoryFiles = [
             'test_personal_fr_vi.json',
             'test_opinions_fr_vi.json',
@@ -570,32 +448,13 @@ export const loadPart1SubcategoryTestData = async (): Promise<{ [key: string]: a
 
         // Build the subcategory data map
         const subcategoryDataMap: { [key: string]: any } = {};
-        let loadedCount = 0;
-        let failedCount = 0;
-        let totalQuestionsLoaded = 0;
 
         results.forEach(({ key, data }) => {
             if (data) {
                 subcategoryDataMap[key] = data;
-                loadedCount++;
-
-                // Log details about this subcategory
-                logQuestionDetails(data, `Part 1 Test Subcategory: ${key}`);
-
-                if (data.questions && Array.isArray(data.questions)) {
-                    totalQuestionsLoaded += data.questions.length;
-                }
             } else {
-                failedCount++;
                 console.warn(`⚠️ Failed to load Part 1 test subcategory: ${key}`);
             }
-        });
-
-        console.log(`📊 Part 1 test subcategory loading summary:`, {
-            totalFiles: subcategoryFiles.length,
-            loaded: loadedCount,
-            failed: failedCount,
-            totalQuestions: totalQuestionsLoaded
         });
 
         return subcategoryDataMap;
@@ -614,28 +473,11 @@ export const preloadAllPart1TestData = async (): Promise<{
     part1SubcategoryTestData: any;
 }> => {
     try {
-        console.log('🚀 Starting to preload all Part 1 test JSON data from Firebase Storage...');
-
         // Load all data in parallel
         const [part1TestData, part1SubcategoryTestData] = await Promise.all([
             loadPart1TestData(),
             loadPart1SubcategoryTestData()
         ]);
-
-        // Calculate total questions loaded
-        let totalQuestions = 0;
-
-        Object.values(part1SubcategoryTestData).forEach((subcategory: any) => {
-            if (subcategory?.questions) {
-                totalQuestions += subcategory.questions.length;
-            }
-        });
-
-        console.log('🎉 All Part 1 test JSON data preloaded successfully!', {
-            part1TestDataLoaded: !!part1TestData,
-            subcategoriesLoaded: Object.keys(part1SubcategoryTestData).length,
-            totalQuestionsAvailable: totalQuestions
-        });
 
         return {
             part1TestData,

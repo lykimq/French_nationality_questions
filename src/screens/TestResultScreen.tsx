@@ -132,7 +132,6 @@ const TestResultScreen = () => {
             // Only cleanup if we have an active (incomplete) test session
             // A completed test should not be cancelled
             if (!cleanupCalledRef.current && currentSession && !currentSession.isCompleted) {
-                console.log('🧹 TestResultScreen: Cleaning up incomplete test session on unmount');
                 cleanupCalledRef.current = true;
                 cancelTest();
             }

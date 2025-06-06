@@ -50,14 +50,12 @@ const TestScreen = () => {
 
     // Refresh data when screen mounts and when it comes into focus
     useEffect(() => {
-        console.log('🔄 TestScreen mounted - refreshing progress data');
         refreshProgress();
     }, []); // Run once on mount
 
     // Listen for navigation focus events to refresh data when coming back to this screen
     useEffect(() => {
         const unsubscribe = untypedNavigation.addListener('focus', () => {
-            console.log('🔄 TestScreen focused - refreshing progress data');
             refreshProgress();
         });
 

@@ -12,7 +12,6 @@ export const uploadImageToFirebase = async (file: Blob | Uint8Array, fileName: s
         const imageRef = ref(storage, `French_questions/assets/${fileName}`);
         const snapshot = await uploadBytes(imageRef, file);
         const downloadURL = await getDownloadURL(snapshot.ref);
-        console.log(`Image uploaded successfully: ${fileName}`);
         return downloadURL;
     } catch (error) {
         console.error('Error uploading image:', error);
@@ -44,7 +43,6 @@ export const deleteImageFromFirebase = async (fileName: string): Promise<void> =
     try {
         const imageRef = ref(storage, `French_questions/assets/${fileName}`);
         await deleteObject(imageRef);
-        console.log(`Image deleted successfully: ${fileName}`);
     } catch (error) {
         console.error('Error deleting image:', error);
         throw error;

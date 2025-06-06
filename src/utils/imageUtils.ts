@@ -39,7 +39,6 @@ const getFirebaseImageUrl = async (imagePath: string): Promise<string | null> =>
         // Cache the URL
         firebaseImageCache[imagePath] = { uri: downloadURL };
 
-        console.log(`Successfully loaded image from Firebase: ${imagePath}`);
         return downloadURL;
     } catch (error) {
         console.error(`Failed to load image from Firebase Storage: ${imagePath}`, error);
@@ -141,7 +140,6 @@ export const preloadImages = async (questionsData: any): Promise<void> => {
 
         // Get unique paths
         const uniquePaths = [...new Set(imagePaths)];
-        console.log(`Starting to preload ${uniquePaths.length} unique images from Firebase Storage`);
 
         // Preload images in batches to avoid overwhelming the storage service
         const batchSize = 5;
@@ -170,12 +168,7 @@ export const preloadImages = async (questionsData: any): Promise<void> => {
             });
 
             await Promise.all(batchPromises);
-
-            // Log progress
-            console.log(`Preloaded batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(uniquePaths.length / batchSize)}`);
         }
-
-        console.log(`Preloading complete: ${loadedCount} loaded, ${failedCount} failed`);
 
         if (failedCount > 0) {
             console.warn(`Failed to load ${failedCount} images. They may not exist in Firebase Storage.`);
@@ -191,7 +184,6 @@ export const preloadImages = async (questionsData: any): Promise<void> => {
 export const clearImageCache = (): void => {
     firebaseImageCache = {};
     failedImageCache.clear();
-    console.log('Image cache cleared');
 };
 
 /**

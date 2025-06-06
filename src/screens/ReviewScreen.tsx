@@ -37,7 +37,6 @@ const ReviewScreen = () => {
     // Load incorrect questions on mount
     useEffect(() => {
         const questions = getIncorrectQuestions();
-        console.log('📚 Loaded incorrect questions for review:', questions.length);
         setIncorrectQuestions(questions);
 
         // Reset state when questions change

@@ -224,7 +224,6 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, [currentSession, testProgress, testStatistics]);
 
     const cancelTest = useCallback(() => {
-        console.log('🛑 Cancelling test session');
         setCurrentSession(null);
         setCurrentQuestionIndex(0);
     }, []);
@@ -259,7 +258,6 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, [allProcessedQuestions, testProgress.incorrectQuestions]);
 
     const refreshProgress = useCallback(async (): Promise<void> => {
-        console.log('🔄 Refreshing progress...');
         if (isMountedRef.current) {
             await loadTestData();
         }

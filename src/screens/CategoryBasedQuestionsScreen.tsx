@@ -100,8 +100,6 @@ const CategoryBasedQuestionsScreen = () => {
 
 export default CategoryBasedQuestionsScreen;
 
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-
 // These styles are used by other components, so we'll keep them as a function that takes the theme
 export const getCommonStyles = (theme: any) => StyleSheet.create({
     container: {

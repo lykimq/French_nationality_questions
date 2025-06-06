@@ -24,7 +24,6 @@ import FormattedText from '../components/FormattedText';
 import { TestAnswer, TestStackParamList } from '../types';
 import { getTextFromMultiLang, getTextPreview } from '../types';
 import { getCachedImageSource } from '../utils/imageUtils';
-import { testDatabaseIntegration, testQuestionIdUniqueness, logDatabaseStatistics } from '../utils/testDatabaseIntegration';
 import { useIcons } from '../contexts/IconContext';
 
 type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
@@ -48,75 +47,16 @@ const TestQuestionScreen = () => {
     const [timeLeft, setTimeLeft] = useState<number | null>(null);
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [showDebugPanel, setShowDebugPanel] = useState(__DEV__); // Only show in dev mode
 
     const currentQuestion = getCurrentQuestion();
 
     // Check if session is completed or invalid and redirect to Test screen
     useEffect(() => {
         if (!currentSession || currentSession.isCompleted) {
-            console.log('⚠️ TestQuestionScreen: Session is completed or missing, redirecting to Test screen');
             navigation.navigate('Test', undefined);
             return;
         }
     }, [currentSession, navigation]);
-
-    // Database validation on component mount (only in dev mode)
-    useEffect(() => {
-        if (__DEV__ && currentQuestion) {
-            // Run a quick database validation when the first question loads
-            const validateDatabase = async () => {
-                try {
-                    console.log('🧪 Running database validation...');
-                    await logDatabaseStatistics();
-
-                    // Test the current question's data integrity
-                    console.log('🔍 Current question validation:', {
-                        id: currentQuestion.id,
-                        hasQuestion: !!currentQuestion.question,
-                        hasQuestionVi: !!currentQuestion.question_vi,
-                        hasExplanation: !!currentQuestion.explanation,
-                        hasExplanationVi: !!currentQuestion.explanation_vi,
-                        questionLength: getTextFromMultiLang(currentQuestion.question || '', 'fr').length,
-                        explanationLength: getTextFromMultiLang(currentQuestion.explanation || '', 'fr').length,
-                        category: currentQuestion.categoryId,
-                        categoryTitle: currentQuestion.categoryTitle
-                    });
-                } catch (error) {
-                    console.error('❌ Database validation failed:', error);
-                }
-            };
-
-            // Only run validation once per session
-            if (currentQuestionIndex === 0) {
-                validateDatabase();
-            }
-        }
-    }, [currentQuestion, currentQuestionIndex]);
-
-    // Debug logging for current question
-    useEffect(() => {
-        if (currentQuestion) {
-            console.log('📊 Current Question Debug Info:', {
-                id: currentQuestion.id,
-                categoryId: currentQuestion.categoryId,
-                categoryTitle: currentQuestion.categoryTitle,
-                hasQuestion: !!currentQuestion.question,
-                hasQuestionVi: !!currentQuestion.question_vi,
-                hasExplanation: !!currentQuestion.explanation,
-                hasExplanationVi: !!currentQuestion.explanation_vi,
-                questionLength: getTextFromMultiLang(currentQuestion.question || '', 'fr').length,
-                questionViLength: currentQuestion.question_vi?.length || 0,
-                explanationLength: getTextFromMultiLang(currentQuestion.explanation || '', 'fr').length,
-                explanationViLength: currentQuestion.explanation_vi?.length || 0,
-                hasImage: !!currentQuestion.image,
-                sessionId: currentSession?.id,
-                sessionMode: currentSession?.mode,
-                questionIndex: currentQuestionIndex,
-                totalQuestions: currentSession?.totalQuestions
-            });
-        }
-    }, [currentQuestion, currentQuestionIndex, currentSession]);
 
     // Initialize timer if test has time limit
     useEffect(() => {
@@ -159,18 +99,6 @@ const TestQuestionScreen = () => {
 
     // Reset state when question changes
     useEffect(() => {
-        console.log('🔄 Question changed, resetting state. Index:', currentQuestionIndex);
-        if (currentQuestion) {
-            console.log('📝 Current question details:', {
-                id: currentQuestion.id,
-                categoryId: currentQuestion.categoryId,
-                questionFr: getTextPreview(currentQuestion.question || '', 100),
-                questionVi: currentQuestion.question_vi?.substring(0, 100) + '...' || 'No Vietnamese translation',
-                hasExplanation: !!currentQuestion.explanation,
-                hasExplanationVi: !!currentQuestion.explanation_vi,
-                categoryTitle: currentQuestion.categoryTitle
-            });
-        }
         setShowAnswer(false);
         setUserFeedback(null);
         setQuestionStartTime(new Date());
@@ -193,22 +121,11 @@ const TestQuestionScreen = () => {
     };
 
     const handleRevealAnswer = () => {
-        console.log('👁️ Revealing answer for question ID:', currentQuestion?.id);
         setShowAnswer(true);
     };
 
     const handleUserFeedback = async (feedback: 'correct' | 'incorrect') => {
         if (!currentQuestion || isSubmitting) return;
-
-        console.log('💭 User feedback for question:', {
-            questionId: currentQuestion.id,
-            questionIndex: currentQuestionIndex,
-            feedback,
-            questionText: getTextPreview(currentQuestion.question || ''),
-            questionTextVi: currentQuestion.question_vi?.substring(0, 50) + '...' || 'No Vietnamese text',
-            categoryId: currentQuestion.categoryId,
-            categoryTitle: currentQuestion.categoryTitle
-        });
 
         setIsSubmitting(true);
         setUserFeedback(feedback);
@@ -224,11 +141,8 @@ const TestQuestionScreen = () => {
                 timestamp: new Date(),
             };
 
-            console.log('📤 Submitting answer:', answer);
             await submitAnswer(answer);
-            console.log('✅ Answer submitted successfully');
         } catch (error) {
-            console.error('❌ Error submitting answer:', error);
             Alert.alert(
                 language === 'fr' ? 'Erreur' : 'Lỗi',
                 language === 'fr' ? 'Erreur lors de la soumission de la réponse' : 'Lỗi khi nộp câu trả lời'
@@ -239,26 +153,21 @@ const TestQuestionScreen = () => {
     };
 
     const handleNextQuestion = () => {
-        console.log('➡️ Moving to next question. Current index:', currentQuestionIndex, 'Total:', currentSession?.totalQuestions);
         if (currentQuestionIndex < (currentSession?.totalQuestions ?? 0) - 1) {
             // Move to next question
             setShowAnswer(false);
             setUserFeedback(null);
         } else {
-            console.log('🏁 Finishing test - reached last question');
             handleFinishTest();
         }
     };
 
     const handleFinishTest = async () => {
         try {
-            console.log('🏁 Finishing test...');
             const result = await finishTest();
-            console.log('✅ Test finished successfully, navigating to results');
             const serializedResult = serializeTestResult(result);
             navigation.navigate('TestResult', { testResult: serializedResult });
         } catch (error) {
-            console.error('❌ Error finishing test:', error);
             Alert.alert(
                 language === 'fr' ? 'Erreur' : 'Lỗi',
                 language === 'fr' ? 'Erreur lors de la finalisation du test' : 'Lỗi khi hoàn thành bài kiểm tra'
@@ -275,49 +184,12 @@ const TestQuestionScreen = () => {
                 {
                     text: language === 'fr' ? 'Oui' : 'Có',
                     onPress: () => {
-                        console.log('❌ Cancelling test');
                         cancelTest();
-                        // Navigate back to the main test screen
                         navigation.goBack();
                     },
                 },
             ]
         );
-    };
-
-    // Debug function to run comprehensive database tests
-    const runDatabaseTests = async () => {
-        try {
-            console.log('🧪 Starting comprehensive database tests...');
-
-            // Run database integration test
-            const integrationResult = await testDatabaseIntegration();
-            console.log('Database Integration Test:', integrationResult);
-
-            // Run ID uniqueness test
-            const uniquenessResult = await testQuestionIdUniqueness();
-            console.log('Question ID Uniqueness Test:', uniquenessResult);
-
-            // Show results to user
-            const message = `Database Tests Complete:
-
-Integration: ${integrationResult.success ? '✅ PASSED' : '❌ FAILED'}
-Total Questions: ${integrationResult.totalQuestions}
-Categories: ${integrationResult.categoriesLoaded.length}
-Subcategories: ${integrationResult.subcategoriesLoaded.length}
-
-ID Uniqueness: ${uniquenessResult.success ? '✅ PASSED' : '❌ FAILED'}
-Unique IDs: ${uniquenessResult.uniqueIds}/${uniquenessResult.totalQuestions}
-Duplicates: ${uniquenessResult.duplicateIds.length}
-
-Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
-
-            Alert.alert('Database Test Results', message);
-
-        } catch (error) {
-            console.error('❌ Database tests failed:', error);
-            Alert.alert('Database Test Error', `Tests failed: ${error}`);
-        }
     };
 
     const formatTime = (seconds: number): string => {
@@ -390,23 +262,9 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                             <FormattedText style={[styles.questionCounterText, { color: theme.colors.headerText }]}>
                                 {currentQuestionIndex + 1} / {currentSession.totalQuestions}
                             </FormattedText>
-                            {/* Show question ID for debugging */}
-                            <FormattedText style={[styles.questionIdText, { color: theme.colors.textMuted }]}>
-                                ID: {currentQuestion.id}
-                            </FormattedText>
                         </View>
 
                         <View style={styles.headerRight}>
-                            {/* Debug panel toggle (only in dev mode) */}
-                            {__DEV__ && (
-                                <TouchableOpacity
-                                    onPress={runDatabaseTests}
-                                    style={[styles.debugButton, { backgroundColor: theme.colors.warning }]}
-                                >
-                                    <Ionicons name={getIconName('bug') as any} size={16} color="white" />
-                                </TouchableOpacity>
-                            )}
-
                             {timeLeft !== null && (
                                 <View style={[styles.timer, { backgroundColor: timeLeft < 60 ? theme.colors.error : theme.colors.primary }]}>
                                     <Ionicons name={getIconName('time') as any} size={16} color="white" />
@@ -418,10 +276,7 @@ Issues: ${integrationResult.issues.length + uniquenessResult.issues.length}`;
                                 <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
                                 <Switch
                                     value={language === 'vi'}
-                                    onValueChange={() => {
-                                        console.log('🔄 Language toggle from', language, 'to', language === 'fr' ? 'vi' : 'fr');
-                                        toggleLanguage();
-                                    }}
+                                    onValueChange={toggleLanguage}
                                     thumbColor={theme.colors.switchThumb}
                                     trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
                                     style={styles.languageSwitch}
@@ -630,19 +485,6 @@ const styles = StyleSheet.create({
     questionCounterText: {
         fontSize: 16,
         fontWeight: '600',
-    },
-    questionIdText: {
-        fontSize: 12,
-        fontWeight: '400',
-        marginTop: 2,
-    },
-    debugButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 8,
-        paddingVertical: 6,
-        borderRadius: 16,
-        marginRight: 8,
     },
     timer: {
         flexDirection: 'row',

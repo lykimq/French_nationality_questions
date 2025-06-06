@@ -16,8 +16,6 @@ if (!firebaseConfig.apiKey || !firebaseConfig.projectId || !firebaseConfig.stora
     console.error('❌ Firebase configuration is incomplete. Please check your environment variables.');
 }
 
-console.log('🔧 Firebase initialized with project:', firebaseConfig.projectId);
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

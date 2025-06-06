@@ -86,11 +86,9 @@ export const loadTestStatistics = async (): Promise<TestStatistics> => {
 // Load Part 1 test data
 export const loadPart1TestData = async (): Promise<Record<string, any>> => {
     try {
-        console.log('🔄 Loading Part 1 test data...');
         const { part1SubcategoryTestData } = await preloadAllPart1TestData();
 
         if (part1SubcategoryTestData) {
-            console.log('✅ Part 1 test data loaded successfully');
             return part1SubcategoryTestData;
         }
 
@@ -111,8 +109,6 @@ export const saveTestData = async (
             AsyncStorage.setItem(STORAGE_KEYS.TEST_PROGRESS, JSON.stringify(progress)),
             AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(statistics))
         ]);
-
-        console.log('✅ Test data saved successfully');
     } catch (error) {
         console.error('❌ Error saving test data:', error);
         throw error; // Re-throw to handle in calling code
@@ -125,8 +121,6 @@ export const loadAllTestData = async (): Promise<{
     statistics: TestStatistics;
     part1Data: Record<string, any>;
 }> => {
-    console.log('📖 Loading test data...');
-
     try {
         const [progress, statistics, part1Data] = await Promise.all([
             loadTestProgress(),
