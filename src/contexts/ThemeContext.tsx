@@ -42,13 +42,14 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
     const [colorTheme, setColorThemeState] = useState<ColorTheme>('classic');
     const [isLoading, setIsLoading] = useState(true);
 
-    // Get icons from IconContext with error handling
+    // Get icons from IconContext with better error handling
+    let iconContext: ReturnType<typeof useIcons> | null = null;
     let icons: IconMapping;
+
     try {
-        const iconContext = useIcons();
+        iconContext = useIcons();
         icons = iconContext.icons;
     } catch (error) {
-        console.error('IconContext not available in ThemeProvider:', error);
         // Provide fallback icons to prevent runtime errors
         icons = {
             home: 'home',
@@ -118,7 +119,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
     }, []);
 
     // Save theme to storage when it changes
-    const setThemeMode = async (mode: ThemeMode) => {
+    const setThemeMode = React.useCallback(async (mode: ThemeMode) => {
         try {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, mode);
             setThemeModeState(mode);
@@ -126,10 +127,10 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             console.error('Error saving theme:', error);
             setThemeModeState(mode);
         }
-    };
+    }, []);
 
     // Save color theme to storage when it changes
-    const setColorTheme = async (theme: ColorTheme) => {
+    const setColorTheme = React.useCallback(async (theme: ColorTheme) => {
         try {
             await AsyncStorage.setItem(COLOR_THEME_STORAGE_KEY, theme);
             setColorThemeState(theme);
@@ -137,21 +138,23 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             console.error('Error saving color theme:', error);
             setColorThemeState(theme);
         }
-    };
+    }, []);
 
-    const toggleTheme = () => {
+    const toggleTheme = React.useCallback(() => {
         const newMode = themeMode === 'light' ? 'dark' : 'light';
         setThemeMode(newMode);
-    };
+    }, [themeMode, setThemeMode]);
 
-    const currentColors = colorThemes[colorTheme][themeMode];
-    const currentTheme: Theme = {
-        mode: themeMode,
-        colorTheme,
-        colors: currentColors,
-    };
+    const currentTheme: Theme = React.useMemo(() => {
+        const currentColors = colorThemes[colorTheme][themeMode];
+        return {
+            mode: themeMode,
+            colorTheme,
+            colors: currentColors,
+        };
+    }, [themeMode, colorTheme]);
 
-    const value: ThemeContextType = {
+    const value: ThemeContextType = React.useMemo(() => ({
         theme: {
             ...currentTheme,
             icons, // Include icons from IconContext
@@ -161,7 +164,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
         setThemeMode,
         setColorTheme,
         toggleTheme,
-    };
+    }), [currentTheme, icons, themeMode, colorTheme, setThemeMode, setColorTheme, toggleTheme]);
 
     // Don't render children until theme is loaded
     if (isLoading) {
