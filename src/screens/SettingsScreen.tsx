@@ -22,6 +22,7 @@ import IconSelector from '../components/IconSelector';
 import JsonIconSelector from '../components/JsonIconSelector';
 import ColorThemeSelector from '../components/ColorThemeSelector';
 import FormattedText from '../components/FormattedText';
+import { sharedStyles } from '../utils/sharedStyles';
 import type { SettingItemProps } from '../types';
 
 const SettingItem: React.FC<SettingItemProps> = ({
@@ -543,17 +544,14 @@ const SettingsScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        ...sharedStyles.container,
     },
     safeArea: {
         // backgroundColor will be set dynamically
     },
     header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        ...sharedStyles.header,
         paddingTop: 10,
-        paddingHorizontal: 20,
         paddingBottom: 15,
     },
     title: {
@@ -561,27 +559,18 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...sharedStyles.languageSelector,
     },
     languageLabel: {
+        ...sharedStyles.languageLabel,
         marginHorizontal: 5,
-        fontWeight: '600',
     },
     scrollView: {
         flex: 1,
     },
     section: {
-        borderRadius: 10,
-        marginHorizontal: 15,
-        marginTop: 20,
-        marginBottom: 5,
-        overflow: 'hidden',
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
+        ...sharedStyles.section,
+        ...sharedStyles.lightShadow,
     },
     sectionTitle: {
         fontSize: 16,
@@ -604,12 +593,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     themeIconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 15,
+        ...sharedStyles.iconContainer,
     },
     themeSelectorTitle: {
         fontSize: 16,
@@ -669,12 +653,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
     },
     iconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 15,
+        ...sharedStyles.iconContainer,
     },
     settingTitle: {
         flex: 1,
@@ -722,11 +701,7 @@ const styles = StyleSheet.create({
         marginTop: 2,
     },
     modalOverlay: {
-        flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
+        ...sharedStyles.modalOverlay,
     },
     modalContainer: {
         borderRadius: 20,

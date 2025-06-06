@@ -19,6 +19,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest, deserializeTestResult } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
+import { sharedStyles } from '../utils/sharedStyles';
 import { TestResult, TestStackParamList } from '../types';
 
 type TestResultScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
@@ -351,17 +352,13 @@ const TestResultScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        ...sharedStyles.container,
     },
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 20,
-        paddingVertical: 16,
+        ...sharedStyles.header,
     },
     closeButton: {
-        padding: 8,
+        ...sharedStyles.backButton,
     },
     headerCenter: {
         flex: 1,
@@ -371,12 +368,11 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...sharedStyles.languageSelector,
     },
     languageLabel: {
+        ...sharedStyles.languageLabel,
         fontSize: 12,
-        marginHorizontal: 8,
     },
     languageSwitch: {
         transform: [{ scale: 0.75 }],
@@ -419,13 +415,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     statsCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     cardTitle: {
         fontSize: 18,
@@ -454,13 +444,7 @@ const styles = StyleSheet.create({
         marginTop: 4,
     },
     recommendationsCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     recommendationItem: {
         marginBottom: 16,
@@ -481,13 +465,7 @@ const styles = StyleSheet.create({
         marginLeft: 28,
     },
     progressCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     progressStats: {
         flexDirection: 'row',

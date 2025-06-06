@@ -22,6 +22,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
+import { sharedStyles } from '../utils/sharedStyles';
 import { TestMode, TestConfig, TestRecommendation, MainTestModeOption, TestStackParamList } from '../types';
 
 const { width, height } = Dimensions.get('window');
@@ -696,16 +697,14 @@ const TestScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        ...sharedStyles.container,
     },
     header: {
         paddingHorizontal: 20,
         paddingVertical: 20,
     },
     headerContent: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        ...sharedStyles.spaceBetween,
     },
     headerText: {
         flex: 1,
@@ -719,13 +718,12 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...sharedStyles.languageSelector,
     },
     languageLabel: {
+        ...sharedStyles.languageLabel,
         fontSize: 16,
         fontWeight: 'bold',
-        marginHorizontal: 8,
     },
     scrollView: {
         flex: 1,
@@ -735,13 +733,8 @@ const styles = StyleSheet.create({
         paddingBottom: 40,
     },
     progressCard: {
-        borderRadius: 16,
-        padding: 20,
+        ...sharedStyles.card,
         marginBottom: 24,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
     },
     progressHeader: {
         flexDirection: 'row',
@@ -785,13 +778,8 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     recommendationsSection: {
-        borderRadius: 16,
-        padding: 20,
+        ...sharedStyles.card,
         marginBottom: 24,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
     },
     sectionTitle: {
         fontSize: 20,
@@ -832,15 +820,10 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     modeCard: {
+        ...sharedStyles.card,
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 20,
-        borderRadius: 16,
         marginBottom: 16,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
         position: 'relative',
     },
     recommendedCard: {
@@ -862,12 +845,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     modeIconContainer: {
-        width: 60,
-        height: 60,
-        borderRadius: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 16,
+        ...sharedStyles.largeIconContainer,
     },
     modeContent: {
         flex: 1,

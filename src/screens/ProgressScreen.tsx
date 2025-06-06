@@ -18,6 +18,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import FormattedText from '../components/FormattedText';
+import { sharedStyles } from '../utils/sharedStyles';
 import { TestStackParamList } from '../types';
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
@@ -295,17 +296,13 @@ const ProgressScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        ...sharedStyles.container,
     },
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 20,
-        paddingVertical: 16,
+        ...sharedStyles.header,
     },
     backButton: {
-        padding: 8,
+        ...sharedStyles.backButton,
     },
     headerCenter: {
         flex: 1,
@@ -316,12 +313,11 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...sharedStyles.languageSelector,
     },
     languageLabel: {
+        ...sharedStyles.languageLabel,
         fontSize: 12,
-        marginHorizontal: 8,
     },
     languageSwitch: {
         transform: [{ scale: 0.75 }],
@@ -334,13 +330,7 @@ const styles = StyleSheet.create({
         paddingBottom: 40,
     },
     overallCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     cardTitle: {
         fontSize: 18,
@@ -378,13 +368,7 @@ const styles = StyleSheet.create({
         marginLeft: 8,
     },
     categoryCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     categoryItem: {
         marginBottom: 16,
@@ -411,23 +395,13 @@ const styles = StyleSheet.create({
         fontSize: 12,
     },
     progressBar: {
-        height: 4,
-        backgroundColor: '#E0E0E0',
-        borderRadius: 2,
-        overflow: 'hidden',
+        ...sharedStyles.progressBar,
     },
     progressBarFill: {
-        height: '100%',
-        borderRadius: 2,
+        ...sharedStyles.progressBarFill,
     },
     scoresCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     scoresContainer: {
         flexDirection: 'row',
@@ -446,13 +420,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     analysisCard: {
-        borderRadius: 16,
-        padding: 20,
-        marginBottom: 20,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
+        ...sharedStyles.card,
     },
     analysisStats: {
         flexDirection: 'row',

@@ -10,6 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { SettingsComponentProps } from '../types';
+import { sharedStyles } from '../utils/sharedStyles';
 
 interface FontOption {
     name: string;
@@ -120,19 +121,13 @@ const FontSelector: React.FC<SettingsComponentProps> = ({
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...sharedStyles.row,
         paddingVertical: 12,
         paddingHorizontal: 15,
         borderBottomWidth: 1,
     },
     iconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 15,
+        ...sharedStyles.iconContainer,
     },
     textContainer: {
         flex: 1,
@@ -155,16 +150,11 @@ const styles = StyleSheet.create({
         maxHeight: '70%',
     },
     modalHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 20,
+        ...sharedStyles.modalHeader,
         paddingVertical: 15,
-        borderBottomWidth: 1,
     },
     modalTitle: {
-        fontSize: 18,
-        fontWeight: '600',
+        ...sharedStyles.modalTitle,
     },
     fontOption: {
         flexDirection: 'row',

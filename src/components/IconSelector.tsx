@@ -122,25 +122,14 @@ const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
 
 const styles = StyleSheet.create({
     optionCard: {
-        borderRadius: 12,
-        padding: 16,
+        ...sharedStyles.smallCard,
         borderWidth: 1,
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
     },
     optionHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginBottom: 16,
+        ...sharedStyles.optionHeader,
     },
     optionLeft: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        flex: 1,
+        ...sharedStyles.optionLeft,
     },
     optionIconContainer: {
         width: 48,
@@ -151,16 +140,13 @@ const styles = StyleSheet.create({
         marginRight: 16,
     },
     optionContent: {
-        flex: 1,
+        ...sharedStyles.optionContent,
     },
     optionTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        marginBottom: 4,
+        ...sharedStyles.optionTitle,
     },
     optionDescription: {
-        fontSize: 14,
-        lineHeight: 20,
+        ...sharedStyles.optionDescription,
     },
     selectedBadge: {
         width: 24,
@@ -168,11 +154,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         justifyContent: 'center',
         alignItems: 'center',
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
+        ...sharedStyles.lightShadow,
     },
     iconPreviewRow: {
         flexDirection: 'row',

@@ -77,7 +77,7 @@ export function BaseIconSelector<T>({
             >
                 <View style={styles.selectorLeft}>
                     <View style={[
-                        styles.selectorIconContainer,
+                        sharedStyles.iconContainer,
                         { backgroundColor: theme.colors.primary + '15' }
                     ]}>
                         <Ionicons name={getIconName('palette') as any} size={20} color={theme.colors.primary} />
@@ -113,18 +113,18 @@ export function BaseIconSelector<T>({
             >
                 <View style={[styles.modalContainer, { backgroundColor: theme.colors.background }]}>
                     <View style={[
-                        styles.modalHeader,
+                        sharedStyles.modalHeader,
                         {
                             backgroundColor: theme.colors.card,
                             borderBottomColor: theme.colors.divider
                         }
                     ]}>
-                        <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
+                        <FormattedText style={[sharedStyles.modalTitle, { color: theme.colors.text }]}>
                             {language === 'fr' ? modalTitle : modalTitleVi}
                         </FormattedText>
                         <TouchableOpacity
                             onPress={() => setModalVisible(false)}
-                            style={styles.closeButton}
+                            style={sharedStyles.closeButton}
                             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                         >
                             <Ionicons name={getIconName('close') as any} size={24} color={theme.colors.text} />
@@ -159,14 +159,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
     },
-    selectorIconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginRight: 15,
-    },
+
     selectorContent: {
         flex: 1,
     },
@@ -188,21 +181,7 @@ const styles = StyleSheet.create({
     modalContainer: {
         flex: 1,
     },
-    modalHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 20,
-        paddingVertical: 16,
-        borderBottomWidth: 1,
-    },
-    modalTitle: {
-        fontSize: 18,
-        fontWeight: '600',
-    },
-    closeButton: {
-        padding: 4,
-    },
+
     listContainer: {
         padding: 20,
     },

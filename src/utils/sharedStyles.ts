@@ -146,6 +146,87 @@ export const sharedStyles = StyleSheet.create({
         shadowOpacity: 0.15,
         shadowRadius: 6,
     },
+
+    // Common header styles
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        paddingVertical: 16,
+    },
+
+    headerTitle: {
+        fontSize: 20,
+        fontWeight: '600',
+    },
+
+    backButton: {
+        padding: 8,
+    },
+
+    // Common section styles
+    section: {
+        borderRadius: 10,
+        marginHorizontal: 15,
+        marginTop: 20,
+        marginBottom: 5,
+        overflow: 'hidden',
+    },
+
+    // Common progress styles
+    progressBar: {
+        height: 4,
+        backgroundColor: '#E0E0E0',
+        borderRadius: 2,
+        overflow: 'hidden',
+    },
+
+    progressBarFill: {
+        height: '100%',
+        borderRadius: 2,
+    },
+
+    // Common language selector styles
+    languageSelector: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+
+    languageLabel: {
+        fontSize: 14,
+        fontWeight: '600',
+        marginHorizontal: 8,
+    },
+
+    // Common option styles for selectors
+    optionHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginBottom: 16,
+    },
+
+    optionLeft: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        flex: 1,
+    },
+
+    optionContent: {
+        flex: 1,
+    },
+
+    optionTitle: {
+        fontSize: 16,
+        fontWeight: '600',
+        marginBottom: 4,
+    },
+
+    optionDescription: {
+        fontSize: 14,
+        lineHeight: 20,
+    },
 });
 
 // Common style combinations

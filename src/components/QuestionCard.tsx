@@ -272,9 +272,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
     },
     header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        ...sharedStyles.spaceBetween,
         marginBottom: 12,
     },
     headerPressed: {

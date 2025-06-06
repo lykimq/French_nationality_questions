@@ -10,6 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme, colorThemeInfo } from '../contexts/ThemeContext';
 import type { ColorTheme, SettingsComponentProps } from '../types';
 import FormattedText from './FormattedText';
+import { sharedStyles } from '../utils/sharedStyles';
 
 const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
     title,
@@ -118,16 +119,11 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
     },
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        ...sharedStyles.row,
         marginBottom: 12,
     },
     iconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
+        ...sharedStyles.iconContainer,
         marginRight: 12,
     },
     headerText: {
