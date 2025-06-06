@@ -42,7 +42,6 @@ const TestScreen = () => {
         isLoading,
         generateRecommendations,
         refreshProgress,
-        cancelTest,
     } = useTest();
 
     const [selectedMode, setSelectedMode] = useState<TestMode | null>(null);
