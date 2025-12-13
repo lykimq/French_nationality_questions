@@ -1,0 +1,44 @@
+# Expo
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Node modules
+node_modules/
+
+# npm
+package-lock.json
+
+# Yarn
+yarn-error.log
+.pnp.js
+.yarn/
+.yarnrc.yml
+
+# CocoaPods
+/ios/Pods/
+
+# Android
+android/
+# Note on android/: in managed Expo projects, you usually want to ignore the android/ directory.
+# If you run `npx expo run:android`, it will be generated.
+# If you eject (prebuild), you might want to commit it. 
+# Given the user context "why not found expo", this seems like a managed workflow or close to it, 
+# but they did run `expo run:android` which generates it. 
+# Safe default for managed flow often ignores it, but if they prebuilt, they might want it.
+# However, standard practice for many Expo users is to gitignore it and regenerate.
+# I will ignore it as per plan, but if the user has custom native code, this might need adjustment.
+# The user approved "Ignore: ... android/ (build folders)".
+
+# Jest
+coverage/
+
+# Misc
+.env
+.DS_Store
+*.log
