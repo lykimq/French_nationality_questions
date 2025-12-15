@@ -14,12 +14,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
-import { useIcons } from '../contexts/IconContext';
-import FormattedText from '../components/FormattedText';
-import { TestStackParamList, TestConfig, TestMode, SubcategoryTestModeOption } from '../types';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTest } from '../../contexts/TestContext';
+import { useIcons } from '../../contexts/IconContext';
+import FormattedText from '../../components/FormattedText';
+import { TestStackParamList, TestConfig, TestMode, SubcategoryTestModeOption } from '../../types';
 
 type SubcategoryTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

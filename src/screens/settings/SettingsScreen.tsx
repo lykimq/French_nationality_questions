@@ -7,17 +7,17 @@ import {
     StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
-import FormattedText from '../components/FormattedText';
-import { sharedStyles } from '../utils/sharedStyles';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTheme } from '../../contexts/ThemeContext';
+import FormattedText from '../../components/FormattedText';
+import { sharedStyles } from '../../utils/sharedStyles';
 
 // Import new components
-import TextFormattingSettings from '../components/settings/TextFormattingSettings';
-import ThemeSettings from '../components/settings/ThemeSettings';
-import IconSettings from '../components/settings/IconSettings';
-import AppInfoSettings from '../components/settings/AppInfoSettings';
-import RatingModal from '../components/settings/RatingModal';
+import TextFormattingSettings from '../../components/settings/TextFormattingSettings';
+import ThemeSettings from '../../components/settings/ThemeSettings';
+import IconSettings from '../../components/settings/IconSettings';
+import AppInfoSettings from '../../components/settings/AppInfoSettings';
+import RatingModal from '../../components/settings/RatingModal';
 
 const SettingsScreen = () => {
     const { language, toggleLanguage } = useLanguage();
@@ -107,6 +107,6 @@ const styles = StyleSheet.create({
 });
 
 // Export the DisplaySettingsProvider and useDisplaySettings for backward compatibility
-export { DisplaySettingsProvider, useDisplaySettings } from '../components/settings/DisplaySettingsContext';
+export { DisplaySettingsProvider, useDisplaySettings } from '../../components/settings/DisplaySettingsContext';
 
 export default SettingsScreen;

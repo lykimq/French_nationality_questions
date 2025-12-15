@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { useTheme } from '../contexts/ThemeContext';
-import { useTestResult } from '../hooks/useTestResult';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useTestResult } from '../../hooks/useTestResult';
 import {
     ScoreCard,
     StatisticsCard,
@@ -17,8 +17,8 @@ import {
     ActionButtons,
     TestResultHeader,
     LoadingView,
-} from '../components/test-result';
-import { sharedStyles } from '../utils/sharedStyles';
+} from '../../components/test-result';
+import { sharedStyles } from '../../utils/sharedStyles';
 
 const TestResultScreen = () => {
     const { themeMode } = useTheme();

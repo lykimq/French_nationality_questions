@@ -10,19 +10,19 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 
-import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
-import FormattedText from '../components/FormattedText';
-import ProgressCard from '../components/test/ProgressCard';
-import TestModeCard from '../components/test/TestModeCard';
-import TestModeModal from '../components/test/TestModeModal';
-import RecommendationSection from '../components/test/RecommendationSection';
-import SubcategoryTestCard from '../components/test/SubcategoryTestCard';
-import { sharedStyles } from '../utils/sharedStyles';
-import { useTestModes } from '../hooks/useTestModes';
-import { useTestActions } from '../hooks/useTestActions';
-import { getLocalizedText, createSubcategoryTestDetails } from '../utils/testScreenUtils';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTest } from '../../contexts/TestContext';
+import FormattedText from '../../components/FormattedText';
+import ProgressCard from '../../components/test/ProgressCard';
+import TestModeCard from '../../components/test/TestModeCard';
+import TestModeModal from '../../components/test/TestModeModal';
+import RecommendationSection from '../../components/test/RecommendationSection';
+import SubcategoryTestCard from '../../components/test/SubcategoryTestCard';
+import { sharedStyles } from '../../utils/sharedStyles';
+import { useTestModes } from '../../hooks/useTestModes';
+import { useTestActions } from '../../hooks/useTestActions';
+import { getLocalizedText, createSubcategoryTestDetails } from '../../utils/testScreenUtils';
 
 const TestScreen = () => {
     const untypedNavigation = useNavigation(); // For event listeners

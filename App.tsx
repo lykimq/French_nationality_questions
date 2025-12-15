@@ -9,7 +9,7 @@ import {
 import { PatrickHand_400Regular } from '@expo-google-fonts/patrick-hand';
 import { DancingScript_400Regular } from '@expo-google-fonts/dancing-script';
 import AppNavigator from './src/navigation/AppNavigator';
-import { DisplaySettingsProvider } from './src/screens/SettingsScreen';
+import { DisplaySettingsProvider } from './src/components/settings/DisplaySettingsContext';
 import { TextFormattingProvider } from './src/contexts/TextFormattingContext';
 import { ThemeProvider } from './src/contexts/ThemeContext';
 import { IconProvider } from './src/contexts/IconContext';

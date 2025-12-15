@@ -14,19 +14,19 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
-import { useIcons } from '../contexts/IconContext';
-import FormattedText from '../components/FormattedText';
-import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../types';
-import { preloadAllPart1TestData } from '../utils/dataUtils';
-import { getLocalizedText } from '../utils/testScreenUtils';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTest } from '../../contexts/TestContext';
+import { useIcons } from '../../contexts/IconContext';
+import FormattedText from '../../components/FormattedText';
+import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../../types';
+import { preloadAllPart1TestData } from '../../utils/dataUtils';
+import { getLocalizedText } from '../../utils/testScreenUtils';
 
-type Part1TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
+type ConversationTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
-const Part1TestScreen = () => {
-    const navigation = useNavigation<Part1TestScreenNavigationProp>();
+const ConversationTestScreen = () => {
+    const navigation = useNavigation<ConversationTestScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { startTest } = useTest();
@@ -529,4 +529,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Part1TestScreen;
+export default ConversationTestScreen;

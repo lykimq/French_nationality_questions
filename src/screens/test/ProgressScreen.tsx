@@ -14,12 +14,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
-import FormattedText from '../components/FormattedText';
-import { sharedStyles } from '../utils/sharedStyles';
-import { TestStackParamList } from '../types';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTest } from '../../contexts/TestContext';
+import FormattedText from '../../components/FormattedText';
+import { sharedStyles } from '../../utils/sharedStyles';
+import { TestStackParamList } from '../../types';
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

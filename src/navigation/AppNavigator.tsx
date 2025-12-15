@@ -5,18 +5,18 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
-import HomeScreen from '../screens/HomeScreen';
-import CategoryQuestionsScreen from '../screens/CategoryQuestionsScreen';
-import CategoryBasedQuestionsScreen from '../screens/CategoryBasedQuestionsScreen';
-import SearchScreen from '../screens/SearchScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-import TestScreen from '../screens/TestScreen';
-import SubcategoryTestScreen from '../screens/SubcategoryTestScreen';
-import Part1TestScreen from '../screens/Part1TestScreen';
-import TestQuestionScreen from '../screens/TestQuestionScreen';
-import TestResultScreen from '../screens/TestResultScreen';
-import ProgressScreen from '../screens/ProgressScreen';
-import ReviewScreen from '../screens/ReviewScreen';
+import HomeScreen from '../screens/welcome/HomeScreen';
+import CategoryQuestionsScreen from '../screens/welcome/CategoryQuestionsScreen';
+import CategoryBasedQuestionsScreen from '../screens/welcome/CategoryBasedQuestionsScreen';
+import SearchScreen from '../screens/search/SearchScreen';
+import SettingsScreen from '../screens/settings/SettingsScreen';
+import TestScreen from '../screens/test/TestScreen';
+import SubcategoryTestScreen from '../screens/test/SubcategoryTestScreen';
+import ConversationTestScreen from '../screens/test/ConversationTestScreen';
+import TestQuestionScreen from '../screens/test/TestQuestionScreen';
+import TestResultScreen from '../screens/test/TestResultScreen';
+import ProgressScreen from '../screens/test/ProgressScreen';
+import ReviewScreen from '../screens/test/ReviewScreen';
 import DataLoadingScreen from '../components/DataLoadingScreen';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
@@ -60,7 +60,7 @@ const TestStack = () => {
         >
             <Stack.Screen name="Test" component={TestScreen} />
             <Stack.Screen name="SubcategoryTest" component={SubcategoryTestScreen} />
-            <Stack.Screen name="Part1Test" component={Part1TestScreen} />
+            <Stack.Screen name="ConversationTest" component={ConversationTestScreen} />
             <Stack.Screen
                 name="TestQuestion"
                 component={TestQuestionScreen}

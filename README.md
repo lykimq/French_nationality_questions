@@ -69,21 +69,27 @@ LanguageProvider (outermost)
 - **`TestContext.tsx`**: Test state management and progress tracking
 
 ### 4. Screen Components (`src/screens/`)
-**Main Navigation Screens**:
-- **`HomeScreen.tsx`**: Landing page with category navigation
-- **`SearchScreen.tsx`**: Advanced question search and filtering (largest file: 1018 lines)
-- **`SettingsScreen.tsx`**: App configuration and preferences
-- **`TestScreen.tsx`**: Test mode selection and configuration
+Screens are organized into logical folders for better navigation:
 
-**Secondary Screens**:
+**Welcome Screens** (`src/screens/welcome/`):
+- **`HomeScreen.tsx`**: Landing page with category navigation
 - **`CategoryQuestionsScreen.tsx`**: Category-based question browsing
 - **`CategoryBasedQuestionsScreen.tsx`**: Specific category question sets
+
+**Search Screens** (`src/screens/search/`):
+- **`SearchScreen.tsx`**: Advanced question search and filtering (largest file: 1018 lines)
+
+**Test Screens** (`src/screens/test/`):
+- **`TestScreen.tsx`**: Test mode selection and configuration
+- **`ConversationTestScreen.tsx`**: Part 1 conversation tests (personal info, opinions, daily life)
+- **`SubcategoryTestScreen.tsx`**: Subcategory-specific tests
 - **`TestQuestionScreen.tsx`**: Individual question display during tests
 - **`TestResultScreen.tsx`**: Test completion and results
 - **`ProgressScreen.tsx`**: Detailed progress analytics
 - **`ReviewScreen.tsx`**: Question review and study mode
-- **`SubcategoryTestScreen.tsx`**: Subcategory-specific tests
-- **`Part1TestScreen.tsx`**: Specialized test format
+
+**Settings Screens** (`src/screens/settings/`):
+- **`SettingsScreen.tsx`**: App configuration and preferences
 
 ### 5. Reusable Components (`src/components/`)
 **Core Components**:

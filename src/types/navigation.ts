@@ -59,7 +59,7 @@ export type HomeStackParamList = Readonly<{
 export type TestStackParamList = Readonly<{
     Test: undefined;
     SubcategoryTest: undefined;
-    Part1Test: undefined;
+    ConversationTest: undefined;
     TestQuestion: undefined;
     TestResult: {
         readonly testResult: SerializableTestResult;

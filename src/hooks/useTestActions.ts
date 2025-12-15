@@ -160,7 +160,7 @@ export const useTestActions = ({ testModes, getLocalizedText }: UseTestActionsPr
     }, [navigation]);
 
     const handleNavigateToPart1Tests = useCallback(() => {
-        navigation.navigate('Part1Test', undefined);
+        navigation.navigate('ConversationTest', undefined);
     }, [navigation]);
 
     const handleModeSelection = useCallback((mode: TestMode) => {

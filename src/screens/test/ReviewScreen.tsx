@@ -15,12 +15,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { useTheme } from '../contexts/ThemeContext';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTest } from '../contexts/TestContext';
-import FormattedText from '../components/FormattedText';
-import { TestQuestion, TestStackParamList } from '../types';
-import { getCachedImageSource } from '../utils/imageUtils';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTest } from '../../contexts/TestContext';
+import FormattedText from '../../components/FormattedText';
+import { TestQuestion, TestStackParamList } from '../../types';
+import { getCachedImageSource } from '../../utils/imageUtils';
 
 type ReviewScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

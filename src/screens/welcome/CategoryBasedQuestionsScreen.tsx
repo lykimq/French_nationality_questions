@@ -4,12 +4,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { HomeStackParamList } from '../types';
-import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
-import CategorySlideView from '../components/CategorySlideView';
-import CategorySelectionView from '../components/CategorySelectionView';
-import FormattedText from '../components/FormattedText';
+import { HomeStackParamList } from '../../types';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { useTheme } from '../../contexts/ThemeContext';
+import CategorySlideView from '../../components/CategorySlideView';
+import CategorySelectionView from '../../components/CategorySelectionView';
+import FormattedText from '../../components/FormattedText';
 
 type CategoryBasedQuestionsRouteProp = RouteProp<HomeStackParamList, 'CategoryBasedQuestions'>;
 
