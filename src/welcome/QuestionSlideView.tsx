@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { View, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { GestureDetector, Gesture } from 'react-native-gesture-handler';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import QuestionCard from '../../search/QuestionCard';
-import { Question, QuestionSlideViewProps, MultiLangText } from '../../types';
-import { FormattedText } from '../../shared/components';
+import { GestureDetector, Gesture } from 'react-native-gesture-handler';    
+import { useTheme } from '../shared/contexts/ThemeContext';
+import QuestionCard from '../search/QuestionCard';
+import { Question, QuestionSlideViewProps, MultiLangText } from '../types';
+import { FormattedText } from '../shared/components';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25; // Reduced threshold for easier swipe

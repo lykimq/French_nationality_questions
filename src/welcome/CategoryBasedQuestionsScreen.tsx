@@ -7,8 +7,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList } from '../types';
 import { useLanguage } from '../shared/contexts/LanguageContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import CategorySlideView from './components/CategorySlideView';
-import CategorySelectionView from './components/CategorySelectionView';
+import CategorySlideView from './CategorySlideView';
+import CategorySelectionView from './CategorySelectionView';
 import { FormattedText } from '../shared/components';
 
 type CategoryBasedQuestionsRouteProp = RouteProp<HomeStackParamList, 'CategoryBasedQuestions'>;

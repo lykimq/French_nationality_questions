@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useTheme } from '../shared/contexts/ThemeContext';
 import CategoryCard from './CategoryCard';
-import { CategorySelectionViewProps } from '../../types';
+import { CategorySelectionViewProps } from '../types';
 
 const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
     categories,

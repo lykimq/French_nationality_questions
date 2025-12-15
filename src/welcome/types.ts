@@ -1,4 +1,4 @@
-import type { MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from '../../types';
+import type { MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from '../types';
 
 // ==================== QUESTION DOMAIN ====================
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcons } from '../../shared/contexts/IconContext';
-import { FormattedText } from '../../shared/components';
-import { CategoryCardProps } from '../../types';
-import { sharedStyles } from '../../shared/utils';
+import { useTheme } from '../shared/contexts/ThemeContext';
+import { useIcons } from '../shared/contexts/IconContext';
+import { FormattedText } from '../shared/components';
+import { CategoryCardProps } from '../types';
+import { sharedStyles } from '../shared/utils';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,
