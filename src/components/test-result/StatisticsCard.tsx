@@ -6,7 +6,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useIcons } from '../../contexts/IconContext';
 import FormattedText from '../FormattedText';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 import { TestStatistics, IconMapping } from '../../types';
 
 interface StatisticsCardProps {

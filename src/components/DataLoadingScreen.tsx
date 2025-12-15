@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import FormattedText from './FormattedText';
-import { sharedStyles } from '../utils/sharedStyles';
+import { sharedStyles } from '../utils/shared';
 
 interface DataLoadingScreenProps {
     error?: string | null;

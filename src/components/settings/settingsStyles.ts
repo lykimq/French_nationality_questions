@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 
 // Settings-specific styles that extend or differ from sharedStyles
 // Note: For iconContainer, use sharedStyles.iconContainer directly

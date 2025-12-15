@@ -5,7 +5,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import ColorThemeSelector from '../ColorThemeSelector';
 import FormattedText from '../FormattedText';
 import { settingsStyles } from './settingsStyles';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 
 interface ThemeSettingsProps {
     language: 'fr' | 'vi';

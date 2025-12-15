@@ -5,7 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
 import { CategoryCardProps } from '../types';
-import { sharedStyles } from '../utils/sharedStyles';
+import { sharedStyles } from '../utils/shared';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,

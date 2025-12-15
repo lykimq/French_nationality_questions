@@ -4,7 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import FormattedText from '../FormattedText';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 
 export interface TestProgressData {
     totalTestsTaken: number;

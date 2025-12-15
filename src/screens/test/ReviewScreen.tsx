@@ -20,7 +20,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest } from '../../contexts/TestContext';
 import FormattedText from '../../components/FormattedText';
 import { TestQuestion, TestStackParamList } from '../../types';
-import { getCachedImageSource } from '../../utils/imageUtils';
+import { getCachedImageSource } from '../../utils/shared';
 
 type ReviewScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

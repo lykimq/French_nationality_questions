@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useIcons } from '../../contexts/IconContext';
 import FormattedText from '../FormattedText';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 import { TestRecommendation } from '../../types';
 
 interface RecommendationSectionProps {

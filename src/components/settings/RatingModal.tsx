@@ -3,7 +3,7 @@ import { StyleSheet, View, TouchableOpacity, Modal, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import FormattedText from '../FormattedText';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 import { settingsStyles } from './settingsStyles';
 
 interface RatingModalProps {

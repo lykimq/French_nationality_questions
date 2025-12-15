@@ -5,16 +5,16 @@ import { useLanguage } from './LanguageContext';
 import { DEFAULT_TEST_PROGRESS, DEFAULT_TEST_STATISTICS } from '../constants/testConstants';
 
 // Import utilities
-import { processAllQuestions } from '../utils/testDataUtils';
-import { loadAllTestData, saveTestData } from '../utils/testStorageUtils';
-import { generateTestQuestions, getQuestionsByIds } from '../utils/testGenerationUtils';
+import { processAllQuestions } from '../utils/test';
+import { loadAllTestData, saveTestData } from '../utils/test';
+import { generateTestQuestions, getQuestionsByIds } from '../utils/test';
 import {
     calculateUpdatedProgress,
     updateTestStatistics,
     updateWeakStrongCategories,
     generateRecommendations,
     calculateTestScore
-} from '../utils/testCalculationUtils';
+} from '../utils/test';
 
 // Import types
 import type {
@@ -29,7 +29,7 @@ import type {
 } from '../types';
 
 // Re-export utility functions for backward compatibility
-export { serializeTestResult, deserializeTestResult } from '../utils/testSerialization';
+export { serializeTestResult, deserializeTestResult } from '../utils/test';
 
 interface TestContextType {
     // Current test session

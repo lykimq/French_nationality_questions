@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/imageUtils';
+import { getImageSource as loadImageSource, getCachedImageSource } from '../utils/shared';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { QuestionCardProps } from '../types';
-import { sharedStyles } from '../utils/sharedStyles';
+import { sharedStyles } from '../utils/shared';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,

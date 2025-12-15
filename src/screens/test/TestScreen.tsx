@@ -19,10 +19,10 @@ import TestModeCard from '../../components/test/TestModeCard';
 import TestModeModal from '../../components/test/TestModeModal';
 import RecommendationSection from '../../components/test/RecommendationSection';
 import SubcategoryTestCard from '../../components/test/SubcategoryTestCard';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 import { useTestModes } from '../../hooks/useTestModes';
 import { useTestActions } from '../../hooks/useTestActions';
-import { getLocalizedText, createSubcategoryTestDetails } from '../../utils/testScreenUtils';
+import { getLocalizedText, createSubcategoryTestDetails } from '../../utils/test';
 
 const TestScreen = () => {
     const untypedNavigation = useNavigation(); // For event listeners

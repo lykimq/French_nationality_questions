@@ -1,5 +1,5 @@
 import { ref, uploadBytes, getDownloadURL, listAll, deleteObject } from 'firebase/storage';
-import { storage } from '../config/firebaseConfig';
+import { storage } from '../../config/firebaseConfig';
 
 /**
  * Uploads an image to Firebase Storage

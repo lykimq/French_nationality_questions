@@ -1,5 +1,5 @@
 import { ref, getDownloadURL } from 'firebase/storage';
-import { storage } from '../config/firebaseConfig';
+import { storage } from '../../config/firebaseConfig';
 
 // Cache object for Firebase Storage JSON data
 type DataCache = {

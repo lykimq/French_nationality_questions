@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useIcons } from './IconContext';
 import type { ThemeMode, ColorTheme, Theme, IconMapping } from '../types';
-import { colorThemes, colorThemeInfo } from '../utils/colorThemes';
+import { colorThemes, colorThemeInfo } from '../utils/settings';
 
 // Context interface
 interface ThemeContextType {

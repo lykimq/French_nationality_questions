@@ -18,7 +18,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest } from '../../contexts/TestContext';
 import FormattedText from '../../components/FormattedText';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 import { TestStackParamList } from '../../types';
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;

@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme, colorThemeInfo } from '../contexts/ThemeContext';
 import type { ColorTheme, SettingsComponentProps } from '../types';
 import FormattedText from './FormattedText';
-import { sharedStyles } from '../utils/sharedStyles';
+import { sharedStyles } from '../utils/shared';
 
 const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
     title,

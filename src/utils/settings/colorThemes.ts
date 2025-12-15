@@ -1,4 +1,4 @@
-import type { ColorTheme, ThemeColors, ColorThemeInfo } from '../types';
+import type { ColorTheme, ThemeColors, ColorThemeInfo } from '../../types';
 
 // Helper function to create theme colors with common defaults
 const createThemeColors = (

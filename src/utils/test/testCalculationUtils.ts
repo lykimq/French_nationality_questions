@@ -1,4 +1,4 @@
-import { MEMORY_LIMITS, PERFORMANCE_THRESHOLDS } from '../constants/testConstants';
+import { MEMORY_LIMITS, PERFORMANCE_THRESHOLDS } from '../../constants/testConstants';
 import { safeAverage, applyMemoryLimits } from './testDataUtils';
 import type {
     TestSession,
@@ -6,7 +6,7 @@ import type {
     TestStatistics,
     TestRecommendation,
     ImprovementTrend
-} from '../types';
+} from '../../types';
 
 // Calculate updated progress after test completion
 export const calculateUpdatedProgress = (

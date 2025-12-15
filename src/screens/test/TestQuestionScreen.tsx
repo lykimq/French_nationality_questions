@@ -23,7 +23,7 @@ import { useTest, serializeTestResult } from '../../contexts/TestContext';
 import FormattedText from '../../components/FormattedText';
 import { TestAnswer, TestStackParamList } from '../../types';
 import { getTextFromMultiLang, getTextPreview } from '../../types';
-import { getCachedImageSource } from '../../utils/imageUtils';
+import { getCachedImageSource } from '../../utils/shared';
 import { useIcons } from '../../contexts/IconContext';
 
 type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;

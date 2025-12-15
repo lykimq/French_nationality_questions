@@ -18,7 +18,7 @@ import {
     TestResultHeader,
     LoadingView,
 } from '../../components/test-result';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 
 const TestResultScreen = () => {
     const { themeMode } = useTheme();

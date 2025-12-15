@@ -1,4 +1,4 @@
-import type { TestResult, SerializableTestResult } from '../types';
+import type { TestResult, SerializableTestResult } from '../../types';
 
 // Utility functions for test result serialization
 export const serializeTestResult = (result: TestResult): SerializableTestResult => {

@@ -5,7 +5,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import FormattedText from '../FormattedText';
 import SettingItem from './SettingItem';
 import { settingsStyles } from './settingsStyles';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { sharedStyles } from '../../utils/shared';
 
 interface AppInfoSettingsProps {
     language: 'fr' | 'vi';

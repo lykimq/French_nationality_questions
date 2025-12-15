@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect, useCallback, useRef } from 'react';
 // Import the data loading utilities
-import { loadMainQuestionData, preloadAllData } from '../utils/dataUtils';
-import { preloadImages } from '../utils/imageUtils';
+import { loadMainQuestionData, preloadAllData } from '../utils/shared';
+import { preloadImages } from '../utils/shared';
 import type {
     Language,
     HistoryCategory,

@@ -20,8 +20,8 @@ import { useTest } from '../../contexts/TestContext';
 import { useIcons } from '../../contexts/IconContext';
 import FormattedText from '../../components/FormattedText';
 import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../../types';
-import { preloadAllPart1TestData } from '../../utils/dataUtils';
-import { getLocalizedText } from '../../utils/testScreenUtils';
+import { preloadAllPart1TestData } from '../../utils/shared';
+import { getLocalizedText } from '../../utils/test';
 
 type ConversationTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 

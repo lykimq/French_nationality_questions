@@ -10,7 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { SettingsComponentProps } from '../types';
-import { sharedStyles } from '../utils/sharedStyles';
+import { sharedStyles } from '../utils/shared';
 
 interface FontOption {
     name: string;

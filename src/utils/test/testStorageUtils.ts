@@ -1,13 +1,13 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { preloadAllPart1TestData } from './dataUtils';
+import { preloadAllPart1TestData } from '../shared/dataUtils';
 import {
     STORAGE_KEYS,
     DEFAULT_TEST_PROGRESS,
     DEFAULT_TEST_STATISTICS,
     MEMORY_LIMITS
-} from '../constants/testConstants';
+} from '../../constants/testConstants';
 import { safeParseDate, applyMemoryLimits } from './testDataUtils';
-import type { TestProgress, TestStatistics } from '../types';
+import type { TestProgress, TestStatistics } from '../../types';
 
 // Load test progress from storage with validation and memory limits
 export const loadTestProgress = async (): Promise<TestProgress> => {

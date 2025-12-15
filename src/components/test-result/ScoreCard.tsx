@@ -7,7 +7,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useIcons } from '../../contexts/IconContext';
 import FormattedText from '../FormattedText';
-import { getScoreColor, getScoreMessage } from '../../utils/scoreUtils';
+import { getScoreColor, getScoreMessage } from '../../utils/test';
 
 interface ScoreCardProps {
     score: number;

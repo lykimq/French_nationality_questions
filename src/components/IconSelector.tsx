@@ -5,7 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useIcons } from '../contexts/IconContext';
 import FormattedText from './FormattedText';
 import { BaseIconSelector } from './BaseIconSelector';
-import { sharedStyles } from '../utils/sharedStyles';
+import { sharedStyles } from '../utils/shared';
 import { iconSets, iconSetOptions } from '../config/iconConfig';
 import type { SettingsComponentWithValueProps, IconSetType, IconSetInfo } from '../types';
 
