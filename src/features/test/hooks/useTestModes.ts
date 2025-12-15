@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { MainTestModeOption } from '../types';
+import { MainTestModeOption } from '../../../types';
 
 interface UseTestModesProps {
     testProgress: {

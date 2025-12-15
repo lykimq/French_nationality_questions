@@ -1,4 +1,4 @@
-import type { TestQuestion } from '../types';
+import type { TestQuestion } from '../../../types';
 
 // Type validation helpers
 export const isValidQuestionData = (question: any): boolean => {

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
+import { GestureDetector, Gesture } from 'react-native-gesture-handler';
 import { useTheme } from '../../../shared/contexts/ThemeContext';
 import { QuestionCard } from '../../search/components';
 import type { MultiLangText, MultilingualQuestion, CategorySlideViewProps, NavigationQuestion } from '../../../types';
@@ -16,7 +16,6 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
     const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const translateX = useRef(new Animated.Value(0)).current;
-    const panRef = useRef(null);
 
     const currentCategory = categories[currentCategoryIndex];
     const currentQuestion = currentCategory?.questions[currentQuestionIndex];
@@ -72,14 +71,14 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
         }
     };
 
-    const onGestureEvent = Animated.event(
-        [{ nativeEvent: { translationX: translateX } }],
-        { useNativeDriver: true }
-    );
-
-    const onHandlerStateChange = (event: PanGestureHandlerStateChangeEvent) => {
-        if (event.nativeEvent.oldState === State.ACTIVE) {
-            const { translationX, velocityX } = event.nativeEvent;
+    const panGesture = Gesture.Pan()
+        .activeOffsetX([-10, 10])
+        .failOffsetY([-20, 20])
+        .onUpdate((event) => {
+            translateX.setValue(event.translationX);
+        })
+        .onEnd((event) => {
+            const { translationX, velocityX } = event;
             const shouldNavigate = Math.abs(translationX) > SWIPE_THRESHOLD || Math.abs(velocityX) > VELOCITY_THRESHOLD;
 
             if (shouldNavigate) {
@@ -98,8 +97,7 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
                     restSpeedThreshold: 0.01,
                 }).start();
             }
-        }
-    };
+        });
 
     const getLocalizedQuestion = (question: MultilingualQuestion | NavigationQuestion): MultiLangText => {
         if (typeof question.question === 'string') {
@@ -170,13 +168,7 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
                 </TouchableOpacity>
             </View>
 
-            <PanGestureHandler
-                ref={panRef}
-                onGestureEvent={onGestureEvent}
-                onHandlerStateChange={onHandlerStateChange}
-                activeOffsetX={[-10, 10]}
-                failOffsetY={[-20, 20]}
-            >
+            <GestureDetector gesture={panGesture}>
                 <Animated.View
                     style={[
                         styles.content,
@@ -197,14 +189,14 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories, langu
                                 id={currentQuestion.id}
                                 question={getLocalizedQuestion(currentQuestion)}
                                 explanation={getLocalizedExplanation(currentQuestion)}
-                                image={currentQuestion.image}
+                                image={('image' in currentQuestion ? currentQuestion.image : null) || null}
                                 language={language}
                                 alwaysExpanded={true}
                             />
                         )}
                     </ScrollView>
                 </Animated.View>
-            </PanGestureHandler>
+            </GestureDetector>
         </View>
     );
 };

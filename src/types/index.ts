@@ -17,3 +17,6 @@ export * from './navigation';
 export * from '../features/welcome/types';
 export * from '../features/test/types';
 export * from '../features/settings/types';
+
+// Explicitly re-export TestQuestion from welcome/types to avoid ambiguity
+export type { TestQuestion } from '../features/welcome/types';

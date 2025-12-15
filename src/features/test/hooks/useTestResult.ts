@@ -2,8 +2,8 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { useTest, deserializeTestResult } from '../contexts/TestContext';
-import { TestResult, TestStackParamList } from '../types';
+import { useTest, deserializeTestResult } from '../../test/contexts/TestContext';
+import { TestResult, TestStackParamList } from '../../../types';
 
 type TestResultScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 type TestResultScreenRouteProp = RouteProp<TestStackParamList, 'TestResult'>;

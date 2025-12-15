@@ -1,4 +1,4 @@
-import type { Language, MultiLangText } from '../core';
+import type { Language, MultiLangText } from '../../../types';
 
 // ==================== HOME STACK NAVIGATION ====================
 

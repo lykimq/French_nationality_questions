@@ -7,7 +7,7 @@ import { useLanguage } from '../../../../shared/contexts/LanguageContext';
 import { useIcons } from '../../../../shared/contexts/IconContext';
 import { FormattedText } from '../../../../shared/components';
 import { sharedStyles } from '../../../../shared/utils';
-import { TestRecommendation } from '../types';
+import { TestRecommendation } from '../../../../types';
 
 interface RecommendationsCardProps {
     recommendations: readonly TestRecommendation[];

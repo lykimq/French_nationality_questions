@@ -7,7 +7,7 @@ import { useLanguage } from '../../../../shared/contexts/LanguageContext';
 import { useIcons } from '../../../../shared/contexts/IconContext';
 import { FormattedText } from '../../../../shared/components';
 import { sharedStyles } from '../../../../shared/utils';
-import { TestStatistics, IconMapping } from '../types';
+import { TestStatistics, IconMapping } from '../../../../types';
 
 interface StatisticsCardProps {
     statistics: TestStatistics;

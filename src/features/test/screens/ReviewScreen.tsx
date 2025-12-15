@@ -18,7 +18,7 @@ import { useTheme } from '../../../shared/contexts/ThemeContext';
 import { useLanguage } from '../../../shared/contexts/LanguageContext';
 import { useTest } from '../contexts/TestContext';
 import { FormattedText, LanguageToggle, BackButton } from '../../../shared/components';
-import { TestQuestion, TestStackParamList } from '../types';
+import { TestQuestion, TestStackParamList } from '../../../types';
 import { getCachedImageSource, getQuestionTextWithDualLanguage, getExplanationTextWithDualLanguage } from '../../../shared/utils';
 import { getLocalizedText as buildLocalizedText } from '../utils';
 

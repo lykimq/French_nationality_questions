@@ -1,6 +1,7 @@
 import { PART1_ID_OFFSETS } from '../constants/testConstants';
 import { processQuestionData } from './testDataUtils';
-import type { TestConfig, TestQuestion } from '../types';
+import type { TestConfig } from '../types';
+import type { TestQuestion } from '../../../types';
 
 // Generate Part 1 test questions
 export const generatePart1Questions = (

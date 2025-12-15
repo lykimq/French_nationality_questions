@@ -1,4 +1,4 @@
-import type { TestProgress, TestStatistics } from '../types';
+import type { TestProgress, TestStatistics } from '../../../types';
 
 // Storage keys for AsyncStorage
 export const STORAGE_KEYS = {

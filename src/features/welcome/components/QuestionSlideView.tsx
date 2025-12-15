@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { View, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
+import { GestureDetector, Gesture } from 'react-native-gesture-handler';
 import { useTheme } from '../../../shared/contexts/ThemeContext';
 import { QuestionCard } from '../../search/components';
 import { Question, QuestionSlideViewProps, MultiLangText } from '../../../types';
@@ -15,7 +15,6 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
     const { theme } = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
     const translateX = useRef(new Animated.Value(0)).current;
-    const panRef = useRef(null);
 
     const navigateToPrevious = () => {
         if (currentIndex > 0) {
@@ -43,14 +42,14 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
         }
     };
 
-    const onGestureEvent = Animated.event(
-        [{ nativeEvent: { translationX: translateX } }],
-        { useNativeDriver: true }
-    );
-
-    const onHandlerStateChange = (event: PanGestureHandlerStateChangeEvent) => {
-        if (event.nativeEvent.oldState === State.ACTIVE) {
-            const { translationX, velocityX } = event.nativeEvent;
+    const panGesture = Gesture.Pan()
+        .activeOffsetX([-10, 10])
+        .failOffsetY([-20, 20])
+        .onUpdate((event) => {
+            translateX.setValue(event.translationX);
+        })
+        .onEnd((event) => {
+            const { translationX, velocityX } = event;
 
             // Determine if the swipe was fast enough or far enough to trigger navigation
             const shouldNavigate = Math.abs(translationX) > SWIPE_THRESHOLD || Math.abs(velocityX) > VELOCITY_THRESHOLD;
@@ -84,8 +83,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                     restSpeedThreshold: 0.01,
                 }).start();
             }
-        }
-    };
+        });
 
     const getLocalizedQuestion = (question: Question): string | MultiLangText => {
         if (language === 'vi') {
@@ -153,13 +151,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                 </TouchableOpacity>
             </View>
 
-            <PanGestureHandler
-                ref={panRef}
-                onGestureEvent={onGestureEvent}
-                onHandlerStateChange={onHandlerStateChange}
-                activeOffsetX={[-10, 10]} // Start gesture recognition earlier
-                failOffsetY={[-20, 20]} // Allow more vertical movement before failing
-            >
+            <GestureDetector gesture={panGesture}>
                 <Animated.View
                     style={[
                         styles.content,
@@ -179,13 +171,13 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, langua
                             id={currentQuestion.id}
                             question={getLocalizedQuestion(currentQuestion)}
                             explanation={getLocalizedExplanation(currentQuestion)}
-                            image={currentQuestion.image || null}
+                            image={('image' in currentQuestion ? (currentQuestion as any).image : null) as string | null | undefined}
                             language={language}
                             alwaysExpanded={true}
                         />
                     </ScrollView>
                 </Animated.View>
-            </PanGestureHandler>
+            </GestureDetector>
         </View>
     );
 };
