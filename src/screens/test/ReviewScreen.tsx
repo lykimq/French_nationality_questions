@@ -7,7 +7,6 @@ import {
     StatusBar,
     Image,
     ActivityIndicator,
-    Switch,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -18,9 +17,10 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest } from '../../contexts/TestContext';
-import { FormattedText } from '../../components/shared';
+import { FormattedText, LanguageToggle, BackButton } from '../../components/shared';
 import { TestQuestion, TestStackParamList } from '../../types';
-import { getCachedImageSource } from '../../utils/shared';
+import { getCachedImageSource, getQuestionTextWithDualLanguage, getExplanationTextWithDualLanguage } from '../../utils/shared';
+import { getLocalizedText as buildLocalizedText } from '../../utils/test';
 
 type ReviewScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -29,6 +29,7 @@ const ReviewScreen = () => {
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { getIncorrectQuestions, testProgress, isLoading } = useTest();
+    const getLocalizedText = buildLocalizedText(language);
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [showAnswer, setShowAnswer] = useState(false);
@@ -49,53 +50,14 @@ const ReviewScreen = () => {
         setShowAnswer(false);
     }, [currentQuestionIndex]);
 
-    // Helper functions to get localized text with dual language support
-    const getLocalizedText = (textFr: string, textVi: string): string => {
-        if (language === 'fr') {
-            return textFr;
-        } else {
-            return `${textVi}\n${textFr}`;
-        }
-    };
-
     const getQuestionText = (): string => {
         const currentQuestion = incorrectQuestions[currentQuestionIndex];
-        if (!currentQuestion) return '';
-
-        const questionText = typeof currentQuestion.question === 'string'
-            ? currentQuestion.question
-            : currentQuestion.question?.fr || '';
-
-        if (language === 'fr') {
-            return questionText || 'Question non disponible';
-        } else {
-            // For Vietnamese, show both French and Vietnamese if available
-            if (currentQuestion.question_vi) {
-                return `🇫🇷 ${questionText}\n\n🇻🇳 ${currentQuestion.question_vi}`;
-            } else {
-                return questionText || 'Question non disponible';
-            }
-        }
+        return getQuestionTextWithDualLanguage(currentQuestion, language);
     };
 
     const getExplanationText = (): string => {
         const currentQuestion = incorrectQuestions[currentQuestionIndex];
-        if (!currentQuestion) return '';
-
-        const explanationText = typeof currentQuestion.explanation === 'string'
-            ? currentQuestion.explanation
-            : currentQuestion.explanation?.fr || '';
-
-        if (language === 'fr') {
-            return explanationText || 'Explication non disponible';
-        } else {
-            // For Vietnamese, show both French and Vietnamese if available
-            if (currentQuestion.explanation_vi) {
-                return `🇫🇷 ${explanationText}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
-            } else {
-                return explanationText || 'Explication non disponible';
-            }
-        }
+        return getExplanationTextWithDualLanguage(currentQuestion, language);
     };
 
     const handleRevealAnswer = () => {
@@ -148,17 +110,20 @@ const ReviewScreen = () => {
                                 {getLocalizedText('Révision des Questions', 'Ôn tập câu hỏi')}
                             </FormattedText>
 
-                            <View style={styles.languageSelector}>
-                                <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                                <Switch
-                                    value={language === 'vi'}
-                                    onValueChange={toggleLanguage}
-                                    thumbColor={theme.colors.switchThumb}
-                                    trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                                    style={styles.languageSwitch}
-                                />
-                                <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                            </View>
+                            <LanguageToggle
+                                language={language}
+                                onToggle={toggleLanguage}
+                                textColor={theme.colors.headerText}
+                                style={styles.languageToggle}
+                                labelStyle={styles.languageToggleLabel}
+                            />
+                        <LanguageToggle
+                            language={language}
+                            onToggle={toggleLanguage}
+                            textColor={theme.colors.headerText}
+                            style={styles.languageToggle}
+                            labelStyle={styles.languageToggleLabel}
+                        />
                         </View>
                     </View>
 
@@ -198,9 +163,7 @@ const ReviewScreen = () => {
                 {/* Header with navigation */}
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <View style={styles.headerTop}>
-                        <TouchableOpacity onPress={handleGoBack} style={styles.backButton}>
-                            <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
-                        </TouchableOpacity>
+                        <BackButton onPress={handleGoBack} />
 
                         <View style={styles.questionCounter}>
                             <FormattedText style={[styles.questionCounterText, { color: theme.colors.headerText }]}>
@@ -212,17 +175,13 @@ const ReviewScreen = () => {
                             </FormattedText>
                         </View>
 
-                        <View style={styles.languageSelector}>
-                            <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                            <Switch
-                                value={language === 'vi'}
-                                onValueChange={toggleLanguage}
-                                thumbColor={theme.colors.switchThumb}
-                                trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                                style={styles.languageSwitch}
-                            />
-                            <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                        </View>
+                        <LanguageToggle
+                            language={language}
+                            onToggle={toggleLanguage}
+                            textColor={theme.colors.headerText}
+                            style={styles.languageToggle}
+                            labelStyle={styles.languageToggleLabel}
+                        />
                     </View>
 
                     {/* Progress bar */}
@@ -416,17 +375,12 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginTop: 2,
     },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
+    languageToggle: {
+        marginLeft: 12,
     },
-    languageLabel: {
+    languageToggleLabel: {
         fontSize: 14,
         fontWeight: 'bold',
-        marginHorizontal: 6,
-    },
-    languageSwitch: {
-        transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }],
     },
     progressContainer: {
         height: 4,

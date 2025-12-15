@@ -7,7 +7,6 @@ import {
     StatusBar,
     Dimensions,
     ActivityIndicator,
-    Switch,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -17,9 +16,10 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest } from '../../contexts/TestContext';
-import { FormattedText } from '../../components/shared';
+import { FormattedText, LanguageToggle, BackButton } from '../../components/shared';
 import { sharedStyles } from '../../utils/shared';
 import { TestStackParamList } from '../../types';
+import { getLocalizedText as buildLocalizedText } from '../../utils/test';
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -28,17 +28,9 @@ const ProgressScreen = () => {
     const { theme, themeMode } = useTheme();
     const { language, toggleLanguage } = useLanguage();
     const { testProgress, testStatistics, isLoading, refreshProgress } = useTest();
+    const getLocalizedText = buildLocalizedText(language);
 
     const [isRefreshing, setIsRefreshing] = useState(false);
-
-    // Helper function to get localized text with dual language support
-    const getLocalizedText = (textFr: string, textVi: string): string => {
-        if (language === 'fr') {
-            return textFr;
-        } else {
-            return `${textVi}\n${textFr}`;
-        }
-    };
 
     useEffect(() => {
         // Refresh progress when screen loads
@@ -100,25 +92,19 @@ const ProgressScreen = () => {
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <TouchableOpacity onPress={handleGoBack} style={styles.backButton}>
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
-                    </TouchableOpacity>
+                    <BackButton onPress={handleGoBack} />
                     <View style={styles.headerCenter}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
                             {getLocalizedText('Progression', 'Tiến độ')}
                         </FormattedText>
                     </View>
-                    <View style={styles.languageSelector}>
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor={theme.colors.switchThumb}
-                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                            style={styles.languageSwitch}
-                        />
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                    </View>
+                    <LanguageToggle
+                        language={language}
+                        onToggle={toggleLanguage}
+                        textColor={theme.colors.headerText}
+                        style={styles.languageToggle}
+                        labelStyle={styles.languageToggleLabel}
+                    />
                 </View>
 
                 <ScrollView
@@ -312,15 +298,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '600',
     },
-    languageSelector: {
-        ...sharedStyles.languageSelector,
+    languageToggle: {
+        marginLeft: 12,
     },
-    languageLabel: {
+    languageToggleLabel: {
         ...sharedStyles.languageLabel,
         fontSize: 12,
-    },
-    languageSwitch: {
-        transform: [{ scale: 0.75 }],
     },
     scrollView: {
         flex: 1,

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { getImageSource as loadImageSource, getCachedImageSource } from '../../utils/shared';
+import { getImageSource as loadImageSource, getCachedImageSource, getQuestionText, getExplanationText, formatExplanation } from '../../utils/shared';
 import { ImageModal, FormattedText } from '../shared';
 import { useTheme } from '../../contexts/ThemeContext';
 import { QuestionCardProps } from '../../types';
 import { sharedStyles } from '../../utils/shared';
+import type { Language } from '../../types/core';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -77,32 +78,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         };
     }, [image, id]);
 
-    const getQuestionText = (lang: 'fr' | 'vi') => {
-        if (typeof question === 'string') {
-            return question || '';
-        }
-        return (question && question[lang]) ? String(question[lang]) : '';
+    const getQuestionTextForLang = (lang: Language) => {
+        return getQuestionText(question, lang);
     };
 
-    const getExplanationText = (lang: 'fr' | 'vi') => {
-        if (typeof explanation === 'string') {
-            return explanation || '';
-        }
-        return (explanation && explanation[lang]) ? String(explanation[lang]) : '';
-    };
-
-    const formatExplanation = (text: string) => {
-        if (!text) return '';
-
-        let formatted = text
-            .replace(/\. /g, '. \n\n')
-            .replace(/\! /g, '! \n\n')
-            .replace(/\? /g, '? \n\n')
-            .replace(/\[(.*?)\]/g, '\n→ $1 ←\n')
-            .replace(/\n\n+/g, '\n\n')
-            .trim();
-
-        return formatted;
+    const getExplanationTextForLang = (lang: Language) => {
+        return getExplanationText(explanation, lang);
     };
 
     const toggleExpand = () => {
@@ -153,11 +134,11 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 </View>
                 <View style={styles.questionContainer}>
                     <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={expanded ? 0 : 2}>
-                        {getQuestionText('fr')}
+                        {getQuestionTextForLang('fr')}
                     </FormattedText>
                     {isMultilingual && language === 'vi' && (
                         <FormattedText style={[styles.translation, { color: theme.colors.textSecondary }]} numberOfLines={expanded ? 0 : 1}>
-                            {getQuestionText('vi')}
+                            {getQuestionTextForLang('vi')}
                         </FormattedText>
                     )}
                 </View>
@@ -216,19 +197,19 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         </View>
                     )}
 
-                    {getExplanationText('fr') !== "" && (
+                    {getExplanationTextForLang('fr') !== "" && (
                         <View style={styles.explanationContainer}>
                             <View style={styles.section}>
                                 <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
                                 <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                    {formatExplanation(getExplanationText('fr'))}
+                                    {formatExplanation(getExplanationTextForLang('fr'))}
                                 </FormattedText>
 
-                                {isMultilingual && showBothLanguages && language === 'vi' && getExplanationText('vi') !== "" && (
+                                {isMultilingual && showBothLanguages && language === 'vi' && getExplanationTextForLang('vi') !== "" && (
                                     <>
                                         <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle, { color: theme.colors.primary }]}>Giải thích:</FormattedText>
                                         <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                            {formatExplanation(getExplanationText('vi'))}
+                                            {formatExplanation(getExplanationTextForLang('vi'))}
                                         </FormattedText>
                                     </>
                                 )}

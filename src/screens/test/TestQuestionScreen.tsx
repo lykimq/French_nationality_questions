@@ -21,8 +21,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest, serializeTestResult } from '../../contexts/TestContext';
 import { FormattedText, LanguageToggle } from '../../components/shared';
 import { TestAnswer, TestStackParamList } from '../../types';
-import { getTextFromMultiLang } from '../../types';
-import { getCachedImageSource } from '../../utils/shared';
+import { getCachedImageSource, getQuestionTextWithDualLanguage, getExplanationTextWithDualLanguage } from '../../utils/shared';
 import { useIcons } from '../../contexts/IconContext';
 
 type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
@@ -204,34 +203,12 @@ const TestQuestionScreen = () => {
 
     // Helper function to get the correct question text based on language
     const getQuestionText = (): string => {
-        if (!currentQuestion) return '';
-
-        if (language === 'fr') {
-            return getTextFromMultiLang(currentQuestion.question || '', 'fr') || 'Question non disponible';
-        } else {
-            // For Vietnamese, show both French and Vietnamese if available
-            if (currentQuestion.question_vi) {
-                return `🇫🇷 ${getTextFromMultiLang(currentQuestion.question || '', 'fr')}\n\n🇻🇳 ${currentQuestion.question_vi}`;
-            } else {
-                return getTextFromMultiLang(currentQuestion.question || '', 'fr') || 'Question non disponible';
-            }
-        }
+        return getQuestionTextWithDualLanguage(currentQuestion, language);
     };
 
     // Helper function to get the correct explanation text based on language
     const getExplanationText = (): string => {
-        if (!currentQuestion) return '';
-
-        if (language === 'fr') {
-            return getTextFromMultiLang(currentQuestion.explanation || '', 'fr') || 'Explication non disponible';
-        } else {
-            // For Vietnamese, show both French and Vietnamese if available
-            if (currentQuestion.explanation_vi) {
-                return `🇫🇷 ${getTextFromMultiLang(currentQuestion.explanation || '', 'fr')}\n\n🇻🇳 ${currentQuestion.explanation_vi}`;
-            } else {
-                return getTextFromMultiLang(currentQuestion.explanation || '', 'fr') || 'Explication non disponible';
-            }
-        }
+        return getExplanationTextWithDualLanguage(currentQuestion, language);
     };
 
     if (!currentSession || !currentQuestion) {
