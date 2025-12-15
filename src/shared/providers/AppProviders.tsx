@@ -1,0 +1,31 @@
+import React from 'react';
+
+import { LanguageProvider } from '../contexts/LanguageContext';
+import { IconProvider } from '../contexts/IconContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
+import { TextFormattingProvider } from '../contexts/TextFormattingContext';
+import { DisplaySettingsProvider } from '../../features/test/contexts/DisplaySettingsContext';
+import { TestProvider } from '../../features/test/contexts/TestContext';
+
+interface AppProvidersProps {
+    children: React.ReactNode;
+}
+
+const AppProviders: React.FC<AppProvidersProps> = ({ children }) => (
+    <LanguageProvider>
+        <IconProvider>
+            <ThemeProvider>
+                <TextFormattingProvider>
+                    <DisplaySettingsProvider>
+                        <TestProvider>
+                            {children}
+                        </TestProvider>
+                    </DisplaySettingsProvider>
+                </TextFormattingProvider>
+            </ThemeProvider>
+        </IconProvider>
+    </LanguageProvider>
+);
+
+export default AppProviders;
+

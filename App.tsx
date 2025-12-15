@@ -9,12 +9,7 @@ import {
 import { PatrickHand_400Regular } from '@expo-google-fonts/patrick-hand';
 import { DancingScript_400Regular } from '@expo-google-fonts/dancing-script';
 import AppNavigator from './src/navigation/AppNavigator';
-import { DisplaySettingsProvider } from './src/components/settings/DisplaySettingsContext';
-import { TextFormattingProvider } from './src/contexts/TextFormattingContext';
-import { ThemeProvider } from './src/contexts/ThemeContext';
-import { IconProvider } from './src/contexts/IconContext';
-import { LanguageProvider } from './src/contexts/LanguageContext';
-import { TestProvider } from './src/contexts/TestContext';
+import AppProviders from './src/shared/providers/AppProviders';
 
 // Suppress React 19 useInsertionEffect warnings for icon libraries
 const originalConsoleWarn = console.warn;
@@ -40,19 +35,9 @@ export default function App() {
   return (
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaProvider>
-        <LanguageProvider>
-          <IconProvider>
-            <ThemeProvider>
-              <TextFormattingProvider>
-                <DisplaySettingsProvider>
-                  <TestProvider>
-                    <AppNavigator />
-                  </TestProvider>
-                </DisplaySettingsProvider>
-              </TextFormattingProvider>
-            </ThemeProvider>
-          </IconProvider>
-        </LanguageProvider>
+        <AppProviders>
+          <AppNavigator />
+        </AppProviders>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );

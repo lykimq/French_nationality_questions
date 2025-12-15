@@ -13,8 +13,7 @@ export * from './ui';
 // Navigation types (shared)
 export * from './navigation';
 
-// Screen-specific types
-export * from './welcome';
-export * from './test';
-export * from './search';
-export * from './settings';
+// Feature-specific types
+export * from '../features/welcome/types';
+export * from '../features/test/types';
+export * from '../features/settings/types';
