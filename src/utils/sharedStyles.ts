@@ -60,6 +60,9 @@ export const sharedStyles = StyleSheet.create({
         borderBottomWidth: 1,
     },
 
+    // Generic modal title (fontSize: 18)
+    // Note: For settings-specific modal titles (e.g., RatingModal),
+    // see settingsStyles.modalTitle which has different styling (fontSize: 20, bold, centered)
     modalTitle: {
         fontSize: 18,
         fontWeight: '600',
@@ -81,6 +84,8 @@ export const sharedStyles = StyleSheet.create({
     },
 
     // Common text styles
+    // Note: This is a generic section title. For settings-specific section titles,
+    // see settingsStyles.sectionTitle which has different styling (fontSize: 16, padding, borderBottom)
     sectionTitle: {
         fontSize: 18,
         fontWeight: '600',

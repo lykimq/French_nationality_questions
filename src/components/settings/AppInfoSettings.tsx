@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import FormattedText from '../FormattedText';
 import SettingItem from './SettingItem';
+import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../utils/sharedStyles';
 
 interface AppInfoSettingsProps {
@@ -44,8 +45,8 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ language, onRateApp }
     };
 
     return (
-        <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
-            <FormattedText style={[styles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
+        <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
+            <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
                 {language === 'fr' ? 'Autres options' : 'Tùy chọn khác'}
             </FormattedText>
 
@@ -67,16 +68,16 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ language, onRateApp }
                 language={language}
             />
 
-            <View style={[styles.settingItem, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+            <View style={[settingsStyles.settingItem, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
                 <TouchableOpacity
                     style={styles.versionContainer}
                     onPress={showAppVersion}
                 >
-                    <View style={[styles.iconContainer, { backgroundColor: '#9C27B0' + '20' }]}>
+                    <View style={[sharedStyles.iconContainer, { backgroundColor: '#9C27B0' + '20' }]}>
                         <Ionicons name={theme.icons.info as any} size={20} color="#9C27B0" />
                     </View>
                     <View style={styles.versionInfo}>
-                        <FormattedText style={[styles.settingTitle, { color: theme.colors.text }]}>
+                        <FormattedText style={[settingsStyles.settingTitle, { color: theme.colors.text }]}>
                             {language === 'fr' ? 'Version de l\'application' : 'Phiên bản ứng dụng'}
                         </FormattedText>
                         <FormattedText style={[styles.versionNumber, { color: theme.colors.textMuted }]}>
@@ -91,31 +92,6 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ language, onRateApp }
 };
 
 const styles = StyleSheet.create({
-    section: {
-        ...sharedStyles.section,
-        ...sharedStyles.lightShadow,
-    },
-    sectionTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        paddingHorizontal: 15,
-        paddingVertical: 12,
-        borderBottomWidth: 1,
-    },
-    settingItem: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingVertical: 12,
-        paddingHorizontal: 15,
-        borderBottomWidth: 1,
-    },
-    iconContainer: {
-        ...sharedStyles.iconContainer,
-    },
-    settingTitle: {
-        flex: 1,
-        fontSize: 16,
-    },
     versionContainer: {
         flexDirection: 'row',
         alignItems: 'center',

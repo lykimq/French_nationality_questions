@@ -13,7 +13,6 @@ import FormattedText from '../components/FormattedText';
 import { sharedStyles } from '../utils/sharedStyles';
 
 // Import new components
-import { useDisplaySettings } from '../components/settings/DisplaySettingsContext';
 import TextFormattingSettings from '../components/settings/TextFormattingSettings';
 import ThemeSettings from '../components/settings/ThemeSettings';
 import IconSettings from '../components/settings/IconSettings';
@@ -22,7 +21,6 @@ import RatingModal from '../components/settings/RatingModal';
 
 const SettingsScreen = () => {
     const { language, toggleLanguage } = useLanguage();
-    const { isSlideMode, toggleSlideMode } = useDisplaySettings();
     const { theme, themeMode } = useTheme();
     const [showRatingModal, setShowRatingModal] = useState(false);
 

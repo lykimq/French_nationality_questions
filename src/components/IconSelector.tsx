@@ -9,15 +9,6 @@ import { sharedStyles } from '../utils/sharedStyles';
 import { iconSets, iconSetOptions } from '../config/iconConfig';
 import type { SettingsComponentWithValueProps, IconSetType, IconSetInfo } from '../types';
 
-// Base icon mappings for preview
-const baseIcons = {
-    home: 'home',
-    search: 'search',
-    settings: 'settings',
-    star: 'star',
-    share: 'share-social',
-} as const;
-
 const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,
     title_vi,

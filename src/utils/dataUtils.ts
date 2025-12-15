@@ -64,6 +64,63 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
 };
 
 /**
+ * Validates a single question structure
+ * @param question - The question object to validate
+ * @param index - The index of the question in the array
+ * @param errors - Array to append errors to
+ * @param summary - Summary object to update
+ */
+const validateQuestion = (
+    question: any,
+    index: number,
+    errors: string[],
+    summary: {
+        questionsWithIds: number;
+        questionsWithFrench: number;
+        questionsWithVietnamese: number;
+        questionsWithExplanations: number;
+        questionsWithVietnameseExplanations: number;
+        questionsWithImages: number;
+    }
+): void => {
+    // Check for required ID
+    if (typeof question.id === 'number') {
+        summary.questionsWithIds++;
+    } else {
+        errors.push(`Question at index ${index} missing or invalid ID`);
+    }
+
+    // Check for French question text
+    if (question.question && typeof question.question === 'string' && question.question.trim()) {
+        summary.questionsWithFrench++;
+    } else {
+        errors.push(`Question ${question.id || index} missing French text`);
+    }
+
+    // Check for Vietnamese question text
+    if (question.question_vi && typeof question.question_vi === 'string' && question.question_vi.trim()) {
+        summary.questionsWithVietnamese++;
+    }
+
+    // Check for French explanation
+    if (question.explanation && typeof question.explanation === 'string' && question.explanation.trim()) {
+        summary.questionsWithExplanations++;
+    } else {
+        errors.push(`Question ${question.id || index} missing French explanation`);
+    }
+
+    // Check for Vietnamese explanation
+    if (question.explanation_vi && typeof question.explanation_vi === 'string' && question.explanation_vi.trim()) {
+        summary.questionsWithVietnameseExplanations++;
+    }
+
+    // Check for images
+    if (question.image && question.image !== null) {
+        summary.questionsWithImages++;
+    }
+};
+
+/**
  * Validates the structure of loaded data to ensure it contains proper questions with IDs
  * @param data - The loaded JSON data
  * @param dataType - The type/name of the data for logging
@@ -123,85 +180,17 @@ export const validateDataStructure = (data: any, dataType: string): {
             const isValid = errors.length === 0;
             return { isValid, errors, summary };
         }
-        // Check if it's a category data structure (main categories)
+        // Check if it's a category data structure (main categories) or subcategory structure
         else if (data.questions && Array.isArray(data.questions)) {
-            summary.categoryInfo = `Category: ${data.id || 'unknown'} - ${data.title || 'no title'}`;
+            const isSubcategory = data.id && data.title;
+            summary.categoryInfo = isSubcategory
+                ? `Subcategory: ${data.id} - ${data.title}`
+                : `Category: ${data.id || 'unknown'} - ${data.title || 'no title'}`;
             summary.totalQuestions = data.questions.length;
 
+            // Use shared validation function for both category and subcategory questions
             data.questions.forEach((question: any, index: number) => {
-                // Check for required ID
-                if (typeof question.id === 'number') {
-                    summary.questionsWithIds++;
-                } else {
-                    errors.push(`Question at index ${index} missing or invalid ID`);
-                }
-
-                // Check for French question text
-                if (question.question && typeof question.question === 'string' && question.question.trim()) {
-                    summary.questionsWithFrench++;
-                } else {
-                    errors.push(`Question ${question.id || index} missing French text`);
-                }
-
-                // Check for Vietnamese question text
-                if (question.question_vi && typeof question.question_vi === 'string' && question.question_vi.trim()) {
-                    summary.questionsWithVietnamese++;
-                }
-
-                // Check for French explanation
-                if (question.explanation && typeof question.explanation === 'string' && question.explanation.trim()) {
-                    summary.questionsWithExplanations++;
-                } else {
-                    errors.push(`Question ${question.id || index} missing French explanation`);
-                }
-
-                // Check for Vietnamese explanation
-                if (question.explanation_vi && typeof question.explanation_vi === 'string' && question.explanation_vi.trim()) {
-                    summary.questionsWithVietnameseExplanations++;
-                }
-
-                // Check for images
-                if (question.image && question.image !== null) {
-                    summary.questionsWithImages++;
-                }
-            });
-        }
-        // Check if it's a subcategory structure (history subcategories)
-        else if (data.id && data.title && data.questions && Array.isArray(data.questions)) {
-            summary.categoryInfo = `Subcategory: ${data.id} - ${data.title}`;
-            summary.totalQuestions = data.questions.length;
-
-            data.questions.forEach((question: any, index: number) => {
-                // Same validation as above
-                if (typeof question.id === 'number') {
-                    summary.questionsWithIds++;
-                } else {
-                    errors.push(`Question at index ${index} missing or invalid ID`);
-                }
-
-                if (question.question && typeof question.question === 'string' && question.question.trim()) {
-                    summary.questionsWithFrench++;
-                } else {
-                    errors.push(`Question ${question.id || index} missing French text`);
-                }
-
-                if (question.question_vi && typeof question.question_vi === 'string' && question.question_vi.trim()) {
-                    summary.questionsWithVietnamese++;
-                }
-
-                if (question.explanation && typeof question.explanation === 'string' && question.explanation.trim()) {
-                    summary.questionsWithExplanations++;
-                } else {
-                    errors.push(`Question ${question.id || index} missing French explanation`);
-                }
-
-                if (question.explanation_vi && typeof question.explanation_vi === 'string' && question.explanation_vi.trim()) {
-                    summary.questionsWithVietnameseExplanations++;
-                }
-
-                if (question.image && question.image !== null) {
-                    summary.questionsWithImages++;
-                }
+                validateQuestion(question, index, errors, summary);
             });
         } else {
             errors.push(`Unknown data structure for ${dataType}`);

@@ -21,6 +21,7 @@ import { useIcons } from '../contexts/IconContext';
 import FormattedText from '../components/FormattedText';
 import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../types';
 import { preloadAllPart1TestData } from '../utils/dataUtils';
+import { getLocalizedText } from '../utils/testScreenUtils';
 
 type Part1TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -113,19 +114,11 @@ const Part1TestScreen = () => {
         return shortTitles[subcategoryId] || { fr: subcategoryId, vi: subcategoryId };
     };
 
-    const getLocalizedText = (textFr: string, textVi: string): string => {
-        if (language === 'fr') {
-            return textFr;
-        } else {
-            return `${textVi}\n${textFr}`;
-        }
-    };
-
     const handleStartTest = async (testMode: Part1TestModeOption) => {
         if (testMode.questionCount === 0) {
             Alert.alert(
-                getLocalizedText('Aucune question disponible', 'Không có câu hỏi'),
-                getLocalizedText(
+                getLocalizedText(language)('Aucune question disponible', 'Không có câu hỏi'),
+                getLocalizedText(language)(
                     'Il n\'y a pas de questions disponibles pour cette catégorie.',
                     'Không có câu hỏi nào có sẵn cho danh mục này.'
                 )
@@ -151,8 +144,8 @@ const Part1TestScreen = () => {
         } catch (error) {
             console.error('Error starting Part 1 test:', error);
             Alert.alert(
-                getLocalizedText('Erreur', 'Lỗi'),
-                getLocalizedText(
+                getLocalizedText(language)('Erreur', 'Lỗi'),
+                getLocalizedText(language)(
                     'Impossible de démarrer le test. Veuillez réessayer.',
                     'Không thể bắt đầu bài kiểm tra. Vui lòng thử lại.'
                 )
@@ -187,7 +180,7 @@ const Part1TestScreen = () => {
                         </View>
                         <View style={styles.titleContainer}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]} numberOfLines={2}>
-                                {getLocalizedText(shortTitle.fr, shortTitle.vi)}
+                                {getLocalizedText(language)(shortTitle.fr, shortTitle.vi)}
                             </FormattedText>
                             <FormattedText style={[styles.cardSubtitle, { color: theme.colors.textSecondary }]} numberOfLines={1}>
                                 {testMode.questionCount} {language === 'fr' ? 'questions' : 'câu hỏi'}
@@ -209,7 +202,7 @@ const Part1TestScreen = () => {
                 {/* Bottom: Description and time info */}
                 <View style={styles.cardBottom}>
                     <FormattedText style={[styles.cardDescription, { color: theme.colors.textSecondary }]} numberOfLines={2}>
-                        {getLocalizedText(testMode.description_fr, testMode.description_vi)}
+                        {getLocalizedText(language)(testMode.description_fr, testMode.description_vi)}
                     </FormattedText>
 
                     {testMode.questionCount > 0 && (
@@ -231,7 +224,7 @@ const Part1TestScreen = () => {
 
                     {testMode.questionCount === 0 && (
                         <FormattedText style={[styles.noQuestionsText, { color: theme.colors.textSecondary }]}>
-                            {getLocalizedText('Aucune question disponible', 'Chưa có câu hỏi')}
+                            {getLocalizedText(language)('Aucune question disponible', 'Chưa có câu hỏi')}
                         </FormattedText>
                     )}
                 </View>
@@ -253,17 +246,17 @@ const Part1TestScreen = () => {
                         </TouchableOpacity>
                         <View style={styles.headerTextContainer}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {getLocalizedText('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                                {getLocalizedText(language)('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
                             </FormattedText>
                         </View>
                     </View>
                 </SafeAreaView>
-                <View style={styles.loadingContainer}>
-                    <ActivityIndicator size="large" color={theme.colors.primary} />
-                    <FormattedText style={[styles.loadingText, { color: theme.colors.textSecondary }]}>
-                        {getLocalizedText('Chargement des tests...', 'Đang tải bài kiểm tra...')}
-                    </FormattedText>
-                </View>
+                    <View style={styles.loadingContainer}>
+                        <ActivityIndicator size="large" color={theme.colors.primary} />
+                        <FormattedText style={[styles.loadingText, { color: theme.colors.textSecondary }]}>
+                            {getLocalizedText(language)('Chargement des tests...', 'Đang tải bài kiểm tra...')}
+                        </FormattedText>
+                    </View>
             </View>
         );
     }
@@ -282,7 +275,7 @@ const Part1TestScreen = () => {
                         </TouchableOpacity>
                         <View style={styles.headerTextContainer}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {getLocalizedText('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                                {getLocalizedText(language)('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
                             </FormattedText>
                         </View>
                     </View>
@@ -290,7 +283,7 @@ const Part1TestScreen = () => {
                 <View style={styles.errorContainer}>
                     <Ionicons name={getIconName('alertCircle') as any} size={48} color={theme.colors.error} />
                     <FormattedText style={[styles.errorText, { color: theme.colors.error }]}>
-                        {getLocalizedText('Erreur de chargement', 'Lỗi tải dữ liệu')}
+                        {getLocalizedText(language)('Erreur de chargement', 'Lỗi tải dữ liệu')}
                     </FormattedText>
                     <FormattedText style={[styles.errorDetailText, { color: theme.colors.textSecondary }]}>
                         {dataLoadingError}
@@ -315,10 +308,10 @@ const Part1TestScreen = () => {
 
                     <View style={styles.headerTextContainer}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                            {getLocalizedText('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                            {getLocalizedText(language)('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
                         </FormattedText>
                         <FormattedText style={[styles.headerSubtitle, { color: theme.colors.headerText + 'B3' }]}>
-                            {getLocalizedText('Tests de conversation et connaissances', 'Bài kiểm tra hội thoại và kiến thức')}
+                            {getLocalizedText(language)('Tests de conversation et connaissances', 'Bài kiểm tra hội thoại và kiến thức')}
                         </FormattedText>
                     </View>
 
@@ -348,7 +341,7 @@ const Part1TestScreen = () => {
                     <View style={[styles.loadingOverlay, { backgroundColor: theme.colors.background + 'E6' }]}>
                         <ActivityIndicator size="large" color={theme.colors.primary} />
                         <FormattedText style={[styles.loadingText, { color: theme.colors.text }]}>
-                            {getLocalizedText('Préparation du test...', 'Đang chuẩn bị bài kiểm tra...')}
+                            {getLocalizedText(language)('Préparation du test...', 'Đang chuẩn bị bài kiểm tra...')}
                         </FormattedText>
                     </View>
                 )}

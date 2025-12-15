@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import ColorThemeSelector from '../ColorThemeSelector';
 import FormattedText from '../FormattedText';
+import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../utils/sharedStyles';
 
 interface ThemeSettingsProps {
@@ -14,8 +15,8 @@ const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
     const { theme, themeMode, colorTheme, setThemeMode, setColorTheme } = useTheme();
 
     return (
-        <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
-            <FormattedText style={[styles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
+        <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
+            <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
                 {language === 'fr' ? 'Apparence' : 'Giao diện'}
             </FormattedText>
 
@@ -31,7 +32,7 @@ const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
             {/* Theme Selector */}
             <View style={[styles.themeSelector, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
                 <View style={styles.themeSelectorLeft}>
-                    <View style={[styles.themeIconContainer, { backgroundColor: (themeMode === 'dark' ? '#FFA726' : '#FFB74D') + '15' }]}>
+                    <View style={[sharedStyles.iconContainer, { backgroundColor: (themeMode === 'dark' ? '#FFA726' : '#FFB74D') + '15' }]}>
                         <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={22} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
                     </View>
                     <FormattedText style={[styles.themeSelectorTitle, { color: theme.colors.text }]}>
@@ -90,17 +91,6 @@ const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
 };
 
 const styles = StyleSheet.create({
-    section: {
-        ...sharedStyles.section,
-        ...sharedStyles.lightShadow,
-    },
-    sectionTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        paddingHorizontal: 15,
-        paddingVertical: 12,
-        borderBottomWidth: 1,
-    },
     themeSelector: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -113,9 +103,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         flex: 1,
-    },
-    themeIconContainer: {
-        ...sharedStyles.iconContainer,
     },
     themeSelectorTitle: {
         fontSize: 16,

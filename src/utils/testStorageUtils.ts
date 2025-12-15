@@ -83,8 +83,8 @@ export const loadTestStatistics = async (): Promise<TestStatistics> => {
     }
 };
 
-// Load Part 1 test data
-export const loadPart1TestData = async (): Promise<Record<string, any>> => {
+// Load Part 1 test subcategory data from storage
+export const loadPart1TestSubcategoryData = async (): Promise<Record<string, any>> => {
     try {
         const { part1SubcategoryTestData } = await preloadAllPart1TestData();
 
@@ -94,7 +94,7 @@ export const loadPart1TestData = async (): Promise<Record<string, any>> => {
 
         return {};
     } catch (error) {
-        console.error('❌ Error loading Part 1 test data:', error);
+        console.error('❌ Error loading Part 1 test subcategory data:', error);
         return {};
     }
 };
@@ -125,7 +125,7 @@ export const loadAllTestData = async (): Promise<{
         const [progress, statistics, part1Data] = await Promise.all([
             loadTestProgress(),
             loadTestStatistics(),
-            loadPart1TestData()
+            loadPart1TestSubcategoryData()
         ]);
 
         return { progress, statistics, part1Data };

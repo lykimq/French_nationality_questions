@@ -6,7 +6,7 @@ import SliderSetting from '../SliderSetting';
 import FontSelector from '../FontSelector';
 import FormattedText from '../FormattedText';
 import SettingItem from './SettingItem';
-import { sharedStyles } from '../../utils/sharedStyles';
+import { settingsStyles } from './settingsStyles';
 
 interface TextFormattingSettingsProps {
     language: 'fr' | 'vi';
@@ -47,8 +47,8 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
     };
 
     return (
-        <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
-            <FormattedText style={[styles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
+        <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
+            <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
                 {language === 'fr' ? 'Formatage du texte' : 'Định dạng văn bản'}
             </FormattedText>
 
@@ -143,17 +143,6 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
 };
 
 const styles = StyleSheet.create({
-    section: {
-        ...sharedStyles.section,
-        ...sharedStyles.lightShadow,
-    },
-    sectionTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        paddingHorizontal: 15,
-        paddingVertical: 12,
-        borderBottomWidth: 1,
-    },
     previewContainer: {
         paddingHorizontal: 15,
         paddingVertical: 15,

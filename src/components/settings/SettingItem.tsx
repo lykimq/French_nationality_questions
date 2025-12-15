@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Switch, TouchableOpacity } from 'react-native';
+import { View, Switch, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import FormattedText from '../FormattedText';
+import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../utils/sharedStyles';
 import type { SettingItemProps } from '../../types';
 
@@ -21,14 +22,14 @@ const SettingItem: React.FC<SettingItemProps> = ({
 
     return (
         <TouchableOpacity
-            style={[styles.settingItem, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}
+            style={[settingsStyles.settingItem, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}
             onPress={onPress}
             disabled={isSwitch}
         >
-            <View style={[styles.iconContainer, { backgroundColor: iconColor + '20' }]}>
+            <View style={[sharedStyles.iconContainer, { backgroundColor: iconColor + '20' }]}>
                 <Ionicons name={icon as any} size={20} color={iconColor} />
             </View>
-            <FormattedText style={[styles.settingTitle, { color: theme.colors.text }]}>
+            <FormattedText style={[settingsStyles.settingTitle, { color: theme.colors.text }]}>
                 {language === 'fr' ? title : (title_vi || title)}
             </FormattedText>
             {isSwitch && (
@@ -45,22 +46,5 @@ const SettingItem: React.FC<SettingItemProps> = ({
         </TouchableOpacity>
     );
 };
-
-const styles = StyleSheet.create({
-    settingItem: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingVertical: 12,
-        paddingHorizontal: 15,
-        borderBottomWidth: 1,
-    },
-    iconContainer: {
-        ...sharedStyles.iconContainer,
-    },
-    settingTitle: {
-        flex: 1,
-        fontSize: 16,
-    },
-});
 
 export default SettingItem;

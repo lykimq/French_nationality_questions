@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import FormattedText from '../FormattedText';
 import { sharedStyles } from '../../utils/sharedStyles';
+import { settingsStyles } from './settingsStyles';
 
 interface RatingModalProps {
     visible: boolean;
@@ -97,13 +98,13 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
             animationType="fade"
             onRequestClose={handleClose}
         >
-            <View style={styles.modalOverlay}>
-                <View style={[styles.modalContainer, { backgroundColor: theme.colors.card }]}>
-                    <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
+            <View style={sharedStyles.modalOverlay}>
+                <View style={[settingsStyles.modalContainer, { backgroundColor: theme.colors.card }]}>
+                    <FormattedText style={[settingsStyles.modalTitle, { color: theme.colors.text }]}>
                         {language === 'fr' ? 'Évaluez cette application' : 'Đánh giá ứng dụng này'}
                     </FormattedText>
 
-                    <FormattedText style={[styles.modalSubtitle, { color: theme.colors.textMuted }]}>
+                    <FormattedText style={[settingsStyles.modalSubtitle, { color: theme.colors.textMuted }]}>
                         {language === 'fr'
                             ? 'Votre avis nous aide à améliorer l\'application'
                             : 'Ý kiến của bạn giúp chúng tôi cải thiện ứng dụng'
@@ -116,19 +117,19 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
 
                     <View style={styles.modalButtons}>
                         <TouchableOpacity
-                            style={[styles.modalButton, styles.cancelButton, { backgroundColor: theme.colors.background }]}
+                            style={[settingsStyles.modalButton, styles.cancelButton, { backgroundColor: theme.colors.background }]}
                             onPress={handleClose}
                         >
-                            <FormattedText style={[styles.cancelButtonText, { color: theme.colors.text }]}>
+                            <FormattedText style={[settingsStyles.modalButtonText, { color: theme.colors.text }]}>
                                 {language === 'fr' ? 'Annuler' : 'Hủy'}
                             </FormattedText>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={[styles.modalButton, styles.submitButton, { backgroundColor: theme.colors.primary }]}
+                            style={[settingsStyles.modalButton, styles.submitButton, { backgroundColor: theme.colors.primary }]}
                             onPress={handleRatingSubmit}
                         >
-                            <FormattedText style={[styles.submitButtonText, { color: theme.colors.buttonText }]}>
+                            <FormattedText style={[settingsStyles.modalButtonText, { color: theme.colors.buttonText }]}>
                                 {language === 'fr' ? 'Envoyer' : 'Gửi'}
                             </FormattedText>
                         </TouchableOpacity>
@@ -140,33 +141,6 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
 };
 
 const styles = StyleSheet.create({
-    modalOverlay: {
-        ...sharedStyles.modalOverlay,
-    },
-    modalContainer: {
-        borderRadius: 20,
-        padding: 30,
-        alignItems: 'center',
-        minWidth: 300,
-        maxWidth: 350,
-        elevation: 10,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 5 },
-        shadowOpacity: 0.25,
-        shadowRadius: 10,
-    },
-    modalTitle: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 8,
-        textAlign: 'center',
-    },
-    modalSubtitle: {
-        fontSize: 16,
-        textAlign: 'center',
-        marginBottom: 30,
-        lineHeight: 22,
-    },
     starsContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
@@ -181,14 +155,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: '100%',
     },
-    modalButton: {
-        flex: 1,
-        paddingVertical: 12,
-        paddingHorizontal: 20,
-        borderRadius: 10,
-        alignItems: 'center',
-        marginHorizontal: 5,
-    },
     cancelButton: {
         borderWidth: 1,
         borderColor: 'rgba(0,0,0,0.1)',
@@ -199,14 +165,6 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-    },
-    cancelButtonText: {
-        fontSize: 16,
-        fontWeight: '600',
-    },
-    submitButtonText: {
-        fontSize: 16,
-        fontWeight: '600',
     },
 });
 
