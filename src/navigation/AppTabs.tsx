@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import HomeStack from './HomeStack';
 import SearchScreen from '../search/SearchScreen';
 import TestStack from './TestStack';
+import CivicExamStack from '../test_civic/navigation/CivicExamStack';
 import SettingsScreen from '../settings/SettingsScreen';
 import { DataLoadingScreen } from '../shared/components';
 import { useLanguage } from '../shared/contexts/LanguageContext';
@@ -91,6 +92,16 @@ const AppTabs = () => {
                 name="TestTab"
                 component={TestStack}
                 options={{ title: tabLabels[language].test }}
+            />
+            <Tab.Screen
+                name="CivicExamTab"
+                component={CivicExamStack}
+                options={{ 
+                    title: language === 'fr' ? 'Examen Civique' : 'Kỳ thi Công dân',
+                    tabBarIcon: ({ focused, color, size }: TabBarIconProps) => (
+                        <Ionicons name={focused ? 'document-text' : 'document-text-outline'} size={size} color={color} />
+                    ),
+                }}
             />
             <Tab.Screen
                 name="SettingsTab"

@@ -1,0 +1,744 @@
+{
+  "id": "civic_exam",
+  "title": "Examen Civique pour la Naturalisation",
+  "title_vi": "Kỳ thi Công dân cho Quốc tịch",
+  "description": "Questions pour l'examen civique selon l'arrêté du 10 octobre 2025",
+  "description_vi": "Câu hỏi cho kỳ thi công dân theo nghị định ngày 10 tháng 10 năm 2025",
+  "questions": [
+    {
+      "id": 1001,
+      "question": "Quelle est la devise de la République française ?",
+      "question_vi": "Khẩu hiệu của nước Cộng hòa Pháp là gì?",
+      "explanation": "La devise de la République française est 'Liberté, Égalité, Fraternité'. Elle est inscrite sur les frontons des mairies et des écoles publiques.",
+      "explanation_vi": "Khẩu hiệu của nước Cộng hòa Pháp là 'Tự do, Bình đẳng, Bác ái'. Nó được khắc trên các mặt tiền của tòa thị chính và trường học công lập.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "devise_symboles",
+      "questionType": "knowledge",
+      "options": [
+        "Liberté, Égalité, Fraternité",
+        "Unité, Justice, Progrès",
+        "Démocratie, République, Nation",
+        "Paix, Travail, Patrie"
+      ],
+      "correctAnswer": 0,
+      "explanationOptions": [
+        "La devise de la République française est 'Liberté, Égalité, Fraternité'. Elle est inscrite sur les frontons des mairies et des écoles publiques.",
+        "La devise française est 'Unité, Justice, Progrès' et représente les valeurs européennes.",
+        "La devise de la France est 'Démocratie, République, Nation' depuis la Révolution.",
+        "La devise française est 'Paix, Travail, Patrie' et symbolise l'économie."
+      ],
+      "correctExplanationAnswer": 0
+    },
+    {
+      "id": 1002,
+      "question": "Quel est le drapeau de la France ?",
+      "question_vi": "Lá cờ của Pháp là gì?",
+      "explanation": "Le drapeau français est tricolore : bleu, blanc, rouge. Il est l'emblème national de la France depuis la Révolution française.",
+      "explanation_vi": "Lá cờ Pháp có ba màu: xanh dương, trắng, đỏ. Đây là biểu tượng quốc gia của Pháp từ Cách mạng Pháp.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "devise_symboles",
+      "questionType": "knowledge",
+      "options": [
+        "Bleu, blanc, rouge (vertical)",
+        "Rouge, blanc, bleu (horizontal)",
+        "Bleu, jaune, rouge (vertical)",
+        "Rouge, blanc, vert (horizontal)"
+      ],
+      "correctAnswer": 0,
+      "explanationOptions": [
+        "Le drapeau français est tricolore : bleu, blanc, rouge. Il est l'emblème national de la France depuis la Révolution française.",
+        "Le drapeau français est rouge, blanc, bleu en horizontal depuis 1789.",
+        "Le drapeau français est bleu, jaune, rouge et représente les couleurs de l'Europe.",
+        "Le drapeau français est rouge, blanc, vert et symbolise la nature."
+      ],
+      "correctExplanationAnswer": 0
+    },
+    {
+      "id": 1003,
+      "question": "Quel est l'hymne national de la France ?",
+      "question_vi": "Quốc ca của Pháp là gì?",
+      "explanation": "L'hymne national de la France est 'La Marseillaise', composée par Claude Joseph Rouget de Lisle en 1792.",
+      "explanation_vi": "Quốc ca của Pháp là 'La Marseillaise', được sáng tác bởi Claude Joseph Rouget de Lisle vào năm 1792.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "devise_symboles",
+      "questionType": "knowledge",
+      "options": [
+        "La Marseillaise",
+        "Le Chant du départ",
+        "Aux armes citoyens",
+        "Vive la France"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1004,
+      "question": "Qu'est-ce que la laïcité en France ?",
+      "question_vi": "Thế tục hóa ở Pháp là gì?",
+      "explanation": "La laïcité est le principe de séparation de l'Église et de l'État, garantissant la liberté de conscience et l'égalité de tous les citoyens, quelles que soient leurs croyances.",
+      "explanation_vi": "Thế tục hóa là nguyên tắc tách biệt giữa Giáo hội và Nhà nước, đảm bảo tự do lương tâm và bình đẳng của tất cả công dân, bất kể niềm tin của họ.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "laicite",
+      "questionType": "knowledge",
+      "options": [
+        "La séparation de l'Église et de l'État",
+        "L'absence de religion en France",
+        "L'interdiction de toutes les religions",
+        "La religion d'État"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1005,
+      "question": "Quand a été promulguée la loi de séparation des Églises et de l'État en France ?",
+      "question_vi": "Luật tách biệt Giáo hội và Nhà nước ở Pháp được ban hành khi nào?",
+      "explanation": "La loi de séparation des Églises et de l'État a été promulguée le 9 décembre 1905. Elle établit la laïcité en France.",
+      "explanation_vi": "Luật tách biệt Giáo hội và Nhà nước được ban hành vào ngày 9 tháng 12 năm 1905. Nó thiết lập thế tục hóa ở Pháp.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "laicite",
+      "questionType": "knowledge",
+      "options": [
+        "9 décembre 1905",
+        "14 juillet 1789",
+        "4 octobre 1958",
+        "11 novembre 1918"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1006,
+      "question": "Vous êtes dans un établissement scolaire public. Un élève porte un signe religieux ostensible. Que faites-vous ?",
+      "question_vi": "Bạn đang ở trong một trường học công lập. Một học sinh đeo biểu tượng tôn giáo rõ ràng. Bạn làm gì?",
+      "explanation": "Dans les établissements scolaires publics, le port de signes religieux ostensibles est interdit par la loi du 15 mars 2004. L'élève doit être informé de cette interdiction.",
+      "explanation_vi": "Trong các trường học công lập, việc đeo biểu tượng tôn giáo rõ ràng bị cấm theo luật ngày 15 tháng 3 năm 2004. Học sinh phải được thông báo về lệnh cấm này.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "situational_principles",
+      "questionType": "situational",
+      "options": [
+        "Je rappelle l'interdiction du port de signes religieux ostensibles à l'école",
+        "Je laisse faire car c'est une liberté individuelle",
+        "J'interdis uniquement certains signes religieux",
+        "Je demande à tous les élèves de porter des signes religieux"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1007,
+      "question": "Dans un service public, un agent refuse de servir une personne en raison de ses convictions religieuses. Cette attitude est-elle conforme au principe de laïcité ?",
+      "question_vi": "Trong một dịch vụ công, một nhân viên từ chối phục vụ một người vì niềm tin tôn giáo của họ. Thái độ này có phù hợp với nguyên tắc thế tục hóa không?",
+      "explanation": "Non, cette attitude est contraire au principe de laïcité. Les agents des services publics doivent respecter la neutralité et traiter tous les usagers de manière égale, quelles que soient leurs croyances.",
+      "explanation_vi": "Không, thái độ này trái với nguyên tắc thế tục hóa. Nhân viên dịch vụ công phải tôn trọng tính trung lập và đối xử bình đẳng với tất cả người sử dụng, bất kể niềm tin của họ.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "situational_principles",
+      "questionType": "situational",
+      "options": [
+        "Non, c'est contraire au principe de laïcité",
+        "Oui, c'est une liberté de l'agent",
+        "Oui, si l'agent a des convictions religieuses",
+        "Non, mais seulement dans certains services"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1008,
+      "question": "Un collègue vous demande de ne pas travailler certains jours pour des raisons religieuses. Dans le secteur privé, que pouvez-vous faire ?",
+      "question_vi": "Một đồng nghiệp yêu cầu bạn không làm việc vào một số ngày vì lý do tôn giáo. Trong khu vực tư nhân, bạn có thể làm gì?",
+      "explanation": "Dans le secteur privé, l'employeur peut accorder des aménagements si cela n'entrave pas le bon fonctionnement de l'entreprise. La liberté de manifester sa religion peut être restreinte pour des impératifs d'organisation.",
+      "explanation_vi": "Trong khu vực tư nhân, người sử dụng lao động có thể cho phép điều chỉnh nếu điều này không cản trở hoạt động của doanh nghiệp. Tự do thể hiện tôn giáo có thể bị hạn chế vì lý do tổ chức.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "situational_principles",
+      "questionType": "situational",
+      "options": [
+        "L'employeur peut accorder des aménagements si possible",
+        "C'est toujours interdit dans le secteur privé",
+        "C'est obligatoire dans tous les cas",
+        "Cela dépend uniquement de la religion"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1009,
+      "question": "Vous êtes témoin d'un acte de discrimination religieuse dans votre entreprise. Que devez-vous faire ?",
+      "question_vi": "Bạn chứng kiến một hành vi phân biệt đối xử tôn giáo trong công ty của bạn. Bạn phải làm gì?",
+      "explanation": "La discrimination religieuse est interdite. Vous pouvez signaler cet acte à votre employeur, aux représentants du personnel, ou à la Défenseure des droits.",
+      "explanation_vi": "Phân biệt đối xử tôn giáo bị cấm. Bạn có thể báo cáo hành vi này cho người sử dụng lao động, đại diện nhân viên, hoặc Người bảo vệ quyền lợi.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "situational_principles",
+      "questionType": "situational",
+      "options": [
+        "Signaler l'acte de discrimination",
+        "Ne rien faire",
+        "Faire la même chose",
+        "Changer de religion"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1010,
+      "question": "Dans un espace public, une personne vous demande de respecter ses convictions religieuses en modifiant votre comportement. Que faites-vous ?",
+      "question_vi": "Trong không gian công cộng, một người yêu cầu bạn tôn trọng niềm tin tôn giáo của họ bằng cách thay đổi hành vi của bạn. Bạn làm gì?",
+      "explanation": "Dans l'espace public, chacun a le droit d'exprimer ses convictions religieuses dans la limite du respect de l'ordre public. Cependant, personne ne peut imposer ses convictions à autrui.",
+      "explanation_vi": "Trong không gian công cộng, mỗi người có quyền thể hiện niềm tin tôn giáo của mình trong giới hạn tôn trọng trật tự công cộng. Tuy nhiên, không ai có thể áp đặt niềm tin của mình lên người khác.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "situational_principles",
+      "questionType": "situational",
+      "options": [
+        "Je respecte la liberté de chacun sans imposer mes convictions",
+        "Je modifie toujours mon comportement",
+        "J'impose mes propres convictions",
+        "J'évite tous les espaces publics"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1011,
+      "question": "Un parent d'élève demande à ce que son enfant soit dispensé de certains cours pour des raisons religieuses. Quelle est la réponse de l'école publique ?",
+      "question_vi": "Một phụ huynh yêu cầu con mình được miễn một số môn học vì lý do tôn giáo. Phản hồi của trường công lập là gì?",
+      "explanation": "Dans l'école publique laïque, il est interdit de choisir les enseignements en fonction de ses croyances religieuses. L'instruction est obligatoire pour tous les élèves.",
+      "explanation_vi": "Trong trường công lập thế tục, việc chọn môn học dựa trên niềm tin tôn giáo bị cấm. Giáo dục là bắt buộc cho tất cả học sinh.",
+      "image": null,
+      "theme": "principles_values",
+      "subTheme": "situational_principles",
+      "questionType": "situational",
+      "options": [
+        "C'est interdit, l'instruction est obligatoire",
+        "C'est autorisé pour toutes les religions",
+        "C'est autorisé uniquement pour certaines religions",
+        "Cela dépend de l'école"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1012,
+      "question": "Quels sont les trois pouvoirs en France ?",
+      "question_vi": "Ba quyền lực ở Pháp là gì?",
+      "explanation": "Les trois pouvoirs en France sont : le pouvoir législatif (faire les lois), le pouvoir exécutif (appliquer les lois), et le pouvoir judiciaire (rendre la justice).",
+      "explanation_vi": "Ba quyền lực ở Pháp là: quyền lập pháp (làm luật), quyền hành pháp (thực thi luật), và quyền tư pháp (xét xử).",
+      "image": null,
+      "theme": "institutional_political",
+      "subTheme": "democracy_vote",
+      "questionType": "knowledge",
+      "options": [
+        "Législatif, exécutif, judiciaire",
+        "Présidentiel, parlementaire, judiciaire",
+        "National, régional, local",
+        "Exécutif, législatif, économique"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1013,
+      "question": "Qui fait les lois en France ?",
+      "question_vi": "Ai làm luật ở Pháp?",
+      "explanation": "Les lois sont faites par le Parlement, composé de l'Assemblée nationale et du Sénat. Les députés et les sénateurs votent les lois.",
+      "explanation_vi": "Luật được làm bởi Quốc hội, bao gồm Hạ viện và Thượng viện. Các nghị sĩ và thượng nghị sĩ bỏ phiếu cho các luật.",
+      "image": null,
+      "theme": "institutional_political",
+      "subTheme": "democracy_vote",
+      "questionType": "knowledge",
+      "options": [
+        "Le Parlement (Assemblée nationale et Sénat)",
+        "Le Président de la République",
+        "Le Premier ministre",
+        "Les maires"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1014,
+      "question": "Quelles sont les conditions pour voter en France ?",
+      "question_vi": "Điều kiện để bầu cử ở Pháp là gì?",
+      "explanation": "Pour voter en France, il faut avoir la nationalité française, être majeur (18 ans), et ne pas avoir été privé de ses droits civils et politiques suite à une condamnation.",
+      "explanation_vi": "Để bầu cử ở Pháp, cần có quốc tịch Pháp, đủ 18 tuổi, và không bị tước quyền công dân và chính trị do bị kết án.",
+      "image": null,
+      "theme": "institutional_political",
+      "subTheme": "democracy_vote",
+      "questionType": "knowledge",
+      "options": [
+        "Avoir la nationalité française, être majeur, ne pas être privé de ses droits",
+        "Avoir 16 ans et résider en France",
+        "Avoir un titre de séjour",
+        "Avoir résidé 5 ans en France"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1015,
+      "question": "Qui est le chef de l'État en France ?",
+      "question_vi": "Ai là người đứng đầu nhà nước ở Pháp?",
+      "explanation": "Le Président de la République est le chef de l'État en France. Il est élu au suffrage universel direct pour un mandat de 5 ans.",
+      "explanation_vi": "Tổng thống Cộng hòa là người đứng đầu nhà nước ở Pháp. Ông được bầu bằng phổ thông đầu phiếu trực tiếp với nhiệm kỳ 5 năm.",
+      "image": null,
+      "theme": "institutional_political",
+      "subTheme": "organization_republic",
+      "questionType": "knowledge",
+      "options": [
+        "Le Président de la République",
+        "Le Premier ministre",
+        "Le Président de l'Assemblée nationale",
+        "Le Maire de Paris"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1016,
+      "question": "Combien de niveaux de collectivités locales existe-t-il en France ?",
+      "question_vi": "Có bao nhiêu cấp độ chính quyền địa phương ở Pháp?",
+      "explanation": "Il existe trois niveaux de collectivités locales en France : la commune, le département, et la région.",
+      "explanation_vi": "Có ba cấp độ chính quyền địa phương ở Pháp: xã, tỉnh, và vùng.",
+      "image": null,
+      "theme": "institutional_political",
+      "subTheme": "organization_republic",
+      "questionType": "knowledge",
+      "options": [
+        "Trois : commune, département, région",
+        "Deux : commune et région",
+        "Quatre : commune, département, région, État",
+        "Un seul : la commune"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1017,
+      "question": "Combien d'États membres compte l'Union européenne en 2025 ?",
+      "question_vi": "Liên minh châu Âu có bao nhiêu quốc gia thành viên vào năm 2025?",
+      "explanation": "L'Union européenne compte 27 États membres en 2025 (après le départ du Royaume-Uni en 2020).",
+      "explanation_vi": "Liên minh châu Âu có 27 quốc gia thành viên vào năm 2025 (sau khi Vương quốc Anh rời đi vào năm 2020).",
+      "image": null,
+      "theme": "institutional_political",
+      "subTheme": "european_institutions",
+      "questionType": "knowledge",
+      "options": [
+        "27 États membres",
+        "28 États membres",
+        "25 États membres",
+        "30 États membres"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1018,
+      "question": "Quels sont les droits fondamentaux garantis par la Constitution française ?",
+      "question_vi": "Những quyền cơ bản nào được Hiến pháp Pháp đảm bảo?",
+      "explanation": "La Constitution garantit les libertés individuelles (liberté de circulation, d'opinion, d'expression, de conscience), les droits sociaux et économiques, et le principe de dignité humaine.",
+      "explanation_vi": "Hiến pháp đảm bảo các quyền tự do cá nhân (tự do đi lại, tư tưởng, ngôn luận, lương tâm), quyền xã hội và kinh tế, và nguyên tắc nhân phẩm.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "fundamental_rights",
+      "questionType": "knowledge",
+      "options": [
+        "Libertés individuelles, droits sociaux et économiques, dignité humaine",
+        "Uniquement les libertés économiques",
+        "Uniquement les droits politiques",
+        "Seulement les droits sociaux"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1019,
+      "question": "Quel texte garantit les droits fondamentaux en France depuis 1789 ?",
+      "question_vi": "Văn bản nào đảm bảo quyền cơ bản ở Pháp từ năm 1789?",
+      "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789 est le texte fondateur qui garantit les droits fondamentaux en France. Elle est intégrée dans le préambule de la Constitution.",
+      "explanation_vi": "Tuyên ngôn Nhân quyền và Dân quyền năm 1789 là văn bản nền tảng đảm bảo quyền cơ bản ở Pháp. Nó được tích hợp vào lời nói đầu của Hiến pháp.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "fundamental_rights",
+      "questionType": "knowledge",
+      "options": [
+        "La Déclaration des droits de l'homme et du citoyen de 1789",
+        "Le Code civil de 1804",
+        "La Constitution de 1958",
+        "Le Traité de Rome de 1957"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1020,
+      "question": "Quelle est l'obligation fiscale des personnes résidant en France ?",
+      "question_vi": "Nghĩa vụ thuế của người cư trú tại Pháp là gì?",
+      "explanation": "Toutes les personnes résidant en France ont l'obligation de déclarer leurs revenus et de payer les impôts selon leurs ressources. C'est un acte solidaire qui finance les services publics.",
+      "explanation_vi": "Tất cả người cư trú tại Pháp có nghĩa vụ khai báo thu nhập và nộp thuế theo nguồn lực của họ. Đây là hành động đoàn kết tài trợ cho các dịch vụ công.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "obligations_duties",
+      "questionType": "knowledge",
+      "options": [
+        "Déclarer ses revenus et payer les impôts",
+        "Payer uniquement la TVA",
+        "Ne payer aucun impôt",
+        "Payer uniquement les impôts locaux"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1021,
+      "question": "Quelles sont les obligations des parents envers leurs enfants mineurs en France ?",
+      "question_vi": "Nghĩa vụ của cha mẹ đối với con chưa thành niên ở Pháp là gì?",
+      "explanation": "Les parents ont l'obligation d'assurer l'éducation, la santé, la sécurité et le bien-être de leurs enfants mineurs. Ils doivent respecter l'intégrité physique et morale de l'enfant.",
+      "explanation_vi": "Cha mẹ có nghĩa vụ đảm bảo giáo dục, sức khỏe, an toàn và phúc lợi của con chưa thành niên. Họ phải tôn trọng tính toàn vẹn thể chất và tinh thần của trẻ.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "obligations_duties",
+      "questionType": "knowledge",
+      "options": [
+        "Assurer l'éducation, la santé, la sécurité et le bien-être",
+        "Uniquement l'éducation",
+        "Uniquement la santé",
+        "Aucune obligation légale"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1022,
+      "question": "Quelles sont les conséquences du non-respect des lois en France ?",
+      "question_vi": "Hậu quả của việc không tuân thủ luật pháp ở Pháp là gì?",
+      "explanation": "Le non-respect des lois peut entraîner des sanctions pénales (amendes, peines d'emprisonnement) selon la gravité de l'infraction. La police et la gendarmerie sont chargées de faire respecter la loi.",
+      "explanation_vi": "Việc không tuân thủ luật có thể dẫn đến hình phạt hình sự (tiền phạt, án tù) tùy theo mức độ nghiêm trọng của vi phạm. Cảnh sát và hiến binh có trách nhiệm đảm bảo tuân thủ luật.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "obligations_duties",
+      "questionType": "knowledge",
+      "options": [
+        "Sanctions pénales selon la gravité",
+        "Aucune conséquence",
+        "Uniquement des avertissements",
+        "Seulement des amendes"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1023,
+      "question": "Vous êtes témoin d'une discrimination dans votre lieu de travail. Que devez-vous faire ?",
+      "question_vi": "Bạn chứng kiến một hành vi phân biệt đối xử tại nơi làm việc. Bạn phải làm gì?",
+      "explanation": "La discrimination est interdite en France. Vous pouvez signaler cet acte à votre employeur, aux représentants du personnel, au Défenseur des droits, ou porter plainte.",
+      "explanation_vi": "Phân biệt đối xử bị cấm ở Pháp. Bạn có thể báo cáo hành vi này cho người sử dụng lao động, đại diện nhân viên, Người bảo vệ quyền lợi, hoặc khiếu nại.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "situational_rights",
+      "questionType": "situational",
+      "options": [
+        "Signaler l'acte de discrimination",
+        "Ne rien faire",
+        "Faire la même chose",
+        "Changer de travail"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1024,
+      "question": "Un employeur vous demande de travailler sans contrat de travail. Que faites-vous ?",
+      "question_vi": "Một người sử dụng lao động yêu cầu bạn làm việc không có hợp đồng lao động. Bạn làm gì?",
+      "explanation": "Le contrat de travail est obligatoire en France. Travailler sans contrat expose à l'exploitation et prive de droits sociaux. Il faut refuser et signaler cette situation.",
+      "explanation_vi": "Hợp đồng lao động là bắt buộc ở Pháp. Làm việc không có hợp đồng dẫn đến bóc lột và tước quyền xã hội. Cần từ chối và báo cáo tình huống này.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "situational_rights",
+      "questionType": "situational",
+      "options": [
+        "Refuser et signaler cette situation",
+        "Accepter sans contrat",
+        "Accepter uniquement si le salaire est élevé",
+        "Accepter temporairement"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1025,
+      "question": "Vous subissez des violences conjugales. Vers qui pouvez-vous vous tourner ?",
+      "question_vi": "Bạn bị bạo lực gia đình. Bạn có thể tìm đến ai?",
+      "explanation": "En cas de violences conjugales, vous pouvez contacter la police (17), le 3919 (violences faites aux femmes), des associations d'aide, ou porter plainte. La protection est un droit fondamental.",
+      "explanation_vi": "Trong trường hợp bạo lực gia đình, bạn có thể liên hệ cảnh sát (17), số 3919 (bạo lực đối với phụ nữ), các hiệp hội hỗ trợ, hoặc khiếu nại. Bảo vệ là quyền cơ bản.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "situational_rights",
+      "questionType": "situational",
+      "options": [
+        "Contacter la police, le 3919, ou des associations d'aide",
+        "Ne rien faire",
+        "Attendre que cela passe",
+        "Partager sur les réseaux sociaux uniquement"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1026,
+      "question": "Un propriétaire refuse de vous louer un logement en raison de votre origine. Que faites-vous ?",
+      "question_vi": "Một chủ nhà từ chối cho bạn thuê nhà vì nguồn gốc của bạn. Bạn làm gì?",
+      "explanation": "La discrimination dans l'accès au logement est interdite en France. Vous pouvez porter plainte, contacter le Défenseur des droits, ou saisir la justice.",
+      "explanation_vi": "Phân biệt đối xử trong tiếp cận nhà ở bị cấm ở Pháp. Bạn có thể khiếu nại, liên hệ Người bảo vệ quyền lợi, hoặc khởi kiện.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "situational_rights",
+      "questionType": "situational",
+      "options": [
+        "Porter plainte pour discrimination",
+        "Accepter la situation",
+        "Changer d'origine",
+        "Ne rien faire"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1027,
+      "question": "Vous êtes victime de harcèlement au travail. Quels sont vos droits ?",
+      "question_vi": "Bạn là nạn nhân của quấy rối tại nơi làm việc. Quyền của bạn là gì?",
+      "explanation": "Le harcèlement au travail est interdit. Vous avez le droit de signaler ces faits à votre employeur, aux représentants du personnel, au médecin du travail, ou porter plainte.",
+      "explanation_vi": "Quấy rối tại nơi làm việc bị cấm. Bạn có quyền báo cáo các sự việc này cho người sử dụng lao động, đại diện nhân viên, bác sĩ lao động, hoặc khiếu nại.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "situational_rights",
+      "questionType": "situational",
+      "options": [
+        "Signaler le harcèlement et porter plainte si nécessaire",
+        "Ne rien dire",
+        "Quitter immédiatement sans préavis",
+        "Harceler en retour"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1028,
+      "question": "Un employeur vous paie moins qu'un collègue pour le même travail en raison de votre sexe. Que faites-vous ?",
+      "question_vi": "Một người sử dụng lao động trả lương cho bạn thấp hơn đồng nghiệp cho cùng công việc vì giới tính của bạn. Bạn làm gì?",
+      "explanation": "L'égalité salariale entre les femmes et les hommes est obligatoire en France. Cette discrimination est interdite. Vous pouvez porter plainte et demander réparation.",
+      "explanation_vi": "Bình đẳng lương giữa nam và nữ là bắt buộc ở Pháp. Phân biệt đối xử này bị cấm. Bạn có thể khiếu nại và yêu cầu bồi thường.",
+      "image": null,
+      "theme": "rights_duties",
+      "subTheme": "situational_rights",
+      "questionType": "situational",
+      "options": [
+        "Porter plainte pour discrimination salariale",
+        "Accepter la situation",
+        "Demander une augmentation uniquement",
+        "Ne rien faire"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1029,
+      "question": "En quelle année a eu lieu la Révolution française ?",
+      "question_vi": "Cách mạng Pháp diễn ra vào năm nào?",
+      "explanation": "La Révolution française a commencé en 1789 avec la prise de la Bastille le 14 juillet. Elle a conduit à la fin de la monarchie absolue et à la proclamation de la République.",
+      "explanation_vi": "Cách mạng Pháp bắt đầu vào năm 1789 với việc chiếm ngục Bastille vào ngày 14 tháng 7. Nó dẫn đến sự kết thúc của chế độ quân chủ chuyên chế và tuyên bố nền Cộng hòa.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "historical_periods",
+      "questionType": "knowledge",
+      "options": [
+        "1789",
+        "1792",
+        "1804",
+        "1815"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1030,
+      "question": "Qui était le général de Gaulle ?",
+      "question_vi": "Tướng de Gaulle là ai?",
+      "explanation": "Charles de Gaulle était un général et homme d'État français. Il a lancé l'appel du 18 juin 1940 pour résister à l'occupation allemande, et est devenu président de la République en 1958.",
+      "explanation_vi": "Charles de Gaulle là một tướng và chính khách Pháp. Ông đã phát động lời kêu gọi ngày 18 tháng 6 năm 1940 để kháng chiến chống lại sự chiếm đóng của Đức, và trở thành tổng thống vào năm 1958.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "historical_periods",
+      "questionType": "knowledge",
+      "options": [
+        "Général et président de la République, résistant",
+        "Un roi de France",
+        "Un écrivain français",
+        "Un peintre français"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1031,
+      "question": "En quelle année les femmes ont-elles obtenu le droit de vote en France ?",
+      "question_vi": "Phụ nữ Pháp có quyền bầu cử vào năm nào?",
+      "explanation": "Les femmes ont obtenu le droit de vote en France en 1944, sous le gouvernement provisoire du général de Gaulle.",
+      "explanation_vi": "Phụ nữ có quyền bầu cử ở Pháp vào năm 1944, dưới chính phủ lâm thời của tướng de Gaulle.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "historical_periods",
+      "questionType": "knowledge",
+      "options": [
+        "1944",
+        "1789",
+        "1905",
+        "1958"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1032,
+      "question": "Quel est le plus long fleuve de France ?",
+      "question_vi": "Sông dài nhất của Pháp là gì?",
+      "explanation": "La Loire est le plus long fleuve de France avec environ 1013 km. Elle traverse le centre de la France et se jette dans l'océan Atlantique.",
+      "explanation_vi": "Sông Loire là sông dài nhất của Pháp với khoảng 1013 km. Nó chảy qua trung tâm nước Pháp và đổ ra Đại Tây Dương.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "territories_geography",
+      "questionType": "knowledge",
+      "options": [
+        "La Loire",
+        "La Seine",
+        "Le Rhône",
+        "La Garonne"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1033,
+      "question": "Combien de régions compte la France métropolitaine ?",
+      "question_vi": "Pháp đại lục có bao nhiêu vùng?",
+      "explanation": "La France métropolitaine compte 13 régions depuis la réforme territoriale de 2016 (fusion de certaines régions).",
+      "explanation_vi": "Pháp đại lục có 13 vùng kể từ cải cách lãnh thổ năm 2016 (sáp nhập một số vùng).",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "territories_geography",
+      "questionType": "knowledge",
+      "options": [
+        "13 régions",
+        "22 régions",
+        "26 régions",
+        "10 régions"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1034,
+      "question": "Quels sont les pays qui ont une frontière avec la France ?",
+      "question_vi": "Những quốc gia nào có biên giới với Pháp?",
+      "explanation": "La France métropolitaine partage ses frontières avec 8 pays : l'Espagne, l'Italie, la Suisse, l'Allemagne, le Luxembourg, la Belgique, Monaco, et l'Andorre.",
+      "explanation_vi": "Pháp đại lục chia sẻ biên giới với 8 quốc gia: Tây Ban Nha, Ý, Thụy Sĩ, Đức, Luxembourg, Bỉ, Monaco, và Andorra.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "territories_geography",
+      "questionType": "knowledge",
+      "options": [
+        "Espagne, Italie, Suisse, Allemagne, Luxembourg, Belgique, Monaco, Andorre",
+        "Uniquement l'Espagne et l'Italie",
+        "Uniquement l'Allemagne et la Belgique",
+        "Tous les pays d'Europe"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1035,
+      "question": "Quel monument parisien est le symbole de la France dans le monde ?",
+      "question_vi": "Công trình nào ở Paris là biểu tượng của Pháp trên thế giới?",
+      "explanation": "La Tour Eiffel, construite en 1889 pour l'Exposition universelle, est le monument emblématique de Paris et de la France dans le monde entier.",
+      "explanation_vi": "Tháp Eiffel, được xây dựng vào năm 1889 cho Triển lãm thế giới, là công trình biểu tượng của Paris và Pháp trên toàn thế giới.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "heritage",
+      "questionType": "knowledge",
+      "options": [
+        "La Tour Eiffel",
+        "L'Arc de Triomphe",
+        "Notre-Dame de Paris",
+        "Le Louvre"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1036,
+      "question": "Quel musée parisien abrite la Joconde ?",
+      "question_vi": "Bảo tàng nào ở Paris lưu giữ bức tranh Mona Lisa?",
+      "explanation": "Le musée du Louvre, à Paris, abrite la Joconde (Mona Lisa) de Léonard de Vinci, l'une des œuvres d'art les plus célèbres au monde.",
+      "explanation_vi": "Bảo tàng Louvre ở Paris lưu giữ bức tranh Mona Lisa của Léonard de Vinci, một trong những tác phẩm nghệ thuật nổi tiếng nhất thế giới.",
+      "image": null,
+      "theme": "history_geography_culture",
+      "subTheme": "heritage",
+      "questionType": "knowledge",
+      "options": [
+        "Le musée du Louvre",
+        "Le musée d'Orsay",
+        "Le Centre Pompidou",
+        "Le musée Rodin"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1037,
+      "question": "Quelles sont les démarches essentielles pour s'installer en France ?",
+      "question_vi": "Những thủ tục cần thiết để định cư tại Pháp là gì?",
+      "explanation": "Pour s'installer en France, il faut : obtenir un titre de séjour, déclarer son changement d'adresse, souscrire une assurance responsabilité civile, et échanger son permis de conduire si nécessaire.",
+      "explanation_vi": "Để định cư tại Pháp, cần: có thẻ cư trú, khai báo thay đổi địa chỉ, mua bảo hiểm trách nhiệm dân sự, và đổi bằng lái xe nếu cần.",
+      "image": null,
+      "theme": "living_society",
+      "subTheme": "residence",
+      "questionType": "knowledge",
+      "options": [
+        "Obtenir un titre de séjour, déclarer son adresse, souscrire une assurance",
+        "Uniquement obtenir un titre de séjour",
+        "Uniquement déclarer son adresse",
+        "Aucune démarche nécessaire"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1038,
+      "question": "Quel est le numéro d'urgence médicale en France ?",
+      "question_vi": "Số khẩn cấp y tế ở Pháp là gì?",
+      "explanation": "Le numéro d'urgence médicale en France est le 15 (SAMU - Service d'Aide Médicale Urgente). Le 112 est le numéro d'urgence européen.",
+      "explanation_vi": "Số khẩn cấp y tế ở Pháp là 15 (SAMU - Dịch vụ Cứu thương Khẩn cấp). Số 112 là số khẩn cấp châu Âu.",
+      "image": null,
+      "theme": "living_society",
+      "subTheme": "healthcare",
+      "questionType": "knowledge",
+      "options": [
+        "15 (SAMU)",
+        "17 (police)",
+        "18 (pompiers)",
+        "112 (urgence européenne)"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1039,
+      "question": "Quelle est la durée légale du travail en France ?",
+      "question_vi": "Thời gian làm việc hợp pháp ở Pháp là bao nhiêu?",
+      "explanation": "La durée légale du travail en France est de 35 heures par semaine pour les salariés à temps plein. Des heures supplémentaires peuvent être effectuées dans certaines limites.",
+      "explanation_vi": "Thời gian làm việc hợp pháp ở Pháp là 35 giờ mỗi tuần cho nhân viên toàn thời gian. Có thể làm thêm giờ trong một số giới hạn.",
+      "image": null,
+      "theme": "living_society",
+      "subTheme": "work",
+      "questionType": "knowledge",
+      "options": [
+        "35 heures par semaine",
+        "40 heures par semaine",
+        "30 heures par semaine",
+        "38 heures par semaine"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 1040,
+      "question": "Quelle est la durée de l'instruction obligatoire en France ?",
+      "question_vi": "Thời gian giáo dục bắt buộc ở Pháp là bao nhiêu?",
+      "explanation": "L'instruction est obligatoire en France de 3 à 16 ans. Les parents ont l'obligation de scolariser leurs enfants ou de leur assurer une instruction à domicile.",
+      "explanation_vi": "Giáo dục là bắt buộc ở Pháp từ 3 đến 16 tuổi. Cha mẹ có nghĩa vụ cho con đi học hoặc đảm bảo giáo dục tại nhà.",
+      "image": null,
+      "theme": "living_society",
+      "subTheme": "parental_authority_education",
+      "questionType": "knowledge",
+      "options": [
+        "De 3 à 16 ans",
+        "De 6 à 16 ans",
+        "De 3 à 18 ans",
+        "De 6 à 18 ans"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}
+

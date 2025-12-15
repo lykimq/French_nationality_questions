@@ -1,0 +1,242 @@
+import React from 'react';
+import {
+    StyleSheet,
+    View,
+    ScrollView,
+    StatusBar,
+    TouchableOpacity,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Ionicons } from '@expo/vector-icons';
+
+import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useLanguage } from '../../shared/contexts/LanguageContext';
+import { useCivicExam } from '../hooks/useCivicExam';
+import { FormattedText } from '../../shared/components';
+import { sharedStyles } from '../../shared/utils';
+import type { CivicExamStackParamList } from '../types';
+
+type CivicExamHomeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
+
+const CivicExamHomeScreen = () => {
+    const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
+    const { theme, themeMode } = useTheme();
+    const { language } = useLanguage();
+    const { examProgress, isLoading } = useCivicExam();
+
+    const getLocalizedText = (fr: string, vi: string) => {
+        return language === 'fr' ? fr : vi;
+    };
+
+    const handleStartExam = () => {
+        navigation.navigate('CivicExamInfo');
+    };
+
+    const handlePracticeMode = () => {
+        navigation.navigate('CivicExamPractice');
+    };
+
+    if (isLoading) {
+        return (
+            <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
+                <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted }]}>
+                    {getLocalizedText('Chargement...', 'Đang tải...')}
+                </FormattedText>
+            </View>
+        );
+    }
+
+    return (
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
+
+            <SafeAreaView style={{ flex: 1 }} edges={['top']}>
+                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
+                    <TouchableOpacity
+                        onPress={() => navigation.goBack()}
+                        style={styles.backButton}
+                    >
+                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                    </TouchableOpacity>
+                    <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
+                        {getLocalizedText('Examen Civique', 'Kỳ thi Công dân')}
+                    </FormattedText>
+                    <View style={styles.headerSpacer} />
+                </View>
+
+                <ScrollView
+                    style={styles.scrollView}
+                    contentContainerStyle={styles.contentContainer}
+                    showsVerticalScrollIndicator={false}
+                >
+                    <View style={[styles.infoCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+                        <Ionicons name="school" size={48} color={theme.colors.primary} style={styles.icon} />
+                        <FormattedText style={[styles.title, { color: theme.colors.text }]}>
+                            {getLocalizedText(
+                                'Examen Civique pour la Naturalisation',
+                                'Kỳ thi Công dân cho Quốc tịch'
+                            )}
+                        </FormattedText>
+                        <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]}>
+                            {getLocalizedText(
+                                '40 questions • 45 minutes • 80% pour réussir',
+                                '40 câu hỏi • 45 phút • 80% để đạt'
+                            )}
+                        </FormattedText>
+                    </View>
+
+                    <View style={styles.statsContainer}>
+                        <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
+                            <FormattedText style={[styles.statValue, { color: theme.colors.primary }]}>
+                                {examProgress.totalExamsTaken + examProgress.totalPracticeSessions}
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                                {getLocalizedText('Tests passés', 'Bài đã làm')}
+                            </FormattedText>
+                        </View>
+                        <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
+                            <FormattedText style={[styles.statValue, { color: examProgress.bestScore >= 80 ? '#4CAF50' : theme.colors.primary }]}>
+                                {examProgress.bestScore}%
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                                {getLocalizedText('Meilleur score', 'Điểm cao nhất')}
+                            </FormattedText>
+                        </View>
+                        <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
+                            <FormattedText style={[styles.statValue, { color: examProgress.passedExams > 0 ? '#4CAF50' : theme.colors.primary }]}>
+                                {examProgress.passedExams}
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                                {getLocalizedText('Réussis', 'Đã đạt')}
+                            </FormattedText>
+                        </View>
+                    </View>
+
+                    <TouchableOpacity
+                        style={[styles.primaryButton, { backgroundColor: theme.colors.primary }]}
+                        onPress={handleStartExam}
+                        activeOpacity={0.8}
+                    >
+                        <Ionicons name="document-text" size={24} color="#FFFFFF" />
+                        <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
+                            {getLocalizedText('Commencer l\'examen', 'Bắt đầu kỳ thi')}
+                        </FormattedText>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={[styles.secondaryButton, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}
+                        onPress={handlePracticeMode}
+                        activeOpacity={0.8}
+                    >
+                        <Ionicons name="book" size={24} color={theme.colors.primary} />
+                        <FormattedText style={[styles.buttonText, { color: theme.colors.primary }]}>
+                            {getLocalizedText('Mode pratique', 'Chế độ luyện tập')}
+                        </FormattedText>
+                    </TouchableOpacity>
+                </ScrollView>
+            </SafeAreaView>
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        ...sharedStyles.container,
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 20,
+        paddingVertical: 16,
+    },
+    backButton: {
+        padding: 8,
+    },
+    headerTitle: {
+        flex: 1,
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    headerSpacer: {
+        width: 40,
+    },
+    scrollView: {
+        flex: 1,
+    },
+    contentContainer: {
+        padding: 20,
+        paddingBottom: 40,
+    },
+    infoCard: {
+        borderRadius: 16,
+        padding: 24,
+        alignItems: 'center',
+        marginBottom: 24,
+        borderWidth: 1,
+    },
+    icon: {
+        marginBottom: 16,
+    },
+    title: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: 8,
+    },
+    description: {
+        fontSize: 16,
+        textAlign: 'center',
+    },
+    statsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 24,
+        gap: 12,
+    },
+    statCard: {
+        flex: 1,
+        borderRadius: 12,
+        padding: 16,
+        alignItems: 'center',
+    },
+    statValue: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 4,
+    },
+    statLabel: {
+        fontSize: 12,
+        textAlign: 'center',
+    },
+    primaryButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 12,
+        padding: 16,
+        marginBottom: 12,
+        gap: 12,
+    },
+    secondaryButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 12,
+        padding: 16,
+        borderWidth: 2,
+        gap: 12,
+    },
+    buttonText: {
+        fontSize: 16,
+        fontWeight: '600',
+    },
+    loadingText: {
+        fontSize: 16,
+    },
+});
+
+export default CivicExamHomeScreen;
+

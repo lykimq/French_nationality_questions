@@ -170,6 +170,26 @@ const TestScreen = () => {
                         details={subcategoryTestDetails[1].details}
                         onPress={handleNavigateToPart1Tests}
                     />
+
+                    {/* Civic Exam Section */}
+                    <SubcategoryTestCard
+                        title={localizedText('Examen Civique', 'Kỳ thi Công dân')}
+                        description={localizedText(
+                            'Examen civique pour la naturalisation - 40 questions, 45 minutes',
+                            'Kỳ thi công dân cho quốc tịch - 40 câu hỏi, 45 phút'
+                        )}
+                        icon="document-text"
+                        iconColor="#2196F3"
+                        details={[
+                            localizedText('40 questions à choix multiples', '40 câu hỏi trắc nghiệm'),
+                            localizedText('45 minutes maximum', 'Tối đa 45 phút'),
+                            localizedText('80% pour réussir (32/40)', '80% để đạt (32/40)'),
+                        ]}
+                        onPress={() => {
+                            const navigation = untypedNavigation as any;
+                            navigation.navigate('CivicExamTab', { screen: 'CivicExamHome' });
+                        }}
+                    />
                 </ScrollView>
             </SafeAreaView>
 

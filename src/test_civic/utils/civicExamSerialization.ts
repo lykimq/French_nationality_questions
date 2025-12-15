@@ -1,0 +1,79 @@
+import type { CivicExamResult, CivicExamSession, CivicExamTheme } from '../types';
+
+// Serializable civic exam result for navigation (dates as ISO strings)
+export interface SerializableCivicExamResult {
+    readonly session: {
+        readonly id: string;
+        readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
+        readonly questions: readonly any[];
+        readonly answers: readonly {
+            readonly questionId: number;
+            readonly isCorrect: boolean;
+            readonly userAnswer?: string;
+            readonly timeSpent: number;
+            readonly timestamp: string; // ISO string
+        }[];
+        readonly startTime: string; // ISO string
+        readonly endTime?: string; // ISO string
+        readonly isCompleted: boolean;
+        readonly score: number;
+        readonly totalQuestions: number;
+        readonly correctAnswers: number;
+        readonly themes?: readonly string[];
+        readonly isPracticeMode: boolean;
+    };
+    readonly statistics: any;
+    readonly passed: boolean;
+    readonly score: number;
+    readonly correctAnswers: number;
+    readonly totalQuestions: number;
+    readonly incorrectQuestions: readonly any[];
+    readonly timeSpent: number;
+}
+
+export const serializeCivicExamResult = (result: CivicExamResult): SerializableCivicExamResult => {
+    return {
+        session: {
+            ...result.session,
+            answers: result.session.answers.map(answer => ({
+                ...answer,
+                timestamp: answer.timestamp.toISOString(),
+            })),
+            startTime: result.session.startTime.toISOString(),
+            endTime: result.session.endTime?.toISOString(),
+        },
+        statistics: result.statistics,
+        passed: result.passed,
+        score: result.score,
+        correctAnswers: result.correctAnswers,
+        totalQuestions: result.totalQuestions,
+        incorrectQuestions: result.incorrectQuestions,
+        timeSpent: result.timeSpent,
+    };
+};
+
+export const deserializeCivicExamResult = (serialized: SerializableCivicExamResult): CivicExamResult => {
+    const deserializedSession: CivicExamSession = {
+        ...serialized.session,
+        answers: serialized.session.answers.map(answer => ({
+            ...answer,
+            timestamp: new Date(answer.timestamp),
+        })),
+        startTime: new Date(serialized.session.startTime),
+        endTime: serialized.session.endTime ? new Date(serialized.session.endTime) : undefined,
+        themes: serialized.session.themes as readonly CivicExamTheme[] | undefined,
+    };
+    
+
+    return {
+        session: deserializedSession,
+        statistics: serialized.statistics,
+        passed: serialized.passed,
+        score: serialized.score,
+        correctAnswers: serialized.correctAnswers,
+        totalQuestions: serialized.totalQuestions,
+        incorrectQuestions: serialized.incorrectQuestions,
+        timeSpent: serialized.timeSpent,
+    };
+};
+

@@ -1,0 +1,298 @@
+import React, { useState } from 'react';
+import {
+    StyleSheet,
+    View,
+    ScrollView,
+    StatusBar,
+    TouchableOpacity,
+    Alert,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Ionicons } from '@expo/vector-icons';
+
+import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useLanguage } from '../../shared/contexts/LanguageContext';
+import { useCivicExam } from '../hooks/useCivicExam';
+import { FormattedText } from '../../shared/components';
+import { sharedStyles } from '../../shared/utils';
+import { THEME_DISPLAY_NAMES } from '../constants/civicExamConstants';
+import type { CivicExamStackParamList, CivicExamTheme } from '../types';
+
+type CivicExamPracticeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
+
+const ALL_THEMES: CivicExamTheme[] = [
+    'principles_values',
+    'institutional_political',
+    'rights_duties',
+    'history_geography_culture',
+    'living_society',
+];
+
+const CivicExamPracticeScreen = () => {
+    const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
+    const { theme, themeMode } = useTheme();
+    const { language } = useLanguage();
+    const { startExam } = useCivicExam();
+    const [selectedThemes, setSelectedThemes] = useState<CivicExamTheme[]>(ALL_THEMES);
+    const [isStarting, setIsStarting] = useState(false);
+
+    const getLocalizedText = (fr: string, vi: string) => {
+        return language === 'fr' ? fr : vi;
+    };
+
+    const toggleTheme = (themeId: CivicExamTheme) => {
+        setSelectedThemes(prev => {
+            if (prev.includes(themeId)) {
+                return prev.filter(t => t !== themeId);
+            } else {
+                return [...prev, themeId];
+            }
+        });
+    };
+
+    const selectAll = () => {
+        setSelectedThemes(ALL_THEMES);
+    };
+
+    const deselectAll = () => {
+        setSelectedThemes([]);
+    };
+
+    const handleStartPractice = async () => {
+        if (selectedThemes.length === 0) {
+            Alert.alert(
+                getLocalizedText('Aucun thème sélectionné', 'Chưa chọn chủ đề'),
+                getLocalizedText(
+                    'Veuillez sélectionner au moins un thème pour commencer.',
+                    'Vui lòng chọn ít nhất một chủ đề để bắt đầu.'
+                )
+            );
+            return;
+        }
+
+        try {
+            setIsStarting(true);
+            await startExam({
+                mode: 'civic_exam_practice',
+                questionCount: 40,
+                timeLimit: 45,
+                includeExplanations: true,
+                shuffleQuestions: true,
+                shuffleOptions: true,
+                showProgress: true,
+                selectedThemes,
+            });
+            navigation.navigate('CivicExamQuestion');
+        } catch (error) {
+            console.error('Error starting practice:', error);
+            Alert.alert(
+                getLocalizedText('Erreur', 'Lỗi'),
+                getLocalizedText(
+                    'Impossible de démarrer la pratique. Veuillez réessayer.',
+                    'Không thể bắt đầu luyện tập. Vui lòng thử lại.'
+                )
+            );
+        } finally {
+            setIsStarting(false);
+        }
+    };
+
+    return (
+        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
+
+            <SafeAreaView style={{ flex: 1 }} edges={['top']}>
+                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
+                    <TouchableOpacity
+                        onPress={() => navigation.goBack()}
+                        style={styles.backButton}
+                    >
+                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                    </TouchableOpacity>
+                    <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
+                        {getLocalizedText('Mode pratique', 'Chế độ luyện tập')}
+                    </FormattedText>
+                    <View style={styles.headerSpacer} />
+                </View>
+
+                <ScrollView
+                    style={styles.scrollView}
+                    contentContainerStyle={styles.contentContainer}
+                    showsVerticalScrollIndicator={false}
+                >
+                    <View style={[styles.infoCard, { backgroundColor: theme.colors.card }]}>
+                        <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
+                            {getLocalizedText(
+                                'Sélectionnez les thèmes que vous souhaitez pratiquer. 40 questions seront générées aléatoirement à partir des thèmes sélectionnés.',
+                                'Chọn các chủ đề bạn muốn luyện tập. 40 câu hỏi sẽ được tạo ngẫu nhiên từ các chủ đề đã chọn.'
+                            )}
+                        </FormattedText>
+                    </View>
+
+                    <View style={styles.actionsRow}>
+                        <TouchableOpacity
+                            style={[styles.actionButton, { backgroundColor: theme.colors.primary }]}
+                            onPress={selectAll}
+                        >
+                            <FormattedText style={[styles.actionButtonText, { color: '#FFFFFF' }]}>
+                                {getLocalizedText('Tout sélectionner', 'Chọn tất cả')}
+                            </FormattedText>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={[styles.actionButton, { backgroundColor: theme.colors.card, borderWidth: 1, borderColor: theme.colors.border }]}
+                            onPress={deselectAll}
+                        >
+                            <FormattedText style={[styles.actionButtonText, { color: theme.colors.text }]}>
+                                {getLocalizedText('Tout désélectionner', 'Bỏ chọn tất cả')}
+                            </FormattedText>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.themesContainer}>
+                        {ALL_THEMES.map((themeId) => {
+                            const isSelected = selectedThemes.includes(themeId);
+                            const themeInfo = THEME_DISPLAY_NAMES[themeId];
+                            return (
+                                <TouchableOpacity
+                                    key={themeId}
+                                    style={[
+                                        styles.themeCard,
+                                        {
+                                            backgroundColor: isSelected ? theme.colors.primary + '15' : theme.colors.card,
+                                            borderColor: isSelected ? theme.colors.primary : theme.colors.border,
+                                        }
+                                    ]}
+                                    onPress={() => toggleTheme(themeId)}
+                                    activeOpacity={0.7}
+                                >
+                                    <View style={styles.themeCardContent}>
+                                        <Ionicons
+                                            name={isSelected ? 'checkbox' : 'square-outline'}
+                                            size={24}
+                                            color={isSelected ? theme.colors.primary : theme.colors.textMuted}
+                                        />
+                                        <View style={styles.themeTextContainer}>
+                                            <FormattedText style={[styles.themeTitle, { color: theme.colors.text }]}>
+                                                {language === 'fr' ? themeInfo.fr : themeInfo.vi}
+                                            </FormattedText>
+                                        </View>
+                                    </View>
+                                </TouchableOpacity>
+                            );
+                        })}
+                    </View>
+
+                    <TouchableOpacity
+                        style={[
+                            styles.startButton,
+                            {
+                                backgroundColor: selectedThemes.length > 0 ? theme.colors.primary : theme.colors.textMuted,
+                                opacity: isStarting ? 0.6 : 1,
+                            }
+                        ]}
+                        onPress={handleStartPractice}
+                        disabled={selectedThemes.length === 0 || isStarting}
+                        activeOpacity={0.8}
+                    >
+                        <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
+                            {isStarting
+                                ? getLocalizedText('Démarrage...', 'Đang khởi động...')
+                                : getLocalizedText('Commencer la pratique', 'Bắt đầu luyện tập')
+                            }
+                        </FormattedText>
+                    </TouchableOpacity>
+                </ScrollView>
+            </SafeAreaView>
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        ...sharedStyles.container,
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 20,
+        paddingVertical: 16,
+    },
+    backButton: {
+        padding: 8,
+    },
+    headerTitle: {
+        flex: 1,
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    headerSpacer: {
+        width: 40,
+    },
+    scrollView: {
+        flex: 1,
+    },
+    contentContainer: {
+        padding: 20,
+        paddingBottom: 40,
+    },
+    infoCard: {
+        borderRadius: 12,
+        padding: 16,
+        marginBottom: 20,
+    },
+    infoText: {
+        fontSize: 15,
+        lineHeight: 22,
+    },
+    actionsRow: {
+        flexDirection: 'row',
+        gap: 12,
+        marginBottom: 20,
+    },
+    actionButton: {
+        flex: 1,
+        borderRadius: 8,
+        padding: 12,
+        alignItems: 'center',
+    },
+    actionButtonText: {
+        fontSize: 14,
+        fontWeight: '600',
+    },
+    themesContainer: {
+        gap: 12,
+        marginBottom: 24,
+    },
+    themeCard: {
+        borderRadius: 12,
+        padding: 16,
+        borderWidth: 2,
+    },
+    themeCardContent: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+    },
+    themeTextContainer: {
+        flex: 1,
+    },
+    themeTitle: {
+        fontSize: 16,
+        fontWeight: '600',
+    },
+    startButton: {
+        borderRadius: 12,
+        padding: 18,
+        alignItems: 'center',
+    },
+    startButtonText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+});
+
+export default CivicExamPracticeScreen;
+

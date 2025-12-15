@@ -6,6 +6,7 @@ import { ThemeProvider } from '../contexts/ThemeContext';
 import { TextFormattingProvider } from '../contexts/TextFormattingContext';
 import { DisplaySettingsProvider } from '../../test/contexts/DisplaySettingsContext';
 import { TestProvider } from '../../test/contexts/TestContext';
+import { CivicExamProvider } from '../../test_civic/contexts/CivicExamContext';
 
 interface AppProvidersProps {
     children: React.ReactNode;
@@ -18,7 +19,9 @@ const AppProviders: React.FC<AppProvidersProps> = ({ children }) => (
                 <TextFormattingProvider>
                     <DisplaySettingsProvider>
                         <TestProvider>
-                            {children}
+                            <CivicExamProvider>
+                                {children}
+                            </CivicExamProvider>
                         </TestProvider>
                     </DisplaySettingsProvider>
                 </TextFormattingProvider>
