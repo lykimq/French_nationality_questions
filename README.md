@@ -208,14 +208,37 @@ LanguageProvider (outermost)
 
 ## 🚀 Getting Started
 
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+- Expo CLI
+- Firebase project with Storage enabled
+
+### Setup
+
+1. **Install dependencies**
 ```bash
-# Install dependencies
 npm install
+```
 
-# Start development server
+2. **Configure Firebase**
+   - Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   - Fill in your Firebase credentials in `.env`:
+     - Get your Firebase config from [Firebase Console](https://console.firebase.google.com/)
+     - Go to Project Settings > General > Your apps
+     - Copy the values to your `.env` file
+   - **Important**: The `.env` file is gitignored and will not be committed to version control
+
+3. **Start development server**
+```bash
 npx expo start
+```
 
-# Platform-specific builds
+4. **Platform-specific builds**
+```bash
 npx expo run:android    # Android
 npx expo run:ios        # iOS
 npx expo start --web    # Web
@@ -249,4 +272,6 @@ Questions Data (JSON) → dataUtils → Context Providers → Screens → Compon
 
 ---
 
-This application demonstrates modern React Native development practices with functional programming principles, comprehensive type safety, and user-centric design for French citizenship exam preparation.
+This application demonstrates modern React Native development practices with
+functional programming principles, comprehensive type safety, and user-centric
+design for French citizenship exam preparation.
