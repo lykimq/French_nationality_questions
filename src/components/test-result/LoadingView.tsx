@@ -3,7 +3,7 @@ import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
-import FormattedText from '../FormattedText';
+import { FormattedText } from '../shared';
 
 interface LoadingViewProps {
     message?: string;

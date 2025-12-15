@@ -9,7 +9,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTheme } from '../../contexts/ThemeContext';
-import FormattedText from '../../components/FormattedText';
+import { FormattedText } from '../../components/shared';
 import { sharedStyles } from '../../utils/shared';
 
 // Import new components

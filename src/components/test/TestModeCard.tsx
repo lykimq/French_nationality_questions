@@ -3,7 +3,7 @@ import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useIcons } from '../../contexts/IconContext';
-import FormattedText from '../FormattedText';
+import { FormattedText } from '../shared';
 import { sharedStyles } from '../../utils/shared';
 import { MainTestModeOption } from '../../types';
 

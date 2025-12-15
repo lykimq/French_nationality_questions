@@ -2,9 +2,9 @@ import React from 'react';
 import { View } from 'react-native';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useIcons } from '../../contexts/IconContext';
-import IconSelector from '../IconSelector';
-import JsonIconSelector from '../JsonIconSelector';
-import FormattedText from '../FormattedText';
+import IconSelector from './IconSelector';
+import JsonIconSelector from './JsonIconSelector';
+import { FormattedText } from '../shared';
 import { settingsStyles } from './settingsStyles';
 
 interface IconSettingsProps {

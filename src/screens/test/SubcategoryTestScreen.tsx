@@ -18,7 +18,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest } from '../../contexts/TestContext';
 import { useIcons } from '../../contexts/IconContext';
-import FormattedText from '../../components/FormattedText';
+import { FormattedText } from '../../components/shared';
 import { TestStackParamList, TestConfig, TestMode, SubcategoryTestModeOption } from '../../types';
 
 type SubcategoryTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;

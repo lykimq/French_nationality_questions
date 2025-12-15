@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Modal, FlatList, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcons } from '../contexts/IconContext';
-import FormattedText from './FormattedText';
-import { sharedStyles } from '../utils/shared';
-import type { Language } from '../types';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useIcons } from '../../contexts/IconContext';
+import { FormattedText } from '../shared';
+import { sharedStyles } from '../../utils/shared';
+import type { Language } from '../../types';
 
 interface BaseIconSelectorProps<T> {
     title: string;

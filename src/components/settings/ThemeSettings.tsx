@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
-import ColorThemeSelector from '../ColorThemeSelector';
-import FormattedText from '../FormattedText';
+import ColorThemeSelector from './ColorThemeSelector';
+import { FormattedText } from '../shared';
 import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../utils/shared';
 

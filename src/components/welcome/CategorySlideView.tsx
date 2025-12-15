@@ -2,10 +2,10 @@ import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, Animated, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { PanGestureHandler, State, PanGestureHandlerStateChangeEvent } from 'react-native-gesture-handler';
-import { useTheme } from '../contexts/ThemeContext';
-import QuestionCard from './QuestionCard';
-import type { MultiLangText, MultilingualQuestion, CategorySlideViewProps, NavigationQuestion } from '../types';
-import FormattedText from './FormattedText';
+import { useTheme } from '../../contexts/ThemeContext';
+import { QuestionCard } from '../search';
+import type { MultiLangText, MultilingualQuestion, CategorySlideViewProps, NavigationQuestion } from '../../types';
+import { FormattedText } from '../shared';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;

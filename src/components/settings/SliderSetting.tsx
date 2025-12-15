@@ -6,9 +6,9 @@ import {
     PanResponder,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import FormattedText from './FormattedText';
-import { useTheme } from '../contexts/ThemeContext';
-import { ExtendedSettingsComponent } from '../types';
+import { FormattedText } from '../shared';
+import { useTheme } from '../../contexts/ThemeContext';
+import { ExtendedSettingsComponent } from '../../types';
 
 interface SliderSettingAdditionalProps {
     minimumValue: number;

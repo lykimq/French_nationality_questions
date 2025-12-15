@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, View, ScrollView, StatusBar, Switch } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import CategoryCard from '../../components/CategoryCard';
+import { CategoryCard } from '../../components/welcome';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, MultiLangCategory, FrenchCategory } from '../../types';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTheme } from '../../contexts/ThemeContext';
-import FormattedText from '../../components/FormattedText';
+import { FormattedText } from '../../components/shared';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 

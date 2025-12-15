@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useTheme, colorThemeInfo } from '../contexts/ThemeContext';
-import type { ColorTheme, SettingsComponentProps } from '../types';
-import FormattedText from './FormattedText';
-import { sharedStyles } from '../utils/shared';
+import { useTheme, colorThemeInfo } from '../../contexts/ThemeContext';
+import type { ColorTheme, SettingsComponentProps } from '../../types';
+import { FormattedText } from '../shared';
+import { sharedStyles } from '../../utils/shared';
 
 const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
     title,

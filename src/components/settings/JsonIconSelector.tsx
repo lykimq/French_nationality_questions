@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcons } from '../contexts/IconContext';
-import FormattedText from './FormattedText';
+import { useTheme } from '../../contexts/ThemeContext';
+import { useIcons } from '../../contexts/IconContext';
+import { FormattedText } from '../shared';
 import { BaseIconSelector } from './BaseIconSelector';
-import { sharedStyles } from '../utils/shared';
-import { jsonIconSets, iconSetOptions } from '../config/iconConfig';
-import type { SettingsComponentWithValueProps, IconSetType, IconSetInfo } from '../types';
+import { sharedStyles } from '../../utils/shared';
+import { jsonIconSets, iconSetOptions } from '../../config/iconConfig';
+import type { SettingsComponentWithValueProps, IconSetType, IconSetInfo } from '../../types';
 
 const JsonIconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,

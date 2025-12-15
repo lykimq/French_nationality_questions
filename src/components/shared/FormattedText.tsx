@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
-import { FormattedTextProps } from '../types';
+import { useTextFormatting, getTextStyles } from '../../contexts/TextFormattingContext';
+import { FormattedTextProps } from '../../types';
 
 const FormattedText: React.FC<FormattedTextProps> = ({
     children,

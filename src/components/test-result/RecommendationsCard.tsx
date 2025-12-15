@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useIcons } from '../../contexts/IconContext';
-import FormattedText from '../FormattedText';
+import { FormattedText } from '../shared';
 import { sharedStyles } from '../../utils/shared';
 import { TestRecommendation } from '../../types';
 

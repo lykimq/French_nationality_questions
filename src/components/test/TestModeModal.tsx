@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useIcons } from '../../contexts/IconContext';
-import FormattedText from '../FormattedText';
+import { FormattedText } from '../shared';
 import { MainTestModeOption } from '../../types';
 
 const { height } = Dimensions.get('window');

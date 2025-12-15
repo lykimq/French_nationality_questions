@@ -7,10 +7,10 @@ import {
     FlatList,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import FormattedText from './FormattedText';
-import { useTheme } from '../contexts/ThemeContext';
-import { SettingsComponentProps } from '../types';
-import { sharedStyles } from '../utils/shared';
+import { FormattedText } from '../shared';
+import { useTheme } from '../../contexts/ThemeContext';
+import type { SettingsComponentProps } from '../../types';
+import { sharedStyles } from '../../utils/shared';
 
 interface FontOption {
     name: string;

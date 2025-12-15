@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, View, Alert } from 'react-native';
 import { useTextFormatting, getTextStyles } from '../../contexts/TextFormattingContext';
 import { useTheme } from '../../contexts/ThemeContext';
-import SliderSetting from '../SliderSetting';
-import FontSelector from '../FontSelector';
-import FormattedText from '../FormattedText';
+import SliderSetting from './SliderSetting';
+import FontSelector from './FontSelector';
+import { FormattedText } from '../shared';
 import SettingItem from './SettingItem';
 import { settingsStyles } from './settingsStyles';
 

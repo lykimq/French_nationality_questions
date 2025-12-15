@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useIcons } from '../../contexts/IconContext';
-import FormattedText from '../FormattedText';
+import { FormattedText } from '../shared';
 import { getScoreColor, getScoreMessage } from '../../utils/test';
 
 interface ScoreCardProps {

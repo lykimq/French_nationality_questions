@@ -13,7 +13,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest } from '../../contexts/TestContext';
-import FormattedText from '../../components/FormattedText';
+import { FormattedText } from '../../components/shared';
 import ProgressCard from '../../components/test/ProgressCard';
 import TestModeCard from '../../components/test/TestModeCard';
 import TestModeModal from '../../components/test/TestModeModal';

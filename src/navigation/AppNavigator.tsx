@@ -17,7 +17,7 @@ import TestQuestionScreen from '../screens/test/TestQuestionScreen';
 import TestResultScreen from '../screens/test/TestResultScreen';
 import ProgressScreen from '../screens/test/ProgressScreen';
 import ReviewScreen from '../screens/test/ReviewScreen';
-import DataLoadingScreen from '../components/DataLoadingScreen';
+import { DataLoadingScreen } from '../components/shared';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 

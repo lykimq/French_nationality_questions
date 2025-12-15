@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Share, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
-import FormattedText from '../FormattedText';
+import { FormattedText } from '../shared';
 import SettingItem from './SettingItem';
 import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../utils/shared';

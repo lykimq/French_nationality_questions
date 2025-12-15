@@ -20,7 +20,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest, serializeTestResult } from '../../contexts/TestContext';
-import FormattedText from '../../components/FormattedText';
+import { FormattedText } from '../../components/shared';
 import { TestAnswer, TestStackParamList } from '../../types';
 import { getTextFromMultiLang, getTextPreview } from '../../types';
 import { getCachedImageSource } from '../../utils/shared';
