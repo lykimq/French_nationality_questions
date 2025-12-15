@@ -6,7 +6,6 @@ import {
     ScrollView,
     TouchableOpacity,
     StatusBar,
-    Switch,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -15,7 +14,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import type { MultiLangText } from '../../types';
 import { getTextFromMultiLang } from '../../types';
 import { useTheme } from '../../contexts/ThemeContext';
-import { FormattedText } from '../../components/shared';
+import { FormattedText, LanguageToggle } from '../../components/shared';
 
 // Define the search result question type
 interface SearchResultQuestion {
@@ -440,16 +439,11 @@ const SearchScreen = () => {
                     <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
                         {language === 'fr' ? 'Rechercher' : 'Tìm kiếm'}
                     </FormattedText>
-                    <View style={styles.languageSelector}>
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor={theme.colors.switchThumb}
-                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                        />
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                    </View>
+                    <LanguageToggle
+                        language={language}
+                        onToggle={toggleLanguage}
+                        textColor={theme.colors.headerText}
+                    />
                 </View>
             </SafeAreaView>
 
@@ -766,14 +760,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-    },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-    languageLabel: {
-        marginHorizontal: 5,
-        fontWeight: '600',
     },
     searchContainer: {
         paddingHorizontal: 20,

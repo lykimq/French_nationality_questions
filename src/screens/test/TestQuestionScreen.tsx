@@ -9,7 +9,6 @@ import {
     Image,
     Dimensions,
     ActivityIndicator,
-    Switch,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -20,9 +19,9 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTest, serializeTestResult } from '../../contexts/TestContext';
-import { FormattedText } from '../../components/shared';
+import { FormattedText, LanguageToggle } from '../../components/shared';
 import { TestAnswer, TestStackParamList } from '../../types';
-import { getTextFromMultiLang, getTextPreview } from '../../types';
+import { getTextFromMultiLang } from '../../types';
 import { getCachedImageSource } from '../../utils/shared';
 import { useIcons } from '../../contexts/IconContext';
 
@@ -272,17 +271,13 @@ const TestQuestionScreen = () => {
                                 </View>
                             )}
 
-                            <View style={styles.languageSelector}>
-                                <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                                <Switch
-                                    value={language === 'vi'}
-                                    onValueChange={toggleLanguage}
-                                    thumbColor={theme.colors.switchThumb}
-                                    trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                                    style={styles.languageSwitch}
-                                />
-                                <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                            </View>
+                            <LanguageToggle
+                                language={language}
+                                onToggle={toggleLanguage}
+                                textColor={theme.colors.headerText}
+                                style={styles.languageToggle}
+                                labelStyle={styles.languageToggleLabel}
+                            />
                         </View>
                     </View>
 
@@ -685,18 +680,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
+    languageToggle: {
         marginLeft: 12,
     },
-    languageLabel: {
+    languageToggleLabel: {
         fontSize: 14,
-        fontWeight: '600',
-        marginHorizontal: 4,
-    },
-    languageSwitch: {
-        transform: [{ scale: 0.75 }],
     },
 });
 

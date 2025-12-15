@@ -15,11 +15,6 @@ export const getTextFromMultiLang = (text: string | MultiLangText, language: Lan
     return text[language];
 };
 
-export const getTextPreview = (text: string | MultiLangText, maxLength: number = 50): string => {
-    const textString = typeof text === 'string' ? text : text.fr;
-    return textString.length > maxLength ? textString.substring(0, maxLength) + '...' : textString;
-};
-
 export const isMultiLangText = (text: string | MultiLangText): text is MultiLangText => {
     return typeof text === 'object' && text !== null && 'fr' in text && 'vi' in text;
 };
