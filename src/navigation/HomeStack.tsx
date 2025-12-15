@@ -1,9 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from '../features/welcome/screens/HomeScreen';
-import CategoryQuestionsScreen from '../features/welcome/screens/CategoryQuestionsScreen';
-import CategoryBasedQuestionsScreen from '../features/welcome/screens/CategoryBasedQuestionsScreen';
+import HomeScreen from '../welcome/HomeScreen';
+import CategoryQuestionsScreen from '../welcome/CategoryQuestionsScreen';
+import CategoryBasedQuestionsScreen from '../welcome/CategoryBasedQuestionsScreen';
 import { useTheme } from '../shared/contexts/ThemeContext';
 
 const Stack = createNativeStackNavigator();

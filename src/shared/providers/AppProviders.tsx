@@ -4,8 +4,8 @@ import { LanguageProvider } from '../contexts/LanguageContext';
 import { IconProvider } from '../contexts/IconContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { TextFormattingProvider } from '../contexts/TextFormattingContext';
-import { DisplaySettingsProvider } from '../../features/test/contexts/DisplaySettingsContext';
-import { TestProvider } from '../../features/test/contexts/TestContext';
+import { DisplaySettingsProvider } from '../../test/contexts/DisplaySettingsContext';
+import { TestProvider } from '../../test/contexts/TestContext';
 
 interface AppProvidersProps {
     children: React.ReactNode;

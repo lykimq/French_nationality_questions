@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
 import HomeStack from './HomeStack';
-import SearchScreen from '../features/search/screens/SearchScreen';
+import SearchScreen from '../search/SearchScreen';
 import TestStack from './TestStack';
-import SettingsScreen from '../features/settings/screens/SettingsScreen';
+import SettingsScreen from '../settings/SettingsScreen';
 import { DataLoadingScreen } from '../shared/components';
 import { useLanguage } from '../shared/contexts/LanguageContext';
 import { useTheme } from '../shared/contexts/ThemeContext';

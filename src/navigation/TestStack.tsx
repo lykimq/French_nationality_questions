@@ -1,13 +1,13 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import TestScreen from '../features/test/screens/TestScreen';
-import SubcategoryTestScreen from '../features/test/screens/SubcategoryTestScreen';
-import ConversationTestScreen from '../features/test/screens/ConversationTestScreen';
-import TestQuestionScreen from '../features/test/screens/TestQuestionScreen';
-import TestResultScreen from '../features/test/screens/TestResultScreen';
-import ProgressScreen from '../features/test/screens/ProgressScreen';
-import ReviewScreen from '../features/test/screens/ReviewScreen';
+import TestScreen from '../test/TestScreen';
+import SubcategoryTestScreen from '../test/SubcategoryTestScreen';
+import ConversationTestScreen from '../test/ConversationTestScreen';
+import TestQuestionScreen from '../test/TestQuestionScreen';
+import TestResultScreen from '../test/TestResultScreen';
+import ProgressScreen from '../test/ProgressScreen';
+import ReviewScreen from '../test/ReviewScreen';
 import { useTheme } from '../shared/contexts/ThemeContext';
 
 const Stack = createNativeStackNavigator();

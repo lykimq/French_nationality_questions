@@ -1,5 +1,5 @@
 import type { Language, MultiLangText } from './core';
-import type { Question, MultilingualQuestion } from '../features/welcome/types/domain';
+import type { Question, MultilingualQuestion } from '../welcome/types';
 
 // ==================== FRENCH-ONLY DATA STRUCTURES ====================
 

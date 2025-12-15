@@ -14,9 +14,9 @@ export * from './ui';
 export * from './navigation';
 
 // Feature-specific types
-export * from '../features/welcome/types';
-export * from '../features/test/types';
-export * from '../features/settings/types';
+export * from '../welcome/types';
+export * from '../test/types';
+export * from '../settings/types';
 
 // Explicitly re-export TestQuestion from welcome/types to avoid ambiguity
-export type { TestQuestion } from '../features/welcome/types';
+export type { TestQuestion } from '../welcome/types';

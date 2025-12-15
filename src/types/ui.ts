@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
 import type { Language, MultiLangText, MultilingualEntity, VisualEntity } from './core';
-import type { Question, MultilingualQuestion, CategoryType, HistoryCategory, HistorySubcategory } from '../features/welcome/types/domain';
+import type { Question, MultilingualQuestion, CategoryType, HistoryCategory, HistorySubcategory, NavigationQuestion } from '../welcome/types';
 import type { FrenchQuestionsData, MultiLangQuestionsData } from './language';
-import type { NavigationQuestion } from '../features/welcome/types/navigation';
 
 // ==================== COMPONENT BASE PATTERNS ====================
 
