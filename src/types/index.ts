@@ -4,21 +4,17 @@
 // Core fundamental types
 export * from './core';
 
-// Domain business logic types
-export * from './domain';
-
 // Language-specific types
 export * from './language';
 
 // UI component types
 export * from './ui';
 
-// Testing and analytics types
-export * from './testing';
-
-// Navigation types
+// Navigation types (shared)
 export * from './navigation';
 
-// Specialized types (maintained separately)
-export * from './theme';
-export * from './icons';
+// Screen-specific types
+export * from './welcome';
+export * from './test';
+export * from './search';
+export * from './settings';

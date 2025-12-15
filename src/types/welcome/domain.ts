@@ -1,4 +1,4 @@
-import type { MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from './core';
+import type { MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from '../core';
 
 // ==================== QUESTION DOMAIN ====================
 
@@ -87,3 +87,4 @@ export type LanguageVariant<T extends string | MultiLangText> = T extends MultiL
     : T extends string
     ? T
     : never;
+

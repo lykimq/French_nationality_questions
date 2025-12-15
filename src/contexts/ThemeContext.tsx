@@ -2,8 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useIcons } from './IconContext';
-import type { ThemeMode, ColorTheme, Theme } from '../types';
-import type { IconMapping } from '../types/icons';
+import type { ThemeMode, ColorTheme, Theme, IconMapping } from '../types';
 import { colorThemes, colorThemeInfo } from '../utils/colorThemes';
 
 // Context interface

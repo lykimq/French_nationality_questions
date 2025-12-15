@@ -74,3 +74,4 @@ export interface Theme {
     colorTheme: ColorTheme;
     colors: ThemeColors;
 }
+

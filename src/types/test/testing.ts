@@ -1,5 +1,5 @@
-import type { Language, TimestampedEntity } from './core';
-import type { TestQuestion } from './domain';
+import type { Language, TimestampedEntity } from '../core';
+import type { TestQuestion } from '../welcome/domain';
 
 // ==================== TEST CONFIGURATION ====================
 
@@ -215,3 +215,4 @@ export type TestModeOptionCollection<T extends BaseTestModeOption = BaseTestMode
 export type TestResultTransformer<T, U> = (result: T) => U;
 export type SerializationTransformer = TestResultTransformer<TestResult, SerializableTestResult>;
 export type DeserializationTransformer = TestResultTransformer<SerializableTestResult, TestResult>;
+
