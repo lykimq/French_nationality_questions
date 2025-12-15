@@ -74,7 +74,7 @@ const SearchScreen = () => {
                     categoryTitle: isTranslationLoaded
                         ? (language === 'vi' ? (category as any).title_vi || category.title : category.title)
                         : category.title,
-                    hasImage: !!question.image,
+                    hasImage: !!(question as any).image,
                 });
             });
         });
@@ -83,11 +83,11 @@ const SearchScreen = () => {
         if (historyCategories && historySubcategories) {
             Object.values(historySubcategories).forEach(subcategory => {
                 if (subcategory.questions) {
-                    subcategory.questions.forEach(question => {
+                    subcategory.questions.forEach((question: any) => {
                         const searchQuestion: SearchResultQuestion = {
                             id: question.id,
-                            categoryId: subcategory.id,
-                            categoryTitle: subcategory.title,
+                            categoryId: (subcategory as any).id,
+                            categoryTitle: (subcategory as any).title,
                             question: '', // Initialize with empty values first
                             explanation: '', // Initialize with empty values first
                             hasImage: !!question.image,
