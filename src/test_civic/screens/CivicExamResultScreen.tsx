@@ -92,10 +92,20 @@ const CivicExamResultScreen = () => {
                             {correctAnswers} / {totalQuestions} {getLocalizedText('bonnes réponses', 'câu đúng')}
                         </FormattedText>
                         <FormattedText style={styles.resultThreshold}>
-                            {getLocalizedText(
-                                `Minimum requis: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
-                                `Tối thiểu: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
-                            )}
+                            {(() => {
+                                const passingScore = Math.ceil((totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
+                                if (totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
+                                    return getLocalizedText(
+                                        `Minimum requis: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
+                                        `Tối thiểu: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
+                                    );
+                                } else {
+                                    return getLocalizedText(
+                                        `Minimum requis: ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
+                                        `Tối thiểu: ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
+                                    );
+                                }
+                            })()}
                         </FormattedText>
                     </View>
 

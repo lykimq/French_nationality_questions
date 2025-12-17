@@ -17,6 +17,7 @@ import TextFormattingSettings from './components/TextFormattingSettings';
 import ThemeSettings from './components/ThemeSettings';
 import IconSettings from './components/IconSettings';
 import AppInfoSettings from './components/AppInfoSettings';
+import CivicExamSettings from './components/CivicExamSettings';
 import RatingModal from './components/RatingModal';
 
 const SettingsScreen = () => {
@@ -63,6 +64,9 @@ const SettingsScreen = () => {
 
                 {/* Text Formatting Section */}
                 <TextFormattingSettings language={language} />
+
+                {/* Civic Exam Statistics Section */}
+                <CivicExamSettings language={language} />
 
                 {/* App Info Section */}
                 <AppInfoSettings language={language} onRateApp={handleRateApp} />

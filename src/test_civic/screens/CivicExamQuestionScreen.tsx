@@ -17,7 +17,7 @@ import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
-import QuestionCard from '../../search/QuestionCard';
+import { useCallback } from 'react';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import { getCivicExamQuestionText, getCivicExamExplanationText } from '../utils/civicExamQuestionUtils';
@@ -48,6 +48,7 @@ const CivicExamQuestionScreen = () => {
     const [timeLeft, setTimeLeft] = useState<number>(CIVIC_EXAM_CONFIG.TIME_LIMIT_SECONDS);
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const previousQuestionIndexRef = useRef<number>(-1);
+    const timerRef = useRef<NodeJS.Timeout | null>(null);
 
     const currentQuestion = getCurrentQuestion() as (CivicExamQuestion & { 
         options?: string[]; 
@@ -61,6 +62,21 @@ const CivicExamQuestionScreen = () => {
     const isPracticeMode = currentSession?.isPracticeMode || false;
     const displayLanguage = isExamMode ? 'fr' : language;
 
+    // Handle time up with useCallback to avoid stale closures
+    const handleTimeUp = useCallback(() => {
+        if (timerRef.current) {
+            clearInterval(timerRef.current);
+            timerRef.current = null;
+        }
+        Alert.alert(
+            displayLanguage === 'fr' ? 'Temps écoulé' : 'Hết giờ',
+            displayLanguage === 'fr'
+                ? 'Le temps est écoulé. Vous serez redirigé vers la révision.'
+                : 'Thời gian đã hết. Bạn sẽ được chuyển đến phần xem lại.',
+            [{ text: 'OK', onPress: () => navigation.navigate('CivicExamReview') }]
+        );
+    }, [displayLanguage, navigation]);
+
     // Initialize timer
     useEffect(() => {
         if (currentSession) {
@@ -69,14 +85,18 @@ const CivicExamQuestionScreen = () => {
         }
     }, [currentSession]);
 
-    // Timer countdown
+    // Timer countdown - only in exam mode
     useEffect(() => {
+        if (!isExamMode || !currentSession) {
+            return;
+        }
+
         if (timeLeft <= 0) {
             handleTimeUp();
             return;
         }
 
-        const timer = setInterval(() => {
+        timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     handleTimeUp();
@@ -86,8 +106,13 @@ const CivicExamQuestionScreen = () => {
             });
         }, 1000);
 
-        return () => clearInterval(timer);
-    }, [timeLeft]);
+        return () => {
+            if (timerRef.current) {
+                clearInterval(timerRef.current);
+                timerRef.current = null;
+            }
+        };
+    }, [timeLeft, isExamMode, currentSession, handleTimeUp]);
 
     // Reset selected answer when question changes
     useEffect(() => {
@@ -107,7 +132,7 @@ const CivicExamQuestionScreen = () => {
         setAnswerSubmitted(false);
         setIsAnswerCorrect(null);
         setQuestionStartTime(new Date());
-    }, [currentQuestionIndex]);
+    }, [currentQuestionIndex, currentQuestion]);
 
     // Check if session is completed
     useEffect(() => {
@@ -115,16 +140,6 @@ const CivicExamQuestionScreen = () => {
             navigation.navigate('CivicExamHome');
         }
     }, [currentSession, navigation]);
-
-    const handleTimeUp = async () => {
-        Alert.alert(
-            displayLanguage === 'fr' ? 'Temps écoulé' : 'Hết giờ',
-            displayLanguage === 'fr'
-                ? 'Le temps est écoulé. Vous serez redirigé vers la révision.'
-                : 'Thời gian đã hết. Bạn sẽ được chuyển đến phần xem lại.',
-            [{ text: 'OK', onPress: () => navigation.navigate('CivicExamReview') }]
-        );
-    };
 
     const handleAnswerSelect = async (index: number) => {
         if (!currentQuestion || answerSubmitted) return;
@@ -252,10 +267,20 @@ const CivicExamQuestionScreen = () => {
                         <View style={[styles.progressBar, { width: `${progress}%`, backgroundColor: theme.colors.primary }]} />
                     </View>
                     <FormattedText style={[styles.passingInfo, { color: theme.colors.headerText }]}>
-                        {getLocalizedText(
-                            `Passage: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`,
-                            `Đạt: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`
-                        )}
+                        {(() => {
+                            const passingScore = Math.ceil((currentSession.totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
+                            if (currentSession.totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
+                                return getLocalizedText(
+                                    `Passage: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`,
+                                    `Đạt: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`
+                                );
+                            } else {
+                                return getLocalizedText(
+                                    `Passage: ${passingScore}/${currentSession.totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
+                                    `Đạt: ${passingScore}/${currentSession.totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
+                                );
+                            }
+                        })()}
                     </FormattedText>
                 </View>
 

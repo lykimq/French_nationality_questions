@@ -6,9 +6,20 @@ import { calculateCivicExamScore, isCivicExamPassed } from '../utils/civicExamSc
 import {
     loadAllCivicExamData,
     saveCivicExamData,
+    resetCivicExamData,
     DEFAULT_CIVIC_EXAM_PROGRESS,
     DEFAULT_CIVIC_EXAM_STATISTICS,
 } from '../utils/civicExamStorage';
+import { loadCivicExamQuestions } from '../utils/civicExamDataLoader';
+import {
+    updateThemePerformance,
+    updateExamStatistics,
+    calculateProgressUpdates,
+} from '../utils/civicExamHelpers';
+import {
+    createDefaultCivicExamProgress,
+    createDefaultCivicExamStatistics,
+} from '../utils/civicExamDefaults';
 import type {
     CivicExamConfig,
     CivicExamSession,
@@ -45,6 +56,7 @@ interface CivicExamContextType {
 
     // Progress tracking
     refreshProgress: () => Promise<void>;
+    resetProgress: () => Promise<void>;
     isLoading: boolean;
 }
 
@@ -64,41 +76,18 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
     const isMountedRef = useRef(true);
 
     // Memoized question collections to avoid reprocessing
+    const [civicQuestions, setCivicQuestions] = useState<ReturnType<typeof processAllQuestions>>([]);
+    
+    useEffect(() => {
+        loadCivicExamQuestions().then(setCivicQuestions).catch(() => {
+            console.warn('Could not load civic exam questions');
+        });
+    }, []);
+
     const allProcessedQuestions = useMemo(() => {
         const regularQuestions = processAllQuestions(questionsData, historySubcategories);
-        
-        // Load civic exam questions from JSON file
-        // Note: In production, this should be loaded from Firebase Storage
-        // For now, we'll merge them with regular questions
-        try {
-            // Import civic exam questions
-            const civicExamData = require('../data/civic_exam_questions.json');
-            if (civicExamData?.questions) {
-                const civicQuestions = civicExamData.questions.map((q: any) => ({
-                    id: q.id,
-                    question: q.question,
-                    question_vi: q.question_vi,
-                    explanation: q.explanation,
-                    explanation_vi: q.explanation_vi,
-                    image: q.image,
-                    categoryId: 'civic_exam',
-                    categoryTitle: 'Examen Civique',
-                    theme: q.theme,
-                    subTheme: q.subTheme,
-                    questionType: q.questionType,
-                    options: q.options || [],
-                    correctAnswer: q.correctAnswer,
-                    explanationOptions: q.explanationOptions || [],
-                    correctExplanationAnswer: q.correctExplanationAnswer,
-                }));
-                return [...regularQuestions, ...civicQuestions];
-            }
-        } catch (error) {
-            console.warn('Could not load civic exam questions:', error);
-        }
-        
-        return regularQuestions;
-    }, [questionsData, historySubcategories]);
+        return [...regularQuestions, ...civicQuestions];
+    }, [questionsData, historySubcategories, civicQuestions]);
 
     // Load data on mount with cleanup
     useEffect(() => {
@@ -115,13 +104,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         return () => {
             isMountedRef.current = false;
         };
-    }, []);
-
-    // Cleanup effect to prevent memory leaks
-    useEffect(() => {
-        return () => {
-            isMountedRef.current = false;
-        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const loadExamData = useCallback(async () => {
@@ -151,11 +134,40 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
             throw new Error('No questions available for this exam configuration');
         }
 
-        if (questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
-            console.warn(`Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, got ${questions.length}`);
+        // Validate uniqueness of questions
+        const questionIds = new Set<number>();
+        const duplicateIds: number[] = [];
+        questions.forEach(q => {
+            if (questionIds.has(q.id)) {
+                duplicateIds.push(q.id);
+            } else {
+                questionIds.add(q.id);
+            }
+        });
+
+        if (duplicateIds.length > 0) {
+            throw new Error(
+                `Cannot start exam: Found ${duplicateIds.length} duplicate question(s) with IDs: ${duplicateIds.join(', ')}. ` +
+                `This is a critical error and should not occur.`
+            );
         }
 
         const isPracticeMode = config.mode === 'civic_exam_practice';
+        
+        // In exam mode, we must have exactly 40 questions
+        if (!isPracticeMode && questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
+            throw new Error(
+                `Cannot start exam: Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, but only ${questions.length} are available. Please ensure all themes have sufficient questions.`
+            );
+        }
+
+        // In practice mode, warn if we don't have 40 questions but allow it
+        if (isPracticeMode && questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
+            console.warn(
+                `Practice mode: Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, got ${questions.length}. ` +
+                `This may be due to limited questions in selected themes.`
+            );
+        }
 
         const newSession: CivicExamSession = {
             id: Date.now().toString(),
@@ -235,7 +247,6 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
             correctAnswers,
         };
 
-        // Get incorrect questions
         const incorrectQuestionIds = currentSession.answers
             .filter(a => !a.isCorrect)
             .map(a => a.questionId);
@@ -244,43 +255,13 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
             incorrectQuestionIds.includes(q.id)
         ) as CivicExamQuestion[];
 
-        // Update progress
-        const isPracticeMode = currentSession.isPracticeMode;
-        const newTotalExams = isPracticeMode
-            ? examProgress.totalPracticeSessions + 1
-            : examProgress.totalExamsTaken + 1;
+        const updatedProgress = calculateProgressUpdates(
+            finishedSession,
+            examProgress,
+            score,
+            correctAnswers
+        );
 
-        // Calculate passed/failed exams only for non-practice mode
-        const shouldUpdatePassFailStats = !isPracticeMode;
-        const newPassedExams = shouldUpdatePassFailStats && passed
-            ? examProgress.passedExams + 1
-            : examProgress.passedExams;
-        const newFailedExams = shouldUpdatePassFailStats && !passed
-            ? examProgress.failedExams + 1
-            : examProgress.failedExams;
-
-        const totalSessions = examProgress.totalExamsTaken + examProgress.totalPracticeSessions;
-        const updatedProgress: CivicExamProgress = {
-            ...examProgress,
-            totalExamsTaken: isPracticeMode ? examProgress.totalExamsTaken : newTotalExams,
-            totalPracticeSessions: isPracticeMode ? newTotalExams : examProgress.totalPracticeSessions,
-            questionsAnswered: examProgress.questionsAnswered + finishedSession.totalQuestions,
-            correctAnswersTotal: examProgress.correctAnswersTotal + correctAnswers,
-            averageScore: totalSessions > 0
-                ? Math.round(((examProgress.averageScore * totalSessions) + score) / (totalSessions + 1))
-                : score,
-            bestScore: Math.max(examProgress.bestScore, score),
-            passedExams: newPassedExams,
-            failedExams: newFailedExams,
-            recentScores: [...examProgress.recentScores.slice(-9), score],
-            incorrectQuestions: [...examProgress.incorrectQuestions, ...incorrectQuestionIds].slice(-100),
-            themePerformance: updateThemePerformance(
-                finishedSession,
-                examProgress.themePerformance
-            ),
-        };
-
-        // Update statistics
         const updatedStatistics = updateExamStatistics(finishedSession, examStatistics, updatedProgress);
 
         // Update state
@@ -351,58 +332,34 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         }
     }, [loadExamData]);
 
-    // Helper function to update theme performance
-    const updateThemePerformance = (
-        session: CivicExamSession,
-        currentThemePerformance: CivicExamProgress['themePerformance']
-    ): CivicExamProgress['themePerformance'] => {
-        const updated = { ...currentThemePerformance };
-
-        session.questions.forEach((question) => {
-            const answer = session.answers.find(a => a.questionId === question.id);
-            if (!answer) return;
-
-            const theme = (question as CivicExamQuestion).theme;
-            if (!theme) return;
-
-            if (!updated[theme]) {
-                updated[theme] = { questionsAttempted: 0, correctAnswers: 0, accuracy: 0 };
-            }
-
-            updated[theme].questionsAttempted += 1;
-            if (answer.isCorrect) {
-                updated[theme].correctAnswers += 1;
-            }
-            updated[theme].accuracy = Math.round(
-                (updated[theme].correctAnswers / updated[theme].questionsAttempted) * 100
-            );
-        });
-
-        return updated;
-    };
-
-    // Helper function to update statistics
-    const updateExamStatistics = (
-        session: CivicExamSession,
-        currentStatistics: CivicExamStatistics,
-        updatedProgress: CivicExamProgress
-    ): CivicExamStatistics => {
-        const updated = { ...currentStatistics };
-
-        // Update theme breakdown
-        updated.themeBreakdown = { ...updatedProgress.themePerformance };
-
-        // Update time statistics
-        const allTimes = session.answers.map(a => a.timeSpent).filter(time => time > 0);
-        if (allTimes.length > 0) {
-            const avgTime = allTimes.reduce((sum, time) => sum + time, 0) / allTimes.length;
-            updated.timeStats.averageTimePerQuestion = Math.round(avgTime);
-            updated.timeStats.fastestTime = Math.min(updated.timeStats.fastestTime, ...allTimes);
-            updated.timeStats.slowestTime = Math.max(updated.timeStats.slowestTime, ...allTimes);
+    const resetProgress = useCallback(async (): Promise<void> => {
+        if (!isMountedRef.current) {
+            return;
         }
 
-        return updated;
-    };
+        try {
+            await resetCivicExamData();
+            
+            if (isMountedRef.current) {
+                const freshProgress = createDefaultCivicExamProgress();
+                const freshStats = createDefaultCivicExamStatistics();
+                
+                setExamProgress(freshProgress);
+                setExamStatistics(freshStats);
+            }
+        } catch (error) {
+            console.error('❌ Error resetting progress:', error);
+            if (isMountedRef.current) {
+                const errorProgress = createDefaultCivicExamProgress();
+                const errorStats = createDefaultCivicExamStatistics();
+                
+                setExamProgress(errorProgress);
+                setExamStatistics(errorStats);
+            }
+            throw error;
+        }
+    }, []);
+
 
     // Memoize context value to prevent unnecessary re-renders
     const contextValue = useMemo((): CivicExamContextType => ({
@@ -421,6 +378,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         getPreviousQuestion,
         getIncorrectQuestions,
         refreshProgress,
+        resetProgress,
         isLoading,
     }), [
         currentSession,
@@ -437,6 +395,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         getPreviousQuestion,
         getIncorrectQuestions,
         refreshProgress,
+        resetProgress,
         isLoading,
     ]);
 

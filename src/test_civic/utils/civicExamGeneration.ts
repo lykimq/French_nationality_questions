@@ -40,7 +40,8 @@ const selectQuestionsForSubTheme = (
     subTheme: CivicExamSubTheme,
     count: number,
     availableQuestions: TestQuestion[],
-    isPracticeMode: boolean
+    isPracticeMode: boolean,
+    usedIds?: Set<number>
 ): TestQuestion[] => {
     let candidates = getQuestionsBySubTheme(availableQuestions, subTheme);
     
@@ -49,6 +50,11 @@ const selectQuestionsForSubTheme = (
         // This would require additional mapping logic
         // For now, return empty if no direct match
         return [];
+    }
+    
+    // Filter out already used questions if provided
+    if (usedIds) {
+        candidates = candidates.filter(q => !usedIds.has(q.id));
     }
     
     // Filter by question type based on mode
@@ -64,21 +70,33 @@ const selectQuestionsForTheme = (
     theme: CivicExamTheme,
     distribution: typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTheme],
     availableQuestions: TestQuestion[],
-    isPracticeMode: boolean
+    isPracticeMode: boolean,
+    globalUsedIds?: Set<number>
 ): TestQuestion[] => {
     const selectedQuestions: TestQuestion[] = [];
+    const localUsedIds = new Set<number>();
     const themeQuestions = getQuestionsByTheme(availableQuestions, theme);
     
     // Select questions for each sub-theme
     (Object.entries(distribution.subThemes) as [CivicExamSubTheme, number][]).forEach(
         ([subTheme, count]) => {
             if (count > 0) {
+                // Combine local and global used IDs to prevent duplicates
+                const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
                 const subThemeQuestions = selectQuestionsForSubTheme(
                     subTheme,
                     count,
                     themeQuestions,
-                    isPracticeMode
+                    isPracticeMode,
+                    combinedUsedIds
                 );
+                // Track locally used IDs
+                subThemeQuestions.forEach(q => {
+                    localUsedIds.add(q.id);
+                    if (globalUsedIds) {
+                        globalUsedIds.add(q.id);
+                    }
+                });
                 selectedQuestions.push(...subThemeQuestions);
             }
         }
@@ -87,8 +105,9 @@ const selectQuestionsForTheme = (
     // If we don't have enough questions from sub-themes, fill from theme
     if (selectedQuestions.length < distribution.total) {
         const remaining = distribution.total - selectedQuestions.length;
-        const usedIds = new Set(selectedQuestions.map(q => q.id));
-        const available = themeQuestions.filter(q => !usedIds.has(q.id));
+        // Combine local and global used IDs
+        const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
+        const available = themeQuestions.filter(q => !combinedUsedIds.has(q.id));
         
         // Filter by question type in practice mode
         const filtered = isPracticeMode 
@@ -96,10 +115,25 @@ const selectQuestionsForTheme = (
             : available;
         
         const additional = selectRandomQuestions(filtered, remaining);
+        // Track additional questions
+        additional.forEach(q => {
+            localUsedIds.add(q.id);
+            if (globalUsedIds) {
+                globalUsedIds.add(q.id);
+            }
+        });
         selectedQuestions.push(...additional);
     }
     
-    return selectedQuestions.slice(0, distribution.total);
+    // Remove duplicates using Set (more efficient than findIndex)
+    const uniqueMap = new Map<number, TestQuestion>();
+    selectedQuestions.forEach(q => {
+        if (!uniqueMap.has(q.id)) {
+            uniqueMap.set(q.id, q);
+        }
+    });
+    
+    return Array.from(uniqueMap.values()).slice(0, distribution.total);
 };
 
 // ==================== MAIN GENERATION FUNCTION ====================
@@ -127,7 +161,6 @@ export const generateCivicExamQuestions = (
     // Select questions for each theme according to distribution
     (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTheme, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTheme]][]).forEach(
         ([theme, distribution]) => {
-            // Skip themes not selected in practice mode
             if (isPracticeMode && config.selectedThemes && config.selectedThemes.length > 0) {
                 if (!config.selectedThemes.includes(theme)) {
                     return;
@@ -146,7 +179,8 @@ export const generateCivicExamQuestions = (
                 theme,
                 distribution,
                 themeQuestions,
-                isPracticeMode
+                isPracticeMode,
+                usedQuestionIds
             );
             
             selected.forEach(q => usedQuestionIds.add(q.id));
@@ -154,43 +188,67 @@ export const generateCivicExamQuestions = (
         }
     );
     
-    // Ensure we have exactly 40 questions
+    // Fill remaining questions if needed
     if (selectedQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
         const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - selectedQuestions.length;
-        const unusedQuestions = availableQuestions.filter(
-            q => !usedQuestionIds.has(q.id)
-        );
-        
+        const unusedQuestions = availableQuestions.filter(q => !usedQuestionIds.has(q.id));
         const filtered = isPracticeMode
             ? filterKnowledgeQuestions(unusedQuestions)
             : unusedQuestions;
         
-        const additional = selectRandomQuestions(filtered, remaining);
-        selectedQuestions.push(...additional);
-    }
-    
-    // Shuffle final set and limit to 40
-    const shuffled = shuffleArray(selectedQuestions);
-    let finalQuestions = shuffled.slice(0, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
-    
-    // In practice mode, ensure all questions have options
-    if (isPracticeMode) {
-        finalQuestions = filterQuestionsWithOptions(finalQuestions);
-        
-        // If we lost questions, try to fill from available pool
-        if (finalQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
-            const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - finalQuestions.length;
-            const usedIds = new Set(finalQuestions.map(q => q.id));
-            const available = availableQuestions.filter(
-                q => !usedIds.has(q.id) && 'options' in q && Array.isArray(q.options) && q.options.length > 0
+        if (filtered.length > 0) {
+            const additional = selectRandomQuestions(filtered, remaining);
+            additional.forEach(q => {
+                if (!usedQuestionIds.has(q.id)) {
+                    usedQuestionIds.add(q.id);
+                    selectedQuestions.push(q);
+                }
+            });
+        } else {
+            console.warn(
+                `Cannot fill remaining ${remaining} questions: no more questions available. ` +
+                `Current count: ${selectedQuestions.length}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`
             );
-            const additional = selectRandomQuestions(available, remaining);
-            finalQuestions = [...finalQuestions, ...additional].slice(0, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
         }
     }
     
-    // Enrich with metadata
-    return enrichQuestionsWithMetadata(finalQuestions);
+    // In practice mode, ensure all questions have options
+    let finalQuestions = isPracticeMode
+        ? filterQuestionsWithOptions(selectedQuestions)
+        : selectedQuestions;
+    
+    // Fill gaps if questions were filtered out in practice mode
+    if (isPracticeMode && finalQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
+        const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - finalQuestions.length;
+        const finalUsedIds = new Set(finalQuestions.map(q => q.id));
+        const available = availableQuestions.filter(
+            q => !finalUsedIds.has(q.id) && 
+                 'options' in q && 
+                 Array.isArray(q.options) && 
+                 q.options.length > 0
+        );
+        const additional = selectRandomQuestions(available, remaining);
+        additional.forEach(q => {
+            if (!finalUsedIds.has(q.id)) {
+                finalUsedIds.add(q.id);
+                finalQuestions.push(q);
+            }
+        });
+    }
+    
+    // Remove duplicates and limit to target count (single pass)
+    const uniqueMap = new Map<number, TestQuestion>();
+    finalQuestions.forEach(q => {
+        if (!uniqueMap.has(q.id)) {
+            uniqueMap.set(q.id, q);
+        }
+    });
+    
+    const uniqueQuestions = Array.from(uniqueMap.values());
+    const targetCount = Math.min(uniqueQuestions.length, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
+    const shuffled = shuffleArray(uniqueQuestions).slice(0, targetCount);
+    
+    return enrichQuestionsWithMetadata(shuffled);
 };
 
 // ==================== VALIDATION ====================
@@ -202,6 +260,23 @@ export const validateQuestionDistribution = (
     
     if (questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
         errors.push(`Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, got ${questions.length}`);
+    }
+    
+    // Check for duplicate questions by ID
+    const questionIds = new Set<number>();
+    const duplicateIds: number[] = [];
+    questions.forEach(q => {
+        if (questionIds.has(q.id)) {
+            duplicateIds.push(q.id);
+        } else {
+            questionIds.add(q.id);
+        }
+    });
+    
+    if (duplicateIds.length > 0) {
+        errors.push(
+            `Found ${duplicateIds.length} duplicate question(s) with IDs: ${duplicateIds.join(', ')}`
+        );
     }
     
     // Count questions per theme
@@ -235,4 +310,5 @@ export const validateQuestionDistribution = (
         errors,
     };
 };
+
 

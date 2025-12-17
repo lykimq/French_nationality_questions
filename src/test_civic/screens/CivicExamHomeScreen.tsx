@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     StyleSheet,
     View,
@@ -7,7 +7,7 @@ import {
     TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -24,7 +24,14 @@ const CivicExamHomeScreen = () => {
     const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { language } = useLanguage();
-    const { examProgress, isLoading } = useCivicExam();
+    const { examProgress, isLoading, refreshProgress } = useCivicExam();
+
+    // Refresh progress when screen comes into focus (e.g., returning from settings)
+    useFocusEffect(
+        React.useCallback(() => {
+            refreshProgress();
+        }, [refreshProgress])
+    );
 
     const getLocalizedText = (fr: string, vi: string) => {
         return language === 'fr' ? fr : vi;
