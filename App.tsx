@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
@@ -28,8 +28,14 @@ export default function App() {
     DancingScript: DancingScript_400Regular,
   });
 
-  if (!fontsLoaded) {
-    return null; // Return null while fonts are loading
+  // On web, proceed even if fonts aren't loaded to avoid blocking the app
+  // Fonts will load asynchronously and apply when ready
+  if (!fontsLoaded && Platform.OS !== 'web') {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#007AFF" />
+      </View>
+    );
   }
 
   return (
@@ -46,5 +52,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
   },
 });

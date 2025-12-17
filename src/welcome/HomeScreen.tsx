@@ -23,7 +23,7 @@ const HomeScreen = () => {
         historySubcategories
     } = useLanguage();
 
-    const categories = questionsData.categories;
+    const categories = questionsData?.categories || [];
 
     const navigateToCategory = (categoryId: string) => {
         navigation.navigate('CategoryQuestions', { categoryId, language });
@@ -89,37 +89,47 @@ const HomeScreen = () => {
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
-                {categories.map((category: FrenchCategory | MultiLangCategory) => {
-                    const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
-                    const description_vi = isTranslationLoaded ? (category as MultiLangCategory).description_vi : undefined;
+                {categories.length > 0 ? (
+                    <>
+                        {categories.map((category: FrenchCategory | MultiLangCategory) => {
+                            const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
+                            const description_vi = isTranslationLoaded ? (category as MultiLangCategory).description_vi : undefined;
 
-                    return (
-                        <CategoryCard
-                            key={category.id}
-                            title={category.title}
-                            title_vi={title_vi}
-                            description={category.description}
-                            description_vi={description_vi}
-                            icon={category.icon}
-                            count={category.questions.length}
-                            onPress={() => navigateToCategory(category.id)}
-                            language={language}
-                        />
-                    );
-                })}
+                            return (
+                                <CategoryCard
+                                    key={category.id}
+                                    title={category.title}
+                                    title_vi={title_vi}
+                                    description={category.description}
+                                    description_vi={description_vi}
+                                    icon={category.icon}
+                                    count={category.questions?.length || 0}
+                                    onPress={() => navigateToCategory(category.id)}
+                                    language={language}
+                                />
+                            );
+                        })}
 
-                {historyCategories && (
-                    <CategoryCard
-                        key="history"
-                        title={(historyCategories as any).title}
-                        title_vi={(historyCategories as any).title_vi}
-                        description={(historyCategories as any).description}
-                        description_vi={(historyCategories as any).description_vi}
-                        icon={(historyCategories as any).icon}
-                        count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
-                        onPress={navigateToHistoryQuestions}
-                        language={language}
-                    />
+                        {historyCategories && (
+                            <CategoryCard
+                                key="history"
+                                title={(historyCategories as any).title}
+                                title_vi={(historyCategories as any).title_vi}
+                                description={(historyCategories as any).description}
+                                description_vi={(historyCategories as any).description_vi}
+                                icon={(historyCategories as any).icon}
+                                count={Object.values(historySubcategories).reduce((total, subcategory) => total + (subcategory.questions?.length || 0), 0)}
+                                onPress={navigateToHistoryQuestions}
+                                language={language}
+                            />
+                        )}
+                    </>
+                ) : (
+                    <View style={styles.emptyContainer}>
+                        <FormattedText style={[styles.emptyText, { color: theme.colors.textMuted }]}>
+                            {language === 'fr' ? 'Chargement des catégories...' : 'Đang tải danh mục...'}
+                        </FormattedText>
+                    </View>
                 )}
             </ScrollView>
         </View>
@@ -162,6 +172,16 @@ const styles = StyleSheet.create({
     contentContainer: {
         flexGrow: 1,
         padding: 20,
+    },
+    emptyContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingVertical: 40,
+    },
+    emptyText: {
+        fontSize: 16,
+        textAlign: 'center',
     },
 });
 

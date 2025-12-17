@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web",
-    "merge-data": "node scripts/merge_and_organize_data.js",
-    "json-to-yaml": "node scripts/json_to_yaml.js",
-    "yaml-to-json": "node scripts/yaml_to_json.js"
+    "web": "expo start --web"
   },
   "dependencies": {
     "@expo-google-fonts/dancing-script": "^0.4.0",
@@ -26,19 +23,18 @@
     "expo-font": "^13.3.1",
     "expo-linear-gradient": "^14.1.4",
     "expo-status-bar": "~2.2.3",
-    "expo-vector-icons": "^10.0.1",
     "firebase": "^11.8.1",
-    "react": "19.0.0",
-    "react-native": "0.79.2",
+    "react": "18.2.0",
+    "react-native": "0.76.5",
     "react-native-gesture-handler": "^2.25.0",
     "react-native-safe-area-context": "^5.4.0",
-    "react-native-screens": "^4.10.0"
+    "react-native-screens": "^4.10.0",
+    "react-native-web": "^0.19.13"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@types/react": "~19.0.10",
+    "@types/react": "~18.2.6",
     "js-yaml": "^4.1.0",
-    "pdf-parse": "^2.4.5",
     "typescript": "~5.8.3"
   },
   "private": true

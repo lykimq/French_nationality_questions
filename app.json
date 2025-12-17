@@ -25,7 +25,9 @@
       "package": "com.lykimq_uyen.French_nationality_questions"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static"
     }
   }
 }
