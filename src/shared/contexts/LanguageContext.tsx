@@ -133,6 +133,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
                     setHistorySubcategories(subcategoryData);
 
                     await processMainData(mainData, language);
+                } else {
+                    // If mainData is null, set error but don't block the app
+                    setDataLoadingError('Failed to load question data. Please check your connection or Firebase configuration.');
                 }
 
                 if (isActive) {

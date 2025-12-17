@@ -22,12 +22,12 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.lykimq_uyen.French_nationality_questions"
+      "package": "com.lykimq_uyen.French_nationality_questions",
+      "jsEngine": "hermes"
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "bundler": "metro",
-      "output": "static"
+      "bundler": "metro"
     }
   }
 }

@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "dev": "expo start",
+    "list-emulators": "/home/quyen/Android/Sdk/emulator/emulator -list-avds",
+    "start-emulator": "./scripts/start-emulator.sh"
   },
   "dependencies": {
     "@expo-google-fonts/dancing-script": "^0.4.0",
     "@expo-google-fonts/kalam": "^0.4.0",
     "@expo-google-fonts/patrick-hand": "^0.4.0",
+    "@expo/metro-runtime": "~5.0.5",
     "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "^1.24.0",
     "@react-navigation/bottom-tabs": "^6.5.11",
@@ -19,22 +23,24 @@
     "@react-navigation/native-stack": "^6.9.17",
     "dotenv": "^16.5.0",
     "expo": "~53.0.9",
+    "expo-asset": "^12.0.11",
     "expo-dev-client": "~5.1.8",
     "expo-font": "^13.3.1",
     "expo-linear-gradient": "^14.1.4",
     "expo-status-bar": "~2.2.3",
+    "expo-vector-icons": "^10.0.1",
     "firebase": "^11.8.1",
-    "react": "18.2.0",
-    "react-native": "0.76.5",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.2",
     "react-native-gesture-handler": "^2.25.0",
     "react-native-safe-area-context": "^5.4.0",
     "react-native-screens": "^4.10.0",
-    "react-native-web": "^0.19.13"
+    "react-native-web": "^0.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@types/react": "~18.2.6",
-    "js-yaml": "^4.1.0",
+    "@types/react": "~19.0.10",
     "typescript": "~5.8.3"
   },
   "private": true

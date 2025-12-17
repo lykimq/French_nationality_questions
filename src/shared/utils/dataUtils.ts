@@ -12,49 +12,116 @@ let firebaseDataCache: DataCache = {};
 let failedDataCache: Set<string> = new Set();
 
 /**
+ * Loads JSON data from local files as fallback
+ * @param dataPath - The path to the JSON file (e.g., "geography_fr_vi.json" or "subcategories/economy.json")
+ * @returns Promise that resolves to the parsed JSON data or null if failed
+ */
+const getLocalJsonData = async (dataPath: string): Promise<any> => {
+    try {
+        // Map Firebase paths to local file paths
+        const localPathMap: { [key: string]: any } = {
+            'personal_fr_vi.json': require('../../data/personal_fr_vi.json'),
+            'geography_fr_vi.json': require('../../data/geography_fr_vi.json'),
+            'history_categories.json': require('../../data/history_categories.json'),
+            'subcategories/local_gov.json': require('../../data/subcategories/local_gov.json'),
+            'subcategories/monarchy.json': require('../../data/subcategories/monarchy.json'),
+            'subcategories/revolution.json': require('../../data/subcategories/revolution.json'),
+            'subcategories/wars.json': require('../../data/subcategories/wars.json'),
+            'subcategories/republic.json': require('../../data/subcategories/republic.json'),
+            'subcategories/democracy.json': require('../../data/subcategories/democracy.json'),
+            'subcategories/economy.json': require('../../data/subcategories/economy.json'),
+            'subcategories/culture.json': require('../../data/subcategories/culture.json'),
+            'subcategories/arts.json': require('../../data/subcategories/arts.json'),
+            'subcategories/celebrities.json': require('../../data/subcategories/celebrities.json'),
+            'subcategories/sports.json': require('../../data/subcategories/sports.json'),
+            'subcategories/holidays.json': require('../../data/subcategories/holidays.json'),
+        };
+
+        const localData = localPathMap[dataPath];
+        if (localData) {
+            // Cache the data
+            firebaseDataCache[dataPath] = localData;
+            return localData;
+        }
+
+        return null;
+    } catch (error) {
+        console.error(`❌ Failed to load local JSON data: ${dataPath}`, error);
+        return null;
+    }
+};
+
+/**
  * Gets JSON data from Firebase Storage
  * @param dataPath - The path to the JSON file (e.g., "geography_fr_vi.json" or "subcategories/economy.json")
  * @returns Promise that resolves to the parsed JSON data or null if failed
  */
 const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
     try {
-        // If we've already failed to load this data, don't try again
-        if (failedDataCache.has(dataPath)) {
-            console.warn(`⚠️ Data previously failed to load: ${dataPath}`);
-            return null;
-        }
-
         // Check if we have this data cached
         if (firebaseDataCache[dataPath]) {
             return firebaseDataCache[dataPath];
         }
 
-        // Create reference to the JSON file in Firebase Storage
-        // Using the structure: French_questions/data/[dataPath]
-        const dataRef = ref(storage, `French_questions/data/${dataPath}`);
-
-        // Get the download URL
-        const downloadURL = await getDownloadURL(dataRef);
-
-        // Fetch the JSON data
-        const response = await fetch(downloadURL);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        // If we've already failed to load this data, try local fallback
+        if (failedDataCache.has(dataPath)) {
+            console.log(`📦 Trying local fallback for: ${dataPath}`);
+            return await getLocalJsonData(dataPath);
         }
 
-        const jsonData = await response.json();
+        // Try Firebase first if available
+        if (storage) {
+            try {
+                // Create reference to the JSON file in Firebase Storage
+                // Using the structure: French_questions/data/[dataPath]
+                const dataRef = ref(storage, `French_questions/data/${dataPath}`);
 
-        // Validate the loaded data
-        const validationResult = validateDataStructure(jsonData, dataPath);
-        if (!validationResult.isValid) {
-            console.error(`❌ Data validation failed for ${dataPath}:`, validationResult.errors);
+                // Get the download URL
+                const downloadURL = await getDownloadURL(dataRef);
+
+                // Fetch the JSON data
+                const response = await fetch(downloadURL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const jsonData = await response.json();
+
+                // Validate the loaded data
+                const validationResult = validateDataStructure(jsonData, dataPath);
+                if (!validationResult.isValid) {
+                    console.error(`❌ Data validation failed for ${dataPath}:`, validationResult.errors);
+                }
+
+                // Cache the data
+                firebaseDataCache[dataPath] = jsonData;
+                return jsonData;
+            } catch (firebaseError) {
+                console.warn(`⚠️ Firebase load failed for ${dataPath}, trying local fallback:`, firebaseError);
+                // Fall through to local loading
+            }
+        } else {
+            console.log(`📦 Firebase not configured, using local data for: ${dataPath}`);
         }
 
-        // Cache the data
-        firebaseDataCache[dataPath] = jsonData;
-        return jsonData;
+        // Fallback to local files
+        const localData = await getLocalJsonData(dataPath);
+        if (localData) {
+            return localData;
+        }
+
+        // If both Firebase and local loading failed, mark as failed
+        failedDataCache.add(dataPath);
+        console.error(`❌ Failed to load JSON data from both Firebase and local: ${dataPath}`);
+        return null;
     } catch (error) {
-        console.error(`❌ Failed to load JSON data from Firebase Storage: ${dataPath}`, error);
+        console.error(`❌ Failed to load JSON data: ${dataPath}`, error);
+
+        // Try local fallback as last resort
+        const localData = await getLocalJsonData(dataPath);
+        if (localData) {
+            return localData;
+        }
 
         // Add to failed cache to avoid repeated attempts
         failedDataCache.add(dataPath);
