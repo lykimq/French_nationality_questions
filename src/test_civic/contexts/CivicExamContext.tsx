@@ -250,19 +250,28 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
             ? examProgress.totalPracticeSessions + 1
             : examProgress.totalExamsTaken + 1;
 
+        // Calculate passed/failed exams only for non-practice mode
+        const shouldUpdatePassFailStats = !isPracticeMode;
+        const newPassedExams = shouldUpdatePassFailStats && passed
+            ? examProgress.passedExams + 1
+            : examProgress.passedExams;
+        const newFailedExams = shouldUpdatePassFailStats && !passed
+            ? examProgress.failedExams + 1
+            : examProgress.failedExams;
+
+        const totalSessions = examProgress.totalExamsTaken + examProgress.totalPracticeSessions;
         const updatedProgress: CivicExamProgress = {
             ...examProgress,
             totalExamsTaken: isPracticeMode ? examProgress.totalExamsTaken : newTotalExams,
             totalPracticeSessions: isPracticeMode ? newTotalExams : examProgress.totalPracticeSessions,
             questionsAnswered: examProgress.questionsAnswered + finishedSession.totalQuestions,
             correctAnswersTotal: examProgress.correctAnswersTotal + correctAnswers,
-            averageScore: Math.round(
-                ((examProgress.averageScore * (examProgress.totalExamsTaken + examProgress.totalPracticeSessions)) + score) / 
-                (examProgress.totalExamsTaken + examProgress.totalPracticeSessions + 1)
-            ),
+            averageScore: totalSessions > 0
+                ? Math.round(((examProgress.averageScore * totalSessions) + score) / (totalSessions + 1))
+                : score,
             bestScore: Math.max(examProgress.bestScore, score),
-            passedExams: isPracticeMode ? examProgress.passedExams : (passed ? examProgress.passedExams + 1 : examProgress.passedExams),
-            failedExams: isPracticeMode ? examProgress.failedExams : (passed ? examProgress.failedExams : examProgress.failedExams + 1),
+            passedExams: newPassedExams,
+            failedExams: newFailedExams,
             recentScores: [...examProgress.recentScores.slice(-9), score],
             incorrectQuestions: [...examProgress.incorrectQuestions, ...incorrectQuestionIds].slice(-100),
             themePerformance: updateThemePerformance(
