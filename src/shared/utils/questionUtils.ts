@@ -1,5 +1,5 @@
 import { Language, MultiLangText, getTextFromMultiLang } from '../../types/core';
-import type { Question } from '../../types/welcome/domain';
+import type { Question } from '../../welcome/types';
 
 /**
  * Extracts question text with dual language support for Vietnamese mode

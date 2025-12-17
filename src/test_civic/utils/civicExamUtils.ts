@@ -53,8 +53,19 @@ export const getQuestionsBySubTheme = (
     return questions.filter(q => getSubThemeFromQuestion(q) === subTheme);
 };
 
+export const filterQuestionsWithOptions = (questions: TestQuestion[]): TestQuestion[] => {
+    return questions.filter(q => {
+        const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
+        return hasOptions;
+    });
+};
+
 export const filterKnowledgeQuestions = (questions: TestQuestion[]): TestQuestion[] => {
-    return questions.filter(q => getQuestionTypeFromQuestion(q) === 'knowledge');
+    return questions.filter(q => {
+        const questionType = getQuestionTypeFromQuestion(q);
+        const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
+        return questionType === 'knowledge' && hasOptions;
+    });
 };
 
 export const filterSituationalQuestions = (questions: TestQuestion[]): TestQuestion[] => {

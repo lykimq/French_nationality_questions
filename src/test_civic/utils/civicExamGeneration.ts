@@ -8,6 +8,7 @@ import {
     getQuestionsByTheme,
     getQuestionsBySubTheme,
     filterKnowledgeQuestions,
+    filterQuestionsWithOptions,
     getQuestionsByThemes,
     enrichQuestionsWithMetadata,
 } from './civicExamUtils';
@@ -170,7 +171,23 @@ export const generateCivicExamQuestions = (
     
     // Shuffle final set and limit to 40
     const shuffled = shuffleArray(selectedQuestions);
-    const finalQuestions = shuffled.slice(0, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
+    let finalQuestions = shuffled.slice(0, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
+    
+    // In practice mode, ensure all questions have options
+    if (isPracticeMode) {
+        finalQuestions = filterQuestionsWithOptions(finalQuestions);
+        
+        // If we lost questions, try to fill from available pool
+        if (finalQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
+            const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - finalQuestions.length;
+            const usedIds = new Set(finalQuestions.map(q => q.id));
+            const available = availableQuestions.filter(
+                q => !usedIds.has(q.id) && 'options' in q && Array.isArray(q.options) && q.options.length > 0
+            );
+            const additional = selectRandomQuestions(available, remaining);
+            finalQuestions = [...finalQuestions, ...additional].slice(0, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
+        }
+    }
     
     // Enrich with metadata
     return enrichQuestionsWithMetadata(finalQuestions);

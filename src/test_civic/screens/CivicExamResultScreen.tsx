@@ -17,7 +17,14 @@ import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import { deserializeCivicExamResult, type SerializableCivicExamResult } from '../utils/civicExamSerialization';
-import type { CivicExamStackParamList } from '../types';
+import {
+    getCivicExamQuestionText,
+    getUserAnswerText,
+    getCorrectAnswerText,
+    parseUserAnswerIndex,
+    type CivicExamQuestionWithOptions,
+} from '../utils/civicExamQuestionUtils';
+import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
 
 type CivicExamResultScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 type RouteParams = {
@@ -48,7 +55,7 @@ const CivicExamResultScreen = () => {
         return null;
     }
 
-    const { passed, score, correctAnswers, totalQuestions, incorrectQuestions } = result;
+    const { passed, score, correctAnswers, totalQuestions, incorrectQuestions, session } = result;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -100,21 +107,47 @@ const CivicExamResultScreen = () => {
                                     `Câu sai (${incorrectQuestions.length})`
                                 )}
                             </FormattedText>
-                            {incorrectQuestions.slice(0, 5).map((question) => (
-                                <View key={question.id} style={styles.incorrectItem}>
-                                    <FormattedText style={[styles.incorrectQuestion, { color: theme.colors.text }]}>
-                                        {typeof question.question === 'string' ? question.question : question.question.fr}
-                                    </FormattedText>
-                                </View>
-                            ))}
-                            {incorrectQuestions.length > 5 && (
-                                <FormattedText style={[styles.moreText, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText(
-                                        `Et ${incorrectQuestions.length - 5} autre(s) question(s)...`,
-                                        `Và ${incorrectQuestions.length - 5} câu khác...`
-                                    )}
-                                </FormattedText>
-                            )}
+                            {incorrectQuestions.map((question) => {
+                                const civicQuestion = question as CivicExamQuestionWithOptions;
+                                const userAnswer = session.answers.find(a => a.questionId === question.id);
+                                const userAnswerIndex = parseUserAnswerIndex(userAnswer?.userAnswer);
+                                const userAnswerText = getUserAnswerText(civicQuestion, userAnswerIndex, language);
+                                const correctAnswerText = getCorrectAnswerText(civicQuestion, language);
+                                
+                                return (
+                                    <View key={question.id} style={styles.incorrectItem}>
+                                        <FormattedText style={[styles.incorrectQuestion, { color: theme.colors.text }]}>
+                                            {getCivicExamQuestionText(question, language)}
+                                        </FormattedText>
+                                        
+                                        <View style={[styles.answerSection, { marginTop: 12 }]}>
+                                            <View style={[styles.answerRow, { marginBottom: 8 }]}>
+                                                <View style={[styles.answerLabel, { backgroundColor: theme.colors.error + '20' }]}>
+                                                    <Ionicons name="close-circle" size={16} color={theme.colors.error} />
+                                                    <FormattedText style={[styles.answerLabelText, { color: theme.colors.error }]}>
+                                                        {getLocalizedText('Votre réponse:', 'Câu trả lời của bạn:')}
+                                                    </FormattedText>
+                                                </View>
+                                                <FormattedText style={[styles.answerText, { color: theme.colors.text }]}>
+                                                    {userAnswerText}
+                                                </FormattedText>
+                                            </View>
+                                            
+                                            <View style={styles.answerRow}>
+                                                <View style={[styles.answerLabel, { backgroundColor: '#4CAF50' + '20' }]}>
+                                                    <Ionicons name="checkmark-circle" size={16} color="#4CAF50" />
+                                                    <FormattedText style={[styles.answerLabelText, { color: '#4CAF50' }]}>
+                                                        {getLocalizedText('Bonne réponse:', 'Đáp án đúng:')}
+                                                    </FormattedText>
+                                                </View>
+                                                <FormattedText style={[styles.answerText, { color: theme.colors.text }]}>
+                                                    {correctAnswerText}
+                                                </FormattedText>
+                                            </View>
+                                        </View>
+                                    </View>
+                                );
+                            })}
                         </View>
                     )}
                 </ScrollView>
@@ -194,14 +227,40 @@ const styles = StyleSheet.create({
         marginBottom: 16,
     },
     incorrectItem: {
-        marginBottom: 12,
-        paddingBottom: 12,
+        marginBottom: 16,
+        paddingBottom: 16,
         borderBottomWidth: 1,
         borderBottomColor: 'rgba(0,0,0,0.1)',
     },
     incorrectQuestion: {
         fontSize: 15,
         lineHeight: 22,
+        fontWeight: '600',
+    },
+    answerSection: {
+        marginTop: 12,
+    },
+    answerRow: {
+        marginBottom: 8,
+    },
+    answerLabel: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        borderRadius: 6,
+        marginBottom: 6,
+        gap: 6,
+        alignSelf: 'flex-start',
+    },
+    answerLabelText: {
+        fontSize: 13,
+        fontWeight: '600',
+    },
+    answerText: {
+        fontSize: 15,
+        lineHeight: 22,
+        paddingLeft: 4,
     },
     moreText: {
         fontSize: 14,

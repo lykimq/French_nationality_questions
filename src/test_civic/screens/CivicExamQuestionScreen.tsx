@@ -20,6 +20,7 @@ import { FormattedText } from '../../shared/components';
 import QuestionCard from '../../search/QuestionCard';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
+import { getCivicExamQuestionText, getCivicExamExplanationText } from '../utils/civicExamQuestionUtils';
 import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
 import type { TestAnswer } from '../../test/types';
 
@@ -45,8 +46,8 @@ const CivicExamQuestionScreen = () => {
     const [answerSubmitted, setAnswerSubmitted] = useState(false);
     const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
     const [timeLeft, setTimeLeft] = useState<number>(CIVIC_EXAM_CONFIG.TIME_LIMIT_SECONDS);
-    const [questionStartTime] = useState<Date>(new Date());
-    const previousQuestionIdRef = useRef<number | null>(null);
+    const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
+    const previousQuestionIndexRef = useRef<number>(-1);
 
     const currentQuestion = getCurrentQuestion() as (CivicExamQuestion & { 
         options?: string[]; 
@@ -88,26 +89,25 @@ const CivicExamQuestionScreen = () => {
         return () => clearInterval(timer);
     }, [timeLeft]);
 
-    // Reset selected answer when question changes (but not if we're showing feedback in practice mode)
+    // Reset selected answer when question changes
     useEffect(() => {
         if (!currentQuestion) return;
         
-        const currentQuestionId = currentQuestion.id;
-        
-        // Only reset if we've actually moved to a different question
-        if (previousQuestionIdRef.current !== null && previousQuestionIdRef.current === currentQuestionId) {
-            // Same question, don't reset (this prevents reset when session updates)
+        // Only reset if we've actually moved to a different question index
+        if (previousQuestionIndexRef.current === currentQuestionIndex) {
+            // Same question index, don't reset (this prevents reset when session updates)
             return;
         }
         
-        // New question, reset state and update ref
-        previousQuestionIdRef.current = currentQuestionId;
+        // New question, reset all state and update ref
+        previousQuestionIndexRef.current = currentQuestionIndex;
         setSelectedAnswer(null);
         setSelectedExplanationAnswer(null);
         setShowExplanation(false);
         setAnswerSubmitted(false);
         setIsAnswerCorrect(null);
-    }, [currentQuestionIndex, currentQuestion?.id]);
+        setQuestionStartTime(new Date());
+    }, [currentQuestionIndex]);
 
     // Check if session is completed
     useEffect(() => {
@@ -161,14 +161,7 @@ const CivicExamQuestionScreen = () => {
         // In practice mode, move to next question after showing feedback
         if (isPracticeMode) {
             if (currentQuestionIndex < currentSession.totalQuestions - 1) {
-                // Reset state for next question
-                setSelectedAnswer(null);
-                setSelectedExplanationAnswer(null);
-                setShowExplanation(false);
-                setAnswerSubmitted(false);
-                setIsAnswerCorrect(null);
-                
-                // Manually advance to next question
+                // Advance to next question - state will be reset by useEffect
                 goToNextQuestion();
             } else {
                 navigation.navigate('CivicExamReview');
@@ -213,27 +206,6 @@ const CivicExamQuestionScreen = () => {
         }
     };
 
-    const getExplanationText = (): string => {
-        if (!currentQuestion) return '';
-        if (typeof currentQuestion.explanation === 'string') {
-            return currentQuestion.explanation;
-        }
-        if (typeof currentQuestion.explanation === 'object' && currentQuestion.explanation !== null) {
-            return displayLanguage === 'fr' ? currentQuestion.explanation.fr : currentQuestion.explanation.vi;
-        }
-        return '';
-    };
-
-    const getQuestionText = (): string => {
-        if (!currentQuestion) return '';
-        if (typeof currentQuestion.question === 'string') {
-            return currentQuestion.question;
-        }
-        if (typeof currentQuestion.question === 'object' && currentQuestion.question !== null) {
-            return displayLanguage === 'fr' ? currentQuestion.question.fr : currentQuestion.question.vi;
-        }
-        return '';
-    };
 
     const formatTime = (seconds: number): string => {
         const mins = Math.floor(seconds / 60);
@@ -302,7 +274,7 @@ const CivicExamQuestionScreen = () => {
                             </View>
                         </View>
                         <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
-                            {getQuestionText()}
+                            {getCivicExamQuestionText(currentQuestion, displayLanguage)}
                         </FormattedText>
                     </View>
 
@@ -311,7 +283,7 @@ const CivicExamQuestionScreen = () => {
                         <FormattedText style={[styles.optionsTitle, { color: theme.colors.text }]}>
                             {getLocalizedText('Choisissez votre réponse:', 'Chọn câu trả lời:')}
                         </FormattedText>
-                        {options.map((option, index) => {
+                        {options.length > 0 ? options.map((option, index) => {
                             const isSelected = selectedAnswer === index;
                             const isCorrect = currentQuestion.correctAnswer === index;
                             const showResult = isPracticeMode && answerSubmitted;
@@ -368,7 +340,11 @@ const CivicExamQuestionScreen = () => {
                                     </View>
                                 </TouchableOpacity>
                             );
-                        })}
+                        }) : (
+                            <FormattedText style={[styles.optionText, { color: theme.colors.textMuted, textAlign: 'center', padding: 16 }]}>
+                                {getLocalizedText('Aucune option disponible', 'Không có tùy chọn')}
+                            </FormattedText>
+                        )}
                     </View>
 
                     {/* Feedback and Explanation (Practice Mode Only) */}
@@ -390,13 +366,13 @@ const CivicExamQuestionScreen = () => {
                                 </View>
                             )}
                             
-                            {showExplanation && getExplanationText() && (
+                            {showExplanation && getCivicExamExplanationText(currentQuestion, displayLanguage) && (
                                 <View style={styles.explanationTextContainer}>
                                     <FormattedText style={[styles.explanationTitle, { color: theme.colors.text }]}>
                                         {getLocalizedText('Explication:', 'Giải thích:')}
                                     </FormattedText>
                                     <FormattedText style={[styles.explanationText, { color: theme.colors.textSecondary }]}>
-                                        {getExplanationText()}
+                                        {getCivicExamExplanationText(currentQuestion, displayLanguage)}
                                     </FormattedText>
                                 </View>
                             )}
