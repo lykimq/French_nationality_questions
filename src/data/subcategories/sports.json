@@ -1,26 +1,20 @@
 {
-    "id": "sports",
-    "title": "Sports",
-    "title_vi": "Thể thao",
-    "icon": "football",
-    "description": "Sports et événements sportifs français",
-    "description_vi": "Thể thao và các sự kiện thể thao Pháp",
-    "questions": [
-        {
-            "id": 71,
-            "question": "Quel grand évènement sportif Français connaissez-vous ?",
-            "explanation": "- Vous pouvez citer une épreuve cycliste comme le Tour de France. \n\n - Une épreuve de tennis comme le tournoi de Roland Garros.\n\n - Une compétition de course automobile comme les 24h du Mans. \n\n - Une course comme le Marathon de Paris.",
-            "question_vi": "Bạn biết những sự kiện thể thao lớn nào của Pháp?",
-            "explanation_vi": "- Bạn có thể kể đến các giải đua xe đạp như Tour de France. \n\n - Giải đấu quần vợt như Roland Garros. \n\n - Giải đua xe như 24 giờ Le Mans. \n\n - Các cuộc đua như Marathon Paris.",
-            "image": null
-        },
-        {
-            "id": 77,
-            "question": "Connaissez-vous des sportifs Français(e)s ?",
-            "explanation": "- Dans le football : Michel Platini, Zinedine Zidane. \n\n - Dans le cyclisme : Richard Virenque. \n\n - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah. \n\n - Dans le judo : Teddy Riner.",
-            "question_vi": "Bạn có biết các vận động viên Pháp nào không?",
-            "explanation_vi": "- Trong bóng đá: Michel Platini, Zinedine Zidane. \n\n - Trong đua xe đạp: Richard Virenque. \n\n - Trong quần vợt: Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah. \n\n - Trong judo: Teddy Riner.",
-            "image": null
-        }
-    ]
+  "id": "sports",
+  "title": "Sports",
+  "icon": "football",
+  "description": "Sports et événements sportifs français",
+  "questions": [
+    {
+      "id": 71,
+      "question": "Quel grand évènement sportif Français connaissez-vous ?",
+      "explanation": "- Vous pouvez citer une épreuve cycliste comme le Tour de France. \n\n - Une épreuve de tennis comme le tournoi de Roland Garros.\n\n - Une compétition de course automobile comme les 24h du Mans. \n\n - Une course comme le Marathon de Paris.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "question": "Connaissez-vous des sportifs Français(e)s ?",
+      "explanation": "- Dans le football : Michel Platini, Zinedine Zidane. \n\n - Dans le cyclisme : Richard Virenque. \n\n - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah. \n\n - Dans le judo : Teddy Riner.",
+      "image": null
+    }
+  ]
 }

@@ -1,97 +1,73 @@
 {
   "id": "geography",
   "title": "Géographie et administration",
-  "title_vi": "Địa lý và Hành chính",
   "icon": "map",
   "description": "Questions 25 à 35 sur la géographie et l'administration de la France",
-  "description_vi": "Câu hỏi 25-35 về địa lý và hành chính Pháp",
   "questions": [
     {
       "id": 25,
       "question": "Citez les trois plus grandes villes Françaises",
       "explanation": "Paris, Marseille et Lyon sont les trois plus grandes villes de France.",
-      "question_vi": "Hãy liệt kê ba thành phố lớn nhất của Pháp",
-      "explanation_vi": "Paris, Marseille và Lyon là ba thành phố lớn nhất của Pháp.",
       "image": null
     },
     {
       "id": 26,
       "question": "Citez trois départements Français",
       "explanation": "Haut-Rhin, Bas-Rhin, Haute-Garonne sont les trois départements de France.",
-      "question_vi": "Hãy liệt kê ba tỉnh của Pháp",
-      "explanation_vi": "Haut-Rhin, Bas-Rhin, Haute-Garonne là ba tỉnh của Pháp.",
       "image": null
     },
     {
       "id": 27,
       "question": "Citez trois départements d'outre-mer",
       "explanation": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion sont les cinq départements d'outre-mer de France.",
-      "question_vi": "Hãy liệt kê ba tỉnh hải ngoại của Pháp",
-      "explanation_vi": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion là ba tỉnh hải ngoại của Pháp.",
       "image": null
     },
     {
       "id": 28,
       "question": "Citez trois régions Françaises",
       "explanation": "Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d’Azur, Occitanie v.v…",
-      "question_vi": "Hãy liệt kê ba vùng của Pháp: ",
-      "explanation_vi": "Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d’Azur, Occitanie v.v…)",
       "image": null
     },
     {
       "id": 29,
       "question": "Enumérez les trois types de collectivités Françaises",
       "explanation": "Il y a trois types de collectivités en France. 1. Les communes : Il y a 36 000 communes en France. 2. Les régions : La France compte 12 régions en Métropole en plus de la corse (qui n’est pas une région en soit mais qui en a les compétences) ainsi que 5 régions en outre-mer. 3. Les Départements : La France compte 101 département s, 96 département se trouvent en métropole et 5 en Outre-mer.",
-      "question_vi": "Liệt kê ba loại tổ chức của Pháp",
-      "explanation_vi": "Có ba loại tổ chức ở Pháp. 1. Các huyện: Có 36.000 huyện ở Pháp. 2. Các vùng: Pháp có 12 vùng ở Métropole cộng với vùng Corse (không phải là một vùng nhưng có quyền lực) cũng như 5 vùng ở ngoại thành. 3. Các tỉnh: Pháp có 101 tỉnh, 96 tỉnh ở Métropole và 5 ở ngoại thành.",
       "image": null
     },
     {
       "id": 30,
       "question": "Citez des fleuves Français que vous connaissez",
       "explanation": "La Loire, le Rhône, La Seine, le Rhin, la Garonne, La Marne, La Dordogne…",
-      "question_vi": "Hãy liệt kê ba con sông lớn của Pháp",
-      "explanation_vi": "Loire, Rhône, Seine, Rhin, Garonne, Marne, Dordogne…",
       "image": null
     },
     {
       "id": 31,
       "question": "Citez des chaines de montagne en France que vous connaissez",
       "explanation": "Le Massif central, les Alpes, les Pyrénées, les Vosges, le Jura.",
-      "question_vi": "Hãy liệt kê ba dãy núi lớn của Pháp",
-      "explanation_vi": "Massif central, Alpes, Pyrénées, Vosges, Jura.",
       "image": null
     },
     {
       "id": 32,
       "question": "En France quel est le point culminant ?",
       "explanation": "C’est le Mont-Blanc [avec une altitude de 4809m il se trouve entre la France et l’Italie].",
-      "question_vi": "Ở Pháp đỉnh núi nào cao nhất?",
-      "explanation_vi": "Đó là Mont-Blanc [với độ cao 4809m, nó nằm giữa Pháp và Ý].",
       "image": null
     },
     {
       "id": 33,
       "question": "Quels sont les pays frontaliers ou limitrophes avec la France ?",
       "explanation": "L’Espagne, L’Italie, la Suisse, L’Allemagne, le Luxembourg Andorre, Monaco et la Belgique.",
-      "question_vi": "Những quốc gia nào giáp với Pháp?",
-      "explanation_vi": "Tây Ban Nha, Ý, Thụy Sĩ, Đức, Luxembourg, Andora, Monaco và Bỉ.",
       "image": null
     },
     {
       "id": 34,
       "question": "Dans quelle région sommes-nous ?",
       "explanation": "Nous sommes en Île-de-France, c’est la région où se trouve Paris et ses alentours, y compris Boulogne-Billancourt où j’habite.",
-      "question_vi": "Chúng ta đang ở vùng nào?",
-      "explanation_vi": "Chúng ta đang ở vùng Île-de-France, đây là vùng thủ đô bao gồm cả Paris và các khu vực lân cận như Boulogne-Billancourt, nơi tôi đang sinh sống.",
       "image": null
     },
     {
       "id": 35,
       "question": "Dans quel département sommes-nous ?",
       "explanation": "Nous sommes dans le département des Hauts-de-Seine, c’est le département numéro 92. Il se trouve juste à l’ouest de Paris.",
-      "question_vi": "Chúng ta đang ở tỉnh nào?",
-      "explanation_vi": "Chúng ta đang ở tỉnh Hauts-de-Seine, mã số hành chính là 92. Tỉnh này nằm ngay phía tây của Paris.",
       "image": null
     }
   ]

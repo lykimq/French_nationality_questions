@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { getImageSource as loadImageSource, getCachedImageSource, getQuestionText, getExplanationText, formatExplanation } from '../shared/utils';
-import { ImageModal, FormattedText } from '../shared/components';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import { QuestionCardProps } from '../types';
-import { sharedStyles } from '../shared/utils';
+import { getImageSource as loadImageSource, getCachedImageSource, getQuestionText, getExplanationText, formatExplanation } from '../utils';
+import ImageModal from './ImageModal';
+import FormattedText from './FormattedText';
+import { useTheme } from '../contexts/ThemeContext';
+import { QuestionCardProps } from '../../types';
+import { sharedStyles } from '../utils';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -22,16 +23,16 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         image,
         alwaysExpanded
     });
-    
+
     const [expanded, setExpanded] = useState(alwaysExpanded);
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
     const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
     const { theme } = useTheme();
-    
+
     const isExpanded = alwaysExpanded ? true : expanded;
-    
+
     console.log('[QuestionCard] State - expanded:', expanded, 'alwaysExpanded:', alwaysExpanded, 'isExpanded (computed):', isExpanded);
 
     // Load Firebase image when component mounts or image changes
@@ -111,7 +112,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     };
 
     console.log('[QuestionCard] Rendering card - isExpanded:', isExpanded, 'expanded state:', expanded);
-    
+
     return (
         <View style={[
             styles.card,

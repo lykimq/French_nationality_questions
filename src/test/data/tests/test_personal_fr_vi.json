@@ -1,73 +1,55 @@
 {
   "id": "test_personal",
   "title": "Première partie : Parlons de vous - Informations personnelles",
-  "title_vi": "Phần một: Nói về bạn - Thông tin cá nhân",
   "icon": "clipboard",
   "description": "Questions test sur la vie personnelle et l'entourage",
-  "description_vi": "Câu hỏi test về thông tin cá nhân và người thân",
   "questions": [
     {
       "id": 1,
       "question": "Pourquoi êtes-vous venu en France ?",
       "explanation": "Je suis venu en France pour la première fois en 2009 pour effectuer un stage de master à Bordeaux, que j'ai suivi pendant cinq mois. Après l'obtention de mon diplôme, j'ai poursuivi un doctorat à l'Université Grenoble-Alpes.",
-      "question_vi": "Tại sao bạn đến Pháp?",
-      "explanation_vi": "Lần đầu tiên tôi đến Pháp vào năm 2009 để thực hiện kỳ thực tập thạc sĩ tại Bordeaux, kéo dài 5 tháng. Sau khi tốt nghiệp, tôi tiếp tục học tiến sĩ tại Đại học Grenoble-Alpes.",
       "image": null
     },
     {
       "id": 2,
       "question": "Pourquoi êtes-vous resté en France ?",
       "explanation": "Au fil des années, je me suis habitué à la culture française, à la langue, et j'ai découvert avec plaisir la gastronomie locale. J'apprécie beaucoup la liberté d'expression, la facilité de voyager entre les pays, et le mode de vie français. La France est devenue ma maison, mon pays d'adoption où je veux m'investir pleinement.",
-      "question_vi": "Tại sao bạn ở lại Pháp?",
-      "explanation_vi": "Trong suốt những năm qua, tôi đã quen với văn hóa và ngôn ngữ Pháp, và tôi rất thích ẩm thực Pháp. Tôi rất trân trọng tự do ngôn luận, sự thuận tiện trong việc di chuyển giữa các nước và phong cách sống của người Pháp. Pháp đã trở thành ngôi nhà, quê hương thứ hai mà tôi muốn cống hiến và phát triển.",
       "image": null
     },
     {
       "id": 3,
       "question": "Quand êtes-vous arrivé en France ? Parliez-vous déjà français ?",
       "explanation": "Je suis arrivé(e) en France pour la première fois le 15 juin 2009 pour un stage de master à Bordeaux. J'apprends le français depuis plus de dix ans, de manière non continue, mais je continue à apprendre régulièrement depuis mon arrivée en France.",
-      "question_vi": "Bạn đến Pháp khi nào? Lúc đó bạn đã biết nói tiếng Pháp chưa?",
-      "explanation_vi": "Tôi đến Pháp lần đầu tiên vào ngày 15 tháng 6 năm 2009 để thực tập thạc sĩ tại Bordeaux. Tôi đã học tiếng Pháp hơn mười năm, không học liên tục, nhưng tôi vẫn tiếp tục học đều đặn kể từ khi đến Pháp.",
       "image": null
     },
     {
       "id": 4,
       "question": "Votre entourage est français ou mixte ?",
       "explanation": "La majorité de mes amis sont Français, mais j'ai aussi des amis étrangers, comme des Russes et des Mauriciens. Cependant, la plupart de mon entourage est français.",
-      "question_vi": "Những người xung quanh bạn là người Pháp hay hỗn hợp?",
-      "explanation_vi": "Phần lớn bạn bè của tôi là người Pháp, nhưng tôi cũng có bạn bè người nước ngoài như người Nga và người Mauritius. Tuy nhiên, đa số những người xung quanh tôi là người Pháp.",
       "image": null
     },
     {
       "id": 5,
       "question": "Est-ce que vous avez des frères et sœurs ?",
       "explanation": "Oui, j'ai de la famille qui vit au Vietnam, y compris mes parents, mes frères et sœurs.",
-      "question_vi": "Bạn có anh chị em không?",
-      "explanation_vi": "Vâng, tôi có gia đình sống ở Việt Nam, bao gồm bố mẹ, anh chị em.",
       "image": null
     },
     {
       "id": 6,
       "question": "Est-ce que vous avez des enfants ?",
       "explanation": "Je n'ai pas d'enfants et je ne prévois pas d'en avoir dans un avenir proche.",
-      "question_vi": "Bạn có con không?",
-      "explanation_vi": "Tôi không có con và tôi không dự định có con trong tương lai gần.",
       "image": null
     },
     {
       "id": 7,
       "question": "Où habite votre famille ?",
       "explanation": "J'ai de la famille qui vit au Vietnam, y compris mes parents, mes frères et sœurs.",
-      "question_vi": "Gia đình bạn sống ở đâu?",
-      "explanation_vi": "Tôi có gia đình sống ở Việt Nam, bao gồm bố mẹ, anh chị em.",
       "image": null
     },
     {
       "id": 8,
       "question": "Est-ce que vous avez des amis français ? (ils peuvent demander à voir des photos + numéro de téléphone)",
       "explanation": "J'ai plusieurs amis français avec qui j'ai des liens solides. Je leur rends souvent visite pour le déjeuner le week-end ou lors d'occasions spéciales comme Noël ou le réveillon du Nouvel An. Nous sommes amis depuis plus de huit ans.",
-      "question_vi": "Bạn có bạn bè người Pháp không? (họ có thể hỏi xem ảnh và số điện thoại)",
-      "explanation_vi": "Tôi có nhiều bạn bè người Pháp, và chúng tôi có mối quan hệ rất thân thiết. Tôi thường đến thăm họ vào buổi trưa cuối tuần hoặc những dịp đặc biệt như Giáng Sinh hoặc đêm giao thừa. Chúng tôi đã là bạn bè hơn tám năm rồi.",
       "image": null
     }
   ]

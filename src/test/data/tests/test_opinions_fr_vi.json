@@ -1,129 +1,97 @@
 {
   "id": "test_opinions",
   "title": "Première partie : Parlons de vous - Vos opinions",
-  "title_vi": "Phần một: Nói về bạn - Ý kiến của bạn",
   "icon": "message-circle",
   "description": "Questions test sur vos opinions concernant la France et votre attachement au pays",
-  "description_vi": "Câu hỏi test về ý kiến của bạn liên quan đến Pháp và sự gắn bó với đất nước",
   "questions": [
     {
       "id": 1,
       "question": "Vous sentez-vous plus français ou étranger ?",
       "explanation": "Même si je ne suis pas né en France, je me sens aujourd'hui très proche de la culture française. Je vis en France depuis plus de 10 ans. J'y ai fait mes études de master et de doctorat dans une école française, ce qui m'a permis de bien connaître le système éducatif et de m'y adapter pleinement. Depuis, j'ai intégré le monde professionnel en France et je me suis habitué à la culture de travail, aux valeurs de la société, et au mode de vie français. Je continue bien sûr à garder mes origines, mais je me sens de plus en plus français dans ma façon de penser, de vivre et de m'engager dans la société.",
-      "question_vi": "Bạn cảm thấy mình giống người Pháp hay người nước ngoài hơn?",
-      "explanation_vi": "Mặc dù tôi không sinh ra ở Pháp, nhưng hiện tại tôi cảm thấy rất gần gũi với văn hoá Pháp. Tôi đã sống ở Pháp hơn 10 năm, và từng theo học chương trình thạc sĩ và tiến sĩ tại một trường đại học Pháp. Điều này giúp tôi hiểu rõ và thích nghi tốt với hệ thống giáo dục Pháp. Sau đó, tôi đã làm việc và sinh sống tại đây, quen thuộc với văn hoá làm việc, lối sống và các giá trị xã hội của người Pháp. Dù tôi vẫn giữ gìn nguồn gốc của mình, nhưng tôi cảm thấy ngày càng trở nên \"Pháp\" hơn trong cách suy nghĩ, sinh hoạt và đóng góp cho xã hội.",
       "image": null
     },
     {
       "id": 2,
       "question": "Est-ce que voter est important pour vous ?",
       "explanation": "Oui, voter est très important pour moi. C'est un droit fondamental et un devoir citoyen. Cela permet de faire entendre sa voix et de participer activement aux décisions qui concernent la société.",
-      "question_vi": "Việc bỏ phiếu có quan trọng đối với bạn không?",
-      "explanation_vi": "Vâng, việc bỏ phiếu rất quan trọng với tôi. Đó là một quyền cơ bản và cũng là nghĩa vụ của công dân. Nhờ đó, tôi có thể bày tỏ quan điểm và tham gia vào các quyết định liên quan đến xã hội.",
       "image": null
     },
     {
       "id": 3,
       "question": "Est-ce que votre pays vous manque à part votre famille ?",
       "explanation": "Oui, mon pays me manque parfois, notamment la culture, la nourriture et certains repères. C'est pour cela que je retourne le visiter une fois par an, pour garder un lien avec mes origines, même si aujourd'hui je me sens pleinement intégré en France.",
-      "question_vi": "Bạn có nhớ quê hương (ngoài việc nhớ gia đình) không?",
-      "explanation_vi": "Vâng, thỉnh thoảng tôi cũng nhớ quê hương – như văn hóa, ẩm thực và những điều quen thuộc. Vì vậy tôi về thăm mỗi năm một lần để duy trì mối liên kết với cội nguồn, dù hiện tại tôi đã hòa nhập tốt vào cuộc sống ở Pháp.",
       "image": null
     },
     {
       "id": 4,
       "question": "Qu'est-ce qui vous fait sentir plus attaché à la France ?",
       "explanation": "Plusieurs éléments me font me sentir profondément attaché à la France. J'y ai fait mes études supérieures, obtenu mon doctorat, et je vis et travaille ici depuis plus de dix ans. J'apprécie  particulièrement les valeurs de la République française – la liberté, l'égalité et la fraternité – qui se reflètent dans la vie quotidienne. Le mode de vie français, la richesse culturelle, la gastronomie, ainsi que la qualité de vie sont autant d'aspects qui me plaisent. Je me sens également intégré grâce à mes relations durables avec des collègues et amis français, et à mon implication dans la société à travers mon travail. Aujourd'hui, la France est bien plus qu'un pays d'accueil : c'est devenu mon cadre de vie naturel.",
-      "question_vi": "Điều gì khiến bạn cảm thấy gắn bó với nước Pháp hơn?",
-      "explanation_vi": "Có nhiều yếu tố khiến tôi cảm thấy gắn bó sâu sắc với nước Pháp. Tôi đã học thạc sĩ và tiến sĩ tại đây, và đã sống cũng như làm việc ở Pháp hơn mười năm. Tôi rất trân trọng các giá trị của nước Cộng hòa Pháp như tự do, bình đẳng và bác ái – những giá trị thể hiện rõ trong đời sống hằng ngày. Tôi yêu thích lối sống của người Pháp, sự đa dạng văn hóa, ẩm thực phong phú và chất lượng cuộc sống ở đây. Tôi cũng có nhiều mối quan hệ thân thiết với bạn bè và đồng nghiệp người Pháp, điều đó giúp tôi cảm thấy mình thực sự là một phần của xã hội này. Với tôi, nước Pháp không chỉ là nơi cư trú mà còn là mái nhà thân thuộc.",
       "image": null
     },
     {
       "id": 5,
       "question": "Qu'est-ce qui vous fait vous sentir français ?",
       "explanation": "Ce qui me fait me sentir français, c'est mon parcours de vie ici et mon intégration progressive mais profonde dans la société française. J'ai fait mes études supérieures (master et doctorat) dans une école française, je travaille aujourd'hui en tant qu'ingénieur de recherche en informatique, et j'ai adopté le mode de vie français au quotidien. Je parle français tous les jours, aussi bien dans un cadre professionnel qu'avec mes amis. Je me retrouve dans les valeurs de la République, notamment la liberté, l'égalité et la fraternité. Je participe à la vie locale, je respecte les codes sociaux, j'apprécie la gastronomie, et je vis selon un rythme de vie typiquement français. C'est cette immersion complète, naturelle et volontaire qui me fait me sentir français.",
-      "question_vi": "Điều gì khiến bạn cảm thấy mình là người Pháp?",
-      "explanation_vi": "Điều khiến tôi cảm thấy mình là người Pháp chính là quá trình sống và hòa nhập tại Pháp trong suốt hơn 10 năm qua. Tôi đã học thạc sĩ và tiến sĩ tại một trường đại học Pháp, hiện tôi làm việc với vai trò kỹ sư nghiên cứu trong lĩnh vực khoa học máy tính và đã quen với lối sống cũng như văn hoá nơi đây. Tôi sử dụng tiếng Pháp hàng ngày trong công việc cũng như trong giao tiếp với bạn bè. Tôi đồng cảm với các giá trị của nước Cộng hòa Pháp như tự do, bình đẳng và bác ái. Tôi tham gia vào cuộc sống xã hội, yêu thích ẩm thực Pháp và sinh hoạt theo nhịp sống của người Pháp. Chính sự hoà nhập toàn diện và tự nhiên này khiến tôi cảm thấy mình thực sự là một phần của nước Pháp.",
       "image": null
     },
     {
       "id": 6,
       "question": "Que pensez-vous de la politique française ?",
       "explanation": "Je pense que la politique française repose sur des institutions démocratiques solides. Elle permet la liberté d'expression, le débat public, et la participation citoyenne, ce que je trouve très important dans une société moderne.",
-      "question_vi": "Bạn nghĩ gì về chính trị Pháp?",
-      "explanation_vi": "Tôi nghĩ rằng chính trị Pháp dựa trên nền tảng dân chủ vững chắc. Người dân có quyền tự do ngôn luận, tranh luận công khai và tham gia vào các quyết định xã hội – điều đó rất quan trọng trong một xã hội hiện đại.",
       "image": null
     },
     {
       "id": 7,
       "question": "Que pensez-vous de l'interdiction du port de l'abaya dans les écoles ?",
       "explanation": "Je comprends que la France défend fermement le principe de la laïcité à l'école, pour garantir un espace neutre, égalitaire et respectueux de toutes les convictions. L'interdiction du port de signes religieux visibles comme l'abaya s'inscrit dans cette logique. Même si ce sujet peut être sensible, je respecte les valeurs républicaines françaises et le cadre légal qui vise à protéger la neutralité de l'école publique.",
-      "question_vi": "Bạn nghĩ gì về việc cấm mặc abaya trong trường học?",
-      "explanation_vi": "Tôi hiểu rằng nước Pháp rất coi trọng nguyên tắc thế tục trong giáo dục, nhằm đảm bảo môi trường học đường trung lập, bình đẳng và tôn trọng mọi quan điểm. Việc cấm mặc trang phục tôn giáo như abaya trong trường học nằm trong định hướng đó. Dù đây là vấn đề nhạy cảm, tôi tôn trọng các giá trị của nền Cộng hòa Pháp và luật pháp nhằm bảo vệ tính trung lập trong môi trường giáo dục công lập.",
       "image": null
     },
     {
       "id": 8,
       "question": "Pourriez-vous abandonner votre nationalité si nécessaire ?",
       "explanation": "Oui, je pourrais l'envisager si cela était nécessaire. Cependant, à l'heure actuelle, le Vietnam autorise la double nationalité dans certaines conditions, ce qui me permettrait de conserver un lien avec mon pays d'origine tout en m'engageant pleinement en tant que citoyen français.",
-      "question_vi": "Bạn có thể từ bỏ quốc tịch gốc nếu cần thiết không?",
-      "explanation_vi": "Vâng, tôi có thể xem xét việc từ bỏ quốc tịch nếu thật sự cần thiết. Tuy nhiên, hiện nay Việt Nam cho phép mang hai quốc tịch trong một số trường hợp, vì vậy tôi có thể vừa giữ liên kết với quê hương, vừa cam kết đầy đủ với tư cách là công dân Pháp.",
       "image": null
     },
     {
       "id": 9,
       "question": "Aimeriez-vous voter ?",
       "explanation": "Oui, j'aimerais voter, car c'est un droit fondamental et une manière importante de participer activement à la vie démocratique du pays.",
-      "question_vi": "Bạn có muốn bỏ phiếu không?",
-      "explanation_vi": "Vâng, tôi muốn được bỏ phiếu vì đó là một quyền cơ bản và là cách quan trọng để tham gia vào đời sống dân chủ của đất nước.",
       "image": null
     },
     {
       "id": 10,
       "question": "Connaissez-vous des gens qui vous demandent de l'aide pour venir en France ? Est-ce que votre famille va venir vivre en France ?",
       "explanation": "Non, je ne connais pas de gens qui me demandent de l'aide pour venir en France. Concernant ma famille, j'ai de la famille qui vit au Vietnam, y compris mes parents, mes frères et sœurs, mais je ne compte pas les faire venir en France.",
-      "question_vi": "Bạn có biết ai nhờ bạn giúp đỡ để đến Pháp không? Gia đình bạn có định đến sống ở Pháp không?",
-      "explanation_vi": "Không, tôi không biết ai nhờ tôi giúp đỡ để đến Pháp. Về gia đình, tôi có gia đình sống ở Việt Nam, bao gồm bố mẹ, anh chị em, nhưng tôi không có kế hoạch đưa họ sang Pháp.",
       "image": null
     },
     {
       "id": 11,
       "question": "Quel événement produit en France vous semble intéressant ?",
       "explanation": "Un événement que je trouve particulièrement intéressant en France, c'est la Fête de la Musique. C'est un moment convivial, ouvert à tous, qui permet de découvrir des artistes de tous horizons dans l'espace public. C'est aussi une belle illustration de la culture française, de la liberté d'expression et de l'accès à la culture pour tous. J'apprécie également les Journées du Patrimoine, qui permettent de visiter des lieux historiques souvent fermés au public, et qui montrent l'importance que la France accorde à son histoire et à sa culture.",
-      "question_vi": "Sự kiện nào xảy ra ở Pháp mà bạn thấy thú vị?",
-      "explanation_vi": "Một sự kiện mà tôi thấy rất thú vị ở Pháp là Ngày hội Âm nhạc (Fête de la Musique). Đây là dịp để mọi người cùng nhau tận hưởng âm nhạc miễn phí ngoài trời, với các nghệ sĩ chuyên nghiệp lẫn không chuyên. Sự kiện này thể hiện tinh thần tự do, cởi mở và tình yêu nghệ thuật của người Pháp. Tôi cũng rất thích Ngày Di sản (Journées du Patrimoine), khi nhiều địa điểm lịch sử thường không mở cửa sẽ được đón khách tham quan. Nó thể hiện sự trân trọng của nước Pháp đối với văn hoá và lịch sử.",
       "image": null
     },
     {
       "id": 12,
       "question": "Qu'est-ce qu'il y a en France et que vous n'avez pas dans votre pays ?",
       "explanation": "En France, j'apprécie particulièrement la démocratie, la liberté d'expression et le respect des droits humains, qui sont mieux établis qu'au Vietnam. J'admire aussi la richesse culturelle, la qualité du système éducatif et les avancées scientifiques. Ces aspects m'offrent un environnement favorable pour vivre et évoluer.",
-      "question_vi": "Ở Pháp có gì mà ở nước bạn không có?",
-      "explanation_vi": "Tại Pháp, tôi đặc biệt trân trọng nền dân chủ, quyền tự do ngôn luận và sự tôn trọng các quyền con người, những điều này được thực hiện tốt hơn so với ở Việt Nam. Tôi cũng ngưỡng mộ sự đa dạng văn hóa, chất lượng của hệ thống giáo dục và những tiến bộ khoa học. Những điều này mang lại cho tôi một môi trường thuận lợi để sống và phát triển.",
       "image": null
     },
     {
       "id": 13,
       "question": "Est-ce que c'est la première fois que vous demandez la nationalité ?",
       "explanation": "Oui, c'est la première fois que je fais une demande de nationalité française.",
-      "question_vi": "Đây có phải là lần đầu tiên bạn xin quốc tịch không?",
-      "explanation_vi": "Vâng, đây là lần đầu tiên tôi xin quốc tịch Pháp.",
       "image": null
     },
     {
       "id": 14,
       "question": "Pourquoi voulez-vous obtenir la nationalité française ?",
       "explanation": "Je souhaite obtenir la nationalité française parce que je vis en France depuis plus de dix ans, j'y ai fait mes études supérieures (master et doctorat), et j'y ai construit ma vie professionnelle et personnelle. Je me sens pleinement intégré dans la société française, aussi bien sur le plan culturel que social et professionnel. J'adhère profondément aux valeurs de la République française – liberté, égalité, fraternité – et je m'efforce de les incarner au quotidien. Obtenir la nationalité française serait pour moi une reconnaissance de ce lien fort et durable que j'ai avec la France. Ce n'est pas seulement une formalité, mais un engagement sincère envers le pays que je considère désormais comme le mien.",
-      "question_vi": "Tại sao bạn muốn có quốc tịch Pháp?",
-      "explanation_vi": "Tôi muốn xin quốc tịch Pháp vì tôi đã sống ở Pháp hơn mười năm, học thạc sĩ và tiến sĩ tại đây, và đã xây dựng sự nghiệp cũng như cuộc sống cá nhân tại đất nước này. Tôi cảm thấy mình đã hoàn toàn hoà nhập vào xã hội Pháp, từ văn hoá, công việc đến các mối quan hệ xã hội. Tôi thực sự đồng cảm với các giá trị của nước Cộng hoà Pháp như tự do, bình đẳng và bác ái, và luôn cố gắng thể hiện những giá trị đó trong cuộc sống hằng ngày. Việc trở thành công dân Pháp không chỉ là một thủ tục hành chính, mà là một cam kết chân thành của tôi đối với đất nước mà tôi coi là quê hương thứ hai của mình.",
       "image": null
     },
     {
       "id": 15,
       "question": "Pourquoi voulez-vous devenir français ?",
       "explanation": "Je souhaite devenir français parce que la France est le pays où j'ai construit ma vie. J'y vis depuis plus de dix ans, j'y ai fait mes études supérieures, j'y travaille, et je m'y sens pleinement intégré. Je partage les valeurs de la République française – liberté, égalité, fraternité – qui sont en accord avec mes convictions personnelles. Devenir français serait une continuité naturelle de mon parcours, une reconnaissance de mon engagement envers la société française, et une manière de participer encore plus activement à la vie citoyenne du pays que je considère désormais comme le mien.",
-      "question_vi": "Tại sao bạn muốn trở thành người Pháp?",
-      "explanation_vi": "Tôi muốn trở thành công dân Pháp vì nước Pháp là nơi tôi đã xây dựng cuộc sống của mình. Tôi đã sống ở đây hơn mười năm, học tập, làm việc và hòa nhập vào xã hội Pháp. Tôi chia sẻ các giá trị của nước Cộng hòa Pháp như tự do, bình đẳng và bác ái – những giá trị rất phù hợp với niềm tin cá nhân của tôi. Việc trở thành người Pháp là bước tiếp theo tự nhiên trong hành trình của tôi, là sự công nhận cho sự gắn bó và đóng góp của tôi với xã hội Pháp, và cũng là cơ hội để tôi tham gia tích cực hơn vào đời sống công dân tại quê hương thứ hai này.",
       "image": null
     }
   ]

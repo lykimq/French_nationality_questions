@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { CategorySlideViewProps } from '../types';
-import SlideQuestionView from './SlideQuestionView';
+import { SlideQuestionView } from '../shared/components';
 import { FormattedText } from '../shared/components';
 
 const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories }) => {

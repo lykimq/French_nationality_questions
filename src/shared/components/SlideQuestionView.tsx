@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { View, Animated, Dimensions, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import QuestionCard from '../search/QuestionCard';
-import { FormattedText } from '../shared/components';
+import { useTheme } from '../contexts/ThemeContext';
+import QuestionCard from './QuestionCard';
+import FormattedText from './FormattedText';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
