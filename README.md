@@ -113,13 +113,9 @@ Screens are organized into logical folders for better navigation:
 **Modular Type System**:
 - **`index.ts`**: Central type exports
 - **`core.ts`**: Fundamental data types
-- **`domain.ts`**: Business logic types
-- **`language.ts`**: Internationalization types
+- **`questionsData.ts`**: Question data structure types
 - **`ui.ts`**: UI component interfaces
-- **`testing.ts`**: Test and analytics types
 - **`navigation.ts`**: Navigation parameter types
-- **`theme.ts`**: Theme and styling types
-- **`icons.ts`**: Icon configuration types
 
 ### 7. Data Management (`src/data/`)
 - **JSON files**: Structured question data by category

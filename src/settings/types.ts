@@ -61,9 +61,7 @@ export interface ThemeColors {
 export interface ColorThemeInfo {
     id: ColorTheme;
     name: string;
-    nameVi: string;
     description: string;
-    descriptionVi: string;
     primaryColor: string;
     accentColor: string;
     isGradient?: boolean;
@@ -173,9 +171,7 @@ export interface JsonIconColorMapping {
 export interface IconSetInfo {
     id: IconSetType;
     name: string;
-    nameVi: string;
     description: string;
-    descriptionVi: string;
     previewIcon: string;
 }
 

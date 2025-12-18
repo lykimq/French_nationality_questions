@@ -189,33 +189,25 @@ export const iconSetOptions: IconSetInfo[] = [
     {
         id: 'filled',
         name: 'Rempli',
-        nameVi: 'Đặc',
         description: 'Icônes pleines et audacieuses',
-        descriptionVi: 'Biểu tượng đặc và đậm',
         previewIcon: 'star',
     },
     {
         id: 'outlined',
         name: 'Esquissé',
-        nameVi: 'Viền',
         description: 'Icônes avec contours simples',
-        descriptionVi: 'Biểu tượng có viền đơn giản',
         previewIcon: 'star-outline',
     },
     {
         id: 'rounded',
         name: 'Arrondi',
-        nameVi: 'Bo tròn',
         description: 'Icônes avec des coins arrondis',
-        descriptionVi: 'Biểu tượng có góc bo tròn',
         previewIcon: 'star',
     },
     {
         id: 'sharp',
         name: 'Angulaire',
-        nameVi: 'Góc cạnh',
         description: 'Icônes avec des bords nets',
-        descriptionVi: 'Biểu tượng có cạnh sắc nét',
         previewIcon: 'star-sharp',
     },
 ];

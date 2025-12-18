@@ -19,8 +19,6 @@ interface SliderSettingAdditionalProps {
 
 const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdditionalProps>> = ({
     title,
-    title_vi,
-    language,
     value,
     minimumValue,
     maximumValue,
@@ -87,10 +85,10 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
     const progressPercentage = ((value - minimumValue) / (maximumValue - minimumValue)) * 100;
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+            <View style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
             <View style={styles.headerRow}>
                 <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                    {language === 'fr' ? title : (title_vi || title)}
+                    {title}
                 </FormattedText>
                 <FormattedText style={[styles.valueText, { color: theme.colors.primary }]}>
                     {formatValue(value)}

@@ -15,17 +15,17 @@ export const getScoreColor = (score: number, theme: Theme): string => {
     return theme.colors.error;
 };
 
-export const getScoreMessage = (score: number, language: string): string => {
+export const getScoreMessage = (score: number): string => {
     const safeScore = score || 0;
     if (safeScore >= 90) {
-        return language === 'fr' ? 'Excellent!' : 'Xuất sắc!';
+        return 'Excellent!';
     } else if (safeScore >= 80) {
-        return language === 'fr' ? 'Très bien!' : 'Rất tốt!';
+        return 'Très bien!';
     } else if (safeScore >= 70) {
-        return language === 'fr' ? 'Bien!' : 'Tốt!';
+        return 'Bien!';
     } else if (safeScore >= 60) {
-        return language === 'fr' ? 'Passable' : 'Đạt';
+        return 'Passable';
     } else {
-        return language === 'fr' ? 'À améliorer' : 'Cần cải thiện';
+        return 'À améliorer';
     }
 };

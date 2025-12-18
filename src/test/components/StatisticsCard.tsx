@@ -3,7 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
@@ -39,49 +38,43 @@ const StatItem: React.FC<StatItemProps> = ({ icon, label, value, color }) => {
 
 const StatisticsCard: React.FC<StatisticsCardProps> = ({ statistics }) => {
     const { theme } = useTheme();
-    const { language } = useLanguage();
 
     const getTrendText = (trend: string) => {
-        if (language === 'fr') {
-            return trend === 'improving' ? 'Progression' :
-                trend === 'declining' ? 'Baisse' : 'Stable';
-        } else {
-            return trend === 'improving' ? 'Tiến bộ' :
-                trend === 'declining' ? 'Giảm' : 'Ổn định';
-        }
+        return trend === 'improving' ? 'Progression' :
+            trend === 'declining' ? 'Baisse' : 'Stable';
     };
 
     return (
         <View style={[styles.statsCard, { backgroundColor: theme.colors.surface }]}>
             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                {language === 'fr' ? 'Statistiques' : 'Thống kê'}
+                Statistiques
             </FormattedText>
 
             <View style={styles.statsGrid}>
                 <StatItem
                     icon="time"
-                    label={language === 'fr' ? 'Temps moyen' : 'Thời gian TB'}
+                    label="Temps moyen"
                     value={`${Math.round(statistics.timeStats?.averageTimePerQuestion || 0)}s`}
                     color={theme.colors.primary}
                 />
 
                 <StatItem
                     icon="trendingUp"
-                    label={language === 'fr' ? 'Tendance' : 'Xu hướng'}
+                    label="Tendance"
                     value={getTrendText(statistics.improvementTrend)}
                     color={theme.colors.success}
                 />
 
                 <StatItem
                     icon="checkmarkCircle"
-                    label={language === 'fr' ? 'Maîtrisées' : 'Đã thành thạo'}
+                    label="Maîtrisées"
                     value={`${statistics.masteredQuestions?.length || 0}`}
                     color={theme.colors.success}
                 />
 
                 <StatItem
                     icon="alertCircle"
-                    label={language === 'fr' ? 'À revoir' : 'Cần xem lại'}
+                    label="À revoir"
                     value={`${statistics.strugglingQuestions?.length || 0}`}
                     color={theme.colors.warning}
                 />

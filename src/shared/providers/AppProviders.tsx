@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LanguageProvider } from '../contexts/LanguageContext';
+import { DataProvider } from '../contexts/DataContext';
 import { IconProvider } from '../contexts/IconContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { TextFormattingProvider } from '../contexts/TextFormattingContext';
@@ -13,7 +13,7 @@ interface AppProvidersProps {
 }
 
 const AppProviders: React.FC<AppProvidersProps> = ({ children }) => (
-    <LanguageProvider>
+    <DataProvider>
         <IconProvider>
             <ThemeProvider>
                 <TextFormattingProvider>
@@ -27,7 +27,7 @@ const AppProviders: React.FC<AppProvidersProps> = ({ children }) => (
                 </TextFormattingProvider>
             </ThemeProvider>
         </IconProvider>
-    </LanguageProvider>
+    </DataProvider>
 );
 
 export default AppProviders;

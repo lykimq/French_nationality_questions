@@ -4,8 +4,8 @@
 // Core fundamental types
 export * from './core';
 
-// Language-specific types
-export * from './language';
+// Questions data types
+export * from './questionsData';
 
 // UI component types
 export * from './ui';

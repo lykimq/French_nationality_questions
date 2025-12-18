@@ -14,20 +14,18 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { useLanguage } from '../shared/contexts/LanguageContext';
+import { useData } from '../shared/contexts/DataContext';
 import { useTest } from './contexts/TestContext';
 import { useIcons } from '../shared/contexts/IconContext';
-import { FormattedText, LanguageToggle } from '../shared/components';
+import { FormattedText } from '../shared/components';
 import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../types';
 import { preloadAllPart1TestData } from '../shared/utils';
-import { getLocalizedText } from './utils';    
 
 type ConversationTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
 const ConversationTestScreen = () => {
     const navigation = useNavigation<ConversationTestScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const { startTest } = useTest();
     const { getIconName, getJsonIconName } = useIcons();
 
@@ -83,10 +81,8 @@ const ConversationTestScreen = () => {
             return {
                 mode: `part1_${subcategory.id}` as TestMode,
                 subcategoryId: subcategory.id,
-                title_fr: subcategory.title,
-                title_vi: subcategory.title_vi,
-                description_fr: subcategory.description,
-                description_vi: subcategory.description_vi,
+                title: subcategory.title,
+                description: subcategory.description,
                 icon: subcategory.icon,
                 color: getSubcategoryColor(subcategory.id),
                 questionCount,
@@ -95,32 +91,20 @@ const ConversationTestScreen = () => {
     }, [part1TestCategories, part1TestSubcategories]);
 
     // Helper function to create shorter, user-friendly titles
-    const getShortTitle = (subcategoryId: string): { fr: string; vi: string } => {
-        const shortTitles: { [key: string]: { fr: string; vi: string } } = {
-            test_personal: {
-                fr: 'Informations personnelles',
-                vi: 'Thông tin cá nhân'
-            },
-            test_opinions: {
-                fr: 'Vos opinions',
-                vi: 'Ý kiến của bạn'
-            },
-            test_daily_life: {
-                fr: 'Vie quotidienne',
-                vi: 'Cuộc sống hàng ngày'
-            }
+    const getShortTitle = (subcategoryId: string): string => {
+        const shortTitles: { [key: string]: string } = {
+            test_personal: 'Informations personnelles',
+            test_opinions: 'Vos opinions',
+            test_daily_life: 'Vie quotidienne'
         };
-        return shortTitles[subcategoryId] || { fr: subcategoryId, vi: subcategoryId };
+        return shortTitles[subcategoryId] || subcategoryId;
     };
 
     const handleStartTest = async (testMode: Part1TestModeOption) => {
         if (testMode.questionCount === 0) {
             Alert.alert(
-                getLocalizedText(language)('Aucune question disponible', 'Không có câu hỏi'),
-                getLocalizedText(language)(
-                    'Il n\'y a pas de questions disponibles pour cette catégorie.',
-                    'Không có câu hỏi nào có sẵn cho danh mục này.'
-                )
+                'Aucune question disponible',
+                'Il n\'y a pas de questions disponibles pour cette catégorie.'
             );
             return;
         }
@@ -143,11 +127,8 @@ const ConversationTestScreen = () => {
         } catch (error) {
             console.error('Error starting Part 1 test:', error);
             Alert.alert(
-                getLocalizedText(language)('Erreur', 'Lỗi'),
-                getLocalizedText(language)(
-                    'Impossible de démarrer le test. Veuillez réessayer.',
-                    'Không thể bắt đầu bài kiểm tra. Vui lòng thử lại.'
-                )
+                'Erreur',
+                'Impossible de démarrer le test. Veuillez réessayer.'
             );
         } finally {
             setIsStartingTest(false);
@@ -179,10 +160,10 @@ const ConversationTestScreen = () => {
                         </View>
                         <View style={styles.titleContainer}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]} numberOfLines={2}>
-                                {getLocalizedText(language)(shortTitle.fr, shortTitle.vi)}
+                                {shortTitle}
                             </FormattedText>
                             <FormattedText style={[styles.cardSubtitle, { color: theme.colors.textSecondary }]} numberOfLines={1}>
-                                {testMode.questionCount} {language === 'fr' ? 'questions' : 'câu hỏi'}
+                                {testMode.questionCount} questions
                             </FormattedText>
                         </View>
                     </View>
@@ -201,7 +182,7 @@ const ConversationTestScreen = () => {
                 {/* Bottom: Description and time info */}
                 <View style={styles.cardBottom}>
                     <FormattedText style={[styles.cardDescription, { color: theme.colors.textSecondary }]} numberOfLines={2}>
-                        {getLocalizedText(language)(testMode.description_fr, testMode.description_vi)}
+                        {testMode.description}
                     </FormattedText>
 
                     {testMode.questionCount > 0 && (
@@ -209,13 +190,13 @@ const ConversationTestScreen = () => {
                             <View style={styles.testInfoItem}>
                                 <Ionicons name={getIconName('time') as any} size={14} color={testMode.color} />
                                 <FormattedText style={[styles.testInfoText, { color: testMode.color }]}>
-                                    ~{Math.ceil(testMode.questionCount * 2)} {language === 'fr' ? 'min' : 'phút'}
+                                    ~{Math.ceil(testMode.questionCount * 2)} min
                                 </FormattedText>
                             </View>
                             <View style={styles.testInfoItem}>
                                 <Ionicons name={getIconName('chatbox') as any} size={14} color={testMode.color} />
                                 <FormattedText style={[styles.testInfoText, { color: testMode.color }]}>
-                                    {language === 'fr' ? 'Conversation' : 'Hội thoại'}
+                                    Conversation
                                 </FormattedText>
                             </View>
                         </View>
@@ -223,7 +204,7 @@ const ConversationTestScreen = () => {
 
                     {testMode.questionCount === 0 && (
                         <FormattedText style={[styles.noQuestionsText, { color: theme.colors.textSecondary }]}>
-                            {getLocalizedText(language)('Aucune question disponible', 'Chưa có câu hỏi')}
+                            Aucune question disponible
                         </FormattedText>
                     )}
                 </View>
@@ -245,7 +226,7 @@ const ConversationTestScreen = () => {
                         </TouchableOpacity>
                         <View style={styles.headerTextContainer}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {getLocalizedText(language)('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                                Tests Partie 1
                             </FormattedText>
                         </View>
                     </View>
@@ -253,7 +234,7 @@ const ConversationTestScreen = () => {
                     <View style={styles.loadingContainer}>
                         <ActivityIndicator size="large" color={theme.colors.primary} />
                         <FormattedText style={[styles.loadingText, { color: theme.colors.textSecondary }]}>
-                            {getLocalizedText(language)('Chargement des tests...', 'Đang tải bài kiểm tra...')}
+                            Chargement des tests...
                         </FormattedText>
                     </View>
             </View>
@@ -274,7 +255,7 @@ const ConversationTestScreen = () => {
                         </TouchableOpacity>
                         <View style={styles.headerTextContainer}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {getLocalizedText(language)('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                                Tests Partie 1
                             </FormattedText>
                         </View>
                     </View>
@@ -282,7 +263,7 @@ const ConversationTestScreen = () => {
                 <View style={styles.errorContainer}>
                     <Ionicons name={getIconName('alertCircle') as any} size={48} color={theme.colors.error} />
                     <FormattedText style={[styles.errorText, { color: theme.colors.error }]}>
-                        {getLocalizedText(language)('Erreur de chargement', 'Lỗi tải dữ liệu')}
+                        Erreur de chargement
                     </FormattedText>
                     <FormattedText style={[styles.errorDetailText, { color: theme.colors.textSecondary }]}>
                         {dataLoadingError}
@@ -307,20 +288,12 @@ const ConversationTestScreen = () => {
 
                     <View style={styles.headerTextContainer}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                            {getLocalizedText(language)('Tests Partie 1', 'Bài Kiểm Tra Phần 1')}
+                            Tests Partie 1
                         </FormattedText>
                         <FormattedText style={[styles.headerSubtitle, { color: theme.colors.headerText + 'B3' }]}>
-                            {getLocalizedText(language)('Tests de conversation et connaissances', 'Bài kiểm tra hội thoại và kiến thức')}
+                            Tests de conversation et connaissances
                         </FormattedText>
                     </View>
-
-                    <LanguageToggle
-                        language={language}
-                        onToggle={toggleLanguage}
-                        textColor={theme.colors.headerText}
-                        style={styles.languageToggle}
-                        labelStyle={styles.languageToggleLabel}
-                    />
                 </View>
             </SafeAreaView>
 
@@ -337,7 +310,7 @@ const ConversationTestScreen = () => {
                     <View style={[styles.loadingOverlay, { backgroundColor: theme.colors.background + 'E6' }]}>
                         <ActivityIndicator size="large" color={theme.colors.primary} />
                         <FormattedText style={[styles.loadingText, { color: theme.colors.text }]}>
-                            {getLocalizedText(language)('Préparation du test...', 'Đang chuẩn bị bài kiểm tra...')}
+                            Préparation du test...
                         </FormattedText>
                     </View>
                 )}
@@ -374,12 +347,6 @@ const styles = StyleSheet.create({
     headerSubtitle: {
         fontSize: 14,
         marginTop: 2,
-    },
-    languageToggle: {
-        marginLeft: 10,
-    },
-    languageToggleLabel: {
-        fontSize: 12,
     },
     scrollView: {
         flex: 1,

@@ -8,11 +8,7 @@ import { FormattedText } from '../../shared/components';
 import SettingItem from './SettingItem';
 import { settingsStyles } from './settingsStyles';
 
-interface TextFormattingSettingsProps {
-    language: 'fr' | 'vi';
-}
-
-const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ language }) => {
+const TextFormattingSettings: React.FC = () => {
     const { theme } = useTheme();
     const {
         settings,
@@ -24,21 +20,16 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
     } = useTextFormatting();
 
     const handleResetTextSettings = () => {
-        const title = language === 'fr' ? 'Réinitialisation' : 'Đặt lại';
-        const message = language === 'fr'
-            ? 'Réinitialiser tous les paramètres de texte aux valeurs par défaut ?'
-            : 'Đặt lại tất cả cài đặt văn bản về giá trị mặc định?';
-
         Alert.alert(
-            title,
-            message,
+            'Réinitialisation',
+            'Réinitialiser tous les paramètres de texte aux valeurs par défaut ?',
             [
                 {
-                    text: language === 'fr' ? 'Annuler' : 'Hủy',
+                    text: 'Annuler',
                     style: 'cancel',
                 },
                 {
-                    text: language === 'fr' ? 'Réinitialiser' : 'Đặt lại',
+                    text: 'Réinitialiser',
                     style: 'destructive',
                     onPress: resetToDefaults,
                 },
@@ -49,13 +40,13 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
     return (
         <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
             <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
-                {language === 'fr' ? 'Formatage du texte' : 'Định dạng văn bản'}
+                Formatage du texte
             </FormattedText>
 
             {/* Text Preview */}
             <View style={[styles.previewContainer, { backgroundColor: theme.colors.background, borderBottomColor: theme.colors.divider }]}>
                 <FormattedText style={[styles.previewLabel, { color: theme.colors.textSecondary }]}>
-                    {language === 'fr' ? 'Aperçu :' : 'Xem trước:'}
+                    Aperçu :
                 </FormattedText>
 
                 {/* Question Style Preview */}
@@ -65,10 +56,7 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
                             <FormattedText style={[styles.previewId, { color: theme.colors.buttonText }]}>42</FormattedText>
                         </View>
                         <FormattedText style={[styles.previewQuestion, { color: theme.colors.text }]}>
-                            {language === 'fr'
-                                ? 'Quelle est la devise de la République française ?'
-                                : 'Khẩu hiệu của Cộng hòa Pháp là gì?'
-                            }
+                            Quelle est la devise de la République française ?
                         </FormattedText>
                     </View>
                 </View>
@@ -79,17 +67,12 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
                     backgroundColor: theme.colors.card,
                     borderColor: theme.colors.border
                 }]}>
-                    {language === 'fr'
-                        ? 'Ceci est un exemple de texte avec vos paramètres de formatage. Vous pouvez voir comment la taille de police, la police, l\'espacement des lignes et l\'espacement des lettres affectent l\'apparence du texte dans l\'application.'
-                        : 'Đây là một ví dụ về văn bản với cài đặt định dạng của bạn. Bạn có thể thấy cách kích thước phông chữ, phông chữ, khoảng cách dòng và khoảng cách chữ cái ảnh hưởng đến giao diện của văn bản trong ứng dụng.'
-                    }
+                    Ceci est un exemple de texte avec vos paramètres de formatage. Vous pouvez voir comment la taille de police, la police, l'espacement des lignes et l'espacement des lettres affectent l'apparence du texte dans l'application.
                 </FormattedText>
             </View>
 
             <SliderSetting
                 title="Taille de police"
-                title_vi="Kích thước chữ"
-                language={language}
                 value={settings.fontSize}
                 minimumValue={12}
                 maximumValue={24}
@@ -100,16 +83,12 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
 
             <FontSelector
                 title="Police de caractères"
-                title_vi="Phông chữ"
-                language={language}
                 value={settings.fontFamily}
                 onValueChange={updateFontFamily}
             />
 
             <SliderSetting
                 title="Hauteur de ligne"
-                title_vi="Chiều cao dòng"
-                language={language}
                 value={settings.lineHeight}
                 minimumValue={1.0}
                 maximumValue={2.0}
@@ -120,8 +99,6 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
 
             <SliderSetting
                 title="Espacement des lettres"
-                title_vi="Khoảng cách chữ"
-                language={language}
                 value={settings.letterSpacing}
                 minimumValue={-1}
                 maximumValue={3}
@@ -132,11 +109,9 @@ const TextFormattingSettings: React.FC<TextFormattingSettingsProps> = ({ languag
 
             <SettingItem
                 title="Réinitialiser les paramètres de texte"
-                title_vi="Đặt lại cài đặt văn bản"
                 icon={theme.icons.refresh}
                 iconColor={theme.colors.error}
                 onPress={handleResetTextSettings}
-                language={language}
             />
         </View>
     );

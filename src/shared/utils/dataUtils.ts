@@ -144,9 +144,7 @@ const validateQuestion = (
     summary: {
         questionsWithIds: number;
         questionsWithFrench: number;
-        questionsWithVietnamese: number;
         questionsWithExplanations: number;
-        questionsWithVietnameseExplanations: number;
         questionsWithImages: number;
     }
 ): void => {
@@ -157,28 +155,18 @@ const validateQuestion = (
         errors.push(`Question at index ${index} missing or invalid ID`);
     }
 
-    // Check for French question text
+    // Check for question text
     if (question.question && typeof question.question === 'string' && question.question.trim()) {
         summary.questionsWithFrench++;
     } else {
-        errors.push(`Question ${question.id || index} missing French text`);
+        errors.push(`Question ${question.id || index} missing question text`);
     }
 
-    // Check for Vietnamese question text
-    if (question.question_vi && typeof question.question_vi === 'string' && question.question_vi.trim()) {
-        summary.questionsWithVietnamese++;
-    }
-
-    // Check for French explanation
+    // Check for explanation
     if (question.explanation && typeof question.explanation === 'string' && question.explanation.trim()) {
         summary.questionsWithExplanations++;
     } else {
-        errors.push(`Question ${question.id || index} missing French explanation`);
-    }
-
-    // Check for Vietnamese explanation
-    if (question.explanation_vi && typeof question.explanation_vi === 'string' && question.explanation_vi.trim()) {
-        summary.questionsWithVietnameseExplanations++;
+        errors.push(`Question ${question.id || index} missing explanation`);
     }
 
     // Check for images
@@ -200,9 +188,7 @@ export const validateDataStructure = (data: any, dataType: string): {
         totalQuestions: number;
         questionsWithIds: number;
         questionsWithFrench: number;
-        questionsWithVietnamese: number;
         questionsWithExplanations: number;
-        questionsWithVietnameseExplanations: number;
         questionsWithImages: number;
         categoryInfo?: string;
     };
@@ -212,9 +198,7 @@ export const validateDataStructure = (data: any, dataType: string): {
         totalQuestions: 0,
         questionsWithIds: 0,
         questionsWithFrench: 0,
-        questionsWithVietnamese: 0,
         questionsWithExplanations: 0,
-        questionsWithVietnameseExplanations: 0,
         questionsWithImages: 0,
         categoryInfo: undefined as string | undefined,
     };
@@ -289,23 +273,23 @@ export const getCachedJsonData = (dataPath: string): any => {
  * @returns Promise that resolves to the loaded data structure
  */
 export const loadMainQuestionData = async (): Promise<{
-    personal_fr_vi: any;
-    geography_fr_vi: any;
+    personal: any;
+    geography: any;
 } | null> => {
     try {
-        const [personal_fr_vi, geography_fr_vi] = await Promise.all([
+        const [personal, geography] = await Promise.all([
             getFirebaseJsonData('personal_fr_vi.json'),
             getFirebaseJsonData('geography_fr_vi.json')
         ]);
 
-        if (!personal_fr_vi || !geography_fr_vi) {
+        if (!personal || !geography) {
             console.error('❌ Failed to load one or more main data files');
             return null;
         }
 
         return {
-            personal_fr_vi,
-            geography_fr_vi
+            personal,
+            geography
         };
     } catch (error) {
         console.error('❌ Error loading main question data:', error);
@@ -432,34 +416,26 @@ export const loadPart1TestData = async (): Promise<any> => {
         const part1TestData = {
             id: "test_part1",
             title: "Première partie : Tests de connaissances",
-            title_vi: "Phần một: Bài kiểm tra kiến thức",
             icon: "book",
             description: "Première partie des tests divisée en trois sous-catégories",
-            description_vi: "Phần một của bài kiểm tra được chia thành ba chủ đề con",
             subcategories: [
                 {
                     id: "test_personal",
                     title: "Informations personnelles",
-                    title_vi: "Thông tin cá nhân",
                     icon: "person",
-                    description: "Questions sur la vie personnelle et l'entourage",
-                    description_vi: "Câu hỏi về thông tin cá nhân và người thân"
+                    description: "Questions sur la vie personnelle et l'entourage"
                 },
                 {
                     id: "test_opinions",
                     title: "Vos opinions",
-                    title_vi: "Ý kiến của bạn",
                     icon: "chatbox",
-                    description: "Questions sur vos opinions concernant la France",
-                    description_vi: "Câu hỏi về ý kiến của bạn liên quan đến Pháp"
+                    description: "Questions sur vos opinions concernant la France"
                 },
                 {
                     id: "test_daily_life",
                     title: "Vie quotidienne",
-                    title_vi: "Cuộc sống hàng ngày",
                     icon: "calendar",
-                    description: "Questions sur la vie quotidienne, le travail et les loisirs",
-                    description_vi: "Câu hỏi về cuộc sống hàng ngày, công việc và giải trí"
+                    description: "Questions sur la vie quotidienne, le travail et les loisirs"
                 }
             ]
         };

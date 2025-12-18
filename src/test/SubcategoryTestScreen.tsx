@@ -15,7 +15,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { useLanguage } from '../shared/contexts/LanguageContext';
+import { useData } from '../shared/contexts/DataContext';
 import { useTest } from './contexts/TestContext';
 import { useIcons } from '../shared/contexts/IconContext';
 import { FormattedText } from '../shared/components';
@@ -26,7 +26,7 @@ type SubcategoryTestScreenNavigationProp = NativeStackNavigationProp<TestStackPa
 const SubcategoryTestScreen = () => {
     const navigation = useNavigation<SubcategoryTestScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage, historyCategories, historySubcategories } = useLanguage();
+    const { historyCategories, historySubcategories } = useData();
     const { startTest } = useTest();
     const { getIconName, getJsonIconName } = useIcons();
 
@@ -62,10 +62,8 @@ const SubcategoryTestScreen = () => {
             return {
                 mode: `subcategory_${subcategoryId}` as TestMode,
                 subcategoryId: subcategoryId,
-                title_fr: (subcategory as any).title,
-                title_vi: (subcategory as any).title_vi || (subcategory as any).title,
-                description_fr: (subcategory as any).description || '',
-                description_vi: (subcategory as any).description_vi || (subcategory as any).description || '',
+                title: (subcategory as any).title,
+                description: (subcategory as any).description || '',
                 icon: (subcategory as any).icon || 'help-circle',
                 color: getSubcategoryColor(subcategoryId),
                 questionCount,
@@ -73,22 +71,12 @@ const SubcategoryTestScreen = () => {
         });
     }, [historyCategories, historySubcategories]);
 
-    const getLocalizedText = (textFr: string, textVi: string): string => {
-        if (language === 'fr') {
-            return textFr;
-        } else {
-            return `${textVi}\n${textFr}`;
-        }
-    };
 
     const handleStartTest = async (testMode: SubcategoryTestModeOption) => {
         if (testMode.questionCount === 0) {
             Alert.alert(
-                getLocalizedText('Aucune question disponible', 'Không có câu hỏi'),
-                getLocalizedText(
-                    'Il n\'y a pas de questions disponibles pour cette catégorie.',
-                    'Không có câu hỏi nào có sẵn cho danh mục này.'
-                )
+                'Aucune question disponible',
+                'Il n\'y a pas de questions disponibles pour cette catégorie.'
             );
             return;
         }
@@ -111,11 +99,8 @@ const SubcategoryTestScreen = () => {
         } catch (error) {
             console.error('Error starting subcategory test:', error);
             Alert.alert(
-                getLocalizedText('Erreur', 'Lỗi'),
-                getLocalizedText(
-                    'Impossible de démarrer le test. Veuillez réessayer.',
-                    'Không thể bắt đầu bài kiểm tra. Vui lòng thử lại.'
-                )
+                'Erreur',
+                'Impossible de démarrer le test. Veuillez réessayer.'
             );
         } finally {
             setIsStartingTest(false);
@@ -149,26 +134,26 @@ const SubcategoryTestScreen = () => {
 
             <View style={styles.cardContent}>
                 <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                    {getLocalizedText(testMode.title_fr, testMode.title_vi)}
+                    {testMode.title}
                 </FormattedText>
                 <FormattedText style={[styles.cardDescription, { color: theme.colors.textSecondary }]}>
-                    {getLocalizedText(testMode.description_fr, testMode.description_vi)}
+                    {testMode.description}
                 </FormattedText>
 
                 {testMode.questionCount > 0 && (
                     <View style={styles.testInfo}>
                         <FormattedText style={[styles.testInfoText, { color: testMode.color }]}>
-                            {language === 'fr' ? 'Questions' : 'Câu hỏi'}: {testMode.questionCount}
+                            Questions: {testMode.questionCount}
                         </FormattedText>
                         <FormattedText style={[styles.testInfoText, { color: testMode.color }]}>
-                            {language === 'fr' ? 'Durée' : 'Thời gian'}: ~{Math.ceil(testMode.questionCount * 1.5)} min
+                            Durée: ~{Math.ceil(testMode.questionCount * 1.5)} min
                         </FormattedText>
                     </View>
                 )}
 
                 {testMode.questionCount === 0 && (
                     <FormattedText style={[styles.noQuestionsText, { color: theme.colors.textSecondary }]}>
-                        {getLocalizedText('Aucune question disponible', 'Chưa có câu hỏi')}
+                        Aucune question disponible
                     </FormattedText>
                 )}
             </View>
@@ -190,23 +175,13 @@ const SubcategoryTestScreen = () => {
 
                     <View style={styles.headerTextContainer}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                            {getLocalizedText('Tests par Catégorie', 'Bài Kiểm Tra Theo Chủ Đề')}
+                            Tests par Catégorie
                         </FormattedText>
                         <FormattedText style={[styles.headerSubtitle, { color: theme.colors.headerText + 'B3' }]}>
-                            {getLocalizedText('Choisissez une catégorie spécifique', 'Chọn một chủ đề cụ thể')}
+                            Choisissez une catégorie spécifique
                         </FormattedText>
                     </View>
 
-                    <View style={styles.languageSelector}>
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor={theme.colors.switchThumb}
-                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                        />
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                    </View>
                 </View>
             </SafeAreaView>
 
@@ -219,7 +194,7 @@ const SubcategoryTestScreen = () => {
                     <View style={styles.loadingContainer}>
                         <ActivityIndicator size="large" color={theme.colors.primary} />
                         <FormattedText style={[styles.loadingText, { color: theme.colors.textSecondary }]}>
-                            {getLocalizedText('Chargement des catégories...', 'Đang tải các chủ đề...')}
+                            Chargement des catégories...
                         </FormattedText>
                     </View>
                 ) : (
@@ -232,7 +207,7 @@ const SubcategoryTestScreen = () => {
                     <View style={[styles.loadingOverlay, { backgroundColor: theme.colors.background + 'E6' }]}>
                         <ActivityIndicator size="large" color={theme.colors.primary} />
                         <FormattedText style={[styles.loadingText, { color: theme.colors.text }]}>
-                            {getLocalizedText('Préparation du test...', 'Đang chuẩn bị bài kiểm tra...')}
+                            Préparation du test...
                         </FormattedText>
                     </View>
                 )}
@@ -269,16 +244,6 @@ const styles = StyleSheet.create({
     headerSubtitle: {
         fontSize: 14,
         marginTop: 2,
-    },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: 10,
-    },
-    languageLabel: {
-        marginHorizontal: 5,
-        fontWeight: '600',
-        fontSize: 12,
     },
     scrollView: {
         flex: 1,

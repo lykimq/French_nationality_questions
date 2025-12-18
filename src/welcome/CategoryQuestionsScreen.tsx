@@ -4,8 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { HomeStackParamList, MultiLangCategory, Question } from '../types';
-import { useLanguage } from '../shared/contexts/LanguageContext';
+import { HomeStackParamList, Question } from '../types';
+import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import QuestionSlideView from './QuestionSlideView';
 import { FormattedText } from '../shared/components';
@@ -17,14 +17,8 @@ const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { categoryId, language: initialLanguage } = route.params;
-    const { language, setLanguage, toggleLanguage, questionsData, isTranslationLoaded } = useLanguage();
-
-    useEffect(() => {
-        if (initialLanguage && initialLanguage !== language) {
-            setLanguage(initialLanguage);
-        }
-    }, [initialLanguage]);
+    const { categoryId } = route.params;
+    const { questionsData } = useData();
 
     const category = questionsData.categories.find(c => c.id === categoryId);
 
@@ -36,13 +30,8 @@ const CategoryQuestionsScreen = () => {
         );
     }
 
-    const title_vi = isTranslationLoaded ? (category as MultiLangCategory).title_vi : undefined;
-    const displayTitle = language === 'fr'
-        ? category.title
-        : `${title_vi || category.title}\n${category.title}`;
-    const questionsCount = language === 'fr'
-        ? `${category.questions.length} questions`
-        : `${category.questions.length} câu hỏi`;
+    const displayTitle = category.title;
+    const questionsCount = `${category.questions.length} questions`;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -60,20 +49,10 @@ const CategoryQuestionsScreen = () => {
                         <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>{displayTitle}</FormattedText>
                         <FormattedText style={[styles.count, { color: theme.colors.headerText + 'B3' }]}>{questionsCount}</FormattedText>
                     </View>
-                    <View style={styles.languageSelector}>
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor={theme.colors.switchThumb}
-                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                        />
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                    </View>
                 </View>
             </SafeAreaView>
 
-            <QuestionSlideView questions={category.questions as Question[]} language={language} />
+            <QuestionSlideView questions={category.questions as Question[]} />
         </View>
     );
 };
@@ -108,15 +87,5 @@ const styles = StyleSheet.create({
     count: {
         fontSize: 14,
         marginTop: 2,
-    },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: 10,
-    },
-    languageLabel: {
-        marginHorizontal: 5,
-        fontWeight: '600',
-        fontSize: 12,
     },
 });

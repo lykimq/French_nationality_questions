@@ -12,7 +12,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
@@ -24,12 +23,7 @@ type CivicExamInfoScreenNavigationProp = NativeStackNavigationProp<CivicExamStac
 const CivicExamInfoScreen = () => {
     const navigation = useNavigation<CivicExamInfoScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language } = useLanguage();
     const { startExam } = useCivicExam();
-
-    const getLocalizedText = (fr: string, vi: string) => {
-        return language === 'fr' ? fr : vi;
-    };
 
     const handleStartExam = async () => {
         try {
@@ -61,7 +55,7 @@ const CivicExamInfoScreen = () => {
                         <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        {getLocalizedText('Informations sur l\'examen', 'Thông tin kỳ thi')}
+                        Informations sur l'examen
                     </FormattedText>
                     <View style={styles.headerSpacer} />
                 </View>
@@ -73,67 +67,55 @@ const CivicExamInfoScreen = () => {
                 >
                     <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
                         <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Modalités de l\'examen', 'Thể thức kỳ thi')}
+                            Modalités de l'examen
                         </FormattedText>
                         <View style={styles.infoRow}>
                             <Ionicons name="document-text" size={20} color={theme.colors.primary} />
                             <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                                {getLocalizedText(
-                                    `${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions à choix multiples`,
-                                    `${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} câu hỏi trắc nghiệm`
-                                )}
+                                {CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions à choix multiples
                             </FormattedText>
                         </View>
                         <View style={styles.infoRow}>
                             <Ionicons name="time" size={20} color={theme.colors.primary} />
                             <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                                {getLocalizedText(
-                                    `${CIVIC_EXAM_CONFIG.TIME_LIMIT_MINUTES} minutes maximum`,
-                                    `Tối đa ${CIVIC_EXAM_CONFIG.TIME_LIMIT_MINUTES} phút`
-                                )}
+                                {CIVIC_EXAM_CONFIG.TIME_LIMIT_MINUTES} minutes maximum
                             </FormattedText>
                         </View>
                         <View style={styles.infoRow}>
                             <Ionicons name="trophy" size={20} color={theme.colors.primary} />
                             <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                                {getLocalizedText(
-                                    `${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} bonnes réponses (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%) pour réussir`,
-                                    `${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} câu đúng (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%) để đạt`
-                                )}
+                                {CIVIC_EXAM_CONFIG.PASSING_SCORE}/{CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} bonnes réponses ({CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%) pour réussir
                             </FormattedText>
                         </View>
                     </View>
 
                     <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
                         <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Thématiques', 'Chủ đề')}
+                            Thématiques
                         </FormattedText>
                         <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
-                            • {getLocalizedText('Principes et valeurs de la République (11 questions)', 'Nguyên tắc và giá trị của Cộng hòa (11 câu)')}
+                            • Principes et valeurs de la République (11 questions)
                         </FormattedText>
                         <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
-                            • {getLocalizedText('Système institutionnel et politique (6 questions)', 'Hệ thống thể chế và chính trị (6 câu)')}
+                            • Système institutionnel et politique (6 questions)
                         </FormattedText>
                         <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
-                            • {getLocalizedText('Droits et devoirs (11 questions)', 'Quyền và nghĩa vụ (11 câu)')}
+                            • Droits et devoirs (11 questions)
                         </FormattedText>
                         <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
-                            • {getLocalizedText('Histoire, géographie et culture (8 questions)', 'Lịch sử, địa lý và văn hóa (8 câu)')}
+                            • Histoire, géographie et culture (8 questions)
                         </FormattedText>
                         <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
-                            • {getLocalizedText('Vivre dans la société française (4 questions)', 'Sống trong xã hội Pháp (4 câu)')}
+                            • Vivre dans la société française (4 questions)
                         </FormattedText>
                     </View>
 
                     <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
                         <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Important', 'Quan trọng')}
+                            Important
                         </FormattedText>
                         <FormattedText style={[styles.warningText, { color: theme.colors.text }]}>
-                            {getLocalizedText(
-                                '• L\'examen se déroule en français uniquement\n• Vous pouvez revenir en arrière pour modifier vos réponses\n• Le temps restant sera affiché en permanence\n• Vous pourrez réviser vos réponses avant de soumettre',
-                                '• Kỳ thi chỉ diễn ra bằng tiếng Pháp\n• Bạn có thể quay lại để sửa câu trả lời\n• Thời gian còn lại sẽ được hiển thị liên tục\n• Bạn có thể xem lại câu trả lời trước khi nộp'
-                            )}
+                            • L'examen se déroule en français uniquement\n• Vous pouvez revenir en arrière pour modifier vos réponses\n• Le temps restant sera affiché en permanence\n• Vous pourrez réviser vos réponses avant de soumettre
                         </FormattedText>
                     </View>
 
@@ -143,7 +125,7 @@ const CivicExamInfoScreen = () => {
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
-                            {getLocalizedText('Commencer l\'examen', 'Bắt đầu kỳ thi')}
+                            Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>
                 </ScrollView>

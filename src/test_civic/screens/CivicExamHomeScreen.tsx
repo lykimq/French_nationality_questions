@@ -12,7 +12,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
@@ -23,7 +22,6 @@ type CivicExamHomeScreenNavigationProp = NativeStackNavigationProp<CivicExamStac
 const CivicExamHomeScreen = () => {
     const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language } = useLanguage();
     const { examProgress, isLoading, refreshProgress } = useCivicExam();
 
     // Refresh progress when screen comes into focus (e.g., returning from settings)
@@ -32,10 +30,6 @@ const CivicExamHomeScreen = () => {
             refreshProgress();
         }, [refreshProgress])
     );
-
-    const getLocalizedText = (fr: string, vi: string) => {
-        return language === 'fr' ? fr : vi;
-    };
 
     const handleStartExam = () => {
         navigation.navigate('CivicExamInfo');
@@ -49,7 +43,7 @@ const CivicExamHomeScreen = () => {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted }]}>
-                    {getLocalizedText('Chargement...', 'Đang tải...')}
+                    Chargement...
                 </FormattedText>
             </View>
         );
@@ -68,7 +62,7 @@ const CivicExamHomeScreen = () => {
                         <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        {getLocalizedText('Examen Civique', 'Kỳ thi Công dân')}
+                        Examen Civique
                     </FormattedText>
                     <View style={styles.headerSpacer} />
                 </View>
@@ -81,16 +75,10 @@ const CivicExamHomeScreen = () => {
                     <View style={[styles.infoCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
                         <Ionicons name="school" size={48} color={theme.colors.primary} style={styles.icon} />
                         <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                            {getLocalizedText(
-                                'Examen Civique pour la Naturalisation',
-                                'Kỳ thi Công dân cho Quốc tịch'
-                            )}
+                            Examen Civique pour la Naturalisation
                         </FormattedText>
                         <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]}>
-                            {getLocalizedText(
-                                '40 questions • 45 minutes • 80% pour réussir',
-                                '40 câu hỏi • 45 phút • 80% để đạt'
-                            )}
+                            40 questions • 45 minutes • 80% pour réussir
                         </FormattedText>
                     </View>
 
@@ -100,7 +88,7 @@ const CivicExamHomeScreen = () => {
                                 {examProgress.totalExamsTaken + examProgress.totalPracticeSessions}
                             </FormattedText>
                             <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
-                                {getLocalizedText('Tests passés', 'Bài đã làm')}
+                                Tests passés
                             </FormattedText>
                         </View>
                         <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
@@ -108,7 +96,7 @@ const CivicExamHomeScreen = () => {
                                 {examProgress.bestScore}%
                             </FormattedText>
                             <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
-                                {getLocalizedText('Meilleur score', 'Điểm cao nhất')}
+                                Meilleur score
                             </FormattedText>
                         </View>
                         <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
@@ -116,7 +104,7 @@ const CivicExamHomeScreen = () => {
                                 {examProgress.passedExams}
                             </FormattedText>
                             <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
-                                {getLocalizedText('Réussis', 'Đã đạt')}
+                                Réussis
                             </FormattedText>
                         </View>
                     </View>
@@ -128,7 +116,7 @@ const CivicExamHomeScreen = () => {
                     >
                         <Ionicons name="document-text" size={24} color="#FFFFFF" />
                         <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
-                            {getLocalizedText('Commencer l\'examen', 'Bắt đầu kỳ thi')}
+                            Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>
 
@@ -139,7 +127,7 @@ const CivicExamHomeScreen = () => {
                     >
                         <Ionicons name="book" size={24} color={theme.colors.primary} />
                         <FormattedText style={[styles.buttonText, { color: theme.colors.primary }]}>
-                            {getLocalizedText('Mode pratique', 'Chế độ luyện tập')}
+                            Mode pratique
                         </FormattedText>
                     </TouchableOpacity>
                 </ScrollView>

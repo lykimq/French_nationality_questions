@@ -9,20 +9,13 @@ import { sharedStyles } from '../shared/utils';
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,
-    title_vi,
     description,
-    description_vi,
     icon,
     count,
     onPress,
-    language = 'fr',  // Default to French if not specified
 }) => {
     const { theme } = useTheme();
     const { getJsonIconName, getJsonIconColor, getIconName } = useIcons();
-
-    // Determine which language to display
-    const displayTitle = language === 'fr' ? title : (title_vi || title);
-    const displayDescription = language === 'fr' ? description : (description_vi || description);
 
     // Get the mapped icon name and vibrant color based on the current JSON icon set
     const mappedIconName = getJsonIconName(icon || 'default');
@@ -51,15 +44,12 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 />
             </View>
             <View style={styles.content}>
-                <FormattedText style={[styles.title, { color: theme.colors.text }]}>{displayTitle}</FormattedText>
-                {title_vi && language === 'vi' && (
-                    <FormattedText style={[styles.titleTranslation, { color: theme.colors.textSecondary }]}>{title}</FormattedText>
-                )}
+                <FormattedText style={[styles.title, { color: theme.colors.text }]}>{title}</FormattedText>
                 <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]} numberOfLines={2}>
-                    {displayDescription}
+                    {description}
                 </FormattedText>
                 <View style={[styles.countContainer, { backgroundColor: iconColor + '15' }]}>
-                    <FormattedText style={[styles.count, { color: iconColor }]}>{count} {language === 'fr' ? 'questions' : 'câu hỏi'}</FormattedText>
+                    <FormattedText style={[styles.count, { color: iconColor }]}>{count} questions</FormattedText>
                 </View>
             </View>
             <Ionicons name={getIconName('chevronForward') as keyof typeof Ionicons.glyphMap} size={24} color={iconColor} style={styles.arrowIcon} />

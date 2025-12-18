@@ -1,22 +1,15 @@
 import * as React from 'react';
 import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
-import type { Language, MultiLangText, MultilingualEntity, VisualEntity } from './core';
-import type { Question, MultilingualQuestion, CategoryType, HistoryCategory, HistorySubcategory, NavigationQuestion } from '../welcome/types';
-import type { FrenchQuestionsData, MultiLangQuestionsData } from './language';
+import type { BaseEntity, VisualEntity } from './core';
+import type { Question, CategoryType, HistoryCategory, HistorySubcategory, NavigationQuestion } from '../welcome/types';
+import type { FrenchQuestionsData } from './questionsData';
 
 // ==================== COMPONENT BASE PATTERNS ====================
 
-// Base props for all components that support language switching
-export interface LanguageAwareProps {
-    readonly language: Language;
-}
-
-// Base props for components with multilingual content
-export interface MultilingualProps extends LanguageAwareProps {
+// Base props for components with title and description
+export interface TitleProps {
     readonly title: string;
-    readonly title_vi?: string;
     readonly description?: string;
-    readonly description_vi?: string;
 }
 
 // Base props for interactive components
@@ -59,17 +52,17 @@ export interface AsyncComponentProps extends LoadingStateProps, ErrorStateProps,
 // ==================== FORM & INPUT COMPONENTS ====================
 
 // Generic value component props - functional approach
-export interface ValueComponentProps<T = string> extends LanguageAwareProps {
+export interface ValueComponentProps<T = string> {
     readonly value: T;
     readonly onValueChange: (value: T) => void;
     readonly disabled?: boolean;
 }
 
 // Settings component props - extends value component
-export interface SettingsComponentProps<T = string> extends ValueComponentProps<T>, MultilingualProps { }
+export interface SettingsComponentProps<T = string> extends ValueComponentProps<T>, TitleProps { }
 
 // Settings component with value support - for icon selectors and similar components
-export interface SettingsComponentWithValueProps<T = string> extends ValueComponentProps<T>, MultilingualProps { }
+export interface SettingsComponentWithValueProps<T = string> extends ValueComponentProps<T>, TitleProps { }
 
 // Extended settings component with additional props
 export type ExtendedSettingsComponent<T = string, P extends Record<string, any> = {}> =
@@ -95,28 +88,28 @@ export interface TextFormattingSettings {
 // ==================== QUESTION & CATEGORY COMPONENTS ====================
 
 // Question card component props
-export interface QuestionCardProps extends LanguageAwareProps {
+export interface QuestionCardProps {
     readonly id: number;
-    readonly question: string | MultiLangText;
-    readonly explanation: string | MultiLangText;
+    readonly question: string;
+    readonly explanation: string;
     readonly image?: string | null;
     readonly alwaysExpanded?: boolean;
 }
 
 // Category card component props
-export interface CategoryCardProps extends MultilingualProps, InteractiveProps, VisualProps {
+export interface CategoryCardProps extends TitleProps, InteractiveProps, VisualProps {
     readonly count: number;
 }
 
 // Question slide view props
-export interface QuestionSlideViewProps extends LanguageAwareProps {
+export interface QuestionSlideViewProps {
     readonly questions: readonly Question[];
 }
 
 // Category slide view props
-export interface CategorySlideViewProps extends LanguageAwareProps {
-    readonly categories: readonly (MultilingualEntity & VisualEntity & {
-        readonly questions: readonly (MultilingualQuestion | NavigationQuestion)[];
+export interface CategorySlideViewProps {
+    readonly categories: readonly (BaseEntity & TitleProps & VisualEntity & {
+        readonly questions: readonly (Question | NavigationQuestion)[];
     })[];
 }
 
@@ -146,35 +139,29 @@ export interface HOCProps<P extends Record<string, any> = {}> {
 
 // ==================== CONTEXT TYPES ====================
 
-// Language context type (import from domain/language types for full typing)
-export interface LanguageContextType {
-    readonly language: Language;
-    readonly setLanguage: (lang: Language) => void;
-    readonly toggleLanguage: () => void;
-    readonly questionsData: FrenchQuestionsData | MultiLangQuestionsData;
-    readonly isTranslationLoaded: boolean;
+// Data context type (provides questions data, not language switching)
+export interface DataContextType {
+    readonly questionsData: FrenchQuestionsData;
     readonly historyCategories: HistoryCategory | null;
     readonly historySubcategories: Record<string, HistorySubcategory>;
     readonly isDataLoading: boolean;
     readonly dataLoadingError: string | null;
 }
 
-// Language provider props
-export interface LanguageProviderProps {
+// Data provider props
+export interface DataProviderProps {
     readonly children: React.ReactNode;
 }
 
 // Settings item props
 export interface SettingItemProps {
     readonly title: string;
-    readonly title_vi?: string;
     readonly icon: string;
     readonly iconColor: string;
     readonly isSwitch?: boolean;
     readonly value?: boolean;
     readonly onValueChange?: (value: boolean) => void;
     readonly onPress?: () => void;
-    readonly language?: Language;
 }
 
 // Image modal props

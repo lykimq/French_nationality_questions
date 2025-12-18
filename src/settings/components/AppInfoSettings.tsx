@@ -8,22 +8,17 @@ import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../shared/utils';
 
 interface AppInfoSettingsProps {
-    language: 'fr' | 'vi';
     onRateApp: () => void;
 }
 
-const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ language, onRateApp }) => {
+const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ onRateApp }) => {
     const { theme } = useTheme();
     const APP_VERSION = '1.0.0';
 
     const shareApp = async () => {
         try {
-            const message = language === 'fr'
-                ? 'Découvrez cette application de préparation à l\'entretien de naturalisation française!'
-                : 'Khám phá ứng dụng này để chuẩn bị cho buổi phỏng vấn nhập quốc tịch Pháp!';
-
             await Share.share({
-                message,
+                message: 'Découvrez cette application de préparation à l\'entretien de naturalisation française!',
             });
         } catch (error) {
             console.error('Error sharing:', error);
@@ -31,41 +26,36 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ language, onRateApp }
     };
 
     const showAppVersion = () => {
-        const title = language === 'fr' ? 'Version de l\'application' : 'Phiên bản ứng dụng';
-        const message = language === 'fr'
-            ? `Version: ${APP_VERSION}\n\nCette application vous aide à préparer votre entretien de naturalisation française avec des questions et réponses pratiques.`
-            : `Phiên bản: ${APP_VERSION}\n\nỨng dụng này giúp bạn chuẩn bị cho buổi phỏng vấn nhập quốc tịch Pháp với các câu hỏi và câu trả lời thực tế.`;
-
-        Alert.alert(title, message, [
-            {
-                text: 'OK',
-                style: 'default',
-            }
-        ]);
+        Alert.alert(
+            'Version de l\'application',
+            `Version: ${APP_VERSION}\n\nCette application vous aide à préparer votre entretien de naturalisation française avec des questions et réponses pratiques.`,
+            [
+                {
+                    text: 'OK',
+                    style: 'default',
+                }
+            ]
+        );
     };
 
     return (
         <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
             <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
-                {language === 'fr' ? 'Autres options' : 'Tùy chọn khác'}
+                Autres options
             </FormattedText>
 
             <SettingItem
                 title="Partager l'application"
-                title_vi="Chia sẻ ứng dụng"
                 icon={theme.icons.share}
                 iconColor={theme.colors.warning}
                 onPress={shareApp}
-                language={language}
             />
 
             <SettingItem
                 title="Évaluer l'application"
-                title_vi="Đánh giá ứng dụng"
                 icon={theme.icons.star}
                 iconColor="#FFC107"
                 onPress={onRateApp}
-                language={language}
             />
 
             <View style={[settingsStyles.settingItem, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
@@ -78,7 +68,7 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ language, onRateApp }
                     </View>
                     <View style={styles.versionInfo}>
                         <FormattedText style={[settingsStyles.settingTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Version de l\'application' : 'Phiên bản ứng dụng'}
+                            Version de l'application
                         </FormattedText>
                         <FormattedText style={[styles.versionNumber, { color: theme.colors.textMuted }]}>
                             v{APP_VERSION}

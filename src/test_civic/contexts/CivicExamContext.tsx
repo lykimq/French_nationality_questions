@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
+import { useData } from '../../shared/contexts/DataContext';
 import { processAllQuestions } from '../../test/utils/testDataUtils';
 import { generateCivicExamQuestions } from '../utils/civicExamGeneration';
 import { calculateCivicExamScore, isCivicExamPassed } from '../utils/civicExamScoring';
@@ -63,7 +63,7 @@ interface CivicExamContextType {
 const CivicExamContext = createContext<CivicExamContextType | undefined>(undefined);
 
 export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { questionsData, historySubcategories } = useLanguage();
+    const { questionsData, historySubcategories } = useData();
 
     // State management
     const [currentSession, setCurrentSession] = useState<CivicExamSession | null>(null);

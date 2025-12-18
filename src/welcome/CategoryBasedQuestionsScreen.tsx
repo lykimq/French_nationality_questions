@@ -5,7 +5,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList } from '../types';
-import { useLanguage } from '../shared/contexts/LanguageContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import CategorySlideView from './CategorySlideView';
 import CategorySelectionView from './CategorySelectionView';
@@ -17,13 +16,12 @@ const CategoryBasedQuestionsScreen = () => {
     const route = useRoute<CategoryBasedQuestionsRouteProp>();
     const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>();
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const { categories, title } = route.params;
 
     const [selectedCategoryIndex, setSelectedCategoryIndex] = useState<number | null>(null);
 
     const totalQuestions = categories.reduce((total, category) => total + category.questions.length, 0);
-    const questionsCount = `${totalQuestions} ${language === 'fr' ? 'questions' : 'câu hỏi'}`;
+    const questionsCount = `${totalQuestions} questions`;
 
     const handleBack = () => {
         if (selectedCategoryIndex !== null) {
@@ -36,19 +34,15 @@ const CategoryBasedQuestionsScreen = () => {
     const getCurrentTitle = () => {
         if (selectedCategoryIndex !== null) {
             const category = categories[selectedCategoryIndex];
-            return language === 'fr'
-                ? category.title
-                : `${category.title_vi || category.title}\n${category.title}`;
+            return category.title;
         }
-        return language === 'fr'
-            ? route.params.title
-            : `${route.params.title_vi || route.params.title}\n${route.params.title}`;
+        return route.params.title;
     };
 
     const getCurrentCount = () => {
         if (selectedCategoryIndex !== null) {
             const count = categories[selectedCategoryIndex].questions.length;
-            return `${count} ${language === 'fr' ? 'questions' : 'câu hỏi'}`;
+            return `${count} questions`;
         }
         return questionsCount;
     };
@@ -69,28 +63,16 @@ const CategoryBasedQuestionsScreen = () => {
                         <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>{getCurrentTitle()}</FormattedText>
                         <FormattedText style={[styles.count, { color: theme.colors.headerText + 'B3' }]}>{getCurrentCount()}</FormattedText>
                     </View>
-                    <View style={styles.languageSelector}>
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor={theme.colors.switchThumb}
-                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                        />
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                    </View>
                 </View>
             </SafeAreaView>
 
             {selectedCategoryIndex !== null ? (
                 <CategorySlideView
                     categories={[categories[selectedCategoryIndex]]}
-                    language={language}
                 />
             ) : (
                 <CategorySelectionView
                     categories={categories}
-                    language={language}
                     onSelectCategory={setSelectedCategoryIndex}
                 />
             )}
@@ -134,17 +116,6 @@ export const getCommonStyles = (theme: any) => StyleSheet.create({
         color: theme.colors.headerText + 'B3',
         marginTop: 2,
     },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: 10,
-    },
-    languageLabel: {
-        color: theme.colors.headerText,
-        marginHorizontal: 5,
-        fontWeight: '600',
-        fontSize: 12,
-    },
 });
 
 const styles = StyleSheet.create({
@@ -175,16 +146,6 @@ const styles = StyleSheet.create({
     count: {
         fontSize: 14,
         marginTop: 2,
-    },
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: 10,
-    },
-    languageLabel: {
-        marginHorizontal: 5,
-        fontWeight: '600',
-        fontSize: 12,
     },
     slideContent: {
         flex: 1,

@@ -10,13 +10,11 @@ import { TestRecommendation } from '../types';
 interface RecommendationSectionProps {
     recommendations: TestRecommendation[];
     onRecommendationAction: (recommendation: TestRecommendation) => void;
-    getLocalizedText: (textFr: string, textVi: string) => string;
 }
 
 const RecommendationSection: React.FC<RecommendationSectionProps> = ({
     recommendations,
     onRecommendationAction,
-    getLocalizedText,
 }) => {
     const { theme } = useTheme();
     const { getIconName, getJsonIconName } = useIcons();
@@ -39,7 +37,7 @@ const RecommendationSection: React.FC<RecommendationSectionProps> = ({
     return (
         <View style={[styles.recommendationsSection, { backgroundColor: theme.colors.surface }]}>
             <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                {getLocalizedText('Recommandations', 'Đề xuất')}
+                Recommandations
             </FormattedText>
             {recommendations.slice(0, 2).map((rec, index) => {
                 const isActionable = (rec.type === 'review_questions' && rec.questionIds && rec.questionIds.length > 0) ||
@@ -65,14 +63,14 @@ const RecommendationSection: React.FC<RecommendationSectionProps> = ({
                         />
                         <View style={styles.recommendationContent}>
                             <FormattedText style={[styles.recommendationTitle, { color: theme.colors.text }]}>
-                                {getLocalizedText(rec.title_fr, rec.title_vi)}
+                                {rec.title}
                             </FormattedText>
                             <FormattedText style={[styles.recommendationDescription, { color: theme.colors.textMuted }]}>
-                                {getLocalizedText(rec.description_fr, rec.description_vi)}
+                                {rec.description}
                             </FormattedText>
                             {isActionable && (
                                 <FormattedText style={[styles.recommendationAction, { color: theme.colors.primary }]}>
-                                    {getLocalizedText(rec.actionText_fr, rec.actionText_vi)}
+                                    {rec.actionText}
                                 </FormattedText>
                             )}
                         </View>

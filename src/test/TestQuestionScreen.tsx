@@ -17,11 +17,10 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { useLanguage } from '../shared/contexts/LanguageContext';
 import { useTest, serializeTestResult } from './contexts/TestContext';
-import { FormattedText, LanguageToggle } from '../shared/components';
+import { FormattedText } from '../shared/components';
 import { TestAnswer, TestStackParamList } from '../types';
-import { getCachedImageSource, getQuestionTextWithDualLanguage, getExplanationTextWithDualLanguage } from '../shared/utils';
+import { getCachedImageSource, getQuestionText, getExplanationText } from '../shared/utils';
 import { useIcons } from '../shared/contexts/IconContext';
 
 type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
@@ -29,7 +28,6 @@ type TestQuestionScreenNavigationProp = NativeStackNavigationProp<TestStackParam
 const TestQuestionScreen = () => {
     const navigation = useNavigation<TestQuestionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const { getIconName } = useIcons();
     const {
         currentSession,
@@ -112,8 +110,8 @@ const TestQuestionScreen = () => {
 
     const handleTimeUp = async () => {
         Alert.alert(
-            language === 'fr' ? 'Temps écoulé' : 'Hết giờ',
-            language === 'fr' ? 'Le temps est écoulé. Le test va se terminer.' : 'Thời gian đã hết. Bài kiểm tra sẽ kết thúc.',
+            'Temps écoulé',
+            'Le temps est écoulé. Le test va se terminer.',
             [{ text: 'OK', onPress: handleFinishTest }]
         );
     };
@@ -142,8 +140,8 @@ const TestQuestionScreen = () => {
             await submitAnswer(answer);
         } catch (error) {
             Alert.alert(
-                language === 'fr' ? 'Erreur' : 'Lỗi',
-                language === 'fr' ? 'Erreur lors de la soumission de la réponse' : 'Lỗi khi nộp câu trả lời'
+                'Erreur',
+                'Erreur lors de la soumission de la réponse'
             );
         } finally {
             setIsSubmitting(false);
@@ -167,20 +165,20 @@ const TestQuestionScreen = () => {
             navigation.navigate('TestResult', { testResult: serializedResult });
         } catch (error) {
             Alert.alert(
-                language === 'fr' ? 'Erreur' : 'Lỗi',
-                language === 'fr' ? 'Erreur lors de la finalisation du test' : 'Lỗi khi hoàn thành bài kiểm tra'
+                'Erreur',
+                'Erreur lors de la finalisation du test'
             );
         }
     };
 
     const handleCancelTest = () => {
         Alert.alert(
-            language === 'fr' ? 'Annuler le test' : 'Hủy bài kiểm tra',
-            language === 'fr' ? 'Êtes-vous sûr de vouloir annuler ce test ?' : 'Bạn có chắc chắn muốn hủy bài kiểm tra này?',
+            'Annuler le test',
+            'Êtes-vous sûr de vouloir annuler ce test ?',
             [
-                { text: language === 'fr' ? 'Non' : 'Không', style: 'cancel' },
+                { text: 'Non', style: 'cancel' },
                 {
-                    text: language === 'fr' ? 'Oui' : 'Có',
+                    text: 'Oui',
                     onPress: () => {
                         cancelTest();
                         navigation.goBack();
@@ -201,14 +199,18 @@ const TestQuestionScreen = () => {
         return ((currentQuestionIndex + 1) / currentSession.totalQuestions) * 100;
     };
 
-    // Helper function to get the correct question text based on language
-    const getQuestionText = (): string => {
-        return getQuestionTextWithDualLanguage(currentQuestion, language);
+    const getQuestionTextValue = (): string => {
+        if (!currentQuestion) return '';
+        return typeof currentQuestion.question === 'string' 
+            ? currentQuestion.question 
+            : currentQuestion.question || '';
     };
 
-    // Helper function to get the correct explanation text based on language
-    const getExplanationText = (): string => {
-        return getExplanationTextWithDualLanguage(currentQuestion, language);
+    const getExplanationTextValue = (): string => {
+        if (!currentQuestion) return '';
+        return typeof currentQuestion.explanation === 'string' 
+            ? currentQuestion.explanation 
+            : currentQuestion.explanation || '';
     };
 
     if (!currentSession || !currentQuestion) {
@@ -216,7 +218,7 @@ const TestQuestionScreen = () => {
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {language === 'fr' ? 'Chargement...' : 'Đang tải...'}
+                    Chargement...
                 </FormattedText>
             </View>
         );
@@ -248,13 +250,6 @@ const TestQuestionScreen = () => {
                                 </View>
                             )}
 
-                            <LanguageToggle
-                                language={language}
-                                onToggle={toggleLanguage}
-                                textColor={theme.colors.headerText}
-                                style={styles.languageToggle}
-                                labelStyle={styles.languageToggleLabel}
-                            />
                         </View>
                     </View>
 
@@ -276,7 +271,7 @@ const TestQuestionScreen = () => {
                     <View style={[styles.questionCard, { backgroundColor: theme.colors.surface }]}>
                         <View style={styles.questionHeader}>
                             <FormattedText style={[styles.questionLabel, { color: theme.colors.textMuted }]}>
-                                {language === 'fr' ? 'Question d\'entretien' : 'Câu hỏi phỏng vấn'} {currentQuestionIndex + 1}
+                                Question d'entretien {currentQuestionIndex + 1}
                             </FormattedText>
                             {currentQuestion.categoryTitle && (
                                 <View style={[styles.categoryBadge, { backgroundColor: theme.colors.primaryLight }]}>
@@ -290,7 +285,7 @@ const TestQuestionScreen = () => {
                         </View>
 
                         <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
-                            {getQuestionText()}
+                            {getQuestionTextValue()}
                         </FormattedText>
 
                         {currentQuestion.image && (
@@ -307,14 +302,11 @@ const TestQuestionScreen = () => {
                             <View style={styles.instructionHeader}>
                                 <Ionicons name={getIconName('bulb') as any} size={20} color={theme.colors.warning} />
                                 <FormattedText style={[styles.instructionTitle, { color: theme.colors.text }]}>
-                                    {language === 'fr' ? 'Instructions' : 'Hướng dẫn'}
+                                    Instructions
                                 </FormattedText>
                             </View>
                             <FormattedText style={[styles.instructionText, { color: theme.colors.textMuted }]}>
-                                {language === 'fr'
-                                    ? 'Réfléchissez à votre réponse, puis cliquez sur "Voir la réponse" pour découvrir la réponse attendue et comparer avec vos connaissances.'
-                                    : 'Hãy suy nghĩ về câu trả lời của bạn, sau đó nhấn "Xem đáp án" để khám phá câu trả lời mong đợi và so sánh với kiến thức của bạn.'
-                                }
+                                Réfléchissez à votre réponse, puis cliquez sur "Voir la réponse" pour découvrir la réponse attendue et comparer avec vos connaissances.
                             </FormattedText>
                         </View>
                     )}
@@ -325,11 +317,11 @@ const TestQuestionScreen = () => {
                             <View style={styles.answerHeader}>
                                 <Ionicons name={getIconName('checkmarkCircle') as any} size={20} color={theme.colors.success} />
                                 <FormattedText style={[styles.answerTitle, { color: theme.colors.text }]}>
-                                    {language === 'fr' ? 'Réponse attendue' : 'Đáp án mong đợi'}
+                                    Réponse attendue
                                 </FormattedText>
                             </View>
                             <FormattedText style={[styles.answerText, { color: theme.colors.textMuted }]}>
-                                {getExplanationText()}
+                                {getExplanationTextValue()}
                             </FormattedText>
                         </View>
                     )}
@@ -338,9 +330,7 @@ const TestQuestionScreen = () => {
                     {showAnswer && userFeedback === null && (
                         <View style={[styles.assessmentCard, { backgroundColor: theme.colors.surface }]}>
                             <FormattedText style={[styles.assessmentQuestion, { color: theme.colors.text }]}>
-                                {language === 'fr'
-                                    ? 'Évaluez votre réponse:'
-                                    : 'Đánh giá câu trả lời của bạn:'}
+                                Évaluez votre réponse:
                             </FormattedText>
                             <View style={styles.assessmentButtons}>
                                 <TouchableOpacity
@@ -350,7 +340,7 @@ const TestQuestionScreen = () => {
                                 >
                                     <Ionicons name={getIconName('checkmark') as any} size={20} color="white" />
                                     <FormattedText style={styles.assessmentButtonText}>
-                                        {language === 'fr' ? 'Je savais' : 'Tôi biết'}
+                                        Je savais
                                     </FormattedText>
                                 </TouchableOpacity>
                                 <TouchableOpacity
@@ -360,7 +350,7 @@ const TestQuestionScreen = () => {
                                 >
                                     <Ionicons name={getIconName('close') as any} size={20} color="white" />
                                     <FormattedText style={styles.assessmentButtonText}>
-                                        {language === 'fr' ? 'Je ne savais pas' : 'Tôi không biết'}
+                                        Je ne savais pas
                                     </FormattedText>
                                 </TouchableOpacity>
                             </View>
@@ -383,8 +373,8 @@ const TestQuestionScreen = () => {
                             />
                             <FormattedText style={[styles.feedbackText, { color: theme.colors.text }]}>
                                 {userFeedback === 'correct'
-                                    ? (language === 'fr' ? 'Excellent! Continuez ainsi.' : 'Xuất sắc! Hãy tiếp tục như vậy.')
-                                    : (language === 'fr' ? 'Pas de problème, c\'est ainsi qu\'on apprend!' : 'Không sao, đó là cách chúng ta học hỏi!')
+                                    ? 'Excellent! Continuez ainsi.'
+                                    : 'Pas de problème, c\'est ainsi qu\'on apprend!'
                                 }
                             </FormattedText>
                         </View>
@@ -399,7 +389,7 @@ const TestQuestionScreen = () => {
                             onPress={handleRevealAnswer}
                         >
                             <FormattedText style={styles.actionButtonText}>
-                                {language === 'fr' ? 'Voir la réponse' : 'Xem đáp án'}
+                                Voir la réponse
                             </FormattedText>
                             <Ionicons name={getIconName('eye') as any} size={20} color="white" />
                         </TouchableOpacity>
@@ -410,8 +400,8 @@ const TestQuestionScreen = () => {
                         >
                             <FormattedText style={styles.actionButtonText}>
                                 {currentQuestionIndex < currentSession.totalQuestions - 1
-                                    ? (language === 'fr' ? 'Question suivante' : 'Câu hỏi tiếp theo')
-                                    : (language === 'fr' ? 'Terminer le test' : 'Hoàn thành bài test')
+                                    ? 'Question suivante'
+                                    : 'Terminer le test'
                                 }
                             </FormattedText>
                             <Ionicons
@@ -423,7 +413,7 @@ const TestQuestionScreen = () => {
                     ) : (
                         <View style={[styles.actionButton, { backgroundColor: theme.colors.textMuted, opacity: 0.6 }]}>
                             <FormattedText style={styles.actionButtonText}>
-                                {language === 'fr' ? 'Évaluez votre réponse ci-dessus' : 'Đánh giá câu trả lời ở trên'}
+                                Évaluez votre réponse ci-dessus
                             </FormattedText>
                         </View>
                     )}
@@ -656,12 +646,6 @@ const styles = StyleSheet.create({
     headerRight: {
         flexDirection: 'row',
         alignItems: 'center',
-    },
-    languageToggle: {
-        marginLeft: 12,
-    },
-    languageToggleLabel: {
-        fontSize: 14,
     },
 });
 

@@ -4,7 +4,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
 import { getScoreColor, getScoreMessage } from '../utils';
@@ -21,11 +20,10 @@ const ScoreCard: React.FC<ScoreCardProps> = ({
     totalQuestions,
 }) => {
     const { theme } = useTheme();
-    const { language } = useLanguage();
     const { getIconName } = useIcons();
 
     const scoreColor = getScoreColor(score, theme);
-    const scoreMessage = getScoreMessage(score, language);
+    const scoreMessage = getScoreMessage(score);
 
     return (
         <LinearGradient
@@ -44,7 +42,7 @@ const ScoreCard: React.FC<ScoreCardProps> = ({
                     {Math.round(score || 0)}%
                 </FormattedText>
                 <FormattedText style={[styles.scoreDetails, { color: theme.colors.textMuted }]}>
-                    {correctAnswers || 0} / {totalQuestions || 0} {language === 'fr' ? 'correctes' : 'đúng'}
+                    {correctAnswers || 0} / {totalQuestions || 0} correctes
                 </FormattedText>
             </View>
         </LinearGradient>

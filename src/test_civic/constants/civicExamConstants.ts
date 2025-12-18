@@ -159,47 +159,32 @@ export const CIVIC_EXAM_CONFIG = {
 
 // ==================== THEME DISPLAY NAMES ====================
 
-export const THEME_DISPLAY_NAMES: Record<CivicExamTheme, { fr: string; vi: string }> = {
-    principles_values: {
-        fr: 'Principes et valeurs de la République',
-        vi: 'Nguyên tắc và giá trị của Cộng hòa',
-    },
-    institutional_political: {
-        fr: 'Système institutionnel et politique',
-        vi: 'Hệ thống thể chế và chính trị',
-    },
-    rights_duties: {
-        fr: 'Droits et devoirs',
-        vi: 'Quyền và nghĩa vụ',
-    },
-    history_geography_culture: {
-        fr: 'Histoire, géographie et culture',
-        vi: 'Lịch sử, địa lý và văn hóa',
-    },
-    living_society: {
-        fr: 'Vivre dans la société française',
-        vi: 'Sống trong xã hội Pháp',
-    },
+export const THEME_DISPLAY_NAMES: Record<CivicExamTheme, string> = {
+    principles_values: 'Principes et valeurs de la République',
+    institutional_political: 'Système institutionnel et politique',
+    rights_duties: 'Droits et devoirs',
+    history_geography_culture: 'Histoire, géographie et culture',
+    living_society: 'Vivre dans la société française',
 };
 
 // ==================== SUBTHEME DISPLAY NAMES ====================
 
-export const SUBTHEME_DISPLAY_NAMES: Record<CivicExamSubTheme, { fr: string; vi: string }> = {
-    devise_symboles: { fr: 'Devise et symboles de la République', vi: 'Khẩu hiệu và biểu tượng của Cộng hòa' },
-    laicite: { fr: 'Laïcité', vi: 'Thế tục hóa' },
-    situational_principles: { fr: 'Mises en situation', vi: 'Tình huống' },
-    democracy_vote: { fr: 'Démocratie et droit de vote', vi: 'Dân chủ và quyền bầu cử' },
-    organization_republic: { fr: 'Organisation de la République française', vi: 'Tổ chức của Cộng hòa Pháp' },
-    european_institutions: { fr: 'Institutions européennes', vi: 'Thể chế châu Âu' },
-    fundamental_rights: { fr: 'Droits fondamentaux', vi: 'Quyền cơ bản' },
-    obligations_duties: { fr: 'Obligations et devoirs', vi: 'Nghĩa vụ và bổn phận' },
-    situational_rights: { fr: 'Mises en situation', vi: 'Tình huống' },
-    historical_periods: { fr: 'Principales périodes et personnages historiques', vi: 'Các giai đoạn và nhân vật lịch sử chính' },
-    territories_geography: { fr: 'Territoires et géographie', vi: 'Lãnh thổ và địa lý' },
-    heritage: { fr: 'Patrimoine français', vi: 'Di sản Pháp' },
-    residence: { fr: "S'installer et résider en France", vi: 'Định cư và cư trú tại Pháp' },
-    healthcare: { fr: "L'accès aux soins", vi: 'Tiếp cận chăm sóc sức khỏe' },
-    work: { fr: 'Travailler en France', vi: 'Làm việc tại Pháp' },
-    parental_authority_education: { fr: "Autorité parentale et système éducatif", vi: 'Quyền cha mẹ và hệ thống giáo dục' },
+export const SUBTHEME_DISPLAY_NAMES: Record<CivicExamSubTheme, string> = {
+    devise_symboles: 'Devise et symboles de la République',
+    laicite: 'Laïcité',
+    situational_principles: 'Mises en situation',
+    democracy_vote: 'Démocratie et droit de vote',
+    organization_republic: 'Organisation de la République française',
+    european_institutions: 'Institutions européennes',
+    fundamental_rights: 'Droits fondamentaux',
+    obligations_duties: 'Obligations et devoirs',
+    situational_rights: 'Mises en situation',
+    historical_periods: 'Principales périodes et personnages historiques',
+    territories_geography: 'Territoires et géographie',
+    heritage: 'Patrimoine français',
+    residence: "S'installer et résider en France",
+    healthcare: "L'accès aux soins",
+    work: 'Travailler en France',
+    parental_authority_education: "Autorité parentale et système éducatif",
 };
 

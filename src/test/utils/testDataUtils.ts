@@ -32,15 +32,10 @@ export const processQuestionData = (
         id: finalId,
         question: typeof question.question === 'string'
             ? question.question
-            : question.question?.fr || question.question || '',
-        question_vi: question.question_vi ||
-            (typeof question.question !== 'string' ? question.question?.vi : undefined),
+            : question.question || '',
         explanation: typeof question.explanation === 'string'
             ? question.explanation
-            : question.explanation?.fr || question.explanation || 'No explanation provided',
-        explanation_vi: question.explanation_vi ||
-            (typeof question.explanation !== 'string' ? question.explanation?.vi : undefined) ||
-            (typeof question.explanation === 'string' ? question.explanation : 'No explanation provided'),
+            : question.explanation || 'No explanation provided',
         image: question.image,
         categoryId,
         categoryTitle: categoryTitle || categoryId,

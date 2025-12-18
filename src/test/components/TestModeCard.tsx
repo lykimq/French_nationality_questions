@@ -10,7 +10,6 @@ import { MainTestModeOption } from '../types';
 interface TestModeCardProps {
     modeOption: MainTestModeOption;
     onPress: () => void;
-    getLocalizedText: (textFr: string, textVi: string) => string;
     getLocalizedModeTitle: (modeOption: MainTestModeOption) => string;
     getLocalizedModeDescription: (modeOption: MainTestModeOption) => string;
 }
@@ -18,7 +17,6 @@ interface TestModeCardProps {
 const TestModeCard: React.FC<TestModeCardProps> = ({
     modeOption,
     onPress,
-    getLocalizedText,
     getLocalizedModeTitle,
     getLocalizedModeDescription,
 }) => {
@@ -38,7 +36,7 @@ const TestModeCard: React.FC<TestModeCardProps> = ({
             {modeOption.isRecommended && (
                 <View style={[styles.recommendedBadge, { backgroundColor: theme.colors.primary }]}>
                     <FormattedText style={styles.recommendedText}>
-                        {getLocalizedText('Recommandé', 'Được đề xuất')}
+                        Recommandé
                     </FormattedText>
                 </View>
             )}
@@ -59,7 +57,7 @@ const TestModeCard: React.FC<TestModeCardProps> = ({
                     <View style={styles.modeDetail}>
                         <Ionicons name={getIconName('helpCircle') as any} size={16} color={theme.colors.textMuted} />
                         <FormattedText style={[styles.modeDetailText, { color: theme.colors.textMuted }]}>
-                            {modeOption.questionCount} {getLocalizedText('questions', 'câu hỏi')}
+                            {modeOption.questionCount} questions
                         </FormattedText>
                     </View>
 
@@ -67,7 +65,7 @@ const TestModeCard: React.FC<TestModeCardProps> = ({
                         <View style={styles.modeDetail}>
                             <Ionicons name={getIconName('time') as any} size={16} color={theme.colors.textMuted} />
                             <FormattedText style={[styles.modeDetailText, { color: theme.colors.textMuted }]}>
-                                {modeOption.timeLimit} {getLocalizedText('min', 'phút')}
+                                {modeOption.timeLimit} min
                             </FormattedText>
                         </View>
                     )}

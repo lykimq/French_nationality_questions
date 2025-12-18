@@ -4,26 +4,35 @@ import { Ionicons } from '@expo/vector-icons';
 import { getImageSource as loadImageSource, getCachedImageSource, getQuestionText, getExplanationText, formatExplanation } from '../shared/utils';
 import { ImageModal, FormattedText } from '../shared/components';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { QuestionCardProps, Language } from '../types';
+import { QuestionCardProps } from '../types';
 import { sharedStyles } from '../shared/utils';
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
     question,
     explanation,
-    language = 'fr',
     image,
     alwaysExpanded = false,
 }) => {
+    console.log('[QuestionCard] Render - id:', id, 'question length:', question?.length || 0, 'explanation length:', explanation?.length || 0, 'alwaysExpanded:', alwaysExpanded);
+    console.log('[QuestionCard] Props received:', {
+        id,
+        question: question?.substring(0, 50),
+        explanation: explanation?.substring(0, 50),
+        image,
+        alwaysExpanded
+    });
+    
     const [expanded, setExpanded] = useState(alwaysExpanded);
-    const [showBothLanguages, setShowBothLanguages] = useState(true);
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
     const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
     const { theme } = useTheme();
-
-    const isMultilingual = typeof question !== 'string';
+    
+    const isExpanded = alwaysExpanded ? true : expanded;
+    
+    console.log('[QuestionCard] State - expanded:', expanded, 'alwaysExpanded:', alwaysExpanded, 'isExpanded (computed):', isExpanded);
 
     // Load Firebase image when component mounts or image changes
     useEffect(() => {
@@ -77,13 +86,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         };
     }, [image, id]);
 
-    const getQuestionTextForLang = (lang: Language) => {
-        return getQuestionText(question, lang);
-    };
-
-    const getExplanationTextForLang = (lang: Language) => {
-        return getExplanationText(explanation, lang);
-    };
 
     const toggleExpand = () => {
         setExpanded(!expanded);
@@ -108,6 +110,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         setIsImageModalVisible(false);
     };
 
+    console.log('[QuestionCard] Rendering card - isExpanded:', isExpanded, 'expanded state:', expanded);
+    
     return (
         <View style={[
             styles.card,
@@ -117,7 +121,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 borderColor: theme.colors.questionCardBorder,
                 borderWidth: 1,
             },
-            expanded && styles.cardExpanded
+            isExpanded && styles.cardExpanded
         ]}>
             <Pressable
                 style={({ pressed }) => [
@@ -132,28 +136,27 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     <FormattedText style={[styles.id, { color: theme.colors.buttonText }]}>{id}</FormattedText>
                 </View>
                 <View style={styles.questionContainer}>
-                    <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={expanded ? 0 : 2}>
-                        {getQuestionTextForLang('fr')}
-                    </FormattedText>
-                    {isMultilingual && language === 'vi' && (
-                        <FormattedText style={[styles.translation, { color: theme.colors.textSecondary }]} numberOfLines={expanded ? 0 : 1}>
-                            {getQuestionTextForLang('vi')}
-                        </FormattedText>
-                    )}
+                    {(() => {
+                        const questionText = getQuestionText(question);
+                        console.log('[QuestionCard] Rendering question text - length:', questionText.length, 'preview:', questionText.substring(0, 50), 'isExpanded:', isExpanded);
+                        return (
+                            <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={isExpanded ? 0 : 2}>
+                                {questionText}
+                            </FormattedText>
+                        );
+                    })()}
                 </View>
                 <View style={styles.iconContainer}>
                     <Ionicons
-                        name={expanded ? theme.icons.chevronUp as any : theme.icons.chevronDown as any}
+                        name={isExpanded ? theme.icons.chevronUp as any : theme.icons.chevronDown as any}
                         size={24}
                         color={theme.colors.primary}
                     />
                 </View>
             </Pressable>
 
-            {expanded && (
+            {isExpanded && (
                 <View style={[styles.expandedContent, { backgroundColor: theme.colors.questionCardBackground }]}>
-                    {isMultilingual}
-
                     {/* Display image if available */}
                     {image && !imageError && (
                         <TouchableOpacity
@@ -165,7 +168,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                 <View style={[styles.imageLoading, { backgroundColor: theme.colors.surface }]}>
                                     <ActivityIndicator size="large" color={theme.colors.primary} />
                                     <FormattedText style={[styles.loadingText, { color: theme.colors.text }]}>
-                                        {language === 'fr' ? "Chargement de l'image..." : "Đang tải hình ảnh..."}
+                                        Chargement de l'image...
                                     </FormattedText>
                                 </View>
                             )}
@@ -191,30 +194,29 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         <View style={[styles.imageFallback, { backgroundColor: theme.colors.surface }]}>
                             <Ionicons name={theme.icons.image as any} size={40} color={theme.colors.textMuted} />
                             <FormattedText style={[styles.imageFallbackText, { color: theme.colors.textMuted }]}>
-                                {language === 'fr' ? "Image non disponible" : "Hình ảnh không khả dụng"}
+                                Image non disponible
                             </FormattedText>
                         </View>
                     )}
 
-                    {getExplanationTextForLang('fr') !== "" && (
-                        <View style={styles.explanationContainer}>
-                            <View style={styles.section}>
-                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
-                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                    {formatExplanation(getExplanationTextForLang('fr'))}
-                                </FormattedText>
-
-                                {isMultilingual && showBothLanguages && language === 'vi' && getExplanationTextForLang('vi') !== "" && (
-                                    <>
-                                        <FormattedText style={[styles.sectionTitle, styles.secondLanguageTitle, { color: theme.colors.primary }]}>Giải thích:</FormattedText>
+                    {(() => {
+                        const explanationText = getExplanationText(explanation);
+                        console.log('[QuestionCard] Rendering explanation - length:', explanationText.length, 'isEmpty:', explanationText === '');
+                        if (explanationText !== "") {
+                            return (
+                                <View style={styles.explanationContainer}>
+                                    <View style={styles.section}>
+                                        <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
                                         <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                            {formatExplanation(getExplanationTextForLang('vi'))}
+                                            {formatExplanation(explanationText)}
                                         </FormattedText>
-                                    </>
-                                )}
-                            </View>
-                        </View>
-                    )}
+                                    </View>
+                                </View>
+                            );
+                        }
+                        console.warn('[QuestionCard] Explanation is empty, not rendering explanation section');
+                        return null;
+                    })()}
                 </View>
             )}
 
@@ -348,9 +350,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
         marginBottom: 8,
-    },
-    secondLanguageTitle: {
-        marginTop: 16,
     },
     sectionContent: {
         fontSize: 14,

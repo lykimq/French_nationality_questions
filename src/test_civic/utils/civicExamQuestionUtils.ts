@@ -1,7 +1,7 @@
-import { Language } from '../../types/core';
 import { getQuestionText, getExplanationText } from '../../shared/utils/questionUtils';
 import type { TestQuestion } from '../../types';
 import type { CivicExamQuestion } from '../types';
+
 
 /**
  * Civic exam question with options and correct answer
@@ -15,34 +15,28 @@ export interface CivicExamQuestionWithOptions extends CivicExamQuestion {
 
 /**
  * Extracts question text from a civic exam question
- * Handles both string and MultiLangText formats
  * 
  * @param question - The question object
- * @param language - The language to use for extraction
- * @returns The question text in the specified language
+ * @returns The question text
  */
 export const getCivicExamQuestionText = (
-    question: TestQuestion | null | undefined,
-    language: Language = 'fr'
+    question: TestQuestion | null | undefined
 ): string => {
     if (!question) return '';
-    return getQuestionText(question.question, language);
+    return getQuestionText(question.question);
 };
 
 /**
  * Extracts explanation text from a civic exam question
- * Handles both string and MultiLangText formats
  * 
  * @param question - The question object
- * @param language - The language to use for extraction
- * @returns The explanation text in the specified language
+ * @returns The explanation text
  */
 export const getCivicExamExplanationText = (
-    question: TestQuestion | null | undefined,
-    language: Language = 'fr'
+    question: TestQuestion | null | undefined
 ): string => {
     if (!question) return '';
-    return getExplanationText(question.explanation, language);
+    return getExplanationText(question.explanation);
 };
 
 /**
@@ -84,10 +78,9 @@ export const getAnswerTextFromOptions = (
  */
 export const getUserAnswerText = (
     question: CivicExamQuestionWithOptions | null | undefined,
-    userAnswerIndex: number | null | undefined,
-    language: Language = 'fr'
+    userAnswerIndex: number | null | undefined
 ): string => {
-    const fallbackText = language === 'fr' ? 'Aucune réponse' : 'Không có câu trả lời';
+    const fallbackText = 'Aucune réponse';
     return getAnswerTextFromOptions(question, userAnswerIndex, fallbackText);
 };
 
@@ -95,14 +88,12 @@ export const getUserAnswerText = (
  * Gets the correct answer text from a question
  * 
  * @param question - The question with options and correctAnswer
- * @param language - The language for fallback messages
  * @returns The correct answer text
  */
 export const getCorrectAnswerText = (
-    question: CivicExamQuestionWithOptions | null | undefined,
-    language: Language = 'fr'
+    question: CivicExamQuestionWithOptions | null | undefined
 ): string => {
-    const fallbackText = language === 'fr' ? 'Aucune réponse' : 'Không có câu trả lời';
+    const fallbackText = 'Aucune réponse';
     const correctAnswerIndex = question?.correctAnswer;
     return getAnswerTextFromOptions(question, correctAnswerIndex, fallbackText);
 };
@@ -124,20 +115,18 @@ export const parseUserAnswerIndex = (userAnswer: string | null | undefined): num
  * 
  * @param question - The question with options
  * @param userAnswerIndex - The user's selected answer index
- * @param language - The language for fallback messages
  * @returns Object containing user answer text and correct answer text
  */
 export const getQuestionAnswerInfo = (
     question: CivicExamQuestionWithOptions | null | undefined,
     userAnswerIndex: number | null | undefined,
-    language: Language = 'fr'
 ): {
     userAnswerText: string;
     correctAnswerText: string;
     isCorrect: boolean;
 } => {
-    const userAnswerText = getUserAnswerText(question, userAnswerIndex, language);
-    const correctAnswerText = getCorrectAnswerText(question, language);
+    const userAnswerText = getUserAnswerText(question, userAnswerIndex);
+    const correctAnswerText = getCorrectAnswerText(question);
     const correctAnswerIndex = question?.correctAnswer;
     const isCorrect = userAnswerIndex !== null && 
                      correctAnswerIndex !== undefined && 

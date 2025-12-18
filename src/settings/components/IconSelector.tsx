@@ -11,8 +11,6 @@ import type { SettingsComponentWithValueProps, IconSetType, IconSetInfo } from '
 
 const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     title,
-    title_vi,
-    language,
     value,
     onValueChange,
 }) => {
@@ -60,13 +58,13 @@ const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
                                 styles.optionTitle,
                                 { color: theme.colors.text }
                             ]}>
-                                {language === 'fr' ? item.name : item.nameVi}
+                                {item.name}
                             </FormattedText>
                             <FormattedText style={[
                                 styles.optionDescription,
                                 { color: theme.colors.textSecondary }
                             ]}>
-                                {language === 'fr' ? item.description : item.descriptionVi}
+                                {item.description}
                             </FormattedText>
                         </View>
                     </View>
@@ -98,15 +96,12 @@ const IconSelector: React.FC<SettingsComponentWithValueProps<IconSetType>> = ({
     return (
         <BaseIconSelector
             title={title}
-            title_vi={title_vi || title}
-            language={language}
             value={value}
             onValueChange={onValueChange}
             options={iconSetOptions}
             renderPreview={renderPreview}
             renderOption={renderOption}
             modalTitle="Choisir un style d'icônes"
-            modalTitleVi="Chọn kiểu biểu tượng"
         />
     );
 };

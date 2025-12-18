@@ -2,7 +2,6 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 
@@ -40,30 +39,29 @@ const ProgressStat: React.FC<ProgressStatProps> = ({ value, label, color }) => {
 
 const ProgressOverviewCard: React.FC<ProgressOverviewCardProps> = ({ testProgress }) => {
     const { theme } = useTheme();
-    const { language } = useLanguage();
 
     return (
         <View style={[styles.progressCard, { backgroundColor: theme.colors.surface }]}>
             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                {language === 'fr' ? 'Progression Globale' : 'Tiến độ tổng thể'}
+                Progression Globale
             </FormattedText>
 
             <View style={styles.progressStats}>
                 <ProgressStat
                     value={String(testProgress.totalTestsTaken || 0)}
-                    label={language === 'fr' ? 'Tests effectués' : 'Bài test đã làm'}
+                    label="Tests effectués"
                     color={theme.colors.primary}
                 />
 
                 <ProgressStat
                     value={`${Math.round(testProgress.averageScore || 0)}%`}
-                    label={language === 'fr' ? 'Score moyen' : 'Điểm trung bình'}
+                    label="Score moyen"
                     color={theme.colors.success}
                 />
 
                 <ProgressStat
                     value={`${Math.round(testProgress.bestScore || 0)}%`}
-                    label={language === 'fr' ? 'Meilleur score' : 'Điểm cao nhất'}
+                    label="Meilleur score"
                     color={theme.colors.warning}
                 />
             </View>

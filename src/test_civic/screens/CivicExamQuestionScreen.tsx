@@ -14,7 +14,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { useCallback } from 'react';
@@ -29,7 +28,6 @@ type CivicExamQuestionScreenNavigationProp = NativeStackNavigationProp<CivicExam
 const CivicExamQuestionScreen = () => {
     const navigation = useNavigation<CivicExamQuestionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language } = useLanguage();
     const {
         currentSession,
         currentQuestionIndex,
@@ -57,10 +55,8 @@ const CivicExamQuestionScreen = () => {
         correctExplanationAnswer?: number;
     }) | null;
 
-    // Force French language in exam mode (not practice)
     const isExamMode = currentSession?.mode === 'civic_exam_naturalization';
     const isPracticeMode = currentSession?.isPracticeMode || false;
-    const displayLanguage = isExamMode ? 'fr' : language;
 
     // Handle time up with useCallback to avoid stale closures
     const handleTimeUp = useCallback(() => {
@@ -69,13 +65,11 @@ const CivicExamQuestionScreen = () => {
             timerRef.current = null;
         }
         Alert.alert(
-            displayLanguage === 'fr' ? 'Temps écoulé' : 'Hết giờ',
-            displayLanguage === 'fr'
-                ? 'Le temps est écoulé. Vous serez redirigé vers la révision.'
-                : 'Thời gian đã hết. Bạn sẽ được chuyển đến phần xem lại.',
+            'Temps écoulé',
+            'Le temps est écoulé. Vous serez redirigé vers la révision.',
             [{ text: 'OK', onPress: () => navigation.navigate('CivicExamReview') }]
         );
-    }, [displayLanguage, navigation]);
+    }, [navigation]);
 
     // Initialize timer
     useEffect(() => {
@@ -212,10 +206,8 @@ const CivicExamQuestionScreen = () => {
             } catch (error) {
                 console.error('Error submitting answer:', error);
                 Alert.alert(
-                    displayLanguage === 'fr' ? 'Erreur' : 'Lỗi',
-                    displayLanguage === 'fr'
-                        ? 'Erreur lors de la soumission de la réponse'
-                        : 'Lỗi khi nộp câu trả lời'
+                    'Erreur',
+                    'Erreur lors de la soumission de la réponse'
                 );
             }
         }
@@ -228,16 +220,12 @@ const CivicExamQuestionScreen = () => {
         return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
 
-    const getLocalizedText = (fr: string, vi: string) => {
-        return displayLanguage === 'fr' ? fr : vi;
-    };
-
     if (!currentSession || !currentQuestion) {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {getLocalizedText('Chargement...', 'Đang tải...')}
+                    Chargement...
                 </FormattedText>
             </View>
         );
@@ -270,15 +258,9 @@ const CivicExamQuestionScreen = () => {
                         {(() => {
                             const passingScore = Math.ceil((currentSession.totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
                             if (currentSession.totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
-                                return getLocalizedText(
-                                    `Passage: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`,
-                                    `Đạt: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`
-                                );
+                                return `Passage: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`;
                             } else {
-                                return getLocalizedText(
-                                    `Passage: ${passingScore}/${currentSession.totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
-                                    `Đạt: ${passingScore}/${currentSession.totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
-                                );
+                                return `Passage: ${passingScore}/${currentSession.totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`;
                             }
                         })()}
                     </FormattedText>
@@ -299,14 +281,14 @@ const CivicExamQuestionScreen = () => {
                             </View>
                         </View>
                         <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
-                            {getCivicExamQuestionText(currentQuestion, displayLanguage)}
+                            {getCivicExamQuestionText(currentQuestion)}
                         </FormattedText>
                     </View>
 
                     {/* Multiple Choice Options */}
                     <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card }]}>
                         <FormattedText style={[styles.optionsTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Choisissez votre réponse:', 'Chọn câu trả lời:')}
+                            Choisissez votre réponse:
                         </FormattedText>
                         {options.length > 0 ? options.map((option, index) => {
                             const isSelected = selectedAnswer === index;
@@ -367,7 +349,7 @@ const CivicExamQuestionScreen = () => {
                             );
                         }) : (
                             <FormattedText style={[styles.optionText, { color: theme.colors.textMuted, textAlign: 'center', padding: 16 }]}>
-                                {getLocalizedText('Aucune option disponible', 'Không có tùy chọn')}
+                                Aucune option disponible
                             </FormattedText>
                         )}
                     </View>
@@ -379,25 +361,25 @@ const CivicExamQuestionScreen = () => {
                                 <View style={[styles.feedbackMessage, { backgroundColor: '#4CAF50' + '20', borderColor: '#4CAF50' }]}>
                                     <Ionicons name="checkmark-circle" size={32} color="#4CAF50" />
                                     <FormattedText style={[styles.feedbackText, { color: '#4CAF50' }]}>
-                                        {getLocalizedText('Bonne réponse !', 'Câu trả lời đúng!')}
+                                        Bonne réponse !
                                     </FormattedText>
                                 </View>
                             ) : (
                                 <View style={[styles.feedbackMessage, { backgroundColor: '#F44336' + '20', borderColor: '#F44336' }]}>
                                     <Ionicons name="close-circle" size={32} color="#F44336" />
                                     <FormattedText style={[styles.feedbackText, { color: '#F44336' }]}>
-                                        {getLocalizedText('Mauvaise réponse', 'Câu trả lời sai')}
+                                        Mauvaise réponse
                                     </FormattedText>
                                 </View>
                             )}
                             
-                            {showExplanation && getCivicExamExplanationText(currentQuestion, displayLanguage) && (
+                            {showExplanation && getCivicExamExplanationText(currentQuestion) && (
                                 <View style={styles.explanationTextContainer}>
                                     <FormattedText style={[styles.explanationTitle, { color: theme.colors.text }]}>
-                                        {getLocalizedText('Explication:', 'Giải thích:')}
+                                        Explication:
                                     </FormattedText>
                                     <FormattedText style={[styles.explanationText, { color: theme.colors.textSecondary }]}>
-                                        {getCivicExamExplanationText(currentQuestion, displayLanguage)}
+                                        {getCivicExamExplanationText(currentQuestion)}
                                     </FormattedText>
                                 </View>
                             )}
@@ -414,8 +396,8 @@ const CivicExamQuestionScreen = () => {
                         >
                             <FormattedText style={[styles.submitButtonText, { color: '#FFFFFF' }]}>
                                 {currentQuestionIndex < currentSession.totalQuestions - 1
-                                    ? getLocalizedText('Question suivante', 'Câu tiếp theo')
-                                    : getLocalizedText('Voir les résultats', 'Xem kết quả')
+                                    ? 'Question suivante'
+                                    : 'Voir les résultats'
                                 }
                             </FormattedText>
                         </TouchableOpacity>
@@ -434,8 +416,8 @@ const CivicExamQuestionScreen = () => {
                         >
                             <FormattedText style={[styles.submitButtonText, { color: '#FFFFFF' }]}>
                                 {currentQuestionIndex < currentSession.totalQuestions - 1
-                                    ? getLocalizedText('Question suivante', 'Câu tiếp theo')
-                                    : getLocalizedText('Voir les résultats', 'Xem kết quả')
+                                    ? 'Question suivante'
+                                    : 'Voir les résultats'
                                 }
                             </FormattedText>
                         </TouchableOpacity>

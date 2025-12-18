@@ -15,7 +15,6 @@ interface TestModeModalProps {
     isStartingTest: boolean;
     onClose: () => void;
     onStartTest: () => void;
-    getLocalizedText: (textFr: string, textVi: string) => string;
     getLocalizedModeTitle: (modeOption: MainTestModeOption) => string;
     getLocalizedModeDescription: (modeOption: MainTestModeOption) => string;
 }
@@ -26,7 +25,6 @@ const TestModeModal: React.FC<TestModeModalProps> = ({
     isStartingTest,
     onClose,
     onStartTest,
-    getLocalizedText,
     getLocalizedModeTitle,
     getLocalizedModeDescription,
 }) => {
@@ -64,7 +62,7 @@ const TestModeModal: React.FC<TestModeModalProps> = ({
                             <View style={styles.modalDetailRow}>
                                 <Ionicons name={getIconName('helpCircle') as any} size={20} color={theme.colors.primary} />
                                 <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
-                                    {getLocalizedText('Questions:', 'Số câu hỏi:')}
+                                    Questions:
                                 </FormattedText>
                                 <FormattedText style={[styles.modalDetailValue, { color: theme.colors.textMuted }]}>
                                     {modeOption.questionCount}
@@ -75,10 +73,10 @@ const TestModeModal: React.FC<TestModeModalProps> = ({
                                 <View style={styles.modalDetailRow}>
                                     <Ionicons name={getIconName('time') as any} size={20} color={theme.colors.primary} />
                                     <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
-                                        {getLocalizedText('Durée:', 'Thời gian:')}
+                                        Durée:
                                     </FormattedText>
                                     <FormattedText style={[styles.modalDetailValue, { color: theme.colors.textMuted }]}>
-                                        {modeOption.timeLimit} {getLocalizedText('minutes', 'phút')}
+                                        {modeOption.timeLimit} minutes
                                     </FormattedText>
                                 </View>
                             )}
@@ -86,7 +84,7 @@ const TestModeModal: React.FC<TestModeModalProps> = ({
                             <View style={styles.modalDetailRow}>
                                 <Ionicons name={getIconName('shuffle') as any} size={20} color={theme.colors.primary} />
                                 <FormattedText style={[styles.modalDetailLabel, { color: theme.colors.text }]}>
-                                    {getLocalizedText('Questions mélangées', 'Câu hỏi ngẫu nhiên')}
+                                    Questions mélangées
                                 </FormattedText>
                                 <Ionicons name={getIconName('checkmark') as any} size={20} color={theme.colors.success} />
                             </View>
@@ -98,7 +96,7 @@ const TestModeModal: React.FC<TestModeModalProps> = ({
                                 onPress={onClose}
                             >
                                 <FormattedText style={[styles.modalButtonText, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Annuler', 'Hủy')}
+                                    Annuler
                                 </FormattedText>
                             </TouchableOpacity>
 
@@ -113,7 +111,7 @@ const TestModeModal: React.FC<TestModeModalProps> = ({
                                     <>
                                         <Ionicons name={getIconName('play') as any} size={20} color="white" />
                                         <FormattedText style={styles.modalStartButtonText}>
-                                            {getLocalizedText('Commencer', 'Bắt đầu')}
+                                            Commencer
                                         </FormattedText>
                                     </>
                                 )}

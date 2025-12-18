@@ -3,7 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
@@ -15,7 +14,6 @@ interface RecommendationsCardProps {
 
 const RecommendationsCard: React.FC<RecommendationsCardProps> = ({ recommendations }) => {
     const { theme } = useTheme();
-    const { language } = useLanguage();
     const { getIconName } = useIcons();
 
     if (recommendations.length === 0) {
@@ -25,7 +23,7 @@ const RecommendationsCard: React.FC<RecommendationsCardProps> = ({ recommendatio
     return (
         <View style={[styles.recommendationsCard, { backgroundColor: theme.colors.surface }]}>
             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                {language === 'fr' ? 'Recommandations' : 'Đề xuất'}
+                Recommandations
             </FormattedText>
 
             {recommendations.map((rec, index) => (
@@ -37,11 +35,11 @@ const RecommendationsCard: React.FC<RecommendationsCardProps> = ({ recommendatio
                             color={theme.colors.primary}
                         />
                         <FormattedText style={[styles.recommendationTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? rec.title_fr : rec.title_vi}
+                            {rec.title}
                         </FormattedText>
                     </View>
                     <FormattedText style={[styles.recommendationDescription, { color: theme.colors.textMuted }]}>
-                        {language === 'fr' ? rec.description_fr : rec.description_vi}
+                        {rec.description}
                     </FormattedText>
                 </View>
             ))}

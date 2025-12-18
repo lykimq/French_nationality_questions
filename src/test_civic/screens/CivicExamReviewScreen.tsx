@@ -12,7 +12,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
@@ -24,12 +23,7 @@ type CivicExamReviewScreenNavigationProp = NativeStackNavigationProp<CivicExamSt
 const CivicExamReviewScreen = () => {
     const navigation = useNavigation<CivicExamReviewScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language } = useLanguage();
     const { currentSession, finishExam } = useCivicExam();
-
-    const getLocalizedText = (fr: string, vi: string) => {
-        return language === 'fr' ? fr : vi;
-    };
 
     // Handle navigation when session is missing (useEffect to avoid render-time navigation)
     useEffect(() => {
@@ -62,7 +56,7 @@ const CivicExamReviewScreen = () => {
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        {getLocalizedText('Révision', 'Xem lại')}
+                        Révision
                     </FormattedText>
                 </View>
 
@@ -73,20 +67,17 @@ const CivicExamReviewScreen = () => {
                 >
                     <View style={[styles.summaryCard, { backgroundColor: theme.colors.card }]}>
                         <FormattedText style={[styles.summaryTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Résumé', 'Tóm tắt')}
+                            Résumé
                         </FormattedText>
                         <View style={styles.summaryRow}>
                             <FormattedText style={[styles.summaryText, { color: theme.colors.text }]}>
-                                {getLocalizedText('Questions répondues:', 'Câu đã trả lời:')} {answeredCount} / {currentSession.totalQuestions}
+                                Questions répondues: {answeredCount} / {currentSession.totalQuestions}
                             </FormattedText>
                         </View>
                         {unansweredCount > 0 && (
                             <View style={styles.summaryRow}>
                                 <FormattedText style={[styles.warningText, { color: theme.colors.warning }]}>
-                                    {getLocalizedText(
-                                        `${unansweredCount} question(s) non répondue(s)`,
-                                        `${unansweredCount} câu chưa trả lời`
-                                    )}
+                                    {unansweredCount} question(s) non répondue(s)
                                 </FormattedText>
                             </View>
                         )}
@@ -95,10 +86,7 @@ const CivicExamReviewScreen = () => {
                     <View style={[styles.infoCard, { backgroundColor: theme.colors.card }]}>
                         <Ionicons name="information-circle" size={24} color={theme.colors.primary} />
                         <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                            {getLocalizedText(
-                                'Vous pouvez revenir en arrière pour modifier vos réponses avant de soumettre.',
-                                'Bạn có thể quay lại để sửa câu trả lời trước khi nộp.'
-                            )}
+                            Vous pouvez revenir en arrière pour modifier vos réponses avant de soumettre.
                         </FormattedText>
                     </View>
                 </ScrollView>
@@ -110,7 +98,7 @@ const CivicExamReviewScreen = () => {
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.submitButtonText, { color: '#FFFFFF' }]}>
-                            {getLocalizedText('Soumettre l\'examen', 'Nộp bài thi')}
+                            Soumettre l'examen
                         </FormattedText>
                     </TouchableOpacity>
                 </View>

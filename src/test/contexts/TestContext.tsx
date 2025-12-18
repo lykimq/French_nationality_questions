@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
+import { useData } from '../../shared/contexts/DataContext';
 
 // Import constants
 import { DEFAULT_TEST_PROGRESS, DEFAULT_TEST_STATISTICS } from '../constants/testConstants';
@@ -68,7 +68,7 @@ interface TestContextType {
 const TestContext = createContext<TestContextType | undefined>(undefined);
 
 export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { questionsData, historySubcategories } = useLanguage();
+    const { questionsData, historySubcategories } = useData();
 
     // State management
     const [currentSession, setCurrentSession] = useState<TestSession | null>(null);

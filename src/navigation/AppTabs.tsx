@@ -8,30 +8,21 @@ import TestStack from './TestStack';
 import CivicExamStack from '../test_civic/navigation/CivicExamStack';
 import SettingsScreen from '../settings/SettingsScreen';
 import { DataLoadingScreen } from '../shared/components';
-import { useLanguage } from '../shared/contexts/LanguageContext';
+import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import type { TabBarIconProps, RouteType } from '../types';
 
 const Tab = createBottomTabNavigator();
 
-// Translations for tab labels
 const tabLabels = {
-    fr: {
-        home: 'Accueil',
-        search: 'Rechercher',
-        test: 'Tests',
-        settings: 'Paramètres'
-    },
-    vi: {
-        home: 'Trang chủ',
-        search: 'Tìm kiếm',
-        test: 'Bài kiểm tra',
-        settings: 'Cài đặt'
-    }
+    home: 'Accueil',
+    search: 'Rechercher',
+    test: 'Tests',
+    settings: 'Paramètres'
 };
 
 const AppTabs = () => {
-    const { language, isDataLoading, dataLoadingError } = useLanguage();
+    const { isDataLoading, dataLoadingError } = useData();
     const { theme } = useTheme();
 
     if (isDataLoading || dataLoadingError) {
@@ -81,23 +72,23 @@ const AppTabs = () => {
             <Tab.Screen
                 name="HomeTab"
                 component={HomeStack}
-                options={{ title: tabLabels[language].home }}
+                options={{ title: tabLabels.home }}
             />
             <Tab.Screen
                 name="SearchTab"
                 component={SearchScreen}
-                options={{ title: tabLabels[language].search }}
+                options={{ title: tabLabels.search }}
             />
             <Tab.Screen
                 name="TestTab"
                 component={TestStack}
-                options={{ title: tabLabels[language].test }}
+                options={{ title: tabLabels.test }}
             />
             <Tab.Screen
                 name="CivicExamTab"
                 component={CivicExamStack}
                 options={{ 
-                    title: language === 'fr' ? 'Examen Civique' : 'Kỳ thi Công dân',
+                    title: 'Examen Civique',
                     tabBarIcon: ({ focused, color, size }: TabBarIconProps) => (
                         <Ionicons name={focused ? 'document-text' : 'document-text-outline'} size={size} color={color} />
                     ),
@@ -106,7 +97,7 @@ const AppTabs = () => {
             <Tab.Screen
                 name="SettingsTab"
                 component={SettingsScreen}
-                options={{ title: tabLabels[language].settings }}
+                options={{ title: tabLabels.settings }}
             />
         </Tab.Navigator>
     );

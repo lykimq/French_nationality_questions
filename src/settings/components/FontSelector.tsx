@@ -14,25 +14,22 @@ import { sharedStyles } from '../../shared/utils';
 
 interface FontOption {
     name: string;
-    nameVi: string;
     value: string;
     preview: string;
 }
 
 const FONT_OPTIONS: FontOption[] = [
-    { name: 'Système', nameVi: 'Hệ thống', value: 'System', preview: 'Aa' },
-    { name: 'Sans Serif', nameVi: 'Sans Serif', value: 'sans-serif', preview: 'Aa' },
-    { name: 'Serif', nameVi: 'Serif', value: 'serif', preview: 'Aa' },
-    { name: 'Monospace', nameVi: 'Monospace', value: 'monospace', preview: 'Aa' },
-    { name: 'Kalam', nameVi: 'Kalam', value: 'Kalam', preview: 'Aa' },
-    { name: 'Patrick Hand', nameVi: 'Patrick Hand', value: 'PatrickHand', preview: 'Aa' },
-    { name: 'Dancing Script', nameVi: 'Dancing Script', value: 'DancingScript', preview: 'Aa' },
+    { name: 'Système', value: 'System', preview: 'Aa' },
+    { name: 'Sans Serif', value: 'sans-serif', preview: 'Aa' },
+    { name: 'Serif', value: 'serif', preview: 'Aa' },
+    { name: 'Monospace', value: 'monospace', preview: 'Aa' },
+    { name: 'Kalam', value: 'Kalam', preview: 'Aa' },
+    { name: 'Patrick Hand', value: 'PatrickHand', preview: 'Aa' },
+    { name: 'Dancing Script', value: 'DancingScript', preview: 'Aa' },
 ];
 
 const FontSelector: React.FC<SettingsComponentProps> = ({
     title,
-    title_vi,
-    language,
     value,
     onValueChange,
 }) => {
@@ -57,10 +54,10 @@ const FontSelector: React.FC<SettingsComponentProps> = ({
         >
             <View style={styles.fontInfo}>
                 <FormattedText style={[styles.fontName, { color: theme.colors.text, fontFamily: item.value === 'System' ? undefined : item.value }]}>
-                    {language === 'fr' ? item.name : item.nameVi}
+                    {item.name}
                 </FormattedText>
                 <FormattedText style={[styles.fontPreview, { color: theme.colors.textSecondary, fontFamily: item.value === 'System' ? undefined : item.value }]}>
-                    {item.preview} - {language === 'fr' ? 'Exemple de texte' : 'Văn bản mẫu'}
+                    {item.preview} - Exemple de texte
                 </FormattedText>
             </View>
             {item.value === value && (
@@ -80,10 +77,10 @@ const FontSelector: React.FC<SettingsComponentProps> = ({
                 </View>
                 <View style={styles.textContainer}>
                     <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                        {language === 'fr' ? title : (title_vi || title)}
+                        {title}
                     </FormattedText>
                     <FormattedText style={[styles.currentValue, { color: theme.colors.textSecondary }]}>
-                        {language === 'fr' ? currentFont.name : currentFont.nameVi}
+                        {currentFont.name}
                     </FormattedText>
                 </View>
                 <Ionicons name={theme.icons.chevronForward as any} size={20} color={theme.colors.textMuted} />
@@ -99,7 +96,7 @@ const FontSelector: React.FC<SettingsComponentProps> = ({
                     <View style={[styles.modalContent, { backgroundColor: theme.colors.modalBackground }]}>
                         <View style={[styles.modalHeader, { borderBottomColor: theme.colors.divider }]}>
                             <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Choisir une police' : 'Chọn phông chữ'}
+                                Choisir une police
                             </FormattedText>
                             <TouchableOpacity onPress={() => setModalVisible(false)}>
                                 <Ionicons name={theme.icons.close as any} size={24} color={theme.colors.text} />

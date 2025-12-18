@@ -2,7 +2,6 @@ import React from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { FormattedText } from '../../shared/components';
 
 interface LoadingViewProps {
@@ -11,9 +10,8 @@ interface LoadingViewProps {
 
 const LoadingView: React.FC<LoadingViewProps> = ({ message }) => {
     const { theme } = useTheme();
-    const { language } = useLanguage();
 
-    const defaultMessage = language === 'fr' ? 'Chargement des résultats...' : 'Đang tải kết quả...';
+    const defaultMessage = 'Chargement des résultats...';
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>

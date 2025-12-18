@@ -7,7 +7,6 @@ import {
     StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useLanguage } from '../shared/contexts/LanguageContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { FormattedText } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
@@ -21,7 +20,6 @@ import CivicExamSettings from './components/CivicExamSettings';
 import RatingModal from './components/RatingModal';
 
 const SettingsScreen = () => {
-    const { language, toggleLanguage } = useLanguage();
     const { theme, themeMode } = useTheme();
     const [showRatingModal, setShowRatingModal] = useState(false);
 
@@ -40,43 +38,32 @@ const SettingsScreen = () => {
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
-                        {language === 'fr' ? 'Paramètres' : 'Cài đặt'}
+                        Paramètres
                     </FormattedText>
-                    <View style={styles.languageSelector}>
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                        <Switch
-                            value={language === 'vi'}
-                            onValueChange={toggleLanguage}
-                            thumbColor={theme.colors.switchThumb}
-                            trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                        />
-                        <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
-                    </View>
                 </View>
             </SafeAreaView>
 
             <ScrollView style={[styles.scrollView, { backgroundColor: theme.colors.background }]}>
                 {/* Theme Section */}
-                <ThemeSettings language={language} />
+                <ThemeSettings />
 
                 {/* Icon Settings */}
-                <IconSettings language={language} />
+                <IconSettings />
 
                 {/* Text Formatting Section */}
-                <TextFormattingSettings language={language} />
+                <TextFormattingSettings />
 
                 {/* Civic Exam Statistics Section */}
-                <CivicExamSettings language={language} />
+                <CivicExamSettings />
 
                 {/* App Info Section */}
-                <AppInfoSettings language={language} onRateApp={handleRateApp} />
+                <AppInfoSettings onRateApp={handleRateApp} />
             </ScrollView>
 
             {/* Rating Modal */}
             <RatingModal
                 visible={showRatingModal}
                 onClose={handleCloseRatingModal}
-                language={language}
             />
         </View>
     );
@@ -97,13 +84,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-    },
-    languageSelector: {
-        ...sharedStyles.languageSelector,
-    },
-    languageLabel: {
-        ...sharedStyles.languageLabel,
-        marginHorizontal: 5,
     },
     scrollView: {
         flex: 1,

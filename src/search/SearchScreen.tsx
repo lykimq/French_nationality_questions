@@ -10,17 +10,15 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import QuestionCard from './QuestionCard';
-import { useLanguage } from '../shared/contexts/LanguageContext';  
-import type { MultiLangText } from '../types';
-import { getTextFromMultiLang } from '../types';
+import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText, LanguageToggle } from '../shared/components';
+import { FormattedText } from '../shared/components';
 
 // Define the search result question type
 interface SearchResultQuestion {
     id: number;
-    question: string | MultiLangText;
-    explanation: string | MultiLangText;
+    question: string;
+    explanation: string;
     categoryId: string;
     categoryTitle?: string;
     image?: string | null;
@@ -44,7 +42,7 @@ interface SearchSuggestion {
 }
 
 const SearchScreen = () => {
-    const { language, toggleLanguage, questionsData, isTranslationLoaded, historyCategories, historySubcategories } = useLanguage();
+    const { questionsData, historyCategories, historySubcategories } = useData();
     const { theme, themeMode } = useTheme();
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
@@ -71,9 +69,7 @@ const SearchScreen = () => {
                 questions.push({
                     ...question,
                     categoryId: category.id,
-                    categoryTitle: isTranslationLoaded
-                        ? (language === 'vi' ? (category as any).title_vi || category.title : category.title)
-                        : category.title,
+                    categoryTitle: category.title,
                     hasImage: !!(question as any).image,
                 });
             });
@@ -93,19 +89,8 @@ const SearchScreen = () => {
                             hasImage: !!question.image,
                         };
 
-                        if (isTranslationLoaded) {
-                            searchQuestion.question = {
-                                fr: getTextFromMultiLang(question.question, 'fr'),
-                                vi: question.question_vi || getTextFromMultiLang(question.question, 'fr')
-                            };
-                            searchQuestion.explanation = {
-                                fr: getTextFromMultiLang(question.explanation || '', 'fr'),
-                                vi: question.explanation_vi || getTextFromMultiLang(question.explanation || '', 'fr')
-                            };
-                        } else {
-                            searchQuestion.question = getTextFromMultiLang(question.question, 'fr');
-                            searchQuestion.explanation = question.explanation ? getTextFromMultiLang(question.explanation, 'fr') : '';
-                        }
+                        searchQuestion.question = question.question || '';
+                        searchQuestion.explanation = question.explanation || '';
 
                         if (question.image) {
                             searchQuestion.image = question.image;
@@ -118,7 +103,7 @@ const SearchScreen = () => {
         }
 
         return questions;
-    }, [questionsData, historyCategories, historySubcategories, isTranslationLoaded, language]);
+    }, [questionsData, historyCategories, historySubcategories]);
 
     // Get available categories for filter
     const availableCategories = useMemo(() => {
@@ -161,9 +146,7 @@ const SearchScreen = () => {
         // Add common keyword suggestions based on question content
         const commonKeywords = new Map<string, number>();
         allQuestions.forEach(q => {
-            const text = typeof q.question === 'string'
-                ? q.question
-                : (isTranslationLoaded && language === 'vi' ? (q.question as MultiLangText).vi : (q.question as MultiLangText).fr);
+            const text = q.question;
 
             const words = text.toLowerCase().split(/\s+/).filter(word =>
                 word.length > 3 && word.includes(normalizedQuery)
@@ -242,104 +225,45 @@ const SearchScreen = () => {
                 matches.push('ID');
             }
 
-            // Get text content based on language and translation status
-            let questionText = '';
-            let explanationText = '';
-            let categoryText = item.categoryTitle || '';
+            // Get text content
+            const questionText = (item.question || '').toLowerCase();
+            const explanationText = (item.explanation || '').toLowerCase();
+            const categoryText = item.categoryTitle || '';
 
-            if (isTranslationLoaded) {
-                const q = item.question as MultiLangText;
-                const e = item.explanation as MultiLangText;
-
-                if (language === 'vi') {
-                    questionText = q.vi || q.fr;
-                    explanationText = e.vi || e.fr;
-                } else {
-                    questionText = q.fr;
-                    explanationText = e.fr;
+            if (appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both')) {
+                // Exact phrase match
+                if (questionText.includes(normalizedQuery)) {
+                    matchScore += 100;
+                    matches.push('question_exact');
                 }
 
-                // Also search in both languages for comprehensive results
-                const questionTextFr = q.fr.toLowerCase();
-                const questionTextVi = (q.vi || '').toLowerCase();
-                const explanationTextFr = e.fr.toLowerCase();
-                const explanationTextVi = (e.vi || '').toLowerCase();
-
-                // Apply search scope filter
-                if (appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both')) {
-                    // Exact phrase match (highest score)
-                    if (questionTextFr.includes(normalizedQuery) || questionTextVi.includes(normalizedQuery)) {
-                        matchScore += 100;
-                        matches.push('question_exact');
-                    }
-
-                    // Word-based matching
-                    const queryWords = normalizedQuery.split(/\s+/);
-                    queryWords.forEach(word => {
-                        if (word.length > 2) {
-                            if (questionTextFr.includes(word) || questionTextVi.includes(word)) {
-                                matchScore += 50;
-                                matches.push('question_word');
-                            }
+                // Word-based matching
+                const queryWords = normalizedQuery.split(/\s+/);
+                queryWords.forEach(word => {
+                    if (word.length > 2) {
+                        if (questionText.includes(word)) {
+                            matchScore += 50;
+                            matches.push('question_word');
                         }
-                    });
-                }
-
-                if (appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both')) {
-                    if (explanationTextFr.includes(normalizedQuery) || explanationTextVi.includes(normalizedQuery)) {
-                        matchScore += 80;
-                        matches.push('explanation_exact');
                     }
+                });
+            }
 
-                    const queryWords = normalizedQuery.split(/\s+/);
-                    queryWords.forEach(word => {
-                        if (word.length > 2) {
-                            if (explanationTextFr.includes(word) || explanationTextVi.includes(word)) {
-                                matchScore += 30;
-                                matches.push('explanation_word');
-                            }
-                        }
-                    });
+            if (appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both')) {
+                if (explanationText.includes(normalizedQuery)) {
+                    matchScore += 80;
+                    matches.push('explanation_exact');
                 }
-            } else {
-                questionText = (item.question as string).toLowerCase();
-                explanationText = (item.explanation as string).toLowerCase();
 
-                if (appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both')) {
-                    // Exact phrase match
-                    if (questionText.includes(normalizedQuery)) {
-                        matchScore += 100;
-                        matches.push('question_exact');
+                const queryWords = normalizedQuery.split(/\s+/);
+                queryWords.forEach(word => {
+                    if (word.length > 2) {
+                        if (explanationText.includes(word)) {
+                            matchScore += 30;
+                            matches.push('explanation_word');
+                        }
                     }
-
-                    // Word-based matching
-                    const queryWords = normalizedQuery.split(/\s+/);
-                    queryWords.forEach(word => {
-                        if (word.length > 2) {
-                            if (questionText.includes(word)) {
-                                matchScore += 50;
-                                matches.push('question_word');
-                            }
-                        }
-                    });
-                }
-
-                if (appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both')) {
-                    if (explanationText.includes(normalizedQuery)) {
-                        matchScore += 80;
-                        matches.push('explanation_exact');
-                    }
-
-                    const queryWords = normalizedQuery.split(/\s+/);
-                    queryWords.forEach(word => {
-                        if (word.length > 2) {
-                            if (explanationText.includes(word)) {
-                                matchScore += 30;
-                                matches.push('explanation_word');
-                            }
-                        }
-                    });
-                }
+                });
             }
 
             // Category name matching
@@ -381,7 +305,7 @@ const SearchScreen = () => {
         }, 300);
 
         return () => clearTimeout(timeoutId);
-    }, [searchQuery, allQuestions, isTranslationLoaded, language, filters]);
+    }, [searchQuery, allQuestions, filters]);
 
     const clearSearch = () => {
         setSearchQuery('');
@@ -437,13 +361,8 @@ const SearchScreen = () => {
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
-                        {language === 'fr' ? 'Rechercher' : 'Tìm kiếm'}
+                        Rechercher
                     </FormattedText>
-                    <LanguageToggle
-                        language={language}
-                        onToggle={toggleLanguage}
-                        textColor={theme.colors.headerText}
-                    />
                 </View>
             </SafeAreaView>
 
@@ -452,7 +371,7 @@ const SearchScreen = () => {
                     <Ionicons name="search" size={20} color={theme.colors.textMuted} />
                     <TextInput
                         style={[styles.input, { color: theme.colors.text }]}
-                        placeholder={language === 'fr' ? "Rechercher une question..." : "Tìm kiếm câu hỏi..."}
+                        placeholder="Rechercher une question..."
                         value={searchQuery}
                         onChangeText={setSearchQuery}
                         placeholderTextColor={theme.colors.textMuted}
@@ -513,11 +432,11 @@ const SearchScreen = () => {
                     <View style={[styles.advancedPanel, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
                         <View style={styles.advancedHeader}>
                             <FormattedText style={[styles.advancedTitle, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Recherche avancée' : 'Tìm kiếm nâng cao'}
+                                Recherche avancée
                             </FormattedText>
                             <TouchableOpacity onPress={resetFilters}>
                                 <FormattedText style={[styles.resetButton, { color: theme.colors.primary }]}>
-                                    {language === 'fr' ? 'Réinitialiser' : 'Đặt lại'}
+                                    Réinitialiser
                                 </FormattedText>
                             </TouchableOpacity>
                         </View>
@@ -525,7 +444,7 @@ const SearchScreen = () => {
                         {/* Category Filter */}
                         <View style={styles.filterSection}>
                             <FormattedText style={[styles.filterLabel, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Catégories:' : 'Danh mục:'}
+                                Catégories:
                             </FormattedText>
                             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryTags}>
                                 {availableCategories.map(category => (
@@ -552,7 +471,7 @@ const SearchScreen = () => {
                         {/* Image Filter */}
                         <View style={styles.filterSection}>
                             <FormattedText style={[styles.filterLabel, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Questions avec images:' : 'Câu hỏi có hình ảnh:'}
+                                Questions avec images:
                             </FormattedText>
                             <View style={styles.imageFilterButtons}>
                                 {(['all', 'with', 'without'] as const).map(option => (
@@ -569,10 +488,7 @@ const SearchScreen = () => {
                                             styles.imageFilterText,
                                             { color: filters.hasImage === option ? theme.colors.buttonText : theme.colors.text }
                                         ]}>
-                                            {language === 'fr'
-                                                ? (option === 'all' ? 'Toutes' : option === 'with' ? 'Avec' : 'Sans')
-                                                : (option === 'all' ? 'Tất cả' : option === 'with' ? 'Có' : 'Không')
-                                            }
+                                            {option === 'all' ? 'Toutes' : option === 'with' ? 'Avec' : 'Sans'}
                                         </FormattedText>
                                     </TouchableOpacity>
                                 ))}
@@ -582,7 +498,7 @@ const SearchScreen = () => {
                         {/* Search Scope */}
                         <View style={styles.filterSection}>
                             <FormattedText style={[styles.filterLabel, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Rechercher dans:' : 'Tìm kiếm trong:'}
+                                Rechercher dans:
                             </FormattedText>
                             <View style={styles.scopeButtons}>
                                 {(['question', 'explanation', 'both'] as const).map(scope => (
@@ -612,10 +528,7 @@ const SearchScreen = () => {
                                             styles.scopeButtonText,
                                             { color: filters.searchIn.includes(scope) ? theme.colors.buttonText : theme.colors.text }
                                         ]}>
-                                            {language === 'fr'
-                                                ? (scope === 'question' ? 'Questions' : scope === 'explanation' ? 'Explications' : 'Les deux')
-                                                : (scope === 'question' ? 'Câu hỏi' : scope === 'explanation' ? 'Giải thích' : 'Cả hai')
-                                            }
+                                            {scope === 'question' ? 'Questions' : scope === 'explanation' ? 'Explications' : 'Les deux'}
                                         </FormattedText>
                                     </TouchableOpacity>
                                 ))}
@@ -627,14 +540,11 @@ const SearchScreen = () => {
                 {/* Search Statistics */}
                 <View style={styles.statsContainer}>
                     <FormattedText style={[styles.statsText, { color: theme.colors.textMuted }]}>
-                        {language === 'fr'
-                            ? `${totalQuestions} questions disponibles (${mainQuestions} principales + ${historyQuestions} histoire)`
-                            : `${totalQuestions} câu hỏi có sẵn (${mainQuestions} chính + ${historyQuestions} lịch sử)`
-                        }
+                        {`${totalQuestions} questions disponibles (${mainQuestions} principales + ${historyQuestions} histoire)`}
                     </FormattedText>
                     {(filters.categories.length > 0 || filters.hasImage !== 'all') && (
                         <FormattedText style={[styles.filterStatus, { color: theme.colors.primary }]}>
-                            {language === 'fr' ? 'Filtres actifs' : 'Bộ lọc đang hoạt động'}
+                            Filtres actifs
                         </FormattedText>
                     )}
                 </View>
@@ -645,11 +555,11 @@ const SearchScreen = () => {
                 <View style={[styles.historyContainer, { backgroundColor: theme.colors.background }]}>
                     <View style={styles.historyHeader}>
                         <FormattedText style={[styles.historyTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? 'Recherches récentes:' : 'Tìm kiếm gần đây:'}
+                            Recherches récentes:
                         </FormattedText>
                         <TouchableOpacity onPress={clearSearchHistory}>
                             <FormattedText style={[styles.clearHistoryText, { color: theme.colors.primary }]}>
-                                {language === 'fr' ? 'Effacer' : 'Xóa'}
+                                Effacer
                             </FormattedText>
                         </TouchableOpacity>
                     </View>
@@ -673,14 +583,10 @@ const SearchScreen = () => {
                 <View style={styles.noResults}>
                     <Ionicons name="search-outline" size={64} color={theme.colors.textMuted} />
                     <FormattedText style={[styles.noResultsText, { color: theme.colors.textSecondary }]}>
-                        {language === 'fr'
-                            ? 'Tapez votre question pour commencer la recherche'
-                            : 'Nhập câu hỏi của bạn để bắt đầu tìm kiếm'}
+                        Tapez votre question pour commencer la recherche
                     </FormattedText>
                     <FormattedText style={[styles.searchHintText, { color: theme.colors.textMuted }]}>
-                        {language === 'fr'
-                            ? 'Utilisez la recherche avancée pour des filtres plus précis'
-                            : 'Sử dụng tìm kiếm nâng cao để có bộ lọc chi tiết hơn'}
+                        Utilisez la recherche avancée pour des filtres plus précis
                     </FormattedText>
                 </View>
             ) : (
@@ -693,12 +599,10 @@ const SearchScreen = () => {
                         <>
                             <View style={styles.resultsHeader}>
                                 <FormattedText style={[styles.resultsTitle, { color: theme.colors.text }]}>
-                                    {language === 'fr'
-                                        ? `${searchResults.length} résultat${searchResults.length > 1 ? 's' : ''} trouvé${searchResults.length > 1 ? 's' : ''}`
-                                        : `Tìm thấy ${searchResults.length} kết quả`}
+                                    {`${searchResults.length} résultat${searchResults.length > 1 ? 's' : ''} trouvé${searchResults.length > 1 ? 's' : ''}`}
                                 </FormattedText>
                                 <FormattedText style={[styles.sortedByText, { color: theme.colors.textMuted }]}>
-                                    {language === 'fr' ? 'Trié par pertinence' : 'Sắp xếp theo độ liên quan'}
+                                    Trié par pertinence
                                 </FormattedText>
                             </View>
                             {searchResults.map((result) => (
@@ -716,7 +620,6 @@ const SearchScreen = () => {
                                         question={result.question}
                                         explanation={result.explanation}
                                         image={result.image}
-                                        language={language}
                                     />
                                 </View>
                             ))}
@@ -725,14 +628,10 @@ const SearchScreen = () => {
                         <View style={styles.noResults}>
                             <Ionicons name="document-text-outline" size={64} color={theme.colors.textMuted} />
                             <FormattedText style={[styles.noResultsText, { color: theme.colors.textSecondary }]}>
-                                {language === 'fr'
-                                    ? 'Aucune question trouvée pour votre recherche'
-                                    : 'Không tìm thấy câu hỏi nào cho tìm kiếm của bạn'}
+                                Aucune question trouvée pour votre recherche
                             </FormattedText>
                             <FormattedText style={[styles.searchHintText, { color: theme.colors.textMuted }]}>
-                                {language === 'fr'
-                                    ? 'Essayez d\'ajuster vos filtres ou d\'utiliser d\'autres mots-clés'
-                                    : 'Hãy thử điều chỉnh bộ lọc hoặc sử dụng từ khóa khác'}
+                                Essayez d'ajuster vos filtres ou d'utiliser d'autres mots-clés
                             </FormattedText>
                         </View>
                     )}

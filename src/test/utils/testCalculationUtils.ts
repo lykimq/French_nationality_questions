@@ -168,22 +168,16 @@ export const generateRecommendations = (
     if (testProgress.averageScore >= PERFORMANCE_THRESHOLDS.EXCELLENT) {
         recommendations.push({
             type: 'good_job',
-            title_vi: 'Thành tích xuất sắc!',
-            title_fr: 'Performance Excellente !',
-            description_vi: 'Bạn đang thể hiện rất tốt. Hãy tiếp tục luyện tập để duy trì trình độ.',
-            description_fr: 'Vous performez très bien. Continuez à pratiquer pour maintenir votre niveau.',
-            actionText_vi: 'Làm bài phỏng vấn thử',
-            actionText_fr: 'Passer un Entretien Fictif',
+            title: 'Performance Excellente !',
+            description: 'Vous performez très bien. Continuez à pratiquer pour maintenir votre niveau.',
+            actionText: 'Passer un Entretien Fictif',
         });
     } else if (testProgress.averageScore < PERFORMANCE_THRESHOLDS.WEAK) {
         recommendations.push({
             type: 'practice_more',
-            title_vi: 'Cần luyện tập thêm',
-            title_fr: 'Besoin de Plus de Pratique',
-            description_vi: 'Tập trung nghiên cứu tài liệu kỹ hơn trước khi làm thêm bài kiểm tra.',
-            description_fr: 'Concentrez-vous sur l\'étude approfondie des matériaux avant de passer plus de tests.',
-            actionText_vi: 'Học các chủ đề',
-            actionText_fr: 'Étudier les Catégories',
+            title: 'Besoin de Plus de Pratique',
+            description: 'Concentrez-vous sur l\'étude approfondie des matériaux avant de passer plus de tests.',
+            actionText: 'Étudier les Catégories',
         });
     }
 
@@ -191,12 +185,9 @@ export const generateRecommendations = (
     if (testProgress.weakCategories.length > 0) {
         recommendations.push({
             type: 'study_category',
-            title_vi: 'Tập trung vào điểm yếu',
-            title_fr: 'Se Concentrer sur les Points Faibles',
-            description_vi: 'Bạn cần cải thiện ở một số chủ đề.',
-            description_fr: 'Vous devez vous améliorer dans certaines catégories.',
-            actionText_vi: 'Luyện tập điểm yếu',
-            actionText_fr: 'Pratiquer les Points Faibles',
+            title: 'Se Concentrer sur les Points Faibles',
+            description: 'Vous devez vous améliorer dans certaines catégories.',
+            actionText: 'Pratiquer les Points Faibles',
             categoryIds: testProgress.weakCategories,
         });
     }
@@ -205,12 +196,9 @@ export const generateRecommendations = (
     if (testProgress.incorrectQuestions.length > 0) {
         recommendations.push({
             type: 'review_questions',
-            title_vi: 'Xem lại câu hỏi sai',
-            title_fr: 'Réviser les Questions Incorrectes',
-            description_vi: 'Xem lại những câu hỏi bạn đã trả lời sai trước đây.',
-            description_fr: 'Révisez les questions auxquelles vous avez répondu incorrectement précédemment.',
-            actionText_vi: 'Xem lại câu hỏi',
-            actionText_fr: 'Réviser les Questions',
+            title: 'Réviser les Questions Incorrectes',
+            description: 'Révisez les questions auxquelles vous avez répondu incorrectement précédemment.',
+            actionText: 'Réviser les Questions',
             questionIds: testProgress.incorrectQuestions.slice(-20),
         });
     }

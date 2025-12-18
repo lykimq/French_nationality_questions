@@ -9,21 +9,17 @@ import { settingsStyles } from './settingsStyles';
 interface RatingModalProps {
     visible: boolean;
     onClose: () => void;
-    language: 'fr' | 'vi';
 }
 
-const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language }) => {
+const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
     const { theme } = useTheme();
     const [selectedRating, setSelectedRating] = useState(0);
 
     const handleRatingSubmit = () => {
         if (selectedRating === 0) {
-            const message = language === 'fr'
-                ? 'Veuillez sélectionner une note avant de continuer.'
-                : 'Vui lòng chọn một đánh giá trước khi tiếp tục.';
             Alert.alert(
-                language === 'fr' ? 'Attention' : 'Cảnh báo',
-                message
+                'Attention',
+                'Veuillez sélectionner une note avant de continuer.'
             );
             return;
         }
@@ -31,36 +27,27 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
         onClose();
 
         if (selectedRating >= 4) {
-            // High rating - redirect to store
-            const title = language === 'fr' ? 'Merci!' : 'Cảm ơn!';
-            const message = language === 'fr'
-                ? 'Merci pour votre excellente évaluation! Souhaitez-vous laisser un avis sur le store?'
-                : 'Cảm ơn bạn đã đánh giá cao! Bạn có muốn để lại đánh giá trên cửa hàng không?';
-
-            Alert.alert(title, message, [
-                {
-                    text: language === 'fr' ? 'Plus tard' : 'Để sau',
-                    style: 'cancel',
-                },
-                {
-                    text: language === 'fr' ? 'Oui' : 'Có',
-                    onPress: () => {
-                        // In a real app, this would open the appropriate store
-                        const storeMessage = language === 'fr'
-                            ? 'Redirection vers le store... (Fonctionnalité à implémenter)'
-                            : 'Chuyển hướng đến cửa hàng... (Tính năng cần triển khai)';
-                        Alert.alert('Info', storeMessage);
+            Alert.alert(
+                'Merci!',
+                'Merci pour votre excellente évaluation! Souhaitez-vous laisser un avis sur le store?',
+                [
+                    {
+                        text: 'Plus tard',
+                        style: 'cancel',
                     },
-                },
-            ]);
+                    {
+                        text: 'Oui',
+                        onPress: () => {
+                            Alert.alert('Info', 'Redirection vers le store... (Fonctionnalité à implémenter)');
+                        },
+                    },
+                ]
+            );
         } else {
-            // Lower rating - ask for feedback
-            const title = language === 'fr' ? 'Merci pour votre retour' : 'Cảm ơn phản hồi của bạn';
-            const message = language === 'fr'
-                ? 'Nous sommes désolés que l\'application ne réponde pas entièrement à vos attentes. Votre avis nous aide à l\'améliorer!'
-                : 'Chúng tôi xin lỗi vì ứng dụng chưa đáp ứng hoàn toàn mong đợi của bạn. Ý kiến của bạn giúp chúng tôi cải thiện!';
-
-            Alert.alert(title, message);
+            Alert.alert(
+                'Merci pour votre retour',
+                'Nous sommes désolés que l\'application ne réponde pas entièrement à vos attentes. Votre avis nous aide à l\'améliorer!'
+            );
         }
 
         setSelectedRating(0);
@@ -101,14 +88,11 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
             <View style={sharedStyles.modalOverlay}>
                 <View style={[settingsStyles.modalContainer, { backgroundColor: theme.colors.card }]}>
                     <FormattedText style={[settingsStyles.modalTitle, { color: theme.colors.text }]}>
-                        {language === 'fr' ? 'Évaluez cette application' : 'Đánh giá ứng dụng này'}
+                        Évaluez cette application
                     </FormattedText>
 
                     <FormattedText style={[settingsStyles.modalSubtitle, { color: theme.colors.textMuted }]}>
-                        {language === 'fr'
-                            ? 'Votre avis nous aide à améliorer l\'application'
-                            : 'Ý kiến của bạn giúp chúng tôi cải thiện ứng dụng'
-                        }
+                        Votre avis nous aide à améliorer l'application
                     </FormattedText>
 
                     <View style={styles.starsContainer}>
@@ -121,7 +105,7 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
                             onPress={handleClose}
                         >
                             <FormattedText style={[settingsStyles.modalButtonText, { color: theme.colors.text }]}>
-                                {language === 'fr' ? 'Annuler' : 'Hủy'}
+                                Annuler
                             </FormattedText>
                         </TouchableOpacity>
 
@@ -130,7 +114,7 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose, language })
                             onPress={handleRatingSubmit}
                         >
                             <FormattedText style={[settingsStyles.modalButtonText, { color: theme.colors.buttonText }]}>
-                                {language === 'fr' ? 'Envoyer' : 'Gửi'}
+                                Envoyer
                             </FormattedText>
                         </TouchableOpacity>
                     </View>

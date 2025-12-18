@@ -5,38 +5,28 @@ import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
-import type { Language } from '../../types';
-
 interface BaseIconSelectorProps<T> {
     title: string;
-    title_vi: string;
-    language: Language;
     value: T;
     onValueChange: (value: T) => void;
     options: Array<{
         id: T;
         name: string;
-        nameVi: string;
         description: string;
-        descriptionVi: string;
     }>;
     renderPreview: (value: T) => React.ReactNode;
     renderOption: (item: any, isSelected: boolean) => React.ReactNode;
     modalTitle: string;
-    modalTitleVi: string;
 }
 
 export function BaseIconSelector<T>({
     title,
-    title_vi,
-    language,
     value,
     onValueChange,
     options,
     renderPreview,
     renderOption,
     modalTitle,
-    modalTitleVi,
 }: BaseIconSelectorProps<T>) {
     const { theme } = useTheme();
     const { getIconName } = useIcons();
@@ -87,13 +77,13 @@ export function BaseIconSelector<T>({
                             styles.selectorTitle,
                             { color: theme.colors.text }
                         ]}>
-                            {language === 'fr' ? title : title_vi}
+                            {title}
                         </FormattedText>
                         <FormattedText style={[
                             styles.currentValue,
                             { color: theme.colors.textSecondary }
                         ]}>
-                            {language === 'fr' ? currentOption?.name : currentOption?.nameVi}
+                            {currentOption?.name}
                         </FormattedText>
                     </View>
                 </View>
@@ -120,7 +110,7 @@ export function BaseIconSelector<T>({
                         }
                     ]}>
                         <FormattedText style={[sharedStyles.modalTitle, { color: theme.colors.text }]}>
-                            {language === 'fr' ? modalTitle : modalTitleVi}
+                            {modalTitle}
                         </FormattedText>
                         <TouchableOpacity
                             onPress={() => setModalVisible(false)}

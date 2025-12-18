@@ -12,7 +12,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
@@ -35,14 +34,8 @@ const CivicExamResultScreen = () => {
     const navigation = useNavigation<CivicExamResultScreenNavigationProp>();
     const route = useRoute();
     const { theme, themeMode } = useTheme();
-    const { language } = useLanguage();
-
     const serializedResult = (route.params as RouteParams)?.result;
     const result = serializedResult ? deserializeCivicExamResult(serializedResult) : null;
-
-    const getLocalizedText = (fr: string, vi: string) => {
-        return language === 'fr' ? fr : vi;
-    };
 
     // Handle navigation when result is missing (useEffect to avoid render-time navigation)
     useEffect(() => {
@@ -64,7 +57,7 @@ const CivicExamResultScreen = () => {
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        {getLocalizedText('Résultats', 'Kết quả')}
+                        Résultats
                     </FormattedText>
                 </View>
 
@@ -80,30 +73,21 @@ const CivicExamResultScreen = () => {
                             color="#FFFFFF"
                         />
                         <FormattedText style={styles.resultTitle}>
-                            {passed
-                                ? getLocalizedText('Examen réussi !', 'Đã đạt!')
-                                : getLocalizedText('Examen échoué', 'Chưa đạt')
-                            }
+                            {passed ? 'Examen réussi !' : 'Examen échoué'}
                         </FormattedText>
                         <FormattedText style={styles.resultScore}>
                             {score}%
                         </FormattedText>
                         <FormattedText style={styles.resultDetails}>
-                            {correctAnswers} / {totalQuestions} {getLocalizedText('bonnes réponses', 'câu đúng')}
+                            {correctAnswers} / {totalQuestions} bonnes réponses
                         </FormattedText>
                         <FormattedText style={styles.resultThreshold}>
                             {(() => {
                                 const passingScore = Math.ceil((totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
                                 if (totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
-                                    return getLocalizedText(
-                                        `Minimum requis: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
-                                        `Tối thiểu: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
-                                    );
+                                    return `Minimum requis: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`;
                                 } else {
-                                    return getLocalizedText(
-                                        `Minimum requis: ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`,
-                                        `Tối thiểu: ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`
-                                    );
+                                    return `Minimum requis: ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`;
                                 }
                             })()}
                         </FormattedText>
@@ -112,22 +96,19 @@ const CivicExamResultScreen = () => {
                     {incorrectQuestions.length > 0 && (
                         <View style={[styles.incorrectCard, { backgroundColor: theme.colors.card }]}>
                             <FormattedText style={[styles.incorrectTitle, { color: theme.colors.text }]}>
-                                {getLocalizedText(
-                                    `Questions incorrectes (${incorrectQuestions.length})`,
-                                    `Câu sai (${incorrectQuestions.length})`
-                                )}
+                                Questions incorrectes ({incorrectQuestions.length})
                             </FormattedText>
                             {incorrectQuestions.map((question) => {
                                 const civicQuestion = question as CivicExamQuestionWithOptions;
                                 const userAnswer = session.answers.find(a => a.questionId === question.id);
                                 const userAnswerIndex = parseUserAnswerIndex(userAnswer?.userAnswer);
-                                const userAnswerText = getUserAnswerText(civicQuestion, userAnswerIndex, language);
-                                const correctAnswerText = getCorrectAnswerText(civicQuestion, language);
+                                const userAnswerText = getUserAnswerText(civicQuestion, userAnswerIndex);
+                                const correctAnswerText = getCorrectAnswerText(civicQuestion);
                                 
                                 return (
                                     <View key={question.id} style={styles.incorrectItem}>
                                         <FormattedText style={[styles.incorrectQuestion, { color: theme.colors.text }]}>
-                                            {getCivicExamQuestionText(question, language)}
+                                            {getCivicExamQuestionText(question)}
                                         </FormattedText>
                                         
                                         <View style={[styles.answerSection, { marginTop: 12 }]}>
@@ -135,7 +116,7 @@ const CivicExamResultScreen = () => {
                                                 <View style={[styles.answerLabel, { backgroundColor: theme.colors.error + '20' }]}>
                                                     <Ionicons name="close-circle" size={16} color={theme.colors.error} />
                                                     <FormattedText style={[styles.answerLabelText, { color: theme.colors.error }]}>
-                                                        {getLocalizedText('Votre réponse:', 'Câu trả lời của bạn:')}
+                                                        Votre réponse:
                                                     </FormattedText>
                                                 </View>
                                                 <FormattedText style={[styles.answerText, { color: theme.colors.text }]}>
@@ -147,7 +128,7 @@ const CivicExamResultScreen = () => {
                                                 <View style={[styles.answerLabel, { backgroundColor: '#4CAF50' + '20' }]}>
                                                     <Ionicons name="checkmark-circle" size={16} color="#4CAF50" />
                                                     <FormattedText style={[styles.answerLabelText, { color: '#4CAF50' }]}>
-                                                        {getLocalizedText('Bonne réponse:', 'Đáp án đúng:')}
+                                                        Bonne réponse:
                                                     </FormattedText>
                                                 </View>
                                                 <FormattedText style={[styles.answerText, { color: theme.colors.text }]}>
@@ -169,7 +150,7 @@ const CivicExamResultScreen = () => {
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
-                            {getLocalizedText('Retour à l\'accueil', 'Về trang chủ')}
+                            Retour à l'accueil
                         </FormattedText>
                     </TouchableOpacity>
                 </View>

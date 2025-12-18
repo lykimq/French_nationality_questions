@@ -13,7 +13,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
@@ -33,14 +32,9 @@ const ALL_THEMES: CivicExamTheme[] = [
 const CivicExamPracticeScreen = () => {
     const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language } = useLanguage();
     const { startExam } = useCivicExam();
     const [selectedThemes, setSelectedThemes] = useState<CivicExamTheme[]>(ALL_THEMES);
     const [isStarting, setIsStarting] = useState(false);
-
-    const getLocalizedText = (fr: string, vi: string) => {
-        return language === 'fr' ? fr : vi;
-    };
 
     const toggleTheme = (themeId: CivicExamTheme) => {
         setSelectedThemes(prev => {
@@ -63,11 +57,8 @@ const CivicExamPracticeScreen = () => {
     const handleStartPractice = async () => {
         if (selectedThemes.length === 0) {
             Alert.alert(
-                getLocalizedText('Aucun thème sélectionné', 'Chưa chọn chủ đề'),
-                getLocalizedText(
-                    'Veuillez sélectionner au moins un thème pour commencer.',
-                    'Vui lòng chọn ít nhất một chủ đề để bắt đầu.'
-                )
+                'Aucun thème sélectionné',
+                'Veuillez sélectionner au moins un thème pour commencer.'
             );
             return;
         }
@@ -88,11 +79,8 @@ const CivicExamPracticeScreen = () => {
         } catch (error) {
             console.error('Error starting practice:', error);
             Alert.alert(
-                getLocalizedText('Erreur', 'Lỗi'),
-                getLocalizedText(
-                    'Impossible de démarrer la pratique. Veuillez réessayer.',
-                    'Không thể bắt đầu luyện tập. Vui lòng thử lại.'
-                )
+                'Erreur',
+                'Impossible de démarrer la pratique. Veuillez réessayer.'
             );
         } finally {
             setIsStarting(false);
@@ -112,7 +100,7 @@ const CivicExamPracticeScreen = () => {
                         <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
                     </TouchableOpacity>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        {getLocalizedText('Mode pratique', 'Chế độ luyện tập')}
+                        Mode pratique
                     </FormattedText>
                     <View style={styles.headerSpacer} />
                 </View>
@@ -124,10 +112,7 @@ const CivicExamPracticeScreen = () => {
                 >
                     <View style={[styles.infoCard, { backgroundColor: theme.colors.card }]}>
                         <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                            {getLocalizedText(
-                                'Sélectionnez les thèmes que vous souhaitez pratiquer. 40 questions seront générées aléatoirement à partir des thèmes sélectionnés.',
-                                'Chọn các chủ đề bạn muốn luyện tập. 40 câu hỏi sẽ được tạo ngẫu nhiên từ các chủ đề đã chọn.'
-                            )}
+                            Sélectionnez les thèmes que vous souhaitez pratiquer. 40 questions seront générées aléatoirement à partir des thèmes sélectionnés.
                         </FormattedText>
                     </View>
 
@@ -137,7 +122,7 @@ const CivicExamPracticeScreen = () => {
                             onPress={selectAll}
                         >
                             <FormattedText style={[styles.actionButtonText, { color: '#FFFFFF' }]}>
-                                {getLocalizedText('Tout sélectionner', 'Chọn tất cả')}
+                                Tout sélectionner
                             </FormattedText>
                         </TouchableOpacity>
                         <TouchableOpacity
@@ -145,7 +130,7 @@ const CivicExamPracticeScreen = () => {
                             onPress={deselectAll}
                         >
                             <FormattedText style={[styles.actionButtonText, { color: theme.colors.text }]}>
-                                {getLocalizedText('Tout désélectionner', 'Bỏ chọn tất cả')}
+                                Tout désélectionner
                             </FormattedText>
                         </TouchableOpacity>
                     </View>
@@ -175,7 +160,7 @@ const CivicExamPracticeScreen = () => {
                                         />
                                         <View style={styles.themeTextContainer}>
                                             <FormattedText style={[styles.themeTitle, { color: theme.colors.text }]}>
-                                                {language === 'fr' ? themeInfo.fr : themeInfo.vi}
+                                                {themeInfo}
                                             </FormattedText>
                                         </View>
                                     </View>
@@ -197,10 +182,7 @@ const CivicExamPracticeScreen = () => {
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
-                            {isStarting
-                                ? getLocalizedText('Démarrage...', 'Đang khởi động...')
-                                : getLocalizedText('Commencer la pratique', 'Bắt đầu luyện tập')
-                            }
+                            {isStarting ? 'Démarrage...' : 'Commencer la pratique'}
                         </FormattedText>
                     </TouchableOpacity>
                 </ScrollView>

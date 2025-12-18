@@ -9,14 +9,12 @@ import type { SettingItemProps } from '../../types';
 
 const SettingItem: React.FC<SettingItemProps> = ({
     title,
-    title_vi,
     icon,
     iconColor,
     isSwitch = false,
     value,
     onValueChange,
     onPress,
-    language = 'fr',
 }) => {
     const { theme } = useTheme();
 
@@ -30,7 +28,7 @@ const SettingItem: React.FC<SettingItemProps> = ({
                 <Ionicons name={icon as any} size={20} color={iconColor} />
             </View>
             <FormattedText style={[settingsStyles.settingTitle, { color: theme.colors.text }]}>
-                {language === 'fr' ? title : (title_vi || title)}
+                {title}
             </FormattedText>
             {isSwitch && (
                 <Switch

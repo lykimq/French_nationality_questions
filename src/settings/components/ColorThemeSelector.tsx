@@ -14,8 +14,6 @@ import { sharedStyles } from '../../shared/utils';
 
 const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
     title,
-    title_vi,
-    language,
     value,
     onValueChange,
 }) => {
@@ -66,7 +64,7 @@ const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
 
                 {/* Theme Name */}
                 <FormattedText style={[styles.themeName, { color: theme.colors.text }]} numberOfLines={1}>
-                    {language === 'fr' ? themeInfo.name.split(' ')[0] : themeInfo.nameVi.split(' ')[0]}
+                    {themeInfo.name.split(' ')[0]}
                 </FormattedText>
             </TouchableOpacity>
         );
@@ -83,10 +81,10 @@ const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
                 </View>
                 <View style={styles.headerText}>
                     <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                        {language === 'fr' ? title : title_vi}
+                        {title}
                     </FormattedText>
                     <FormattedText style={[styles.subtitle, { color: theme.colors.textSecondary }]}>
-                        {language === 'fr' ? selectedThemeInfo.name : selectedThemeInfo.nameVi}
+                        {selectedThemeInfo.name}
                     </FormattedText>
                 </View>
             </View>

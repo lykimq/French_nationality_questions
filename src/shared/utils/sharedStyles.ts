@@ -192,17 +192,6 @@ export const sharedStyles = StyleSheet.create({
         borderRadius: 2,
     },
 
-    // Common language selector styles
-    languageSelector: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-
-    languageLabel: {
-        fontSize: 14,
-        fontWeight: '600',
-        marginHorizontal: 8,
-    },
 
     // Common option styles for selectors
     optionHeader: {

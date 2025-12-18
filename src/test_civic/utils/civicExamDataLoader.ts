@@ -1,12 +1,9 @@
-import type { TestQuestion } from '../../types';
-import type { CivicExamQuestion } from '../types';
+import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 
 interface CivicExamQuestionData {
     id: number;
     question: string;
-    question_vi: string;
     explanation: string;
-    explanation_vi: string;
     image?: string | null;
     theme: string;
     subTheme: string;
@@ -34,10 +31,7 @@ const validateQuestionData = (q: unknown): q is CivicExamQuestionData => {
         question.id > 0 &&
         typeof question.question === 'string' &&
         question.question.length > 0 &&
-        typeof question.question_vi === 'string' &&
-        question.question_vi.length > 0 &&
         typeof question.explanation === 'string' &&
-        typeof question.explanation_vi === 'string' &&
         typeof question.theme === 'string' &&
         question.theme.length > 0 &&
         typeof question.subTheme === 'string' &&
@@ -64,16 +58,14 @@ const validateAnswerIndex = (index: unknown, maxLength: number): number | undefi
     return index >= 0 && index < maxLength ? index : undefined;
 };
 
-const transformCivicQuestion = (q: CivicExamQuestionData): TestQuestion & Partial<CivicExamQuestion> => {
+const transformCivicQuestion = (q: CivicExamQuestionData): CivicExamQuestionWithOptions => {
     const options = sanitizeStringArray(q.options);
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
     
     return {
         id: q.id,
         question: sanitizeString(q.question),
-        question_vi: sanitizeString(q.question_vi),
         explanation: sanitizeString(q.explanation),
-        explanation_vi: sanitizeString(q.explanation_vi),
         image: typeof q.image === 'string' && q.image.trim().length > 0 ? q.image.trim() : undefined,
         categoryId: 'civic_exam',
         categoryTitle: 'Examen Civique',
@@ -87,7 +79,7 @@ const transformCivicQuestion = (q: CivicExamQuestionData): TestQuestion & Partia
     };
 };
 
-export const loadCivicExamQuestions = async (): Promise<TestQuestion[]> => {
+export const loadCivicExamQuestions = async (): Promise<CivicExamQuestionWithOptions[]> => {
     try {
         const civicExamData: CivicExamDataFile = require('../data/civic_exam_questions.json');
         

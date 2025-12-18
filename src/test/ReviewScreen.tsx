@@ -15,21 +15,17 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { useLanguage } from '../shared/contexts/LanguageContext';
 import { useTest } from './contexts/TestContext';
-import { FormattedText, LanguageToggle, BackButton } from '../shared/components';
+import { FormattedText, BackButton } from '../shared/components';
 import { TestQuestion, TestStackParamList } from '../types';
-import { getCachedImageSource, getQuestionTextWithDualLanguage, getExplanationTextWithDualLanguage } from '../shared/utils';
-import { getLocalizedText as buildLocalizedText } from './utils';
+import { getCachedImageSource, getQuestionText, getExplanationText } from '../shared/utils';
 
 type ReviewScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
 const ReviewScreen = () => {
     const navigation = useNavigation<ReviewScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const { getIncorrectQuestions, testProgress, isLoading } = useTest();
-    const getLocalizedText = buildLocalizedText(language);
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [showAnswer, setShowAnswer] = useState(false);
@@ -50,14 +46,14 @@ const ReviewScreen = () => {
         setShowAnswer(false);
     }, [currentQuestionIndex]);
 
-    const getQuestionText = (): string => {
+    const getCurrentQuestionText = (): string => {
         const currentQuestion = incorrectQuestions[currentQuestionIndex];
-        return getQuestionTextWithDualLanguage(currentQuestion, language);
+        return getQuestionText(currentQuestion?.question);
     };
 
-    const getExplanationText = (): string => {
+    const getCurrentExplanationText = (): string => {
         const currentQuestion = incorrectQuestions[currentQuestionIndex];
-        return getExplanationTextWithDualLanguage(currentQuestion, language);
+        return getExplanationText(currentQuestion?.explanation);
     };
 
     const handleRevealAnswer = () => {
@@ -87,7 +83,7 @@ const ReviewScreen = () => {
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {getLocalizedText('Chargement...', 'Đang tải...')}
+                    Chargement...
                 </FormattedText>
             </View>
         );
@@ -107,23 +103,9 @@ const ReviewScreen = () => {
                             </TouchableOpacity>
 
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {getLocalizedText('Révision des Questions', 'Ôn tập câu hỏi')}
+                                Révision des Questions
                             </FormattedText>
 
-                            <LanguageToggle
-                                language={language}
-                                onToggle={toggleLanguage}
-                                textColor={theme.colors.headerText}
-                                style={styles.languageToggle}
-                                labelStyle={styles.languageToggleLabel}
-                            />
-                        <LanguageToggle
-                            language={language}
-                            onToggle={toggleLanguage}
-                            textColor={theme.colors.headerText}
-                            style={styles.languageToggle}
-                            labelStyle={styles.languageToggleLabel}
-                        />
                         </View>
                     </View>
 
@@ -131,13 +113,10 @@ const ReviewScreen = () => {
                     <View style={styles.emptyStateContainer}>
                         <Ionicons name="checkmark-circle" size={80} color={theme.colors.success} />
                         <FormattedText style={[styles.emptyStateTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Excellent travail !', 'Làm tốt lắm!')}
+                            Excellent travail !
                         </FormattedText>
                         <FormattedText style={[styles.emptyStateDescription, { color: theme.colors.textMuted }]}>
-                            {getLocalizedText(
-                                'Vous n\'avez aucune question incorrecte à réviser pour le moment.',
-                                'Bạn không có câu hỏi sai nào để xem lại vào lúc này.'
-                            )}
+                            Vous n'avez aucune question incorrecte à réviser pour le moment.
                         </FormattedText>
 
                         <TouchableOpacity
@@ -146,7 +125,7 @@ const ReviewScreen = () => {
                         >
                             <Ionicons name="arrow-back" size={20} color="white" />
                             <FormattedText style={styles.takeTestButtonText}>
-                                {getLocalizedText('Retour aux tests', 'Quay lại bài test')}
+                                Retour aux tests
                             </FormattedText>
                         </TouchableOpacity>
                     </View>
@@ -175,13 +154,6 @@ const ReviewScreen = () => {
                             </FormattedText>
                         </View>
 
-                        <LanguageToggle
-                            language={language}
-                            onToggle={toggleLanguage}
-                            textColor={theme.colors.headerText}
-                            style={styles.languageToggle}
-                            labelStyle={styles.languageToggleLabel}
-                        />
                     </View>
 
                     {/* Progress bar */}
@@ -203,14 +175,11 @@ const ReviewScreen = () => {
                         <View style={styles.reviewNoticeHeader}>
                             <Ionicons name="school" size={20} color={theme.colors.warning} />
                             <FormattedText style={[styles.reviewNoticeTitle, { color: theme.colors.text }]}>
-                                {getLocalizedText('Mode Révision', 'Chế độ ôn tập')}
+                                Mode Révision
                             </FormattedText>
                         </View>
                         <FormattedText style={[styles.reviewNoticeText, { color: theme.colors.textMuted }]}>
-                            {getLocalizedText(
-                                'Cette question a été répondue incorrectement lors de tests précédents.',
-                                'Câu hỏi này đã được trả lời sai trong các bài kiểm tra trước.'
-                            )}
+                            Cette question a été répondue incorrectement lors de tests précédents.
                         </FormattedText>
                     </View>
 
@@ -218,7 +187,7 @@ const ReviewScreen = () => {
                     <View style={[styles.questionCard, { backgroundColor: theme.colors.surface }]}>
                         <View style={styles.questionHeader}>
                             <FormattedText style={[styles.questionLabel, { color: theme.colors.textMuted }]}>
-                                {getLocalizedText('Question à réviser', 'Câu hỏi cần ôn tập')} {currentQuestionIndex + 1}
+                                Question à réviser {currentQuestionIndex + 1}
                             </FormattedText>
                             {currentQuestion?.categoryTitle && (
                                 <View style={[styles.categoryBadge, { backgroundColor: theme.colors.primaryLight }]}>
@@ -230,7 +199,7 @@ const ReviewScreen = () => {
                         </View>
 
                         <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
-                            {getQuestionText()}
+                            {getCurrentQuestionText()}
                         </FormattedText>
 
                         {currentQuestion?.image && (
@@ -247,14 +216,11 @@ const ReviewScreen = () => {
                             <View style={styles.instructionHeader}>
                                 <Ionicons name="bulb" size={20} color={theme.colors.warning} />
                                 <FormattedText style={[styles.instructionTitle, { color: theme.colors.text }]}>
-                                    {getLocalizedText('Instructions', 'Hướng dẫn')}
+                                    Instructions
                                 </FormattedText>
                             </View>
                             <FormattedText style={[styles.instructionText, { color: theme.colors.textMuted }]}>
-                                {getLocalizedText(
-                                    'Réfléchissez à votre réponse, puis cliquez sur "Voir la réponse" pour découvrir la réponse correcte et améliorer vos connaissances.',
-                                    'Hãy suy nghĩ về câu trả lời của bạn, sau đó nhấn "Xem đáp án" để khám phá câu trả lời đúng và cải thiện kiến thức của bạn.'
-                                )}
+                                Réfléchissez à votre réponse, puis cliquez sur "Voir la réponse" pour découvrir la réponse correcte et améliorer vos connaissances.
                             </FormattedText>
                         </View>
                     )}
@@ -265,11 +231,11 @@ const ReviewScreen = () => {
                             <View style={styles.answerHeader}>
                                 <Ionicons name="checkmark-circle" size={20} color={theme.colors.success} />
                                 <FormattedText style={[styles.answerTitle, { color: theme.colors.text }]}>
-                                    {getLocalizedText('Réponse correcte', 'Đáp án đúng')}
+                                    Réponse correcte
                                 </FormattedText>
                             </View>
                             <FormattedText style={[styles.answerText, { color: theme.colors.textMuted }]}>
-                                {getExplanationText()}
+                                {getCurrentExplanationText()}
                             </FormattedText>
                         </View>
                     )}
@@ -284,7 +250,7 @@ const ReviewScreen = () => {
                         >
                             <Ionicons name="eye" size={20} color="white" />
                             <FormattedText style={styles.actionButtonText}>
-                                {getLocalizedText('Voir la réponse', 'Xem đáp án')}
+                                Voir la réponse
                             </FormattedText>
                         </TouchableOpacity>
                     ) : (
@@ -307,7 +273,7 @@ const ReviewScreen = () => {
                                     styles.navButtonText,
                                     { color: currentQuestionIndex === 0 ? theme.colors.textMuted : theme.colors.text }
                                 ]}>
-                                    {getLocalizedText('Précédent', 'Trước')}
+                                    Précédent
                                 </FormattedText>
                             </TouchableOpacity>
 
@@ -317,7 +283,7 @@ const ReviewScreen = () => {
                                     onPress={handleNextQuestion}
                                 >
                                     <FormattedText style={[styles.navButtonText, { color: 'white' }]}>
-                                        {getLocalizedText('Suivant', 'Tiếp')}
+                                        Suivant
                                     </FormattedText>
                                     <Ionicons name="chevron-forward" size={20} color="white" />
                                 </TouchableOpacity>
@@ -328,7 +294,7 @@ const ReviewScreen = () => {
                                 >
                                     <Ionicons name="checkmark" size={20} color="white" />
                                     <FormattedText style={[styles.navButtonText, { color: 'white' }]}>
-                                        {getLocalizedText('Terminé', 'Hoàn thành')}
+                                        Terminé
                                     </FormattedText>
                                 </TouchableOpacity>
                             )}
@@ -374,13 +340,6 @@ const styles = StyleSheet.create({
     questionIdText: {
         fontSize: 12,
         marginTop: 2,
-    },
-    languageToggle: {
-        marginLeft: 12,
-    },
-    languageToggleLabel: {
-        fontSize: 14,
-        fontWeight: 'bold',
     },
     progressContainer: {
         height: 4,

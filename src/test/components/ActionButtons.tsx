@@ -3,7 +3,6 @@ import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useLanguage } from '../../shared/contexts/LanguageContext';
 import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
 
@@ -17,7 +16,6 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
     onViewProgress,
 }) => {
     const { theme } = useTheme();
-    const { language } = useLanguage();
     const { getIconName } = useIcons();
 
     return (
@@ -28,7 +26,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
             >
                 <Ionicons name={getIconName('analytics') as any} size={20} color={theme.colors.primary} />
                 <FormattedText style={[styles.secondaryButtonText, { color: theme.colors.primary }]}>
-                    {language === 'fr' ? 'Voir Progression' : 'Xem tiến độ'}
+                    Voir Progression
                 </FormattedText>
             </TouchableOpacity>
 
@@ -38,7 +36,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
             >
                 <Ionicons name={getIconName('refresh') as any} size={20} color="white" />
                 <FormattedText style={styles.primaryButtonText}>
-                    {language === 'fr' ? 'Nouveau Test' : 'Làm bài mới'}
+                    Nouveau Test
                 </FormattedText>
             </TouchableOpacity>
         </View>

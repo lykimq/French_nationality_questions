@@ -11,7 +11,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { useLanguage } from '../shared/contexts/LanguageContext';
+import { useData } from '../shared/contexts/DataContext';
 import { useTest } from './contexts/TestContext';
 import { FormattedText } from '../shared/components';
 import ProgressCard from './components/ProgressCard';
@@ -22,12 +22,11 @@ import SubcategoryTestCard from './components/SubcategoryTestCard';
 import { sharedStyles } from '../shared/utils';
 import { useTestModes } from './hooks/useTestModes';
 import { useTestActions } from './hooks/useTestActions';
-import { getLocalizedText, createSubcategoryTestDetails } from './utils';
+import { createSubcategoryTestDetails } from './utils';
 
 const TestScreen = () => {
     const untypedNavigation = useNavigation(); // For event listeners
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const {
         testProgress,
         testStatistics,
@@ -35,9 +34,6 @@ const TestScreen = () => {
         generateRecommendations,
         refreshProgress,
     } = useTest();
-
-    // Create localized text function
-    const localizedText = getLocalizedText(language);
 
     // Get test modes configuration
     const { testModes, getLocalizedModeTitle, getLocalizedModeDescription } = useTestModes({
@@ -56,10 +52,10 @@ const TestScreen = () => {
         handleNavigateToPart1Tests,
         handleModeSelection,
         handleModalClose,
-    } = useTestActions({ testModes, getLocalizedText: localizedText });
+    } = useTestActions({ testModes });
 
     // Get subcategory test details
-    const subcategoryTestDetails = createSubcategoryTestDetails(localizedText);
+    const subcategoryTestDetails = createSubcategoryTestDetails();
 
     // Refresh data when screen mounts and when it comes into focus
     useEffect(() => {
@@ -82,7 +78,7 @@ const TestScreen = () => {
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {localizedText('Chargement...', 'Đang tải...')}
+                    Chargement...
                 </FormattedText>
             </View>
         );
@@ -97,21 +93,11 @@ const TestScreen = () => {
                     <View style={styles.headerContent}>
                         <View style={styles.headerText}>
                             <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                                {localizedText('Tests de Préparation', 'Bài kiểm tra chuẩn bị')}
+                                Tests de Préparation
                             </FormattedText>
                             <FormattedText style={[styles.headerSubtitle, { color: theme.colors.headerText + 'B3' }]}>
-                                {localizedText('Testez vos connaissances', 'Kiểm tra kiến thức của bạn')}
+                                Testez vos connaissances
                             </FormattedText>
-                        </View>
-                        <View style={styles.languageSelector}>
-                            <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>FR</FormattedText>
-                            <Switch
-                                value={language === 'vi'}
-                                onValueChange={toggleLanguage}
-                                thumbColor={theme.colors.switchThumb}
-                                trackColor={{ false: theme.colors.primaryLight, true: theme.colors.primaryLight }}
-                            />
-                            <FormattedText style={[styles.languageLabel, { color: theme.colors.headerText }]}>VI</FormattedText>
                         </View>
                     </View>
                 </View>
@@ -125,28 +111,24 @@ const TestScreen = () => {
                         testProgress={testProgress}
                         testStatistics={testStatistics}
                         onPress={handleViewDetailedProgress}
-                        getLocalizedText={localizedText}
-                        language={language}
                     />
 
                     <RecommendationSection
                         recommendations={recommendations}
                         onRecommendationAction={handleRecommendationAction}
-                        getLocalizedText={localizedText}
                     />
 
                     <View style={styles.modesSection}>
                         <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
-                            {localizedText('Modes de Test', 'Chế độ kiểm tra')}
+                            Modes de Test
                         </FormattedText>
                         {testModes.map((modeOption) => (
                             <TestModeCard
                                 key={modeOption.mode}
                                 modeOption={modeOption}
                                 onPress={() => handleModeSelection(modeOption.mode)}
-                                getLocalizedText={localizedText}
-                                getLocalizedModeTitle={(mode) => getLocalizedModeTitle(mode, language, localizedText)}
-                                getLocalizedModeDescription={(mode) => getLocalizedModeDescription(mode, language, localizedText)}
+                                getLocalizedModeTitle={(mode) => getLocalizedModeTitle(mode)}
+                                getLocalizedModeDescription={(mode) => getLocalizedModeDescription(mode)}
                             />
                         ))}
                     </View>
@@ -173,17 +155,14 @@ const TestScreen = () => {
 
                     {/* Civic Exam Section */}
                     <SubcategoryTestCard
-                        title={localizedText('Examen Civique', 'Kỳ thi Công dân')}
-                        description={localizedText(
-                            'Examen civique pour la naturalisation - 40 questions, 45 minutes',
-                            'Kỳ thi công dân cho quốc tịch - 40 câu hỏi, 45 phút'
-                        )}
+                        title="Examen Civique"
+                        description="Examen civique pour la naturalisation - 40 questions, 45 minutes"
                         icon="document-text"
                         iconColor="#2196F3"
                         details={[
-                            localizedText('40 questions à choix multiples', '40 câu hỏi trắc nghiệm'),
-                            localizedText('45 minutes maximum', 'Tối đa 45 phút'),
-                            localizedText('80% pour réussir (32/40)', '80% để đạt (32/40)'),
+                            { icon: 'helpCircle', text: '40 questions à choix multiples' },
+                            { icon: 'time', text: '45 minutes maximum' },
+                            { icon: 'checkmarkCircle', text: '80% pour réussir (32/40)' },
                         ]}
                         onPress={() => {
                             const navigation = untypedNavigation as any;
@@ -199,9 +178,8 @@ const TestScreen = () => {
                 isStartingTest={isStartingTest}
                 onClose={handleModalClose}
                 onStartTest={() => selectedMode && handleStartTest(selectedMode)}
-                getLocalizedText={localizedText}
-                getLocalizedModeTitle={(mode) => getLocalizedModeTitle(mode, language, localizedText)}
-                getLocalizedModeDescription={(mode) => getLocalizedModeDescription(mode, language, localizedText)}
+                getLocalizedModeTitle={(mode) => getLocalizedModeTitle(mode)}
+                getLocalizedModeDescription={(mode) => getLocalizedModeDescription(mode)}
             />
         </View>
     );
@@ -228,14 +206,6 @@ const styles = StyleSheet.create({
     },
     headerSubtitle: {
         fontSize: 16,
-    },
-    languageSelector: {
-        ...sharedStyles.languageSelector,
-    },
-    languageLabel: {
-        ...sharedStyles.languageLabel,
-        fontSize: 16,
-        fontWeight: 'bold',
     },
     scrollView: {
         flex: 1,

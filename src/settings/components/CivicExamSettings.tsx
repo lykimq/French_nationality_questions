@@ -6,30 +6,21 @@ import { FormattedText } from '../../shared/components';
 import SettingItem from './SettingItem';
 import { settingsStyles } from './settingsStyles';
 
-interface CivicExamSettingsProps {
-    language: 'fr' | 'vi';
-}
-
-const CivicExamSettings: React.FC<CivicExamSettingsProps> = ({ language }) => {
+const CivicExamSettings: React.FC = () => {
     const { theme } = useTheme();
     const { examProgress, resetProgress } = useCivicExam();
 
     const handleResetStatistics = () => {
-        const title = language === 'fr' ? 'Réinitialiser les statistiques' : 'Đặt lại thống kê';
-        const message = language === 'fr'
-            ? 'Êtes-vous sûr de vouloir réinitialiser toutes les statistiques de l\'examen civique ? Cette action est irréversible et supprimera tous vos scores, progrès et statistiques.'
-            : 'Bạn có chắc chắn muốn đặt lại tất cả thống kê của kỳ thi công dân? Hành động này không thể hoàn tác và sẽ xóa tất cả điểm số, tiến độ và thống kê của bạn.';
-
         Alert.alert(
-            title,
-            message,
+            'Réinitialiser les statistiques',
+            'Êtes-vous sûr de vouloir réinitialiser toutes les statistiques de l\'examen civique ? Cette action est irréversible et supprimera tous vos scores, progrès et statistiques.',
             [
                 {
-                    text: language === 'fr' ? 'Annuler' : 'Hủy',
+                    text: 'Annuler',
                     style: 'cancel',
                 },
                 {
-                    text: language === 'fr' ? 'Réinitialiser' : 'Đặt lại',
+                    text: 'Réinitialiser',
                     style: 'destructive',
                     onPress: async () => {
                         try {
@@ -46,10 +37,8 @@ const CivicExamSettings: React.FC<CivicExamSettingsProps> = ({ language }) => {
                             console.warn('✅ RESET COMPLETE - Check if numbers are now zero');
                             
                             Alert.alert(
-                                language === 'fr' ? 'Réinitialisation réussie' : 'Đặt lại thành công',
-                                language === 'fr'
-                                    ? 'Toutes les statistiques ont été réinitialisées.'
-                                    : 'Tất cả thống kê đã được đặt lại.',
+                                'Réinitialisation réussie',
+                                'Toutes les statistiques ont été réinitialisées.',
                                 [{ 
                                     text: 'OK',
                                     onPress: () => {
@@ -60,10 +49,8 @@ const CivicExamSettings: React.FC<CivicExamSettingsProps> = ({ language }) => {
                         } catch (error) {
                             console.error('❌ ERROR resetting statistics:', error);
                             Alert.alert(
-                                language === 'fr' ? 'Erreur' : 'Lỗi',
-                                language === 'fr'
-                                    ? 'Une erreur est survenue lors de la réinitialisation.'
-                                    : 'Đã xảy ra lỗi khi đặt lại.',
+                                'Erreur',
+                                'Une erreur est survenue lors de la réinitialisation.',
                                 [{ text: 'OK' }]
                             );
                         }
@@ -84,16 +71,14 @@ const CivicExamSettings: React.FC<CivicExamSettingsProps> = ({ language }) => {
     return (
         <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
             <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
-                {language === 'fr' ? 'Statistiques de l\'examen civique' : 'Thống kê kỳ thi công dân'}
+                Statistiques de l'examen civique
             </FormattedText>
 
             <SettingItem
                 title="Réinitialiser les statistiques"
-                title_vi="Đặt lại thống kê"
                 icon={theme.icons.refresh}
                 iconColor={theme.colors.error}
                 onPress={handleResetStatistics}
-                language={language}
             />
         </View>
     );

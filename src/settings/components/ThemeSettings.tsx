@@ -7,24 +7,18 @@ import { FormattedText } from '../../shared/components';
 import { settingsStyles } from './settingsStyles';
 import { sharedStyles } from '../../shared/utils';
 
-interface ThemeSettingsProps {
-    language: 'fr' | 'vi';
-}
-
-const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
+const ThemeSettings: React.FC = () => {
     const { theme, themeMode, colorTheme, setThemeMode, setColorTheme } = useTheme();
 
     return (
         <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
             <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
-                {language === 'fr' ? 'Apparence' : 'Giao diện'}
+                Apparence
             </FormattedText>
 
             {/* Color Theme Selector */}
             <ColorThemeSelector
                 title="Thème de couleur"
-                title_vi="Chủ đề màu sắc"
-                language={language}
                 value={colorTheme}
                 onValueChange={setColorTheme}
             />
@@ -36,7 +30,7 @@ const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
                         <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={22} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
                     </View>
                     <FormattedText style={[styles.themeSelectorTitle, { color: theme.colors.text }]}>
-                        {language === 'fr' ? 'Mode d\'affichage' : 'Chế độ hiển thị'}
+                        Mode d'affichage
                     </FormattedText>
                 </View>
 
@@ -59,7 +53,7 @@ const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
                             styles.themeOptionText,
                             { color: themeMode === 'light' ? '#FFFFFF' : theme.colors.textMuted }
                         ]}>
-                            {language === 'fr' ? 'Clair' : 'Sáng'}
+                            Clair
                         </FormattedText>
                     </TouchableOpacity>
 
@@ -81,7 +75,7 @@ const ThemeSettings: React.FC<ThemeSettingsProps> = ({ language }) => {
                             styles.themeOptionText,
                             { color: themeMode === 'dark' ? '#FFFFFF' : theme.colors.textMuted }
                         ]}>
-                            {language === 'fr' ? 'Sombre' : 'Tối'}
+                            Sombre
                         </FormattedText>
                     </TouchableOpacity>
                 </View>

@@ -16,9 +16,7 @@ interface DatabaseTestResult {
         id: number;
         category: string;
         hasFrench: boolean;
-        hasVietnamese: boolean;
         hasExplanation: boolean;
-        hasVietnameseExplanation: boolean;
     }>;
 }
 
@@ -47,8 +45,8 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
             console.log('✅ Main data loaded successfully');
 
             // Test personal questions
-            if (mainData.personal_fr_vi) {
-                const validation = validateDataStructure(mainData.personal_fr_vi, 'personal_fr_vi');
+            if (mainData.personal) {
+                const validation = validateDataStructure(mainData.personal, 'personal');
                 result.categoriesLoaded.push('personal');
                 result.totalQuestions += validation.summary.totalQuestions;
 
@@ -57,17 +55,15 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
                 }
 
                 // Add sample questions
-                if (mainData.personal_fr_vi.questions) {
-                    const sampleCount = Math.min(3, mainData.personal_fr_vi.questions.length);
+                if (mainData.personal.questions) {
+                    const sampleCount = Math.min(3, mainData.personal.questions.length);
                     for (let i = 0; i < sampleCount; i++) {
-                        const q = mainData.personal_fr_vi.questions[i];
+                        const q = mainData.personal.questions[i];
                         result.questionSamples.push({
                             id: q.id,
                             category: 'personal',
                             hasFrench: !!q.question,
-                            hasVietnamese: !!q.question_vi,
-                            hasExplanation: !!q.explanation,
-                            hasVietnameseExplanation: !!q.explanation_vi
+                            hasExplanation: !!q.explanation
                         });
                     }
                 }
@@ -76,8 +72,8 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
             }
 
             // Test geography questions
-            if (mainData.geography_fr_vi) {
-                const validation = validateDataStructure(mainData.geography_fr_vi, 'geography_fr_vi');
+            if (mainData.geography) {
+                const validation = validateDataStructure(mainData.geography, 'geography');
                 result.categoriesLoaded.push('geography');
                 result.totalQuestions += validation.summary.totalQuestions;
 
@@ -86,17 +82,15 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
                 }
 
                 // Add sample questions
-                if (mainData.geography_fr_vi.questions) {
-                    const sampleCount = Math.min(3, mainData.geography_fr_vi.questions.length);
+                if (mainData.geography.questions) {
+                    const sampleCount = Math.min(3, mainData.geography.questions.length);
                     for (let i = 0; i < sampleCount; i++) {
-                        const q = mainData.geography_fr_vi.questions[i];
+                        const q = mainData.geography.questions[i];
                         result.questionSamples.push({
                             id: q.id,
                             category: 'geography',
                             hasFrench: !!q.question,
-                            hasVietnamese: !!q.question_vi,
-                            hasExplanation: !!q.explanation,
-                            hasVietnameseExplanation: !!q.explanation_vi
+                            hasExplanation: !!q.explanation
                         });
                     }
                 }
@@ -132,9 +126,7 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
                         id: q.id,
                         category: key,
                         hasFrench: !!q.question,
-                        hasVietnamese: !!q.question_vi,
-                        hasExplanation: !!q.explanation,
-                        hasVietnameseExplanation: !!q.explanation_vi
+                        hasExplanation: !!q.explanation
                     });
                 }
             } else {
@@ -177,17 +169,11 @@ const generateRecommendations = (result: DatabaseTestResult): string[] => {
     }
 
     if (result.categoriesLoaded.length === 0) {
-        recommendations.push('Critical: No main categories loaded. Check personal_fr_vi.json and geography_fr_vi.json files.');
+        recommendations.push('Critical: No main categories loaded. Check personal and geography data files.');
     }
 
     if (result.subcategoriesLoaded.length < 10) {
         recommendations.push('Warning: Some subcategories may not have loaded. Check subcategories folder in Firebase Storage.');
-    }
-
-    // Check for missing Vietnamese translations
-    const questionsWithoutVietnamese = result.questionSamples.filter(q => !q.hasVietnamese);
-    if (questionsWithoutVietnamese.length > 0) {
-        recommendations.push(`Info: ${questionsWithoutVietnamese.length} sample questions missing Vietnamese translations.`);
     }
 
     // Check for missing explanations
@@ -228,16 +214,16 @@ export const testQuestionIdUniqueness = async (): Promise<{
         const allIds: number[] = [];
 
         // Collect IDs from main data
-        if (mainData?.personal_fr_vi?.questions) {
-            mainData.personal_fr_vi.questions.forEach((q: any) => {
+        if (mainData?.personal?.questions) {
+            mainData.personal.questions.forEach((q: any) => {
                 if (typeof q.id === 'number') {
                     allIds.push(q.id);
                 }
             });
         }
 
-        if (mainData?.geography_fr_vi?.questions) {
-            mainData.geography_fr_vi.questions.forEach((q: any) => {
+        if (mainData?.geography?.questions) {
+            mainData.geography.questions.forEach((q: any) => {
                 if (typeof q.id === 'number') {
                     allIds.push(q.id);
                 }
@@ -300,30 +286,27 @@ export const logDatabaseStatistics = async (): Promise<void> => {
         const { mainData, historyData, subcategoryData } = await preloadAllData();
 
         let totalQuestions = 0;
-        let questionsWithVietnamese = 0;
         let questionsWithImages = 0;
 
         const categoryStats: { [key: string]: number } = {};
 
         // Process main data
-        if (mainData?.personal_fr_vi?.questions) {
-            const count = mainData.personal_fr_vi.questions.length;
+        if (mainData?.personal?.questions) {
+            const count = mainData.personal.questions.length;
             totalQuestions += count;
             categoryStats['personal'] = count;
 
-            mainData.personal_fr_vi.questions.forEach((q: any) => {
-                if (q.question_vi) questionsWithVietnamese++;
+            mainData.personal.questions.forEach((q: any) => {
                 if (q.image) questionsWithImages++;
             });
         }
 
-        if (mainData?.geography_fr_vi?.questions) {
-            const count = mainData.geography_fr_vi.questions.length;
+        if (mainData?.geography?.questions) {
+            const count = mainData.geography.questions.length;
             totalQuestions += count;
             categoryStats['geography'] = count;
 
-            mainData.geography_fr_vi.questions.forEach((q: any) => {
-                if (q.question_vi) questionsWithVietnamese++;
+            mainData.geography.questions.forEach((q: any) => {
                 if (q.image) questionsWithImages++;
             });
         }
@@ -336,7 +319,6 @@ export const logDatabaseStatistics = async (): Promise<void> => {
                 categoryStats[key] = count;
 
                 (subcategory as any).questions.forEach((q: any) => {
-                    if (q.question_vi) questionsWithVietnamese++;
                     if (q.image) questionsWithImages++;
                 });
             }
@@ -344,7 +326,6 @@ export const logDatabaseStatistics = async (): Promise<void> => {
 
         console.log('📊 Database Statistics Summary:');
         console.log(`Total Questions: ${totalQuestions}`);
-        console.log(`Questions with Vietnamese: ${questionsWithVietnamese} (${Math.round(questionsWithVietnamese / totalQuestions * 100)}%)`);
         console.log(`Questions with Images: ${questionsWithImages} (${Math.round(questionsWithImages / totalQuestions * 100)}%)`);
         console.log('Questions by Category:', categoryStats);
         console.log(`History Categories Available: ${historyData ? 'Yes' : 'No'}`);

@@ -1,4 +1,4 @@
-import type { Language, TimestampedEntity } from '../../types/core';
+import type { TimestampedEntity } from '../types/core';
 import type { TestQuestion } from '../welcome/types';
 
 // ==================== TEST CONFIGURATION ====================
@@ -148,15 +148,12 @@ export type ReadonlyTestStatistics = Readonly<{
 // Recommendation types
 export type RecommendationType = 'study_category' | 'review_questions' | 'practice_more' | 'good_job';
 
-// Multilingual recommendation
+// Recommendation
 export interface TestRecommendation {
     readonly type: RecommendationType;
-    readonly title_vi: string;
-    readonly title_fr: string;
-    readonly description_vi: string;
-    readonly description_fr: string;
-    readonly actionText_vi: string;
-    readonly actionText_fr: string;
+    readonly title: string;
+    readonly description: string;
+    readonly actionText: string;
     readonly categoryIds?: readonly string[];
     readonly questionIds?: readonly number[];
 }
@@ -182,10 +179,8 @@ export interface SerializableTestResult {
 // Base test mode option for UI display
 export interface BaseTestModeOption {
     readonly mode: TestMode;
-    readonly title_fr: string;
-    readonly title_vi: string;
-    readonly description_fr: string;
-    readonly description_vi: string;
+    readonly title: string;
+    readonly description: string;
     readonly icon: string;
     readonly color: string;
     readonly questionCount: number;

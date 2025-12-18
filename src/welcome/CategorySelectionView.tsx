@@ -6,7 +6,6 @@ import { CategorySelectionViewProps } from '../types';
 
 const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
     categories,
-    language,
     onSelectCategory
 }) => {
     const { theme } = useTheme();
@@ -21,13 +20,10 @@ const CategorySelectionView: React.FC<CategorySelectionViewProps> = ({
                 <CategoryCard
                     key={category.id}
                     title={category.title}
-                    title_vi={category.title_vi}
                     description={category.description || ''}
-                    description_vi={category.description_vi}
                     icon={category.icon || 'book'}
                     count={category.questions.length}
                     onPress={() => onSelectCategory(index)}
-                    language={language}
                 />
             ))}
         </ScrollView>

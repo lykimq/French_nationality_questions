@@ -13,22 +13,18 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { useTheme } from '../shared/contexts/ThemeContext'; 
-import { useLanguage } from '../shared/contexts/LanguageContext';
+import { useTheme } from '../shared/contexts/ThemeContext';
 import { useTest } from './contexts/TestContext';
-import { FormattedText, LanguageToggle, BackButton } from '../shared/components';
+import { FormattedText, BackButton } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 import { TestStackParamList } from '../types';
-import { getLocalizedText as buildLocalizedText } from './utils';
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
 const ProgressScreen = () => {
     const navigation = useNavigation<ProgressScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const { testProgress, testStatistics, isLoading, refreshProgress } = useTest();
-    const getLocalizedText = buildLocalizedText(language);
 
     const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -80,7 +76,7 @@ const ProgressScreen = () => {
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
                 <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
-                    {getLocalizedText('Chargement des statistiques...', 'Đang tải thống kê...')}
+                    Chargement des statistiques...
                 </FormattedText>
             </View>
         );
@@ -95,16 +91,9 @@ const ProgressScreen = () => {
                     <BackButton onPress={handleGoBack} />
                     <View style={styles.headerCenter}>
                         <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                            {getLocalizedText('Progression', 'Tiến độ')}
+                            Progression
                         </FormattedText>
                     </View>
-                    <LanguageToggle
-                        language={language}
-                        onToggle={toggleLanguage}
-                        textColor={theme.colors.headerText}
-                        style={styles.languageToggle}
-                        labelStyle={styles.languageToggleLabel}
-                    />
                 </View>
 
                 <ScrollView
@@ -115,7 +104,7 @@ const ProgressScreen = () => {
                     {/* Overall Progress */}
                     <View style={[styles.overallCard, { backgroundColor: theme.colors.surface }]}>
                         <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Progression Globale', 'Tiến độ tổng thể')}
+                            Progression Globale
                         </FormattedText>
 
                         <View style={styles.progressStats}>
@@ -124,7 +113,7 @@ const ProgressScreen = () => {
                                     {testProgress.totalTestsTaken || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Tests effectués', 'Bài test đã làm')}
+                                    Tests effectués
                                 </FormattedText>
                             </View>
 
@@ -133,7 +122,7 @@ const ProgressScreen = () => {
                                     {Math.round(testProgress.averageScore || 0)}%
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Score moyen', 'Điểm trung bình')}
+                                    Score moyen
                                 </FormattedText>
                             </View>
 
@@ -142,7 +131,7 @@ const ProgressScreen = () => {
                                     {Math.round(testProgress.bestScore || 0)}%
                                 </FormattedText>
                                 <FormattedText style={[styles.progressLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Meilleur score', 'Điểm cao nhất')}
+                                    Meilleur score
                                 </FormattedText>
                             </View>
                         </View>
@@ -154,16 +143,8 @@ const ProgressScreen = () => {
                                 color={getTrendColor(testStatistics.improvementTrend || 'stable')}
                             />
                             <FormattedText style={[styles.trendText, { color: getTrendColor(testStatistics.improvementTrend || 'stable') }]}>
-                                {language === 'fr' ? (
-                                    (testStatistics.improvementTrend || 'stable') === 'improving' ? 'En progression' :
-                                        (testStatistics.improvementTrend || 'stable') === 'declining' ? 'En baisse' : 'Stable'
-                                ) : (
-                                    (testStatistics.improvementTrend || 'stable') === 'improving' ?
-                                        getLocalizedText('En progression', 'Đang tiến bộ') :
-                                        (testStatistics.improvementTrend || 'stable') === 'declining' ?
-                                            getLocalizedText('En baisse', 'Đang giảm') :
-                                            getLocalizedText('Stable', 'Ổn định')
-                                )}
+                                {(testStatistics.improvementTrend || 'stable') === 'improving' ? 'En progression' :
+                                    (testStatistics.improvementTrend || 'stable') === 'declining' ? 'En baisse' : 'Stable'}
                             </FormattedText>
                         </View>
                     </View>
@@ -172,7 +153,7 @@ const ProgressScreen = () => {
                     {Object.keys(testStatistics.categoryPerformance).length > 0 && (
                         <View style={[styles.categoryCard, { backgroundColor: theme.colors.surface }]}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                                {getLocalizedText('Performance par Catégorie', 'Thành tích theo danh mục')}
+                                Performance par Catégorie
                             </FormattedText>
 
                             {Object.values(testStatistics.categoryPerformance).map((category, index) => (
@@ -190,8 +171,7 @@ const ProgressScreen = () => {
 
                                     <View style={styles.categoryStats}>
                                         <FormattedText style={[styles.categoryStatsText, { color: theme.colors.textMuted }]}>
-                                            {category.correctAnswers || 0}/{category.questionsAttempted || 0} {getLocalizedText('correctes', 'đúng')} •
-                                            {Math.round(category.averageTime || 0)}s {getLocalizedText('moy.', 'TB')}
+                                            {category.correctAnswers || 0}/{category.questionsAttempted || 0} correctes • {Math.round(category.averageTime || 0)}s moy.
                                         </FormattedText>
                                     </View>
 
@@ -215,7 +195,7 @@ const ProgressScreen = () => {
                     {testProgress.recentScores.length > 0 && (
                         <View style={[styles.scoresCard, { backgroundColor: theme.colors.surface }]}>
                             <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                                {getLocalizedText('Scores Récents', 'Điểm gần đây')}
+                                Scores Récents
                             </FormattedText>
 
                             <View style={styles.scoresContainer}>
@@ -239,7 +219,7 @@ const ProgressScreen = () => {
                     {/* Question Analysis */}
                     <View style={[styles.analysisCard, { backgroundColor: theme.colors.surface }]}>
                         <FormattedText style={[styles.cardTitle, { color: theme.colors.text }]}>
-                            {getLocalizedText('Analyse des Questions', 'Phân tích câu hỏi')}
+                            Analyse des Questions
                         </FormattedText>
 
                         <View style={styles.analysisStats}>
@@ -249,7 +229,7 @@ const ProgressScreen = () => {
                                     {testStatistics.masteredQuestions?.length || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.analysisLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Maîtrisées', 'Đã thành thạo')}
+                                    Maîtrisées
                                 </FormattedText>
                             </View>
 
@@ -259,7 +239,7 @@ const ProgressScreen = () => {
                                     {testStatistics.strugglingQuestions?.length || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.analysisLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('À revoir', 'Cần xem lại')}
+                                    À revoir
                                 </FormattedText>
                             </View>
 
@@ -269,7 +249,7 @@ const ProgressScreen = () => {
                                     {testProgress.questionsAnswered || 0}
                                 </FormattedText>
                                 <FormattedText style={[styles.analysisLabel, { color: theme.colors.textMuted }]}>
-                                    {getLocalizedText('Total répondues', 'Tổng đã trả lời')}
+                                    Total répondues
                                 </FormattedText>
                             </View>
                         </View>
@@ -297,13 +277,6 @@ const styles = StyleSheet.create({
     headerTitle: {
         fontSize: 18,
         fontWeight: '600',
-    },
-    languageToggle: {
-        marginLeft: 12,
-    },
-    languageToggleLabel: {
-        ...sharedStyles.languageLabel,
-        fontSize: 12,
     },
     scrollView: {
         flex: 1,

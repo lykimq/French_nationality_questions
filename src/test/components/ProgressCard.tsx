@@ -11,31 +11,19 @@ interface ProgressCardProps {
     testProgress: TestProgress;
     testStatistics: TestStatistics;
     onPress: () => void;
-    getLocalizedText: (textFr: string, textVi: string) => string;
-    language: string;
 }
 
 const ProgressCard: React.FC<ProgressCardProps> = ({
     testProgress,
     testStatistics,
     onPress,
-    getLocalizedText,
-    language,
 }) => {
     const { theme } = useTheme();
     const { getIconName } = useIcons();
 
     const getTrendText = () => {
-        if (language === 'fr') {
-            return testStatistics.improvementTrend === 'improving' ? 'En progression' :
-                testStatistics.improvementTrend === 'declining' ? 'En baisse' : 'Stable';
-        } else {
-            return testStatistics.improvementTrend === 'improving' ?
-                getLocalizedText('En progression', 'Đang tiến bộ') :
-                testStatistics.improvementTrend === 'declining' ?
-                    getLocalizedText('En baisse', 'Đang giảm') :
-                    getLocalizedText('Stable', 'Ổn định');
-        }
+        return testStatistics.improvementTrend === 'improving' ? 'En progression' :
+            testStatistics.improvementTrend === 'declining' ? 'En baisse' : 'Stable';
     };
 
     const getTrendIcon = () => {
@@ -68,7 +56,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
         >
             <View style={styles.progressHeader}>
                 <FormattedText style={[styles.progressTitle, { color: theme.colors.text }]}>
-                    {getLocalizedText('Votre Progression', 'Tiến độ của bạn')}
+                    Votre Progression
                 </FormattedText>
                 <View style={styles.progressHeaderRight}>
                     <Ionicons name={getIconName('analytics') as any} size={24} color={theme.colors.primary} />
@@ -82,7 +70,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
                         {testProgress.totalTestsTaken}
                     </FormattedText>
                     <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
-                        {getLocalizedText('Tests', 'Bài test')}
+                        Tests
                     </FormattedText>
                 </View>
 
@@ -91,7 +79,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
                         {testProgress.averageScore}%
                     </FormattedText>
                     <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
-                        {getLocalizedText('Moyenne', 'Trung bình')}
+                        Moyenne
                     </FormattedText>
                 </View>
 
@@ -100,7 +88,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
                         {testProgress.bestScore}%
                     </FormattedText>
                     <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
-                        {getLocalizedText('Meilleur', 'Cao nhất')}
+                        Meilleur
                     </FormattedText>
                 </View>
             </View>
@@ -120,7 +108,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
 
             <View style={styles.viewDetailsHint}>
                 <FormattedText style={[styles.viewDetailsText, { color: theme.colors.textMuted }]}>
-                    {getLocalizedText('Appuyez pour voir les détails', 'Nhấn để xem chi tiết')}
+                    Appuyez pour voir les détails
                 </FormattedText>
             </View>
         </TouchableOpacity>

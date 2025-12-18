@@ -1,4 +1,4 @@
-import type { MultilingualEntity, VisualEntity, CategorizableEntity, MultiLangText, Language } from '../types';
+import type { TitledEntity, VisualEntity, CategorizableEntity } from '../types';
 
 // ==================== QUESTION DOMAIN ====================
 
@@ -9,20 +9,11 @@ export interface NumberEntity {
 
 // Core question structure - immutable and functional
 export interface Question extends NumberEntity, VisualEntity, CategorizableEntity {
-    readonly question: string | MultiLangText;
-    readonly question_vi?: string;
-    readonly explanation?: string | MultiLangText;
-    readonly explanation_vi?: string;
+    readonly question: string;
+    readonly explanation?: string;
 }
 
-// Specialized question types using composition
-export type MultilingualQuestion = Question & {
-    readonly question: string;
-    readonly question_vi: string;
-    readonly explanation?: string;
-    readonly explanation_vi?: string;
-};
-
+// Test question type
 export type TestQuestion = Question & CategorizableEntity & {
     readonly categoryId: string;
     readonly categoryTitle: string;
@@ -30,17 +21,16 @@ export type TestQuestion = Question & CategorizableEntity & {
 
 // Question collections - using readonly arrays for immutability
 export type QuestionCollection = readonly Question[];
-export type MultilingualQuestionCollection = readonly MultilingualQuestion[];
 
 // ==================== CATEGORY DOMAIN ====================
 
 // Base category structure
-export interface Category extends MultilingualEntity, VisualEntity {
+export interface Category extends TitledEntity, VisualEntity {
     readonly questions: QuestionCollection;
 }
 
 // Category with subcategories - hierarchical structure
-export interface CategoryWithSubcategories extends MultilingualEntity, VisualEntity {
+export interface CategoryWithSubcategories extends TitledEntity, VisualEntity {
     readonly subcategories: readonly Category[];
 }
 
@@ -63,16 +53,8 @@ export type HistorySubcategory = Category;
 // ==================== TYPE GUARDS ====================
 
 // Functional type guards for runtime type checking
-export const isMultilingualQuestion = (question: Question): question is MultilingualQuestion => {
-    return typeof question.question === 'string' && typeof question.question_vi === 'string';
-};
-
 export const isCategoryWithSubcategories = (category: CategoryType): category is CategoryWithSubcategories => {
     return 'subcategories' in category;
-};
-
-export const hasMultiLangText = (text: string | MultiLangText): text is MultiLangText => {
-    return typeof text === 'object' && text !== null && 'fr' in text && 'vi' in text;
 };
 
 // ==================== UTILITY TYPES ====================
@@ -81,22 +63,14 @@ export const hasMultiLangText = (text: string | MultiLangText): text is MultiLan
 export type ExtractQuestions<T extends { questions: readonly any[] }> = T['questions'][number];
 export type ExtractCategories<T extends { categories: readonly any[] }> = T['categories'][number];
 
-// Language-specific extraction
-export type LanguageVariant<T extends string | MultiLangText> = T extends MultiLangText
-    ? T[Language]
-    : T extends string
-    ? T
-    : never;
 
 // ==================== HOME STACK NAVIGATION ====================
 
-// Question structure for navigation params - supports both string and MultiLangText
+// Question structure for navigation params
 export interface NavigationQuestion {
     readonly id: number;
-    readonly question: string | MultiLangText;
-    readonly question_vi?: string;
-    readonly explanation?: string | MultiLangText;
-    readonly explanation_vi?: string;
+    readonly question: string;
+    readonly explanation?: string;
     readonly image?: string | null;
 }
 
@@ -104,9 +78,7 @@ export interface NavigationQuestion {
 export interface NavigationCategory {
     readonly id: string;
     readonly title: string;
-    readonly title_vi?: string;
     readonly description?: string;
-    readonly description_vi?: string;
     readonly icon?: string;
     readonly questions: readonly NavigationQuestion[];
 }
@@ -116,17 +88,14 @@ export type HomeStackParamList = Readonly<{
     Home: undefined;
     CategoryQuestions: {
         readonly categoryId: string;
-        readonly language?: Language;
     };
     CategoryBasedQuestions: {
         readonly categories: readonly NavigationCategory[];
         readonly title: string;
-        readonly title_vi?: string;
     };
     QuestionDetail: {
         readonly categoryId: string;
         readonly questionId: number;
-        readonly language?: Language;
     };
 }>;
 
