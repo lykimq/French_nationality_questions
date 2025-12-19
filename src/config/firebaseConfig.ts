@@ -1,15 +1,18 @@
 import { initializeApp } from 'firebase/app';
 import { getStorage } from 'firebase/storage';
+import { createLogger } from '../shared/utils/logger';
+
+const logger = createLogger('FirebaseConfig');
 
 // Firebase configuration from environment variables
 // IMPORTANT: Never commit actual keys to git. Use .env file (which is gitignored)
 // All credentials should be in .env file with EXPO_PUBLIC_ prefix
 const firebaseConfig = {
     apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
-    authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN || 
+    authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN ||
         `${process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID}.firebaseapp.com`,
     projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET || 
+    storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET ||
         `${process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID}.firebasestorage.app`,
     messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.EXPO_PUBLIC_FIREBASE_MOBILE_SDK_APP_ID
@@ -31,16 +34,16 @@ if (missingFields.length > 0) {
         `   3. Restart Expo server (stop and start again)\n` +
         `   4. On web, ensure variables start with EXPO_PUBLIC_\n` +
         `\nThe app will continue to run but Firebase features will not work.`;
-    console.warn(errorMessage);
+    logger.warn(errorMessage);
 } else {
     try {
         // Initialize Firebase
         app = initializeApp(firebaseConfig);
-        
+
         // Initialize Cloud Storage and get a reference to the service
         storage = getStorage(app);
     } catch (error) {
-        console.error('Failed to initialize Firebase:', error);
+        logger.error('Failed to initialize Firebase:', error);
     }
 }
 

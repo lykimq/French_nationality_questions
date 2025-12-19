@@ -18,8 +18,11 @@ import { useTheme } from '../shared/contexts/ThemeContext';
 import { useData } from '../shared/contexts/DataContext';
 import { useTest } from './contexts/TestContext';
 import { useIcons } from '../shared/contexts/IconContext';
+import { createLogger } from '../shared/utils/logger';
 import { FormattedText } from '../shared/components';
 import { TestStackParamList, TestConfig, TestMode, SubcategoryTestModeOption, Category } from '../types';
+
+const logger = createLogger('SubcategoryTest');
 
 type SubcategoryTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -97,7 +100,7 @@ const SubcategoryTestScreen = () => {
             await startTest(config as any);
             navigation.navigate('TestQuestion', undefined);
         } catch (error) {
-            console.error('Error starting subcategory test:', error);
+            logger.error('Error starting subcategory test:', error);
             Alert.alert(
                 'Erreur',
                 'Impossible de démarrer le test. Veuillez réessayer.'

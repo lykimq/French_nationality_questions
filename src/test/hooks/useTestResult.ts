@@ -4,6 +4,9 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTest, deserializeTestResult } from '../contexts/TestContext';
 import { TestResult, TestStackParamList } from '../../types';
+import { createLogger } from '../../shared/utils/logger';
+
+const logger = createLogger('useTestResult');
 
 type TestResultScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 type TestResultScreenRouteProp = RouteProp<TestStackParamList, 'TestResult'>;
@@ -40,7 +43,7 @@ export const useTestResult = () => {
                     setTestResult(fallbackResult);
                 } else {
                     // Create a minimal fallback if no session data is available
-                    console.warn('TestResultScreen: No test result provided and no completed session found');
+                    logger.warn('TestResultScreen: No test result provided and no completed session found');
 
                     const fallbackResult: TestResult = {
                         session: {

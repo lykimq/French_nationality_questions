@@ -7,7 +7,10 @@ import {
     MEMORY_LIMITS
 } from '../constants/testConstants';
 import { safeParseDate, applyMemoryLimits } from './testDataUtils';
+import { createLogger } from '../../shared/utils/logger';
 import type { TestProgress, TestStatistics } from '../types';
+
+const logger = createLogger('TestStorage');
 
 // Load test progress from storage with validation and memory limits
 export const loadTestProgress = async (): Promise<TestProgress> => {
@@ -38,7 +41,7 @@ export const loadTestProgress = async (): Promise<TestProgress> => {
                 : [],
         };
     } catch (error) {
-        console.error('Error loading test progress:', error);
+        logger.error('Error loading test progress:', error);
         return DEFAULT_TEST_PROGRESS;
     }
 };
@@ -78,7 +81,7 @@ export const loadTestStatistics = async (): Promise<TestStatistics> => {
                 : [],
         };
     } catch (error) {
-        console.error('Error loading test statistics:', error);
+        logger.error('Error loading test statistics:', error);
         return DEFAULT_TEST_STATISTICS;
     }
 };
@@ -94,7 +97,7 @@ export const loadPart1TestSubcategoryData = async (): Promise<Record<string, any
 
         return {};
     } catch (error) {
-        console.error('Error loading Part 1 test subcategory data:', error);
+        logger.error('Error loading Part 1 test subcategory data:', error);
         return {};
     }
 };
@@ -110,7 +113,7 @@ export const saveTestData = async (
             AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(statistics))
         ]);
     } catch (error) {
-        console.error('Error saving test data:', error);
+        logger.error('Error saving test data:', error);
         throw error; // Re-throw to handle in calling code
     }
 };
@@ -130,7 +133,7 @@ export const loadAllTestData = async (): Promise<{
 
         return { progress, statistics, part1Data };
     } catch (error) {
-        console.error('Error loading test data:', error);
+        logger.error('Error loading test data:', error);
         throw error;
     }
 };

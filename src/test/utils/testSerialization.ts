@@ -1,4 +1,7 @@
+import { createLogger } from '../../shared/utils/logger';
 import type { TestResult, SerializableTestResult } from '../types';
+
+const logger = createLogger('TestSerialization');
 
 // Utility functions for test result serialization
 export const serializeTestResult = (result: TestResult): SerializableTestResult => {
@@ -18,10 +21,10 @@ export const serializeTestResult = (result: TestResult): SerializableTestResult 
                     // If it's a string, try to parse it as a date
                     lastAttemptedISO = new Date(lastAccessed).toISOString();
                 } else {
-                    console.warn(`Invalid lastAccessed format for category ${key}:`, lastAccessed);
+                    logger.warn(`Invalid lastAccessed format for category ${key}:`, lastAccessed);
                 }
             } catch (error) {
-                console.error(`Error serializing lastAccessed for category ${key}:`, error);
+                logger.error(`Error serializing lastAccessed for category ${key}:`, error);
             }
         }
 

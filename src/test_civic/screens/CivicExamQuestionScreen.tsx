@@ -4,7 +4,6 @@ import {
     View,
     ScrollView,
     StatusBar,
-    TouchableOpacity,
     Alert,
     ActivityIndicator,
 } from 'react-native';
@@ -17,14 +16,15 @@ import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
-import { getCivicExamQuestionText, getCivicExamExplanationText } from '../utils/civicExamQuestionUtils';
+import { getCivicExamExplanationText } from '../utils/civicExamQuestionUtils';
 import { useTimer } from '../hooks/useTimer';
 import { ExamHeader } from '../components/ExamHeader';
-import { OptionButton } from '../components/OptionButton';
 import { ExamFeedback } from '../components/ExamFeedback';
+import { CivicExamQuestionCard } from '../components/CivicExamQuestionCard';
+import { CivicExamOptions } from '../components/CivicExamOptions';
+import { CivicExamFooter } from '../components/CivicExamFooter';
 import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
-import type { TestAnswer } from '../../test/types';
 
 const logger = createLogger('CivicExamQuestionScreen');
 type CivicExamQuestionScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
@@ -161,7 +161,6 @@ const CivicExamQuestionScreen = () => {
     }
 
     const progress = ((currentQuestionIndex + 1) / currentSession.totalQuestions) * 100;
-    const options = currentQuestion.options || [];
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -181,35 +180,18 @@ const CivicExamQuestionScreen = () => {
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
                 >
-                    <View style={[styles.questionCard, { backgroundColor: theme.colors.card }]}>
-                        <View style={styles.questionHeader}>
-                            <View style={[styles.questionNumberBadge, { backgroundColor: theme.colors.primary }]}>
-                                <FormattedText style={[styles.questionNumber, { color: '#FFFFFF' }]}>
-                                    {currentQuestionIndex + 1}
-                                </FormattedText>
-                            </View>
-                        </View>
-                        <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
-                            {getCivicExamQuestionText(currentQuestion)}
-                        </FormattedText>
-                    </View>
+                    <CivicExamQuestionCard
+                        currentQuestion={currentQuestion}
+                        currentQuestionIndex={currentQuestionIndex}
+                    />
 
-                    <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card }]}>
-                        <FormattedText style={[styles.optionsTitle, { color: theme.colors.text }]}>
-                            Choisissez votre réponse:
-                        </FormattedText>
-                        {options.map((option, index) => (
-                            <OptionButton
-                                key={index}
-                                index={index}
-                                option={option}
-                                isSelected={selectedAnswer === index}
-                                isCorrect={currentQuestion.correctAnswer === index}
-                                showResult={isPracticeMode && answerSubmitted}
-                                onPress={handleAnswerSelect}
-                            />
-                        ))}
-                    </View>
+                    <CivicExamOptions
+                        currentQuestion={currentQuestion}
+                        selectedAnswer={selectedAnswer}
+                        answerSubmitted={answerSubmitted}
+                        isPracticeMode={isPracticeMode}
+                        onAnswerSelect={handleAnswerSelect}
+                    />
 
                     {isPracticeMode && answerSubmitted && (
                         <ExamFeedback
@@ -219,27 +201,15 @@ const CivicExamQuestionScreen = () => {
                     )}
                 </ScrollView>
 
-                <View style={[styles.footer, { backgroundColor: theme.colors.card, borderTopColor: theme.colors.border }]}>
-                    <TouchableOpacity
-                        style={[
-                            styles.submitButton,
-                            {
-                                backgroundColor: (selectedAnswer !== null || (isPracticeMode && answerSubmitted)) ? theme.colors.primary : theme.colors.textMuted,
-                                opacity: (selectedAnswer !== null || (isPracticeMode && answerSubmitted)) ? 1 : 0.5,
-                            }
-                        ]}
-                        onPress={isPracticeMode && answerSubmitted ? handleNextQuestion : handleSubmitAnswer}
-                        disabled={selectedAnswer === null && !(isPracticeMode && answerSubmitted)}
-                        activeOpacity={0.8}
-                    >
-                        <FormattedText style={[styles.submitButtonText, { color: '#FFFFFF' }]}>
-                            {currentQuestionIndex < currentSession.totalQuestions - 1
-                                ? 'Question suivante'
-                                : 'Voir les résultats'
-                            }
-                        </FormattedText>
-                    </TouchableOpacity>
-                </View>
+                <CivicExamFooter
+                    selectedAnswer={selectedAnswer}
+                    answerSubmitted={answerSubmitted}
+                    isPracticeMode={isPracticeMode}
+                    currentQuestionIndex={currentQuestionIndex}
+                    totalQuestions={currentSession.totalQuestions}
+                    onNextQuestion={handleNextQuestion}
+                    onSubmitAnswer={handleSubmitAnswer}
+                />
             </SafeAreaView>
         </View>
     );
@@ -255,54 +225,6 @@ const styles = StyleSheet.create({
     contentContainer: {
         padding: 20,
         paddingBottom: 100,
-    },
-    questionCard: {
-        borderRadius: 12,
-        padding: 20,
-        marginBottom: 20,
-    },
-    questionHeader: {
-        flexDirection: 'row',
-        marginBottom: 16,
-    },
-    questionNumberBadge: {
-        width: 32,
-        height: 32,
-        borderRadius: 16,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    questionNumber: {
-        fontSize: 16,
-        fontWeight: 'bold',
-    },
-    questionText: {
-        fontSize: 18,
-        fontWeight: '600',
-        lineHeight: 26,
-    },
-    optionsContainer: {
-        borderRadius: 12,
-        padding: 16,
-        marginBottom: 20,
-    },
-    optionsTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        marginBottom: 16,
-    },
-    footer: {
-        padding: 20,
-        borderTopWidth: 1,
-    },
-    submitButton: {
-        borderRadius: 12,
-        padding: 16,
-        alignItems: 'center',
-    },
-    submitButtonText: {
-        fontSize: 16,
-        fontWeight: 'bold',
     },
     loadingText: {
         fontSize: 16,

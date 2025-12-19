@@ -20,7 +20,9 @@ import { useIcons } from '../shared/contexts/IconContext';
 import { FormattedText } from '../shared/components';
 import { TestStackParamList, TestConfig, TestMode, Part1TestModeOption } from '../types';
 import { preloadAllPart1TestData } from '../shared/utils';
+import { createLogger } from '../shared/utils/logger';
 
+const logger = createLogger('ConversationTestScreen');
 type ConversationTestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
 const ConversationTestScreen = () => {
@@ -125,7 +127,7 @@ const ConversationTestScreen = () => {
             await startTest(config as any);
             navigation.navigate('TestQuestion', undefined);
         } catch (error) {
-            console.error('Error starting Part 1 test:', error);
+            logger.error('Error starting Part 1 test:', error);
             Alert.alert(
                 'Erreur',
                 'Impossible de démarrer le test. Veuillez réessayer.'
@@ -231,12 +233,12 @@ const ConversationTestScreen = () => {
                         </View>
                     </View>
                 </SafeAreaView>
-                    <View style={styles.loadingContainer}>
-                        <ActivityIndicator size="large" color={theme.colors.primary} />
-                        <FormattedText style={[styles.loadingText, { color: theme.colors.textSecondary }]}>
-                            Chargement des tests...
-                        </FormattedText>
-                    </View>
+                <View style={styles.loadingContainer}>
+                    <ActivityIndicator size="large" color={theme.colors.primary} />
+                    <FormattedText style={[styles.loadingText, { color: theme.colors.textSecondary }]}>
+                        Chargement des tests...
+                    </FormattedText>
+                </View>
             </View>
         );
     }

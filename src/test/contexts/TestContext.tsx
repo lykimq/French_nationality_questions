@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
+import { createLogger } from '../../shared/utils/logger';
 import { useData } from '../../shared/contexts/DataContext';
 
 // Import constants
@@ -30,6 +31,8 @@ import type {
     TestRecommendation,
 } from '../../types';
 
+const logger = createLogger('TestContext');
+
 // Re-export utility functions for backward compatibility
 export { serializeTestResult, deserializeTestResult } from '../utils';
 
@@ -45,7 +48,8 @@ interface TestContextType {
 
     // Test management
     startTest: (config: TestConfig) => Promise<void>;
-    submitAnswer: (answer: TestAnswer) => Promise<void>;
+    submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
+    goToNextQuestion: () => void;
     finishTest: () => Promise<TestResult>;
     cancelTest: () => void;
 
@@ -123,7 +127,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 setPart1TestSubcategories(part1Data);
             }
         } catch (error) {
-            console.error('Error loading test data:', error);
+            logger.error('Error loading test data:', error);
         } finally {
             if (isMountedRef.current) {
                 setIsLoading(false);
@@ -154,7 +158,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setCurrentQuestionIndex(0);
     }, [allProcessedQuestions, part1TestSubcategories]);
 
-    const submitAnswer = useCallback(async (answer: TestAnswer): Promise<void> => {
+    const submitAnswer = useCallback(async (answer: TestAnswer, autoAdvance: boolean = true): Promise<void> => {
         if (!currentSession) {
             throw new Error('No active test session');
         }
@@ -178,7 +182,16 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         setCurrentSession(updatedSession);
 
-        // Move to next question
+        // Move to next question only if autoAdvance is true
+        if (autoAdvance && currentQuestionIndex < currentSession.questions.length - 1) {
+            setCurrentQuestionIndex(prev => prev + 1);
+        }
+    }, [currentSession, currentQuestionIndex]);
+
+    const goToNextQuestion = useCallback((): void => {
+        if (!currentSession) {
+            return;
+        }
         if (currentQuestionIndex < currentSession.questions.length - 1) {
             setCurrentQuestionIndex(prev => prev + 1);
         }
@@ -286,6 +299,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         testStatistics,
         startTest,
         submitAnswer,
+        goToNextQuestion,
         finishTest,
         cancelTest,
         getCurrentQuestion,
@@ -304,6 +318,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         testStatistics,
         startTest,
         submitAnswer,
+        goToNextQuestion,
         finishTest,
         cancelTest,
         getCurrentQuestion,

@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { createLogger } from '../../shared/utils/logger';
 import { safeParseDate, applyMemoryLimits } from '../../test/utils/testDataUtils';
 import type { CivicExamProgress, CivicExamStatistics, CivicExamTheme } from '../types';
 import {
@@ -6,6 +7,8 @@ import {
     createDefaultCivicExamProgress,
     createDefaultCivicExamStatistics,
 } from './civicExamDefaults';
+
+const logger = createLogger('CivicExamStorage');
 
 // Storage keys for civic exam
 export const CIVIC_EXAM_STORAGE_KEYS = {
@@ -45,7 +48,7 @@ export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
         try {
             parsedProgress = JSON.parse(progressData);
         } catch (parseError) {
-            console.error('Failed to parse progress data:', parseError);
+            logger.error('Failed to parse progress data:', parseError);
             return DEFAULT_CIVIC_EXAM_PROGRESS;
         }
 
@@ -54,7 +57,7 @@ export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
         }
 
         const progress = parsedProgress as Record<string, unknown>;
-        
+
         const loadThemePerformance = (theme: CivicExamTheme) => {
             const themeData = (progress.themePerformance as Record<string, unknown>)?.[theme] as Record<string, unknown> | undefined;
             return {
@@ -99,10 +102,10 @@ export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
             createdAt: progress.createdAt ? safeParseDate(progress.createdAt) : new Date(),
             updatedAt: progress.updatedAt ? safeParseDate(progress.updatedAt) : new Date(),
         };
-        
+
         return loadedProgress;
     } catch (error) {
-        console.error('Error loading civic exam progress:', error);
+        logger.error('Error loading civic exam progress:', error);
         return DEFAULT_CIVIC_EXAM_PROGRESS;
     }
 };
@@ -119,7 +122,7 @@ export const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> =>
         try {
             parsedStatistics = JSON.parse(statisticsData);
         } catch (parseError) {
-            console.error('Failed to parse statistics data:', parseError);
+            logger.error('Failed to parse statistics data:', parseError);
             return DEFAULT_CIVIC_EXAM_STATISTICS;
         }
 
@@ -167,7 +170,7 @@ export const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> =>
             },
         };
     } catch (error) {
-        console.error('Error loading civic exam statistics:', error);
+        logger.error('Error loading civic exam statistics:', error);
         return DEFAULT_CIVIC_EXAM_STATISTICS;
     }
 };
@@ -183,7 +186,7 @@ export const saveCivicExamData = async (
             AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS, JSON.stringify(statistics))
         ]);
     } catch (error) {
-        console.error('Error saving civic exam data:', error);
+        logger.error('Error saving civic exam data:', error);
         throw error;
     }
 };
@@ -201,7 +204,7 @@ export const loadAllCivicExamData = async (): Promise<{
 
         return { progress, statistics };
     } catch (error) {
-        console.error('Error loading civic exam data:', error);
+        logger.error('Error loading civic exam data:', error);
         throw error;
     }
 };
@@ -213,16 +216,16 @@ export const resetCivicExamData = async (): Promise<void> => {
             AsyncStorage.removeItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS),
             AsyncStorage.removeItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS)
         ]);
-        
+
         const freshProgress = createDefaultCivicExamProgress();
         const freshStatistics = createDefaultCivicExamStatistics();
-        
+
         await Promise.all([
             AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS, JSON.stringify(freshProgress)),
             AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS, JSON.stringify(freshStatistics))
         ]);
     } catch (error) {
-        console.error('Error resetting civic exam data:', error);
+        logger.error('Error resetting civic exam data:', error);
         throw error;
     }
 };

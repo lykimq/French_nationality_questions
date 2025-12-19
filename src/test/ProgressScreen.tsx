@@ -17,7 +17,10 @@ import { useTheme } from '../shared/contexts/ThemeContext';
 import { useTest } from './contexts/TestContext';
 import { FormattedText, BackButton } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
+import { createLogger } from '../shared/utils/logger';
 import { TestStackParamList } from '../types';
+
+const logger = createLogger('ProgressScreen');
 
 type ProgressScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -38,7 +41,7 @@ const ProgressScreen = () => {
         try {
             await refreshProgress();
         } catch (error) {
-            console.error('Error refreshing progress:', error);
+            logger.error('Error refreshing progress:', error);
         } finally {
             setIsRefreshing(false);
         }

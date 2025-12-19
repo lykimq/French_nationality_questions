@@ -1,4 +1,7 @@
 import type { TestQuestion } from '../../types';
+import { createLogger } from '../../shared/utils/logger';
+
+const logger = createLogger('TestDataUtils');
 
 // Type validation helpers
 export const isValidQuestionData = (question: any): boolean => {
@@ -15,7 +18,7 @@ export const processQuestionData = (
     idOffset: number = 0
 ): TestQuestion => {
     if (!isValidQuestionData(question)) {
-        console.warn(`Invalid question data for question ID: ${question?.id}`);
+        logger.warn(`Invalid question data for question ID: ${question?.id}`);
         // Return a fallback question instead of throwing
         return {
             id: question?.id || 0,
@@ -80,7 +83,7 @@ export const processAllQuestions = (
 
     // Safety check
     if (!questionsData?.categories) {
-        console.warn('questionsData.categories is not available');
+        logger.warn('questionsData.categories is not available');
         return questions;
     }
 
@@ -90,7 +93,7 @@ export const processAllQuestions = (
 
         category.questions.forEach((question: any) => {
             if (seenIds.has(question.id)) {
-                console.warn(`Duplicate question ID: ${question.id} in category ${category.id}`);
+                logger.warn(`Duplicate question ID: ${question.id} in category ${category.id}`);
                 return;
             }
             seenIds.add(question.id);
@@ -106,7 +109,7 @@ export const processAllQuestions = (
 
             subcategory.questions.forEach((question: any) => {
                 if (seenIds.has(question.id)) {
-                    console.warn(`Duplicate question ID: ${question.id} in history subcategory ${subcategory.id}`);
+                    logger.warn(`Duplicate question ID: ${question.id} in history subcategory ${subcategory.id}`);
                     return;
                 }
                 seenIds.add(question.id);

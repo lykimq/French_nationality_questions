@@ -1,4 +1,7 @@
+import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
+
+const logger = createLogger('CivicExamDataLoader');
 
 interface CivicExamQuestionData {
     id: number;
@@ -22,9 +25,9 @@ const validateQuestionData = (q: unknown): q is CivicExamQuestionData => {
     if (typeof q !== 'object' || q === null) {
         return false;
     }
-    
+
     const question = q as Record<string, unknown>;
-    
+
     return (
         typeof question.id === 'number' &&
         isFinite(question.id) &&
@@ -61,7 +64,7 @@ const validateAnswerIndex = (index: unknown, maxLength: number): number | undefi
 const transformCivicQuestion = (q: CivicExamQuestionData): CivicExamQuestionWithOptions => {
     const options = sanitizeStringArray(q.options);
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
-    
+
     return {
         id: q.id,
         question: sanitizeString(q.question),
@@ -82,19 +85,19 @@ const transformCivicQuestion = (q: CivicExamQuestionData): CivicExamQuestionWith
 export const loadCivicExamQuestions = async (): Promise<CivicExamQuestionWithOptions[]> => {
     try {
         const civicExamData: CivicExamDataFile = require('../data/civic_exam_questions.json');
-        
+
         if (!civicExamData || typeof civicExamData !== 'object') {
-            console.warn('Civic exam questions data is missing or invalid');
+            logger.warn('Civic exam questions data is missing or invalid');
             return [];
         }
-        
+
         if (!Array.isArray(civicExamData.questions)) {
-            console.warn('Civic exam questions must be an array');
+            logger.warn('Civic exam questions must be an array');
             return [];
         }
 
         if (civicExamData.questions.length === 0) {
-            console.warn('Civic exam questions array is empty');
+            logger.warn('Civic exam questions array is empty');
             return [];
         }
 
@@ -104,17 +107,16 @@ export const loadCivicExamQuestions = async (): Promise<CivicExamQuestionWithOpt
 
         if (validQuestions.length < civicExamData.questions.length) {
             const invalidCount = civicExamData.questions.length - validQuestions.length;
-            console.warn(`Skipped ${invalidCount} invalid civic exam question(s)`);
+            logger.warn(`Skipped ${invalidCount} invalid civic exam question(s)`);
         }
 
         if (validQuestions.length === 0) {
-            console.warn('No valid civic exam questions found after validation');
+            logger.warn('No valid civic exam questions found after validation');
         }
 
         return validQuestions;
     } catch (error) {
-        console.warn('Could not load civic exam questions:', error);
+        logger.warn('Could not load civic exam questions:', error);
         return [];
     }
 };
-

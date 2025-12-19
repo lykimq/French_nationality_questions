@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { createLogger } from '../utils/logger';
 import type { TextFormattingSettings } from '../../types';
+
+const logger = createLogger('TextFormattingContext');
 
 interface TextFormattingContextType {
     settings: TextFormattingSettings;
@@ -40,11 +43,11 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
                     if (isValidSettings(parsedSettings)) {
                         setSettings(parsedSettings);
                     } else {
-                        console.warn('Invalid settings format in storage, using defaults');
+                        logger.warn('Invalid settings format in storage, using defaults');
                     }
                 }
             } catch (error) {
-                console.error('Failed to load text formatting settings:', error);
+                logger.error('Failed to load text formatting settings:', error);
             }
         };
 
@@ -61,7 +64,7 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
             await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newSettings));
             setSettings(newSettings);
         } catch (error) {
-            console.error('Failed to save text formatting settings:', error);
+            logger.error('Failed to save text formatting settings:', error);
             // Still update the state even if storage fails
             setSettings(newSettings);
         }

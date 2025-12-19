@@ -16,8 +16,11 @@ import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
+import { createLogger } from '../../shared/utils/logger';
 import { THEME_DISPLAY_NAMES } from '../constants/civicExamConstants';
 import type { CivicExamStackParamList, CivicExamTheme } from '../types';
+
+const logger = createLogger('CivicExamPractice');
 
 type CivicExamPracticeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 
@@ -77,7 +80,7 @@ const CivicExamPracticeScreen = () => {
             });
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
-            console.error('Error starting practice:', error);
+            logger.error('Error starting practice:', error);
             Alert.alert(
                 'Erreur',
                 'Impossible de démarrer la pratique. Veuillez réessayer.'

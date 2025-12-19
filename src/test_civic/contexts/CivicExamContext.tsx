@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
+import { createLogger } from '../../shared/utils/logger';
 import { useData } from '../../shared/contexts/DataContext';
 import { processAllQuestions } from '../../test/utils/testDataUtils';
 import { generateCivicExamQuestions } from '../utils/civicExamGeneration';
@@ -30,6 +31,8 @@ import type {
 } from '../types';
 import type { TestAnswer } from '../../test/types';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
+
+const logger = createLogger('CivicExamContext');
 
 interface CivicExamContextType {
     // Current exam session
@@ -77,10 +80,10 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
 
     // Memoized question collections to avoid reprocessing
     const [civicQuestions, setCivicQuestions] = useState<ReturnType<typeof processAllQuestions>>([]);
-    
+
     useEffect(() => {
         loadCivicExamQuestions().then(setCivicQuestions).catch(() => {
-            console.warn('Could not load civic exam questions');
+            logger.warn('Could not load civic exam questions');
         });
     }, []);
 
@@ -119,7 +122,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
                 setExamStatistics(statistics);
             }
         } catch (error) {
-            console.error('Error loading civic exam data:', error);
+            logger.error('Error loading civic exam data:', error);
         } finally {
             if (isMountedRef.current) {
                 setIsLoading(false);
@@ -153,7 +156,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         }
 
         const isPracticeMode = config.mode === 'civic_exam_practice';
-        
+
         // In exam mode, we must have exactly 40 questions
         if (!isPracticeMode && questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
             throw new Error(
@@ -244,7 +247,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         const incorrectQuestionIds = currentSession.answers
             .filter(a => !a.isCorrect)
             .map(a => a.questionId);
-        
+
         const incorrectQuestions = currentSession.questions.filter(q =>
             incorrectQuestionIds.includes(q.id)
         ) as CivicExamQuestion[];
@@ -333,20 +336,20 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
 
         try {
             await resetCivicExamData();
-            
+
             if (isMountedRef.current) {
                 const freshProgress = createDefaultCivicExamProgress();
                 const freshStats = createDefaultCivicExamStatistics();
-                
+
                 setExamProgress(freshProgress);
                 setExamStatistics(freshStats);
             }
         } catch (error) {
-            console.error('Error resetting progress:', error);
+            logger.error('Error resetting progress:', error);
             if (isMountedRef.current) {
                 const errorProgress = createDefaultCivicExamProgress();
                 const errorStats = createDefaultCivicExamStatistics();
-                
+
                 setExamProgress(errorProgress);
                 setExamStatistics(errorStats);
             }

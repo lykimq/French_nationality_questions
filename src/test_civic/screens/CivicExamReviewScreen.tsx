@@ -15,8 +15,11 @@ import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
+import { createLogger } from '../../shared/utils/logger';
 import { serializeCivicExamResult } from '../utils/civicExamSerialization';
 import type { CivicExamStackParamList } from '../types';
+
+const logger = createLogger('CivicExamReview');
 
 type CivicExamReviewScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 
@@ -38,7 +41,7 @@ const CivicExamReviewScreen = () => {
             const serializedResult = serializeCivicExamResult(result);
             navigation.navigate('CivicExamResult', { result: serializedResult });
         } catch (error) {
-            console.error('Error finishing exam:', error);
+            logger.error('Error finishing exam:', error);
         }
     };
 

@@ -15,8 +15,11 @@ import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useCivicExam } from '../hooks/useCivicExam';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
+import { createLogger } from '../../shared/utils/logger';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import type { CivicExamStackParamList } from '../types';
+
+const logger = createLogger('CivicExamInfo');
 
 type CivicExamInfoScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 
@@ -38,7 +41,7 @@ const CivicExamInfoScreen = () => {
             });
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
-            console.error('Error starting exam:', error);
+            logger.error('Error starting exam:', error);
         }
     };
 

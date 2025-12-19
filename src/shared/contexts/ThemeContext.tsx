@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useIcons } from './IconContext';
+import { createLogger } from '../utils/logger';
 import type { ThemeMode, ColorTheme, Theme, IconMapping } from '../../types';
 import { colorThemes, colorThemeInfo } from '../../theme/colorThemes';
 
@@ -34,6 +35,8 @@ interface ThemeProviderProps {
 
 const THEME_STORAGE_KEY = '@french_app_theme';
 const COLOR_THEME_STORAGE_KEY = '@french_app_color_theme';
+
+const logger = createLogger('ThemeContext');
 
 // Internal theme provider that requires IconContext
 const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
@@ -108,7 +111,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
                     setColorThemeState(savedColorTheme as ColorTheme);
                 }
             } catch (error) {
-                console.error('Error loading theme:', error);
+                logger.error('Error loading theme:', error);
             } finally {
                 setIsLoading(false);
             }
@@ -123,7 +126,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, mode);
             setThemeModeState(mode);
         } catch (error) {
-            console.error('Error saving theme:', error);
+            logger.error('Error saving theme:', error);
             setThemeModeState(mode);
         }
     }, []);
@@ -134,7 +137,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             await AsyncStorage.setItem(COLOR_THEME_STORAGE_KEY, theme);
             setColorThemeState(theme);
         } catch (error) {
-            console.error('Error saving color theme:', error);
+            logger.error('Error saving color theme:', error);
             setColorThemeState(theme);
         }
     }, []);

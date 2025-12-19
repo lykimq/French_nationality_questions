@@ -1,7 +1,10 @@
 import { PART1_ID_OFFSETS } from '../constants/testConstants';
 import { processQuestionData } from './testDataUtils';
+import { createLogger } from '../../shared/utils/logger';
 import type { TestConfig } from '../types';
 import type { TestQuestion } from '../../types';
+
+const logger = createLogger('TestGeneration');
 
 // Generate Part 1 test questions
 export const generatePart1Questions = (
@@ -24,7 +27,7 @@ export const generatePart1Questions = (
                         offset
                     ));
                 } catch (error) {
-                    console.error(`Error processing Part 1 question ${question?.id}:`, error);
+                    logger.error(`Error processing Part 1 question ${question?.id}:`, error);
                 }
             });
         }

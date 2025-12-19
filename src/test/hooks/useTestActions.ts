@@ -4,6 +4,9 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { TestMode, TestConfig, TestRecommendation, MainTestModeOption, TestStackParamList } from '../types';
 import { useTest } from '../contexts/TestContext';
+import { createLogger } from '../../shared/utils/logger';
+
+const logger = createLogger('useTestActions');
 
 type TestScreenNavigationProp = NativeStackNavigationProp<TestStackParamList>;
 
@@ -47,7 +50,7 @@ export const useTestActions = ({ testModes }: UseTestActionsProps) => {
             await startTest(config as any);
             navigation.navigate('TestQuestion', undefined);
         } catch (error) {
-            console.error('Error starting test:', error);
+            logger.error('Error starting test:', error);
             Alert.alert(
                 'Erreur',
                 'Impossible de démarrer le test. Veuillez réessayer.'
@@ -124,7 +127,7 @@ export const useTestActions = ({ testModes }: UseTestActionsProps) => {
                 }
             }
         } catch (error) {
-            console.error('Error handling recommendation action:', error);
+            logger.error('Error handling recommendation action:', error);
             Alert.alert(
                 'Erreur',
                 'Une erreur s\'est produite. Veuillez réessayer.'

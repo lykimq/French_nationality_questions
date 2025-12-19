@@ -4,6 +4,9 @@
  */
 
 import { preloadAllData, validateDataStructure } from '../../shared/utils';
+import { createLogger } from '../../shared/utils/logger';
+
+const logger = createLogger('DatabaseIntegration');
 
 interface DatabaseTestResult {
     success: boolean;
@@ -137,7 +140,7 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
         result.success = result.issues.length === 0 && result.totalQuestions > 0;
 
     } catch (error) {
-        console.error('Database integration test failed:', error);
+        logger.error('Database integration test failed:', error);
         result.issues.push(`Test execution failed: ${error}`);
         result.success = false;
     }
@@ -247,7 +250,7 @@ export const testQuestionIdUniqueness = async (): Promise<{
         result.success = result.duplicateIds.length === 0 && result.totalQuestions > 0;
 
     } catch (error) {
-        console.error('ID uniqueness test failed:', error);
+        logger.error('ID uniqueness test failed:', error);
         result.issues.push(`Test failed: ${error}`);
     }
 
@@ -301,6 +304,6 @@ export const logDatabaseStatistics = async (): Promise<void> => {
         });
 
     } catch (error) {
-        console.error('Failed to generate database statistics:', error);
+        logger.error('Failed to generate database statistics:', error);
     }
 };
