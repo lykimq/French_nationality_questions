@@ -55,7 +55,7 @@ const CivicExamContextInternal: React.FC<{
         if (sessionContext.currentSession) {
             return await progressContext.updateProgressFromSession(sessionContext.currentSession, result);
         }
-        return result;
+        throw new Error('Cannot finish exam: no active session');
     }, [sessionContext, progressContext]);
 
     const getIncorrectQuestions = useCallback((): CivicExamQuestion[] => {

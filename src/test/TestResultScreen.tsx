@@ -9,6 +9,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useTheme } from '../shared/contexts/ThemeContext';  
 import { useTestResult } from './hooks/useTestResult';
+import { useTest } from './contexts/TestContext';
 import {
     ScoreCard,
     StatisticsCard,
@@ -22,7 +23,8 @@ import { sharedStyles } from '../shared/utils';
 
 const TestResultScreen = () => {
     const { themeMode } = useTheme();
-    const { testResult, isLoading, handlers, testProgress } = useTestResult();
+    const { testResult, isLoading, handlers } = useTestResult();
+    const { testProgress } = useTest();
 
     if (isLoading || !testResult) {
         return <LoadingView />;

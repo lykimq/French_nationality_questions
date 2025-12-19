@@ -1,19 +1,9 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
 import { createLogger } from '../../shared/utils/logger';
 import { useData } from '../../shared/contexts/DataContext';
-import { DEFAULT_TEST_PROGRESS, DEFAULT_TEST_STATISTICS } from '../constants/testConstants';
-import {
-    calculateTestScore,
-    calculateUpdatedProgress,
-    generateRecommendations,
-    generateTestQuestions,
-    getQuestionsByIds,
-    loadAllTestData,
-    processAllQuestions,
-    saveTestData,
-    updateTestStatistics,
-    updateWeakStrongCategories,
-} from '../utils';
+import { processAllQuestions, loadAllTestData, generateRecommendations } from '../utils';
+import { TestSessionProvider, useTestSession } from './TestSessionContext';
+import { TestProgressProvider, useTestProgress } from './TestProgressContext';
 import type {
     TestSession,
     TestProgress,
@@ -30,293 +20,140 @@ const logger = createLogger('TestContext');
 export { serializeTestResult, deserializeTestResult } from '../utils';
 
 interface TestContextType {
-    // Current test session
     currentSession: TestSession | null;
     isTestActive: boolean;
     currentQuestionIndex: number;
-
-    // Progress and statistics
     testProgress: TestProgress;
     testStatistics: TestStatistics;
-
-    // Test management
     startTest: (config: TestConfig) => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishTest: () => Promise<TestResult>;
     cancelTest: () => void;
-
-    // Question management
     getCurrentQuestion: () => TestQuestion | null;
     getNextQuestion: () => TestQuestion | null;
     getPreviousQuestion: () => TestQuestion | null;
     getIncorrectQuestions: () => TestQuestion[];
-
-    // Progress tracking
     refreshProgress: () => Promise<void>;
     getWeakCategories: () => string[];
     getStrongCategories: () => string[];
-
-    // Utilities
     generateRecommendations: () => TestRecommendation[];
     isLoading: boolean;
 }
 
 const TestContext = createContext<TestContextType | undefined>(undefined);
 
-export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { questionsData, historySubcategories } = useData();
-
-    // State management
-    const [currentSession, setCurrentSession] = useState<TestSession | null>(null);
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [part1TestSubcategories, setPart1TestSubcategories] = useState<Record<string, any>>({});
-    const [testProgress, setTestProgress] = useState<TestProgress>(DEFAULT_TEST_PROGRESS);
-    const [testStatistics, setTestStatistics] = useState<TestStatistics>(DEFAULT_TEST_STATISTICS);
-    const [isLoading, setIsLoading] = useState(true);
-
-    const isMountedRef = useRef(true);
-
-    const allProcessedQuestions = useMemo(() => {
-        return processAllQuestions(questionsData, historySubcategories);
-    }, [questionsData, historySubcategories]);
-
-    useEffect(() => {
-        isMountedRef.current = true;
-
-        const loadData = async () => {
-            if (isMountedRef.current) {
-                await loadTestData();
-            }
-        };
-
-        loadData();
-
-        return () => {
-            isMountedRef.current = false;
-        };
-    }, []);
-
-    const loadTestData = useCallback(async () => {
-        if (!isMountedRef.current) return;
-
-        try {
-            setIsLoading(true);
-            const { progress, statistics, part1Data } = await loadAllTestData();
-
-            if (isMountedRef.current) {
-                setTestProgress(progress);
-                setTestStatistics(statistics);
-                setPart1TestSubcategories(part1Data);
-            }
-        } catch (error) {
-            logger.error('Error loading test data:', error);
-        } finally {
-            if (isMountedRef.current) {
-                setIsLoading(false);
-            }
-        }
-    }, []);
+const TestContextInternal: React.FC<{ 
+    children: ReactNode;
+    allProcessedQuestions: ReturnType<typeof processAllQuestions>;
+    part1TestSubcategories: Record<string, any>;
+}> = ({ children, allProcessedQuestions, part1TestSubcategories }) => {
+    const sessionContext = useTestSession();
+    const progressContext = useTestProgress();
 
     const startTest = useCallback(async (config: TestConfig): Promise<void> => {
-        const questions = generateTestQuestions(config, allProcessedQuestions, part1TestSubcategories);
-
-        if (questions.length === 0) {
-            throw new Error('No questions available for this test configuration');
-        }
-
-        const newSession: TestSession = {
-            id: Date.now().toString(),
-            mode: config.mode,
-            questions,
-            answers: [],
-            startTime: new Date(),
-            isCompleted: false,
-            score: 0,
-            totalQuestions: questions.length,
-            correctAnswers: 0,
-        };
-
-        setCurrentSession(newSession);
-        setCurrentQuestionIndex(0);
-    }, [allProcessedQuestions, part1TestSubcategories]);
-
-    const submitAnswer = useCallback(async (answer: TestAnswer, autoAdvance: boolean = true): Promise<void> => {
-        if (!currentSession) {
-            throw new Error('No active test session');
-        }
-
-        const currentQuestion = currentSession.questions[currentQuestionIndex];
-        if (!currentQuestion) {
-            throw new Error(`No current question found at index: ${currentQuestionIndex}`);
-        }
-
-        if (answer.questionId !== currentQuestion.id) {
-            throw new Error(
-                `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
-            );
-        }
-
-        const updatedSession: TestSession = {
-            ...currentSession,
-            answers: [...currentSession.answers, answer],
-        };
-
-        setCurrentSession(updatedSession);
-
-        // Move to next question only if autoAdvance is true
-        if (autoAdvance && currentQuestionIndex < currentSession.questions.length - 1) {
-            setCurrentQuestionIndex(prev => prev + 1);
-        }
-    }, [currentSession, currentQuestionIndex]);
-
-    const goToNextQuestion = useCallback((): void => {
-        if (!currentSession) {
-            return;
-        }
-        if (currentQuestionIndex < currentSession.questions.length - 1) {
-            setCurrentQuestionIndex(prev => prev + 1);
-        }
-    }, [currentSession, currentQuestionIndex]);
+        await sessionContext.startTest(config, allProcessedQuestions, part1TestSubcategories);
+    }, [sessionContext, allProcessedQuestions, part1TestSubcategories]);
 
     const finishTest = useCallback(async (): Promise<TestResult> => {
-        if (!currentSession) {
-            throw new Error('No active test session');
+        const result = sessionContext.finishTest();
+        if (sessionContext.currentSession) {
+            await progressContext.updateProgressFromSession(
+                sessionContext.currentSession,
+                result.session.score,
+                result.session.correctAnswers
+            );
+            return {
+                ...result,
+                statistics: progressContext.testStatistics,
+                recommendations: generateRecommendations(progressContext.testProgress),
+            };
         }
-
-        const correctAnswers = currentSession.answers.filter((answer: TestAnswer) => answer.isCorrect).length;
-        const score = calculateTestScore(correctAnswers, currentSession.totalQuestions);
-
-        const finishedSession: TestSession = {
-            ...currentSession,
-            endTime: new Date(),
-            isCompleted: true,
-            score,
-            correctAnswers,
-        };
-
-        // Calculate updated progress and statistics
-        const updatedProgress = calculateUpdatedProgress(finishedSession, testProgress, score, correctAnswers);
-        const updatedStatistics = updateTestStatistics(finishedSession, testStatistics, updatedProgress);
-
-        // Update weak/strong categories
-        const { weakCategories, strongCategories } = updateWeakStrongCategories(updatedStatistics);
-        updatedProgress.weakCategories = weakCategories;
-        updatedProgress.strongCategories = strongCategories;
-
-        // Update state
-        setTestProgress(updatedProgress);
-        setTestStatistics(updatedStatistics);
-        setCurrentSession(null);
-        setCurrentQuestionIndex(0);
-
-        // Save to storage
-        await saveTestData(updatedProgress, updatedStatistics);
-
         return {
-            session: finishedSession,
-            statistics: updatedStatistics,
-            recommendations: generateRecommendations(updatedProgress),
+            ...result,
+            statistics: progressContext.testStatistics,
+            recommendations: generateRecommendations(progressContext.testProgress),
         };
-    }, [currentSession, testProgress, testStatistics]);
-
-    const cancelTest = useCallback(() => {
-        setCurrentSession(null);
-        setCurrentQuestionIndex(0);
-    }, []);
-
-    const getCurrentQuestion = useCallback((): TestQuestion | null => {
-        if (!currentSession || currentQuestionIndex >= currentSession.questions.length) {
-            return null;
-        }
-        return currentSession.questions[currentQuestionIndex];
-    }, [currentSession, currentQuestionIndex]);
-
-    const getNextQuestion = useCallback((): TestQuestion | null => {
-        if (!currentSession || currentQuestionIndex + 1 >= currentSession.questions.length) {
-            return null;
-        }
-        return currentSession.questions[currentQuestionIndex + 1];
-    }, [currentSession, currentQuestionIndex]);
-
-    const getPreviousQuestion = useCallback((): TestQuestion | null => {
-        if (!currentSession || currentQuestionIndex <= 0) {
-            return null;
-        }
-        return currentSession.questions[currentQuestionIndex - 1];
-    }, [currentSession, currentQuestionIndex]);
+    }, [sessionContext, progressContext]);
 
     const getIncorrectQuestions = useCallback((): TestQuestion[] => {
-        if (testProgress.incorrectQuestions.length === 0) {
-            return [];
-        }
-
-        return getQuestionsByIds(allProcessedQuestions, testProgress.incorrectQuestions);
-    }, [allProcessedQuestions, testProgress.incorrectQuestions]);
-
-    const refreshProgress = useCallback(async (): Promise<void> => {
-        if (isMountedRef.current) {
-            await loadTestData();
-        }
-    }, [loadTestData]);
-
-    const getWeakCategories = useCallback((): string[] => {
-        return testProgress.weakCategories;
-    }, [testProgress.weakCategories]);
-
-    const getStrongCategories = useCallback((): string[] => {
-        return testProgress.strongCategories;
-    }, [testProgress.strongCategories]);
+        return progressContext.getIncorrectQuestions(allProcessedQuestions);
+    }, [progressContext, allProcessedQuestions]);
 
     const getRecommendations = useCallback((): TestRecommendation[] => {
-        return generateRecommendations(testProgress);
-    }, [testProgress]);
+        return generateRecommendations(progressContext.testProgress);
+    }, [progressContext.testProgress]);
 
     const contextValue = useMemo((): TestContextType => ({
-        currentSession,
-        isTestActive: currentSession !== null,
-        currentQuestionIndex,
-        testProgress,
-        testStatistics,
+        currentSession: sessionContext.currentSession,
+        isTestActive: sessionContext.isTestActive,
+        currentQuestionIndex: sessionContext.currentQuestionIndex,
+        testProgress: progressContext.testProgress,
+        testStatistics: progressContext.testStatistics,
         startTest,
-        submitAnswer,
-        goToNextQuestion,
+        submitAnswer: sessionContext.submitAnswer,
+        goToNextQuestion: sessionContext.goToNextQuestion,
         finishTest,
-        cancelTest,
-        getCurrentQuestion,
-        getNextQuestion,
-        getPreviousQuestion,
+        cancelTest: sessionContext.cancelTest,
+        getCurrentQuestion: sessionContext.getCurrentQuestion,
+        getNextQuestion: sessionContext.getNextQuestion,
+        getPreviousQuestion: sessionContext.getPreviousQuestion,
         getIncorrectQuestions,
-        refreshProgress,
-        getWeakCategories,
-        getStrongCategories,
+        refreshProgress: progressContext.refreshProgress,
+        getWeakCategories: progressContext.getWeakCategories,
+        getStrongCategories: progressContext.getStrongCategories,
         generateRecommendations: getRecommendations,
-        isLoading,
+        isLoading: progressContext.isLoading,
     }), [
-        currentSession,
-        currentQuestionIndex,
-        testProgress,
-        testStatistics,
+        sessionContext,
+        progressContext,
         startTest,
-        submitAnswer,
-        goToNextQuestion,
         finishTest,
-        cancelTest,
-        getCurrentQuestion,
-        getNextQuestion,
-        getPreviousQuestion,
         getIncorrectQuestions,
-        refreshProgress,
-        getWeakCategories,
-        getStrongCategories,
         getRecommendations,
-        isLoading,
     ]);
 
     return (
         <TestContext.Provider value={contextValue}>
             {children}
         </TestContext.Provider>
+    );
+};
+
+export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+    const { questionsData, historySubcategories } = useData();
+    const [part1TestSubcategories, setPart1TestSubcategories] = useState<Record<string, any>>({});
+
+    useEffect(() => {
+        const loadPart1Data = async () => {
+            try {
+                const { part1Data } = await loadAllTestData();
+                setPart1TestSubcategories(part1Data);
+            } catch (error) {
+                logger.error('Error loading Part 1 test data:', error);
+            }
+        };
+        loadPart1Data();
+    }, []);
+
+    const allProcessedQuestions = useMemo(() => {
+        return processAllQuestions(questionsData, historySubcategories);
+    }, [questionsData, historySubcategories]);
+
+    return (
+        <TestProgressProvider>
+            <TestSessionProvider 
+                allProcessedQuestions={allProcessedQuestions}
+                part1TestSubcategories={part1TestSubcategories}
+            >
+                <TestContextInternal 
+                    allProcessedQuestions={allProcessedQuestions}
+                    part1TestSubcategories={part1TestSubcategories}
+                >
+                    {children}
+                </TestContextInternal>
+            </TestSessionProvider>
+        </TestProgressProvider>
     );
 };
 

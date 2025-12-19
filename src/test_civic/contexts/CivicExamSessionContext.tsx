@@ -21,7 +21,7 @@ interface CivicExamSessionContextType {
     startExam: (config: CivicExamConfig, allQuestions: any[]) => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
-    finishExam: () => CivicExamResult;
+    finishExam: () => Omit<CivicExamResult, 'statistics'> & { session: CivicExamSession };
     cancelExam: () => void;
 
     getCurrentQuestion: () => CivicExamQuestion | null;

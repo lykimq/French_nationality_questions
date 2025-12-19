@@ -11,16 +11,6 @@ import { DancingScript_400Regular } from '@expo-google-fonts/dancing-script';
 import AppNavigator from './src/navigation/AppNavigator';
 import AppProviders from './src/shared/providers/AppProviders';
 
-// Suppress React 19 useInsertionEffect warnings for icon libraries
-const originalConsoleWarn = console.warn;
-console.warn = (...args) => {
-  const message = args[0];
-  if (typeof message === 'string' && message.includes('useInsertionEffect must not schedule updates')) {
-    return; // Suppress this specific warning
-  }
-  originalConsoleWarn.apply(console, args);
-};
-
 export default function App() {
   const [fontsLoaded] = useFonts({
     Kalam: Kalam_400Regular,
