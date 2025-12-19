@@ -17,7 +17,7 @@ import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import { getCivicExamExplanationText } from '../utils/civicExamQuestionUtils';
-import { useTimer } from '../hooks/useTimer';
+import { useCountdownTimer } from '../../shared/hooks/useCountdownTimer';
 import { ExamHeader } from '../components/ExamHeader';
 import { ExamFeedback } from '../components/ExamFeedback';
 import { CivicExamQuestionCard } from '../components/CivicExamQuestionCard';
@@ -57,10 +57,11 @@ const CivicExamQuestionScreen = () => {
         );
     }, [navigation]);
 
-    const { timeLeft, formattedTime } = useTimer({
+    const { timeLeft, formattedTime } = useCountdownTimer({
         initialTime: CIVIC_EXAM_CONFIG.TIME_LIMIT_SECONDS,
         isActive: isExamMode && !!currentSession,
-        onTimeUp: handleTimeUp
+        onTimeUp: handleTimeUp,
+        autoStart: true,
     });
 
     const currentQuestion = getCurrentQuestion() as (CivicExamQuestion & {

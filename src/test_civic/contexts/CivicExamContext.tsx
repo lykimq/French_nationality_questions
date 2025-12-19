@@ -49,24 +49,12 @@ interface CivicExamContextType {
 const CivicExamContext = createContext<CivicExamContextType | undefined>(undefined);
 
 // Internal component that uses the split contexts
-const CivicExamContextInternal: React.FC<{ children: ReactNode }> = ({ children }) => {
+const CivicExamContextInternal: React.FC<{ 
+    children: ReactNode;
+    allProcessedQuestions: ReturnType<typeof processAllQuestions>;
+}> = ({ children, allProcessedQuestions }) => {
     const sessionContext = useCivicExamSession();
     const progressContext = useCivicExamProgress();
-    const { questionsData, historySubcategories } = useData();
-
-    // Memoized question collections to avoid reprocessing
-    const [civicQuestions, setCivicQuestions] = useState<ReturnType<typeof processAllQuestions>>([]);
-
-    useEffect(() => {
-        loadCivicExamQuestions().then(setCivicQuestions).catch(() => {
-            logger.warn('Could not load civic exam questions');
-        });
-    }, []);
-
-    const allProcessedQuestions = useMemo(() => {
-        const regularQuestions = processAllQuestions(questionsData, historySubcategories);
-        return [...regularQuestions, ...civicQuestions];
-    }, [questionsData, historySubcategories, civicQuestions]);
 
     const startExam = useCallback(async (config: CivicExamConfig): Promise<void> => {
         await sessionContext.startExam(config, allProcessedQuestions);
@@ -75,7 +63,7 @@ const CivicExamContextInternal: React.FC<{ children: ReactNode }> = ({ children 
     const finishExam = useCallback(async (): Promise<CivicExamResult> => {
         const result = sessionContext.finishExam();
         if (sessionContext.currentSession) {
-            await progressContext.updateProgressFromSession(sessionContext.currentSession, result);
+            return await progressContext.updateProgressFromSession(sessionContext.currentSession, result);
         }
         return result;
     }, [sessionContext, progressContext]);
@@ -137,7 +125,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
     return (
         <CivicExamProgressProvider>
             <CivicExamSessionProvider allProcessedQuestions={allProcessedQuestions}>
-                <CivicExamContextInternal>
+                <CivicExamContextInternal allProcessedQuestions={allProcessedQuestions}>
                     {children}
                 </CivicExamContextInternal>
             </CivicExamSessionProvider>
