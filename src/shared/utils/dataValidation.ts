@@ -1,7 +1,3 @@
-/**
- * Data validation utilities for validating question and category data structures
- */
-
 export interface ValidationResult {
     isValid: boolean;
     errors: string[];
@@ -15,9 +11,6 @@ export interface ValidationResult {
     };
 }
 
-/**
- * Validates a single question structure
- */
 const validateQuestion = (
     question: any,
     index: number,
@@ -47,9 +40,6 @@ const validateQuestion = (
     }
 };
 
-/**
- * Validates the structure of loaded data
- */
 export const validateDataStructure = (data: any, dataType: string): ValidationResult => {
     const errors: string[] = [];
     const summary: ValidationResult['summary'] = {

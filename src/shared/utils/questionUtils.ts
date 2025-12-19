@@ -1,8 +1,5 @@
 import type { Question } from '../../welcome/types';
 
-/**
- * Extracts question text
- */
 export const getQuestionText = (
     question: string | null | undefined
 ): string => {
@@ -10,9 +7,6 @@ export const getQuestionText = (
     return question;
 };
 
-/**
- * Extracts explanation text
- */
 export const getExplanationText = (
     explanation: string | null | undefined
 ): string => {
@@ -20,10 +14,6 @@ export const getExplanationText = (
     return explanation;
 };
 
-/**
- * Formats explanation text with line breaks for better readability
- * Adds line breaks after sentences and formats special markers
- */
 export const formatExplanation = (text: string): string => {
     if (!text) return '';
 

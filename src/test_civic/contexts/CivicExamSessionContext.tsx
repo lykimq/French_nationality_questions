@@ -45,7 +45,6 @@ export const CivicExamSessionProvider: React.FC<{
             throw new Error('No questions available for this exam configuration');
         }
 
-        // Validate uniqueness of questions
         const questionIds = new Set<number>();
         const duplicateIds: number[] = [];
         questions.forEach(q => {
@@ -65,7 +64,6 @@ export const CivicExamSessionProvider: React.FC<{
 
         const isPracticeMode = config.mode === 'civic_exam_practice';
 
-        // In exam mode, we must have exactly 40 questions
         if (!isPracticeMode && questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
             throw new Error(
                 `Cannot start exam: Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, but only ${questions.length} are available. Please ensure all themes have sufficient questions.`
@@ -100,7 +98,6 @@ export const CivicExamSessionProvider: React.FC<{
             throw new Error(`No current question found at index: ${currentQuestionIndex}`);
         }
 
-        // Strict validation
         if (answer.questionId !== currentQuestion.id) {
             throw new Error(
                 `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
@@ -114,8 +111,6 @@ export const CivicExamSessionProvider: React.FC<{
 
         setCurrentSession(updatedSession);
 
-        // Move to next question only if autoAdvance is true (exam mode)
-        // In practice mode, we show feedback first, then user clicks next
         if (autoAdvance && currentQuestionIndex < currentSession.questions.length - 1) {
             setCurrentQuestionIndex(prev => prev + 1);
         }

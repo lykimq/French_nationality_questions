@@ -31,7 +31,6 @@ const TextFormattingContext = createContext<TextFormattingContextType | undefine
 export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [settings, setSettings] = useState<TextFormattingSettings>(defaultSettings);
 
-    // Load settings from storage on mount
     useEffect(() => {
         let isMounted = true;
 
@@ -53,7 +52,6 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
 
         loadSettings();
 
-        // Cleanup function to prevent state updates after unmount
         return () => {
             isMounted = false;
         };

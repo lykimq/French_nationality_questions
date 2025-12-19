@@ -8,7 +8,6 @@ import type {
     ImprovementTrend
 } from '../types';
 
-// Calculate updated progress after test completion
 export const calculateUpdatedProgress = (
     finishedSession: TestSession,
     currentProgress: TestProgress,
@@ -39,13 +38,11 @@ export const calculateUpdatedProgress = (
             ],
             MEMORY_LIMITS.MAX_INCORRECT_QUESTIONS
         ),
-        // These will be updated after statistics calculation
         weakCategories: [],
         strongCategories: [],
     };
 };
 
-// Update test statistics after test completion
 export const updateTestStatistics = (
     session: TestSession,
     currentStatistics: TestStatistics,
@@ -53,7 +50,6 @@ export const updateTestStatistics = (
 ): TestStatistics => {
     const newStatistics = { ...currentStatistics };
 
-    // Update category performance
     session.questions.forEach((question) => {
         const answer = session.answers.find(a => a.questionId === question.id);
         if (!answer) return;
@@ -79,7 +75,6 @@ export const updateTestStatistics = (
         catPerf.lastAttempted = new Date();
     });
 
-    // Update time statistics safely
     const allTimes = session.answers.map(a => a.timeSpent).filter(time => time > 0);
     if (allTimes.length > 0) {
         newStatistics.timeStats.averageTimePerQuestion = Math.round(safeAverage(allTimes));
@@ -87,13 +82,11 @@ export const updateTestStatistics = (
         newStatistics.timeStats.slowestTime = Math.max(newStatistics.timeStats.slowestTime, ...allTimes);
     }
 
-    // Update mastered/struggling questions with memory limits
     session.answers.forEach(answer => {
         if (answer.isCorrect) {
             if (!newStatistics.masteredQuestions.includes(answer.questionId)) {
                 newStatistics.masteredQuestions.push(answer.questionId);
             }
-            // Remove from struggling
             const strugglingIndex = newStatistics.strugglingQuestions.indexOf(answer.questionId);
             if (strugglingIndex > -1) {
                 newStatistics.strugglingQuestions.splice(strugglingIndex, 1);
@@ -102,7 +95,6 @@ export const updateTestStatistics = (
             if (!newStatistics.strugglingQuestions.includes(answer.questionId)) {
                 newStatistics.strugglingQuestions.push(answer.questionId);
             }
-            // Remove from mastered
             const masteredIndex = newStatistics.masteredQuestions.indexOf(answer.questionId);
             if (masteredIndex > -1) {
                 newStatistics.masteredQuestions.splice(masteredIndex, 1);
@@ -110,7 +102,6 @@ export const updateTestStatistics = (
         }
     });
 
-    // Apply memory limits to prevent unbounded growth
     newStatistics.masteredQuestions = applyMemoryLimits(
         newStatistics.masteredQuestions,
         MEMORY_LIMITS.MAX_MASTERED_QUESTIONS
@@ -120,13 +111,11 @@ export const updateTestStatistics = (
         MEMORY_LIMITS.MAX_STRUGGLING_QUESTIONS
     );
 
-    // Update improvement trend
     newStatistics.improvementTrend = calculateImprovementTrend(updatedProgress.recentScores);
 
     return newStatistics;
 };
 
-// Calculate improvement trend based on recent scores
 export const calculateImprovementTrend = (recentScores: number[]): ImprovementTrend => {
     if (recentScores.length < 3) return 'stable';
 
@@ -143,7 +132,6 @@ export const calculateImprovementTrend = (recentScores: number[]): ImprovementTr
     return 'stable';
 };
 
-// Update weak and strong categories based on statistics
 export const updateWeakStrongCategories = (
     statistics: TestStatistics
 ): { weakCategories: string[]; strongCategories: string[] } => {
@@ -158,13 +146,11 @@ export const updateWeakStrongCategories = (
     return { weakCategories, strongCategories };
 };
 
-// Generate test recommendations based on progress
 export const generateRecommendations = (
     testProgress: TestProgress
 ): TestRecommendation[] => {
     const recommendations: TestRecommendation[] = [];
 
-    // Performance-based recommendations
     if (testProgress.averageScore >= PERFORMANCE_THRESHOLDS.EXCELLENT) {
         recommendations.push({
             type: 'good_job',
@@ -181,7 +167,6 @@ export const generateRecommendations = (
         });
     }
 
-    // Weak categories recommendation
     if (testProgress.weakCategories.length > 0) {
         recommendations.push({
             type: 'study_category',
@@ -192,7 +177,6 @@ export const generateRecommendations = (
         });
     }
 
-    // Review incorrect questions
     if (testProgress.incorrectQuestions.length > 0) {
         recommendations.push({
             type: 'review_questions',
@@ -206,7 +190,6 @@ export const generateRecommendations = (
     return recommendations;
 };
 
-// Calculate test score
 export const calculateTestScore = (correctAnswers: number, totalQuestions: number): number => {
     if (totalQuestions === 0) return 0;
     return Math.round((correctAnswers / totalQuestions) * 100);

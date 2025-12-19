@@ -18,29 +18,20 @@ import type { TestAnswer } from '../../test/types';
 const logger = createLogger('CivicExamContext');
 
 interface CivicExamContextType {
-    // Current exam session
     currentSession: CivicExamSession | null;
     isExamActive: boolean;
     currentQuestionIndex: number;
-
-    // Progress and statistics
     examProgress: CivicExamProgress;
     examStatistics: CivicExamStatistics;
-
-    // Exam management
     startExam: (config: CivicExamConfig) => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishExam: () => Promise<CivicExamResult>;
     cancelExam: () => void;
-
-    // Question management
     getCurrentQuestion: () => CivicExamQuestion | null;
     getNextQuestion: () => CivicExamQuestion | null;
     getPreviousQuestion: () => CivicExamQuestion | null;
     getIncorrectQuestions: () => CivicExamQuestion[];
-
-    // Progress tracking
     refreshProgress: () => Promise<void>;
     resetProgress: () => Promise<void>;
     isLoading: boolean;
@@ -48,7 +39,6 @@ interface CivicExamContextType {
 
 const CivicExamContext = createContext<CivicExamContextType | undefined>(undefined);
 
-// Internal component that uses the split contexts
 const CivicExamContextInternal: React.FC<{ 
     children: ReactNode;
     allProcessedQuestions: ReturnType<typeof processAllQuestions>;
@@ -72,7 +62,6 @@ const CivicExamContextInternal: React.FC<{
         return progressContext.getIncorrectQuestions(allProcessedQuestions);
     }, [progressContext, allProcessedQuestions]);
 
-    // Memoize context value to prevent unnecessary re-renders
     const contextValue = useMemo((): CivicExamContextType => ({
         currentSession: sessionContext.currentSession,
         isExamActive: sessionContext.isExamActive,
@@ -106,7 +95,6 @@ const CivicExamContextInternal: React.FC<{
     );
 };
 
-// Main provider that composes session and progress providers
 export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const { questionsData, historySubcategories } = useData();
     const [civicQuestions, setCivicQuestions] = useState<ReturnType<typeof processAllQuestions>>([]);

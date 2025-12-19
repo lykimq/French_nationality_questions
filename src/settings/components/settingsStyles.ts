@@ -1,7 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-// Settings-specific styles that extend or differ from sharedStyles
-// Note: For iconContainer, use sharedStyles.iconContainer directly
 export const settingsStyles = StyleSheet.create({
     settingItem: {
         flexDirection: 'row',
@@ -14,8 +12,6 @@ export const settingsStyles = StyleSheet.create({
         flex: 1,
         fontSize: 15,
     },
-    // Modal styles specific to settings modals (e.g., RatingModal)
-    // Note: sharedStyles.modalTitle is more generic (fontSize: 18)
     modalContainer: {
         borderRadius: 20,
         padding: 30,

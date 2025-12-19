@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-// Shared style patterns to reduce duplication across components
 export const sharedStyles = StyleSheet.create({
-    // Common card styles
     card: {
         borderRadius: 16,
         padding: 20,
@@ -23,7 +21,6 @@ export const sharedStyles = StyleSheet.create({
         shadowRadius: 4,
     },
 
-    // Common icon container styles
     iconContainer: {
         width: 36,
         height: 36,
@@ -42,7 +39,6 @@ export const sharedStyles = StyleSheet.create({
         marginRight: 16,
     },
 
-    // Common modal styles
     modalOverlay: {
         flex: 1,
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -60,9 +56,6 @@ export const sharedStyles = StyleSheet.create({
         borderBottomWidth: 1,
     },
 
-    // Generic modal title (fontSize: 18)
-    // Note: For settings-specific modal titles (e.g., RatingModal),
-    // see settingsStyles.modalTitle which has different styling (fontSize: 20, bold, centered)
     modalTitle: {
         fontSize: 18,
         fontWeight: '600',
@@ -72,7 +65,6 @@ export const sharedStyles = StyleSheet.create({
         padding: 4,
     },
 
-    // Common container styles
     container: {
         flex: 1,
     },
@@ -83,9 +75,6 @@ export const sharedStyles = StyleSheet.create({
         alignItems: 'center',
     },
 
-    // Common text styles
-    // Note: This is a generic section title. For settings-specific section titles,
-    // see settingsStyles.sectionTitle which has different styling (fontSize: 16, padding, borderBottom)
     sectionTitle: {
         fontSize: 18,
         fontWeight: '600',
@@ -97,7 +86,6 @@ export const sharedStyles = StyleSheet.create({
         marginBottom: 8,
     },
 
-    // Common button styles
     primaryButton: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -115,7 +103,6 @@ export const sharedStyles = StyleSheet.create({
         borderWidth: 1,
     },
 
-    // Common layout styles
     row: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -127,7 +114,6 @@ export const sharedStyles = StyleSheet.create({
         alignItems: 'center',
     },
 
-    // Common shadow styles
     lightShadow: {
         elevation: 1,
         shadowColor: '#000',
@@ -152,7 +138,6 @@ export const sharedStyles = StyleSheet.create({
         shadowRadius: 6,
     },
 
-    // Common header styles
     header: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -170,7 +155,6 @@ export const sharedStyles = StyleSheet.create({
         padding: 8,
     },
 
-    // Common section styles
     section: {
         borderRadius: 10,
         marginHorizontal: 15,
@@ -179,7 +163,6 @@ export const sharedStyles = StyleSheet.create({
         overflow: 'hidden',
     },
 
-    // Common progress styles
     progressBar: {
         height: 4,
         backgroundColor: '#E0E0E0',
@@ -192,8 +175,6 @@ export const sharedStyles = StyleSheet.create({
         borderRadius: 2,
     },
 
-
-    // Common option styles for selectors
     optionHeader: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -223,13 +204,6 @@ export const sharedStyles = StyleSheet.create({
     },
 });
 
-// Common style combinations
-export const cardWithShadow = [sharedStyles.card, sharedStyles.mediumShadow];
-export const smallCardWithShadow = [sharedStyles.smallCard, sharedStyles.lightShadow];
-export const iconContainerStyle = sharedStyles.iconContainer;
-export const largeIconContainerStyle = sharedStyles.largeIconContainer;
-
-// Helper function to create common container styles with theme colors
 export const getCardContainerStyle = (theme: { colors: { card: string; divider: string } }) => ({
     backgroundColor: theme.colors.card,
     borderBottomColor: theme.colors.divider,

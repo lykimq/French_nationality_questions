@@ -36,7 +36,6 @@ export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
     const iconSet = DEFAULT_ICON_SET;
     const jsonIconSet = DEFAULT_ICON_SET;
 
-    // Memoized getter functions
     const getIconName = useCallback((iconKey: keyof IconMapping): string => {
         return iconSets[iconSet][iconKey];
     }, []);
@@ -55,7 +54,6 @@ export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
         return jsonIconColors.default;
     }, []);
 
-    // Memoize context value to prevent unnecessary re-renders
     const value = useMemo<IconContextType>(() => ({
         iconSet,
         icons: iconSets[iconSet],

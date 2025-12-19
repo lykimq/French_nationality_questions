@@ -1,9 +1,4 @@
-/**
- * Simple logger utility to manage console logs across the application.
- * Allows toggling logs based on the environment and provides a consistent interface.
- */
-
-const IS_DEV = __DEV__; // Expo/React Native global for development mode
+const IS_DEV = __DEV__;
 
 export enum LogLevel {
     DEBUG = 0,
@@ -13,7 +8,6 @@ export enum LogLevel {
     NONE = 4,
 }
 
-// Global log level - can be changed at runtime if needed
 let globalLogLevel: LogLevel = IS_DEV ? LogLevel.DEBUG : LogLevel.WARN;
 
 class Logger {
@@ -51,16 +45,10 @@ class Logger {
 
     error(message: string, ...args: any[]): void {
         if (this.shouldLog(LogLevel.ERROR)) {
-            // Errors should probably be logged even in production, 
-            // or sent to an error reporting service like Sentry
             console.error(`❌ ${this.formatMessage(message)}`, ...args);
         }
     }
 }
-
-export const setGlobalLogLevel = (level: LogLevel) => {
-    globalLogLevel = level;
-};
 
 export const createLogger = (prefix: string) => new Logger(prefix);
 

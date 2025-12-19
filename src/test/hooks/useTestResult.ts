@@ -86,17 +86,14 @@ export const useTestResult = () => {
         navigation.navigate('Test', undefined);
     }, [navigation]);
 
-    // Cleanup effect - only clear test state if there's an incomplete/active session
     useEffect(() => {
         return () => {
-            // Only cleanup if we have an active (incomplete) test session
-            // A completed test should not be cancelled
             if (!cleanupCalledRef.current && currentSession && !currentSession.isCompleted) {
                 cleanupCalledRef.current = true;
                 cancelTest();
             }
         };
-    }, []); // Empty dependency array to avoid re-running
+    }, []);
 
     return {
         testResult,

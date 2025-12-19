@@ -43,10 +43,8 @@ export const CivicExamProgressProvider: React.FC<{ children: ReactNode }> = ({ c
     const [examStatistics, setExamStatistics] = useState<CivicExamStatistics>(DEFAULT_CIVIC_EXAM_STATISTICS);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Memory leak prevention
     const isMountedRef = useRef(true);
 
-    // Load data on mount with cleanup
     useEffect(() => {
         isMountedRef.current = true;
 

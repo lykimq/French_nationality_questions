@@ -6,19 +6,13 @@ import { validateDataStructure } from './dataValidation';
 
 const logger = createLogger('dataUtils');
 
-// Cache object for Firebase Storage JSON data
 type DataCache = {
     [key: string]: any;
 };
 
 let firebaseDataCache: DataCache = {};
-
-// Cache for failed data loads to avoid repeated attempts
 let failedDataCache: Set<string> = new Set();
 
-/**
- * Loads JSON data from local files as fallback
- */
 const getLocalJsonData = async (dataPath: string): Promise<any> => {
     try {
         const localData = LOCAL_DATA_MAP[dataPath];
@@ -33,9 +27,6 @@ const getLocalJsonData = async (dataPath: string): Promise<any> => {
     }
 };
 
-/**
- * Gets JSON data from Firebase Storage with local fallback
- */
 const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
     try {
         if (firebaseDataCache[dataPath]) {
@@ -89,9 +80,6 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
     }
 };
 
-/**
- * Common loader for JSON file collections (subcategories, tests)
- */
 const loadJsonCollection = async (
     files: readonly string[],
     directoryPrefix: string = '',
@@ -187,7 +175,6 @@ export const preloadAllPart1TestData = async () => {
 };
 
 export const loadPart1TestData = async (): Promise<any> => {
-    // Virtual category structure for Part 1 tests
     return {
         id: "test_part1",
         title: "Première partie : Tests de connaissances",
@@ -200,18 +187,3 @@ export const loadPart1TestData = async (): Promise<any> => {
         ]
     };
 };
-
-export const clearDataCache = (): void => {
-    firebaseDataCache = {};
-    failedDataCache.clear();
-};
-
-export const getDataCacheStats = () => {
-    return {
-        cachedFiles: Object.keys(firebaseDataCache).length,
-        failedFiles: failedDataCache.size,
-        cacheSize: JSON.stringify(firebaseDataCache).length
-    };
-};
-
-export const getCachedJsonData = (dataPath: string): any => firebaseDataCache[dataPath] || null;

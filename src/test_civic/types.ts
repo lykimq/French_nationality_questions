@@ -104,7 +104,6 @@ export type CivicExamStackParamList = Readonly<{
     } | undefined;
 }>;
 
-// Re-export for convenience
 export type { SerializableCivicExamResult };
 
 // ==================== QUESTION METADATA ====================

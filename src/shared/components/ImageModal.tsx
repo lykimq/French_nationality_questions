@@ -35,17 +35,12 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
         onGestureGrant: () => setShowZoomHint(false)
     });
 
-    // Reset image loaded state and animations when modal opens or image changes
     useEffect(() => {
         if (visible && imageSource) {
             setImageLoaded(false);
             resetPanZoom();
-
-            // Show zoom hint for 3 seconds
             setShowZoomHint(true);
             const hintTimeout = setTimeout(() => setShowZoomHint(false), 3000);
-
-            // Cleanup function to clear timeout
             return () => clearTimeout(hintTimeout);
         }
     }, [visible, imageSource, resetPanZoom]);
@@ -55,18 +50,15 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
     };
 
     const handleImageError = () => {
-        setImageLoaded(true); // Still mark as loaded to hide loading indicator
+        setImageLoaded(true);
     };
 
-    // Handle background press - only close if pressing the background, not the image
     const handleBackgroundPress = (event: GestureResponderEvent) => {
-        // Only close if the press is directly on the background
         if (event.target === event.currentTarget) {
             onClose();
         }
     };
 
-    // Don't render if not visible
     if (!visible) return null;
 
     return (
@@ -78,27 +70,23 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
             statusBarTranslucent={true}
         >
             <StatusBar backgroundColor="rgba(0, 0, 0, 0.9)" barStyle="light-content" />
-            <SafeAreaView style={styles.modalContainer}>
+                    <SafeAreaView style={styles.modalContainer}>
                 <View
                     style={[styles.modalOverlay, { backgroundColor: themeMode === 'dark' ? 'rgba(0, 0, 0, 0.95)' : 'rgba(0, 0, 0, 0.85)' }]}
                     onStartShouldSetResponder={() => true}
                     onResponderRelease={handleBackgroundPress}
                 >
-                    {/* Close button */}
                     <TouchableOpacity style={[styles.closeButton, { backgroundColor: theme.colors.primary + '80' }]} onPress={onClose}>
                         <Ionicons name="close" size={30} color="#FFFFFF" />
                     </TouchableOpacity>
 
-                    {/* Zoom hint overlay */}
                     {showZoomHint && (
                         <View style={[styles.zoomHint, { backgroundColor: theme.colors.primary + 'CC' }]}>
                             <FormattedText style={styles.zoomHintText}>Double-tap to zoom • Drag to pan when zoomed</FormattedText>
                         </View>
                     )}
 
-                    {/* Photo container with zoom and pan gestures */}
                     <View style={styles.photoContainer}>
-                        {/* Loading indicator */}
                         {!imageLoaded && (
                             <ActivityIndicator
                                 size="large"

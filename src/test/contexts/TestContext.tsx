@@ -1,11 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
 import { createLogger } from '../../shared/utils/logger';
 import { useData } from '../../shared/contexts/DataContext';
-
-// Import constants
 import { DEFAULT_TEST_PROGRESS, DEFAULT_TEST_STATISTICS } from '../constants/testConstants';
-
-// Import utilities
 import {
     calculateTestScore,
     calculateUpdatedProgress,
@@ -18,8 +14,6 @@ import {
     updateTestStatistics,
     updateWeakStrongCategories,
 } from '../utils';
-
-// Import types
 import type {
     TestSession,
     TestProgress,
@@ -33,7 +27,6 @@ import type {
 
 const logger = createLogger('TestContext');
 
-// Re-export utility functions for backward compatibility
 export { serializeTestResult, deserializeTestResult } from '../utils';
 
 interface TestContextType {
@@ -82,15 +75,12 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const [testStatistics, setTestStatistics] = useState<TestStatistics>(DEFAULT_TEST_STATISTICS);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Memory leak prevention
     const isMountedRef = useRef(true);
 
-    // Memoized question collections to avoid reprocessing
     const allProcessedQuestions = useMemo(() => {
         return processAllQuestions(questionsData, historySubcategories);
     }, [questionsData, historySubcategories]);
 
-    // Load data on mount with cleanup
     useEffect(() => {
         isMountedRef.current = true;
 
@@ -102,13 +92,6 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
         loadData();
 
-        return () => {
-            isMountedRef.current = false;
-        };
-    }, []);
-
-    // Cleanup effect to prevent memory leaks
-    useEffect(() => {
         return () => {
             isMountedRef.current = false;
         };
@@ -168,7 +151,6 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             throw new Error(`No current question found at index: ${currentQuestionIndex}`);
         }
 
-        // Strict validation - throw error instead of just logging
         if (answer.questionId !== currentQuestion.id) {
             throw new Error(
                 `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
@@ -290,7 +272,6 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return generateRecommendations(testProgress);
     }, [testProgress]);
 
-    // Memoize context value to prevent unnecessary re-renders
     const contextValue = useMemo((): TestContextType => ({
         currentSession,
         isTestActive: currentSession !== null,
