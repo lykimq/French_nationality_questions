@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { getImageSource as loadImageSource, getCachedImageSource, getQuestionText, getExplanationText, formatExplanation } from '../utils';
+import { getQuestionText, getExplanationText, formatExplanation } from '../utils';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { QuestionCardProps } from '../../types';
 import { sharedStyles } from '../utils';
+import { useFirebaseImage } from '../hooks/useFirebaseImage';
+import { createLogger } from '../utils/logger';
+
+const logger = createLogger('QuestionCard');
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -15,90 +19,17 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     image,
     alwaysExpanded = false,
 }) => {
-    console.log('[QuestionCard] Render - id:', id, 'question length:', question?.length || 0, 'explanation length:', explanation?.length || 0, 'alwaysExpanded:', alwaysExpanded);
-    console.log('[QuestionCard] Props received:', {
-        id,
-        question: question?.substring(0, 50),
-        explanation: explanation?.substring(0, 50),
-        image,
-        alwaysExpanded
-    });
-
     const [expanded, setExpanded] = useState(alwaysExpanded);
-    const [imageError, setImageError] = useState(false);
-    const [imageLoading, setImageLoading] = useState(true);
-    const [imageSource, setImageSource] = useState<any>(null);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
     const { theme } = useTheme();
 
+    const { imageSource, isLoading: imageLoading, error: imageError } = useFirebaseImage(image);
     const isExpanded = alwaysExpanded ? true : expanded;
 
-    console.log('[QuestionCard] State - expanded:', expanded, 'alwaysExpanded:', alwaysExpanded, 'isExpanded (computed):', isExpanded);
-
-    // Load Firebase image when component mounts or image changes
-    useEffect(() => {
-        let isMounted = true;
-
-        const loadImage = async () => {
-            if (!image) {
-                setImageSource(null);
-                setImageLoading(false);
-                return;
-            }
-
-            setImageLoading(true);
-            setImageError(false);
-
-            try {
-                // First try to get cached image source for immediate display
-                const cachedSource = getCachedImageSource(image);
-                if (cachedSource && isMounted) {
-                    setImageSource(cachedSource);
-                    setImageLoading(false);
-                    return;
-                }
-
-                // If not cached, load from Firebase
-                const source = await loadImageSource(image);
-                if (isMounted) {
-                    if (source) {
-                        setImageSource(source);
-                        setImageLoading(false);
-                    } else {
-                        setImageError(true);
-                        setImageLoading(false);
-                        setImageSource(null);
-                    }
-                }
-            } catch (error) {
-                console.error('Error loading image for question', id, ':', image, error);
-                if (isMounted) {
-                    setImageError(true);
-                    setImageLoading(false);
-                    setImageSource(null);
-                }
-            }
-        };
-
-        loadImage();
-
-        return () => {
-            isMounted = false;
-        };
-    }, [image, id]);
-
-
     const toggleExpand = () => {
-        setExpanded(!expanded);
-    };
-
-    const handleImageError = () => {
-        setImageError(true);
-        setImageLoading(false);
-    };
-
-    const handleImageLoad = () => {
-        setImageLoading(false);
+        if (!alwaysExpanded) {
+            setExpanded(!expanded);
+        }
     };
 
     const handleImagePress = () => {
@@ -107,11 +38,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         }
     };
 
-    const closeImageModal = () => {
-        setIsImageModalVisible(false);
-    };
+    const closeImageModal = () => setIsImageModalVisible(false);
 
-    console.log('[QuestionCard] Rendering card - isExpanded:', isExpanded, 'expanded state:', expanded);
+    const questionText = getQuestionText(question);
+    const explanationText = getExplanationText(explanation);
 
     return (
         <View style={[
@@ -128,32 +58,29 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 style={({ pressed }) => [
                     styles.header,
                     { backgroundColor: theme.colors.questionCardBackground },
-                    pressed && [styles.headerPressed, { backgroundColor: theme.colors.primary + '10' }]
+                    pressed && !alwaysExpanded && [styles.headerPressed, { backgroundColor: theme.colors.primary + '10' }]
                 ]}
                 onPress={toggleExpand}
-                android_ripple={{ color: theme.colors.primary + '20' }}
+                android_ripple={!alwaysExpanded ? { color: theme.colors.primary + '20' } : undefined}
+                disabled={alwaysExpanded}
             >
                 <View style={[styles.idContainer, { backgroundColor: theme.colors.primary }]}>
                     <FormattedText style={[styles.id, { color: theme.colors.buttonText }]}>{id}</FormattedText>
                 </View>
                 <View style={styles.questionContainer}>
-                    {(() => {
-                        const questionText = getQuestionText(question);
-                        console.log('[QuestionCard] Rendering question text - length:', questionText.length, 'preview:', questionText.substring(0, 50), 'isExpanded:', isExpanded);
-                        return (
-                            <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={isExpanded ? 0 : 2}>
-                                {questionText}
-                            </FormattedText>
-                        );
-                    })()}
+                    <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={isExpanded ? 0 : 2}>
+                        {questionText}
+                    </FormattedText>
                 </View>
-                <View style={styles.iconContainer}>
-                    <Ionicons
-                        name={isExpanded ? theme.icons.chevronUp as any : theme.icons.chevronDown as any}
-                        size={24}
-                        color={theme.colors.primary}
-                    />
-                </View>
+                {!alwaysExpanded && (
+                    <View style={styles.iconContainer}>
+                        <Ionicons
+                            name={isExpanded ? theme.icons.chevronUp as any : theme.icons.chevronDown as any}
+                            size={24}
+                            color={theme.colors.primary}
+                        />
+                    </View>
+                )}
             </Pressable>
 
             {isExpanded && (
@@ -164,6 +91,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                             style={[styles.imageContainer, { borderColor: theme.colors.border }]}
                             onPress={handleImagePress}
                             activeOpacity={0.9}
+                            disabled={imageLoading}
                         >
                             {imageLoading && (
                                 <View style={[styles.imageLoading, { backgroundColor: theme.colors.surface }]}>
@@ -179,8 +107,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                         source={imageSource}
                                         style={[styles.image, imageLoading && styles.hiddenImage]}
                                         resizeMode="contain"
-                                        onError={handleImageError}
-                                        onLoad={handleImageLoad}
                                     />
                                     <View style={styles.imageOverlay}>
                                         <Ionicons name={theme.icons.expand as any} size={24} color="#FFFFFF" />
@@ -200,29 +126,21 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         </View>
                     )}
 
-                    {(() => {
-                        const explanationText = getExplanationText(explanation);
-                        console.log('[QuestionCard] Rendering explanation - length:', explanationText.length, 'isEmpty:', explanationText === '');
-                        if (explanationText !== "") {
-                            return (
-                                <View style={styles.explanationContainer}>
-                                    <View style={styles.section}>
-                                        <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
-                                        <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
-                                            {formatExplanation(explanationText)}
-                                        </FormattedText>
-                                    </View>
-                                </View>
-                            );
-                        }
-                        console.warn('[QuestionCard] Explanation is empty, not rendering explanation section');
-                        return null;
-                    })()}
+                    {explanationText !== "" && (
+                        <View style={styles.explanationContainer}>
+                            <View style={styles.section}>
+                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
+                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
+                                    {formatExplanation(explanationText)}
+                                </FormattedText>
+                            </View>
+                        </View>
+                    )}
                 </View>
             )}
 
-            {/* Add a clickable overlay to the unexpanded card */}
-            {!expanded && (
+            {/* Add a clickable overlay to the unexpanded card if not always expanded */}
+            {!isExpanded && !alwaysExpanded && (
                 <Pressable
                     style={styles.overlay}
                     onPress={toggleExpand}
@@ -255,10 +173,9 @@ const styles = StyleSheet.create({
     },
     header: {
         ...sharedStyles.spaceBetween,
-        marginBottom: 12,
     },
     headerPressed: {
-        // backgroundColor will be set dynamically
+        borderRadius: 8,
     },
     idContainer: {
         width: 36,
@@ -281,18 +198,11 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         lineHeight: 22,
     },
-    translation: {
-        fontSize: 14,
-        marginTop: 4,
-        fontStyle: 'italic',
-        lineHeight: 20,
-    },
     iconContainer: {
         padding: 4,
     },
     expandedContent: {
-        paddingHorizontal: 16,
-        paddingBottom: 16,
+        paddingTop: 16,
     },
     imageContainer: {
         borderRadius: 8,
@@ -342,7 +252,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     explanationContainer: {
-        marginBottom: 16,
+        marginBottom: 8,
     },
     section: {
         marginBottom: 12,

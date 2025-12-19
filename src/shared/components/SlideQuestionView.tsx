@@ -5,16 +5,18 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import QuestionCard from './QuestionCard';
 import FormattedText from './FormattedText';
+import { createLogger } from '../utils/logger';
 
+const logger = createLogger('SlideQuestionView');
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
 
 export interface SlideQuestionViewProps {
-    question: any; // Using any to support both Question types (should be unified)
+    question: any;
     currentIndex: number;
     totalCount: number;
-    title?: string; // For category title
+    title?: string;
     onNext: () => void;
     onPrevious: () => void;
     hasNext: boolean;
@@ -40,18 +42,8 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     // Track the question ID to detect changes for animation reset
     const prevQuestionIdRef = useRef<string | null>(null);
 
-    console.log('[SlideQuestionView] Render', {
-        questionId: question?.id,
-        currentIndex,
-        totalCount,
-        hasNext,
-        hasPrevious,
-        isAnimating
-    });
-
     // Reset scroll when question changes
     const handleScrollReset = useCallback(() => {
-        console.log('[SlideQuestionView] Resetting scroll position');
         scrollViewRef.current?.scrollTo({ y: 0, animated: false });
     }, []);
 
@@ -59,17 +51,12 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     useEffect(() => {
         const currentId = question?.id;
         if (currentId !== prevQuestionIdRef.current) {
-            console.log('[SlideQuestionView] Question changed from', prevQuestionIdRef.current, 'to', currentId);
-
-            // If we were animating, this is likely the completion of the state update
             if (isAnimating) {
-                console.log('[SlideQuestionView] Resetting animation values after question change');
                 translateX.setValue(0);
                 opacity.setValue(1);
                 setIsAnimating(false);
                 handleScrollReset();
             } else {
-                // Initial load or external update
                 translateX.setValue(0);
                 opacity.setValue(1);
             }
@@ -78,12 +65,8 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     }, [question?.id, isAnimating, handleScrollReset, translateX, opacity]);
 
     const animateTransition = useCallback((direction: 'left' | 'right', callback: () => void) => {
-        if (isAnimating) {
-            console.log('[SlideQuestionView] Already animating, ignoring');
-            return;
-        }
+        if (isAnimating) return;
 
-        console.log('[SlideQuestionView] Starting animation', direction);
         setIsAnimating(true);
 
         Animated.parallel([
@@ -98,23 +81,16 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                 useNativeDriver: true,
             })
         ]).start(() => {
-            console.log('[SlideQuestionView] Animation finished, calling callback');
             callback();
-            // Note: We do NOT reset animation here. We wait for the prop change in useEffect.
-            // This ensures the old question stays hidden until the new one is ready.
         });
     }, [isAnimating, translateX, opacity]);
 
     const handleNextPress = useCallback(() => {
-        if (hasNext) {
-            animateTransition('left', onNext);
-        }
+        if (hasNext) animateTransition('left', onNext);
     }, [hasNext, animateTransition, onNext]);
 
     const handlePreviousPress = useCallback(() => {
-        if (hasPrevious) {
-            animateTransition('right', onPrevious);
-        }
+        if (hasPrevious) animateTransition('right', onPrevious);
     }, [hasPrevious, animateTransition, onPrevious]);
 
     const panGesture = Gesture.Pan()
@@ -137,57 +113,40 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                 } else if (translationX < 0 && hasNext) {
                     handleNextPress();
                 } else {
-                    // Snap back if navigation is not possible
                     Animated.parallel([
                         Animated.spring(translateX, {
                             toValue: 0,
                             useNativeDriver: true,
                             tension: 50,
                             friction: 8,
-                            restDisplacementThreshold: 0.01,
-                            restSpeedThreshold: 0.01,
                         }),
                         Animated.spring(opacity, {
                             toValue: 1,
                             useNativeDriver: true,
                             tension: 50,
                             friction: 8,
-                            restDisplacementThreshold: 0.01,
-                            restSpeedThreshold: 0.01,
                         })
                     ]).start();
                 }
             } else {
-                // Snap back
                 Animated.parallel([
                     Animated.spring(translateX, {
                         toValue: 0,
                         useNativeDriver: true,
                         tension: 50,
                         friction: 8,
-                        restDisplacementThreshold: 0.01,
-                        restSpeedThreshold: 0.01,
                     }),
                     Animated.spring(opacity, {
                         toValue: 1,
                         useNativeDriver: true,
                         tension: 50,
                         friction: 8,
-                        restDisplacementThreshold: 0.01,
-                        restSpeedThreshold: 0.01,
                     })
                 ]).start();
             }
         });
 
-    if (!question) {
-        console.warn('[SlideQuestionView] No question provided');
-        return null;
-    }
-
-    // Helper to get text safely
-    const getQuestionText = (q: any) => q.question || '';
-    const getExplanationText = (q: any) => q.explanation || '';
+    if (!question) return null;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -245,16 +204,14 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                         showsVerticalScrollIndicator={true}
                         bounces={true}
                     >
-                        {question && (
-                            <QuestionCard
-                                key={question.id} // Force remount on question change
-                                id={question.id}
-                                question={getQuestionText(question)}
-                                explanation={getExplanationText(question)}
-                                image={question.image || null}
-                                alwaysExpanded={true}
-                            />
-                        )}
+                        <QuestionCard
+                            key={question.id}
+                            id={question.id}
+                            question={question.question}
+                            explanation={question.explanation}
+                            image={question.image || null}
+                            alwaysExpanded={true}
+                        />
                     </ScrollView>
                 </Animated.View>
             </GestureDetector>

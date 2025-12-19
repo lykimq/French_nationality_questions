@@ -1,5 +1,8 @@
 import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../config/firebaseConfig';
+import { createLogger } from './logger';
+
+const logger = createLogger('ImageUtils');
 
 // Cache object for Firebase Storage URLs
 type ImageCache = {
@@ -20,7 +23,7 @@ const getFirebaseImageUrl = async (imagePath: string): Promise<string | null> =>
     try {
         // If we've already failed to load this image, don't try again
         if (failedImageCache.has(imagePath)) {
-            console.warn(`Image previously failed to load: ${imagePath}`);
+            logger.warn(`Image previously failed to load: ${imagePath}`);
             return null;
         }
 
@@ -41,7 +44,7 @@ const getFirebaseImageUrl = async (imagePath: string): Promise<string | null> =>
 
         return downloadURL;
     } catch (error) {
-        console.error(`Failed to load image from Firebase Storage: ${imagePath}`, error);
+        logger.error(`Failed to load image from Firebase Storage: ${imagePath}`, error);
 
         // Add to failed cache to avoid repeated attempts
         failedImageCache.add(imagePath);
@@ -71,10 +74,7 @@ export const getImageSource = async (imagePath: string | null): Promise<any> => 
 
         // Extract filename from various possible path formats
         const filename = imagePath
-            .replace(/^\.\.\/assets\//, "") // Remove ../assets/
-            .replace(/^\.\/assets\//, "")   // Remove ./assets/
-            .replace(/^assets\//, "")       // Remove assets/
-            .replace(/^.*\//, "");          // Remove any other path prefixes
+            .replace(/^.*[\\/]/, ""); // Remove any path prefixes (cross-platform)
 
         // Get Firebase Storage URL
         const firebaseUrl = await getFirebaseImageUrl(filename);
@@ -83,10 +83,10 @@ export const getImageSource = async (imagePath: string | null): Promise<any> => 
             return { uri: firebaseUrl };
         }
 
-        console.warn(`Image not found in Firebase Storage: ${filename}`);
+        logger.warn(`Image not found in Firebase Storage: ${filename}`);
         return null;
     } catch (error) {
-        console.error(`Failed to get image source: ${imagePath}`, error);
+        logger.error(`Failed to get image source: ${imagePath}`, error);
         return null;
     }
 };
@@ -106,11 +106,7 @@ export const getCachedImageSource = (imagePath: string | null): any => {
     }
 
     // Extract filename
-    const filename = imagePath
-        .replace(/^\.\.\/assets\//, "")
-        .replace(/^\.\/assets\//, "")
-        .replace(/^assets\//, "")
-        .replace(/^.*\//, "");
+    const filename = imagePath.replace(/^.*[\\/]/, "");
 
     // Return cached Firebase URL if available
     return firebaseImageCache[filename] || null;
@@ -143,7 +139,6 @@ export const preloadImages = async (questionsData: any): Promise<void> => {
 
         // Preload images in batches to avoid overwhelming the storage service
         const batchSize = 5;
-        let loadedCount = 0;
         let failedCount = 0;
 
         for (let i = 0; i < uniquePaths.length; i += batchSize) {
@@ -153,17 +148,12 @@ export const preloadImages = async (questionsData: any): Promise<void> => {
             const batchPromises = batch.map(async (path) => {
                 try {
                     const imageSource = await getImageSource(path);
-                    if (imageSource) {
-                        loadedCount++;
-                        return { path, success: true };
-                    } else {
+                    if (!imageSource) {
                         failedCount++;
-                        return { path, success: false };
                     }
                 } catch (error) {
                     failedCount++;
-                    console.error(`Error preloading image: ${path}`, error);
-                    return { path, success: false };
+                    logger.error(`Error preloading image: ${path}`, error);
                 }
             });
 
@@ -171,10 +161,10 @@ export const preloadImages = async (questionsData: any): Promise<void> => {
         }
 
         if (failedCount > 0) {
-            console.warn(`Failed to load ${failedCount} images. They may not exist in Firebase Storage.`);
+            logger.warn(`Failed to load ${failedCount} images during preloading.`);
         }
     } catch (error) {
-        console.error('Error during image preloading:', error);
+        logger.error('Error during image preloading:', error);
     }
 };
 

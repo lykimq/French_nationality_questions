@@ -1,5 +1,8 @@
 import { ref, uploadBytes, getDownloadURL, listAll, deleteObject } from 'firebase/storage';
 import { storage } from '../../config/firebaseConfig';
+import { createLogger } from './logger';
+
+const logger = createLogger('FirebaseUtils');
 
 /**
  * Uploads an image to Firebase Storage
@@ -14,7 +17,7 @@ export const uploadImageToFirebase = async (file: Blob | Uint8Array, fileName: s
         const downloadURL = await getDownloadURL(snapshot.ref);
         return downloadURL;
     } catch (error) {
-        console.error('Error uploading image:', error);
+        logger.error('Error uploading image:', error);
         throw error;
     }
 };
@@ -29,7 +32,7 @@ export const listFirebaseImages = async (): Promise<string[]> => {
         const result = await listAll(assetsRef);
         return result.items.map(item => item.name);
     } catch (error) {
-        console.error('Error listing images:', error);
+        logger.error('Error listing images:', error);
         throw error;
     }
 };
@@ -44,7 +47,7 @@ export const deleteImageFromFirebase = async (fileName: string): Promise<void> =
         const imageRef = ref(storage, `French_questions/assets/${fileName}`);
         await deleteObject(imageRef);
     } catch (error) {
-        console.error('Error deleting image:', error);
+        logger.error('Error deleting image:', error);
         throw error;
     }
 };
