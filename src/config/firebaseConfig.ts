@@ -3,7 +3,7 @@ import { getStorage } from 'firebase/storage';
 
 // Firebase configuration from environment variables with fallbacks
 const firebaseConfig = {
-    apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY || "AIzaSyBkQTh-WeU8kD75I7vLC4JLNbfGr4JDxYU",
+    apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY || "",
     authDomain: `${process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID || "french-nationality-questions"}.firebaseapp.com`,
     projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID || "french-nationality-questions",
     storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET || "french-nationality-questions.firebasestorage.app",
