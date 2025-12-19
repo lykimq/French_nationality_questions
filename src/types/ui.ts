@@ -80,9 +80,6 @@ export interface FormattedTextProps {
 // Text formatting settings
 export interface TextFormattingSettings {
     readonly fontSize: number;
-    readonly fontFamily: string;
-    readonly lineHeight: number;
-    readonly letterSpacing: number;
 }
 
 // ==================== QUESTION & CATEGORY COMPONENTS ====================

@@ -11,32 +11,32 @@ const FormattedText: React.FC<FormattedTextProps> = ({
     const { settings } = useTextFormatting();
     const formattedStyles = getTextStyles(settings);
 
-    // Create a function to strip font-related properties from styles
-    const stripFontProperties = (styleObj: any): any => {
+    // Create a function to strip fontSize from styles
+    const stripFontSize = (styleObj: any): any => {
         if (!styleObj || typeof styleObj !== 'object') return styleObj;
 
         // Handle StyleSheet objects by flattening them first
         const flattened = StyleSheet.flatten(styleObj);
         if (!flattened) return null;
 
-        const { fontSize, lineHeight, letterSpacing, fontFamily, ...otherProps } = flattened;
+        const { fontSize, ...otherProps } = flattened;
         return otherProps;
     };
 
-    // Process the style prop to remove font-related properties
+    // Process the style prop to remove fontSize
     const processedStyle = React.useMemo(() => {
         if (!style) return null;
 
         if (Array.isArray(style)) {
-            return style.map(stripFontProperties).filter(Boolean);
+            return style.map(stripFontSize).filter(Boolean);
         } else {
-            return stripFontProperties(style);
+            return stripFontSize(style);
         }
     }, [style]);
 
     // Merge styles with user formatting settings taking precedence
     const finalStyles = [
-        processedStyle, // Component styles without font properties
+        processedStyle, // Component styles without fontSize
         formattedStyles, // User formatting settings (always take precedence)
     ].filter(Boolean);
 

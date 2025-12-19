@@ -3,7 +3,6 @@ import { StyleSheet, View, Alert } from 'react-native';
 import { useTextFormatting, getTextStyles } from '../../shared/contexts/TextFormattingContext';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import SliderSetting from './SliderSetting';
-import FontSelector from './FontSelector';
 import { FormattedText } from '../../shared/components';
 import SettingItem from './SettingItem';
 import { settingsStyles } from './settingsStyles';
@@ -13,9 +12,6 @@ const TextFormattingSettings: React.FC = () => {
     const {
         settings,
         updateFontSize,
-        updateFontFamily,
-        updateLineHeight,
-        updateLetterSpacing,
         resetToDefaults
     } = useTextFormatting();
 
@@ -67,7 +63,7 @@ const TextFormattingSettings: React.FC = () => {
                     backgroundColor: theme.colors.card,
                     borderColor: theme.colors.border
                 }]}>
-                    Ceci est un exemple de texte avec vos paramètres de formatage. Vous pouvez voir comment la taille de police, la police, l'espacement des lignes et l'espacement des lettres affectent l'apparence du texte dans l'application.
+                    Ceci est un exemple de texte avec vos paramètres de formatage. Vous pouvez voir comment la taille de police affecte l'apparence du texte dans l'application.
                 </FormattedText>
             </View>
 
@@ -78,32 +74,6 @@ const TextFormattingSettings: React.FC = () => {
                 maximumValue={24}
                 step={1}
                 onValueChange={updateFontSize}
-                formatValue={(val: number) => `${val}px`}
-            />
-
-            <FontSelector
-                title="Police de caractères"
-                value={settings.fontFamily}
-                onValueChange={updateFontFamily}
-            />
-
-            <SliderSetting
-                title="Hauteur de ligne"
-                value={settings.lineHeight}
-                minimumValue={1.0}
-                maximumValue={2.0}
-                step={0.1}
-                onValueChange={updateLineHeight}
-                formatValue={(val: number) => val.toFixed(1)}
-            />
-
-            <SliderSetting
-                title="Espacement des lettres"
-                value={settings.letterSpacing}
-                minimumValue={-1}
-                maximumValue={3}
-                step={0.5}
-                onValueChange={updateLetterSpacing}
                 formatValue={(val: number) => `${val}px`}
             />
 

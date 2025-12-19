@@ -5,17 +5,11 @@ import type { TextFormattingSettings } from '../../types';
 interface TextFormattingContextType {
     settings: TextFormattingSettings;
     updateFontSize: (size: number) => void;
-    updateFontFamily: (family: string) => void;
-    updateLineHeight: (height: number) => void;
-    updateLetterSpacing: (spacing: number) => void;
     resetToDefaults: () => void;
 }
 
 const defaultSettings: TextFormattingSettings = {
     fontSize: 16,
-    fontFamily: 'System',
-    lineHeight: 1.4,
-    letterSpacing: 0,
 };
 
 const STORAGE_KEY = '@text_formatting_settings';
@@ -25,10 +19,7 @@ const isValidSettings = (settings: any): settings is TextFormattingSettings => {
     return (
         typeof settings === 'object' &&
         settings !== null &&
-        typeof settings.fontSize === 'number' &&
-        typeof settings.fontFamily === 'string' &&
-        typeof settings.lineHeight === 'number' &&
-        typeof settings.letterSpacing === 'number'
+        typeof settings.fontSize === 'number'
     );
 };
 
@@ -89,18 +80,6 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
         updateSetting('fontSize', size);
     }, [updateSetting]);
 
-    const updateFontFamily = useCallback((family: string) => {
-        updateSetting('fontFamily', family);
-    }, [updateSetting]);
-
-    const updateLineHeight = useCallback((height: number) => {
-        updateSetting('lineHeight', height);
-    }, [updateSetting]);
-
-    const updateLetterSpacing = useCallback((spacing: number) => {
-        updateSetting('letterSpacing', spacing);
-    }, [updateSetting]);
-
     const resetToDefaults = useCallback(() => {
         saveSettings(defaultSettings);
     }, [saveSettings]);
@@ -108,9 +87,6 @@ export const TextFormattingProvider: React.FC<{ children: React.ReactNode }> = (
     const value: TextFormattingContextType = {
         settings,
         updateFontSize,
-        updateFontFamily,
-        updateLineHeight,
-        updateLetterSpacing,
         resetToDefaults,
     };
 
@@ -132,9 +108,6 @@ export const useTextFormatting = () => {
 export const getTextStyles = (settings: TextFormattingSettings) => {
     const styles = {
         fontSize: settings.fontSize,
-        fontFamily: settings.fontFamily === 'System' ? undefined : settings.fontFamily,
-        lineHeight: settings.fontSize * settings.lineHeight,
-        letterSpacing: settings.letterSpacing,
     };
 
     return styles;
