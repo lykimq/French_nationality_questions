@@ -14,7 +14,6 @@ import { sharedStyles } from '../shared/utils';
 // Import new components
 import TextFormattingSettings from './components/TextFormattingSettings';
 import ThemeSettings from './components/ThemeSettings';
-import IconSettings from './components/IconSettings';
 import AppInfoSettings from './components/AppInfoSettings';
 import CivicExamSettings from './components/CivicExamSettings';
 import RatingModal from './components/RatingModal';
@@ -46,9 +45,6 @@ const SettingsScreen = () => {
             <ScrollView style={[styles.scrollView, { backgroundColor: theme.colors.background }]}>
                 {/* Theme Section */}
                 <ThemeSettings />
-
-                {/* Icon Settings */}
-                <IconSettings />
 
                 {/* Text Formatting Section */}
                 <TextFormattingSettings />

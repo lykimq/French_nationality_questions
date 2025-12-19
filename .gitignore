@@ -79,3 +79,8 @@ yarn-error.*
 *.tsbuildinfo
 
 # @end expo-cli
+
+# Firebase configuration files (contains sensitive API keys)
+**/google-services.json
+**/GoogleService-Info.plist
+**/firebase.json
