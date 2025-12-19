@@ -1,0 +1,2691 @@
+{
+    "theme": "Vivre dans la société française",
+    "id": "admin",
+    "title": "Démarches Administratives",
+    "icon": "document-text",
+    "description": "L'administration au service du citoyen",
+    "questions": [
+        {
+            "id": "LIV-057",
+            "question": "Quel est le rôle de la mairie (ou hôtel de ville) ?",
+            "explanation": "C'est l'institution de proximité. Elle gère l'état civil (naissances, mariages, décès), les écoles primaires, l'urbanisme et la vie locale.",
+            "image": null
+        },
+        {
+            "id": "LIV-058",
+            "question": "Qui représente l'État dans un département ?",
+            "explanation": "Le Préfet.",
+            "image": null
+        },
+        {
+            "id": "LIV-059",
+            "question": "Qu'est-ce que l'assimilation à la communauté française ?",
+            "explanation": "C'est l'adhésion aux valeurs de la République, la maîtrise de la langue française et une connaissance suffisante de l'histoire et de la culture de la France.",
+            "image": null
+        },
+        {
+            "id": "LIV-060",
+            "question": "Qui décide de l'octroi de la nationalité française ?",
+            "explanation": "C'est le ministre de l'Intérieur qui prend la décision finale après enquête.",
+            "image": null
+        },
+        {
+            "id": "LIV-061",
+            "question": "Tout citoyen peut-il créer une association ?",
+            "explanation": "Oui, la liberté d'association est garantie (loi de 1901). Les associations jouent un rôle majeur dans la solidarité et la vie culturelle.",
+            "image": null
+        },
+        {
+            "id": "LIV-339",
+            "question": "Quel est le but de l'entretien réglementaire en préfecture ?",
+            "explanation": "L'entretien vise à évaluer le degré d'assimilation du candidat, sa connaissance de la société française, de ses principes et valeurs essentiels, ainsi que son adhésion à ceux-ci.",
+            "image": null
+        },
+        {
+            "id": "LIV-340",
+            "question": "Pourquoi voulez-vous devenir un citoyen français ou française?",
+            "explanation": "Dès mon arrivée en France, j’ai ressenti un profond attachement pour ce pays, bien au-delà d’un simple lieu de résidence : la France est devenue ma maison. Chaque jour, je me sens un peu plus français, non seulement par ma manière de vivre, mais aussi par mon adhésion totale aux valeurs de la République : liberté, égalité, fraternité. Ces principes ne sont pas de simples mots pour moi: ils sont le fondement d’une société juste et solidaire, dans laquelle je veux pleinement m’inscrire. Mon sentiment d’appartenance va bien au-delà d’une simple appréciation : il est ancré dans ma vie quotidienne. La France est le pays où j’ai construit (ou je compte construire) mon avenir, où j’ai tissé des liens solides, tant sur le plan personnel que professionnel. Mon entourage, mon travail, mes ambitions… tout se dessine ici. Je partage la culture française, son attachement à la démocratie, aux droits de l’homme, à la laïcité, qui permet à chacun de vivre librement, dans le respect des autres. La France est aussi un pays dont le rayonnement international me rend fier. Son histoire, sa place de leader dans des domaines d’excellence comme l’aéronautique, la recherche scientifique, le luxe ou encore la gastronomie témoignent de son dynamisme et de son influence dans le monde. Être citoyen français, c’est appartenir à une nation qui porte haut les valeurs de progrès et d’innovation, tout en défendant un modèle social protecteur et solidaire. Au-delà de ses réussites économiques et scientifiques, la France est un pays où la culture et l’art occupent une place centrale. J’ai une profonde admiration pour son patrimoine, sa littérature, son cinéma, sa musique… Cette richesse culturelle, qui traverse les siècles et continue d’inspirer le monde entier, me passionne et me nourrit au quotidien. Mais être français, c’est aussi un engagement. Ce n’est pas seulement un privilège, c’est une responsabilité. Obtenir la nationalité française me permettrait de renforcer encore mon implication dans la société, notamment en exerçant mon droit de vote. Pour moi, voter n’est pas juste un droit, c’est un devoir citoyen, une façon d’être acteur de la démocratie et de contribuer au futur de ce pays que j’aime. Aujourd’hui, je souhaite aller au bout de mon intégration et affirmer officiellement mon appartenance à cette nation qui m’a accueilli et dans laquelle je me reconnais pleinement. Devenir citoyen français, c’est l’aboutissement d’un parcours de vie, mais c’est surtout un engagement du cœur.",
+            "image": null
+        },
+        {
+            "id": "LIV-341",
+            "question": "Que changera pour vous le fait de devenir français ?",
+            "explanation": "Cela me donnera accès aux droits et devoirs des citoyens français, notamment le droit de vote et la protection de l’État.",
+            "image": null
+        },
+        {
+            "id": "LIV-342",
+            "question": "Quelles libertés fondamentales sont garanties en France ?",
+            "explanation": "La liberté de pensée, de croyance, de s'exprimer, de se réunir, et la liberté de la presse.",
+            "image": null
+        },
+        {
+            "id": "LIV-343",
+            "question": "Qu'est-ce que le principe d'égalité ?",
+            "explanation": "Tous les citoyens ont les mêmes droits et devoirs quels que soient leur sexe, leur origine, leur religion, leurs opinions ou leur orientation sexuelle.",
+            "image": null
+        },
+        {
+            "id": "LIV-344",
+            "question": "Qu'est-ce qui illustre le principe de Fraternité et de solidarité ?",
+            "explanation": "Le système de sécurité sociale, financé par les cotisations et les impôts, illustre la solidarité entre les citoyens.",
+            "image": null
+        },
+        {
+            "id": "LIV-345",
+            "question": "Un employeur peut-il refuser d'embaucher quelqu'un en raison de son origine ou de sa religion ?",
+            "explanation": "Non, c'est une discrimination interdite par la loi. Les décisions doivent être fondées exclusivement sur des raisons professionnelles.",
+            "image": null
+        },
+        {
+            "id": "LIV-346",
+            "question": "Quand l'État peut-il restreindre la manifestation de la religion en public ?",
+            "explanation": "Pour préserver l'ordre public. Nul ne peut se prévaloir de ses croyances pour s'affranchir des règles communes.",
+            "image": null
+        },
+        {
+            "id": "LIV-347",
+            "question": "Qu’est-ce qu’un Français ?",
+            "explanation": "Un Français est une personne qui appartient à la nation française par sa culture, son histoire, sa langue et son attachement aux valeurs républicaines. Être Français, c'est partager un héritage commun, se reconnaître dans les principes de liberté, d’égalité et de fraternité, et participer à la vie du pays, que ce soit à travers la langue, les traditions ou les institutions. C’est aussi une identité qui se construit, une manière de vivre ensemble et de s’inscrire dans une société fondée sur la tolérance, le respect des autres et la solidarité.",
+            "image": null
+        },
+        {
+            "id": "LIV-348",
+            "question": "Qu’est-ce qu’un citoyen français ?",
+            "explanation": "Un citoyen français est une personne qui participe activement à la vie de la nation. Il ne se contente pas d’appartenir à la France, il contribue à son avenir par ses actions, ses choix et son engagement. Être citoyen, c’est : - S’investir dans la société en respectant et en défendant les valeurs communes - Prendre part aux décisions en votant, en s’informant et en débattant des enjeux de la société - Être solidaire en contribuant à la vie collective, en aidant les autres, en respectant les lois et les principes qui permettent à tous de vivre ensemble - Porter l’esprit républicain, qui repose sur la laïcité, l’égalité des chances et la fraternité Un citoyen ne se définit pas uniquement par ses droits, mais par son rôle dans la société. Il participe activement à faire vivre la démocratie et à construire le pays pour les générations futures.",
+            "image": null
+        },
+        {
+            "id": "LIV-349",
+            "question": "Parlez-moi de votre entourage ?",
+            "explanation": "Mon entourage reflète la diversité et l’ouverture de la France. J’ai la chance d’avoir des proches français, comme mon frère et mon cousin, qui ont obtenu la nationalité française. Au quotidien, je suis entouré d’amis et de collègues de différents horizons, ce qui m’a permis de m’intégrer pleinement et d’adhérer aux valeurs de vivre-ensemble et de fraternité qui font la force de ce pays. (Il s’agit d’une réponse type comme les autres questions, vous pouvez vous en inspirer en fonction de votre situation).",
+            "image": null
+        },
+        {
+            "id": "LIV-350",
+            "question": "Êtes-vous membre d'une association ?",
+            "explanation": "Oui, je suis membre d’une association d’aide aux sans-abri et d’une autre à vocation culturelle. Ces engagements illustrent mon attachement aux valeurs de solidarité et de partage.",
+            "image": null
+        },
+        {
+            "id": "LIV-351",
+            "question": "Pourquoi avez-vous choisis la France ? Pourquoi la France ?",
+            "explanation": "J’ai choisi la France pour sa stabilité, ses valeurs démocratiques et son modèle social qui garantissent égalité et justice. Son dynamisme culturel et économique offre un cadre idéal pour s’épanouir. Ici, j’ai trouvé des opportunités, tissé des liens forts et construit mon avenir, faisant de la France ma véritable maison.",
+            "image": null
+        },
+        {
+            "id": "LIV-352",
+            "question": "Avez-vous une croyance religieuse ?",
+            "explanation": "Oui/Non, je suis (religion/non), ce qui est une partie importante de ma/une vie personnelle non religieuse pour moi.",
+            "image": null
+        },
+        {
+            "id": "LIV-353",
+            "question": "Portez-vous le foulard ? Pourquoi ?",
+            "explanation": "Le port du foulard relève d’un choix personnel, influencé par des convictions religieuses, culturelles ou individuelles. En France, il est autorisé dans l’espace public, sauf dans certaines situations encadrées par la loi, comme à l’école pour les élèves ou dans certaines fonctions publiques.",
+            "image": null
+        },
+        {
+            "id": "LIV-354",
+            "question": "Quelles sont vos habitudes au quotidien en France ?",
+            "explanation": "Je travaille/étudie, je participe à la vie sociale et culturelle, et je respecte les valeurs républicaines.",
+            "image": null
+        },
+        {
+            "id": "LIV-355",
+            "question": "Quelle est votre position sur l'égalité des genres en France ?",
+            "explanation": "Je suis fermement pour l'égalité des genres et je soutiens les efforts en France pour promouvoir l'égalité professionnelle et les droits des femmes. Je considère ces enjeux comme essentiels pour une société juste et équilibrée, où chaque individu peut s'épanouir sans discrimination.",
+            "image": null
+        },
+        {
+            "id": "LIV-356",
+            "question": "Quel est votre avis sur l’interdiction de la polygamie en France?",
+            "explanation": "Je soutiens les principes d'égalité et les lois qui régissent le mariage en France. Je comprends et respecte que la polygamie est interdite, reconnaissant l'importance de l'égalité entre les époux et les principes juridiques qui protègent les droits de chaque individu.",
+            "image": null
+        },
+        {
+            "id": "LIV-357",
+            "question": "– Que pensez-vous de la presse satirique ?",
+            "explanation": "La presse satirique est un moyen d’expression important qui utilise l’humour pour critiquer et dénoncer des sujets politiques et sociaux. Elle joue un rôle essentiel dans la liberté d’expression tout en respectant les limites de la loi, notamment en évitant la diffamation, l'incitation à la haine ou les discours discriminatoires, afin de ne pas porter atteinte aux droits des individus. Exemple : journal Charlie hebdo.",
+            "image": null
+        },
+        {
+            "id": "LIV-358",
+            "question": "Les valeurs de votre religion se heurtent-elles avec les valeurs de la France ?",
+            "explanation": "Non, les valeurs de ma religion sont compatibles avec les valeurs de la France, notamment celles de la laïcité et de la tolérance.",
+            "image": null
+        },
+        {
+            "id": "LIV-359",
+            "question": "Que pensez-vous des derniers événements relatifs à Charlie Hebdo ?",
+            "explanation": "Je condamne toute forme de violence, mais je soutiens également la liberté d'expression.",
+            "image": null
+        },
+        {
+            "id": "LIV-360",
+            "question": "Quel est le rôle de la liberté d’expression en France ?",
+            "explanation": "La liberté d’expression est un droit fondamental inscrit dans la Déclaration des Droits de l’Homme et du Citoyen de 1789, permettant à chacun d’exprimer ses opinions dans le respect de la loi.",
+            "image": null
+        },
+        {
+            "id": "LIV-361",
+            "question": "Pourquoi son assassinat a-t-il marqué la société française ?",
+            "explanation": "Son assassinat a profondément choqué la France car il symbolise une attaque contre les valeurs fondamentales de la République, notamment la liberté d’expression et la laïcité.",
+            "image": null
+        },
+        {
+            "id": "LIV-362",
+            "question": "Quel est votre avis sur cette affaire ?",
+            "explanation": "Cet acte est une tragédie inacceptable. Rien ne justifie la violence, et toute forme d’extrémisme doit être fermement condamnée. Cette affaire rappelle l’importance de défendre la liberté d’expression tout en encourageant le respect et le dialogue dans la société.",
+            "image": null
+        },
+        {
+            "id": "LIV-363",
+            "question": "Que pensez-vous des manifestations des Gilets Jaunes ?",
+            "explanation": "Les manifestations des Gilets Jaunes ont révélé des fractures sociales profondes, mettant en lumière des demandes de justice fiscale et sociale. Leur impact sur la politique française a été significatif, incitant à des réformes et à un dialogue national sur l'égalité économique.",
+            "image": null
+        },
+        {
+            "id": "LIV-364",
+            "question": "Quel est votre avis sur les mesures de sécurité renforcées en France suite à l'attaque du Bataclan ?",
+            "explanation": "Je pense que ces mesures étaient nécessaires pour améliorer la sécurité publique, bien qu'elles aient également soulevé des questions sur les libertés individuelles.",
+            "image": null
+        },
+        {
+            "id": "LIV-365",
+            "question": "Les femmes peuvent-elles s’habiller comme elles le souhaitent en France ?",
+            "explanation": "Oui, en France, la loi garantit la liberté vestimentaire, dans le respect de l’ordre public.",
+            "image": null
+        },
+        {
+            "id": "LIV-366",
+            "question": "Quel est votre avis sur les revendications principales du mouvement des Gilets Jaunes ?",
+            "explanation": "Les revendications mettent en lumière des problèmes significatifs d'inégalité et de pouvoir d'achat, nécessitant une réponse politique attentive et inclusive.",
+            "image": null
+        },
+        {
+            "id": "LIV-367",
+            "question": "Pourquoi l’IVG est-elle un sujet d'actualité en 2024 ?",
+            "explanation": "En mars 2024, la France est devenue le premier pays à graver la liberté de recourir à l’IVG dans sa Constitution. Cette décision vise à garantir ce droit fondamental et à le protéger de toute remise en cause future.",
+            "image": null
+        },
+        {
+            "id": "LIV-368",
+            "question": "Que signifie la Liberté ?",
+            "explanation": "Selon l’article 1 de la Déclaration des Droits de l'Homme et du Citoyen d'août 1789 : tous les individus naissent libres et égaux en droits, garantissant ainsi la liberté de chaque citoyen français, qu'il soit homme ou femme. L'esclavage est formellement interdit et les droits fondamentaux sont protégés par des lois en France, tant au niveau individuel que collectif. Parmi ces libertés, on peut citer la liberté d'expression, le droit de vote, la liberté de circulation, le droit au travail et le droit à l'éducation.",
+            "image": null
+        },
+        {
+            "id": "LIV-369",
+            "question": "Que signifie l'Égalité?",
+            "explanation": "Conformément à l'article 1 de la Déclaration des Droits de l'Homme et du Citoyen, la France garantit à tous ses citoyens une égalité juridique, leur assurant les mêmes droits, les mêmes devoirs et leur soumission aux mêmes règles. L'État français s'engage à combattre les discriminations, telles que le racisme, le sexisme, la xénophobie et l'antisémitisme, et à prévenir toute forme de traitement injuste envers ses citoyens.",
+            "image": null
+        },
+        {
+            "id": "LIV-370",
+            "question": "La signification de la Fraternité ?",
+            "explanation": "La France est construite sur le désir de cohabitation harmonieuse entre ses citoyens, exprimant ainsi la solidarité entre eux.",
+            "image": null
+        },
+        {
+            "id": "LIV-371",
+            "question": "Un exemple d’illustration de la Fraternité ?",
+            "explanation": "Depuis 1945, le système de sécurité sociale, financé par les entreprises et tous ceux qui travaillent en France, incarne cette volonté de fraternité envers les concitoyens. Le pays condamne les discriminations, qui consistent à défavoriser un individu ou un groupe par rapport à d'autres, et considère le racisme comme un délit.",
+            "image": null
+        },
+        {
+            "id": "LIV-372",
+            "question": "Peut-on rajouter une quatrième valeur ? Si oui laquelle ?",
+            "explanation": "Oui la laïcité, la laïcité est un principe fondamental de la République française, qui comporte deux volets importants : - L'État se doit d'être neutre envers les religions et ne doit favoriser aucune religion particulière. La religion relève de la sphère privée de chaque individu. - L'État garantit la liberté religieuse, permettant à chacun de croire ou de ne pas croire et de choisir sa religion librement.",
+            "image": null
+        },
+        {
+            "id": "LIV-373",
+            "question": "Quand la France est devenue laïque ?",
+            "explanation": "09 décembre 1905",
+            "image": null
+        },
+        {
+            "id": "LIV-374",
+            "question": "Qu'est-ce que les Lumières et quel a été leur impact sur la France ?",
+            "explanation": "Le siècle des Lumières, au 18e siècle, a été une période de grands progrès intellectuels et philosophiques. En France, les philosophes des Lumières, tels que Voltaire et Rousseau, ont remis en question les traditions et proposé des idées sur la démocratie, l'égalité et la liberté, influençant fortement la Révolution Française et la pensée moderne.",
+            "image": null
+        },
+        {
+            "id": "LIV-375",
+            "question": "Quelle est l’importance de l’abolition de l’esclavage ?",
+            "explanation": "L’abolition a marqué une avancée majeure pour les droits de l’Homme et la reconnaissance de l’égalité entre tous les citoyens.",
+            "image": null
+        },
+        {
+            "id": "LIV-376",
+            "question": "Qu'est-ce que la Francophonie et quel est son rôle ?",
+            "explanation": "La Francophonie est une organisation internationale regroupant des pays et régions où le français est une langue majeure. Pour la France, elle représente un moyen de promouvoir la langue française, ainsi que les valeurs culturelles, éducatives et politiques associées.",
+            "image": null
+        },
+        {
+            "id": "LIV-377",
+            "question": "Qui était Henri IV (4) ?",
+            "explanation": "Henri IV (1553-1610) était roi de France de 1589 à 1610. Premier roi de la famille des Bourbons, il a mis fin aux guerres de religion avec l’édit de Nantes, qui donnait des droits aux protestants. Il est aussi connu pour sa célèbre phrase : \"Paris vaut bien une messe.\" Il a été assassiné en 1610.",
+            "image": null
+        },
+        {
+            "id": "LIV-378",
+            "question": "Qui est Jean Jaurès ?",
+            "explanation": "Jean Jaurès était un homme politique et intellectuel français, figure majeure du socialisme en France. Il est surtout connu pour sa lutte en faveur de la paix et de la justice sociale. En tant que député, il défendait les droits des travailleurs et la laïcité, et a joué un rôle clé dans la création de la Section Française de l'Internationale Ouvrière (SFIO). Il a été assassiné en 1914, pendant la Première Guerre mondiale, pour ses idées pacifistes.",
+            "image": null
+        },
+        {
+            "id": "LIV-379",
+            "question": "Qu'est-ce que la Saint-Barthélemy ?",
+            "explanation": "Le massacre de la Saint-Barthélemy, survenu en 1572, est l'un des événements les plus sombres des guerres de religion en France. Il s'agit d'une série de meurtres organisés de protestants (Huguenots) par des catholiques, symbolisant l'intensité des conflits religieux de l'époque.",
+            "image": null
+        },
+        {
+            "id": "LIV-380",
+            "question": "Qu'est-ce que le traité de Nantes ?",
+            "explanation": "Signé en 1598 par Henri IV, le traité de Nantes a mis fin aux guerres de religion en France en accordant des droits et une certaine liberté de culte aux protestants. Ce traité est considéré comme un pas important vers la tolérance religieuse.",
+            "image": null
+        },
+        {
+            "id": "LIV-381",
+            "question": "Citez quelques auteurs français récents et leurs œuvres ?",
+            "explanation": "- Jean d'Ormesson : La Gloire de l'Empire Ce roman mêle fiction et réflexion historique, proposant une vision de l’histoire à travers les yeux d’un personnage imaginaire, tout en offrant une réflexion sur la quête du pouvoir et de la gloire. - Leïla Slimani : Chanson Douce Ce roman aborde les thèmes de la maternité, de la psychologie et des inégalités sociales à travers l’histoire de la relation entre une nourrice et les parents d’une famille parisienne. - Michel Houellebecq : Soumission",
+            "image": null
+        },
+        {
+            "id": "LIV-382",
+            "question": "Qui est Simone de Beauvoir ?",
+            "explanation": "Simone de Beauvoir était une philosophe, écrivaine et militante féministe française. Elle est l'autrice de Le Deuxième Sexe, un ouvrage fondamental sur les inégalités de genre et l'émancipation des femmes.",
+            "image": null
+        },
+        {
+            "id": "LIV-383",
+            "question": "Citez des personnalités que vous connaissez qui sont enterrées au Panthéon ?",
+            "explanation": "- Voltaire (1694-1778) - Philosophe des Lumières, connu pour son esprit critique, sa défense de la liberté civile et de la séparation de l'Église et de l'État. - Jean-Jacques Rousseau (1712-1778) - Philosophe, écrivain et compositeur, ses idées ont influencé la Révolution française, l'éducation moderne et la théorie politique. - Victor Hugo (1802-1885) - Écrivain, poète et dramaturge, auteur de chefs-d'œuvre comme Les Misérables et Notre- Dame de Paris. Il est aussi connu pour son engagement politique et social. - Émile Zola (1840-1902) - Écrivain et journaliste, figure majeure du naturalisme dans la littérature. Il est également connu pour son intervention dans l'Affaire Dreyfus avec son fameux article J'accuse...!. - Marie Curie (1867-1934) - Physicienne et chimiste, pionnière dans le domaine de la radioactivité, elle est la première femme à recevoir le Prix Nobel et la seule personne à en avoir reçu deux dans deux domaines scientifiques différents (Physique et Chimie).",
+            "image": null
+        },
+        {
+            "id": "LIV-384",
+            "question": "Qu'ont en commun les pays européens ?",
+            "explanation": "Les pays européens partagent une histoire, des valeurs culturelles, économiques et politiques similaires. La plupart sont membres de l'Union européenne (UE), qui favorise la coopération économique, politique et sociale. Ils adhèrent à des principes communs comme la démocratie, les droits de l'homme et l'état de droit. De plus, de nombreux pays européens utilisent l'euro comme monnaie et participent à des accords communs comme l'espace Schengen.",
+            "image": null
+        },
+        {
+            "id": "LIV-385",
+            "question": "Quel texte définit l'organisation de l'État ?",
+            "explanation": "La Constitution de la Ve République (adoptée en 1958).",
+            "image": null
+        },
+        {
+            "id": "LIV-386",
+            "question": "Sur quel principe sont fondées les institutions françaises ?",
+            "explanation": "Sur la séparation des pouvoirs : législatif, exécutif et autorité judiciaire.",
+            "image": null
+        },
+        {
+            "id": "LIV-387",
+            "question": "Qui est élu au suffrage universel ?",
+            "explanation": "Le Président de la République, les députés (suffrage direct), les sénateurs (suffrage indirect) et les maires.",
+            "image": null
+        },
+        {
+            "id": "LIV-388",
+            "question": "Qu'est-ce que le suffrage universel ?",
+            "explanation": "C'est le droit de vote pour tous les citoyens majeurs (18 ans) disposant de leurs droits civils et politiques.",
+            "image": null
+        },
+        {
+            "id": "LIV-389",
+            "question": "Qui dirige le Gouvernement ?",
+            "explanation": "Le Premier ministre, nommé par le Président de la République.",
+            "image": null
+        },
+        {
+            "id": "LIV-390",
+            "question": "Quel est le rôle de la Justice ?",
+            "explanation": "Elle règle les litiges et sanctionne les infractions aux lois. Elle est indépendante.",
+            "image": null
+        },
+        {
+            "id": "LIV-391",
+            "question": "Êtes-vous d'accord avec le régime démocratique ?",
+            "explanation": "Absolument !",
+            "image": null
+        },
+        {
+            "id": "LIV-392",
+            "question": "Qu'est-ce que la discrimination pour vous?",
+            "explanation": "La discrimination c'est par exemple de ne pas recruter quelqu'un à cause de son origine, ou de son appartenance à une ethnie ou une religion ou même de son sexe, le seul et unique critère d'embauche doit être la compétence.",
+            "image": null
+        },
+        {
+            "id": "LIV-393",
+            "question": "La discrimination est-elle légale en France?",
+            "explanation": "Non pas du tout, c'est un délit passible de graves et lourdes sanctions judiciaires.",
+            "image": null
+        },
+        {
+            "id": "LIV-394",
+            "question": "Les citoyens sont-ils toujours satisfaits des choix du gouvernement ?",
+            "explanation": "Non, les citoyens ne sont pas toujours d'accord avec les décisions du gouvernement.",
+            "image": null
+        },
+        {
+            "id": "LIV-395",
+            "question": "Comment manifestent ils leur désaccord ?",
+            "explanation": "En manifestant, en faisant grève etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-396",
+            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
+            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "image": null
+        },
+        {
+            "id": "LIV-397",
+            "question": "Quel a été le fait marquant de la 5éme république ?",
+            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": "LIV-398",
+            "question": "Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?",
+            "explanation": "Elle a eu lieu le 09 Décembre 1905.",
+            "image": null
+        },
+        {
+            "id": "LIV-399",
+            "question": "En quelle année a été aboli l'esclavage en France ?",
+            "explanation": "Le 27 avril 1848.",
+            "image": null
+        },
+        {
+            "id": "LIV-400",
+            "question": "Si l'on devait rajouter une valeur quelle sera-t-elle selon vous ?",
+            "explanation": "La Laïcité.",
+            "image": null
+        },
+        {
+            "id": "LIV-401",
+            "question": "Dans quelle république sommes nous ?",
+            "explanation": "Nous sommes dans la cinquième république.",
+            "image": null
+        },
+        {
+            "id": "LIV-402",
+            "question": "Quand sont les dates des républiques précédentes?",
+            "explanation": "- La première république : 1792-1804  - La deuxième république : 1848 – 1852  - La troisième république : 1870 – 1940  - La quatrième république : 1946-1958  - La cinquième république : 1958 – aujourd'hui.",
+            "image": null
+        },
+        {
+            "id": "LIV-403",
+            "question": "Qui a instauré la cinquième république ?",
+            "explanation": "C'est le général Charles de Gaule.",
+            "image": null
+        },
+        {
+            "id": "LIV-404",
+            "question": "Ou se trouve le siège de la présidence de la république ?",
+            "explanation": "Il se trouve au Palais de l’Élysée.",
+            "image": null
+        },
+        {
+            "id": "LIV-405",
+            "question": "Quel est l'âge de la majorité en France ?",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-406",
+            "question": "Citez les différentes institutions politiques en France ?",
+            "explanation": "- Le pouvoir exécutif.  - Le pouvoir législatif.  - Le pouvoir judiciaire.",
+            "image": null
+        },
+        {
+            "id": "LIV-407",
+            "question": "Comment sont élus les députés ?",
+            "explanation": "Les députés sont élus au suffrage universel direct uninominal majoritaire à deux tours.",
+            "image": null
+        },
+        {
+            "id": "LIV-408",
+            "question": "Pour combien d'années sont élus les députés ?",
+            "explanation": "Les députés sont élus pour un mandat de cinq ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-409",
+            "question": "Qui constitue le gouvernement ?",
+            "explanation": "- Le premier ministre.  - Les ministres.  - Les secrétaires d’état.",
+            "image": null
+        },
+        {
+            "id": "LIV-410",
+            "question": "Pour combien d'année est son mandat ?",
+            "explanation": "Son mandat est de 5 ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-411",
+            "question": "Qu'est-ce que la chambre basse ?",
+            "explanation": "C’est l’assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": "LIV-412",
+            "question": "Qu'est-ce que la chambre haute ?",
+            "explanation": "C’est le Sénat.",
+            "image": null
+        },
+        {
+            "id": "LIV-413",
+            "question": "Savez vous ce qu'est la cohabitation politique ?",
+            "explanation": "La cohabitation politique désigne la coexistence institutionnelle entre un chef de l’État et un chef du gouvernement (issu de la majorité parlementaire) politiquement antagonistes.",
+            "image": null
+        },
+        {
+            "id": "LIV-414",
+            "question": "Citez un exemple de cohabitation politique en France ?",
+            "explanation": "- Mitterrand (PS) / Chirac (RPR). - Chirac (RPR) / Jospin (PS).",
+            "image": null
+        },
+        {
+            "id": "LIV-415",
+            "question": "Qui a écrit la Marseillaise ?",
+            "explanation": "C'est Claude Joseph Rouget de Lisle.",
+            "image": null
+        },
+        {
+            "id": "LIV-416",
+            "question": "Connaissez vous le premier couplet de la Marseillaise ?",
+            "explanation": "Allons enfants de la Patrie, Le jour de gloire est arrivé !  Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes !  Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !",
+            "image": null
+        },
+        {
+            "id": "LIV-417",
+            "question": "À quelle occasion la Marseillaise a-t-elle été écrite ?",
+            "explanation": "Dans la nuit du 25 au 26 avril 1792, à la suite de la déclaration de guerre du roi d'Autriche, elle fut composée chez le maire de Strasbourg, dénommé Dietrich, la marseillaise s'intitula \"Chant de guerre pour l'armée du Rhin\".",
+            "image": null
+        },
+        {
+            "id": "LIV-418",
+            "question": "Combien de pays compte l'union européenne ?",
+            "explanation": "En 2024 l'union Européennes compte 27 états membres. (Le Royaume-Uni a quitté l'union Européenne en 2020 durant le Brexit)",
+            "image": null
+        },
+        {
+            "id": "LIV-419",
+            "question": "Dans quel intérêt les pays européens rejoignent l'union européenne ?",
+            "explanation": "Pour bénéficier d’un marché commun, assurer la paix, favoriser la coopération économique et politique.",
+            "image": null
+        },
+        {
+            "id": "LIV-420",
+            "question": "Ou se trouve le siège de la commission européenne ?",
+            "explanation": "Il se trouve à Bruxelles en Belgique.",
+            "image": null
+        },
+        {
+            "id": "LIV-421",
+            "question": "Quel pays détient la présidence de l'union européenne cette année (2025) ?",
+            "explanation": "En 2025, la Pologne détient la présidence tournante du Conseil de l'Union européenne du 1er janvier au 30 juin. Cette présidence vise à renforcer la sécurité européenne et à promouvoir la coopération entre les États membres.",
+            "image": null
+        },
+        {
+            "id": "LIV-422",
+            "question": "Combien d'étoiles comporte-t-il ?",
+            "explanation": "Il comporte 12 étoiles disposées en cercle.",
+            "image": null
+        },
+        {
+            "id": "LIV-423",
+            "question": "Que symbolisent ces étoiles ?",
+            "explanation": "Elles symbolisent les idéaux d'unité, de solidarité et d'harmonie entre les peuples européens.",
+            "image": null
+        },
+        {
+            "id": "LIV-424",
+            "question": "Que représente la journée du 09 Mai ?",
+            "explanation": "C'est la journée de l'Europe qui représente le jour de la paix.",
+            "image": null
+        },
+        {
+            "id": "LIV-425",
+            "question": "Que connaissez vous sur le traité de Rome ? et quand a-il-eu lieu ?",
+            "explanation": "Le 25 mars 1957, l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas signent à Rome deux traités : le premier crée la Communauté économique européenne (CEE) ; le second crée la Communauté européenne de l'énergie atomique (CEEA ou Euratom)",
+            "image": null
+        },
+        {
+            "id": "LIV-426",
+            "question": "Que pensez vous de la parité hommes femmes ?",
+            "explanation": "La parité hommes-femmes est un objectif important pour assurer l'égalité des droits et des opportunités entre les sexes. Malgré des progrès significatifs, il reste encore des efforts à faire dans certains domaines, notamment en politique, dans les entreprises et au niveau salarial.",
+            "image": null
+        },
+        {
+            "id": "LIV-427",
+            "question": "Avons-nous atteint cette parité dans tous les domaines ?",
+            "explanation": "Non, la parité hommes-femmes n'est pas encore atteinte dans tous les domaines, notamment en politique, dans certains secteurs professionnels, et en matière de salaires.",
+            "image": null
+        },
+        {
+            "id": "LIV-428",
+            "question": "Qui décidera de vous octroyer ou non la nationalité française ?",
+            "explanation": "C’est le ministre de l’Intérieur qui décide de vous accorder ou non la nationalité française.",
+            "image": null
+        },
+        {
+            "id": "LIV-429",
+            "question": "En quelle année les citoyens Français sont-ils devenus Européens ?",
+            "explanation": "Les citoyens français sont devenus citoyens européens en 1992, avec l'entrée en vigueur du traité de Maastricht.",
+            "image": null
+        },
+        {
+            "id": "LIV-430",
+            "question": "En cas de conflit armé qui pourra être appelé à défendre la patrie ?",
+            "explanation": "Tous les citoyens français peuvent être appelés à défendre la patrie en cas de conflit armé, notamment par le biais du service national ou de la mobilisation générale.",
+            "image": null
+        },
+        {
+            "id": "LIV-431",
+            "question": "Par qui est-il financé ?",
+            "explanation": "Il est financé par les entreprises et les gens qui travaillent (c’est une application de la fraternité)",
+            "image": null
+        },
+        {
+            "id": "LIV-432",
+            "question": "Qui finance les services publics ?",
+            "explanation": "Ce sont les gens qui travaillent à travers les impôts.",
+            "image": null
+        },
+        {
+            "id": "LIV-433",
+            "question": "Si vous obtenez la nationalité Française comptez-vous vivre en France ?",
+            "explanation": "Encore une question piège de l’entretien de naturalisation Française, vous obtenez la nationalité Française pour vivre principalement en France !",
+            "image": null
+        },
+        {
+            "id": "LIV-434",
+            "question": "Pouvez-vous citer quelques partis politiques français ?",
+            "explanation": "Parmi les principaux partis politiques en France, on trouve Renaissance (ex-La République en Marche), Les Républicains, le Parti Socialiste, La France Insoumise et le Rassemblement National.",
+            "image": null
+        },
+        {
+            "id": "LIV-435",
+            "question": "Si l'on devait ajouter une cinquième valeur aux principes fondamentaux de la République française, que serait-elle selon vous ?",
+            "explanation": "L'indivisibilité : signifie que la République ne peut être fragmentée : il n’existe qu’un seul peuple français, avec les mêmes lois sur tout le territoire.",
+            "image": null
+        },
+        {
+            "id": "LIV-436",
+            "question": "Que signifie Le faisceau de licteur ?",
+            "explanation": "Le faisceau de licteur est un symbole de l'autorité de l'État en France. Il représente l'unité et la force collective du peuple français. Il est composé d'un faisceau de verges entourant une hache, rappelant l'autorité de la République et la puissance de l'État.",
+            "image": null
+        },
+        {
+            "id": "LIV-437",
+            "question": "Que signifie Le sceau de la république ?",
+            "explanation": "Le sceau de la République française est utilisé pour authentifier les actes officiels du gouvernement. Il représente l'État et est généralement gravé sur les documents officiels et les pièces de monnaie. Le sceau peut varier dans sa représentation, mais il symbolise l'autorité et l'authenticité des décisions et des actes de l'État.",
+            "image": null
+        },
+        {
+            "id": "LIV-438",
+            "question": "Que signifie la république pour vous ?",
+            "explanation": "La république est un mode d'organisation d'un pays dans lequel le pouvoir est exercé par des représentants élus de la population (directement ou indirectement). Le chef de l'État exerçant un mandat temporaire est désigné pour un mandat limité (souvent par élection) et ne détient pas le pouvoir de manière exclusive.",
+            "image": null
+        },
+        {
+            "id": "LIV-439",
+            "question": "Quels sont les différents types de Monarchies ?",
+            "explanation": "- Monarchie absolue → Le roi détient tous les pouvoirs (ex : Arabie Saoudite). - Monarchie constitutionnelle → Le roi règne mais ne gouverne pas, il partage le pouvoir avec un gouvernement élu (ex : Royaume-Uni, Espagne). - Monarchie parlementaire → Le roi a un rôle symbolique, tout le pouvoir appartient au parlement élu (ex : Suède, Belgique).",
+            "image": null
+        },
+        {
+            "id": "LIV-440",
+            "question": "Quels sont les différents types de Républiques",
+            "explanation": "- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil). - République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie). - République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie). - République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).",
+            "image": null
+        },
+        {
+            "id": "LIV-441",
+            "question": "Où se situe le siège de la Présidence de la République ?",
+            "explanation": "Le siège de la Présidence de la République est situé à l'Élysée.",
+            "image": null
+        },
+        {
+            "id": "LIV-442",
+            "question": "Dans quelle république nous trouvons-nous actuellement ?",
+            "explanation": "Nous nous trouvons actuellement dans la Cinquième République, instaurée par Charles de Gaulle.",
+            "image": null
+        },
+        {
+            "id": "LIV-443",
+            "question": "Quand la Cinquième République a-t- elle été instaurée et quel événement marquant l'a accompagnée ?",
+            "explanation": "La Constitution de la Cinquième République a été adoptée en 1958, marquant ainsi la séparation des pouvoirs exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": "LIV-444",
+            "question": "Qui détient le commandement de l'armée ?",
+            "explanation": "Le président de la République.",
+            "image": null
+        },
+        {
+            "id": "LIV-445",
+            "question": "Quel est le système politique de la France ?",
+            "explanation": "Une république semi-présidentielle.",
+            "image": null
+        },
+        {
+            "id": "LIV-446",
+            "question": "Quel est le régime politique de la France ?",
+            "explanation": "La France est une république démocratique.",
+            "image": null
+        },
+        {
+            "id": "LIV-447",
+            "question": "Quelles sont les principales institutions de la République française ?",
+            "explanation": "Les institutions comprennent : - Le pouvoir exécutif : Ce pouvoir est détenu par le président de la République et le gouvernement dirigé par le Premier ministre. Ils sont responsables de l’application des lois et de la gestion de la politique nationale et internationale. Le président nomme le Premier ministre, préside le Conseil des ministres, et peut proposer des référendums ou dissoudre l’Assemblée nationale. - Le pouvoir législatif : Ce pouvoir est exercé par le Parlement, composé de deux chambres, chambre basse « l’Assemblée nationale » et la chambre haute « du Sénat ». Leur mission est de voter les lois et de contrôler le gouvernement. Les députés de l’Assemblée nationale sont élus au suffrage direct pour cinq ans, tandis que les sénateurs sont élus au suffrage indirect pour six ans. L'Assemblée a une prépondérance en cas de désaccord entre les deux chambres. - Le pouvoir judiciaire : Ce pouvoir est indépendant et exercé par les juges et magistrats. Son rôle est de garantir le respect des lois et de trancher les litiges, protégeant ainsi les droits des citoyens. Le Conseil constitutionnel veille, quant à lui, à la conformité des lois à la Constitution.",
+            "image": null
+        },
+        {
+            "id": "LIV-448",
+            "question": "C’est quoi le gouvernement ?",
+            "explanation": "Le gouvernement est l'organe exécutif chargé de mettre en œuvre les lois et de gérer le pays. Il est dirigé par le Premier ministre et comprend des ministres, chacun responsable d'un secteur particulier comme l'économie ou la santé. Les secrétaires d'État sont des membres du gouvernement qui assistent les ministres dans des domaines spécifiques. Ils ont un rôle plus restreint que les ministres, mais aident à la gestion des affaires publiques. Le gouvernement agit sous l'autorité du président de la République.",
+            "image": null
+        },
+        {
+            "id": "LIV-449",
+            "question": "C'est quoi le suffrage universel ?",
+            "explanation": "Le suffrage universel est un système de vote où tous les citoyens adultes, sans distinction de sexe, de richesse ou de statut, ont le droit de participer aux élections. En France, il est utilisé pour élire les députés, le président de la République et d'autres représentants. Il peut être direct (le peuple vote directement pour les candidats) ou indirect (les électeurs désignent des représentants qui choisiront les élus).",
+            "image": null
+        },
+        {
+            "id": "LIV-450",
+            "question": "C'est quoi l'article 49.3 ?",
+            "explanation": "L'article 49.3 de la constitution permet au gouvernement de faire passer une loi sans vote à l’Assemblée nationale. Les députés peuvent répondre en déposant une motion de censure. Si elle est votée, le gouvernement tombe. Sinon, la loi est adoptée automatiquement.",
+            "image": null
+        },
+        {
+            "id": "LIV-451",
+            "question": "C'est quoi une motion de censure ?",
+            "explanation": "Une motion de censure est un vote organisé par l’Assemblée nationale pour exprimer un désaccord avec le gouvernement. Si la majorité des députés vote cette motion, le gouvernement doit démissionner.",
+            "image": null
+        },
+        {
+            "id": "LIV-452",
+            "question": "Quelles sont les conditions pour adopter une motion de censure ?",
+            "explanation": "Pour qu'une motion de censure soit adoptée à l’Assemblée nationale, elle doit respecter plusieurs conditions notamment : - Être déposée par au moins 1/10ᵉ des députés (soit 58 sur 577). - Être votée à la majorité absolue des députés, soit au moins 289 voix sur 577. Si elle est adoptée, le gouvernement doit démissionner immédiatement.",
+            "image": null
+        },
+        {
+            "id": "LIV-453",
+            "question": "Quel est le délai pour déposer une motion de censure après l’utilisation du 49.3 ?",
+            "explanation": "Après l’engagement de la responsabilité du gouvernement sur un texte avec l’article 49.3, les députés ont un délai de 24 heures pour déposer une motion de censure. Passé ce délai, aucune motion ne peut être enregistrée, et la loi est adoptée automatiquement si aucune motion n’a été votée.",
+            "image": null
+        },
+        {
+            "id": "LIV-454",
+            "question": "Qu'est-ce que la cohabitation en politique française ?",
+            "explanation": "Une période où le Président de la République et le Premier ministre appartiennent à des camps politiques opposés.",
+            "image": null
+        },
+        {
+            "id": "LIV-455",
+            "question": "Comment est élu le maire ?",
+            "explanation": "Le maire est élu au suffrage indirect. Cela signifie que ce ne sont pas directement les habitants qui votent pour lui, mais les membres du conseil municipal.",
+            "image": null
+        },
+        {
+            "id": "LIV-456",
+            "question": "Comment est élu le conseil municipal ?",
+            "explanation": "- Lors des élections municipales, les habitants de la commune votent pour élire les conseillers municipaux. Ces élections ont lieu tous les 6 ans. - Le mode de scrutin dépend de la taille de la commune (majoritaire pour les petites communes, proportionnel pour les grandes).  - Une fois élus, les conseillers municipaux se réunissent lors de leur première séance. - Ils votent pour choisir le maire parmi eux. - L’élection se fait à bulletin secret et le maire doit obtenir la majorité absolue (plus de la moitié des voix).",
+            "image": null
+        },
+        {
+            "id": "LIV-457",
+            "question": "Comment sont élus les adjoints aux maires :",
+            "explanation": "Les adjoints au maire sont élus par le conseil municipal lors de sa première réunion après les élections municipales. L’élection se fait au scrutin de liste à la majorité absolue. Leur nombre est déterminé en fonction de la taille de la commune, et ils assistent le maire dans ses fonctions en recevant des délégations de compétences.",
+            "image": null
+        },
+        {
+            "id": "LIV-458",
+            "question": "Quelle est la fonction du Médiateur de la République ?",
+            "explanation": "Aider à résoudre les litiges entre les citoyens et l'administration.",
+            "image": null
+        },
+        {
+            "id": "LIV-459",
+            "question": "Quels sont les quatre premières personnalités de l'État en France ?",
+            "explanation": "- Le Président de la République → Chef de l'État, garant des institutions et de la Constitution. - Le Premier ministre → Chef du gouvernement, responsable de la politique nationale. - Le Président du Sénat → Deuxième personnage de l’État, il assure l’intérim en cas de vacance de la présidence. - Le Président de l’Assemblée nationale → Dirige les débats à l’Assemblée et joue un rôle clé dans le processus législatif. Cet ordre définit aussi la hiérarchie dans les cérémonies et l’État.",
+            "image": null
+        },
+        {
+            "id": "LIV-460",
+            "question": "quel était le résultat de cette ouverture ?",
+            "explanation": "Chaque ordre devait exprimer ses doléances (revendications) durant cette réunion. Le Tiers-État, frustré par l'injustice du système de vote, se proclame Assemblée nationale le 17 juin 1789, marquant ainsi le début de la Révolution française.",
+            "image": null
+        },
+        {
+            "id": "LIV-461",
+            "question": "Quand et pourquoi la Première République a-t-elle été proclamée ?",
+            "explanation": "Elle a été proclamée le 21 septembre 1792 après la chute de la monarchie. La fuite du roi en 1791 et son procès pour trahison ont contribué à son abolition.",
+            "image": null
+        },
+        {
+            "id": "LIV-462",
+            "question": "Quand la Première République prend-elle fin?",
+            "explanation": "Le 2 décembre 1804, Napoléon Bonaparte se fait sacrer Empereur des Français, mettant fin à la Première République et établissant le Premier Empire.",
+            "image": null
+        },
+        {
+            "id": "LIV-463",
+            "question": "Quand et pourquoi la Deuxième République a-t-elle été proclamée ?",
+            "explanation": "Elle est proclamée le 24 février 1848, après la révolution de février qui entraîne l'abdication du roi Louis-Philippe Ier et la fin de la monarchie de Juillet.",
+            "image": null
+        },
+        {
+            "id": "LIV-464",
+            "question": "Quelles sont les premières grandes mesures de la Deuxième République ?",
+            "explanation": "- Établissement du suffrage universel masculin (27 millions de citoyens peuvent voter). - Abolition définitive de l'esclavage dans les colonies françaises (27 avril 1848, sous l'impulsion de Victor Schœlcher). - Création des Ateliers nationaux pour fournir du travail aux ouvriers (abandonnés après peu de temps).",
+            "image": null
+        },
+        {
+            "id": "LIV-465",
+            "question": "Comment la Deuxième République prend-elle fin ?",
+            "explanation": "Par le coup d'État du 2 décembre 1851, où Louis-Napoléon Bonaparte dissout l’Assemblée nationale et établit un pouvoir personnel.",
+            "image": null
+        },
+        {
+            "id": "LIV-466",
+            "question": "Que devient la France après la Deuxième République ?",
+            "explanation": "Un an après son coup d’État, Louis-Napoléon Bonaparte se fait proclamer empereur sous le nom de Napoléon III, marquant le début du Second Empire (1852-1870).",
+            "image": null
+        },
+        {
+            "id": "LIV-467",
+            "question": "Qu'est-ce que le régime de Vichy et pourquoi a-t-il été instauré ?",
+            "explanation": "Le régime de Vichy, officiellement \"l’État français\", est le gouvernement mis en place après la défaite de la France face à l'Allemagne nazie en juin 1940. Le 10 juillet 1940, l’Assemblée nationale vote les pleins pouvoirs au maréchal Philippe Pétain, mettant ainsi fin à la Troisième République.",
+            "image": null
+        },
+        {
+            "id": "LIV-468",
+            "question": "Quand la Quatrième République est-elle instaurée ?",
+            "explanation": "Après la Seconde Guerre mondiale, la nouvelle Constitution est adoptée par référendum le 13 octobre 1946, rétablissant la République.",
+            "image": null
+        },
+        {
+            "id": "LIV-469",
+            "question": "Comment fonctionne la Quatrième République ?",
+            "explanation": "Un régime parlementaire, où le président de la République a peu de pouvoirs. Un gouvernement responsable devant l'Assemblée nationale, qui peut le renverser par une motion de censure.",
+            "image": null
+        },
+        {
+            "id": "LIV-470",
+            "question": "Quels sont les grands événements sous la Quatrième République ?",
+            "explanation": "- Reconstruction économique après la guerre. -",
+            "image": null
+        },
+        {
+            "id": "LIV-471",
+            "question": "Pourquoi la Quatrième République prend-elle fin ?",
+            "explanation": "L’instabilité politique (plus de 20 gouvernements en 12 ans) et la crise de la guerre d’Algérie mènent au retour du général de Gaulle, qui propose une nouvelle Constitution en 1958, donnant naissance à la Cinquième République.",
+            "image": null
+        },
+        {
+            "id": "LIV-472",
+            "question": "Qu'est-ce que la Convention nationale ?",
+            "explanation": "La Convention nationale était l'assemblée qui gouvernait la France du 21 septembre 1792 au 26 octobre 1795, pendant la Première République. Elle a aboli la monarchie, proclamé la République et jugé Louis XVI (16). Elle était composée de députés élus au suffrage universel masculin et divisée en plusieurs courants politiques, comme les Montagnards et les Girondins.",
+            "image": null
+        },
+        {
+            "id": "LIV-473",
+            "question": "Qui est Simone Veil ?",
+            "explanation": "Simone Veil (1927-2017) était une femme politique française, rescapée de la déportation pendant la Seconde Guerre mondiale. Elle est principalement connue pour avoir porté la loi dépénalisant l’interruption volontaire de grossesse (IVG) en 1975 lorsqu'elle était ministre de la Santé. Elle a également été présidente du Parlement européen et membre de l'Académie française. Son engagement en faveur des droits des femmes et de la mémoire de la Shoah a marqué l’histoire de la France. Elle repose au Panthéon depuis 2018.",
+            "image": null
+        },
+        {
+            "id": "LIV-474",
+            "question": "Quels sont les moments clés de la Cinquième République ?",
+            "explanation": "-",
+            "image": null
+        },
+        {
+            "id": "LIV-475",
+            "question": "Qu’est-ce qui change avec la Cinquième République ?",
+            "explanation": "La Cinquième République se distingue notamment par : - Le président est élu au suffrage universel direct (depuis 1962). - Le président a le pouvoir de nommer le Premier ministre, dissoudre l’Assemblée nationale et recourir à des pouvoirs exceptionnels (article 16). - Fin du régime d’instabilité gouvernementale de la Quatrième République (fréquents changements de gouvernement). - Introduction du 49.3, permettant au gouvernement d’adopter une loi sans vote du Parlement sauf en cas de motion de censure. - Le Parlement (Assemblée nationale et Sénat) conserve un rôle de contrôle, mais il ne peut plus renverser facilement le gouvernement. - Le Sénat ne peut pas bloquer définitivement une loi, contrairement à l’Assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": "LIV-476",
+            "question": "Qui est Édith Cresson ?",
+            "explanation": "Édith Cresson est une femme politique française qui a été la première et à ce jour la seule femme à occuper le poste de Premier ministre en France. Elle a exercé cette fonction de 1991 à 1992 sous la présidence de François Mitterrand. Avant cela, elle a occupé plusieurs postes ministériels et a ensuite été commissaire européenne.",
+            "image": null
+        },
+        {
+            "id": "LIV-477",
+            "question": "En quelle année a été adoptée la Ve République en France ?",
+            "explanation": "1958.",
+            "image": null
+        },
+        {
+            "id": "LIV-478",
+            "question": "À quelles dates ont été établies les cinq Républiques françaises ?",
+            "explanation": "- Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie. - Deuxième République : instaurée le 24 février 1848 par le gouvernement provisoire à la suite de la Révolution de 1848.  - Troisième République : proclamée le 4 septembre 1870 par Léon Gambetta et d'autres républicains après la défaite de Napoléon III. - Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération. - Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.",
+            "image": null
+        },
+        {
+            "id": "LIV-479",
+            "question": "Qui est Léon Blum ?",
+            "explanation": "Léon Blum fut un homme politique français, leader du Parti Socialiste et Premier ministre du Front Populaire en 1936. Il est célèbre pour avoir instauré des réformes sociales majeures, comme la semaine de travail de 40 heures et les congés payés. Sa politique a marqué l'histoire de la France en renforçant les droits des travailleurs et en modernisant le pays sur le plan social.",
+            "image": null
+        },
+        {
+            "id": "LIV-480",
+            "question": "Comment la France a-t-elle obtenu la Corse ?",
+            "explanation": "La Corse a été cédée à la France par la République de Gênes en 1768. Cette acquisition a été importante pour la France, tant pour des raisons stratégiques que culturelles, la Corse étant la terre natale de Napoléon Bonaparte.",
+            "image": null
+        },
+        {
+            "id": "LIV-481",
+            "question": "Qui est François Mitterrand ?",
+            "explanation": "François Mitterrand fut le président de la République française de 1981 à 1995, un des plus longs mandats de l’histoire de la France. Il a mis en place des réformes majeures, notamment l’abolition de la peine de mort, la décentralisation et des politiques sociales. Mitterrand a également joué un rôle déterminant dans la construction de l’Union européenne.",
+            "image": null
+        },
+        {
+            "id": "LIV-482",
+            "question": "Quels pays font partie de l'Union européenne mais pas de la zone euro ?",
+            "explanation": "Certaines nations membres de l'Union européenne n'ont pas adopté l'euro comme monnaie officielle. Ces pays continuent à utiliser leur propre monnaie nationale. Voici quelques exemples : - Suède (utilise la couronne suédoise) - Danemark (utilise la couronne danoise) - Pologne (utilise le złoty) - Hongrie (utilise le forint) - République tchèque (utilise la couronne tchèque) - Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro.  Fin de la seconde édition",
+            "image": null
+        },
+        {
+            "id": "LIV-483",
+            "question": "Combien y a-t-il de communes et qui les administre ?",
+            "explanation": "Environ 35 000 communes (34 965 en 2021), administrées par un maire et un conseil municipal.",
+            "image": null
+        },
+        {
+            "id": "LIV-484",
+            "question": "Quelles sont les compétences de la commune ?",
+            "explanation": "Écoles primaires et maternelles, état civil (naissances, mariages, décès), voirie, activités culturelles et sportives.",
+            "image": null
+        },
+        {
+            "id": "LIV-485",
+            "question": "Qui administre le département et quelles sont ses compétences ?",
+            "explanation": "Le conseil départemental (101 départements). Il gère les collèges, la protection sociale (enfance, personnes âgées).",
+            "image": null
+        },
+        {
+            "id": "LIV-486",
+            "question": "Quelles sont les compétences de la région ?",
+            "explanation": "Le conseil régional (13 régions métropolitaines) gère les lycées, la formation professionnelle et les transports.",
+            "image": null
+        },
+        {
+            "id": "LIV-487",
+            "question": "Combien y a-t-il de territoires d'Outre-mer ?",
+            "explanation": "12 territoires (Départements/Régions et Collectivités d'Outre-mer).",
+            "image": null
+        },
+        {
+            "id": "LIV-488",
+            "question": "Qui représente l'État dans les départements et régions ?",
+            "explanation": "Le Préfet.",
+            "image": null
+        },
+        {
+            "id": "LIV-489",
+            "question": "Où habitez-vous actuellement ?",
+            "explanation": "J’habite à (Ville, Département).",
+            "image": null
+        },
+        {
+            "id": "LIV-490",
+            "question": "Avez-vous visité d'autres villes en France ? Lesquelles et qu'avez-vous appris de ces visites ?",
+            "explanation": "Oui, j'ai visité (noms des villes, par exemple : Lyon, Bordeaux, Marseille). Chaque visite m'a permis de découvrir la diversité culturelle et régionale de la France, renforçant mon appréciation pour le pays.",
+            "image": null
+        },
+        {
+            "id": "LIV-491",
+            "question": "Vous habitez seul(e) ou en famille ?",
+            "explanation": "J’habite (seul(e) / en famille) à (ville ou région).",
+            "image": null
+        },
+        {
+            "id": "LIV-492",
+            "question": "Où passez-vous habituellement vos vacances ?",
+            "explanation": "Nous passons nos vacances soit en explorant différentes régions de France pour découvrir sa beauté et sa diversité, soit en retournant dans notre pays d'origine pour rester connectés à nos racines et revoir notre famille.",
+            "image": null
+        },
+        {
+            "id": "LIV-493",
+            "question": "Quelles sont les 3 types de collectivités en France ?",
+            "explanation": "Communes",
+            "image": null
+        },
+        {
+            "id": "LIV-494",
+            "question": "Comment sont élus les conseillers départementaux ?",
+            "explanation": "Les conseillers départementaux sont élus pour six ans au suffrage universel direct, mais avec un scrutin binominal majoritaire à deux tours.",
+            "image": null
+        },
+        {
+            "id": "LIV-495",
+            "question": "Quelles sont les principales réformes de Napoléon sous le Consulat ?",
+            "explanation": "- Création des préfets pour administrer les départements. - Réforme de l'éducation avec les lycées. - Création du franc germinal (monnaie stable). - Adoption du Code civil (1804), qui influence encore le droit français.",
+            "image": null
+        },
+        {
+            "id": "LIV-496",
+            "question": "Comment la France a-t-elle été impliquée dans la colonisation ?",
+            "explanation": "La France a été une des principales puissances coloniales, avec un empire s'étendant sur plusieurs continents, notamment en Afrique, en Asie et dans les Caraïbes. La colonisation a eu des répercussions durables sur ces régions et continue d'influencer les relations internationales et la politique française.",
+            "image": null
+        },
+        {
+            "id": "LIV-497",
+            "question": "Citez un plat typique de votre région ?",
+            "explanation": "Provence-Alpes-Côte d'Azur : La ratatouille – Bretagne : Les crêpes – Normandie : Le camembert –",
+            "image": null
+        },
+        {
+            "id": "LIV-498",
+            "question": "Quel fromage est souvent associé à la région de Normandie ?",
+            "explanation": "Le Camembert.",
+            "image": null
+        },
+        {
+            "id": "LIV-499",
+            "question": "Pouvez-vous nommer des départements d’outre-mer (DOM) ?",
+            "explanation": "Les départements d’outre-mer (DOM) comprennent la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.",
+            "image": null
+        },
+        {
+            "id": "LIV-500",
+            "question": "Quelles sont les collectivités d’outre- mer ?",
+            "explanation": "Les collectivités d’outre-mer comprennent la Polynésie française, Saint-Barthélemy, SaintMartin, Saint-Pierre-et- Miquelon et Wallis-et-Futuna. Il existe également des statuts particuliers, notamment la Nouvelle-Calédonie, les Terres australes et antarctiques françaises, ainsi que l'île de Clipperton.",
+            "image": null
+        },
+        {
+            "id": "LIV-501",
+            "question": "Combien y a-t-il de collectivités et territoires d’Outre-mer (COM-TOM) ?",
+            "explanation": "Il y a 6 collectivités d’Outre-mer (COM) et 1 territoire spécial : - Polynésie française - Saint-Pierre-et-Miquelon - Saint-Barthélemy - Saint-Martin - Wallis-et-Futuna - Nouvelle-Calédonie (statut spécial) Ces territoires ont plus d’autonomie et des règles spécifiques.",
+            "image": null
+        },
+        {
+            "id": "LIV-502",
+            "question": "Quelle est la région française réputée pour ses vignobles ?",
+            "explanation": "La Bourgogne.",
+            "image": null
+        },
+        {
+            "id": "LIV-503",
+            "question": "Quelle région française est connue pour la production de champagne ?",
+            "explanation": "La Champagne.",
+            "image": null
+        },
+        {
+            "id": "LIV-504",
+            "question": "Quelle est la première femme à avoir été élue maire d'une grande ville en France ?",
+            "explanation": "Catherine Trautmann, maire de Strasbourg en 1989.",
+            "image": null
+        },
+        {
+            "id": "LIV-505",
+            "question": "Dans quelle région vous trouvez-vous ?",
+            "explanation": "Selon votre cas, exemple : le Nord.",
+            "image": null
+        },
+        {
+            "id": "LIV-506",
+            "question": "Quelle est la région française réputée pour ses fromages et ses volcans ?",
+            "explanation": "L'Auvergne.",
+            "image": null
+        },
+        {
+            "id": "LIV-507",
+            "question": "Quelle région française est connue pour ses vignobles et sa production de vin ?",
+            "explanation": "La région de Bordeaux est célèbre pour ses vignobles et sa production de vin.",
+            "image": null
+        },
+        {
+            "id": "LIV-508",
+            "question": "Quelle est la plus grande région forestière de France ?",
+            "explanation": "La Forêt des Landes est la plus grande région forestière de France.",
+            "image": null
+        },
+        {
+            "id": "LIV-509",
+            "question": "Quelle région est connue comme le berceau de la Préhistoire en France ?",
+            "explanation": "La région connue comme le berceau de la Préhistoire en France est le Périgord, située en Dordogne, dans le sud- ouest du pays.",
+            "image": null
+        },
+        {
+            "id": "LIV-510",
+            "question": "de quel côté se trouvent-ils ?",
+            "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine. - Au nord, la Manche sépare la France du Royaume-Uni. - Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur. - Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
+            "image": null
+        },
+        {
+            "id": "LIV-511",
+            "question": "Qu'est-ce que l'eurozone ?",
+            "explanation": "L'eurozone est un groupe de pays de l'UE qui ont adopté l'euro comme monnaie commune.",
+            "image": null
+        },
+        {
+            "id": "LIV-512",
+            "question": "Qu'est-ce que la grotte de Lascaux ?",
+            "explanation": "Une grotte préhistorique ornée de peintures datant de 18 000 av. J.-C.",
+            "image": null
+        },
+        {
+            "id": "LIV-513",
+            "question": "Quelle influence a eu l'Antiquité romaine en France ?",
+            "explanation": "Les Romains se sont installés à partir de 50 av. J.-C., apportant la culture latine, le mode de vie romain et des monuments (ex: théâtre d'Orange).",
+            "image": null
+        },
+        {
+            "id": "LIV-514",
+            "question": "Qui est Clovis ?",
+            "explanation": "Roi des Francs (466-511), il unifie le territoire et adopte la religion chrétienne.",
+            "image": null
+        },
+        {
+            "id": "LIV-515",
+            "question": "Qui est Jeanne d'Arc ?",
+            "explanation": "Héroïne nationale (1412-1431) qui a combattu les Anglais pendant la guerre de Cent Ans et libéré une partie de la France.",
+            "image": null
+        },
+        {
+            "id": "LIV-516",
+            "question": "Qu'a fait Henri IV en 1598 ?",
+            "explanation": "Il a signé l'Édit de Nantes, accordant la liberté de culte aux protestants pour rétablir la paix.",
+            "image": null
+        },
+        {
+            "id": "LIV-517",
+            "question": "Qui est Louis XIV ?",
+            "explanation": "Le \"Roi Soleil\" (1643-1715), monarque absolu qui a construit le château de Versailles et renforcé l'État centralisé.",
+            "image": null
+        },
+        {
+            "id": "LIV-518",
+            "question": "Qui est Molière ?",
+            "explanation": "Célèbre dramaturge du XVIIe siècle (comédies).",
+            "image": null
+        },
+        {
+            "id": "LIV-519",
+            "question": "Qui sont les philosophes des Lumières ?",
+            "explanation": "Voltaire, Rousseau, Diderot... Ils ont combattu pour la tolérance et la liberté au XVIIIe siècle.",
+            "image": null
+        },
+        {
+            "id": "LIV-520",
+            "question": "Quand la Ire République a-t-elle été proclamée ?",
+            "explanation": "En 1792.",
+            "image": null
+        },
+        {
+            "id": "LIV-521",
+            "question": "Qui a créé le Code civil ?",
+            "explanation": "Napoléon Ier (Empire).",
+            "image": null
+        },
+        {
+            "id": "LIV-522",
+            "question": "Quand l'esclavage a-t-il été aboli ?",
+            "explanation": "En 1848.",
+            "image": null
+        },
+        {
+            "id": "LIV-523",
+            "question": "Qui est Victor Hugo ?",
+            "explanation": "Grand écrivain du XIXe siècle (*Les Misérables*), engagé contre la misère et la peine de mort.",
+            "image": null
+        },
+        {
+            "id": "LIV-524",
+            "question": "Quand la IIIe République s'est-elle installée et qu'a fait Jules Ferry ?",
+            "explanation": "Vers 1875. Jules Ferry a rendu l'école primaire gratuite, laïque et obligatoire (années 1880).",
+            "image": null
+        },
+        {
+            "id": "LIV-525",
+            "question": "Que commémore le 11 novembre ?",
+            "explanation": "L'armistice de la Première Guerre mondiale (1914-1918).",
+            "image": null
+        },
+        {
+            "id": "LIV-526",
+            "question": "Que commémore le 8 mai ?",
+            "explanation": "La victoire des Alliés lors de la Seconde Guerre mondiale (1939-1945).",
+            "image": null
+        },
+        {
+            "id": "LIV-527",
+            "question": "Qu'est-ce que le régime de Vichy ?",
+            "explanation": "Le régime dirigé par le Maréchal Pétain (1940-1944) qui a collaboré avec l'Allemagne nazie.",
+            "image": null
+        },
+        {
+            "id": "LIV-528",
+            "question": "Qu'est-ce que la décolonisation (1950-1962) ?",
+            "explanation": "Période d'indépendance des colonies françaises (Indochine, Afrique du Nord/Algérie, Afrique noire).",
+            "image": null
+        },
+        {
+            "id": "LIV-529",
+            "question": "Qu'est-ce que Mai 68 ?",
+            "explanation": "Un grand mouvement social et étudiant qui a marqué la société française.",
+            "image": null
+        },
+        {
+            "id": "LIV-530",
+            "question": "Quand la majorité est-elle passée à 18 ans ?",
+            "explanation": "En 1974.",
+            "image": null
+        },
+        {
+            "id": "LIV-531",
+            "question": "Quand la peine de mort a-t-elle été abolie ?",
+            "explanation": "En 1981.",
+            "image": null
+        },
+        {
+            "id": "LIV-532",
+            "question": "Citez des personnalités naturalisées célèbres.",
+            "explanation": "Marie Curie (Physique), Joséphine Baker (Artiste/Résistante), Georges Charpak (Physique), Romain Gary (Écrivain), etc.",
+            "image": null
+        },
+        {
+            "id": "LIV-533",
+            "question": "Citez des personnes naturalisées Français(e)",
+            "explanation": "Marie Curie, Joséphine Baker",
+            "image": null
+        },
+        {
+            "id": "LIV-534",
+            "question": "Connaissez-vous Brigitte Bardot ?",
+            "explanation": "Brigitte Bardot est une actrice de cinéma, chanteuse et militante pour la cause animale. Elle a plusieurs œuvres artistiques et culturelles à son actif dont les plus connus sont \"Moi je joue\" et \"Harley Davidson\".",
+            "image": null
+        },
+        {
+            "id": "LIV-535",
+            "question": "Citez des animateurs de télévision Français que vous connaissez ?",
+            "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-536",
+            "question": "Citez des chanteurs Français connus ?",
+            "explanation": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-537",
+            "question": "Citez des journalistes Français(e)s connus ?",
+            "explanation": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
+            "image": null
+        },
+        {
+            "id": "LIV-538",
+            "question": "Citez des acteurs/actrices Français(e)s que vous connaissez ?",
+            "explanation": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-539",
+            "question": "Citez des femmes politique que vous connaissez ?",
+            "explanation": "Simone Veil, Agnès Buzyn, Ségolène Royal etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-540",
+            "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
+            "explanation": "Elles ont été bâties au moyen-âge.",
+            "image": null
+        },
+        {
+            "id": "LIV-541",
+            "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
+            "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-542",
+            "question": "Qui a été à l'origine de l'Arc de triomphe ?",
+            "explanation": "C'est Napoléon 1er.",
+            "image": null
+        },
+        {
+            "id": "LIV-543",
+            "question": "Qui a construit la tour Eiffel ?",
+            "explanation": "C'est Gustave Eiffel.",
+            "image": null
+        },
+        {
+            "id": "LIV-544",
+            "question": "Quand la tour Eiffel a été construite et à quel évènement ?",
+            "explanation": "En 1889 lors de l'exposition universelle de Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-545",
+            "question": "Quelle est la monnaie actuelle de la France?",
+            "explanation": "C'est l'Euro.",
+            "image": null
+        },
+        {
+            "id": "LIV-546",
+            "question": "Pourquoi le 1er Mai est-il férié ?",
+            "explanation": "Nous fêtons la fête du Travail.",
+            "image": null
+        },
+        {
+            "id": "LIV-547",
+            "question": "Pourquoi le 11 Novembre est-il férié ?",
+            "explanation": "Le 11 novembre marque la fin de la première guerre mondiale, c'est ce qu'on appelle l'Armistice signée en 1918",
+            "image": null
+        },
+        {
+            "id": "LIV-548",
+            "question": "Citez des Reines de France",
+            "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-549",
+            "question": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
+            "explanation": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+            "image": null
+        },
+        {
+            "id": "LIV-550",
+            "question": "Quel évènement Historique de la France vous a-t-il le plus marqué ?",
+            "explanation": "- Sport: L’événement historique qui m’a le plus marqué est la victoire de la France lors de la Coupe du monde de football en 1998. C’était un moment très fort, car il a uni toute la population dans la joie et la fierté. Cette victoire symbolisait aussi une France diverse, rassemblée autour de valeurs communes comme le sport, l’effort collectif et le vivre-ensemble. Pour moi, cela montre une image positive et solidaire du pays.   - Chairlie Hebdo: L’événement de Charlie Hebdo en 2015 m’a beaucoup marqué car il représente la défense de la liberté d’expression, une valeur fondamentale en France. Malgré l’attaque terroriste contre le journal, les Français se sont rassemblés pour protéger cette liberté essentielle, montrant la force de la démocratie et de la solidarité dans le pays.   - Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.",
+            "image": null
+        },
+        {
+            "id": "LIV-551",
+            "question": "Quel été le rôle de la Bastille avant sa démolition ?",
+            "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-552",
+            "question": "Qui a instauré le code civil en France ?",
+            "explanation": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
+            "image": null
+        },
+        {
+            "id": "LIV-553",
+            "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
+            "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+            "image": null
+        },
+        {
+            "id": "LIV-554",
+            "question": "Citez des anciennes colonies Françaises?",
+            "explanation": "Algérie, Sénégal, Mali, Côte d'Ivoire.",
+            "image": null
+        },
+        {
+            "id": "LIV-555",
+            "question": "Connaissez-vous la bataille de Verdun ?",
+            "explanation": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
+            "image": null
+        },
+        {
+            "id": "LIV-556",
+            "question": "Avez-vous regardé ou assisté aux Jeux Olympiques de Paris 2024 ?",
+            "explanation": "La cérémonie d’ouverture des Jeux Olympiques de Paris 2024 a marqué les esprits par son format inédit sur la Seine, offrant un spectacle grandiose mêlant histoire, culture et modernité. Saluée pour son audace et sa mise en scène innovante, elle a néanmoins suscité quelques débats sur certains choix artistiques. Globalement, l’événement a été largement apprécié, renforçant l’image de Paris comme capitale du sport et de la culture.",
+            "image": null
+        },
+        {
+            "id": "LIV-557",
+            "question": "Que signifie chaque couleur:",
+            "explanation": "Le blanc est la couleur historique des rois de France, le bleu et le rouge représentent la ville de Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-558",
+            "question": "– Qu’est-ce qu’une Monarchie ?",
+            "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
+            "image": null
+        },
+        {
+            "id": "LIV-559",
+            "question": "Qu'est-ce que l'ouverture des États généraux ?",
+            "explanation": "L’ouverture des États généraux a eu lieu le 5 mai 1789 à Versailles. C’était une réunion convoquée par le roi Louis XVI (16) pour tenter de résoudre la grave crise financière que traversait la France.",
+            "image": null
+        },
+        {
+            "id": "LIV-560",
+            "question": "De quoi étaient composés les états généraux ?",
+            "explanation": "Les États généraux réunissaient les trois ordres de la société : - Le Clergé - La Noblesse - Le Tiers-État (98 % de la population)",
+            "image": null
+        },
+        {
+            "id": "LIV-561",
+            "question": "Quel événement marque la fin officielle de la monarchie ?",
+            "explanation": "La Convention nationale a voté l'abolition de la monarchie le 21 septembre 1792, mettant fin au règne de Louis XVI (16).",
+            "image": null
+        },
+        {
+            "id": "LIV-562",
+            "question": "Qu'est-ce que le Consulat en France ?",
+            "explanation": "Le Consulat a été une période de gouvernement en France après la Révolution, de 1799 à 1804. Dirigé par Napoléon Bonaparte en tant que Premier Consul, il a marqué la fin de la Révolution et a conduit à l'établissement du Premier Empire français.",
+            "image": null
+        },
+        {
+            "id": "LIV-563",
+            "question": "Quand et comment prend fin le régime de Vichy ?",
+            "explanation": "- Le régime s’effondre avec la Libération de la France en 1944, menée par les Alliés et la Résistance. - 6 juin 1944 : Débarquement en Normandie. - 25 août 1944 : Libération de Paris. - Pétain fuit en Allemagne, puis en Suisse. Il est arrêté en 1945.",
+            "image": null
+        },
+        {
+            "id": "LIV-564",
+            "question": "Que commémore-t-on le 11 novembre en France ?",
+            "explanation": "Le 11 novembre correspond à la signature de l'armistice mettant fin à la Première Guerre mondiale. Ce jour est férié en commémoration de la victoire de la France et de la paix",
+            "image": null
+        },
+        {
+            "id": "LIV-565",
+            "question": "Qu'est-ce qui s'est passé le 3 août 1914 ??",
+            "explanation": "Le 3 août 1914, à 18 heures, l'Allemagne annonce son entrée en guerre contre la France.",
+            "image": null
+        },
+        {
+            "id": "LIV-566",
+            "question": "Quels sont les principaux traités mettant fin au conflit ?",
+            "explanation": "- Conférence de Yalta (février 1945) : Définition du partage de l’Europe après-guerre. - Traité de San Francisco (1951) : Paix entre le Japon et les Alliés.",
+            "image": null
+        },
+        {
+            "id": "LIV-567",
+            "question": "Qui était Jean Moulin ?",
+            "explanation": "Jean Moulin était un haut fonctionnaire et résistant français pendant la Seconde Guerre mondiale. Il est connu pour avoir unifié les mouvements de la Résistance sous l’autorité de la France libre dirigée par Charles de Gaulle.",
+            "image": null
+        },
+        {
+            "id": "LIV-568",
+            "question": "Quel était son rôle dans la Résistance ?",
+            "explanation": "Jean Moulin a été chargé par Charles de Gaulle d’unifier les différents groupes de la Résistance en 1942. Il a créé le Conseil national de la Résistance (CNR) en 1943 pour coordonner les actions contre l’occupant allemand.",
+            "image": null
+        },
+        {
+            "id": "LIV-569",
+            "question": "Quel a été le rôle de la France dans la création de l'Union européenne ?",
+            "explanation": "La France a joué un rôle crucial dans la création de l'Union européenne, notamment à travers les efforts de Robert Schuman et Jean Monnet après la Seconde Guerre Mondiale. L'objectif était de créer une coopération économique et politique en Europe pour assurer la paix et la stabilité.",
+            "image": null
+        },
+        {
+            "id": "LIV-570",
+            "question": "Pourquoi l’abolition de l’esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?",
+            "explanation": "L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates : - 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802. -",
+            "image": null
+        },
+        {
+            "id": "LIV-571",
+            "question": "Quel a été le rôle de la France dans la fondation de l'ONU ?",
+            "explanation": "La France est l'un des membres fondateurs de l'Organisation des Nations Unies (ONU) et l'un de ses cinq membres permanents du Conseil de sécurité. Son rôle dans la fondation de l'ONU reflète son engagement en faveur de la paix et de la coopération internationale après la Seconde Guerre Mondiale.",
+            "image": null
+        },
+        {
+            "id": "LIV-572",
+            "question": "Qui était François Ier ?",
+            "explanation": "François Ier (1494-1547) a régné sur la France de 1515 à 1547. Il a marqué l’histoire par son amour des arts et de la culture, invitant Léonard de Vinci en France. Il est aussi célèbre pour sa victoire à la bataille de Marignan en 1515 et sa rivalité avec l’empereur Charles Quint.",
+            "image": null
+        },
+        {
+            "id": "LIV-573",
+            "question": "Citez quelques figures historiques qui ont marqué la France ?",
+            "explanation": "Jeanne d'Arc, Charles de Gaulle, Louis 14, Louis 16, Napoléon, Charlemagne…",
+            "image": null
+        },
+        {
+            "id": "LIV-574",
+            "question": "Qu'est-ce que le Traité de l'Élysée ?",
+            "explanation": "Signé en 1963 par la France et l'Allemagne, le Traité de l'Élysée a marqué un tournant dans les relations franco-allemandes. Ce traité a établi une coopération étroite entre les deux pays, jetant les bases d'une Europe plus unie et pacifique.",
+            "image": null
+        },
+        {
+            "id": "LIV-575",
+            "question": "Durant quelles années les cathédrales gothiques ont-elles été majoritairement construites en France ?",
+            "explanation": "La construction des cathédrales gothiques, caractérisées par leurs architectures impressionnantes et leurs vitraux colorés, a principalement eu lieu entre le 12e et le 16e siècle, avec des exemples remarquables comme Notre-Dame de Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-576",
+            "question": "Qui est Antoine de Saint-Exupéry ?",
+            "explanation": "Antoine de Saint-Exupéry était un écrivain et aviateur français, auteur de célèbres ouvrages tels que Le Petit Prince et Night Flight. Il a effectué des missions de courrier aérien pour Aéropostale, et ses expériences ont profondément influencé ses écrits. Saint-Exupéry a disparu en 1944 pendant une mission de reconnaissance aérienne lors de la Seconde Guerre mondiale.",
+            "image": null
+        },
+        {
+            "id": "LIV-577",
+            "question": "Qui a construit l’Arc de Triomphe ?",
+            "explanation": "L'Arc de Triomphe, situé sur les Champs-Élysées est construit par Napoléon 1er en 1806.",
+            "image": null
+        },
+        {
+            "id": "LIV-578",
+            "question": "Pouvez-vous donner un résumé de ce film ?",
+            "explanation": "Intouchables est un film de 2011 réalisé par Olivier Nakache et Éric Toledano. Il raconte l'histoire d'une amitié improbable entre un aristocrate tétraplégique et son aide à domicile, un homme d'origine modeste.",
+            "image": null
+        },
+        {
+            "id": "LIV-579",
+            "question": "Pouvez-vous donner un résumé de cette série ?",
+            "explanation": "HPI (Haute Potentiel Intellectuel) est une série télévisée française diffusée depuis 2021. Elle raconte l’histoire de Morgane Alvaro, une femme au QI exceptionnel qui, après avoir été diagnostiquée HPI, se retrouve à résoudre des enquêtes criminelles pour la police, tout en jonglant avec sa vie personnelle un peu chaotique.",
+            "image": null
+        },
+        {
+            "id": "LIV-580",
+            "question": "Quelles est la place France dans la pâtisserie au niveau mondial?",
+            "explanation": "La France est un leader mondial dans la pâtisserie en raison de son histoire, de ses techniques de fabrication uniques et de ses créations emblématiques comme les éclairs, les macarons, les millefeuilles et les croissants. Les écoles de pâtisserie françaises, comme Le Cordon Bleu, sont aussi réputées mondialement.",
+            "image": null
+        },
+        {
+            "id": "LIV-581",
+            "question": "Quelle est la position de la France dans le classement mondial des puissances économiques en 2023 ?",
+            "explanation": "La France se classe 7ème avec un PIB de 2 806 milliards de dollars, prévoyant une croissance de 0,6%.",
+            "image": null
+        },
+        {
+            "id": "LIV-582",
+            "question": "Quand a été créé la CEE (Communauté Économique Européenne) ?",
+            "explanation": "En 1957 (Traité de Rome), la France est un pays fondateur.",
+            "image": null
+        },
+        {
+            "id": "LIV-583",
+            "question": "Combien d'États compte l'Union Européenne ?",
+            "explanation": "27 États membres.",
+            "image": null
+        },
+        {
+            "id": "LIV-584",
+            "question": "Quel est l'objectif de l'UE ?",
+            "explanation": "Garantir la paix et établir une union étroite entre les peuples européens.",
+            "image": null
+        },
+        {
+            "id": "LIV-585",
+            "question": "Quelle est la monnaie commune ?",
+            "explanation": "L'Euro (depuis 2002 pour les pièces/billets, 2000 marché).",
+            "image": null
+        },
+        {
+            "id": "LIV-586",
+            "question": "Quelle est la place de la France à l'ONU ?",
+            "explanation": "Membre permanent du Conseil de sécurité.",
+            "image": null
+        },
+        {
+            "id": "LIV-587",
+            "question": "Combien de personnes parlent français dans le monde ?",
+            "explanation": "Environ 300 millions (le livret dit 200, d'autres sources disent plus, retenons 200-300 millions selon le livret: \"200 millions parlent couramment\").",
+            "image": null
+        },
+        {
+            "id": "LIV-588",
+            "question": "Quel est le rang économique de la France ?",
+            "explanation": "6ème puissance économique mondiale.",
+            "image": null
+        },
+        {
+            "id": "LIV-589",
+            "question": "Quels sont les atouts économiques de la France ?",
+            "explanation": "L'aéronautique, le luxe, le tourisme (1ère destination mondiale), l'agriculture et les transports.",
+            "image": null
+        },
+        {
+            "id": "LIV-590",
+            "question": "Connaissez-vous vos voisins ?",
+            "explanation": "Oui/Non, pas tous par manque de temps mais nous nous saluons régulièrement…",
+            "image": null
+        },
+        {
+            "id": "LIV-591",
+            "question": "Quel est le nom de votre employeur ?",
+            "explanation": "Mon employeur est (Nom de l’entreprise).",
+            "image": null
+        },
+        {
+            "id": "LIV-592",
+            "question": "Avez-vous des amis ou des contacts français ?",
+            "explanation": "Oui, j'ai développé des amitiés solides avec des Français, qui ont enrichi mon expérience ici en France (exemples d'influence, par exemple : m'invitant à des événements locaux, me faisant découvrir des parties moins connues de la culture française, m'aidant à naviguer dans certaines formalités administratives). Ces relations m'ont permis de me sentir plus chez moi en France et de mieux comprendre les subtilités de la société française.",
+            "image": null
+        },
+        {
+            "id": "LIV-593",
+            "question": "À quelle fréquence retournez-vous dans votre pays d'origine ?",
+            "explanation": "En général, je rentre (une fois) par an pour rendre visite à ma famille et profiter de vacances en même temps.",
+            "image": null
+        },
+        {
+            "id": "LIV-594",
+            "question": "Qu'est-ce qui vous plaît le plus en France et que vous n’avez pas dans votre pays d’origine ?",
+            "explanation": "Ce que j'apprécie particulièrement en France, c'est (élément spécifique, par exemple : la richesse culturelle, le système de santé, l'éducation…). J'aime aussi la diversité et l'ouverture d'esprit des gens ici.",
+            "image": null
+        },
+        {
+            "id": "LIV-595",
+            "question": "Faites-vous du sport ?",
+            "explanation": "Oui, je pratique (nom du sport). / Non, mais je m’intéresse au sport et au bien-être.",
+            "image": null
+        },
+        {
+            "id": "LIV-596",
+            "question": "Quel est votre degré de proximité avec vos amis ?",
+            "explanation": "J’entretiens des relations amicales régulières avec des amis en France, que je vois souvent.",
+            "image": null
+        },
+        {
+            "id": "LIV-597",
+            "question": "Si vous pouviez vivre dans un autre pays européen hors France, lequel choisiriez-vous ?",
+            "explanation": "La France est mon premier et dernier choix, mais d’autres pays comme (nom du pays) pourraient aussi m’intéresser pour des raisons personnelles ou professionnelles.",
+            "image": null
+        },
+        {
+            "id": "LIV-598",
+            "question": "Quelle est la date de naissance de votre conjoint(e) ?",
+            "explanation": "Il/elle est né(e) le (JJ/MM/AAAA).",
+            "image": null
+        },
+        {
+            "id": "LIV-599",
+            "question": "Quelle est la nationalité de votre conjoint(e) ?",
+            "explanation": "Il/elle est (Nationalité).",
+            "image": null
+        },
+        {
+            "id": "LIV-600",
+            "question": "Pratiquez-vous des activités ensemble ?",
+            "explanation": "Oui, nous aimons (activité, par exemple : randonner, cuisiner, visiter des musées) ensemble. Cela nous aide à renforcer notre lien.",
+            "image": null
+        },
+        {
+            "id": "LIV-601",
+            "question": "Suivez-vous l'actualité française ? Comment vous tenez-vous informé ?",
+            "explanation": "Oui, je suis régulièrement l'actualité française via des journaux en ligne, la télévision, et les réseaux sociaux pour comprendre les enjeux sociétaux et politiques actuels en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-602",
+            "question": "Regardez-vous la télévision française ? Quels types de programmes ou chaînes préférezvous ?",
+            "explanation": "Oui, je regarde la télévision française, en particulier les chaînes d'information comme France 24 et les programmes culturels sur Arte, pour améliorer mon français et comprendre la culture française.",
+            "image": null
+        },
+        {
+            "id": "LIV-603",
+            "question": "c’est quoi la presse Satirique ?",
+            "explanation": "La presse satirique est un type de presse qui utilise l'humour, l'ironie et l'exagération pour critiquer et se moquer des événements politiques, sociaux ou culturels. Elle vise souvent à dénoncer des abus, des injustices ou des comportements absurdes, tout en provoquant la réflexion. Les caricatures, les parodies et les jeux de mots sont des outils courants dans ce genre de presse.",
+            "image": null
+        },
+        {
+            "id": "LIV-604",
+            "question": "Que s’est-il passé en France le 13 novembre 2015 ?",
+            "explanation": "Le 13 novembre 2015, la France a été frappée par une série d’attentats terroristes à Paris et SaintDenis, faisant de nombreuses victimes.",
+            "image": null
+        },
+        {
+            "id": "LIV-605",
+            "question": "Quelles sont les conséquences des attentats du 13 novembre 2015 ?",
+            "explanation": "Ces événements ont conduit à un renforcement des mesures de sécurité et à des actions contre le terrorisme en France et en Europe.",
+            "image": null
+        },
+        {
+            "id": "LIV-606",
+            "question": "Que pensez-vous des attentats du 13 novembre 2015 à Paris ?",
+            "explanation": "Les attentats du 13 novembre 2015 ont été un événement tragique qui a profondément affecté la France. Ils ont mis en évidence la nécessité de renforcer la sécurité nationale et internationale face à la menace terroriste.",
+            "image": null
+        },
+        {
+            "id": "LIV-607",
+            "question": "Combien de médailles la France a-t-elle remportées aux Jeux Olympiques de Paris 2024 ?",
+            "explanation": "La France a remporté 64 médailles au total.",
+            "image": null
+        },
+        {
+            "id": "LIV-608",
+            "question": "Combien de médailles d'or, d'argent et de bronze la France a-t-elle obtenues ?",
+            "explanation": "- 16 médailles d'or - 26 médailles d'argent - 22 médailles de bronze",
+            "image": null
+        },
+        {
+            "id": "LIV-609",
+            "question": "Citez quelques champions français aux Jeux Olympiques de Paris 2024 ?",
+            "explanation": "- Léon Marchand (Natation) : 4 médailles d'or, 1 médaille de bronze. - Teddy Riner (Judo) : 1 médaille d'or. - Pauline Ferrand-Prévot (VTT) : 1 médaille d'or. - Les athlètes français en canoë-kayak ont également décroché plusieurs médailles.",
+            "image": null
+        },
+        {
+            "id": "LIV-610",
+            "question": "Que pensez-vous des Jeux Olympiques de Paris 2024 ?",
+            "explanation": "Les Jeux ont été un événement marquant, mettant en avant l'organisation française et renforçant l'image de la France à l'échelle internationale.",
+            "image": null
+        },
+        {
+            "id": "LIV-611",
+            "question": "Quand ont eu lieu les Jeux Olympiques de Paris 2024 ?",
+            "explanation": "Les Jeux ont eu lieu du 26 juillet au 11 août 2024.",
+            "image": null
+        },
+        {
+            "id": "LIV-612",
+            "question": "Qu’est-ce que le Brexit ?",
+            "explanation": "Le Brexit désigne la sortie du Royaume-Uni de l’Union européenne, décidée par référendum en 2016 et effective depuis le 31 janvier 2020.",
+            "image": null
+        },
+        {
+            "id": "LIV-613",
+            "question": "Quelles ont été les conséquences du Brexit ?",
+            "explanation": "Le Brexit a eu des impacts économiques, politiques et administratifs sur les échanges entre le Royaume-Uni et l’Union européenne.",
+            "image": null
+        },
+        {
+            "id": "LIV-614",
+            "question": "Qu’est-ce que le mouvement #MeToo ?",
+            "explanation": "Le mouvement #MeToo est un mouvement mondial contre les violences sexistes et sexuelles, encourageant la libération de la parole des victimes.",
+            "image": null
+        },
+        {
+            "id": "LIV-615",
+            "question": "Quelle a été la réaction des autorités françaises ?",
+            "explanation": "Les autorités ont condamné fermement cet acte, renforcé la lutte contre l’extrémisme et organisé des hommages nationaux en mémoire de Samuel Paty.",
+            "image": null
+        },
+        {
+            "id": "LIV-616",
+            "question": "Que pensez-vous de l'affaire Nayel ?",
+            "explanation": "L'affaire Nayel a suscité une grande émotion et a mis en évidence les enjeux autour de la justice pénale et du traitement médiatique des affaires criminelles. Elle rappelle l'importance de la prudence dans la couverture médiatique et le respect du processus judiciaire pour garantir la justice pour tous les parties concernées.",
+            "image": null
+        },
+        {
+            "id": "LIV-617",
+            "question": "Que pensez-vous des défis actuels auxquels sont confrontés les agriculteurs français ?",
+            "explanation": "Les défis sont complexes, allant de la durabilité à la viabilité économique, et exigent des solutions innovantes et un soutien accru de l'État.",
+            "image": null
+        },
+        {
+            "id": "LIV-618",
+            "question": "Quel est votre avis sur la gestion de l'affaire Nayel par les médias et la justice française ?",
+            "explanation": "Cette affaire a montré l'importance de la prudence médiatique et la nécessité d'une justice rapide et équitable pour les victimes et leurs familles.",
+            "image": null
+        },
+        {
+            "id": "LIV-619",
+            "question": "Quel est l'emblème de la France ?",
+            "explanation": "L'emblème de la France est le drapeau tricolore composé des couleurs rouge, bleue et blanche.",
+            "image": null
+        },
+        {
+            "id": "LIV-620",
+            "question": "Que représente Le coq ?",
+            "explanation": "Le coq est un symbole national français. Il est souvent représenté sur les monuments, les édifices publics et les maillots des équipes sportives françaises. Le coq représente la fierté nationale, le courage et la vigilance.",
+            "image": null
+        },
+        {
+            "id": "LIV-621",
+            "question": "En quelle année la France est devenue démocratique ?",
+            "explanation": "La France est devenue démocratique tels qu’elle est connue à nos jour, le 4 octobre 1958",
+            "image": null
+        },
+        {
+            "id": "LIV-622",
+            "question": "Quelle est la plus haute juridiction administrative en France?",
+            "explanation": "Le Conseil d’État.",
+            "image": null
+        },
+        {
+            "id": "LIV-623",
+            "question": "Quelle est la langue officielle de la France ?",
+            "explanation": "Le français.",
+            "image": null
+        },
+        {
+            "id": "LIV-624",
+            "question": "Qu'est-ce que l'ENA ?",
+            "explanation": "L'École Nationale d'Administration, une grande école formant les hauts fonctionnaires.",
+            "image": null
+        },
+        {
+            "id": "LIV-625",
+            "question": "Quelle est la population de la France ?",
+            "explanation": "En 2024, la population française est estimée à environ 68 millions d’habitants.",
+            "image": null
+        },
+        {
+            "id": "LIV-626",
+            "question": "Quel est le principe du service public en France ?",
+            "explanation": "Assurer des services essentiels à tous les citoyens, indépendamment de la rentabilité.",
+            "image": null
+        },
+        {
+            "id": "LIV-627",
+            "question": "Quelle est la nouvelle appellation de l’ENA depuis 2021 ?",
+            "explanation": "L'École Nationale d'Administration, devenue l'Institut national du service public (INSP).",
+            "image": null
+        },
+        {
+            "id": "LIV-628",
+            "question": "Citez quelques personnalités françaises célèbres ayant acquis la nationalité française.",
+            "explanation": "Parmi les personnalités naturalisées, on trouve le chanteur Johnny Hallyday, l’artiste Pablo Picasso, l’actrice Marlène Dietrich, et l’écrivain Milan Kundera.",
+            "image": null
+        },
+        {
+            "id": "LIV-629",
+            "question": "Quel était le rôle initial de la Bastille à Paris ?",
+            "explanation": "La Bastille, initialement construite comme une forteresse pour protéger Paris, était devenue une prison d'État avant la Révolution Française. Sa prise par les révolutionnaires est devenue un symbole fort de la lutte contre l'autoritarisme.",
+            "image": null
+        },
+        {
+            "id": "LIV-630",
+            "question": "Qu'est-ce que le Directoire ?",
+            "explanation": "Le Directoire (1795-1799) était un régime plus modéré, dirigé par cinq directeurs, mais il était instable et affaibli par la corruption.",
+            "image": null
+        },
+        {
+            "id": "LIV-631",
+            "question": "Quel était le but de la construction de la Tour Eiffel ?",
+            "explanation": "La Tour Eiffel a été construite par Gustave Eiffel et ses collaborateurs pour l'Exposition universelle de 1889 à Paris. Initialement controversée, elle est aujourd'hui un symbole emblématique de Paris et de la France, reconnue dans le monde entier.",
+            "image": null
+        },
+        {
+            "id": "LIV-632",
+            "question": "Quel a été l'impact de la Conférence de Berlin de 1884-1885 sur la colonisation française ?",
+            "explanation": "La Conférence de Berlin, à laquelle la France a participé, a été organisée pour réguler la colonisation et le commerce en Afrique. Elle a conduit à une augmentation de la présence coloniale française en Afrique, mais a aussi exacerbé les tensions coloniales et a eu des conséquences durables sur les populations africaines.",
+            "image": null
+        },
+        {
+            "id": "LIV-633",
+            "question": "Quelle est l'importance du traité de Maastricht pour la France ?",
+            "explanation": "Le traité de Maastricht, signé en 1992, a marqué une étape majeure dans l'intégration européenne. Pour la France, ce traité a signifié un engagement accru envers l'Union européenne, notamment à travers la création de l'Union économique et monétaire et l'introduction de l'euro.",
+            "image": null
+        },
+        {
+            "id": "LIV-634",
+            "question": "Qu'est-ce que le Traité d'Amsterdam ?",
+            "explanation": "Un traité de l'Union européenne entré en vigueur en 1999.",
+            "image": null
+        },
+        {
+            "id": "LIV-635",
+            "question": "Quelle est l'origine du nom Gaule ?",
+            "explanation": "Terme utilisé par les Romains pour désigner les territoires habités par les Celtes en Europe occidentale.",
+            "image": null
+        },
+        {
+            "id": "LIV-636",
+            "question": "Quelle est la plus ancienne université de France ?",
+            "explanation": "L'Université de Paris, fondée en 1150.",
+            "image": null
+        },
+        {
+            "id": "LIV-637",
+            "question": "Qu'est-ce que la bataille de Marignan ?",
+            "explanation": "Une victoire française importante de François Ier en 1515 contre les Suisses.",
+            "image": null
+        },
+        {
+            "id": "LIV-638",
+            "question": "Quelles sont les principales caractéristiques de la Tour Eiffel ?",
+            "explanation": "La Tour Eiffel mesure 330 mètres de haut, est construite en fer puddlé et pèse 10 100 tonnes.",
+            "image": null
+        },
+        {
+            "id": "LIV-639",
+            "question": "Quel célèbre musée de Paris abrite la Joconde ?",
+            "explanation": "Le musée du Louvre abrite la Joconde",
+            "image": null
+        },
+        {
+            "id": "LIV-640",
+            "question": "Quel est le sport le plus populaire en France ?",
+            "explanation": "Le football.",
+            "image": null
+        },
+        {
+            "id": "LIV-641",
+            "question": "Citez quelques marques française de la haute couture ?",
+            "explanation": "La mode de luxe créée par de grands couturiers comme Chanel, Dior et Yves Saint Laurent.",
+            "image": null
+        },
+        {
+            "id": "LIV-642",
+            "question": "Quels sont quelques musées célèbres en France ?",
+            "explanation": "Le Louvre, le Musée d’Orsay et le Centre Pompidou.",
+            "image": null
+        },
+        {
+            "id": "LIV-643",
+            "question": "Quelle cathédrale gothique est située sur l'île de la Cité à Paris ?",
+            "explanation": "La cathédrale Notre-Dame de Paris est située sur l'île de la Cité.",
+            "image": null
+        },
+        {
+            "id": "LIV-644",
+            "question": "Quel est le nom du satellite français lancé en 1965 ?",
+            "explanation": "Astérix.",
+            "image": null
+        },
+        {
+            "id": "LIV-645",
+            "question": "Quel est le nom de la célèbre basilique située sur la colline de Montmartre à Paris ?",
+            "explanation": "La basilique du Sacré-Cœur est située sur la colline de Montmartre.",
+            "image": null
+        },
+        {
+            "id": "LIV-646",
+            "question": "Qui est Jean-Paul Sartre ?",
+            "explanation": "Jean-Paul Sartre était un philosophe, écrivain et figure majeure de l’existentialisme. Il est l'auteur de nombreuses œuvres philosophiques et littéraires, dont L'Être et le Néant et Les Mots. Il a également refusé le prix Nobel de littérature en 1964.",
+            "image": null
+        },
+        {
+            "id": "LIV-647",
+            "question": "Qu'est-ce que le Panthéon à Paris ?",
+            "explanation": "Le Panthéon est un monument à Paris, situé dans le Quartier Latin. Il est à la fois un lieu de sépulture et un symbole national où reposent de nombreuses personnalités françaises importantes.",
+            "image": null
+        },
+        {
+            "id": "LIV-648",
+            "question": "Citez un film français et son acteur principal.",
+            "explanation": "Film : Intouchables, acteur principal : François Cluzet (qui joue le rôle de Philippe)",
+            "image": null
+        },
+        {
+            "id": "LIV-649",
+            "question": "Citez une série française et son acteur principal.",
+            "explanation": "Série: HPI, actrice principale : Audrey Fleurot (qui joue le rôle de Morgane Alvaro)",
+            "image": null
+        },
+        {
+            "id": "LIV-650",
+            "question": "Quel est le festival de musique électronique célèbre en France ?",
+            "explanation": "Les Nuits Sonores à Lyon.",
+            "image": null
+        },
+        {
+            "id": "LIV-651",
+            "question": "Quel est le dernier film que vous avez vu au cinéma ? Qui est le réalisateur et l'acteur principal ?",
+            "explanation": "Cela dépend des goûts et de l'actualité du cinéma, mais par exemple : Le dernier film que j'ai vu est Le Comte de Monte-Cristo, réalisé par Matthieu Delaporte et Alexandre de La Patellière. L'acteur principal est Pierre Niney, qui interprète le rôle d'Edmond Dantès.",
+            "image": null
+        },
+        {
+            "id": "LIV-652",
+            "question": "En quelle année le TGV (Train à Grande Vitesse) a-t-il été inauguré ?",
+            "explanation": "1981.",
+            "image": null
+        },
+        {
+            "id": "LIV-653",
+            "question": "Quelle est la capacité du Stade de France ?",
+            "explanation": "Environ 80 000 spectateurs.",
+            "image": null
+        },
+        {
+            "id": "LIV-654",
+            "question": "Nommez deux grands scientifiques français.",
+            "explanation": "Marie Curie et Louis Pasteur.",
+            "image": null
+        },
+        {
+            "id": "LIV-655",
+            "question": "Qui est Louis Pasteur ?",
+            "explanation": "Louis Pasteur était un scientifique français, pionnier dans la découverte des micro-organismes et dans le développement de vaccins. Il a révolutionné la médecine avec ses recherches sur la fermentation et la pasteurisation.",
+            "image": null
+        },
+        {
+            "id": "LIV-656",
+            "question": "Citez quelques chefs cuisiniers célèbres.",
+            "explanation": "Paul Bocuse, Alain Ducasse, Joël Robuchon, Philippe Etchebest, Hélène Darroze et Michel Sarran.",
+            "image": null
+        },
+        {
+            "id": "LIV-657",
+            "question": "Qu'est-ce que la Francophonie ?",
+            "explanation": "L'ensemble des personnes et pays partageant la langue française.",
+            "image": null
+        },
+        {
+            "id": "LIV-658",
+            "question": "Quelle est la première université fondée en France ?",
+            "explanation": "L'Université de Paris, connue sous le nom de Sorbonne.",
+            "image": null
+        },
+        {
+            "id": "LIV-659",
+            "question": "Nommez un célèbre festival de cinéma qui se tient annuellement en France ?",
+            "explanation": "Le Festival de Cannes.",
+            "image": null
+        },
+        {
+            "id": "LIV-660",
+            "question": "Quel est le nombre de restaurants étoilés Michelin en France ?",
+            "explanation": "La France possède plus de 600 restaurants étoilés Michelin, dont plusieurs 3 étoiles, ce qui en fait l'un des pays avec le plus grand nombre de restaurants de haute gastronomie.",
+            "image": null
+        },
+        {
+            "id": "LIV-661",
+            "question": "Quel musée français est dédié à l'art moderne et contemporain ?",
+            "explanation": "Le Centre Pompidou.",
+            "image": null
+        },
+        {
+            "id": "LIV-662",
+            "question": "Qu'est-ce que la Fête de la Musique ?",
+            "explanation": "Un événement annuel célébrant la musique vivante le 21 juin, jour du solstice d'été.",
+            "image": null
+        },
+        {
+            "id": "LIV-663",
+            "question": "Qu'est-ce que le Groupe des Sept ou G7 ?",
+            "explanation": "Un groupe de pays industrialisés dont la France fait partie, se réunissant annuellement pour discuter de questions économiques mondiales.",
+            "image": null
+        },
+        {
+            "id": "LIV-664",
+            "question": "Qu'est-ce que l'AMF (Autorité des marchés financiers) ?",
+            "explanation": "L'organisme de régulation de la bourse en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-665",
+            "question": "Quel écrivain français a remporté le Prix Nobel de littérature en 2014 ?",
+            "explanation": "Patrick Modiano.",
+            "image": null
+        },
+        {
+            "id": "LIV-666",
+            "question": "Qu'est-ce que le CNRS ?",
+            "explanation": "Le Centre National de la Recherche Scientifique, une organisation gouvernementale de recherche en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-667",
+            "question": "En quelle année la France a-t-elle adopté l'euro comme monnaie ?",
+            "explanation": "2002.",
+            "image": null
+        },
+        {
+            "id": "LIV-668",
+            "question": "Comment la France a-t-elle influencé la cuisine mondiale ?",
+            "explanation": "La France a grandement influencé la cuisine mondiale par ses techniques culinaires, ses écoles de cuisine, son système de restaurants et ses innovations gastronomiques. Des chefs comme Paul Bocuse, Alain Ducasse et Joël Robuchon ont également contribué à faire connaître la cuisine française dans le monde entier.",
+            "image": null
+        },
+        {
+            "id": "LIV-669",
+            "question": "Quelle est l'œuvre littéraire de Victor Hugo plaidant contre la peine de mort ?",
+            "explanation": "Le Dernier Jour d'un condamné.",
+            "image": null
+        },
+        {
+            "id": "LIV-670",
+            "question": "Quelle est la bande dessinée la plus connue en France ?",
+            "explanation": "Astérix et Obélix",
+            "image": null
+        },
+        {
+            "id": "LIV-671",
+            "question": "Citez quelques personnages français connus ?",
+            "explanation": "-",
+            "image": null
+        },
+        {
+            "id": "LIV-672",
+            "question": "Citez quelques sportifs français connu et leur discipline respective :",
+            "explanation": "Kylian Mbappé (football), Tony Parker (Basket), Clarisse Agbegnenou (judo), Antoine Dupont (Rugby), Camille Lacourt (Natation)",
+            "image": null
+        },
+        {
+            "id": "LIV-673",
+            "question": "Quel est le surnom de la France dû à sa forme géographique ?",
+            "explanation": "L'Hexagone.",
+            "image": null
+        },
+        {
+            "id": "LIV-674",
+            "question": "Pouvez-vous citer quelques pays limitrophes de la France ?",
+            "explanation": "La France partage ses frontières avec l'Espagne, l'Andorre, l'Italie, la Suisse, l'Allemagne, le Luxembourg, la Belgique, et Monaco.",
+            "image": null
+        },
+        {
+            "id": "LIV-675",
+            "question": "Quel est le plus grand lac naturel de France ?",
+            "explanation": "Le Lac du Bourget.",
+            "image": null
+        },
+        {
+            "id": "LIV-676",
+            "question": "Quelle est la plus vieille institution financière encore en activité en France ?",
+            "explanation": "La Banque de France, fondée en 1800.",
+            "image": null
+        },
+        {
+            "id": "LIV-677",
+            "question": "Quel est le nom de l'aéroport le plus fréquenté de France ?",
+            "explanation": "L'aéroport Charles-de-Gaulle.",
+            "image": null
+        },
+        {
+            "id": "LIV-678",
+            "question": "Quelle est la hauteur de la Tour Eiffel ?",
+            "explanation": "Environ 324 mètres.",
+            "image": null
+        },
+        {
+            "id": "LIV-679",
+            "question": "Quel est le nom du Parc national situé en Guadeloupe ?",
+            "explanation": "Le Parc national de la Guadeloupe.",
+            "image": null
+        },
+        {
+            "id": "LIV-680",
+            "question": "Qu'est-ce que le Mont-Saint-Michel ?",
+            "explanation": "Un îlot rocheux en Normandie, célèbre pour son abbaye et classé au patrimoine mondial de l'UNESCO.",
+            "image": null
+        },
+        {
+            "id": "LIV-681",
+            "question": "Quelle est la plus grande île de France métropolitaine ?",
+            "explanation": "La Corse.",
+            "image": null
+        },
+        {
+            "id": "LIV-682",
+            "question": "Quel est le plus ancien pont de Paris encore debout ?",
+            "explanation": "Le Pont Neuf.",
+            "image": null
+        },
+        {
+            "id": "LIV-683",
+            "question": "Quelle célèbre course cycliste traverse la France chaque été ?",
+            "explanation": "Le Tour de France.",
+            "image": null
+        },
+        {
+            "id": "LIV-684",
+            "question": "Quelle est la plus haute montagne de France ?",
+            "explanation": "Le Mont Blanc.",
+            "image": null
+        },
+        {
+            "id": "LIV-685",
+            "question": "Quelle est la capitale de la France ?",
+            "explanation": "Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-686",
+            "question": "Quel est le plus grand port maritime de France ?",
+            "explanation": "Le Port de Marseille.",
+            "image": null
+        },
+        {
+            "id": "LIV-687",
+            "question": "Quelle est la spécialité culinaire de Lyon ?",
+            "explanation": "La quenelle.",
+            "image": null
+        },
+        {
+            "id": "LIV-688",
+            "question": "Quelle est la plus grande forêt de France ?",
+            "explanation": "La forêt des Landes.",
+            "image": null
+        },
+        {
+            "id": "LIV-689",
+            "question": "Quel est le point culminant de la France ?",
+            "explanation": "Le Mont Blanc est le point culminant de la France.",
+            "image": null
+        },
+        {
+            "id": "LIV-690",
+            "question": "Quel est le nom du désert situé dans le sud de la France ?",
+            "explanation": "Le désert situé dans le sud de la France est le désert des Bardenas Reales.",
+            "image": null
+        },
+        {
+            "id": "LIV-691",
+            "question": "Quelles sont les montagnes situées à la frontière entre la France et l'Espagne ?",
+            "explanation": "Les Pyrénées sont les montagnes situées à la frontière entre la France et l'Espagne.",
+            "image": null
+        },
+        {
+            "id": "LIV-692",
+            "question": "Quel est le nom de la chaîne de montagnes située en France qui est célèbre pour ses stations de ski ?",
+            "explanation": "Les Alpes sont célèbres pour leurs stations de ski en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-693",
+            "question": "Quelles sont les principales chaînes de montagnes en France ?",
+            "explanation": "Les Alpes, les Pyrénées, le Massif central, le Jura, les Vosges.",
+            "image": null
+        },
+        {
+            "id": "LIV-694",
+            "question": "Quels pays ne font pas partie de l'Union européenne mais font partie de l'espace Schengen ?",
+            "explanation": "Certains pays ne font pas partie de l'Union européenne mais font partie de l'Espace Schengen, qui permet la libre circulation des personnes entre ses membres. Ces pays sont : - Norvège - Islande - Suisse - Liechtenstein Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'Espace Schengen, même s'ils ne sont pas membres de l'Union européenne.",
+            "image": null
+        },
+        {
+            "id": "LIV-695",
+            "question": "Quel est le nom du satellite européen de navigation ?",
+            "explanation": "Galileo.",
+            "image": null
+        },
+        {
+            "id": "LIV-696",
+            "question": "En quelle année la France est-elle devenue membre de l'Union Européenne ?",
+            "explanation": "1957, avec la signature du Traité de Rome (la France est l'un des membres fondateurs).",
+            "image": null
+        },
+        {
+            "id": "LIV-697",
+            "question": "Qui est Robert Schuman ?",
+            "explanation": "Robert Schuman était un homme politique français, ministre des Affaires étrangères, considéré comme l'un des pères fondateurs de l'Union européenne. Il est célèbre pour avoir proposé la Déclaration Schuman en 1950, qui a initié la création de la Communauté européenne du charbon et de l'acier, première étape vers l'intégration européenne.",
+            "image": null
+        },
+        {
+            "id": "LIV-698",
+            "question": "Qu'est-ce que l'Union européenne (UE) ?",
+            "explanation": "L'UE est une organisation politique et économique regroupant 27 pays européens.",
+            "image": null
+        },
+        {
+            "id": "LIV-699",
+            "question": "Qu’est-ce que l’Eurovision ?",
+            "explanation": "L'Eurovision est un concours de chansons annuel organisé par l'Union européenne de radio-télévision (UER). Bien qu'il ne soit pas directement lié à l'UE, plusieurs pays européens et quelques pays voisins y participent, mettant en avant la culture musicale européenne.",
+            "image": null
+        },
+        {
+            "id": "LIV-700",
+            "question": "Quelle est la monnaie utilisée dans la zone euro ?",
+            "explanation": "La monnaie utilisée dans la zone euro est l'euro (€).",
+            "image": null
+        },
+        {
+            "id": "LIV-701",
+            "question": "Quels pays européens ne font pas partie de l'UE ?",
+            "explanation": "Parmi les pays européens qui ne font pas partie de l'UE, on trouve la Norvège, la Suisse, et le RoyaumeUni.",
+            "image": null
+        },
+        {
+            "id": "LIV-702",
+            "question": "Quelle est la capitale de l'Union européenne ?",
+            "explanation": "La capitale de l'UE est Bruxelles, en Belgique.",
+            "image": null
+        },
+        {
+            "id": "LIV-703",
+            "question": "Quels sont les objectifs principaux de l'UE ?",
+            "explanation": "Les principaux objectifs de l'UE sont la paix, la stabilité, la prospérité économique, et la coopération entre les pays membres.",
+            "image": null
+        },
+        {
+            "id": "LIV-704",
+            "question": "Quelles sont les langues officielles de l'UE ?",
+            "explanation": "L'UE compte 24 langues officielles, dont l'anglais, le français, l'allemand, et l'espagnol.",
+            "image": null
+        },
+        {
+            "id": "LIV-705",
+            "question": "Quel a été l'impact du Brexit sur l'UE ?",
+            "explanation": "Le Brexit a conduit à la sortie du Royaume-Uni de l'UE, ce qui a eu des conséquences économiques et politiques.",
+            "image": null
+        },
+        {
+            "id": "LIV-706",
+            "question": "Quelles sont les mesures prises par l'UE pour lutter contre le changement climatique ?",
+            "explanation": "L'UE a adopté le pacte vert pour l'Europe, une initiative visant à atteindre la neutralité carbone d'ici 2050.",
+            "image": null
+        },
+        {
+            "id": "LIV-707",
+            "question": "Comment l'UE a-t-elle réagi à la crise migratoire en Europe ?",
+            "explanation": "L'UE a mis en place diverses politiques et accords pour gérer la crise migratoire, y compris la réinstallation des réfugiés.",
+            "image": null
+        },
+        {
+            "id": "LIV-708",
+            "question": "Quelles sont les principales initiatives de l'UE en matière de numérisation ?",
+            "explanation": "L'UE promeut la transformation numérique à travers des programmes tels que le marché unique numérique.",
+            "image": null
+        },
+        {
+            "id": "LIV-709",
+            "question": "Quel est le slogan de l'UE ?",
+            "explanation": "Le slogan de l'UE est 'Unie dans la diversité'.",
+            "image": null
+        },
+        {
+            "id": "LIV-710",
+            "question": "Quel est le Jour de l'Europe ?",
+            "explanation": "Le Jour de l'Europe est célébré le 9 mai en l'honneur de la déclaration Schuman en 1950.",
+            "image": null
+        },
+        {
+            "id": "LIV-711",
+            "question": "Qu'est-ce que la Commission européenne ?",
+            "explanation": "La Commission européenne est l'organe exécutif de l'UE, responsable de la mise en œuvre des politiques et de la gestion des programmes.",
+            "image": null
+        },
+        {
+            "id": "LIV-712",
+            "question": "Qu'est-ce que le Conseil de l'Union européenne ?",
+            "explanation": "Le Conseil de l'UE représente les gouvernements des États membres et prend des décisions sur les politiques de l'UE.",
+            "image": null
+        },
+        {
+            "id": "LIV-713",
+            "question": "Qu'est-ce que le pacte vert pour l'Europe (Green Deal) ?",
+            "explanation": "Le pacte vert pour l'Europe est une initiative de l'UE visant à atteindre la neutralité carbone et à promouvoir la durabilité environnementale.",
+            "image": null
+        },
+        {
+            "id": "LIV-714",
+            "question": "C'est quoi l'espace Schengen ?",
+            "explanation": "L'espace Schengen est un ensemble de pays européens qui ont aboli les contrôles aux frontières internes entre eux. Cela permet la libre circulation des personnes à l'intérieur de cet espace, facilitant les voyages et les échanges. Il comprend la plupart des pays de l'UE, ainsi que quelques pays non membres de l'UE.",
+            "image": null
+        },
+        {
+            "id": "LIV-715",
+            "question": "Où se trouve le siège principal de l'Union européenne ?",
+            "explanation": "Le siège principal de l'Union européenne se trouve à Bruxelles, en Belgique.",
+            "image": null
+        },
+        {
+            "id": "LIV-716",
+            "question": "Quel est le dernier pays à avoir rejoint l'Union européenne ?",
+            "explanation": "La Croatie est le dernier pays à avoir rejoint l'UE, le 1er juillet 2013.",
+            "image": null
+        },
+        {
+            "id": "LIV-717",
+            "question": "Quel est votre avis sur l'actualité mondiale ?",
+            "explanation": "L'actualité mondiale est complexe, marquée par des défis tels que les conflits géopolitiques, la crise climatique, et les avancées technologiques. Elle nécessite une approche nuancée et informée pour comprendre les enjeux actuels.",
+            "image": null
+        },
+        {
+            "id": "LIV-718",
+            "question": "Citez des personnages littéraires Français célèbres",
+            "explanation": "Thénardier, jean valjean (Les misérables), Rémy (Sans famille), le petit prince,…",
+            "image": null
+        },
+        {
+            "id": "LIV-719",
+            "question": "Citez des artistes Français connus",
+            "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-720",
+            "question": "Citez des écrivains Français Célèbres",
+            "explanation": "Beaumarchais, Molière, Victor Hugo etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-721",
+            "question": "Citez des œuvres littéraires célèbres",
+            "explanation": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-722",
+            "question": "Qui était Voltaire ?",
+            "explanation": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+            "image": null
+        },
+        {
+            "id": "LIV-723",
+            "question": "À Quel mouvement voltaire appartient-il ?",
+            "explanation": "Il appartenait au mouvement de la philosophie des lumières et il en est l'un des représentants les plus connus.",
+            "image": null
+        },
+        {
+            "id": "LIV-724",
+            "question": "Citez des philosophes connus des lumières ?",
+            "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-725",
+            "question": "Qu'est-ce que la philosophie des lumières ?",
+            "explanation": "C'est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du xviie siècle avec plusieurs philosophes comme voltaire, rousseau etc… et qui par leur engagement contre les oppressions religieuses et politiques, se voyaient comme une élite avancée œuvrant pour un progrès du monde. Combattant l'irrationnel, l'arbitraire, l'obscurantisme et la « superstition » des siècles passés, ils ont procédé au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. L'influence de leurs écrits a été déterminante dans les grands événements de la fin du xviiie siècle que sont la Déclaration d'indépendance des États-Unis et la Révolution française.",
+            "image": null
+        },
+        {
+            "id": "LIV-726",
+            "question": "Quel grand évènement sportif Français connaissez-vous ?",
+            "explanation": "- Vous pouvez citer une épreuve cycliste comme le Tour de France.    - Une épreuve de tennis comme le tournoi de Roland Garros.   - Une compétition de course automobile comme les 24h du Mans.    - Une course comme le Marathon de Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-727",
+            "question": "Connaissez-vous des sportifs Français(e)s ?",
+            "explanation": "- Dans le football : Michel Platini, Zinedine Zidane.    - Dans le cyclisme : Richard Virenque.    - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.    - Dans le judo : Teddy Riner.",
+            "image": null
+        },
+        {
+            "id": "LIV-728",
+            "question": "Vivez-vous en appartement ou en maison ?",
+            "explanation": "J’habite dans un(e) (Appartement/Maison).",
+            "image": null
+        },
+        {
+            "id": "LIV-729",
+            "question": "Pouvez-vous nous parler de votre parcours avant d'arriver en France ?",
+            "explanation": "Originaire de (pays), j'ai décidé de venir en France pour (raison, par exemple : poursuivre mes études, opportunités professionnelles, rejoindre ma famille). J'ai été attiré par la qualité de vie, la culture et les opportunités qu'offre la France.",
+            "image": null
+        },
+        {
+            "id": "LIV-730",
+            "question": "Comment la Terreur a-t-elle pris fin ?",
+            "explanation": "Le 27 juillet 1794 (9 thermidor an II), Robespierre et ses partisans sont arrêtés et exécutés.",
+            "image": null
+        },
+        {
+            "id": "LIV-731",
+            "question": "Qui a peint la Joconde et où est-elle exposée ?",
+            "explanation": "Léonard de Vinci, et elle est exposée au musée du Louvre.",
+            "image": null
+        },
+        {
+            "id": "LIV-732",
+            "question": "Pourquoi voulez-vous devenir Français ?",
+            "explanation": "Je suis venu en France pour la première fois en 2009 pour effectuer un stage de master à Bordeaux, que j’ai suivi pendant cinq mois. Après l’obtention de mon diplôme, j’ai poursuivi un doctorat à l’Université Grenoble-Alpes. Même lorsque je vivais à Pékin, mes professeurs étaient français, et j’avais régulièrement l’occasion de venir en France pour mes études. Après mon doctorat, j’ai eu la chance de travailler à Paris, à l’ENS, pendant trois ans. Depuis, je cherche et trouve des emplois en France, et je travaille encore aujourd’hui dans un environnement français.   Au fil des années, je me suis habitué à la culture française, à la langue, et j’ai découvert avec plaisir la gastronomie locale : j’aime le fromage, le vin, et voyager en France ainsi qu’en Europe. J’apprécie beaucoup la liberté d’expression, la facilité de voyager entre les pays, et le mode de vie français.   Je souhaite devenir Français car je me sens pleinement intégré dans cette société. J’admire profondément les valeurs de la République française, notamment la liberté, l’égalité, et la fraternité. La France, en tant que troisième économie mondiale et leader dans plusieurs secteurs comme l’aéronautique, l’agroalimentaire et le luxe, représente pour moi un pays où je peux construire un projet personnel et professionnel solide.    Aujourd’hui, je me sens plus Français que jamais et je n’ai plus aucune autre alternative, car la France est devenue ma maison, mon pays d’adoption où je veux m’investir pleinement.",
+            "image": null
+        },
+        {
+            "id": "LIV-733",
+            "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+            "explanation": "Je retourne dans mon pays d'origine une fois par an.",
+            "image": null
+        },
+        {
+            "id": "LIV-734",
+            "question": "Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+            "explanation": "Je suis célibataire, je n'ai ni enfant ni compagnon. Je vis seule.",
+            "image": null
+        },
+        {
+            "id": "LIV-735",
+            "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
+            "explanation": "Je vis seule mais je partage mon logement avec un colocataire.",
+            "image": null
+        },
+        {
+            "id": "LIV-736",
+            "question": "Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?",
+            "explanation": "Je n’ai pas de conjoint ni de partenaire, donc je ne partage aucune activité avec quelqu’un",
+            "image": null
+        },
+        {
+            "id": "LIV-737",
+            "question": "Avez-vous vos liens personnels et familiaux en France ?",
+            "explanation": "J'ai plusieurs amis français avec qui j'ai des liens solides. Je leur rends souvent visite pour le déjeuner le week-end ou lors d'occasions spéciales comme Noël ou le réveillon du Nouvel An. Nous sommes amis depuis plus de huit ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-738",
+            "question": "Faites-vous partie d’une association ? Si oui, laquelle et depuis quand ?",
+            "explanation": "Oui, je fais partie d’une église locale appelée La Cité. Je suis membre actifve de cette communauté.",
+            "image": null
+        },
+        {
+            "id": "LIV-739",
+            "question": "DOu se trouve le siège de cette association ?",
+            "explanation": "Le siège de l’église La Cité se trouve au 24 Rue Antoine-Julien Hénard, 75012 Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-740",
+            "question": "Pratiquez vous une religion ?",
+            "explanation": "Oui, je suis chrétienne.",
+            "image": null
+        },
+        {
+            "id": "LIV-741",
+            "question": "Pourquoi êtes-vous venu en France la toute première fois ?",
+            "explanation": "Je suis arrivé(e) en France pour la première fois le 15 juin 2009 pour un stage de master à Bordeaux, où je suis resté(e) pendant cinq mois. Je suivais un master en informatique.",
+            "image": null
+        },
+        {
+            "id": "LIV-742",
+            "question": "Qu’avez-vous en France que vous n’avez pas dans votre pays d’origine ?",
+            "explanation": "En France, j’apprécie particulièrement la démocratie, la liberté d’expression et le respect des droits humains, qui sont mieux établis qu’au Vietnam. J’admire aussi la richesse culturelle, la qualité du système éducatif et les avancées scientifiques. Ces aspects m’offrent un environnement favorable pour vivre et évoluer.",
+            "image": null
+        },
+        {
+            "id": "LIV-743",
+            "question": "Ou avez-vous appris le Français ?",
+            "explanation": "J’ai appris le français à l’école, avec des cours particuliers, et surtout au quotidien dans la vie de tous les jours.",
+            "image": null
+        },
+        {
+            "id": "LIV-744",
+            "question": "Pendant combien de temps avez-vous étudier le Français ?",
+            "explanation": "J’apprends le français depuis plus de dix ans, de manière non continue, mais je continue à apprendre régulièrement depuis mon arrivée en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-745",
+            "question": "Parlez-vous d’autres langues ? Si oui, lesquelles ?",
+            "explanation": "Je parle vietnamien, qui est ma langue maternelle, ainsi que l’anglais, ma deuxième langue.",
+            "image": null
+        },
+        {
+            "id": "LIV-746",
+            "question": "Quelle langue vous parait la plus facile ? Pourquoi ?",
+            "explanation": "Le Français, car c’est la langue que j’utilise dans la vie de tous les jours.",
+            "image": null
+        },
+        {
+            "id": "LIV-747",
+            "question": "Envoyez vous de l’argent dans votre pays d’origine ? Si oui à qui ?",
+            "explanation": "Oui, j’envoie environ 200 euros par mois à mes parents, comme un cadeau pour eux.",
+            "image": null
+        },
+        {
+            "id": "LIV-748",
+            "question": "Ou passez vous vos vacances ?",
+            "explanation": "Je passe mes vacances principalement en France et j’ai eu l’occasion de visiter la plupart des grandes villes comme Paris, Lyon, Marseille, Strasbourg, Lille, Nice, et bien d’autres encore.",
+            "image": null
+        },
+        {
+            "id": "LIV-749",
+            "question": "Quelles sont les nationalités des personnes de votre entourage ?",
+            "explanation": "La majorité de mes amis sont Français, mais j’ai aussi des amis étrangers, comme des Russes et des Mauriciens. Cependant, la plupart de mon entourage est français.",
+            "image": null
+        },
+        {
+            "id": "LIV-750",
+            "question": "Depuis quand habitez-vous à cette adresse ?",
+            "explanation": "Depuis (Nombre d’années/mois).",
+            "image": null
+        },
+        {
+            "id": "LIV-751",
+            "question": "Où avez-vous appris le français ?",
+            "explanation": "J’ai appris le français à (École, Université, Cours, Autodidacte...)",
+            "image": null
+        },
+        {
+            "id": "LIV-752",
+            "question": "Regardez-vous la télévision française ?",
+            "explanation": "Oui/Non, je regarde (Nom de chaîne ou d’émission).",
+            "image": null
+        },
+        {
+            "id": "LIV-753",
+            "question": "Écoutez-vous la radio en France ?",
+            "explanation": "Oui/Non, j’écoute (Nom de la station).",
+            "image": null
+        },
+        {
+            "id": "LIV-754",
+            "question": "Lisez-vous la presse française ?",
+            "explanation": "Oui, je lis (Nom du journal ou site internet).",
+            "image": null
+        },
+        {
+            "id": "LIV-755",
+            "question": "Pourquoi avez-vous quitté votre pays d’origine ?",
+            "explanation": "J’ai quitté mon pays pour des raisons familiales et/ou professionnelles. La France m’a offert la possibilité de poursuivre mon projet de vie dans un cadre stable, sécurisant et propice à mon épanouissement personnel et professionnel.",
+            "image": null
+        },
+        {
+            "id": "LIV-756",
+            "question": "Quand êtes-vous arrivé(e) en France ?",
+            "explanation": "Je suis arrivé(e) en France en (année) et j'y réside depuis.",
+            "image": null
+        },
+        {
+            "id": "LIV-757",
+            "question": "Êtes-vous marié(e) ? Depuis quand ?",
+            "explanation": "Oui, je suis marié(e) depuis le (JJ/MM/AAAA). (Ou : Non, je ne suis pas marié(e).)",
+            "image": null
+        },
+        {
+            "id": "LIV-758",
+            "question": "Vivez-vous ensemble ? Depuis combien de temps ?",
+            "explanation": "Oui, nous vivons ensemble depuis (Nombre d’années/mois). (Ou : Non, nous vivons séparément pour des raisons professionnelles/familiales...)",
+            "image": null
+        },
+        {
+            "id": "LIV-759",
+            "question": "Avez-vous des animaux de compagnie ?",
+            "explanation": "Oui, nous avons (un chien, un chat, un oiseau…). (Ou : Non, nous n’avons pas d’animaux.)",
+            "image": null
+        },
+        {
+            "id": "LIV-760",
+            "question": "Quand la peine de mort a-t-elle été abolie en France ?",
+            "explanation": "La peine de mort a été abolie en France le 9 octobre 1981.",
+            "image": null
+        },
+        {
+            "id": "LIV-761",
+            "question": "Où siège la plus haute juridiction judiciaire en France?",
+            "explanation": "À la Cour de cassation, située au Palais de Justice de Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-762",
+            "question": "Où siège le Conseil d’État?",
+            "explanation": "Au Palais-Royal, à Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-763",
+            "question": "Peut-on avoir une double nationalité en France ?",
+            "explanation": "Oui, selon les accords entre pays.",
+            "image": null
+        },
+        {
+            "id": "LIV-764",
+            "question": "Combien de temps dure le mandat des conseillers municipaux ?",
+            "explanation": "6 ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-765",
+            "question": "Comment Louis XVI (16) a-t-il été jugé ?",
+            "explanation": "Il a été jugé par la Convention nationale, reconnu coupable de trahison et guillotiné le 21 janvier 1793.",
+            "image": null
+        },
+        {
+            "id": "LIV-766",
+            "question": "Pourquoi la Terreur a-t-elle eu lieu ?",
+            "explanation": "Entre 1793 et 1794, le gouvernement a instauré la Terreur pour éliminer les ennemis de la Révolution. Environ 16 000 personnes ont été exécutées sous l'autorité du Comité de salut public, dirigé par Robespierre.",
+            "image": null
+        },
+        {
+            "id": "LIV-767",
+            "question": "Comment Jean Moulin est-il mort ?",
+            "explanation": "Il a été arrêté par la Gestapo le 21 juin 1943 à Caluire, près de Lyon, après une trahison. Torturé par Klaus Barbie, chef de la Gestapo à Lyon, il est mort des suites de ses blessures durant son transfert vers l'Allemagne, le 8 juillet 1943.",
+            "image": null
+        },
+        {
+            "id": "LIV-768",
+            "question": "Quand l’esclavage a-t-il été aboli en France ?",
+            "explanation": "L’abolition de l’esclavage en France date du 27 avril 1848, sous l’impulsion de Victor Schœlcher.",
+            "image": null
+        },
+        {
+            "id": "LIV-769",
+            "question": "Qui était l'épouse de Louis XVI (16) ?",
+            "explanation": "Marie-Antoinette était l'épouse de Louis XVI (16).",
+            "image": null
+        },
+        {
+            "id": "LIV-770",
+            "question": "Qui est à lʼorigine de la Tour Eiffel ?",
+            "explanation": "Gustave Eiffel.",
+            "image": null
+        },
+        {
+            "id": "LIV-771",
+            "question": "Pourquoi est-elle célèbre ?",
+            "explanation": "- Elle représente le savoir-faire français en ingénierie. - Elle attire plus de 6 millions de visiteurs par an. - Elle est un symbole mondial de la France et de Paris.",
+            "image": null
+        },
+        {
+            "id": "LIV-772",
+            "question": "Comment est-elle souvent appelée?",
+            "explanation": "La tour Eiffel est souvent appelée La Grande Dame de Fer.",
+            "image": null
+        },
+        {
+            "id": "LIV-773",
+            "question": "Qui est l'auteur du roman \"Madame Bovary\" ?",
+            "explanation": "Gustave Flaubert.",
+            "image": null
+        },
+        {
+            "id": "LIV-774",
+            "question": "Qui est l'auteur de L'Étranger ?",
+            "explanation": "Albert Camus.",
+            "image": null
+        },
+        {
+            "id": "LIV-775",
+            "question": "Qui est le créateur de la série de bandes dessinées Astérix ?",
+            "explanation": "René Goscinny et Albert Uderzo.",
+            "image": null
+        },
+        {
+            "id": "LIV-776",
+            "question": "Art 1. Comment naissent les hommes ?",
+            "explanation": "Libres et égaux en droits.",
+            "image": null
+        },
+        {
+            "id": "LIV-777",
+            "question": "Art 3. Où réside la souveraineté ?",
+            "explanation": "Dans la Nation.",
+            "image": null
+        },
+        {
+            "id": "LIV-778",
+            "question": "Art 4. Qu'est-ce que la liberté ?",
+            "explanation": "Pouvoir faire tout ce qui ne nuit pas à autrui.",
+            "image": null
+        },
+        {
+            "id": "LIV-779",
+            "question": "Art 9. Quelle est la présomption concernant tout homme ?",
+            "explanation": "Tout homme est présumé innocent jusqu'à ce qu'il ait été déclaré coupable.",
+            "image": null
+        },
+        {
+            "id": "LIV-780",
+            "question": "Art 10. Peut-on être inquiété pour ses opinions ?",
+            "explanation": "Non, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public.",
+            "image": null
+        }
+    ]
+}

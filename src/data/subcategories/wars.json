@@ -87,6 +87,18 @@
       "question": "Où a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?",
       "explanation": "En Normandie.",
       "image": "French_questions/assets/normandie.png"
+    },
+    {
+      "id": 352,
+      "question": "Qui était une figure de la Résistance française pendant la Seconde Guerre mondiale ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 358,
+      "question": "Quelle organisation a été créée en 1945 après la Seconde Guerre mondiale ?",
+      "explanation": "",
+      "image": null
     }
   ]
 }

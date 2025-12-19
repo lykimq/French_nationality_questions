@@ -1,0 +1,75 @@
+{
+    "theme": "Droits et devoirs",
+    "id": "fundamental_rights",
+    "title": "Droits fondamentaux",
+    "icon": "hand-left",
+    "description": "Les socles de la liberté et de l'égalité en France",
+    "questions": [
+        {
+            "id": "LIV-025",
+            "question": "Qu'est-ce que la Déclaration des Droits de l'Homme et du Citoyen ?",
+            "explanation": "Adoptée en 1789, c'est un texte fondateur qui définit les droits naturels et imprescriptibles de l'homme : la liberté, la propriété, la sûreté et la résistance à l'oppression.",
+            "image": null
+        },
+        {
+            "id": "LIV-026",
+            "question": "Que signifie 'Les hommes naissent et demeurent libres et égaux en droits' ?",
+            "explanation": "C'est l'article 1er de la DDHC. Cela signifie qu'aucune distinction sociale ne peut être fondée sur la naissance ou le statut ; tous les citoyens ont les mêmes droits.",
+            "image": null
+        },
+        {
+            "id": "LIV-027",
+            "question": "La liberté d'expression est-elle absolue ?",
+            "explanation": "Non. Elle est garantie mais limitée par la loi pour respecter les droits d'autrui (interdiction de l'incitation à la haine, diffamation, injure).",
+            "image": null
+        },
+        {
+            "id": "LIV-028",
+            "question": "Quelle est la position de la France sur l'égalité femmes-hommes ?",
+            "explanation": "C'est une valeur essentielle de la République. La loi garantit aux femmes les mêmes droits qu'aux hommes dans tous les domaines (professionnel, politique, civil).",
+            "image": null
+        },
+        {
+            "id": "LIV-029",
+            "question": "Qu'est-ce que la loi Veil ?",
+            "explanation": "C'est la loi de 1975 qui a légalisé l'interruption volontaire de grossesse (IVG) en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-030",
+            "question": "Quand la peine de mort a-t-elle été abolie ?",
+            "explanation": "En 1981, sous l'impulsion de Robert Badinter.",
+            "image": null
+        },
+        {
+            "id": "LIV-031",
+            "question": "Qu'est-ce que le mariage pour tous ?",
+            "explanation": "C'est la loi de 2013 qui permet aux couples de même sexe de se marier et d'adopter.",
+            "image": null
+        },
+        {
+            "id": "LIV-137",
+            "question": "L'administration peut-elle refuser la nationalité française pour non-respect de l'égalité femmes-hommes ?",
+            "explanation": "Oui, même si la personne est mariée à un(e) français(e), car l'égalité entre les femmes et les hommes est une valeur essentielle de la République.",
+            "image": null
+        },
+        {
+            "id": "LIV-138",
+            "question": "La liberté d'expression a-t-elle des limites ?",
+            "explanation": "Oui, elle est limitée par le respect des droits des autres. Il est interdit de diffuser des injures, des propos diffamatoires, des provocations à la haine ou de faire l'apologie de crimes contre l'humanité.",
+            "image": null
+        },
+        {
+            "id": "LIV-139",
+            "question": "Que pensez-vous de l'impact des attaques contre Charlie Hebdo sur la liberté d'expression ?",
+            "explanation": "À mon avis, cela a souligné l'importance cruciale de la liberté d'expression, tout en montrant la nécessité de dialoguer sur ses limites respectueuses.",
+            "image": null
+        },
+        {
+            "id": "LIV-140",
+            "question": "Pensez-vous que la liberté d'expression est absolue ?",
+            "explanation": "Non, la liberté est garantie mais elle n'est pas absolue car les libertés des uns s'arrêtent là où commencent celles des autres.",
+            "image": null
+        }
+    ]
+}

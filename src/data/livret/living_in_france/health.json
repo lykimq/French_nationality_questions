@@ -1,0 +1,51 @@
+{
+    "theme": "Vivre dans la société française",
+    "id": "health",
+    "title": "Santé et protection sociale",
+    "icon": "medical",
+    "description": "Le système de santé et de solidarité",
+    "questions": [
+        {
+            "id": "LIV-062",
+            "question": "Qu'est-ce que le système de sécurité sociale ?",
+            "explanation": "Créé en 1945, c'est un système de protection contre les risques de la vie (maladie, vieillesse, famille, accidents du travail). Il est fondé sur le principe de solidarité.",
+            "image": null
+        },
+        {
+            "id": "LIV-063",
+            "question": "Par qui est financée la Sécurité sociale ?",
+            "explanation": "Elle est financée par les cotisations sociales prélevées sur les salaires (employeurs et salariés) et par l'impôt (CSG).",
+            "image": null
+        },
+        {
+            "id": "LIV-064",
+            "question": "Qu'est-ce que le RSA ?",
+            "explanation": "Le Revenu de Solidarité Active. C'est une prestation qui assure un revenu minimum aux personnes sans ressources ou ayant des ressources faibles.",
+            "image": null
+        },
+        {
+            "id": "LIV-781",
+            "question": "Qui a été à l'origine du château de Versailles ?",
+            "explanation": "C'est Louis XIV (Louis 14).",
+            "image": null
+        },
+        {
+            "id": "LIV-782",
+            "question": "Qu'est-ce que le Traité de Versailles ?",
+            "explanation": "Le Traité de Versailles, signé en 1919, a mis officiellement fin à la Première Guerre Mondiale. Ce traité a imposé de lourdes réparations et des restrictions territoriales à l'Allemagne, et a redessiné la carte de l'Europe. Cependant, il est aussi considéré comme ayant semé les graines du mécontentement menant à la Seconde Guerre Mondiale.",
+            "image": null
+        },
+        {
+            "id": "LIV-783",
+            "question": "Comment s'appelle le système de santé publique en France ?",
+            "explanation": "La Sécurité Sociale.",
+            "image": null
+        },
+        {
+            "id": "LIV-784",
+            "question": "Qui a construit le château de Versailles ?",
+            "explanation": "Louis XIV (14).",
+            "image": null
+        }
+    ]
+}

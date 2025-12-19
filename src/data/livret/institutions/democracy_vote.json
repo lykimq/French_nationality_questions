@@ -1,0 +1,165 @@
+{
+    "theme": "Système institutionnel et politique",
+    "id": "democracy_vote",
+    "title": "Démocratie et droit de vote",
+    "icon": "people",
+    "description": "Les principes du pouvoir au peuple",
+    "questions": [
+        {
+            "id": "LIV-013",
+            "question": "Qu'est-ce que pour vous la démocratie ?",
+            "explanation": "C'est un système où le peuple est souverain. Les citoyens participent aux décisions et à la vie politique, directement ou via des représentants élus.",
+            "image": null
+        },
+        {
+            "id": "LIV-014",
+            "question": "Quel est l'âge de la majorité et du droit de vote en France ?",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-015",
+            "question": "Qu'est-ce que le suffrage universel ?",
+            "explanation": "C'est le droit de vote accordé à tous les citoyens majeurs, sans distinction de sexe, de fortune ou de statut social.",
+            "image": null
+        },
+        {
+            "id": "LIV-016",
+            "question": "Pourquoi vote-t-on en démocratie ?",
+            "explanation": "C'est un droit et un devoir civique. Cela permet aux citoyens de choisir leurs représentants et d'influencer la politique du pays.",
+            "image": null
+        },
+        {
+            "id": "LIV-017",
+            "question": "Citez quelques types d'élections en France.",
+            "explanation": "Présidentielles, législatives (députés), municipales (maires), départementales, régionales et européennes.",
+            "image": null
+        },
+        {
+            "id": "LIV-030",
+            "question": "Quelles sont les formes de la démocratie ?",
+            "explanation": "Il y a trois formes de démocraties, la démocratie directe, participative et représentative.",
+            "image": null
+        },
+        {
+            "id": "LIV-031",
+            "question": "Quelles formes libertés sont garanties en démocratie ?",
+            "explanation": "La liberté de penser, la liberté de croire ou de ne pas croire, la liberté d'expression etc…",
+            "image": null
+        },
+        {
+            "id": "LIV-032",
+            "question": "Les femmes ont-elles le droit de vote en France ?",
+            "explanation": "Oui",
+            "image": null
+        },
+        {
+            "id": "LIV-033",
+            "question": "Depuis quand les femmes ont elles le droit de vote en France ?",
+            "explanation": "Depuis le 21 avril 1944.",
+            "image": null
+        },
+        {
+            "id": "LIV-034",
+            "question": "Par quel scrutin et pour combien de mandats peut être élu le président de la république ?",
+            "explanation": "Le président est élu au suffrage universel direct, à la majorité absolue en deux tours. Il peut faire au maximum deux mandats de cinq ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-035",
+            "question": "Qui a le droit de voter aux élections ?",
+            "explanation": "Tout citoyen Français majeur.",
+            "image": null
+        },
+        {
+            "id": "LIV-036",
+            "question": "Quels seront les prochaines élections ?",
+            "explanation": "Les prochaines élections seront les élections présidentielles françaises prévues en avril 2027.",
+            "image": null
+        },
+        {
+            "id": "LIV-037",
+            "question": "Pourquoi la France a-t-elle organisé des élections législatives anticipées en 2024 ?",
+            "explanation": "La dissolution de l'Assemblée nationale par le président Emmanuel Macron a entraîné des élections anticipées en raison d'une impasse législative suite aux élections européennes qui ont eu lieu en juin 2024. Le gouvernement ne parvenait pas à rassembler une majorité pour faire voter certaines lois importantes, ce qui reflétait des tensions politiques persistantes.",
+            "image": null
+        },
+        {
+            "id": "LIV-038",
+            "question": "Quels blocs politiques se sont démarqués lors de ces élections ?",
+            "explanation": "Les élections ont été marquées par l’avancée de trois grands blocs : le Rassemblement National (RN), la coalition pro-présidentielle (Ensemble) et le Nouveau Front Populaire, représentant la gauche. Le RN, qui a remporté le plus de voix au premier tour. Ensuite, le nouveau front populaire est arrivé en tête au second tour avec une majorité relative.",
+            "image": null
+        },
+        {
+            "id": "LIV-039",
+            "question": "Les élections ont-elles permis de former une majorité au Parlement ?",
+            "explanation": "Non, aucun groupe politique n’a obtenu de majorité absolue, ce qui a laissé l'Assemblée nationale fragmentée. Les partis doivent donc négocier des accords pour former une majorité de gouvernance, faute de quoi de nouvelles élections pourraient être envisagées.",
+            "image": null
+        },
+        {
+            "id": "LIV-040",
+            "question": "Quelle est la différence entre République et démocratie ?",
+            "explanation": "Une république n'a pas de roi, mais cela ne signifie pas que c’est une démocratie, tandis qu'une démocratie signifie que le peuple a le pouvoir, et cela peut exister dans une république ou une monarchie. - Une république n’est pas forcément une démocratie. Ex : La Chine est une république mais pas une démocratie (régime autoritaire). - Une démocratie n’est pas forcément une république. Ex : Le Royaume-Uni est une démocratie mais reste une monarchie.",
+            "image": null
+        },
+        {
+            "id": "LIV-041",
+            "question": "En quelle année le droit de vote des femmes a-t-il été introduit en France ?",
+            "explanation": "1944.",
+            "image": null
+        },
+        {
+            "id": "LIV-042",
+            "question": "En quelle année le droit de vote des hommes a-t-il été introduit en France ?",
+            "explanation": "Le droit de vote des hommes a été introduit en 1848, pendant la Deuxième République, avec le suffrage universel masculin.",
+            "image": null
+        },
+        {
+            "id": "LIV-043",
+            "question": "Quels types d’élections ont lieu en France ?",
+            "explanation": "En France, on trouve les élections présidentielles (5ans), législatives (5ans), municipales (6ans), régionales (6ans), européennes (5ans), et les élections départementales (6ans).",
+            "image": null
+        },
+        {
+            "id": "LIV-044",
+            "question": "Quelles sont les dernières élections qui ont eu lieu en France ?",
+            "explanation": "- Élections législatives : Les élections législatives ont eu lieu les 30 juin et 7 juillet 2024 pour élire les membres de la 17ᵉ Assemblée nationale. - Élections européennes : Elles se sont déroulées le 9 juin 2024 pour élire les représentants français au Parlement européen. - Élections présidentielles : Les élections présidentielles ont eu lieu les 10 et 24 avril 2022, et ont abouti à la réélection d'Emmanuel Macron.",
+            "image": null
+        },
+        {
+            "id": "LIV-045",
+            "question": "Quelles sont les prochaines élections ?",
+            "explanation": "Les prochaines élections en France sont les suivantes : - Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes. - Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat. - Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans. - Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen.  Ils peuvent avoir d’autres élections en fonction de l’actualité.",
+            "image": null
+        },
+        {
+            "id": "LIV-046",
+            "question": "Quel est l’âge légal pour voter en France ?",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": "LIV-047",
+            "question": "Pendant combien de mois après l’acquisition de la nationalité est-on autorisée à voter ?",
+            "explanation": "Dès l’inscription sur les listes électorales, généralement dans les mois suivant l’acquisition de la nationalité.",
+            "image": null
+        },
+        {
+            "id": "LIV-048",
+            "question": "Qu'est-ce que les élections municipales ?",
+            "explanation": "Ce sont des élections qui permettent d'élire les membres du conseil municipal de chaque commune et qui sont appelés les conseillers municipaux, c'est eux ensuite qui élisent le maire et ces adjoints.",
+            "image": null
+        },
+        {
+            "id": "LIV-049",
+            "question": "Qu'est-ce que la démocratie ?",
+            "explanation": "La démocratie est une forme de gouvernement dans laquelle la souveraineté appartient au peuple. En d'autres termes, c'est un système de gouvernement du peuple, par le peuple et pour le peuple.",
+            "image": null
+        },
+        {
+            "id": "LIV-050",
+            "question": "Êtes-vous d'accord avec le principe de la démocratie ?",
+            "explanation": "Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles  j'ai choisi de vivre en France.",
+            "image": null
+        }
+    ]
+}

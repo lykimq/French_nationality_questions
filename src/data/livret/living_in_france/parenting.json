@@ -1,0 +1,177 @@
+{
+    "theme": "Vivre dans la société française",
+    "id": "parenting",
+    "title": "Parentalité et famille",
+    "icon": "heart",
+    "description": "L'éducation et les valeurs familiales dans la République",
+    "questions": [
+        {
+            "id": "LIV-068",
+            "question": "L'école est-elle obligatoire en France ?",
+            "explanation": "Oui, de 3 à 16 ans pour tous les enfants résidant en France.",
+            "image": null
+        },
+        {
+            "id": "LIV-069",
+            "question": "Quels sont les trois principes de l'école publique ?",
+            "explanation": "Elle est gratuite, laïque et obligatoire.",
+            "image": null
+        },
+        {
+            "id": "LIV-070",
+            "question": "Qu'est-ce que la mixité à l'école ?",
+            "explanation": "C'est le fait que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes. C'est un vecteur d'égalité dès le plus jeune âge.",
+            "image": null
+        },
+        {
+            "id": "LIV-071",
+            "question": "Quel est le rôle des parents dans l'éducation ?",
+            "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
+            "image": null
+        },
+        {
+            "id": "LIV-787",
+            "question": "Êtes-vous d'accord avec le principe de l'école mixte ?",
+            "explanation": "Oui, je soutiens l'école mixte car elle favorise l'égalité, la diversité et la compréhension mutuelle dès le plus jeune âge.",
+            "image": null
+        },
+        {
+            "id": "LIV-788",
+            "question": "Vous opposeriez-vous à une orientation ou un choix de vie spécifique de vos enfants ?",
+            "explanation": "Nous souhaitons soutenir nos enfants dans leurs choix, tant qu'ils sont heureux et en bonne santé, respectant leurs libertés individuelles.",
+            "image": null
+        },
+        {
+            "id": "LIV-789",
+            "question": "Quelles valeurs vos parents vous ont- ils transmises ?",
+            "explanation": "Mes parents m'ont transmis l'importance de l'honnêteté, du respect, de la responsabilité, et de la bienveillance envers les autres.",
+            "image": null
+        },
+        {
+            "id": "LIV-790",
+            "question": "Que pensez-vous du mariage pour tous ?",
+            "explanation": "Je conçois le mariage pour tous en tant que principe d'égalité des droits et de la liberté.",
+            "image": null
+        },
+        {
+            "id": "LIV-791",
+            "question": "Depuis quand l'école est-elle obligatoire en France ?",
+            "explanation": "Depuis le 28 mars 1882.",
+            "image": null
+        },
+        {
+            "id": "LIV-792",
+            "question": "Qui a rendu l'école obligatoire en France ?",
+            "explanation": "C'est l'ancien maire de Paris Jules Ferry.",
+            "image": null
+        },
+        {
+            "id": "LIV-793",
+            "question": "Que pensez-vous du système éducatif français, soit pour vous-même, soit pour vos enfants ?",
+            "explanation": "Le système éducatif français est reconnu pour sa rigueur, son accessibilité et son excellence, notamment dans des domaines comme les sciences, la littérature et la philosophie. Il garantit à chacun les mêmes chances de réussite grâce à un enseignement de qualité et un accès à l’éducation pour tous. Son ouverture à la réflexion critique et à la culture générale en fait un pilier essentiel de la République, formant des citoyens éclairés et responsables.",
+            "image": null
+        },
+        {
+            "id": "LIV-794",
+            "question": "Avez-vous des projets de voyage avec votre famille ? Vers quelle destination ?",
+            "explanation": "Oui, nous aimons découvrir de nouveaux lieux. Notre prochain projet est de visiter (destination), pour explorer sa culture et son histoire avec nos enfants.",
+            "image": null
+        },
+        {
+            "id": "LIV-795",
+            "question": "Avez-vous de la famille dans votre pays d'origine ?",
+            "explanation": "Oui, j'ai (préciser les liens familiaux, par exemple : mes parents, frères et sœurs) dans mon pays d'origine. Nous restons en contact étroit grâce aux appels vidéo et aux réseaux sociaux.",
+            "image": null
+        },
+        {
+            "id": "LIV-796",
+            "question": "Avez-vous des enfants ? Quels sont leurs prénoms et leurs dates de naissance ?",
+            "explanation": "Oui, j’ai (Nombre) enfant(s). Ils s’appellent (Prénoms) et sont nés le (Dates de naissance). (Ou: Non, je n’ai pas d’enfant.)",
+            "image": null
+        },
+        {
+            "id": "LIV-797",
+            "question": "Quelles sont vos activités en famille ?",
+            "explanation": "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc.",
+            "image": null
+        },
+        {
+            "id": "LIV-798",
+            "question": "Qui s'occupe principalement des enfants ?",
+            "explanation": "Nous nous partageons les responsabilités parentales autant que possible, en nous adaptant à nos horaires professionnels respectifs.",
+            "image": null
+        },
+        {
+            "id": "LIV-799",
+            "question": "Comment votre partenaire et vous pensez-vous des décisions importantes pour la famille ?",
+            "explanation": "Nous prenons les décisions importantes ensemble, après avoir discuté de toutes les options et conséquences, pour nous assurer que nous agissons dans le meilleur intérêt de notre famille.",
+            "image": null
+        },
+        {
+            "id": "LIV-800",
+            "question": "Envoyez-vous de l'argent à votre famille dans votre pays d'origine ?",
+            "explanation": "Oui/NON, j'envoie /ou pas occasionnellement de l'argent pour soutenir ma famille. Cela me permet de rester connecté à eux et de contribuer à leur bien-être.",
+            "image": null
+        },
+        {
+            "id": "LIV-801",
+            "question": "Quelles sont les chaînes de montagnes qui séparent la France de ses voisins ?",
+            "explanation": "- - - France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.",
+            "image": null
+        },
+        {
+            "id": "LIV-802",
+            "question": "Avez-vous des enfants ? Comptez-vous en avoir prochainement ?",
+            "explanation": "Je n'ai pas d'enfants et je ne prévois pas d'en avoir dans un avenir proche.",
+            "image": null
+        },
+        {
+            "id": "LIV-803",
+            "question": "Qui s’occupe des enfants ? Qui s’occupe des tâches ménagères ?",
+            "explanation": "Je n'ai pas d'enfants et je vis seul(e), donc je m’occupe seule de toutes les tâches ménagères.",
+            "image": null
+        },
+        {
+            "id": "LIV-804",
+            "question": "Avez-vous des proches de votre famille qui vivent en France ?",
+            "explanation": "Oui, certains membres de ma famille vivent en France, comme (mentionner sans trop de détails).",
+            "image": null
+        },
+        {
+            "id": "LIV-805",
+            "question": "Avez-vous d'autres membres de votre famille en France ?",
+            "explanation": "Oui, j’ai (Parents, frères/sœurs, cousins…) qui vivent en France. (Ou : Non, ma famille vit à l’étranger.)",
+            "image": null
+        },
+        {
+            "id": "LIV-806",
+            "question": "Passez-vous souvent du temps avec votre belle-famille ?",
+            "explanation": "Oui, nous nous voyons régulièrement, notamment lors des repas familiaux et des fêtes. (Ou : Nous sommes en contact mais nous ne nous voyons pas souvent en raison de la distance.)",
+            "image": null
+        },
+        {
+            "id": "LIV-807",
+            "question": "Pourquoi les autres membres de votre famille n’ont-ils pas demandé la nationalité ?",
+            "explanation": "Chacun fait son choix en fonction de sa situation personnelle et de ses projets.",
+            "image": null
+        },
+        {
+            "id": "LIV-808",
+            "question": "Comment célébrez-vous les fêtes en famille ?",
+            "explanation": "Nous célébrons les fêtes comme Noël, le Nouvel An ou les anniversaires en famille avec des repas et des moments conviviaux.",
+            "image": null
+        },
+        {
+            "id": "LIV-809",
+            "question": "Envisagez-vous d'avoir des enfants ? Si oui, combien ?",
+            "explanation": "Oui/Non, nous envisageons d'avoir des enfants. Nous aimerions avoir (nombre d'enfants), pour agrandir notre famille.",
+            "image": null
+        },
+        {
+            "id": "LIV-810",
+            "question": "Envisagez-vous de faire venir votre famille en France ?",
+            "explanation": "Si les circonstances le permettent, j'aimerais faire venir (membres de la famille) en France pour leur offrir de meilleures opportunités ou simplement pour les réunir et passer du temps ensemble.",
+            "image": null
+        }
+    ]
+}

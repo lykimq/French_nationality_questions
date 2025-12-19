@@ -573,6 +573,558 @@
       "question": "Si vous obtenez la nationalité Française comptez-vous vivre en France ?",
       "explanation": "Encore une question piège de l’entretien de naturalisation Française, vous obtenez la nationalité Française pour vivre principalement en France !",
       "image": null
+    },
+    {
+      "id": 201,
+      "question": "Complétez les paroles de la Marseillaise \"Allons enfants de la patrie...\"",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 202,
+      "question": "Dans le cadre d'un entretien d'embauche, que peut-on demander au candidat?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 203,
+      "question": "Déclarer ses revenus aux services fiscaux est :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 204,
+      "question": "En France, les impôts permettent de financier les dépenses publiques. Quelle proposition est correcte?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 205,
+      "question": "La liberté d'association est :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 206,
+      "question": "La liberté d'expression sur les réseaux sociaux en France est :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 207,
+      "question": "Lequel de ces prénoms évoque un symbole de la République ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 208,
+      "question": "Lequel de ces symboles représenté la République française ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 209,
+      "question": "Où peut-on voir la devise de la République ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 210,
+      "question": "Lesquels sont des symboles officiers de la République française ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 211,
+      "question": "Peut-on brûler publiquement un drapeau français ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 212,
+      "question": "Quand la sécurité sociale a-t-elle étée établie en France ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 213,
+      "question": "Que commémore la fête nationale ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 214,
+      "question": "Que porte Marianne sur la tête ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 215,
+      "question": "Que signifie le mot \"fraternité\" dans la devise française ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 216,
+      "question": "Quel symbole de la République peut-on voir sur les maillots de l'équipe de France de football ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 217,
+      "question": "Quelle est la devise de la République française ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 218,
+      "question": "Qu'est-ce que la liberté d'association ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 219,
+      "question": "Qu'est-ce qu'une liberté ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 220,
+      "question": "Selon la Constitution, la France est une République...",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 221,
+      "question": "Surquel document peut-on voir Marianne ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 222,
+      "question": "Une des valeurs de la devise républicaine est l'égalité. Qu'est-ce que cela signifie ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 223,
+      "question": "Une personne peut-elle changer librement de religion en France ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 224,
+      "question": "Selon le principe de laïcité, que signifie la neutralité de l'État ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 225,
+      "question": "Que peut faire un usager du service public dans une mairie ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 226,
+      "question": "En France, il est possible pour l'État de financier :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 227,
+      "question": "Enquelle année la loi de séparation des Églises et de l'État a-t-elle étée votée ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 228,
+      "question": "Que dit la loi de 1905 ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 229,
+      "question": "Que garantit le principe de laïcité ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 230,
+      "question": "Quel jour célibre-t-on officièlement la laïcité en France ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 231,
+      "question": "Quel symbole religieux peut être porté dans une école publique dans le respect de la laïcité ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 232,
+      "question": "Quel terme désigné précisément la haine ou les préjugés contre les Juifs ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 233,
+      "question": "Quel texte est considéré comme le texte fondateur de la laïcité ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 234,
+      "question": "Quelle institution française doit rester neutre en matière de religion ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 235,
+      "question": "À l'école, la charte de la laïcité permet de :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 236,
+      "question": "Qui doit respecter et veiller à la neutralité religieuse dans les services publics ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 237,
+      "question": "Une personne déclare ne croire enaucun dieu. On peut dire :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 238,
+      "question": "Comment est désigné le Premier ministe ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 239,
+      "question": "Qui peut seprésenter aux élections présidentielles ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 240,
+      "question": "À qui apparient la souverinété nationale ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 241,
+      "question": "Qui est élu lors des élections municipales ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 242,
+      "question": "L'inscription sur les listedes élctorales est :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 243,
+      "question": "Quelle condition est nécessaire pour voter aux élections présidentielles ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 244,
+      "question": "Quelle condition faut-il replir pour être candidat aux élections municipales ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 245,
+      "question": "Parmi ces autorités, laquelle est élue ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 246,
+      "question": "Quelles sont les fonctions du maire ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 247,
+      "question": "Une personne, n'avant pas d'accès à internet, veut s'inscrite sur les listedes élctorales pour pouvoir voter aux prochaines élections politiques. À où peut-elle s'inscrite ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 248,
+      "question": "Àquel âge peut-on devenir éllecteur ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 249,
+      "question": "En France, est-ce obligatoire de voter ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 250,
+      "question": "A-t-on le droit de ne pas respecter une loi ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 251,
+      "question": "Comment sont désignés les députés ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 252,
+      "question": "Qui vote les loi ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 253,
+      "question": "La séparation desouviers est un principe fondamental. Quels sont les troisouviers concernés ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 254,
+      "question": "Qu'est-ce que l'État de droit ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 255,
+      "question": "Quelles sont les durées du mandat du conseil municipal et du maire ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 256,
+      "question": "Qui est élu lors des élections législatives ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 257,
+      "question": "Quelle est la durée du mandat du Président de la République française ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 258,
+      "question": "Quelle est la durée du mandat des députés ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 259,
+      "question": "Quelle est la durée du mandat des sénéateurs ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 260,
+      "question": "Qui dirige l'action du gouvernement ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 261,
+      "question": "En France, est-ce possible d'adhérer à un parti politique ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 262,
+      "question": "Qui sanctionne l'auteur d'un vol ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 263,
+      "question": "Qui gère les collèges publics ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 264,
+      "question": "Qui gère les écoles primaires et maternelles publiques ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 265,
+      "question": "Comment sont désignés les maires ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 266,
+      "question": "Quelle collectivité territoriale est responsable des transports régionaux?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 267,
+      "question": "Quelle est l'une des voies possibles pour modifier la Constitution?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 268,
+      "question": "Qui assure l'intérim du préident de la République en cas de décès?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 269,
+      "question": "Quel est le role du Conseil constitutionnel ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 270,
+      "question": "Quelle condition est obligatoire pour seprésenter à l'élection stratégienne?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 271,
+      "question": "Combien y a-t-il de départements en France ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 272,
+      "question": "Comment estOrganisé le découvertage administratif de la France ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 273,
+      "question": "Qui représenté l'État dans un département ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 274,
+      "question": "Qel est le role du Préident de la République ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 275,
+      "question": "Qel est le role du Premier ministre ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 276,
+      "question": "Qel est le role du Défenseur des droits ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 277,
+      "question": "Enquelle année la citoyenneté européen nea-t-elle ete créé ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 278,
+      "question": "Quel est le dernier État à avoir intégré l'Union Européenne en 2013 ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 279,
+      "question": "Qui a composé l'hymne de l'Union Européenne ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 280,
+      "question": "Quand est célébrée la journée de l'Europe ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 281,
+      "question": "Où est le siège de la Banque centrale européen ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 282,
+      "question": "Où est le siège de la Commission européen ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 283,
+      "question": "Qui siège au Parlement européen ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 284,
+      "question": "Les citoyens de l'Union Européenne peuvent-ils voter aux élections locales dans un autre État de l'Union ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 285,
+      "question": "Combien d'États font partie de l'Union Européenne au 1er janvier 2025 ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 286,
+      "question": "Enquelle année letraité de Maastricht, qui marque la fondation de l'Union Européenne, a-t-il eté signé ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 287,
+      "question": "Qeltraité concerne la construction de l'Union Européenne ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 288,
+      "question": "Qel État a quitté l'Union Européenne en 2020 ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 289,
+      "question": "Qel est l'hymne de l'Union Européenne ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 290,
+      "question": "De quoi est composé le drapeau européen ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 291,
+      "question": "Qui élit les députés européens ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 292,
+      "question": "Où est le siège du Parlement européen ?",
+      "explanation": "",
+      "image": null
     }
   ]
 }

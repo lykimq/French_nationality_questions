@@ -1,0 +1,272 @@
+{
+  "id": "society",
+  "title": "Vivre en France",
+  "icon": "home",
+  "description": "Questions sur la vie quotidienne et la société",
+  "questions": [
+    {
+      "id": 411,
+      "question": "Où faut-il déclarer la naissance d'un enfant ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 412,
+      "question": "Quelle action peut réaliser le locataire d'un logement sans l'autorisation du propriété ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 413,
+      "question": "Quel marriage est reconnu légalement ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 414,
+      "question": "Le stationnement sur une place réservée aux personnes handicapées :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 415,
+      "question": "Si une machine à laver est cassée, il est possible de :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 416,
+      "question": "Dans quel cas faut-il déclarer son enfant au service d'état civil ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 417,
+      "question": "Quand faut-il déclarer son enfant au service d'état civil ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 418,
+      "question": "Quel numéro d'urgence permet d'appeler la police ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 419,
+      "question": "Quel numéro d'urgence permit d'appeler le SAMU ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 420,
+      "question": "Auprès de chaque institution les parents peuvent inscire leurs enfants à l'école publique ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 421,
+      "question": "En cas de divorce, qui exerce l'autorité parentale ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 422,
+      "question": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 423,
+      "question": "Qui peut demander le divorce de personnes mariées ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 424,
+      "question": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 425,
+      "question": "La contraception :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 426,
+      "question": "Qu'est-ce que le principe de confidentialité dans le domaine de la santé ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 427,
+      "question": "À quoi sert la carte Vitale ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 428,
+      "question": "À quoi sert une mutuelle santé ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 429,
+      "question": "Qu'est-ce que le tiers payant ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 430,
+      "question": "L'inscription à l'Assurance maladie est :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 431,
+      "question": "L'avortement est-il possible en France ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 432,
+      "question": "Travailler sans être déclaré est :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 433,
+      "question": "Qu'est-ce que le SMIC ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 434,
+      "question": "Quelle est la première démarche à réaliser pour chercher un employi ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 435,
+      "question": "Quelle est la durée légale du temps de travail parSEAime ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 436,
+      "question": "Qui peut demander un congé parental d'éducation ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 437,
+      "question": "Une personne étrangère, en situation régulière, peut créé son entreprise :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 438,
+      "question": "Une femme peut-elle créé son entreprise ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 439,
+      "question": "Quels sont les textes qui définissant les règles au travail ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 440,
+      "question": "Quelles sont les'affaires traitées par le conseil de prud'homme ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 441,
+      "question": "Qui a le droit de se syndiquer ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 442,
+      "question": "Est-il possible de licencer une femme enceinte ou en congé maternité, en raison de sa grossesse ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 443,
+      "question": "L'instruction des enfants est obligatoire de :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 444,
+      "question": "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 445,
+      "question": "Quelle est la définition de l'autorité parentale ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 446,
+      "question": "Quel motif d'absence est accepté par l'école ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 447,
+      "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 448,
+      "question": "Àquel âge commence l'instruction obligatoire des enfants ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 449,
+      "question": "Comment s'appellent les établissements scolaires que les élèves intègrent après l'école élémentaire ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 450,
+      "question": "En tant que parent d'élève, il est possible de :",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 451,
+      "question": "Quelle instruction est prévue pour les enfants qui ne parlent pas français ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 452,
+      "question": "S'agissant de l'accueil des enfants en situation de handicap à l'école, laquelle des propositions est vraie ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 453,
+      "question": "Depuis le 1er juillet 2021, qu'elle est la durée du congé paternité ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 454,
+      "question": "Est-ce possible de punir physiquement ses enfants ?",
+      "explanation": "",
+      "image": null
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -10,306 +10,39 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { QuestionCard } from '../shared/components';
-import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { FormattedText } from '../shared/components';
-
-// Define the search result question type
-interface SearchResultQuestion {
-    id: number;
-    question: string;
-    explanation: string;
-    categoryId: string;
-    categoryTitle?: string;
-    image?: string | null;
-    matchScore?: number;
-    hasImage?: boolean;
-}
-
-// Advanced search filters interface
-interface SearchFilters {
-    categories: string[];
-    hasImage: 'all' | 'with' | 'without';
-    questionRange: { min: number; max: number };
-    searchIn: ('question' | 'explanation' | 'both')[];
-}
-
-// Search suggestion interface
-interface SearchSuggestion {
-    text: string;
-    type: 'keyword' | 'category' | 'id';
-    count?: number;
-}
+import { useSearch, SearchSuggestion } from './useSearch';
 
 const SearchScreen = () => {
-    const { questionsData, historyCategories, historySubcategories } = useData();
     const { theme, themeMode } = useTheme();
-    const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
     const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
-    const [searchHistory, setSearchHistory] = useState<string[]>([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>([]);
 
-    // Advanced search filters
-    const [filters, setFilters] = useState<SearchFilters>({
-        categories: [],
-        hasImage: 'all',
-        questionRange: { min: 1, max: 200 },
-        searchIn: ['both'],
-    });
+    const {
+        searchQuery,
+        setSearchQuery,
+        searchResults,
+        searchSuggestions,
+        filters,
+        setFilters,
+        searchHistory,
+        setSearchHistory,
+        availableCategories,
+        getSearchStats
+    } = useSearch();
 
-    // Create a comprehensive list of all questions including history questions
-    const allQuestions = useMemo(() => {
-        const questions: SearchResultQuestion[] = [];
-
-        // Add main category questions
-        questionsData.categories.forEach(category => {
-            category.questions.forEach(question => {
-                questions.push({
-                    ...question,
-                    categoryId: category.id,
-                    categoryTitle: category.title,
-                    hasImage: !!(question as any).image,
-                });
-            });
-        });
-
-        // Add history questions from subcategories
-        if (historyCategories && historySubcategories) {
-            Object.values(historySubcategories).forEach(subcategory => {
-                if (subcategory.questions) {
-                    subcategory.questions.forEach((question: any) => {
-                        const searchQuestion: SearchResultQuestion = {
-                            id: question.id,
-                            categoryId: (subcategory as any).id,
-                            categoryTitle: (subcategory as any).title,
-                            question: '', // Initialize with empty values first
-                            explanation: '', // Initialize with empty values first
-                            hasImage: !!question.image,
-                        };
-
-                        searchQuestion.question = question.question || '';
-                        searchQuestion.explanation = question.explanation || '';
-
-                        if (question.image) {
-                            searchQuestion.image = question.image;
-                        }
-
-                        questions.push(searchQuestion);
-                    });
-                }
-            });
-        }
-
-        return questions;
-    }, [questionsData, historyCategories, historySubcategories]);
-
-    // Get available categories for filter
-    const availableCategories = useMemo(() => {
-        const categories = new Map<string, { id: string; title: string; count: number }>();
-
-        allQuestions.forEach(q => {
-            const existing = categories.get(q.categoryId);
-            if (existing) {
-                existing.count++;
-            } else {
-                categories.set(q.categoryId, {
-                    id: q.categoryId,
-                    title: q.categoryTitle || q.categoryId,
-                    count: 1
-                });
-            }
-        });
-
-        return Array.from(categories.values()).sort((a, b) => b.count - a.count);
-    }, [allQuestions]);
-
-    // Generate search suggestions based on current query
-    const generateSuggestions = (query: string): SearchSuggestion[] => {
-        if (query.length < 2) return [];
-
-        const suggestions: SearchSuggestion[] = [];
-        const normalizedQuery = query.toLowerCase();
-
-        // Add category suggestions
-        availableCategories.forEach(cat => {
-            if (cat.title.toLowerCase().includes(normalizedQuery)) {
-                suggestions.push({
-                    text: cat.title,
-                    type: 'category',
-                    count: cat.count
-                });
-            }
-        });
-
-        // Add common keyword suggestions based on question content
-        const commonKeywords = new Map<string, number>();
-        allQuestions.forEach(q => {
-            const text = q.question;
-
-            const words = text.toLowerCase().split(/\s+/).filter(word =>
-                word.length > 3 && word.includes(normalizedQuery)
-            );
-
-            words.forEach(word => {
-                commonKeywords.set(word, (commonKeywords.get(word) || 0) + 1);
-            });
-        });
-
-        // Add top keyword suggestions
-        Array.from(commonKeywords.entries())
-            .sort(([, a], [, b]) => b - a)
-            .slice(0, 5)
-            .forEach(([keyword, count]) => {
-                suggestions.push({
-                    text: keyword,
-                    type: 'keyword',
-                    count
-                });
-            });
-
-        // Add ID suggestion if query is numeric
-        if (/^\d+$/.test(query)) {
-            const id = parseInt(query);
-            const matchingQuestion = allQuestions.find(q => q.id === id);
-            if (matchingQuestion) {
-                suggestions.push({
-                    text: `Question #${id}`,
-                    type: 'id'
-                });
-            }
-        }
-
-        return suggestions.slice(0, 8);
-    };
-
-    // Enhanced search function with advanced filters
-    const performSearch = (query: string, appliedFilters: SearchFilters = filters) => {
-        if (query.trim() === '') {
-            setSearchResults([]);
-            setShowSuggestions(false);
-            return;
-        }
-
-        const normalizedQuery = query.toLowerCase().trim();
-
-        let filteredQuestions = allQuestions;
-
-        // Apply category filter
-        if (appliedFilters.categories.length > 0) {
-            filteredQuestions = filteredQuestions.filter(q =>
-                appliedFilters.categories.includes(q.categoryId)
-            );
-        }
-
-        // Apply image filter
-        if (appliedFilters.hasImage !== 'all') {
-            filteredQuestions = filteredQuestions.filter(q =>
-                appliedFilters.hasImage === 'with' ? q.hasImage : !q.hasImage
-            );
-        }
-
-        // Apply question ID range filter
-        filteredQuestions = filteredQuestions.filter(q =>
-            q.id >= appliedFilters.questionRange.min && q.id <= appliedFilters.questionRange.max
-        );
-
-        const results = filteredQuestions.map(item => {
-            let matchScore = 0;
-            let matches = [];
-
-            // Check if searching by ID
-            if (item.id.toString() === normalizedQuery) {
-                matchScore = 1000; // Highest priority for exact ID match
-                matches.push('ID');
-            }
-
-            // Get text content
-            const questionText = (item.question || '').toLowerCase();
-            const explanationText = (item.explanation || '').toLowerCase();
-            const categoryText = item.categoryTitle || '';
-
-            if (appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both')) {
-                // Exact phrase match
-                if (questionText.includes(normalizedQuery)) {
-                    matchScore += 100;
-                    matches.push('question_exact');
-                }
-
-                // Word-based matching
-                const queryWords = normalizedQuery.split(/\s+/);
-                queryWords.forEach(word => {
-                    if (word.length > 2) {
-                        if (questionText.includes(word)) {
-                            matchScore += 50;
-                            matches.push('question_word');
-                        }
-                    }
-                });
-            }
-
-            if (appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both')) {
-                if (explanationText.includes(normalizedQuery)) {
-                    matchScore += 80;
-                    matches.push('explanation_exact');
-                }
-
-                const queryWords = normalizedQuery.split(/\s+/);
-                queryWords.forEach(word => {
-                    if (word.length > 2) {
-                        if (explanationText.includes(word)) {
-                            matchScore += 30;
-                            matches.push('explanation_word');
-                        }
-                    }
-                });
-            }
-
-            // Category name matching
-            if (categoryText.toLowerCase().includes(normalizedQuery)) {
-                matchScore += 20;
-                matches.push('category');
-            }
-
-            return {
-                ...item,
-                matchScore,
-                matches
-            };
-        }).filter(item => item.matchScore > 0)
-            .sort((a, b) => b.matchScore - a.matchScore); // Sort by relevance
-
-        setSearchResults(results);
-        setShowSuggestions(false);
-
-        // Add to search history
-        if (query.trim() && !searchHistory.includes(query.trim())) {
-            setSearchHistory(prev => [query.trim(), ...prev.slice(0, 9)]); // Keep last 10 searches
-        }
-    };
-
-    useEffect(() => {
-        // Generate suggestions when query changes
+    // Effect to handle suggestions visibility based on query length (originally inside hook effect but UI state needs control)
+    React.useEffect(() => {
         if (searchQuery.length >= 2 && searchQuery.length <= 3) {
-            const suggestions = generateSuggestions(searchQuery);
-            setSearchSuggestions(suggestions);
-            setShowSuggestions(suggestions.length > 0);
+            setShowSuggestions(searchSuggestions.length > 0);
         } else {
             setShowSuggestions(false);
         }
-
-        // Debounce search to avoid too many operations
-        const timeoutId = setTimeout(() => {
-            performSearch(searchQuery);
-        }, 300);
-
-        return () => clearTimeout(timeoutId);
-    }, [searchQuery, allQuestions, filters]);
+    }, [searchQuery, searchSuggestions.length]);
 
     const clearSearch = () => {
         setSearchQuery('');
-        setSearchResults([]);
         setShowSuggestions(false);
     };
 
@@ -344,15 +77,8 @@ const SearchScreen = () => {
         setSearchHistory([]);
     };
 
-    const getSearchStats = () => {
-        const totalQuestions = allQuestions.length;
-        const mainQuestions = questionsData.categories.reduce((sum, cat) => sum + cat.questions.length, 0);
-        const historyQuestions = totalQuestions - mainQuestions;
-
-        return { totalQuestions, mainQuestions, historyQuestions };
-    };
-
     const { totalQuestions, mainQuestions, historyQuestions } = getSearchStats();
+
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>

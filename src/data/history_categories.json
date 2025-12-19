@@ -75,6 +75,24 @@
       "title": "Jours Fériés",
       "icon": "calendar",
       "description": "Les jours fériés et leurs significations"
+    },
+    {
+      "id": "history_general",
+      "title": "Histoire Générale",
+      "icon": "book",
+      "description": "Questions diverses sur l'histoire"
+    },
+    {
+      "id": "geography",
+      "title": "Géographie",
+      "icon": "globe",
+      "description": "Questions sur la géographie de la France"
+    },
+    {
+      "id": "society",
+      "title": "Vivre en France",
+      "icon": "home",
+      "description": "Questions sur la vie quotidienne et la société"
     }
   ]
 }

@@ -33,6 +33,30 @@
       "question": "Qui a été à l'origine du château de Versailles ?",
       "explanation": "C'est Louis XIV (Louis 14).",
       "image": null
+    },
+    {
+      "id": 330,
+      "question": "Parmi ces textes, lequel a été adopté sous Napoléon ler ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 339,
+      "question": "Quel roi de France a été guillotiné pendant la Révolution française ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 341,
+      "question": "Enquelle année Napoléon ler est-il devenu empeureur ?",
+      "explanation": "",
+      "image": null
+    },
+    {
+      "id": 369,
+      "question": "Quel château célibre se trouveopsis de Paris et symbolise le pouvoir royal de Louis XIV ?",
+      "explanation": "",
+      "image": null
     }
   ]
 }
