@@ -171,7 +171,6 @@ export const generateCivicExamQuestions = (
                 .filter(q => !usedQuestionIds.has(q.id));
             
             if (themeQuestions.length === 0) {
-                console.warn(`No questions available for theme: ${theme}`);
                 return;
             }
             
@@ -204,11 +203,6 @@ export const generateCivicExamQuestions = (
                     selectedQuestions.push(q);
                 }
             });
-        } else {
-            console.warn(
-                `Cannot fill remaining ${remaining} questions: no more questions available. ` +
-                `Current count: ${selectedQuestions.length}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`
-            );
         }
     }
     

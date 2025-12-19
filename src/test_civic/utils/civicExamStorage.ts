@@ -183,7 +183,7 @@ export const saveCivicExamData = async (
             AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS, JSON.stringify(statistics))
         ]);
     } catch (error) {
-        console.error('❌ Error saving civic exam data:', error);
+        console.error('Error saving civic exam data:', error);
         throw error;
     }
 };
@@ -201,7 +201,7 @@ export const loadAllCivicExamData = async (): Promise<{
 
         return { progress, statistics };
     } catch (error) {
-        console.error('❌ Error loading civic exam data:', error);
+        console.error('Error loading civic exam data:', error);
         throw error;
     }
 };
@@ -222,7 +222,7 @@ export const resetCivicExamData = async (): Promise<void> => {
             AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS, JSON.stringify(freshStatistics))
         ]);
     } catch (error) {
-        console.error('❌ Error resetting civic exam data:', error);
+        console.error('Error resetting civic exam data:', error);
         throw error;
     }
 };

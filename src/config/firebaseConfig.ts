@@ -40,7 +40,7 @@ if (missingFields.length > 0) {
         // Initialize Cloud Storage and get a reference to the service
         storage = getStorage(app);
     } catch (error) {
-        console.error('❌ Failed to initialize Firebase:', error);
+        console.error('Failed to initialize Firebase:', error);
     }
 }
 

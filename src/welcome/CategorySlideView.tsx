@@ -34,11 +34,9 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories }) => 
 
         if (currentQuestionIndex < totalQ - 1) {
             // Next question in same category
-            console.log('[CategorySlideView] Next question');
             setCurrentQuestionIndex(prev => prev + 1);
         } else if (currentCategoryIndex < categories.length - 1) {
             // Next category
-            console.log('[CategorySlideView] Next category');
             setCurrentCategoryIndex(prev => prev + 1);
             setCurrentQuestionIndex(0);
         }
@@ -47,11 +45,9 @@ const CategorySlideView: React.FC<CategorySlideViewProps> = ({ categories }) => 
     const handlePrevious = useCallback(() => {
         if (currentQuestionIndex > 0) {
             // Previous question in same category
-            console.log('[CategorySlideView] Previous question');
             setCurrentQuestionIndex(prev => prev - 1);
         } else if (currentCategoryIndex > 0) {
             // Previous category
-            console.log('[CategorySlideView] Previous category');
             const newCategoryIndex = currentCategoryIndex - 1;
             const newCategory = categories[newCategoryIndex];
             setCurrentCategoryIndex(newCategoryIndex);

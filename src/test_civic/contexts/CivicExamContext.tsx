@@ -119,7 +119,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
                 setExamStatistics(statistics);
             }
         } catch (error) {
-            console.error('❌ Error loading civic exam data:', error);
+            console.error('Error loading civic exam data:', error);
         } finally {
             if (isMountedRef.current) {
                 setIsLoading(false);
@@ -161,13 +161,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
             );
         }
 
-        // In practice mode, warn if we don't have 40 questions but allow it
-        if (isPracticeMode && questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
-            console.warn(
-                `Practice mode: Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, got ${questions.length}. ` +
-                `This may be due to limited questions in selected themes.`
-            );
-        }
+        // In practice mode, allow fewer than 40 questions if needed
 
         const newSession: CivicExamSession = {
             id: Date.now().toString(),
@@ -348,7 +342,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
                 setExamStatistics(freshStats);
             }
         } catch (error) {
-            console.error('❌ Error resetting progress:', error);
+            console.error('Error resetting progress:', error);
             if (isMountedRef.current) {
                 const errorProgress = createDefaultCivicExamProgress();
                 const errorStats = createDefaultCivicExamStatistics();

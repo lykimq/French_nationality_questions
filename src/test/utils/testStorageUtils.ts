@@ -94,7 +94,7 @@ export const loadPart1TestSubcategoryData = async (): Promise<Record<string, any
 
         return {};
     } catch (error) {
-        console.error('❌ Error loading Part 1 test subcategory data:', error);
+        console.error('Error loading Part 1 test subcategory data:', error);
         return {};
     }
 };
@@ -110,7 +110,7 @@ export const saveTestData = async (
             AsyncStorage.setItem(STORAGE_KEYS.TEST_STATISTICS, JSON.stringify(statistics))
         ]);
     } catch (error) {
-        console.error('❌ Error saving test data:', error);
+        console.error('Error saving test data:', error);
         throw error; // Re-throw to handle in calling code
     }
 };
@@ -130,7 +130,7 @@ export const loadAllTestData = async (): Promise<{
 
         return { progress, statistics, part1Data };
     } catch (error) {
-        console.error('❌ Error loading test data:', error);
+        console.error('Error loading test data:', error);
         throw error;
     }
 };

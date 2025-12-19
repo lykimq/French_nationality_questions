@@ -123,7 +123,7 @@ export const TestProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 setPart1TestSubcategories(part1Data);
             }
         } catch (error) {
-            console.error('❌ Error loading test data:', error);
+            console.error('Error loading test data:', error);
         } finally {
             if (isMountedRef.current) {
                 setIsLoading(false);

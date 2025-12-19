@@ -24,8 +24,6 @@ interface DatabaseTestResult {
  * Comprehensive test of the database integration
  */
 export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => {
-    console.log('🧪 Starting comprehensive database integration test...');
-
     const result: DatabaseTestResult = {
         success: false,
         totalQuestions: 0,
@@ -42,8 +40,6 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
 
         // Test main data
         if (mainData) {
-            console.log('✅ Main data loaded successfully');
-
             // Test personal questions
             if (mainData.personal) {
                 const validation = validateDataStructure(mainData.personal, 'personal');
@@ -103,7 +99,7 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
 
         // Test history data
         if (historyData) {
-            console.log('✅ History categories data loaded successfully');
+            // History categories data loaded successfully
         } else {
             result.issues.push('History categories data not found');
         }
@@ -140,17 +136,8 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
         // Determine success
         result.success = result.issues.length === 0 && result.totalQuestions > 0;
 
-        console.log('🎯 Database Integration Test Results:', {
-            success: result.success,
-            totalQuestions: result.totalQuestions,
-            categoriesLoaded: result.categoriesLoaded.length,
-            subcategoriesLoaded: result.subcategoriesLoaded.length,
-            issues: result.issues.length,
-            questionSamples: result.questionSamples.length
-        });
-
     } catch (error) {
-        console.error('❌ Database integration test failed:', error);
+        console.error('Database integration test failed:', error);
         result.issues.push(`Test execution failed: ${error}`);
         result.success = false;
     }
@@ -199,8 +186,6 @@ export const testQuestionIdUniqueness = async (): Promise<{
     duplicateIds: number[];
     issues: string[];
 }> => {
-    console.log('🔍 Testing question ID uniqueness...');
-
     const result = {
         success: false,
         totalQuestions: 0,
@@ -261,15 +246,8 @@ export const testQuestionIdUniqueness = async (): Promise<{
 
         result.success = result.duplicateIds.length === 0 && result.totalQuestions > 0;
 
-        console.log('🔍 ID Uniqueness Test Results:', {
-            totalQuestions: result.totalQuestions,
-            uniqueIds: result.uniqueIds,
-            duplicates: result.duplicateIds.length,
-            success: result.success
-        });
-
     } catch (error) {
-        console.error('❌ ID uniqueness test failed:', error);
+        console.error('ID uniqueness test failed:', error);
         result.issues.push(`Test failed: ${error}`);
     }
 
@@ -280,8 +258,6 @@ export const testQuestionIdUniqueness = async (): Promise<{
  * Log comprehensive database statistics
  */
 export const logDatabaseStatistics = async (): Promise<void> => {
-    console.log('📊 Generating comprehensive database statistics...');
-
     try {
         const { mainData, historyData, subcategoryData } = await preloadAllData();
 
@@ -324,14 +300,7 @@ export const logDatabaseStatistics = async (): Promise<void> => {
             }
         });
 
-        console.log('📊 Database Statistics Summary:');
-        console.log(`Total Questions: ${totalQuestions}`);
-        console.log(`Questions with Images: ${questionsWithImages} (${Math.round(questionsWithImages / totalQuestions * 100)}%)`);
-        console.log('Questions by Category:', categoryStats);
-        console.log(`History Categories Available: ${historyData ? 'Yes' : 'No'}`);
-        console.log(`Subcategories Loaded: ${Object.keys(subcategoryData).length}`);
-
     } catch (error) {
-        console.error('❌ Failed to generate database statistics:', error);
+        console.error('Failed to generate database statistics:', error);
     }
 };
