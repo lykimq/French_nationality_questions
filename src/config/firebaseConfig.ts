@@ -15,15 +15,6 @@ const firebaseConfig = {
     appId: process.env.EXPO_PUBLIC_FIREBASE_MOBILE_SDK_APP_ID
 };
 
-// Debug: Log environment variable availability (only in development)
-if (__DEV__) {
-    console.log('🔍 Firebase Environment Variables Check:');
-    console.log('  EXPO_PUBLIC_FIREBASE_API_KEY:', process.env.EXPO_PUBLIC_FIREBASE_API_KEY ? '✅ Set' : '❌ Missing');
-    console.log('  EXPO_PUBLIC_FIREBASE_PROJECT_ID:', process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID ? '✅ Set' : '❌ Missing');
-    console.log('  EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET:', process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET ? '✅ Set' : '❌ Missing');
-    console.log('  Platform:', typeof window !== 'undefined' ? 'Web' : 'Native');
-}
-
 // Validate configuration - warn if required values are missing but don't crash the app
 const requiredFields = ['apiKey', 'projectId', 'storageBucket'] as const;
 const missingFields = requiredFields.filter(field => !firebaseConfig[field]);
