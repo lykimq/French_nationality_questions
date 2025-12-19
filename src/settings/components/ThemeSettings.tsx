@@ -4,18 +4,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import ColorThemeSelector from './ColorThemeSelector';
 import { FormattedText } from '../../shared/components';
-import { settingsStyles } from './settingsStyles';
-import { sharedStyles } from '../../shared/utils';
+import { sharedStyles, getCardContainerStyle } from '../../shared/utils';
 
 const ThemeSettings: React.FC = () => {
     const { theme, themeMode, colorTheme, setThemeMode, setColorTheme } = useTheme();
 
     return (
-        <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
-            <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
-                Apparence
-            </FormattedText>
-
+        <View>
             {/* Color Theme Selector */}
             <ColorThemeSelector
                 title="Thème de couleur"
@@ -24,10 +19,10 @@ const ThemeSettings: React.FC = () => {
             />
 
             {/* Theme Selector */}
-            <View style={[styles.themeSelector, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+            <View style={[styles.themeSelector, getCardContainerStyle(theme)]}>
                 <View style={styles.themeSelectorLeft}>
                     <View style={[sharedStyles.iconContainer, { backgroundColor: (themeMode === 'dark' ? '#FFA726' : '#FFB74D') + '15' }]}>
-                        <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={22} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
+                        <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={20} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
                     </View>
                     <FormattedText style={[styles.themeSelectorTitle, { color: theme.colors.text }]}>
                         Mode d'affichage
@@ -45,7 +40,7 @@ const ThemeSettings: React.FC = () => {
                     >
                         <Ionicons
                             name="sunny"
-                            size={16}
+                            size={14}
                             color={themeMode === 'light' ? '#FFFFFF' : theme.colors.textMuted}
                             style={styles.themeOptionIcon}
                         />
@@ -67,7 +62,7 @@ const ThemeSettings: React.FC = () => {
                     >
                         <Ionicons
                             name="moon"
-                            size={16}
+                            size={14}
                             color={themeMode === 'dark' ? '#FFFFFF' : theme.colors.textMuted}
                             style={styles.themeOptionIcon}
                         />
@@ -89,8 +84,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingVertical: 16,
-        paddingHorizontal: 15,
+        paddingVertical: 12,
+        paddingHorizontal: 16,
         borderBottomWidth: 1,
     },
     themeSelectorLeft: {
@@ -99,24 +94,25 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     themeSelectorTitle: {
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: '600',
+        marginLeft: 12,
     },
     themeToggleWrapper: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        padding: 3,
-        borderRadius: 22,
+        padding: 2,
+        borderRadius: 20,
     },
     themeOption: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 8,
-        paddingHorizontal: 12,
-        borderRadius: 16,
-        marginLeft: 3,
-        minWidth: 70,
+        paddingVertical: 6,
+        paddingHorizontal: 10,
+        borderRadius: 14,
+        marginLeft: 2,
+        minWidth: 65,
         justifyContent: 'center',
     },
     themeOptionActive: {
@@ -130,7 +126,7 @@ const styles = StyleSheet.create({
         marginRight: 4,
     },
     themeOptionText: {
-        fontSize: 13,
+        fontSize: 12,
         fontWeight: '600',
     },
 });

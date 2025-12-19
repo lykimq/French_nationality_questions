@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme, colorThemeInfo } from '../../shared/contexts/ThemeContext';
 import type { ColorTheme, SettingsComponentProps } from '../../types';
 import { FormattedText } from '../../shared/components';
-import { sharedStyles } from '../../shared/utils';
+import { getCardContainerStyle } from '../../shared/utils';
 
 const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
     title,
@@ -73,20 +73,15 @@ const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
     const selectedThemeInfo = colorThemeInfo[value];
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+        <View style={[styles.container, getCardContainerStyle(theme)]}>
             {/* Header */}
             <View style={styles.header}>
-                <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '15' }]}>
-                    <Ionicons name="color-palette" size={20} color={theme.colors.primary} />
-                </View>
-                <View style={styles.headerText}>
-                    <FormattedText style={[styles.title, { color: theme.colors.text }]}>
-                        {title}
-                    </FormattedText>
-                    <FormattedText style={[styles.subtitle, { color: theme.colors.textSecondary }]}>
-                        {selectedThemeInfo.name}
-                    </FormattedText>
-                </View>
+                <FormattedText style={[styles.title, { color: theme.colors.text }]}>
+                    {title}
+                </FormattedText>
+                <FormattedText style={[styles.subtitle, { color: theme.colors.textSecondary }]}>
+                    {selectedThemeInfo.name}
+                </FormattedText>
             </View>
 
             {/* Horizontal Color Themes Scroll */}
@@ -110,30 +105,21 @@ const ColorThemeSelector: React.FC<SettingsComponentProps<ColorTheme>> = ({
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 1,
         paddingHorizontal: 16,
-        paddingTop: 16,
+        paddingTop: 12,
         paddingBottom: 12,
         borderBottomWidth: 1,
     },
     header: {
-        ...sharedStyles.row,
-        marginBottom: 12,
-    },
-    iconContainer: {
-        ...sharedStyles.iconContainer,
-        marginRight: 12,
-    },
-    headerText: {
-        flex: 1,
+        marginBottom: 10,
     },
     title: {
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: '600',
         marginBottom: 2,
     },
     subtitle: {
-        fontSize: 14,
+        fontSize: 13,
     },
     scrollView: {
         marginHorizontal: -16,
@@ -144,18 +130,18 @@ const styles = StyleSheet.create({
     },
     colorOption: {
         alignItems: 'center',
-        marginRight: 16,
-        borderRadius: 12,
-        padding: 8,
+        marginRight: 12,
+        borderRadius: 10,
+        padding: 6,
     },
     colorCircle: {
-        width: 44,
-        height: 44,
-        borderRadius: 22,
+        width: 40,
+        height: 40,
+        borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
-        marginBottom: 6,
+        marginBottom: 5,
     },
     accentDot: {
         width: 12,
@@ -173,7 +159,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-        borderRadius: 22,
+        borderRadius: 20,
         backgroundColor: 'rgba(0, 0, 0, 0.3)',
         justifyContent: 'center',
         alignItems: 'center',

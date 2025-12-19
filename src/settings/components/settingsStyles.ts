@@ -1,31 +1,18 @@
 import { StyleSheet } from 'react-native';
-import { sharedStyles } from '../../shared/utils';
 
 // Settings-specific styles that extend or differ from sharedStyles
 // Note: For iconContainer, use sharedStyles.iconContainer directly
 export const settingsStyles = StyleSheet.create({
-    section: {
-        ...sharedStyles.section,
-        ...sharedStyles.lightShadow,
-    },
-    // Settings section title (different from sharedStyles.sectionTitle which is more generic)
-    sectionTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        paddingHorizontal: 15,
-        paddingVertical: 12,
-        borderBottomWidth: 1,
-    },
     settingItem: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingVertical: 12,
-        paddingHorizontal: 15,
+        paddingHorizontal: 16,
         borderBottomWidth: 1,
     },
     settingTitle: {
         flex: 1,
-        fontSize: 16,
+        fontSize: 15,
     },
     // Modal styles specific to settings modals (e.g., RatingModal)
     // Note: sharedStyles.modalTitle is more generic (fontSize: 18)

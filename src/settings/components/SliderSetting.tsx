@@ -8,6 +8,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { FormattedText } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { getCardContainerStyle } from '../../shared/utils';
 import { ExtendedSettingsComponent } from '../../types';
 
 interface SliderSettingAdditionalProps {
@@ -51,7 +52,7 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
         return Math.max(minimumValue, Math.min(maximumValue, steppedValue));
     };
 
-    const handleTrackPress = (event: any) => {
+    const handlePositionChange = (event: any) => {
         if (trackRef.current) {
             trackRef.current.measure((x, y, width, height, pageX, pageY) => {
                 const touchX = event.nativeEvent.pageX - pageX;
@@ -66,17 +67,9 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
         onMoveShouldSetPanResponder: () => true,
         onPanResponderGrant: (event) => {
             setIsPressed(true);
-            handleTrackPress(event);
+            handlePositionChange(event);
         },
-        onPanResponderMove: (event) => {
-            if (trackRef.current) {
-                trackRef.current.measure((x, y, width, height, pageX, pageY) => {
-                    const touchX = event.nativeEvent.pageX - pageX;
-                    const newValue = calculateValueFromPosition(touchX, width);
-                    onValueChange(newValue);
-                });
-            }
-        },
+        onPanResponderMove: handlePositionChange,
         onPanResponderRelease: () => {
             setIsPressed(false);
         },
@@ -85,7 +78,7 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
     const progressPercentage = ((value - minimumValue) / (maximumValue - minimumValue)) * 100;
 
     return (
-            <View style={[styles.container, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+        <View style={[styles.container, getCardContainerStyle(theme)]}>
             <View style={styles.headerRow}>
                 <FormattedText style={[styles.title, { color: theme.colors.text }]}>
                     {title}
@@ -168,22 +161,22 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: 15,
-        paddingHorizontal: 15,
+        paddingVertical: 12,
+        paddingHorizontal: 16,
         borderBottomWidth: 1,
     },
     headerRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 15,
+        marginBottom: 12,
     },
     title: {
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: '500',
     },
     valueText: {
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: '600',
     },
     controlsRow: {

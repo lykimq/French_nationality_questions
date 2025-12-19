@@ -228,3 +228,9 @@ export const cardWithShadow = [sharedStyles.card, sharedStyles.mediumShadow];
 export const smallCardWithShadow = [sharedStyles.smallCard, sharedStyles.lightShadow];
 export const iconContainerStyle = sharedStyles.iconContainer;
 export const largeIconContainerStyle = sharedStyles.largeIconContainer;
+
+// Helper function to create common container styles with theme colors
+export const getCardContainerStyle = (theme: { colors: { card: string; divider: string } }) => ({
+    backgroundColor: theme.colors.card,
+    borderBottomColor: theme.colors.divider,
+});

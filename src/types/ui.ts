@@ -155,6 +155,7 @@ export interface SettingItemProps {
     readonly title: string;
     readonly icon: string;
     readonly iconColor: string;
+    readonly subtitle?: string;
     readonly isSwitch?: boolean;
     readonly value?: boolean;
     readonly onValueChange?: (value: boolean) => void;

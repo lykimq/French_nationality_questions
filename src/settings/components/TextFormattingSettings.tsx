@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Alert } from 'react-native';
+import { View } from 'react-native';
 import { useTextFormatting } from '../../shared/contexts/TextFormattingContext';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import SliderSetting from './SliderSetting';
-import { FormattedText } from '../../shared/components';
 import SettingItem from './SettingItem';
-import { settingsStyles } from './settingsStyles';
+import { showConfirmationAlert } from '../../shared/utils';
 
 const TextFormattingSettings: React.FC = () => {
     const { theme } = useTheme();
@@ -16,29 +15,16 @@ const TextFormattingSettings: React.FC = () => {
     } = useTextFormatting();
 
     const handleResetTextSettings = () => {
-        Alert.alert(
-            'Réinitialisation',
-            'Réinitialiser tous les paramètres de texte aux valeurs par défaut ?',
-            [
-                {
-                    text: 'Annuler',
-                    style: 'cancel',
-                },
-                {
-                    text: 'Réinitialiser',
-                    style: 'destructive',
-                    onPress: resetToDefaults,
-                },
-            ]
-        );
+        showConfirmationAlert({
+            title: 'Réinitialisation',
+            message: 'Réinitialiser tous les paramètres de texte aux valeurs par défaut ?',
+            confirmText: 'Réinitialiser',
+            onConfirm: resetToDefaults,
+        });
     };
 
     return (
-        <View style={[settingsStyles.section, { backgroundColor: theme.colors.card }]}>
-            <FormattedText style={[settingsStyles.sectionTitle, { color: theme.colors.textSecondary, borderBottomColor: theme.colors.divider }]}>
-                Formatage du texte
-            </FormattedText>
-
+        <View>
             <SliderSetting
                 title="Taille de police"
                 value={settings.fontSize}
@@ -58,6 +44,5 @@ const TextFormattingSettings: React.FC = () => {
         </View>
     );
 };
-
 
 export default TextFormattingSettings;
