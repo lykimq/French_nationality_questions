@@ -115,6 +115,12 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
         // Remove markdown image links like [Voir l'image](pics/xxx.png)
         explanationText = explanationText.replace(/\[Voir l'image\]\([^)]+\)/g, '').trim();
     }
+
+    // Remove repeated question from explanation if present
+    if (explanationText.trim().startsWith(questionText.trim())) {
+        explanationText = explanationText.substring(questionText.length).trim();
+    }
+
     explanationText = formatExplanation(explanationText);
 
     // Calculate scrollbar thumb metrics
@@ -165,17 +171,17 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                         ]}
                     >
                         <View style={styles.cardContent}>
-                            <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '15' }]}>
+                            <View style={[styles.badge, { backgroundColor: theme.colors.primary + '15' }]}>
                                 <Ionicons
                                     name="help-circle"
-                                    size={32}
+                                    size={20}
                                     color={theme.colors.primary}
                                 />
+                                <FormattedText style={[styles.badgeText, { color: theme.colors.primary }]}>
+                                    Question
+                                </FormattedText>
                             </View>
-                            <FormattedText style={[styles.label, { color: theme.colors.textSecondary }]}>
-                                Question
-                            </FormattedText>
-                            <FormattedText style={[styles.questionText, { color: theme.colors.text }]}>
+                            <FormattedText style={[styles.frontQuestionText, { color: theme.colors.text }]}>
                                 {questionText}
                             </FormattedText>
                             <View style={styles.flipHint}>
@@ -211,21 +217,23 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                     ]}
                 >
                     <View style={styles.backCardContent}>
+
                         <Pressable onPress={onFlip} style={styles.headerPressable}>
-                            <View style={[styles.iconContainer, { backgroundColor: theme.colors.success + '15' }]}>
+                            <View style={[styles.badge, { backgroundColor: theme.colors.success + '15' }]}>
                                 <Ionicons
                                     name="checkmark-circle"
-                                    size={32}
+                                    size={20}
                                     color={theme.colors.success}
                                 />
+                                <FormattedText style={[styles.badgeText, { color: theme.colors.success }]}>
+                                    Réponse
+                                </FormattedText>
                             </View>
-                            <FormattedText style={[styles.label, { color: theme.colors.textSecondary }]}>
-                                Réponse
-                            </FormattedText>
                         </Pressable>
 
                         <View style={styles.scrollContainer}>
                             <ScrollView
+                                key={question.id}
                                 ref={scrollViewRef}
                                 style={styles.explanationScrollView}
                                 contentContainerStyle={styles.explanationScrollContent}
@@ -242,6 +250,14 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                                 scrollEventThrottle={16}
                             >
                                 <Pressable onPress={onFlip} style={styles.contentPressable}>
+                                    {/* Question Context */}
+                                    <View style={styles.explanationTextContainer}>
+                                        <FormattedText style={[styles.contextQuestionText, { color: theme.colors.primary }]}>
+                                            {questionText}
+                                        </FormattedText>
+                                        <View style={[styles.separator, { backgroundColor: theme.colors.border }]} />
+                                    </View>
+
                                     {/* Display image if available */}
                                     {question.image && (
                                         <>
@@ -358,33 +374,46 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
     },
-    iconContainer: {
-        width: 64,
-        height: 64,
-        borderRadius: 32,
-        justifyContent: 'center',
+    badge: {
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        borderRadius: 20,
+        marginBottom: 20,
+        flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 16,
+        gap: 8,
     },
-    label: {
+    badgeText: {
         fontSize: 14,
-        fontWeight: '600',
+        fontWeight: '700',
         textTransform: 'uppercase',
         letterSpacing: 1,
-        marginBottom: 16,
     },
-    questionText: {
-        fontSize: 20,
-        fontWeight: '600',
+    frontQuestionText: {
+        fontSize: 22,
+        fontWeight: '700',
         textAlign: 'center',
-        lineHeight: 28,
+        lineHeight: 32,
         marginBottom: 24,
+    },
+    contextQuestionText: {
+        fontSize: 16,
+        fontWeight: '700',
+        lineHeight: 24,
+        marginBottom: 12,
+        opacity: 0.9,
+    },
+    separator: {
+        height: 1,
+        width: '100%',
+        marginBottom: 16,
+        opacity: 0.2,
     },
     scrollContainer: {
         flex: 1,
         width: '100%',
         position: 'relative',
-        paddingRight: 10, // Make room for scrollbar
+        paddingRight: 6,
     },
     explanationScrollView: {
         flex: 1,
@@ -398,6 +427,7 @@ const styles = StyleSheet.create({
     headerPressable: {
         width: '100%',
         alignItems: 'center',
+        marginBottom: 8,
     },
     contentPressable: {
         flex: 1,
@@ -413,7 +443,7 @@ const styles = StyleSheet.create({
         flexShrink: 0,
     },
     imageContainer: {
-        borderRadius: 8,
+        borderRadius: 12,
         overflow: 'hidden',
         marginBottom: 16,
         borderWidth: 1,
@@ -431,7 +461,7 @@ const styles = StyleSheet.create({
         height: 200,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 8,
+        borderRadius: 12,
     },
     imageFallback: {
         width: '100%',
@@ -439,11 +469,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 16,
-        borderRadius: 8,
+        borderRadius: 12,
     },
     customScrollbarTrack: {
         position: 'absolute',
-        right: -8, // Position outside the padded container
+        right: -4,
         top: 0,
         bottom: 0,
         width: 4,
@@ -460,10 +490,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 16,
         gap: 8,
+        opacity: 0.7,
     },
     flipHintText: {
-        fontSize: 12,
-        fontStyle: 'italic',
+        fontSize: 13,
+        fontWeight: '500',
     },
 });
 
