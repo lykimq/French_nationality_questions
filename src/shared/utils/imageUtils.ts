@@ -1,6 +1,7 @@
 import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../config/firebaseConfig';
 import { createLogger } from './logger';
+import { LOCAL_IMAGE_MAP } from '../config/dataConfig';
 
 const logger = createLogger('ImageUtils');
 
@@ -46,6 +47,13 @@ export const getImageSource = async (imagePath: string | null): Promise<any> => 
             return firebaseImageCache[imagePath];
         }
 
+        // Check for local image first
+        const localImage = LOCAL_IMAGE_MAP[imagePath];
+        if (localImage) {
+            return localImage;
+        }
+
+        // Try Firebase as fallback
         const filename = imagePath.replace(/^.*[\\/]/, "");
         const firebaseUrl = await getFirebaseImageUrl(filename);
 
@@ -53,7 +61,7 @@ export const getImageSource = async (imagePath: string | null): Promise<any> => 
             return { uri: firebaseUrl };
         }
 
-        logger.warn(`Image not found in Firebase Storage: ${filename}`);
+        logger.warn(`Image not found locally or in Firebase Storage: ${imagePath}`);
         return null;
     } catch (error) {
         logger.error(`Failed to get image source: ${imagePath}`, error);
@@ -68,6 +76,13 @@ export const getCachedImageSource = (imagePath: string | null): any => {
         return firebaseImageCache[imagePath] || { uri: imagePath };
     }
 
+    // Check for local image first
+    const localImage = LOCAL_IMAGE_MAP[imagePath];
+    if (localImage) {
+        return localImage;
+    }
+
+    // Check Firebase cache
     const filename = imagePath.replace(/^.*[\\/]/, "");
     return firebaseImageCache[filename] || null;
 };

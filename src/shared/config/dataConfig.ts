@@ -74,3 +74,25 @@ export const LOCAL_DATA_MAP: Record<string, any> = {
     'formation/system_et_politique.json': require('../../data/formation/system_et_politique.json'),
     'formation/vivre_dans_la_societe_francaise.json': require('../../data/formation/vivre_dans_la_societe_francaise.json'),
 };
+
+/**
+ * Maps image paths to local require statements.
+ * This is necessary because React Native's 'require' must be static.
+ */
+export const LOCAL_IMAGE_MAP: Record<string, any> = {
+    'pics/card.png': require('../../data/pics/card.png'),
+    'pics/chart_ecole.png': require('../../data/pics/chart_ecole.png'),
+    'pics/child.png': require('../../data/pics/child.png'),
+    'pics/earth.png': require('../../data/pics/earth.png'),
+    'pics/euro.png': require('../../data/pics/euro.png'),
+    'pics/food.png': require('../../data/pics/food.png'),
+    'pics/judiciaire.png': require('../../data/pics/judiciaire.png'),
+    'pics/lecole.png': require('../../data/pics/lecole.png'),
+    'pics/parcours_dune_loi.png': require('../../data/pics/parcours_dune_loi.png'),
+    'pics/parent.png': require('../../data/pics/parent.png'),
+    'pics/politiques.png': require('../../data/pics/politiques.png'),
+    'pics/porte.png': require('../../data/pics/porte.png'),
+    'pics/region.png': require('../../data/pics/region.png'),
+    'pics/territories.png': require('../../data/pics/territories.png'),
+    'pics/urgence_number.png': require('../../data/pics/urgence_number.png'),
+};
