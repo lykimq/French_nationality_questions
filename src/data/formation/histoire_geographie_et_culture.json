@@ -18,7 +18,7 @@
         {
             "id": 3,
             "question": "Depuis 1958, la Ve République",
-            "explanation": "Depuis 1958, la Ve République\n\nLa République telle que nous la connaissons aujourd’hui s’est construite progressivement. Elle a hérité des acquis, des luttes et des transformations des différents régimes qui l’ont précédée.\n\n[Voir l'image](pics/politiques.png)",
+            "explanation": "Depuis 1958, la Ve République\n\nLa République telle que nous la connaissons aujourd’hui s’est construite progressivement. Elle a hérité des acquis, des luttes et des transformations des différents régimes qui l’ont précédée.\n\n",
             "image": "pics/politiques.png"
         },
         {
@@ -660,13 +660,13 @@
         {
             "id": 110,
             "question": "Quelles sont les frontières de la France ?",
-            "explanation": "La France en quelques chiffres clés\nSuperficie : environ 543 000 km² pour la métropole, 120 000 km² pour les DROM et 4 600 km² pour les COM (667 000 km² au total).\n- Nombre d’habitants : 68,6 millions (au 1er janvier 2025).\n- Nombre de régions : 18 (13 en métropole et 5 en outre-mer).\n- Nombre de départements : 101 (96 en métropole et 5 en outre-mer).\n- Nombre de communes : environ 35 000 (France métropolitaine et DROM, au 1er janvier 2025).\n\n[Voir l'image](pics/region.png)\n\nQuelles sont les frontières de la France ?\nLa France possède à la fois des frontières terrestres et des frontières maritimes étendues. Elle occupe une position stratégique en Europe de l’Ouest.\n\nFrontières terrestres (3 000 km en France hexagonale)\nEn Europe, la France partage des frontières terrestres avec 8 pays : la Belgique, le Luxembourg, l’Allemagne, la Suisse, l’Italie et l’Espagne, ainsi que les principautés d’Andorre et de Monaco.\n\nElle possède aussi des frontières avec le Brésil et le Suriname en Amérique du Sud, grâce à la Guyane.\n\nFrontières maritimes (5 500 km en France métropolitaine)\nLes frontières maritimes de la France s’étendent le long de la mer du Nord, de la Manche, de l’océan Atlantique et de la mer Méditerranée.\n\nGrâce à ses territoires d’outre-mer, la France est aussi présente dans les océans Pacifique, Atlantique et Indien, ce qui en fait une puissance géographique mondiale.",
+            "explanation": "La France en quelques chiffres clés\nSuperficie : environ 543 000 km² pour la métropole, 120 000 km² pour les DROM et 4 600 km² pour les COM (667 000 km² au total).\n- Nombre d’habitants : 68,6 millions (au 1er janvier 2025).\n- Nombre de régions : 18 (13 en métropole et 5 en outre-mer).\n- Nombre de départements : 101 (96 en métropole et 5 en outre-mer).\n- Nombre de communes : environ 35 000 (France métropolitaine et DROM, au 1er janvier 2025).\n\n\n\nQuelles sont les frontières de la France ?\nLa France possède à la fois des frontières terrestres et des frontières maritimes étendues. Elle occupe une position stratégique en Europe de l’Ouest.\n\nFrontières terrestres (3 000 km en France hexagonale)\nEn Europe, la France partage des frontières terrestres avec 8 pays : la Belgique, le Luxembourg, l’Allemagne, la Suisse, l’Italie et l’Espagne, ainsi que les principautés d’Andorre et de Monaco.\n\nElle possède aussi des frontières avec le Brésil et le Suriname en Amérique du Sud, grâce à la Guyane.\n\nFrontières maritimes (5 500 km en France métropolitaine)\nLes frontières maritimes de la France s’étendent le long de la mer du Nord, de la Manche, de l’océan Atlantique et de la mer Méditerranée.\n\nGrâce à ses territoires d’outre-mer, la France est aussi présente dans les océans Pacifique, Atlantique et Indien, ce qui en fait une puissance géographique mondiale.",
             "image": "pics/region.png"
         },
         {
             "id": 111,
             "question": "Quelles sont les frontières naturelles de la France ?",
-            "explanation": "Quelles sont les frontières naturelles de la France ?\nPlusieurs frontières naturelles sont présentes dans le pays. Elles ont aidé la France à façonner son territoire et à protéger ses limites au cours de l’histoire.\n\nFleuves et montagnes\n- À l’est : le Rhin sépare la France et l’Allemagne sur une partie de la frontière. Les massifs du Jura et des Vosges jouent également un rôle de frontière avec la Suisse et l’Allemagne.\n- Au sud : les Pyrénées forment une barrière montagneuse entre la France et l’Espagne.\n- Au sud-est : les Alpes marquent la limite entre la France et l’Italie and, en partie, la Suisse.\n\nMers et océans\n\nLa France est bordée par plusieurs façades maritimes.\n\n- Au nord-ouest : la mer du Nord et la Manche.\n- À l’est : l’océan Atlantique.\n- Au sud : la mer Méditerranée.\nCes frontières naturelles offrent à la France une grande diversité de paysages et une ouverture stratégique vers le monde.\n\nLes frontières et l’espace maritime de la France\n\n[Voir l'image](pics/card.png)",
+            "explanation": "Quelles sont les frontières naturelles de la France ?\nPlusieurs frontières naturelles sont présentes dans le pays. Elles ont aidé la France à façonner son territoire et à protéger ses limites au cours de l’histoire.\n\nFleuves et montagnes\n- À l’est : le Rhin sépare la France et l’Allemagne sur une partie de la frontière. Les massifs du Jura et des Vosges jouent également un rôle de frontière avec la Suisse et l’Allemagne.\n- Au sud : les Pyrénées forment une barrière montagneuse entre la France et l’Espagne.\n- Au sud-est : les Alpes marquent la limite entre la France et l’Italie and, en partie, la Suisse.\n\nMers et océans\n\nLa France est bordée par plusieurs façades maritimes.\n\n- Au nord-ouest : la mer du Nord et la Manche.\n- À l’est : l’océan Atlantique.\n- Au sud : la mer Méditerranée.\nCes frontières naturelles offrent à la France une grande diversité de paysages et une ouverture stratégique vers le monde.\n\nLes frontières et l’espace maritime de la France\n\n",
             "image": "pics/card.png"
         },
         {
@@ -816,7 +816,7 @@
         {
             "id": 136,
             "question": "Quels sont les principaux produits agricoles français ?",
-            "explanation": "Quels sont les principaux produits agricoles français ?\nL’agriculture française est très diversifiée grâce à la variété des paysages, climats et sols présents sur le territoire. Les productions agricoles les plus importantes (en valeur) sont :\n\n- le vin ;\n- les céréales ;\n- le lait ;\n- et la viande.\nLa France possède le premier cheptel bovin d’Europe et récolte 24% des céréales européennes, soit 65 millions de tonnes de blé, orge et maïs en 2023.\n\n[Voir l'image](pics/food.png)",
+            "explanation": "Quels sont les principaux produits agricoles français ?\nL’agriculture française est très diversifiée grâce à la variété des paysages, climats et sols présents sur le territoire. Les productions agricoles les plus importantes (en valeur) sont :\n\n- le vin ;\n- les céréales ;\n- le lait ;\n- et la viande.\nLa France possède le premier cheptel bovin d’Europe et récolte 24% des céréales européennes, soit 65 millions de tonnes de blé, orge et maïs en 2023.\n\n",
             "image": "pics/food.png"
         },
         {
@@ -858,7 +858,7 @@
         {
             "id": 143,
             "question": "Pourquoi cette ouverture sur la mer est-elle un atout ?",
-            "explanation": "Pourquoi cette ouverture sur la mer est-elle un atout ?\nCes vastes zones maritimes apportent plusieurs avantages à la France :\n\n- Atout géopolitique : la France peut renforcer sa souveraineté, protéger ses intérêts stratégiques et exercer une influence dans plusieurs régions clés du globe.\n- Atout économique : la ZEE est une source de richesse, grâce à la pêche et au contrôle du transport maritime.\n- Atout environnemental : ces espaces servent aussi à étudier la biodiversité et les écosystèmes sous-marins pour mieux protéger les océans face au changement climatique et à la surexploitation.\n\n[Voir l'image](pics/earth.png)",
+            "explanation": "Pourquoi cette ouverture sur la mer est-elle un atout ?\nCes vastes zones maritimes apportent plusieurs avantages à la France :\n\n- Atout géopolitique : la France peut renforcer sa souveraineté, protéger ses intérêts stratégiques et exercer une influence dans plusieurs régions clés du globe.\n- Atout économique : la ZEE est une source de richesse, grâce à la pêche et au contrôle du transport maritime.\n- Atout environnemental : ces espaces servent aussi à étudier la biodiversité et les écosystèmes sous-marins pour mieux protéger les océans face au changement climatique et à la surexploitation.\n\n",
             "image": "pics/earth.png"
         },
         {
@@ -870,7 +870,7 @@
         {
             "id": 145,
             "question": "Où sont situés les grands ports français ?",
-            "explanation": "Où sont situés les grands ports français ?\nLa France compte 66 ports de commerce maritime, dont 12 ports d’État :\n\n- 7 grands ports en France métropolitaine : Dunkerque, Le Havre, Rouen, Nantes Saint-Nazaire, La Rochelle, Bordeaux et Marseille.\n- 4 grands ports dans les territoires d’outre-mer : Guyane, Martinique, Guadeloupe, Port-Réunion.\n- 1 port d’intérêt national : le port de Saint-Pierre-et-Miquelon, près du Canada, est aussi un port d’État. Il est bien plus petit que les autres ports, mais important du fait de sa situation géographique.\n\n[Voir l'image](pics/porte.png)",
+            "explanation": "Où sont situés les grands ports français ?\nLa France compte 66 ports de commerce maritime, dont 12 ports d’État :\n\n- 7 grands ports en France métropolitaine : Dunkerque, Le Havre, Rouen, Nantes Saint-Nazaire, La Rochelle, Bordeaux et Marseille.\n- 4 grands ports dans les territoires d’outre-mer : Guyane, Martinique, Guadeloupe, Port-Réunion.\n- 1 port d’intérêt national : le port de Saint-Pierre-et-Miquelon, près du Canada, est aussi un port d’État. Il est bien plus petit que les autres ports, mais important du fait de sa situation géographique.\n\n",
             "image": "pics/porte.png"
         },
         {

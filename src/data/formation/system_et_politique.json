@@ -36,7 +36,7 @@
         {
             "id": 6,
             "question": "L'autorité judiciaire, c’est quoi ?",
-            "explanation": "L'autorité judiciaire, c’est quoi ?\nL'autorité judiciaire est exercée par les juges et les magistrats (recrutés par concours et non choisis par le pouvoir).\n\nLa justice est indépendante, elle rend un jugement impartial et équitable. Une aide juridictionnelle financière existe pour que chacun (peu importe sa nationalité, son âge, ses revenus) soit défendu de manière juste.\n\n[Voir l'image](pics/judiciaire.png)",
+            "explanation": "L'autorité judiciaire, c’est quoi ?\nL'autorité judiciaire est exercée par les juges et les magistrats (recrutés par concours et non choisis par le pouvoir).\n\nLa justice est indépendante, elle rend un jugement impartial et équitable. Une aide juridictionnelle financière existe pour que chacun (peu importe sa nationalité, son âge, ses revenus) soit défendu de manière juste.\n\n",
             "image": "pics/judiciaire.png"
         },
         {
@@ -144,7 +144,7 @@
         {
             "id": 24,
             "question": "Comment la loi est-elle validée ?",
-            "explanation": "Comment la loi est-elle validée ?\nQuand le texte de loi a été validé par la commission parlementaire, il est transmis à l’Assemblée nationale ou au Sénat pour être discuté et amendé (modifications) en séances publiques.\n\nChaque article et chaque amendement sont votés un par un. Puis, l’ensemble du texte de loi est validé.\n\nLes deux chambres parlementaires (le Sénat et l’Assemblée nationale) doivent valider un texte de loi identique pour qu’il soit appliqué.\n\nLa loi est l'expression de la volonté générale.\n\n[Voir l'image](pics/parcours_dune_loi.png)",
+            "explanation": "Comment la loi est-elle validée ?\nQuand le texte de loi a été validé par la commission parlementaire, il est transmis à l’Assemblée nationale ou au Sénat pour être discuté et amendé (modifications) en séances publiques.\n\nChaque article et chaque amendement sont votés un par un. Puis, l’ensemble du texte de loi est validé.\n\nLes deux chambres parlementaires (le Sénat et l’Assemblée nationale) doivent valider un texte de loi identique pour qu’il soit appliqué.\n\nLa loi est l'expression de la volonté générale.\n\n",
             "image": "pics/parcours_dune_loi.png"
         },
         {
@@ -204,7 +204,7 @@
         {
             "id": 34,
             "question": "Exemple de répartition des compétences entre l’État et les collectivités territoriales : l’école en France",
-            "explanation": "Exemple de répartition des compétences entre l’État et les collectivités territoriales : l’école en France\nLe service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n    - définit les programmes scolaires ;\n    - recrute, forme et gère les enseignants ;\n    - valide les manuels scolaires ;\n    - supervise les universités.\n- Les régions gèrent les lycées ;\n- Les départements gèrent les collèges ;\n- Les communes gèrent les écoles maternelles et primaires.\nGérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine.\n\n[Voir l'image](pics/territories.png)",
+            "explanation": "Exemple de répartition des compétences entre l’État et les collectivités territoriales : l’école en France\nLe service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n    - définit les programmes scolaires ;\n    - recrute, forme et gère les enseignants ;\n    - valide les manuels scolaires ;\n    - supervise les universités.\n- Les régions gèrent les lycées ;\n- Les départements gèrent les collèges ;\n- Les communes gèrent les écoles maternelles et primaires.\nGérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine.\n\n",
             "image": "pics/territories.png"
         },
         {
@@ -222,7 +222,7 @@
         {
             "id": 37,
             "question": "Les dates clés de l’extension géographique",
-            "explanation": "Les dates clés de l’extension géographique\n- En 1957, la CEE est créée avec 6 pays : Allemagne de l’Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.\n- En 1973, 3 nouveaux pays entrent dans la CEE : Danemark, Irlande et Royaume-Uni.\n- En 1981, la Grèce intègre l’Europe.\n- En 1986, c’est au tour de l’Espagne et du Portugal.\n- En 1995, l’Autriche, la Finlande et la Suède intègrent l’UE.\n- En 2004, l’extension géographique concerne de nombreux pays : Chypre, Estonie, Hongrie, Lettonie, Lituanie, Malte, Pologne, République tchèque, Slovaquie et Slovénie.\n- En 2007, la Bulgarie et la Roumanie intègrent l’UE.\n- En 2013, c’est au tour de la Croatie.\n- En 2020, pour la première fois, un pays quitte l’UE : le Royaume-Uni.\n\n[Voir l'image](pics/euro.png)",
+            "explanation": "Les dates clés de l’extension géographique\n- En 1957, la CEE est créée avec 6 pays : Allemagne de l’Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.\n- En 1973, 3 nouveaux pays entrent dans la CEE : Danemark, Irlande et Royaume-Uni.\n- En 1981, la Grèce intègre l’Europe.\n- En 1986, c’est au tour de l’Espagne et du Portugal.\n- En 1995, l’Autriche, la Finlande et la Suède intègrent l’UE.\n- En 2004, l’extension géographique concerne de nombreux pays : Chypre, Estonie, Hongrie, Lettonie, Lituanie, Malte, Pologne, République tchèque, Slovaquie et Slovénie.\n- En 2007, la Bulgarie et la Roumanie intègrent l’UE.\n- En 2013, c’est au tour de la Croatie.\n- En 2020, pour la première fois, un pays quitte l’UE : le Royaume-Uni.\n\n",
             "image": "pics/euro.png"
         },
         {

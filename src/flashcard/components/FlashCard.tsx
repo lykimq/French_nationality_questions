@@ -31,6 +31,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
         // Reset scroll state when question changes
         setScrollOffset(0);
         setContentHeight(0);
+        scrollViewRef.current?.scrollTo({ y: 0, animated: false });
     }, [question.id]);
 
     const handleScroll = (event: any) => {
@@ -111,14 +112,25 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
     const questionText = question.question || '';
     // Remove markdown image links from explanation if image is displayed separately
     let explanationText = question.explanation || '';
-    if (question.image) {
-        // Remove markdown image links like [Voir l'image](pics/xxx.png)
-        explanationText = explanationText.replace(/\[Voir l'image\]\([^)]+\)/g, '').trim();
-    }
 
-    // Remove repeated question from explanation if present
-    if (explanationText.trim().startsWith(questionText.trim())) {
-        explanationText = explanationText.substring(questionText.length).trim();
+    // Robust Deduplication Logic
+    const normalizeText = (text: string) => text.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const normalizedQuestion = normalizeText(questionText);
+
+    // Split by newline to check the first paragraph/line
+    const lines = explanationText.split('\n');
+    if (lines.length > 0) {
+        const firstLine = lines[0];
+        const normalizedFirstLine = normalizeText(firstLine);
+
+        // If the first line is substantially similar to the question (contains it or is contained by it)
+        // or effectively equal, remove it.
+        // We check if the normalized first line *starts with* the normalized question
+        // OR if the normalized question *starts with* the normalized first line (handle partial header)
+        if (normalizedFirstLine.length > 0 &&
+            (normalizedFirstLine.includes(normalizedQuestion) || normalizedQuestion.includes(normalizedFirstLine))) {
+            explanationText = lines.slice(1).join('\n').trim();
+        }
     }
 
     explanationText = formatExplanation(explanationText);
@@ -233,7 +245,6 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
 
                         <View style={styles.scrollContainer}>
                             <ScrollView
-                                key={question.id}
                                 ref={scrollViewRef}
                                 style={styles.explanationScrollView}
                                 contentContainerStyle={styles.explanationScrollContent}
@@ -437,10 +448,12 @@ const styles = StyleSheet.create({
         flexShrink: 0,
     },
     explanationText: {
-        fontSize: 16,
-        lineHeight: 24,
-        textAlign: 'justify',
+        fontFamily: 'PatrickHand',
+        fontSize: 17, // Slightly larger for better readability
+        lineHeight: 28, // ~1.6x line height
+        color: '#2c3e50', // Dark grey/blue instead of pure black for softer contrast
         flexShrink: 0,
+        marginBottom: 8,
     },
     imageContainer: {
         borderRadius: 12,
