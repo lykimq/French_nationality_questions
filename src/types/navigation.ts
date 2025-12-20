@@ -4,7 +4,8 @@
 export type TabParamList = Readonly<{
     HomeTab: undefined;
     SearchTab: undefined;
-    TestTab: undefined;
+    CivicExamTab: undefined;
+    FlashCardTab: undefined;
     SettingsTab: undefined;
 }>;
 

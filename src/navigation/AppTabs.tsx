@@ -4,8 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 
 import HomeStack from './HomeStack';
 import SearchScreen from '../search/SearchScreen';
-import TestStack from './TestStack';
 import CivicExamStack from '../test_civic/navigation/CivicExamStack';
+import FlashCardStack from '../flashcard/navigation/FlashCardStack';
 import SettingsScreen from '../settings/SettingsScreen';
 import { DataLoadingScreen } from '../shared/components';
 import { useData } from '../shared/contexts/DataContext';
@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 const tabLabels = {
     home: 'Accueil',
     search: 'Rechercher',
-    test: 'Tests',
+    flashcard: 'Cartes Flash',
     settings: 'Paramètres'
 };
 
@@ -41,7 +41,7 @@ const AppTabs = () => {
                         iconName = focused ? theme.icons.home : theme.icons.home;
                     } else if (route.name === 'SearchTab') {
                         iconName = focused ? theme.icons.search : theme.icons.search;
-                    } else if (route.name === 'TestTab') {
+                    } else if (route.name === 'FlashCardTab') {
                         iconName = focused ? 'school' : 'school-outline';
                     } else if (route.name === 'SettingsTab') {
                         iconName = focused ? theme.icons.settings : theme.icons.settings;
@@ -80,11 +80,6 @@ const AppTabs = () => {
                 options={{ title: tabLabels.search }}
             />
             <Tab.Screen
-                name="TestTab"
-                component={TestStack}
-                options={{ title: tabLabels.test }}
-            />
-            <Tab.Screen
                 name="CivicExamTab"
                 component={CivicExamStack}
                 options={{ 
@@ -93,6 +88,11 @@ const AppTabs = () => {
                         <Ionicons name={focused ? 'document-text' : 'document-text-outline'} size={size} color={color} />
                     ),
                 }}
+            />
+            <Tab.Screen
+                name="FlashCardTab"
+                component={FlashCardStack}
+                options={{ title: tabLabels.flashcard }}
             />
             <Tab.Screen
                 name="SettingsTab"

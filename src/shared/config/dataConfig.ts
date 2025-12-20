@@ -35,6 +35,16 @@ export const DATA_FILES = {
             'test_opinions_fr_vi.json',
             'test_daily_life_fr_vi.json'
         ] as const
+    },
+    FORMATION: {
+        DIRECTORY: 'formation/',
+        FILES: [
+            'principes_et_valeurs.json',
+            'histoire_geographie_et_culture.json',
+            'droits_et_devoirs.json',
+            'system_et_politique.json',
+            'vivre_dans_la_societe_francaise.json'
+        ] as const
     }
 };
 
@@ -58,4 +68,9 @@ export const LOCAL_DATA_MAP: Record<string, any> = {
     'subcategories/celebrities.json': require('../../data/subcategories/celebrities.json'),
     'subcategories/sports.json': require('../../data/subcategories/sports.json'),
     'subcategories/holidays.json': require('../../data/subcategories/holidays.json'),
+    'formation/principes_et_valeurs.json': require('../../data/formation/principes_et_valeurs.json'),
+    'formation/histoire_geographie_et_culture.json': require('../../data/formation/histoire_geographie_et_culture.json'),
+    'formation/droits_et_devoirs.json': require('../../data/formation/droits_et_devoirs.json'),
+    'formation/system_et_politique.json': require('../../data/formation/system_et_politique.json'),
+    'formation/vivre_dans_la_societe_francaise.json': require('../../data/formation/vivre_dans_la_societe_francaise.json'),
 };

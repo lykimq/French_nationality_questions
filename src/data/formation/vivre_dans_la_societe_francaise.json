@@ -228,7 +228,7 @@
         {
             "id": 38,
             "question": "Un médecin traitant, c’est quoi ?",
-            "explanation": "Un médecin traitant, c’est quoi ?\nLe médecin généraliste devient médecin traitant lorsqu’il est officiellement déclaré par le patient pour assurer le suivi médical et coordonner les soins.\n\nLe médecin traitant est celui qui :\n\n- soigne et suit le patient régulièrement : c’est lui qu’il faut consulter en premier pour un avis sur sa santé et qui s'assure que le suivi médical est optimal ;\n- oriente dans le parcours de soins coordonnés : c’est l’interlocuteur privilégié, il informe et vous met, si besoin, en relation avec d'autres professionnels de santé (médecins spécialistes, médecins hospitaliers,...) ;\n- connaît et gère votre dossier médical : il centralise toutes les informations concernant vos soins et votre état de santé. Il tient à jour votre dossier médical (résultats d'examens, diagnostics, traitements...) ;\n- assure une prévention personnenenalisée : il assure le suivi de la vaccination, les examens de dépistage organisés (exemple : dépistage du cancer colorectal), peut aider à l'arrêt du tabac, donne des conseils santé en fonction de votre style de vie, de votre âge ou de vos antécédents familiaux, des conseils en nutrition…\n- établit le protocole de soins à suivre si le patient est atteint d'une affection de longue durée. Il le construit en concertation avec les autres médecins qui suivent la maladie.",
+            "explanation": "Un médecin traitant, c’est quoi ?\nLe médecin généraliste devient médecin traitant lorsqu’il est officiellement déclaré par le patient pour assurer le suivi médical et coordonner les soins.\n\nLe médecin traitant est celui qui :\n\n- soigne et suit le patient régulièrement : c’est lui qu’il faut consulter en premier pour un avis sur sa santé et qui s'assure que le suivi médical est optimal ;\n- oriente dans le parcours de soins coordonnés : c’est l’interlocuteur privilégié, il informe et vous met, si besoin, en relation avec d'autres professionnels de santé (médecins spécialistes, médecins hospitaliers,...) ;\n- connaît et gère votre dossier médical : il centralise toutes les informations concernant vos soins et votre état de santé. Il tient à jour votre dossier médical (résultats d'examens, diagnostics, traitements...) ;\n- assure une prévention personnenalisée : il assure le suivi de la vaccination, les examens de dépistage organisés (exemple : dépistage du cancer colorectal), peut aider à l'arrêt du tabac, donne des conseils santé en fonction de votre style de vie, de votre âge ou de vos antécédents familiaux, des conseils en nutrition…\n- établit le protocole de soins à suivre si le patient est atteint d'une affection de longue durée. Il le construit en concertation avec les autres médecins qui suivent la maladie.",
             "image": null
         },
         {
@@ -600,7 +600,7 @@
         {
             "id": 100,
             "question": "Le CV, à quoi ça sert ?",
-            "explanation": "### Recrutement (2/3)\nDans cette fiche, vous allez découvrir comment s’organise le recrutement en France : le CV.\n\nObjectifs de la fiche :\nComprendre à quoi sert un CV.\n\nConnaître les informations à renseigner dans un CV.\n\nLe CV, à quoi ça sert ?\nLe Curriculum Vitae (CV) est un document qu'une personne envoie à une entreprise dans le but d'être embauché dans cette entreprise.\n\nIl présente la personnene à l’employeur :\n\n- son expérience professionnelle ;\n- son parcours de formation ;\n- ses compétences ;\n- ses qualités.\nIl permet à l'entreprise d'évaluer les capacités de la personne à réaliser le travail attendu.\n\nL'envoi d'un CV n'est pas obligatoire.",
+            "explanation": "### Recrutement (2/3)\nDans cette fiche, vous allez découvrir comment s’organise le recrutement en France : le CV.\n\nObjectifs de la fiche :\nComprendre à quoi sert un CV.\n\nConnaître les informations à renseigner dans un CV.\n\nLe CV, à quoi ça sert ?\nLe Curriculum Vitae (CV) est un document qu'une personne envoie à une entreprise dans le but d'être embauché dans cette entreprise.\n\nIl présente la personne à l’employeur :\n\n- son expérience professionnelle ;\n- son parcours de formation ;\n- ses compétences ;\n- ses qualités.\nIl permet à l'entreprise d'évaluer les capacités de la personne à réaliser le travail attendu.\n\nL'envoi d'un CV n'est pas obligatoire.",
             "image": null
         },
         {
@@ -678,7 +678,7 @@
         {
             "id": 113,
             "question": "La discrimination au travail, qu’est-ce que c’est ?",
-            "explanation": "### Le droit du travail (3/5)\nDans cette fiche, vous allez découvrir une notion importante du droit du travail : la discrimination.\n\nObjectifs de la fiche :\nComprendre ce qu’est la discrimination au travail.\n\nIdentifier les situations de discrimination.\n\nSavoir comment signaler une discrimination.\n\nLa discrimination au travail, qu’est-ce que c’est ?\nOn parle de discrimination au travail quand une personnene est moins bien traitée que les autres par l’employeur en raison d’un des critères interdits par la loi, par exemple son origine, son sexe, son âge...\n\nToutes les personnes qui travaillent dans une entreprise (salarié, stagiaire, apprenti) sont protégées contre la discrimination. Cette protection implique que la personnene peut signaler la discrimination pour obtenir, dans certains cas, une réparation.",
+            "explanation": "### Le droit du travail (3/5)\nDans cette fiche, vous allez découvrir une notion importante du droit du travail : la discrimination.\n\nObjectifs de la fiche :\nComprendre ce qu’est la discrimination au travail.\n\nIdentifier les situations de discrimination.\n\nSavoir comment signaler une discrimination.\n\nLa discrimination au travail, qu’est-ce que c’est ?\nOn parle de discrimination au travail quand une personne est moins bien traitée que les autres par l’employeur en raison d’un des critères interdits par la loi, par exemple son origine, son sexe, son âge...\n\nToutes les personnes qui travaillent dans une entreprise (salarié, stagiaire, apprenti) sont protégées contre la discrimination. Cette protection implique que la personne peut signaler la discrimination pour obtenir, dans certains cas, une réparation.",
             "image": null
         },
         {
@@ -690,7 +690,7 @@
         {
             "id": 115,
             "question": "Comment signaler une discrimination ?",
-            "explanation": "Comment signaler une discrimination ?\nUne victime de discrimination ou une personnene qui connaît une discrimination peut le signaler, par exemple :\n\n- à l’Inspection du Travail ;\n- à un représentant du personnel ;\n- à un syndicat professionnel.\nSignaler une discrimination n’entraîne aucune sanction, sauf en cas de mensonge.",
+            "explanation": "Comment signaler une discrimination ?\nUne victime de discrimination ou une personne qui connaît une discrimination peut le signaler, par exemple :\n\n- à l’Inspection du Travail ;\n- à un représentant du personnel ;\n- à un syndicat professionnel.\nSignaler une discrimination n’entraîne aucune sanction, sauf en cas de mensonge.",
             "image": null
         },
         {
@@ -720,7 +720,7 @@
         {
             "id": 120,
             "question": "Les conséquences pour l’employeur",
-            "explanation": "Les conséquences pour l’employeur\nUn employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende. Les peines peuvent aller jusqu’à 5 ans de prison et 75 000 euros d’amende dans certaines situations (exemple : travail non déclaré d’une personnene de moins de 18 ans).\n\nL’employeur peut aussi avoir des sanctions complémentaires.\n\nExemples : fermeture de l’entreprise pendant 3 mois maximum, impossibilité de travailler dans le cadre d’un marché public.\n\nSur le plan financier, l’entreprise doit rembourser les aides publiques perçues, payer un montant supérieur aux cotisations sociales qui n’ont pas été payées, et verser au salarié l’équivalent de 6 mois de salaire.",
+            "explanation": "Les conséquences pour l’employeur\nUn employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende. Les peines peuvent aller jusqu’à 5 ans de prison et 75 000 euros d’amende dans certaines situations (exemple : travail non déclaré d’une personne de moins de 18 ans).\n\nL’employeur peut aussi avoir des sanctions complémentaires.\n\nExemples : fermeture de l’entreprise pendant 3 mois maximum, impossibilité de travailler dans le cadre d’un marché public.\n\nSur le plan financier, l’entreprise doit rembourser les aides publiques perçues, payer un montant supérieur aux cotisations sociales qui n’ont pas été payées, et verser au salarié l’équivalent de 6 mois de salaire.",
             "image": null
         },
         {

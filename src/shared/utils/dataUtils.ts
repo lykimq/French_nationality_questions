@@ -34,11 +34,21 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
         }
 
         if (failedDataCache.has(dataPath)) {
-            logger.info(`Trying local fallback for cached failure: ${dataPath}`);
+            logger.debug(`Trying local fallback for cached failure: ${dataPath}`);
             return await getLocalJsonData(dataPath);
         }
 
-        if (storage) {
+        const hasLocalData = LOCAL_DATA_MAP[dataPath] !== undefined;
+        
+        if (hasLocalData) {
+            const localData = await getLocalJsonData(dataPath);
+            if (localData) {
+                logger.debug(`Using local data for: ${dataPath}`);
+                return localData;
+            }
+        }
+
+        if (storage && !hasLocalData) {
             try {
                 const dataRef = ref(storage, `French_questions/data/${dataPath}`);
                 const downloadURL = await getDownloadURL(dataRef);
@@ -58,10 +68,10 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
                 firebaseDataCache[dataPath] = jsonData;
                 return jsonData;
             } catch (firebaseError) {
-                logger.warn(`Firebase load failed for ${dataPath}, trying local fallback`);
+                logger.debug(`Firebase load failed for ${dataPath}, trying local fallback`);
             }
-        } else {
-            logger.info(`Firebase not configured, using local data for: ${dataPath}`);
+        } else if (!hasLocalData) {
+            logger.debug(`Firebase not configured, trying local data for: ${dataPath}`);
         }
 
         const localData = await getLocalJsonData(dataPath);
@@ -83,12 +93,14 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
 const loadJsonCollection = async (
     files: readonly string[],
     directoryPrefix: string = '',
-    keySuffixToRemove: string = '.json'
+    keySuffixToRemove: string = '.json',
+    useIdAsKey: boolean = false
 ): Promise<{ [key: string]: any }> => {
     try {
         const promises = files.map(async (filename) => {
-            const key = filename.replace(keySuffixToRemove, '');
+            const fallbackKey = filename.replace(keySuffixToRemove, '');
             const data = await getFirebaseJsonData(`${directoryPrefix}${filename}`);
+            const key = useIdAsKey && data?.id ? data.id : fallbackKey;
             return { key, data };
         });
 
@@ -186,4 +198,8 @@ export const loadPart1TestData = async (): Promise<any> => {
             { id: "test_daily_life", title: "Vie quotidienne", icon: "calendar", description: "Questions sur la vie quotidienne" }
         ]
     };
+};
+
+export const loadFormationData = async () => {
+    return loadJsonCollection(DATA_FILES.FORMATION.FILES, DATA_FILES.FORMATION.DIRECTORY, '.json', true);
 };
