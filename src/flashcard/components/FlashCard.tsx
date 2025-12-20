@@ -448,7 +448,7 @@ const styles = StyleSheet.create({
         flexShrink: 0,
     },
     explanationText: {
-        fontFamily: 'PatrickHand',
+        fontFamily: 'San Francisco',
         fontSize: 17, // Slightly larger for better readability
         lineHeight: 28, // ~1.6x line height
         color: '#2c3e50', // Dark grey/blue instead of pure black for softer contrast
