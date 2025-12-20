@@ -1,0 +1,760 @@
+{
+    "themeId": "droits_et_devoirs",
+    "themeTitle": "Droits et devoirs",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Qu’est-ce que les droits fondamentaux ?",
+            "correctAnswer": "les droits et les libertés élémentaires que tout le monde doit respecter pour assurer le bien-être de chacun",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Ils assurent le bien-être de chacun sans distinction de sexe, d'âge ou d'origine.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 2,
+            "question": "Quelles sont les catégories de droits fondamentaux ?",
+            "correctAnswer": "les différentes catégories de droits fondamentaux",
+            "incorrectAnswers": [
+                "Les droits civiques et politiques uniquement",
+                "Les droits économiques et sociaux uniquement",
+                "les droits et les libertés élémentaires que tout le monde doit respecter pour assurer le bien-être de chacun"
+            ],
+            "explanation": "Ils se divisent en droits individuels, sociaux et de solidarité (3ème génération).",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 3,
+            "question": "Quel texte de 1789 garantit ces droits ?",
+            "correctAnswer": "inscrits dans plusieurs textes français et européens, dont :",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "La dignité humaine est un principe fondamental qui constitue le socle de tous les droits fondamentaux."
+            ],
+            "explanation": "Quels textes garantissent ces droits fondamentaux ?...",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 4,
+            "question": "Que sont les droits naturels de la personne ?",
+            "correctAnswer": "“les droits de” tous les êtres humains",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Les droits liés à la personne humaine (dits “les droits de” quelqu’un), c’est quoi ?\nLes droits liés à la personne sont “les droits de” tous les êtres humains. Ce sont des droits naturels que chaque individu possède simplement parce qu’il est un être humain....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 5,
+            "question": "Qu'est-ce que la présomption d'innocence ?",
+            "correctAnswer": "Quels sont les droits qui découlent des droits individuels",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Quels sont les droits qui découlent des droits individuels ?\nL’application des droits fondamentaux liés à la personne humaine cités précédemment (égalité, liberté, sûreté et résistance à l'oppression) entraîne des droits fondamentaux dans une société....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 6,
+            "question": "Quels sont les droits économiques et sociaux ?",
+            "correctAnswer": "Les droits économiques et sociaux, c’est quoi",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Les droits économiques et sociaux, c’est quoi ?\nLes droits économiques et sociaux visent à garantir à chaque individu des conditions de vie dignes en assurant l'accès à des ressources essentielles telles que l'éducation, la santé, le travail, le logement et la sécurité sociale....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 7,
+            "question": "Que sont les droits de troisième génération ?",
+            "correctAnswer": "avant tout fondés sur la solidarité collective",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Les droits dits \"de troisième génération\", c’est quoi ?\nLes droits fondamentaux dits de \"troisième génération\" sont avant tout fondés sur la solidarité collective....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 8,
+            "question": "Qu'est-ce que la dignité humaine ?",
+            "correctAnswer": "le fait que chaque personne a de la valeur et mérite le respect, simplement parce qu’elle est un être humain",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Aucun être humain ne doit être traité comme un objet.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 9,
+            "question": "L'esclavage est-il autorisé en France ?",
+            "correctAnswer": "Dans quel texte de loi, la dignité humaine est-elle inscrite",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Dans quel texte de loi, la dignité humaine est-elle inscrite ?\nLa dignité humaine est un principe fondamental qui constitue le socle de tous les droits fondamentaux....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 10,
+            "question": "Peut-on vendre ses organes en France ?",
+            "correctAnswer": "interdit), que les pratiques eugéniques (sélection du patrimoine génétique) et de clonage sont interdites",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est autorisé dans certains cas"
+            ],
+            "explanation": "Le corps humain n'est pas une marchandise, son intégrité est protégée.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "situation"
+        },
+        {
+            "id": 11,
+            "question": "Qu'est-ce que le droit de disposer de son corps ?",
+            "correctAnswer": "un principe fondamental des droits humains et des libertés individuelles",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Il inclut l'accès libre à la contraception et à l'avortement.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 12,
+            "question": "La contraception est-elle autorisée pour les mineurs ?",
+            "correctAnswer": "Il existe différents moyens de contraception",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La contraception, c’est quoi ?...",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 13,
+            "question": "Qu'est-ce que l'IVG ?",
+            "correctAnswer": "la possibilité d’arrêter une grossesse pour toutes les femmes, sans condition d’âge (les mineures n’ont pas besoin d’une autorisation de leurs parents pour avorter mais elles doive",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "L’interruption volontaire de grossesse, c’est quoi ?\nL’interruption volontaire de grossesse (IVG), c’est la possibilité d’arrêter une grossesse pour toutes les femmes, sans condition d’âge (les mineures n’ont pas besoin d’une autorisation de leurs parents pour avorter mais elles doivent être accompagnées d’une personne majeure de leur choix)....",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 14,
+            "question": "Qui a le droit de se marier en France ?",
+            "correctAnswer": "Un couple est une union entre deux personnes de sexe différent ou de même sexe, qui ont une vie commune.",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Qu’est-ce qu’un couple ?\nUn couple est une union entre deux personnes de sexe différent ou de même sexe, qui ont une vie commune....",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 15,
+            "question": "Peut-on divorcer librement ?",
+            "correctAnswer": "libre de se mettre en couple, de vivre en concubinage, de se pacser, de se marier ou de ne pas le faire",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La liberté conjugale, c’est quoi ?...",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 16,
+            "question": "L'adoption est-elle possible pour les célibataires ?",
+            "correctAnswer": "individuellement libre de choisir d’avoir ou de ne pas avoir d’enfant",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La liberté d’avoir des enfants, c’est quoi ?\nChaque personne du couple est individuellement libre de choisir d’avoir ou de ne pas avoir d’enfant. La contraception et l’IVG sont accessibles sans autorisation du partenaire....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 17,
+            "question": "Qu'est-ce qu'être citoyen français ?",
+            "correctAnswer": "“ressortissant” du pays",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "indirectement auteurs des lois"
+            ],
+            "explanation": "Un citoyen, c’est quoi ?\nLe citoyen français a la nationalité française. Il bénéficie de la protection de l’État et doit respecter ses lois. On dit qu’il est “ressortissant” du pays....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 18,
+            "question": "D'où vient la citoyenneté moderne ?",
+            "correctAnswer": "un droit fondamental inscrit dans la Déclaration des droits de l’homme et du citoyen de 1789",
+            "incorrectAnswers": [
+                "Dans un autre lieu ou service",
+                "Uniquement en ligne ou uniquement en présentiel",
+                "C'est une interprétation partielle ou incomplète de la réalité"
+            ],
+            "explanation": "Elle fonde les droits civiques sur la liberté et l'égalité.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 19,
+            "question": "Peut-on perdre sa nationalité française ?",
+            "correctAnswer": "Cette mesure implique la perte des droits et libertés liés à la citoyenneté dont le droit de vote, le passeport français ou encore la protection diplomatique de l’État.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La déchéance est une sanction grave qui retire la nationalité et les droits associés.",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 20,
+            "question": "Quels sont les droits inaliénables de la DDHC ?",
+            "correctAnswer": "La Déclaration des droits de l'homme et du citoyen, c’est quoi",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "la base de notre démocratie"
+            ],
+            "explanation": "La Déclaration des droits de l'homme et du citoyen, c’est quoi ?\nLa Déclaration des droits de l'homme et du citoyen (DDHC) est un texte fondamental qui affirme les droits fondamentaux de l’être humain : des droits naturels, universels (pour tous les hommes, femmes, enfants…) et inaliénables (ils ne peuvent être donnés à quelqu’un d’autre, ils lui appartiennent) et du citoyen (des droits et devoirs civiques et politiques)....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 21,
+            "question": "Combien d'articles contient la DDHC de 1789 ?",
+            "correctAnswer": "composée d’une introduction et de 17 articles",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Comment ce texte est-il structuré ?\nLa Déclaration des droits de l'homme et du citoyen est composée d’une introduction et de 17 articles. Elle affirme les droits universels de l’Homme et du citoyen. ...",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 22,
+            "question": "A quoi sert une Constitution ?",
+            "correctAnswer": "un acte fondateur par lequel une société se constitue une identité et décide de/établit son organisation",
+            "incorrectAnswers": [
+                "Un texte qui organise uniquement les pouvoirs publics",
+                "Un document qui garantit uniquement les droits civiques",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "C'est la loi suprême qui définit le régime politique.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 23,
+            "question": "Quelle est la Constitution actuelle de la France ?",
+            "correctAnswer": "le texte fondateur de la Ve République",
+            "incorrectAnswers": [
+                "Un texte qui organise uniquement les pouvoirs publics",
+                "Un document qui garantit uniquement les droits civiques",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La Constitution française du 4 octobre 1958\nLa Constitution du 4 octobre 1958 est le texte fondateur de la Ve République. C'est la Constitution qui est appliquée actuellement....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 24,
+            "question": "Qu'est-ce que le bloc de constitutionnalité ?",
+            "correctAnswer": "composée d’un Préambule et de 108 articles organisés en 17 parties",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "Un texte qui organise uniquement les pouvoirs publics",
+                "Un document qui garantit uniquement les droits civiques"
+            ],
+            "explanation": "Le bloc de constitutionnalité\nLa Constitution du 4 octobre 1958 est composée d’un Préambule et de 108 articles organisés en 17 parties....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 25,
+            "question": "Quel texte protège l'écologie dans la Constitution ?",
+            "correctAnswer": "vitale, pour la France et pour les générations à venir de l’humanité",
+            "incorrectAnswers": [
+                "Un texte qui organise uniquement les pouvoirs publics",
+                "Un document qui garantit uniquement les droits civiques",
+                "La dignité humaine est un principe fondamental qui constitue le socle de tous les droits fondamentaux."
+            ],
+            "explanation": "Elle consacre le droit à un environnement sain comme valeur constitutionnelle.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 26,
+            "question": "Quelle citation est célèbre concernant la Charte de 2004 ?",
+            "correctAnswer": "l’histoire de la Charte de l’Environnement de 2004",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "vitale, pour la France et pour les générations à venir de l’humanité"
+            ],
+            "explanation": "Cette phrase de Jacques Chirac a marqué la prise de conscience écologique.",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 27,
+            "question": "Que dit la Charte de l'environnement ?",
+            "correctAnswer": "Que contient la Charte de l’environnement de 2004",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "vitale, pour la France et pour les générations à venir de l’humanité"
+            ],
+            "explanation": "Que contient la Charte de l’environnement de 2004 ?\nLa Charte de l’environnement comporte un Préambule et 10 articles....",
+            "subTheme": "droits_fondamentaux",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 28,
+            "question": "Qui protège vos droits en cas d'agression ?",
+            "correctAnswer": "les forces de l’ordre",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister"
+            ],
+            "explanation": "Vers qui se tourner en premier pour faire valoir ses droits fondamentaux ?\nLes policiers et gendarmes sont les forces de l’ordre. Ils interviennent pour résoudre un conflit, calmer un désaccord ou protéger physiquement une personne....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 29,
+            "question": "Qui est le Défenseur des droits ?",
+            "correctAnswer": "Quels sont les autres acteurs qui peuvent vous accompagner",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister"
+            ],
+            "explanation": "C'est un recours gratuit en cas de discrimination ou conflit avec l'administration.",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 30,
+            "question": "Nos droits sont-ils illimités ?",
+            "correctAnswer": "accordés par la Déclaration des droits de l'homme et du citoyen et les autres textes fondamentaux",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Que dit la Déclaration des droits de l'homme et du citoyen ?\nDe nombreux droits et libertés nous sont accordés par la Déclaration des droits de l'homme et du citoyen et les autres textes fondamentaux. Il est écrit que nos droits sont imprescriptibles (article 2 de la DDHC), ce qui signifie qu’ils ne peuvent pas nous être retirés....",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 31,
+            "question": "Quelles sont les limites aux libertés ?",
+            "correctAnswer": "les limites de nos droits et libertés",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "la base de notre démocratie"
+            ],
+            "explanation": "L'État peut restreindre certaines libertés pour protéger l'intérêt général.",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 32,
+            "question": "Exemple de restriction de liberté légale ?",
+            "correctAnswer": "Quelques exemples\nDans le cadre de la lutte contre le terrorisme certaines libertés individuelles (liberté de circulation, par exemple) ont été restreintes.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Quelques exemples\nDans le cadre de la lutte contre le terrorisme certaines libertés individuelles (liberté de circulation, par exemple) ont été restreintes....",
+            "subTheme": "obligations_devoirs",
+            "questionType": "situation"
+        },
+        {
+            "id": 33,
+            "question": "Qu'est-ce qu'une infraction ?",
+            "correctAnswer": "prononcées par le juge selon la gravité",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Toute violation de la loi pénale est une infraction (contravention, délit, crime).",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 34,
+            "question": "Quelle est l'infraction la plus grave ?",
+            "correctAnswer": "les différents types d’infractions",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Quels sont les différents types d’infractions ?\n1. La contravention\n- La contravention est l’infraction la moins grave. Exemple : un excès de vitesse ou du tapage nocturne.\n- Elle est punie par une amende de maximum 3 000 € (pas de peine de prison possible).\n- Elle est jugée par le tribunal de police....",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 35,
+            "question": "Quelle est la différence entre Police et Gendarmerie ?",
+            "correctAnswer": "chargé de faire respecter la loi",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "La police et la gendarmerie exercent les mêmes missions mais dans des zones différentes."
+            ],
+            "explanation": "Elles ont les mêmes missions mais des zones géographiques et statuts différents.",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 36,
+            "question": "Quel est le rôle des forces de l'ordre ?",
+            "correctAnswer": "La police et la gendarmerie exercent les mêmes missions mais dans des zones différentes.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Quel est leur rôle ?\nLa police et la gendarmerie exercent les mêmes missions mais dans des zones différentes....",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 37,
+            "question": "Quelles sont les obligations de toute personne vivant en France ?",
+            "correctAnswer": "Les obligations des résidents français garantissent :",
+            "incorrectAnswers": [
+                "Des obligations qui concernent uniquement les résidents étrangers",
+                "Des devoirs qui s'appliquent uniquement aux citoyens français",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Résidents et citoyens sont soumis aux lois et à l'impôt.",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 38,
+            "question": "Doit-on aider une personne en danger ?",
+            "correctAnswer": "les obligations du résident français",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est facultatif ou optionnel"
+            ],
+            "explanation": "Quelles sont les obligations du résident français ?\n1. Payer des impôts\nL’impôt permet à l’État de développer et de faire fonctionner son pays. La participation à l’effort commun, adaptée selon ses revenus, est nécessaire pour rendre les services publics gratuits (exemples : police, justice, éducation, hôpitaux, ramassage des ordures…)....",
+            "subTheme": "obligations_devoirs",
+            "questionType": "situation"
+        },
+        {
+            "id": 39,
+            "question": "Pourquoi payer des impôts ?",
+            "correctAnswer": "les obligations que doit respecter le citoyen français",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est facultatif ou optionnel"
+            ],
+            "explanation": "C'est la contribution commune nécessaire au fonctionnement de l'État.",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 40,
+            "question": "Le vote est-il obligatoire en France ?",
+            "correctAnswer": "les obligations du citoyen français",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est facultatif ou optionnel"
+            ],
+            "explanation": "Quelles sont les obligations du citoyen français ?\nLes citoyens ont des devoirs. Ils doivent par exemple participer :...",
+            "subTheme": "obligations_devoirs",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 41,
+            "question": "Les violences conjugales sont-elles punies ?",
+            "correctAnswer": "strictement interdites en France",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "La violence psychologique\nLa violence psychologique est un comportement ou un ensemble d'actes qui visent à vous rabaisser ou à vous dénigrer."
+            ],
+            "explanation": "La violence est interdite, y compris au sein de la famille.",
+            "subTheme": "obligations_devoirs",
+            "questionType": "situation"
+        },
+        {
+            "id": 42,
+            "question": "Qu'est-ce que la violence psychologique ?",
+            "correctAnswer": "les types de violences",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Quels sont les types de violences ?\n1. La violence psychologique\nLa violence psychologique est un comportement ou un ensemble d'actes qui visent à vous rabaisser ou à vous dénigrer....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 43,
+            "question": "A-t-on le droit de donner une fessée aux enfants ?",
+            "correctAnswer": "la maltraitance commise sur un mineur par ses parents ou par des personnes de son entourage (membre de la famille, voisin, ami",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La maltraitance envers les enfants désigne la maltraitance commise sur un mineur par ses parents ou par des personnes de son entourage (membre de la famille, voisin, ami...). En France, la maltraitance des enfants est interdite....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 44,
+            "question": "Le harcèlement scolaire est-il un délit ?",
+            "correctAnswer": "victime de harcèlement scolaire lorsqu'il subit, de manière répétée, des violences verbales, morales ou physiques de la part d'un ou plusieurs autres élèves, à l’intérieur ou à l’e",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les violences entre enfants : le cas du harcèlement scolaire\nUn élève est victime de harcèlement scolaire lorsqu'il subit, de manière répétée, des violences verbales, morales ou physiques de la part d'un ou plusieurs autres élèves, à l’intérieur ou à l’extérieur de l’établissement scolaire....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 45,
+            "question": "L'excision est-elle autorisée en France ?",
+            "correctAnswer": "Qu’est-ce qu’une mutilation sexuelle féminine",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Qu’est-ce qu’une mutilation sexuelle féminine ?\nLes mutilations sexuelles féminines désignent toutes les interventions aboutissant à une ablation (acte consistant à enlever un organe) partielle ou totale des organes génitaux externes de la femme et/ou toute autre mutilation des organes génitaux féminins pratiqués à des fins non thérapeutiques (définition de l’Organisation Mondiale de la Santé)....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 46,
+            "question": "Quelles sont les conséquences des mutilations sexuelles ?",
+            "correctAnswer": "une forme de discrimination à l'égard des femmes",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "la base de notre démocratie"
+            ],
+            "explanation": "Quelles sont les conséquences des mutilations sexuelles féminines ?\nLes mutilations sexuelles féminines ont des conséquences immédiates et durables sur la santé des femmes notamment lors de l'accouchement ainsi que sur le plaisir sexuel....",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 47,
+            "question": "Risque-t-on la prison pour une excision commise à l'étranger ?",
+            "correctAnswer": "interdites et sévèrement punies par la loi, y compris lorsqu'elles sont commises à l'étranger",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est autorisé dans certains cas"
+            ],
+            "explanation": "Le principe d’extraterritorialité s’applique pour protéger les mineures.",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 48,
+            "question": "Qu'est-ce qu'un viol ?",
+            "correctAnswer": "tous les actes commis avec violence, contrainte, menace ou surprise en rapport avec une partie du corps considérée comme intime et sexuelle (la bouche, la poitrine, le sexe, les fe",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "Cela s'applique uniquement à certaines personnes"
+            ],
+            "explanation": "C'est un crime passible de la Cour d'assises.",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 49,
+            "question": "Le viol entre époux existe-t-il ?",
+            "correctAnswer": "les types de violences sexuelles",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Quels sont les types de violences sexuelles ?\nIl existe différents types de violences sexuelles :...",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 50,
+            "question": "Le silence vaut-il consentement ?",
+            "correctAnswer": "directement liée à la notion de consentement : dans les violences sexuelles, la victime n’a pas consenti et n’a pas désiré ces comportements, propos ou images à caractère sexuel",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La notion de consentement, qu’est-ce que c’est ?\nLa violence sexuelle est directement liée à la notion de consentement : dans les violences sexuelles, la victime n’a pas consenti et n’a pas désiré ces comportements, propos ou images à caractère sexuel. Son refus et son non-consentement peuvent être exprimés notamment par des paroles, par des silences, des attitudes, des écrits....",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 51,
+            "question": "La traite des êtres humains (esclavage moderne) est-elle punie ?",
+            "correctAnswer": "le fait de recruter une personne, la transporter, la transférer, l’héberger ou l’accueillir pour l’exploiter",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Nul ne peut être asservi ou exploité.",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 52,
+            "question": "Acheter un acte sexuel est-il légal ?",
+            "correctAnswer": "Les clients et les proxénètes (c’est-à-dire ceux qui tirent profit de la prostitution de quelqu'un ou ceux qui encouragent à la prostitution) peuvent être punis par la loi.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La prostitution c'est quoi ?...",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 53,
+            "question": "Que faire si on est victime de violence ?",
+            "correctAnswer": "victime de violence, peut-on être protégé",
+            "incorrectAnswers": [
+                "La procédure est différente de celle décrite",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Il faut briser le silence et solliciter l'aide des autorités et associations.",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 54,
+            "question": "Vers qui se tourner pour de l'aide ?",
+            "correctAnswer": "victime de violence",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Que faire quand on est victime de violence ?\n1. En parler\nIl ne faut pas rester seul. Exprimer sa souffrance permet de sortir de l’isolement et d’être orienté vers des solutions. Vous pouvez vous adresser à :...",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 55,
+            "question": "Que faire si on est témoin de violence ?",
+            "correctAnswer": "Témoin de violences : vous devez agir sans vous mettre en danger\nQuelque soit la violence dont vous êtes témoin, vous devez agir",
+            "incorrectAnswers": [
+                "La procédure est différente de celle décrite",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Il faut agir responsablement pour protéger la victime.",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 56,
+            "question": "Peut-on témoigner anonymement ?",
+            "correctAnswer": "témoin de violence",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Que faire quand on est témoin de violence ?...",
+            "subTheme": "droits_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 57,
+            "question": "Protéger l'environnement est-il un devoir ?",
+            "correctAnswer": "Le devoir de protéger l’environnement\nToutes les personnes qui habitent en France ont le devoir de protéger l’environnement, pour soi et pour les autres :",
+            "incorrectAnswers": [
+                "Des obligations qui concernent uniquement les résidents étrangers",
+                "Des devoirs qui s'appliquent uniquement aux citoyens français",
+                "Toutes les personnes qui habitent en France ont le devoir de protéger l’environnement, pour soi et pour les autres :"
+            ],
+            "explanation": "Le devoir de protéger l’environnement\nToutes les personnes qui habitent en France ont le devoir de protéger l’environnement, pour soi et pour les autres :...",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 58,
+            "question": "Comment agir pour l'environnement au quotidien ?",
+            "correctAnswer": "- éviter le gaspillage des aliments et de l’énergie ;\n- privilégier les transports en commun et le vélo ;\n- respecter les espaces communs et ne pas y jeter de déchets ;\n-",
+            "incorrectAnswers": [
+                "La procédure est différente de celle décrite",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Chaque geste compte pour un développement durable.",
+            "subTheme": "droits_situation",
+            "questionType": "situation"
+        }
+    ]
+}

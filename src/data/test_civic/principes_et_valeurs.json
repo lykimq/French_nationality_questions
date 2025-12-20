@@ -1,0 +1,942 @@
+{
+    "themeId": "principes_et_valeurs",
+    "themeTitle": "Principes et valeurs de la République",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Qu’est-ce qu’une devise ?",
+            "correctAnswer": "officielle depuis 1848 et fait partie de notre patrimoine national",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La devise de la République française est \"Liberté, Égalité, Fraternité\". Elle exprime les valeurs auxquelles les Français sont attachés.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 2,
+            "question": "D’où vient la devise \"Liberté, Égalité, Fraternité\" ?",
+            "correctAnswer": "autorisé, car chaque personne a la liberté d’avoir une religion ou pas",
+            "incorrectAnswers": [
+                "Dans un autre lieu ou service",
+                "Uniquement en ligne ou uniquement en présentiel",
+                "C'est une interprétation partielle ou incomplète de la réalité"
+            ],
+            "explanation": "La devise apparaît pendant la Révolution française et est adoptée officiellement sous la 2e République en 1848.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 2,
+            "question": "Le prosélytisme est-il autorisé ?",
+            "correctAnswer": "autorisé, car chaque personne a la liberté d’avoir une religion ou pas",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Il est autorisé au nom de la liberté d'expression, sauf abus ou lieux neutres (école, services publics).",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 3,
+            "question": "Où voit-on la devise aujourd’hui ?",
+            "correctAnswer": "ribunaux…\n- sur certaines pièces de monnaie et timbres ;\n- sur les documents officiels : carte d’identité, papiers administratifs…\n- dans la C",
+            "incorrectAnswers": [
+                "Dans un autre lieu ou service",
+                "Uniquement en ligne ou uniquement en présentiel",
+                "C'est une interprétation partielle ou incomplète de la réalité"
+            ],
+            "explanation": "On la trouve sur les bâtiments publics, la monnaie, les timbres et dans la Constitution.",
+            "subTheme": "devise_symboles",
+            "questionType": "situation"
+        },
+        {
+            "id": 4,
+            "question": "La liberté : qu’est-ce que c’est ?",
+            "correctAnswer": "de ne pas empêcher une autre personne d’en faire autant",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Chaque personne peut penser, s’exprimer et vivre comme elle le souhaite, tant qu'elle n'empêche pas une autre personne d’en faire autant.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 5,
+            "question": "Quels types de libertés existent en France ?",
+            "correctAnswer": "Les différents types de liberté\nIl existe deux types de libertés :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Il existe des libertés pour chaque personne (individuelles) et des libertés qui concernent plusieurs personnes (collectives).",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 6,
+            "question": "La liberté est-elle un droit pour tous ?",
+            "correctAnswer": "un droit pour tous, sans faire de différence entre les pays d’origine d’une personne, ses parents ou ses ancêtres, sa religion…",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C’est l’État qui fixe le programme des cours et le fonctionnement des écoles publiques ou des écoles privées sous contrat avec l’État."
+            ],
+            "explanation": "La liberté est un droit pour tous, garantissant sécurité et expression.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 7,
+            "question": "L’égalité : qu’est-ce que c’est ?",
+            "correctAnswer": "un principe fondamental de la République française : elle est inscrite dans la Constitution de 1958",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "L’égalité : qu’est-ce que c’est ?\nL’égalité est un principe fondamental de la République française : elle est inscrite dans la Constitution de 1958. Elle est aussi présente dans la Déclaration des droits de l’homme et du citoyen....",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 8,
+            "question": "Que signifie l'égalité devant les services publics ?",
+            "correctAnswer": "La loi interdit de limiter l’accès à ces services selon certains critères : homme ou femme, origine ethnique, handicap, orientation sexuelle..",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La loi interdit de limiter l’accès aux services selon des critères discriminatoires.",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 9,
+            "question": "L'égalité empêche-t-elle des tarifs différents (ex: bus, piscine) ?",
+            "correctAnswer": "dans des situations différentes",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le principe de l’égalité n’empêche pas de traiter différemment des personnes qui sont dans des situations différentes.",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 10,
+            "question": "Que signifie l’égalité femmes-hommes ?",
+            "correctAnswer": "inscrite dans le Préambule de la Constitution de 1946 : \"la loi garantit à la femme, dans tous les domaines, des droits égaux à ceux de l’homme\"",
+            "incorrectAnswers": [
+                "Cela s'applique uniquement dans certaines conditions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La loi garantit à la femme, dans tous les domaines, des droits égaux à ceux de l’homme.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 11,
+            "question": "Existe-t-il encore des inégalités entre femmes et hommes ?",
+            "correctAnswer": "moins fortes que dans le passé, mais elles sont encore présentes",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "inscrite dans le Préambule de la Constitution de 1946 : \"la loi garantit à la femme, dans tous les domaines, des droits égaux à ceux de l’homme\""
+            ],
+            "explanation": "Des inégalités existent entre les femmes et les hommes\nMalgré ce que dit la loi, il existe dans la vie de tous les jours des inégalités entre les femmes et les hommes. Ces inégalités sont moins fortes que dans le passé, mais elles sont encore présentes....",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 12,
+            "question": "Qu'est-ce que la parité en politique ?",
+            "correctAnswer": "devenues plus nombreuses dans la vie politique, mais il n’y a pas de parité dans les postes à haute responsabilité",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La parité dans la vie politique\nDes lois ont été votées pour permettre la parité, c’est-à-dire l’égalité entre les femmes et les hommes dans les responsabilités politiques....",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 13,
+            "question": "Qu'est-ce que la discrimination ?",
+            "correctAnswer": "moins bien traitée qu’une autre en raison d’un des critères interdits par la loi, par exemple son handicap, sa religion, son orientation sexuelle",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La discrimination, qu’est-ce que c’est ?\nOn parle de discrimination lorsqu’une personne est moins bien traitée qu’une autre en raison d’un des critères interdits par la loi, par exemple son handicap, sa religion, son orientation sexuelle......",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 14,
+            "question": "Les discriminations sont-elles punies par la loi ?",
+            "correctAnswer": "Quelles sont les sanctions",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les discriminations sont interdites et sanctionnées pénalement.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 15,
+            "question": "Citez des formes de discrimination combattues par l'État.",
+            "correctAnswer": "Les différentes formes de discriminations\nL’État lutte activement contre plusieurs formes de discrimination :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les différentes formes de discriminations\nL’État lutte activement contre plusieurs formes de discrimination :...",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 16,
+            "question": "La fraternité : qu’est-ce que c’est ?",
+            "correctAnswer": "la solidarité entre les citoyens",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La fraternité désigne la solidarité et le lien qui unit les citoyens.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 17,
+            "question": "Quelle est l'origine du concept de fraternité en France ?",
+            "correctAnswer": "pas présente dans la Déclaration des droits de l’homme et du citoyen de 1789, alors que la liberté et l’égalité y sont inscrites",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Considérée d'abord comme une valeur morale, elle devient un principe constitutionnel à partir de 1848.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 18,
+            "question": "Comment s'exprime la solidarité collective ?",
+            "correctAnswer": "une aide organisée surtout par des institutions publiques (État, département…), et souvent financée par l’impôt ou des cotisations (c’est-à-dire de l’argent prélevé sur les salaire",
+            "incorrectAnswers": [
+                "La procédure est différente de celle décrite",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Les différentes formes de solidarité\n- La solidarité collective, c’est une aide organisée surtout par des institutions publiques (État, département…), et souvent financée par l’impôt ou des cotisations (c’est-à-dire de l’argent prélevé sur les salaires).\nExemples : la Sécurité sociale, le RSA, l’aide au logement…\n- La solidarité entre les générations, c’est l’entraide entre les personnes d’âges différents.\nExemple : les retraites sont financées par les cotisations des personnes plus jeunes, cell...",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 19,
+            "question": "Comment peut-on s'engager dans la société ?",
+            "correctAnswer": "Les différentes formes de l’engagement\nEn France, chaque personne - française ou étrangère - peut s’engager librement",
+            "incorrectAnswers": [
+                "La procédure est différente de celle décrite",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Les différentes formes de l’engagement\nEn France, chaque personne - française ou étrangère - peut s’engager librement. Ce droit, que l’on appelle \"liberté d’association\", est inscrit dans une loi qui date de 1901....",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 20,
+            "question": "À quoi sert une association ?",
+            "correctAnswer": "aussi une manière de participer à la vie collective, à la solidarité et à la démocratie",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "S’engager permet de défendre des idées, aider les autres et participer à la vie collective.",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 21,
+            "question": "Quelles sont les conditions pour créer une association ?",
+            "correctAnswer": "possible de recevoir des dons ou des subventions, à condition de respecter certaines obligations : transparence sur les finances, respect des lois, déclaration des changements (nou",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "punies par des amendes et diverses sanctions"
+            ],
+            "explanation": "Comment créer une association ?\nLa création d’une association est une démarche simple. Il faut :...",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 22,
+            "question": "Quelles sont les couleurs du drapeau français ?",
+            "correctAnswer": "composé de trois bandes verticales : bleu, blanc et rouge",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "punies par des amendes et diverses sanctions"
+            ],
+            "explanation": "Le drapeau tricolore unit le bleu et rouge (Paris) au blanc (Royauté).",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 23,
+            "question": "Que symbolisent les couleurs du drapeau ?",
+            "correctAnswer": "la naissance des trois couleurs réunies",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "L'histoire du drapeau français\n- En juillet 1789, pendant la Révolution française, les gardes nationaux parisiens portent une cocarde bleue et rouge, les couleurs de la ville de Paris.\n- Le général Lafayette, pour symboliser l’unité entre le roi et le peuple, ajoute le blanc royal au centre : c’est la naissance des trois couleurs réunies.\n- En 1790, le drapeau tricolore commence à être utilisé dans la marine.\n- Il est devenu le drapeau officiel de la France en 1794.\n- Il a perdu les couleurs ble...",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 24,
+            "question": "Peut-on détruire le drapeau français en public ?",
+            "correctAnswer": "interdit de faire outrage au drapeau français, c'est-à-dire de détruire ou d'utiliser de manière dégradante le drapeau en public",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "la naissance des trois couleurs réunies"
+            ],
+            "explanation": "Il est interdit de faire outrage au drapeau français.",
+            "subTheme": "devise_symboles",
+            "questionType": "situation"
+        },
+        {
+            "id": 25,
+            "question": "Quel est l’hymne national de la France ?",
+            "correctAnswer": "Le titre de l’hymne français\nL’hymne national de la France est un chant qui s’appelle La Marseillaise",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La Marseillaise est l'hymne national, composé en 1792.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 26,
+            "question": "Quelle est l'origine de La Marseillaise ?",
+            "correctAnswer": "repris par un bataillon d’habitants de Marseille lors d’une révolte à Paris en août 1792",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "L’histoire de l’hymne français\n- En avril 1792, quelques jours après le début de la guerre de la France contre l'Autriche, un officier français compose le \"Chant de guerre pour l’armée du Rhin\". Ce chant est repris par un bataillon d’habitants de Marseille lors d’une révolte à Paris en août 1792.\n- Le chant se diffuse rapidement partout en France. Face à ce succès, il est déclaré chant national le 14 juillet 1795. Il s’appelle désormais La Marseillaise.\n- Interdite pendant de longues années, la ...",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 27,
+            "question": "À quelle occasion entend-on l'hymne national ?",
+            "correctAnswer": "- Événements sportifs internationaux : avant un match auquel participe une équipe française, cérémonie de remise d’une médaille à un athlète français",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les principales occasions d’entendre l’hymne français\n- Cérémonies officielles de l’État : commémoration nationale, discours du président de la République, hommage rendu aux victimes d’attentats ou aux soldats morts pour la France, défilé militaire du 14 juillet.\n- Événements sportifs internationaux : avant un match auquel participe une équipe française, cérémonie de remise d’une médaille à un athlète français.\n- Manifestations exceptionnelles : rassemblement lors d’un évènement national marquan...",
+            "subTheme": "devise_symboles",
+            "questionType": "situation"
+        },
+        {
+            "id": 28,
+            "question": "Qui est Marianne ?",
+            "correctAnswer": "fondée sur la volonté du peuple et la démocratie",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Marianne est une figure allégorique de la République.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 29,
+            "question": "Sous quels traits Marianne est-elle représentée ?",
+            "correctAnswer": "devenue un repère visuel pour représenter la France et son peuple",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Un élément de la culture populaire\nEn plus de son utilisation dans les institutions de la République française, Marianne est devenue un repère visuel pour représenter la France et son peuple. Elle apparaît sur des timbres, des pièces de monnaie, des affiches, dans des films, des caricatures…...",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 30,
+            "question": "Où trouve-t-on le buste de Marianne ?",
+            "correctAnswer": "présent dans toutes les mairies",
+            "incorrectAnswers": [
+                "Dans un autre lieu ou service",
+                "Uniquement en ligne ou uniquement en présentiel",
+                "C'est une interprétation partielle ou incomplète de la réalité"
+            ],
+            "explanation": "Le buste de Marianne est présent dans chaque mairie.",
+            "subTheme": "devise_symboles",
+            "questionType": "situation"
+        },
+        {
+            "id": 31,
+            "question": "Quelle est la date de la fête nationale ?",
+            "correctAnswer": "le jour de la fête nationale",
+            "incorrectAnswers": [
+                "En 1870 ou 1890",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le 14 juillet est la fête nationale française.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 32,
+            "question": "Que célèbre-t-on le 14 juillet ?",
+            "correctAnswer": "entrés dans la prison de la Bastille",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les origines de la fête nationale\n- Que s’est-il passé le 14 juillet 1789 ?\nDes Parisiens sont entrés dans la prison de la Bastille. Cet événement, que l’on appelle la prise de la Bastille, marque le début de la Révolution française, c’est-à-dire la révolte du peuple contre l’Ancien Régime. Il symbolise la lutte pour la liberté....",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 33,
+            "question": "Que se passe-t-il le 14 juillet ?",
+            "correctAnswer": "la signification de cette journée",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "C'est un jour de célébrations avec défilés militaires et festivités populaires.",
+            "subTheme": "devise_symboles",
+            "questionType": "situation"
+        },
+        {
+            "id": 34,
+            "question": "Quelle est l'origine du Coq comme symbole ?",
+            "correctAnswer": "les origines de ce symbole",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Quelles sont les origines de ce symbole ?\nPendant l’Antiquité, les Romains désignaient les Gaulois par le mot latin \"Gallus\", qui signifiait à la fois \"Gaulois\" et \"coq\". Ce jeu de mots s’est concrétisé par l’utilisation du coq pour représenter le Gaulois de manière symbolique. D’abord moqueur, le coq est peu à peu devenu un symbole de fierté et de courage....",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 35,
+            "question": "Le Coq est-il un symbole officiel ?",
+            "correctAnswer": "pas reconnu de manière officielle comme un symbole de la République française, contrairement au drapeau tricolore, à Marianne ou à la devise nationale",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Contrairement au drapeau ou à la devise, le coq n'est pas un symbole officiel constitutionnel.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 36,
+            "question": "Où voit-on souvent le Coq ?",
+            "correctAnswer": "de La French Tech, communication de Business France, pavillon de la France lors des expositions universelles…\n- Institutions de la République : frontons de certai",
+            "incorrectAnswers": [
+                "Dans un autre lieu ou service",
+                "Uniquement en ligne ou uniquement en présentiel",
+                "C'est une interprétation partielle ou incomplète de la réalité"
+            ],
+            "explanation": "Il est utilisé par les fédérations sportives et certaines institutions.",
+            "subTheme": "devise_symboles",
+            "questionType": "situation"
+        },
+        {
+            "id": 37,
+            "question": "Qu'est-ce que la laïcité ?",
+            "correctAnswer": "libre d’avoir ou de ne pas avoir de religion, d’en changer ou de ne plus en avoir",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté"
+            ],
+            "explanation": "La laïcité garantit que chacun est libre de croire ou de ne pas croire, et que l'État est neutre.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 38,
+            "question": "La laïcité interdit-elle la pratique religieuse ?",
+            "correctAnswer": "ion, sans troubler l’ordre public (c’est-à-dire en respectant les règles de la vie en société : pas de bruit pendant la nuit, pas d’attroupement dans la rue…)",
+            "incorrectAnswers": [
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La liberté de culte est garantie tant qu'elle ne trouble pas l'ordre public.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 39,
+            "question": "Quelle est la relation entre l'État et les religions ?",
+            "correctAnswer": "neutre vis-à-vis des religions",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "fondé sur la seule souveraineté du peuple"
+            ],
+            "explanation": "L’État est neutre vis-à-vis des religions\nLe principe de laïcité implique la séparation entre l’État et les organisations religieuses ainsi que l'égalité de tous devant la loi sans distinction de religion ou de convictions. L'ordre est fondé sur la seule souveraineté du peuple....",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 40,
+            "question": "Peut-on changer de religion en France ?",
+            "correctAnswer": "pratiquées en France, ainsi que divers courants de pensée, spiritualités… Cette diversité peut se retrouver au sein d’une même famille",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "Ne pas avoir de religion ou choisir de ne plus avoir de religion est aussi un droit"
+            ],
+            "explanation": "La liberté de conscience inclut le droit d'apostasier ou de se convertir.",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 41,
+            "question": "A-t-on le droit de ne pas croire en Dieu ?",
+            "correctAnswer": "Le droit de ne pas croire, de ne plus croire ou de changer de religion\nNe pas avoir de religion ou choisir de ne plus avoir de religion est aussi un droit",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "Ne pas avoir de religion ou choisir de ne plus avoir de religion est aussi un droit"
+            ],
+            "explanation": "La liberté de conscience protège aussi le droit de ne pas croire.",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 42,
+            "question": "Quelle est la religion officielle de la France ?",
+            "correctAnswer": "un pays de diversité religieuse :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La France est une République laïque, elle ne reconnaît aucune religion officielle.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 43,
+            "question": "Quelle loi a séparé l'Église et l'État ?",
+            "correctAnswer": "séparés en 1905, plus de 200 ans après l’apparition du principe fondateur de la laïcité dans la Déclaration des droits de l'homme et du citoyen de 1789",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La loi du 9 décembre 1905 acte la séparation des Églises et de l'État.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 44,
+            "question": "Qu'est-ce qui a changé en 1882 pour l'école ?",
+            "correctAnswer": "le fondement de la laïcité",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Les dates clés avant la loi de 1905\nDans le passé, l’Église catholique a eu un rôle central dans la société : elle contrôlait notamment l’éducation, l'état civil (naissances, mariages, décès) et la morale publique....",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 45,
+            "question": "Que dit la loi de 2004 sur l'école ?",
+            "correctAnswer": "indépendant des religions ;",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les dates clés depuis la loi de 1905\nEn 1905, une loi sépare l’Église et l’État :...",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 46,
+            "question": "Peut-on porter des signes religieux dans la rue ?",
+            "correctAnswer": "qu’une personne peut :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Dans l'espace public, chacun peut exprimer ses convictions et porter des signes religieux (sauf visage dissimulé).",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 47,
+            "question": "Un agent de mairie peut-il porter un signe religieux ?",
+            "correctAnswer": "… dans certaines limites\nLes personnes qui travaillent dans les services publics ne peuvent pas exprimer leur religion dans le cadre de leur travail.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "… dans certaines limites\nLes personnes qui travaillent dans les services publics ne peuvent pas exprimer leur religion dans le cadre de leur travail....",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 48,
+            "question": "Pourquoi la dissimulation du visage est-elle interdite ?",
+            "correctAnswer": "interdit de dissimuler son visage dans l’espace public (cagoule, masque, voile intégral",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est autorisé dans certains cas"
+            ],
+            "explanation": "La dissimulation du visage : un interdit\nDepuis le 11 octobre 2010, il est interdit de dissimuler son visage dans l’espace public (cagoule, masque, voile intégral...)....",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 49,
+            "question": "Y a-t-il des signes religieux dans les mairies ?",
+            "correctAnswer": "de l’ordre de la vie privée et ne doivent pas s’imposer aux autres",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La neutralité dans les services publics\nLes personnes qui travaillent dans les services publics ainsi que dans les entreprises ou associations qui ont une mission de service public ne peuvent pas exprimer ou montrer leurs convictions (religieuses, politiques ou philosophiques). Les opinions et croyances sont de l’ordre de la vie privée et ne doivent pas s’imposer aux autres. Cela permet de traiter les usagers de manière équitable....",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 50,
+            "question": "Un usager de la poste peut-il porter un voile ou une kippa ?",
+            "correctAnswer": "limitée dans certaines situations, de manière ponctuelle",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La neutralité ne concerne pas les usagers\nLa neutralité ne s'impose pas aux personnes qui se rendent dans un service public en tant qu'usagers. Elles peuvent donc porter un signe d'appartenance religieuse....",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 51,
+            "question": "Qu'est-ce que le prosélytisme ?",
+            "correctAnswer": "Le prosélytisme, qu’est-ce que c’est",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "C'est l'attitude de vouloir convertir autrui.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 52,
+            "question": "La charte de la laïcité dans les services publics",
+            "correctAnswer": "la Charte de la laïcité dans les services publics",
+            "incorrectAnswers": [
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté",
+                "La loi interdit de limiter l’accès à ces services selon certains critères : homme ou femme, origine ethnique, handicap, orientation sexuelle.."
+            ],
+            "explanation": "La charte de la laïcité dans les services publics\nIl existe un document qui rappelle les droits et les devoirs pour respecter la laïcité dans les services publics. Il s'adresse aux usagers et aux personnes qui travaillent dans ces services. C'est la Charte de la laïcité dans les services publics.",
+            "subTheme": "general",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 53,
+            "question": "Peut-on faire du prosélytisme à l'école ?",
+            "correctAnswer": "interdit dans certains lieux publics :",
+            "incorrectAnswers": [
+                "La procédure est différente de celle décrite",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "L'école est un lieu neutre protégé de toute pression religieuse.",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 54,
+            "question": "Qu'est-ce que la liberté d'expression ?",
+            "correctAnswer": "un droit fondamental",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Chacun a le droit d’avoir ses opinions et de les exprimer librement.",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 55,
+            "question": "Le blasphème est-il un délit en France ?",
+            "correctAnswer": "Le blasphème, c’est quand on critique ou se moque d’une religion, d’un dieu ou de ce que certains considèrent comme sacré",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le critique des religions (blasphème) est libre et n'est pas puni par la loi.",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 56,
+            "question": "Quelles sont les limites à la liberté d'expression ?",
+            "correctAnswer": "Au nom de la liberté d'expression, même si le blasphème n’est pas interdit, on ne peut pas dire tout et n’importe quoi",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "punies par des amendes et diverses sanctions"
+            ],
+            "explanation": "Quelles sont les limites ?\nAu nom de la liberté d'expression, même si le blasphème n’est pas interdit, on ne peut pas dire tout et n’importe quoi. Certains propos sont punis par la loi, par exemple :...",
+            "subTheme": "principes_situation",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 57,
+            "question": "La laïcité s'applique-t-elle dans les entreprises privées ?",
+            "correctAnswer": "e la même manière aux personnes qui travaillent dans les services publics (les agents publics) et à celles qui",
+            "incorrectAnswers": [
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté",
+                "la Charte de la laïcité dans les services publics"
+            ],
+            "explanation": "Dans le privé, la liberté religieuse est la règle, sauf restrictions justifiées (sécurité, clientèle).",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 58,
+            "question": "Un policier ou un juge peut-il porter un signe religieux ?",
+            "correctAnswer": "Mais dans le cadre de son travail, il n’a pas le droit de manifester ses opinions religieuses :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "En tant qu'agents d'autorité publique, ils doivent une neutralité absolue.",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 59,
+            "question": "Un employeur peut-il refuser des congés pour fête religieuse ?",
+            "correctAnswer": "possible, à condition qu'il ne soit pas discriminatoire",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Comment s’applique la laïcité pour les salariés ?...",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 60,
+            "question": "Pourquoi l'école publique est-elle neutre ?",
+            "correctAnswer": "neutres vis-à-vis des religions",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La neutralité de l’école publique\nLes écoles publiques sont neutres vis-à-vis des religions. Cette neutralité permet à chaque élève de penser librement et de construire lui-même ses opinions....",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 61,
+            "question": "Y a-t-il des cours de religion à l'école publique ?",
+            "correctAnswer": "le même que dans les écoles publiques",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "neutres vis-à-vis des religions"
+            ],
+            "explanation": "La place de la religion à l’école\nDans les écoles publiques :...",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 62,
+            "question": "Peut-on refuser un cours (sport, piscine) pour motif religieux ?",
+            "correctAnswer": "Le même programme de cours pour tous\nC’est l’État qui fixe le programme des cours et le fonctionnement des écoles publiques ou des écoles privées sous contrat avec l’État.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C’est l’État qui fixe le programme des cours et le fonctionnement des écoles publiques ou des écoles privées sous contrat avec l’État."
+            ],
+            "explanation": "Il n’est pas possible de refuser de suivre un cours obligatoire pour des motifs religieux.",
+            "subTheme": "laicite",
+            "questionType": "situation"
+        },
+        {
+            "id": 63,
+            "question": "Qu'est-ce que la Charte de la laïcité à l'école ?",
+            "correctAnswer": "pas possible de refuser, en raison de sa religion, une règle de fonctionnement ou un cours du programme",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté"
+            ],
+            "explanation": "C'est un outil pédagogique affiché dans les établissements scolaires.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 64,
+            "question": "La laïcité est-elle contre les religions ?",
+            "correctAnswer": "La laïcité, une garantie d’égalité\nLa laïcité n’est pas une contrainte qui limite la liberté des personnes",
+            "incorrectAnswers": [
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La laïcité n'est pas une opinion anti-religieuse, c'est un cadre de liberté.",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 65,
+            "question": "Quel est le lien entre laïcité et fraternité ?",
+            "correctAnswer": "une condition indispensable pour que les élèves se respectent les uns envers les autres, dans un esprit de fraternité",
+            "incorrectAnswers": [
+                "L'interdiction de toute religion en France",
+                "La séparation entre l'État et l'Église uniquement, sans garantie de liberté",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La laïcité, une condition de la fraternité\nLa charte de la laïcité à l’école montre que l'école a un rôle important pour faire comprendre la laïcité, notamment auprès des élèves....",
+            "subTheme": "laicite",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 66,
+            "question": "Quelle est la langue officielle de la France ?",
+            "correctAnswer": "en 1539 que la langue française a remplacé le latin dans les textes administratifs",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le français : l’unique langue officielle\nC’est en 1539 que la langue française a remplacé le latin dans les textes administratifs. À cette époque, la population utilise de nombreuses langues locales. C’est la première étape pour unifier la langue française....",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 67,
+            "question": "La langue française change-t-elle ?",
+            "correctAnswer": "pas une langue figée",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le français est une langue vivante qui s'enrichit en permanence.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 68,
+            "question": "Que sont le breton, le corse ou le basque ?",
+            "correctAnswer": "utilisées dans différents régions de la France : le breton, le corse, l’alsacien, le basque ou encore le créole",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Elles ne sont pas officielles mais sont reconnues comme patrimoine.",
+            "subTheme": "devise_symboles",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 69,
+            "question": "Qu'est-ce que le contrat d'engagement républicain ?",
+            "correctAnswer": "un document que doit obligatoirement signer toute personne étrangère au moment de la demande d’un titre de séjour",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "## Le contrat d'engagement à respecter les principes de la République...",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 70,
+            "question": "Que se passe-t-il si on ne respecte pas ce contrat ?",
+            "correctAnswer": "- La liberté d'expression et de conscience ;\n- L'égalité entre les femmes et les hommes ;\n- La dignité de la personne humaine ;\n- La devise française ;",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le non-respect des principes peut entraîner le retrait ou le non-renouvellement du titre.",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        },
+        {
+            "id": 71,
+            "question": "Qui doit signer le contrat d'engagement républicain ?",
+            "correctAnswer": "Les cas particuliers\nLes personnes qui bénéficient d’une protection internationale (réfugiés, apatrides, protection subsidiaire) doivent également signer le contrat d’engagement.",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Il est obligatoire pour toute demande de titre de séjour.",
+            "subTheme": "principes_situation",
+            "questionType": "situation"
+        }
+    ]
+}

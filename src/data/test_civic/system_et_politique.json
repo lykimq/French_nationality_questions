@@ -1,0 +1,669 @@
+{
+    "themeId": "system_et_politique",
+    "themeTitle": "Système institutionnel et politique",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Qu’est-ce qu’un État de droit ?",
+            "correctAnswer": "un système dans lequel la loi est la même pour tous, y compris pour l’État",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "soumis aux mêmes lois et a les mêmes droits et devoirs, qu’il soit politicien ou pas) ;"
+            ],
+            "explanation": "L’État de droit, c’est quoi ?\nUn État de droit est un système dans lequel la loi est la même pour tous, y compris pour l’État. Le droit est donc supérieur aux pouvoirs et aux autorités politiques. Ce système garantit le respect des droits fondamentaux et de la démocratie....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 2,
+            "question": "Quels sont les principes de l’État de droit ?",
+            "correctAnswer": "soumis aux mêmes lois et a les mêmes droits et devoirs, qu’il soit politicien ou pas) ;",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "un système dans lequel la loi est la même pour tous, y compris pour l’État"
+            ],
+            "explanation": "Les principes de l’État de droit, quels sont-ils ?\nOn définit l’État de droit selon 6 principes :...",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 3,
+            "question": "Qu’est-ce que la séparation des pouvoirs ?",
+            "correctAnswer": "pas entre les mains des mêmes personnes",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le principe de séparation des pouvoirs, c’est quoi ?\nEn France, la séparation des 3 pouvoirs signifie que les pouvoirs législatif (le Parlement vote les lois), exécutif (le Gouvernement applique et fait respecter la loi) et judiciaire (l’autorité judiciaire contrôle l’application des lois) ne sont pas entre les mains des mêmes personnes....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 4,
+            "question": "Qui exerce le pouvoir législatif en France ?",
+            "correctAnswer": "exercé par le Parlement, composé de 2 entités, qu’on appelle “chambres” :",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le Parlement vote la loi et contrôle l'action du Gouvernement.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 5,
+            "question": "Qui exerce le pouvoir exécutif ?",
+            "correctAnswer": "nommé par le président de la République",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le pouvoir exécutif, c’est quoi ?\nLe pouvoir exécutif est exercé par :...",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 6,
+            "question": "Qui exerce l'autorité judiciaire ?",
+            "correctAnswer": "exercée par les juges et les magistrats (recrutés par concours et non choisis par le pouvoir)",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La justice est indépendante et veille au respect des lois en sanctionnant les infractions.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 7,
+            "question": "Quelle est la différence entre justice civile et pénale ?",
+            "correctAnswer": "Quelle justice pour quel conflit",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "La justice protège, décide et sanctionne impartialement"
+            ],
+            "explanation": "Quelle justice pour quel conflit ?\nLa justice protège, décide et sanctionne impartialement. Selon les parties qui s’opposent, le pouvoir judiciaire s’exerce différemment, réparti entre deux ordres : la justice judiciaire et la justice administrative....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 8,
+            "question": "Quelle est la plus haute juridiction administrative ?",
+            "correctAnswer": "organisées ces institutions judiciaires",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le Conseil d’État est le sommet de la justice administrative, tandis que la Cour de cassation l'est pour l'ordre judiciaire.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 9,
+            "question": "Qu’est-ce que la démocratie ?",
+            "correctAnswer": "le régime politique dans lequel le pouvoir appartient au peuple sans distinction de sexe, de religion, de richesse ou d'origine sociale",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La démocratie, c’est quoi ?\nLe mot démocratie vient du grec \"Dêmos Krátos\" qui signifie \"Peuple Pouvoir\". La démocratie est le régime politique dans lequel le pouvoir appartient au peuple sans distinction de sexe, de religion, de richesse ou d'origine sociale....",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 10,
+            "question": "La France est-elle une démocratie ?",
+            "correctAnswer": "La France est une démocratie\nLa France est une démocratie dans le sens où le pouvoir vient du peuple : les citoyens votent pour choisir leurs représentants au suffrage universel.",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "Le droit de vote est accordé à tout citoyen :"
+            ],
+            "explanation": "La France est une démocratie\nLa France est une démocratie dans le sens où le pouvoir vient du peuple : les citoyens votent pour choisir leurs représentants au suffrage universel....",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 11,
+            "question": "Qu’est-ce qu’une République ?",
+            "correctAnswer": "un système politique dans lequel le pouvoir est détenu par des représentants élus",
+            "incorrectAnswers": [
+                "Un texte qui organise uniquement les pouvoirs publics",
+                "Un document qui garantit uniquement les droits civiques",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La République (\"chose publique\") appartient à tous, contrairement à la monarchie.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 12,
+            "question": "Quelle est la différence entre République et Démocratie ?",
+            "correctAnswer": "La France est une République\nLa France est une République où le pouvoir est exercé par un ensemble de représentants élus par le peuple",
+            "incorrectAnswers": [
+                "Un texte qui organise uniquement les pouvoirs publics",
+                "Un document qui garantit uniquement les droits civiques",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La France est une République\nLa France est une République où le pouvoir est exercé par un ensemble de représentants élus par le peuple. La France n’est plus une monarchie : le pouvoir n’appartient plus à une seule personne....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 13,
+            "question": "Qui sont les principaux acteurs politiques nationaux ?",
+            "correctAnswer": "les acteurs politiques au niveau national",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Qui sont les acteurs politiques au niveau national ?\n- Le président de la République, élu pour 5 ans au suffrage universel directement par les citoyens français. Il nomme le Premier ministre selon la majorité ;\n- le Gouvernement (les ministres sont proposés par le Premier ministre au président de la République) ;\n- les 577 députés de l’Assemblée nationale (élus au suffrage direct par les Français, tous les 5 ans) et les 348 sénateurs du Sénat (élection au suffrage indirect, par les grands électe...",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 14,
+            "question": "Qui dirige la commune ?",
+            "correctAnswer": "les acteurs politiques au niveau local",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Qui sont les acteurs politiques au niveau local ?\n- Les élus municipaux (maire et conseillers municipaux, élus pour 6 ans lors des élections municipales au suffrage direct) : ils représentent les citoyens sur la commune ;\n- les conseillers départementaux (élus pour 6 ans aux élections départementales au suffrage direct) : ils forment l’assemblée départementale qui prend des décisions concernant le département ;\n- les conseillers régionaux (élus pour 6 ans au élections régionales au suffrage dire...",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 15,
+            "question": "Qu’est-ce que le droit de vote ?",
+            "correctAnswer": "le droit d’exprimer sa volonté à une élection",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "C'est un droit fondamental du citoyen pour exprimer sa volonté politique.",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 16,
+            "question": "Qu’est-ce que le suffrage universel ?",
+            "correctAnswer": "inscrit sur la liste électorale)",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le suffrage universel, c’est quoi ?\nLe suffrage universel signifie que tous les citoyens...",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 17,
+            "question": "Quels sont les droits civiques et politiques ?",
+            "correctAnswer": "Les droits civiques et politiques, c’est quoi",
+            "incorrectAnswers": [
+                "Des droits réservés aux citoyens français uniquement",
+                "Des droits qui nécessitent une intervention de l'État pour exister",
+                "soumis aux mêmes lois et a les mêmes droits et devoirs, qu’il soit politicien ou pas) ;"
+            ],
+            "explanation": "Ces droits permettent au citoyen de participer activement à la vie politique et judiciaire.",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 18,
+            "question": "Pour quelles élections vote-t-on au suffrage direct ?",
+            "correctAnswer": "un droit fondamental",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "En France, le droit de vote est un droit fondamental. Il est inscrit dans la Déclaration des droits de l’homme et du citoyen, de 1789. L’article 3 de la Constitution de la Ve République de 1958 le précise....",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 19,
+            "question": "Pourquoi y a-t-il plusieurs partis politiques ?",
+            "correctAnswer": "un principe fondamental de la démocratie française",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "les intermédiaires entre les citoyens et le Gouvernement"
+            ],
+            "explanation": "La pluralité des partis politiques, c’est quoi ?\nLa pluralité des partis politiques (beaucoup de partis différents) est un principe fondamental de la démocratie française. Le Conseil constitutionnel a affirmé que “Le respect du pluralisme constitue le fondement de la démocratie”....",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 20,
+            "question": "Les médias doivent-ils être équitables ?",
+            "correctAnswer": "Les médias sont-ils équitables entre les partis",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La loi impose aux médias audiovisuels de respecter le pluralisme politique.",
+            "subTheme": "democratie_vote",
+            "questionType": "situation"
+        },
+        {
+            "id": 21,
+            "question": "Quel est le rôle des partis politiques ?",
+            "correctAnswer": "les intermédiaires entre les citoyens et le Gouvernement",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "un principe fondamental de la démocratie française"
+            ],
+            "explanation": "Beaucoup de partis politiques différents, à quoi ça sert ?\nLes partis politiques participent à la vie politique (ils peuvent être présents à l’Assemblée et au Sénat)....",
+            "subTheme": "democratie_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 22,
+            "question": "Qui a l'initiative de la loi ?",
+            "correctAnswer": "L’initiative de la loi peut être faite par :",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "L'initiative est partagée entre le Gouvernement et le Parlement.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 23,
+            "question": "Que se passe-t-il avant le vote d'une loi ?",
+            "correctAnswer": "quelqu’un, un rapporteur, pour modifier le texte (amendements)",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Le texte est d'abord travaillé en commission avant d'être débattu en séance publique.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 24,
+            "question": "Qui vote la loi ?",
+            "correctAnswer": "transmis à l’Assemblée nationale ou au Sénat pour être discuté et amendé (modifications) en séances publiques",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Comment la loi est-elle validée ?\nQuand le texte de loi a été validé par la commission parlementaire, il est transmis à l’Assemblée nationale ou au Sénat pour être discuté et amendé (modifications) en séances publiques....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 25,
+            "question": "Qu’est-ce que la navette parlementaire ?",
+            "correctAnswer": "envoyé à l’autre chambre",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La navette parlementaire, c’est quoi ?\nQuand le texte de loi a été validé par une des chambres parlementaires (l’Assemblée nationale ou le Sénat), le texte de loi est envoyé à l’autre chambre....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 26,
+            "question": "Qui a le dernier mot si l'Assemblée et le Sénat ne sont pas d'accord ?",
+            "correctAnswer": "appelée pour se mettre d’accord sur un texte de loi",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "En cas de désaccord persistant, l'Assemblée nationale peut avoir le dernier mot.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 27,
+            "question": "Qui promulgue (valide officiellement) la loi ?",
+            "correctAnswer": "adoptée par les deux chambres",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le Président signe le décret de promulgation pour que la loi entre en vigueur.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 28,
+            "question": "Qu’est-ce que la décentralisation ?",
+            "correctAnswer": "La décentralisation, qu’est-ce que c’est",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "C'est rapprocher la décision des citoyens en donnant des compétences aux élus locaux.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 29,
+            "question": "Quelles sont les principales compétences de la Région ?",
+            "correctAnswer": "la collectivité la plus répandue sur le territoire (il y a plus de 35 000 communes en France)",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "À quoi servent les collectivités territoriales ?\n- La commune a de nombreuses compétences, surtout en urbanisme, logement et action sociale. Elle gère les écoles primaires et maternelles et les services de proximité. C’est la collectivité la plus répandue sur le territoire (il y a plus de 35 000 communes en France). Elle est dirigée par des personnes élues, dont le maire.\n- Le département agit surtout dans l’action sociale (exemples : aide aux personnes handicapées, gestion du RSA). Il gère auss...",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 30,
+            "question": "Exemples de collectivités particulières ?",
+            "correctAnswer": "pas des collectivités à statut particulier, mais elles ont elles aussi des caractéristiques particulières",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Exemples de collectivités à statut particulier\n- Paris a à la fois les compétences de la commune et du département.\n- La métropole de Lyon a, à la fois, les compétences du département et de la commune.\n- La collectivité européenne d'Alsace a les compétences du département et des compétences spécifiques adaptées aux particularités de l’Alsace.\n- Les collectivités d’outre-mer ne sont pas des collectivités à statut particulier, mais elles ont elles aussi des caractéristiques particulières. Par exem...",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 31,
+            "question": "Qui est le Préfet ?",
+            "correctAnswer": "Il ne s’occupe ni de la justice ni de l’armée mais il veille à la continuité de l’État.",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Nommé par le Président, il représente le Gouvernement et fait respecter les lois sur le territoire.",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 32,
+            "question": "Quelle est la mission de la Préfecture ?",
+            "correctAnswer": "Les principales missions de la préfecture et du Préfet\n- Organiser la sécurité des personnes et des biens avec la police, la gendarmerie et les secours",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Les principales missions de la préfecture et du Préfet\n- Organiser la sécurité des personnes et des biens avec la police, la gendarmerie et les secours.\n- Délivrer les titres et autorisations administratives.\n- Vérifier que les collectivités territoriales respectent les lois.\n- Coordonner les aides pour les personnes en difficulté, notamment pour l’emploi, la santé et le logement selon les besoins du territoire.\n- Soutenir le développement économique et social : elle aide à créer des entreprises...",
+            "subTheme": "organisation_republique",
+            "questionType": "situation"
+        },
+        {
+            "id": 33,
+            "question": "Quels sont les niveaux de collectivités territoriales ?",
+            "correctAnswer": "chargés, selon leurs compétences, de gérer le pays et chacun des territoires",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "soumis aux mêmes lois et a les mêmes droits et devoirs, qu’il soit politicien ou pas) ;"
+            ],
+            "explanation": "Découvrir un exemple de répartition des compétences entre l'État et les collectivités territoriales....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 34,
+            "question": "Qui s'occupe des écoles primaires ?",
+            "correctAnswer": "concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Exemple de répartition des compétences entre l’État et les collectivités territoriales : l’école en France\nLe service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales....",
+            "subTheme": "organisation_republique",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 35,
+            "question": "Quand a été créée la Communauté Économique Européenne (CEE) ?",
+            "correctAnswer": "étendu à de nouveaux pays",
+            "incorrectAnswers": [
+                "En 1942 ou 1962",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le Traité de Rome fonde la CEE pour créer un marché commun.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 36,
+            "question": "Qu'a permis le traité de Maastricht en 1992 ?",
+            "correctAnswer": "de créer un marché commun, et la CEEA (communauté européenne de l’énergie atomique)",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "L’élargissement des domaines d’action\n- En 1951, le traité de Paris crée la CECA (communauté européenne du charbon et de l’acier).\n- En 1957, le traité de Rome crée la CEE (communauté économique européenne), dont l’objectif est de créer un marché commun, et la CEEA (communauté européenne de l’énergie atomique).\n- En 1992, le traité de Maastricht crée l’Union européenne (UE). Désormais, les marchandises, les personnes et les capitaux peuvent circuler librement au sein de l’UE. La libre circulatio...",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 37,
+            "question": "Combien y a-t-il de pays dans l'Union européenne (en 2024) ?",
+            "correctAnswer": "créée avec 6 pays : Allemagne de l’Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "étendu à de nouveaux pays"
+            ],
+            "explanation": "Les dates clés de l’extension géographique\n- En 1957, la CEE est créée avec 6 pays : Allemagne de l’Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.\n- En 1973, 3 nouveaux pays entrent dans la CEE : Danemark, Irlande et Royaume-Uni.\n- En 1981, la Grèce intègre l’Europe.\n- En 1986, c’est au tour de l’Espagne et du Portugal.\n- En 1995, l’Autriche, la Finlande et la Suède intègrent l’UE.\n- En 2004, l’extension géographique concerne de nombreux pays : Chypre, Estonie, Hongrie, Lettonie, Litua...",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 38,
+            "question": "À quoi ressemble le drapeau européen ?",
+            "correctAnswer": "la signification du drapeau européen",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "présent sur les façades des institutions européennes, sur les passeports et cartes d’identité de certains États européens…"
+            ],
+            "explanation": "Les 12 étoiles symbolisent la perfection et l'unité, pas le nombre de pays.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 39,
+            "question": "Que symbolise le drapeau européen ?",
+            "correctAnswer": "hissé pour la première fois devant le bâtiment de la Commission européenne, à Bruxelles",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "présent sur les façades des institutions européennes, sur les passeports et cartes d’identité de certains États européens…"
+            ],
+            "explanation": "Le cercle d'étoiles représente l'union des peuples.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 40,
+            "question": "Quel est l'hymne européen ?",
+            "correctAnswer": "l' \"Ode à la joie\", une mélodie écrite par le compositeur allemand Ludwig von Beethoven",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "C'est la mélodie de la 9ème symphonie de Beethoven, symbole de paix.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 41,
+            "question": "Quelle est la devise de l'Union européenne ?",
+            "correctAnswer": "rassemblés en créant l’Union européenne pour partager la paix et la prospérité, dans le respect de leurs diverses cultures, traditions et langues",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "étendu à de nouveaux pays"
+            ],
+            "explanation": "Elle signifie que les Européens sont unis pour la paix tout en gardant leurs cultures différentes.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 42,
+            "question": "Quelle est la date de la Journée de l'Europe ?",
+            "correctAnswer": "La Journée de l’Europe\nChaque année, le 9 mai, tous les pays membres de l’Union européenne fêtent la Journée de l’Europe en organisant des évènements.",
+            "incorrectAnswers": [
+                "En 1940 ou 1960",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "La Journée de l’Europe\nChaque année, le 9 mai, tous les pays membres de l’Union européenne fêtent la Journée de l’Europe en organisant des évènements....",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 43,
+            "question": "Où siègent les principales institutions européennes ?",
+            "correctAnswer": "le résultat d’une évolution constante :",
+            "incorrectAnswers": [
+                "Dans un autre lieu ou service",
+                "Uniquement en ligne ou uniquement en présentiel",
+                "C'est une interprétation partielle ou incomplète de la réalité"
+            ],
+            "explanation": "Strasbourg accueille le Parlement, Bruxelles la Commission et le Conseil, Luxembourg la Cour de Justice.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 44,
+            "question": "Quel est le rôle de la Commission européenne ?",
+            "correctAnswer": "organisée avec quatre institutions :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "chargé d’un domaine : agriculture, justice, égalité… La commission exécute les décisions du Conseil et du Parlement"
+            ],
+            "explanation": "L’évolution des institutions fondatrices\nEn 1951, la CECA est organisée avec quatre institutions :...",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 45,
+            "question": "Quel est le rôle de la Banque centrale européenne (BCE) ?",
+            "correctAnswer": "créée en 1998, au moment de la création de l’euro comme monnaie unique",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "Elle veille à la stabilité des prix dans la zone euro.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 46,
+            "question": "Qu'est-ce que le Conseil de l'Union européenne ?",
+            "correctAnswer": "toutes les deux situées à Bruxelles",
+            "incorrectAnswers": [
+                "C'est une définition partielle ou incomplète",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le Conseil européen et le Conseil de l’Union européenne\nCes deux institutions sont toutes les deux situées à Bruxelles. Elles ont des noms similaires mais elles n’ont pas les mêmes rôles, pas les mêmes membres....",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 47,
+            "question": "Quel est le rôle du Parlement européen ?",
+            "correctAnswer": "chargé d’un domaine : agriculture, justice, égalité… La commission exécute les décisions du Conseil et du Parlement",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "C'est une information incorrecte ou incomplète"
+            ],
+            "explanation": "La Commission européenne et le Parlement européen...",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 48,
+            "question": "À quoi sert la Cour de justice de l'Union européenne ?",
+            "correctAnswer": "Elle rend la justice à l’échelle européenne",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "les intermédiaires entre les citoyens et le Gouvernement"
+            ],
+            "explanation": "Elle garantit que la législation de l'UE est interprétée et appliquée de la même manière dans tous les pays.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 49,
+            "question": "Qui élit les députés européens ?",
+            "correctAnswer": "organisées tous les cinq ans",
+            "incorrectAnswers": [
+                "Seulement certaines catégories de personnes",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Ils sont élus au suffrage universel direct tous les 5 ans.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "knowledge"
+        },
+        {
+            "id": 50,
+            "question": "Qui peut voter aux élections européennes en France ?",
+            "correctAnswer": "Pour avoir le droit de voter en France lors des élections européennes, il faut :",
+            "incorrectAnswers": [
+                "D'autres personnes ou institutions",
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine"
+            ],
+            "explanation": "Le droit de vote est ouvert aux citoyens de l'UE résidents.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "situation"
+        },
+        {
+            "id": 51,
+            "question": "Peut-on être candidat aux élections européennes si on est citoyen de l'UE résidant en France ?",
+            "correctAnswer": "Pour être candidat aux élections européennes organisées en France, il faut :",
+            "incorrectAnswers": [
+                "C'est une interprétation partielle ou incomplète de la réalité",
+                "Cela concerne un aspect différent ou un autre domaine",
+                "organisées tous les cinq ans"
+            ],
+            "explanation": "La citoyenneté européenne donne le droit d'éligibilité aux élections municipales et européennes.",
+            "subTheme": "institutions_europeennes",
+            "questionType": "situation"
+        }
+    ]
+}
