@@ -34,7 +34,6 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
         }
 
         if (failedDataCache.has(dataPath)) {
-            logger.debug(`Trying local fallback for cached failure: ${dataPath}`);
             return await getLocalJsonData(dataPath);
         }
 
@@ -43,7 +42,6 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
         if (hasLocalData) {
             const localData = await getLocalJsonData(dataPath);
             if (localData) {
-                logger.debug(`Using local data for: ${dataPath}`);
                 return localData;
             }
         }
@@ -68,10 +66,8 @@ const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
                 firebaseDataCache[dataPath] = jsonData;
                 return jsonData;
             } catch (firebaseError) {
-                logger.debug(`Firebase load failed for ${dataPath}, trying local fallback`);
+                // Firebase load failed, will try local fallback
             }
-        } else if (!hasLocalData) {
-            logger.debug(`Firebase not configured, trying local data for: ${dataPath}`);
         }
 
         const localData = await getLocalJsonData(dataPath);
