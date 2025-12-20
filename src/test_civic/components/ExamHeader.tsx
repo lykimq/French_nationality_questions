@@ -31,7 +31,7 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
         <View style={styles.header}>
             <View style={styles.headerTop}>
                 <View style={styles.questionCounter}>
-                    <FormattedText style={[styles.questionCounterText, { color: theme.colors.headerText }]}>
+                    <FormattedText style={[styles.questionCounterText, { color: theme.colors.text }]}>
                         {currentQuestionIndex + 1} / {totalQuestions}
                     </FormattedText>
                 </View>
@@ -46,7 +46,7 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
             <View style={[styles.progressContainer, { backgroundColor: theme.colors.border }]}>
                 <View style={[styles.progressBar, { width: `${progress}%`, backgroundColor: theme.colors.primary }]} />
             </View>
-            <FormattedText style={[styles.passingInfo, { color: theme.colors.headerText }]}>
+            <FormattedText style={[styles.passingInfo, { color: theme.colors.text }]}>
                 {passingText}
             </FormattedText>
         </View>

@@ -8,9 +8,11 @@ import {
     getQuestionsByTheme,
     getQuestionsBySubTheme,
     filterKnowledgeQuestions,
+    filterSituationalQuestions,
     filterQuestionsWithOptions,
     getQuestionsByThemes,
     enrichQuestionsWithMetadata,
+    getQuestionTypeFromQuestion,
 } from './civicExamUtils';
 
 // ==================== QUESTION SELECTION ====================
@@ -36,6 +38,10 @@ const selectRandomQuestions = (
     return shuffled.slice(0, count);
 };
 
+const isSituationalSubTheme = (subTheme: CivicExamSubTheme): boolean => {
+    return subTheme === 'situational_principles' || subTheme === 'situational_rights';
+};
+
 const selectQuestionsForSubTheme = (
     subTheme: CivicExamSubTheme,
     count: number,
@@ -45,23 +51,23 @@ const selectQuestionsForSubTheme = (
 ): TestQuestion[] => {
     let candidates = getQuestionsBySubTheme(availableQuestions, subTheme);
     
-    // If no questions found by subTheme, try to infer from category
     if (candidates.length === 0) {
-        // This would require additional mapping logic
-        // For now, return empty if no direct match
         return [];
     }
     
-    // Filter out already used questions if provided
     if (usedIds) {
         candidates = candidates.filter(q => !usedIds.has(q.id));
     }
     
-    // Filter by question type based on mode
+    const isSituational = isSituationalSubTheme(subTheme);
+    
     if (isPracticeMode) {
         candidates = filterKnowledgeQuestions(candidates);
+    } else if (isSituational) {
+        candidates = filterSituationalQuestions(candidates);
+    } else {
+        candidates = filterKnowledgeQuestions(candidates);
     }
-    // In exam mode, include both knowledge and situational
     
     return selectRandomQuestions(candidates, count);
 };
@@ -143,22 +149,15 @@ export const generateCivicExamQuestions = (
     config: CivicExamConfig
 ): CivicExamQuestion[] => {
     const isPracticeMode = config.mode === 'civic_exam_practice';
-    let availableQuestions = [...allQuestions];
+    let availableQuestions = shuffleArray([...allQuestions]);
     
-    // Filter by selected themes if in practice mode
     if (isPracticeMode && config.selectedThemes && config.selectedThemes.length > 0) {
         availableQuestions = getQuestionsByThemes(availableQuestions, config.selectedThemes);
-    }
-    
-    // Filter by question type in practice mode
-    if (isPracticeMode) {
-        availableQuestions = filterKnowledgeQuestions(availableQuestions);
     }
     
     const selectedQuestions: TestQuestion[] = [];
     const usedQuestionIds = new Set<number>();
     
-    // Select questions for each theme according to distribution
     (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTheme, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTheme]][]).forEach(
         ([theme, distribution]) => {
             if (isPracticeMode && config.selectedThemes && config.selectedThemes.length > 0) {
@@ -187,13 +186,17 @@ export const generateCivicExamQuestions = (
         }
     );
     
-    // Fill remaining questions if needed
     if (selectedQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
         const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - selectedQuestions.length;
         const unusedQuestions = availableQuestions.filter(q => !usedQuestionIds.has(q.id));
-        const filtered = isPracticeMode
-            ? filterKnowledgeQuestions(unusedQuestions)
-            : unusedQuestions;
+        
+        let filtered = unusedQuestions;
+        if (isPracticeMode) {
+            filtered = filterKnowledgeQuestions(unusedQuestions);
+            if (filtered.length === 0) {
+                filtered = filterQuestionsWithOptions(unusedQuestions);
+            }
+        }
         
         if (filtered.length > 0) {
             const additional = selectRandomQuestions(filtered, remaining);
@@ -206,12 +209,10 @@ export const generateCivicExamQuestions = (
         }
     }
     
-    // In practice mode, ensure all questions have options
     let finalQuestions = isPracticeMode
         ? filterQuestionsWithOptions(selectedQuestions)
         : selectedQuestions;
     
-    // Fill gaps if questions were filtered out in practice mode
     if (isPracticeMode && finalQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
         const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - finalQuestions.length;
         const finalUsedIds = new Set(finalQuestions.map(q => q.id));
@@ -230,7 +231,6 @@ export const generateCivicExamQuestions = (
         });
     }
     
-    // Remove duplicates and limit to target count (single pass)
     const uniqueMap = new Map<number, TestQuestion>();
     finalQuestions.forEach(q => {
         if (!uniqueMap.has(q.id)) {

@@ -5,143 +5,143 @@
         {
             "id": 1,
             "question": "Qu’est-ce que la domiciliation ?",
-            "correctAnswer": "La domiciliation, c’est quoi",
+            "correctAnswer": "une adresse administrative attribuée aux personnes qui ne peuvent pas recevoir leur courrier de façon constante et confidentielle à une adresse stable",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Elle est indispensable pour faire valoir ses droits (civils, civiques, sociaux).",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment la domiciliation.\n\nLa domiciliation, c’est quoi ?\nLa domiciliation est une adresse administrative attribuée aux personnes qui ne peuvent pas recevoir leur courrier de façon constante et confidentielle à une adresse stable. Les personnes sans domicile fixe, en habitat mobile ou précaire sont concernées.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 2,
             "question": "A quoi sert une adresse de domiciliation ?",
-            "correctAnswer": "indispensable d'avoir une adresse pour recevoir son courrier",
+            "correctAnswer": "exemple : demande et renouvellement de titre de séjour",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "La domiciliation, c’est quoi"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
-            "explanation": "La domiciliation, à quoi ça sert ?\nIl est indispensable d'avoir une adresse pour recevoir son courrier. La domiciliation est une adresse administrative qui permet de bénéficier de droits civils, civiques et sociaux (sous conditions) et d’un accès :...",
+            "explanation": "La domiciliation, à quoi ça sert ?\nIl est indispensable d'avoir une adresse pour recevoir son courrier. La domiciliation est une adresse administrative qui permet de bénéficier de droits civils, civiques et sociaux (sous conditions) et d’un accès :\n\n- à des démarches professionnelles (insertion sociale) ;\n- à des démarches fiscales (exemple : impôts) ;\n- aux démarches préfectorales (exemple : demande et renouvellement de titre de séjour) ;\n- à des services essentiels (compte bancaire, souscription assurances obligatoires) ;\n- à la scolarisation.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 3,
             "question": "Que faire en cas de changement d'adresse ?",
-            "correctAnswer": "Que dois-je faire si je change d’adresse",
+            "correctAnswer": "Selon l’urgence de votre problème de santé, vous pouvez :\n\n- Consulter un médecin\nPour un problème de santé courant, on commence généralement par consulter un médecin traitant (médecin généraliste de référence pour le patient)",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Que dois-je faire si je change d’adresse ?\nQuand vous changez de logement, le changement d’adresse doit être fait le plus rapidement possible (3 mois maximum après le déménagement) :...",
+            "explanation": "Que faire en cas de problème de santé en France ?\nSelon l’urgence de votre problème de santé, vous pouvez :\n\n- Consulter un médecin\nPour un problème de santé courant, on commence généralement par consulter un médecin traitant (médecin généraliste de référence pour le patient).\n\nC’est ce qu’on appelle le parcours de soins coordonnés : c’est le fait de consulter d'abord son médecin traitant, qui va ensuite orienter le patient vers d'autres professionnels de santé si nécessaire, notamment des médecins spécialistes (exemples : cardiologue, dermatologue…).\n\n- Aller à l’hôpital\nEn cas de situation grave (accident, douleurs violentes, malaise grave…), on se rend à l’hôpital, en urgence ou sur rendez-vous. En effet, beaucoup de spécialistes reçoivent leurs patients dans les locaux d’un hôpital.\n\n- Aller en pharmacie\n\nUne pharmacie est un établissement médical où vous pouvez récupérer et acheter des médicaments et autres produits de santé (compléments alimentaires, dispositifs médicaux…).\n\nAprès la consultation avec votre médecin, rendez-vous en pharmacie avec la prescription médicale pour que le pharmacien vous délivre les traitements (médicaments et dispositifs médicaux) prescrits et vous conseille sur leur utilisation.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 4,
             "question": "Pourquoi ouvrir un compte bancaire ?",
-            "correctAnswer": "en sécurité (pas de perte ou de vol) ;",
+            "correctAnswer": "Le compte bancaire est très utile :\n\n- l’argent y est en sécurité (pas de perte ou de vol) ;\n- il est obligatoire pour réaliser beaucoup de démarches administratives, pour travailler (pour recevoir son salaire).",
             "incorrectAnswers": [
                 "Il faut d'abord avoir un emploi pour ouvrir un compte",
                 "L'ouverture d'un compte est payante et obligatoire",
-                "gratuit (mais la banque peut faire payer des frais pour la tenue du compte)"
+                "en sécurité (pas de perte ou de vol) ;"
             ],
-            "explanation": "C'est essentiel pour la vie quotidienne et les démarches administratives.",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment l'ouverture d'un compte bancaire.\n\nUn compte bancaire, pour quoi faire ?\nLe compte bancaire est très utile :\n\n- l’argent y est en sécurité (pas de perte ou de vol) ;\n- il est obligatoire pour réaliser beaucoup de démarches administratives, pour travailler (pour recevoir son salaire).",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 5,
             "question": "Quels documents faut-il pour ouvrir un compte bancaire ?",
-            "correctAnswer": "gratuit (mais la banque peut faire payer des frais pour la tenue du compte)",
+            "correctAnswer": "ou mineur avec autorisation des représentants légaux",
             "incorrectAnswers": [
                 "Il faut d'abord avoir un emploi pour ouvrir un compte",
                 "L'ouverture d'un compte est payante et obligatoire",
-                "en sécurité (pas de perte ou de vol) ;"
+                "Ces enjeux nécessitent une collaboration étroite entre tous les États membres de l’Union européenne."
             ],
-            "explanation": "Comment ouvrir un compte bancaire en France ?\nChaque personne peut ouvrir un compte bancaire en France. Il faut néanmoins respecter certaines règles :...",
+            "explanation": "Comment ouvrir un compte bancaire en France ?\nChaque personne peut ouvrir un compte bancaire en France. Il faut néanmoins respecter certaines règles :\n\n- vérification de l’identité : présenter une pièce d'identité officielle comportant une photographie ;\n- vérification de l’âge : être majeur ou mineur émancipé pour ouvrir seul un compte individuel (ou mineur avec autorisation des représentants légaux) ;\n- justification du domicile de moins de 3 mois en fournissant par exemple l'un des documents suivants : avis d’imposition, quittance de loyer, facture d’eau ou d’électricité, attestation de domicile ;\n- dépôt de signature : déposer une signature qui sera enregistrée par la banque.\n\nOuvrir un compte bancaire est gratuit (mais la banque peut faire payer des frais pour la tenue du compte).",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 6,
             "question": "Que faire si une banque refuse d'ouvrir un compte ?",
-            "correctAnswer": "Et si la banque refuse d’ouvrir un compte",
+            "correctAnswer": "Et si la banque refuse d’ouvrir un compte La banque que vous avez contactée peut refuser de vous ouvrir un compte, sans avoir besoin de justifier sa décision",
             "incorrectAnswers": [
                 "Il faut d'abord avoir un emploi pour ouvrir un compte",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La Banque de France désignera une banque qui sera obligée d'ouvrir un compte.",
+            "explanation": "Et si la banque refuse d’ouvrir un compte ?\nLa banque que vous avez contactée peut refuser de vous ouvrir un compte, sans avoir besoin de justifier sa décision.\n\n> Vous souhaitez faire valoir votre droit au compte ?\n\nSaisissez la Banque de France, responsable de cette mission.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 7,
             "question": "Quel est le rôle de la Banque de France ?",
-            "correctAnswer": "nomie : droit au compte, accompagnement des personnes en surendettement… ainsi que la straté",
+            "correctAnswer": "La Banque de France gère des services à l’économie : droit au compte, accompagnement des personnes en surendettement… ainsi que la stratégie monétaire et assure la stabilité des prix.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines."
             ],
-            "explanation": "Elle gère aussi le droit au compte pour les particuliers.",
+            "explanation": "Quel est le rôle de la Banque de France ?\nLa Banque de France gère des services à l’économie : droit au compte, accompagnement des personnes en surendettement… ainsi que la stratégie monétaire et assure la stabilité des prix.",
             "subTheme": "services_publics",
             "questionType": "knowledge"
         },
         {
             "id": 8,
             "question": "Que faut-il pour conduire une voiture en France ?",
-            "correctAnswer": "obligatoire d’avoir :",
+            "correctAnswer": "L’entretien d’une voiture est obligatoire tous les 2 ans (pour les véhicules de plus de 4 ans).",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "valable en France, rendez-vous en préfecture ou sur (Ouvre une nouvelle fenêtre)service-public"
+                "Le traité de Maastricht, signé en 1992, a marqué une étape majeure dans l'intégration européenne"
             ],
-            "explanation": "Ces trois documents sont obligatoires pour circuler légalement.",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celles qui concernent le permis de conduire.\n\nPeut-on conduire en France ?\nSi vous avez une voiture personnelle, il est obligatoire d’avoir :\n\n- un permis de conduire valide ;\n- une carte grise du véhicule à jour ;\n- une assurance automobile.\n\nL’entretien d’une voiture est obligatoire tous les 2 ans (pour les véhicules de plus de 4 ans).",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 9,
             "question": "De quoi est composé l'examen du permis de conduire ?",
-            "correctAnswer": "nécessaire d'avoir 17 ans au minimum et être résident en France pour passer l'examen du permis de conduire",
+            "correctAnswer": "Le permis comprend 2 épreuves :\n\n- le Code de la route : un examen théorique sous forme de QCM (Questionnaire à Choix Multiples) sur les règles de circulation, la sécurité, les priorités..",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "ernent le permis de conduire"
+                "composé de deux chambres (bicaméral), c'est-à-dire: - Le Sénat, appelée « chambre haute », avec 348 sénateurs,  - L’Assemblée nationale, dite « chambre basse », avec 577 députés"
             ],
-            "explanation": "Comment passer son permis en France ?\nPour passer son permis, rendez-vous en auto-école ou inscrivez-vous en candidat libre. Il est nécessaire d'avoir 17 ans au minimum et être résident en France pour passer l'examen du permis de conduire....",
+            "explanation": "Comment passer son permis en France ?\nPour passer son permis, rendez-vous en auto-école ou inscrivez-vous en candidat libre. Il est nécessaire d'avoir 17 ans au minimum et être résident en France pour passer l'examen du permis de conduire.\n\nVous devrez suivre une formation théorique (code de la route) et une formation pratique (minimum 20 heures).\n\nLe permis comprend 2 épreuves :\n\n- le Code de la route : un examen théorique sous forme de QCM (Questionnaire à Choix Multiples) sur les règles de circulation, la sécurité, les priorités...\n- une épreuve pratique d’environ 30 minutes de conduite, incluant une manœuvre, un test de sécurité et un parcours sur route.\n\nUne fois le permis de conduire obtenu, il est nécessaire de prendre une assurance avant de pouvoir conduire sa voiture.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 10,
             "question": "Existe-t-il des aides pour payer le permis ?",
-            "correctAnswer": "Comment payer son permis de conduire français",
+            "correctAnswer": "Plusieurs dispositifs peuvent aider à financer le permis de conduire :",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "ernent le permis de conduire"
+                "- le permis à 1 € par jour (pour les 15-25 ans) ;\n- des aides de France Travail (selon la situation) ;\n- le Compte Personnel de Formation (qui peut financer tout ou partie du permis)."
             ],
-            "explanation": "Plusieurs dispositifs facilitent l'accès au permis pour l'insertion professionnelle.",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celles qui concernent le permis de conduire.\n\nComment payer son permis de conduire français ?\nPlusieurs dispositifs peuvent aider à financer le permis de conduire :\n\n- le permis à 1 € par jour (pour les 15-25 ans) ;\n- des aides de France Travail (selon la situation) ;\n- le Compte Personnel de Formation (qui peut financer tout ou partie du permis).",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 11,
             "question": "Puis-je conduire avec mon permis étranger ?",
-            "correctAnswer": "valable en France, rendez-vous en préfecture ou sur (Ouvre une nouvelle fenêtre)service-public",
+            "correctAnswer": "- Si vous restez moins d’un an en France (court séjour ou durant vos études) et que votre permis est reconnu en France et est échangeable, vous pouvez conduire avec votre permis de conduire étranger au maximum un an",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "ernent le permis de conduire"
+                "- le permis à 1 € par jour (pour les 15-25 ans) ;\n- des aides de France Travail (selon la situation) ;\n- le Compte Personnel de Formation (qui peut financer tout ou partie du permis)."
             ],
-            "explanation": "Peut-on conduire en France avec un permis de conduire étranger ?\nPour savoir si votre permis de conduire est valable en France, rendez-vous en préfecture ou sur (Ouvre une nouvelle fenêtre)service-public.fr....",
+            "explanation": "Peut-on conduire en France avec un permis de conduire étranger ?\nPour savoir si votre permis de conduire est valable en France, rendez-vous en préfecture ou sur (Ouvre une nouvelle fenêtre)service-public.fr.\n\n- Si vous restez moins d’un an en France (court séjour ou durant vos études) et que votre permis est reconnu en France et est échangeable, vous pouvez conduire avec votre permis de conduire étranger au maximum un an. Le permis de conduire délivré par un pays non européen est valable un an à partir de :\n    - la date du début de validité du premier titre de séjour en France ;\n    - la date de l'obtention de l'attestation de prolongation d'instruction (API) ;\n    - la date de validation du visa long séjour par l'OFII.\n- Si vous restez plus d’1 an en France et que votre permis de conduire est reconnu en France et est échangeable, réalisez cette procédure dès que possible. Il faut vous renseigner à la préfecture ou sur (Ouvre une nouvelle fenêtre)service-public.fr pour savoir si votre permis est échangeable.\n- Si votre permis n’est pas échangeable ou bien si l’échange du permis n’a pas été réalisé au bout d’1 an, vous devez passer le permis de conduire français pour continuer de conduire en France.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
@@ -154,189 +154,189 @@
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de l’assurance responsabilité civile....",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de l’assurance responsabilité civile.\n\nLa responsabilité civile, c’est quoi ?\nLa responsabilité civile, c’est l’obligation de chacun de réparer les dommages matériels, corporels ou moraux que l’on peut causer sans le vouloir à d’autres personnes.\n\nCes dommages peuvent survenir à différents moments :\n\n- à son domicile ;\n- en conduisant un véhicule ;\n- dans le cadre de la vie quotidienne (activités privées) ;\n- dans le cadre professionnel…\n\nSi un enfant mineur, un animal domestique, un objet sous votre responsabilité causent des dommages, alors votre responsabilité civile est aussi engagée.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 13,
             "question": "L'assurance responsabilité civile est-elle obligatoire ?",
-            "correctAnswer": "payante et obligatoire",
+            "correctAnswer": "L’assurance responsabilité civile est payante et obligatoire",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "l’obligation de chacun de réparer les dommages matériels, corporels ou moraux que l’on peut causer sans le vouloir à d’autres personnes"
+                "Oui, de 3 à 16 ans pour tous les enfants résidant en France."
             ],
-            "explanation": "Elle est indispensable pour couvrir les frais en cas d'accident causé à un tiers.",
+            "explanation": "L’assurance responsabilité civile, c’est quoi ?\nL’assurance responsabilité civile est payante et obligatoire. Elle garantit la protection des autres.\n\nSi vous causez un accident, un tort matériel ou un dommage physique, votre assurance prendra en charge (en partie ou en totalité) les préjudices dont vous êtes responsable.\n\nIl existe différents types d’assurances : habitation, automobile…\n\nL’assurance responsabilité est payante : comparez les offres des assurances selon vos besoins spécifiques.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 14,
             "question": "A quoi servent les impôts ?",
-            "correctAnswer": "importants, plus la part prélevée par l’État l’est également",
+            "correctAnswer": "taxe foncière sur les propriétés, enlèvement des ordures ménagères...",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "il y a plus de 35 000 communes en France"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de la déclaration de revenus....",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de la déclaration de revenus.\n\nQu'est-ce que l'impôt et pourquoi doit-on déclarer ses revenus ?\nL'impôt en France :\n\n- permet à l’État de développer et de faire fonctionner son pays : services publics gratuits, aides sociales, gestion des routes...\n- l’impôt sur le revenu dépend des revenus du foyer, cela signifie que plus les revenus sont importants, plus la part prélevée par l’État l’est également. Le prélèvement et la redistribution de l’impôt permettent de réduire l’écart de richesse ;\n- des impôts locaux existent (taxe foncière sur les propriétés, enlèvement des ordures ménagères...).\n\nEn France, il est obligatoire de déclarer ses revenus (argent que vous avez gagné) même si vous ne travaillez pas. Ne pas faire sa déclaration peut entraîner des pénalités financières, le remboursement des aides perçues et des difficultés pour accéder à certains droits (aides sociales…) et peut aller jusqu'à une peine de prison.\n\nL’argent récolté par les impôts est redistribué pour permettre la solidarité (aides sociales, écoles, routes…).",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 15,
             "question": "Qui doit déclarer ses revenus ?",
-            "correctAnswer": "faibles ou nuls (il faut indiquer “0 euro”)",
+            "correctAnswer": "plus les revenus sont élevés, plus la part prélevée par l’État le sera",
             "incorrectAnswers": [
                 "D'autres personnes ou institutions",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La déclaration est obligatoire pour tous dès 18 ans.",
+            "explanation": "Qui doit déclarer ses impôts ?\nToute personne de plus de 18 ans, résidant en France (citoyen français ou pas) doit déclarer ses revenus, même si ses revenus sont faibles ou nuls (il faut indiquer “0 euro”).\n\nLa somme d’impôt à payer dépend des revenus du foyer (plus les revenus sont élevés, plus la part prélevée par l’État le sera) : cela permet de réduire les écarts de richesse.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 16,
             "question": "Quand déclare-t-on ses revenus ?",
-            "correctAnswer": "Créez un compte fiscal ou demandez votre numéro fiscal à votre centre des impôts",
+            "correctAnswer": "Vous pouvez déclarer vos revenus sur (Ouvre une nouvelle fenêtre)[https://cfspart-idp.impots.gouv.fr/](https://cfspart-idp.impots.gouv.fr/)\n\nC’est votre première déclaration",
             "incorrectAnswers": [
                 "En 2015 ou 2035",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La campagne de déclaration est annuelle.",
+            "explanation": "Comment déclarer ses impôts ?\nCette déclaration annuelle a lieu entre avril et mai de chaque année : vous déclarez les revenus que vous avez reçus l’année précédente. Exemple : en avril 2025, vous déclarez les revenus de l’année 2024.\n\nVous pouvez déclarer vos revenus sur (Ouvre une nouvelle fenêtre)[https://cfspart-idp.impots.gouv.fr/](https://cfspart-idp.impots.gouv.fr/)\n\nC’est votre première déclaration ? Créez un compte fiscal ou demandez votre numéro fiscal à votre centre des impôts.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 17,
             "question": "Où se renseigner pour son titre de séjour ?",
-            "correctAnswer": "Le type de titre de séjour varie en fonction de la durée et du motif (la raison) de l’installation en France.",
+            "correctAnswer": "l’Administration Numérique des Étrangers en France",
             "incorrectAnswers": [
                 "Dans un autre lieu ou service",
                 "Uniquement en ligne ou uniquement en présentiel",
                 "Il faut faire la demande après l'expiration du titre"
             ],
-            "explanation": "Quel type de titre de séjour ?...",
+            "explanation": "Quel type de titre de séjour ?\n\nLe type de titre de séjour varie en fonction de la durée et du motif (la raison) de l’installation en France.\n\nPour savoir quel type de titre de séjour vous correspond, rendez-vous :\n\n- en présentiel, dans une maison France Service ou dans un point d’accueil numérique (PAN) en préfecture ;\n- en ligne, sur le site de la préfecture la plus proche ou le site de l’ANEF (l’Administration Numérique des Étrangers en France) : (Ouvre une nouvelle fenêtre)administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/ ;\n- par téléphone, contactez le centre de contact citoyen pour les démarches en lien avec l’ANEF : 0806 001 620.\n\nÀ NOTER\nVous devez informer la Préfecture de tout changement d’adresse ou de domiciliation.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 18,
             "question": "Quand demander le renouvellement de son titre de séjour ?",
-            "correctAnswer": "Comment faire la demande de renouvellement de titre de séjour",
+            "correctAnswer": "pour toutes les demandes de titre de séjour de plus de 1 an",
             "incorrectAnswers": [
                 "À une date différente de celle indiquée",
                 "Il faut faire la demande après l'expiration du titre",
                 "La demande doit être faite uniquement en ligne"
             ],
-            "explanation": "Comment faire la demande de renouvellement de titre de séjour ?\nLa demande de renouvellement de titre de séjour doit être faite au moins 3 mois avant la fin de validité de votre titre de séjour. Vous pouvez faire jusqu’à 3 demandes de titre de séjour pour le même motif par an....",
+            "explanation": "Comment faire la demande de renouvellement de titre de séjour ?\nLa demande de renouvellement de titre de séjour doit être faite au moins 3 mois avant la fin de validité de votre titre de séjour. Vous pouvez faire jusqu’à 3 demandes de titre de séjour pour le même motif par an.\n\nVoici les différentes étapes d’une demande de renouvellement de titre de séjour :\n\n1. prendre contact avec sa préfecture pour connaître les modalités de dépôt ;\n2. préparer le dossier avec :\n- les pièces justificatives demandées ;\n- \"le contrat d'engagement à respecter les principes de la République française\" ;\n- l’attestation de réussite de l’examen civique ;\n- une certification linguistique de niveau A2 (pour toutes les demandes de titre de séjour de plus de 1 an).\n3. déposer le dossier complet, au moins 6 mois avant la fin de validité du titre de séjour.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 19,
             "question": "Comment devenir français ?",
-            "correctAnswer": "une condition pour devenir français, vérifiée lors de l'entretien d'assimilation organisé à la préfecture",
+            "correctAnswer": "auprès de sa plateforme de naturalisation en préfecture",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives d’accès à la nationalité française....",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives d’accès à la nationalité française.\n\nQuel type de démarche ?\nIl existe deux procédures principales pour demander la nationalité française pour les étrangers adultes en France :\n\n- par décret de naturalisation (en ligne sur l'ANEF) après au moins 5 ans de résidence en France, si la personne remplit les conditions prévues et que l’État accepte sa demande ;\n- par déclaration (auprès de sa plateforme de naturalisation en préfecture) : en cas de mariage avec un Français ou en tant qu'ascendant, frère ou sœur de Français.\n\nL'adhésion aux principes et valeurs essentiels de la République est une condition pour devenir français, vérifiée lors de l'entretien d'assimilation organisé à la préfecture.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 20,
             "question": "Où trouver les infos pour la naturalisation ?",
-            "correctAnswer": "Où obtenir des informations sur l'accès à la nationalité française",
+            "correctAnswer": "l’Administration Numérique des Étrangers en France",
             "incorrectAnswers": [
                 "Dans un autre lieu ou service",
                 "Uniquement en ligne ou uniquement en présentiel",
                 "C'est une interprétation partielle ou incomplète de la réalité"
             ],
-            "explanation": "Où obtenir des informations sur l'accès à la nationalité française ?\nPour obtenir des informations sur l'accès à la nationalité française, rendez-vous en ligne :...",
+            "explanation": "Où obtenir des informations sur l'accès à la nationalité française ?\nPour obtenir des informations sur l'accès à la nationalité française, rendez-vous en ligne :\n\n- sur le siteservice-public.fr ;\n- sur le site internet de la préfecture la plus proche ;\n- en ligne, sur le site de la préfecture la plus proche ou le site de l’ANEF (l’Administration Numérique des Étrangers en France) : administration-etrangers-en-france.interieur.gouv.fr/particuliers/\n\nEn cas de difficulté avec les démarches en ligne, vous pouvez bénéficier d'un accompagnement auprès du centre de contact citoyens de l'ANTS (par téléphone au 0806 001 620) ou vous rendre dans un point d’accueil numérique (PAN) en préfecture.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 21,
             "question": "Quelle est la première étape pour la naturalisation ?",
-            "correctAnswer": "nécessaires à ma demande spécifique ;",
+            "correctAnswer": "faire une simulation sur le site service-public.fr pour savoir quelles pièces justificatives sont nécessaires à ma demande spécifique ;\n2",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Catherine Trautmann, maire de Strasbourg en 1989."
             ],
-            "explanation": "Le dossier doit prouver la résidence, les ressources et l'intégration.",
+            "explanation": "Comment faire une demande de naturalisation ?\nVoici les différentes étapes :\n\n1. faire une simulation sur le site service-public.fr pour savoir quelles pièces justificatives sont nécessaires à ma demande spécifique ;\n2. déposer un dossier complet avec les pièces justificatives demandées sur le site internet de l’ANEF pour une demande de naturalisation par décret ou en préfecture (plateforme de naturalisation) pour une déclaration.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 22,
             "question": "Quand faire la déclaration de naissance ?",
-            "correctAnswer": "La déclaration de naissance, à quoi ça sert",
+            "correctAnswer": "Cet acte de naissance permet :\n\n- d’obtenir des droits sociaux (allocations, Sécurité sociale…) ;\n- de demander des documents d’identité ;\n- d’inscrire l’enfant à l’école.",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de la déclaration de naissance....",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de la déclaration de naissance.\n\nLa déclaration de naissance, à quoi ça sert ?\nLa déclaration de naissance est obligatoire. Elle doit être réalisée dans les 5 jours qui suivent la naissance, par le père, la mère ou par une personne qui a assisté à l’accouchement.\n\nLa déclaration de naissance doit être faite à la mairie du lieu de naissance. Elle permet à l'officier d'état civil d'établir l'acte de naissance de l'enfant.\n\nCet acte de naissance permet :\n\n- d’obtenir des droits sociaux (allocations, Sécurité sociale…) ;\n- de demander des documents d’identité ;\n- d’inscrire l’enfant à l’école.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 23,
             "question": "Quels papiers sont nécessaires pour déclarer une naissance ?",
-            "correctAnswer": "nécessaires à la déclaration d’une naissance",
+            "correctAnswer": "en général, attestation du médecin ou de la sage-femme",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Pour faire la déclaration de naissance, vous devez présenter :"
+                "gratuite, laïque et obligatoire"
             ],
-            "explanation": "Quels documents sont nécessaires à la déclaration d’une naissance ?\nPour faire la déclaration de naissance, vous devez présenter :...",
+            "explanation": "Quels documents sont nécessaires à la déclaration d’une naissance ?\nPour faire la déclaration de naissance, vous devez présenter :\n\n- la pièce d'identité des parents (ou du parent) ;\n- le certificat médical d'accouchement (en général, attestation du médecin ou de la sage-femme) ;\n- la déclaration de choix de nom si les parents font cette démarche ;\n- l’acte de reconnaissance si celui-ci a été établi avant la naissance ;\n- le justificatif de domicile (ou de résidence) de moins de 3 mois du père, si l'enfant n'a pas encore été reconnu et que le père souhaite le reconnaître ;\n- le livret de famille pour y inscrire l'enfant, si les parents possèdent déjà un livret.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 24,
             "question": "Quelles sont les conditions pour se marier ?",
-            "correctAnswer": "Deux personnes, de sexe différent ou de même sexe, peuvent se marier si ces personnes :",
+            "correctAnswer": "adoptée, le gouvernement doit démissionner immédiatement",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Il peut y avoir de la discrimination au travail à différents moments."
+                "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc."
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives relatives à la situation familiale et notamment la déclaration de mariage....",
+            "explanation": "Pour qu'une motion de censure soit adoptée à l’Assemblée nationale, elle doit respecter plusieurs conditions notamment : - Être déposée par au moins 1/10ᵉ des députés (soit 58 sur 577). - Être votée à la majorité absolue des députés, soit au moins 289 voix sur 577. Si elle est adoptée, le gouvernement doit démissionner immédiatement.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 25,
             "question": "Où se marie-t-on civilement ?",
-            "correctAnswer": "Comment célébrer le mariage civil",
+            "correctAnswer": "célébré dans la commune où vit au moins l’un des 2 futurs mariés ou l’un de leurs parents",
             "incorrectAnswers": [
                 "Dans un autre lieu ou service",
                 "Uniquement en ligne ou uniquement en présentiel",
                 "C'est une interprétation partielle ou incomplète de la réalité"
             ],
-            "explanation": "Comment célébrer le mariage civil ?\nLe mariage est célébré dans la commune où vit au moins l’un des 2 futurs mariés ou l’un de leurs parents....",
+            "explanation": "Comment célébrer le mariage civil ?\nLe mariage est célébré dans la commune où vit au moins l’un des 2 futurs mariés ou l’un de leurs parents.\n\nPour vous marier, voici les documents à préparer :\n\n- vos pièces d’identité (originales et photocopies) ;\n- un justificatif de domicile (daté de plus de 1 mois) ;\n- vos actes de naissance ;\n- informations d’identité sur les témoins et photocopie de leurs papiers d’identité.\nLe jour de la cérémonie de mariage civil, l’acte de mariage français et un livret de famille vous seront remis.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
         {
             "id": 26,
             "question": "Comment valider un mariage étranger en France ?",
-            "correctAnswer": "Mariage à l’étranger, comment faire reconnaître le mariage en France",
+            "correctAnswer": "inscription de l’acte de mariage étranger dans les registres de l’état civil français",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Mariage à l’étranger, comment faire reconnaître le mariage en France ?\nLa transcription d’un mariage civil célébré à l’étranger (inscription de l’acte de mariage étranger dans les registres de l’état civil français) permet la reconnaissance officielle d’un mariage par la France. Pour faire cette transcription, rendez-vous dans les consulats français à l’étranger ou auprès du Service Central d'État Civil (SCEC) du ministère des Affaires étrangères....",
+            "explanation": "Mariage à l’étranger, comment faire reconnaître le mariage en France ?\nLa transcription d’un mariage civil célébré à l’étranger (inscription de l’acte de mariage étranger dans les registres de l’état civil français) permet la reconnaissance officielle d’un mariage par la France. Pour faire cette transcription, rendez-vous dans les consulats français à l’étranger ou auprès du Service Central d'État Civil (SCEC) du ministère des Affaires étrangères.\n\nUn acte de mariage français et un livret de famille vous seront ensuite remis.",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
@@ -347,35 +347,35 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est facultatif ou optionnel"
+                "Oui, de 3 à 16 ans pour tous les enfants résidant en France."
             ],
-            "explanation": "Elle permet d'obtenir l'acte de décès nécessaire aux démarches (succession, etc).",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives du quotidien, et notamment celle de la déclaration de décès.\n\nLa déclaration de décès en France\nLa déclaration de décès est obligatoire, gratuite et doit être faite à la mairie dès que possible après la constatation du décès. Elle permet d’officialiser le décès et de débuter les obsèques.\n\nLa déclaration du décès à la mairie peut être faite par toute personne majeure qui possède des renseignements sur l’état civil du défunt.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 28,
             "question": "Qui constate le décès ?",
-            "correctAnswer": "Comment déclarer le décès",
+            "correctAnswer": "Une personne est décédée, voici comment agir :\n\nLa constatation du décès\n- Si le décès a eu lieu à l’hôpital ou dans un EHPAD, c'est un professionnel de santé qui constate le décès et qui établit le certificat de décès",
             "incorrectAnswers": [
                 "D'autres personnes ou institutions",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Comment déclarer le décès ?\nUne personne est décédée, voici comment agir :...",
+            "explanation": "Comment déclarer le décès ?\nUne personne est décédée, voici comment agir :\n\nLa constatation du décès\n- Si le décès a eu lieu à l’hôpital ou dans un EHPAD, c'est un professionnel de santé qui constate le décès et qui établit le certificat de décès.\n- Si le décès a eu lieu à domicile, il faut appeler le médecin traitant de la personne décédée ou SOS Médecins.\n- Si le décès a eu lieu sur la voie publique, il faut appeler la police ou la gendarmerie qui établira le certificat de décès.\n\nPrévenir ses proches\nFamille, amis, voisins…\n\nLa déclaration de décès à la mairie\nToute personne majeure peut déclarer le décès, de préférence un proche. Par exemple un parent ou une personne possédant des renseignements sur l'état civil du défunt.\n\nLa personne qui déclarer le décès doit présenter :\n\n- sa pièce d’identité ;\n- le certificat de décès (si possible) ;\n- un document d’identité de la personne décédée.\n\nPrévenir l’employeur\nde la personne décédée.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 29,
             "question": "Comment chercher un logement social ?",
-            "correctAnswer": "Comment trouver un logement",
+            "correctAnswer": "Pour trouver un logement privé, consultez les annonces des agences immobilières ou celles des sites spécialisés",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives relatives à la recherche de logement....",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives relatives à la recherche de logement.\n\nComment trouver un logement ?\nPour trouver un logement privé, consultez les annonces des agences immobilières ou celles des sites spécialisés.\nVous devrez notamment présenter une pièce d’identité, un justificatif de revenus, les quittances de loyer précédentes…\n\nPour un logement social, faites une demande en ligne sur le site (Ouvre une nouvelle fenêtre)demande-logement-social.gouv.fr.\nVous devrez notamment présenter votre pièce d’identité, un avis d’imposition, un justificatif de situation familiale…",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
@@ -388,20 +388,20 @@
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Le bail, contrat de location, à quoi ça sert ?\nLe bail est un contrat écrit entre le bailleur (le plus souvent le propriétaire) et le locataire dans lequel :...",
+            "explanation": "Le bail, contrat de location, à quoi ça sert ?\nLe bail est un contrat écrit entre le bailleur (le plus souvent le propriétaire) et le locataire dans lequel :\n\n- le bailleur s’engage à louer le bien à un montant fixé à l’avance (selon la taille du logement) au locataire ;\n- le locataire s’engage à payer le loyer et les charges et à respecter certaines obligations.\nLe bail est le seul document qui autorise à vivre dans un logement : il est valide seulement s'il est signé par le locataire et le propriétaire.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 31,
             "question": "Quand un locataire peut-il partir ?",
-            "correctAnswer": "la durée minimale entre la notification et la fin du contrat effectif)",
+            "correctAnswer": "si le logement est meublé, si le logement est situé en zone tendue, en cas de problème de santé, en cas de changement professionnel…",
             "incorrectAnswers": [
                 "À une date différente de celle indiquée",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Qui peut interrompre le bail ?\nLe contrat de location peut prendre fin à la fin de la durée qu’il se fixe....",
+            "explanation": "Qui peut interrompre le bail ?\nLe contrat de location peut prendre fin à la fin de la durée qu’il se fixe.\n\nIl peut être interrompu plus rapidement :\n\n- par le bailleur, sous certaines conditions ;\n- par le locataire, à tout moment, en respectant le délai de préavis de 3 mois (qui est la durée minimale entre la notification et la fin du contrat effectif). Le préavis est de 1 mois sous certaines conditions (si le logement est meublé, si le logement est situé en zone tendue, en cas de problème de santé, en cas de changement professionnel…).",
             "subTheme": "demarches_administratives",
             "questionType": "situation"
         },
@@ -412,139 +412,139 @@
             "incorrectAnswers": [
                 "Des obligations qui concernent uniquement les résidents étrangers",
                 "Des devoirs qui s'appliquent uniquement aux citoyens français",
-                "les droits et devoirs du bailleur (propriétaire) ?"
+                "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc."
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives relatives au contrat de location du logement....",
+            "explanation": "Dans cette fiche, vous allez découvrir les démarches administratives relatives au contrat de location du logement.\n\nQuels sont les droits et devoirs du bailleur (propriétaire) ?\nLe propriétaire a pour droits de :\n\n- recevoir le loyer et les charges convenus ;\n- interrompre le bail ou empêcher son renouvellement, sous certaines conditions.\n\nLe propriétaire a pour obligations de :\n\n- louer un logement \"décent\", qui respecte la sécurité et la santé du locataire ;\n- donner au locataire les documents obligatoires lors de la signature du contrat de location et en cours de bail : contrat de bail, état des lieux, diagnostics techniques...\n- assurer les réparations majeures et l'entretien du logement.",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 33,
             "question": "Quelles sont les obligations du locataire ?",
-            "correctAnswer": "les droits et devoirs du locataire",
+            "correctAnswer": "Le locataire a pour droits de :\n\n- profiter paisiblement du logement ;\n- demander au propriétaire la réalisation des réparations nécessaires ;\n- quitter le logement en respectant le délai de préavis (de 3 mois en général, ou d’1 mois sous conditions)",
             "incorrectAnswers": [
                 "Des obligations qui concernent uniquement les résidents étrangers",
                 "Des devoirs qui s'appliquent uniquement aux citoyens français",
-                "à la charge du locataire pendant toute la durée du bail) ;"
+                "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc."
             ],
-            "explanation": "Quels sont les droits et devoirs du locataire ?\nLe locataire a pour droits de :...",
+            "explanation": "Quels sont les droits et devoirs du locataire ?\nLe locataire a pour droits de :\n\n- profiter paisiblement du logement ;\n- demander au propriétaire la réalisation des réparations nécessaires ;\n- quitter le logement en respectant le délai de préavis (de 3 mois en général, ou d’1 mois sous conditions).\n\nLe locataire a pour obligations de :\n\n- payer le loyer et les charges aux dates prévues ;\n- souscrire une assurance habitation couvrant les risques locatifs (incendie, dégât des eaux...) ;\n- assurer l'entretien courant du logement et effectuer les réparations locatives (petites réparations qui sont à la charge du locataire pendant toute la durée du bail) ;\n- utiliser paisiblement les lieux et respecter le \"règlement de copropriété\".",
             "subTheme": "demarches_administratives",
             "questionType": "knowledge"
         },
         {
             "id": 34,
             "question": "Quel numéro appeler pour une urgence médicale ?",
-            "correctAnswer": "Qui contacter en cas de problème",
+            "correctAnswer": "disponible par application, internet et sms",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "- Une femme victime de violence"
+                "adoptée automatiquement si aucune motion n’a été votée"
             ],
-            "explanation": "Qui contacter en cas de problème ?\nEn cas d’urgence, les services d’urgence et d’autres services peuvent être contactés 24h/24 et 7j/7 par téléphone. Ces appels sont gratuits....",
+            "explanation": "Qui contacter en cas de problème ?\nEn cas d’urgence, les services d’urgence et d’autres services peuvent être contactés 24h/24 et 7j/7 par téléphone. Ces appels sont gratuits.\n\nLes numéros d’urgence principaux sont :\n\n- le 15, le numéro du SAMU, en cas d’urgence médicale ;\n- le 17, la police, pour signaler une infraction ;\n- le 18, les pompiers, si une situation de péril ou d’accident se présente ;\n- le 114, pour les personnes sourdes, sourdaveugles, malentendantes, aphasiques (disponible par application, internet et sms) ;\n- le 196 (sur le littoral) ou le canal 16 (en mer) pour les secours maritimes ;\n- le 112, numéro d’urgence européen : urgence médicale, infraction ou péril/accident.",
             "subTheme": "services_publics",
             "questionType": "situation"
         },
         {
             "id": 35,
             "question": "Quel est le numéro d'urgence européen ?",
-            "correctAnswer": "gratuit : le fait de décrocher ne vous sera pas facturé, ni surtaxé",
+            "correctAnswer": "- Infraction (violences, agression, vol, cambriolages) : 17 ou le 112 (ou 114)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Dans quel cas contacter quel service ?\n- Malaise, accident de la route, incendie, personne blessée : 15, 18 ou 112 (ou 114).\n- Infraction (violences, agression, vol, cambriolages) : 17 ou le 112 (ou 114).\n- Assistance aux SDF (sans domicile fixe) : 115.\n- Enfance en danger (violence sur mineurs) : 119 et 116 111 (numéro européen)\n- Secours aéronautiques : 191.\n- Secours maritimes : 196, canal 16 de la radio VHF en mer (ou le 112 depuis le littoral).\n- Alerte attentat : 197.\n- Enfants disparus : ...",
+            "explanation": "Dans quel cas contacter quel service ?\n- Malaise, accident de la route, incendie, personne blessée : 15, 18 ou 112 (ou 114).\n- Infraction (violences, agression, vol, cambriolages) : 17 ou le 112 (ou 114).\n- Assistance aux SDF (sans domicile fixe) : 115.\n- Enfance en danger (violence sur mineurs) : 119 et 116 111 (numéro européen)\n- Secours aéronautiques : 191.\n- Secours maritimes : 196, canal 16 de la radio VHF en mer (ou le 112 depuis le littoral).\n- Alerte attentat : 197.\n- Enfants disparus : 116 000.\n- Risque pour la sécurité dans les transports en commun : 3117 ou par SMS au 31 177.\n- Prévention du suicide : 31 14.\n\nÀ noter\n\nLes services d’urgence utilisent un numéro unique, le 0 800 112 112, pour rappeler les personnes ayant contacté les secours.\n\nCe numéro est gratuit : le fait de décrocher ne vous sera pas facturé, ni surtaxé. Il n'y a aucun risque à répondre à cet appel, ce n'est pas un spam.\n\nAjoutez-le à vos contacts sous l'appellation “Services d’urgence” : vous pouvez répondre en toute confiance.",
             "subTheme": "services_publics",
             "questionType": "knowledge"
         },
         {
             "id": 36,
             "question": "Que faire pour un problème de santé non urgent ?",
-            "correctAnswer": "Que faire en cas de problème de santé en France",
+            "correctAnswer": "Selon l’urgence de votre problème de santé, vous pouvez :\n\n- Consulter un médecin\nPour un problème de santé courant, on commence généralement par consulter un médecin traitant (médecin généraliste de référence pour le patient)",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Que faire en cas de problème de santé en France ?\nSelon l’urgence de votre problème de santé, vous pouvez :...",
+            "explanation": "Que faire en cas de problème de santé en France ?\nSelon l’urgence de votre problème de santé, vous pouvez :\n\n- Consulter un médecin\nPour un problème de santé courant, on commence généralement par consulter un médecin traitant (médecin généraliste de référence pour le patient).\n\nC’est ce qu’on appelle le parcours de soins coordonnés : c’est le fait de consulter d'abord son médecin traitant, qui va ensuite orienter le patient vers d'autres professionnels de santé si nécessaire, notamment des médecins spécialistes (exemples : cardiologue, dermatologue…).\n\n- Aller à l’hôpital\nEn cas de situation grave (accident, douleurs violentes, malaise grave…), on se rend à l’hôpital, en urgence ou sur rendez-vous. En effet, beaucoup de spécialistes reçoivent leurs patients dans les locaux d’un hôpital.\n\n- Aller en pharmacie\n\nUne pharmacie est un établissement médical où vous pouvez récupérer et acheter des médicaments et autres produits de santé (compléments alimentaires, dispositifs médicaux…).\n\nAprès la consultation avec votre médecin, rendez-vous en pharmacie avec la prescription médicale pour que le pharmacien vous délivre les traitements (médicaments et dispositifs médicaux) prescrits et vous conseille sur leur utilisation.",
             "subTheme": "sante",
             "questionType": "situation"
         },
         {
             "id": 37,
             "question": "Pourquoi déclarer un médecin traitant ?",
-            "correctAnswer": "formé pour assurer des soins de premier recours (prévention, dépistage, diagnostic, traitement, orientation, éducation pour la santé)",
+            "correctAnswer": "prévention, dépistage, diagnostic, traitement, orientation, éducation pour la santé",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "importants, plus la part prélevée par l’État l’est également"
+                "taxe foncière sur les propriétés, enlèvement des ordures ménagères..."
             ],
-            "explanation": "Le parcours de soins coordonnés garantit un meilleur taux de remboursement.",
+            "explanation": "Pourquoi consulter un médecin généraliste ?\nLe médecin généraliste est formé pour assurer des soins de premier recours (prévention, dépistage, diagnostic, traitement, orientation, éducation pour la santé). Il prend en charge des patients de tout âge, pour des problèmes courants ou chroniques.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 38,
             "question": "A quoi sert la carte Vitale ?",
-            "correctAnswer": "officiellement déclaré par le patient pour assurer le suivi médical et coordonner les soins",
+            "correctAnswer": "médecins spécialistes, médecins hospitaliers,...",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
-            "explanation": "Un médecin traitant, c’est quoi ?\nLe médecin généraliste devient médecin traitant lorsqu’il est officiellement déclaré par le patient pour assurer le suivi médical et coordonner les soins....",
+            "explanation": "Un médecin traitant, c’est quoi ?\nLe médecin généraliste devient médecin traitant lorsqu’il est officiellement déclaré par le patient pour assurer le suivi médical et coordonner les soins.\n\nLe médecin traitant est celui qui :\n\n- soigne et suit le patient régulièrement : c’est lui qu’il faut consulter en premier pour un avis sur sa santé et qui s'assure que le suivi médical est optimal ;\n- oriente dans le parcours de soins coordonnés : c’est l’interlocuteur privilégié, il informe et vous met, si besoin, en relation avec d'autres professionnels de santé (médecins spécialistes, médecins hospitaliers,...) ;\n- connaît et gère votre dossier médical : il centralise toutes les informations concernant vos soins et votre état de santé. Il tient à jour votre dossier médical (résultats d'examens, diagnostics, traitements...) ;\n- assure une prévention personnenalisée : il assure le suivi de la vaccination, les examens de dépistage organisés (exemple : dépistage du cancer colorectal), peut aider à l'arrêt du tabac, donne des conseils santé en fonction de votre style de vie, de votre âge ou de vos antécédents familiaux, des conseils en nutrition…\n- établit le protocole de soins à suivre si le patient est atteint d'une affection de longue durée. Il le construit en concertation avec les autres médecins qui suivent la maladie.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 39,
             "question": "Comment prendre rendez-vous chez le médecin ?",
-            "correctAnswer": "Comment prendre rendez-vous avec un médecin traitant",
+            "correctAnswer": "Pour prendre un rendez-vous avec un médecin généraliste :",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La prise de rendez-vous est libre.",
+            "explanation": "Comment prendre rendez-vous avec un médecin traitant ?\nPour prendre un rendez-vous avec un médecin généraliste :\n\n- appelez le cabinet de votre médecin traitant ;\n- réservez un rendez-vous en ligne sur la plateforme de votre médecin (exemple : Doctolib, Maiia…).",
             "subTheme": "sante",
             "questionType": "situation"
         },
         {
             "id": 40,
             "question": "Qu'est-ce qu'un médecin spécialiste ?",
-            "correctAnswer": "Pourquoi consulter un médecin spécialiste",
+            "correctAnswer": "un professionnel de santé qui possède une formation approfondie dans un domaine médical précis",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Le médecin spécialiste est un professionnel de santé qui possède une formation approfondie dans un domaine médical précis"
+                "exemple : (Ouvre une nouvelle fenêtre"
             ],
-            "explanation": "Il traite des pathologies spécifiques (cardiologue, dermatologue, etc).",
+            "explanation": "Pourquoi consulter un médecin spécialiste ?\nLe médecin spécialiste est un professionnel de santé qui possède une formation approfondie dans un domaine médical précis. Exemple : la cardiologie, la dermatologie, la gynécologie ou la neurologie.\n\nIl intervient généralement pour diagnostiquer et traiter des problèmes spécifiques ou complexes qui nécessitent des compétences particulières.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 41,
             "question": "Doit-on passer par le généraliste pour voir un spécialiste ?",
-            "correctAnswer": "Quand consulter un spécialiste",
+            "correctAnswer": "spécialiste des yeux et de la vision",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Quand consulter un spécialiste ?\nDans le cadre du parcours de soins coordonnés, le médecin généraliste (qui peut être le médecin traitant) prescrit le rendez-vous avec un médecin spécialiste avec une ordonnance....",
+            "explanation": "Quand consulter un spécialiste ?\nDans le cadre du parcours de soins coordonnés, le médecin généraliste (qui peut être le médecin traitant) prescrit le rendez-vous avec un médecin spécialiste avec une ordonnance.\n\nMais vous pouvez vous-mêmes prendre rendez-vous avec un médecin spécialiste, comme par exemple avec :\n\n- un ophtalmologue (spécialiste des yeux et de la vision) ;\n- un gynécologue (spécialiste de la santé des femmes et de la grossesse) ;\n- un pédiatre (médecin spécialisé dans la santé des enfants) ;\n- un psychiatre (médecin qui traite les troubles mentaux et émotionnels) ;\n- un neuropsychiatre (psychiatre spécialisé dans les maladies du cerveau et du système nerveux).",
             "subTheme": "sante",
             "questionType": "situation"
         },
         {
             "id": 42,
             "question": "Où se faire soigner gratuitement si on n'a pas d'argent ?",
-            "correctAnswer": "souvent plus long, sauf en cas d’urgence",
+            "correctAnswer": "exemple : (Ouvre une nouvelle fenêtre",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "L'hôpital public accueille tout le monde, même sans couverture sociale immédiate.",
+            "explanation": "Comment prendre rendez-vous avec un médecin spécialiste ?\nPour prendre un rendez-vous avec un médecin spécialiste :\n\n- appelez le cabinet de votre médecin spécialiste ;\n- réservez un rendez-vous en ligne sur la plateforme de votre médecin (exemple : (Ouvre une nouvelle fenêtre)Doctolib, (Ouvre une nouvelle fenêtre)Maiia…).\nLe délai d’attente est souvent plus long, sauf en cas d’urgence.",
             "subTheme": "sante",
             "questionType": "situation"
         },
@@ -557,7 +557,7 @@
                 "Uniquement en ligne ou uniquement en présentiel",
                 "C'est une interprétation partielle ou incomplète de la réalité"
             ],
-            "explanation": "La PMI suit les femmes enceintes et les enfants jusqu'à 6 ans.",
+            "explanation": "Une structure d’accueil gratuite, c’est quoi ?\nEn France, de nombreuses structures permettent d’être soigné sans payer. Elles font partie du service public proposé par l’État.\n\nCertaines structures sont généralistes, d’autres spécialisées pour un type d’accompagnement.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
@@ -570,7 +570,7 @@
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Vers quelle structure me diriger ?...",
+            "explanation": "Vers quelle structure me diriger ?\n\nSoins généralistes\n- Pour des soins généralistes : les permanences d’accès aux soins de santé (PASS) de presque tous les hôpitaux publics sont ouvertes à tous. Le personnel soignant vous redirigera vers les spécialistes dont vous avez besoin. Certaines PASS sont spécialisées pour les maladies : des yeux (ophtalmologie), des dents (bucco-dentaires), de la peau (dermatologie).\n- Pour se faire vacciner : vous pouvez demander à un médecin, une sage-femme, un pharmacien ou un infirmier.\n- Pour les femmes enceintes et les enfants de moins de 6 ans (soins et conseils) : rendez-vous dans les centres de protection maternelle et infantile (PMI).\n\nSoins spécialisés\n- Pour avoir une contraception, des conseils sur la sexualité, un accompagnement à l'interruption volontaire de grossesse (IVG) : dans les centres de santé sexuelle.\n- Pour le dépistage du SIDA, hépatites et infections sexuellement transmissibles (IST) : dans les centres gratuits d’information, de dépistage et de diagnostic des infections par le VIH, hépatites et IST (CeGIDD).\n- Pour soigner les addictions : dans les centres de soin, d'accompagnement et de prévention en addictologie (CSAPA) et dans les services alcoologie - addictions des hôpitaux publics.\n- Pour dépister et soigner la tuberculose : dans les centres de lutte anti-tuberculose (CLAT).\n- Pour prendre soin de sa santé mentale : les permanences d'accès aux soins de santé en psychiatrie (PASS Psy) ou Centres régionaux de psychotraumatisme (CRP) ou Centres médico-psychologiques (CMP).\n- Pour la santé mentale des enfants : les centres médico-psychologiques enfants et adolescents (CMPEA) ou Centres médico-psychopédagogiques (CMPP).",
             "subTheme": "sante",
             "questionType": "situation"
         },
@@ -583,46 +583,46 @@
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La permanence des soins est assurée en dehors des heures d'ouverture.",
+            "explanation": "Les services d’urgence, c’est quoi ?\nLes services d’urgence des hôpitaux sont destinés uniquement aux détresses et urgences les plus graves.\n\nCe service accueille toute personne en situation d’urgence (y compris psychiatriques) et la prend en charge. Les services d’urgence sont ouverts 24h/24 et 7j/7 afin de prendre en charge les urgences vitales et les blessures graves qui nécessitent une prise en charge immédiate.",
             "subTheme": "sante",
             "questionType": "situation"
         },
         {
             "id": 46,
             "question": "Qu'est-ce que la PUMa ?",
-            "correctAnswer": "joignable 24h/24 et 7j/7",
+            "correctAnswer": "en cas de forte fièvre, de douleurs importantes ou de malaise",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Qui contacter en cas d’urgence ?...",
+            "explanation": "Qui contacter en cas d’urgence ?\n\n- Sans danger vital immédiat (en cas de forte fièvre, de douleurs importantes ou de malaise) : vous pouvez contacter SOS Médecins au 3624 (0,16 €/minute). En cas de nécessité, un médecin peut venir à domicile, de jour comme de nuit (tarifs conventionnés). Le numéro est joignable 24h/24 et 7j/7.\n- En cas de danger vital (blessure grave, détresse respiratoire, perte de connaissance ou tout autre danger vital) : il faut appeler le SAMU au 15 ou 114 (appel d’urgence pour sourds et malentendants). Une équipe médicale pourra évaluer la situation et envoyer une ambulance si nécessaire. Le numéro est joignable gratuitement 24h/24 et 7j/7.\n\nSi l’état de santé nécessite une prise en charge rapide (entorse, plaie profonde…) mais permet le déplacement, vous pouvez vous rendre directement aux urgences de l’hôpital le plus proche.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 47,
             "question": "A quoi sert une mutuelle ?",
-            "correctAnswer": "les autres numéros d’urgence médicale",
+            "correctAnswer": "un document qu'une personne envoie à une entreprise dans le but d'être embauché dans cette entreprise",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
-            "explanation": "C'est une assurance complémentaire facultative mais recommandée.",
+            "explanation": "Quels sont les autres numéros d’urgence médicale ?\n- Un enfant en danger ? Appelez le 119.\n- Une femme victime de violence ? Appelez le 3919.\n- Pour la prévention du suicide : 3114 et en anglais : 01 46 21 46 46.\nRetrouvez tous les numéros d’urgence dans la fiche ANNEXE dédiée.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 48,
             "question": "La Complémentaire Santé Solidaire (C2S), c'est pour qui ?",
-            "correctAnswer": "La protection universelle maladie (PUMa), c’est quoi",
+            "correctAnswer": "sous certaines conditions : il faut être affilié à l’assurance maladie et respecter un plafond de ressources.",
             "incorrectAnswers": [
                 "D'autres personnes ou institutions",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La protection universelle maladie (PUMa), c’est quoi ?\nLes soins de santé coûtent cher, et ils sont en grande partie financés par les cotisations sociales payées par les personnes qui travaillent....",
+            "explanation": "La Complémentaire Santé Solidaire (C2S), c’est quoi ?\nLa Complémentaire Santé Solidaire est une couverture complémentaire qui prend en charge les dépenses de santé des personnes aux ressources modestes. Selon vos ressources, elle peut être gratuite ou coûter moins de 1 € par jour.\n\nCette complémentaire Santé Solidaire permet de recevoir des soins sans faire d’avance de frais quand il s’agit de consultations médicales, dentaires, hospitalières, les médicaments, lunettes, prothèses dentaires et auditives (sous certaines conditions : il faut être affilié à l’assurance maladie et respecter un plafond de ressources.).\n\nSi vous êtes bénéficiaire, tous les membres de votre foyer le sont aussi.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
@@ -635,163 +635,163 @@
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La couverture complémentaire, c’est quoi ?\nLa couverture complémentaire complète la couverture de base assurée par la protection universelle maladie (PUMa). On l’appelle aussi la mutuelle....",
+            "explanation": "La couverture complémentaire, c’est quoi ?\nLa couverture complémentaire complète la couverture de base assurée par la protection universelle maladie (PUMa). On l’appelle aussi la mutuelle.\n\nLa mutuelle n’est pas obligatoire mais elle est recommandée afin de compléter la prise en charge financière des soins, des médicaments, des indemnités en cas d’arrêt de travail…\n\nL’employeur peut prendre en charge une partie du coût de votre complémentaire santé. Tout employeur du secteur privé a l’obligation de vous en proposer une.\n\nLa prise en charge financière complémentaire est plus ou moins importante selon le niveau de couverture choisi. Les membres de votre foyer peuvent être couverts par votre couverture complémentaire.",
             "subTheme": "sante",
             "questionType": "situation"
         },
         {
             "id": 50,
             "question": "Le secret médical est-il absolu ?",
-            "correctAnswer": "La Complémentaire Santé Solidaire (C2S), c’est quoi",
+            "correctAnswer": "Pour bien soigner, les professionnels de santé peuvent échanger entre eux : c’est le secret médical partagé, défini par la loi",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "le secret médical partagé, défini par la loi"
             ],
-            "explanation": "La Complémentaire Santé Solidaire (C2S), c’est quoi ?\nLa Complémentaire Santé Solidaire est une couverture complémentaire qui prend en charge les dépenses de santé des personnes aux ressources modestes. Selon vos ressources, elle peut être gratuite ou coûter moins de 1 € par jour....",
+            "explanation": "Le secret médical, c’est quoi ?\nLe secret médical protège toutes les informations connues par le professionnel de santé : état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de la consultation. Le secret médical continue, même après la mort du patient.\n\nPour bien soigner, les professionnels de santé peuvent échanger entre eux : c’est le secret médical partagé, défini par la loi.\n\nLe professionnel de santé peut aussi communiquer des informations pour :\n\n- déclarer les naissances ;\n- déclarer les décès ;\n- déclarer aux autorités sanitaires certaines maladies graves ou contagieuses qui nécessitent une intervention urgente.\n\nLe principe de confidentialité fait que le médecin est obligé de garder secrètes les informations médicales d'un patient.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 51,
             "question": "Qu'est-ce que le dépistage ?",
-            "correctAnswer": "Les médecins de garde, c’est quoi",
+            "correctAnswer": "une méthode de prévention efficace qui permet de détecter les maladies tôt and, par conséquent, d’augmenter les chances de guérison grâce à un traitement rapide",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Les médecins de garde, c’est quoi ?\nUn médecin de garde est un médecin généraliste qui fait des consultations en dehors des heures d’ouverture des cabinets médicaux (soir, nuits, week-ends, jours fériés)....",
+            "explanation": "Le dépistage, c’est quoi ?\nLe dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes. C’est une méthode de prévention efficace qui permet de détecter les maladies tôt and, par conséquent, d’augmenter les chances de guérison grâce à un traitement rapide.\n\nLes dépistages les plus fréquents concernent :\n\n- les cancers ;\n- les maladies du cœur et des poumons ;\n- les infections, notamment les infections sexuellement transmissibles (IST).\nLe dépistage est proposé en priorité aux personnes les plus à risque de développer une maladie. Il est fait régulièrement, selon un calendrier précis, pour une meilleure surveillance.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 52,
             "question": "La vaccination est-elle obligatoire ?",
-            "correctAnswer": "une pharmacie désignée pour rester ouverte lorsque les autres sont fermées (soir, nuits, week-ends, jours fériés)",
+            "correctAnswer": "Une pharmacie de garde est une pharmacie désignée pour rester ouverte lorsque les autres sont fermées (soir, nuits, week-ends, jours fériés)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Oui, de 3 à 16 ans pour tous les enfants résidant en France."
             ],
-            "explanation": "Les pharmacies de garde, c’est quoi ?\nUne pharmacie de garde est une pharmacie désignée pour rester ouverte lorsque les autres sont fermées (soir, nuits, week-ends, jours fériés). Les pharmacies sont désignées à tour de rôle....",
+            "explanation": "Les pharmacies de garde, c’est quoi ?\nUne pharmacie de garde est une pharmacie désignée pour rester ouverte lorsque les autres sont fermées (soir, nuits, week-ends, jours fériés). Les pharmacies sont désignées à tour de rôle.\n\nLa pharmacie de garde permet notamment d’obtenir des médicaments en urgence et d’assurer une continuité des soins.\n\nPour savoir où est la pharmacie de garde la plus proche de chez vous, prenez contact avec la gendarmerie ou la police (17) ou appelez le 32 37 (0,35 €/minute).",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 53,
             "question": "Qu'est-ce que la santé mentale ?",
-            "correctAnswer": "plus valide, quelle prise en charge des frais de santé",
+            "correctAnswer": "C’est quand une personne se sent bien dans sa tête (exemple : elle sait gérer son stress) et avec les autres",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir la couverture maladie quand le titre de séjour n’est plus valable....",
+            "explanation": "La santé mentale, c’est quoi ?\nLa santé mentale désigne un état de bien-être psychique, émotionnel et social. C’est quand une personne se sent bien dans sa tête (exemple : elle sait gérer son stress) et avec les autres.\n\nAvoir une bonne santé mentale, ce n’est pas seulement l’absence de troubles psychiques graves ; quand on a une bonne santé mentale, on peut affronter les problèmes de la vie, avoir des relations sociales équilibrées avec les autres, travailler et contribuer à la vie en société.",
             "subTheme": "sante",
             "questionType": "knowledge"
         },
         {
             "id": 54,
             "question": "A quoi sert France Travail ?",
-            "correctAnswer": "validée, vous recevez :",
+            "correctAnswer": "c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "de 35 heures par semaine"
             ],
-            "explanation": "Le remboursement des frais de santé, comment ça fonctionne ?\nVotre inscription à l’Assurance Maladie est obligatoire. Quand elle est validée, vous recevez :...",
+            "explanation": "S’inscrire à France Travail, à quoi ça sert ?\nChaque personne étrangère qui est en situation régulière (c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale), et qui n’a pas de travail, doit être inscrite à France Travail. C'est un organisme public qui accompagne les personnes à la recherche d'un emploi.\n\nCette inscription permet à la personne d’être accompagnée pour trouver un travail ou suivre une formation. Les solutions proposées sont adaptées à sa situation et à ses besoins.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
         {
             "id": 55,
             "question": "Qui doit s'inscrire à France Travail ?",
-            "correctAnswer": "à charge, remplir aussi le formulaire de rattachement des enfants ;",
+            "correctAnswer": "c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale",
             "incorrectAnswers": [
                 "D'autres personnes ou institutions",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir comment s’inscrire à la protection universelle maladie (PUMa) de l’Assurance maladie....",
+            "explanation": "S’inscrire à France Travail, à quoi ça sert ?\nChaque personne étrangère qui est en situation régulière (c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale), et qui n’a pas de travail, doit être inscrite à France Travail. C'est un organisme public qui accompagne les personnes à la recherche d'un emploi.\n\nCette inscription permet à la personne d’être accompagnée pour trouver un travail ou suivre une formation. Les solutions proposées sont adaptées à sa situation et à ses besoins.",
             "subTheme": "emploi_economie",
             "questionType": "situation"
         },
         {
             "id": 56,
             "question": "Comment s'inscrire à France Travail ?",
-            "correctAnswer": "valable dans la limite des capacités d’accueil des structures et si les modalités d’organisation de l’établissement ne s’y opposent pas",
+            "correctAnswer": "c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Le libre choix du praticien, c’est quoi ?\nLa loi garantit que toute personne a le droit de choisir librement son professionnel de santé et l’établissement dans lequel elle veut être soignée. Aucun praticien ou établissement ne peut être imposé à un patient....",
+            "explanation": "S’inscrire à France Travail, à quoi ça sert ?\nChaque personne étrangère qui est en situation régulière (c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale), et qui n’a pas de travail, doit être inscrite à France Travail. C'est un organisme public qui accompagne les personnes à la recherche d'un emploi.\n\nCette inscription permet à la personne d’être accompagnée pour trouver un travail ou suivre une formation. Les solutions proposées sont adaptées à sa situation et à ses besoins.",
             "subTheme": "emploi_economie",
             "questionType": "situation"
         },
         {
             "id": 57,
             "question": "Peut-on travailler sans parler français ?",
-            "correctAnswer": "le secret médical partagé, défini par la loi",
+            "correctAnswer": "Pour bien soigner, les professionnels de santé peuvent échanger entre eux : c’est le secret médical partagé, défini par la loi",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Le secret médical, c’est quoi ?\nLe secret médical protège toutes les informations connues par le professionnel de santé : état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de la consultation. Le secret médical continue, même après la mort du patient....",
+            "explanation": "Le secret médical, c’est quoi ?\nLe secret médical protège toutes les informations connues par le professionnel de santé : état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de la consultation. Le secret médical continue, même après la mort du patient.\n\nPour bien soigner, les professionnels de santé peuvent échanger entre eux : c’est le secret médical partagé, défini par la loi.\n\nLe professionnel de santé peut aussi communiquer des informations pour :\n\n- déclarer les naissances ;\n- déclarer les décès ;\n- déclarer aux autorités sanitaires certaines maladies graves ou contagieuses qui nécessitent une intervention urgente.\n\nLe principe de confidentialité fait que le médecin est obligé de garder secrètes les informations médicales d'un patient.",
             "subTheme": "emploi_economie",
             "questionType": "situation"
         },
         {
             "id": 58,
             "question": "Comment faire reconnaître un diplôme étranger ?",
-            "correctAnswer": "pas en capacité de recevoir ces informations) :",
+            "correctAnswer": "sauf s’il n’est pas en capacité de recevoir ces informations",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Le droit à l’information, c’est quoi ?...",
+            "explanation": "Le droit à l’information, c’est quoi ?\n\nAvant tout acte et après, le médecin doit expliquer au patient (sauf s’il n’est pas en capacité de recevoir ces informations) :\n\n- l’état de santé actuel et l’évolution possible ;\n- les soins ou examens prévus, à quoi ils servent et comment ils se déroulent ;\n- les risques, même s’ils sont rares ;\n- les autres options possibles ;\n- les conséquences d’un refus de soins.\n\nEn cas d’accident médical, le professionnel ou l’établissement doit informer la victime dans les 15 jours suivant la découverte du dommage.\n\nEnfin, toute personne a le droit d’accéder à son dossier médical et d’en demander une copie.",
             "subTheme": "emploi_economie",
             "questionType": "situation"
         },
         {
             "id": 59,
             "question": "Qu'est-ce que la VAE ?",
-            "correctAnswer": "pas conforme avec le principe de laïcité",
+            "correctAnswer": "Il peut vous être refusé d'accéder à votre demande à l'hôpital si celle-ci n'est pas conforme avec le principe de laïcité.",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Elle permet d'obtenir une certification grâce à ses années de travail.",
+            "explanation": "Les devoirs du patient : le respect des règles médicales et du principe de laïcité\nLe patient ne peut pas imposer à l'hôpital un choix ou un acte médical contraire aux protocoles ou à l'organisation du service public, que ce soit pour des raisons religieuses, philosophiques ou personnelles.\n\nIl peut vous être refusé d'accéder à votre demande à l'hôpital si celle-ci n'est pas conforme avec le principe de laïcité.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
         {
             "id": 60,
             "question": "Qu'est-ce qu'un contrat de travail ?",
-            "correctAnswer": "un ensemble d’actions, de mesures et d’outils (exemple : dépistage ou la vaccination) mis en place pour :",
+            "correctAnswer": "nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Le contrat de travail est nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur)."
+                "on l’appelle aussi le contrat d’intérim"
             ],
-            "explanation": "Il protège les deux parties.",
+            "explanation": "Un contrat de travail, qu’est-ce que c’est ?\nLe contrat de travail est nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur).\n\n- Il précise le salaire, les compétences et connaissances nécessaires, la durée du travail, les tâches du salarié.\n- Il entraîne des obligations pour le salarié et pour l’employeur.\n\nIl existe différents types de contrat de travail selon leur durée, la nature du travail à réaliser...",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
         {
             "id": 61,
             "question": "Qu'est-ce qu'un CDI ?",
-            "correctAnswer": "Le dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes",
+            "correctAnswer": "une méthode de prévention efficace qui permet de détecter les maladies tôt and, par conséquent, d’augmenter les chances de guérison grâce à un traitement rapide",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Le dépistage, c’est quoi ?\nLe dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes. C’est une méthode de prévention efficace qui permet de détecter les maladies tôt and, par conséquent, d’augmenter les chances de guérison grâce à un traitement rapide....",
+            "explanation": "Le dépistage, c’est quoi ?\nLe dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes. C’est une méthode de prévention efficace qui permet de détecter les maladies tôt and, par conséquent, d’augmenter les chances de guérison grâce à un traitement rapide.\n\nLes dépistages les plus fréquents concernent :\n\n- les cancers ;\n- les maladies du cœur et des poumons ;\n- les infections, notamment les infections sexuellement transmissibles (IST).\nLe dépistage est proposé en priorité aux personnes les plus à risque de développer une maladie. Il est fait régulièrement, selon un calendrier précis, pour une meilleure surveillance.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
@@ -804,33 +804,33 @@
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "La vaccination, c’est quoi ?\nLa vaccination est un moyen simple, sûr et efficace de se protéger des maladies dangereuses et des séquelles qu’elles peuvent laisser. Elle utilise les défenses naturelles de l’organisme pour renforcer le système immunitaire....",
+            "explanation": "La vaccination, c’est quoi ?\nLa vaccination est un moyen simple, sûr et efficace de se protéger des maladies dangereuses et des séquelles qu’elles peuvent laisser. Elle utilise les défenses naturelles de l’organisme pour renforcer le système immunitaire.\n\nPour optimiser son efficacité pour moi et pour les autres, il est important de respecter les obligations vaccinales et le calendrier des vaccinations. La liste des vaccins recommandés ou obligatoires est indiquée dans le carnet de santé et est mise à jour par le médecin à chaque consultation.\n\nL’entrée dans les structures collectives pour les enfants (crèches, écoles…) est conditionnée à la réalisation de certains vaccins.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
         {
             "id": 63,
             "question": "Quelle est la durée légale du travail ?",
-            "correctAnswer": "proposé aux plus de 18 ans et peut être réalisé à tout âge",
+            "correctAnswer": "La durée légale est de 35 heures par semaine.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "possible de travailler dès l'âge de 16 ans"
+                "de 35 heures par semaine"
             ],
-            "explanation": "Mon Bilan Prévention, c’est quoi ?\n“Mon Bilan Prévention” permet de faire un point global sur sa santé (en dehors de toute maladie) :...",
+            "explanation": "La durée légale est de 35 heures par semaine.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
         {
             "id": 64,
             "question": "Qu'est-ce que le SMIC ?",
-            "correctAnswer": "un état de bien-être psychique, émotionnel et social",
+            "correctAnswer": "C’est quand une personne se sent bien dans sa tête (exemple : elle sait gérer son stress) et avec les autres",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Nul ne peut être payé en dessous du SMIC.",
+            "explanation": "La santé mentale, c’est quoi ?\nLa santé mentale désigne un état de bien-être psychique, émotionnel et social. C’est quand une personne se sent bien dans sa tête (exemple : elle sait gérer son stress) et avec les autres.\n\nAvoir une bonne santé mentale, ce n’est pas seulement l’absence de troubles psychiques graves ; quand on a une bonne santé mentale, on peut affronter les problèmes de la vie, avoir des relations sociales équilibrées avec les autres, travailler et contribuer à la vie en société.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
@@ -843,7 +843,7 @@
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "C'est un droit acquis par tous les salariés.",
+            "explanation": "Vers qui se tourner ?\nSi vous, ou un proche, ne se sent pas bien, vous pouvez contacter :\n\n- le médecin traitant, qui assure le suivi régulier ;\n- un psychologue ou un psychiatre, des médecins spécialistes qui vous accompagnent en cabinet ou à l’hôpital ;\n- une structure de proximité comme les Centres Médico-Psychologiques (CMP) ;\n- les lignes d’écoute anonymes :\n    - 3114 : pour la prévention du suicide (24h/24) ;\n    - Fil Santé Jeunes : pour les jeunes.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
@@ -854,22 +854,22 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Je travaille de (Heure) à (Heure), du (Jour) au (Jour)."
             ],
-            "explanation": "On ne peut refuser un emploi pour l'origine, le sexe, ou la religion.",
+            "explanation": "Un renforcement des actions de prévention\nLa prévention concernant la santé mentale est une priorité pour accompagner au mieux et au plus tôt les patients.\n\nPlusieurs actions sont mises en place :\n\n- campagnes de sensibilisation grand public ;\n- interventions dans les écoles, universités et entreprises ;\n- forfait \"MonPsy\" : jusqu’à 8 séances chez un psychologue remboursées sous conditions.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
         {
             "id": 67,
             "question": "A quoi sert l'Inspection du travail ?",
-            "correctAnswer": "S’inscrire à France Travail, à quoi ça sert",
+            "correctAnswer": "Elle informe et conseille les employeurs, les salariés et les représentants du personnel.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
-            "explanation": "S’inscrire à France Travail, à quoi ça sert ?\nChaque personne étrangère qui est en situation régulière (c’est-à-dire qui a un titre de séjour, qui est réfugiée, ou qui bénéficie de la protection internationale), et qui n’a pas de travail, doit être inscrite à France Travail. C'est un organisme public qui accompagne les personnes à la recherche d'un emploi....",
+            "explanation": "Dans cette fiche, vous allez découvrir un acteur important du droit du travail : l’inspection du travail.\n\nÀ quoi sert l’inspection du travail ?\n\nElle informe et conseille les employeurs, les salariés et les représentants du personnel.",
             "subTheme": "emploi_economie",
             "questionType": "knowledge"
         },
@@ -880,48 +880,48 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "une activité professionnelle pour laquelle il n’y a pas de déclaration officielle"
+                "on l’appelle aussi travail dissimulé"
             ],
-            "explanation": "Le questionnaire d’orientation, qu’est-ce que c’est ?\nLe questionnaire d’orientation permet de faire un premier point sur les besoins de la personne....",
+            "explanation": "Le questionnaire d’orientation, qu’est-ce que c’est ?\nLe questionnaire d’orientation permet de faire un premier point sur les besoins de la personne.\n\nIl pose diverses questions sur la personne :\n\n- des questions générales, notamment si elle est célibataire, mariée, divorcée, veuve…\n- des questions sur son niveau en français ;\n- des questions sur son niveau d’utilisation d’internet et d’autres outils numériques ;\n- des questions professionnelles, notamment sur son expérience et ses compétences.\n\nLe questionnaire d’orientation existe en 5 langues.",
             "subTheme": "emploi_economie",
             "questionType": "situation"
         },
         {
             "id": 69,
             "question": "Quels sont les droits de l'enfant ?",
-            "correctAnswer": "des informations utiles, par exemple pour créer un CV facilement sans maîtriser le français",
+            "correctAnswer": "La liberté, la propriété, la sûreté et la résistance à l'oppression.",
             "incorrectAnswers": [
                 "Des droits réservés aux citoyens français uniquement",
                 "Des droits qui nécessitent une intervention de l'État pour exister",
-                "Pour faire la déclaration de naissance, vous devez présenter :"
+                "gratuite, laïque et obligatoire"
             ],
-            "explanation": "La Convention Internationale des Droits de l'Enfant les protège.",
+            "explanation": "La liberté, la propriété, la sûreté et la résistance à l'oppression.",
             "subTheme": "education_famille",
             "questionType": "knowledge"
         },
         {
             "id": 70,
             "question": "Qu'est-ce que l'autorité parentale ?",
-            "correctAnswer": "automatique pour deux catégories de personnes",
+            "correctAnswer": "s’ils sont mariés, pacsés, en concubinage ou séparés",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Elle s'exerce dans l'intérêt de l'enfant jusqu'à sa majorité.",
+            "explanation": "L’autorité parentale, qu’est-ce que c’est ?\nLes parents ont des droits et des devoirs vis-à-vis de leur enfant de moins de 18 ans. L’ensemble de ces droits et devoirs, c’est-à-dire ce qu’ils peuvent et ce qu’ils doivent faire, correspond à ce que l’on appelle l’autorité parentale.\n\nLes deux parents ont tous les deux l’autorité parentale : ils ont les mêmes droits et les mêmes devoirs. Peu importe leur situation (s’ils sont mariés, pacsés, en concubinage ou séparés).\n\nIls sont tous les deux responsables de leur enfant.",
             "subTheme": "education_famille",
             "questionType": "knowledge"
         },
         {
             "id": 71,
             "question": "L'école est-elle obligatoire ?",
-            "correctAnswer": "Votre inscription à France Travail est automatique si :",
+            "correctAnswer": "Oui, de 3 à 16 ans pour tous les enfants résidant en France.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "l'ancien maire de Paris Jules Ferry"
             ],
-            "explanation": "C'est un droit fondamental et un devoir des parents.",
+            "explanation": "Oui, de 3 à 16 ans pour tous les enfants résidant en France.",
             "subTheme": "education_famille",
             "questionType": "knowledge"
         },
@@ -932,22 +932,22 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "au cœur de la transmission des valeurs de la République, telles que la citoyenneté, la laïcité, la culture de l’engagement et la lutte contre toutes les formes de discrimination"
+                "Oui, de 3 à 16 ans pour tous les enfants résidant en France."
             ],
-            "explanation": "C'est un principe de la République.",
+            "explanation": "La démarche pour bénéficier des services de France Travail\nVotre inscription est automatique mais vous devez faire une démarche pour bénéficier des services de France Travail.\n\n1. Vous répondez au questionnaire d’orientation.\n2. Vous vous connectez sur le site internet francetravail.fr.\n3. Vous allez sur votre espace personnel en utilisant les codes que vous avez reçus par courrier ou par e-mail.\nVotre espace personnel vous permet de gérer vos rendez-vous, envoyer des informations…",
             "subTheme": "education_famille",
             "questionType": "knowledge"
         },
         {
             "id": 73,
             "question": "Qu'est-ce que la laïcité à l'école ?",
-            "correctAnswer": "automatique pour deux catégories de personnes",
+            "correctAnswer": "pas possible de refuser, en raison de sa religion, une règle de fonctionnement ou un cours du programme",
             "incorrectAnswers": [
                 "C'est une définition partielle ou incomplète",
                 "L'interdiction de toute religion en France",
                 "La séparation entre l'État et l'Église uniquement, sans garantie de liberté"
             ],
-            "explanation": "Elle permet à tous les élèves de vivre ensemble sans pression religieuse.",
+            "explanation": "La charte de la laïcité à l’école\nÀ l’école, il n’est pas possible de refuser, en raison de sa religion, une règle de fonctionnement ou un cours du programme. C’est l’une des règles d’application de la laïcité dans les écoles.\n\nL’ensemble des règles d’application de la laïcité dans les écoles est listé dans la charte de la laïcité à l’école. Ce document s’adresse aux professeurs, aux élèves ainsi qu’aux parents d’élèves.",
             "subTheme": "education_famille",
             "questionType": "knowledge"
         },
@@ -958,9 +958,9 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "exemple : incitation à consommer de la drogue"
             ],
-            "explanation": "La co-éducation favorise la réussite de l'enfant.",
+            "explanation": "Êtes-vous concerné ?\nVotre inscription à France Travail est automatique si :\n\n- vous avez demandé le Revenu de Solidarité Active (RSA) ;\n- vous avez une relation officielle (mariage, concubinage, PACS) avec une personne qui a demandé le RSA ;\n- vous avez demandé un accompagnement à une Mission locale pour vous aider à trouver un travail.",
             "subTheme": "education_famille",
             "questionType": "situation"
         },
@@ -973,20 +973,20 @@
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "La démarche pour bénéficier des services de France Travail\nVotre inscription est automatique mais vous devez faire une démarche pour bénéficier des services de France Travail....",
+            "explanation": "La démarche pour bénéficier des services de France Travail\nVotre inscription est automatique mais vous devez faire une démarche pour bénéficier des services de France Travail.\n\n- si la demande de RSA a été faite par internet, vous recevez par email un lien d’inscription et le questionnaire d’orientation à remplir ;\n- si la demande de RSA a été faite en remplissant des papiers, vous recevez par courrier un document d’inscription et le questionnaire d’orientation à remplir ;\n- si vous êtes déjà suivi par une Mission locale, c’est elle qui vous aide pour vous inscrire à France Travail et transmet à France Travail vos réponses au questionnaire.",
             "subTheme": "education_famille",
             "questionType": "situation"
         },
         {
             "id": 76,
             "question": "Peut-on perdre l'autorité parentale ?",
-            "correctAnswer": "automatique pour les personnes bénéficiaires du RSA ou inscrites en Mission locale",
+            "correctAnswer": "s’ils sont mariés, pacsés, en concubinage ou séparés",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "mariés, pacsés, en concubinage ou séparés)"
+                "par exemple en cas de conflit avec ses parents"
             ],
-            "explanation": "L'intérêt de l'enfant prime sur le droit des parents.",
+            "explanation": "L’autorité parentale, qu’est-ce que c’est ?\nLes parents ont des droits et des devoirs vis-à-vis de leur enfant de moins de 18 ans. L’ensemble de ces droits et devoirs, c’est-à-dire ce qu’ils peuvent et ce qu’ils doivent faire, correspond à ce que l’on appelle l’autorité parentale.\n\nLes deux parents ont tous les deux l’autorité parentale : ils ont les mêmes droits et les mêmes devoirs. Peu importe leur situation (s’ils sont mariés, pacsés, en concubinage ou séparés).\n\nIls sont tous les deux responsables de leur enfant.",
             "subTheme": "education_famille",
             "questionType": "knowledge"
         },
@@ -999,7 +999,7 @@
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Les étapes\n1. Vous allez sur (Ouvre une nouvelle fenêtre)le site internet de France Travail, puis dans la rubrique Services, vous choisissez \"S’inscrire ou se réinscrire\".\n2. Vous remplissez votre demande d’inscription.\n3. Si vous avez du mal à comprendre la langue française, cochez la case \"en français et en calculs est-ce que j’ai des difficultés ?\". Vous aurez alors une discussion au téléphone avec un conseiller de France Travail. Il vous aidera à répondre au questionnaire d’orientation.\n4. S...",
+            "explanation": "Les étapes\n1. Vous allez sur (Ouvre une nouvelle fenêtre)le site internet de France Travail, puis dans la rubrique Services, vous choisissez \"S’inscrire ou se réinscrire\".\n2. Vous remplissez votre demande d’inscription.\n3. Si vous avez du mal à comprendre la langue française, cochez la case \"en français et en calculs est-ce que j’ai des difficultés ?\". Vous aurez alors une discussion au téléphone avec un conseiller de France Travail. Il vous aidera à répondre au questionnaire d’orientation.\n4. Si vous comprenez bien la langue française, vous remplissez le questionnaire d’orientation. Après cette étape, il y a deux possibilités :\n- vous avez tout de suite une proposition de rendez-vous avec un conseiller de France Travail ;\n- vous serez appelé par téléphone, plus tard, par l’organisation la plus adaptée à vos besoins.\n\nSi vous avez du mal à remplir le questionnaire d’orientation, vous pouvez téléphoner au 09 84 98 37 94 : une personne vous aidera.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -1012,7 +1012,7 @@
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Rester inscrit avec un nouveau document de séjour\nSi vous devez renouveler votre document de séjour, vous avez des démarches à faire pour rester inscrit à France Travail....",
+            "explanation": "Rester inscrit avec un nouveau document de séjour\nSi vous devez renouveler votre document de séjour, vous avez des démarches à faire pour rester inscrit à France Travail.\n\n1. Vous allez à la préfecture pour commencer les démarches à partir de 120 jours avant la fin de votre titre de séjour. Après avoir demandé le renouvellement de votre titre de séjour, vous recevez un document.\n2. Vous apportez ce document dès que possible à l’accueil de votre agence France Travail.\n3. Dès que vous recevez votre nouveau titre de séjour, vous l’apportez à l’accueil de votre agence France Travail.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -1023,7 +1023,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "élus au suffrage direct par les Français, tous les 5 ans"
             ],
             "explanation": "Au niveau national\n- France Travail aide les personnes à trouver un travail et aide les entreprises qui recrutent.\n- L’Office Français de l’Immigration et de l’Intégration (OFII) organise le parcours d’intégration et oriente les personnes vers des structures d’accompagnement à l’emploi.",
             "subTheme": "general",
@@ -1036,9 +1036,9 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "maire et conseillers municipaux, élus pour 6 ans lors des élections municipales au suffrage direct"
             ],
-            "explanation": "Au niveau local\n- Les Missions locales aident les personnes âgées de 16 à 25 ans à trouver un travail.\n- Les Cap emploi aident les personnes qui ont un handicap à trouver un travail.\n- Les MDPH aident les personnes qui ont un handicap à choisir une orientation professionnelle.\n- Les Maisons De l’Emploi (MDE) analysent le monde du travail au niveau local, coordonnent différentes organisations pour développer le travail dans un territoire.\n- Les Plans Locaux pour l’Insertion et l’Emploi (PLIE) org...",
+            "explanation": "Au niveau local\n- Les Missions locales aident les personnes âgées de 16 à 25 ans à trouver un travail.\n- Les Cap emploi aident les personnes qui ont un handicap à trouver un travail.\n- Les MDPH aident les personnes qui ont un handicap à choisir une orientation professionnelle.\n- Les Maisons De l’Emploi (MDE) analysent le monde du travail au niveau local, coordonnent différentes organisations pour développer le travail dans un territoire.\n- Les Plans Locaux pour l’Insertion et l’Emploi (PLIE) organisent les aides pour les personnes qui ont du mal à trouver un travail.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -1058,59 +1058,59 @@
         {
             "id": 82,
             "question": "Comment se former au français quand on est salarié et signataire du CIR ?",
-            "correctAnswer": "possibles pour suivre une formation au français :",
+            "correctAnswer": "environ une demi-journée si le salarié travaille 35 heures par semaine",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Comment se former au français quand on est salarié et signataire du CIR ?\nDeux options sont possibles pour suivre une formation au français :...",
+            "explanation": "Comment se former au français quand on est salarié et signataire du CIR ?\nDeux options sont possibles pour suivre une formation au français :\n\n1. With l'aide de l'employeur :\n- le salarié peut suivre une formation de français sur son temps de travail avec le maintien du salaire ;\n- pendant maximum 80 heures. La répartition des heures de formation peut être discutée avec l'employeur. Il est possible de prendre jusqu’à 10 % de votre temps de travail par semaine (environ une demi-journée si le salarié travaille 35 heures par semaine) ;\n- le salarié doit informer l'employeur et discuter avec lui des jours d'absence.\nAttention : Si l'employeur est un particulier (pas une entreprise), les règles sont différentes.\n\n2. With le Compte Personnel de Formation (CPF) :\n\n- le salarié peut utiliser son CPF pour acheter une formation au français : il a le droit à une absence de 28 heures (4 jours de travail à plein temps) pour suivre la formation ;\n- toute personne qui travaille a un CPF ;\n- le CPF augmente de 500 € maximum à la fin de chaque année de travail.\nSi le salarié n'est pas signataire du CIR, son employeur peut aussi proposer des formations : il faut se renseigner auprès du service des ressources humaines.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 83,
             "question": "La reconnaissance en France d’un diplôme obtenu à l’étranger",
-            "correctAnswer": "Vous souhaitez étudier ou travailler en France",
+            "correctAnswer": "délivrée uniquement par l’organisation où vous souhaitez étudier, ou par l’employeur où vous souhaitez travailler",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "valable en France, rendez-vous en préfecture ou sur (Ouvre une nouvelle fenêtre)service-public"
+                "La Corse a été cédée à la France par la République de Gênes en 1768"
             ],
-            "explanation": "La reconnaissance en France d’un diplôme obtenu à l’étranger\nVous souhaitez étudier ou travailler en France ? Vous pouvez faire reconnaître votre diplôme obtenu dans un autre pays que la France....",
+            "explanation": "La reconnaissance en France d’un diplôme obtenu à l’étranger\nVous souhaitez étudier ou travailler en France ? Vous pouvez faire reconnaître votre diplôme obtenu dans un autre pays que la France.\n\nLes critères sont différents :\n\n- selon votre parcours et les exigences de la formation souhaitée, si vous voulez étudier en France ;\n- selon le métier que vous souhaitez exercer en France.\n\nLa reconnaissance du diplôme est délivrée uniquement par l’organisation où vous souhaitez étudier, ou par l’employeur où vous souhaitez travailler.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 84,
             "question": "L’attestation de comparabilité, à quoi ça sert ?",
-            "correctAnswer": "Selon votre situation, vous aurez peut-être besoin d’une attestation de comparabilité : c’est un document qui est fourni par le Centre Enic-Naric.",
+            "correctAnswer": "un document qui est fourni par le Centre Enic-Naric",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
-            "explanation": "L’attestation de comparabilité, à quoi ça sert ?\nSelon votre situation, vous aurez peut-être besoin d’une attestation de comparabilité : c’est un document qui est fourni par le Centre Enic-Naric....",
+            "explanation": "L’attestation de comparabilité, à quoi ça sert ?\nSelon votre situation, vous aurez peut-être besoin d’une attestation de comparabilité : c’est un document qui est fourni par le Centre Enic-Naric.\n\n- Situation 1 : vous souhaitez étudier en France. Certains lieux d’enseignement demandent ce document pour mieux comprendre le parcours de formation que vous avez suivi à l’étranger.\n- Situation 2 : vous souhaitez travailler en France. Certains employeurs demandent ce document pour mieux comprendre votre parcours de formation et évaluer votre niveau de formation.\n- Situation 3 : vous souhaitez demander la nationalité française. Dans certaines situations, ce document est nécessaire.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 85,
             "question": "Les étapes pour faire reconnaître son diplôme",
-            "correctAnswer": "Les étapes pour faire reconnaître votre diplôme :",
+            "correctAnswer": "pièce d’identité, diplôme, relevés de notes et leurs traductions officielles",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Les étapes pour faire reconnaître son diplôme\nLes étapes pour faire reconnaître votre diplôme :...",
+            "explanation": "Les étapes pour faire reconnaître son diplôme\nLes étapes pour faire reconnaître votre diplôme :\n\n1. vérifiez que votre situation permet de faire reconnaître votre diplôme en France ;\n2. préparez les documents (pièce d’identité, diplôme, relevés de notes et leurs traductions officielles) ;\n3. déposez votre dossier sur le site internet de Enic-Naric ;\n4. payez les frais (20 € au moment du dépôt, puis 100 € pour l’analyse du dossier). Vous n’avez pas à payer si vous êtes demandeur d’asile ou réfugié ou bénéficiaire de la protection subsidiaire ou temporaire.\n\nCes étapes concernent les formations de plus de 200 heures et les métiers qui ne sont pas réglementés.\n\nExemples de métiers réglementés : avocat, médecin, architecte, mécanicien, coiffeur.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 86,
             "question": "La VAE, qu’est-ce que c’est ?",
-            "correctAnswer": "La Validation des Acquis de l'Expérience (VAE) permet de faire reconnaître vos compétences de manière officielle, comme un diplôme reçu après une formation.",
+            "correctAnswer": "de faire reconnaître vos compétences de manière officielle, comme un diplôme reçu après une formation",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1127,7 +1127,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Les étapes pour faire reconnaître votre diplôme :"
+                "pièce d’identité, diplôme, relevés de notes et leurs traductions officielles"
             ],
             "explanation": "Les principales étapes pour obtenir une VAE\n1. Déposez votre candidature sur (Ouvre une nouvelle fenêtre)le site internet de France VAE.\n2. Complétez un dossier avec le détail de vos expériences en lien avec le diplôme visé.\n3. Passez un entretien avec un jury.",
             "subTheme": "general",
@@ -1140,7 +1140,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "en sécurité (pas de perte ou de vol) ;"
+                "L'UE a adopté le pacte vert pour l'Europe, une initiative visant à atteindre la neutralité carbone d'ici 2050."
             ],
             "explanation": "Exemples d’expériences prises en compte pour une VAE\n- Activité professionnelle salariée ou non.\n- Bénévolat ou volontariat.\n- Inscription sur la liste des sportifs de haut niveau.\n- Participation à des activités d’économie solidaire, si la personne est accueillie et accompagnée par un organisme assurant l’accueil et l’accompagnement des personnes en difficultés.\n- Responsabilités syndicales.",
             "subTheme": "general",
@@ -1149,20 +1149,20 @@
         {
             "id": 89,
             "question": "Un contrat de travail, qu’est-ce que c’est ?",
-            "correctAnswer": "Le contrat de travail est nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur).",
+            "correctAnswer": "nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Ce contrat est utilisé uniquement pour une mission de courte durée (quelques jours, quelques mois)."
+                "on l’appelle aussi le contrat d’intérim"
             ],
-            "explanation": "Un contrat de travail, qu’est-ce que c’est ?\nLe contrat de travail est nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur)....",
+            "explanation": "Un contrat de travail, qu’est-ce que c’est ?\nLe contrat de travail est nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur).\n\n- Il précise le salaire, les compétences et connaissances nécessaires, la durée du travail, les tâches du salarié.\n- Il entraîne des obligations pour le salarié et pour l’employeur.\n\nIl existe différents types de contrat de travail selon leur durée, la nature du travail à réaliser...",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 90,
             "question": "Le contrat à durée indéterminée (CDI)",
-            "correctAnswer": "le contrat de travail le plus courant en France",
+            "correctAnswer": "licenciement, mise à la retraite",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1179,7 +1179,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "le contrat de travail le plus courant en France"
+                "licenciement, mise à la retraite"
             ],
             "explanation": "Le contrat à durée déterminée (CDD)\n\nIl est utilisé pour une tâche précise et limitée dans le temps. Exemple : remplacer un autre salarié pendant son absence limitée dans le temps, faire face à une augmentation d’activité limitée dans le temps.\n\nEn général, sa durée maximale est de 18 mois.",
             "subTheme": "general",
@@ -1188,33 +1188,33 @@
         {
             "id": 92,
             "question": "Les autres types de contrat de travail",
-            "correctAnswer": "Ce contrat est utilisé uniquement pour une mission de courte durée (quelques jours, quelques mois).",
+            "correctAnswer": "Les autres types de contrat de travail\nLe contrat temporaire (on l’appelle aussi le contrat d’intérim) : il est conclu entre un salarié, une entreprise de travail temporaire et une entreprise où le salarié réalise sa mission",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Le contrat de travail est nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur)."
+                "nécessaire pour toute personne qui s’engage dans un travail payé sous forme de salaire (le salarié), pour le compte d’une autre personne (l’employeur)"
             ],
-            "explanation": "Les autres types de contrat de travail\nLe contrat temporaire (on l’appelle aussi le contrat d’intérim) : il est conclu entre un salarié, une entreprise de travail temporaire et une entreprise où le salarié réalise sa mission.\nCe contrat est utilisé uniquement pour une mission de courte durée (quelques jours, quelques mois)....",
+            "explanation": "Les autres types de contrat de travail\nLe contrat temporaire (on l’appelle aussi le contrat d’intérim) : il est conclu entre un salarié, une entreprise de travail temporaire et une entreprise où le salarié réalise sa mission.\nCe contrat est utilisé uniquement pour une mission de courte durée (quelques jours, quelques mois).\n\nLe contrat de professionnalisation : il est conclu entre un salarié et un employeur, dans le cadre de certaines formations.\n\nLe CDD d’usage (on l’appelle aussi le contrat d'extra) : c’est un CDD particulier. Il permet à l’employeur d’embaucher une personne pour réaliser une tâche précise et temporaire pendant une très courte durée (quelques heures, une journée ou quelques journées qui se suivent sans interruption).",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 93,
             "question": "Peut-on cumuler plusieurs contrats de travail ?",
-            "correctAnswer": "interdit de cumuler ce contrat avec une autre activité professionnelle",
+            "correctAnswer": "ou 44 heures par semaine sur une période de 12 semaines qui se suivent",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est autorisé dans certains cas"
+                "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Peut-on cumuler plusieurs contrats de travail ?\nUn salarié peut cumuler plusieurs contrats de travail (CDI, CDD...), chez un ou plusieurs employeurs. Dans ce cas, il y a des règles à respecter....",
+            "explanation": "Peut-on cumuler plusieurs contrats de travail ?\nUn salarié peut cumuler plusieurs contrats de travail (CDI, CDD...), chez un ou plusieurs employeurs. Dans ce cas, il y a des règles à respecter.\n\n- Ne pas dépasser la durée maximale de travail fixée par la loi (1607 heures par an).\n- Ne pas dépasser 10 heures de travail par jour et 48 heures de travail par semaine (ou 44 heures par semaine sur une période de 12 semaines qui se suivent).\n- Ne pas exercer deux activités concurrentes.\nAttention. Si un contrat de travail comporte une clause d’exclusivité, cela signifie qu’il est interdit de cumuler ce contrat avec une autre activité professionnelle.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 94,
             "question": "Qui peut créer une entreprise en France ?",
-            "correctAnswer": "Il est important d’avoir de l’expérience dans l’activité de la future entreprise, et de connaître des personnes qui pourront vous aider.",
+            "correctAnswer": "important d’avoir de l’expérience dans l’activité de la future entreprise, et de connaître des personnes qui pourront vous aider",
             "incorrectAnswers": [
                 "D'autres personnes ou institutions",
                 "C'est une interprétation partielle ou incomplète de la réalité",
@@ -1227,20 +1227,20 @@
         {
             "id": 95,
             "question": "Les étapes pour construire votre projet",
-            "correctAnswer": "protégée par un brevet d’invention",
+            "correctAnswer": "Pour cela, il suffit de faire une recherche sur le site internet de l’INPI (Institut National de la Propriété Industrielle)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Les étapes pour faire reconnaître votre diplôme :"
+                "Nous prenons les décisions importantes ensemble, après avoir discuté de toutes les options et conséquences, pour nous assurer que nous agissons dans le meilleur intérêt de notre famille."
             ],
-            "explanation": "Les étapes pour construire votre projet\n1. Clarifier vos envies et celles de vos futurs clients.\n2. Discutez de votre idée avec différentes personnes pour avoir un regard extérieur.\n3. Vérifiez qu’une autre personne n’a pas eu la même idée que vous. Pour cela, il suffit de faire une recherche sur le site internet de l’INPI (Institut National de la Propriété Industrielle). Une idée est protégée par un brevet d’invention. L’INPI recense tous les brevets d’invention.\n4. Construisez votre projet ave...",
+            "explanation": "Les étapes pour construire votre projet\n1. Clarifier vos envies et celles de vos futurs clients.\n2. Discutez de votre idée avec différentes personnes pour avoir un regard extérieur.\n3. Vérifiez qu’une autre personne n’a pas eu la même idée que vous. Pour cela, il suffit de faire une recherche sur le site internet de l’INPI (Institut National de la Propriété Industrielle). Une idée est protégée par un brevet d’invention. L’INPI recense tous les brevets d’invention.\n4. Construisez votre projet avec une étude de marché (analyse des entreprises concurrentes, des clients, de l’environnement économique) et un business plan (présentation du service ou du produit, stratégie, plan financier…).",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 96,
             "question": "Les principales démarches pour créer votre entreprise",
-            "correctAnswer": "pas forcément l’adresse du lieu de travail)",
+            "correctAnswer": "ce n’est pas forcément l’adresse du lieu de travail",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
@@ -1253,33 +1253,33 @@
         {
             "id": 97,
             "question": "Sur le site internet de France Travail",
-            "correctAnswer": "la référence pour trouver un travail en France",
+            "correctAnswer": "fiches de présentation de métiers, témoignages de personnes exerçant un métier...",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est un organisme public qui accompagne les personnes à la recherche d'un emploi."
+                "de 35 heures par semaine"
             ],
-            "explanation": "Sur le site internet de France Travail\nVous pouvez transmettre votre candidature en utilisant un des nombreux sites internet généralistes qui diffusent des offres de travail dans la plupart des secteurs d’activité et partout en France....",
+            "explanation": "Sur le site internet de France Travail\nVous pouvez transmettre votre candidature en utilisant un des nombreux sites internet généralistes qui diffusent des offres de travail dans la plupart des secteurs d’activité et partout en France.\n\nLe site internet de France Travail est la référence pour trouver un travail en France. Environ 160 000 offres sont mises à jour chaque jour. Il vous propose aussi des conseils et des informations utiles pour trouver un travail (fiches de présentation de métiers, témoignages de personnes exerçant un métier...)",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 98,
             "question": "Sur des sites internet spécialisés",
-            "correctAnswer": "Il existe aussi des sites internet spécialisés",
+            "correctAnswer": "Sur des sites internet spécialisés\nIl existe aussi des sites internet spécialisés",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Sur des sites internet spécialisés\nIl existe aussi des sites internet spécialisés. Certains diffusent des offres limitées à un secteur géographique proche de chez vous. D’autres diffusent des offres dans un secteur professionnel....",
+            "explanation": "Sur des sites internet spécialisés\nIl existe aussi des sites internet spécialisés. Certains diffusent des offres limitées à un secteur géographique proche de chez vous. D’autres diffusent des offres dans un secteur professionnel.\n\nExemples :\n\n- le site internet Choisir le service public propose uniquement des offres dans le service public ;\n- le site internet L’industrie recrute propose uniquement des offres d’emploi dans l’industrie\n\nVous pouvez aussi envoyer une candidature en passant directement par le site internet d’une entreprise qui vous intéresse.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 99,
             "question": "En personne",
-            "correctAnswer": "pas la seule manière de transmettre une candidature",
+            "correctAnswer": "événement où vous pouvez rencontrer des personnes qui recrutent, parfois spécialisé dans un secteur d’activité : agriculture, industrie, tourisme…",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1296,7 +1296,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
             "explanation": "Le CV, à quoi ça sert ?\nLe Curriculum Vitae (CV) est un document qu'une personne envoie à une entreprise dans le but d'être embauché dans cette entreprise.\n\nIl présente la personne à l’employeur :\n\n- son expérience professionnelle ;\n- son parcours de formation ;\n- ses compétences ;\n- ses qualités.\nIl permet à l'entreprise d'évaluer les capacités de la personne à réaliser le travail attendu.\n\nL'envoi d'un CV n'est pas obligatoire.",
             "subTheme": "general",
@@ -1305,7 +1305,7 @@
         {
             "id": 101,
             "question": "Les informations importantes du CV",
-            "correctAnswer": "important de réaliser un CV en fonction des informations demandées par l’entreprise dans son offre",
+            "correctAnswer": "diplôme le plus élevé ou celui qui a un lien avec l'offre",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1318,7 +1318,7 @@
         {
             "id": 102,
             "question": "Les points de vigilance",
-            "correctAnswer": "Pour l’entreprise qui diffuse l’offre :\nLes informations demandées dans l’offre de travail doivent avoir un lien direct avec le travail proposé.",
+            "correctAnswer": "Pour la personne qui élabore son CV :\nUne personne qui a été embauchée sur la base d’un CV comportant des fausses informations (diplôme, expérience professionnelle…) peut être licenciée.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1331,20 +1331,20 @@
         {
             "id": 103,
             "question": "La lettre de motivation, à quoi ça sert ?",
-            "correctAnswer": "d’obtenir un rendez-vous avec l’employeur",
+            "correctAnswer": "L’objectif de cette lettre est d’obtenir un rendez-vous avec l’employeur",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir comment s'organise le recrutement en France : la lettre de motivation....",
+            "explanation": "Dans cette fiche, vous allez découvrir comment s'organise le recrutement en France : la lettre de motivation.\n\nLa lettre de motivation, à quoi ça sert ?\nDans une lettre de motivation, la personne explique à l’entreprise pourquoi elle répond à l’offre de travail. L’objectif de cette lettre est d’obtenir un rendez-vous avec l’employeur.\n\nLes personnes qui se chargent des recrutements lisent une lettre de motivation en 30 secondes environ. Il est donc très important de faire passer des messages clés dans cette lettre.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 104,
             "question": "Comment écrire votre lettre de motivation ?",
-            "correctAnswer": "indiquées dans l’offre",
+            "correctAnswer": "Présentez votre expérience en donnant des exemples de compétences qui sont indiquées dans l’offre",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
@@ -1361,7 +1361,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Oui, je pratique (nom du sport)"
             ],
             "explanation": "Faites-vous aider\nIl est utile de faire relire vos premières candidatures (CV, lettre de motivation) pour avoir un regard extérieur. Choisissez des personnes proches de vous (famille, amis…), en lesquelles vous avez confiance. Elles vous aideront à améliorer votre candidature.\n\nPour vous préparer à un rendez-vous d’embauche, n’hésitez pas à vous entraîner à l’oral. Pour cela, faites des simulations avec des personnes proches de vous.",
             "subTheme": "general",
@@ -1370,7 +1370,7 @@
         {
             "id": 106,
             "question": "Le droit du travail, qu’est-ce que c’est ?",
-            "correctAnswer": "Le droit du travail, c’est l’ensemble des règles juridiques qui concernent les relations professionnelles entre les salariés et les employeurs.",
+            "correctAnswer": "l’ensemble des règles juridiques qui concernent les relations professionnelles entre les salariés et les employeurs",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1383,50 +1383,50 @@
         {
             "id": 107,
             "question": "Où trouver ces règles juridiques ?",
-            "correctAnswer": "écrites dans trois types de document :",
+            "correctAnswer": "Les règles sont écrites dans trois types de document :\n\n1",
             "incorrectAnswers": [
                 "Dans un autre lieu ou service",
                 "Uniquement en ligne ou uniquement en présentiel",
                 "C'est une interprétation partielle ou incomplète de la réalité"
             ],
-            "explanation": "Où trouver ces règles juridiques ?\nLes règles sont écrites dans trois types de document :...",
+            "explanation": "Où trouver ces règles juridiques ?\nLes règles sont écrites dans trois types de document :\n\n1. Le Code du travail fixe les droits et les obligations pour tous : contrat de travail, conditions de travail, salaire…\n2. Les conventions collectives concernent une activité (exemple : transport routier). Elles adaptent les règles du Code du travail sur des points précis en fonction de situations particulières liées à cette activité (congés, salaires minimaux...).\n3. Le règlement intérieur est rédigé par un employeur dont l’entreprise compte au moins 50 salariés. Il présente les droits et obligations des salariés en matière de santé, de sécurité et de discipline.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 108,
             "question": "La durée du travail et l'âge pour commencer à travailler",
-            "correctAnswer": "possible de travailler dès l'âge de 16 ans",
+            "correctAnswer": "Il est possible de travailler dès l'âge de 16 ans Tout mineur doit y être autorisé par son représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "automatique mais vous devez faire une démarche pour bénéficier des services de France Travail"
+                "de 35 heures par semaine"
             ],
-            "explanation": "La durée du travail et l'âge pour commencer à travailler\nLe droit du travail détermine une référence pour la durée de travail des salariés à temps complet : 35 heures par semaine. Cette durée s’applique à toutes les entreprises....",
+            "explanation": "La durée du travail et l'âge pour commencer à travailler\nLe droit du travail détermine une référence pour la durée de travail des salariés à temps complet : 35 heures par semaine. Cette durée s’applique à toutes les entreprises.\n\nLes salariés à temps complet peuvent travailler plus de 35 heures. Au-delà de 35 heures, on parle \"d’heures supplémentaires\". L’employeur doit payer ces heures supplémentaires au salarié ou lui permettre de les rattraper.\n\nIl est possible de travailler dès l'âge de 16 ans. Tout mineur doit y être autorisé par son représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 109,
             "question": "Le salaire",
-            "correctAnswer": "Au moment du versement du salaire, l’employeur doit fournir au salarié un bulletin de paie",
+            "correctAnswer": "Ce document comporte des informations obligatoires (période de travail, nombre d’heures de travail…)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "C'est facultatif ou optionnel"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir les principales notions du droit du travail : salaire, congés payés et droit syndical....",
+            "explanation": "Dans cette fiche, vous allez découvrir les principales notions du droit du travail : salaire, congés payés et droit syndical.\n\nLe salaire\n\nIl est interdit de verser un salaire inférieur au salaire minimum de croissance ((Ouvre une nouvelle fenêtre)SMIC), qui est le salaire horaire minimum en France et qui s'élève à 1 801,80 € brut environ.\n\nAu moment du versement du salaire, l’employeur doit fournir au salarié un bulletin de paie. Ce document comporte des informations obligatoires (période de travail, nombre d’heures de travail…). À l’inverse, d’autres informations sont interdites, par exemple les heures ou journées de grève du salarié.\n\nL’employeur peut fournir le bulletin de paie sous forme électronique, sauf si le salarié le refuse.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 110,
             "question": "Le congé payé",
-            "correctAnswer": "Tous les salariés ont droit, chaque année, à un congé payé par leur employeur.",
+            "correctAnswer": "un jour de la semaine où le salarié pourrait potentiellement travailler, sauf le dimanche et les jours fériés",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Cela s'applique uniquement à certaines personnes"
+                "C'est une information incorrecte ou incomplète"
             ],
             "explanation": "Le congé payé\nTous les salariés ont droit, chaque année, à un congé payé par leur employeur.\n\nUn salarié a droit à 2,5 jours ouvrables de congé payé s’il a travaillé chez le même employeur pendant un temps équivalent à un mois de travail.\n\nDéfinition : un jour ouvrable est un jour de la semaine où le salarié pourrait potentiellement travailler, sauf le dimanche et les jours fériés.",
             "subTheme": "general",
@@ -1435,7 +1435,7 @@
         {
             "id": 111,
             "question": "Le droit syndical",
-            "correctAnswer": "Un syndicat est une organisation qui défend les droits des travailleurs : le salaire, les conditions de travail, la sécurité...",
+            "correctAnswer": "une organisation qui défend les droits des travailleurs : le salaire, les conditions de travail, la sécurité",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1448,7 +1448,7 @@
         {
             "id": 112,
             "question": "Le conseil de Prud’hommes",
-            "correctAnswer": "pas d'accord concernant le contrat de travail (licenciement, salaire…), le salarié peut contacter le Conseil de Prud’hommes",
+            "correctAnswer": "Si le salarié et l’employeur ne sont pas d'accord concernant le contrat de travail (licenciement, salaire…), le salarié peut contacter le Conseil de Prud’hommes.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1467,7 +1467,7 @@
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est autorisé dans certains cas"
             ],
-            "explanation": "Dans cette fiche, vous allez découvrir une notion importante du droit du travail : la discrimination....",
+            "explanation": "Dans cette fiche, vous allez découvrir une notion importante du droit du travail : la discrimination.\n\nLa discrimination au travail, qu’est-ce que c’est ?\nOn parle de discrimination au travail quand une personne est moins bien traitée que les autres par l’employeur en raison d’un des critères interdits par la loi, par exemple son origine, son sexe, son âge...\n\nToutes les personnes qui travaillent dans une entreprise (salarié, stagiaire, apprenti) sont protégées contre la discrimination. Cette protection implique que la personne peut signaler la discrimination pour obtenir, dans certains cas, une réparation.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -1478,7 +1478,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Exemples de situations qui peuvent entraîner un retrait de l’autorité parentale :"
+                "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc."
             ],
             "explanation": "Quelles sont les situations de discrimination ?\nIl peut y avoir de la discrimination au travail à différents moments.\n\nPar exemple :\n\n- au moment de l’embauche ;\n- au moment du licenciement ;\n- au moment du renouvellement de contrat ;\n- au moment de la fixation du salaire ;\n- au moment de la définition des tâches du salarié ;\n- au moment des horaires de travail...",
             "subTheme": "general",
@@ -1504,7 +1504,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
             "explanation": "Dans cette fiche, vous allez découvrir un acteur important du droit du travail : l’inspection du travail.\n\nÀ quoi sert l’inspection du travail ?\n\nElle informe et conseille les employeurs, les salariés et les représentants du personnel.",
             "subTheme": "general",
@@ -1513,7 +1513,7 @@
         {
             "id": 117,
             "question": "Ses missions",
-            "correctAnswer": "- Informer sur les lois et des règles du droit du travail",
+            "correctAnswer": "santé, sécurité, durée du travail, travail illégal...",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1530,7 +1530,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Le droit du travail, c’est l’ensemble des règles juridiques qui concernent les relations professionnelles entre les salariés et les employeurs."
+                "l’ensemble des règles juridiques qui concernent les relations professionnelles entre les salariés et les employeurs"
             ],
             "explanation": "Le service de renseignements en droit du travail\nUn salarié qui pense que son employeur ne respecte pas le droit du travail peut se renseigner en appelant le service des renseignements en droit du travail : 0 806 000 126.\n\nCe service répond à des questions juridiques mais, contrairement à l’inspection du travail, il ne peut pas intervenir dans l’entreprise.",
             "subTheme": "general",
@@ -1539,26 +1539,26 @@
         {
             "id": 119,
             "question": "Le travail non déclaré, qu’est-ce que c’est ?",
-            "correctAnswer": "une activité professionnelle pour laquelle il n’y a pas de déclaration officielle",
+            "correctAnswer": "Le travail non déclaré (on l’appelle aussi travail dissimulé), c’est une activité professionnelle pour laquelle il n’y a pas de déclaration officielle",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Le travail non déclaré, qu’est-ce que c’est ?\nLe travail non déclaré (on l’appelle aussi travail dissimulé), c’est une activité professionnelle pour laquelle il n’y a pas de déclaration officielle. Par exemple : pas de déclaration avant l’embauche d’un salarié, mention sur le bulletin de paie d’un nombre d’heures de travail inférieur à celui qui a été réalisé....",
+            "explanation": "Le travail non déclaré, qu’est-ce que c’est ?\nLe travail non déclaré (on l’appelle aussi travail dissimulé), c’est une activité professionnelle pour laquelle il n’y a pas de déclaration officielle. Par exemple : pas de déclaration avant l’embauche d’un salarié, mention sur le bulletin de paie d’un nombre d’heures de travail inférieur à celui qui a été réalisé.\n\nTravailler ou faire travailler de manière non déclarée peut sembler pratique ou économique. Mais cela peut entraîner de graves conséquences pour l’employeur et le salarié.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 120,
             "question": "Les conséquences pour l’employeur",
-            "correctAnswer": "Un employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende",
+            "correctAnswer": "exemple : travail non déclaré d’une personne de moins de 18 ans",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "S’il a reçu des aides sociales (RSA, CAF…), le salarié risque de devoir les rembourser ou de payer une amende."
+                "La Révolution a radicalement transformé la société française, abolissant la monarchie et l'ordre féodal, instaurant une république, et promouvant des idéaux de liberté, d'égalité et de laïcité"
             ],
-            "explanation": "Les conséquences pour l’employeur\nUn employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende. Les peines peuvent aller jusqu’à 5 ans de prison et 75 000 euros d’amende dans certaines situations (exemple : travail non déclaré d’une personne de moins de 18 ans)....",
+            "explanation": "Les conséquences pour l’employeur\nUn employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende. Les peines peuvent aller jusqu’à 5 ans de prison et 75 000 euros d’amende dans certaines situations (exemple : travail non déclaré d’une personne de moins de 18 ans).\n\nExemples : fermeture de l’entreprise pendant 3 mois maximum, impossibilité de travailler dans le cadre d’un marché public.\n\nSur le plan financier, l’entreprise doit rembourser les aides publiques perçues, payer un montant supérieur aux cotisations sociales qui n’ont pas été payées, et verser au salarié l’équivalent de 6 mois de salaire.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -1569,7 +1569,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Un employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende"
+                "La Révolution a radicalement transformé la société française, abolissant la monarchie et l'ordre féodal, instaurant une république, et promouvant des idéaux de liberté, d'égalité et de laïcité"
             ],
             "explanation": "Les conséquences pour le salarié\n\nS’il a reçu des aides sociales (RSA, CAF…), le salarié risque de devoir les rembourser ou de payer une amende.",
             "subTheme": "general",
@@ -1578,7 +1578,7 @@
         {
             "id": 122,
             "question": "La Convention internationale des droits de l’enfant",
-            "correctAnswer": "En 1989, 196 États ont signé un document sur les droits de l’enfant dans le cadre de l’Organisation des Nations Unies (ONU)",
+            "correctAnswer": "le fondement de toute l’action de l’UNICEF, une organisation qui dépend de l’ONU",
             "incorrectAnswers": [
                 "Des droits réservés aux citoyens français uniquement",
                 "Des droits qui nécessitent une intervention de l'État pour exister",
@@ -1591,7 +1591,7 @@
         {
             "id": 123,
             "question": "L’intérêt de l’enfant est supérieur",
-            "correctAnswer": "supérieur à sa volonté et à celle de ses parents",
+            "correctAnswer": "L’intérêt de l’enfant est supérieur\nL’intérêt de l’enfant est supérieur à sa volonté et à celle de ses parents",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1608,22 +1608,22 @@
             "incorrectAnswers": [
                 "Des droits réservés aux citoyens français uniquement",
                 "Des droits qui nécessitent une intervention de l'État pour exister",
-                "En 1989, 196 États ont signé un document sur les droits de l’enfant dans le cadre de l’Organisation des Nations Unies (ONU)"
+                "le fondement de toute l’action de l’UNICEF, une organisation qui dépend de l’ONU"
             ],
-            "explanation": "Les principaux droits de l’enfant\n- L’égalité.\n- Avoir un nom, une identité.\n- Vivre en famille.\n- Être soigné, protégé des maladies, avoir une alimentation suffisante et équilibrée.\n- Bénéficier d’une justice adaptée à son âge.\n- Aller à l’école et avoir des loisirs.\n- Protection de la vie privée.\n- Ne pas faire la guerre ni la subir : être protégé en temps de guerre.\n- Protection contre la violence.\n- Protection contre l'exploitation.\n- Liberté de s’informer et de s’exprimer, d’être entendu su...",
+            "explanation": "Les principaux droits de l’enfant\n- L’égalité.\n- Avoir un nom, une identité.\n- Vivre en famille.\n- Être soigné, protégé des maladies, avoir une alimentation suffisante et équilibrée.\n- Bénéficier d’une justice adaptée à son âge.\n- Aller à l’école et avoir des loisirs.\n- Protection de la vie privée.\n- Ne pas faire la guerre ni la subir : être protégé en temps de guerre.\n- Protection contre la violence.\n- Protection contre l'exploitation.\n- Liberté de s’informer et de s’exprimer, d’être entendu sur les questions qui le concernent.\n- Enfant en situation de handicap : vivre avec et comme les autres, ils peuvent bénéficier d'un emploi du temps aménagé.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 125,
             "question": "L’autorité parentale, qu’est-ce que c’est ?",
-            "correctAnswer": "mariés, pacsés, en concubinage ou séparés)",
+            "correctAnswer": "s’ils sont mariés, pacsés, en concubinage ou séparés",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "émancipé, c’est-à-dire qu’il devient adulte avant 18 ans (par exemple en cas de conflit avec ses parents) ;"
+                "par exemple en cas de conflit avec ses parents"
             ],
-            "explanation": "L’autorité parentale, qu’est-ce que c’est ?\nLes parents ont des droits et des devoirs vis-à-vis de leur enfant de moins de 18 ans. L’ensemble de ces droits et devoirs, c’est-à-dire ce qu’ils peuvent et ce qu’ils doivent faire, correspond à ce que l’on appelle l’autorité parentale....",
+            "explanation": "L’autorité parentale, qu’est-ce que c’est ?\nLes parents ont des droits et des devoirs vis-à-vis de leur enfant de moins de 18 ans. L’ensemble de ces droits et devoirs, c’est-à-dire ce qu’ils peuvent et ce qu’ils doivent faire, correspond à ce que l’on appelle l’autorité parentale.\n\nLes deux parents ont tous les deux l’autorité parentale : ils ont les mêmes droits et les mêmes devoirs. Peu importe leur situation (s’ils sont mariés, pacsés, en concubinage ou séparés).\n\nIls sont tous les deux responsables de leur enfant.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -1643,11 +1643,11 @@
         {
             "id": 127,
             "question": "Quels sont les droits et les devoirs des parents ?",
-            "correctAnswer": "Quels sont les droits et les devoirs des parents ",
+            "correctAnswer": "Réponse basée sur les informations fournies.",
             "incorrectAnswers": [
                 "Des droits réservés aux citoyens français uniquement",
                 "Des droits qui nécessitent une intervention de l'État pour exister",
-                "Pour faire la déclaration de naissance, vous devez présenter :"
+                "gratuite, laïque et obligatoire"
             ],
             "explanation": "Quels sont les droits et les devoirs des parents ?",
             "subTheme": "general",
@@ -1669,7 +1669,7 @@
         {
             "id": 129,
             "question": "Devoir d'éducation",
-            "correctAnswer": "obligatoire pour tout enfant entre 3 et 16 ans",
+            "correctAnswer": "Par exemple : l'instruction est obligatoire pour tout enfant entre 3 et 16 ans",
             "incorrectAnswers": [
                 "Des obligations qui concernent uniquement les résidents étrangers",
                 "Des devoirs qui s'appliquent uniquement aux citoyens français",
@@ -1721,11 +1721,11 @@
         {
             "id": 133,
             "question": "La loi française est prioritaire sur les valeurs culturelles et familiales",
-            "correctAnswer": "prioritaire sur les valeurs culturelles et familiales",
+            "correctAnswer": "Exemple : le principe d’égalité entre les filles et les garçons doit être respecté, même dans la sphère privée.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Liberté, Egalité, Fraternité."
             ],
             "explanation": "La loi française est prioritaire sur les valeurs culturelles et familiales\nLa loi française est prioritaire sur les valeurs culturelles et familiales. Cela signifie que si des valeurs culturelles et familiales contredisent la loi française, elles ne peuvent pas être transmises ou appliquées.\n\nExemple : le principe d’égalité entre les filles et les garçons doit être respecté, même dans la sphère privée.",
             "subTheme": "general",
@@ -1747,7 +1747,7 @@
         {
             "id": 135,
             "question": "Quand se termine l’autorité parentale ?",
-            "correctAnswer": "émancipé, c’est-à-dire qu’il devient adulte avant 18 ans (par exemple en cas de conflit avec ses parents) ;",
+            "correctAnswer": "L'autorité parentale se termine :\n\n- quand l'enfant a 18 ans ;\n- si l’enfant est émancipé, c’est-à-dire qu’il devient adulte avant 18 ans (par exemple en cas de conflit avec ses parents) ;\n- en cas de retrait de l’autorité parentale.",
             "incorrectAnswers": [
                 "À une date différente de celle indiquée",
                 "C'est une interprétation partielle ou incomplète de la réalité",
@@ -1760,7 +1760,7 @@
         {
             "id": 136,
             "question": "Qui décide du retrait de l’autorité parentale ?",
-            "correctAnswer": "une décision prise par un tribunal",
+            "correctAnswer": "Le retrait de l’autorité parentale est une décision prise par un tribunal.",
             "incorrectAnswers": [
                 "D'autres personnes ou institutions",
                 "C'est une interprétation partielle ou incomplète de la réalité",
@@ -1773,24 +1773,24 @@
         {
             "id": 137,
             "question": "Dans quelles situations ?",
-            "correctAnswer": "Exemples de situations qui peuvent entraîner un retrait de l’autorité parentale :",
+            "correctAnswer": "assistance décidée par un tribunal",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Il peut y avoir de la discrimination au travail à différents moments."
+                "un leader mondial dans la pâtisserie en raison de son histoire, de ses techniques de fabrication uniques et de ses créations emblématiques comme les éclairs, les macarons, les millefeuilles et les cro"
             ],
-            "explanation": "Dans quelles situations ?\nExemples de situations qui peuvent entraîner un retrait de l’autorité parentale :...",
+            "explanation": "Dans quelles situations ?\nExemples de situations qui peuvent entraîner un retrait de l’autorité parentale :\n\n- mise en danger de l’enfant : violence physique ou psychologique ;\n- désintérêt pour l’enfant : abstention volontaire d'exercer les droits et devoirs parentaux pendant plus de deux ans, malgré une procédure d’assistance éducative (assistance décidée par un tribunal) ;\n- condamnation pour un crime ou un délit : un parent a commis un crime ou un délit sur son enfant ou l'autre parent, un parent a participé à un crime ou un délit réalisé par son enfant.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 138,
             "question": "Quelles sont les conséquences ?",
-            "correctAnswer": "Le retrait total de l’autorité parentale",
+            "correctAnswer": "Le retrait total de l’autorité parentale\n\nLe retrait partiel de l’autorité parentale\n\nExemple : le parent peut conserver ses droits sur les biens de l’enfant, ses droits et devoirs de surveillance et d'éducation.",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Il peut y avoir de la discrimination au travail à différents moments."
+                "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc."
             ],
             "explanation": "Quelles sont les conséquences ?\nLe retrait total de l’autorité parentale\n\nLe retrait partiel de l’autorité parentale\n\nExemple : le parent peut conserver ses droits sur les biens de l’enfant, ses droits et devoirs de surveillance et d'éducation.",
             "subTheme": "general",
@@ -1799,7 +1799,7 @@
         {
             "id": 139,
             "question": "Faire garder son enfant par des professionnels",
-            "correctAnswer": "en contact avec d’autres enfants",
+            "correctAnswer": "Un des avantages : les enfants sont en contact avec d’autres enfants",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
@@ -1812,37 +1812,37 @@
         {
             "id": 140,
             "question": "Où faire garder son enfant ?",
-            "correctAnswer": "- La crèche est un endroit qui garde de nombreux enfants, de manière régulière",
+            "correctAnswer": "gérée par une association, une commune…",
             "incorrectAnswers": [
                 "La procédure est différente de celle décrite",
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine"
             ],
-            "explanation": "Où faire garder son enfant ?\n- La crèche est un endroit qui garde de nombreux enfants, de manière régulière. Diverses activités favorisent le bon développement des enfants. Il existe différents types de crèches : crèche collective (gérée par une association, une commune…), crèche dans une entreprise, crèche parentale (les parents se partagent les temps de garde)…\n- La micro-crèche est une crèche qui garde 10 enfants au maximum. Elle garde les enfants de manière régulière ou seulement certains jo...",
+            "explanation": "Où faire garder son enfant ?\n- La crèche est un endroit qui garde de nombreux enfants, de manière régulière. Diverses activités favorisent le bon développement des enfants. Il existe différents types de crèches : crèche collective (gérée par une association, une commune…), crèche dans une entreprise, crèche parentale (les parents se partagent les temps de garde)…\n- La micro-crèche est une crèche qui garde 10 enfants au maximum. Elle garde les enfants de manière régulière ou seulement certains jours.\n- La halte-garderie permet de faire garder son enfant certains jours, pas plus de 3 demi-journées par semaine. Elle fonctionne comme une crèche, mais les professionnels sont moins nombreux.\n- L’assistante maternelle peut garder un ou plusieurs enfants en même temps. Il est possible de faire garder son enfant de moins de 3 ans, en complément de l’école.\n- À domicile. Les parents emploient directement une personne qui vient garder l’enfant chez eux. Cette solution est plus chère que les autres et moins encadrée.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 141,
             "question": "L’organisation de l’école en France",
-            "correctAnswer": "organisée en 4 temps :",
+            "correctAnswer": "L’école est organisée en 4 temps :\n\n- la maternelle, (de 3 à 6 ans)",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Oui, de 3 à 16 ans pour tous les enfants résidant en France."
             ],
-            "explanation": "L’organisation de l’école en France\nFrançais ou étrangers, tous les enfants âgés de 3 à 16 ans, qui habitent en France, doivent aller à l’école. C’est une obligation....",
+            "explanation": "L’organisation de l’école en France\nFrançais ou étrangers, tous les enfants âgés de 3 à 16 ans, qui habitent en France, doivent aller à l’école. C’est une obligation.\n\nL’école est organisée en 4 temps :\n\n- la maternelle, (de 3 à 6 ans). Il y a 3 niveaux : petite section, moyenne section, et grande section ;\n- le cours élémentaire (de 6 à 11 ans). Il y a 5 niveaux : CP, CE1, CE2, CM1 et CM2 ;\n- le collège (de 11 à 15 ans). Il y a 4 niveaux : 6e, 5e, 4e et 3e. À la fin du collège, l’enfant passe un diplôme qui s’appelle le brevet des collèges, ou diplôme national du brevet (DNB) ;\n- le lycée (de 15 à 18 ans). Il y a 3 niveaux : Seconde, Première, Terminale. À la fin du lycée l’enfant passe un diplôme qui s’appelle le baccalauréat (BAC), qui permet de poursuivre des études et d’être orienté vers de nombreux parcours dans l’enseignement supérieur.\n\nUne cantine est accessible à tous les enfants qui le souhaitent dans tous les établissements scolaires.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 142,
             "question": "Pourquoi aller à l’école dès l’âge de 3 ans ?",
-            "correctAnswer": "L’école maternelle permet aux enfants de s’intégrer dans la société :",
+            "correctAnswer": "L’école maternelle permet aux enfants de s’intégrer dans la société :\n\n- les enfants apprennent la langue française s’ils ne la parlent pas encore ;\n- ils apprennent à vivre ensemble ;\n- ils se font des amis",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Selon la loi du 15 mars 2004, l'école doit être neutre pour former tous les citoyens et protéger les mineurs contre les pressions."
             ],
             "explanation": "Pourquoi aller à l’école dès l’âge de 3 ans ?\nL’école maternelle permet aux enfants de s’intégrer dans la société :\n\n- les enfants apprennent la langue française s’ils ne la parlent pas encore ;\n- ils apprennent à vivre ensemble ;\n- ils se font des amis.\n\nL’école maternelle permet aux parents de rencontrer de nouvelles personnes : les enseignants et d’autres parents.",
             "subTheme": "general",
@@ -1868,7 +1868,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "gratuite, laïque et obligatoire"
             ],
             "explanation": "L’école publique\n\nPour inscrire son enfant à l’école publique, il suffit de contacter la mairie, ou l’école située à proximité de son domicile.\n\nL’École républicaine, gratuite, laïque et obligatoire, est au cœur de la transmission des valeurs de la République, telles que la citoyenneté, la laïcité, la culture de l’engagement et la lutte contre toutes les formes de discrimination.",
             "subTheme": "general",
@@ -1903,11 +1903,11 @@
         {
             "id": 147,
             "question": "L’école accueille tous les enfants",
-            "correctAnswer": "En France, tous les enfants de 3 à 16 ans doivent aller à l’école",
+            "correctAnswer": "c’est-à-dire ceux dont la langue maternelle n’est pas le français",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Cela s'applique uniquement à certaines personnes"
+                "C'est une information incorrecte ou incomplète"
             ],
             "explanation": "L’école accueille tous les enfants\nEn France, tous les enfants de 3 à 16 ans doivent aller à l’école. Cette obligation concerne donc aussi les enfants non francophones (c’est-à-dire ceux dont la langue maternelle n’est pas le français).\n\nPlus d’un tiers des enfants qui vont à l’école parlent une autre langue que le français à la maison.",
             "subTheme": "general",
@@ -1920,16 +1920,16 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "reconnu pour sa rigueur, son accessibilité et son excellence, notamment dans des domaines comme les sciences, la littérature et la philosophie"
             ],
-            "explanation": "Des cours adaptés pour apprendre le français\nAu moment de l’entrée dans l’école, l’enfant qui ne parle pas bien (ou pas du tout) le français passe un test de positionnement pour déterminer son niveau en français et l'orienter vers l'un des dispositifs suivants :...",
+            "explanation": "Des cours adaptés pour apprendre le français\nAu moment de l’entrée dans l’école, l’enfant qui ne parle pas bien (ou pas du tout) le français passe un test de positionnement pour déterminer son niveau en français et l'orienter vers l'un des dispositifs suivants :\n\n- Unités Pédagogiques pour Élèves étrangers Allophones Arrivants - UPE2A : déployées pour les élèves allophones nouvellement arrivés ;\n- Unités Pédagogiques pour Élèves Allophones Arrivants, Non Scolarisés Antérieurement - UPE2A-NSA : destinées aux élèves allophones non scolarisés avant leur arrivée, ces unités leur offrent la possibilité de prolonger d’une année supplémentaire le dispositif UPE2A.\n\nSelon son niveau, il peut suivre des cours adaptés. Entouré d’enfants et d’adultes qui parlent le français, il apprend vite la langue française dans le cadre de l’école.\n\nUne fois qu’il maîtrise le français, il peut suivre les mêmes cours que les autres enfants.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 149,
             "question": "L’information des parents",
-            "correctAnswer": "transmises de manière régulière par l’intermédiaire du livret scolaire (pendant le cours élémentaire) puis du bulletin scolaire (pendant le collège et le lycée)",
+            "correctAnswer": "Ces informations sont transmises de manière régulière par l’intermédiaire du livret scolaire (pendant le cours élémentaire) puis du bulletin scolaire (pendant le collège et le lycée).",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -1959,7 +1959,7 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines."
             ],
             "explanation": "Le rôle des parents\n\nLes parents peuvent participer à la vie de l’école de plusieurs façons :\n\n- en rejoignant l’association de parents d’élèves qui défend les intérêts des enfants ;\n- en se présentant aux élections de représentants des parents d’élèves. Les représentants des parents d’élèves participent aux decisions importantes concernant l’organisation de l’école.",
             "subTheme": "general",
@@ -1981,11 +1981,11 @@
         {
             "id": 153,
             "question": "OEPRE, à quoi ça sert ?",
-            "correctAnswer": "OEPRE donne des outils aux parents pour la réussite de leurs enfants à l’école et permet d'aider les enfants dans leur apprentissage.",
+            "correctAnswer": "OEPRE donne des outils aux parents pour la réussite de leurs enfants à l’école et permet d'aider les enfants dans leur apprentissage",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "indispensable d'avoir une adresse pour recevoir son courrier"
+                "ils peuvent être présents à l’Assemblée et au Sénat"
             ],
             "explanation": "OEPRE, à quoi ça sert ?\nOEPRE donne des outils aux parents pour la réussite de leurs enfants à l’école et permet d'aider les enfants dans leur apprentissage.\n\nLa formation facilite aussi l’intégration des parents étrangers dans la société française.",
             "subTheme": "general",
@@ -1994,7 +1994,7 @@
         {
             "id": 154,
             "question": "OEPRE en pratique",
-            "correctAnswer": "Les ateliers ont lieu dans les écoles, collèges et lycées, partout en France",
+            "correctAnswer": "http://www.intercariforef.org/formations/recherche-formations-dian.html",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -2007,7 +2007,7 @@
         {
             "id": 155,
             "question": "Le soutien à la parentalité, qu’est-ce que c’est ?",
-            "correctAnswer": "Le soutien à la parentalité, c’est un ensemble d’actions, décidées par l’État, pour aider les parents qui ont du mal à assurer l’éducation de leurs enfants.",
+            "correctAnswer": "un ensemble d’actions, décidées par l’État, pour aider les parents qui ont du mal à assurer l’éducation de leurs enfants",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
@@ -2024,22 +2024,22 @@
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "Le soutien à la parentalité, c’est un ensemble d’actions, décidées par l’État, pour aider les parents qui ont du mal à assurer l’éducation de leurs enfants."
+                "un ensemble d’actions, décidées par l’État, pour aider les parents qui ont du mal à assurer l’éducation de leurs enfants"
             ],
-            "explanation": "Les grands principes du soutien à la parentalité\nLes actions de soutien à la parentalité se fondent sur des grands principes. Ces principes ont été définis par un document officiel : la charte nationale de soutien à la parentalité....",
+            "explanation": "Les grands principes du soutien à la parentalité\nLes actions de soutien à la parentalité se fondent sur des grands principes. Ces principes ont été définis par un document officiel : la charte nationale de soutien à la parentalité.\n\nLes grands principes :\n\n- valoriser les rôles, le projet et les compétences des parents ;\n- s’adresser à toutes les familles, partout en France ;\n- accompagner les parents de manière globale et en fonction du contexte familial ;\n- accompagner avant la naissance de l’enfant et jusqu’à ses 18 ans ;\n- respecter l’égalité entre les femmes et les hommes ;\n- permettre à chaque parent d’occuper, dans la mesure du possible, sa place dans le développement de son enfant ;\n- proposer des interventions diverses et neutres sur les plans politique, philosophique et religieux ;\n- garantir que les bénévoles ou professionnels qui interviennent sont compétents en matière de parentalité.",
             "subTheme": "general",
             "questionType": "knowledge"
         },
         {
             "id": 157,
             "question": "Quels types d’action soutiennent la parentalité ?",
-            "correctAnswer": "La politique nationale de soutien à la parentalité se concrétise par 6 grands types d’actions, partout en France :",
+            "correctAnswer": "séparation, difficulté à assurer l’autorité parentale…",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
-                "C'est une information incorrecte ou incomplète"
+                "- Monarchie absolue → Le roi détient tous les pouvoirs (ex : Arabie Saoudite)"
             ],
-            "explanation": "Quels types d’action soutiennent la parentalité ?\nLa politique nationale de soutien à la parentalité se concrétise par 6 grands types d’actions, partout en France :...",
+            "explanation": "Quels types d’action soutiennent la parentalité ?\nLa politique nationale de soutien à la parentalité se concrétise par 6 grands types d’actions, partout en France :\n\n- se former : les Réseaux d’Écoute, d’Appui et d’Accompagnement des Parents (REAAP) proposent des activités et des ressources pour développer les compétences des parents ;\n- rencontrer : les Lieux d’accueil enfant-parent (Laep) favorisent les rencontres et les échanges entre différents parents et leurs enfants de moins de 6 ans ;\n- se retrouver : les espaces de rencontre sont des lieux où peuvent se retrouver, pendant un moment, des parents séparés et leurs enfants, par exemple dans le cas d’un divorce difficile ;\n- s’informer : les Points info famille (Pif) mettent à disposition des parents de l’information et facilitent leurs démarches administratives ;\nsuivre la scolarité : les Contrats locaux d’accompagnement à la scolarité (Clas) organisent des actions pour aider les parents dans le suivi scolaire de leurs enfants ;\n- résoudre un conflit : la médiation familiale permet de trouver une solution, par exemple en cas de conflit familial (séparation, difficulté à assurer l’autorité parentale…).",
             "subTheme": "general",
             "questionType": "knowledge"
         },
@@ -2050,7 +2050,7 @@
             "incorrectAnswers": [
                 "Des obligations qui concernent uniquement les résidents étrangers",
                 "Des devoirs qui s'appliquent uniquement aux citoyens français",
-                "C'est une information incorrecte ou incomplète"
+                "article 1 de la Charte de l’environnement de 2004"
             ],
             "explanation": "Protéger son enfant : un devoir des parents\nLes parents ont le devoir de protéger leur enfant : ne pas le laisser seul, éviter les situations dangereuses, porter attention à tout signe de mal-être…",
             "subTheme": "general",
@@ -2059,13 +2059,13 @@
         {
             "id": 159,
             "question": "Les parents doivent signaler toute violence",
-            "correctAnswer": "en contactant l’école : si la violence se passe à l’école ou en lien avec la vie à l’école (exemple : harcèlement) ;\n- en contactant la police ou la g",
+            "correctAnswer": "exemple : incitation à consommer de la drogue",
             "incorrectAnswers": [
                 "C'est une interprétation partielle ou incomplète de la réalité",
                 "Cela concerne un aspect différent ou un autre domaine",
                 "C'est une information incorrecte ou incomplète"
             ],
-            "explanation": "Les parents doivent signaler toute violence\nLes parents doivent signaler toute violence :...",
+            "explanation": "Les parents doivent signaler toute violence\nLes parents doivent signaler toute violence :\n\n- en contactant l’école : si la violence se passe à l’école ou en lien avec la vie à l’école (exemple : harcèlement) ;\n- en contactant la police ou la gendarmerie : en cas de violences graves (exemple : incitation à consommer de la drogue) ;\n- en appelant le numéro 119 : en cas de mise en danger de l’enfance (exemples : violence physique, psychologique, sexuelle...) ;\n- en appelant le numéro 30 20 : en cas de harcèlement de l'enfant.",
             "subTheme": "general",
             "questionType": "knowledge"
         }
