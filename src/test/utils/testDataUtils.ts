@@ -108,6 +108,9 @@ export const processAllQuestions = (
             if (!subcategory?.questions) return;
 
             subcategory.questions.forEach((question: any) => {
+                if (question?.status === 'needs_review') {
+                    return;
+                }
                 if (seenIds.has(question.id)) {
                     logger.warn(`Duplicate question ID: ${question.id} in history subcategory ${subcategory.id}`);
                     return;

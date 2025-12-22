@@ -1,0 +1,128 @@
+{
+  "id": "arts",
+  "title": "Arts & Littérature",
+  "icon": "brush",
+  "description": "Artistes, écrivains et œuvres célèbres",
+  "questions": [
+    {
+      "id": 1,
+      "question": "À Quel mouvement voltaire appartient-il ?",
+      "explanation": "Il appartenait au mouvement de la philosophie des lumières et il en est l'un des représentants les plus connus.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 70
+      }
+    },
+    {
+      "id": 2,
+      "question": "Citez des artistes Français connus",
+      "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 65
+      }
+    },
+    {
+      "id": 3,
+      "question": "Citez des écrivains Français Célèbres",
+      "explanation": "Beaumarchais, Molière, Victor Hugo etc…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 66
+      }
+    },
+    {
+      "id": 4,
+      "question": "Citez des peintres Français célèbres",
+      "explanation": "Cézanne, Delacroix, Monet etc…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 63
+      }
+    },
+    {
+      "id": 5,
+      "question": "Citez des personnages littéraires Français célèbres",
+      "explanation": "Thénardier, jean valjean (Les misérables), Rémy (Sans famille), le petit prince,…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 62
+      }
+    },
+    {
+      "id": 6,
+      "question": "Citez des philosophes connus des lumières ?",
+      "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 75
+      }
+    },
+    {
+      "id": 7,
+      "question": "Citez des œuvres littéraires célèbres",
+      "explanation": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 67
+      }
+    },
+    {
+      "id": 8,
+      "question": "Qu'est-ce que la philosophie des lumières ?",
+      "explanation": "C'est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du xviie siècle avec plusieurs philosophes comme voltaire, rousseau etc… et qui par leur engagement contre les oppressions religieuses et politiques, se voyaient comme une élite avancée œuvrant pour un progrès du monde. Combattant l'irrationnel, l'arbitraire, l'obscurantisme et la « superstition » des siècles passés, ils ont procédé au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. L'influence de leurs écrits a été déterminante dans les grands événements de la fin du xviiie siècle que sont la Déclaration d'indépendance des États-Unis et la Révolution française.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 76
+      }
+    },
+    {
+      "id": 9,
+      "question": "Qui a écrit les trois mousquetaires ?",
+      "explanation": "Alexandre Dumas et Auguste Maquet.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 68
+      }
+    },
+    {
+      "id": 10,
+      "question": "Qui était Voltaire ?",
+      "explanation": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "arts.json",
+        "id": 69
+      }
+    }
+  ]
+}

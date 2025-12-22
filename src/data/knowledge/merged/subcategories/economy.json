@@ -1,0 +1,20 @@
+{
+  "id": "economy",
+  "title": "Économie & Monnaie",
+  "icon": "cash",
+  "description": "L'économie française et le système monétaire",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quelle est la monnaie actuelle de la France?",
+      "explanation": "C'est l'Euro.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "economy.json",
+        "id": 167
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "monarchy",
+  "title": "Monarchie & Royauté",
+  "icon": "star",
+  "description": "Questions sur les rois et reines de France",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Citez des Reines de France",
+      "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+      "image": "../assets/Marie_Antoinette_Adult.jpg",
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 38
+      }
+    },
+    {
+      "id": 2,
+      "question": "Citez trois rois de France",
+      "explanation": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 37
+      }
+    },
+    {
+      "id": 3,
+      "question": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
+      "explanation": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 39
+      }
+    },
+    {
+      "id": 4,
+      "question": "Enquelle année Napoléon ler est-il devenu empeureur ?",
+      "explanation": "",
+      "image": null,
+      "status": "needs_review",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 341
+      }
+    },
+    {
+      "id": 5,
+      "question": "Parmi ces textes, lequel a été adopté sous Napoléon ler ?",
+      "explanation": "",
+      "image": null,
+      "status": "needs_review",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 330
+      }
+    },
+    {
+      "id": 6,
+      "question": "Quel château célibre se trouveopsis de Paris et symbolise le pouvoir royal de Louis XIV ?",
+      "explanation": "",
+      "image": null,
+      "status": "needs_review",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 369
+      }
+    },
+    {
+      "id": 7,
+      "question": "Quel roi de France a été guillotiné pendant la Révolution française ?",
+      "explanation": "",
+      "image": null,
+      "status": "needs_review",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 339
+      }
+    },
+    {
+      "id": 8,
+      "question": "Qui a été à l'origine du château de Versailles ?",
+      "explanation": "C'est Louis XIV (Louis 14).",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 85
+      }
+    },
+    {
+      "id": 9,
+      "question": "Qui été le Roi de France durant la révolution Française ?",
+      "explanation": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "monarchy.json",
+        "id": 40
+      }
+    }
+  ]
+}

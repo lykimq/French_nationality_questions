@@ -1,0 +1,32 @@
+{
+  "id": "local_gov",
+  "title": "Administration Locale",
+  "icon": "business",
+  "description": "Questions sur l'administration locale et la vie civique",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qu'est-ce que l'hôtel de ville ?",
+      "explanation": "C'est la mairie principale d'une grande ville ou d'une ville importante.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "local_gov.json",
+        "id": 59
+      }
+    },
+    {
+      "id": 2,
+      "question": "Qu'est-ce que les élections municipales ?",
+      "explanation": "Ce sont des élections qui permettent d'élire les membres du conseil municipal de chaque commune et qui sont appelés les conseillers municipaux, c'est eux ensuite qui élisent le maire et ces adjoints.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "local_gov.json",
+        "id": 162
+      }
+    }
+  ]
+}

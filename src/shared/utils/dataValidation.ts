@@ -29,9 +29,11 @@ const validateQuestion = (
         errors.push(`Question ${question.id || index} missing question text`);
     }
 
+    const isNeedsReview = question?.status === 'needs_review';
+
     if (question.explanation && typeof question.explanation === 'string' && question.explanation.trim()) {
         summary.questionsWithExplanations++;
-    } else {
+    } else if (!isNeedsReview) {
         errors.push(`Question ${question.id || index} missing explanation`);
     }
 

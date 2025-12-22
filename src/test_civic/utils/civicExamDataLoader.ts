@@ -190,13 +190,22 @@ const loadQuestionsFromFileData = (
         return [];
     }
 
-    const validQuestions = questions
+    const questionsForExam = questions.filter((q: any) => q?.status !== 'needs_review');
+    const skippedForReview = questions.length - questionsForExam.length;
+
+    const validQuestions = questionsForExam
         .filter(q => validateQuestionData(q, theme))
         .map(q => transformCivicQuestion(q, theme!));
 
     if (validQuestions.length < questions.length) {
         const invalidCount = questions.length - validQuestions.length;
-        logger.warn(`Skipped ${invalidCount} invalid civic exam question(s)`);
+        if (skippedForReview > 0) {
+            logger.warn(`Skipped ${skippedForReview} civic exam question(s) marked needs_review`);
+        }
+        const invalidAfterReviewSkip = invalidCount - skippedForReview;
+        if (invalidAfterReviewSkip > 0) {
+            logger.warn(`Skipped ${invalidAfterReviewSkip} invalid civic exam question(s)`);
+        }
     }
 
     return validQuestions;

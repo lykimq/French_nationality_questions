@@ -1,0 +1,200 @@
+{
+  "id": "wars",
+  "title": "Guerres & Résistance",
+  "icon": "shield",
+  "description": "Les guerres mondiales et la résistance française",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Citez des anciennes colonies Françaises?",
+      "explanation": "Algérie, Sénégal, Mali, Côte d'Ivoire.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 94
+      }
+    },
+    {
+      "id": 2,
+      "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
+      "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 48
+      }
+    },
+    {
+      "id": 3,
+      "question": "Connaissez-vous la bataille de Verdun ?",
+      "explanation": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 96
+      }
+    },
+    {
+      "id": 4,
+      "question": "Où a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?",
+      "explanation": "En Normandie.",
+      "image": "French_questions/assets/normandie.png",
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 103
+      }
+    },
+    {
+      "id": 5,
+      "question": "Qu'est-ce que la guerre de 100 ans ?",
+      "explanation": "C'est une guerre résultant d'un conflit entre les rois de France et les rois d'Angleterre durant le Moyen-Age. Ce conflit d'un siècle a en réalité duré 116 ans plus exactement !",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 95
+      }
+    },
+    {
+      "id": 6,
+      "question": "Quand a eu lieu la première guerre mondiale ?",
+      "explanation": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 novembre 1918",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 98
+      }
+    },
+    {
+      "id": 7,
+      "question": "Quand a eu lieu la seconde guerre mondiale ?",
+      "explanation": "La seconde guerre mondiale a eu lieu du 1er septembre 1939 au 02 septembre 1945",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 99
+      }
+    },
+    {
+      "id": 8,
+      "question": "Quand a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?",
+      "explanation": "Le débarquement des alliés a eu lieu le 6 juin 1944.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 102
+      }
+    },
+    {
+      "id": 9,
+      "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
+      "explanation": "On les appelait les Poilus.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 97
+      }
+    },
+    {
+      "id": 10,
+      "question": "Quelle organisation a été créée en 1945 après la Seconde Guerre mondiale ?",
+      "explanation": "",
+      "image": null,
+      "status": "needs_review",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 358
+      }
+    },
+    {
+      "id": 11,
+      "question": "Quelles sont les dates des deux dernières guerres mondiales ?",
+      "explanation": "- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18). \n\n - La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 47
+      }
+    },
+    {
+      "id": 12,
+      "question": "Qui est Charles de Gaulle ?",
+      "explanation": "Le Général De Gaulle est un militaire, un résistant et un homme politique français, il est le fondateur de la 5ème République et l'un des principaux architectes de la résistance française. Il a été président de la République française sous la 5ème République de 1959 à 1969.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 49
+      }
+    },
+    {
+      "id": 13,
+      "question": "Qui est Jeanne d'Arc?",
+      "explanation": "C'est une jeune paysanne Française qui a conduit les troupes Françaises à la libération d'une partie du territoire Français durant la guerre des 100 ans.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 180
+      }
+    },
+    {
+      "id": 14,
+      "question": "Qui était une figure de la Résistance française pendant la Seconde Guerre mondiale ?",
+      "explanation": "",
+      "image": null,
+      "status": "needs_review",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 352
+      }
+    },
+    {
+      "id": 15,
+      "question": "Qui sont les alliés durant la première guerre mondiale ?",
+      "explanation": "La France, l'Angleterre, la Russie et les USA (États-Unis d'Amérique).",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 100
+      }
+    },
+    {
+      "id": 16,
+      "question": "Qui sont les allies durant la seconde guerre mondiale?",
+      "explanation": "La France, l'Angleterre, l'URSS (Union Soviétique), les USA.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "wars.json",
+        "id": 101
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "holidays",
+  "title": "Jours Fériés",
+  "icon": "calendar",
+  "description": "Les jours fériés et leurs significations",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Pourquoi le 11 Novembre est-il férié ?",
+      "explanation": "Le 11 novembre marque la fin de la première guerre mondiale, c'est ce qu'on appelle l'Armistice signée en 1918",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "holidays.json",
+        "id": 56
+      }
+    },
+    {
+      "id": 2,
+      "question": "Pourquoi le 1er Mai est-il férié ?",
+      "explanation": "Nous fêtons la fête du Travail.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "holidays.json",
+        "id": 55
+      }
+    },
+    {
+      "id": 3,
+      "question": "Que fête-on le 14 juillet ?",
+      "explanation": "C'est la fête nationale en France, le 14 juillet est généralement associé à la prise de la Bastille en 1789, c'est dans les faits le 14 juillet 1790, la fête de la Fédération, qui est officiellement commémoré en France depuis plus d'un siècle.",
+      "image": null,
+      "status": "ok",
+      "source": {
+        "type": "subcategories",
+        "path": "holidays.json",
+        "id": 57
+      }
+    }
+  ]
+}
