@@ -71,34 +71,71 @@ const normalizeQuestionType = (questionType: string): 'knowledge' | 'situational
     return 'knowledge';
 };
 
-const validateQuestionData = (q: unknown, defaultTheme?: CivicExamTheme): q is CivicExamQuestionData & { theme: CivicExamTheme } => {
+const validateQuestionData = (
+    q: unknown, 
+    defaultTheme?: CivicExamTheme,
+    onInvalid?: (reason: string) => void
+): q is CivicExamQuestionData & { theme: CivicExamTheme } => {
     if (typeof q !== 'object' || q === null) {
+        onInvalid?.('Question is not an object');
         return false;
     }
 
     const question = q as Record<string, unknown>;
+    const questionId = question.id;
 
     const hasValidId = typeof question.id === 'number' &&
         isFinite(question.id) &&
         question.id > 0;
     
+    if (!hasValidId) {
+        onInvalid?.(`Question ${questionId || 'unknown'} has invalid ID (must be positive number)`);
+        return false;
+    }
+    
     const hasValidQuestion = typeof question.question === 'string' &&
         question.question.length > 0;
     
+    if (!hasValidQuestion) {
+        onInvalid?.(`Question ${questionId} missing or empty question text`);
+        return false;
+    }
+    
     const hasValidExplanation = typeof question.explanation === 'string';
+    
+    if (!hasValidExplanation) {
+        onInvalid?.(`Question ${questionId} missing explanation`);
+        return false;
+    }
     
     const hasValidSubTheme = typeof question.subTheme === 'string' &&
         question.subTheme.length > 0;
+    
+    if (!hasValidSubTheme) {
+        onInvalid?.(`Question ${questionId} missing or empty subTheme`);
+        return false;
+    }
     
     const questionType = typeof question.questionType === 'string' ? question.questionType.toLowerCase().trim() : '';
     const hasValidQuestionType = questionType === 'knowledge' || 
         questionType === 'situational' || 
         questionType === 'situation';
 
+    if (!hasValidQuestionType) {
+        onInvalid?.(`Question ${questionId} has invalid questionType: "${question.questionType}" (must be "knowledge" or "situational")`);
+        return false;
+    }
+
     const theme = question.theme as string | undefined;
     const hasValidTheme = theme ? THEME_ID_MAP[theme] !== undefined : defaultTheme !== undefined;
 
-    return hasValidId && hasValidQuestion && hasValidExplanation && hasValidSubTheme && hasValidQuestionType && hasValidTheme;
+    if (!hasValidTheme) {
+        const themeStr = theme ? `"${theme}"` : 'undefined';
+        onInvalid?.(`Question ${questionId} has invalid theme: ${themeStr} (no default theme provided)`);
+        return false;
+    }
+
+    return true;
 };
 
 const sanitizeString = (str: unknown): string => {
@@ -193,18 +230,29 @@ const loadQuestionsFromFileData = (
     const questionsForExam = questions.filter((q: any) => q?.status !== 'needs_review');
     const skippedForReview = questions.length - questionsForExam.length;
 
+    const validationErrors: string[] = [];
     const validQuestions = questionsForExam
-        .filter(q => validateQuestionData(q, theme))
+        .filter(q => {
+            const isValid = validateQuestionData(q, theme, (reason) => {
+                validationErrors.push(reason);
+            });
+            return isValid;
+        })
         .map(q => transformCivicQuestion(q, theme!));
 
     if (validQuestions.length < questions.length) {
         const invalidCount = questions.length - validQuestions.length;
         if (skippedForReview > 0) {
-            logger.warn(`Skipped ${skippedForReview} civic exam question(s) marked needs_review`);
+            logger.debug(`Skipped ${skippedForReview} civic exam question(s) marked needs_review`);
         }
         const invalidAfterReviewSkip = invalidCount - skippedForReview;
         if (invalidAfterReviewSkip > 0) {
             logger.warn(`Skipped ${invalidAfterReviewSkip} invalid civic exam question(s)`);
+            if (validationErrors.length > 0) {
+                const errorSummary = validationErrors.slice(0, 5).join('; ');
+                const moreErrors = validationErrors.length > 5 ? ` (and ${validationErrors.length - 5} more)` : '';
+                logger.warn(`Validation errors: ${errorSummary}${moreErrors}`);
+            }
         }
     }
 
@@ -238,8 +286,6 @@ export const loadCivicExamQuestions = async (): Promise<CivicExamQuestionWithOpt
 
         if (allQuestions.length === 0) {
             logger.warn('No valid civic exam questions found after loading all files');
-        } else {
-            logger.info(`Loaded ${allQuestions.length} civic exam questions from 7 files`);
         }
 
         return allQuestions;
