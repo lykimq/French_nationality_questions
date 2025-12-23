@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcons } from '../../shared/contexts/IconContext';
+import { Icon3D } from '../../shared/components';
 
 interface SearchBarProps {
     searchQuery: string;
@@ -19,10 +20,21 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     onClear,
 }) => {
     const { theme } = useTheme();
+    const { getIconName, getIconVariant } = useIcons();
+
+    const searchIconName = getIconName('search');
+    const searchVariant = getIconVariant('search');
+    const closeIconName = getIconName('close');
+    const closeVariant = getIconVariant('close');
 
     return (
         <View style={[styles.searchBar, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
-            <Ionicons name="search" size={20} color={theme.colors.textMuted} />
+            <Icon3D
+                name={searchIconName}
+                size={16}
+                color={theme.colors.textMuted}
+                variant="default"
+            />
             <TextInput
                 style={[styles.input, { color: theme.colors.text }]}
                 placeholder="Rechercher une question..."
@@ -36,15 +48,21 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 onPress={onToggleAdvanced}
                 style={[styles.advancedButton, showAdvanced && { backgroundColor: theme.colors.primary + '20' }]}
             >
-                <Ionicons
+                <Icon3D
                     name="options"
-                    size={20}
+                    size={16}
                     color={showAdvanced ? theme.colors.primary : theme.colors.textMuted}
+                    variant="default"
                 />
             </TouchableOpacity>
             {searchQuery !== '' && (
                 <TouchableOpacity onPress={onClear} style={styles.clearButton}>
-                    <Ionicons name="close-circle" size={20} color={theme.colors.textMuted} />
+                    <Icon3D
+                        name="close-circle"
+                        size={16}
+                        color={theme.colors.textMuted}
+                        variant="default"
+                    />
                 </TouchableOpacity>
             )}
         </View>
@@ -59,25 +77,23 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         borderRadius: 25,
         borderWidth: 1,
-        elevation: 2,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.1,
         shadowRadius: 2,
+        elevation: 2,
+        gap: 8,
     },
     input: {
         flex: 1,
-        marginLeft: 10,
-        fontSize: 16,
+        fontSize: 15,
+        paddingVertical: 0,
     },
     advancedButton: {
-        padding: 8,
+        padding: 6,
         borderRadius: 15,
-        marginHorizontal: 5,
     },
     clearButton: {
-        padding: 5,
-        marginLeft: 5,
+        padding: 4,
     },
 });
-

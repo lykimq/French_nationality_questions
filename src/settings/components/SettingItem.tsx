@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Switch, TouchableOpacity, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText } from '../../shared/components';
+import { useIcons } from '../../shared/contexts/IconContext';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { settingsStyles } from './settingsStyles';
-import { sharedStyles, getCardContainerStyle } from '../../shared/utils';
+import { getCardContainerStyle } from '../../shared/utils';
 import type { SettingItemProps } from '../../types';
 
 const SettingItem: React.FC<SettingItemProps> = ({
@@ -18,6 +18,10 @@ const SettingItem: React.FC<SettingItemProps> = ({
     onPress,
 }) => {
     const { theme } = useTheme();
+    const { getIconName, getIconVariant } = useIcons();
+
+    const chevronIconName = getIconName('chevronForward');
+    const chevronVariant = getIconVariant('chevronForward');
 
     return (
         <TouchableOpacity
@@ -25,9 +29,13 @@ const SettingItem: React.FC<SettingItemProps> = ({
             onPress={onPress}
             disabled={isSwitch}
         >
-            <View style={[sharedStyles.iconContainer, { backgroundColor: iconColor + '20' }]}>
-                <Ionicons name={icon as any} size={18} color={iconColor} />
-            </View>
+            <Icon3D
+                name={icon}
+                size={16}
+                color={iconColor}
+                variant="glass"
+                backgroundColor={theme.colors.card}
+            />
             <View style={styles.textContainer}>
                 <FormattedText style={[settingsStyles.settingTitle, { color: theme.colors.text }]}>
                     {title}
@@ -47,7 +55,12 @@ const SettingItem: React.FC<SettingItemProps> = ({
                 />
             )}
             {!isSwitch && (
-                <Ionicons name={theme.icons.chevronForward as any} size={20} color={theme.colors.textMuted} />
+                <Icon3D
+                    name={chevronIconName}
+                    size={16}
+                    color={theme.colors.textMuted}
+                    variant={chevronVariant}
+                />
             )}
         </TouchableOpacity>
     );

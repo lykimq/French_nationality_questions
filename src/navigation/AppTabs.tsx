@@ -1,16 +1,16 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
 
 import HomeStack from './HomeStack';
 import SearchScreen from '../search/SearchScreen';
 import CivicExamStack from '../test_civic/navigation/CivicExamStack';
 import FlashCardStack from '../flashcard/navigation/FlashCardStack';
 import SettingsScreen from '../settings/SettingsScreen';
-import { DataLoadingScreen } from '../shared/components';
+import { DataLoadingScreen, Icon3D } from '../shared/components';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import type { TabBarIconProps, RouteType } from '../types';
+import { useIcons } from '../shared/contexts/IconContext';
+import type { TabBarIconProps } from '../types';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,84 +24,114 @@ const tabLabels = {
 const AppTabs = () => {
     const { isDataLoading, dataLoadingError } = useData();
     const { theme } = useTheme();
+    const { getIconName, getIconVariant } = useIcons();
 
     if (isDataLoading || dataLoadingError) {
         return <DataLoadingScreen error={dataLoadingError} />;
     }
 
+    const renderTabIcon = (iconKey: 'home' | 'search' | 'settings', focused: boolean, color: string) => {
+        const iconName = getIconName(iconKey);
+        const variant = getIconVariant(iconKey);
+        
+        return (
+            <Icon3D
+                name={iconName}
+                size={18}
+                color={color}
+                variant={focused ? variant : 'default'}
+            />
+        );
+    };
+
     return (
         <Tab.Navigator
-            screenOptions={({ route }: { route: RouteType }) => ({
+            screenOptions={{
                 headerShown: false,
                 tabBarShowLabel: true,
-                tabBarIcon: ({ focused, color, size }: TabBarIconProps) => {
-                    let iconName: string;
-
-                    if (route.name === 'HomeTab') {
-                        iconName = focused ? theme.icons.home : theme.icons.home;
-                    } else if (route.name === 'SearchTab') {
-                        iconName = focused ? theme.icons.search : theme.icons.search;
-                    } else if (route.name === 'FlashCardTab') {
-                        iconName = focused ? 'school' : 'school-outline';
-                    } else if (route.name === 'SettingsTab') {
-                        iconName = focused ? theme.icons.settings : theme.icons.settings;
-                    } else {
-                        iconName = 'help-circle-outline';
-                    }
-
-                    return <Ionicons name={iconName as any} size={size} color={color} />;
-                },
                 tabBarActiveTintColor: theme.colors.primary,
                 tabBarInactiveTintColor: theme.colors.textMuted,
                 tabBarLabelStyle: {
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: '500',
+                    marginTop: 2,
+                },
+                tabBarIconStyle: {
+                    marginTop: 4,
                 },
                 tabBarStyle: {
                     backgroundColor: theme.colors.surface,
                     borderTopColor: theme.colors.border,
-                    paddingVertical: 5,
-                    height: 60,
+                    borderTopWidth: 1,
+                    paddingTop: 8,
+                    paddingBottom: 6,
+                    height: 65,
                     elevation: 8,
                     shadowOpacity: 0.1,
                     shadowRadius: 3,
                     shadowOffset: { width: 0, height: -3 },
                 },
-            })}
+            }}
         >
             <Tab.Screen
                 name="HomeTab"
                 component={HomeStack}
-                options={{ title: tabLabels.home }}
+                options={{
+                    title: tabLabels.home,
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) => 
+                        renderTabIcon('home', focused, color),
+                }}
             />
             <Tab.Screen
                 name="SearchTab"
                 component={SearchScreen}
-                options={{ title: tabLabels.search }}
+                options={{
+                    title: tabLabels.search,
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) => 
+                        renderTabIcon('search', focused, color),
+                }}
             />
             <Tab.Screen
                 name="CivicExamTab"
                 component={CivicExamStack}
-                options={{ 
+                options={{
                     title: 'Examen Civique',
-                    tabBarIcon: ({ focused, color, size }: TabBarIconProps) => (
-                        <Ionicons name={focused ? 'document-text' : 'document-text-outline'} size={size} color={color} />
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) => (
+                        <Icon3D
+                            name="document-text"
+                            size={18}
+                            color={color}
+                            variant={focused ? 'gradient' : 'default'}
+                        />
                     ),
                 }}
             />
             <Tab.Screen
                 name="FlashCardTab"
                 component={FlashCardStack}
-                options={{ title: tabLabels.flashcard }}
+                options={{
+                    title: tabLabels.flashcard,
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) => (
+                        <Icon3D
+                            name="school"
+                            size={18}
+                            color={color}
+                            variant={focused ? 'gradient' : 'default'}
+                        />
+                    ),
+                }}
             />
             <Tab.Screen
                 name="SettingsTab"
                 component={SettingsScreen}
-                options={{ title: tabLabels.settings }}
+                options={{
+                    title: tabLabels.settings,
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) => 
+                        renderTabIcon('settings', focused, color),
+                }}
             />
         </Tab.Navigator>
     );
 };
 
 export default AppTabs;
-

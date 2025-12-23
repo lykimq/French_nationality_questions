@@ -1,6 +1,15 @@
-import type { IconSetType, IconMapping, JsonIconMapping, JsonIconColorMapping, IconSetInfo } from '../types';
+import type { IconMapping, JsonIconMapping, JsonIconColorMapping, Icon3DVariant } from '../types';
 
-// Base icon names - avoids duplication by programmatically generating variants
+// Modern 3D icon variants for the application
+export const icon3DVariants: Record<string, Icon3DVariant> = {
+    navigation: 'gradient',
+    category: 'elevated',
+    action: 'glass',
+    feature: 'glass',
+    status: 'neon',
+};
+
+// Base icon names with modern Ionicons
 const baseIcons = {
     home: 'home',
     search: 'search',
@@ -43,71 +52,11 @@ const baseIcons = {
     arrowBack: 'arrow-back',
 } as const;
 
-// Function to generate icon sets programmatically to reduce duplication
-const generateOutlinedIcons = (base: typeof baseIcons): IconMapping => {
-    return Object.entries(base).reduce((acc, [key, value]) => {
-        acc[key as keyof IconMapping] = `${value}-outline`;
-        return acc;
-    }, {} as IconMapping);
-};
+// Modern icon configurations
+export const iconSets: IconMapping = baseIcons;
 
-const generateSharpIcons = (base: typeof baseIcons): IconMapping => {
-    return Object.entries(base).reduce((acc, [key, value]) => {
-        acc[key as keyof IconMapping] = `${value}-sharp`;
-        return acc;
-    }, {} as IconMapping);
-};
-
-// Icon set configurations for UI elements
-export const iconSets: Record<IconSetType, IconMapping> = {
-    filled: baseIcons,
-    outlined: generateOutlinedIcons(baseIcons),
-    rounded: {
-        home: 'home',
-        search: 'search-circle',
-        settings: 'settings',
-        categories: 'apps',
-        chevronDown: 'chevron-down-circle',
-        chevronUp: 'chevron-up-circle',
-        chevronForward: 'chevron-forward-circle',
-        chevronBack: 'chevron-back-circle',
-        close: 'close-circle',
-        language: 'globe',
-        textFormat: 'document-text',
-        share: 'share',
-        star: 'star',
-        info: 'help-circle',
-        refresh: 'refresh-circle',
-        sun: 'sunny',
-        moon: 'moon',
-        palette: 'color-palette',
-        image: 'camera',
-        expand: 'resize',
-        collapse: 'contract',
-        analytics: 'analytics',
-        helpCircle: 'help-circle',
-        time: 'time',
-        checkmark: 'checkmark',
-        checkmarkCircle: 'checkmark-circle',
-        play: 'play',
-        trophy: 'trophy',
-        eye: 'eye',
-        bulb: 'bulb',
-        alertCircle: 'alert-circle',
-        trendingUp: 'trending-up',
-        shuffle: 'shuffle',
-        bug: 'bug',
-        grid: 'grid',
-        flash: 'flash',
-        people: 'people-circle',
-        chatbox: 'chatbox',
-        arrowBack: 'arrow-back',
-    },
-    sharp: generateSharpIcons(baseIcons),
-};
-
-// Base JSON category icons
-const baseJsonIcons = {
+// JSON category icons with modern design
+export const jsonIconSets: JsonIconMapping = {
     map: 'map',
     person: 'person',
     book: 'book',
@@ -122,92 +71,112 @@ const baseJsonIcons = {
     football: 'football',
     calendar: 'calendar',
     default: 'help-circle',
-} as const;
-
-// Function to generate JSON icon sets programmatically
-const generateJsonOutlinedIcons = (base: typeof baseJsonIcons): JsonIconMapping => {
-    return Object.entries(base).reduce((acc, [key, value]) => {
-        acc[key as keyof JsonIconMapping] = key === 'default' && value === 'help-circle'
-            ? 'help-circle-outline'
-            : `${value}-outline`;
-        return acc;
-    }, {} as JsonIconMapping);
 };
 
-const generateJsonSharpIcons = (base: typeof baseJsonIcons): JsonIconMapping => {
-    return Object.entries(base).reduce((acc, [key, value]) => {
-        acc[key as keyof JsonIconMapping] = key === 'default' && value === 'help-circle'
-            ? 'help-circle-sharp'
-            : `${value}-sharp`;
-        return acc;
-    }, {} as JsonIconMapping);
-};
-
-// JSON Category icon set configurations
-export const jsonIconSets: Record<IconSetType, JsonIconMapping> = {
-    filled: baseJsonIcons,
-    outlined: generateJsonOutlinedIcons(baseJsonIcons),
-    rounded: {
-        map: 'location',
-        person: 'person-circle',
-        book: 'library',
-        business: 'storefront',
-        star: 'star',
-        flag: 'flag',
-        shield: 'medal',
-        people: 'people-circle',
-        cash: 'card',
-        library: 'albums',
-        brush: 'color-wand',
-        football: 'fitness',
-        calendar: 'time',
-        default: 'information-circle',
-    },
-    sharp: generateJsonSharpIcons(baseJsonIcons),
-};
-
-// Vibrant colors for JSON category icons - modern and Gen Z friendly
+// Modern vibrant colors with 3D-friendly palettes
 export const jsonIconColors: JsonIconColorMapping = {
-    map: '#00B4D8',        // Ocean blue for geography
-    person: '#9D4EDD',     // Purple for personal
-    book: '#F77F00',       // Orange for history/books
-    business: '#06D6A0',   // Emerald for business/government
-    star: '#FFD60A',       // Gold for monarchy/star
-    flag: '#EF476F',       // Red/pink for revolution
-    shield: '#118AB2',     // Navy blue for wars/shield
-    people: '#F72585',     // Hot pink for democracy/people
-    cash: '#43AA8B',       // Green for economy/money
-    library: '#7209B7',    // Deep purple for culture/library
-    brush: '#FF006E',      // Bright magenta for arts/creativity
-    football: '#FB5607',   // Energetic orange for sports
-    calendar: '#8338EC',   // Purple for holidays/events
-    default: '#6C757D',    // Gray for fallback
+    map: '#00B4D8',
+    person: '#9D4EDD',
+    book: '#F77F00',
+    business: '#06D6A0',
+    star: '#FFD60A',
+    flag: '#EF476F',
+    shield: '#118AB2',
+    people: '#F72585',
+    cash: '#43AA8B',
+    library: '#7209B7',
+    brush: '#FF006E',
+    football: '#FB5607',
+    calendar: '#8338EC',
+    default: '#6C757D',
 };
 
-// Icon set metadata for display
-export const iconSetOptions: IconSetInfo[] = [
+// 3D variant assignments for different icon types
+export const iconVariantMap: Record<keyof IconMapping, Icon3DVariant> = {
+    home: 'gradient',
+    search: 'glass',
+    settings: 'elevated',
+    categories: 'elevated',
+    chevronDown: 'default',
+    chevronUp: 'default',
+    chevronForward: 'default',
+    chevronBack: 'default',
+    close: 'glass',
+    language: 'glass',
+    textFormat: 'glass',
+    share: 'elevated',
+    star: 'neon',
+    info: 'glass',
+    refresh: 'glass',
+    sun: 'neon',
+    moon: 'neon',
+    palette: 'gradient',
+    image: 'glass',
+    expand: 'default',
+    collapse: 'default',
+    analytics: 'gradient',
+    helpCircle: 'glass',
+    time: 'glass',
+    checkmark: 'elevated',
+    checkmarkCircle: 'elevated',
+    play: 'gradient',
+    trophy: 'neon',
+    eye: 'glass',
+    bulb: 'neon',
+    alertCircle: 'elevated',
+    trendingUp: 'gradient',
+    shuffle: 'glass',
+    bug: 'glass',
+    grid: 'elevated',
+    flash: 'neon',
+    people: 'elevated',
+    chatbox: 'glass',
+    arrowBack: 'default',
+};
+
+// 3D variant assignments for JSON category icons
+export const jsonIconVariantMap: Record<keyof JsonIconMapping, Icon3DVariant> = {
+    map: 'elevated',
+    person: 'elevated',
+    book: 'elevated',
+    business: 'elevated',
+    star: 'elevated',
+    flag: 'elevated',
+    shield: 'elevated',
+    people: 'elevated',
+    cash: 'elevated',
+    library: 'elevated',
+    brush: 'elevated',
+    football: 'elevated',
+    calendar: 'elevated',
+    default: 'glass',
+};
+
+// 3D icon style metadata
+export const icon3DStyleOptions: Array<{ id: Icon3DVariant; name: string; description: string }> = [
     {
-        id: 'filled',
-        name: 'Rempli',
-        description: 'Icônes pleines et audacieuses',
-        previewIcon: 'star',
+        id: 'default',
+        name: 'Simple',
+        description: 'Style moderne et épuré',
     },
     {
-        id: 'outlined',
-        name: 'Esquissé',
-        description: 'Icônes avec contours simples',
-        previewIcon: 'star-outline',
+        id: 'gradient',
+        name: 'Dégradé',
+        description: 'Effet de dégradé 3D vibrant',
     },
     {
-        id: 'rounded',
-        name: 'Arrondi',
-        description: 'Icônes avec des coins arrondis',
-        previewIcon: 'star',
+        id: 'elevated',
+        name: 'Élevé',
+        description: 'Effet de profondeur et d\'ombre',
     },
     {
-        id: 'sharp',
-        name: 'Angulaire',
-        description: 'Icônes avec des bords nets',
-        previewIcon: 'star-sharp',
+        id: 'neon',
+        name: 'Néon',
+        description: 'Effet lumineux néon moderne',
+    },
+    {
+        id: 'glass',
+        name: 'Verre',
+        description: 'Effet glassmorphism transparent',
     },
 ];

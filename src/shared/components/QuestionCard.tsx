@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { getQuestionText, getExplanationText, formatExplanation } from '../utils';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
+import Icon3D from './Icon3D';
 import { useTheme } from '../contexts/ThemeContext';
+import { useIcons } from '../contexts/IconContext';
 import { QuestionCardProps } from '../../types';
 import { sharedStyles } from '../utils';
 import { useFirebaseImage } from '../hooks/useFirebaseImage';
@@ -22,6 +23,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const [expanded, setExpanded] = useState(alwaysExpanded);
     const [isImageModalVisible, setIsImageModalVisible] = useState(false);
     const { theme } = useTheme();
+    const { getIconName, getIconVariant } = useIcons();
 
     const { imageSource, isLoading: imageLoading, error: imageError } = useFirebaseImage(image);
     const isExpanded = alwaysExpanded ? true : expanded;
@@ -74,10 +76,11 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 </View>
                 {!alwaysExpanded && (
                     <View style={styles.iconContainer}>
-                        <Ionicons
-                            name={isExpanded ? theme.icons.chevronUp as any : theme.icons.chevronDown as any}
-                            size={24}
+                        <Icon3D
+                            name={isExpanded ? getIconName('chevronUp') : getIconName('chevronDown')}
+                            size={20}
                             color={theme.colors.primary}
+                            variant={isExpanded ? getIconVariant('chevronUp') : getIconVariant('chevronDown')}
                         />
                     </View>
                 )}
@@ -109,7 +112,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                         resizeMode="contain"
                                     />
                                     <View style={styles.imageOverlay}>
-                                        <Ionicons name={theme.icons.expand as any} size={24} color="#FFFFFF" />
+                                        <Icon3D
+                                            name={getIconName('expand')}
+                                            size={20}
+                                            color="#FFFFFF"
+                                            variant="default"
+                                        />
                                     </View>
                                 </>
                             )}
@@ -119,7 +127,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     {/* Display fallback if image fails to load */}
                     {image && imageError && (
                         <View style={[styles.imageFallback, { backgroundColor: theme.colors.surface }]}>
-                            <Ionicons name={theme.icons.image as any} size={40} color={theme.colors.textMuted} />
+                            <Icon3D
+                                name={getIconName('image')}
+                                size={32}
+                                color={theme.colors.textMuted}
+                                variant={getIconVariant('image')}
+                            />
                             <FormattedText style={[styles.imageFallbackText, { color: theme.colors.textMuted }]}>
                                 Image non disponible
                             </FormattedText>

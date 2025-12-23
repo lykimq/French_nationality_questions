@@ -1,39 +1,32 @@
 import React, { createContext, useContext, ReactNode, useMemo, useCallback } from 'react';
-import type { IconSetType, IconMapping, JsonIconMapping } from '../../types';
-import { iconSets, jsonIconSets, jsonIconColors } from '../../config/iconConfig';
+import type { IconMapping, JsonIconMapping, Icon3DVariant } from '../../types';
+import { iconSets, jsonIconSets, jsonIconColors, iconVariantMap, jsonIconVariantMap } from '../../config/iconConfig';
 
-const DEFAULT_ICON_SET: IconSetType = 'filled';
-
-// Mapping from JSON file icon names to JsonIconMapping keys
-// Each category gets a unique icon to avoid duplicates
 const iconNameToKeyMap: Record<string, keyof JsonIconMapping> = {
-    'office-building': 'business',      // administration_locale - local administration
-    'scale': 'shield',                  // ddhc - rights declaration
-    'user': 'person',                   // vie_personnelle_integration - personal
-    'government': 'library',            // democratie_politique - democracy/political institutions
-    'history': 'book',                  // reperes_historiques - history
-    'music-note': 'brush',              // arts_culture_sports - arts/culture
-    'balance': 'people',                // droits_devoirs - citizen rights/duties (changed from shield)
-    'globe': 'star',                    // france_europe_monde - France in the world (changed from map)
-    'map': 'map',                       // geographie_sites - geography
-    'flag': 'flag',                     // principes_valeurs - republic values
+    'office-building': 'business',
+    'scale': 'shield',
+    'user': 'person',
+    'government': 'library',
+    'history': 'book',
+    'music-note': 'brush',
+    'balance': 'people',
+    'globe': 'star',
+    'map': 'map',
+    'flag': 'flag',
 };
 
-// Context interface
 interface IconContextType {
-    iconSet: IconSetType;
     icons: IconMapping;
-    jsonIconSet: IconSetType;
     jsonIcons: JsonIconMapping;
     getIconName: (iconKey: keyof IconMapping) => string;
     getJsonIconName: (iconKey: keyof JsonIconMapping | string) => string;
     getJsonIconColor: (iconKey: keyof JsonIconMapping | string) => string;
+    getIconVariant: (iconKey: keyof IconMapping) => Icon3DVariant;
+    getJsonIconVariant: (iconKey: keyof JsonIconMapping | string) => Icon3DVariant;
 }
 
-// Create context
 const IconContext = createContext<IconContextType | undefined>(undefined);
 
-// Custom hook to use icons
 export const useIcons = (): IconContextType => {
     const context = useContext(IconContext);
     if (!context) {
@@ -42,31 +35,25 @@ export const useIcons = (): IconContextType => {
     return context;
 };
 
-// Icon provider component
 interface IconProviderProps {
     children: ReactNode;
 }
 
 export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
-    const iconSet = DEFAULT_ICON_SET;
-    const jsonIconSet = DEFAULT_ICON_SET;
-
     const getIconName = useCallback((iconKey: keyof IconMapping): string => {
-        return iconSets[iconSet][iconKey];
+        return iconSets[iconKey];
     }, []);
 
     const getJsonIconName = useCallback((iconKey: keyof JsonIconMapping | string): string => {
-        // Map icon name from JSON file to JsonIconMapping key if needed
         const mappedKey = iconNameToKeyMap[iconKey] || iconKey;
         
-        if (mappedKey in jsonIconSets[jsonIconSet]) {
-            return jsonIconSets[jsonIconSet][mappedKey as keyof JsonIconMapping];
+        if (mappedKey in jsonIconSets) {
+            return jsonIconSets[mappedKey as keyof JsonIconMapping];
         }
-        return jsonIconSets[jsonIconSet].default;
+        return jsonIconSets.default;
     }, []);
 
     const getJsonIconColor = useCallback((iconKey: keyof JsonIconMapping | string): string => {
-        // Map icon name from JSON file to JsonIconMapping key if needed
         const mappedKey = iconNameToKeyMap[iconKey] || iconKey;
         
         if (mappedKey in jsonIconColors) {
@@ -75,18 +62,33 @@ export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
         return jsonIconColors.default;
     }, []);
 
+    const getIconVariant = useCallback((iconKey: keyof IconMapping): Icon3DVariant => {
+        return iconVariantMap[iconKey] || 'default';
+    }, []);
+
+    const getJsonIconVariant = useCallback((iconKey: keyof JsonIconMapping | string): Icon3DVariant => {
+        const mappedKey = iconNameToKeyMap[iconKey] || iconKey;
+        
+        if (mappedKey in jsonIconVariantMap) {
+            return jsonIconVariantMap[mappedKey as keyof JsonIconMapping];
+        }
+        return jsonIconVariantMap.default;
+    }, []);
+
     const value = useMemo<IconContextType>(() => ({
-        iconSet,
-        icons: iconSets[iconSet],
-        jsonIconSet,
-        jsonIcons: jsonIconSets[jsonIconSet],
+        icons: iconSets,
+        jsonIcons: jsonIconSets,
         getIconName,
         getJsonIconName,
         getJsonIconColor,
+        getIconVariant,
+        getJsonIconVariant,
     }), [
         getIconName,
         getJsonIconName,
         getJsonIconColor,
+        getIconVariant,
+        getJsonIconVariant,
     ]);
 
     return (

@@ -1,29 +1,39 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcons } from '../../shared/contexts/IconContext';
 import ColorThemeSelector from './ColorThemeSelector';
-import { FormattedText } from '../../shared/components';
-import { sharedStyles, getCardContainerStyle } from '../../shared/utils';
+import { FormattedText, Icon3D } from '../../shared/components';
+import { getCardContainerStyle } from '../../shared/utils';
 
 const ThemeSettings: React.FC = () => {
     const { theme, themeMode, colorTheme, setThemeMode, setColorTheme } = useTheme();
+    const { getIconName, getIconVariant } = useIcons();
+
+    const sunIconName = getIconName('sun');
+    const moonIconName = getIconName('moon');
+    const sunVariant = getIconVariant('sun');
+    const moonVariant = getIconVariant('moon');
+
+    const currentIconColor = themeMode === 'dark' ? '#FFA726' : '#FFB74D';
 
     return (
         <View>
-            {/* Color Theme Selector */}
             <ColorThemeSelector
                 title="Thème de couleur"
                 value={colorTheme}
                 onValueChange={setColorTheme}
             />
 
-            {/* Theme Selector */}
             <View style={[styles.themeSelector, getCardContainerStyle(theme)]}>
                 <View style={styles.themeSelectorLeft}>
-                    <View style={[sharedStyles.iconContainer, { backgroundColor: (themeMode === 'dark' ? '#FFA726' : '#FFB74D') + '15' }]}>
-                        <Ionicons name={themeMode === 'dark' ? 'moon' : 'sunny'} size={20} color={themeMode === 'dark' ? '#FFA726' : '#FFB74D'} />
-                    </View>
+                    <Icon3D
+                        name={themeMode === 'dark' ? moonIconName : sunIconName}
+                        size={18}
+                        color={currentIconColor}
+                        variant={themeMode === 'dark' ? moonVariant : sunVariant}
+                        backgroundColor={theme.colors.card}
+                    />
                     <FormattedText style={[styles.themeSelectorTitle, { color: theme.colors.text }]}>
                         Mode d'affichage
                     </FormattedText>
@@ -38,11 +48,12 @@ const ThemeSettings: React.FC = () => {
                         onPress={() => setThemeMode('light')}
                         activeOpacity={0.7}
                     >
-                        <Ionicons
-                            name="sunny"
-                            size={14}
+                        <Icon3D
+                            name={sunIconName}
+                            size={12}
                             color={themeMode === 'light' ? '#FFFFFF' : theme.colors.textMuted}
-                            style={styles.themeOptionIcon}
+                            variant="default"
+                            containerStyle={styles.themeOptionIcon}
                         />
                         <FormattedText style={[
                             styles.themeOptionText,
@@ -60,11 +71,12 @@ const ThemeSettings: React.FC = () => {
                         onPress={() => setThemeMode('dark')}
                         activeOpacity={0.7}
                     >
-                        <Ionicons
-                            name="moon"
-                            size={14}
+                        <Icon3D
+                            name={moonIconName}
+                            size={12}
                             color={themeMode === 'dark' ? '#FFFFFF' : theme.colors.textMuted}
-                            style={styles.themeOptionIcon}
+                            variant="default"
+                            containerStyle={styles.themeOptionIcon}
                         />
                         <FormattedText style={[
                             styles.themeOptionText,
@@ -92,42 +104,32 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         flex: 1,
+        gap: 12,
     },
     themeSelectorTitle: {
         fontSize: 15,
         fontWeight: '600',
-        marginLeft: 12,
     },
     themeToggleWrapper: {
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: 2,
         borderRadius: 20,
+        padding: 3,
     },
     themeOption: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingVertical: 6,
-        paddingHorizontal: 10,
-        borderRadius: 14,
-        marginLeft: 2,
-        minWidth: 65,
-        justifyContent: 'center',
+        paddingHorizontal: 12,
+        borderRadius: 17,
     },
     themeOptionActive: {
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
     },
     themeOptionIcon: {
         marginRight: 4,
     },
     themeOptionText: {
-        fontSize: 12,
-        fontWeight: '600',
+        fontSize: 13,
+        fontWeight: '500',
     },
 });
 

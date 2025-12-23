@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { View, Animated, Dimensions, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
+import { useIcon3D } from '../hooks';
 import QuestionCard from './QuestionCard';
 import FormattedText from './FormattedText';
+import Icon3D from './Icon3D';
 import { createLogger } from '../utils/logger';
 
 const logger = createLogger('SlideQuestionView');
@@ -34,10 +35,14 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     hasPrevious
 }) => {
     const { theme } = useTheme();
+    const { getIcon } = useIcon3D();
     const translateX = useRef(new Animated.Value(0)).current;
     const opacity = useRef(new Animated.Value(1)).current;
     const scrollViewRef = useRef<ScrollView>(null);
     const [isAnimating, setIsAnimating] = useState(false);
+
+    const chevronBackIcon = getIcon('chevronBack');
+    const chevronForwardIcon = getIcon('chevronForward');
 
     // Track the question ID to detect changes for animation reset
     const prevQuestionIdRef = useRef<string | null>(null);
@@ -157,10 +162,11 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     onPress={handlePreviousPress}
                     disabled={!hasPrevious}
                 >
-                    <Ionicons
-                        name="chevron-back"
-                        size={24}
+                    <Icon3D
+                        name={chevronBackIcon.name}
+                        size={20}
                         color={!hasPrevious ? theme.colors.textMuted : theme.colors.primary}
+                        variant={hasPrevious ? chevronBackIcon.variant : 'default'}
                     />
                 </TouchableOpacity>
                 <View style={styles.navigationInfo}>
@@ -178,10 +184,11 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     onPress={handleNextPress}
                     disabled={!hasNext}
                 >
-                    <Ionicons
-                        name="chevron-forward"
-                        size={24}
+                    <Icon3D
+                        name={chevronForwardIcon.name}
+                        size={20}
                         color={!hasNext ? theme.colors.textMuted : theme.colors.primary}
+                        variant={hasNext ? chevronForwardIcon.variant : 'default'}
                     />
                 </TouchableOpacity>
             </View>

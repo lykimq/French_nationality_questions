@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { useIcons } from '../shared/contexts/IconContext';
-import { FormattedText } from '../shared/components';
+import { FormattedText, Icon3D } from '../shared/components';
 import { CategoryCardProps } from '../types';
 import { sharedStyles } from '../shared/utils';
 
@@ -15,11 +14,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     onPress,
 }) => {
     const { theme } = useTheme();
-    const { getJsonIconName, getJsonIconColor, getIconName } = useIcons();
+    const { getJsonIconName, getJsonIconColor, getJsonIconVariant, getIconName, getIconVariant } = useIcons();
 
-    // Get the mapped icon name and vibrant color based on the current JSON icon set
     const mappedIconName = getJsonIconName(icon || 'default');
     const iconColor = getJsonIconColor(icon || 'default');
+    const iconVariant = getJsonIconVariant(icon || 'default');
+    const chevronIconName = getIconName('chevronForward');
+    const chevronVariant = getIconVariant('chevronForward');
 
     return (
         <Pressable
@@ -36,13 +37,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             onPress={onPress}
             android_ripple={{ color: iconColor + '20' }}
         >
-            <View style={[sharedStyles.largeIconContainer, { backgroundColor: iconColor + '15' }]}>
-                <Ionicons
-                    name={mappedIconName as keyof typeof Ionicons.glyphMap}
-                    size={32}
-                    color={iconColor}
-                />
-            </View>
+            <Icon3D
+                name={mappedIconName}
+                size={28}
+                color={iconColor}
+                variant={iconVariant}
+                backgroundColor={theme.colors.card}
+            />
             <View style={styles.content}>
                 <FormattedText style={[styles.title, { color: theme.colors.text }]}>{title}</FormattedText>
                 <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]} numberOfLines={2}>
@@ -52,7 +53,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                     <FormattedText style={[styles.count, { color: iconColor }]}>{count} questions</FormattedText>
                 </View>
             </View>
-            <Ionicons name={getIconName('chevronForward') as keyof typeof Ionicons.glyphMap} size={24} color={iconColor} style={styles.arrowIcon} />
+            <Icon3D
+                name={chevronIconName}
+                size={20}
+                color={iconColor}
+                variant={chevronVariant}
+                containerStyle={styles.arrowIcon}
+            />
         </Pressable>
     );
 };
@@ -68,20 +75,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     cardPressed: {
-        // backgroundColor will be set dynamically
     },
     content: {
         flex: 1,
+        marginLeft: 12,
     },
     title: {
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 2,
-    },
-    titleTranslation: {
-        fontSize: 14,
-        fontStyle: 'italic',
-        marginBottom: 4,
     },
     description: {
         fontSize: 14,

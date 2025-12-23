@@ -73,8 +73,8 @@ export interface Theme {
     colors: ThemeColors;
 }
 
-// Icon types
-export type IconSetType = 'filled' | 'outlined' | 'rounded' | 'sharp';
+// 3D Icon variant types
+export type Icon3DVariant = 'default' | 'gradient' | 'elevated' | 'neon' | 'glass';
 
 // Icon mapping interface for UI elements
 export interface IconMapping {
@@ -167,11 +167,10 @@ export interface JsonIconColorMapping {
     default: string;       // fallback color
 }
 
-// Icon set information for UI display
-export interface IconSetInfo {
-    id: IconSetType;
+// 3D Icon style information for UI display
+export interface Icon3DStyleInfo {
+    id: Icon3DVariant;
     name: string;
     description: string;
-    previewIcon: string;
 }
 
