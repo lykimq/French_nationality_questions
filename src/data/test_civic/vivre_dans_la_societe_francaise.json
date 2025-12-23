@@ -892,7 +892,6 @@
             "explanation": "La domiciliation est une adresse administrative attribuée aux personnes qui ne peuvent\npas recevoir leur courrier de façon constante et confidentielle à une adresse stable.\nLes personnes sans domicile fixe, en habitat mobile ou précaire sont concernées.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -905,7 +904,6 @@
             "explanation": "Il est indispensable d'avoir une adresse pour recevoir son courrier. La domiciliation\nest une adresse administrative qui permet de bénéficier de droits civils, civiques et\nsociaux (sous conditions) et d’un accès :\n\n- à des démarches professionnelles (insertion sociale) ;\n- à des démarches fiscales (exemple : impôts) ;\n- aux démarches préfectorales (exemple : demande et renouvellement de titre de séjour) ;\n- à des services essentiels (compte bancaire, souscription assurances obligatoires) ;\n- à la scolarisation.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -918,7 +916,6 @@
             "explanation": "Quand vous changez de logement, le changement d’adresse doit être fait le plus\nrapidement possible (3 mois maximum après le déménagement) :\n\n1. faire un changement d’adresse sur (Ouvre une nouvelle fenêtre)service-public.fr qui\n   informe les services publics du changement : la CAF, les impôts, la Sécurité\n   sociale…\n2. informer les services tels que : banque, assurance, employeur, opérateur\n   téléphonique…\n3. mettre à jour ses papiers (exemples : carte grise, liste électorale).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -931,7 +928,6 @@
             "explanation": "Le compte bancaire est très utile :\n\n- l’argent y est en sécurité (pas de perte ou de vol) ;\n- il est obligatoire pour réaliser beaucoup de démarches administratives, pour\ntravailler (pour recevoir son salaire).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -944,7 +940,6 @@
             "explanation": "Chaque personne peut ouvrir un compte bancaire en France. Il faut néanmoins respecter\ncertaines règles :\n\n- vérification de l’identité : présenter une pièce d'identité officielle comportant une\nphotographie ;\n- vérification de l’âge : être majeur ou mineur émancipé pour ouvrir seul un compte\nindividuel (ou mineur avec autorisation des représentants légaux) ;\n- justification du domicile de moins de 3 mois en fournissant par exemple l'un des\ndocuments suivants : avis d’imposition, quittance de loyer, facture d’eau ou\nd’électricité, attestation de domicile ;\n- dépôt de signature : déposer une signature qui sera enregistrée par la banque.\n\nOuvrir un compte bancaire est gratuit (mais la banque peut faire payer des frais pour\nla tenue du compte).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -957,7 +952,6 @@
             "explanation": "La banque que vous avez contactée peut refuser de vous ouvrir un compte, sans avoir\nbesoin de justifier sa décision.\n\n> Vous souhaitez faire valoir votre droit au compte ?\n\nSaisissez la Banque de France, responsable de cette mission.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -970,7 +964,6 @@
             "explanation": "Si vous avez une voiture personnelle, il est obligatoire d’avoir :\n\n- un permis de conduire valide ;\n- une carte grise du véhicule à jour ;\n- une assurance automobile.\n\nL’entretien d’une voiture est obligatoire tous les 2 ans (pour les véhicules de plus de\n4 ans).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -983,7 +976,6 @@
             "explanation": "Pour passer son permis, rendez-vous en auto-école ou inscrivez-vous en candidat libre.\nIl est nécessaire d'avoir 17 ans au minimum et être résident en France pour passer\nl'examen du permis de conduire.\n\nVous devrez suivre une formation théorique (code de la route) et une formation pratique\n(minimum 20 heures).\n\nLe permis comprend 2 épreuves :\n\n- le Code de la route : un examen théorique sous forme de QCM (Questionnaire à Choix\nMultiples) sur les règles de circulation, la sécurité, les priorités...\n- une épreuve pratique d’environ 30 minutes de conduite, incluant une manœuvre, un test\nde sécurité et un parcours sur route.\n\nUne fois le permis de conduire obtenu, il est nécessaire de prendre une assurance avant\nde pouvoir conduire sa voiture.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -996,7 +988,6 @@
             "explanation": "Plusieurs dispositifs peuvent aider à financer le permis de conduire :\n\n- le permis à 1 € par jour (pour les 15-25 ans) ;\n- des aides de France Travail (selon la situation) ;\n- le Compte Personnel de Formation (qui peut financer tout ou partie du permis).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1009,7 +1000,6 @@
             "explanation": "Pour savoir si votre permis de conduire est valable en France, rendez-vous en\npréfecture ou sur service-public.fr.\n\n- Si vous restez moins d’un an en France (court séjour ou durant vos études) et que\nvotre permis est reconnu en France et est échangeable, vous pouvez conduire avec votre\npermis de conduire étranger au maximum un an. Le permis de conduire délivré par un pays\nnon européen est valable un an à partir de :\n    - la date du début de validité du premier titre de séjour en France ;\n    - la date de l'obtention de l'attestation de prolongation d'instruction (API) ;\n    - la date de validation du visa long séjour par l'OFII.\n- Si vous restez plus d’1 an en France et que votre permis de conduire est reconnu en\nFrance et est échangeable, réalisez cette procédure dès que possible. Il faut vous\nrenseigner à la préfecture ou sur (Ouvre une nouvelle fenêtre)service-public.fr pour\nsavoir si votre permis est échangeable.\n- Si votre permis n’est pas échangeable ou bien si l’échange du permis n’a pas été\nréalisé au bout d’1 an, vous devez passer le permis de conduire français pour continuer\nde conduire en France.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1022,7 +1012,6 @@
             "explanation": "La responsabilité civile, c’est l’obligation de chacun de réparer les dommages\nmatériels, corporels ou moraux que l’on peut causer sans le vouloir à d’autres\npersonnes.\n\nCes dommages peuvent survenir à différents moments :\n\n- à son domicile ;\n- en conduisant un véhicule ;\n- dans le cadre de la vie quotidienne (activités privées) ;\n- dans le cadre professionnel…\n\nSi un enfant mineur, un animal domestique, un objet sous votre responsabilité causent\ndes dommages, alors votre responsabilité civile est aussi engagée.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1035,7 +1024,6 @@
             "explanation": "L’assurance responsabilité civile est payante et obligatoire. Elle garantit la\nprotection des autres.\n\nSi vous causez un accident, un tort matériel ou un dommage physique, votre assurance\nprendra en charge (en partie ou en totalité) les préjudices dont vous êtes responsable.\n\nIl existe différents types d’assurances : habitation, automobile…\n\nL’assurance responsabilité est payante : comparez les offres des assurances selon vos\nbesoins spécifiques.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1048,7 +1036,6 @@
             "explanation": "L'impôt en France :\n\n- permet à l’État de développer et de faire fonctionner son pays : services publics\ngratuits, aides sociales, gestion des routes...\n- l’impôt sur le revenu dépend des revenus du foyer, cela signifie que plus les revenus\nsont importants, plus la part prélevée par l’État l’est également. Le prélèvement et la\nredistribution de l’impôt permettent de réduire l’écart de richesse ;\n- des impôts locaux existent (taxe foncière sur les propriétés, enlèvement des ordures\nménagères...).\n\nEn France, il est obligatoire de déclarer ses revenus (argent que vous avez gagné) même\nsi vous ne travaillez pas. Ne pas faire sa déclaration peut entraîner des pénalités\nfinancières, le remboursement des aides perçues et des difficultés pour accéder à\ncertains droits (aides sociales…) et peut aller jusqu'à une peine de prison.\n\nL’argent récolté par les impôts est redistribué pour permettre la solidarité (aides\nsociales, écoles, routes…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1061,7 +1048,6 @@
             "explanation": "Toute personne de plus de 18 ans, résidant en France (citoyen français ou pas) doit\ndéclarer ses revenus, même si ses revenus sont faibles ou nuls (il faut indiquer “0\neuro”).\n\nLa somme d’impôt à payer dépend des revenus du foyer (plus les revenus sont élevés,\nplus la part prélevée par l’État le sera) : cela permet de réduire les écarts de\nrichesse.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1074,7 +1060,6 @@
             "explanation": "Cette déclaration annuelle a lieu entre avril et mai de chaque année : vous déclarez\nles revenus que vous avez reçus l’année précédente. Exemple : en avril 2025, vous\ndéclarez les revenus de l’année 2024.\n\nVous pouvez déclarer vos revenus sur https://cfspart-idp.impots.gouv.fr/\n\nC’est votre première déclaration ? Créez un compte fiscal ou demandez votre numéro\nfiscal à votre centre des impôts.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1087,7 +1072,6 @@
             "explanation": "Tout étranger doit disposer d’un titre de séjour valide qui correspond à sa situation.\n\nLe type de titre de séjour varie en fonction de la durée et du motif (la raison) de\nl’installation en France.\n\nPour savoir quel type de titre de séjour vous correspond, rendez-vous :\n\n- en présentiel, dans une maison France Service ou dans un point d’accueil numérique\n(PAN) en préfecture ;\n- en ligne, sur le site de la préfecture la plus proche ou le site de l’ANEF\n(l’Administration Numérique des Étrangers en France) : (Ouvre une nouvelle\nfenêtre)administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/ ;\n- par téléphone, contactez le centre de contact citoyen pour les démarches en lien avec\nl’ANEF : 0806 001 620.\n\nÀ NOTER\nVous devez informer la Préfecture de tout changement d’adresse ou de domiciliation.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1100,7 +1084,6 @@
             "explanation": "La demande de renouvellement de titre de séjour doit être faite au moins 3 mois avant\nla fin de validité de votre titre de séjour. Vous pouvez faire jusqu’à 3 demandes de\ntitre de séjour pour le même motif par an.\n\nVoici les différentes étapes d’une demande de renouvellement de titre de séjour :\n\n1. prendre contact avec sa préfecture pour connaître les modalités de dépôt ;\n2. préparer le dossier avec :\n- les pièces justificatives demandées ;\n- \"le contrat d'engagement à respecter les principes de la République française\" ;\n- l’attestation de réussite de l’examen civique ;\n- une certification linguistique de niveau A2 (pour toutes les demandes de titre de\nséjour de plus de 1 an).\n3. déposer le dossier complet, au moins 6 mois avant la fin de validité du titre de\n   séjour.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1113,7 +1096,6 @@
             "explanation": "Il existe deux procédures principales pour demander la nationalité française pour les\nétrangers adultes en France :\n\n- par décret de naturalisation (en ligne sur l'ANEF) après au moins 5 ans de résidence\nen France, si la personne remplit les conditions prévues et que l’État accepte sa\ndemande ;\n- par déclaration (auprès de sa plateforme de naturalisation en préfecture) : en cas de\nmariage avec un Français ou en tant qu'ascendant, frère ou sœur de Français.\n\nL'adhésion aux principes et valeurs essentiels de la République est une condition pour\ndevenir français, vérifiée lors de l'entretien d'assimilation organisé à la préfecture.\n\nOù obtenir des informations sur l'accès à la nationalité française ?\nPour obtenir des informations sur l'accès à la nationalité française, rendez-vous en\nligne :\n\n- sur le site service-public.fr ;\n- sur le site internet de la préfecture la plus proche ;\n- en ligne, sur le site de la préfecture la plus proche ou le site de l’ANEF\n(l’Administration Numérique des Étrangers en France) :\nadministration-etrangers-en-france.interieur.gouv.fr/particuliers/\n\nEn cas de difficulté avec les démarches en ligne, vous pouvez bénéficier d'un\naccompagnement auprès du centre de contact citoyens de l'ANTS (par téléphone au 0806\n001 620) ou vous rendre dans un point d’accueil numérique (PAN) en préfecture.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1126,7 +1108,6 @@
             "explanation": "Voici les différentes étapes :\n\n1. faire une simulation sur le site service-public.fr pour savoir quelles pièces\n   justificatives sont nécessaires à ma demande spécifique ;\n2. déposer un dossier complet avec les pièces justificatives demandées sur le site\n   internet de l’ANEF pour une demande de naturalisation par décret ou en préfecture\n   (plateforme de naturalisation) pour une déclaration.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1139,7 +1120,6 @@
             "explanation": "La déclaration de naissance est obligatoire. Elle doit être réalisée dans les 5 jours\nqui suivent la naissance, par le père, la mère ou par une personne qui a assisté à\nl’accouchement.\n\nLa déclaration de naissance doit être faite à la mairie du lieu de naissance. Elle\npermet à l'officier d'état civil d'établir l'acte de naissance de l'enfant.\n\nCet acte de naissance permet :\n\n- d’obtenir des droits sociaux (allocations, Sécurité sociale…) ;\n- de demander des documents d’identité ;\n- d’inscrire l’enfant à l’école.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1152,7 +1132,6 @@
             "explanation": "Pour faire la déclaration de naissance, vous devez présenter :\n\n- la pièce d'identité des parents (ou du parent) ;\n- le certificat médical d'accouchement (en général, attestation du médecin ou de la\nsage-femme) ;\n- la déclaration de choix de nom si les parents font cette démarche ;\n- l’acte de reconnaissance si celui-ci a été établi avant la naissance ;\n- le justificatif de domicile (ou de résidence) de moins de 3 mois du père, si l'enfant\nn'a pas encore été reconnu et que le père souhaite le reconnaître ;\n- le livret de famille pour y inscrire l'enfant, si les parents possèdent déjà un\nlivret.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1165,7 +1144,6 @@
             "explanation": "Le mariage civil est le seul mariage reconnu en France.\n\nDeux personnes, de sexe différent ou de même sexe, peuvent se marier si ces personnes :\n\n- ont plus de 18 ans (ou moins de 18 ans, mais vous avez l’accord d’au moins un de vos\nparents ou l’autorisation vous a été accordée par le procureur de la République) ;\n- n'ont pas de lien de parenté ou d’alliance (exemple : le mariage entre cousins\ngermains est interdit) ;\n- et qu’elles peuvent donner un consentement libre et éclairé au mariage.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1178,7 +1156,6 @@
             "explanation": "Le mariage est célébré dans la commune où vit au moins l’un des 2 futurs mariés ou l’un\nde leurs parents.\n\nPour vous marier, voici les documents à préparer :\n\n- vos pièces d’identité (originales et photocopies) ;\n- un justificatif de domicile (daté de plus de 1 mois) ;\n- vos actes de naissance ;\n- informations d’identité sur les témoins et photocopie de leurs papiers d’identité.\n\nLe jour de la cérémonie de mariage civil, l’acte de mariage français et un livret de\nfamille vous seront remis.\n\nMariage à l’étranger, comment faire reconnaître le mariage en France ?\nLa transcription d’un mariage civil célébré à l’étranger (inscription de l’acte de\nmariage étranger dans les registres de l’état civil français) permet la reconnaissance\nofficielle d’un mariage par la France. Pour faire cette transcription, rendez-vous dans\nles consulats français à l’étranger ou auprès du Service Central d'État Civil (SCEC) du\nministère des Affaires étrangères.\n\nUn acte de mariage français et un livret de famille vous seront ensuite remis.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1191,7 +1168,6 @@
             "explanation": "La déclaration de décès est obligatoire, gratuite et doit être faite à la mairie dès\nque possible après la constatation du décès. Elle permet d’officialiser le décès et de\ndébuter les obsèques.\n\nLa déclaration du décès à la mairie peut être faite par toute personne majeure qui\npossède des renseignements sur l’état civil du défunt.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1204,7 +1180,6 @@
             "explanation": "Une personne est décédée, voici comment agir :\n\nLa constatation du décès\n- Si le décès a eu lieu à l’hôpital ou dans un EHPAD, c'est un professionnel de santé\nqui constate le décès et qui établit le certificat de décès.\n- Si le décès a eu lieu à domicile, il faut appeler le médecin traitant de la personne\ndécédée ou SOS Médecins.\n- Si le décès a eu lieu sur la voie publique, il faut appeler la police ou la\ngendarmerie qui établira le certificat de décès.\n\nPrévenir ses proches\nFamille, amis, voisins…\n\nLa déclaration de décès à la mairie\nToute personne majeure peut déclarer le décès, de préférence un proche. Par exemple un\nparent ou une personne possédant des renseignements sur l'état civil du défunt.\n\nLa personne qui déclare le décès doit présenter :\n\n- sa pièce d’identité ;\n- le certificat de décès (si possible) ;\n- un document d’identité de la personne décédée.\n\nPrévenir l’employeur\nde la personne décédée.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1217,7 +1192,6 @@
             "explanation": "Pour trouver un logement privé, consultez les annonces des agences immobilières ou\ncelles des sites spécialisés.\n\nVous devrez notamment présenter une pièce d’identité, un justificatif de revenus, les\nquittances de loyer précédentes…\n\nPour un logement social, faites une demande en ligne sur le site (Ouvre une nouvelle\nfenêtre)demande-logement-social.gouv.fr.\n\nVous devrez notamment présenter votre pièce d’identité, un avis d’imposition, un\njustificatif de situation familiale…",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1230,7 +1204,6 @@
             "explanation": "Le bail est un contrat écrit entre le bailleur (le plus souvent le propriétaire) et le\nlocataire dans lequel :\n\n- le bailleur s’engage à louer le bien à un montant fixé à l’avance (selon la taille du\nlogement) au locataire ;\n- le locataire s’engage à payer le loyer et les charges et à respecter certaines\nobligations.\n\nLe bail est le seul document qui autorise à vivre dans un logement : il est valide\nseulement s'il est signé par le locataire et le propriétaire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1243,7 +1216,6 @@
             "explanation": "Le contrat de location peut prendre fin à la fin de la durée qu’il se fixe.\n\nIl peut être interrompu plus rapidement :\n\n- par le bailleur, sous certaines conditions ;\n- par le locataire, à tout moment, en respectant le délai de préavis de 3 mois (qui est\nla durée minimale entre la notification et la fin du contrat effectif). Le préavis est\nde 1 mois sous certaines conditions (si le logement est meublé, si le logement est\nsitué en zone tendue, en cas de problème de santé, en cas de changement\nprofessionnel…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1256,7 +1228,6 @@
             "explanation": "Le propriétaire a pour droits de :\n\n- recevoir le loyer et les charges convenus ;\n- interrompre le bail ou empêcher son renouvellement, sous certaines conditions.\n\nLe propriétaire a pour obligations de :\n\n- louer un logement \"décent\", qui respecte la sécurité et la santé du locataire ;\n- donner au locataire les documents obligatoires lors de la signature du contrat de\nlocation et en cours de bail : contrat de bail, état des lieux, diagnostics\ntechniques...\n- assurer les réparations majeures et l'entretien du logement.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1269,7 +1240,6 @@
             "explanation": "Le locataire a pour droits de :\n\n- profiter paisiblement du logement ;\n- demander au propriétaire la réalisation des réparations nécessaires ;\n- quitter le logement en respectant le délai de préavis (de 3 mois en général, ou d’1\nmois sous conditions).\n\nLe locataire a pour obligations de :\n\n- payer le loyer et les charges aux dates prévues ;\n- souscrire une assurance habitation couvrant les risques locatifs (incendie, dégât des\neaux...) ;\n- assurer l'entretien courant du logement et effectuer les réparations locatives\n(petites réparations qui sont à la charge du locataire pendant toute la durée du bail)\n;\n- utiliser paisiblement les lieux et respecter le \"règlement de copropriété\".",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1282,7 +1252,6 @@
             "explanation": "En cas d’urgence, les services d’urgence et d’autres services peuvent être contactés\n24h/24 et 7j/7 par téléphone. Ces appels sont gratuits.\n\nLes numéros d’urgence principaux sont :\n\n- le 15, le numéro du SAMU, en cas d’urgence médicale ;\n- le 17, la police, pour signaler une infraction ;\n- le 18, les pompiers, si une situation de péril ou d’accident se présente ;\n- le 114, pour les personnes sourdes, sourdaveugles, malentendantes, aphasiques\n(disponible par application, internet et sms) ;\n- le 196 (sur le littoral) ou le canal 16 (en mer) pour les secours maritimes ;\n- le 112, numéro d’urgence européen : urgence médicale, infraction ou péril/accident.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1295,7 +1264,6 @@
             "explanation": "- Malaise, accident de la route, incendie, personne blessée : 15, 18 ou 112 (ou 114).\n- Infraction (violences, agression, vol, cambriolages) : 17 ou le 112 (ou 114).\n- Assistance aux SDF (sans domicile fixe) : 115.\n- Enfance en danger (violence sur mineurs) : 119 et 116 111 (numéro européen)\n- Secours aéronautiques : 191.\n- Secours maritimes : 196, canal 16 de la radio VHF en mer (ou le 112 depuis le\nlittoral).\n- Alerte attentat : 197.\n- Enfants disparus : 116 000.\n- Risque pour la sécurité dans les transports en commun : 3117 ou par SMS au 31 177.\n- Prévention du suicide : 31 14.\n\nÀ noter\n\nLes services d’urgence utilisent un numéro unique, le 0 800 112 112, pour rappeler les\npersonnes ayant contacté les secours.\n\nCe numéro est gratuit : le fait de décrocher ne vous sera pas facturé, ni surtaxé. Il\nn'y a aucun risque à répondre à cet appel, ce n'est pas un spam.\n\nAjoutez-le à vos contacts sous l'appellation “Services d’urgence” : vous pouvez\nrépondre en toute confiance.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1308,7 +1276,6 @@
             "explanation": "Selon l’urgence de votre problème de santé, vous pouvez :\n\n- Consulter un médecin\nPour un problème de santé courant, on commence généralement par consulter un médecin\ntraitant (médecin généraliste de référence pour le patient).\n\nC’est ce qu’on appelle le parcours de soins coordonnés : c’est le fait de consulter\nd'abord son médecin traitant, qui va ensuite orienter le patient vers d'autres\nprofessionnels de santé si nécessaire, notamment des médecins spécialistes (exemples :\ncardiologue, dermatologue…).\n\n- Aller à l’hôpital\nEn cas de situation grave (accident, douleurs violentes, malaise grave…), on se rend à\nl’hôpital, en urgence ou sur rendez-vous. En effet, beaucoup de spécialistes reçoivent\nleurs patients dans les locaux d’un hôpital.\n\n- Aller en pharmacie\nLe pharmacien peut vous donner des conseils pour les douleurs du quotidien.\n\nUne pharmacie est un établissement médical où vous pouvez récupérer et acheter des\nmédicaments et autres produits de santé (compléments alimentaires, dispositifs\nmédicaux…).\n\nAprès la consultation avec votre médecin, rendez-vous en pharmacie avec la prescription\nmédicale pour que le pharmacien vous délivre les traitements (médicaments et\ndispositifs médicaux) prescrits et vous conseille sur leur utilisation.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1321,7 +1288,6 @@
             "explanation": "Le médecin généraliste est formé pour assurer des soins de premier recours (prévention,\ndépistage, diagnostic, traitement, orientation, éducation pour la santé). Il prend en\ncharge des patients de tout âge, pour des problèmes courants ou chroniques.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1334,7 +1300,6 @@
             "explanation": "Le médecin généraliste devient médecin traitant lorsqu’il est officiellement déclaré\npar le patient pour assurer le suivi médical et coordonner les soins.\n\nLe médecin traitant est celui qui :\n\n- soigne et suit le patient régulièrement : c’est lui qu’il faut consulter en premier\npour un avis sur sa santé et qui s'assure que le suivi médical est optimal ;\n- oriente dans le parcours de soins coordonnés : c’est l’interlocuteur privilégié, il\ninforme et vous met, si besoin, en relation avec d'autres professionnels de santé\n(médecins spécialistes, médecins hospitaliers,...) ;\n- connaît et gère votre dossier médical : il centralise toutes les informations\nconcernant vos soins et votre état de santé. Il tient à jour votre dossier médical\n(résultats d'examens, diagnostics, traitements...) ;\n- assure une prévention personnalisée : il assure le suivi de la vaccination, les\nexamens de dépistage organisés (exemple : dépistage du cancer colorectal), peut aider à\nl'arrêt du tabac, donne des conseils santé en fonction de votre style de vie, de votre\nâge ou de vos antécédents familiaux, des conseils en nutrition…\n- établit le protocole de soins à suivre si le patient est atteint d'une affection de\nlongue durée. Il le construit en concertation avec les autres médecins qui suivent la\nmaladie.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1347,7 +1312,6 @@
             "explanation": "Pour prendre un rendez-vous avec un médecin généraliste :\n\n- appelez le cabinet de votre médecin traitant ;\n- réservez un rendez-vous en ligne sur la plateforme de votre médecin (exemple :\nDoctolib, Maiia…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1360,7 +1324,6 @@
             "explanation": "Le médecin spécialiste est un professionnel de santé qui possède une formation\napprofondie dans un domaine médical précis. Exemple : la cardiologie, la dermatologie,\nla gynécologie ou la neurologie.\n\nIl intervient généralement pour diagnostiquer et traiter des problèmes spécifiques ou\ncomplexes qui nécessitent des compétences particulières.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1373,7 +1336,6 @@
             "explanation": "Dans le cadre du parcours de soins coordonnés, le médecin généraliste (qui peut être le\nmédecin traitant) prescrit le rendez-vous avec un médecin spécialiste avec une\nordonnance.\n\nMais vous pouvez vous-mêmes prendre rendez-vous avec un médecin spécialiste, comme par\nexemple avec :\n\n- un ophtalmologue (spécialiste des yeux et de la vision) ;\n- un gynécologue (spécialiste de la santé des femmes et de la grossesse) ;\n- un pédiatre (médecin spécialisé dans la santé des enfants) ;\n- un psychiatre (médecin qui traite les troubles mentaux et émotionnels) ;\n- un neuropsychiatre (psychiatre spécialisé dans les maladies du cerveau et du système\nnerveux).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1386,7 +1348,6 @@
             "explanation": "Pour prendre un rendez-vous avec un médecin spécialiste :\n\n- appelez le cabinet de votre médecin spécialiste ;\n- réservez un rendez-vous en ligne sur la plateforme de votre médecin (exemple : (Ouvre\nune nouvelle fenêtre)Doctolib, (Ouvre une nouvelle fenêtre)Maiia…).\nLe délai d’attente est souvent plus long, sauf en cas d’urgence.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1399,7 +1360,6 @@
             "explanation": "En France, de nombreuses structures permettent d’être soigné sans payer. Elles font\npartie du service public proposé par l’État.\n\nCertaines structures sont généralistes, d’autres spécialisées pour un type\nd’accompagnement.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1412,7 +1372,6 @@
             "explanation": "Soins généralistes\n- Pour des soins généralistes : les permanences d’accès aux soins de santé (PASS) de\npresque tous les hôpitaux publics sont ouvertes à tous. Le personnel soignant vous\nredirigera vers les spécialistes dont vous avez besoin. Certaines PASS sont\nspécialisées pour les maladies : des yeux (ophtalmologie), des dents (bucco-dentaires),\nde la peau (dermatologie).\n- Pour se faire vacciner : vous pouvez demander à un médecin, une sage-femme, un\npharmacien ou un infirmier.\n- Pour les femmes enceintes et les enfants de moins de 6 ans (soins et conseils) :\nrendez-vous dans les centres de protection maternelle et infantile (PMI).\n\nSoins spécialisés\n- Pour avoir une contraception, des conseils sur la sexualité, un accompagnement à\nl'interruption volontaire de grossesse (IVG) : dans les centres de santé sexuelle.\n- Pour le dépistage du SIDA, hépatites et infections sexuellement transmissibles (IST)\n: dans les centres gratuits d’information, de dépistage et de diagnostic des infections\npar le VIH, hépatites et IST (CeGIDD).\n- Pour soigner les addictions : dans les centres de soin, d'accompagnement et de\nprévention en addictologie (CSAPA) et dans les services alcoologie - addictions des\nhôpitaux publics.\n- Pour dépister et soigner la tuberculose : dans les centres de lutte anti-tuberculose\n(CLAT).\n- Pour prendre soin de sa santé mentale : les permanences d'accès aux soins de santé en\npsychiatrie (PASS Psy) ou Centres régionaux de psychotraumatisme (CRP) ou Centres\nmédico-psychologiques (CMP).\n- Pour la santé mentale des enfants : les centres médico-psychologiques enfants et\nadolescents (CMPEA) ou Centres médico-psychopédagogiques (CMPP).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1425,7 +1384,6 @@
             "explanation": "Les services d’urgence des hôpitaux sont destinés uniquement aux détresses et urgences\nles plus graves.\n\nCe service accueille toute personne en situation d’urgence (y compris psychiatriques)\net la prend en charge. Les services d’urgence sont ouverts 24h/24 et 7j/7 afin de\nprendre en charge les urgences vitales et les blessures graves qui nécessitent une\nprise en charge immédiate.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1438,7 +1396,6 @@
             "explanation": "Il faut agir selon la gravité de l’urgence médicale.\n\n- Sans danger vital immédiat (en cas de forte fièvre, de douleurs importantes ou de\nmalaise) : vous pouvez contacter SOS Médecins au 3624 (0,16 €/minute). En cas de\nnécessité, un médecin peut venir à domicile, de jour comme de nuit (tarifs\nconventionnés). Le numéro est joignable 24h/24 et 7j/7.\n- En cas de danger vital (blessure grave, détresse respiratoire, perte de connaissance\nou tout autre danger vital) : il faut appeler le SAMU au 15 ou 114 (appel d’urgence\npour sourds et malentendants). Une équipe médicale pourra évaluer la situation et\nenvoyer une ambulance si nécessaire. Le numéro est joignable gratuitement 24h/24 et\n7j/7.\n\nSi l’état de santé nécessite une prise en charge rapide (entorse, plaie profonde…) mais\npermet le déplacement, vous pouvez vous rendre directement aux urgences de l’hôpital le\nplus proche.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1451,7 +1408,6 @@
             "explanation": "- Un enfant en danger ? Appelez le 119.\n- Une femme victime de violence ? Appelez le 3919.\n- Pour la prévention du suicide : 3114 et en anglais : 01 46 21 46 46.\nRetrouvez tous les numéros d’urgence dans la fiche ANNEXE dédiée.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1464,7 +1420,6 @@
             "explanation": "Les soins de santé coûtent cher, et ils sont en grande partie financés par les\ncotisations sociales payées par les personnes qui travaillent.\n\nLa protection universelle maladie PUMa garantit un droit à la prise en charge\nfinancière des frais de santé pour toute personne qui travaille ou réside en France de\nmanière stable et régulière et qui est affiliée à l’Assurance maladie. Ce dispositif\nd’Assurance sociale permet à chacun d’accéder aux soins, même en cas de perte d’emploi\nou de changement de situation familiale.\n\nQuand vous payez une consultation ou des médicaments, vous êtes (au moins sur le\nforfait de base) remboursé par la protection universelle maladie. C’est la couverture\nde base.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1477,7 +1432,6 @@
             "explanation": "La couverture complémentaire complète la couverture de base assurée par la protection\nuniverselle maladie (PUMa). On l’appelle aussi la mutuelle.\n\nLa mutuelle n’est pas obligatoire mais elle est recommandée afin de compléter la prise\nen charge financière des soins, des médicaments, des indemnités en cas d’arrêt de\ntravail…\n\nL’employeur peut prendre en charge une partie du coût de votre complémentaire santé.\nTout employeur du secteur privé a l’obligation de vous en proposer une.\n\nLa prise en charge financière complémentaire est plus ou moins importante selon le\nniveau de couverture choisi. Les membres de votre foyer peuvent être couverts par votre\ncouverture complémentaire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1490,7 +1444,6 @@
             "explanation": "La Complémentaire Santé Solidaire est une couverture complémentaire qui prend en charge\nles dépenses de santé des personnes aux ressources modestes. Selon vos ressources, elle\npeut être gratuite ou coûter moins de 1 € par jour.\n\nCette complémentaire Santé Solidaire permet de recevoir des soins sans faire d’avance\nde frais quand il s’agit de consultations médicales, dentaires, hospitalières, les\nmédicaments, lunettes, prothèses dentaires et auditives (sous certaines conditions : il\nfaut être affilié à l’assurance maladie et respecter un plafond de ressources.).\n\nSi vous êtes bénéficiaire, tous les membres de votre foyer le sont aussi.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1503,7 +1456,6 @@
             "explanation": "Un médecin de garde est un médecin généraliste qui fait des consultations en dehors des\nheures d’ouverture des cabinets médicaux (soir, nuits, week-ends, jours fériés).\n\nIl prend en charge rapidement les problèmes de santé urgents mais non vitaux (afin de\nne pas surcharger les services d’urgence hospitaliers, destinés en priorité aux\nurgences vitales).\n\nSelon le cas, le médecin de garde peut :\n\n- se déplacer à domicile ;\n- accueillir le patient dans un centre de garde ;\n- donner des conseils médicaux par téléphone si une consultation n’est pas nécessaire.\n\nPour contacter un médecin de garde, appelez le 15 (SAMU) ou le numéro spécifique pour\nla permanence des soins mis en place dans votre région.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1516,7 +1468,6 @@
             "explanation": "Une pharmacie de garde est une pharmacie désignée pour rester ouverte lorsque les\nautres sont fermées (soir, nuits, week-ends, jours fériés). Les pharmacies sont\ndésignées à tour de rôle.\n\nLa pharmacie de garde permet notamment d’obtenir des médicaments en urgence et\nd’assurer une continuité des soins.\n\nPour savoir où est la pharmacie de garde la plus proche de chez vous, prenez contact\navec la gendarmerie ou la police (17) ou appelez le 32 37 (0,35 €/minute).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1529,7 +1480,6 @@
             "explanation": "Votre inscription à l’Assurance Maladie est obligatoire. Quand elle est validée, vous\nrecevez :\n\n- le numéro de sécurité sociale : identifiant unique et personnel à 15 chiffres, le\nnuméro de sécurité sociale atteste que vous avez l’Assurance maladie. Ce numéro est\ninscrit sur votre carte Vitale et sur l’attestation de droits (disponible sur\nameli.fr). Le numéro de sécurité sociale est souvent demandé dans les démarches\nadministratives ou professionnelles. Avant de valider votre inscription à l’Assurance\nmaladie, un Numéro Identifiant d’Attente (NIA) peut vous être attribué. Vous pouvez\nêtre pris en charge, mais vous n’êtes pas encore inscrit ;\n- une carte Vitale : carte personnelle, la carte Vitale prouve que vous bénéficiez des\ndroits à l’Assurance Maladie.\n\nLors d’une consultation médicale, vous remettez votre carte Vitale au professionnel de\nsanté.\n\nLe professionnel de santé insère votre carte Vitale dans son lecteur et transmet une\nfeuille de soins électronique (date de l’acte, montant des honoraires…) à l’Assurance\nmaladie.\n\nCette feuille de soins permet de constater la facturation des soins et ainsi\nd'enclencher leur remboursement. C'est ce qu'on appelle la télétransmission.\n\nC'est auprès de la caisse primaire d'Assurance maladie qu'il faut demander le\nremboursement des frais de santé.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1542,7 +1492,6 @@
             "explanation": "- Choisir un médecin traitant : toujours consulter le même médecin généraliste (et lui\ndemander de devenir votre médecin traitant), vous permet un bon suivi médical.\n- Présenter sa carte Vitale : la carte Vitale permet au médecin de transmettre\nrapidement des informations à l’Assurance maladie et assure ainsi un remboursement\nrapide. Cette carte n’est pas une carte de paiement mais elle permet de bénéficier du\ntiers payant.\n- Bénéficier du tiers-payant : le système de tiers-payant permet de ne pas avancer la\nsomme d’argent que l’Assurance maladie rembourse. Le professionnel de santé est\ndirectement payé par l’Assurance maladie. Le tiers-payant n’est pas systématique. Pour\nen bénéficier quand c’est possible, présentez la carte Vitale au professionnel de santé\n(pharmacie notamment).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1555,7 +1504,6 @@
             "explanation": "Le compte Ameli : le compte Ameli est l’espace personnel en ligne de l’Assurance\nMaladie. Il permet de suivre ses remboursements, communiquer avec des conseillers, si\nbesoin, mettre à jour ses informations, envoyer des documents ou encore demander une\nnouvelle carte Vitale.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1568,7 +1516,6 @@
             "explanation": "Dès le début de la grossesse et jusqu’à 12 jours après l’accouchement, l’Assurance Maladie prend en charge une grande partie des frais médicaux liés à la maternité.\n\nPour être prise en charge dans cette période de maternité, pensez à déclarer votre grossesse dans les 3 premiers mois en consultant un médecin généraliste (médecin traitant idéalement) ou votre sage-femme.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1581,7 +1528,6 @@
             "explanation": "Lors des 5 premiers mois de grossesse\n\n- L'Assurance maladie prend en charge à 100% avec dispense d'avance de frais (tiers payant) les examens médicaux obligatoires dans le cadre du suivi de la grossesse.\n- Les 2 premières échographies réalisées avant la fin du 5e mois de grossesse sont prises en charge à 70%.\n- À compter du 4ème mois de grossesse, il est possible de bénéficier d'un examen de prévention bucco-dentaire pris en charge à 100% par l'Assurance maladie.\n\nDu 6e mois de grossesse à l’accouchement\n\n- Tous les frais médicaux remboursables sont pris en charge à 100%. Il n’y a pas d’avance de frais à faire (tiers payant). Cette prise en charge s'applique à tous les frais médicaux, qu’ils soient ou non en rapport avec la grossesse.\n- La 3e échographie bénéficie de la prise en charge à 100%.\n\nLes frais d'accouchement et les frais de séjour, dans la limite de 12 jours sont pris en charge à 100% dans un hôpital ou une clinique conventionnée.\n\nPendant les 12 jours après l’accouchement\n\n- Tous les frais médicaux remboursables sont pris en charge à 100%. Il n’y a pas d’avance de frais à faire (tiers payant). Cette prise en charge s’applique à tous les frais médicaux, qu’ils soient ou non en rapport avec la grossesse.\n- Il est possible d’être suivi par une sage-femme (également pris en charge à 100% dans cette période).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1594,7 +1540,6 @@
             "explanation": "La loi garantit que toute personne a le droit de choisir librement son professionnel de\nsanté et l’établissement dans lequel elle veut être soignée. Aucun praticien ou\nétablissement ne peut être imposé à un patient.\n\nCe droit est valable dans la limite des capacités d’accueil des structures et si les\nmodalités d’organisation de l’établissement ne s’y opposent pas.\n\nExemples : changer de médecin traitant, choisir un hôpital public ou un cabinet de\nville plutôt qu’une clinique.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1607,7 +1552,6 @@
             "explanation": "Le secret médical protège toutes les informations connues par le professionnel de santé\n: état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de\nla consultation. Le secret médical continue, même après la mort du patient.\n\nPour bien soigner, les professionnels de santé peuvent échanger entre eux : c’est le\nsecret médical partagé, défini par la loi.\n\nLe professionnel de santé peut aussi communiquer des informations pour :\n\n- déclarer les naissances ;\n- déclarer les décès ;\n- déclarer aux autorités sanitaires certaines maladies graves ou contagieuses qui\nnécessitent une intervention urgente.\n\nEn dehors de ce cadre, il y a une violation du secret médical, qui est punie par la loi.\n\nLe principe de confidentialité fait que le médecin est obligé de garder secrètes les\ninformations médicales d'un patient.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1620,7 +1564,6 @@
             "explanation": "Toute personne a le droit de comprendre son état de santé et les soins qu’on lui fait.\n\nAvant tout acte et après, le médecin doit expliquer au patient (sauf s’il n’est pas en\ncapacité de recevoir ces informations) :\n\n- l’état de santé actuel et l’évolution possible ;\n- les soins ou examens prévus, à quoi ils servent et comment ils se déroulent ;\n- les risques, même s’ils sont rares ;\n- les autres options possibles ;\n- les conséquences d’un refus de soins.\n\nEn cas d’accident médical, le professionnel ou l’établissement doit informer la victime\ndans les 15 jours suivant la découverte du dommage.\n\nEnfin, toute personne a le droit d’accéder à son dossier médical et d’en demander une\ncopie.\n\nLes devoirs du patient : le respect des règles médicales et du principe de laïcité\nLe patient ne peut pas imposer à l'hôpital un choix ou un acte médical contraire aux\nprotocoles ou à l'organisation du service public, que ce soit pour des raisons\nreligieuses, philosophiques ou personnelles.\n\nIl peut vous être refusé d'accéder à votre demande à l'hôpital si celle-ci n'est pas\nconforme avec le principe de laïcité.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1633,7 +1576,6 @@
             "explanation": "Un dispositif de prévention de santé est un ensemble d’actions, de mesures et d’outils\n(exemple : dépistage ou la vaccination) mis en place pour :\n\n- empêcher l’apparition de maladies ;\n- détecter et limiter la progression de symptômes ;\n- promouvoir un mode de vie sain.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1646,7 +1588,6 @@
             "explanation": "Le dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de\nsymptômes. C’est une méthode de prévention efficace qui permet de détecter les maladies\ntôt et, par conséquent, d’augmenter les chances de guérison grâce à un traitement\nrapide.\n\nLes dépistages les plus fréquents concernent :\n\n- les cancers ;\n- les maladies du cœur et des poumons ;\n- les infections, notamment les infections sexuellement transmissibles (IST).\nLe dépistage est proposé en priorité aux personnes les plus à risque de développer une\nmaladie. Il est fait régulièrement, selon un calendrier précis, pour une meilleure\nsurveillance.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1659,7 +1600,6 @@
             "explanation": "La vaccination est un moyen simple, sûr et efficace de se protéger des maladies\ndangereuses et des séquelles qu’elles peuvent laisser. Elle utilise les défenses\nnaturelles de l’organisme pour renforcer le système immunitaire.\n\nCertains vaccins sont obligatoires pour protéger la santé de la population.\n\nPour optimiser son efficacité pour moi et pour les autres, il est important de\nrespecter les obligations vaccinales et le calendrier des vaccinations. La liste des\nvaccins recommandés ou obligatoires est indiquée dans le carnet de santé et est mise à\njour par le médecin à chaque consultation.\n\nL’entrée dans les structures collectives pour les enfants (crèches, écoles…) est\nconditionnée à la réalisation de certains vaccins.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1672,7 +1612,6 @@
             "explanation": "“Mon Bilan Prévention” permet de faire un point global sur sa santé (en dehors de toute\nmaladie) :\n\n- identifier les habitudes de vie qui peuvent nuire à la santé (tabac, alimentation,\nsommeil, activité physique…) ;\n- renforcer le suivi de votre santé physique et mentale ;\n- proposer des conseils et consultations supplémentaires si besoin.\nCe dispositif de prévention gratuit est proposé aux plus de 18 ans et peut être réalisé\nà tout âge. Prenez rendez-vous avec un médecin, un infirmier ou un pharmacien habilité.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1685,7 +1624,6 @@
             "explanation": "La santé mentale désigne un état de bien-être psychique, émotionnel et social. C’est\nquand une personne se sent bien dans sa tête (exemple : elle sait gérer son stress) et\navec les autres.\n\nAvoir une bonne santé mentale, ce n’est pas seulement l’absence de troubles psychiques\ngraves ; quand on a une bonne santé mentale, on peut affronter les problèmes de la vie,\navoir des relations sociales équilibrées avec les autres, travailler et contribuer à la\nvie en société.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1698,7 +1636,6 @@
             "explanation": "Si vous, ou un proche, ne se sent pas bien, vous pouvez contacter :\n\n- le médecin traitant, qui assure le suivi régulier ;\n- un psychologue ou un psychiatre, des médecins spécialistes qui vous accompagnent en\ncabinet ou à l’hôpital ;\n- une structure de proximité comme les Centres Médico-Psychologiques (CMP) ;\n- les lignes d’écoute anonymes :\n    - 3114 : pour la prévention du suicide (24h/24) ;\n    - Fil Santé Jeunes : pour les jeunes.\n\nUn renforcement des actions de prévention\nLa prévention concernant la santé mentale est une priorité pour accompagner au mieux et\nau plus tôt les patients.\n\nPlusieurs actions sont mises en place :\n\n- campagnes de sensibilisation grand public ;\n- interventions dans les écoles, universités et entreprises ;\n- forfait \"MonPsy\" : jusqu’à 8 séances chez un psychologue remboursées sous conditions.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1711,7 +1648,6 @@
             "explanation": "Chaque personne étrangère qui est en situation régulière (c’est-à-dire qui a un titre\nde séjour, qui est réfugiée, ou qui bénéficie de la protection internationale), et qui\nn’a pas de travail, doit être inscrite à France Travail. C'est un organisme public qui\naccompagne les personnes à la recherche d'un emploi.\n\nCette inscription permet à la personne d’être accompagnée pour trouver un travail ou\nsuivre une formation. Les solutions proposées sont adaptées à sa situation et à ses\nbesoins.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1724,7 +1660,6 @@
             "explanation": "Le questionnaire d’orientation permet de faire un premier point sur les besoins de la\npersonne.\n\nIl pose diverses questions sur la personne :\n\n- des questions générales, notamment si elle est célibataire, mariée, divorcée, veuve…\n- des questions sur son niveau en français ;\n- des questions sur son niveau d’utilisation d’internet et d’autres outils numériques ;\n- des questions professionnelles, notamment sur son expérience et ses compétences.\n\nLe questionnaire d’orientation existe en 5 langues.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1737,7 +1672,6 @@
             "explanation": "L’application Travailler en France explique de manière simple les services utiles pour\ntrouver un travail. Les explications existent en plusieurs langues.\n\nCette application :\n\n- propose des offres de travail traduites dans plusieurs langues ;\n- regroupe des informations utiles, par exemple pour créer un CV facilement sans\nmaîtriser le français.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1750,7 +1684,6 @@
             "explanation": "L’inscription à France Travail est automatique pour deux catégories de personnes. Ces\npersonnes n’ont aucune démarche à faire pour s’inscrire.\n\nCette fiche présente la première catégorie.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1763,7 +1696,6 @@
             "explanation": "Votre inscription à France Travail est automatique si :\n\n- vous recevez le Revenu de Solidarité Active (RSA) ;\n- vous avez une relation officielle (mariage, concubinage, PACS) avec une personne qui\nreçoit le RSA ;\n- vous êtes inscrit en Mission Locale dans le cadre d’un Parcours Contractualisé\nd’Accompagnement vers l’Emploi et l’Autonomie (PACEA) ou un Contrat d’Engagement Jeune\n(CEJ).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1776,7 +1708,6 @@
             "explanation": "Votre inscription est automatique mais vous devez faire une démarche pour bénéficier\ndes services de France Travail.\n\n1. Vous répondez au questionnaire d’orientation.\n2. Vous vous connectez sur le site internet francetravail.fr.\n3. Vous allez sur votre espace personnel en utilisant les codes que vous avez reçus par\n   courrier ou par e-mail.\n\nVotre espace personnel vous permet de gérer vos rendez-vous, envoyer des informations…",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1789,7 +1720,6 @@
             "explanation": "L’inscription à France Travail est automatique pour deux catégories de personnes. Ces\npersonnes n’ont aucune démarche à faire pour s’inscrire.\n\nCette fiche présente la deuxième catégorie.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1802,7 +1732,6 @@
             "explanation": "Votre inscription à France Travail est automatique si :\n\n- vous avez demandé le Revenu de Solidarité Active (RSA) ;\n- vous avez une relation officielle (mariage, concubinage, PACS) avec une personne qui\na demandé le RSA ;\n- vous avez demandé un accompagnement à une Mission locale pour vous aider à trouver un\ntravail.\n\nLa démarche pour bénéficier des services de France Travail\nVotre inscription est automatique mais vous devez faire une démarche pour bénéficier\ndes services de France Travail.\n\n- si la demande de RSA a été faite par internet, vous recevez par email un lien\nd’inscription et le questionnaire d’orientation à remplir ;\n- si la demande de RSA a été faite en remplissant des papiers, vous recevez par\ncourrier un document d’inscription et le questionnaire d’orientation à remplir ;\n- si vous êtes déjà suivi par une Mission locale, c’est elle qui vous aide pour vous\ninscrire à France Travail et transmet à France Travail vos réponses au questionnaire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1815,7 +1744,6 @@
             "explanation": "L’inscription à France Travail est automatique pour les personnes bénéficiaires du RSA\nou inscrites en Mission locale.\n\nLes autres personnes doivent s’inscrire par elles-mêmes.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1828,7 +1756,6 @@
             "explanation": "1. Vous allez sur (Ouvre une nouvelle fenêtre)le site internet de France Travail, puis\n   dans la rubrique Services, vous choisissez \"S’inscrire ou se réinscrire\".\n2. Vous remplissez votre demande d’inscription.\n3. Si vous avez du mal à comprendre la langue française, cochez la case \"en français et\n   en calculs est-ce que j’ai des difficultés ?\". Vous aurez alors une discussion au\n   téléphone avec un conseiller de France Travail. Il vous aidera à répondre au\n   questionnaire d’orientation.\n4. Si vous comprenez bien la langue française, vous remplissez le questionnaire\n   d’orientation. Après cette étape, il y a deux possibilités :\n- vous avez tout de suite une proposition de rendez-vous avec un conseiller de France\nTravail ;\n- vous serez appelé par téléphone, plus tard, par l’organisation la plus adaptée à vos\nbesoins.\n\nSi vous avez du mal à remplir le questionnaire d’orientation, vous pouvez téléphoner au\n09 84 98 37 94 : une personne vous aidera.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1841,7 +1768,6 @@
             "explanation": "Si vous devez renouveler votre document de séjour, vous avez des démarches à faire pour\nrester inscrit à France Travail.\n\n1. Vous allez à la préfecture pour commencer les démarches à partir de 120 jours avant\n   la fin de votre titre de séjour. Après avoir demandé le renouvellement de votre\n   titre de séjour, vous recevez un document.\n2. Vous apportez ce document dès que possible à l’accueil de votre agence France\n   Travail.\n3. Dès que vous recevez votre nouveau titre de séjour, vous l’apportez à l’accueil de\n   votre agence France Travail.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1854,7 +1780,6 @@
             "explanation": "- France Travail aide les personnes à trouver un travail et aide les entreprises qui\nrecrutent.\n- L’Office Français de l’Immigration et de l’Intégration (OFII) organise le parcours\nd’intégration et oriente les personnes vers des structures d’accompagnement à l’emploi.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1867,7 +1792,6 @@
             "explanation": "- Les Missions locales aident les personnes âgées de 16 à 25 ans à trouver un travail.\n- Les Cap emploi aident les personnes qui ont un handicap à trouver un travail.\n- Les MDPH aident les personnes qui ont un handicap à choisir une orientation\nprofessionnelle.\n- Les Maisons De l’Emploi (MDE) analysent le monde du travail au niveau local,\ncoordonnent différentes organisations pour développer le travail dans un territoire.\n- Les Plans Locaux pour l’Insertion et l’Emploi (PLIE) organisent les aides pour les\npersonnes qui ont du mal à trouver un travail.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1880,7 +1804,6 @@
             "explanation": "- Les Centres Communaux d’Action Sociale (CCAS) et les associations locales aident les\npersonnes à faire les démarches administratives et à choisir une orientation\nprofessionnelle.\n- Les ONG et les associations spécialisées aident les personnes à s’intégrer dans la\nsociété française, à apprendre le français et à choisir une orientation\nprofessionnelle.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1893,7 +1816,6 @@
             "explanation": "Deux options sont possibles pour suivre une formation au français :\n\n1. Avec l'aide de l'employeur :\n- le salarié peut suivre une formation de français sur son temps de travail avec le\nmaintien du salaire ;\n- pendant maximum 80 heures. La répartition des heures de formation peut être discutée\navec l'employeur. Il est possible de prendre jusqu’à 10 % de votre temps de travail par\nsemaine (environ une demi-journée si le salarié travaille 35 heures par semaine) ;\n- le salarié doit informer l'employeur et discuter avec lui des jours d'absence.\nAttention : Si l'employeur est un particulier (pas une entreprise), les règles sont\ndifférentes.\n\n2. Avec le Compte Personnel de Formation (CPF) :\n\n- le salarié peut utiliser son CPF pour acheter une formation au français : il a le\ndroit à une absence de 28 heures (4 jours de travail à plein temps) pour suivre la\nformation ;\n- toute personne qui travaille a un CPF ;\n- le CPF augmente de 500 € maximum à la fin de chaque année de travail.\nSi le salarié n'est pas signataire du CIR, son employeur peut aussi proposer des\nformations : il faut se renseigner auprès du service des ressources humaines.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1906,7 +1828,6 @@
             "explanation": "Vous souhaitez étudier ou travailler en France ? Vous pouvez faire reconnaître votre\ndiplôme obtenu dans un autre pays que la France.\n\nLes critères sont différents :\n\n- selon votre parcours et les exigences de la formation souhaitée, si vous voulez\nétudier en France ;\n- selon le métier que vous souhaitez exercer en France.\n\nLa reconnaissance du diplôme est délivrée uniquement par l’organisation où vous\nsouhaitez étudier, ou par l’employeur où vous souhaitez travailler.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1919,7 +1840,6 @@
             "explanation": "Selon votre situation, vous aurez peut-être besoin d’une attestation de comparabilité :\nc’est un document qui est fourni par le Centre Enic-Naric.\n\n- Situation 1 : vous souhaitez étudier en France. Certains lieux d’enseignement\ndemandent ce document pour mieux comprendre le parcours de formation que vous avez\nsuivi à l’étranger.\n- Situation 2 : vous souhaitez travailler en France. Certains employeurs demandent ce\ndocument pour mieux comprendre votre parcours de formation et évaluer votre niveau de\nformation.\n- Situation 3 : vous souhaitez demander la nationalité française. Dans certaines\nsituations, ce document est nécessaire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1932,7 +1852,6 @@
             "explanation": "Les étapes pour faire reconnaître votre diplôme :\n\n1. vérifiez que votre situation permet de faire reconnaître votre diplôme en France ;\n2. préparez les documents (pièce d’identité, diplôme, relevés de notes et leurs\n   traductions officielles) ;\n3. déposez votre dossier sur le site internet de Enic-Naric ;\n4. payez les frais (20 € au moment du dépôt, puis 100 € pour l’analyse du dossier).\n   Vous n’avez pas à payer si vous êtes demandeur d’asile ou réfugié ou bénéficiaire de\n   la protection subsidiaire ou temporaire.\n\nVous recevrez la réponse 4 à 6 mois environ après votre demande.\n\nCes étapes concernent les formations de plus de 200 heures et les métiers qui ne sont\npas réglementés.\n\nExemples de métiers réglementés : avocat, médecin, architecte, mécanicien, coiffeur.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1945,7 +1864,6 @@
             "explanation": "La Validation des Acquis de l'Expérience (VAE) permet de faire reconnaître vos\ncompétences de manière officielle, comme un diplôme reçu après une formation.\n\nToutes les personnes peuvent obtenir une VAE. Peu importe votre âge, votre nationalité,\nvotre niveau de formation…\n\nPour demander une VAE, vous devez avoir une expérience d’au moins un an qui a un lien\ndirect avec le diplôme visé.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1958,7 +1876,6 @@
             "explanation": "1. Déposez votre candidature sur (Ouvre une nouvelle fenêtre)le site internet de France\n   VAE.\n2. Complétez un dossier avec le détail de vos expériences en lien avec le diplôme visé.\n3. Passez un entretien avec un jury.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1971,7 +1888,6 @@
             "explanation": "- Activité professionnelle salariée ou non.\n- Bénévolat ou volontariat.\n- Inscription sur la liste des sportifs de haut niveau.\n- Participation à des activités d’économie solidaire, si la personne est accueillie et\naccompagnée par un organisme assurant l’accueil et l’accompagnement des personnes en\ndifficultés.\n- Responsabilités syndicales.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1984,7 +1900,6 @@
             "explanation": "Le contrat de travail est nécessaire pour toute personne qui s’engage dans un travail\npayé sous forme de salaire (le salarié), pour le compte d’une autre personne\n(l’employeur).\n\n- Il précise le salaire, les compétences et connaissances nécessaires, la durée du\ntravail, les tâches du salarié.\n- Il entraîne des obligations pour le salarié et pour l’employeur.\n\nIl existe différents types de contrat de travail selon leur durée, la nature du travail\nà réaliser...",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -1997,7 +1912,6 @@
             "explanation": "C’est le contrat de travail le plus courant en France.\n\nIl n’a pas de date de fin.\n\nIl peut être à temps plein ou à temps partiel.\n\nUn contrat à temps partiel doit être écrit.\n\nUn contrat à temps plein n’est pas obligatoirement écrit, mais c’est préférable.\n\nLe CDI peut être rompu dans différents cas :\n\n- décision de l'employeur (licenciement, mise à la retraite) ;\n- décision du salarié (démission, départ à la retraite) ;\n- événement imprévisible exceptionnel (exemple : destruction totale de l'entreprise en\nraison d’un incendie) ;\n- accord entre le salarié et l’employeur (rupture conventionnelle).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2010,7 +1924,6 @@
             "explanation": "Ce contrat de travail a une date de fin.\n\nIl est utilisé pour une tâche précise et limitée dans le temps. Exemple : remplacer un\nautre salarié pendant son absence limitée dans le temps, faire face à une augmentation\nd’activité limitée dans le temps.\n\nLe CDD doit être écrit.\n\nEn général, sa durée maximale est de 18 mois.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2023,7 +1936,6 @@
             "explanation": "Le contrat temporaire (on l’appelle aussi le contrat d’intérim) : il est conclu entre\nun salarié, une entreprise de travail temporaire et une entreprise où le salarié\nréalise sa mission.\n\nCe contrat est utilisé uniquement pour une mission de courte durée (quelques jours,\nquelques mois).\n\nCe contrat doit être écrit et signé.\n\nLe contrat de professionnalisation : il est conclu entre un salarié et un employeur,\ndans le cadre de certaines formations.\n\nLe CDD d’usage (on l’appelle aussi le contrat d'extra) : c’est un CDD particulier. Il\npermet à l’employeur d’embaucher une personne pour réaliser une tâche précise et\ntemporaire pendant une très courte durée (quelques heures, une journée ou quelques\njournées qui se suivent sans interruption).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2036,7 +1948,6 @@
             "explanation": "Un salarié peut cumuler plusieurs contrats de travail (CDI, CDD...), chez un ou\nplusieurs employeurs. Dans ce cas, il y a des règles à respecter.\n\n- Ne pas dépasser la durée maximale de travail fixée par la loi (1607 heures par an).\n- Ne pas dépasser 10 heures de travail par jour et 48 heures de travail par semaine (ou\n44 heures par semaine sur une période de 12 semaines qui se suivent).\n- Ne pas exercer deux activités concurrentes.\n\nAttention. Si un contrat de travail comporte une clause d’exclusivité, cela signifie\nqu’il est interdit de cumuler ce contrat avec une autre activité professionnelle.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2049,7 +1960,6 @@
             "explanation": "Vous pouvez créer une entreprise en France, même si vous n’avez pas la nationalité\nfrançaise.\n\nVous n’avez pas besoin de diplôme, sauf pour certaines activités (exemple : coiffure…).\n\nIl est important d’avoir de l’expérience dans l’activité de la future entreprise, et de\nconnaître des personnes qui pourront vous aider.\n\nPartout en France, il y a des associations pour vous aider à définir votre projet et\ntrouver de l’argent.\n\nIl y a des aides financières comme l'aide à la création ou à la reprise d'une entreprise (ACRE) ou des aides régionales.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2062,7 +1972,6 @@
             "explanation": "1. Clarifier vos envies et celles de vos futurs clients.\n2. Discutez de votre idée avec différentes personnes pour avoir un regard extérieur.\n3. Vérifiez qu’une autre personne n’a pas eu la même idée que vous. Pour cela, il\n   suffit de faire une recherche sur le site internet de l’INPI (Institut National de\n   la Propriété Industrielle). Une idée est protégée par un brevet d’invention. L’INPI\n   recense tous les brevets d’invention.\n4. Construisez votre projet avec une étude de marché (analyse des entreprises\n   concurrentes, des clients, de l’environnement économique) et un business plan\n   (présentation du service ou du produit, stratégie, plan financier…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2075,7 +1984,6 @@
             "explanation": "- Choisir une adresse officielle pour l’entreprise (ce n’est pas forcément l’adresse du\nlieu de travail).\n- Enregistrer les statuts de votre société (nom, forme juridique, adresse, montant du\ncapital, comment seront prises les décisions…).\n- Déclarer votre entreprise (on appelle cette démarche l’immatriculation).\n- Publier dans un journal d’annonces légales.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2088,7 +1996,6 @@
             "explanation": "Vous pouvez transmettre votre candidature en utilisant un des nombreux sites internet\ngénéralistes qui diffusent des offres de travail dans la plupart des secteurs\nd’activité et partout en France.\n\nLe site internet de France Travail est la référence pour trouver un travail en France.\nEnviron 160 000 offres sont mises à jour chaque jour. Il vous propose aussi des\nconseils et des informations utiles pour trouver un travail (fiches de présentation de\nmétiers, témoignages de personnes exerçant un métier...)",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2101,7 +2008,6 @@
             "explanation": "Il existe aussi des sites internet spécialisés. Certains diffusent des offres limitées\nà un secteur géographique proche de chez vous. D’autres diffusent des offres dans un\nsecteur professionnel.\n\nExemples :\n\n- le site internet Choisir le service public propose uniquement des offres dans le\nservice public ;\n- le site internet L’industrie recrute propose uniquement des offres d’emploi dans\nl’industrie\n\nGrâce aux moteurs de recherche, vous pouvez cibler les sites en fonction de votre\nprofil.\n\nVous pouvez aussi envoyer une candidature en passant directement par le site internet\nd’une entreprise qui vous intéresse.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2114,7 +2020,6 @@
             "explanation": "Internet n’est pas la seule manière de transmettre une candidature. Vous pouvez la\nremettre en personne dans les locaux de l’entreprise ou pendant un forum / salon\nprofessionnel (événement où vous pouvez rencontrer des personnes qui recrutent, parfois\nspécialisé dans un secteur d’activité : agriculture, industrie, tourisme…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2127,7 +2032,6 @@
             "explanation": "Le Curriculum Vitae (CV) est un document qu'une personne envoie à une entreprise dans\nle but d'être embauché dans cette entreprise.\n\nIl présente la personne à l’employeur :\n\n- son expérience professionnelle ;\n- son parcours de formation ;\n- ses compétences ;\n- ses qualités.\nIl permet à l'entreprise d'évaluer les capacités de la personne à réaliser le travail\nattendu.\n\nL'envoi d'un CV n'est pas obligatoire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2140,7 +2044,6 @@
             "explanation": "Il est important de réaliser un CV en fonction des informations demandées par\nl’entreprise dans son offre.\n\n- Nom, prénom, email, numéro de téléphone, âge.\n- Principales expériences professionnelles ou uniquement celles qui ont un lien avec\nl'offre.\n- Formation (diplôme le plus élevé ou celui qui a un lien avec l'offre).\n- Photographie d'identité (ce n’est pas obligatoire).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2153,7 +2056,6 @@
             "explanation": "Pour l’entreprise qui diffuse l’offre :\nLes informations demandées dans l’offre de travail doivent avoir un lien direct avec le\ntravail proposé.\n\nPour la personne qui élabore son CV :\nUne personne qui a été embauchée sur la base d’un CV comportant des fausses\ninformations (diplôme, expérience professionnelle…) peut être licenciée.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2166,7 +2068,6 @@
             "explanation": "Dans une lettre de motivation, la personne explique à l’entreprise pourquoi elle répond\nà l’offre de travail. L’objectif de cette lettre est d’obtenir un rendez-vous avec\nl’employeur.\n\nLes personnes qui se chargent des recrutements lisent une lettre de motivation en 30\nsecondes environ. Il est donc très important de faire passer des messages clés dans\ncette lettre.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2179,7 +2080,6 @@
             "explanation": "1. Expliquez d’abord pourquoi l’offre de travail vous intéresse.\n2. Présentez votre expérience en donnant des exemples de compétences qui sont indiquées\n   dans l’offre.\n3. Montrez que vous avez bien compris ce dont l’entreprise a besoin.\n4. Expliquez ce que vous pourrez apporter à l’entreprise.\n5. Concluez en demandant un rendez-vous.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2192,7 +2092,6 @@
             "explanation": "Il est utile de faire relire vos premières candidatures (CV, lettre de motivation) pour\navoir un regard extérieur. Choisissez des personnes proches de vous (famille, amis…),\nen lesquelles vous avez confiance. Elles vous aideront à améliorer votre candidature.\n\nPour vous préparer à un rendez-vous d’embauche, n’hésitez pas à vous entraîner à\nl’oral. Pour cela, faites des simulations avec des personnes proches de vous.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2205,7 +2104,6 @@
             "explanation": "Le droit du travail, c’est l’ensemble des règles juridiques qui concernent les\nrelations professionnelles entre les salariés et les employeurs.\n\nDéfinition : une règle juridique organise la vie sociale. Si une règle n’est pas\nrespectée, l’État peut punir par une sanction.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2218,7 +2116,6 @@
             "explanation": "Les règles sont écrites dans trois types de document :\n\n1. Le Code du travail fixe les droits et les obligations pour tous : contrat de\n   travail, conditions de travail, salaire…\n2. Les conventions collectives concernent une activité (exemple : transport routier).\n   Elles adaptent les règles du Code du travail sur des points précis en fonction de\n   situations particulières liées à cette activité (congés, salaires minimaux...).\n3. Le règlement intérieur est rédigé par un employeur dont l’entreprise compte au moins\n   50 salariés. Il présente les droits et obligations des salariés en matière de santé,\n   de sécurité et de discipline.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2231,7 +2128,6 @@
             "explanation": "Le droit du travail détermine une référence pour la durée de travail des salariés à\ntemps complet : 35 heures par semaine. Cette durée s’applique à toutes les entreprises.\n\nLes salariés à temps partiel travaillent moins de 35 heures par semaine.\n\nLes salariés à temps complet peuvent travailler plus de 35 heures. Au-delà de 35\nheures, on parle \"d’heures supplémentaires\". L’employeur doit payer ces heures\nsupplémentaires au salarié ou lui permettre de les rattraper.\n\nIl existe aussi un temps de travail maximal à ne pas dépasser.\n\nIl est possible de travailler dès l'âge de 16 ans. Tout mineur doit y être autorisé par\nson représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2244,7 +2140,6 @@
             "explanation": "Le salaire est l’argent versé par l’employeur au salarié, en échange du travail qu’il a\nfourni.\n\nIl est interdit de verser un salaire inférieur au salaire minimum de croissance ((Ouvre\nune nouvelle fenêtre)SMIC), qui est le salaire horaire minimum en France et qui s'élève\nà 1 801,80 € brut environ.\n\nAu moment du versement du salaire, l’employeur doit fournir au salarié un bulletin de\npaie. Ce document comporte des informations obligatoires (période de travail, nombre\nd’heures de travail…). À l’inverse, d’autres informations sont interdites, par exemple\nles heures ou journées de grève du salarié.\n\nL’employeur peut fournir le bulletin de paie sous forme électronique, sauf si le\nsalarié le refuse.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2257,7 +2152,6 @@
             "explanation": "Tous les salariés ont droit, chaque année, à un congé payé par leur employeur.\n\nLe congé payé est un droit et une obligation.\n\nUn salarié a droit à 2,5 jours ouvrables de congé payé s’il a travaillé chez le même\nemployeur pendant un temps équivalent à un mois de travail.\n\nDéfinition : un jour ouvrable est un jour de la semaine où le salarié pourrait\npotentiellement travailler, sauf le dimanche et les jours fériés.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2270,7 +2164,6 @@
             "explanation": "En France, chaque salarié a le droit de se syndiquer.\n\nCela veut dire qu’il peut créer, adhérer ou participer à un syndicat.\n\nUn syndicat est une organisation qui défend les droits des travailleurs : le salaire,\nles conditions de travail, la sécurité...\n\nPersonne ne peut obliger un salarié à rejoindre un syndicat, et personne ne peut le\npunir s’il en fait partie.\n\nC’est une liberté importante dans le monde du travail.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2283,7 +2176,6 @@
             "explanation": "Si le salarié et l’employeur ne sont pas d'accord concernant le contrat de travail\n(licenciement, salaire…), le salarié peut contacter le Conseil de Prud’hommes.\n\nC’est un lieu de Justice qui décide dans ce type de conflit. Il peut imposer à\nl’employeur de payer une indemnité au salarié, de le réintégrer dans l’entreprise…",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2296,7 +2188,6 @@
             "explanation": "On parle de discrimination au travail quand une personne est moins bien traitée que les\nautres par l’employeur en raison d’un des critères interdits par la loi, par exemple\nson origine, son sexe, son âge...\n\nToutes les personnes qui travaillent dans une entreprise (salarié, stagiaire, apprenti)\nsont protégées contre la discrimination. Cette protection implique que la personne peut\nsignaler la discrimination pour obtenir, dans certains cas, une réparation.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2309,7 +2200,6 @@
             "explanation": "Il peut y avoir de la discrimination au travail à différents moments.\n\nPar exemple :\n\n- au moment de l’embauche ;\n- au moment du licenciement ;\n- au moment du renouvellement de contrat ;\n- au moment de la fixation du salaire ;\n- au moment de la définition des tâches du salarié ;\n- au moment des horaires de travail...",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2322,7 +2212,6 @@
             "explanation": "Une victime de discrimination ou une personne qui connaît une discrimination peut le\nsignaler, par exemple :\n\n- à l’Inspection du Travail ;\n- à un représentant du personnel ;\n- à un syndicat professionnel.\nSignaler une discrimination n’entraîne aucune sanction, sauf en cas de mensonge.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2335,7 +2224,6 @@
             "explanation": "L'inspection du travail est un service de l’État qui veille au respect du droit du\ntravail.\n\nElle informe et conseille les employeurs, les salariés et les représentants du\npersonnel.\n\nSes missions\n- Informer sur les lois et des règles du droit du travail.\n- Conseiller les employeurs et les salariés en fonction de leur situation.\n- Servir de médiateur dans un conflit entre plusieurs salariés et un employeur.\n- Vérifier le respect du droit du travail (santé, sécurité, durée du travail, travail\nillégal...).\n\nDans certaines situations, l'employeur doit obtenir l’autorisation de l’inspection du\ntravail avant d'agir.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2348,7 +2236,6 @@
             "explanation": "Un salarié qui pense que son employeur ne respecte pas le droit du travail peut se\nrenseigner en appelant le service des renseignements en droit du travail : 0 806 000\n126.\n\nCe service répond à des questions juridiques mais, contrairement à l’inspection du\ntravail, il ne peut pas intervenir dans l’entreprise.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2361,7 +2248,6 @@
             "explanation": "Le travail non déclaré (on l’appelle aussi travail dissimulé), c’est une activité\nprofessionnelle pour laquelle il n’y a pas de déclaration officielle. Par exemple : pas\nde déclaration avant l’embauche d’un salarié, mention sur le bulletin de paie d’un\nnombre d’heures de travail inférieur à celui qui a été réalisé.\n\nLe travail non déclaré est interdit par la loi.\n\nTravailler ou faire travailler de manière non déclarée peut sembler pratique ou\néconomique. Mais cela peut entraîner de graves conséquences pour l’employeur et le\nsalarié.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2374,7 +2260,6 @@
             "explanation": "Un employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45\n000 euros d’amende. Les peines peuvent aller jusqu’à 5 ans de prison et 75 000 euros\nd’amende dans certaines situations (exemple : travail non déclaré d’une personne de\nmoins de 18 ans).\n\nL’employeur peut aussi avoir des sanctions complémentaires.\n\nExemples : fermeture de l’entreprise pendant 3 mois maximum, impossibilité de\ntravailler dans le cadre d’un marché public.\n\nSur le plan financier, l’entreprise doit rembourser les aides publiques perçues, payer\nun montant supérieur aux cotisations sociales qui n’ont pas été payées, et verser au\nsalarié l’équivalent de 6 mois de salaire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2387,7 +2272,6 @@
             "explanation": "Un salarié qui travaille sans être déclaré ne cotise ni à l’assurance chômage, ni pour\nsa retraite.\n\nIl n’a pas droit à la sécurité sociale en cas de maladie ou d’accident du travail.\n\nIl n’a pas de congé payé.\n\nIl ne peut pas se défendre en cas de conflit avec l’employeur.\n\nIl peut être licencié du jour au lendemain, sans annonce préalable.\n\nS’il a reçu des aides sociales (RSA, CAF…), le salarié risque de devoir les rembourser\nou de payer une amende.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2400,7 +2284,6 @@
             "explanation": "En 1989, 196 États ont signé un document sur les droits de l’enfant dans le cadre de\nl’Organisation des Nations Unies (ONU). Ce document s’appelle la Convention\nInternationale des Droits de l’Enfant. Seuls les États-Unis ne l’ont pas signé.\n\nCe document présente les droits fondamentaux des enfants.\n\nIl impose des contraintes aux États qui l’ont signé. Il assure donc la protection des\nenfants.\n\nC’est le fondement de toute l’action de l’UNICEF, une organisation qui dépend de l’ONU.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2413,7 +2296,6 @@
             "explanation": "L’intérêt de l’enfant est supérieur à sa volonté et à celle de ses parents. C’est l’un\ndes principes de la Convention.\n\nCe principe signifie que l'enfant peut choisir lui-même son avenir. Ce ne sont pas ses\nparents qui décident à sa place, sauf si les décisions de l’enfant le mettent en\ndanger.\n\nLes principaux droits de l’enfant\n- L’égalité.\n- Avoir un nom, une identité.\n- Vivre en famille.\n- Être soigné, protégé des maladies, avoir une alimentation suffisante et équilibrée.\n- Bénéficier d’une justice adaptée à son âge.\n- Aller à l’école et avoir des loisirs.\n- Protection de la vie privée.\n- Ne pas faire la guerre ni la subir : être protégé en temps de guerre.\n- Protection contre la violence.\n- Protection contre l'exploitation.\n- Liberté de s’informer et de s’exprimer, d’être entendu sur les questions qui le\nconcernent.\n- Enfant en situation de handicap : vivre avec et comme les autres, ils peuvent\nbénéficier d'un emploi du temps aménagé.\n\n![](./pics/child.png)",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2426,7 +2308,6 @@
             "explanation": "Les parents ont des droits et des devoirs vis-à-vis de leur enfant de moins de 18 ans.\nL’ensemble de ces droits et devoirs, c’est-à-dire ce qu’ils peuvent et ce qu’ils\ndoivent faire, correspond à ce que l’on appelle l’autorité parentale.\n\nLes deux parents ont tous les deux l’autorité parentale : ils ont les mêmes droits et\nles mêmes devoirs. Peu importe leur situation (s’ils sont mariés, pacsés, en\nconcubinage ou séparés).\n\nDès sa naissance, les parents doivent déclarer leur enfant à la mairie.\n\nIls sont tous les deux responsables de leur enfant.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2439,7 +2320,6 @@
             "explanation": "Les parents exercent leurs droits et devoirs dans l'intérêt de leur enfant et dans le\nrespect de leur enfant. Ils n’utilisent ni la violence physique, ni la violence\npsychologique.\n\nLes parents associent leur enfant aux décisions qui le concernent, selon son âge et sa\nmaturité.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2452,7 +2332,6 @@
             "explanation": "Droit et devoir de surveillance et de protection\n\n- Les parents doivent veiller à la sécurité de l'enfant, surveiller ses relations, ses\ndéplacements, ses communications, son utilisation des réseaux sociaux.\n- Par exemple : protéger l’enfant contre le racket, le viol, la prostitution, les\naddictions, le harcèlement, la violence...\n\nDevoir d'éducation:\n- Les parents doivent veiller à l'éducation scolaire, intellectuelle, morale et\néventuellement religieuse de l'enfant.\n- Par exemple : l'instruction est obligatoire pour tout enfant entre 3 et 16 ans. Des\nparents qui ne respectent pas cette obligation peuvent recevoir une amende et faire une\npeine de prison.\n\nDevoir d'assurer sa santé\n\nDevoir d'entretien :\nChacun des parents doit participer à nourrir, héberger et répondre aux besoins de leur\nenfant (loisir, culture).\n\nDevoir de protection de sa vie privée et de son image",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2465,7 +2344,6 @@
             "explanation": "La loi française est prioritaire sur les valeurs culturelles et familiales. Cela\nsignifie que si des valeurs culturelles et familiales contredisent la loi française,\nelles ne peuvent pas être transmises ou appliquées.\n\nExemple : le principe d’égalité entre les filles et les garçons doit être respecté,\nmême dans la sphère privée.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2478,7 +2356,6 @@
             "explanation": "Les parents ont le droit et le devoir de gérer les biens de leur enfant, par exemple un\nappartement issu d’un héritage.\n\nIls ont également la jouissance légale des biens de l'enfant jusqu'à ses 16 ans. Cela\nsignifie, par exemple, qu’ils peuvent s’approprier les revenus liés à la location d’un\nappartement dont leur enfant est propriétaire.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2491,7 +2368,6 @@
             "explanation": "Un parent ne peut pas renoncer à son autorité parentale. Mais l’autorité parentale peut\nêtre retirée à un parent, ou aux deux parents, en cas de mise en danger de l’enfant ou\ndésintérêt pour l’enfant.\n\nLe retrait de l’autorité parentale est une décision prise par un tribunal.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2504,7 +2380,6 @@
             "explanation": "Exemples de situations qui peuvent entraîner un retrait de l’autorité parentale :\n\n- mise en danger de l’enfant : violence physique ou psychologique ;\n- désintérêt pour l’enfant : abstention volontaire d'exercer les droits et devoirs\nparentaux pendant plus de deux ans, malgré une procédure d’assistance éducative\n(assistance décidée par un tribunal) ;\n- condamnation pour un crime ou un délit : un parent a commis un crime ou un délit sur\nson enfant ou l'autre parent, un parent a participé à un crime ou un délit réalisé par\nson enfant.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2517,7 +2392,6 @@
             "explanation": "Le retrait total de l’autorité parentale\nLe parent perd tous ses droits et devoirs sur son enfant.\n\nIl n'a plus le droit de prendre de décisions concernant son enfant.\n\nIl n’a plus aucun droit sur les biens de son enfant.\n\nLe parent conserve l'obligation de contribuer à l'entretien et l'éducation de son\nenfant.\n\nLe parent reste le père ou la mère de l’enfant.\n\nLe retrait partiel de l’autorité parentale\nL’autorité parentale est retirée sur certains droits et/ou devoirs.\n\nExemple : le parent peut conserver ses droits sur les biens de l’enfant, ses droits et\ndevoirs de surveillance et d'éducation.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2530,7 +2404,6 @@
             "explanation": "Les enfants de moins de 3 ans qui ne vont pas encore à l’école peuvent être gardés par\ndes professionnels spécialisés dans la garde d’enfant.\n\nCe service est payant, mais il existe des aides financières pour les personnes à\nfaibles revenus.\n\nIl existe différents lieux de garde d’enfant. Un des avantages : les enfants sont en\ncontact avec d’autres enfants.\n\nCes lieux gardent des enfants à partir de 2 mois et demi. Dans certains cas, ils\ngardent des enfants jusqu’à 6 ans.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2543,7 +2416,6 @@
             "explanation": "- La crèche est un endroit qui garde de nombreux enfants, de manière régulière.\nDiverses activités favorisent le bon développement des enfants. Il existe différents\ntypes de crèches : crèche collective (gérée par une association, une commune…), crèche\ndans une entreprise, crèche parentale (les parents se partagent les temps de garde)…\n- La micro-crèche est une crèche qui garde 10 enfants au maximum. Elle garde les\nenfants de manière régulière ou seulement certains jours.\n- La halte-garderie permet de faire garder son enfant certains jours, pas plus de 3\ndemi-journées par semaine. Elle fonctionne comme une crèche, mais les professionnels\nsont moins nombreux.\n- L’assistante maternelle peut garder un ou plusieurs enfants en même temps. Il est\npossible de faire garder son enfant de moins de 3 ans, en complément de l’école.\n- À domicile. Les parents emploient directement une personne qui vient garder l’enfant\nchez eux. Cette solution est plus chère que les autres et moins encadrée.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2556,7 +2428,6 @@
             "explanation": "Français ou étrangers, tous les enfants âgés de 3 à 16 ans, qui habitent en France,\ndoivent aller à l’école. C’est une obligation.\n\nL’école est organisée en 4 temps :\n\n- la maternelle, (de 3 à 6 ans). Il y a 3 niveaux : petite section, moyenne section, et\ngrande section ;\n- le cours élémentaire (de 6 à 11 ans). Il y a 5 niveaux : CP, CE1, CE2, CM1 et CM2 ;\n- le collège (de 11 à 15 ans). Il y a 4 niveaux : 6e, 5e, 4e et 3e. À la fin du\ncollège, l’enfant passe un diplôme qui s’appelle le brevet des collèges, ou diplôme\nnational du brevet (DNB) ;\n- le lycée (de 15 à 18 ans). Il y a 3 niveaux : Seconde, Première, Terminale. À la fin\ndu lycée l’enfant passe un diplôme qui s’appelle le baccalauréat (BAC), qui permet de\npoursuivre des études et d’être orienté vers de nombreux parcours dans l’enseignement\nsupérieur.\n\nUne cantine est accessible à tous les enfants qui le souhaitent dans tous les\nétablissements scolaires.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2569,7 +2440,6 @@
             "explanation": "L’école maternelle permet aux enfants de s’intégrer dans la société :\n\n- les enfants apprennent la langue française s’ils ne la parlent pas encore ;\n- ils apprennent à vivre ensemble ;\n- ils se font des amis.\n\nLes enfants y apprennent aussi à dessiner, écrire, compter, comprendre.\n\nL’école maternelle permet aux parents de rencontrer de nouvelles personnes : les\nenseignants et d’autres parents.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2582,7 +2452,6 @@
             "explanation": "Après 16 ans, l’école n’est plus obligatoire mais tous les enfants peuvent poursuivre\nleurs études. Il existe de nombreuses possibilités : apprentissage (agriculture,\nbâtiment…), université (sport, langues, sciences…), écoles d’ingénieur, écoles de\ncommerce…",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2595,7 +2464,6 @@
             "explanation": "Les parents sont libres d'inscrire leur enfant dans une école publique ou privée.\n\nPour inscrire son enfant à l’école publique, il suffit de contacter la mairie, ou\nl’école située à proximité de son domicile.\n\nLes diplômes délivrés par les écoles publiques ont tous une valeur officielle.\n\nL’École républicaine, gratuite, laïque et obligatoire, est au cœur de la transmission\ndes valeurs de la République, telles que la citoyenneté, la laïcité, la culture de\nl’engagement et la lutte contre toutes les formes de discrimination.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2608,7 +2476,6 @@
             "explanation": "Les parents peuvent inscrire leur enfant dans une école privée, sans contrainte liée à\nleur lieu de domicile.\n\nLes écoles privées sont également contrôlées par l’État selon leur statut.\n\nIl peut y avoir des frais complémentaires par rapport à l’école publique.\n\nLes diplômes délivrés par les écoles privées n'ont pas tous une valeur officielle.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2621,7 +2488,6 @@
             "explanation": "Un parent peut exceptionnellement \"faire l’école\" lui-même à son enfant.\n\nIl faut une autorisation spéciale, en fonction de certains motifs.\n\nExemples : l’état de santé de l’enfant, l’enfant pratique un sport de manière\nintensive, l’enfant a un handicap.\n\nLes motifs sont très encadrés par la loi.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2634,7 +2500,6 @@
             "explanation": "En France, tous les enfants de 3 à 16 ans doivent aller à l’école. Cette obligation\nconcerne donc aussi les enfants non francophones (c’est-à-dire ceux dont la langue\nmaternelle n’est pas le français).\n\nPlus d’un tiers des enfants qui vont à l’école parlent une autre langue que le français\nà la maison.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2647,7 +2512,6 @@
             "explanation": "Au moment de l’entrée dans l’école, l’enfant qui ne parle pas bien (ou pas du tout) le\nfrançais passe un test de positionnement pour déterminer son niveau en français et\nl'orienter vers l'un des dispositifs suivants :\n\n- Unités Pédagogiques pour Élèves étrangers Allophones Arrivants - UPE2A : déployées\npour les élèves allophones nouvellement arrivés ;\n- Unités Pédagogiques pour Élèves Allophones Arrivants, Non Scolarisés Antérieurement -\nUPE2A-NSA : destinées aux élèves allophones non scolarisés avant leur arrivée, ces\nunités leur offrent la possibilité de prolonger d’une année supplémentaire le\ndispositif UPE2A.\n\nSelon son niveau, il peut suivre des cours adaptés. Entouré d’enfants et d’adultes qui\nparlent le français, il apprend vite la langue française dans le cadre de l’école.\n\nUne fois qu’il maîtrise le français, il peut suivre les mêmes cours que les autres\nenfants.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2660,7 +2524,6 @@
             "explanation": "L’école doit informer régulièrement les parents :\n\n- des résultats de leur enfant lors des évaluations ;\n- de son comportement à l’école.\nCes informations sont transmises de manière régulière par l’intermédiaire du livret\nscolaire (pendant le cours élémentaire) puis du bulletin scolaire (pendant le collège\net le lycée).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2673,7 +2536,6 @@
             "explanation": "Les parents ont des devoirs pour accompagner la scolarité de leur enfant :\n\n- lire le livret scolaire ou le bulletin scolaire ;\n- consulter le carnet de liaison (il est souvent numérique) : sur l'espace numérique de\ntravail (ENT) de l'école ;\n- communiquer avec les professeurs ;\n- participer aux réunions parents-professeurs ;\n- faire les démarches administratives (inscriptions…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2686,7 +2548,6 @@
             "explanation": "Les parents doivent soutenir leur enfant et suivre ses devoirs à la maison.\n\nLes parents peuvent participer à la vie de l’école de plusieurs façons :\n\n- en rejoignant l’association de parents d’élèves qui défend les intérêts des enfants ;\n- en se présentant aux élections de représentants des parents d’élèves. Les\nreprésentants des parents d’élèves participent aux décisions importantes concernant\nl’organisation de l’école.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2699,7 +2560,6 @@
             "explanation": "OEPRE, signifie \"Ouvrir l’École aux Parents pour la Réussite des Enfants\". C'est un\ndispositif du Ministère de l'Intérieur et du Ministère de l’Éducation Nationale pour\nles parents étrangers.\n\nCette formation permet aux parents de travailler :\n\n- la langue française ;\n- les valeurs de la République française ;\n- le fonctionnement de l’école.\nC’est une démarche volontaire pour les parents qui souhaitent s’inscrire aux ateliers.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2712,7 +2572,6 @@
             "explanation": "OEPRE donne des outils aux parents pour la réussite de leurs enfants à l’école et\npermet d'aider les enfants dans leur apprentissage.\n\nLa formation facilite aussi l’intégration des parents étrangers dans la société\nfrançaise.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2725,7 +2584,6 @@
             "explanation": "Les ateliers ont lieu dans les écoles, collèges et lycées, partout en France. Ils sont\norganisés pendant la semaine, à des horaires qui facilitent l’accès au plus grand\nnombre de parents.\n\nLa formation dure entre 60 heures et 120 heures réparties dans l’année scolaire.\n\nPour trouver l’adresse de l’atelier le plus proche de chez vous, consultez ce site :\nhttp://www.intercariforef.org/formations/recherche-formations-dian.html",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2738,7 +2596,6 @@
             "explanation": "Le soutien à la parentalité, c’est un ensemble d’actions, décidées par l’État, pour\naider les parents qui ont du mal à assurer l’éducation de leurs enfants.\n\nCes actions sont très variées : écouter les parents parler de leurs ressentis et leurs\ndoutes, leur apporter des conseils, les informer notamment sur les besoins des enfants,\nles inciter à s’entraider entre parents…",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2751,7 +2608,6 @@
             "explanation": "Les actions de soutien à la parentalité se fondent sur des grands principes. Ces\nprincipes ont été définis par un document officiel : la charte nationale de soutien à\nla parentalité.\n\nLes grands principes :\n\n- valoriser les rôles, le projet et les compétences des parents ;\n- s’adresser à toutes les familles, partout en France ;\n- accompagner les parents de manière globale et en fonction du contexte familial ;\n- accompagner avant la naissance de l’enfant et jusqu’à ses 18 ans ;\n- respecter l’égalité entre les femmes et les hommes ;\n- permettre à chaque parent d’occuper, dans la mesure du possible, sa place dans le\ndéveloppement de son enfant ;\n- proposer des interventions diverses et neutres sur les plans politique, philosophique\net religieux ;\n- garantir que les bénévoles ou professionnels qui interviennent sont compétents en\nmatière de parentalité.\n\n![](./pics/parent.png)",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2764,7 +2620,6 @@
             "explanation": "La politique nationale de soutien à la parentalité se concrétise par 6 grands types\nd’actions, partout en France :\n\n- se former : les Réseaux d’Écoute, d’Appui et d’Accompagnement des Parents (REAAP)\nproposent des activités et des ressources pour développer les compétences des parents ;\n- rencontrer : les Lieux d’accueil enfant-parent (Laep) favorisent les rencontres et\nles échanges entre différents parents et leurs enfants de moins de 6 ans ;\n- se retrouver : les espaces de rencontre sont des lieux où peuvent se retrouver,\npendant un moment, des parents séparés et leurs enfants, par exemple dans le cas d’un\ndivorce difficile ;\n- s’informer : les Points info famille (Pif) mettent à disposition des parents de\nl’information et facilitent leurs démarches administratives ;\nsuivre la scolarité : les Contrats locaux d’accompagnement à la scolarité (Clas)\norganisent des actions pour aider les parents dans le suivi scolaire de leurs enfants ;\n- résoudre un conflit : la médiation familiale permet de trouver une solution, par\nexemple en cas de conflit familial (séparation, difficulté à assurer l’autorité\nparentale…).",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
@@ -2777,7 +2632,6 @@
             "explanation": "Les parents ont le devoir de protéger leur enfant : ne pas le laisser seul, éviter les\nsituations dangereuses, porter attention à tout signe de mal-être…\n\nLes parents doivent signaler toute violence :\n\n- en contactant l’école : si la violence se passe à l’école ou en lien avec la vie à\nl’école (exemple : harcèlement) ;\n- en contactant la police ou la gendarmerie : en cas de violences graves (exemple :\nincitation à consommer de la drogue) ;\n- en appelant le numéro 119 : en cas de mise en danger de l’enfance (exemples :\nviolence physique, psychologique, sexuelle...) ;\n- en appelant le numéro 30 20 : en cas de harcèlement de l'enfant.",
             "subTheme": "residence",
             "questionType": "knowledge",
-            "status": "needs_review",
             "source": {
                 "type": "formation",
                 "file": "vivre_dans_la_societe_francaise.json",
