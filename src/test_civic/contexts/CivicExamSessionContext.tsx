@@ -116,8 +116,6 @@ export const CivicExamSessionProvider: React.FC<{
             isPracticeMode,
         };
 
-        logger.info(`Created exam session with ${actualQuestionCount} questions`);
-
         setCurrentSession(newSession);
         setCurrentQuestionIndex(0);
         await saveSession(newSession);
@@ -192,11 +190,6 @@ export const CivicExamSessionProvider: React.FC<{
             const questionId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
             return !isNaN(questionId) && incorrectQuestionIds.includes(questionId);
         }) as CivicExamQuestion[];
-
-        logger.info(
-            `Finished exam: ${correctAnswers}/${actualQuestionCount} correct, ` +
-            `score=${score}%, passed=${passed}`
-        );
 
         // Clear persisted active session once finished
         saveSession(null);
