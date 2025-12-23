@@ -173,14 +173,6 @@ const validateAnswerIndex = (index: unknown, maxLength: number): number | undefi
     return index >= 0 && index < maxLength ? index : undefined;
 };
 
-const normalizeSubTheme = (subTheme: string): CivicExamSubTheme => {
-    if (!isValidSubTheme(subTheme)) {
-        logger.warn(`Invalid subTheme: "${subTheme}", validation should have caught this`);
-        throw new Error(`Invalid subTheme: "${subTheme}"`);
-    }
-    return subTheme;
-};
-
 const CIVIC_ID_OFFSET = 1_000_000;
 
 const transformCivicQuestion = (
@@ -189,7 +181,7 @@ const transformCivicQuestion = (
 ): CivicExamQuestionWithOptions => {
     const baseNumber = extractCivicId(q.id) ?? 0;
     const theme = q.theme ? (isValidTheme(q.theme) ? q.theme : defaultTheme) : defaultTheme;
-    const subTheme = normalizeSubTheme(q.subTheme);
+    const subTheme = q.subTheme as CivicExamSubTheme;
     const questionType = normalizeQuestionType(q.questionType);
     
     let options = sanitizeStringArray(q.options);

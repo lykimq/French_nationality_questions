@@ -19,12 +19,8 @@ export interface CivicExamQuestionWithOptions extends CivicExamQuestion {
  * @param question - The question object
  * @returns The question text
  */
-export const getCivicExamQuestionText = (
-    question: TestQuestion | null | undefined
-): string => {
-    if (!question) return '';
-    return getQuestionText(question.question);
-};
+export const getCivicExamQuestionText = (question: TestQuestion | null | undefined): string => 
+    getQuestionText(question?.question);
 
 /**
  * Extracts explanation text from a civic exam question
@@ -32,12 +28,8 @@ export const getCivicExamQuestionText = (
  * @param question - The question object
  * @returns The explanation text
  */
-export const getCivicExamExplanationText = (
-    question: TestQuestion | null | undefined
-): string => {
-    if (!question) return '';
-    return getExplanationText(question.explanation);
-};
+export const getCivicExamExplanationText = (question: TestQuestion | null | undefined): string => 
+    getExplanationText(question?.explanation);
 
 /**
  * Gets the answer text from a question's options array by index

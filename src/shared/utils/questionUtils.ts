@@ -6,19 +6,9 @@ import { createLogger } from './logger';
 
 const logger = createLogger('QuestionUtils');
 
-export const getQuestionText = (
-    question: string | null | undefined
-): string => {
-    if (!question) return '';
-    return question;
-};
+export const getQuestionText = (question: string | null | undefined): string => question ?? '';
 
-export const getExplanationText = (
-    explanation: string | null | undefined
-): string => {
-    if (!explanation) return '';
-    return explanation;
-};
+export const getExplanationText = (explanation: string | null | undefined): string => explanation ?? '';
 
 export const formatExplanation = (text: string): string => {
     if (!text) return '';

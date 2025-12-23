@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useCivicExam } from '../hooks/useCivicExam';
+import { useCivicExam } from '../contexts/CivicExamContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';

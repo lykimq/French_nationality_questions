@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useCivicExam } from '../../test_civic/hooks/useCivicExam';
+import { useCivicExam } from '../../test_civic/contexts/CivicExamContext';
 import SettingItem from './SettingItem';
 import CollapsibleSection from './CollapsibleSection';
 import { showConfirmationAlert, showSimpleAlert } from '../../shared/utils';
