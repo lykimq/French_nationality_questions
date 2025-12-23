@@ -17,8 +17,8 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
 
-    const searchIcon = getIcon('search');
-    const imageIcon = getIcon('image');
+    const searchIcon = getIcon('search') || { name: 'search' };
+    const imageIcon = getIcon('image') || { name: 'image' };
 
     if (searchQuery === '') {
         return (
@@ -76,7 +76,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
                 <View key={`${result.categoryId}-${result.id}`} style={styles.resultItem}>
                     <View style={styles.categoryLabel}>
                         <FormattedText style={[styles.categoryLabelText, { color: theme.colors.primary }]}>
-                            {result.categoryTitle}
+                            {result.categoryTitle || result.categoryId || 'Sans catégorie'}
                         </FormattedText>
                         {result.hasImage && (
                             <Icon3D

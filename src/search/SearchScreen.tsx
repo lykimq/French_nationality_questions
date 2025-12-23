@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
     StyleSheet,
     View,
@@ -21,6 +21,9 @@ const SearchScreen = () => {
     const { theme, themeMode } = useTheme();
     const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
     const [showSuggestions, setShowSuggestions] = useState(false);
+    const [suggestionsDismissed, setSuggestionsDismissed] = useState(false);
+    const [pendingSelection, setPendingSelection] = useState<string | null>(null);
+    const selectionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const {
         searchQuery,
@@ -32,20 +35,46 @@ const SearchScreen = () => {
         searchHistory,
         setSearchHistory,
         availableCategories,
-        getSearchStats
+        getSearchStats,
+        performSearch,
+        isSearching
     } = useSearch();
 
     useEffect(() => {
-        if (searchQuery.length >= 2 && searchQuery.length <= 3) {
-            setShowSuggestions(searchSuggestions.length > 0);
-        } else {
-            setShowSuggestions(false);
-        }
-    }, [searchQuery, searchSuggestions.length]);
+        // Show suggestions when query length is 2-6, we have suggestions, and the user has not dismissed them
+        const shouldShowSuggestions =
+            searchQuery.length >= 2 &&
+            searchQuery.length <= 6 &&
+            searchSuggestions.length > 0 &&
+            !suggestionsDismissed;
+
+        setShowSuggestions(shouldShowSuggestions);
+    }, [searchQuery, searchSuggestions.length, suggestionsDismissed]);
+
+    useEffect(() => {
+        return () => {
+            if (selectionTimeoutRef.current) {
+                clearTimeout(selectionTimeoutRef.current);
+            }
+        };
+    }, []);
 
     const clearSearch = () => {
         setSearchQuery('');
         setShowSuggestions(false);
+        setSuggestionsDismissed(false);
+        setPendingSelection(null);
+        if (selectionTimeoutRef.current) {
+            clearTimeout(selectionTimeoutRef.current);
+        }
+    };
+
+    const handleSearchChange = (query: string) => {
+        setSuggestionsDismissed(false);
+        setSearchQuery(query);
+        if (pendingSelection) {
+            setPendingSelection(null);
+        }
     };
 
     const toggleAdvancedSearch = () => {
@@ -63,8 +92,19 @@ const SearchScreen = () => {
 
 
     const applySuggestion = (suggestion: SearchSuggestion) => {
+        if (selectionTimeoutRef.current) {
+            clearTimeout(selectionTimeoutRef.current);
+        }
+
+        setPendingSelection(suggestion.text);
         setSearchQuery(suggestion.text);
-        setShowSuggestions(false);
+        selectionTimeoutRef.current = setTimeout(() => {
+            setPendingSelection(null);
+            setSuggestionsDismissed(true);
+            setShowSuggestions(false);
+        }, 200);
+        // Immediately perform search when suggestion is selected (bypass debounce)
+        performSearch(suggestion.text);
     };
 
     const clearSearchHistory = () => {
@@ -89,21 +129,18 @@ const SearchScreen = () => {
             <View style={[styles.searchContainer, { backgroundColor: theme.colors.background }]}>
                 <SearchBar
                     searchQuery={searchQuery}
-                    onSearchChange={(query) => {
-                        setSearchQuery(query);
-                        if (query.length >= 2) {
-                            setShowSuggestions(true);
-                        }
-                    }}
+                    onSearchChange={handleSearchChange}
                     onToggleAdvanced={toggleAdvancedSearch}
                     showAdvanced={showAdvancedSearch}
                     onClear={clearSearch}
+                    isSearching={isSearching}
                 />
 
                 {showSuggestions && (
                     <SearchSuggestions
                         suggestions={searchSuggestions}
                         onApplySuggestion={applySuggestion}
+                        highlightedSuggestion={pendingSelection}
                     />
                 )}
 

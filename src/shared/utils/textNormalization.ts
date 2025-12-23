@@ -5,16 +5,23 @@
 
 /**
  * Normalizes text for search operations.
- * Converts to lowercase and trims whitespace.
+ * Converts to lowercase, removes accents, and trims whitespace.
+ * This helps match words with and without accents (e.g., "français" matches "francais").
  * 
  * @param text - The text to normalize
  * @returns Normalized text suitable for search
  * 
  * @example
- * normalizeForSearch("  Hello World  ") // "hello world"
+ * normalizeForSearch("  Français  ") // "francais"
  */
-export const normalizeForSearch = (text: string): string => 
-    (text || '').toLowerCase().trim();
+export const normalizeForSearch = (text: string): string => {
+    if (!text) return '';
+    return text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+};
 
 /**
  * Normalizes text for strict comparison.

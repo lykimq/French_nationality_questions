@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Pressable } from 'react-native';
 import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useIcon3D } from '../../shared/hooks';
@@ -8,11 +8,13 @@ import type { SearchSuggestion } from '../useSearch';
 interface SearchSuggestionsProps {
     suggestions: SearchSuggestion[];
     onApplySuggestion: (suggestion: SearchSuggestion) => void;
+    highlightedSuggestion?: string | null;
 }
 
 export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
     suggestions,
     onApplySuggestion,
+    highlightedSuggestion,
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
@@ -28,21 +30,32 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
     const getIconForSuggestion = (type: string) => {
         switch (type) {
             case 'category':
-                return categoriesIcon.name;
+                return categoriesIcon?.name || 'folder';
             case 'id':
-                return helpIcon.name;
+                return helpIcon?.name || 'help-circle';
             default:
-                return searchIcon.name;
+                return searchIcon?.name || 'search';
         }
     };
 
     return (
         <View style={[styles.suggestionsContainer, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
             {suggestions.map((suggestion, index) => (
-                <TouchableOpacity
+                <Pressable
                     key={index}
-                    style={[styles.suggestionItem, { borderBottomColor: theme.colors.border }]}
                     onPress={() => onApplySuggestion(suggestion)}
+                    style={({ pressed }) => [
+                        styles.suggestionItem,
+                        {
+                            borderBottomColor: theme.colors.border,
+                            backgroundColor: pressed || suggestion.text === highlightedSuggestion
+                                ? theme.colors.primary + '10'
+                                : theme.colors.card,
+                            borderLeftColor: pressed || suggestion.text === highlightedSuggestion
+                                ? theme.colors.primary
+                                : 'transparent',
+                        },
+                    ]}
                 >
                     <Icon3D
                         name={getIconForSuggestion(suggestion.type)}
@@ -51,14 +64,14 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
                         variant="default"
                     />
                     <FormattedText style={[styles.suggestionText, { color: theme.colors.text }]}>
-                        {suggestion.text}
+                        {suggestion.text || ''}
                     </FormattedText>
-                    {suggestion.count && (
+                    {suggestion.count !== undefined && suggestion.count !== null && (
                         <FormattedText style={[styles.suggestionCount, { color: theme.colors.textMuted }]}>
                             {suggestion.count}
                         </FormattedText>
                     )}
-                </TouchableOpacity>
+                </Pressable>
             ))}
         </View>
     );
@@ -81,6 +94,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 1,
+        borderLeftWidth: 3,
     },
     suggestionText: {
         flex: 1,

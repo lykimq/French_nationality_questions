@@ -1,15 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useIcons } from '../../shared/contexts/IconContext';
 import { Icon3D } from '../../shared/components';
 
-interface SearchBarProps {
+export interface SearchBarProps {
     searchQuery: string;
     onSearchChange: (query: string) => void;
     onToggleAdvanced: () => void;
     showAdvanced: boolean;
     onClear: () => void;
+    isSearching?: boolean;
 }
 
 export const SearchBar: React.FC<SearchBarProps> = ({
@@ -18,6 +19,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     onToggleAdvanced,
     showAdvanced,
     onClear,
+    isSearching = false,
 }) => {
     const { theme } = useTheme();
     const { getIconName, getIconVariant } = useIcons();
@@ -55,6 +57,13 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                     variant="default"
                 />
             </TouchableOpacity>
+            {isSearching && searchQuery !== '' && (
+                <ActivityIndicator
+                    size="small"
+                    color={theme.colors.primary}
+                    style={styles.searchIndicator}
+                />
+            )}
             {searchQuery !== '' && (
                 <TouchableOpacity onPress={onClear} style={styles.clearButton}>
                     <Icon3D
@@ -95,5 +104,8 @@ const styles = StyleSheet.create({
     },
     clearButton: {
         padding: 4,
+    },
+    searchIndicator: {
+        marginHorizontal: 4,
     },
 });
