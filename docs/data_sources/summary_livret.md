@@ -1,26 +1,4 @@
-### Conditions d'assimilation et de naturalisation
-
-1. Qu'est-ce que l'assimilation à la communauté française ?
-
-L'assimilation implique une maîtrise de la langue française, une connaissance suffisante de l'histoire, de la culture et de la société françaises, ainsi qu'une adhésion aux principes et valeurs de la République.
-
-2. Quel est le but de l'entretien réglementaire en préfecture ?
-
-L'entretien vise à évaluer le degré d'assimilation du candidat, sa connaissance de la société française, de ses principes et valeurs essentiels, ainsi que son adhésion à ceux-ci.
-
-3. L'administration peut-elle refuser la nationalité française pour non-respect de l'égalité femmes-hommes ?
-
-Oui, même si la personne est mariée à un(e) français(e), car **l'égalité entre les femmes et les hommes** est une valeur essentielle de la République.
-
-4. Pourquoi voulez-vous devenir un citoyen français ou française?
-
-Dès mon arrivée en France, j’ai ressenti un profond attachement pour ce pays, bien au-delà d’un simple lieu de résidence : la France est devenue ma maison. Chaque jour, je me sens un peu plus français, non seulement par ma manière de vivre, mais aussi par mon adhésion totale aux valeurs de la République : liberté, égalité, fraternité. Ces principes ne sont pas de simples mots pour moi: ils sont le fondement d’une société juste et solidaire, dans laquelle je veux pleinement m’inscrire. Mon sentiment d’appartenance va bien au-delà d’une simple appréciation : il est ancré dans ma vie quotidienne. La France est le pays où j’ai construit (ou je compte construire) mon avenir, où j’ai tissé des liens solides, tant sur le plan personnel que professionnel. Mon entourage, mon travail, mes ambitions… tout se dessine ici. Je partage la culture française, son attachement à la démocratie, aux droits de l’homme, à la laïcité, qui permet à chacun de vivre librement, dans le respect des autres. La France est aussi un pays dont le rayonnement international me rend fier. Son histoire, sa place de leader dans des domaines d’excellence comme l’aéronautique, la recherche scientifique, le luxe ou encore la gastronomie témoignent de son dynamisme et de son influence dans le monde. Être citoyen français, c’est appartenir à une nation qui porte haut les valeurs de progrès et d’innovation, tout en défendant un modèle social protecteur et solidaire. Au-delà de ses réussites économiques et scientifiques, la France est un pays où la culture et l’art occupent une place centrale. J’ai une profonde admiration pour son patrimoine, sa littérature, son cinéma, sa musique… Cette richesse culturelle, qui traverse les siècles et continue d’inspirer le monde entier, me passionne et me nourrit au quotidien. Mais être français, c’est aussi un engagement. Ce n’est pas seulement un privilège, c’est une responsabilité. Obtenir la nationalité française me permettrait de renforcer encore mon implication dans la société, notamment en exerçant mon droit de vote. Pour moi, voter n’est pas juste un droit, c’est un devoir citoyen, une façon d’être acteur de la démocratie et de contribuer au futur de ce pays que j’aime. Aujourd’hui, je souhaite aller au bout de mon intégration et affirmer officiellement mon appartenance à cette nation qui m’a accueilli et dans laquelle je me reconnais pleinement. Devenir citoyen français, c’est l’aboutissement d’un parcours de vie, mais c’est surtout un engagement du cœur.
-
-5. Que changera pour vous le fait de devenir français ?
-
-Cela me donnera accès aux droits et devoirs des citoyens français, notamment le droit de vote et la protection de l’État.
-
-### Principes et Valeurs de la République
+# Principes et Valeurs de la République
 
 1. Quelles sont les valeurs de la République (la devise) ?
 
@@ -68,7 +46,16 @@ Un Français est une personne qui appartient à la nation française par sa cult
 
 12. Qu’est-ce qu’un citoyen français ?
 
-Un citoyen français est une personne qui participe activement à la vie de la nation. Il ne se contente pas d’appartenir à la France, il contribue à son avenir par ses actions, ses choix et son engagement. Être citoyen, c’est :  S’investir dans la société en respectant et en défendant les valeurs communes  Prendre part aux décisions en votant, en s’informant et en débattant des enjeux de la société  Être solidaire en contribuant à la vie collective, en aidant les autres, en respectant les lois et les principes qui permettent à tous de vivre ensemble  Porter l’esprit républicain, qui repose sur la laïcité, l’égalité des chances et la fraternité Un citoyen ne se définit pas uniquement par ses droits, mais par son rôle dans la société. Il participe activement à faire vivre la démocratie et à construire le pays pour les générations futures.
+- Un citoyen français est une personne qui participe activement à la vie de la nation. Il ne se contente pas d’appartenir à la France, il contribue à son avenir par ses actions, ses choix et son engagement. Être citoyen, c’est :
+
+- S’investir dans la société en respectant et en défendant les valeurs communes
+
+- Prendre part aux décisions en votant, en s’informant et en débattant des enjeux de la société
+
+- Être solidaire en contribuant à la vie collective, en aidant les autres, en respectant les lois et les principes qui permettent à tous de vivre ensemble
+
+- Porter l’esprit républicain, qui repose sur la laïcité, l’égalité des chances et la fraternité Un citoyen ne se définit pas uniquement par ses droits, mais par son rôle dans la société. Il participe activement à faire vivre la démocratie et à construire le pays pour les générations futures.
+
 
 13. Parlez-moi de votre entourage ?
 
@@ -216,7 +203,12 @@ Depuis 1945, le système de sécurité sociale, financé par les entreprises et 
 
 49. Peut-on rajouter une quatrième valeur ? Si oui laquelle ?
 
-Oui la laïcité, la laïcité est un principe fondamental de la République française, qui comporte deux volets importants :  L'État se doit d'être neutre envers les religions et ne doit favoriser aucune religion particulière. La religion relève de la sphère privée de chaque individu.  L'État garantit la liberté religieuse, permettant à chacun de croire ou de ne pas croire et de choisir sa religion librement.
+- Oui la laïcité, la laïcité est un principe fondamental de la République française, qui comporte deux volets importants :
+
+- L'État se doit d'être neutre envers les religions et ne doit favoriser aucune religion particulière. La religion relève de la sphère privée de chaque individu.
+
+- L'État garantit la liberté religieuse, permettant à chacun de croire ou de ne pas croire et de choisir sa religion librement.
+
 
 50. Quand la France est devenue laïque ?
 
@@ -244,7 +236,16 @@ En France, il est permis de porter des signes religieux dans les espaces publics
 
 56. Quelles sont les causes principales de la Révolution française ?
 
-La Révolution française (1789-1799) a été causée par plusieurs facteurs:  Une crise financière due aux dépenses excessives de la monarchie et aux guerres, notamment la guerre d’indépendance américaine.  Une injustice sociale avec une société divisée en trois ordres (clergé, noblesse, tiers état), où le tiers état (98 % de la population) supportait la majorité des impôts.  Une crise politique liée à l’absolutisme royal et à l’incapacité de Louis XVI à réformer le pays.  L’influence des Lumières, qui ont diffusé des idées de liberté, d’égalité et de souveraineté populaire.
+- La Révolution française (1789-1799) a été causée par plusieurs facteurs:
+
+- Une crise financière due aux dépenses excessives de la monarchie et aux guerres, notamment la guerre d’indépendance américaine.
+
+- Une injustice sociale avec une société divisée en trois ordres (clergé, noblesse, tiers état), où le tiers état (98 % de la population) supportait la majorité des impôts.
+
+- Une crise politique liée à l’absolutisme royal et à l’incapacité de Louis XVI à réformer le pays.
+
+- L’influence des Lumières, qui ont diffusé des idées de liberté, d’égalité et de souveraineté populaire.
+
 
 57. Quelle est l'année de début de la Révolution Française ?
 
@@ -252,7 +253,14 @@ La Révolution Française, marquant une transformation profonde de la société 
 
 58. Quels sont les événements marquants du début de la Troisième République ?
 
- La Commune de Paris (1871) : insurrection populaire réprimée dans le sang.  La consolidation républicaine (années 1870-1880) face aux monarchistes.  Lois Jules Ferry (1881-1882) instaurant l'école gratuite, laïque et obligatoire.  Séparation de l’Église et de l’État (1905).
+- La Commune de Paris (1871) : insurrection populaire réprimée dans le sang.
+
+- La consolidation républicaine (années 1870-1880) face aux monarchistes.
+
+- Lois Jules Ferry (1881-1882) instaurant l'école gratuite, laïque et obligatoire.
+
+- Séparation de l’Église et de l’État (1905).
+
 
 59. Qu'est-ce que la Déclaration des Droits de l'Homme et du Citoyen ?
 
@@ -300,7 +308,12 @@ Signé en 1598 par Henri IV, le traité de Nantes a mis fin aux guerres de relig
 
 70. Citez quelques auteurs français récents et leurs œuvres ?
 
- Jean d'Ormesson : La Gloire de l'Empire Ce roman mêle fiction et réflexion historique, proposant une vision de l’histoire à travers les yeux d’un personnage imaginaire, tout en offrant une réflexion sur la quête du pouvoir et de la gloire.  Leïla Slimani : Chanson Douce Ce roman aborde les thèmes de la maternité, de la psychologie et des inégalités sociales à travers l’histoire de la relation entre une nourrice et les parents d’une famille parisienne.  Michel Houellebecq : Soumission
+- Jean d'Ormesson : La Gloire de l'Empire Ce roman mêle fiction et réflexion historique, proposant une vision de l’histoire à travers les yeux d’un personnage imaginaire, tout en offrant une réflexion sur la quête du pouvoir et de la gloire.
+
+- Leïla Slimani : Chanson Douce Ce roman aborde les thèmes de la maternité, de la psychologie et des inégalités sociales à travers l’histoire de la relation entre une nourrice et les parents d’une famille parisienne.
+
+- Michel Houellebecq : Soumission
+
 
 71. Qui est Simone de Beauvoir ?
 
@@ -312,13 +325,27 @@ La Statue de la Liberté.
 
 73. Citez des personnalités que vous connaissez qui sont enterrées au Panthéon ?
 
- Voltaire (1694-1778) - Philosophe des Lumières, connu pour son esprit critique, sa défense de la liberté civile et de la séparation de l'Église et de l'État.  Jean-Jacques Rousseau (1712-1778) - Philosophe, écrivain et compositeur, ses idées ont influencé la Révolution française, l'éducation moderne et la théorie politique.  Victor Hugo (1802-1885) - Écrivain, poète et dramaturge, auteur de chefs-d'œuvre comme Les Misérables et Notre- Dame de Paris. Il est aussi connu pour son engagement politique et social.  Émile Zola (1840-1902) - Écrivain et journaliste, figure majeure du naturalisme dans la littérature. Il est également connu pour son intervention dans l'Affaire Dreyfus avec son fameux article J'accuse...!.  Marie Curie (1867-1934) - Physicienne et chimiste, pionnière dans le domaine de la radioactivité, elle est la première femme à recevoir le Prix Nobel et la seule personne à en avoir reçu deux dans deux domaines scientifiques différents (Physique et Chimie).
+Voltaire (1694-1778)
+
+- Philosophe des Lumières, connu pour son esprit critique, sa défense de la liberté civile et de la séparation de l'Église et de l'État.
+
+Jean-Jacques Rousseau (1712-1778)
+- Philosophe, écrivain et compositeur, ses idées ont influencé la Révolution française, l'éducation moderne et la théorie politique.
+
+Victor Hugo (1802-1885)
+- Écrivain, poète et dramaturge, auteur de chefs-d'œuvre comme Les Misérables et Notre- Dame de Paris. Il est aussi connu pour son engagement politique et social.
+
+Émile Zola (1840-1902)
+- Écrivain et journaliste, figure majeure du naturalisme dans la littérature. Il est également connu pour son intervention dans l'Affaire Dreyfus avec son fameux article J'accuse...!.
+
+Marie Curie (1867-1934)
+- Physicienne et chimiste, pionnière dans le domaine de la radioactivité, elle est la première femme à recevoir le Prix Nobel et la seule personne à en avoir reçu deux dans deux domaines scientifiques différents (Physique et Chimie).
 
 74. Qu'ont en commun les pays européens ?
 
 Les pays européens partagent une histoire, des valeurs culturelles, économiques et politiques similaires. La plupart sont membres de l'Union européenne (UE), qui favorise la coopération économique, politique et sociale. Ils adhèrent à des principes communs comme la démocratie, les droits de l'homme et l'état de droit. De plus, de nombreux pays européens utilisent l'euro comme monnaie et participent à des accords communs comme l'espace Schengen.
 
-### Démocratie et Organisation Politique
+# Démocratie et Organisation Politique
 
 1. Quel texte définit l'organisation de l'État ?
 
@@ -450,11 +477,23 @@ Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire 
 
 33. Quels sont les symboles de la république Française ?
 
-- Le Drapeau Tricolore.  - La marseillaise.  - Marianne.  - Le bonnet Phrygien.  - La devise "Liberté, égalité, Fraternité".  - La fleur de Lys.  - Le 14 Juillet.
+- Le Drapeau Tricolore.
+- La marseillaise.
+- Marianne.
+- Le bonnet Phrygien.
+- La devise "Liberté, égalité, Fraternité".
+- La fleur de Lys.
+- Le 14 Juillet.
 
 34. Quelles sont les couleurs du drapeau Français ?
 
-Bleu, Blanc, Rouge  - Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime.  - Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France.  - Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.
+Bleu, Blanc, Rouge
+
+- Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime.
+
+- Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France.
+
+- Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.
 
 35. Que représentent les couleurs du drapeau Français ?
 
@@ -482,7 +521,16 @@ Nous sommes dans la cinquième république.
 
 41. Quand sont les dates des républiques précédentes?
 
-- La première république : 1792-1804  - La deuxième république : 1848 – 1852  - La troisième république : 1870 – 1940  - La quatrième république : 1946-1958  - La cinquième république : 1958 – aujourd'hui.
+- La première république : 1792-1804
+
+- La deuxième république : 1848 – 1852
+
+- La troisième république : 1870 – 1940
+
+- La quatrième république : 1946-1958
+
+- La cinquième république : 1958 – aujourd'hui.
+
 
 42. Qui a instauré la cinquième république ?
 
@@ -494,15 +542,40 @@ Il se trouve au Palais de l’Élysée.
 
 44. Citez dans l'ordre les présidents de la cinquième république.
 
-- Charles de Gaulle.  - George Pompidou.  - Valérie Giscard d'Estaing.  - François Mitterrand.  - Jacques Chirac.  - Nicolas Sarkozy.  - François Hollande.  - Emmanuel Macron.
+- Charles de Gaulle.
+
+- George Pompidou.
+
+- Valérie Giscard d'Estaing.
+
+- François Mitterrand.
+
+- Jacques Chirac.
+
+- Nicolas Sarkozy.
+
+- François Hollande.
+
+- Emmanuel Macron.
+
 
 45. Citez trois anciens premiers ministres Français de la cinquième république.
 
-- Edouard Philippe.  - Manuel Valls.  - François Fillon.
+- Edouard Philippe.
+
+- Manuel Valls.
+
+- François Fillon.
+
 
 46. Citez trois ministres du gouvernement actuel.
 
-- Gerald Darmanin.  - Bruno Le Maire.  - Eric Dupond-Moretti.
+- Gerald Darmanin.
+
+- Bruno Le Maire.
+
+- Eric Dupond-Moretti.
+
 
 47. Pour combien de temps est élu le président de la république ?
 
@@ -522,7 +595,12 @@ Tout citoyen Français majeur.
 
 51. Qu'est-ce que le parlement ?
 
-Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres:   - La chambre haute (le Sénat).  - La chambre basse (l’Assemblée nationale).
+Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres:
+
+- La chambre haute (le Sénat).
+
+- La chambre basse (l’Assemblée nationale).
+
 
 52. Quel est le rôle exact du parlement ?
 
@@ -530,7 +608,12 @@ Le Parlement en France discute, modifie et vote les lois. Il détient le pouvoir
 
 53. Citez les différentes institutions politiques en France ?
 
-- Le pouvoir exécutif.  - Le pouvoir législatif.  - Le pouvoir judiciaire.
+- Le pouvoir exécutif.
+
+- Le pouvoir législatif.
+
+- Le pouvoir judiciaire.
+
 
 54. Qu'est-ce que le pouvoir Exécutif et quel est son rôle ?
 
@@ -562,7 +645,12 @@ En 2025, la députée de Boulogne-Billancourt (92100), située dans les Hauts-de
 
 61. Qui constitue le gouvernement ?
 
-- Le premier ministre.  - Les ministres.  - Les secrétaires d’état.
+- Le premier ministre.
+
+- Les ministres.
+
+- Les secrétaires d’état.
+
 
 62. Qui est le président de l'assemblée Nationale ?
 
@@ -766,7 +854,10 @@ Le système éducatif français est reconnu pour sa rigueur, son accessibilité 
 
 112. Pouvez-vous citer trois sujets d'actualité récents en France qui vous ont particulièrement marqué ?
 
-Trois sujets qui m'ont marqué sont :  Utilisation de l’article 49.3 pour le budget 2025 : Début février 2025, le gouvernement a fait appel à l’article 49.3 pour faire adopter le budget de l’année.  Réduction des tarifs de l’électricité : Depuis le 1ᵉʳ février 2025, une baisse de 15 % des prix de l’électricité a été appliquée, apportant un soulagement à de nombreux foyers français.  Projet de rénovation du Louvre : Le célèbre musée parisien a annoncé une initiative majeure visant à moderniser ses infrastructures et à améliorer l’accueil des visiteurs, tout en renforçant la préservation de ses collections. La réponse est à développer en fonction de l’actualité en France.
+Trois sujets qui m'ont marqué sont :
+- Utilisation de l’article 49.3 pour le budget 2025 : Début février 2025, le gouvernement a fait appel à l’article 49.3 pour faire adopter le budget de l’année.
+- Réduction des tarifs de l’électricité : Depuis le 1ᵉʳ février 2025, une baisse de 15 % des prix de l’électricité a été appliquée, apportant un soulagement à de nombreux foyers français.
+- Projet de rénovation du Louvre : Le célèbre musée parisien a annoncé une initiative majeure visant à moderniser ses infrastructures et à améliorer l’accueil des visiteurs, tout en renforçant la préservation de ses collections. La réponse est à développer en fonction de l’actualité en France.
 
 113. La loi sur le mariage pour tous a été adoptée sous quel président de la république ?
 
@@ -810,15 +901,22 @@ La république est un mode d'organisation d'un pays dans lequel le pouvoir est e
 
 123. Quelle est la différence entre République et démocratie ?
 
-Une république n'a pas de roi, mais cela ne signifie pas que c’est une démocratie, tandis qu'une démocratie signifie que le peuple a le pouvoir, et cela peut exister dans une république ou une monarchie.  Une république n’est pas forcément une démocratie. Ex : La Chine est une république mais pas une démocratie (régime autoritaire).  Une démocratie n’est pas forcément une république. Ex : Le Royaume-Uni est une démocratie mais reste une monarchie.
+- Une république n'a pas de roi, mais cela ne signifie pas que c’est une démocratie, tandis qu'une démocratie signifie que le peuple a le pouvoir, et cela peut exister dans une république ou une monarchie.
+- Une république n’est pas forcément une démocratie. Ex : La Chine est une république mais pas une démocratie (régime autoritaire).
+- Une démocratie n’est pas forcément une république. Ex : Le Royaume-Uni est une démocratie mais reste une monarchie.
 
 124. Quels sont les différents types de Monarchies ?
 
- Monarchie absolue → Le roi détient tous les pouvoirs (ex : Arabie Saoudite).  Monarchie constitutionnelle → Le roi règne mais ne gouverne pas, il partage le pouvoir avec un gouvernement élu (ex : Royaume-Uni, Espagne).  Monarchie parlementaire → Le roi a un rôle symbolique, tout le pouvoir appartient au parlement élu (ex : Suède, Belgique).
+- Monarchie absolue → Le roi détient tous les pouvoirs (ex : Arabie Saoudite).
+- Monarchie constitutionnelle → Le roi règne mais ne gouverne pas, il partage le pouvoir avec un gouvernement élu (ex : Royaume-Uni, Espagne).
+- Monarchie parlementaire → Le roi a un rôle symbolique, tout le pouvoir appartient au parlement élu (ex : Suède, Belgique).
 
 125. Quels sont les différents types de Républiques
 
- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil).  République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie).  République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie).  République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).
+- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil).
+- République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie).
+- République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie).
+- République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).
 
 126. Qui occupe actuellement la fonction de président de la République ?
 
@@ -846,7 +944,15 @@ La Constitution de la Cinquième République a été adoptée en 1958, marquant 
 
 132. Pouvez-vous citer les présidents de la Cinquième République dans l’ordre ?
 
-Les présidents de la Cinquième République sont :  Charles De Gaulle : 1959 - 1969  Georges Pompidou : 1969- 1974  Valéry Giscard d'Estaing : 1974-1981  François Mitterrand : 1981-1995  Jacques Chirac : 1995-2007  Nicolas Sarkozy : 2007-2012  François Hollande : 2012 - 2017  Emmanuel Macron : 2017- Mandat en cours
+Les présidents de la Cinquième République sont :
+- Charles De Gaulle : 1959 - 1969
+- Georges Pompidou : 1969- 1974
+- Valéry Giscard d'Estaing : 1974-1981
+- François Mitterrand : 1981-1995
+- Jacques Chirac : 1995-2007
+- Nicolas Sarkozy : 2007-2012
+- François Hollande : 2012 - 2017
+- Emmanuel Macron : 2017- Mandat en cours
 
 133. Qui détient le commandement de l'armée ?
 
@@ -886,15 +992,24 @@ En France, on trouve les élections présidentielles (5ans), législatives (5ans
 
 142. Quelles sont les dernières élections qui ont eu lieu en France ?
 
- Élections législatives : Les élections législatives ont eu lieu les 30 juin et 7 juillet 2024 pour élire les membres de la 17ᵉ Assemblée nationale.  Élections européennes : Elles se sont déroulées le 9 juin 2024 pour élire les représentants français au Parlement européen.  Élections présidentielles : Les élections présidentielles ont eu lieu les 10 et 24 avril 2022, et ont abouti à la réélection d'Emmanuel Macron.
+- Élections législatives : Les élections législatives ont eu lieu les 30 juin et 7 juillet 2024 pour élire les membres de la 17ᵉ Assemblée nationale.
+- Élections européennes : Elles se sont déroulées le 9 juin 2024 pour élire les représentants français au Parlement européen.
+- Élections présidentielles : Les élections présidentielles ont eu lieu les 10 et 24 avril 2022, et ont abouti à la réélection d'Emmanuel Macron.
 
 143. Quelles sont les prochaines élections ?
 
-Les prochaines élections en France sont les suivantes :  Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes.  Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat.  Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans.  Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen.  Ils peuvent avoir d’autres élections en fonction de l’actualité.
+Les prochaines élections en France sont les suivantes :
+- Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes.
+- Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat.
+- Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans.
+- Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen.  Ils peuvent avoir d’autres élections en fonction de l’actualité.
 
 144. Quelles sont les principales institutions de la République française ?
 
-Les institutions comprennent :  Le pouvoir exécutif : Ce pouvoir est détenu par le président de la République et le gouvernement dirigé par le Premier ministre. Ils sont responsables de l’application des lois et de la gestion de la politique nationale et internationale. Le président nomme le Premier ministre, préside le Conseil des ministres, et peut proposer des référendums ou dissoudre l’Assemblée nationale.  Le pouvoir législatif : Ce pouvoir est exercé par le Parlement, composé de deux chambres, chambre basse « l’Assemblée nationale » et la chambre haute « du Sénat ». Leur mission est de voter les lois et de contrôler le gouvernement. Les députés de l’Assemblée nationale sont élus au suffrage direct pour cinq ans, tandis que les sénateurs sont élus au suffrage indirect pour six ans. L'Assemblée a une prépondérance en cas de désaccord entre les deux chambres.  Le pouvoir judiciaire : Ce pouvoir est indépendant et exercé par les juges et magistrats. Son rôle est de garantir le respect des lois et de trancher les litiges, protégeant ainsi les droits des citoyens. Le Conseil constitutionnel veille, quant à lui, à la conformité des lois à la Constitution.
+Les institutions comprennent :
+- Le pouvoir exécutif : Ce pouvoir est détenu par le président de la République et le gouvernement dirigé par le Premier ministre. Ils sont responsables de l’application des lois et de la gestion de la politique nationale et internationale. Le président nomme le Premier ministre, préside le Conseil des ministres, et peut proposer des référendums ou dissoudre l’Assemblée nationale.
+- Le pouvoir législatif : Ce pouvoir est exercé par le Parlement, composé de deux chambres, chambre basse « l’Assemblée nationale » et la chambre haute « du Sénat ». Leur mission est de voter les lois et de contrôler le gouvernement. Les députés de l’Assemblée nationale sont élus au suffrage direct pour cinq ans, tandis que les sénateurs sont élus au suffrage indirect pour six ans. L'Assemblée a une prépondérance en cas de désaccord entre les deux chambres.
+- Le pouvoir judiciaire : Ce pouvoir est indépendant et exercé par les juges et magistrats. Son rôle est de garantir le respect des lois et de trancher les litiges, protégeant ainsi les droits des citoyens. Le Conseil constitutionnel veille, quant à lui, à la conformité des lois à la Constitution.
 
 145. C’est quoi le gouvernement ?
 
@@ -902,7 +1017,9 @@ Le gouvernement est l'organe exécutif chargé de mettre en œuvre les lois et d
 
 146. De quoi est composé le parlement français ?
 
-Le parlement français est composé de deux chambres (bicaméral), c'est-à-dire:  Le Sénat, appelée « chambre haute », avec 348 sénateurs,   L’Assemblée nationale, dite « chambre basse », avec 577 députés.
+Le parlement français est composé de deux chambres (bicaméral), c'est-à-dire:
+- Le Sénat, appelée « chambre haute », avec 348 sénateurs,
+- L’Assemblée nationale, dite « chambre basse », avec 577 députés.
 
 147. Qu'est-ce que le Sénat en France ?
 
@@ -1022,11 +1139,17 @@ Non, le Sénat ne peut pas déposer de motion de censure contre le gouvernement.
 
 176. L'article 49.3 s'applique-t-il devant l'Assemblée nationale et le Sénat ?
 
-L'article 49.3 de la Constitution ne peut être utilisé que devant l'Assemblée nationale. Il permet au Premier ministre d’engager la responsabilité du gouvernement sur un texte de loi, ce qui entraîne son adoption sans vote, sauf si une motion de censure est déposée et adoptée par 289 députés (majorité absolue). Le Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa  responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement. Cependant, le Sénat peut débattre et voter des lois, mais son opposition ne bloque pas définitivement un texte, puisque l’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres.
+L'article 49.3 de la Constitution ne peut être utilisé que devant l'Assemblée nationale. Il permet au Premier ministre d’engager la responsabilité du gouvernement sur un texte de loi, ce qui entraîne son adoption sans vote, sauf si une motion de censure est déposée et adoptée par 289 députés (majorité absolue).
+
+Le Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa  responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement.
+
+Cependant, le Sénat peut débattre et voter des lois, mais son opposition ne bloque pas définitivement un texte, puisque l’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres.
 
 177. Quelles sont les conditions pour adopter une motion de censure ?
 
-Pour qu'une motion de censure soit adoptée à l’Assemblée nationale, elle doit respecter plusieurs conditions notamment :  Être déposée par au moins 1/10ᵉ des députés (soit 58 sur 577).  Être votée à la majorité absolue des députés, soit au moins 289 voix sur 577. Si elle est adoptée, le gouvernement doit démissionner immédiatement.
+Pour qu'une motion de censure soit adoptée à l’Assemblée nationale, elle doit respecter plusieurs conditions notamment :
+- Être déposée par au moins 1/10ᵉ des députés (soit 58 sur 577).
+- Être votée à la majorité absolue des députés, soit au moins 289 voix sur 577. Si elle est adoptée, le gouvernement doit démissionner immédiatement.
 
 178. Quel est le délai pour déposer une motion de censure après l’utilisation du 49.3 ?
 
@@ -1054,7 +1177,11 @@ Le maire est élu au suffrage indirect. Cela signifie que ce ne sont pas directe
 
 184. Comment est élu le conseil municipal ?
 
- Lors des élections municipales, les habitants de la commune votent pour élire les conseillers municipaux. Ces élections ont lieu tous les 6 ans.  Le mode de scrutin dépend de la taille de la commune (majoritaire pour les petites communes, proportionnel pour les grandes).   Une fois élus, les conseillers municipaux se réunissent lors de leur première séance.  Ils votent pour choisir le maire parmi eux.  L’élection se fait à bulletin secret et le maire doit obtenir la majorité absolue (plus de la moitié des voix).
+- Lors des élections municipales, les habitants de la commune votent pour élire les conseillers municipaux. Ces élections ont lieu tous les 6 ans.
+- Le mode de scrutin dépend de la taille de la commune (majoritaire pour les petites communes, proportionnel pour les grandes).
+- Une fois élus, les conseillers municipaux se réunissent lors de leur première séance.
+- Ils votent pour choisir le maire parmi eux.
+- L’élection se fait à bulletin secret et le maire doit obtenir la majorité absolue (plus de la moitié des voix).
 
 185. Comment sont élus les adjoints aux maires :
 
@@ -1114,11 +1241,23 @@ Huit (8) présidents élus depuis 1958.
 
 199. Quels sont les quatre premières personnalités de l'État en France ?
 
- Le Président de la République → Chef de l'État, garant des institutions et de la Constitution.  Le Premier ministre → Chef du gouvernement, responsable de la politique nationale.  Le Président du Sénat → Deuxième personnage de l’État, il assure l’intérim en cas de vacance de la présidence.  Le Président de l’Assemblée nationale → Dirige les débats à l’Assemblée et joue un rôle clé dans le processus législatif. Cet ordre définit aussi la hiérarchie dans les cérémonies et l’État.
+- Le Président de la République → Chef de l'État, garant des institutions et de la Constitution.
+- Le Premier ministre → Chef du gouvernement, responsable de la politique nationale.
+- Le Président du Sénat → Deuxième personnage de l’État, il assure l’intérim en cas de vacance de la présidence.
+- Le Président de l’Assemblée nationale → Dirige les débats à l’Assemblée et joue un rôle clé dans le processus législatif. Cet ordre définit aussi la hiérarchie dans les cérémonies et l’État.
 
 200. Quelles sont les dates clés de la Révolution française ?
 
- 5 mai 1789 : Ouverture des États généraux par Louis XVI (16).  17 juin 1789 : Le tiers état se proclame Assemblée nationale.  20 juin 1789 : Serment du Jeu de Paume, engagement de donner une constitution à la France.  14 juillet 1789 : Prise de la Bastille, symbole du début de la Révolution.  26 août 1789 : Adoption de la Déclaration des Droits de l’Homme et du Citoyen.  21 juin 1791 : Fuite du roi à Varennes, qui fragilise la monarchie.  10 août 1792 : Prise des Tuileries, arrestation du roi.  21 janvier 1793 : Exécution de Louis XVI (16).  16 octobre 1793 : Exécution de Marie-Antoinette.  9 novembre 1799: Coup d’État de Napoléon Bonaparte, fin de la Révolution.
+- 5 mai 1789 : Ouverture des États généraux par Louis XVI (16).
+- 17 juin 1789 : Le tiers état se proclame Assemblée nationale.
+- 20 juin 1789 : Serment du Jeu de Paume, engagement de donner une constitution à la France.
+- 14 juillet 1789 : Prise de la Bastille, symbole du début de la Révolution.
+- 26 août 1789 : Adoption de la Déclaration des Droits de l’Homme et du Citoyen.
+- 21 juin 1791 : Fuite du roi à Varennes, qui fragilise la monarchie.
+- 10 août 1792 : Prise des Tuileries, arrestation du roi.
+- 21 janvier 1793 : Exécution de Louis XVI (16).
+- 16 octobre 1793 : Exécution de Marie-Antoinette.
+- 9 novembre 1799: Coup d’État de Napoléon Bonaparte, fin de la Révolution.
 
 201. quel était le résultat de cette ouverture ?
 
@@ -1126,11 +1265,27 @@ Chaque ordre devait exprimer ses doléances (revendications) durant cette réuni
 
 202. Citez Quelques événements marquants de la Révolution ?
 
- La Nuit du 4 août 1789 : Abolition des privilèges et des droits féodaux.  La Constitution de 1791 : Instauration d’une monarchie constitutionnelle.  La République proclamée le 22 septembre 1792 : Fin de la monarchie, début de la Première République.  La Terreur (1793-1794) : Période marquée par des exécutions massives sous la direction de Robespierre.  Le Directoire (1795-1799) : Période de gouvernement instable avant l’arrivée de Napoléon.
+- La Nuit du 4 août 1789 : Abolition des privilèges et des droits féodaux.
+
+- La Constitution de 1791 : Instauration d’une monarchie constitutionnelle.
+
+- La République proclamée le 22 septembre 1792 : Fin de la monarchie, début de la Première République.
+
+- La Terreur (1793-1794) : Période marquée par des exécutions massives sous la direction de Robespierre.
+
+- Le Directoire (1795-1799) : Période de gouvernement instable avant l’arrivée de Napoléon.
 
 203. Quelles sont les principales réformes de la Révolution ?
 
- Abolition des privilèges et des droits féodaux (4 août 1789).  Déclaration des Droits de l’Homme et du Citoyen (26 août 1789).  Constitution de 1791 instaurant une monarchie constitutionnelle.  Création du suffrage universel masculin en 1792.  Instauration du calendrier républicain (1793-1805).
+- Abolition des privilèges et des droits féodaux (4 août 1789).
+
+- Déclaration des Droits de l’Homme et du Citoyen (26 août 1789).
+
+- Constitution de 1791 instaurant une monarchie constitutionnelle.
+
+- Création du suffrage universel masculin en 1792.
+
+- Instauration du calendrier républicain (1793-1805).
 
 204. Quand et pourquoi la Première République a-t-elle été proclamée ?
 
@@ -1138,7 +1293,12 @@ Elle a été proclamée le 21 septembre 1792 après la chute de la monarchie. La
 
 205. Quels étaient les pouvoirs sous la Première République ?
 
- La Convention nationale (1792-1795), qui gouvernait et adoptait les lois.   Le Comité de salut public (1793-1794), dirigé par Robespierre, qui a exercé un pouvoir fort pendant la Terreur.  Le Directoire (1795-1799), un gouvernement plus modéré avec cinq directeurs.
+- La Convention nationale (1792-1795), qui gouvernait et adoptait les lois.
+
+- Le Comité de salut public (1793-1794), dirigé par Robespierre, qui a exercé un pouvoir fort pendant la Terreur.
+
+- Le Directoire (1795-1799), un gouvernement plus modéré avec cinq directeurs.
+
 
 206. Quand la Première République prend-elle fin?
 
@@ -1150,7 +1310,12 @@ Elle est proclamée le 24 février 1848, après la révolution de février qui e
 
 208. Quelles sont les premières grandes mesures de la Deuxième République ?
 
- Établissement du suffrage universel masculin (27 millions de citoyens peuvent voter).  Abolition définitive de l'esclavage dans les colonies françaises (27 avril 1848, sous l'impulsion de Victor Schœlcher).  Création des Ateliers nationaux pour fournir du travail aux ouvriers (abandonnés après peu de temps).
+- Établissement du suffrage universel masculin (27 millions de citoyens peuvent voter).
+
+- Abolition définitive de l'esclavage dans les colonies françaises (27 avril 1848, sous l'impulsion de Victor Schœlcher).
+
+- Création des Ateliers nationaux pour fournir du travail aux ouvriers (abandonnés après peu de temps).
+
 
 209. Qui est élu premier président de la République ?
 
@@ -1186,7 +1351,8 @@ Un régime parlementaire, où le président de la République a peu de pouvoirs.
 
 217. Quels sont les grands événements sous la Quatrième République ?
 
- Reconstruction économique après la guerre. 
+- Reconstruction économique après la guerre.
+
 
 218. Pourquoi la Quatrième République prend-elle fin ?
 
@@ -1194,11 +1360,25 @@ L’instabilité politique (plus de 20 gouvernements en 12 ans) et la crise de l
 
 219. Quels sont les principaux personnages de la Première Guerre mondiale ?
 
- Georges Clemenceau : Président du Conseil français surnommé "Le Tigre".  Maréchal Foch : Commandant en chef des forces alliées.  Wilhelm II : Empereur d’Allemagne. 
+- Georges Clemenceau : Président du Conseil français surnommé "Le Tigre".
+
+- Maréchal Foch : Commandant en chef des forces alliées.
+
+- Wilhelm II : Empereur d’Allemagne.
+
 
 220. Quels sont les principaux personnages de la Seconde Guerre mondiale ?
 
- Charles de Gaulle : Chef de la France libre et futur président.  Jean Moulin : Héros de la Résistance française.  Winston Churchill : Premier ministre du Royaume-Uni.  Franklin D. Roosevelt : Président des États-Unis.  Joseph Staline : Dirigeant de l’URSS.
+- Charles de Gaulle : Chef de la France libre et futur président.
+
+- Jean Moulin : Héros de la Résistance française.
+
+- Winston Churchill : Premier ministre du Royaume-Uni.
+
+- Franklin D. Roosevelt : Président des États-Unis.
+
+- Joseph Staline : Dirigeant de l’URSS.
+
 
 221. Qu'est-ce que la Convention nationale ?
 
@@ -1218,15 +1398,57 @@ Le régime de Napoléon III, également connu sous le nom de Second Empire, s'es
 
 225. Combien y a-t-il eu de Napoléon et quelle est la différence entre eux ?
 
-Il y a eu trois Napoléon qui ont régné en France : 1. Napoléon Ier (Napoléon Bonaparte) – 1804-1815  Premier empereur des Français (sacré en 1804).  Grand stratège militaire, il conquiert une grande partie de l’Europe.  Défait en 1814, revient au pouvoir en 1815 (les Cent-Jours) mais perd à Waterloo, ce qui marque sa chute définitive. 2. Napoléon II (1815, mais ne règne pas réellement)  Fils de Napoléon Ier et Marie-Louise d’Autriche.  Désigné empereur après l’abdication de son père en 1815, mais il n’a jamais régné (resté en Autriche sous contrôle autrichien).  Mort jeune, surnommé "L'Aiglon".  3. Napoléon III (1852-1870)  Neveu de Napoléon Ier.  Élu président de la République en 1848, il prend le pouvoir par un coup d’État en 1851.  Se proclame empereur en 1852 et instaure le Second Empire.  Renversé en 1870 après la défaite contre la Prusse (bataille de Sedan).
+- Il y a eu trois Napoléon qui ont régné en France : 1. Napoléon Ier (Napoléon Bonaparte) – 1804-1815
+
+- Premier empereur des Français (sacré en 1804).
+
+- Grand stratège militaire, il conquiert une grande partie de l’Europe.
+
+- Défait en 1814, revient au pouvoir en 1815 (les Cent-Jours) mais perd à Waterloo, ce qui marque sa chute définitive. 2. Napoléon II (1815, mais ne règne pas réellement)
+
+- Fils de Napoléon Ier et Marie-Louise d’Autriche.
+
+- Désigné empereur après l’abdication de son père en 1815, mais il n’a jamais régné (resté en Autriche sous contrôle autrichien).
+
+- Mort jeune, surnommé "L'Aiglon".  3. Napoléon III (1852-1870)
+
+- Neveu de Napoléon Ier.
+
+- Élu président de la République en 1848, il prend le pouvoir par un coup d’État en 1851.
+
+- Se proclame empereur en 1852 et instaure le Second Empire.
+
+- Renversé en 1870 après la défaite contre la Prusse (bataille de Sedan).
+
 
 226. Quels sont les moments clés de la Cinquième République ?
 
-
+- 1958 : Adoption de la Constitution de la Ve République.
+
+- 1962 : Élection du président au suffrage universel direct.
+
+- 1981 : Alternance politique et abolition de la peine de mort.
+
+- 2000 : Passage du septennat au quinquennat (mandat de 5 ans).
+
+- 2008 : Grande révision constitutionnelle (renforcement du rôle du Parlement et des droits des citoyens).
 
 227. Qu’est-ce qui change avec la Cinquième République ?
 
-La Cinquième République se distingue notamment par :  Le président est élu au suffrage universel direct (depuis 1962).  Le président a le pouvoir de nommer le Premier ministre, dissoudre l’Assemblée nationale et recourir à des pouvoirs exceptionnels (article 16).  Fin du régime d’instabilité gouvernementale de la Quatrième République (fréquents changements de gouvernement).  Introduction du 49.3, permettant au gouvernement d’adopter une loi sans vote du Parlement sauf en cas de motion de censure.  Le Parlement (Assemblée nationale et Sénat) conserve un rôle de contrôle, mais il ne peut plus renverser facilement le gouvernement.  Le Sénat ne peut pas bloquer définitivement une loi, contrairement à l’Assemblée nationale.
+- La Cinquième République se distingue notamment par :
+
+- Le président est élu au suffrage universel direct (depuis 1962).
+
+- Le président a le pouvoir de nommer le Premier ministre, dissoudre l’Assemblée nationale et recourir à des pouvoirs exceptionnels (article 16).
+
+- Fin du régime d’instabilité gouvernementale de la Quatrième République (fréquents changements de gouvernement).
+
+- Introduction du 49.3, permettant au gouvernement d’adopter une loi sans vote du Parlement sauf en cas de motion de censure.
+
+- Le Parlement (Assemblée nationale et Sénat) conserve un rôle de contrôle, mais il ne peut plus renverser facilement le gouvernement.
+
+- Le Sénat ne peut pas bloquer définitivement une loi, contrairement à l’Assemblée nationale.
+
 
 228. Qui était le président de la France lors des événements de Mai 68 ?
 
@@ -1246,7 +1468,16 @@ Charles de Gaulle, chef de la France Libre.
 
 232. À quelles dates ont été établies les cinq Républiques françaises ?
 
- Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie.  Deuxième République : instaurée le 24 février 1848 par le gouvernement provisoire à la suite de la Révolution de 1848.   Troisième République : proclamée le 4 septembre 1870 par Léon Gambetta et d'autres républicains après la défaite de Napoléon III.  Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération.  Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.
+- Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie.
+
+- Deuxième République : instaurée le 24 février 1848 par le gouvernement provisoire à la suite de la Révolution de 1848.
+
+- Troisième République : proclamée le 4 septembre 1870 par Léon Gambetta et d'autres républicains après la défaite de Napoléon III.
+
+- Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération.
+
+- Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.
+
 
 233. Qui est Léon Blum ?
 
@@ -1278,9 +1509,22 @@ L'Union européenne n'a pas un "président" unique, mais plutôt plusieurs insti
 
 240. Quels pays font partie de l'Union européenne mais pas de la zone euro ?
 
-Certaines nations membres de l'Union européenne n'ont pas adopté l'euro comme monnaie officielle. Ces pays continuent à utiliser leur propre monnaie nationale. Voici quelques exemples :  Suède (utilise la couronne suédoise)  Danemark (utilise la couronne danoise)  Pologne (utilise le złoty)  Hongrie (utilise le forint)  République tchèque (utilise la couronne tchèque)  Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro.  Fin de la seconde édition
+- Certaines nations membres de l'Union européenne n'ont pas adopté l'euro comme monnaie officielle. Ces pays continuent à utiliser leur propre monnaie nationale. Voici quelques exemples :
 
-### Droits et Devoirs du Citoyen
+- Suède (utilise la couronne suédoise)
+
+- Danemark (utilise la couronne danoise)
+
+- Pologne (utilise le złoty)
+
+- Hongrie (utilise le forint)
+
+- République tchèque (utilise la couronne tchèque)
+
+- Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro.  Fin de la seconde édition
+
+
+# Droits et Devoirs du Citoyen
 
 1. À quel âge obtient-on le droit de vote ?
 
@@ -1492,13 +1736,22 @@ Paris - Île-de-France, Marseille - Provence-Alpes-Côte d'Azur, Lyon - Auvergne
 
 53. Quelles sont les origines des principaux fleuves de France ?
 
- La Loire : C'est le plus long fleuve de France, il prend sa source dans le Massif central, plus précisément dans le département de l'Allier, et se jette dans l'océan Atlantique.  La Seine : Elle prend sa source dans le plateau de Langres, en Haute-Marne, et traverse Paris avant de se jeter dans la Manche.  Le Rhône : Il prend sa source dans le massif du Mont Blanc en Suisse, traverse la région AuvergneRhône-Alpes et se jette dans la mer Méditerranée, dans le delta du Rhône.  La Garonne : Elle prend sa source dans les Pyrénées espagnoles et traverse le sud-ouest de la France avant de se jeter dans l'océan Atlantique, dans l'estuaire de la Gironde.   Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.
+- La Loire : C'est le plus long fleuve de France, il prend sa source dans le Massif central, plus précisément dans le département de l'Allier, et se jette dans l'océan Atlantique.
+
+- La Seine : Elle prend sa source dans le plateau de Langres, en Haute-Marne, et traverse Paris avant de se jeter dans la Manche.
+
+- Le Rhône : Il prend sa source dans le massif du Mont Blanc en Suisse, traverse la région AuvergneRhône-Alpes et se jette dans la mer Méditerranée, dans le delta du Rhône.
+
+- La Garonne : Elle prend sa source dans les Pyrénées espagnoles et traverse le sud-ouest de la France avant de se jeter dans l'océan Atlantique, dans l'estuaire de la Gironde.
+
+- Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.
+
 
 54. Pourquoi l'Union européenne a-t-elle été créée ?
 
 L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale. Son objectif principal est de favoriser la coopération économique et politique entre les pays membres afin d'éviter les conflits, d'assurer un marché commun et d'améliorer la vie des citoyens européens par des politiques communes en matière d'économie, d'environnement, de droits humains, et de sécurité.
 
-### Administration Locale et Territoriale
+# Administration Locale et Territoriale
 
 1. Combien y a-t-il de communes et qui les administre ?
 
@@ -1542,7 +1795,9 @@ Nous passons nos vacances soit en explorant différentes régions de France pour
 
 11. Quelles sont les 3 types de collectivités en France ?
 
-Communes
+- Les communes
+- Les départements
+- Les régions
 
 12. Comment sont élus les conseillers départementaux ?
 
@@ -1550,7 +1805,14 @@ Les conseillers départementaux sont élus pour six ans au suffrage universel di
 
 13. Quelles sont les principales réformes de Napoléon sous le Consulat ?
 
- Création des préfets pour administrer les départements.  Réforme de l'éducation avec les lycées.  Création du franc germinal (monnaie stable).  Adoption du Code civil (1804), qui influence encore le droit français.
+- Création des préfets pour administrer les départements.
+
+- Réforme de l'éducation avec les lycées.
+
+- Création du franc germinal (monnaie stable).
+
+- Adoption du Code civil (1804), qui influence encore le droit français.
+
 
 14. Comment la France a-t-elle été impliquée dans la colonisation ?
 
@@ -1574,7 +1836,20 @@ Les collectivités d’outre-mer comprennent la Polynésie française, Saint-Bar
 
 19. Combien y a-t-il de collectivités et territoires d’Outre-mer (COM-TOM) ?
 
-Il y a 6 collectivités d’Outre-mer (COM) et 1 territoire spécial :  Polynésie française  Saint-Pierre-et-Miquelon  Saint-Barthélemy  Saint-Martin  Wallis-et-Futuna  Nouvelle-Calédonie (statut spécial) Ces territoires ont plus d’autonomie et des règles spécifiques.
+- Il y a 6 collectivités d’Outre-mer (COM) et 1 territoire spécial :
+
+- Polynésie française
+
+- Saint-Pierre-et-Miquelon
+
+- Saint-Barthélemy
+
+- Saint-Martin
+
+- Wallis-et-Futuna
+
+- Nouvelle-Calédonie (statut spécial) Ces territoires ont plus d’autonomie et des règles spécifiques.
+
 
 20. Quelle est la région française réputée pour ses vignobles ?
 
@@ -1610,13 +1885,20 @@ La région connue comme le berceau de la Préhistoire en France est le Périgord
 
 28. de quel côté se trouvent-ils ?
 
- À l'ouest, l'Océan Atlantique borde la France métropolitaine.  Au nord, la Manche sépare la France du Royaume-Uni.  Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.  Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.
+- À l'ouest, l'Océan Atlantique borde la France métropolitaine.
+
+- Au nord, la Manche sépare la France du Royaume-Uni.
+
+- Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.
+
+- Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.
+
 
 29. Qu'est-ce que l'eurozone ?
 
 L'eurozone est un groupe de pays de l'UE qui ont adopté l'euro comme monnaie commune.
 
-### Repères Historiques et Mémoire Nationale
+# Repères Historiques et Mémoire Nationale
 
 1. Qu'est-ce que la grotte de Lascaux ?
 
@@ -1844,7 +2126,12 @@ L’événement de la Révolution française qui m’a le plus marqué est la pr
 
 57. Quel évènement Historique de la France vous a-t-il le plus marqué ?
 
-- Sport: L’événement historique qui m’a le plus marqué est la victoire de la France lors de la Coupe du monde de football en 1998. C’était un moment très fort, car il a uni toute la population dans la joie et la fierté. Cette victoire symbolisait aussi une France diverse, rassemblée autour de valeurs communes comme le sport, l’effort collectif et le vivre-ensemble. Pour moi, cela montre une image positive et solidaire du pays.   - Chairlie Hebdo: L’événement de Charlie Hebdo en 2015 m’a beaucoup marqué car il représente la défense de la liberté d’expression, une valeur fondamentale en France. Malgré l’attaque terroriste contre le journal, les Français se sont rassemblés pour protéger cette liberté essentielle, montrant la force de la démocratie et de la solidarité dans le pays.   - Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.
+- Sport: L’événement historique qui m’a le plus marqué est la victoire de la France lors de la Coupe du monde de football en 1998. C’était un moment très fort, car il a uni toute la population dans la joie et la fierté. Cette victoire symbolisait aussi une France diverse, rassemblée autour de valeurs communes comme le sport, l’effort collectif et le vivre-ensemble. Pour moi, cela montre une image positive et solidaire du pays.
+
+- Chairlie Hebdo: L’événement de Charlie Hebdo en 2015 m’a beaucoup marqué car il représente la défense de la liberté d’expression, une valeur fondamentale en France. Malgré l’attaque terroriste contre le journal, les Français se sont rassemblés pour protéger cette liberté essentielle, montrant la force de la démocratie et de la solidarité dans le pays.
+
+- Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.
+
 
 58. Quel été le rôle de la Bastille avant sa démolition ?
 
@@ -1852,7 +2139,45 @@ La prison de la Bastille servait de prison d'état dans laquelle ont été empri
 
 59. Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?
 
-Elle a été adoptée le 26 Aout 1789.    Déclaration des droits de l'homme et du citoyen du 26 août 1789.    Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous.    En conséquence, l'Assemblée Nationale reconnaît et déclare, en  présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen.    - Art 1er: Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune.    - Art 2: Le but de toute association politique est la conservation des droits naturels et imprescriptibles de l'Homme. Ces droits sont la liberté, la propriété, la sûreté, et la résistance à l'oppression.   - Art 3: Le principe de toute Souveraineté réside essentiellement dans la Nation. Nul corps, nul individu ne peut exercer d'autorité qui n'en émane expressément.    - Art 4: La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui : ainsi, l'exercice des droits naturels de chaque homme n'a de bornes que celles qui assurent aux autres Membres de la Société la jouissance de ces mêmes droits. Ces bornes ne peuvent être déterminées que par la Loi.   - Art 5: La Loi n'a le droit de défendre que les actions nuisibles à la Société. Tout ce qui n'est pas défendu par la Loi ne peut être empêché, et nul ne peut être contraint à faire ce qu'elle n'ordonne pas.   - Art 6: La Loi est l'expression de la volonté générale. Tous les Citoyens ont droit de concourir personnellement, ou par leurs Représentants, à sa formation. Elle doit être la même pour tous, soit qu'elle protège, soit qu'elle punisse. Tous les Citoyens étant égaux à ses yeux sont également admissibles à toutes dignités, places et emplois publics, selon leur capacité, et sans autre distinction que celle de leurs vertus et de leurs talents.   - Art 7: Nul homme ne peut être accusé, arrêté ni détenu que dans les cas déterminés par la Loi, et selon les formes qu'elle a prescrites. Ceux quisollicitent, expédient, exécutent ou font exécuter des ordres arbitraires, doivent être punis ; mais tout citoyen appelé ou saisi en vertu de la Loi doit obéir à l'instant : ilse rend coupable par la résistance.    - Art 8: La Loi ne doit établir que des peines strictement et évidemment nécessaires, et nul ne peut être puni qu'en vertu d'une Loi établie et promulguée antérieurement au délit, et légalement appliquée.   - Art 9: Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable, s'il est jugé indispensable de l'arrêter, toute rigueur qui ne serait pas nécessaire pour s'assurer de sa personne doit être sévèrement réprimée par la loi.   - Art 10: Nul ne doit être inquiété pour ses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public établi par la Loi.    - Art 11: La libre communication des pensées et des opinions est un des droits les plus précieux de l'Homme : tout Citoyen peut donc parler, écrire, imprimer librement, sauf à répondre à l'abus de cette liberté dans les cas déterminés par la Loi.   - Art 12: La garantie des droits de l'Homme et du Citoyen nécessite une force publique : cette force est donc instituée pour l'avantage de tous, et non pour l'utilité particulière de ceux auxquels elle est confiée.   - Art 13: Pour l'entretien de la force publique, et pour les dépenses d'administration, une contribution commune est indispensable : elle doit être également répartie entre tous les citoyens, en raison de leurs facultés.   - Art 14: Tous les Citoyens ont le droit de constater, par eux-mêmes ou par leurs représentants, la nécessité de la contribution publique, de la consentir librement d'en suivre l'emploi, et d'en déterminer la quotité, l'assiette, le recouvrement et la durée.   - Art 15: La Société a le droit de demander compte à tout Agent public de son administration.   - Art 16: Toute Société dans laquelle la garantie des Droits n'est pas assurée, ni la séparation des Pouvoirs déterminée, n'a point de Constitution.   - Art 17: La propriété étant un droit inviolable et sacré, nul ne peut en être privé, si ce n'est lorsque la nécessité publique, légalement constatée, l'exige évidemment, et sous la condition d'une juste et préalable indemnité.
+Elle a été adoptée le 26 Aout 1789.    
+- Déclaration des droits de l'homme et du citoyen du 26 août 1789.    
+- Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous.    
+- En conséquence, l'Assemblée Nationale reconnaît et déclare, en  présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen.
+
+- Art 1er: Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune.
+
+- Art 2: Le but de toute association politique est la conservation des droits naturels et imprescriptibles de l'Homme. Ces droits sont la liberté, la propriété, la sûreté, et la résistance à l'oppression.
+
+- Art 3: Le principe de toute Souveraineté réside essentiellement dans la Nation. Nul corps, nul individu ne peut exercer d'autorité qui n'en émane expressément.
+
+- Art 4: La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui : ainsi, l'exercice des droits naturels de chaque homme n'a de bornes que celles qui assurent aux autres Membres de la Société la jouissance de ces mêmes droits. Ces bornes ne peuvent être déterminées que par la Loi.
+
+- Art 5: La Loi n'a le droit de défendre que les actions nuisibles à la Société. Tout ce qui n'est pas défendu par la Loi ne peut être empêché, et nul ne peut être contraint à faire ce qu'elle n'ordonne pas.
+
+- Art 6: La Loi est l'expression de la volonté générale. Tous les Citoyens ont droit de concourir personnellement, ou par leurs Représentants, à sa formation. Elle doit être la même pour tous, soit qu'elle protège, soit qu'elle punisse. Tous les Citoyens étant égaux à ses yeux sont également admissibles à toutes dignités, places et emplois publics, selon leur capacité, et sans autre distinction que celle de leurs vertus et de leurs talents.
+
+- Art 7: Nul homme ne peut être accusé, arrêté ni détenu que dans les cas déterminés par la Loi, et selon les formes qu'elle a prescrites. Ceux quisollicitent, expédient, exécutent ou font exécuter des ordres arbitraires, doivent être punis ; mais tout citoyen appelé ou saisi en vertu de la Loi doit obéir à l'instant : ilse rend coupable par la résistance.
+
+- Art 8: La Loi ne doit établir que des peines strictement et évidemment nécessaires, et nul ne peut être puni qu'en vertu d'une Loi établie et promulguée antérieurement au délit, et légalement appliquée.
+
+- Art 9: Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable, s'il est jugé indispensable de l'arrêter, toute rigueur qui ne serait pas nécessaire pour s'assurer de sa personne doit être sévèrement réprimée par la loi.
+
+- Art 10: Nul ne doit être inquiété pour ses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public établi par la Loi.
+
+- Art 11: La libre communication des pensées et des opinions est un des droits les plus précieux de l'Homme : tout Citoyen peut donc parler, écrire, imprimer librement, sauf à répondre à l'abus de cette liberté dans les cas déterminés par la Loi.
+
+- Art 12: La garantie des droits de l'Homme et du Citoyen nécessite une force publique : cette force est donc instituée pour l'avantage de tous, et non pour l'utilité particulière de ceux auxquels elle est confiée.
+
+- Art 13: Pour l'entretien de la force publique, et pour les dépenses d'administration, une contribution commune est indispensable : elle doit être également répartie entre tous les citoyens, en raison de leurs facultés.
+
+- Art 14: Tous les Citoyens ont le droit de constater, par eux-mêmes ou par leurs représentants, la nécessité de la contribution publique, de la consentir librement d'en suivre l'emploi, et d'en déterminer la quotité, l'assiette, le recouvrement et la durée.
+
+- Art 15: La Société a le droit de demander compte à tout Agent public de son administration.
+
+- Art 16: Toute Société dans laquelle la garantie des Droits n'est pas assurée, ni la séparation des Pouvoirs déterminée, n'a point de Constitution.
+
+- Art 17: La propriété étant un droit inviolable et sacré, nul ne peut en être privé, si ce n'est lorsque la nécessité publique, légalement constatée, l'exige évidemment, et sous la condition d'une juste et préalable indemnité.
+
 
 60. Qui a instauré le code civil en France ?
 
@@ -1860,7 +2185,10 @@ Le Code Civil en France a été instauré par Napoléon Bonaparte.
 
 61. Quelles sont les dates des deux dernières guerres mondiales ?
 
-- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18).    - La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945
+- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18).
+
+- La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945
+
 
 62. Connaissez vous Jean Moulin ? pourquoi est-il connu ?
 
@@ -1940,11 +2268,31 @@ L’ouverture des États généraux a eu lieu le 5 mai 1789 à Versailles. C’�
 
 81. De quoi étaient composés les états généraux ?
 
-Les États généraux réunissaient les trois ordres de la société :  Le Clergé  La Noblesse  Le Tiers-État (98 % de la population)
+- Les États généraux réunissaient les trois ordres de la société :
+
+- Le Clergé
+
+- La Noblesse
+
+- Le Tiers-État (98 % de la population)
+
 
 82. Qui sont les principales figures de la Révolution ?
 
- Louis XVI (1754-1793) : Roi de France exécuté en 1793.  Marie-Antoinette (1755-1793) : Reine de France, guillotinée.  Mirabeau (1749-1791) : Orateur influent du début de la Révolution.  Robespierre (1758-1794) : Chef des Jacobins, instigateur de la Terreur.  Danton (1759-1794) : Révolutionnaire modéré, exécuté sous la Terreur.   Marat (1743-1793) : Journaliste radical, assassiné dans son bain.  Napoléon Bonaparte (1769-1821) : Met fin à la Révolution et devient empereur en 1804.
+- Louis XVI (1754-1793) : Roi de France exécuté en 1793.
+
+- Marie-Antoinette (1755-1793) : Reine de France, guillotinée.
+
+- Mirabeau (1749-1791) : Orateur influent du début de la Révolution.
+
+- Robespierre (1758-1794) : Chef des Jacobins, instigateur de la Terreur.
+
+- Danton (1759-1794) : Révolutionnaire modéré, exécuté sous la Terreur.
+
+- Marat (1743-1793) : Journaliste radical, assassiné dans son bain.
+
+- Napoléon Bonaparte (1769-1821) : Met fin à la Révolution et devient empereur en 1804.
+
 
 83. Quel monarque régnait en France au début de la Révolution Française ?
 
@@ -1980,11 +2328,21 @@ Il met en place le Consulat (1799-1804), où il gouverne avec deux autres consul
 
 91. Quand et comment prend fin le régime de Vichy ?
 
- Le régime s’effondre avec la Libération de la France en 1944, menée par les Alliés et la Résistance.  6 juin 1944 : Débarquement en Normandie.  25 août 1944 : Libération de Paris.  Pétain fuit en Allemagne, puis en Suisse. Il est arrêté en 1945.
+- Le régime s’effondre avec la Libération de la France en 1944, menée par les Alliés et la Résistance.
+
+- 6 juin 1944 : Débarquement en Normandie.
+
+- 25 août 1944 : Libération de Paris.
+
+- Pétain fuit en Allemagne, puis en Suisse. Il est arrêté en 1945.
+
 
 92. Quelles sont les dates de la Première et la seconde Guerre Mondiale ?
 
- La Première Guerre Mondiale, un conflit mondial d'une ampleur sans précédent, s'est déroulée du 28 Juillet 1914 au 11 Novembre 1918, impliquant de nombreux pays et causant des pertes humaines et matérielles massives.  La Seconde Guerre Mondiale, qui a eu des répercussions profondes sur le monde, s'est étendue du 1er Septembre 1939 au 2 Septembre 1945. Ce conflit mondial a vu s'affronter les puissances de l'Axe et les Alliés et a entraîné d'importantes transformations géopolitiques.
+- La Première Guerre Mondiale, un conflit mondial d'une ampleur sans précédent, s'est déroulée du 28 Juillet 1914 au 11 Novembre 1918, impliquant de nombreux pays et causant des pertes humaines et matérielles massives.
+
+- La Seconde Guerre Mondiale, qui a eu des répercussions profondes sur le monde, s'est étendue du 1er Septembre 1939 au 2 Septembre 1945. Ce conflit mondial a vu s'affronter les puissances de l'Axe et les Alliés et a entraîné d'importantes transformations géopolitiques.
+
 
 93. Quelle est la date exacte du début et de la fin de la Première Guerre mondiale ?
 
@@ -1992,19 +2350,45 @@ La guerre a commencé le 28 juillet 1914 avec la déclaration de guerre de l’A
 
 94. Quelles sont les causes principales de cette guerre ?
 
- Tensions nationalistes en Europe.  Système d’alliances entre les grandes puissances.  L’attentat de Sarajevo (28 juin 1914), où l’archiduc François-Ferdinand d’Autriche a été assassiné.
+- Tensions nationalistes en Europe.
+
+- Système d’alliances entre les grandes puissances.
+
+- L’attentat de Sarajevo (28 juin 1914), où l’archiduc François-Ferdinand d’Autriche a été assassiné.
+
 
 95. Quels sont les traités mettant fin à la guerre ?
 
- Traité de Versailles (28 juin 1919) : Imposant de lourdes sanctions à l’Allemagne.  Traité de Saint-Germain (1919) : Dissolution de l’Empire austro-hongrois.
+- Traité de Versailles (28 juin 1919) : Imposant de lourdes sanctions à l’Allemagne.
+
+- Traité de Saint-Germain (1919) : Dissolution de l’Empire austro-hongrois.
+
 
 96. Quelles sont les conséquences de la Première Guerre mondiale?
 
- Environ 10 millions de morts.  Chute des Empires allemand, russe, austro-hongrois et ottoman.  Création de la Société des Nations (SDN).
+- Environ 10 millions de morts.
+
+- Chute des Empires allemand, russe, austro-hongrois et ottoman.
+
+- Création de la Société des Nations (SDN).
+
 
 97. Quelles sont les principales batailles de la Première Guerre mondiale ?
 
- Bataille de la Marne (6-12 septembre 1914) : Première grande bataille où les Français et les Britanniques stoppent l’avancée allemande vers Paris.  Bataille de Verdun (21 février - 18 décembre 1916) : Bataille d'usure entre la France et l’Allemagne, symbole de la résistance française.  Bataille de la Somme (1er juillet - 18 novembre 1916) : Offensive conjointe francobritannique pour percer le front allemand, très meurtrière.  Bataille du Chemin des Dames (16 avril - 24 octobre 1917) : Offensive française sous le commandement du général Nivelle, marquée par un échec et des mutineries.  Bataille de Passchendaele (31 juillet - 10 novembre 1917) : Offensive britannique marquée par des combats dans des conditions extrêmes de boue et de pluie.  Bataille de Caporetto (24 octobre - 19 novembre 1917): majeure italienne face aux Austro-Hongrois et Allemands.   Seconde bataille de la Marne (15 juillet - 6 août 1918) : Dernière grande offensive allemande stoppée par les Alliés, tournant de la guerre.
+- Bataille de la Marne (6-12 septembre 1914) : Première grande bataille où les Français et les Britanniques stoppent l’avancée allemande vers Paris.
+
+- Bataille de Verdun (21 février - 18 décembre 1916) : Bataille d'usure entre la France et l’Allemagne, symbole de la résistance française.
+
+- Bataille de la Somme (1er juillet - 18 novembre 1916) : Offensive conjointe francobritannique pour percer le front allemand, très meurtrière.
+
+- Bataille du Chemin des Dames (16 avril - 24 octobre 1917) : Offensive française sous le commandement du général Nivelle, marquée par un échec et des mutineries.
+
+- Bataille de Passchendaele (31 juillet - 10 novembre 1917) : Offensive britannique marquée par des combats dans des conditions extrêmes de boue et de pluie.
+
+- Bataille de Caporetto (24 octobre - 19 novembre 1917): majeure italienne face aux Austro-Hongrois et Allemands.
+
+- Seconde bataille de la Marne (15 juillet - 6 août 1918) : Dernière grande offensive allemande stoppée par les Alliés, tournant de la guerre.
+
 
 98. Que commémore-t-on le 11 novembre en France ?
 
@@ -2020,15 +2404,28 @@ La guerre a commencé le 1er septembre 1939 avec l’invasion de la Pologne par 
 
 101. Quelles sont les batailles majeures de la Seconde Guerre mondiale ?
 
- Bataille de France (mai-juin 1940) : Défaite française et occupation.  Bataille de Stalingrad (1942-1943) : Victoire soviétique contre l’Allemagne.  Débarquement de Normandie (6 juin 1944) : Libération de la France.
+- Bataille de France (mai-juin 1940) : Défaite française et occupation.
+
+- Bataille de Stalingrad (1942-1943) : Victoire soviétique contre l’Allemagne.
+
+- Débarquement de Normandie (6 juin 1944) : Libération de la France.
+
 
 102. Quels sont les principaux traités mettant fin au conflit ?
 
- Conférence de Yalta (février 1945) : Définition du partage de l’Europe après-guerre.  Traité de San Francisco (1951) : Paix entre le Japon et les Alliés.
+- Conférence de Yalta (février 1945) : Définition du partage de l’Europe après-guerre.
+
+- Traité de San Francisco (1951) : Paix entre le Japon et les Alliés.
+
 
 103. Quelles sont les conséquences de la guerre ?
 
- Environ 60 millions de morts.  Création de l’ONU (1945) pour garantir la paix.  Début de la Guerre froide entre États-Unis et URSS.
+- Environ 60 millions de morts.
+
+- Création de l’ONU (1945) pour garantir la paix.
+
+- Début de la Guerre froide entre États-Unis et URSS.
+
 
 104. Qui était Jean Moulin ?
 
@@ -2044,7 +2441,12 @@ Il incarne l’unité et le courage de la Résistance face à l’occupation naz
 
 107. Pourquoi la Seconde Guerre mondiale s’est-elle terminée le 2 septembre 1945 et non le 8 mai 1945 ?
 
-La Seconde Guerre mondiale s’est déroulée sur plusieurs continents et s’est terminée à des dates différentes selon les théâtres d’opération.  Le 8 mai 1945 marque la capitulation de l'Allemagne nazie face aux Alliés. C'est la fin de la guerre en Europe, appelée la Victoire en Europe (VE Day).  Le 2 septembre 1945 correspond à la capitulation du Japon, qui met officiellement fin à la Seconde Guerre mondiale dans le monde entier.
+- La Seconde Guerre mondiale s’est déroulée sur plusieurs continents et s’est terminée à des dates différentes selon les théâtres d’opération.
+
+- Le 8 mai 1945 marque la capitulation de l'Allemagne nazie face aux Alliés. C'est la fin de la guerre en Europe, appelée la Victoire en Europe (VE Day).
+
+- Le 2 septembre 1945 correspond à la capitulation du Japon, qui met officiellement fin à la Seconde Guerre mondiale dans le monde entier.
+
 
 108. Qu'est-ce que le Traité de Versailles ?
 
@@ -2068,7 +2470,10 @@ La France a joué un rôle crucial dans la création de l'Union européenne, not
 
 113. Pourquoi l’abolition de l’esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?
 
-L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates :  1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802. 
+- L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates :
+
+- 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802.
+
 
 114. Quelle est l'histoire derrière la construction du Château de Versailles ?
 
@@ -2202,7 +2607,7 @@ Le détroit qui sépare la Corse de l'Italie est le détroit de Bonifacio.
 
 La France se classe 7ème avec un PIB de 2 806 milliards de dollars, prévoyant une croissance de 0,6%.
 
-### La France en Europe et dans le Monde
+# La France en Europe et dans le Monde
 
 1. Quand a été créé la CEE (Communauté Économique Européenne) ?
 
@@ -2334,11 +2739,23 @@ La France a remporté 64 médailles au total.
 
 33. Combien de médailles d'or, d'argent et de bronze la France a-t-elle obtenues ?
 
- 16 médailles d'or  26 médailles d'argent  22 médailles de bronze
+- 16 médailles d'or
+
+- 26 médailles d'argent
+
+- 22 médailles de bronze
+
 
 34. Citez quelques champions français aux Jeux Olympiques de Paris 2024 ?
 
- Léon Marchand (Natation) : 4 médailles d'or, 1 médaille de bronze.  Teddy Riner (Judo) : 1 médaille d'or.  Pauline Ferrand-Prévot (VTT) : 1 médaille d'or.  Les athlètes français en canoë-kayak ont également décroché plusieurs médailles.
+- Léon Marchand (Natation) : 4 médailles d'or, 1 médaille de bronze.
+
+- Teddy Riner (Judo) : 1 médaille d'or.
+
+- Pauline Ferrand-Prévot (VTT) : 1 médaille d'or.
+
+- Les athlètes français en canoë-kayak ont également décroché plusieurs médailles.
+
 
 35. Que pensez-vous des Jeux Olympiques de Paris 2024 ?
 
@@ -2670,7 +3087,8 @@ L'aéroport Charles-de-Gaulle.
 
 117. Quelles sont les chaînes de montagnes qui séparent la France de ses voisins ?
 
-   France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.
+- France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.
+
 
 118. Quelle est la ville d'origine de la tarte Tatin ?
 
@@ -2778,7 +3196,16 @@ Guyane : Frontière avec le Brésil et le Suriname, Saint-Martin : Frontière av
 
 144. Quels pays ne font pas partie de l'Union européenne mais font partie de l'espace Schengen ?
 
-Certains pays ne font pas partie de l'Union européenne mais font partie de l'Espace Schengen, qui permet la libre circulation des personnes entre ses membres. Ces pays sont :  Norvège  Islande  Suisse  Liechtenstein Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'Espace Schengen, même s'ils ne sont pas membres de l'Union européenne.
+- Certains pays ne font pas partie de l'Union européenne mais font partie de l'Espace Schengen, qui permet la libre circulation des personnes entre ses membres. Ces pays sont :
+
+- Norvège
+
+- Islande
+
+- Suisse
+
+- Liechtenstein Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'Espace Schengen, même s'ils ne sont pas membres de l'Union européenne.
+
 
 145. Quel est le nom du satellite européen de navigation ?
 
@@ -2888,7 +3315,7 @@ L'actualité mondiale est complexe, marquée par des défis tels que les conflit
 
 La devise officielle de l'UE est 'Unie dans la diversité'.
 
-### Géographie et Sites Remarquables
+# Géographie et Sites Remarquables
 
 1. Quel est le point culminant ?
 
@@ -2964,9 +3391,17 @@ Parmi les grandes villes françaises, on peut citer Paris, Marseille, Lyon, Toul
 
 19. Citez des villes proches des grandes chaînes de montagnes en France.
 
-
+- Alpes : Grenoble, Annecy, Chamonix.
 
-### Arts, Culture et Sports
+- Pyrénées : Pau, Tarbes, Perpignan.
+
+- Massif central : Clermont-Ferrand, Saint-Étienne.
+
+- Jura : Besançon.
+
+- Vosges : Épinal, Colmar.
+
+# Arts, Culture et Sports
 
 1. Citez des personnages littéraires Français célèbres
 
@@ -3010,11 +3445,25 @@ C'est un mouvement culturel, philosophique, littéraire et intellectuel qui éme
 
 11. Quel grand évènement sportif Français connaissez-vous ?
 
-- Vous pouvez citer une épreuve cycliste comme le Tour de France.    - Une épreuve de tennis comme le tournoi de Roland Garros.   - Une compétition de course automobile comme les 24h du Mans.    - Une course comme le Marathon de Paris.
+- Vous pouvez citer une épreuve cycliste comme le Tour de France.
+
+- Une épreuve de tennis comme le tournoi de Roland Garros.
+
+- Une compétition de course automobile comme les 24h du Mans.
+
+- Une course comme le Marathon de Paris.
+
 
 12. Connaissez-vous des sportifs Français(e)s ?
 
-- Dans le football : Michel Platini, Zinedine Zidane.    - Dans le cyclisme : Richard Virenque.    - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.    - Dans le judo : Teddy Riner.
+- Dans le football : Michel Platini, Zinedine Zidane.
+
+- Dans le cyclisme : Richard Virenque.
+
+- Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.
+
+- Dans le judo : Teddy Riner.
+
 
 13. Vivez-vous en appartement ou en maison ?
 
@@ -3040,171 +3489,181 @@ Claude Monet.
 
 Non, mais je connais leur importance pour la France. / Oui, j’ai visité (nom du territoire) et découvert sa culture.
 
-### Vie Personnelle et Intégration
-
+# Vie Personnelle et Intégration
 1. Pourquoi voulez-vous devenir Français ?
 
-Je suis venu en France pour la première fois en 2009 pour effectuer un stage de master à Bordeaux, que j’ai suivi pendant cinq mois. Après l’obtention de mon diplôme, j’ai poursuivi un doctorat à l’Université Grenoble-Alpes. Même lorsque je vivais à Pékin, mes professeurs étaient français, et j’avais régulièrement l’occasion de venir en France pour mes études. Après mon doctorat, j’ai eu la chance de travailler à Paris, à l’ENS, pendant trois ans. Depuis, je cherche et trouve des emplois en France, et je travaille encore aujourd’hui dans un environnement français.   Au fil des années, je me suis habitué à la culture française, à la langue, et j’ai découvert avec plaisir la gastronomie locale : j’aime le fromage, le vin, et voyager en France ainsi qu’en Europe. J’apprécie beaucoup la liberté d’expression, la facilité de voyager entre les pays, et le mode de vie français.   Je souhaite devenir Français car je me sens pleinement intégré dans cette société. J’admire profondément les valeurs de la République française, notamment la liberté, l’égalité, et la fraternité. La France, en tant que troisième économie mondiale et leader dans plusieurs secteurs comme l’aéronautique, l’agroalimentaire et le luxe, représente pour moi un pays où je peux construire un projet personnel et professionnel solide.    Aujourd’hui, je me sens plus Français que jamais et je n’ai plus aucune autre alternative, car la France est devenue ma maison, mon pays d’adoption où je veux m’investir pleinement.
+Exprimez votre amour et votre attachement à la France :
+- Vous avez toujours aimé la culture, l’histoire et le peuple français
+- Vous souhaitez vous intégrer davantage à la société française
+- Vous souhaitez contribuer à la construction et au développement de la France
+
+Profitez des avantages de la nationalité française :
+- Liberté de circulation, de résidence et de travail dans l’UE
+- Droits à l’éducation, à la santé et à la sécurité sociale
+- Participation aux activités politiques et sociales
 
 2. À quelle fréquence rentrez-vous dans votre pays d'origine ?
 
-Je retourne dans mon pays d'origine une fois par an.
+- Indiquez votre fréquence (ex. une fois par an) et la raison principale (famille, fêtes).
+- Si vous y allez rarement, mentionnez les contraintes (travail, coût, distance).
 
 3. Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?
 
-Je suis célibataire, je n'ai ni enfant ni compagnon. Je vis seule.
+- Précisez votre statut (célibataire, marié(e), pacsé(e), en couple).
+- Si applicable, indiquez brièvement votre conjoint/partenaire (nationalité, situation professionnelle).
 
 4. Votre conjoint vit-il ou vit-elle avec vous ?
 
-Je vis seule mais je partage mon logement avec un colocataire.
+- Mentionnez si vous vivez ensemble en France ; sinon, précisez où il/elle réside (travail, études, famille).
 
 5. Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?
 
-Je n’ai pas de conjoint ni de partenaire, donc je ne partage aucune activité avec quelqu’un
+- Citez 2-3 activités partagées (voyages, cuisine, sport, sorties culturelles) ou précisez que vous êtes célibataire.
 
 6. Avez-vous des enfants ? Comptez-vous en avoir prochainement ?
 
-Je n'ai pas d'enfants et je ne prévois pas d'en avoir dans un avenir proche.
+- Indiquez si vous avez des enfants (prénoms/âges) ou si vous n’en avez pas ; précisez vos intentions futures si besoin.
 
 7. Qui s’occupe des enfants ? Qui s’occupe des tâches ménagères ?
 
-Je n'ai pas d'enfants et je vis seul(e), donc je m’occupe seule de toutes les tâches ménagères.
+- Décrivez le partage : garde des enfants (si applicable) et répartition des tâches ménagères entre vous / conjoint / aide familiale.
 
 8. Avez-vous vos liens personnels et familiaux en France ?
 
-J'ai plusieurs amis français avec qui j'ai des liens solides. Je leur rends souvent visite pour le déjeuner le week-end ou lors d'occasions spéciales comme Noël ou le réveillon du Nouvel An. Nous sommes amis depuis plus de huit ans.
+- Mentionnez vos amis, collègues ou proches en France et la fréquence des rencontres (repas, fêtes, loisirs).
+- Si vous avez de la famille en France, précisez le lien (parents, frères/sœurs, cousins).
 
 9. Quelle langue utilisez-vous au travail et à la maison ?
 
-J’utilise principalement l’anglais pour mes conversations en milieu professionnel, le français pour le travail et la vie quotidienne. Avec mes amis, je mélange le français et l’anglais, et je parle vietnamien avec ma famille restée au Vietnam.
+- Indiquez la langue principale au travail (français/anglais) et celles parlées à la maison (français + langue maternelle).
 
 10. Faites-vous partie d’une association ? Si oui, laquelle et depuis quand ?
 
-Oui, je fais partie d’une église locale appelée La Cité. Je suis membre actifve de cette communauté.
+- Citez l’association (solidarité, sport, culture), votre rôle et depuis quand vous y participez.
 
-11. DOu se trouve le siège de cette association ?
+11. Où se trouve le siège de cette association ?
 
-Le siège de l’église La Cité se trouve au 24 Rue Antoine-Julien Hénard, 75012 Paris.
+- Précisez la ville ou le quartier où elle est basée.
 
 12. Pratiquez vous une religion ?
 
-Oui, je suis chrétienne.
+- Indiquez si vous êtes croyant(e) ou non, en rappelant le respect de la laïcité.
 
 13. Quels sont vos loisirs ?
 
-J'aime faire des promenades, faire du vélo, jouer de la musique, aller au cinéma, aux concerts, etc.
+- Citez 2-3 loisirs (sport, musique, lecture, sorties culturelles) que vous pratiquez régulièrement.
 
 14. Pourquoi êtes-vous venu en France la toute première fois ?
 
-Je suis arrivé(e) en France pour la première fois le 15 juin 2009 pour un stage de master à Bordeaux, où je suis resté(e) pendant cinq mois. Je suivais un master en informatique.
+- Indiquez l’année et le motif de votre première venue (stage, études, emploi, rapprochement familial).
 
 15. Qu’avez-vous en France que vous n’avez pas dans votre pays d’origine ?
 
-En France, j’apprécie particulièrement la démocratie, la liberté d’expression et le respect des droits humains, qui sont mieux établis qu’au Vietnam. J’admire aussi la richesse culturelle, la qualité du système éducatif et les avancées scientifiques. Ces aspects m’offrent un environnement favorable pour vivre et évoluer.
+- Mettez en avant ce que vous appréciez : stabilité, libertés, santé, culture, opportunités professionnelles.
 
 16. Ou avez-vous appris le Français ?
 
-J’ai appris le français à l’école, avec des cours particuliers, et surtout au quotidien dans la vie de tous les jours.
+- Indiquez où vous l’avez appris : école/université/cours particuliers, puis pratique quotidienne en France.
 
 17. Pendant combien de temps avez-vous étudier le Français ?
 
-J’apprends le français depuis plus de dix ans, de manière non continue, mais je continue à apprendre régulièrement depuis mon arrivée en France.
+- Donnez une durée approximative (ex. plusieurs années) et précisez que vous continuez à progresser au quotidien.
 
 18. Utilisez vous la langue Française au travail ?
 
-Je n’utilise pas beaucoup le français au travail, j’utilise principalement l’anglais. Cependant, je parle français dans la vie quotidienne et avec mes amis.
+- Précisez si le français est la langue principale au travail et si vous utilisez ponctuellement l’anglais ou une autre langue.
 
 19. Parlez-vous d’autres langues ? Si oui, lesquelles ?
 
-Je parle vietnamien, qui est ma langue maternelle, ainsi que l’anglais, ma deuxième langue.
+- Listez vos langues (français, anglais, langue maternelle) et les contextes d’usage.
 
 20. Quelle langue vous parait la plus facile ? Pourquoi ?
 
-Le Français, car c’est la langue que j’utilise dans la vie de tous les jours.
+- Indiquez la langue la plus facile pour vous et liez-la à votre usage quotidien (français, langue maternelle, etc.).
 
 21. Envoyez vous de l’argent dans votre pays d’origine ? Si oui à qui ?
 
-Oui, j’envoie environ 200 euros par mois à mes parents, comme un cadeau pour eux.
+- Indiquez si vous envoyez un soutien (montant/fréquence) et à qui (parents, proches).
 
 22. Avez-vous de la famille proche ou lointaine dans votre pays d’origine ? Si oui comptez-vous les faire venir en France ?
 
-Oui, j’ai de la famille qui vit au Vietnam, y compris mes parents, mes frères et sœurs ainsi que ma belle-famille, mais je ne compte pas les faire venir en France.
+- Mentionnez qui vit encore au pays (parents, frères/sœurs) et si vous envisagez ou non une venue en France.
 
 23. Ou passez vous vos vacances ?
 
-Je passe mes vacances principalement en France et j’ai eu l’occasion de visiter la plupart des grandes villes comme Paris, Lyon, Marseille, Strasbourg, Lille, Nice, et bien d’autres encore.
+- Indiquez si vous privilégiez les vacances en France (découverte des régions) et/ou à l’étranger (famille, voyages).
 
 24. Quelles sont les nationalités des personnes de votre entourage ?
 
-La majorité de mes amis sont Français, mais j’ai aussi des amis étrangers, comme des Russes et des Mauriciens. Cependant, la plupart de mon entourage est français.
+- Soulignez la diversité : majorité d’amis français et quelques amis d’autres nationalités.
 
 25. Depuis quand habitez-vous à cette adresse ?
 
-Depuis (Nombre d’années/mois).
+- Indiquez la durée (ex. trois ans) et la localisation (ville, département).
 
 26. Où avez-vous appris le français ?
 
-J’ai appris le français à (École, Université, Cours, Autodidacte...)
+- Précisez votre parcours : école/université/cours, puis pratique quotidienne en France.
 
 27. Regardez-vous la télévision française ?
 
-Oui/Non, je regarde (Nom de chaîne ou d’émission).
+- Indiquez oui/non et citez les types de programmes (info, culture, documentaires).
 
 28. Écoutez-vous la radio en France ?
 
-Oui/Non, j’écoute (Nom de la station).
+- Indiquez oui/non et les formats écoutés (stations généralistes, podcasts, info/culture).
 
 29. Lisez-vous la presse française ?
 
-Oui, je lis (Nom du journal ou site internet).
+- Indiquez oui/non et si vous lisez la presse en ligne ou papier pour suivre l’actualité.
 
 30. Pourquoi avez-vous quitté votre pays d’origine ?
 
-J’ai quitté mon pays pour des raisons familiales et/ou professionnelles. La France m’a offert la possibilité de poursuivre mon projet de vie dans un cadre stable, sécurisant et propice à mon épanouissement personnel et professionnel.
+- Expliquez brièvement (études, opportunité professionnelle, rapprochement familial) et le choix d’un cadre stable en France.
 
 31. Quand êtes-vous arrivé(e) en France ?
 
-Je suis arrivé(e) en France en (année) et j'y réside depuis.
+- Donnez l’année de votre arrivée et précisez que vous résidez en France depuis.
 
 32. Avez-vous des proches de votre famille qui vivent en France ?
 
-Oui, certains membres de ma famille vivent en France, comme (mentionner sans trop de détails).
+- Indiquez si vous avez des proches (parents, frères/sœurs, cousins) en France et en quoi cela aide.
 
 33. Êtes-vous marié(e) ? Depuis quand ?
 
-Oui, je suis marié(e) depuis le (JJ/MM/AAAA). (Ou : Non, je ne suis pas marié(e).)
+- Précisez votre statut (marié(e)/pacsé(e)/célibataire) et, si applicable, la date.
 
 34. Vivez-vous ensemble ? Depuis combien de temps ?
 
-Oui, nous vivons ensemble depuis (Nombre d’années/mois). (Ou : Non, nous vivons séparément pour des raisons professionnelles/familiales...)
+- Si vous avez un conjoint/partenaire, indiquez depuis quand vous vivez ensemble ; sinon, précisez que vous vivez seul(e).
 
 35. Avez-vous d'autres membres de votre famille en France ?
 
-Oui, j’ai (Parents, frères/sœurs, cousins…) qui vivent en France. (Ou : Non, ma famille vit à l’étranger.)
+- Mentionnez si d’autres membres de la famille vivent en France et où se trouve le reste de la famille.
 
 36. Passez-vous souvent du temps avec votre belle-famille ?
 
-Oui, nous nous voyons régulièrement, notamment lors des repas familiaux et des fêtes. (Ou : Nous sommes en contact mais nous ne nous voyons pas souvent en raison de la distance.)
+- Précisez la fréquence des rencontres (repas, fêtes) ou indiquez si la distance limite les échanges.
 
 37. Avez-vous des animaux de compagnie ?
 
-Oui, nous avons (un chien, un chat, un oiseau…). (Ou : Non, nous n’avons pas d’animaux.)
+- Indiquez si vous avez un animal (chien, chat, etc.) ou non.
 
 38. Pourquoi les autres membres de votre famille n’ont-ils pas demandé la nationalité ?
 
-Chacun fait son choix en fonction de sa situation personnelle et de ses projets.
+- Expliquez que c’est un choix personnel, lié à leur situation et à leurs projets.
 
 39. Comment célébrez-vous les fêtes en famille ?
 
-Nous célébrons les fêtes comme Noël, le Nouvel An ou les anniversaires en famille avec des repas et des moments conviviaux.
+- Décrivez brièvement vos habitudes : repas familiaux, échanges de cadeaux, moments conviviaux.
 
 40. Envisagez-vous d'avoir des enfants ? Si oui, combien ?
 
-Oui/Non, nous envisageons d'avoir des enfants. Nous aimerions avoir (nombre d'enfants), pour agrandir notre famille.
+- Indiquez si vous avez un projet d’enfants et, le cas échéant, combien.
 
 41. Envisagez-vous de faire venir votre famille en France ?
 
-Si les circonstances le permettent, j'aimerais faire venir (membres de la famille) en France pour leur offrir de meilleures opportunités ou simplement pour les réunir et passer du temps ensemble.
+- Indiquez si vous avez ce projet et dans quelles conditions (opportunités, regroupement familial, études).
 
 42. Quand la peine de mort a-t-elle été abolie en France ?
 
@@ -3260,7 +3719,12 @@ Louis XIV (14).
 
 55. Pourquoi est-elle célèbre ?
 
- Elle représente le savoir-faire français en ingénierie.  Elle attire plus de 6 millions de visiteurs par an.  Elle est un symbole mondial de la France et de Paris.
+- Elle représente le savoir-faire français en ingénierie.
+
+- Elle attire plus de 6 millions de visiteurs par an.
+
+- Elle est un symbole mondial de la France et de Paris.
+
 
 56. Comment est-elle souvent appelée?
 
@@ -3278,7 +3742,7 @@ Albert Camus.
 
 René Goscinny et Albert Uderzo.
 
-### Déclaration des Droits de l'Homme et du Citoyen (DDHC)
+# Déclaration des Droits de l'Homme et du Citoyen (DDHC)
 
 1. Art 1. Comment naissent les hommes ?
 
@@ -3296,26 +3760,54 @@ Dans la **Nation**.
 
 Pouvoir faire tout ce qui ne nuit pas à autrui.
 
-5. Art 6. Qu'est-ce que la Loi ?
+5. Art 5. Que peut interdire la loi ?
+
+La loi ne défend que les actions nuisibles à la société ; ce qui n'est pas défendu par la loi ne peut être empêché.
+
+6. Art 6. Qu'est-ce que la Loi ?
 
 L'expression de la volonté générale. Elle doit être la même pour tous.
 
-6. Art 9. Quelle est la présomption concernant tout homme ?
+7. Art 7. Dans quels cas peut-on être arrêté ?
+
+Nul ne peut être accusé, arrêté ni détenu que dans les cas prévus par la loi et selon les formes qu'elle prescrit.
+
+8. Art 8. Quelles limites pour les peines ?
+
+La loi ne doit établir que des peines strictement et évidemment nécessaires, applicables uniquement à des faits antérieurs à la loi.
+
+9. Art 9. Quelle est la présomption concernant tout homme ?
 
 Tout homme est présumé **innocent** jusqu'à ce qu'il ait été déclaré coupable.
 
-7. Art 10. Peut-on être inquiété pour ses opinions ?
+10. Art 10. Peut-on être inquiété pour ses opinions ?
 
 Non, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public.
 
-8. Art 11. Quel est un des droits les plus précieux ?
+11. Art 11. Quel est un des droits les plus précieux ?
 
 La libre communication des pensées et des opinions.
 
-9. Art 13. Pourquoi l'impôt est-il nécessaire ?
+12. Art 12. À quoi sert la force publique ?
+
+À garantir les droits de tous ; elle est instituée pour l'avantage de tous, non pour l'intérêt de quelques-uns.
+
+13. Art 13. Pourquoi l'impôt est-il nécessaire ?
 
 Pour l'entretien de la force publique et les dépenses d'administration. Il doit être réparti également en raison des facultés de chacun.
 
-10. Art 17. Le droit de propriété est-il protégé ?
+14. Art 14. Quel est le droit des citoyens sur la contribution publique ?
+
+Les citoyens ont le droit de constater la nécessité de la contribution publique, d’y consentir librement, d’en suivre l’emploi et d’en déterminer la quotité, l’assiette, le recouvrement et la durée.
+
+15. Art 15. Que peut exiger la société des agents publics ?
+
+La société a le droit de demander compte à tout agent public de son administration.
+
+16. Art 16. Quand une société a-t-elle une Constitution ?
+
+Toute société dans laquelle la garantie des droits n'est pas assurée ni la séparation des pouvoirs déterminée n'a point de Constitution.
+
+17. Art 17. Le droit de propriété est-il protégé ?
 
 Oui, c'est un droit inviolable et sacré (sauf nécessité publique et avec indemnité).
