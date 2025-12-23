@@ -9,11 +9,11 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcon3D } from '../../shared/hooks';
 import { useCivicExam } from '../hooks/useCivicExam';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
@@ -26,7 +26,12 @@ type CivicExamInfoScreenNavigationProp = NativeStackNavigationProp<CivicExamStac
 const CivicExamInfoScreen = () => {
     const navigation = useNavigation<CivicExamInfoScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
+    const { getIcon } = useIcon3D();
     const { startExam } = useCivicExam();
+
+    const arrowBackIcon = getIcon('arrowBack');
+    const timeIcon = getIcon('time');
+    const trophyIcon = getIcon('trophy');
 
     const handleStartExam = async () => {
         try {
@@ -55,7 +60,12 @@ const CivicExamInfoScreen = () => {
                         onPress={() => navigation.goBack()}
                         style={styles.backButton}
                     >
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                        <Icon3D
+                            name={arrowBackIcon.name}
+                            size={20}
+                            color={theme.colors.headerText}
+                            variant={arrowBackIcon.variant}
+                        />
                     </TouchableOpacity>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
                         Informations sur l'examen
@@ -73,19 +83,34 @@ const CivicExamInfoScreen = () => {
                             Modalités de l'examen
                         </FormattedText>
                         <View style={styles.infoRow}>
-                            <Ionicons name="document-text" size={20} color={theme.colors.primary} />
+                            <Icon3D
+                                name="document-text"
+                                size={18}
+                                color={theme.colors.primary}
+                                variant="glass"
+                            />
                             <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
                                 {CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions à choix multiples
                             </FormattedText>
                         </View>
                         <View style={styles.infoRow}>
-                            <Ionicons name="time" size={20} color={theme.colors.primary} />
+                            <Icon3D
+                                name={timeIcon.name}
+                                size={18}
+                                color={theme.colors.primary}
+                                variant="glass"
+                            />
                             <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
                                 {CIVIC_EXAM_CONFIG.TIME_LIMIT_MINUTES} minutes maximum
                             </FormattedText>
                         </View>
                         <View style={styles.infoRow}>
-                            <Ionicons name="trophy" size={20} color={theme.colors.primary} />
+                            <Icon3D
+                                name={trophyIcon.name}
+                                size={18}
+                                color={theme.colors.primary}
+                                variant="neon"
+                            />
                             <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
                                 {CIVIC_EXAM_CONFIG.PASSING_SCORE}/{CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} bonnes réponses ({CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%) pour réussir
                             </FormattedText>
@@ -118,7 +143,7 @@ const CivicExamInfoScreen = () => {
                             Important
                         </FormattedText>
                         <FormattedText style={[styles.warningText, { color: theme.colors.text }]}>
-                            • L'examen se déroule en français uniquement\n• Vous pouvez revenir en arrière pour modifier vos réponses\n• Le temps restant sera affiché en permanence\n• Vous pourrez réviser vos réponses avant de soumettre
+                            • L'examen se déroule en français uniquement{'\n'}• Vous pouvez revenir en arrière pour modifier vos réponses{'\n'}• Le temps restant sera affiché en permanence{'\n'}• Vous pourrez réviser vos réponses avant de soumettre
                         </FormattedText>
                     </View>
 
@@ -209,4 +234,3 @@ const styles = StyleSheet.create({
 });
 
 export default CivicExamInfoScreen;
-

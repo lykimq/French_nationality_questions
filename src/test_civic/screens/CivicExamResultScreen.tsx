@@ -9,10 +9,9 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import { deserializeCivicExamResult, type SerializableCivicExamResult } from '../utils/civicExamSerialization';
@@ -67,10 +66,11 @@ const CivicExamResultScreen = () => {
                     showsVerticalScrollIndicator={false}
                 >
                     <View style={[styles.resultCard, { backgroundColor: passed ? '#4CAF50' : theme.colors.error }]}>
-                        <Ionicons
+                        <Icon3D
                             name={passed ? 'checkmark-circle' : 'close-circle'}
-                            size={64}
+                            size={52}
                             color="#FFFFFF"
+                            variant="neon"
                         />
                         <FormattedText style={styles.resultTitle}>
                             {passed ? 'Examen réussi !' : 'Examen échoué'}
@@ -114,7 +114,7 @@ const CivicExamResultScreen = () => {
                                         <View style={[styles.answerSection, { marginTop: 12 }]}>
                                             <View style={[styles.answerRow, { marginBottom: 8 }]}>
                                                 <View style={[styles.answerLabel, { backgroundColor: theme.colors.error + '20' }]}>
-                                                    <Ionicons name="close-circle" size={16} color={theme.colors.error} />
+                                                    <Icon3D name="close-circle" size={14} color={theme.colors.error} variant="default" />
                                                     <FormattedText style={[styles.answerLabelText, { color: theme.colors.error }]}>
                                                         Votre réponse:
                                                     </FormattedText>
@@ -126,7 +126,7 @@ const CivicExamResultScreen = () => {
                                             
                                             <View style={styles.answerRow}>
                                                 <View style={[styles.answerLabel, { backgroundColor: '#4CAF50' + '20' }]}>
-                                                    <Ionicons name="checkmark-circle" size={16} color="#4CAF50" />
+                                                    <Icon3D name="checkmark-circle" size={14} color="#4CAF50" variant="default" />
                                                     <FormattedText style={[styles.answerLabelText, { color: '#4CAF50' }]}>
                                                         Bonne réponse:
                                                     </FormattedText>

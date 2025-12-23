@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcon3D } from '../../shared/hooks';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 
 interface ExamHeaderProps {
@@ -21,6 +21,9 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
     progress
 }) => {
     const { theme } = useTheme();
+    const { getIcon } = useIcon3D();
+    
+    const timeIcon = getIcon('time');
 
     const passingScore = Math.ceil((totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
     const passingText = totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS
@@ -39,7 +42,12 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
                     styles.timer,
                     { backgroundColor: timeLeft < 300 ? theme.colors.error : theme.colors.primary }
                 ]}>
-                    <Ionicons name="time" size={16} color="#FFFFFF" />
+                    <Icon3D
+                        name={timeIcon.name}
+                        size={14}
+                        color="#FFFFFF"
+                        variant="default"
+                    />
                     <FormattedText style={styles.timerText}>{formattedTime}</FormattedText>
                 </View>
             </View>

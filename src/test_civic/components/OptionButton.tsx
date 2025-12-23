@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcon3D } from '../../shared/hooks';
 
 interface OptionButtonProps {
     index: number;
@@ -22,6 +22,9 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
     onPress
 }) => {
     const { theme } = useTheme();
+    const { getIcon } = useIcon3D();
+    
+    const checkmarkIcon = getIcon('checkmarkCircle');
 
     const isWrong = showResult && isSelected && !isCorrect;
     const highlightCorrect = showResult && isCorrect;
@@ -85,10 +88,20 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
                     {option}
                 </FormattedText>
                 {showResult && isCorrect && (
-                    <Ionicons name="checkmark-circle" size={24} color="#4CAF50" />
+                    <Icon3D
+                        name="checkmark-circle"
+                        size={20}
+                        color="#4CAF50"
+                        variant="elevated"
+                    />
                 )}
                 {showResult && isWrong && (
-                    <Ionicons name="close-circle" size={24} color="#F44336" />
+                    <Icon3D
+                        name="close-circle"
+                        size={20}
+                        color="#F44336"
+                        variant="elevated"
+                    />
                 )}
             </View>
         </TouchableOpacity>

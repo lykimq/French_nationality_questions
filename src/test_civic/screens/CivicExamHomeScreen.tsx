@@ -9,11 +9,11 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcon3D } from '../../shared/hooks';
 import { useCivicExam } from '../hooks/useCivicExam';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import type { CivicExamStackParamList } from '../types';
 
@@ -22,9 +22,11 @@ type CivicExamHomeScreenNavigationProp = NativeStackNavigationProp<CivicExamStac
 const CivicExamHomeScreen = () => {
     const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
+    const { getIcon } = useIcon3D();
     const { examProgress, isLoading, refreshProgress } = useCivicExam();
 
-    // Refresh progress when screen comes into focus (e.g., returning from settings)
+    const arrowBackIcon = getIcon('arrowBack');
+
     useFocusEffect(
         React.useCallback(() => {
             refreshProgress();
@@ -59,7 +61,12 @@ const CivicExamHomeScreen = () => {
                         onPress={() => navigation.goBack()}
                         style={styles.backButton}
                     >
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                        <Icon3D
+                            name={arrowBackIcon.name}
+                            size={20}
+                            color={theme.colors.headerText}
+                            variant={arrowBackIcon.variant}
+                        />
                     </TouchableOpacity>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
                         Examen Civique
@@ -73,7 +80,13 @@ const CivicExamHomeScreen = () => {
                     showsVerticalScrollIndicator={false}
                 >
                     <View style={[styles.infoCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
-                        <Ionicons name="school" size={48} color={theme.colors.primary} style={styles.icon} />
+                        <Icon3D
+                            name="school"
+                            size={40}
+                            color={theme.colors.primary}
+                            variant="gradient"
+                            containerStyle={styles.icon}
+                        />
                         <FormattedText style={[styles.title, { color: theme.colors.text }]}>
                             Examen Civique pour la Naturalisation
                         </FormattedText>
@@ -114,7 +127,12 @@ const CivicExamHomeScreen = () => {
                         onPress={handleStartExam}
                         activeOpacity={0.8}
                     >
-                        <Ionicons name="document-text" size={24} color="#FFFFFF" />
+                        <Icon3D
+                            name="document-text"
+                            size={20}
+                            color="#FFFFFF"
+                            variant="gradient"
+                        />
                         <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
                             Commencer l'examen
                         </FormattedText>
@@ -125,7 +143,12 @@ const CivicExamHomeScreen = () => {
                         onPress={handlePracticeMode}
                         activeOpacity={0.8}
                     >
-                        <Ionicons name="book" size={24} color={theme.colors.primary} />
+                        <Icon3D
+                            name="book"
+                            size={20}
+                            color={theme.colors.primary}
+                            variant="elevated"
+                        />
                         <FormattedText style={[styles.buttonText, { color: theme.colors.primary }]}>
                             Mode pratique
                         </FormattedText>
@@ -234,4 +257,3 @@ const styles = StyleSheet.create({
 });
 
 export default CivicExamHomeScreen;
-

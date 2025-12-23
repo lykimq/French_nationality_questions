@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcon3D } from '../../shared/hooks';
 import type { SearchSuggestion } from '../useSearch';
 
 interface SearchSuggestionsProps {
@@ -15,10 +15,26 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
     onApplySuggestion,
 }) => {
     const { theme } = useTheme();
+    const { getIcon } = useIcon3D();
+
+    const searchIcon = getIcon('search');
+    const helpIcon = getIcon('helpCircle');
+    const categoriesIcon = getIcon('categories');
 
     if (suggestions.length === 0) {
         return null;
     }
+
+    const getIconForSuggestion = (type: string) => {
+        switch (type) {
+            case 'category':
+                return categoriesIcon.name;
+            case 'id':
+                return helpIcon.name;
+            default:
+                return searchIcon.name;
+        }
+    };
 
     return (
         <View style={[styles.suggestionsContainer, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
@@ -28,10 +44,11 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
                     style={[styles.suggestionItem, { borderBottomColor: theme.colors.border }]}
                     onPress={() => onApplySuggestion(suggestion)}
                 >
-                    <Ionicons
-                        name={suggestion.type === 'category' ? 'folder-outline' : suggestion.type === 'id' ? 'help-outline' : 'search-outline'}
-                        size={16}
+                    <Icon3D
+                        name={getIconForSuggestion(suggestion.type)}
+                        size={14}
                         color={theme.colors.textMuted}
+                        variant="default"
                     />
                     <FormattedText style={[styles.suggestionText, { color: theme.colors.text }]}>
                         {suggestion.text}
@@ -79,4 +96,3 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
 });
-

@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 
 interface ExamFeedbackProps {
@@ -19,14 +18,24 @@ export const ExamFeedback: React.FC<ExamFeedbackProps> = ({
         <View style={[styles.feedbackContainer, { backgroundColor: theme.colors.card }]}>
             {isCorrect ? (
                 <View style={[styles.feedbackMessage, { backgroundColor: '#4CAF50' + '20', borderColor: '#4CAF50' }]}>
-                    <Ionicons name="checkmark-circle" size={32} color="#4CAF50" />
+                    <Icon3D
+                        name="checkmark-circle"
+                        size={28}
+                        color="#4CAF50"
+                        variant="elevated"
+                    />
                     <FormattedText style={[styles.feedbackText, { color: '#4CAF50' }]}>
                         Bonne réponse !
                     </FormattedText>
                 </View>
             ) : (
                 <View style={[styles.feedbackMessage, { backgroundColor: '#F44336' + '20', borderColor: '#F44336' }]}>
-                    <Ionicons name="close-circle" size={32} color="#F44336" />
+                    <Icon3D
+                        name="close-circle"
+                        size={28}
+                        color="#F44336"
+                        variant="elevated"
+                    />
                     <FormattedText style={[styles.feedbackText, { color: '#F44336' }]}>
                         Mauvaise réponse
                     </FormattedText>

@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { QuestionCard } from '../../shared/components';
-import { FormattedText } from '../../shared/components';
+import { QuestionCard, FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcon3D } from '../../shared/hooks';
 import type { SearchResultQuestion } from '../useSearch';
 
 interface SearchResultsProps {
@@ -16,11 +15,20 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     searchQuery,
 }) => {
     const { theme } = useTheme();
+    const { getIcon } = useIcon3D();
+
+    const searchIcon = getIcon('search');
+    const imageIcon = getIcon('image');
 
     if (searchQuery === '') {
         return (
             <View style={styles.noResults}>
-                <Ionicons name="search-outline" size={64} color={theme.colors.textMuted} />
+                <Icon3D
+                    name={searchIcon.name}
+                    size={52}
+                    color={theme.colors.textMuted}
+                    variant="glass"
+                />
                 <FormattedText style={[styles.noResultsText, { color: theme.colors.textSecondary }]}>
                     Tapez votre question pour commencer la recherche
                 </FormattedText>
@@ -34,7 +42,12 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     if (results.length === 0) {
         return (
             <View style={styles.noResults}>
-                <Ionicons name="document-text-outline" size={64} color={theme.colors.textMuted} />
+                <Icon3D
+                    name="document-text"
+                    size={52}
+                    color={theme.colors.textMuted}
+                    variant="glass"
+                />
                 <FormattedText style={[styles.noResultsText, { color: theme.colors.textSecondary }]}>
                     Aucune question trouvée pour votre recherche
                 </FormattedText>
@@ -66,7 +79,13 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
                             {result.categoryTitle}
                         </FormattedText>
                         {result.hasImage && (
-                            <Ionicons name="image" size={12} color={theme.colors.primary} style={styles.imageIcon} />
+                            <Icon3D
+                                name={imageIcon.name}
+                                size={10}
+                                color={theme.colors.primary}
+                                variant="default"
+                                containerStyle={styles.imageIcon}
+                            />
                         )}
                     </View>
                     <QuestionCard
@@ -86,54 +105,55 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     contentContainer: {
-        flexGrow: 1,
         paddingHorizontal: 20,
-        paddingBottom: 20,
+        paddingVertical: 20,
     },
     resultsHeader: {
-        marginBottom: 15,
+        marginBottom: 20,
     },
     resultsTitle: {
-        fontSize: 16,
-        fontWeight: '600',
-        marginBottom: 2,
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginBottom: 4,
     },
     sortedByText: {
-        fontSize: 12,
+        fontSize: 13,
     },
     resultItem: {
-        marginBottom: 15,
+        marginBottom: 16,
     },
     categoryLabel: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 5,
+        marginBottom: 8,
+        gap: 6,
     },
     categoryLabelText: {
-        fontSize: 12,
+        fontSize: 13,
         fontWeight: '600',
         textTransform: 'uppercase',
+        letterSpacing: 0.5,
     },
     imageIcon: {
-        marginLeft: 5,
+        marginLeft: 4,
     },
     noResults: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 40,
+        paddingVertical: 60,
     },
     noResultsText: {
-        fontSize: 16,
+        fontSize: 18,
+        fontWeight: '600',
         textAlign: 'center',
-        marginTop: 15,
-        lineHeight: 24,
+        marginTop: 20,
+        marginBottom: 8,
     },
     searchHintText: {
         fontSize: 14,
         textAlign: 'center',
-        marginTop: 10,
         lineHeight: 20,
     },
 });
-
