@@ -6,1111 +6,1111 @@
     "description": "Repères historiques et mémoire nationale",
     "questions": [
         {
-            "id": 1,
+            "id": "livret_1",
             "question": "Qu'est-ce que la grotte de Lascaux ?",
             "explanation": "Une grotte préhistorique ornée de peintures datant de 18 000 av. J.-C.",
             "image": null
         },
         {
-            "id": 2,
+            "id": "livret_2",
             "question": "Quelle influence a eu l'Antiquité romaine en France ?",
             "explanation": "Les Romains se sont installés à partir de 50 av. J.-C., apportant la culture latine, le mode de vie romain et des monuments (ex: théâtre d'Orange).",
             "image": null
         },
         {
-            "id": 3,
+            "id": "livret_3",
             "question": "Qui est Clovis ?",
             "explanation": "Roi des Francs (466-511), il unifie le territoire et adopte la religion chrétienne.",
             "image": null
         },
         {
-            "id": 4,
+            "id": "livret_4",
             "question": "Qui est Jeanne d'Arc ?",
             "explanation": "Héroïne nationale (1412-1431) qui a combattu les Anglais pendant la guerre de Cent Ans et libéré une partie de la France.",
             "image": null
         },
         {
-            "id": 5,
+            "id": "livret_5",
             "question": "Qu'a fait Henri IV en 1598 ?",
             "explanation": "Il a signé l'**Édit de Nantes**, accordant la liberté de culte aux protestants pour rétablir la paix.",
             "image": null
         },
         {
-            "id": 6,
+            "id": "livret_6",
             "question": "Qui est Louis XIV ?",
             "explanation": "Le \"Roi Soleil\" (1643-1715), monarque absolu qui a construit le château de Versailles et renforcé l'État centralisé.",
             "image": null
         },
         {
-            "id": 7,
+            "id": "livret_7",
             "question": "Qui est Molière ?",
             "explanation": "Célèbre dramaturge du XVIIe siècle (comédies).",
             "image": null
         },
         {
-            "id": 8,
+            "id": "livret_8",
             "question": "Qui sont les philosophes des Lumières ?",
             "explanation": "Voltaire, Rousseau, Diderot... Ils ont combattu pour la tolérance et la liberté au XVIIIe siècle.",
             "image": null
         },
         {
-            "id": 9,
+            "id": "livret_9",
             "question": "Que s'est-il passé le 14 juillet 1789 ?",
             "explanation": "La **Prise de la Bastille** par le peuple de Paris, symbole de la Révolution française.",
             "image": null
         },
         {
-            "id": 10,
+            "id": "livret_10",
             "question": "Que célèbre-t-on le 14 juillet ?",
             "explanation": "La Fête de la Fédération (14 juillet 1790), symbole d'unité nationale.",
             "image": null
         },
         {
-            "id": 11,
+            "id": "livret_11",
             "question": "Quand la Ire République a-t-elle été proclamée ?",
             "explanation": "En **1792**.",
             "image": null
         },
         {
-            "id": 12,
+            "id": "livret_12",
             "question": "Qui a créé le Code civil ?",
             "explanation": "**Napoléon Ier** (Empire).",
             "image": null
         },
         {
-            "id": 13,
+            "id": "livret_13",
             "question": "Quand l'esclavage a-t-il été aboli ?",
             "explanation": "En **1848**.",
             "image": null
         },
         {
-            "id": 14,
+            "id": "livret_14",
             "question": "Qui est Victor Hugo ?",
             "explanation": "Grand écrivain du XIXe siècle (*Les Misérables*), engagé contre la misère et la peine de mort.",
             "image": null
         },
         {
-            "id": 15,
+            "id": "livret_15",
             "question": "Quand la IIIe République s'est-elle installée et qu'a fait Jules Ferry ?",
             "explanation": "Vers 1875. Jules Ferry a rendu l'école primaire **gratuite, laïque et obligatoire** (années 1880).",
             "image": null
         },
         {
-            "id": 16,
+            "id": "livret_16",
             "question": "Que commémore le 11 novembre ?",
             "explanation": "L'armistice de la **Première Guerre mondiale** (1914-1918).",
             "image": null
         },
         {
-            "id": 17,
+            "id": "livret_17",
             "question": "Que commémore le 8 mai ?",
             "explanation": "La victoire des Alliés lors de la **Seconde Guerre mondiale** (1939-1945).",
             "image": null
         },
         {
-            "id": 18,
+            "id": "livret_18",
             "question": "Qu'est-ce que le régime de Vichy ?",
             "explanation": "Le régime dirigé par le Maréchal Pétain (1940-1944) qui a collaboré avec l'Allemagne nazie.",
             "image": null
         },
         {
-            "id": 19,
+            "id": "livret_19",
             "question": "Qui est Charles de Gaulle ?",
             "explanation": "Chef de la Résistance (Appel du 18 juin), libérateur de la France, et fondateur de la Ve République (1958).",
             "image": null
         },
         {
-            "id": 20,
+            "id": "livret_20",
             "question": "Qu'est-ce que la décolonisation (1950-1962) ?",
             "explanation": "Période d'indépendance des colonies françaises (Indochine, Afrique du Nord/Algérie, Afrique noire).",
             "image": null
         },
         {
-            "id": 21,
+            "id": "livret_21",
             "question": "Qu'est-ce que Mai 68 ?",
             "explanation": "Un grand mouvement social et étudiant qui a marqué la société française.",
             "image": null
         },
         {
-            "id": 22,
+            "id": "livret_22",
             "question": "Quand la majorité est-elle passée à 18 ans ?",
             "explanation": "En **1974**.",
             "image": null
         },
         {
-            "id": 23,
+            "id": "livret_23",
             "question": "Qui a porté la loi sur l'IVG (avortement) ?",
             "explanation": "**Simone Veil** en 1975.",
             "image": null
         },
         {
-            "id": 24,
+            "id": "livret_24",
             "question": "Quand la peine de mort a-t-elle été abolie ?",
             "explanation": "En **1981**.",
             "image": null
         },
         {
-            "id": 25,
+            "id": "livret_25",
             "question": "Citez des personnalités naturalisées célèbres.",
             "explanation": "**Marie Curie** (Physique), **Joséphine Baker** (Artiste/Résistante), Georges Charpak (Physique), Romain Gary (Écrivain), etc.",
             "image": null
         },
         {
-            "id": 26,
+            "id": "livret_26",
             "question": "Citez des personnes naturalisées Français(e)",
             "explanation": "Marie Curie, Joséphine Baker",
             "image": null
         },
         {
-            "id": 27,
+            "id": "livret_27",
             "question": "Connaissez-vous Brigitte Bardot ?",
             "explanation": "Brigitte Bardot est une actrice de cinéma, chanteuse et militante pour la cause animale. Elle a plusieurs œuvres artistiques et culturelles à son actif dont les plus connus sont \"Moi je joue\" et \"Harley Davidson\".",
             "image": null
         },
         {
-            "id": 28,
+            "id": "livret_28",
             "question": "Citez des animateurs de télévision Français que vous connaissez ?",
             "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
             "image": null
         },
         {
-            "id": 29,
+            "id": "livret_29",
             "question": "Citez des chanteurs Français connus ?",
             "explanation": "Celine Dion, Dalida, Johnny Halliday, Charles Aznavour, Georges Brassens, Claude François etc…",
             "image": null
         },
         {
-            "id": 30,
+            "id": "livret_30",
             "question": "Citez des journalistes Français(e)s connus ?",
             "explanation": "Elise Lucet, Ruth ElKrief, Edwy Plenel, Yann Barthès",
             "image": null
         },
         {
-            "id": 31,
+            "id": "livret_31",
             "question": "Citez des acteurs/actrices Français(e)s que vous connaissez ?",
             "explanation": "Jean Dujardin, Gérard Depardieu, Marion Cotillard etc…",
             "image": null
         },
         {
-            "id": 32,
+            "id": "livret_32",
             "question": "Citez des femmes politique que vous connaissez ?",
             "explanation": "Simone Veil, Agnès Buzyn, Ségolène Royal etc…",
             "image": null
         },
         {
-            "id": 33,
+            "id": "livret_33",
             "question": "Citez des monuments historiques Français que vous connaissez ?",
             "explanation": "La tour Eiffel. L'arc de triomphe. Le château de Versailles. Le château de Vincennes. Le Louvre. Le château de la Loire. Le château de Chambord. Le pont du Gard etc…",
             "image": null
         },
         {
-            "id": 34,
+            "id": "livret_34",
             "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
             "explanation": "Elles ont été bâties au moyen-âge.",
             "image": null
         },
         {
-            "id": 35,
+            "id": "livret_35",
             "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
             "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
             "image": null
         },
         {
-            "id": 36,
+            "id": "livret_36",
             "question": "Quels sont les plats typiques Français que vous connaissez ?",
             "explanation": "La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L'aligot etc…",
             "image": null
         },
         {
-            "id": 37,
+            "id": "livret_37",
             "question": "Citez des plats de votre région/Ville/Département",
             "explanation": "Baguette, Croissant, Soupe à l’oignon, Quiche Lorraine, Steak frites, Tarte Tatin, Île flottante, Brie de Meaux, Pâté en croûte, Escargots de Bourgogne, Crêpes, Galettes, Macarons, Chausson aux pommes",
             "image": null
         },
         {
-            "id": 38,
+            "id": "livret_38",
             "question": "Qui a été à l'origine de l'Arc de triomphe ?",
             "explanation": "C'est Napoléon 1er.",
             "image": null
         },
         {
-            "id": 39,
+            "id": "livret_39",
             "question": "Quel est le monument principal en France ?",
             "explanation": "C'est la tour Eiffel à Paris.",
             "image": null
         },
         {
-            "id": 40,
+            "id": "livret_40",
             "question": "Qui a construit la tour Eiffel ?",
             "explanation": "C'est Gustave Eiffel.",
             "image": null
         },
         {
-            "id": 41,
+            "id": "livret_41",
             "question": "Quand la tour Eiffel a été construite et à quel évènement ?",
             "explanation": "En 1889 lors de l'exposition universelle de Paris.",
             "image": null
         },
         {
-            "id": 42,
+            "id": "livret_42",
             "question": "Quelle est la monnaie actuelle de la France?",
             "explanation": "C'est l'Euro.",
             "image": null
         },
         {
-            "id": 43,
+            "id": "livret_43",
             "question": "Pourquoi le 1er Mai est-il férié ?",
             "explanation": "Nous fêtons la fête du Travail.",
             "image": null
         },
         {
-            "id": 44,
+            "id": "livret_44",
             "question": "Pourquoi le 11 Novembre est-il férié ?",
             "explanation": "Le 11 novembre marque la fin de la première guerre mondiale, c'est ce qu'on appelle l'Armistice signée en 1918",
             "image": null
         },
         {
-            "id": 45,
+            "id": "livret_45",
             "question": "Que fête-on le 14 juillet ?",
             "explanation": "C'est la fête nationale en France, le 14 juillet est généralement associé à la prise de la Bastille en 1789, c'est dans les faits le 14 juillet 1790, la fête de la Fédération, qui est officiellement commémoré en France depuis plus d'un siècle.",
             "image": null
         },
         {
-            "id": 46,
+            "id": "livret_46",
             "question": "Qui est le/la maire de votre département ?",
             "explanation": "Le maire du département des Hauts-de-Seine est Pierre-Christophe Baguet. Cependant, il a annoncé le 13 mars 2025 se mettre temporairement en retrait de ses fonctions après un conseil municipal houleux.",
             "image": null
         },
         {
-            "id": 47,
+            "id": "livret_47",
             "question": "Qu'est-ce que l'hôtel de ville ?",
             "explanation": "C'est la mairie principale d'une grande ville ou d'une ville importante.",
             "image": null
         },
         {
-            "id": 48,
+            "id": "livret_48",
             "question": "Qui est le maire de votre ville ?",
             "explanation": "Le maire de Boulogne-Billancourt est Pierre-Christophe Baguet. Comme mentionné précédemment, il a décidé de se mettre temporairement en retrait de ses fonctions.",
             "image": null
         },
         {
-            "id": 49,
+            "id": "livret_49",
             "question": "Qu'est-ce que les élections municipales ?",
             "explanation": "Ce sont des élections qui permettent d'élire les membres du conseil municipal de chaque commune et qui sont appelés les conseillers municipaux, c'est eux ensuite qui élisent le maire et ces adjoints.",
             "image": null
         },
         {
-            "id": 50,
+            "id": "livret_50",
             "question": "Citez trois rois de France",
             "explanation": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
             "image": null
         },
         {
-            "id": 51,
+            "id": "livret_51",
             "question": "Citez des Reines de France",
             "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
             "image": null
         },
         {
-            "id": 52,
+            "id": "livret_52",
             "question": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
             "explanation": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
             "image": null
         },
         {
-            "id": 53,
+            "id": "livret_53",
             "question": "Qui été le Roi de France durant la révolution Française ?",
             "explanation": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
             "image": null
         },
         {
-            "id": 54,
+            "id": "livret_54",
             "question": "Qui a été à l'origine du château de Versailles ?",
             "explanation": "C'est Louis XIV (Louis 14).",
             "image": null
         },
         {
-            "id": 55,
+            "id": "livret_55",
             "question": "À quelle date précise a eu lieu la révolution Française ?",
             "explanation": "La révolution Française a eu lieu le 05 Mai 1789 avec l'ouverture des états généraux et s'est terminée le 09 Novembre 1799 avec le coup d'état du 18 brumaire de Napoléon Bonaparte.",
             "image": null
         },
         {
-            "id": 56,
+            "id": "livret_56",
             "question": "Quel événement de la Révolution vous a-t-il le plus marqué ?",
             "explanation": "L’événement de la Révolution française qui m’a le plus marqué est la prise de la Bastille, le 14 juillet 1789. Ce jour-là, le peuple de Paris a attaqué cette prison, symbole de l’absolutisme royal, pour protester contre l’injustice et la misère. C’est un moment très important, car il marque le début de la Révolution française. Cette révolte a été provoquée par une grave crise économique due à de mauvaises récoltes, à l’inflation, et à l’augmentation des impôts décidée par le roi Louis XVI.",
             "image": null
         },
         {
-            "id": 57,
+            "id": "livret_57",
             "question": "Quel évènement Historique de la France vous a-t-il le plus marqué ?",
             "explanation": "- Sport: L’événement historique qui m’a le plus marqué est la victoire de la France lors de la Coupe du monde de football en 1998. C’était un moment très fort, car il a uni toute la population dans la joie et la fierté. Cette victoire symbolisait aussi une France diverse, rassemblée autour de valeurs communes comme le sport, l’effort collectif et le vivre-ensemble. Pour moi, cela montre une image positive et solidaire du pays.\n\n- Chairlie Hebdo: L’événement de Charlie Hebdo en 2015 m’a beaucoup marqué car il représente la défense de la liberté d’expression, une valeur fondamentale en France. Malgré l’attaque terroriste contre le journal, les Français se sont rassemblés pour protéger cette liberté essentielle, montrant la force de la démocratie et de la solidarité dans le pays.\n\n- Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.",
             "image": null
         },
         {
-            "id": 58,
+            "id": "livret_58",
             "question": "Quel été le rôle de la Bastille avant sa démolition ?",
             "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
             "image": null
         },
         {
-            "id": 59,
+            "id": "livret_59",
             "question": "Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?",
             "explanation": "Elle a été adoptée le 26 Aout 1789.\n- Déclaration des droits de l'homme et du citoyen du 26 août 1789.\n- Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous.\n- En conséquence, l'Assemblée Nationale reconnaît et déclare, en  présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen.\n\n- Art 1er: Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune.\n\n- Art 2: Le but de toute association politique est la conservation des droits naturels et imprescriptibles de l'Homme. Ces droits sont la liberté, la propriété, la sûreté, et la résistance à l'oppression.\n\n- Art 3: Le principe de toute Souveraineté réside essentiellement dans la Nation. Nul corps, nul individu ne peut exercer d'autorité qui n'en émane expressément.\n\n- Art 4: La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui : ainsi, l'exercice des droits naturels de chaque homme n'a de bornes que celles qui assurent aux autres Membres de la Société la jouissance de ces mêmes droits. Ces bornes ne peuvent être déterminées que par la Loi.\n\n- Art 5: La Loi n'a le droit de défendre que les actions nuisibles à la Société. Tout ce qui n'est pas défendu par la Loi ne peut être empêché, et nul ne peut être contraint à faire ce qu'elle n'ordonne pas.\n\n- Art 6: La Loi est l'expression de la volonté générale. Tous les Citoyens ont droit de concourir personnellement, ou par leurs Représentants, à sa formation. Elle doit être la même pour tous, soit qu'elle protège, soit qu'elle punisse. Tous les Citoyens étant égaux à ses yeux sont également admissibles à toutes dignités, places et emplois publics, selon leur capacité, et sans autre distinction que celle de leurs vertus et de leurs talents.\n\n- Art 7: Nul homme ne peut être accusé, arrêté ni détenu que dans les cas déterminés par la Loi, et selon les formes qu'elle a prescrites. Ceux quisollicitent, expédient, exécutent ou font exécuter des ordres arbitraires, doivent être punis ; mais tout citoyen appelé ou saisi en vertu de la Loi doit obéir à l'instant : ilse rend coupable par la résistance.\n\n- Art 8: La Loi ne doit établir que des peines strictement et évidemment nécessaires, et nul ne peut être puni qu'en vertu d'une Loi établie et promulguée antérieurement au délit, et légalement appliquée.\n\n- Art 9: Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable, s'il est jugé indispensable de l'arrêter, toute rigueur qui ne serait pas nécessaire pour s'assurer de sa personne doit être sévèrement réprimée par la loi.\n\n- Art 10: Nul ne doit être inquiété pour ses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public établi par la Loi.\n\n- Art 11: La libre communication des pensées et des opinions est un des droits les plus précieux de l'Homme : tout Citoyen peut donc parler, écrire, imprimer librement, sauf à répondre à l'abus de cette liberté dans les cas déterminés par la Loi.\n\n- Art 12: La garantie des droits de l'Homme et du Citoyen nécessite une force publique : cette force est donc instituée pour l'avantage de tous, et non pour l'utilité particulière de ceux auxquels elle est confiée.\n\n- Art 13: Pour l'entretien de la force publique, et pour les dépenses d'administration, une contribution commune est indispensable : elle doit être également répartie entre tous les citoyens, en raison de leurs facultés.\n\n- Art 14: Tous les Citoyens ont le droit de constater, par eux-mêmes ou par leurs représentants, la nécessité de la contribution publique, de la consentir librement d'en suivre l'emploi, et d'en déterminer la quotité, l'assiette, le recouvrement et la durée.\n\n- Art 15: La Société a le droit de demander compte à tout Agent public de son administration.\n\n- Art 16: Toute Société dans laquelle la garantie des Droits n'est pas assurée, ni la séparation des Pouvoirs déterminée, n'a point de Constitution.\n\n- Art 17: La propriété étant un droit inviolable et sacré, nul ne peut en être privé, si ce n'est lorsque la nécessité publique, légalement constatée, l'exige évidemment, et sous la condition d'une juste et préalable indemnité.",
             "image": null
         },
         {
-            "id": 60,
+            "id": "livret_60",
             "question": "Qui a instauré le code civil en France ?",
             "explanation": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
             "image": null
         },
         {
-            "id": 61,
+            "id": "livret_61",
             "question": "Quelles sont les dates des deux dernières guerres mondiales ?",
             "explanation": "- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18).\n\n- La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
             "image": null
         },
         {
-            "id": 62,
+            "id": "livret_62",
             "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
             "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
             "image": null
         },
         {
-            "id": 63,
+            "id": "livret_63",
             "question": "Citez des anciennes colonies Françaises?",
             "explanation": "Algérie, Sénégal, Mali, Côte d'Ivoire.",
             "image": null
         },
         {
-            "id": 64,
+            "id": "livret_64",
             "question": "Qu'est-ce que la guerre de 100 ans ?",
             "explanation": "C'est une guerre résultant d'un conflit entre les rois de France et les rois d'Angleterre durant le Moyen-Age. Ce conflit d'un siècle a en réalité duré 116 ans plus exactement !",
             "image": null
         },
         {
-            "id": 65,
+            "id": "livret_65",
             "question": "Connaissez-vous la bataille de Verdun ?",
             "explanation": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
             "image": null
         },
         {
-            "id": 66,
+            "id": "livret_66",
             "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
             "explanation": "On les appelait les Poilus.",
             "image": null
         },
         {
-            "id": 67,
+            "id": "livret_67",
             "question": "Quand a eu lieu la première guerre mondiale ?",
             "explanation": "La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 novembre 1918",
             "image": null
         },
         {
-            "id": 68,
+            "id": "livret_68",
             "question": "Quand a eu lieu la seconde guerre mondiale ?",
             "explanation": "La seconde guerre mondiale a eu lieu du 1er septembre 1939 au 02 septembre 1945",
             "image": null
         },
         {
-            "id": 69,
+            "id": "livret_69",
             "question": "Qui sont les alliés durant la première guerre mondiale ?",
             "explanation": "La France, l'Angleterre, la Russie et les USA (États-Unis d'Amérique).",
             "image": null
         },
         {
-            "id": 70,
+            "id": "livret_70",
             "question": "Qui sont les allies durant la seconde guerre mondiale?",
             "explanation": "La France, l'Angleterre, l'URSS (Union Soviétique), les USA.",
             "image": null
         },
         {
-            "id": 71,
+            "id": "livret_71",
             "question": "Quand a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?",
             "explanation": "Le débarquement des alliés a eu lieu le 6 juin 1944.",
             "image": null
         },
         {
-            "id": 72,
+            "id": "livret_72",
             "question": "Où a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?",
             "explanation": "En Normandie.",
             "image": null
         },
         {
-            "id": 73,
+            "id": "livret_73",
             "question": "Avez-vous des projets de voyage avec votre famille ? Vers quelle destination ?",
             "explanation": "Oui, nous aimons découvrir de nouveaux lieux. Notre prochain projet est de visiter (destination), pour explorer sa culture et son histoire avec nos enfants.",
             "image": null
         },
         {
-            "id": 74,
+            "id": "livret_74",
             "question": "Avez-vous de la famille dans votre pays d'origine ?",
             "explanation": "Oui, j'ai (préciser les liens familiaux, par exemple : mes parents, frères et sœurs) dans mon pays d'origine. Nous restons en contact étroit grâce aux appels vidéo et aux réseaux sociaux.",
             "image": null
         },
         {
-            "id": 75,
+            "id": "livret_75",
             "question": "Avez-vous regardé ou assisté aux Jeux Olympiques de Paris 2024 ?",
             "explanation": "La cérémonie d’ouverture des Jeux Olympiques de Paris 2024 a marqué les esprits par son format inédit sur la Seine, offrant un spectacle grandiose mêlant histoire, culture et modernité. Saluée pour son audace et sa mise en scène innovante, elle a néanmoins suscité quelques débats sur certains choix artistiques. Globalement, l’événement a été largement apprécié, renforçant l’image de Paris comme capitale du sport et de la culture.",
             "image": null
         },
         {
-            "id": 76,
+            "id": "livret_76",
             "question": "Que signifie chaque couleur:",
             "explanation": "Le blanc est la couleur historique des rois de France, le bleu et le rouge représentent la ville de Paris.",
             "image": null
         },
         {
-            "id": 77,
+            "id": "livret_77",
             "question": "– Qu’est-ce qu’une Monarchie ?",
             "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
             "image": null
         },
         {
-            "id": 78,
+            "id": "livret_78",
             "question": "Quel est le principe du droit du sol en matière de nationalité française ?",
             "explanation": "Le fait d'acquérir la nationalité française par la naissance en France, sous certaines conditions.",
             "image": null
         },
         {
-            "id": 79,
+            "id": "livret_79",
             "question": "Quel est le principe du droit du sang en matière de nationalité française ?",
             "explanation": "L'acquisition de la nationalité française par filiation.",
             "image": null
         },
         {
-            "id": 80,
+            "id": "livret_80",
             "question": "Qu'est-ce que l'ouverture des États généraux ?",
             "explanation": "L’ouverture des États généraux a eu lieu le 5 mai 1789 à Versailles. C’était une réunion convoquée par le roi Louis XVI (16) pour tenter de résoudre la grave crise financière que traversait la France.",
             "image": null
         },
         {
-            "id": 81,
+            "id": "livret_81",
             "question": "De quoi étaient composés les états généraux ?",
             "explanation": "- Les États généraux réunissaient les trois ordres de la société :\n\n- Le Clergé\n\n- La Noblesse\n\n- Le Tiers-État (98 % de la population)",
             "image": null
         },
         {
-            "id": 82,
+            "id": "livret_82",
             "question": "Qui sont les principales figures de la Révolution ?",
             "explanation": "- Louis XVI (1754-1793) : Roi de France exécuté en 1793.\n\n- Marie-Antoinette (1755-1793) : Reine de France, guillotinée.\n\n- Mirabeau (1749-1791) : Orateur influent du début de la Révolution.\n\n- Robespierre (1758-1794) : Chef des Jacobins, instigateur de la Terreur.\n\n- Danton (1759-1794) : Révolutionnaire modéré, exécuté sous la Terreur.\n\n- Marat (1743-1793) : Journaliste radical, assassiné dans son bain.\n\n- Napoléon Bonaparte (1769-1821) : Met fin à la Révolution et devient empereur en 1804.",
             "image": null
         },
         {
-            "id": 83,
+            "id": "livret_83",
             "question": "Quel monarque régnait en France au début de la Révolution Française ?",
             "explanation": "Louis XVI (16) était le roi de France au début de la Révolution. Son règne est souvent associé à la montée des tensions sociales et économiques qui ont mené à la Révolution.",
             "image": null
         },
         {
-            "id": 84,
+            "id": "livret_84",
             "question": "Pourquoi célèbre-t-on le 14 juillet en France ?",
             "explanation": "Le 14 juillet, connu comme la Fête Nationale française, commémore la prise de la Bastille en 1789, un événement symbolique de la lutte contre l'oppression et un tournant majeur de la Révolution Française.",
             "image": null
         },
         {
-            "id": 85,
+            "id": "livret_85",
             "question": "Pourquoi la prise de la Bastille est-elle un symbole fort ?",
             "explanation": "La Bastille était une prison royale symbolisant l’absolutisme du roi. Sa prise le 14 juillet 1789 marque le début de la Révolution et la révolte du peuple contre l’autorité monarchique.",
             "image": null
         },
         {
-            "id": 86,
+            "id": "livret_86",
             "question": "Pourquoi la Révolution a-t-elle conduit à l’exécution du roi Louis XVI ?",
             "explanation": "Après sa tentative de fuite en 1791, Louis XVI est perçu comme un traître. Il est jugé pour trahison et condamné à mort par la Convention en janvier 1793.",
             "image": null
         },
         {
-            "id": 87,
+            "id": "livret_87",
             "question": "Quel événement marque la fin officielle de la monarchie ?",
             "explanation": "La Convention nationale a voté l'abolition de la monarchie le 21 septembre 1792, mettant fin au règne de Louis XVI (16).",
             "image": null
         },
         {
-            "id": 88,
+            "id": "livret_88",
             "question": "Qu'est-ce que le Consulat en France ?",
             "explanation": "Le Consulat a été une période de gouvernement en France après la Révolution, de 1799 à 1804. Dirigé par Napoléon Bonaparte en tant que Premier Consul, il a marqué la fin de la Révolution et a conduit à l'établissement du Premier Empire français.",
             "image": null
         },
         {
-            "id": 89,
+            "id": "livret_89",
             "question": "Comment Napoléon Bonaparte a-t-il pris le pouvoir ?",
             "explanation": "Par le coup d'État du (9 novembre 1799), où il renverse le Directoire avec l’aide de l'armée et instaure un nouveau régime.",
             "image": null
         },
         {
-            "id": 90,
+            "id": "livret_90",
             "question": "Quel régime Napoléon met-il en place après le coup d'État ?",
             "explanation": "Il met en place le Consulat (1799-1804), où il gouverne avec deux autres consuls, mais il devient rapidement le seul dirigeant.",
             "image": null
         },
         {
-            "id": 91,
+            "id": "livret_91",
             "question": "Quand et comment prend fin le régime de Vichy ?",
             "explanation": "- Le régime s’effondre avec la Libération de la France en 1944, menée par les Alliés et la Résistance.\n\n- 6 juin 1944 : Débarquement en Normandie.\n\n- 25 août 1944 : Libération de Paris.\n\n- Pétain fuit en Allemagne, puis en Suisse. Il est arrêté en 1945.",
             "image": null
         },
         {
-            "id": 92,
+            "id": "livret_92",
             "question": "Quelles sont les dates de la Première et la seconde Guerre Mondiale ?",
             "explanation": "- La Première Guerre Mondiale, un conflit mondial d'une ampleur sans précédent, s'est déroulée du 28 Juillet 1914 au 11 Novembre 1918, impliquant de nombreux pays et causant des pertes humaines et matérielles massives.\n\n- La Seconde Guerre Mondiale, qui a eu des répercussions profondes sur le monde, s'est étendue du 1er Septembre 1939 au 2 Septembre 1945. Ce conflit mondial a vu s'affronter les puissances de l'Axe et les Alliés et a entraîné d'importantes transformations géopolitiques.",
             "image": null
         },
         {
-            "id": 93,
+            "id": "livret_93",
             "question": "Quelle est la date exacte du début et de la fin de la Première Guerre mondiale ?",
             "explanation": "La guerre a commencé le 28 juillet 1914 avec la déclaration de guerre de l’Autriche-Hongrie à la Serbie et s’est terminée le 11 novembre 1918 avec l’armistice signé à Rethondes.",
             "image": null
         },
         {
-            "id": 94,
+            "id": "livret_94",
             "question": "Quelles sont les causes principales de cette guerre ?",
             "explanation": "- Tensions nationalistes en Europe.\n\n- Système d’alliances entre les grandes puissances.\n\n- L’attentat de Sarajevo (28 juin 1914), où l’archiduc François-Ferdinand d’Autriche a été assassiné.",
             "image": null
         },
         {
-            "id": 95,
+            "id": "livret_95",
             "question": "Quels sont les traités mettant fin à la guerre ?",
             "explanation": "- Traité de Versailles (28 juin 1919) : Imposant de lourdes sanctions à l’Allemagne.\n\n- Traité de Saint-Germain (1919) : Dissolution de l’Empire austro-hongrois.",
             "image": null
         },
         {
-            "id": 96,
+            "id": "livret_96",
             "question": "Quelles sont les conséquences de la Première Guerre mondiale?",
             "explanation": "- Environ 10 millions de morts.\n\n- Chute des Empires allemand, russe, austro-hongrois et ottoman.\n\n- Création de la Société des Nations (SDN).",
             "image": null
         },
         {
-            "id": 97,
+            "id": "livret_97",
             "question": "Quelles sont les principales batailles de la Première Guerre mondiale ?",
             "explanation": "- Bataille de la Marne (6-12 septembre 1914) : Première grande bataille où les Français et les Britanniques stoppent l’avancée allemande vers Paris.\n\n- Bataille de Verdun (21 février - 18 décembre 1916) : Bataille d'usure entre la France et l’Allemagne, symbole de la résistance française.\n\n- Bataille de la Somme (1er juillet - 18 novembre 1916) : Offensive conjointe francobritannique pour percer le front allemand, très meurtrière.\n\n- Bataille du Chemin des Dames (16 avril - 24 octobre 1917) : Offensive française sous le commandement du général Nivelle, marquée par un échec et des mutineries.\n\n- Bataille de Passchendaele (31 juillet - 10 novembre 1917) : Offensive britannique marquée par des combats dans des conditions extrêmes de boue et de pluie.\n\n- Bataille de Caporetto (24 octobre - 19 novembre 1917): majeure italienne face aux Austro-Hongrois et Allemands.\n\n- Seconde bataille de la Marne (15 juillet - 6 août 1918) : Dernière grande offensive allemande stoppée par les Alliés, tournant de la guerre.",
             "image": null
         },
         {
-            "id": 98,
+            "id": "livret_98",
             "question": "Que commémore-t-on le 11 novembre en France ?",
             "explanation": "Le 11 novembre correspond à la signature de l'armistice mettant fin à la Première Guerre mondiale. Ce jour est férié en commémoration de la victoire de la France et de la paix",
             "image": null
         },
         {
-            "id": 99,
+            "id": "livret_99",
             "question": "Qu'est-ce qui s'est passé le 3 août 1914 ??",
             "explanation": "Le 3 août 1914, à 18 heures, l'Allemagne annonce son entrée en guerre contre la France.",
             "image": null
         },
         {
-            "id": 100,
+            "id": "livret_100",
             "question": "Quelle est la date exacte du début et de la fin de la Seconde Guerre mondiale ?",
             "explanation": "La guerre a commencé le 1er septembre 1939 avec l’invasion de la Pologne par l’Allemagne et s’est terminée le 2 septembre 1945 avec la capitulation du Japon.",
             "image": null
         },
         {
-            "id": 101,
+            "id": "livret_101",
             "question": "Quelles sont les batailles majeures de la Seconde Guerre mondiale ?",
             "explanation": "- Bataille de France (mai-juin 1940) : Défaite française et occupation.\n\n- Bataille de Stalingrad (1942-1943) : Victoire soviétique contre l’Allemagne.\n\n- Débarquement de Normandie (6 juin 1944) : Libération de la France.",
             "image": null
         },
         {
-            "id": 102,
+            "id": "livret_102",
             "question": "Quels sont les principaux traités mettant fin au conflit ?",
             "explanation": "- Conférence de Yalta (février 1945) : Définition du partage de l’Europe après-guerre.\n\n- Traité de San Francisco (1951) : Paix entre le Japon et les Alliés.",
             "image": null
         },
         {
-            "id": 103,
+            "id": "livret_103",
             "question": "Quelles sont les conséquences de la guerre ?",
             "explanation": "- Environ 60 millions de morts.\n\n- Création de l’ONU (1945) pour garantir la paix.\n\n- Début de la Guerre froide entre États-Unis et URSS.",
             "image": null
         },
         {
-            "id": 104,
+            "id": "livret_104",
             "question": "Qui était Jean Moulin ?",
             "explanation": "Jean Moulin était un haut fonctionnaire et résistant français pendant la Seconde Guerre mondiale. Il est connu pour avoir unifié les mouvements de la Résistance sous l’autorité de la France libre dirigée par Charles de Gaulle.",
             "image": null
         },
         {
-            "id": 105,
+            "id": "livret_105",
             "question": "Quel était son rôle dans la Résistance ?",
             "explanation": "Jean Moulin a été chargé par Charles de Gaulle d’unifier les différents groupes de la Résistance en 1942. Il a créé le Conseil national de la Résistance (CNR) en 1943 pour coordonner les actions contre l’occupant allemand.",
             "image": null
         },
         {
-            "id": 106,
+            "id": "livret_106",
             "question": "Pourquoi Jean Moulin est-il un symbole de la Résistance ?",
             "explanation": "Il incarne l’unité et le courage de la Résistance face à l’occupation nazie. Il a donné sa vie pour la libération de la France et repose depuis 1964 au Panthéon, un honneur réservé aux grandes figures de l’histoire nationale.",
             "image": null
         },
         {
-            "id": 107,
+            "id": "livret_107",
             "question": "Pourquoi la Seconde Guerre mondiale s’est-elle terminée le 2 septembre 1945 et non le 8 mai 1945 ?",
             "explanation": "- La Seconde Guerre mondiale s’est déroulée sur plusieurs continents et s’est terminée à des dates différentes selon les théâtres d’opération.\n\n- Le 8 mai 1945 marque la capitulation de l'Allemagne nazie face aux Alliés. C'est la fin de la guerre en Europe, appelée la Victoire en Europe (VE Day).\n\n- Le 2 septembre 1945 correspond à la capitulation du Japon, qui met officiellement fin à la Seconde Guerre mondiale dans le monde entier.",
             "image": null
         },
         {
-            "id": 108,
+            "id": "livret_108",
             "question": "Qu'est-ce que le Traité de Versailles ?",
             "explanation": "Le Traité de Versailles, signé en 1919, a mis officiellement fin à la Première Guerre Mondiale. Ce traité a imposé de lourdes réparations et des restrictions territoriales à l'Allemagne, et a redessiné la carte de l'Europe. Cependant, il est aussi considéré comme ayant semé les graines du mécontentement menant à la Seconde Guerre Mondiale.",
             "image": null
         },
         {
-            "id": 109,
+            "id": "livret_109",
             "question": "Quelle est l'importance de la bataille de Verdun durant la Première Guerre Mondiale ?",
             "explanation": "La bataille de Verdun, en 1916, est l'une des plus longues et des plus sanglantes de la Première Guerre Mondiale. Elle symbolise la résistance et la ténacité des forces françaises face à l'armée allemande et est devenue un symbole du sacrifice militaire français.",
             "image": null
         },
         {
-            "id": 110,
+            "id": "livret_110",
             "question": "Quel est le rôle de Napoléon Bonaparte dans l'histoire de France ?",
             "explanation": "Napoléon Bonaparte, général de la Révolution française, est devenu par la suite empereur des Français. Il a conduit la France à de nombreuses victoires militaires en Europe et a instauré des réformes importantes, dont le Code civil, qui a profondément influencé le système juridique français.",
             "image": null
         },
         {
-            "id": 111,
+            "id": "livret_111",
             "question": "Qu'est-ce que la Chute de l'Empire Napoléonien ?",
             "explanation": "La chute de l'Empire Napoléonien a commencé avec la désastreuse campagne de Russie en 1812, suivie de défaites majeures. Napoléon a été finalement vaincu à la bataille de Waterloo en 1815, marquant la fin de son règne et un tournant majeur dans l'histoire européenne.",
             "image": null
         },
         {
-            "id": 112,
+            "id": "livret_112",
             "question": "Quel a été le rôle de la France dans la création de l'Union européenne ?",
             "explanation": "La France a joué un rôle crucial dans la création de l'Union européenne, notamment à travers les efforts de Robert Schuman et Jean Monnet après la Seconde Guerre Mondiale. L'objectif était de créer une coopération économique et politique en Europe pour assurer la paix et la stabilité.",
             "image": null
         },
         {
-            "id": 113,
+            "id": "livret_113",
             "question": "Pourquoi l’abolition de l’esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?",
             "explanation": "- L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates :\n\n- 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802.",
             "image": null
         },
         {
-            "id": 114,
+            "id": "livret_114",
             "question": "Quelle est l'histoire derrière la construction du Château de Versailles ?",
             "explanation": "Le Château de Versailles, construit sous Louis XIV (14), est un symbole de la monarchie absolue de l'Ancien Régime. Il a servi de résidence royale et de centre du pouvoir jusqu'à la Révolution  Française, et est reconnu pour son architecture et ses jardins somptueux.",
             "image": null
         },
         {
-            "id": 115,
+            "id": "livret_115",
             "question": ": Que s'est-il passé en France durant la Seconde Guerre mondiale ?",
             "explanation": "La France a été envahie par l'Allemagne en 1940, entraînant une occupation jusqu'en 1944, des mouvements de résistance à travers le pays, et la collaboration du régime de Vichy, jusqu'à la libération par les Alliés.",
             "image": null
         },
         {
-            "id": 116,
+            "id": "livret_116",
             "question": "Quel a été l'impact de la Révolution industrielle en France ?",
             "explanation": "La Révolution industrielle, débutant au 19e siècle, a transformé l'économie française, passant d'une base agricole à une industrialisation croissante. Cela a entraîné des changements sociaux importants, y compris l'urbanisation et l'émergence de nouvelles classes sociales.",
             "image": null
         },
         {
-            "id": 117,
+            "id": "livret_117",
             "question": "Quel a été le rôle de la France dans la fondation de l'ONU ?",
             "explanation": "La France est l'un des membres fondateurs de l'Organisation des Nations Unies (ONU) et l'un de ses cinq membres permanents du Conseil de sécurité. Son rôle dans la fondation de l'ONU reflète son engagement en faveur de la paix et de la coopération internationale après la Seconde Guerre Mondiale.",
             "image": null
         },
         {
-            "id": 118,
+            "id": "livret_118",
             "question": "Qui était Louis XIV (14) et quelle est sa contribution à l'histoire de France ?",
             "explanation": "Louis XIV (14), surnommé le Roi-Soleil, a régné pendant plus de 72 ans. Il est connu pour son gouvernement absolutiste et la construction du Château de Versailles. Son règne a marqué l'apogée de la puissance française en Europe.",
             "image": null
         },
         {
-            "id": 119,
+            "id": "livret_119",
             "question": "Quel a été le rôle de la France dans la guerre de Sécession américaine ?",
             "explanation": "Bien que la France soit restée officiellement neutre pendant la guerre de Sécession américaine, Napoléon III avait des sympathies pour la Confédération et avait envisagé de reconnaître son indépendance. Cependant, les succès de l'Union ont empêché toute intervention française.",
             "image": null
         },
         {
-            "id": 120,
+            "id": "livret_120",
             "question": "Quelle a été l'importance du traité de Versailles pour la France après la Première Guerre Mondiale ?",
             "explanation": "Le traité de Versailles en 1919 a été crucial pour la France, qui cherchait à affaiblir l'Allemagne et à garantir sa propre sécurité. Le traité a imposé des réparations sévères à l'Allemagne et a redéfini les frontières européennes.",
             "image": null
         },
         {
-            "id": 121,
+            "id": "livret_121",
             "question": "Quelle était la politique de la France envers l'Allemagne après la Seconde Guerre Mondiale ?",
             "explanation": "Après la Seconde Guerre Mondiale, la France, sous la direction de Charles de Gaulle et d'autres, a cherché à intégrer l'Allemagne dans un cadre européen coopératif, marquant un tournant dans les relations franco-allemandes et conduisant à la création de la Communauté européenne.",
             "image": null
         },
         {
-            "id": 122,
+            "id": "livret_122",
             "question": "Qui étaient les Alliés pendant les deux guerres mondiales ?",
             "explanation": "Première Guerre mondiale : Les Alliés incluent la France, le Royaume-Uni, la Russie et, dès 1917, les États-Unis. Deuxième Guerre mondiale : Les Alliés regroupent la France, le Royaume-Uni, l’URSS et les États-Unis.",
             "image": null
         },
         {
-            "id": 123,
+            "id": "livret_123",
             "question": "Quelle était la signification de la guillotine pendant la Révolution française ?",
             "explanation": "La guillotine, souvent associée à la Terreur, était vue comme un moyen d'exécution plus humanitaire et égalitaire. Elle est devenue un symbole puissant de la Révolution, utilisée pour exécuter des milliers de personnes, y compris le roi Louis XVI (16) et Robespierre.",
             "image": null
         },
         {
-            "id": 124,
+            "id": "livret_124",
             "question": "Comment la Révolution française a-t- elle influencé les autres pays européens ?",
             "explanation": "La Révolution française a eu un impact profond en Europe, inspirant des mouvements révolutionnaires et des réformes démocratiques dans d'autres pays. Elle a également mené à une série de guerres révolutionnaires entre la France et diverses coalitions européennes.",
             "image": null
         },
         {
-            "id": 125,
+            "id": "livret_125",
             "question": "Pouvez-vous citer quelques rois de France ?",
             "explanation": "Quelques rois de France célèbres sont Louis XIV (14), Louis XVI (16), Louis XV (15), François Ier, et Henri IV (4).",
             "image": null
         },
         {
-            "id": 126,
+            "id": "livret_126",
             "question": "Qui était François Ier ?",
             "explanation": "François Ier (1494-1547) a régné sur la France de 1515 à 1547. Il a marqué l’histoire par son amour des arts et de la culture, invitant Léonard de Vinci en France. Il est aussi célèbre pour sa victoire à la bataille de Marignan en 1515 et sa rivalité avec l’empereur Charles Quint.",
             "image": null
         },
         {
-            "id": 127,
+            "id": "livret_127",
             "question": "Quel roi a été surnommé le Roi Soleil ?",
             "explanation": "Louis XIV (14).",
             "image": null
         },
         {
-            "id": 128,
+            "id": "livret_128",
             "question": "Qu'est-ce que le Code Napoléon ?",
             "explanation": "Le Code civil des Français, établi sous Napoléon Bonaparte en 1804.",
             "image": null
         },
         {
-            "id": 129,
+            "id": "livret_129",
             "question": "Citez quelques figures historiques qui ont marqué la France ?",
             "explanation": "Jeanne d'Arc, Charles de Gaulle, Louis 14, Louis 16, Napoléon, Charlemagne…",
             "image": null
         },
         {
-            "id": 130,
+            "id": "livret_130",
             "question": "Qu'est-ce que le Traité de l'Élysée ?",
             "explanation": "Signé en 1963 par la France et l'Allemagne, le Traité de l'Élysée a marqué un tournant dans les relations franco-allemandes. Ce traité a établi une coopération étroite entre les deux pays, jetant les bases d'une Europe plus unie et pacifique.",
             "image": null
         },
         {
-            "id": 131,
+            "id": "livret_131",
             "question": "Qui était Charlemagne et quel était son rôle dans l'histoire de France ?",
             "explanation": "Charlemagne, roi des Francs et empereur d'Occident au tournant du 9e siècle, est célèbre pour avoir unifié une grande partie de l'Europe sous son règne. Il a joué un rôle clé dans la propagation du christianisme et le développement culturel et éducatif pendant ce qu'on appelle l'ère carolingienne.",
             "image": null
         },
         {
-            "id": 132,
+            "id": "livret_132",
             "question": "Durant quelles années les cathédrales gothiques ont-elles été majoritairement construites en France ?",
             "explanation": "La construction des cathédrales gothiques, caractérisées par leurs architectures impressionnantes et leurs vitraux colorés, a principalement eu lieu entre le 12e et le 16e siècle, avec des exemples remarquables comme Notre-Dame de Paris.",
             "image": null
         },
         {
-            "id": 133,
+            "id": "livret_133",
             "question": "Quel est le rôle de Jeanne d'Arc dans l'histoire de France ?",
             "explanation": "Jeanne d'Arc, surnommée la Pucelle d'Orléans, est une figure héroïque de l'histoire de France au 15e siècle. Elle est célèbre pour avoir mené l'armée française à plusieurs victoires décisives pendant la Guerre de Cent Ans contre l'Angleterre, contribuant significativement à la libération du territoire français. Elle a été canonisée comme sainte par l'Église catholique.",
             "image": null
         },
         {
-            "id": 134,
+            "id": "livret_134",
             "question": "Qui est Antoine de Saint-Exupéry ?",
             "explanation": "Antoine de Saint-Exupéry était un écrivain et aviateur français, auteur de célèbres ouvrages tels que Le Petit Prince et Night Flight. Il a effectué des missions de courrier aérien pour Aéropostale, et ses expériences ont profondément influencé ses écrits. Saint-Exupéry a disparu en 1944 pendant une mission de reconnaissance aérienne lors de la Seconde Guerre mondiale.",
             "image": null
         },
         {
-            "id": 135,
+            "id": "livret_135",
             "question": "Quel a été le rôle de la France dans les découvertes géographiques du 15e et 16e siècle ?",
             "explanation": "Durant les 15e et 16e siècles, la France, comme d'autres puissances européennes, a participé activement aux grandes découvertes. Des explorateurs français tels que Jacques Cartier ont joué un rôle clé dans l'exploration de nouvelles terres, notamment en Amérique du Nord.",
             "image": null
         },
         {
-            "id": 136,
+            "id": "livret_136",
             "question": "Qu'est-ce que la guerre de Cent Ans ?",
             "explanation": "La guerre de Cent Ans (1337-1453) fut un conflit prolongé entre la France et l'Angleterre, principalement dû à des revendications territoriales et dynastiques. Elle a vu l'émergence de figures historiques importantes comme Jeanne d'Arc et a profondément affecté la société médiévale française.",
             "image": null
         },
         {
-            "id": 137,
+            "id": "livret_137",
             "question": "Qu'est-ce que la guerre de Succession d'Espagne et quel a été son impact sur la France ?",
             "explanation": "La guerre de Succession d'Espagne (1701-1714) a été un conflit majeur concernant la succession au trône d'Espagne après la mort du dernier roi Habsbourg. La France, sous Louis XIV (14), a joué un rôle central dans cette guerre, qui a finalement élargi son influence en Europe.",
             "image": null
         },
         {
-            "id": 138,
+            "id": "livret_138",
             "question": "Quel traité a mis fin à la Guerre de Cent Ans entre la France et l'Angleterre ?",
             "explanation": "Le traité de Picquigny en 1475.",
             "image": null
         },
         {
-            "id": 139,
+            "id": "livret_139",
             "question": "Qui a construit l’Arc de Triomphe ?",
             "explanation": "L'Arc de Triomphe, situé sur les Champs-Élysées est construit par Napoléon 1er en 1806.",
             "image": null
         },
         {
-            "id": 140,
+            "id": "livret_140",
             "question": "Quel palais était la résidence des plusieurs rois de France ?",
             "explanation": "Le palais de Versailles était la résidence des rois de France.",
             "image": null
         },
         {
-            "id": 141,
+            "id": "livret_141",
             "question": "Pouvez-vous donner un résumé de ce film ?",
             "explanation": "Intouchables est un film de 2011 réalisé par Olivier Nakache et Éric Toledano. Il raconte l'histoire d'une amitié improbable entre un aristocrate tétraplégique et son aide à domicile, un homme d'origine modeste.",
             "image": null
         },
         {
-            "id": 142,
+            "id": "livret_142",
             "question": "Pouvez-vous donner un résumé de cette série ?",
             "explanation": "HPI (Haute Potentiel Intellectuel) est une série télévisée française diffusée depuis 2021. Elle raconte l’histoire de Morgane Alvaro, une femme au QI exceptionnel qui, après avoir été diagnostiquée HPI, se retrouve à résoudre des enquêtes criminelles pour la police, tout en jonglant avec sa vie personnelle un peu chaotique.",
             "image": null
         },
         {
-            "id": 143,
+            "id": "livret_143",
             "question": "Quelles est la place France dans la pâtisserie au niveau mondial?",
             "explanation": "La France est un leader mondial dans la pâtisserie en raison de son histoire, de ses techniques de fabrication uniques et de ses créations emblématiques comme les éclairs, les macarons, les millefeuilles et les croissants. Les écoles de pâtisserie françaises, comme Le Cordon Bleu, sont aussi réputées mondialement.",
             "image": null
         },
         {
-            "id": 144,
+            "id": "livret_144",
             "question": "Pouvez-vous nommer trois monuments historiques français ?",
             "explanation": "Trois monuments historiques emblématiques de la France sont la grotte de Lascaux, le Château de Versailles, et le Louvre. On peut également mentionner le Palais du Luxembourg, le Panthéon, l'Arc de Triomphe, l'Obélisque et la Tour Eiffel.",
             "image": null
         },
         {
-            "id": 145,
+            "id": "livret_145",
             "question": "Quel est le nom du détroit qui sépare la Corse de l'Italie ?",
             "explanation": "Le détroit qui sépare la Corse de l'Italie est le détroit de Bonifacio.",
             "image": null
         },
         {
-            "id": 146,
+            "id": "livret_146",
             "question": "Quelle est la position de la France dans le classement mondial des puissances économiques en 2023 ?",
             "explanation": "La France se classe 7ème avec un PIB de 2 806 milliards de dollars, prévoyant une croissance de 0,6%.",
             "image": null
         },
         {
-            "id": 147,
+            "id": "livret_147",
             "question": "Parmi ces textes, lequel a été adopté sous Napoléon ler ?",
             "explanation": "Le Code civil (appelé Code Napoléon) a été promulgué en 1804 sous Napoléon Ier.",
             "image": null
         },
         {
-            "id": 148,
+            "id": "livret_148",
             "question": "Quel roi de France a été guillotiné pendant la Révolution française ?",
             "explanation": "Louis XVI a été guillotiné le 21 janvier 1793.",
             "image": null
         },
         {
-            "id": 149,
+            "id": "livret_149",
             "question": "En quelle année Napoléon ler est-il devenu empereur ?",
             "explanation": "Napoléon Ier est sacré empereur le 2 décembre 1804.",
             "image": null
         },
         {
-            "id": 150,
+            "id": "livret_150",
             "question": "Quel château célèbre se trouveopsis de Paris et symbolise le pouvoir royal de Louis XIV ?",
             "explanation": "Le château de Versailles, résidence emblématique de Louis XIV.",
             "image": null
         },
         {
-            "id": 151,
+            "id": "livret_151",
             "question": "Qui a été président de la Ve République ?",
             "explanation": "Exemples : Charles de Gaulle (1er président de la Ve), François Mitterrand, Jacques Chirac, Emmanuel Macron (actuel).",
             "image": null
         },
         {
-            "id": 152,
+            "id": "livret_152",
             "question": "Quel est l'objectif des lois scolaires de la Ille République ?",
             "explanation": "Rendre l'école gratuite, laïque et obligatoire (lois Ferry, 1881-1882).",
             "image": null
         },
         {
-            "id": 153,
+            "id": "livret_153",
             "question": "Que signifie la date du 14 juillet pour les Français ?",
             "explanation": "Fête nationale : prise de la Bastille (1789) et Fête de la Fédération (1790).",
             "image": null
         },
         {
-            "id": 154,
+            "id": "livret_154",
             "question": "Lequel de ces pays est un pays fondateur de l'Union Européenne ?",
             "explanation": "Les six fondateurs de la CEE en 1957 : France, Allemagne de l'Ouest, Italie, Belgique, Pays-Bas, Luxembourg.",
             "image": null
         },
         {
-            "id": 155,
+            "id": "livret_155",
             "question": "Lequel de ces personnages a un lien avec la République française ?",
             "explanation": "Exemple marquant : le général Charles de Gaulle, fondateur de la Ve République.",
             "image": null
         },
         {
-            "id": 156,
+            "id": "livret_156",
             "question": "De quand date l'appel à la résistance du général de Gaulle ?",
             "explanation": "Le 18 juin 1940 (Appel de Londres).",
             "image": null
         },
         {
-            "id": 157,
+            "id": "livret_157",
             "question": "Quel pays a été une colonie française ?",
             "explanation": "Exemples : Algérie, Sénégal, Vietnam (ex-Indochine), Madagascar.",
             "image": null
         },
         {
-            "id": 158,
+            "id": "livret_158",
             "question": "Qui a rendu l'école gratuite, laïque et obligatoire ?",
             "explanation": "Les lois Ferry (Jules Ferry, années 1881-1882).",
             "image": null
         },
         {
-            "id": 159,
+            "id": "livret_159",
             "question": "Depuis quand les Français élisent-ils le président de la République au suffrage universel direct ?",
             "explanation": "Depuis le référendum de 1962 (première élection au suffrage universel direct en 1965).",
             "image": null
         },
         {
-            "id": 160,
+            "id": "livret_160",
             "question": "En quelle année l'Union Européenne a-t-elle été fondée?",
             "explanation": "L'Union européenne naît juridiquement avec le traité de Maastricht, entré en vigueur en 1993.",
             "image": null
         },
         {
-            "id": 161,
+            "id": "livret_161",
             "question": "Que célèbre-t-on le 8 mai ?",
             "explanation": "La victoire des Alliés sur l'Allemagne nazie (8 mai 1945) et la fin de la Seconde Guerre mondiale en Europe.",
             "image": null
         },
         {
-            "id": 162,
+            "id": "livret_162",
             "question": "Quelle est la première étape de la construction Européenne en 1951 ?",
             "explanation": "La création de la CECA (Communauté européenne du charbon et de l'acier) en 1951.",
             "image": null
         },
         {
-            "id": 163,
+            "id": "livret_163",
             "question": "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
             "explanation": "L'armistice du 11 novembre 1918, fin des combats de la Première Guerre mondiale.",
             "image": null
         },
         {
-            "id": 164,
+            "id": "livret_164",
             "question": "Qui a aboli l'esclavage en France ?",
             "explanation": "L'abolition définitive de 1848 est portée par Victor Schœlcher (Deuxième République).",
             "image": null
         },
         {
-            "id": 165,
+            "id": "livret_165",
             "question": "Depuis qu'elle années l'école publique est-elle gratuite ?",
             "explanation": "Gratuite à partir des lois Ferry de 1881-1882 pour l'enseignement primaire public.",
             "image": null
         },
         {
-            "id": 166,
+            "id": "livret_166",
             "question": "En 1944, qu'est-ce qui a changé pour les femmes ?",
             "explanation": "Elles obtiennent le droit de vote et d'éligibilité (ordonnance du 21 avril 1944).",
             "image": null
         },
         {
-            "id": 167,
+            "id": "livret_167",
             "question": "En quelle année l'euro est-il devenu la monnaie officielle de la France ?",
             "explanation": "Les billets et pièces en euros entrent en circulation en 2002 en France.",
             "image": null
         },
         {
-            "id": 168,
+            "id": "livret_168",
             "question": "Quel célèbre philosophe des Lumières a dénoncé l'esclavage ?",
             "explanation": "Montesquieu a critiqué l'esclavage dans \"De l'esprit des lois\" (1748).",
             "image": null
         },
         {
-            "id": 169,
+            "id": "livret_169",
             "question": "Qui était Marie Curie ?",
             "explanation": "Physicienne et chimiste, double prix Nobel (Physique 1903, Chimie 1911), pionnière de la radioactivité.",
             "image": null
         },
         {
-            "id": 170,
+            "id": "livret_170",
             "question": "Qui a peint \"La liberté guidant le peuple\"?",
             "explanation": "Le tableau a été peint par Eugène Delacroix en 1830.",
             "image": null
         },
         {
-            "id": 171,
+            "id": "livret_171",
             "question": "Où peut-on voir des peintures préhistoriques en France ?",
             "explanation": "Dans la grotte de Lascaux (Dordogne) ou d'autres sites ornés préhistoriques.",
             "image": null
         },
         {
-            "id": 172,
+            "id": "livret_172",
             "question": "Pendant quelles journées peut-on visiter gratuitement des lieux culturels en France ?",
             "explanation": "Lors des Journées européennes du patrimoine (week-end de septembre).",
             "image": null
         },
         {
-            "id": 173,
+            "id": "livret_173",
             "question": "Que symbolise le 1er mai ?",
             "explanation": "La Fête du Travail et la journée internationale des travailleurs.",
             "image": null
         },
         {
-            "id": 174,
+            "id": "livret_174",
             "question": "Qui était Monsieur Rouget de Lisle ?",
             "explanation": "Claude Joseph Rouget de Lisle est l'auteur de \"La Marseillaise\" (1792).",
             "image": null
         },
         {
-            "id": 175,
+            "id": "livret_175",
             "question": "Qui était Charles Baudelaire ?",
             "explanation": "Poète français du XIXe siècle, auteur des \"Fleurs du mal\".",
             "image": null
         },
         {
-            "id": 176,
+            "id": "livret_176",
             "question": "Qui était George Sand ?",
             "explanation": "Nom de plume d'Aurore Dupin, romancière du XIXe siècle (\"La Mare au diable\"), figure du romantisme.",
             "image": null
         },
         {
-            "id": 177,
+            "id": "livret_177",
             "question": "Qui était Albert Camus ?",
             "explanation": "Écrivain et philosophe, prix Nobel de littérature 1957 (\"L'Étranger\", \"La Peste\").",
             "image": null
         },
         {
-            "id": 178,
+            "id": "livret_178",
             "question": "Qui était Marguerite Yourcenar ?",
             "explanation": "Écrivaine, première femme élue à l'Académie française (1980), auteure de \"Mémoires d'Hadrien\".",
             "image": null
         },
         {
-            "id": 179,
+            "id": "livret_179",
             "question": "Qui était Paul Cézanne ?",
             "explanation": "Peintre postimpressionniste, auteur des \"Joueurs de cartes\", natif d'Aix-en-Provence.",
             "image": null
         },
         {
-            "id": 180,
+            "id": "livret_180",
             "question": "Qui était Auguste Rodin ?",
             "explanation": "Sculpteur français (\"Le Penseur\", \"Le Baiser\"), figure majeure de la sculpture moderne.",
             "image": null
         },
         {
-            "id": 181,
+            "id": "livret_181",
             "question": "Qui était un célèbre compositeur français ?",
             "explanation": "Exemple : Claude Debussy (impressionnisme musical), ou Hector Berlioz, Maurice Ravel.",
             "image": null
         },
         {
-            "id": 182,
+            "id": "livret_182",
             "question": "Qui était Auguste Renoir ?",
             "explanation": "Peintre impressionniste français (\"Le Déjeuner des canotiers\", \"Bal du moulin de la Galette\").",
             "image": null
         },
         {
-            "id": 183,
+            "id": "livret_183",
             "question": "Quelle est la population approximative de la France en 2025 ?",
             "explanation": "Environ 68 millions d'habitants (estimation 2025).",
             "image": null
         },
         {
-            "id": 184,
+            "id": "livret_184",
             "question": "Qui était une figure de la Résistance française pendant la Seconde Guerre mondiale ?",
             "explanation": "Jean Moulin est une figure emblématique de la Résistance intérieure française.",
             "image": null
         },
         {
-            "id": 185,
+            "id": "livret_185",
             "question": "Quelle organisation a été créée en 1945 après la Seconde Guerre mondiale ?",
             "explanation": "L'Organisation des Nations unies (ONU) est créée en 1945 pour maintenir la paix internationale.",
             "image": null

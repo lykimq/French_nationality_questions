@@ -6,445 +6,445 @@
     "description": "Principes et valeurs de la République",
     "questions": [
         {
-            "id": 1,
+            "id": "livret_1",
             "question": "Quelles sont les valeurs de la République (la devise) ?",
             "explanation": "Les trois valeurs sont **Liberté, Égalité, Fraternité**.",
             "image": null
         },
         {
-            "id": 2,
+            "id": "livret_2",
             "question": "Quels sont les symboles de la République ?",
             "explanation": "L'hymne national (**La Marseillaise**), la **Marianne**, le **drapeau tricolore** (bleu, blanc, rouge) et le 14 juillet (fête nationale).",
             "image": null
         },
         {
-            "id": 3,
+            "id": "livret_3",
             "question": "Quelles libertés fondamentales sont garanties en France ?",
             "explanation": "La liberté de pensée, de croyance, de s'exprimer, de se réunir, et la liberté de la presse.",
             "image": null
         },
         {
-            "id": 4,
+            "id": "livret_4",
             "question": "La liberté d'expression a-t-elle des limites ?",
             "explanation": "Oui, elle est limitée par le respect des droits des autres. Il est interdit de diffuser des injures, des propos diffamatoires, des provocations à la haine ou de faire l'apologie de crimes contre l'humanité.",
             "image": null
         },
         {
-            "id": 5,
+            "id": "livret_5",
             "question": "Qu'est-ce que le principe d'égalité ?",
             "explanation": "Tous les citoyens ont les mêmes droits et devoirs quels que soient leur sexe, leur origine, leur religion, leurs opinions ou leur orientation sexuelle.",
             "image": null
         },
         {
-            "id": 6,
+            "id": "livret_6",
             "question": "Qu'est-ce qui illustre le principe de Fraternité et de solidarité ?",
             "explanation": "Le **système de sécurité sociale**, financé par les cotisations et les impôts, illustre la solidarité entre les citoyens.",
             "image": null
         },
         {
-            "id": 7,
+            "id": "livret_7",
             "question": "Un employeur peut-il refuser d'embaucher quelqu'un en raison de son origine ou de sa religion ?",
             "explanation": "Non, c'est une discrimination interdite par la loi. Les décisions doivent être fondées exclusivement sur des raisons professionnelles.",
             "image": null
         },
         {
-            "id": 8,
+            "id": "livret_8",
             "question": "Qu'est-ce que la Laïcité ?",
             "explanation": "C'est un principe fondamental (loi de 1905) qui sépare les affaires religieuses et publiques. L'État garantit la liberté religieuse mais est neutre face aux religions.",
             "image": null
         },
         {
-            "id": 9,
+            "id": "livret_9",
             "question": "Quand l'État peut-il restreindre la manifestation de la religion en public ?",
             "explanation": "Pour préserver **l'ordre public**. Nul ne peut se prévaloir de ses croyances pour s'affranchir des règles communes.",
             "image": null
         },
         {
-            "id": 10,
+            "id": "livret_10",
             "question": "Pourquoi les signes religieux ostensibles sont-ils interdits à l'école publique ?",
             "explanation": "Selon la loi du 15 mars 2004, l'école doit être **neutre** pour former tous les citoyens et protéger les mineurs contre les pressions.",
             "image": null
         },
         {
-            "id": 11,
+            "id": "livret_11",
             "question": "Qu’est-ce qu’un Français ?",
             "explanation": "Un Français est une personne qui appartient à la nation française par sa culture, son histoire, sa langue et son attachement aux valeurs républicaines. Être Français, c'est partager un héritage commun, se reconnaître dans les principes de liberté, d’égalité et de fraternité, et participer à la vie du pays, que ce soit à travers la langue, les traditions ou les institutions. C’est aussi une identité qui se construit, une manière de vivre ensemble et de s’inscrire dans une société fondée sur la tolérance, le respect des autres et la solidarité.",
             "image": null
         },
         {
-            "id": 12,
+            "id": "livret_12",
             "question": "Qu’est-ce qu’un citoyen français ?",
             "explanation": "- Un citoyen français est une personne qui participe activement à la vie de la nation. Il ne se contente pas d’appartenir à la France, il contribue à son avenir par ses actions, ses choix et son engagement. Être citoyen, c’est :\n\n- S’investir dans la société en respectant et en défendant les valeurs communes\n\n- Prendre part aux décisions en votant, en s’informant et en débattant des enjeux de la société\n\n- Être solidaire en contribuant à la vie collective, en aidant les autres, en respectant les lois et les principes qui permettent à tous de vivre ensemble\n\n- Porter l’esprit républicain, qui repose sur la laïcité, l’égalité des chances et la fraternité Un citoyen ne se définit pas uniquement par ses droits, mais par son rôle dans la société. Il participe activement à faire vivre la démocratie et à construire le pays pour les générations futures.",
             "image": null
         },
         {
-            "id": 13,
+            "id": "livret_13",
             "question": "Parlez-moi de votre entourage ?",
             "explanation": "Mon entourage reflète la diversité et l’ouverture de la France. J’ai la chance d’avoir des proches français, comme mon frère et mon cousin, qui ont obtenu la nationalité française. Au quotidien, je suis entouré d’amis et de collègues de différents horizons, ce qui m’a permis de m’intégrer pleinement et d’adhérer aux valeurs de vivre-ensemble et de fraternité qui font la force de ce pays. (Il s’agit d’une réponse type comme les autres questions, vous pouvez vous en inspirer en fonction de votre situation).",
             "image": null
         },
         {
-            "id": 14,
+            "id": "livret_14",
             "question": "Êtes-vous membre d'une association ?",
             "explanation": "Oui, je suis membre d’une association d’aide aux sans-abri et d’une autre à vocation culturelle. Ces engagements illustrent mon attachement aux valeurs de solidarité et de partage.",
             "image": null
         },
         {
-            "id": 15,
+            "id": "livret_15",
             "question": "Pourquoi avez-vous choisis la France ? Pourquoi la France ?",
             "explanation": "J’ai choisi la France pour sa stabilité, ses valeurs démocratiques et son modèle social qui garantissent égalité et justice. Son dynamisme culturel et économique offre un cadre idéal pour s’épanouir. Ici, j’ai trouvé des opportunités, tissé des liens forts et construit mon avenir, faisant de la France ma véritable maison.",
             "image": null
         },
         {
-            "id": 16,
+            "id": "livret_16",
             "question": "Avez-vous une croyance religieuse ?",
             "explanation": "Oui/Non, je suis (religion/non), ce qui est une partie importante de ma/une vie personnelle non religieuse pour moi.",
             "image": null
         },
         {
-            "id": 17,
+            "id": "livret_17",
             "question": "Portez-vous le foulard ? Pourquoi ?",
             "explanation": "Le port du foulard relève d’un choix personnel, influencé par des convictions religieuses, culturelles ou individuelles. En France, il est autorisé dans l’espace public, sauf dans certaines situations encadrées par la loi, comme à l’école pour les élèves ou dans certaines fonctions publiques.",
             "image": null
         },
         {
-            "id": 18,
+            "id": "livret_18",
             "question": "Quelles sont vos habitudes au quotidien en France ?",
             "explanation": "Je travaille/étudie, je participe à la vie sociale et culturelle, et je respecte les valeurs républicaines.",
             "image": null
         },
         {
-            "id": 19,
+            "id": "livret_19",
             "question": "Êtes-vous d'accord avec le principe de l'école mixte ?",
             "explanation": "Oui, je soutiens l'école mixte car elle favorise l'égalité, la diversité et la compréhension mutuelle dès le plus jeune âge.",
             "image": null
         },
         {
-            "id": 20,
+            "id": "livret_20",
             "question": "Vous opposeriez-vous à une orientation ou un choix de vie spécifique de vos enfants ?",
             "explanation": "Nous souhaitons soutenir nos enfants dans leurs choix, tant qu'ils sont heureux et en bonne santé, respectant leurs libertés individuelles.",
             "image": null
         },
         {
-            "id": 21,
+            "id": "livret_21",
             "question": "Quelles valeurs vos parents vous ont- ils transmises ?",
             "explanation": "Mes parents m'ont transmis l'importance de l'honnêteté, du respect, de la responsabilité, et de la bienveillance envers les autres.",
             "image": null
         },
         {
-            "id": 22,
+            "id": "livret_22",
             "question": "– C’est quoi le Blasphème ?",
             "explanation": "Le blasphème désigne une parole, un acte ou un geste qui offense ou manque de respect à une religion, à ses croyances, ou à ses symboles sacrés, autrement dit, critiquer une idée une religion ou une croyance. Selon les cultures et les religions, ce qui est considéré comme blasphématoire peut varier. En France, il n'est pas interdit par la loi, car tout le monde a le droit de s'exprimer librement tout en restant dans la limite prévue par la loi.",
             "image": null
         },
         {
-            "id": 23,
+            "id": "livret_23",
             "question": "– La laïcité est-elle respectée en France ?",
             "explanation": "La laïcité est un principe fondamental de la République française, garantissant la neutralité de l’État et la liberté de conscience de chacun.",
             "image": null
         },
         {
-            "id": 24,
+            "id": "livret_24",
             "question": "Quelle est votre opinion sur la liberté d'expression et le blasphème en France ?",
             "explanation": "La liberté d'expression en France est essentielle, permettant à chacun de s'exprimer librement, même sur des sujets sensibles comme la religion. Le blasphème, fait partie de ce droit, car il reflète la diversité des opinions et la liberté de penser sans tomber dans un discours haineux ou incitant à la violence ou tout ce qui peut être interdit par la loi.",
             "image": null
         },
         {
-            "id": 25,
+            "id": "livret_25",
             "question": "Quelle est votre position sur l'égalité des genres en France ?",
             "explanation": "Je suis fermement pour l'égalité des genres et je soutiens les efforts en France pour promouvoir l'égalité professionnelle et les droits des femmes. Je considère ces enjeux comme essentiels pour une société juste et équilibrée, où chaque individu peut s'épanouir sans discrimination.",
             "image": null
         },
         {
-            "id": 26,
+            "id": "livret_26",
             "question": "Quel est votre avis sur l’interdiction de la polygamie en France?",
             "explanation": "Je soutiens les principes d'égalité et les lois qui régissent le mariage en France. Je comprends et respecte que la polygamie est interdite, reconnaissant l'importance de l'égalité entre les époux et les principes juridiques qui protègent les droits de chaque individu.",
             "image": null
         },
         {
-            "id": 27,
+            "id": "livret_27",
             "question": "– Que pensez-vous de la presse satirique ?",
             "explanation": "La presse satirique est un moyen d’expression important qui utilise l’humour pour critiquer et dénoncer des sujets politiques et sociaux. Elle joue un rôle essentiel dans la liberté d’expression tout en respectant les limites de la loi, notamment en évitant la diffamation, l'incitation à la haine ou les discours discriminatoires, afin de ne pas porter atteinte aux droits des individus. Exemple : journal Charlie hebdo.",
             "image": null
         },
         {
-            "id": 28,
+            "id": "livret_28",
             "question": "Les valeurs de votre religion se heurtent-elles avec les valeurs de la France ?",
             "explanation": "Non, les valeurs de ma religion sont compatibles avec les valeurs de la France, notamment celles de la laïcité et de la tolérance.",
             "image": null
         },
         {
-            "id": 29,
+            "id": "livret_29",
             "question": "Que pensez-vous du mariage pour tous ?",
             "explanation": "Je conçois le mariage pour tous en tant que principe d'égalité des droits et de la liberté.",
             "image": null
         },
         {
-            "id": 30,
+            "id": "livret_30",
             "question": "Que pensez-vous des derniers événements relatifs à Charlie Hebdo ?",
             "explanation": "Je condamne toute forme de violence, mais je soutiens également la liberté d'expression.",
             "image": null
         },
         {
-            "id": 31,
+            "id": "livret_31",
             "question": "Quel est le rôle de la liberté d’expression en France ?",
             "explanation": "La liberté d’expression est un droit fondamental inscrit dans la Déclaration des Droits de l’Homme et du Citoyen de 1789, permettant à chacun d’exprimer ses opinions dans le respect de la loi.",
             "image": null
         },
         {
-            "id": 32,
+            "id": "livret_32",
             "question": "Qui était Samuel Paty ?",
             "explanation": "Samuel Paty était un enseignant d’histoire-géographie en France, assassiné en octobre 2020 après avoir montré des caricatures dans un cours sur la liberté d’expression.",
             "image": null
         },
         {
-            "id": 33,
+            "id": "livret_33",
             "question": "Que s’est-il passé lors de l’affaire Samuel Paty ?",
             "explanation": "Il a été victime d’une attaque terroriste après avoir été la cible d’une campagne de haine sur les réseaux sociaux liée à un cours qu’il donnait sur la liberté d’expression.",
             "image": null
         },
         {
-            "id": 34,
+            "id": "livret_34",
             "question": "Pourquoi son assassinat a-t-il marqué la société française ?",
             "explanation": "Son assassinat a profondément choqué la France car il symbolise une attaque contre les valeurs fondamentales de la République, notamment la liberté d’expression et la laïcité.",
             "image": null
         },
         {
-            "id": 35,
+            "id": "livret_35",
             "question": "Quel est votre avis sur cette affaire ?",
             "explanation": "Cet acte est une tragédie inacceptable. Rien ne justifie la violence, et toute forme d’extrémisme doit être fermement condamnée. Cette affaire rappelle l’importance de défendre la liberté d’expression tout en encourageant le respect et le dialogue dans la société.",
             "image": null
         },
         {
-            "id": 36,
+            "id": "livret_36",
             "question": "Que pensez-vous des manifestations des Gilets Jaunes ?",
             "explanation": "Les manifestations des Gilets Jaunes ont révélé des fractures sociales profondes, mettant en lumière des demandes de justice fiscale et sociale. Leur impact sur la politique française a été significatif, incitant à des réformes et à un dialogue national sur l'égalité économique.",
             "image": null
         },
         {
-            "id": 37,
+            "id": "livret_37",
             "question": "Quel est votre avis sur les mesures de sécurité renforcées en France suite à l'attaque du Bataclan ?",
             "explanation": "Je pense que ces mesures étaient nécessaires pour améliorer la sécurité publique, bien qu'elles aient également soulevé des questions sur les libertés individuelles.",
             "image": null
         },
         {
-            "id": 38,
+            "id": "livret_38",
             "question": "Que pensez-vous de l'impact des attaques contre Charlie Hebdo sur la liberté d'expression ?",
             "explanation": "À mon avis, cela a souligné l'importance cruciale de la liberté d'expression, tout en montrant la nécessité de dialoguer sur ses limites respectueuses.",
             "image": null
         },
         {
-            "id": 39,
+            "id": "livret_39",
             "question": "Les femmes peuvent-elles s’habiller comme elles le souhaitent en France ?",
             "explanation": "Oui, en France, la loi garantit la liberté vestimentaire, dans le respect de l’ordre public.",
             "image": null
         },
         {
-            "id": 40,
+            "id": "livret_40",
             "question": "Quel est votre avis sur les revendications principales du mouvement des Gilets Jaunes ?",
             "explanation": "Les revendications mettent en lumière des problèmes significatifs d'inégalité et de pouvoir d'achat, nécessitant une réponse politique attentive et inclusive.",
             "image": null
         },
         {
-            "id": 41,
+            "id": "livret_41",
             "question": "Quelles sont les idées qu’on ne doit pas exprimer ?",
             "explanation": "En France, la liberté d’expression est garantie, mais elle est encadrée par la loi. Il est interdit par exemple d’inciter à la haine, à la violence ou de tenir des propos discriminatoires.",
             "image": null
         },
         {
-            "id": 42,
+            "id": "livret_42",
             "question": "Pourquoi l’IVG est-elle un sujet d'actualité en 2024 ?",
             "explanation": "En mars 2024, la France est devenue le premier pays à graver la liberté de recourir à l’IVG dans sa Constitution. Cette décision vise à garantir ce droit fondamental et à le protéger de toute remise en cause future.",
             "image": null
         },
         {
-            "id": 43,
+            "id": "livret_43",
             "question": "En quoi la laïcité est-elle bénéfique ?",
             "explanation": "La laïcité garantit la liberté de conscience et d’expression de chacun, tout en assurant la neutralité de l’État. Elle permet à tous de pratiquer une religion ou de ne pas en avoir, dans le respect des lois et des valeurs républicaines.",
             "image": null
         },
         {
-            "id": 44,
+            "id": "livret_44",
             "question": "Quels sont les principes et les valeurs de la République ? La devise de la France ?",
             "explanation": "Les valeurs de la République sont Liberté, Égalité, Fraternité, qui est également la devise de la France. Ces principes de la République comprennent son caractère indivisible, laïque, démocratique et social, tels que définis par la Constitution du 4 octobre 1958. L'indivisibilité signifie que les lois s'appliquent de manière égale sur l'ensemble du territoire français, sans distinction entre les territoires. La souveraineté nationale appartient au peuple et est exercée par ses représentants élus et par le biais du référendum. La France est une république sociale qui vise à répondre aux besoins de la population dans des domaines tels que l'éducation, le logement, l'emploi et la santé, garantissant ainsi une couverture sociale. En d'autres termes, la nation assure à l'individu et à la famille les conditions nécessaires à leur développement.",
             "image": null
         },
         {
-            "id": 45,
+            "id": "livret_45",
             "question": "Que signifie la Liberté ?",
             "explanation": "Selon l’article 1 de la Déclaration des Droits de l'Homme et du Citoyen d'août 1789 : tous les individus naissent libres et égaux en droits, garantissant ainsi la liberté de chaque citoyen français, qu'il soit homme ou femme. L'esclavage est formellement interdit et les droits fondamentaux sont protégés par des lois en France, tant au niveau individuel que collectif. Parmi ces libertés, on peut citer la liberté d'expression, le droit de vote, la liberté de circulation, le droit au travail et le droit à l'éducation.",
             "image": null
         },
         {
-            "id": 46,
+            "id": "livret_46",
             "question": "Que signifie l'Égalité?",
             "explanation": "Conformément à l'article 1 de la Déclaration des Droits de l'Homme et du Citoyen, la France garantit à tous ses citoyens une égalité juridique, leur assurant les mêmes droits, les mêmes devoirs et leur soumission aux mêmes règles. L'État français s'engage à combattre les discriminations, telles que le racisme, le sexisme, la xénophobie et l'antisémitisme, et à prévenir toute forme de traitement injuste envers ses citoyens.",
             "image": null
         },
         {
-            "id": 47,
+            "id": "livret_47",
             "question": "La signification de la Fraternité ?",
             "explanation": "La France est construite sur le désir de cohabitation harmonieuse entre ses citoyens, exprimant ainsi la solidarité entre eux.",
             "image": null
         },
         {
-            "id": 48,
+            "id": "livret_48",
             "question": "Un exemple d’illustration de la Fraternité ?",
             "explanation": "Depuis 1945, le système de sécurité sociale, financé par les entreprises et tous ceux qui travaillent en France, incarne cette volonté de fraternité envers les concitoyens. Le pays condamne les discriminations, qui consistent à défavoriser un individu ou un groupe par rapport à d'autres, et considère le racisme comme un délit.",
             "image": null
         },
         {
-            "id": 49,
+            "id": "livret_49",
             "question": "Peut-on rajouter une quatrième valeur ? Si oui laquelle ?",
             "explanation": "- Oui la laïcité, la laïcité est un principe fondamental de la République française, qui comporte deux volets importants :\n\n- L'État se doit d'être neutre envers les religions et ne doit favoriser aucune religion particulière. La religion relève de la sphère privée de chaque individu.\n\n- L'État garantit la liberté religieuse, permettant à chacun de croire ou de ne pas croire et de choisir sa religion librement.",
             "image": null
         },
         {
-            "id": 50,
+            "id": "livret_50",
             "question": "Quand la France est devenue laïque ?",
             "explanation": "09 décembre 1905",
             "image": null
         },
         {
-            "id": 51,
+            "id": "livret_51",
             "question": "Qui est Marianne ?",
             "explanation": "Marianne est une figure allégorique féminine qui incarne la République française. Elle représente les valeurs républicaines telles que la liberté, l'égalité et la fraternité. Marianne est souvent représentée avec un bonnet phrygien, qui symbolise la liberté, et elle est présentée dans chaque mairie.",
             "image": null
         },
         {
-            "id": 52,
+            "id": "livret_52",
             "question": "Quelle est L'hymne national française ?",
             "explanation": "L'hymne national français est La Marseillaise. Il s'agit d'un chant révolutionnaire écrit par Claude Joseph Rouget de L’Isle en 1792. Il est devenu l'hymne officiel de la France en 1795. La Marseillaise est un symbole de la lutte pour la liberté, l'égalité et la fraternité, ainsi que de la résistance et du patriotisme.",
             "image": null
         },
         {
-            "id": 53,
+            "id": "livret_53",
             "question": "Que représente Le 14 juillet ?",
             "explanation": "Le 14 juillet est la fête nationale française, également connue sous le nom de Bastille Day. Elle commémore la prise de la Bastille le 14 juillet 1789, qui marque le début de la Révolution française. Le 14 juillet est un symbole de la lutte pour la liberté et l'établissement de la République en France.",
             "image": null
         },
         {
-            "id": 54,
+            "id": "livret_54",
             "question": "C'est quoi la Constitution ?",
             "explanation": "La Constitution est le texte fondamental qui définit l’organisation et le fonctionnement de l’État. Elle fixe les règles du pouvoir, les droits des citoyens et les principes de la République. En France, la Constitution de la Ve République, adoptée en 1958, établit notamment la séparation des pouvoirs (exécutif, législatif, judiciaire) et garantit des droits comme la liberté d’expression et l’égalité devant la loi.",
             "image": null
         },
         {
-            "id": 55,
+            "id": "livret_55",
             "question": "Est-il permis de porter des signes religieux en public en France ?",
             "explanation": "En France, il est permis de porter des signes religieux dans les espaces publics, mais il existe des restrictions dans les écoles publiques et pour les fonctionnaires en fonction, afin de respecter la laïcité.",
             "image": null
         },
         {
-            "id": 56,
+            "id": "livret_56",
             "question": "Quelles sont les causes principales de la Révolution française ?",
             "explanation": "- La Révolution française (1789-1799) a été causée par plusieurs facteurs:\n\n- Une crise financière due aux dépenses excessives de la monarchie et aux guerres, notamment la guerre d’indépendance américaine.\n\n- Une injustice sociale avec une société divisée en trois ordres (clergé, noblesse, tiers état), où le tiers état (98 % de la population) supportait la majorité des impôts.\n\n- Une crise politique liée à l’absolutisme royal et à l’incapacité de Louis XVI à réformer le pays.\n\n- L’influence des Lumières, qui ont diffusé des idées de liberté, d’égalité et de souveraineté populaire.",
             "image": null
         },
         {
-            "id": 57,
+            "id": "livret_57",
             "question": "Quelle est l'année de début de la Révolution Française ?",
             "explanation": "La Révolution Française, marquant une transformation profonde de la société et du gouvernement en France, a débuté en 1789. Elle est célèbre pour ses idéaux de liberté, d'égalité et de fraternité et a conduit à la chute de la monarchie absolue.",
             "image": null
         },
         {
-            "id": 58,
+            "id": "livret_58",
             "question": "Quels sont les événements marquants du début de la Troisième République ?",
             "explanation": "- La Commune de Paris (1871) : insurrection populaire réprimée dans le sang.\n\n- La consolidation républicaine (années 1870-1880) face aux monarchistes.\n\n- Lois Jules Ferry (1881-1882) instaurant l'école gratuite, laïque et obligatoire.\n\n- Séparation de l’Église et de l’État (1905).",
             "image": null
         },
         {
-            "id": 59,
+            "id": "livret_59",
             "question": "Qu'est-ce que la Déclaration des Droits de l'Homme et du Citoyen ?",
             "explanation": "La Déclaration des Droits de l'Homme et du Citoyen, adoptée en 1789 pendant la Révolution Française, est un document fondamental qui établit les droits et libertés individuels. Elle est considérée comme une pierre angulaire des principes modernes de droits humains et de démocratie.",
             "image": null
         },
         {
-            "id": 60,
+            "id": "livret_60",
             "question": "Quelle est l'importance de la Loi de séparation des Églises et de l'État de 1905 ?",
             "explanation": "La Loi de séparation des Églises et de l'État, adoptée en 1905, a établi la laïcité en France. Elle a mis fin au financement public des religions et a affirmé la neutralité de l'État en matière religieuse, jouant un rôle clé dans l'établissement de la liberté religieuse et de l'égalité de tous les citoyens devant la loi, indépendamment de leur croyance.",
             "image": null
         },
         {
-            "id": 61,
+            "id": "livret_61",
             "question": "Qu'est-ce que les Lumières et quel a été leur impact sur la France ?",
             "explanation": "Le siècle des Lumières, au 18e siècle, a été une période de grands progrès intellectuels et philosophiques. En France, les philosophes des Lumières, tels que Voltaire et Rousseau, ont remis en question les traditions et proposé des idées sur la démocratie, l'égalité et la liberté, influençant fortement la Révolution Française et la pensée moderne.",
             "image": null
         },
         {
-            "id": 62,
+            "id": "livret_62",
             "question": "Quelle est l’importance de l’abolition de l’esclavage ?",
             "explanation": "L’abolition a marqué une avancée majeure pour les droits de l’Homme et la reconnaissance de l’égalité entre tous les citoyens.",
             "image": null
         },
         {
-            "id": 63,
+            "id": "livret_63",
             "question": "Qu'est-ce que la Francophonie et quel est son rôle ?",
             "explanation": "La Francophonie est une organisation internationale regroupant des pays et régions où le français est une langue majeure. Pour la France, elle représente un moyen de promouvoir la langue française, ainsi que les valeurs culturelles, éducatives et politiques associées.",
             "image": null
         },
         {
-            "id": 64,
+            "id": "livret_64",
             "question": "Quelles étaient les causes de la chute de la monarchie française pendant la Révolution ?",
             "explanation": "La chute de la monarchie en 1792 peut être attribuée à une combinaison de facteurs, notamment l'insatisfaction populaire face à la crise économique, les idées révolutionnaires de liberté et d'égalité, et l'incapacité du roi à répondre efficacement aux demandes du peuple et à gérer la crise.",
             "image": null
         },
         {
-            "id": 65,
+            "id": "livret_65",
             "question": "Quelles étaient les conséquences de la Révolution française pour la société française ?",
             "explanation": "La Révolution a radicalement transformé la société française, abolissant la monarchie et l'ordre féodal, instaurant une république, et promouvant des idéaux de liberté, d'égalité et de laïcité. Elle a également conduit à des changements sociaux et économiques majeurs et à la redéfinition de la structure politique et sociale de la France.",
             "image": null
         },
         {
-            "id": 66,
+            "id": "livret_66",
             "question": "Qui était Henri IV (4) ?",
             "explanation": "Henri IV (1553-1610) était roi de France de 1589 à 1610. Premier roi de la famille des Bourbons, il a mis fin aux guerres de religion avec l’édit de Nantes, qui donnait des droits aux protestants. Il est aussi connu pour sa célèbre phrase : \"Paris vaut bien une messe.\" Il a été assassiné en 1610.",
             "image": null
         },
         {
-            "id": 67,
+            "id": "livret_67",
             "question": "Qui est Jean Jaurès ?",
             "explanation": "Jean Jaurès était un homme politique et intellectuel français, figure majeure du socialisme en France. Il est surtout connu pour sa lutte en faveur de la paix et de la justice sociale. En tant que député, il défendait les droits des travailleurs et la laïcité, et a joué un rôle clé dans la création de la Section Française de l'Internationale Ouvrière (SFIO). Il a été assassiné en 1914, pendant la Première Guerre mondiale, pour ses idées pacifistes.",
             "image": null
         },
         {
-            "id": 68,
+            "id": "livret_68",
             "question": "Qu'est-ce que la Saint-Barthélemy ?",
             "explanation": "Le massacre de la Saint-Barthélemy, survenu en 1572, est l'un des événements les plus sombres des guerres de religion en France. Il s'agit d'une série de meurtres organisés de protestants (Huguenots) par des catholiques, symbolisant l'intensité des conflits religieux de l'époque.",
             "image": null
         },
         {
-            "id": 69,
+            "id": "livret_69",
             "question": "Qu'est-ce que le traité de Nantes ?",
             "explanation": "Signé en 1598 par Henri IV, le traité de Nantes a mis fin aux guerres de religion en France en accordant des droits et une certaine liberté de culte aux protestants. Ce traité est considéré comme un pas important vers la tolérance religieuse.",
             "image": null
         },
         {
-            "id": 70,
+            "id": "livret_70",
             "question": "Citez quelques auteurs français récents et leurs œuvres ?",
             "explanation": "- Jean d'Ormesson : La Gloire de l'Empire Ce roman mêle fiction et réflexion historique, proposant une vision de l’histoire à travers les yeux d’un personnage imaginaire, tout en offrant une réflexion sur la quête du pouvoir et de la gloire.\n\n- Leïla Slimani : Chanson Douce Ce roman aborde les thèmes de la maternité, de la psychologie et des inégalités sociales à travers l’histoire de la relation entre une nourrice et les parents d’une famille parisienne.\n\n- Michel Houellebecq : Soumission",
             "image": null
         },
         {
-            "id": 71,
+            "id": "livret_71",
             "question": "Qui est Simone de Beauvoir ?",
             "explanation": "Simone de Beauvoir était une philosophe, écrivaine et militante féministe française. Elle est l'autrice de Le Deuxième Sexe, un ouvrage fondamental sur les inégalités de genre et l'émancipation des femmes.",
             "image": null
         },
         {
-            "id": 72,
+            "id": "livret_72",
             "question": "Quel monument est offert par la France aux États-Unis pour célébrer le centenaire de leur indépendance ?",
             "explanation": "La Statue de la Liberté.",
             "image": null
         },
         {
-            "id": 73,
+            "id": "livret_73",
             "question": "Citez des personnalités que vous connaissez qui sont enterrées au Panthéon ?",
             "explanation": "Voltaire (1694-1778)\n\n- Philosophe des Lumières, connu pour son esprit critique, sa défense de la liberté civile et de la séparation de l'Église et de l'État.\n\nJean-Jacques Rousseau (1712-1778)\n- Philosophe, écrivain et compositeur, ses idées ont influencé la Révolution française, l'éducation moderne et la théorie politique.\n\nVictor Hugo (1802-1885)\n- Écrivain, poète et dramaturge, auteur de chefs-d'œuvre comme Les Misérables et Notre- Dame de Paris. Il est aussi connu pour son engagement politique et social.\n\nÉmile Zola (1840-1902)\n- Écrivain et journaliste, figure majeure du naturalisme dans la littérature. Il est également connu pour son intervention dans l'Affaire Dreyfus avec son fameux article J'accuse...!.\n\nMarie Curie (1867-1934)\n- Physicienne et chimiste, pionnière dans le domaine de la radioactivité, elle est la première femme à recevoir le Prix Nobel et la seule personne à en avoir reçu deux dans deux domaines scientifiques différents (Physique et Chimie).",
             "image": null
         },
         {
-            "id": 74,
+            "id": "livret_74",
             "question": "Qu'ont en commun les pays européens ?",
             "explanation": "Les pays européens partagent une histoire, des valeurs culturelles, économiques et politiques similaires. La plupart sont membres de l'Union européenne (UE), qui favorise la coopération économique, politique et sociale. Ils adhèrent à des principes communs comme la démocratie, les droits de l'homme et l'état de droit. De plus, de nombreux pays européens utilisent l'euro comme monnaie et participent à des accords communs comme l'espace Schengen.",
             "image": null

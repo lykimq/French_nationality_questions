@@ -6,973 +6,973 @@
     "description": "La France en Europe et dans le monde",
     "questions": [
         {
-            "id": 1,
+            "id": "livret_1",
             "question": "Quand a été créé la CEE (Communauté Économique Européenne) ?",
             "explanation": "En **1957** (Traité de Rome), la France est un pays fondateur.",
             "image": null
         },
         {
-            "id": 2,
+            "id": "livret_2",
             "question": "Combien d'États compte l'Union Européenne ?",
             "explanation": "**27 États membres**.",
             "image": null
         },
         {
-            "id": 3,
+            "id": "livret_3",
             "question": "Quel est l'objectif de l'UE ?",
             "explanation": "Garantir la paix et établir une union étroite entre les peuples européens.",
             "image": null
         },
         {
-            "id": 4,
+            "id": "livret_4",
             "question": "Quelle est la monnaie commune ?",
             "explanation": "L'**Euro** (depuis 2002 pour les pièces/billets, 2000 marché).",
             "image": null
         },
         {
-            "id": 5,
+            "id": "livret_5",
             "question": "Quelle est la place de la France à l'ONU ?",
             "explanation": "Membre permanent du **Conseil de sécurité**.",
             "image": null
         },
         {
-            "id": 6,
+            "id": "livret_6",
             "question": "Combien de personnes parlent français dans le monde ?",
             "explanation": "Environ **320 millions** de locuteurs dans le monde (OIF 2023, dont ~255 millions d'usage quotidien).",
             "image": null
         },
         {
-            "id": 7,
+            "id": "livret_7",
             "question": "Quel est le rang économique de la France ?",
             "explanation": "**6ème puissance économique** mondiale.",
             "image": null
         },
         {
-            "id": 8,
+            "id": "livret_8",
             "question": "Quels sont les atouts économiques de la France ?",
             "explanation": "L'aéronautique, le luxe, le tourisme (1ère destination mondiale), l'agriculture et les transports.",
             "image": null
         },
         {
-            "id": 9,
+            "id": "livret_9",
             "question": "Connaissez-vous vos voisins ?",
             "explanation": "Oui/Non, pas tous par manque de temps mais nous nous saluons régulièrement…",
             "image": null
         },
         {
-            "id": 10,
+            "id": "livret_10",
             "question": "Quel est le nom de votre employeur ?",
             "explanation": "Mon employeur est (Nom de l’entreprise).",
             "image": null
         },
         {
-            "id": 11,
+            "id": "livret_11",
             "question": "Avez-vous des amis ou des contacts français ?",
             "explanation": "Oui, j'ai développé des amitiés solides avec des Français, qui ont enrichi mon expérience ici en France (exemples d'influence, par exemple : m'invitant à des événements locaux, me faisant découvrir des parties moins connues de la culture française, m'aidant à naviguer dans certaines formalités administratives). Ces relations m'ont permis de me sentir plus chez moi en France et de mieux comprendre les subtilités de la société française.",
             "image": null
         },
         {
-            "id": 12,
+            "id": "livret_12",
             "question": "À quelle fréquence retournez-vous dans votre pays d'origine ?",
             "explanation": "En général, je rentre (une fois) par an pour rendre visite à ma famille et profiter de vacances en même temps.",
             "image": null
         },
         {
-            "id": 13,
+            "id": "livret_13",
             "question": "Qu'est-ce qui vous plaît le plus en France et que vous n’avez pas dans votre pays d’origine ?",
             "explanation": "Ce que j'apprécie particulièrement en France, c'est (élément spécifique, par exemple : la richesse culturelle, le système de santé, l'éducation…). J'aime aussi la diversité et l'ouverture d'esprit des gens ici.",
             "image": null
         },
         {
-            "id": 14,
+            "id": "livret_14",
             "question": "Faites-vous du sport ?",
             "explanation": "Oui, je pratique (nom du sport). / Non, mais je m’intéresse au sport et au bien-être.",
             "image": null
         },
         {
-            "id": 15,
+            "id": "livret_15",
             "question": "Quel est votre degré de proximité avec vos amis ?",
             "explanation": "J’entretiens des relations amicales régulières avec des amis en France, que je vois souvent.",
             "image": null
         },
         {
-            "id": 16,
+            "id": "livret_16",
             "question": "Si vous pouviez vivre dans un autre pays européen hors France, lequel choisiriez-vous ?",
             "explanation": "La France est mon premier et dernier choix, mais d’autres pays comme (nom du pays) pourraient aussi m’intéresser pour des raisons personnelles ou professionnelles.",
             "image": null
         },
         {
-            "id": 17,
+            "id": "livret_17",
             "question": "Suivez-vous l'actualité française ? Comment vous tenez-vous informé ?",
             "explanation": "Oui, je suis régulièrement l'actualité française via des journaux en ligne, la télévision, et les réseaux sociaux pour comprendre les enjeux sociétaux et politiques actuels en France.",
             "image": null
         },
         {
-            "id": 18,
+            "id": "livret_18",
             "question": "Regardez-vous la télévision française ? Quels types de programmes ou chaînes préférezvous ?",
             "explanation": "Oui, je regarde la télévision française, en particulier les chaînes d'information comme France 24 et les programmes culturels sur Arte, pour améliorer mon français et comprendre la culture française.",
             "image": null
         },
         {
-            "id": 19,
+            "id": "livret_19",
             "question": "c’est quoi la presse Satirique ?",
             "explanation": "La presse satirique est un type de presse qui utilise l'humour, l'ironie et l'exagération pour critiquer et se moquer des événements politiques, sociaux ou culturels. Elle vise souvent à dénoncer des abus, des injustices ou des comportements absurdes, tout en provoquant la réflexion. Les caricatures, les parodies et les jeux de mots sont des outils courants dans ce genre de presse.",
             "image": null
         },
         {
-            "id": 20,
+            "id": "livret_20",
             "question": "Que s’est-il passé en France le 13 novembre 2015 ?",
             "explanation": "Le 13 novembre 2015, la France a été frappée par une série d’attentats terroristes à Paris et SaintDenis, faisant de nombreuses victimes.",
             "image": null
         },
         {
-            "id": 21,
+            "id": "livret_21",
             "question": "Quelles sont les conséquences des attentats du 13 novembre 2015 ?",
             "explanation": "Ces événements ont conduit à un renforcement des mesures de sécurité et à des actions contre le terrorisme en France et en Europe.",
             "image": null
         },
         {
-            "id": 22,
+            "id": "livret_22",
             "question": "Que pensez-vous des attentats du 13 novembre 2015 à Paris ?",
             "explanation": "Les attentats du 13 novembre 2015 ont été un événement tragique qui a profondément affecté la France. Ils ont mis en évidence la nécessité de renforcer la sécurité nationale et internationale face à la menace terroriste.",
             "image": null
         },
         {
-            "id": 23,
+            "id": "livret_23",
             "question": "Combien de médailles la France a-t-elle remportées aux Jeux Olympiques de Paris 2024 ?",
             "explanation": "La France a remporté 64 médailles au total.",
             "image": null
         },
         {
-            "id": 24,
+            "id": "livret_24",
             "question": "Combien de médailles d'or, d'argent et de bronze la France a-t-elle obtenues ?",
             "explanation": "- 16 médailles d'or\n\n- 26 médailles d'argent\n\n- 22 médailles de bronze",
             "image": null
         },
         {
-            "id": 25,
+            "id": "livret_25",
             "question": "Citez quelques champions français aux Jeux Olympiques de Paris 2024 ?",
             "explanation": "- Léon Marchand (Natation) : 4 médailles d'or, 1 médaille de bronze.\n\n- Teddy Riner (Judo) : 1 médaille d'or.\n\n- Pauline Ferrand-Prévot (VTT) : 1 médaille d'or.\n\n- Les athlètes français en canoë-kayak ont également décroché plusieurs médailles.",
             "image": null
         },
         {
-            "id": 26,
+            "id": "livret_26",
             "question": "Que pensez-vous des Jeux Olympiques de Paris 2024 ?",
             "explanation": "Les Jeux ont été un événement marquant, mettant en avant l'organisation française et renforçant l'image de la France à l'échelle internationale.",
             "image": null
         },
         {
-            "id": 27,
+            "id": "livret_27",
             "question": "Quand ont eu lieu les Jeux Olympiques de Paris 2024 ?",
             "explanation": "Les Jeux ont eu lieu du 26 juillet au 11 août 2024.",
             "image": null
         },
         {
-            "id": 28,
+            "id": "livret_28",
             "question": "Qu’est-ce que le Brexit ?",
             "explanation": "Le Brexit désigne la sortie du Royaume-Uni de l’Union européenne, décidée par référendum en 2016 et effective depuis le 31 janvier 2020.",
             "image": null
         },
         {
-            "id": 29,
+            "id": "livret_29",
             "question": "Quelles ont été les conséquences du Brexit ?",
             "explanation": "Le Brexit a eu des impacts économiques, politiques et administratifs sur les échanges entre le Royaume-Uni et l’Union européenne.",
             "image": null
         },
         {
-            "id": 30,
+            "id": "livret_30",
             "question": "Qu’est-ce que le mouvement #MeToo ?",
             "explanation": "Le mouvement #MeToo est un mouvement mondial contre les violences sexistes et sexuelles, encourageant la libération de la parole des victimes.",
             "image": null
         },
         {
-            "id": 31,
+            "id": "livret_31",
             "question": "Quelle a été la réaction des autorités françaises ?",
             "explanation": "Les autorités ont condamné fermement cet acte, renforcé la lutte contre l’extrémisme et organisé des hommages nationaux en mémoire de Samuel Paty.",
             "image": null
         },
         {
-            "id": 32,
+            "id": "livret_32",
             "question": "Que pensez-vous de l'affaire Nayel ?",
             "explanation": "L'affaire Nayel a suscité une grande émotion et a mis en évidence les enjeux autour de la justice pénale et du traitement médiatique des affaires criminelles. Elle rappelle l'importance de la prudence dans la couverture médiatique et le respect du processus judiciaire pour garantir la justice pour tous les parties concernées.",
             "image": null
         },
         {
-            "id": 33,
+            "id": "livret_33",
             "question": "Que pensez-vous des défis actuels auxquels sont confrontés les agriculteurs français ?",
             "explanation": "Les défis sont complexes, allant de la durabilité à la viabilité économique, et exigent des solutions innovantes et un soutien accru de l'État.",
             "image": null
         },
         {
-            "id": 34,
+            "id": "livret_34",
             "question": "Quel est votre avis sur la gestion de l'affaire Nayel par les médias et la justice française ?",
             "explanation": "Cette affaire a montré l'importance de la prudence médiatique et la nécessité d'une justice rapide et équitable pour les victimes et leurs familles.",
             "image": null
         },
         {
-            "id": 35,
+            "id": "livret_35",
             "question": "Quel est l'emblème de la France ?",
             "explanation": "L'emblème de la France est le drapeau tricolore composé des couleurs rouge, bleue et blanche.",
             "image": null
         },
         {
-            "id": 36,
+            "id": "livret_36",
             "question": "Quel est le sens des couleurs du drapeau français ?",
             "explanation": "Le drapeau est composé de 3 couleurs sous formes de bandes verticales.",
             "image": null
         },
         {
-            "id": 37,
+            "id": "livret_37",
             "question": "Que représente Le coq ?",
             "explanation": "Le coq est un symbole national français. Il est souvent représenté sur les monuments, les édifices publics et les maillots des équipes sportives françaises. Le coq représente la fierté nationale, le courage et la vigilance.",
             "image": null
         },
         {
-            "id": 38,
+            "id": "livret_38",
             "question": "Qu'est-ce que la démocratie ?",
             "explanation": "La démocratie est une forme de gouvernement dans laquelle la souveraineté appartient au peuple. En d'autres termes, c'est un système de gouvernement du peuple, par le peuple et pour le peuple.",
             "image": null
         },
         {
-            "id": 39,
+            "id": "livret_39",
             "question": "Êtes-vous d'accord avec le principe de la démocratie ?",
             "explanation": "Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles  j'ai choisi de vivre en France.",
             "image": null
         },
         {
-            "id": 40,
+            "id": "livret_40",
             "question": "En quelle année la France est devenue démocratique ?",
             "explanation": "La France est devenue démocratique tels qu’elle est connue à nos jour, le 4 octobre 1958",
             "image": null
         },
         {
-            "id": 41,
+            "id": "livret_41",
             "question": "Pouvez-vous nommer quelques ministres actuels du gouvernement français avec leur nom ?",
             "explanation": "Veuillez noter que ces informations peuvent ne pas être à jour comme tout comme les autres réponses, il est donc recommandé de les vérifier auprès d'une source officielle pour la période",
             "image": null
         },
         {
-            "id": 42,
+            "id": "livret_42",
             "question": "Quelle est la plus haute juridiction administrative en France?",
             "explanation": "Le Conseil d’État.",
             "image": null
         },
         {
-            "id": 43,
+            "id": "livret_43",
             "question": "Pourquoi peut-il dissoudre l’Assemblée nationale ?",
             "explanation": "Parce que l’Assemblée nationale est élue au suffrage universel direct, elle représente directement le peuple. Sa dissolution permet de redonner la parole aux citoyens en cas de crise politique.",
             "image": null
         },
         {
-            "id": 44,
+            "id": "livret_44",
             "question": "Quelle est la langue officielle de la France ?",
             "explanation": "Le français.",
             "image": null
         },
         {
-            "id": 45,
+            "id": "livret_45",
             "question": "Qu'est-ce que l'ENA ?",
             "explanation": "L'École Nationale d'Administration, une grande école formant les hauts fonctionnaires.",
             "image": null
         },
         {
-            "id": 46,
+            "id": "livret_46",
             "question": "Quelle est la population de la France ?",
             "explanation": "En 2024, la population française est estimée à environ 68 millions d’habitants.",
             "image": null
         },
         {
-            "id": 47,
+            "id": "livret_47",
             "question": "Quel est le principe du service public en France ?",
             "explanation": "Assurer des services essentiels à tous les citoyens, indépendamment de la rentabilité.",
             "image": null
         },
         {
-            "id": 48,
+            "id": "livret_48",
             "question": "Comment s'appelle le système de santé publique en France ?",
             "explanation": "La Sécurité Sociale.",
             "image": null
         },
         {
-            "id": 49,
+            "id": "livret_49",
             "question": "Quelle est la nouvelle appellation de l’ENA depuis 2021 ?",
             "explanation": "L'École Nationale d'Administration, devenue l'Institut national du service public (INSP).",
             "image": null
         },
         {
-            "id": 50,
+            "id": "livret_50",
             "question": "Quel est l'âge de l’obligation scolaire en France ?",
             "explanation": "L'école est obligatoire de 3 à 16 ans en France.",
             "image": null
         },
         {
-            "id": 51,
+            "id": "livret_51",
             "question": "Citez quelques personnalités françaises célèbres ayant acquis la nationalité française.",
             "explanation": "Parmi les personnalités naturalisées, on trouve le chanteur Johnny Hallyday, l’artiste Pablo Picasso, l’actrice Marlène Dietrich, et l’écrivain Milan Kundera.",
             "image": null
         },
         {
-            "id": 52,
+            "id": "livret_52",
             "question": "Quel était le rôle initial de la Bastille à Paris ?",
             "explanation": "La Bastille, initialement construite comme une forteresse pour protéger Paris, était devenue une prison d'État avant la Révolution Française. Sa prise par les révolutionnaires est devenue un symbole fort de la lutte contre l'autoritarisme.",
             "image": null
         },
         {
-            "id": 53,
+            "id": "livret_53",
             "question": "Qu'est-ce que le Directoire ?",
             "explanation": "Le Directoire (1795-1799) était un régime plus modéré, dirigé par cinq directeurs, mais il était instable et affaibli par la corruption.",
             "image": null
         },
         {
-            "id": 54,
+            "id": "livret_54",
             "question": "Quel était le but de la construction de la Tour Eiffel ?",
             "explanation": "La Tour Eiffel a été construite par Gustave Eiffel et ses collaborateurs pour l'Exposition universelle de 1889 à Paris. Initialement controversée, elle est aujourd'hui un symbole emblématique de Paris et de la France, reconnue dans le monde entier.",
             "image": null
         },
         {
-            "id": 55,
+            "id": "livret_55",
             "question": "Quel a été l'impact de la Conférence de Berlin de 1884-1885 sur la colonisation française ?",
             "explanation": "La Conférence de Berlin, à laquelle la France a participé, a été organisée pour réguler la colonisation et le commerce en Afrique. Elle a conduit à une augmentation de la présence coloniale française en Afrique, mais a aussi exacerbé les tensions coloniales et a eu des conséquences durables sur les populations africaines.",
             "image": null
         },
         {
-            "id": 56,
+            "id": "livret_56",
             "question": "Quelle est l'importance du traité de Maastricht pour la France ?",
             "explanation": "Le traité de Maastricht, signé en 1992, a marqué une étape majeure dans l'intégration européenne. Pour la France, ce traité a signifié un engagement accru envers l'Union européenne, notamment à travers la création de l'Union économique et monétaire et l'introduction de l'euro.",
             "image": null
         },
         {
-            "id": 57,
+            "id": "livret_57",
             "question": "Qui était Maximilien Robespierre et quel était son rôle pendant la Révolution ?",
             "explanation": "Maximilien Robespierre était un leader influent pendant la Révolution française, notamment pendant la période de la Terreur. Il était membre du Comité de salut public et a joué un rôle clé dans la lutte contre les ennemis de la Révolution, mais sa gouvernance stricte et ses politiques radicales ont conduit à sa chute et à son exécution.",
             "image": null
         },
         {
-            "id": 58,
+            "id": "livret_58",
             "question": "Qu'est-ce que la Terreur, et pourquoi est-elle importante dans le contexte de la Révolution française ?",
             "explanation": "La Terreur (1793-1794) était une période de la Révolution française caractérisée par des arrestations massives, des procès rapides et des exécutions, souvent par guillotine. Elle visait à éliminer les ennemis supposés de la Révolution et à consolider l'autorité du gouvernement révolutionnaire, mais elle a également provoqué une réaction contre l'extrémisme révolutionnaire.",
             "image": null
         },
         {
-            "id": 59,
+            "id": "livret_59",
             "question": "Pouvez-vous nommer quelques reines de France ?",
             "explanation": "Parmi les reines de France, on peut citer Marie-Antoinette, Catherine de Médicis, et Marie de Médicis, Anne de Bretagne, Aliénor d’Aquitaine.",
             "image": null
         },
         {
-            "id": 60,
+            "id": "livret_60",
             "question": "Qu'est-ce que le Traité d'Amsterdam ?",
             "explanation": "Un traité de l'Union européenne entré en vigueur en 1999.",
             "image": null
         },
         {
-            "id": 61,
+            "id": "livret_61",
             "question": "Quelle est l'origine du nom Gaule ?",
             "explanation": "Terme utilisé par les Romains pour désigner les territoires habités par les Celtes en Europe occidentale.",
             "image": null
         },
         {
-            "id": 62,
+            "id": "livret_62",
             "question": "Quelle est la plus ancienne université de France ?",
             "explanation": "L'Université de Paris, fondée en 1150.",
             "image": null
         },
         {
-            "id": 63,
+            "id": "livret_63",
             "question": "Qu'est-ce que la bataille de Marignan ?",
             "explanation": "Une victoire française importante de François Ier en 1515 contre les Suisses.",
             "image": null
         },
         {
-            "id": 64,
+            "id": "livret_64",
             "question": "Citez un monument historique connu de votre choix et présentez-le ?",
             "explanation": "La Tour Eiffel est l’un des monuments les plus emblématiques de la France. Située à Paris, elle a été construite par Gustave Eiffel pour l’Exposition universelle de 1889.",
             "image": null
         },
         {
-            "id": 65,
+            "id": "livret_65",
             "question": "Quelles sont les principales caractéristiques de la Tour Eiffel ?",
             "explanation": "La Tour Eiffel mesure 330 mètres de haut, est construite en fer puddlé et pèse 10 100 tonnes.",
             "image": null
         },
         {
-            "id": 66,
+            "id": "livret_66",
             "question": "Quel célèbre musée de Paris abrite la Joconde ?",
             "explanation": "Le musée du Louvre abrite la Joconde",
             "image": null
         },
         {
-            "id": 67,
+            "id": "livret_67",
             "question": "Quel est le sport le plus populaire en France ?",
             "explanation": "Le football.",
             "image": null
         },
         {
-            "id": 68,
+            "id": "livret_68",
             "question": "Citez quelques marques française de la haute couture ?",
             "explanation": "La mode de luxe créée par de grands couturiers comme Chanel, Dior et Yves Saint Laurent.",
             "image": null
         },
         {
-            "id": 69,
+            "id": "livret_69",
             "question": "Quels sont quelques musées célèbres en France ?",
             "explanation": "Le Louvre, le Musée d’Orsay et le Centre Pompidou.",
             "image": null
         },
         {
-            "id": 70,
+            "id": "livret_70",
             "question": "Quelle cathédrale gothique est située sur l'île de la Cité à Paris ?",
             "explanation": "La cathédrale Notre-Dame de Paris est située sur l'île de la Cité.",
             "image": null
         },
         {
-            "id": 71,
+            "id": "livret_71",
             "question": "Quel est le nom du satellite français lancé en 1965 ?",
             "explanation": "Astérix.",
             "image": null
         },
         {
-            "id": 72,
+            "id": "livret_72",
             "question": "Quel est le nom de la célèbre basilique située sur la colline de Montmartre à Paris ?",
             "explanation": "La basilique du Sacré-Cœur est située sur la colline de Montmartre.",
             "image": null
         },
         {
-            "id": 73,
+            "id": "livret_73",
             "question": "Qui est Jean-Paul Sartre ?",
             "explanation": "Jean-Paul Sartre était un philosophe, écrivain et figure majeure de l’existentialisme. Il est l'auteur de nombreuses œuvres philosophiques et littéraires, dont L'Être et le Néant et Les Mots. Il a également refusé le prix Nobel de littérature en 1964.",
             "image": null
         },
         {
-            "id": 74,
+            "id": "livret_74",
             "question": "Qu'est-ce que le Panthéon à Paris ?",
             "explanation": "Le Panthéon est un monument à Paris, situé dans le Quartier Latin. Il est à la fois un lieu de sépulture et un symbole national où reposent de nombreuses personnalités françaises importantes.",
             "image": null
         },
         {
-            "id": 75,
+            "id": "livret_75",
             "question": "Citez un film français et son acteur principal.",
             "explanation": "Film : Intouchables, acteur principal : François Cluzet (qui joue le rôle de Philippe)",
             "image": null
         },
         {
-            "id": 76,
+            "id": "livret_76",
             "question": "Citez une série française et son acteur principal.",
             "explanation": "Série: HPI, actrice principale : Audrey Fleurot (qui joue le rôle de Morgane Alvaro)",
             "image": null
         },
         {
-            "id": 77,
+            "id": "livret_77",
             "question": "Quel est le festival de musique électronique célèbre en France ?",
             "explanation": "Les Nuits Sonores à Lyon.",
             "image": null
         },
         {
-            "id": 78,
+            "id": "livret_78",
             "question": "Quel est le dernier film que vous avez vu au cinéma ? Qui est le réalisateur et l'acteur principal ?",
             "explanation": "Cela dépend des goûts et de l'actualité du cinéma, mais par exemple : Le dernier film que j'ai vu est Le Comte de Monte-Cristo, réalisé par Matthieu Delaporte et Alexandre de La Patellière. L'acteur principal est Pierre Niney, qui interprète le rôle d'Edmond Dantès.",
             "image": null
         },
         {
-            "id": 79,
+            "id": "livret_79",
             "question": "En quelle année le TGV (Train à Grande Vitesse) a-t-il été inauguré ?",
             "explanation": "1981.",
             "image": null
         },
         {
-            "id": 80,
+            "id": "livret_80",
             "question": "Quelle est la capacité du Stade de France ?",
             "explanation": "Environ 80 000 spectateurs.",
             "image": null
         },
         {
-            "id": 81,
+            "id": "livret_81",
             "question": "Nommez deux grands scientifiques français.",
             "explanation": "Marie Curie et Louis Pasteur.",
             "image": null
         },
         {
-            "id": 82,
+            "id": "livret_82",
             "question": "Qui est Louis Pasteur ?",
             "explanation": "Louis Pasteur était un scientifique français, pionnier dans la découverte des micro-organismes et dans le développement de vaccins. Il a révolutionné la médecine avec ses recherches sur la fermentation et la pasteurisation.",
             "image": null
         },
         {
-            "id": 83,
+            "id": "livret_83",
             "question": "Citez quelques chefs cuisiniers célèbres.",
             "explanation": "Paul Bocuse, Alain Ducasse, Joël Robuchon, Philippe Etchebest, Hélène Darroze et Michel Sarran.",
             "image": null
         },
         {
-            "id": 84,
+            "id": "livret_84",
             "question": "Qu'est-ce que la Francophonie ?",
             "explanation": "L'ensemble des personnes et pays partageant la langue française.",
             "image": null
         },
         {
-            "id": 85,
+            "id": "livret_85",
             "question": "Quelle est la première université fondée en France ?",
             "explanation": "L'Université de Paris, connue sous le nom de Sorbonne.",
             "image": null
         },
         {
-            "id": 86,
+            "id": "livret_86",
             "question": "Nommez un célèbre festival de cinéma qui se tient annuellement en France ?",
             "explanation": "Le Festival de Cannes.",
             "image": null
         },
         {
-            "id": 87,
+            "id": "livret_87",
             "question": "Quel est le nombre de restaurants étoilés Michelin en France ?",
             "explanation": "La France possède plus de 600 restaurants étoilés Michelin, dont plusieurs 3 étoiles, ce qui en fait l'un des pays avec le plus grand nombre de restaurants de haute gastronomie.",
             "image": null
         },
         {
-            "id": 88,
+            "id": "livret_88",
             "question": "Quel musée français est dédié à l'art moderne et contemporain ?",
             "explanation": "Le Centre Pompidou.",
             "image": null
         },
         {
-            "id": 89,
+            "id": "livret_89",
             "question": "Citez quelques plats typiques de la cuisine française ?",
             "explanation": "Coq au vin, Bœuf bourguignon, Ratatouille, Tartiflette, Soupe à l'oignon, Quiche Lorraine Crêpes, Bouillabaisse…",
             "image": null
         },
         {
-            "id": 90,
+            "id": "livret_90",
             "question": "Qu'est-ce que la Fête de la Musique ?",
             "explanation": "Un événement annuel célébrant la musique vivante le 21 juin, jour du solstice d'été.",
             "image": null
         },
         {
-            "id": 91,
+            "id": "livret_91",
             "question": "Qu'est-ce que le Groupe des Sept ou G7 ?",
             "explanation": "Un groupe de pays industrialisés dont la France fait partie, se réunissant annuellement pour discuter de questions économiques mondiales.",
             "image": null
         },
         {
-            "id": 92,
+            "id": "livret_92",
             "question": "Qu'est-ce que l'AMF (Autorité des marchés financiers) ?",
             "explanation": "L'organisme de régulation de la bourse en France.",
             "image": null
         },
         {
-            "id": 93,
+            "id": "livret_93",
             "question": "Quel écrivain français a remporté le Prix Nobel de littérature en 2014 ?",
             "explanation": "Patrick Modiano.",
             "image": null
         },
         {
-            "id": 94,
+            "id": "livret_94",
             "question": "Qu'est-ce que le CNRS ?",
             "explanation": "Le Centre National de la Recherche Scientifique, une organisation gouvernementale de recherche en France.",
             "image": null
         },
         {
-            "id": 95,
+            "id": "livret_95",
             "question": "En quelle année la France a-t-elle adopté l'euro comme monnaie ?",
             "explanation": "2002.",
             "image": null
         },
         {
-            "id": 96,
+            "id": "livret_96",
             "question": "Comment la France a-t-elle influencé la cuisine mondiale ?",
             "explanation": "La France a grandement influencé la cuisine mondiale par ses techniques culinaires, ses écoles de cuisine, son système de restaurants et ses innovations gastronomiques. Des chefs comme Paul Bocuse, Alain Ducasse et Joël Robuchon ont également contribué à faire connaître la cuisine française dans le monde entier.",
             "image": null
         },
         {
-            "id": 97,
+            "id": "livret_97",
             "question": "Quelle est l'œuvre littéraire de Victor Hugo plaidant contre la peine de mort ?",
             "explanation": "Le Dernier Jour d'un condamné.",
             "image": null
         },
         {
-            "id": 98,
+            "id": "livret_98",
             "question": "Quelle est la bande dessinée la plus connue en France ?",
             "explanation": "Astérix et Obélix",
             "image": null
         },
         {
-            "id": 99,
+            "id": "livret_99",
             "question": "Citez quelques personnages français connus ?",
             "explanation": "",
             "image": null
         },
         {
-            "id": 100,
+            "id": "livret_100",
             "question": "Citez quelques sportifs français connu et leur discipline respective :",
             "explanation": "Kylian Mbappé (football), Tony Parker (Basket), Clarisse Agbegnenou (judo), Antoine Dupont (Rugby), Camille Lacourt (Natation)",
             "image": null
         },
         {
-            "id": 101,
+            "id": "livret_101",
             "question": "Quel est le surnom de la France dû à sa forme géographique ?",
             "explanation": "L'Hexagone.",
             "image": null
         },
         {
-            "id": 102,
+            "id": "livret_102",
             "question": "Pouvez-vous citer quelques pays limitrophes de la France ?",
             "explanation": "La France partage ses frontières avec l'Espagne, l'Andorre, l'Italie, la Suisse, l'Allemagne, le Luxembourg, la Belgique, et Monaco.",
             "image": null
         },
         {
-            "id": 103,
+            "id": "livret_103",
             "question": "Quel est le plus grand lac naturel de France ?",
             "explanation": "Le Lac du Bourget.",
             "image": null
         },
         {
-            "id": 104,
+            "id": "livret_104",
             "question": "Quel est l'ancien nom de la ville de Paris sous les Romains ?",
             "explanation": "Lutèce.",
             "image": null
         },
         {
-            "id": 105,
+            "id": "livret_105",
             "question": "Quelle est la plus vieille institution financière encore en activité en France ?",
             "explanation": "La Banque de France, fondée en 1800.",
             "image": null
         },
         {
-            "id": 106,
+            "id": "livret_106",
             "question": "Quel monument historique est situé sur l'île de la Cité à Paris ?",
             "explanation": "La Cathédrale Notre-Dame de Paris.",
             "image": null
         },
         {
-            "id": 107,
+            "id": "livret_107",
             "question": "Quel est le nom de l'aéroport le plus fréquenté de France ?",
             "explanation": "L'aéroport Charles-de-Gaulle.",
             "image": null
         },
         {
-            "id": 108,
+            "id": "livret_108",
             "question": "Quelles sont les chaînes de montagnes qui séparent la France de ses voisins ?",
             "explanation": "- France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.",
             "image": null
         },
         {
-            "id": 109,
+            "id": "livret_109",
             "question": "Quelle est la ville d'origine de la tarte Tatin ?",
             "explanation": "Lamotte-Beuvron.",
             "image": null
         },
         {
-            "id": 110,
+            "id": "livret_110",
             "question": "Quelle est la hauteur de la Tour Eiffel ?",
             "explanation": "Environ 324 mètres.",
             "image": null
         },
         {
-            "id": 111,
+            "id": "livret_111",
             "question": "Quel est le nom du Parc national situé en Guadeloupe ?",
             "explanation": "Le Parc national de la Guadeloupe.",
             "image": null
         },
         {
-            "id": 112,
+            "id": "livret_112",
             "question": "Qu'est-ce que le Mont-Saint-Michel ?",
             "explanation": "Un îlot rocheux en Normandie, célèbre pour son abbaye et classé au patrimoine mondial de l'UNESCO.",
             "image": null
         },
         {
-            "id": 113,
+            "id": "livret_113",
             "question": "Quelles sont les mers et océans qui entourent la France ?",
             "explanation": "En métropole : La Manche, la mer du Nord, l’océan Atlantique et la mer Méditerranée. Outre-mer : L’océan Indien, l’océan Pacifique, l’océan Atlantique, la mer des Caraïbes.",
             "image": null
         },
         {
-            "id": 114,
+            "id": "livret_114",
             "question": "Quelle est la plus grande île de France métropolitaine ?",
             "explanation": "La Corse.",
             "image": null
         },
         {
-            "id": 115,
+            "id": "livret_115",
             "question": "Quelle ville est surnommée la Capitale des Gaules ?",
             "explanation": "Lyon.",
             "image": null
         },
         {
-            "id": 116,
+            "id": "livret_116",
             "question": "Quel est le plus ancien pont de Paris encore debout ?",
             "explanation": "Le Pont Neuf.",
             "image": null
         },
         {
-            "id": 117,
+            "id": "livret_117",
             "question": "Quelle célèbre course cycliste traverse la France chaque été ?",
             "explanation": "Le Tour de France.",
             "image": null
         },
         {
-            "id": 118,
+            "id": "livret_118",
             "question": "Quel fleuve sépare la ville de Paris en deux ?",
             "explanation": "La Seine.",
             "image": null
         },
         {
-            "id": 119,
+            "id": "livret_119",
             "question": "Quelle est la plus haute montagne de France ?",
             "explanation": "Le Mont Blanc.",
             "image": null
         },
         {
-            "id": 120,
+            "id": "livret_120",
             "question": "Quelle est la capitale de la France ?",
             "explanation": "Paris.",
             "image": null
         },
         {
-            "id": 121,
+            "id": "livret_121",
             "question": "Quel est le plus grand port maritime de France ?",
             "explanation": "Le Port de Marseille.",
             "image": null
         },
         {
-            "id": 122,
+            "id": "livret_122",
             "question": "Quelle est la spécialité culinaire de Lyon ?",
             "explanation": "La quenelle.",
             "image": null
         },
         {
-            "id": 123,
+            "id": "livret_123",
             "question": "Quelle est la plus grande forêt de France ?",
             "explanation": "La forêt des Landes.",
             "image": null
         },
         {
-            "id": 124,
+            "id": "livret_124",
             "question": "Quel est le point culminant de la France ?",
             "explanation": "Le Mont Blanc est le point culminant de la France.",
             "image": null
         },
         {
-            "id": 125,
+            "id": "livret_125",
             "question": "Quel est le nom du désert situé dans le sud de la France ?",
             "explanation": "Le désert situé dans le sud de la France est le désert des Bardenas Reales.",
             "image": null
         },
         {
-            "id": 126,
+            "id": "livret_126",
             "question": "Quelles sont les montagnes situées à la frontière entre la France et l'Espagne ?",
             "explanation": "Les Pyrénées sont les montagnes situées à la frontière entre la France et l'Espagne.",
             "image": null
         },
         {
-            "id": 127,
+            "id": "livret_127",
             "question": "Quel est le nom de la chaîne de montagnes située en France qui est célèbre pour ses stations de ski ?",
             "explanation": "Les Alpes sont célèbres pour leurs stations de ski en France.",
             "image": null
         },
         {
-            "id": 128,
+            "id": "livret_128",
             "question": "Quelle île française se trouve dans la mer Méditerranée, au large de la côte sud-est de la France ?",
             "explanation": "La Corse est une île française située dans la mer Méditerranée.",
             "image": null
         },
         {
-            "id": 129,
+            "id": "livret_129",
             "question": "Quelle est la principale île volcanique française située dans l'océan Indien ?",
             "explanation": "La Réunion est la principale île volcanique française dans l'océan Indien.",
             "image": null
         },
         {
-            "id": 130,
+            "id": "livret_130",
             "question": "Quelle rivière traverse la ville de Lyon en France ?",
             "explanation": "Le Rhône traverse la ville de Lyon en France.",
             "image": null
         },
         {
-            "id": 131,
+            "id": "livret_131",
             "question": "Quelles sont quelques grandes villes de France ?",
             "explanation": "Paris, Marseille, Lyon, Toulouse, Nice.",
             "image": null
         },
         {
-            "id": 132,
+            "id": "livret_132",
             "question": "Quelles sont les principales chaînes de montagnes en France ?",
             "explanation": "Les Alpes, les Pyrénées, le Massif central, le Jura, les Vosges.",
             "image": null
         },
         {
-            "id": 133,
+            "id": "livret_133",
             "question": "Quelles mers et océans bordent la France ?",
             "explanation": "La Manche, l'océan Atlantique, la mer Méditerranée, la mer du Nord.",
             "image": null
         },
         {
-            "id": 134,
+            "id": "livret_134",
             "question": "Quelles sont les frontières de la France d'outre-mer ?",
             "explanation": "Guyane : Frontière avec le Brésil et le Suriname, Saint-Martin : Frontière avec Sint Maarten (Pays-Bas), Saint-Pierre-et-Miquelon : Frontière maritime avec le Canada, Mayotte : Frontière maritime avec les Comores et Madagascar, Réunion : Pas de frontière terrestre, mais située à proximité de Madagascar, Nouvelle-Calédonie : Frontières maritimes avec Vanuatu et la Papouasie-Nouvelle-Guinée, Polynésie",
             "image": null
         },
         {
-            "id": 135,
+            "id": "livret_135",
             "question": "Quels pays ne font pas partie de l'Union européenne mais font partie de l'espace Schengen ?",
             "explanation": "- Certains pays ne font pas partie de l'Union européenne mais font partie de l'Espace Schengen, qui permet la libre circulation des personnes entre ses membres. Ces pays sont :\n\n- Norvège\n\n- Islande\n\n- Suisse\n\n- Liechtenstein Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'Espace Schengen, même s'ils ne sont pas membres de l'Union européenne.",
             "image": null
         },
         {
-            "id": 136,
+            "id": "livret_136",
             "question": "Quel est le nom du satellite européen de navigation ?",
             "explanation": "Galileo.",
             "image": null
         },
         {
-            "id": 137,
+            "id": "livret_137",
             "question": "Qui a composé l'hymne européen ?",
             "explanation": "Ludwig van Beethoven, L'Ode à la joie de sa 9ème symphonie.",
             "image": null
         },
         {
-            "id": 138,
+            "id": "livret_138",
             "question": "En quelle année la France est-elle devenue membre de l'Union Européenne ?",
             "explanation": "1957, avec la signature du Traité de Rome (la France est l'un des membres fondateurs).",
             "image": null
         },
         {
-            "id": 139,
+            "id": "livret_139",
             "question": "Qui est Robert Schuman ?",
             "explanation": "Robert Schuman était un homme politique français, ministre des Affaires étrangères, considéré comme l'un des pères fondateurs de l'Union européenne. Il est célèbre pour avoir proposé la Déclaration Schuman en 1950, qui a initié la création de la Communauté européenne du charbon et de l'acier, première étape vers l'intégration européenne.",
             "image": null
         },
         {
-            "id": 140,
+            "id": "livret_140",
             "question": "Qu'est-ce que l'Union européenne (UE) ?",
             "explanation": "L'UE est une organisation politique et économique regroupant 27 pays européens.",
             "image": null
         },
         {
-            "id": 141,
+            "id": "livret_141",
             "question": "Qu’est-ce que l’Eurovision ?",
             "explanation": "L'Eurovision est un concours de chansons annuel organisé par l'Union européenne de radio-télévision (UER). Bien qu'il ne soit pas directement lié à l'UE, plusieurs pays européens et quelques pays voisins y participent, mettant en avant la culture musicale européenne.",
             "image": null
         },
         {
-            "id": 142,
+            "id": "livret_142",
             "question": "Quel est le drapeau de l'Union européenne ?",
             "explanation": "Le drapeau de l'UE est bleu avec 12 étoiles d'or en cercle.",
             "image": null
         },
         {
-            "id": 143,
+            "id": "livret_143",
             "question": "Quelle est la monnaie utilisée dans la zone euro ?",
             "explanation": "La monnaie utilisée dans la zone euro est l'euro (€).",
             "image": null
         },
         {
-            "id": 144,
+            "id": "livret_144",
             "question": "Quels pays européens ne font pas partie de l'UE ?",
             "explanation": "Parmi les pays européens qui ne font pas partie de l'UE, on trouve la Norvège, la Suisse, et le RoyaumeUni.",
             "image": null
         },
         {
-            "id": 145,
+            "id": "livret_145",
             "question": "Quelle est la capitale de l'Union européenne ?",
             "explanation": "La capitale de l'UE est Bruxelles, en Belgique.",
             "image": null
         },
         {
-            "id": 146,
+            "id": "livret_146",
             "question": "Quels sont les objectifs principaux de l'UE ?",
             "explanation": "Les principaux objectifs de l'UE sont la paix, la stabilité, la prospérité économique, et la coopération entre les pays membres.",
             "image": null
         },
         {
-            "id": 147,
+            "id": "livret_147",
             "question": "Quelles sont les langues officielles de l'UE ?",
             "explanation": "L'UE compte 24 langues officielles, dont l'anglais, le français, l'allemand, et l'espagnol.",
             "image": null
         },
         {
-            "id": 148,
+            "id": "livret_148",
             "question": "Quel a été l'impact du Brexit sur l'UE ?",
             "explanation": "Le Brexit a conduit à la sortie du Royaume-Uni de l'UE, ce qui a eu des conséquences économiques et politiques.",
             "image": null
         },
         {
-            "id": 149,
+            "id": "livret_149",
             "question": "Quelles sont les mesures prises par l'UE pour lutter contre le changement climatique ?",
             "explanation": "L'UE a adopté le pacte vert pour l'Europe, une initiative visant à atteindre la neutralité carbone d'ici 2050.",
             "image": null
         },
         {
-            "id": 150,
+            "id": "livret_150",
             "question": "Comment l'UE a-t-elle réagi à la crise migratoire en Europe ?",
             "explanation": "L'UE a mis en place diverses politiques et accords pour gérer la crise migratoire, y compris la réinstallation des réfugiés.",
             "image": null
         },
         {
-            "id": 151,
+            "id": "livret_151",
             "question": "Quelles sont les principales initiatives de l'UE en matière de numérisation ?",
             "explanation": "L'UE promeut la transformation numérique à travers des programmes tels que le marché unique numérique.",
             "image": null
         },
         {
-            "id": 152,
+            "id": "livret_152",
             "question": "Quel est l'hymne de l'Union européenne ?",
             "explanation": "L'hymne de l'UE est l'Ode à la Joie de la 9e Symphonie de Beethoven.",
             "image": null
         },
         {
-            "id": 153,
+            "id": "livret_153",
             "question": "Quel est le slogan de l'UE ?",
             "explanation": "Le slogan de l'UE est 'Unie dans la diversité'.",
             "image": null
         },
         {
-            "id": 154,
+            "id": "livret_154",
             "question": "Quel est le Jour de l'Europe ?",
             "explanation": "Le Jour de l'Europe est célébré le 9 mai en l'honneur de la déclaration Schuman en 1950.",
             "image": null
         },
         {
-            "id": 155,
+            "id": "livret_155",
             "question": "Qu'est-ce que la Commission européenne ?",
             "explanation": "La Commission européenne est l'organe exécutif de l'UE, responsable de la mise en œuvre des politiques et de la gestion des programmes.",
             "image": null
         },
         {
-            "id": 156,
+            "id": "livret_156",
             "question": "Qu'est-ce que le Conseil de l'Union européenne ?",
             "explanation": "Le Conseil de l'UE représente les gouvernements des États membres et prend des décisions sur les politiques de l'UE.",
             "image": null
         },
         {
-            "id": 157,
+            "id": "livret_157",
             "question": "Qu'est-ce que le pacte vert pour l'Europe (Green Deal) ?",
             "explanation": "Le pacte vert pour l'Europe est une initiative de l'UE visant à atteindre la neutralité carbone et à promouvoir la durabilité environnementale.",
             "image": null
         },
         {
-            "id": 158,
+            "id": "livret_158",
             "question": "C'est quoi l'espace Schengen ?",
             "explanation": "L'espace Schengen est un ensemble de pays européens qui ont aboli les contrôles aux frontières internes entre eux. Cela permet la libre circulation des personnes à l'intérieur de cet espace, facilitant les voyages et les échanges. Il comprend la plupart des pays de l'UE, ainsi que quelques pays non membres de l'UE.",
             "image": null
         },
         {
-            "id": 159,
+            "id": "livret_159",
             "question": "Où se trouve le siège principal de l'Union européenne ?",
             "explanation": "Le siège principal de l'Union européenne se trouve à Bruxelles, en Belgique.",
             "image": null
         },
         {
-            "id": 160,
+            "id": "livret_160",
             "question": "Quel est le dernier pays à avoir rejoint l'Union européenne ?",
             "explanation": "La Croatie est le dernier pays à avoir rejoint l'UE, le 1er juillet 2013.",
             "image": null
         },
         {
-            "id": 161,
+            "id": "livret_161",
             "question": "Quel est votre avis sur l'actualité mondiale ?",
             "explanation": "L'actualité mondiale est complexe, marquée par des défis tels que les conflits géopolitiques, la crise climatique, et les avancées technologiques. Elle nécessite une approche nuancée et informée pour comprendre les enjeux actuels.",
             "image": null
         },
         {
-            "id": 162,
+            "id": "livret_162",
             "question": "Quelle est la devise officielle de l'Union européenne ?",
             "explanation": "La devise officielle de l'UE est 'Unie dans la diversité'.",
             "image": null

@@ -6,175 +6,175 @@
     "description": "Administration locale et territoriale",
     "questions": [
         {
-            "id": 1,
+            "id": "livret_1",
             "question": "Combien y a-t-il de communes et qui les administre ?",
             "explanation": "Environ **35 000 communes** (34 965 en 2021), administrées par un **maire** et un conseil municipal.",
             "image": null
         },
         {
-            "id": 2,
+            "id": "livret_2",
             "question": "Quelles sont les compétences de la commune ?",
             "explanation": "Écoles primaires et maternelles, état civil (naissances, mariages, décès), voirie, activités culturelles et sportives.",
             "image": null
         },
         {
-            "id": 3,
+            "id": "livret_3",
             "question": "Qui administre le département et quelles sont ses compétences ?",
             "explanation": "Le conseil départemental (101 départements). Il gère les **collèges**, la protection sociale (enfance, personnes âgées).",
             "image": null
         },
         {
-            "id": 4,
+            "id": "livret_4",
             "question": "Quelles sont les compétences de la région ?",
             "explanation": "Le conseil régional (13 régions métropolitaines) gère les **lycées**, la formation professionnelle et les transports.",
             "image": null
         },
         {
-            "id": 5,
+            "id": "livret_5",
             "question": "Combien y a-t-il de territoires d'Outre-mer ?",
             "explanation": "**12 territoires** (Départements/Régions et Collectivités d'Outre-mer).",
             "image": null
         },
         {
-            "id": 6,
+            "id": "livret_6",
             "question": "Qui représente l'État dans les départements et régions ?",
             "explanation": "Le **Préfet**.",
             "image": null
         },
         {
-            "id": 7,
+            "id": "livret_7",
             "question": "Où habitez-vous actuellement ?",
             "explanation": "J’habite à (Ville, Département).",
             "image": null
         },
         {
-            "id": 8,
+            "id": "livret_8",
             "question": "Avez-vous visité d'autres villes en France ? Lesquelles et qu'avez-vous appris de ces visites ?",
             "explanation": "Oui, j'ai visité (noms des villes, par exemple : Lyon, Bordeaux, Marseille). Chaque visite m'a permis de découvrir la diversité culturelle et régionale de la France, renforçant mon appréciation pour le pays.",
             "image": null
         },
         {
-            "id": 9,
+            "id": "livret_9",
             "question": "Vous habitez seul(e) ou en famille ?",
             "explanation": "J’habite (seul(e) / en famille) à (ville ou région).",
             "image": null
         },
         {
-            "id": 10,
+            "id": "livret_10",
             "question": "Où passez-vous habituellement vos vacances ?",
             "explanation": "Nous passons nos vacances soit en explorant différentes régions de France pour découvrir sa beauté et sa diversité, soit en retournant dans notre pays d'origine pour rester connectés à nos racines et revoir notre famille.",
             "image": null
         },
         {
-            "id": 11,
+            "id": "livret_11",
             "question": "Quelles sont les 3 types de collectivités en France ?",
             "explanation": "- Les communes\n- Les départements\n- Les régions",
             "image": null
         },
         {
-            "id": 12,
+            "id": "livret_12",
             "question": "Comment sont élus les conseillers départementaux ?",
             "explanation": "Les conseillers départementaux sont élus pour six ans au suffrage universel direct, mais avec un scrutin binominal majoritaire à deux tours.",
             "image": null
         },
         {
-            "id": 13,
+            "id": "livret_13",
             "question": "Quelles sont les principales réformes de Napoléon sous le Consulat ?",
             "explanation": "- Création des préfets pour administrer les départements.\n\n- Réforme de l'éducation avec les lycées.\n\n- Création du franc germinal (monnaie stable).\n\n- Adoption du Code civil (1804), qui influence encore le droit français.",
             "image": null
         },
         {
-            "id": 14,
+            "id": "livret_14",
             "question": "Comment la France a-t-elle été impliquée dans la colonisation ?",
             "explanation": "La France a été une des principales puissances coloniales, avec un empire s'étendant sur plusieurs continents, notamment en Afrique, en Asie et dans les Caraïbes. La colonisation a eu des répercussions durables sur ces régions et continue d'influencer les relations internationales et la politique française.",
             "image": null
         },
         {
-            "id": 15,
+            "id": "livret_15",
             "question": "Citez un plat typique de votre région ?",
             "explanation": "Provence-Alpes-Côte d'Azur : La ratatouille – Bretagne : Les crêpes – Normandie : Le camembert –",
             "image": null
         },
         {
-            "id": 16,
+            "id": "livret_16",
             "question": "Quel fromage est souvent associé à la région de Normandie ?",
             "explanation": "Le Camembert.",
             "image": null
         },
         {
-            "id": 17,
+            "id": "livret_17",
             "question": "Pouvez-vous nommer des départements d’outre-mer (DOM) ?",
             "explanation": "Les départements d’outre-mer (DOM) comprennent la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.",
             "image": null
         },
         {
-            "id": 18,
+            "id": "livret_18",
             "question": "Quelles sont les collectivités d’outre- mer ?",
             "explanation": "Les collectivités d’outre-mer comprennent la Polynésie française, Saint-Barthélemy, SaintMartin, Saint-Pierre-et- Miquelon et Wallis-et-Futuna. Il existe également des statuts particuliers, notamment la Nouvelle-Calédonie, les Terres australes et antarctiques françaises, ainsi que l'île de Clipperton.",
             "image": null
         },
         {
-            "id": 19,
+            "id": "livret_19",
             "question": "Combien y a-t-il de collectivités et territoires d’Outre-mer (COM-TOM) ?",
             "explanation": "- Il y a 6 collectivités d’Outre-mer (COM) et 1 territoire spécial :\n\n- Polynésie française\n\n- Saint-Pierre-et-Miquelon\n\n- Saint-Barthélemy\n\n- Saint-Martin\n\n- Wallis-et-Futuna\n\n- Nouvelle-Calédonie (statut spécial) Ces territoires ont plus d’autonomie et des règles spécifiques.",
             "image": null
         },
         {
-            "id": 20,
+            "id": "livret_20",
             "question": "Quelle est la région française réputée pour ses vignobles ?",
             "explanation": "La Bourgogne.",
             "image": null
         },
         {
-            "id": 21,
+            "id": "livret_21",
             "question": "Quelle région française est connue pour la production de champagne ?",
             "explanation": "La Champagne.",
             "image": null
         },
         {
-            "id": 22,
+            "id": "livret_22",
             "question": "Quelle est la première femme à avoir été élue maire d'une grande ville en France ?",
             "explanation": "Catherine Trautmann, maire de Strasbourg en 1989.",
             "image": null
         },
         {
-            "id": 23,
+            "id": "livret_23",
             "question": "Dans quelle région vous trouvez-vous ?",
             "explanation": "Selon votre cas, exemple : le Nord.",
             "image": null
         },
         {
-            "id": 24,
+            "id": "livret_24",
             "question": "Quelle est la région française réputée pour ses fromages et ses volcans ?",
             "explanation": "L'Auvergne.",
             "image": null
         },
         {
-            "id": 25,
+            "id": "livret_25",
             "question": "Quelle région française est connue pour ses vignobles et sa production de vin ?",
             "explanation": "La région de Bordeaux est célèbre pour ses vignobles et sa production de vin.",
             "image": null
         },
         {
-            "id": 26,
+            "id": "livret_26",
             "question": "Quelle est la plus grande région forestière de France ?",
             "explanation": "La Forêt des Landes est la plus grande région forestière de France.",
             "image": null
         },
         {
-            "id": 27,
+            "id": "livret_27",
             "question": "Quelle région est connue comme le berceau de la Préhistoire en France ?",
             "explanation": "La région connue comme le berceau de la Préhistoire en France est le Périgord, située en Dordogne, dans le sud- ouest du pays.",
             "image": null
         },
         {
-            "id": 28,
+            "id": "livret_28",
             "question": "de quel côté se trouvent-ils ?",
             "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine.\n\n- Au nord, la Manche sépare la France du Royaume-Uni.\n\n- Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.\n\n- Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
             "image": null
         },
         {
-            "id": 29,
+            "id": "livret_29",
             "question": "Qu'est-ce que l'eurozone ?",
             "explanation": "L'eurozone est un groupe de pays de l'UE qui ont adopté l'euro comme monnaie commune.",
             "image": null

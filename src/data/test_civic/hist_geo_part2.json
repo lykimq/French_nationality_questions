@@ -1,6 +1,6 @@
 [
     {
-        "id": 91,
+        "id": "test_civic_1",
         "question": "Qu'est-ce que la colonisation ?",
         "correctAnswer": "L'occupation et l'exploitation d'un territoire étranger par la force.",
         "incorrectAnswers": [
@@ -13,7 +13,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 92,
+        "id": "test_civic_2",
         "question": "Où se situaient les premières colonies françaises (XVIe siècle) ?",
         "correctAnswer": "En Amérique (Canada, Louisiane, Antilles).",
         "incorrectAnswers": [
@@ -26,7 +26,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 93,
+        "id": "test_civic_3",
         "question": "Où la France a-t-elle colonisé au XIXe siècle ?",
         "correctAnswer": "En Afrique (Maghreb, Afrique noire) et en Asie (Indochine).",
         "incorrectAnswers": [
@@ -39,7 +39,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 94,
+        "id": "test_civic_4",
         "question": "Sur quoi repose la colonisation ?",
         "correctAnswer": "Sur la domination d'une puissance sur une autre population.",
         "incorrectAnswers": [
@@ -52,7 +52,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 95,
+        "id": "test_civic_5",
         "question": "Quelles étaient les motivations de la colonisation ?",
         "correctAnswer": "Économiques (ressources), politiques (puissance) et prétendument civilisatrices.",
         "incorrectAnswers": [
@@ -65,7 +65,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 96,
+        "id": "test_civic_6",
         "question": "Quelles souffrances le commerce triangulaire a-t-il causées ?",
         "correctAnswer": "La déportation et l'esclavage de millions d'Africains.",
         "incorrectAnswers": [
@@ -78,7 +78,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 97,
+        "id": "test_civic_7",
         "question": "Qu'est-ce que l'immigration ?",
         "correctAnswer": "Le fait de s'installer durablement dans un pays étranger.",
         "incorrectAnswers": [
@@ -91,7 +91,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 98,
+        "id": "test_civic_8",
         "question": "Pourquoi les immigrés viennent-ils en France ?",
         "correctAnswer": "Pour le travail, pour fuir la guerre ou pour rejoindre leur famille.",
         "incorrectAnswers": [
@@ -104,7 +104,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 99,
+        "id": "test_civic_9",
         "question": "Quel est l'objectif des politiques migratoires actuelles ?",
         "correctAnswer": "Réguler les flux et favoriser l'intégration.",
         "incorrectAnswers": [
@@ -117,7 +117,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 100,
+        "id": "test_civic_10",
         "question": "Que signifie le mot 'Shoah' ?",
         "correctAnswer": "Catastrophe (en hébreu), désignant le génocide des Juifs.",
         "incorrectAnswers": [
@@ -130,7 +130,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 101,
+        "id": "test_civic_11",
         "question": "Comment Vichy a-t-il participé à la Shoah ?",
         "correctAnswer": "En arrêtant et déportant les Juifs de France (Rafle du Vél' d'Hiv).",
         "incorrectAnswers": [
@@ -143,7 +143,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 102,
+        "id": "test_civic_12",
         "question": "Pourquoi le devoir de mémoire est-il important ?",
         "correctAnswer": "Pour ne jamais oublier les victimes et éviter que cela recommence.",
         "incorrectAnswers": [
@@ -156,7 +156,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 103,
+        "id": "test_civic_13",
         "question": "Combien de victimes juives a fait la Shoah ?",
         "correctAnswer": "6 millions.",
         "incorrectAnswers": [
@@ -169,7 +169,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 104,
+        "id": "test_civic_14",
         "question": "Comment vivaient les Français sous l'Occupation ?",
         "correctAnswer": "Dans la peur, les restrictions et la perte de liberté.",
         "incorrectAnswers": [
@@ -182,7 +182,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 105,
+        "id": "test_civic_15",
         "question": "Qui a unifié la Résistance intérieure (CNR) ?",
         "correctAnswer": "Jean Moulin.",
         "incorrectAnswers": [
@@ -195,7 +195,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 106,
+        "id": "test_civic_16",
         "question": "Qu'est-ce qui permet la Libération de la France en 1944 ?",
         "correctAnswer": "Le débarquement des Alliés et l'action des Résistants.",
         "incorrectAnswers": [
@@ -208,7 +208,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 107,
+        "id": "test_civic_17",
         "question": "Quelle place la France retrouve-t-elle en 1945 ?",
         "correctAnswer": "Elle siège parmi les vainqueurs et les grandes puissances (ONU).",
         "incorrectAnswers": [
@@ -221,7 +221,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 108,
+        "id": "test_civic_18",
         "question": "De quoi est composé le territoire français ?",
         "correctAnswer": "De la Métropole (Hexagone) et des territoires d'Outre-mer.",
         "incorrectAnswers": [
@@ -234,7 +234,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 109,
+        "id": "test_civic_19",
         "question": "Quels sont les 5 Départements et Régions d'Outre-Mer (DROM) ?",
         "correctAnswer": "Guadeloupe, Martinique, Guyane, La Réunion, Mayotte.",
         "incorrectAnswers": [
@@ -247,7 +247,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 110,
+        "id": "test_civic_20",
         "question": "Combien de pays ont une frontière terrestre avec la France Métropolitaine ?",
         "correctAnswer": "8 pays (Belgique, Luxembourg, Allemagne, Suisse, Italie, Espagne, Andorre, Monaco).",
         "incorrectAnswers": [
@@ -260,7 +260,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 111,
+        "id": "test_civic_21",
         "question": "Quelles sont les frontières naturelles de la France ?",
         "correctAnswer": "Les Pyrénées, les Alpes, le Jura, les Vosges, le Rhin.",
         "incorrectAnswers": [
@@ -273,7 +273,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 112,
+        "id": "test_civic_22",
         "question": "Quels sont les 5 grands fleuves français ?",
         "correctAnswer": "La Seine, la Loire, la Garonne, le Rhône, le Rhin.",
         "incorrectAnswers": [
@@ -286,7 +286,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 113,
+        "id": "test_civic_23",
         "question": "Quelle est la population de la France (environ) ?",
         "correctAnswer": "68 millions d'habitants.",
         "incorrectAnswers": [
@@ -299,7 +299,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 114,
+        "id": "test_civic_24",
         "question": "Comment évolue la population française ?",
         "correctAnswer": "Elle vieillit (plus de personnes âgées).",
         "incorrectAnswers": [
@@ -312,7 +312,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 115,
+        "id": "test_civic_25",
         "question": "Où vit la majorité des Français ?",
         "correctAnswer": "En ville (dans les aires urbaines).",
         "incorrectAnswers": [
@@ -325,7 +325,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 116,
+        "id": "test_civic_26",
         "question": "Qu'est-ce qu'une aire urbaine ?",
         "correctAnswer": "Une ville-centre, sa banlieue et sa couronne périurbaine.",
         "incorrectAnswers": [
@@ -338,7 +338,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 117,
+        "id": "test_civic_27",
         "question": "Qu'est-ce que la métropolisation ?",
         "correctAnswer": "La concentration des hommes et des activités dans les grandes villes.",
         "incorrectAnswers": [
@@ -351,7 +351,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 118,
+        "id": "test_civic_28",
         "question": "Quelles sont les plus grandes métropoles après Paris ?",
         "correctAnswer": "Lyon, Marseille, Lille, Bordeaux, Toulouse.",
         "incorrectAnswers": [
@@ -364,7 +364,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 119,
+        "id": "test_civic_29",
         "question": "Quelle est la place de l'agriculture française en Europe ?",
         "correctAnswer": "Première puissance agricole de l'UE.",
         "incorrectAnswers": [
@@ -377,7 +377,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 120,
+        "id": "test_civic_30",
         "question": "Quelles sont les grandes productions agricoles ?",
         "correctAnswer": "Céréales, vignes, élevage (lait, viande).",
         "incorrectAnswers": [
@@ -390,7 +390,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 121,
+        "id": "test_civic_31",
         "question": "Quels sont les défis de l'agriculture aujourd'hui ?",
         "correctAnswer": "L'environnement (pesticides) et le revenu des agriculteurs.",
         "incorrectAnswers": [
@@ -403,7 +403,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 122,
+        "id": "test_civic_32",
         "question": "Quels sont les points forts de l'industrie française ?",
         "correctAnswer": "Aéronautique, luxe, pharmacie, agroalimentaire, énergie.",
         "incorrectAnswers": [
@@ -416,7 +416,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 123,
+        "id": "test_civic_33",
         "question": "Où se concentre l'industrie aéronautique ?",
         "correctAnswer": "À Toulouse et dans le Sud-Ouest.",
         "incorrectAnswers": [
@@ -429,7 +429,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 124,
+        "id": "test_civic_34",
         "question": "Quel est l'objectif industriel actuel de la France ?",
         "correctAnswer": "La réindustrialisation et l'innovation verte.",
         "incorrectAnswers": [
@@ -442,7 +442,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 125,
+        "id": "test_civic_35",
         "question": "Quelle est la puissance économique de la France ?",
         "correctAnswer": "7e puissance mondiale.",
         "incorrectAnswers": [
@@ -455,7 +455,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 126,
+        "id": "test_civic_36",
         "question": "Dans quel secteur travaillent la majorité des Français ?",
         "correctAnswer": "Le secteur tertiaire (services : commerce, santé, éducation...).",
         "incorrectAnswers": [
@@ -468,7 +468,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 127,
+        "id": "test_civic_37",
         "question": "Quel est un problème économique majeur de l'État ?",
         "correctAnswer": "La dette publique et le déficit.",
         "incorrectAnswers": [
@@ -481,7 +481,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 128,
+        "id": "test_civic_38",
         "question": "Pourquoi la position de la France est-elle un atout ?",
         "correctAnswer": "Elle est au carrefour de l'Europe avec une triple ouverture maritime.",
         "incorrectAnswers": [
@@ -494,7 +494,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 129,
+        "id": "test_civic_39",
         "question": "Quel est le pays le plus peuplé d'Europe ?",
         "correctAnswer": "L'Allemagne.",
         "incorrectAnswers": [
@@ -507,7 +507,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 130,
+        "id": "test_civic_40",
         "question": "Comment le réseau de transport français est-il organisé ?",
         "correctAnswer": "En étoile autour de Paris (centralisé).",
         "incorrectAnswers": [
@@ -520,7 +520,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 131,
+        "id": "test_civic_41",
         "question": "Quels corridors européens traversent la France ?",
         "correctAnswer": "L'axe Nord-Sud (Lille-Paris-Lyon-Marseille) et l'axe Atlantique.",
         "incorrectAnswers": [
@@ -533,7 +533,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 132,
+        "id": "test_civic_42",
         "question": "Pourquoi la France a-t-elle une grande biodiversité ?",
         "correctAnswer": "Grâce à la variété de ses climats et à ses territoires d'Outre-mer.",
         "incorrectAnswers": [
@@ -546,7 +546,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 133,
+        "id": "test_civic_43",
         "question": "Qu'est-ce que le réseau Natura 2000 ?",
         "correctAnswer": "Un réseau de sites naturels protégés en Europe.",
         "incorrectAnswers": [
@@ -559,7 +559,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 134,
+        "id": "test_civic_44",
         "question": "Quels sont les défis environnementaux de la France ?",
         "correctAnswer": "Le changement climatique, la pollution et la protection de la biodiversité.",
         "incorrectAnswers": [
@@ -572,7 +572,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 135,
+        "id": "test_civic_45",
         "question": "Quelle est la part de l'agriculture dans le territoire français ?",
         "correctAnswer": "La moitié du territoire (50%).",
         "incorrectAnswers": [
@@ -585,7 +585,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 136,
+        "id": "test_civic_46",
         "question": "Quelles sont les principales exportations agricoles ?",
         "correctAnswer": "Le vin et les céréales.",
         "incorrectAnswers": [
@@ -598,7 +598,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 137,
+        "id": "test_civic_47",
         "question": "Qu'est-ce que le PIB (Produit Intérieur Brut) ?",
         "correctAnswer": "La richesse produite par le pays en un an.",
         "incorrectAnswers": [
@@ -611,7 +611,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 138,
+        "id": "test_civic_48",
         "question": "La France est-elle un grand pays par la taille ?",
         "correctAnswer": "Moyen à l'échelle mondiale, mais le plus grand de l'UE.",
         "incorrectAnswers": [
@@ -624,7 +624,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 139,
+        "id": "test_civic_49",
         "question": "Quelle est la place démographique de la France dans le monde ?",
         "correctAnswer": "22e rang mondial (moins de 1% de la population mondiale).",
         "incorrectAnswers": [
@@ -637,7 +637,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 140,
+        "id": "test_civic_50",
         "question": "Pourquoi la France est-elle une puissance militaire ?",
         "correctAnswer": "Elle possède l'arme nucléaire et une armée capable d'intervenir partout.",
         "incorrectAnswers": [
@@ -650,7 +650,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 141,
+        "id": "test_civic_51",
         "question": "Pourquoi la France est-elle une puissance diplomatique ?",
         "correctAnswer": "Membre permanent du Conseil de sécurité de l'ONU et grand réseau d'ambassades.",
         "incorrectAnswers": [
@@ -663,7 +663,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 142,
+        "id": "test_civic_52",
         "question": "Qu'est-ce que la ZEE (Zone Économique Exclusive) ?",
         "correctAnswer": "L'espace maritime où la France gère les ressources.",
         "incorrectAnswers": [
@@ -676,7 +676,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 143,
+        "id": "test_civic_53",
         "question": "Quel est l'atout de la ZEE française ?",
         "correctAnswer": "La biodiversité, la pêche et les ressources sous-marines.",
         "incorrectAnswers": [
@@ -689,7 +689,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 144,
+        "id": "test_civic_54",
         "question": "Quel rôle jouent les ports français ?",
         "correctAnswer": "Ils connectent la France au commerce mondial.",
         "incorrectAnswers": [
@@ -702,7 +702,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 145,
+        "id": "test_civic_55",
         "question": "Où sont situés les grands ports maritimes ?",
         "correctAnswer": "Le Havre, Marseille, Dunkerque, Nantes-Saint-Nazaire.",
         "incorrectAnswers": [
@@ -715,7 +715,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 146,
+        "id": "test_civic_56",
         "question": "Pourquoi le transport aérien est-il important ?",
         "correctAnswer": "Pour le tourisme et les échanges internationaux.",
         "incorrectAnswers": [
@@ -728,7 +728,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 147,
+        "id": "test_civic_57",
         "question": "Quel est le plus grand aéroport français ?",
         "correctAnswer": "Paris-Charles de Gaulle (Roissy).",
         "incorrectAnswers": [
@@ -741,7 +741,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 148,
+        "id": "test_civic_58",
         "question": "Quel secteur industriel est lié à l'aérien ?",
         "correctAnswer": "L'aéronautique (Airbus, Safran).",
         "incorrectAnswers": [
@@ -754,7 +754,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 149,
+        "id": "test_civic_59",
         "question": "Quelle est la place de la France dans le tourisme ?",
         "correctAnswer": "1ère destination touristique mondiale.",
         "incorrectAnswers": [
@@ -767,7 +767,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 150,
+        "id": "test_civic_60",
         "question": "Pourquoi les touristes viennent-ils en France ?",
         "correctAnswer": "Pour le patrimoine, les paysages, la culture et la gastronomie.",
         "incorrectAnswers": [
@@ -780,7 +780,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 151,
+        "id": "test_civic_61",
         "question": "Où se trouve la région Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Au Sud-Est (Lyon, Alpes, Massif Central).",
         "incorrectAnswers": [
@@ -793,7 +793,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 152,
+        "id": "test_civic_62",
         "question": "Quelle est la capitale de Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Lyon.",
         "incorrectAnswers": [
@@ -806,7 +806,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 153,
+        "id": "test_civic_63",
         "question": "Quelle est la caractéristique économique d'Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Très dynamique (chimie, industrie, tourisme ski).",
         "incorrectAnswers": [
@@ -819,7 +819,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 154,
+        "id": "test_civic_64",
         "question": "Où se trouve la Bourgogne-Franche-Comté ?",
         "correctAnswer": "À l'Est (Dijon, Besançon, Jura).",
         "incorrectAnswers": [
@@ -832,7 +832,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 155,
+        "id": "test_civic_65",
         "question": "Quelle ville est célèbre pour sa moutarde et ses ducs ?",
         "correctAnswer": "Dijon.",
         "incorrectAnswers": [
@@ -845,7 +845,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 156,
+        "id": "test_civic_66",
         "question": "Quelle est une spécialité de Bourgogne-Franche-Comté ?",
         "correctAnswer": "Le vin de Bourgogne et le Comté.",
         "incorrectAnswers": [
@@ -858,7 +858,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 157,
+        "id": "test_civic_67",
         "question": "Où se trouve la Bretagne ?",
         "correctAnswer": "À l'Ouest (péninsule atlantique).",
         "incorrectAnswers": [
@@ -871,7 +871,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 158,
+        "id": "test_civic_68",
         "question": "Quelle est la capitale de la Bretagne ?",
         "correctAnswer": "Rennes.",
         "incorrectAnswers": [
@@ -884,7 +884,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 159,
+        "id": "test_civic_69",
         "question": "Quelle est l'activité majeure de la Bretagne ?",
         "correctAnswer": "L'agroalimentaire, la pêche et le tourisme.",
         "incorrectAnswers": [
@@ -897,7 +897,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 160,
+        "id": "test_civic_70",
         "question": "Où se trouve le Centre-Val de Loire ?",
         "correctAnswer": "Au Sud de Paris, traversé par la Loire.",
         "incorrectAnswers": [
@@ -910,7 +910,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 161,
+        "id": "test_civic_71",
         "question": "Quelle est la capitale du Centre-Val de Loire ?",
         "correctAnswer": "Orléans.",
         "incorrectAnswers": [
@@ -923,7 +923,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 162,
+        "id": "test_civic_72",
         "question": "Pour quoi est connu le Centre-Val de Loire ?",
         "correctAnswer": "Les Châteaux de la Loire et l'agriculture (céréales).",
         "incorrectAnswers": [
@@ -936,7 +936,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 163,
+        "id": "test_civic_73",
         "question": "Où se trouve la Corse ?",
         "correctAnswer": "Île en Méditerranée, au sud-est.",
         "incorrectAnswers": [
@@ -949,7 +949,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 164,
+        "id": "test_civic_74",
         "question": "Quelle est la capitale (préfecture) de la Corse ?",
         "correctAnswer": "Ajaccio.",
         "incorrectAnswers": [
@@ -962,7 +962,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 165,
+        "id": "test_civic_75",
         "question": "Quelle est l'économie principale de la Corse ?",
         "correctAnswer": "Le tourisme.",
         "incorrectAnswers": [
@@ -975,7 +975,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 166,
+        "id": "test_civic_76",
         "question": "Où se trouve le Grand Est ?",
         "correctAnswer": "Au Nord-Est (Strasbourg, Reims, Metz).",
         "incorrectAnswers": [
@@ -988,7 +988,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 167,
+        "id": "test_civic_77",
         "question": "Quelle ville est la capitale européenne située dans le Grand Est ?",
         "correctAnswer": "Strasbourg.",
         "incorrectAnswers": [
@@ -1001,7 +1001,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 168,
+        "id": "test_civic_78",
         "question": "Pour quels produits le Grand Est est-il connu ?",
         "correctAnswer": "Le Champagne et le vin d'Alsace.",
         "incorrectAnswers": [
@@ -1014,7 +1014,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 169,
+        "id": "test_civic_79",
         "question": "Où se trouvent les Hauts-de-France ?",
         "correctAnswer": "Tout au Nord (Lille, Amiens).",
         "incorrectAnswers": [
@@ -1027,7 +1027,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 170,
+        "id": "test_civic_80",
         "question": "Quelle est la capitale des Hauts-de-France ?",
         "correctAnswer": "Lille.",
         "incorrectAnswers": [
@@ -1040,7 +1040,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 171,
+        "id": "test_civic_81",
         "question": "Quelle est l'histoire économique des Hauts-de-France ?",
         "correctAnswer": "Industrielle (charbon, textile) puis reconversion.",
         "incorrectAnswers": [
@@ -1053,7 +1053,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 172,
+        "id": "test_civic_82",
         "question": "Où se trouve l'Île-de-France ?",
         "correctAnswer": "Autour de Paris.",
         "incorrectAnswers": [
@@ -1066,7 +1066,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 173,
+        "id": "test_civic_83",
         "question": "Quelle est la particularité démographique de l'Île-de-France ?",
         "correctAnswer": "La plus peuplée (12 millions d'habitants).",
         "incorrectAnswers": [
@@ -1079,7 +1079,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 174,
+        "id": "test_civic_84",
         "question": "Quel est le poids économique de l'Île-de-France ?",
         "correctAnswer": "C'est la région la plus riche (30% du PIB).",
         "incorrectAnswers": [
@@ -1092,7 +1092,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 175,
+        "id": "test_civic_85",
         "question": "Où se trouve la Normandie ?",
         "correctAnswer": "Au Nord-Ouest (Rouen, Caen, Le Havre).",
         "incorrectAnswers": [
@@ -1105,7 +1105,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 176,
+        "id": "test_civic_86",
         "question": "Quelle est la capitale administrative de la Normandie ?",
         "correctAnswer": "Rouen.",
         "incorrectAnswers": [
@@ -1118,7 +1118,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 177,
+        "id": "test_civic_87",
         "question": "Pour quoi est connue la Normandie ?",
         "correctAnswer": "Le Mont-Saint-Michel, le Camembert, le cidre.",
         "incorrectAnswers": [
@@ -1131,7 +1131,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 178,
+        "id": "test_civic_88",
         "question": "Où se trouve la Nouvelle-Aquitaine ?",
         "correctAnswer": "Au Sud-Ouest (Bordeaux, Poitiers, Limoges).",
         "incorrectAnswers": [
@@ -1144,7 +1144,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 179,
+        "id": "test_civic_89",
         "question": "Quelle est la capitale de la Nouvelle-Aquitaine ?",
         "correctAnswer": "Bordeaux.",
         "incorrectAnswers": [
@@ -1157,7 +1157,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 180,
+        "id": "test_civic_90",
         "question": "Quels sont les atouts de la Nouvelle-Aquitaine ?",
         "correctAnswer": "L'agriculture, le vin, l'aéronautique et le tourisme.",
         "incorrectAnswers": [

@@ -52,9 +52,31 @@ export const formatExplanation = (text: string): string => {
 // ==================== QUESTION PROCESSING UTILITIES ====================
 
 // Type validation helpers
+const extractNumericId = (rawId: any): number | undefined => {
+    if (typeof rawId === 'number') {
+        return rawId;
+    }
+    if (typeof rawId === 'string') {
+        const match = rawId.match(/(\d+)/);
+        if (match) {
+            const value = Number(match[1]);
+            return Number.isFinite(value) ? value : undefined;
+        }
+    }
+    return undefined;
+};
+
+const getBaseQuestionNumber = (question: any): number | undefined => {
+    if (question && question.id !== undefined) {
+        return extractNumericId(question.id);
+    }
+    return undefined;
+};
+
 export const isValidQuestionData = (question: any): boolean => {
+    const baseNumber = getBaseQuestionNumber(question);
     return question &&
-        typeof question.id === 'number' &&
+        typeof baseNumber === 'number' &&
         (typeof question.question === 'string' || typeof question.question === 'object');
 };
 
@@ -65,7 +87,9 @@ export const processQuestionData = (
     categoryTitle: string,
     idOffset: number = 0
 ): TestQuestion => {
-    if (!isValidQuestionData(question)) {
+    const baseNumber = getBaseQuestionNumber(question);
+
+    if (typeof baseNumber !== 'number') {
         logger.warn(`Invalid question data for question ID: ${question?.id}`);
         // Return a fallback question instead of throwing
         return {
@@ -77,7 +101,7 @@ export const processQuestionData = (
         };
     }
 
-    const finalId = question.id + idOffset;
+    const finalId = baseNumber + idOffset;
 
     return {
         id: finalId,
@@ -98,7 +122,7 @@ export const processAllQuestions = (
     questionsData: any
 ): TestQuestion[] => {
     const questions: TestQuestion[] = [];
-    const seenIds = new Set<number>();
+    const seenKeys = new Set<string>();
 
     // Safety check
     if (!questionsData?.categories) {
@@ -107,17 +131,22 @@ export const processAllQuestions = (
     }
 
     // Process main categories
-    questionsData.categories.forEach((category: any) => {
+    questionsData.categories.forEach((category: any, categoryIndex: number) => {
         if (!category?.questions) return;
 
+        const idOffset = categoryIndex * 1000;
+
         category.questions.forEach((question: any) => {
-            if (seenIds.has(question.id)) {
+            const baseNumber = getBaseQuestionNumber(question);
+            const dedupeKey = `${category.id || 'unknown'}:${question?.id ?? baseNumber ?? 'invalid'}`;
+
+            if (seenKeys.has(dedupeKey)) {
                 logger.warn(`Duplicate question ID: ${question.id} in category ${category.id}`);
                 return;
             }
-            seenIds.add(question.id);
+            seenKeys.add(dedupeKey);
 
-            questions.push(processQuestionData(question, category.id, category.title));
+            questions.push(processQuestionData(question, category.id, category.title, idOffset));
         });
     });
 

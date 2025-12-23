@@ -71,6 +71,20 @@ const normalizeQuestionType = (questionType: string): 'knowledge' | 'situational
     return 'knowledge';
 };
 
+const extractCivicId = (rawId: unknown): number | undefined => {
+    if (typeof rawId === 'number') {
+        return Number.isFinite(rawId) ? rawId : undefined;
+    }
+    if (typeof rawId === 'string') {
+        const match = rawId.match(/(\d+)/);
+        if (match) {
+            const value = Number(match[1]);
+            return Number.isFinite(value) ? value : undefined;
+        }
+    }
+    return undefined;
+};
+
 const validateQuestionData = (
     q: unknown, 
     defaultTheme?: CivicExamTheme,
@@ -83,13 +97,14 @@ const validateQuestionData = (
 
     const question = q as Record<string, unknown>;
     const questionId = question.id;
+    const numericId = extractCivicId(questionId);
 
-    const hasValidId = typeof question.id === 'number' &&
-        isFinite(question.id) &&
-        question.id > 0;
+    const hasValidId = typeof numericId === 'number' &&
+        isFinite(numericId) &&
+        numericId > 0;
     
     if (!hasValidId) {
-        onInvalid?.(`Question ${questionId || 'unknown'} has invalid ID (must be positive number)`);
+        onInvalid?.(`Question ${questionId || 'unknown'} has invalid ID (must contain a positive number)`);
         return false;
     }
     
@@ -160,10 +175,13 @@ const normalizeSubTheme = (subTheme: string): CivicExamSubTheme => {
     return SUBTHEME_MAP[normalized] || 'devise_symboles';
 };
 
+const CIVIC_ID_OFFSET = 1_000_000;
+
 const transformCivicQuestion = (
     q: CivicExamQuestionData,
     defaultTheme: CivicExamTheme
 ): CivicExamQuestionWithOptions => {
+    const baseNumber = extractCivicId(q.id) ?? 0;
     const theme = q.theme ? (THEME_ID_MAP[q.theme] || defaultTheme) : defaultTheme;
     const subTheme = normalizeSubTheme(q.subTheme);
     const questionType = normalizeQuestionType(q.questionType);
@@ -182,7 +200,7 @@ const transformCivicQuestion = (
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
 
     return {
-        id: q.id,
+        id: CIVIC_ID_OFFSET + baseNumber,
         question: sanitizeString(q.question),
         explanation: sanitizeString(q.explanation),
         image: typeof q.image === 'string' && q.image.trim().length > 0 ? q.image.trim() : undefined,

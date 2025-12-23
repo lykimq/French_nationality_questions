@@ -3,7 +3,7 @@
     "themeTitle": "Droits et devoirs",
     "questions": [
         {
-            "id": 1,
+            "id": "test_civic_1",
             "question": "Que garantissent les droits fondamentaux à chaque personne ?",
             "correctAnswer": "La dignité, le respect, l'égalité et la justice",
             "incorrectAnswers": [
@@ -16,7 +16,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 2,
+            "id": "test_civic_2",
             "question": "Combien de catégories de droits fondamentaux existe-t-il ?",
             "correctAnswer": "3 catégories : droits liés à la personne, droits économiques et sociaux, droits de troisième génération",
             "incorrectAnswers": [
@@ -29,7 +29,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 3,
+            "id": "test_civic_3",
             "question": "Quel texte fondamental de 1789 garantit les droits et libertés ?",
             "correctAnswer": "La Déclaration des droits de l'homme et du citoyen",
             "incorrectAnswers": [
@@ -42,7 +42,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 4,
+            "id": "test_civic_4",
             "question": "Quels sont les quatre droits naturels de la personne selon la DDHC ?",
             "correctAnswer": "L'égalité devant la loi, la liberté, la sûreté et la résistance à l'oppression",
             "incorrectAnswers": [
@@ -55,7 +55,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 5,
+            "id": "test_civic_5",
             "question": "Qu'est-ce que la présomption d'innocence ?",
             "correctAnswer": "Toute personne accusée est considérée innocente tant que sa culpabilité n'a pas été prouvée",
             "incorrectAnswers": [
@@ -68,7 +68,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 6,
+            "id": "test_civic_6",
             "question": "Où est inscrit le droit à l'emploi en France ?",
             "correctAnswer": "Dans le Préambule de la Constitution de 1946",
             "incorrectAnswers": [
@@ -81,7 +81,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 7,
+            "id": "test_civic_7",
             "question": "Que sont les droits de \"troisième génération\" ?",
             "correctAnswer": "Des droits collectifs fondés sur la solidarité : paix, environnement, générations futures",
             "incorrectAnswers": [
@@ -94,7 +94,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 8,
+            "id": "test_civic_8",
             "question": "Qu'est-ce que la dignité humaine ?",
             "correctAnswer": "Le fait que chaque personne a de la valeur et mérite le respect simplement parce qu'elle est un être humain",
             "incorrectAnswers": [
@@ -107,7 +107,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 9,
+            "id": "test_civic_9",
             "question": "Dans quel texte européen la dignité humaine est-elle inscrite ?",
             "correctAnswer": "La Charte des droits fondamentaux de l'Union européenne de 2000",
             "incorrectAnswers": [
@@ -120,7 +120,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 10,
+            "id": "test_civic_10",
             "question": "Pourquoi le trafic d'organes est-il interdit en France ?",
             "correctAnswer": "Parce que le corps humain ne peut pas être une source de profit",
             "incorrectAnswers": [
@@ -133,7 +133,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 11,
+            "id": "test_civic_11",
             "question": "Qu'est-ce que le droit de disposer de son corps ?",
             "correctAnswer": "La liberté pour chaque personne de faire ses propres choix concernant son corps",
             "incorrectAnswers": [
@@ -146,7 +146,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 12,
+            "id": "test_civic_12",
             "question": "La contraception est-elle accessible aux mineurs en France ?",
             "correctAnswer": "Oui, de façon anonyme et gratuite sur demande du \"secret\"",
             "incorrectAnswers": [
@@ -159,7 +159,7 @@
             "questionType": "situation"
         },
         {
-            "id": 13,
+            "id": "test_civic_13",
             "question": "Jusqu'à quel âge la contraception est-elle prise en charge à 100% ?",
             "correctAnswer": "Jusqu'à 26 ans pour les femmes assurées sociales",
             "incorrectAnswers": [
@@ -172,7 +172,7 @@
             "questionType": "situation"
         },
         {
-            "id": 14,
+            "id": "test_civic_14",
             "question": "Une mineure a-t-elle besoin de l'autorisation parentale pour avorter ?",
             "correctAnswer": "Non, mais elle doit être accompagnée d'une personne majeure de son choix",
             "incorrectAnswers": [
@@ -185,7 +185,7 @@
             "questionType": "situation"
         },
         {
-            "id": 15,
+            "id": "test_civic_15",
             "question": "L'IVG est-elle prise en charge par l'Assurance Maladie ?",
             "correctAnswer": "Oui, à 100% sans avance de frais pour les femmes assurées sociales",
             "incorrectAnswers": [
@@ -198,7 +198,7 @@
             "questionType": "situation"
         },
         {
-            "id": 16,
+            "id": "test_civic_16",
             "question": "Le mariage entre personnes de même sexe est-il autorisé en France ?",
             "correctAnswer": "Oui, depuis la loi du 17 mai 2013",
             "incorrectAnswers": [
@@ -211,7 +211,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 17,
+            "id": "test_civic_17",
             "question": "Quelle est la condition essentielle de validité du mariage en France ?",
             "correctAnswer": "Le consentement libre des deux personnes",
             "incorrectAnswers": [
@@ -224,7 +224,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 18,
+            "id": "test_civic_18",
             "question": "Comment peut-on mettre fin à un PACS ?",
             "correctAnswer": "Par un simple passage à la mairie",
             "incorrectAnswers": [
@@ -237,7 +237,7 @@
             "questionType": "situation"
         },
         {
-            "id": 19,
+            "id": "test_civic_19",
             "question": "La PMA est-elle ouverte aux femmes célibataires ?",
             "correctAnswer": "Oui, depuis la loi bioéthique du 2 août 2021",
             "incorrectAnswers": [
@@ -250,7 +250,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 20,
+            "id": "test_civic_20",
             "question": "Quels droits possède un citoyen français ?",
             "correctAnswer": "Des droits civiques et politiques comme le droit de vote, et des devoirs comme respecter les lois et payer les impôts",
             "incorrectAnswers": [
@@ -263,7 +263,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 21,
+            "id": "test_civic_21",
             "question": "Où est inscrit le droit à la citoyenneté française ?",
             "correctAnswer": "Dans la Déclaration des droits de l'homme et du citoyen de 1789",
             "incorrectAnswers": [
@@ -276,7 +276,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 22,
+            "id": "test_civic_22",
             "question": "Qu'est-ce que la déchéance de nationalité ?",
             "correctAnswer": "Une décision administrative de l'État qui retire la nationalité française dans certaines conditions",
             "incorrectAnswers": [
@@ -289,7 +289,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 23,
+            "id": "test_civic_23",
             "question": "Quand la Déclaration des droits de l'homme et du citoyen a-t-elle été adoptée ?",
             "correctAnswer": "Le 26 août 1789",
             "incorrectAnswers": [
@@ -302,7 +302,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 24,
+            "id": "test_civic_24",
             "question": "Combien d'articles contient la Déclaration des droits de l'homme et du citoyen ?",
             "correctAnswer": "17 articles",
             "incorrectAnswers": [
@@ -315,7 +315,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 25,
+            "id": "test_civic_25",
             "question": "Qu'est-ce qu'une Constitution ?",
             "correctAnswer": "Un acte fondateur qui établit l'organisation de l'État et les droits fondamentaux",
             "incorrectAnswers": [
@@ -328,7 +328,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 26,
+            "id": "test_civic_26",
             "question": "Quand la Constitution de la Ve République a-t-elle été adoptée ?",
             "correctAnswer": "Le 4 octobre 1958",
             "incorrectAnswers": [
@@ -341,7 +341,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 27,
+            "id": "test_civic_27",
             "question": "Quels textes forment le \"bloc de constitutionnalité\" ?",
             "correctAnswer": "La Constitution de 1958, la DDHC de 1789, le Préambule de 1946 et la Charte de l'environnement de 2004",
             "incorrectAnswers": [
@@ -354,7 +354,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 28,
+            "id": "test_civic_28",
             "question": "Qui est chargé de faire respecter la Constitution ?",
             "correctAnswer": "Le Conseil constitutionnel",
             "incorrectAnswers": [
@@ -367,7 +367,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 29,
+            "id": "test_civic_29",
             "question": "Quand la Charte de l'environnement a-t-elle été ajoutée à la Constitution ?",
             "correctAnswer": "En 2005",
             "incorrectAnswers": [
@@ -380,7 +380,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 30,
+            "id": "test_civic_30",
             "question": "Quelle citation célèbre de Jacques Chirac concerne l'environnement ?",
             "correctAnswer": "\"Notre maison brûle et nous regardons ailleurs\"",
             "incorrectAnswers": [
@@ -393,7 +393,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 31,
+            "id": "test_civic_31",
             "question": "Où peut-on déposer une plainte en France ?",
             "correctAnswer": "Au commissariat de police ou à la brigade de gendarmerie",
             "incorrectAnswers": [
@@ -406,7 +406,7 @@
             "questionType": "situation"
         },
         {
-            "id": 32,
+            "id": "test_civic_32",
             "question": "Quel est le rôle du Défenseur des droits ?",
             "correctAnswer": "Défendre les personnes dont les droits ne sont pas respectés et lutter contre la discrimination",
             "incorrectAnswers": [
@@ -419,7 +419,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 33,
+            "id": "test_civic_33",
             "question": "Quelle est la limite de nos droits et libertés selon la DDHC ?",
             "correctAnswer": "\"La liberté consiste à faire tout ce qui ne nuit pas à autrui\"",
             "incorrectAnswers": [
@@ -432,7 +432,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 34,
+            "id": "test_civic_34",
             "question": "Par quoi nos libertés peuvent-elles être limitées ?",
             "correctAnswer": "L'intérêt général, les libertés des autres, l'ordre public et la dignité humaine",
             "incorrectAnswers": [
@@ -445,7 +445,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 35,
+            "id": "test_civic_35",
             "question": "Qu'est-ce qu'une contravention ?",
             "correctAnswer": "L'infraction la moins grave, punie par une amende de maximum 3 000 €",
             "incorrectAnswers": [
@@ -458,7 +458,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 36,
+            "id": "test_civic_36",
             "question": "Quelle est la peine maximale pour un délit ?",
             "correctAnswer": "Une amende d'au moins 3 750 € et jusqu'à 10 ans de prison",
             "incorrectAnswers": [
@@ -471,7 +471,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 37,
+            "id": "test_civic_37",
             "question": "Quel tribunal juge les crimes ?",
             "correctAnswer": "La cour d'assises et la cour criminelle",
             "incorrectAnswers": [
@@ -484,7 +484,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 38,
+            "id": "test_civic_38",
             "question": "Quelle est la différence entre la police et la gendarmerie ?",
             "correctAnswer": "La police agit en ville, la gendarmerie en zone rurale et périurbaine",
             "incorrectAnswers": [
@@ -497,7 +497,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 39,
+            "id": "test_civic_39",
             "question": "Quelles sont les missions des forces de l'ordre ?",
             "correctAnswer": "Prévention des infractions, maintien de l'ordre, protection des personnes et des biens, enquêtes",
             "incorrectAnswers": [
@@ -510,7 +510,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 40,
+            "id": "test_civic_40",
             "question": "Quelles sont les obligations de toute personne résidant en France ?",
             "correctAnswer": "Payer des impôts, être en situation régulière, porter assistance aux personnes en danger, protéger l'environnement",
             "incorrectAnswers": [
@@ -523,7 +523,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 41,
+            "id": "test_civic_41",
             "question": "Où est inscrite l'obligation de payer des impôts ?",
             "correctAnswer": "Dans la Déclaration des droits de l'homme et du citoyen de 1789",
             "incorrectAnswers": [
@@ -536,7 +536,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 42,
+            "id": "test_civic_42",
             "question": "Que risque-t-on si on n'aide pas une personne en danger ?",
             "correctAnswer": "Une condamnation pour \"non-assistance à personne en danger\"",
             "incorrectAnswers": [
@@ -549,7 +549,7 @@
             "questionType": "situation"
         },
         {
-            "id": 43,
+            "id": "test_civic_43",
             "question": "Quels sont les devoirs spécifiques du citoyen français ?",
             "correctAnswer": "Participer à la vie politique, à la défense du pays et au fonctionnement de la justice",
             "incorrectAnswers": [
@@ -562,7 +562,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 44,
+            "id": "test_civic_44",
             "question": "Qu'a remplacé le service national suspendu en 1997 ?",
             "correctAnswer": "La Journée Défense et Citoyenneté (JDC)",
             "incorrectAnswers": [
@@ -575,7 +575,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 45,
+            "id": "test_civic_45",
             "question": "À partir de quel âge peut-on être juré aux assises ?",
             "correctAnswer": "23 ans",
             "incorrectAnswers": [
@@ -588,7 +588,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 46,
+            "id": "test_civic_46",
             "question": "Quels sont les trois types de violence ?",
             "correctAnswer": "Violence psychologique, violence physique et violence économique",
             "incorrectAnswers": [
@@ -601,7 +601,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 47,
+            "id": "test_civic_47",
             "question": "Les gifles et fessées sont-elles autorisées pour éduquer un enfant ?",
             "correctAnswer": "Non, toutes les violences physiques et psychologiques sont interdites",
             "incorrectAnswers": [
@@ -614,7 +614,7 @@
             "questionType": "situation"
         },
         {
-            "id": 48,
+            "id": "test_civic_48",
             "question": "Le harcèlement scolaire est-il puni par la loi ?",
             "correctAnswer": "Oui, c'est un délit puni par la loi",
             "incorrectAnswers": [
@@ -627,7 +627,7 @@
             "questionType": "situation"
         },
         {
-            "id": 49,
+            "id": "test_civic_49",
             "question": "Les mutilations sexuelles féminines sont-elles punies même si commises à l'étranger ?",
             "correctAnswer": "Oui, elles sont sévèrement punies même si commises à l'étranger",
             "incorrectAnswers": [
@@ -640,7 +640,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 50,
+            "id": "test_civic_50",
             "question": "Qu'est-ce que le viol selon la loi française ?",
             "correctAnswer": "Un acte de pénétration sexuelle imposé par violence, menace, contrainte ou surprise",
             "incorrectAnswers": [
@@ -653,7 +653,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 51,
+            "id": "test_civic_51",
             "question": "Le silence vaut-il consentement en matière sexuelle ?",
             "correctAnswer": "Non, le silence n'est pas un consentement",
             "incorrectAnswers": [
@@ -666,7 +666,7 @@
             "questionType": "situation"
         },
         {
-            "id": 52,
+            "id": "test_civic_52",
             "question": "Le viol entre époux existe-t-il juridiquement ?",
             "correctAnswer": "Oui, personne n'a le droit d'imposer un acte sexuel non désiré, y compris dans un couple",
             "incorrectAnswers": [
@@ -679,7 +679,7 @@
             "questionType": "situation"
         },
         {
-            "id": 53,
+            "id": "test_civic_53",
             "question": "Qu'est-ce que la traite des êtres humains ?",
             "correctAnswer": "Recruter, transporter ou héberger une personne pour l'exploiter",
             "incorrectAnswers": [
@@ -692,7 +692,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 54,
+            "id": "test_civic_54",
             "question": "L'achat d'actes sexuels est-il légal en France ?",
             "correctAnswer": "Non, l'achat d'actes sexuels est interdit",
             "incorrectAnswers": [
@@ -705,7 +705,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 55,
+            "id": "test_civic_55",
             "question": "Que faire en premier quand on est victime de violence ?",
             "correctAnswer": "En parler à une personne de confiance ou un professionnel",
             "incorrectAnswers": [
@@ -718,7 +718,7 @@
             "questionType": "situation"
         },
         {
-            "id": 56,
+            "id": "test_civic_56",
             "question": "Où peut-on porter plainte pour violence ?",
             "correctAnswer": "Dans tous les commissariats ou gendarmeries, ou par courrier au procureur",
             "incorrectAnswers": [
@@ -731,7 +731,7 @@
             "questionType": "situation"
         },
         {
-            "id": 57,
+            "id": "test_civic_57",
             "question": "Que doit faire un témoin de violence ?",
             "correctAnswer": "Agir sans se mettre en danger : écouter la victime, orienter vers des aides, appeler les forces de l'ordre",
             "incorrectAnswers": [
@@ -744,7 +744,7 @@
             "questionType": "situation"
         },
         {
-            "id": 58,
+            "id": "test_civic_58",
             "question": "Peut-on faire un signalement anonyme de violence ?",
             "correctAnswer": "Oui, il est possible de faire un signalement anonyme ou une main courante",
             "incorrectAnswers": [
@@ -757,7 +757,7 @@
             "questionType": "situation"
         },
         {
-            "id": 59,
+            "id": "test_civic_59",
             "question": "Où est inscrit le devoir de protéger l'environnement ?",
             "correctAnswer": "Dans la Charte de l'environnement de 2004",
             "incorrectAnswers": [
@@ -770,7 +770,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 60,
+            "id": "test_civic_60",
             "question": "Quelles actions concrètes protègent l'environnement au quotidien ?",
             "correctAnswer": "Trier les déchets, éviter le gaspillage, utiliser les transports en commun, participer au recyclage",
             "incorrectAnswers": [
@@ -783,7 +783,7 @@
             "questionType": "situation"
         },
         {
-            "id": 61,
+            "id": "test_civic_61",
             "question": "Qu'est-ce que la loi de 1905 ?",
             "correctAnswer": "La loi de séparation des Églises et de l'État, fondant la laïcité en France",
             "incorrectAnswers": [
@@ -796,7 +796,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 62,
+            "id": "test_civic_62",
             "question": "Qu'est-ce que la loi de 2004 sur les signes religieux ?",
             "correctAnswer": "Elle interdit le port de signes religieux ostensibles dans les établissements scolaires publics",
             "incorrectAnswers": [
@@ -809,7 +809,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 63,
+            "id": "test_civic_63",
             "question": "Quelle est la différence entre un décret et une loi ?",
             "correctAnswer": "Une loi est votée par le Parlement, un décret est un acte administratif pris par le Président ou le Premier ministre",
             "incorrectAnswers": [
@@ -822,7 +822,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 64,
+            "id": "test_civic_64",
             "question": "Quel est le rôle de la Cour de cassation ?",
             "correctAnswer": "Vérifier que les lois sont bien appliquées par les tribunaux",
             "incorrectAnswers": [
@@ -835,7 +835,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 65,
+            "id": "test_civic_65",
             "question": "Quelle est la différence entre la justice civile et la justice pénale ?",
             "correctAnswer": "La justice civile règle les litiges entre personnes, la justice pénale s'occupe des infractions à la loi",
             "incorrectAnswers": [
@@ -848,7 +848,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 66,
+            "id": "test_civic_66",
             "question": "Quelle loi a instauré la semaine de 35 heures en France ?",
             "correctAnswer": "La loi Aubry, en 2000",
             "incorrectAnswers": [
@@ -861,7 +861,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 67,
+            "id": "test_civic_67",
             "question": "Qu'est-ce que le RSA ?",
             "correctAnswer": "Le Revenu de Solidarité Active, aide financière pour les personnes sans ressources",
             "incorrectAnswers": [
@@ -874,7 +874,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 68,
+            "id": "test_civic_68",
             "question": "En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?",
             "correctAnswer": "2001",
             "incorrectAnswers": [
@@ -887,7 +887,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 69,
+            "id": "test_civic_69",
             "question": "Quelle loi française interdit de fumer dans les lieux publics fermés ?",
             "correctAnswer": "La loi Évin, en vigueur depuis 2007 pour les lieux publics fermés",
             "incorrectAnswers": [
@@ -900,7 +900,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 70,
+            "id": "test_civic_70",
             "question": "Quelle réforme a introduit l'école obligatoire en France ?",
             "correctAnswer": "Les lois Jules Ferry en 1881-1882",
             "incorrectAnswers": [
@@ -913,7 +913,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 71,
+            "id": "test_civic_71",
             "question": "Quel est l'âge de l'obligation scolaire en France ?",
             "correctAnswer": "De 3 à 16 ans",
             "incorrectAnswers": [
@@ -926,7 +926,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 72,
+            "id": "test_civic_72",
             "question": "L'administration peut-elle refuser la nationalité pour non-respect de l'égalité femmes-hommes ?",
             "correctAnswer": "Oui, même si la personne est mariée à un(e) Français(e)",
             "incorrectAnswers": [
@@ -939,7 +939,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 73,
+            "id": "test_civic_73",
             "question": "Qui a le droit d'accéder aux emplois publics ?",
             "correctAnswer": "Tous les citoyens français selon leurs capacités, par voie de concours",
             "incorrectAnswers": [
@@ -952,7 +952,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 74,
+            "id": "test_civic_74",
             "question": "Quelle est la durée légale du travail en France ?",
             "correctAnswer": "35 heures par semaine",
             "incorrectAnswers": [
@@ -965,7 +965,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 75,
+            "id": "test_civic_75",
             "question": "Un employeur peut-il discriminer un candidat lors d'une embauche ?",
             "correctAnswer": "Non, la discrimination est un délit sévèrement puni par la loi",
             "incorrectAnswers": [
@@ -978,7 +978,7 @@
             "questionType": "knowledge"
         },
         {
-            "id": 76,
+            "id": "test_civic_76",
             "question": "Les droits fondamentaux, c’est quoi ?",
             "explanation": "Les droits fondamentaux (ou libertés fondamentales) sont les droits et les libertés\nélémentaires que tout le monde doit respecter pour assurer le bien-être de chacun.\n\nCes droits sont les mêmes pour tout le monde, peu importe le sexe, l'âge (avant ou\naprès 18 ans), les croyances ou la façon de vivre.\n\nLes droits fondamentaux garantissent à chacun :\n\n- la dignité ;\n- le respect ;\n- l’égalité ;\n- la justice.",
             "subTheme": "droits_fondamentaux",
@@ -990,7 +990,7 @@
             }
         },
         {
-            "id": 77,
+            "id": "test_civic_77",
             "question": "Quelles sont les différentes catégories de droits fondamentaux ?",
             "explanation": "Ces droits fondamentaux peuvent être répartis en 3 catégories :\n\n1. les droits liés à la personne humaine ;\n2. les droits sociaux et économiques ;\n3. les droits dits \"de troisième génération\" qui sont collectifs.\nCes droits fondamentaux sont la base de notre démocratie.",
             "subTheme": "droits_fondamentaux",
@@ -1002,7 +1002,7 @@
             }
         },
         {
-            "id": 78,
+            "id": "test_civic_78",
             "question": "Quels textes garantissent ces droits fondamentaux ?",
             "explanation": "Ces droits fondamentaux sont garantis par l’État.\n\nLes droits et libertés fondamentaux sont inscrits dans plusieurs textes français et\neuropéens, dont :\n\n- la Déclaration des droits de l'homme et du citoyen de 1789 ;\n- le Code Civil de 1804 ;\n- la Constitution française de 1946 ;\n- la Constitution française de 1958 ;\n- la Convention européenne des droits de l’homme et des libertés fondamentales mise en\nplace en 1959 ;\n- la Charte des droits fondamentaux de l'Union européenne de 2000 ;\n- la Charte de l’environnement de 2005.",
             "subTheme": "droits_fondamentaux",
@@ -1014,7 +1014,7 @@
             }
         },
         {
-            "id": 79,
+            "id": "test_civic_79",
             "question": "Les droits liés à la personne humaine (dits “les droits de” quelqu’un), c’est quoi ?",
             "explanation": "Les droits liés à la personne sont “les droits de” tous les êtres humains. Ce sont des\ndroits naturels que chaque individu possède simplement parce qu’il est un être humain.\n\nCe sont des droits individuels, civiques et politiques. Chaque personne a droit à :\n\n- l’égalité devant la loi (tout être humain doit être traité de la même façon par la loi);\n- la liberté ;\n- la sûreté (la sécurité) ;\n- la résistance à l’oppression.\nCes droits fondamentaux sont des libertés fondamentales inaltérables (c'est-à-dire\nqu'elles ne sont pas modifiables).",
             "subTheme": "droits_fondamentaux",
@@ -1026,7 +1026,7 @@
             }
         },
         {
-            "id": 80,
+            "id": "test_civic_80",
             "question": "Quels sont les droits qui découlent des droits individuels ?",
             "explanation": "L’application des droits fondamentaux liés à la personne humaine cités précédemment\n(égalité, liberté, sûreté et résistance à l'oppression) entraîne des droits\nfondamentaux dans une société.\n\nLe principe d’égalité devant la loi se décline en plusieurs types d’égalité :\n\n- le suffrage universel (le droit de vote pour chaque citoyen) ;\n- l’égalité des sexes (les femmes et les hommes doivent recevoir un traitement égal et\nne doivent pas être victimes de discriminations fondées sur leur appartenance à l'un ou\nl'autre sexe ou genre) ;\n- l’égalité devant la loi, l’impôt, la justice, devant l’accès à l’emploi, l'accès à la\nculture…\n\nLe principe de liberté confère à chacun :\n\n- la liberté d’expression (liberté de penser et de dire ce que l’on pense) ;\n- la liberté de culte ou de religion ;\n- le droit de grève (droit pour une personne employée de cesser le travail pour\nexprimer un désaccord).\n\nLe droit de propriété fonde la liberté de disposer de ses biens et d’entreprendre.\n\nLe droit à la sûreté suppose le respect des droits de la défense comme :\n\n- le droit à un procès équitable (être accompagné, dans la langue qu’il comprend) ;\n- la présomption d’innocence (toute personne accusée est dite \"innocente\" tant que sa\nculpabilité n’a pas été prouvée) ;\n- le droit à un avocat ;\n- le droit au silence ;\n- et la protection de la liberté individuelle.",
             "subTheme": "droits_fondamentaux",
@@ -1038,7 +1038,7 @@
             }
         },
         {
-            "id": 81,
+            "id": "test_civic_81",
             "question": "Les droits économiques et sociaux, c’est quoi ?",
             "explanation": "Les droits économiques et sociaux visent à garantir à chaque individu des conditions de\nvie dignes en assurant l'accès à des ressources essentielles telles que l'éducation, la\nsanté, le travail, le logement et la sécurité sociale.\n\nLes droits économiques et sociaux sont notamment :\n\n- le droit à l’emploi : \"Chacun a le devoir de travailler et le droit d'obtenir un\nemploi. Nul ne peut être lésé, dans son travail ou son emploi, en raison de ses\norigines, de ses opinions ou de ses croyances.\" (article 5 du Préambule de la\nConstitution de 1946) ;\n- le droit à la protection de la santé : \"Elle garantit à tous, notamment à l'enfant, à\nla mère et aux vieux travailleurs, la protection de la santé, la sécurité matérielle,\nle repos et les loisirs.\" (article 11 du Préambule de la Constitution de 1946) ;\n- le droit à la gratuité de l’enseignement public : \"La Nation garantit l'égal accès de\nl'enfant et de l'adulte à l'instruction, à la formation professionnelle et à la\nculture. L'organisation de l'enseignement public gratuit et laïque à tous les degrés\nest un devoir de l'État.\" (article 13 du Préambule de la Constitution de 1946).\n\nÀ la différence des droits liés à la personne qui existent dès la naissance d’un\nindividu, les droits économiques et sociaux ont besoin de l’intervention de l’État pour\nêtre assurés et protégés.",
             "subTheme": "droits_fondamentaux",
@@ -1050,7 +1050,7 @@
             }
         },
         {
-            "id": 82,
+            "id": "test_civic_82",
             "question": "Les droits dits \"de troisième génération\", c’est quoi ?",
             "explanation": "Les droits fondamentaux dits de \"troisième génération\" sont avant tout fondés sur la\nsolidarité collective.\n\nCes droits concernent autant un citoyen français qu’un citoyen d’un autre pays. Ils\nprennent en compte des enjeux internationaux qui concernent toute la planète : la paix,\nl’environnement, le développement…\n\nCes droits ont pour but de garantir une vie décente aux futures générations.\n\nOn dit que ce sont des “droits pour” :\n\n- la paix ;\n- un environnement sain (\"Chacun a le droit de vivre dans un environnement équilibré et\nrespectueux de la santé.\" - article 1 de la Charte de l’environnement de 2004) ;\n- des générations futures : nous devons préserver les droits, les ressources et\nl’environnement pour les futures générations ;\n- l’assistance humanitaire : en cas de violation des droits de l’Homme, un État peut\nintervenir dans un autre État pour aider les Hommes qui s’y trouvent (apporter de la\nnourriture et des soins, ou tenter de limiter un conflit fait partie des actions\npossibles).\n\nCes droits sont apparus plus récemment et sont progressivement intégrés dans les textes\nde loi en France. Ils ne peuvent pas encore tous être utilisés devant un tribunal.",
             "subTheme": "droits_fondamentaux",
@@ -1062,7 +1062,7 @@
             }
         },
         {
-            "id": 83,
+            "id": "test_civic_83",
             "question": "La dignité humaine, c’est quoi ?",
             "explanation": "La dignité humaine, c’est le fait que chaque personne a de la valeur et mérite le\nrespect, simplement parce qu’elle est un être humain. Elle mérite un respect\ninconditionnel (sans conditions), peu importe son âge, son sexe, son état de santé\nphysique ou mentale, sa condition sociale, sa religion ou son origine ethnique.\n\nUn être humain ne doit jamais être traité comme un objet ou un moyen.",
             "subTheme": "droits_fondamentaux",
@@ -1074,7 +1074,7 @@
             }
         },
         {
-            "id": 84,
+            "id": "test_civic_84",
             "question": "Dans quel texte de loi, la dignité humaine est-elle inscrite ?",
             "explanation": "La dignité humaine est un principe fondamental qui constitue le socle de tous les\ndroits fondamentaux.\n\nCe principe est inscrit dans le premier chapitre de la Charte des droits fondamentaux\nde l’Union européenne de 2000 parmi 5 droits essentiels liés au respect de la personne\nhumaine.\n\nParmi ces droits, nous pouvons trouver :\n\n- la dignité humaine (article 1) ;\n- le droit à la vie (article 2) ;\n- le droit à l’intégrité de la personne (article 3) ;\n- l’interdiction de la torture et des traitements inhumains ou dégradants (article 4) ;\n- l’interdiction de l’esclavage et du travail forcé (article 5).",
             "subTheme": "droits_fondamentaux",
@@ -1086,7 +1086,7 @@
             }
         },
         {
-            "id": 85,
+            "id": "test_civic_85",
             "question": "Le droit à l’intégrité de la personne, c’est quoi ?",
             "explanation": "Toute personne a droit à son intégrité physique et mentale, peu importe son état de\nsanté.\n\nL’article 3 de la Charte des droits fondamentaux de l’Union européenne de 2000 dit que\nle consentement libre et éclairé doit être respecté, que le corps humain ne peut être\nune source de profit (le trafic d’organe est interdit), que les pratiques eugéniques\n(sélection du patrimoine génétique) et de clonage sont interdites.",
             "subTheme": "droits_fondamentaux",
@@ -1098,7 +1098,7 @@
             }
         },
         {
-            "id": 86,
+            "id": "test_civic_86",
             "question": "Le droit de disposer de son corps, c’est quoi ?",
             "explanation": "Le droit de disposer de son corps est un principe fondamental des droits humains et des\nlibertés individuelles.\n\nC'est la liberté pour chaque personne de faire elle-même ses propres choix concernant\nson corps.\n\nLe droit de disposer de son corps (pour les plus et moins de 18 ans) est garanti par\nplusieurs dispositifs législatifs et de santé publique, notamment pour ce qui concerne\n:\n\n- la contraception ;\n- l’IVG (Interruption Volontaire de Grossesse).",
             "subTheme": "droits_fondamentaux",
@@ -1110,7 +1110,7 @@
             }
         },
         {
-            "id": 87,
+            "id": "test_civic_87",
             "question": "La contraception, c’est quoi ?",
             "explanation": "La contraception, c’est l’ensemble des moyens visant à éviter une grossesse.\n\nIl existe différents moyens de contraception. Les plus connus sont la pilule\ncontraceptive (qui s’adresse aux femmes) et le préservatif. Certains contraceptifs\nnécessitent la prescription d’un médecin ou d’une sage-femme et sont alors délivrés en\npharmacie. Les consultations et prescriptions de contraception aux moins de 18 ans\n(mineurs) peuvent être anonymes et gratuites sur demande du \"secret\".\n\nLa contraception des femmes assurées sociales de moins de 26 ans est prise en charge\npar l’Assurance Maladie sans avance de frais. Les préservatifs pour les hommes de moins\nde 26 ans sont disponibles gratuitement dans les pharmacies, dans les centres de santé\nsexuelle et dans les centres gratuits d'information, de dépistage et de diagnostic\n(CeGGID).\n\nLa contraception d’urgence est délivrée sans ordonnance en pharmacie. Pour les mineurs\n(moins de 18 ans), elle peut être obtenue gratuitement et de façon anonyme en\npharmacie, auprès de l’infirmière scolaire ou dans un centre de santé sexuelle.",
             "subTheme": "droits_fondamentaux",
@@ -1122,7 +1122,7 @@
             }
         },
         {
-            "id": 88,
+            "id": "test_civic_88",
             "question": "L’interruption volontaire de grossesse, c’est quoi ?",
             "explanation": "L’interruption volontaire de grossesse (IVG), c’est la possibilité d’arrêter une\ngrossesse pour toutes les femmes, sans condition d’âge (les mineures n’ont pas besoin\nd’une autorisation de leurs parents pour avorter mais elles doivent être accompagnées\nd’une personne majeure de leur choix).\n\nL’IVG doit être pratiquée dans un cadre réglementé précis. Plusieurs méthodes sont\npossibles, selon le choix de la patiente et le moment de la grossesse :\n\n- l’IVG instrumentale (chirurgie) ;\n- l’IVG médicamenteuse (médicament).\nQuand vous souhaitez recourir à un avortement, vous devez prendre rendez-vous avec un\nmédecin ou une sage-femme.\n\nL’avortement et les actes médicaux adjacents (consultations, échographies, prises de\nsang...) des femmes assurées sociales sont pris en charge à 100 % par l'Assurance\nMaladie sans avance de frais.",
             "subTheme": "droits_fondamentaux",
@@ -1134,7 +1134,7 @@
             }
         },
         {
-            "id": 89,
+            "id": "test_civic_89",
             "question": "Qu’est-ce qu’un couple ?",
             "explanation": "Un couple est une union entre deux personnes de sexe différent ou de même sexe, qui ont\nune vie commune.\n\nQu’ils soient en concubinage, pacsés ou mariés, les deux partenaires du couple ont\nchacun des libertés individuelles fondamentales reconnues par la loi. Ces droits les\nprotègent et garantissent le respect de l’autonomie de chacun d’eux.\n\nDessin en lignes épaisses bleues sans détails réaliste de deux figures humaines\nsimplifiées non genrées dans une maison avec une cheminée.",
             "subTheme": "droits_fondamentaux",
@@ -1146,7 +1146,7 @@
             }
         },
         {
-            "id": 90,
+            "id": "test_civic_90",
             "question": "La liberté conjugale, c’est quoi ?",
             "explanation": "En France, chacun est libre de choisir son conjoint (quel que soit son sexe).\n\nChacun est libre de se mettre en couple, de vivre en concubinage, de se pacser, de se\nmarier ou de ne pas le faire. Le consentement libre est une condition essentielle de la\nvalidité du mariage (article 146 du Code civil).\n\nLa liberté conjugale permet aussi à chaque conjoint de mettre fin à l’union\n(concubinage, PACS ou mariage) dans laquelle elle est engagée :\n\n- le divorce met fin au mariage, sans avoir besoin d’une faute ;\n- le PACS peut être rompu par un simple passage à la mairie ;\n- le concubinage peut s’arrêter à tout moment, sans formalité.",
             "subTheme": "droits_fondamentaux",
@@ -1158,7 +1158,7 @@
             }
         },
         {
-            "id": 91,
+            "id": "test_civic_91",
             "question": "La liberté d’avoir des enfants, c’est quoi ?",
             "explanation": "Chaque personne du couple est individuellement libre de choisir d’avoir ou de ne pas\navoir d’enfant. La contraception et l’IVG sont accessibles sans autorisation du\npartenaire.\n\nQue vous soyez en couple (en concubinage, pacsé ou marié) ou seul, vous avez aussi le\ndroit de devenir parent grâce :\n\n- au droit à l’adoption, qui permet d’adopter un mineur ou un majeur, français ou\nétranger ;\n- à la PMA (Procréation Médicalement Assistée), ouverte à toutes les femmes (en couple\nou seules) depuis le 2 août 2021 grâce à la loi bioéthique.",
             "subTheme": "droits_fondamentaux",
@@ -1170,7 +1170,7 @@
             }
         },
         {
-            "id": 92,
+            "id": "test_civic_92",
             "question": "Un citoyen, c’est quoi ?",
             "explanation": "Le citoyen français a la nationalité française. Il bénéficie de la protection de l’État\net doit respecter ses lois. On dit qu’il est “ressortissant” du pays.\n\nLe citoyen a des droits civiques et politiques (comme le droit de vote entre autres) et\ndes devoirs (respecter les lois, payer les impôts, remplir ses devoirs militaires…).\n\nLa citoyenneté est un droit fondamental. Elle est associée à la liberté. Le citoyen est\nlibre :\n\n- d’exprimer ses opinions (liberté d’expression) ;\n- de voter ;\n- de s’engager ;\n- de voyager…\nLes personnes étrangères qui vivent dans le pays dont elles n'ont pas la nationalité\nn'ont pas tous ces droits et devoirs.",
             "subTheme": "droits_fondamentaux",
@@ -1182,7 +1182,7 @@
             }
         },
         {
-            "id": 93,
+            "id": "test_civic_93",
             "question": "Quel texte garantit ce droit fondamental ?",
             "explanation": "La citoyenneté française est un droit fondamental inscrit dans la Déclaration des\ndroits de l’homme et du citoyen de 1789.\n\nCe texte s'adresse autant au citoyen qu'à l'Homme.",
             "subTheme": "droits_fondamentaux",
@@ -1194,7 +1194,7 @@
             }
         },
         {
-            "id": 94,
+            "id": "test_civic_94",
             "question": "La déchéance de nationalité : la perte de la nationalité",
             "explanation": "La déchéance de nationalité est une décision administrative de l’État qui retire à une\npersonne sa nationalité française dans certaines conditions.\n\nCette mesure implique la perte des droits et libertés liés à la citoyenneté dont le\ndroit de vote, le passeport français ou encore la protection diplomatique de l’État.",
             "subTheme": "droits_fondamentaux",
@@ -1206,7 +1206,7 @@
             }
         },
         {
-            "id": 95,
+            "id": "test_civic_95",
             "question": "La Déclaration des droits de l'homme et du citoyen, c’est quoi ?",
             "explanation": "La Déclaration des droits de l'homme et du citoyen (DDHC) est un texte fondamental qui\naffirme les droits fondamentaux de l’être humain : des droits naturels, universels\n(pour tous les hommes, femmes, enfants…) et inaliénables (ils ne peuvent être donnés à\nquelqu’un d’autre, ils lui appartiennent) et du citoyen (des droits et devoirs civiques\net politiques).\n\nAdoptée le 26 août 1789, la Déclaration des droits de l'homme et du citoyen marque une\nrupture avec l'Ancien Régime et fixe les objectifs et le programme de la Révolution\nfrançaise : construire une démocratie fondée sur la justice, l’égalité et la liberté,\noù le pouvoir appartient au peuple\n\nCette Déclaration est reprise par la Constitution de 1791 et devient une référence\njuridique pour les démocraties modernes dans le monde entier.",
             "subTheme": "droits_fondamentaux",
@@ -1218,7 +1218,7 @@
             }
         },
         {
-            "id": 96,
+            "id": "test_civic_96",
             "question": "Comment ce texte est-il structuré ?",
             "explanation": "La Déclaration des droits de l'homme et du citoyen est composée d’une introduction et\nde 17 articles. Elle affirme les droits universels de l’Homme et du citoyen.\n\nVoici quelques exemples : \n\n- l’égalité : \"Les Hommes naissent et demeurent libres et égaux en droits.\" (article\n1er) ;\n- le droit de propriété, parmi les droits fondamentaux : \"Le but de toute association\npolitique est la conservation des droits naturels et imprescriptibles de l'homme. Ces\ndroits sont la liberté, la propriété, la sûreté, et la résistance à l'oppression.\"\n(article 2) ;\n- la liberté d’opinion, religieuse et d’expression : \"Nul ne doit être inquiété pour\nses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre\npublic établi par la loi.\" (article 10)\n\nEt d’autres principes fondamentaux tels que : la présomption d’innocence, la\nsouveraineté nationale, la séparation des pouvoirs (contrôlés par une même personne\nsous la monarchie absolue), l’obligation de contribuer à l’impôt selon ses moyens…",
             "subTheme": "droits_fondamentaux",
@@ -1230,7 +1230,7 @@
             }
         },
         {
-            "id": 97,
+            "id": "test_civic_97",
             "question": "Une Constitution, c’est quoi ?",
             "explanation": "Une Constitution est un acte fondateur par lequel une société se constitue une identité\net décide de/établit son organisation. Ses articles déterminent :\n\n- l'organisation de l’État (comment le pouvoir est réparti et exercé) ;\n- les caractéristiques du régime politique ;\n- les principaux droits et libertés fondamentaux ;\n- la façon dont ces derniers vont être garantis pour tous les citoyens.",
             "subTheme": "droits_fondamentaux",
@@ -1242,7 +1242,7 @@
             }
         },
         {
-            "id": 98,
+            "id": "test_civic_98",
             "question": "La Constitution française du 4 octobre 1958",
             "explanation": "La Constitution du 4 octobre 1958 est le texte fondateur de la Ve République. C'est la\nConstitution qui est appliquée actuellement.\n\nElle a été rédigée en moins de trois mois par le Gouvernement du Général de Gaulle,\ndans un contexte de crise politique liée à la guerre d’Algérie. Elle a été approuvée\npar référendum (les citoyens votent par “oui” ou par “non” à une question posée par le\nprésident de la République) à 82% des voix le 28 septembre 1958. Elle est adoptée le 4\noctobre 1958.\n\nLa Constitution est un texte très difficile à modifier mais quelques modifications ont\npu être apportées. En 1962 par exemple, un référendum constitutionnel a validé que le\nprésident de la République ne serait plus élu au suffrage indirect (élu par des grands\nélecteurs), mais au suffrage direct (par les citoyens eux-mêmes).",
             "subTheme": "droits_fondamentaux",
@@ -1254,7 +1254,7 @@
             }
         },
         {
-            "id": 99,
+            "id": "test_civic_99",
             "question": "Le bloc de constitutionnalité",
             "explanation": "La Constitution du 4 octobre 1958 est composée d’un Préambule et de 108 articles\norganisés en 17 parties.\n\nLe Préambule de la Constitution de la Ve République fait référence à 3 textes\nfondateurs :\n\n1. La Déclaration des droits de l’homme et du citoyen de 1789 ;\n2. Le Préambule de la Constitution de 1946 ;\n3. La Charte de l’environnement de 2004.\nCes trois textes fondateurs et la Constitution française du 4 octobre 1958 forment,\nensemble, le \"bloc de constitutionnalité\".\n\nLe bloc de constitutionnalité est la référence juridique la plus haute : toutes les\nlois françaises doivent le respecter. Le Conseil constitutionnel est chargé de faire\nrespecter la Constitution, la norme suprême en droit français.",
             "subTheme": "droits_fondamentaux",
@@ -1266,7 +1266,7 @@
             }
         },
         {
-            "id": 100,
+            "id": "test_civic_100",
             "question": "La Charte de l’environnement de 2004, qu’est-ce que c’est ?",
             "explanation": "La Charte de l’Environnement de 2004 dit que la protection de l’environnement est\nvitale, pour la France et pour les générations à venir de l’humanité.",
             "subTheme": "droits_fondamentaux",
@@ -1278,7 +1278,7 @@
             }
         },
         {
-            "id": 101,
+            "id": "test_civic_101",
             "question": "Quelle est l’histoire de la Charte de l’Environnement de 2004 ?",
             "explanation": "En 2000, on prend peu à peu conscience que nous devons protéger l’environnement de\nnotre planète.\n\nAu Sommet mondial sur le développement durable de 2002, le président de la République\nJacques Chirac a dit : \"Notre maison brûle et nous regardons ailleurs.\"\n\nEn 2004, après deux ans de discussion, la Charte de l’environnement est validée.\n\nElle est ajoutée à la Constitution de 1958 en 2005.",
             "subTheme": "droits_fondamentaux",
@@ -1290,7 +1290,7 @@
             }
         },
         {
-            "id": 102,
+            "id": "test_civic_102",
             "question": "Que contient la Charte de l’environnement de 2004 ?",
             "explanation": "La Charte de l’environnement comporte un Préambule et 10 articles.\n\nOn peut notamment y lire que : \n\n- l’Homme dépend de la nature et la nature dépend de l’Homme ;\n- chacun doit contribuer à limiter les dégâts de l’homme et de ses activités sur\nl’environnement.\n\nOn cite souvent cette dernière phrase du Préambule : \"Afin d’assurer un développement\ndurable, les choix destinés à répondre aux besoins du présent ne doivent pas\ncompromettre la capacité des générations futures et des autres peuples à satisfaire\nleurs propres besoins\".",
             "subTheme": "droits_fondamentaux",
@@ -1302,7 +1302,7 @@
             }
         },
         {
-            "id": 103,
+            "id": "test_civic_103",
             "question": "Vers qui se tourner en premier pour faire valoir ses droits fondamentaux ?",
             "explanation": "Les policiers et gendarmes sont les forces de l’ordre. Ils interviennent pour résoudre\nun conflit, calmer un désaccord ou protéger physiquement une personne.\n\nVous pouvez vous rendre au commissariat de police ou à la brigade de gendarmerie la\nplus proche. Vous pouvez y déposer une plainte contre quelqu’un (ou contre X, si vous\nne connaissez pas l’identité de la personne responsable).\n\nLe Défenseur des droits est une autorité administrative indépendante chargée de veiller\nau respect des droits.\n\nElle a pour mission de défendre les personnes dont les droits ne sont pas respectés et\nde permettre l’égalité pour tous (lutte contre la discrimination). Elle intervient pour\nrégler les conflits entre un service public et un usager. Elle vous accueille dans des\nstructures publiques locales (mairie, CAF, France Travail, préfecture…).\n\nLes maisons de justice et du droit orientent et conseillent les personnes dans leurs\ndémarches juridiques.\n\nElles assurent des permanences gratuites grâce à des associations spécialisées, sous la\nCoordination des conseils Départementaux d’Accès au Droit (CDAD).",
             "subTheme": "droits_fondamentaux",
@@ -1314,7 +1314,7 @@
             }
         },
         {
-            "id": 104,
+            "id": "test_civic_104",
             "question": "Quels sont les autres acteurs qui peuvent vous accompagner ?",
             "explanation": "Quand vous déposez une plainte, une procédure est ouverte. Différents acteurs peuvent\nvous accompagner dans cette procédure judiciaire :\n\n- Un conciliateur ou un médiateur : il contacte les deux parties et essaye de trouver\nun accord à l’amiable afin d’éviter un procès.\n- Un avocat : il informe, conseille et défend devant la justice. Pour les personnes aux\nfaibles ressources, une prise en charge des frais de justice est possible.",
             "subTheme": "droits_fondamentaux",
@@ -1326,7 +1326,7 @@
             }
         },
         {
-            "id": 105,
+            "id": "test_civic_105",
             "question": "Que dit la Déclaration des droits de l'homme et du citoyen ?",
             "explanation": "De nombreux droits et libertés nous sont accordés par la Déclaration des droits de\nl'homme et du citoyen et les autres textes fondamentaux. Il est écrit que nos droits\nsont imprescriptibles (article 2 de la DDHC), ce qui signifie qu’ils ne peuvent pas\nnous être retirés.\n\nCependant, ces droits et libertés ont une limite pour protéger la vie en société. Nos\ndroits et libertés individuels sont limités par les droits des autres : \"La liberté\nconsiste à faire tout ce qui ne nuit pas à autrui\" (article 4 de la DDHC).",
             "subTheme": "droits_fondamentaux",
@@ -1338,7 +1338,7 @@
             }
         },
         {
-            "id": 106,
+            "id": "test_civic_106",
             "question": "Quelles sont les limites de nos droits et libertés ?",
             "explanation": "Nos droits et libertés individuels sont limités par :\n\n- l’intérêt général ;\n- les libertés des autres ;\n- la défense de l’ordre public qui concerne non seulement la sécurité, mais également\nla tranquillité, la salubrité (c’est-à-dire qui ne présente pas de danger pour\nl’hygiène, la santé et l’environnement) ;\n- le respect de la dignité humaine.",
             "subTheme": "droits_fondamentaux",
@@ -1350,7 +1350,7 @@
             }
         },
         {
-            "id": 107,
+            "id": "test_civic_107",
             "question": "Quelques exemples",
             "explanation": "Dans le cadre de la lutte contre le terrorisme certaines libertés individuelles\n(liberté de circulation, par exemple) ont été restreintes.\n\nLa mise en place de l'état d'urgence sanitaire contre le Covid-19 en mars 2020 a limité\nla liberté d'aller et venir, la liberté d'entreprendre et la liberté de réunion.\n\nEn milieu carcéral, la liberté de correspondance peut être restreinte pour des raisons\nde sécurité ou de maintien de l’ordre.\n\nDe même, il est interdit de circuler dans l'espace public avec une tenue qui vise à\ncacher son visage.",
             "subTheme": "droits_fondamentaux",
@@ -1362,7 +1362,7 @@
             }
         },
         {
-            "id": 108,
+            "id": "test_civic_108",
             "question": "Une infraction, qu’est-ce que c’est ?",
             "explanation": "Tout le monde doit respecter les lois. Elles garantissent l’ordre public et la sécurité\nde tous.\n\nLes infractions pénales désignent des actes ou des comportements interdits par la loi.\n\nLe non-respect des lois peut entraîner des sanctions. Les sanctions sont prononcées par\nle juge selon la gravité.",
             "subTheme": "droits_fondamentaux",
@@ -1374,7 +1374,7 @@
             }
         },
         {
-            "id": 109,
+            "id": "test_civic_109",
             "question": "Quels sont les différents types d'infractions ?",
             "explanation": "1. La contravention\n- La contravention est l'infraction la moins grave. Exemple : un excès de vitesse ou du\ntapage nocturne.\n- Elle est punie par une amende de maximum 3 000 € (pas de peine de prison possible).\n- Elle est jugée par le tribunal de police.\n\n2. Le délit\n- Le délit est une infraction intermédiaire. Exemples : vol, fraude fiscale,\nharcèlement, agression sexuelle, homicide involontaire, ne pas scolariser son enfant…\n- Il est puni par une amende supérieure ou égale à 3 750 € et une peine\nd’emprisonnement entre 2 mois et 10 ans.\n- Il est jugé par le tribunal correctionnel.\n\n3. Le crime\n- Le crime est l'infraction la plus grave. Exemples : assassinat (prémédité), meurtre\n(non prémédité), viol, braquage, terrorisme…\n- En raison de la gravité de cette infraction, la tentative de crime est toujours\npunissable.\n- Il est sanctionné par une amende supérieure ou égale à 3 750 € et une peine\nd’emprisonnement de 15 ans à la perpétuité (prison à vie).\n- La cour d’assises et la cour criminelle jugent les accusés de crime.",
             "subTheme": "droits_fondamentaux",
@@ -1386,7 +1386,7 @@
             }
         },
         {
-            "id": 110,
+            "id": "test_civic_110",
             "question": "Qui est chargé de faire respecter la loi ?",
             "explanation": "La police et la gendarmerie sont des forces de l’ordre. Ces deux institutions assurent\nle respect des lois en France.\n\nInstitutions distinctes, elles agissent sur des périmètres différents :\n\n- la police assure le respect des lois en ville ;\n- la gendarmerie agit en zone rurale et périurbaine (campagne) et sur les axes de\ncirculation. Les gendarmes ont le statut de militaires.",
             "subTheme": "droits_fondamentaux",
@@ -1398,7 +1398,7 @@
             }
         },
         {
-            "id": 111,
+            "id": "test_civic_111",
             "question": "Quel est leur rôle ?",
             "explanation": "La police et la gendarmerie exercent les mêmes missions mais dans des zones différentes.\n\nElles se chargent de :\n\n- la prévention des infractions ;\n- le maintien de l’ordre public ;\n- la protection des personnes et des biens ;\n- l’investigation ou enquête sur les infractions ;\n- la protection du pays en cas de menace extérieure ou de terrorisme.\n\nLes policiers et les gendarmes peuvent donner des amendes, recueillir le témoignage\nd’une infraction sous forme de procès-verbaux ou constater et signaler des faits à la\njustice.\n\nLes 2 institutions travaillent parfois ensemble pour assurer la sécurité et l’ordre\npublic.",
             "subTheme": "droits_fondamentaux",
@@ -1410,7 +1410,7 @@
             }
         },
         {
-            "id": 112,
+            "id": "test_civic_112",
             "question": "Vivre en France : vivre ensemble selon des règles communes à tous",
             "explanation": "Toute personne qui habite en France (peu importe sa nationalité, citoyen français ou\nnon) doit respecter certaines obligations légales envers l’État et certaines règles qui\nrelèvent du vivre-ensemble et du respect de la société.\n\nLes obligations des résidents français garantissent :\n\n- la cohésion sociale ;\n- la sécurité ;\n- le bon fonctionnement de la société.",
             "subTheme": "droits_fondamentaux",
@@ -1422,7 +1422,7 @@
             }
         },
         {
-            "id": 113,
+            "id": "test_civic_113",
             "question": "Quelles sont les obligations du résident français ?",
             "explanation": "1. Payer des impôts\nL’impôt permet à l’État de développer et de faire fonctionner son pays. La\nparticipation à l’effort commun, adaptée selon ses revenus, est nécessaire pour rendre\nles services publics gratuits (exemples : police, justice, éducation, hôpitaux,\nramassage des ordures…).\n\nL’obligation de payer des impôts est inscrite dans la Déclaration des droits de l'homme\net du citoyen de 1789.\n\n2. Être en situation régulière\nLes personnes étrangères qui vivent en France doivent avoir un titre de séjour valide\net renouveler leur titre à son expiration.\n\nElles doivent aussi respecter les conditions du regroupement et de la réunification\nfamiliale.\n\n3. Assurer l’assistance à personne en danger\nAssurer l’assistance à personne en danger, c’est porter secours à toute personne en\ndanger.\n\nSi une personne voit quelqu’un en danger ou qui est en danger, il doit l’aider.\n\nSi elle n’aide pas, elle peut être condamnée pour “non-assistance à personne en danger”.\n\n4. Défendre l’environnement\nAu quotidien, chacun a l’obligation d’agir pour protéger l’environnement que ce soit au\nsujet de : l’alimentation, la consommation responsable, les économies d’eau et\nd’énergie, le choix des transports, la limitation des produits chimiques, le jardinage\nécologique, la réutilisation et le recyclage.",
             "subTheme": "droits_fondamentaux",
@@ -1434,7 +1434,7 @@
             }
         },
         {
-            "id": 114,
+            "id": "test_civic_114",
             "question": "Quelles sont les obligations que doit respecter le citoyen français ?",
             "explanation": "En plus des règles précédemment énoncées, le citoyen français doit respecter la loi\n(française et européenne).\n\nIl doit aussi tout mettre en œuvre pour essayer de la faire respecter par les autres.\n\nLes citoyens, qui ont le droit de vote, sont indirectement auteurs des lois. En effet,\nils ont élu des représentants qui ont voté les lois. Les citoyens doivent donc d’autant\nplus respecter ces règles qu’ils se sont indirectement fixés à eux-mêmes.",
             "subTheme": "droits_fondamentaux",
@@ -1446,7 +1446,7 @@
             }
         },
         {
-            "id": 115,
+            "id": "test_civic_115",
             "question": "Quelles sont les obligations du citoyen français ?",
             "explanation": "Les citoyens ont des devoirs. Ils doivent par exemple participer :\n\n1. À la vie politique\nPar son vote, le citoyen assure le bon fonctionnement de la démocratie. En France, la\ncarte d'électeur porte la mention “Voter est un droit, c’est aussi un devoir civique”.\n\n2. À la défense du pays\nLe service national, suspendu en 1997, a été remplacé par une Journée d’Appel et de\nPréparation à la Défense (JAPD), puis par la Journée Défense et Citoyenneté (JDC). La\nJDC sensibilise les jeunes citoyens à leurs responsabilités en matière de sécurité\nnationale et leur fait découvrir les missions des forces armées en temps de paix et en\ntemps de guerre.\n\n3. Au fonctionnement de la justice\nTout citoyen français âgé de plus de 23 ans, qui a tous ses droits civiques et qui est\ninscrit sur les listes électorales, peut être tiré au sort pour être juré lors d’un\nprocès d’une cour d'assises. C’est un rôle clé qui garantit la participation directe\ndes citoyens à l’administration de la justice.",
             "subTheme": "droits_fondamentaux",
@@ -1458,7 +1458,7 @@
             }
         },
         {
-            "id": 116,
+            "id": "test_civic_116",
             "question": "Quels sont les types de violences ?",
             "explanation": "1. La violence psychologique\nLa violence psychologique est un comportement ou un ensemble d'actes qui visent à vous\nrabaisser ou à vous dénigrer.\n\nExemples de violences psychologiques :\n\n- insulter une personne ;\n- tenir des propos dévalorisants ou dénigrants contre une personne, en privé ou en\npublic ;\n- confisquer les documents d'identité d'une personne ;\n- menacer une personne.\n\n2. La violence physique\nLa violence physique se caractérise par un geste qui a pour but de blesser une personne.\n\nExemples de violences physiques :\n\n- une gifle ;\n- un coup (avec une main, un objet) ;\n- être poussé ou tiré par les cheveux.\n\n3. La violence économique\nLa violence économique est un comportement qui vise à contrôler l’argent de son\npartenaire pour le contrôler.\n\nExemple de violences économiques :\n\n- Contrôle total des ressources financières et de leur utilisation.",
             "subTheme": "droits_fondamentaux",
@@ -1470,7 +1470,7 @@
             }
         },
         {
-            "id": 117,
+            "id": "test_civic_117",
             "question": "La maltraitance des enfants, c'est quoi ?",
             "explanation": "Différents types de violences existent :\n\n- des violences physiques ou sexuelles (morsure, brûlure, étranglement, attouchement,\nmutilation sexuelle...) ;\n- des violences psychologiques (cris, menaces, moqueries...) ;\n- la privation volontaire de soins (alimentation, médicaments, hygiène...).\nLa violence n’apprend rien, elle ne peut pas être utilisée pour éduquer un enfant ;\nc’est inscrit dans la loi. Les gifles, les fessées, les humiliations ou les autres\nviolences psychologiques et physiques sont interdites.",
             "subTheme": "droits_fondamentaux",
@@ -1482,7 +1482,7 @@
             }
         },
         {
-            "id": 118,
+            "id": "test_civic_118",
             "question": "Les violences entre enfants : le cas du harcèlement scolaire",
             "explanation": "Un élève est victime de harcèlement scolaire lorsqu'il subit, de manière répétée, des\nviolences verbales, morales ou physiques de la part d'un ou plusieurs autres élèves, à\nl’intérieur ou à l’extérieur de l’établissement scolaire.\n\nCes actes de violence sont, par exemple, des insultes, des moqueries, des brimades, des\nrejets d'un groupe, des bousculades, des coups, des vols.\n\nLe harcèlement scolaire est un délit. Il est puni par la loi.",
             "subTheme": "droits_fondamentaux",
@@ -1494,7 +1494,7 @@
             }
         },
         {
-            "id": 119,
+            "id": "test_civic_119",
             "question": "Qu'est-ce qu'une mutilation sexuelle féminine ?",
             "explanation": "Les mutilations sexuelles féminines désignent toutes les interventions aboutissant à\nune ablation (acte consistant à enlever un organe) partielle ou totale des organes\ngénitaux externes de la femme et/ou toute autre mutilation des organes génitaux\nféminins pratiqués à des fins non thérapeutiques (définition de l’Organisation Mondiale\nde la Santé).\n\nExemples :\n\n- l’excision (ablation totale ou partielle du gland du clitoris et des petites lèvres) ;\n- l’infibulation (ablation totale ou partielle du gland du clitoris, des petites lèvres\net des grandes lèvres).",
             "subTheme": "droits_fondamentaux",
@@ -1506,7 +1506,7 @@
             }
         },
         {
-            "id": 120,
+            "id": "test_civic_120",
             "question": "Quelles sont les conséquences des mutilations sexuelles féminines ?",
             "explanation": "Les mutilations sexuelles féminines ont des conséquences immédiates et durables sur la\nsanté des femmes notamment lors de l'accouchement ainsi que sur le plaisir sexuel.\n\nElles peuvent entraîner des infections, des maladies, des rapports sexuels très\ndouloureux, des grossesses et des accouchements à risques et même la mort.\n\nElles peuvent également avoir de graves répercussions psychologiques : angoisse,\nanxiété, dépression et même suicide.\n\nElles constituent une atteinte aux droits fondamentaux de la personne : l’intégrité\nphysique, psychologique et sa santé.\n\nElles sont une forme de discrimination à l'égard des femmes.",
             "subTheme": "droits_fondamentaux",
@@ -1518,7 +1518,7 @@
             }
         },
         {
-            "id": 121,
+            "id": "test_civic_121",
             "question": "Que prévoit la loi ?",
             "explanation": "Les mutilations sexuelles féminines sont interdites et sévèrement punies par la loi, y\ncompris lorsqu'elles sont commises à l'étranger. Aucune tradition ne peut justifier de\ntels actes discriminatoires.\n\nLes parents sont responsables de la protection des droits fondamentaux de leur enfant.",
             "subTheme": "droits_fondamentaux",
@@ -1530,7 +1530,7 @@
             }
         },
         {
-            "id": 122,
+            "id": "test_civic_122",
             "question": "La violence sexuelle, une violence interdite",
             "explanation": "La violence sexuelle désigne tous les actes commis avec violence, contrainte, menace ou\nsurprise en rapport avec une partie du corps considérée comme intime et sexuelle (la\nbouche, la poitrine, le sexe, les fesses et les cuisses).",
             "subTheme": "droits_fondamentaux",
@@ -1542,7 +1542,7 @@
             }
         },
         {
-            "id": 123,
+            "id": "test_civic_123",
             "question": "Quels sont les types de violences sexuelles ?",
             "explanation": "Il existe différents types de violences sexuelles :\n\n- Le harcèlement sexuel : c'est le fait d'imposer à une personne des propos ou\ncomportements à connotation sexuelle ou sexiste. Le chantage est aussi considéré comme\ndu harcèlement sexuel.\nExemples : remarque sur le corps d’une personne, sifflements, SMS à caractère\npornographique, remarques dégradantes sur l’orientation sexuelle, blagues obscènes…\n- L’agression sexuelle : c'est un acte sexuel, sans pénétration, imposé par une\npersonne à une autre personne. Cette infraction est caractérisée lorsque l'auteur a\nutilisé des violences, des menaces, une contrainte physique ou psychologique ou a agi\npar surprise. Un attouchement sexuel non consenti est une agression sexuelle.\n- Le viol : c'est un acte de pénétration sexuelle imposé par une personne à une autre\npersonne. Ce crime est caractérisé lorsque l'auteur a utilisé des violences, des\nmenaces, une contrainte physique ou psychologique ou par surprise.\nCes violences portent atteinte aux droits fondamentaux de la personne. Personne n’a le\ndroit d’imposer un acte sexuel non désiré y compris dans un couple.",
             "subTheme": "droits_fondamentaux",
@@ -1554,7 +1554,7 @@
             }
         },
         {
-            "id": 124,
+            "id": "test_civic_124",
             "question": "La notion de consentement, qu'est-ce que c'est ?",
             "explanation": "La violence sexuelle est directement liée à la notion de consentement : dans les\nviolences sexuelles, la victime n’a pas consenti et n’a pas désiré ces comportements,\npropos ou images à caractère sexuel. Son refus et son non-consentement peuvent être\nexprimés notamment par des paroles, par des silences, des attitudes, des écrits.\n\nLe consentement doit être réciproque et mutuel : tout rapprochement physique doit être\nvalidé par les 2 partenaires. Ce consentement peut être formulé par des propos et/ou\ndes actions. Le silence n’est pas un consentement. Le consentement est temporaire. Il\npeut être donné puis retiré. Le consentement concerne un acte sexuel et non tous les\nactes sexuels. Si une personne n’est pas en état de donner son consentement (alcool,\nsommeil, sous médicaments…), c’est donc qu’elle refuse.",
             "subTheme": "droits_fondamentaux",
@@ -1566,7 +1566,7 @@
             }
         },
         {
-            "id": 125,
+            "id": "test_civic_125",
             "question": "La traite des êtres humains, c'est quoi ?",
             "explanation": "La traite des êtres humains c'est le fait de recruter une personne, la transporter, la\ntransférer, l’héberger ou l’accueillir pour l’exploiter.\n\nElle peut prendre différentes formes :\n\n- des faits de proxénétisme (tirer profit financier), d'agression ou d'atteintes\nsexuelles ;\n- de réduction en esclavage ou en servitude ;\n- de soumission à du travail, des services forcés ou de la mendicité.\nLa traite des êtres humains est interdite en France.",
             "subTheme": "droits_fondamentaux",
@@ -1578,7 +1578,7 @@
             }
         },
         {
-            "id": 126,
+            "id": "test_civic_126",
             "question": "La prostitution, c'est quoi ?",
             "explanation": "La prostitution est l’échange d’un acte sexuel contre de l’argent.\n\nLes clients et les proxénètes (c’est-à-dire ceux qui tirent profit de la prostitution\nde quelqu'un ou ceux qui encouragent à la prostitution) peuvent être punis par la loi.\n\nIl existe un accompagnement pour les personnes qui souhaitent sortir de la prostitution\n: la France lutte contre la prostitution grâce à la prévention et à la valorisation de\nla réinsertion. Un retrait de toute peine et un Parcours de Sortie de Prostitution\n(PSP) sont proposés à ceux qui souhaitent sortir de la prostitution.\n\nL’achat d’actes sexuels est interdit en France.",
             "subTheme": "droits_fondamentaux",
@@ -1590,7 +1590,7 @@
             }
         },
         {
-            "id": 127,
+            "id": "test_civic_127",
             "question": "Que faire quand on est victime de violence ?",
             "explanation": "1. En parler\nIl ne faut pas rester seul. Exprimer sa souffrance permet de sortir de l’isolement et\nd’être orienté vers des solutions. Vous pouvez vous adresser à :\n\n- une personne de confiance : ami, membre de la famille, collègue, enseignant…\n- un professionnel : médecin, psychologue, travailleur social…\n\n2. Se faire accompagner\nIl existe de nombreuses associations spécialisées selon le type de violence vécue.\nElles proposent souvent un accompagnement :\n\n- psychologique (écoute, soutien, groupes de parole) ;\n- juridique (informations sur vos droits, aide à porter plainte) ;\n- social (logement d’urgence, démarches administratives…).\nCes accompagnements sont gratuits, confidentiels et sans obligation de porter plainte.\n\n3. Porter plainte ou signaler les faits\nEn tant que victime, vous pouvez :\n\n- déposer plainte auprès de tous les commissariats ou les gendarmeries ;\n- envoyer un courrier au procureur de la République ;\n- utiliser les plateformes de signalement en ligne, notamment pour les violences\nsexuelles et sexistes.\n\nLa victime de violences n'est jamais responsable.\n![](./pics/urgence_number.png)",
             "subTheme": "droits_fondamentaux",
@@ -1602,7 +1602,7 @@
             }
         },
         {
-            "id": 128,
+            "id": "test_civic_128",
             "question": "Témoin de violences : vous devez agir sans vous mettre en danger",
             "explanation": "Quelle que soit la violence dont vous êtes témoin, vous devez agir. Votre action aidera la\nvictime qui peut être un membre de votre famille, un collègue de travail, un inconnu\ndans la rue…",
             "subTheme": "droits_fondamentaux",
@@ -1614,7 +1614,7 @@
             }
         },
         {
-            "id": 129,
+            "id": "test_civic_129",
             "question": "Que faire quand on est témoin de violence ?",
             "explanation": "Il est important d’agir, sans mettre la victime ou vous-mêmes en danger.\n\n- Écouter et soutenir la victime : écouter, c’est déjà aider la victime.\n- Orienter vers des aides : sans forcer la victime à agir, vous pouvez lui donner des\nsolutions : un numéro de téléphone de secours, un site de signalement en ligne, un\ncontact de professionnels de santé ou social. Proposer une information, une ressource\nou un accompagnement à une démarche peut parfois suffire à déclencher un changement.\n- Intervenir sans se mettre en danger : si une personne est témoin direct d’une\nviolence, elle doit d’abord se protéger, puis aider la victime. Elle peut appeler les\nforces de l’ordre ou chercher de l’aide autour (autres témoins, responsables de lieu\npublic, agents de sécurité…).\n- Témoigner et signaler : être témoin, c’est aussi pouvoir faire avancer une enquête ou\nprotéger d’autres victimes. En tant que témoin, il est possible de témoigner auprès de\nla police ou d’un juge si la victime décide de porter plainte. Il est également\npossible de faire un signalement anonyme ou d’envoyer une main courante (signaler des\nfaits à la police ou à la gendarmerie, sans déposer plainte) pour que les faits soient\nenregistrés.",
             "subTheme": "droits_fondamentaux",
@@ -1626,7 +1626,7 @@
             }
         },
         {
-            "id": 130,
+            "id": "test_civic_130",
             "question": "Le devoir de protéger l'environnement",
             "explanation": "Toutes les personnes qui habitent en France ont le devoir de protéger l’environnement,\npour soi et pour les autres :\n\n- “Chacun a le droit de vivre dans un environnement équilibré et respectueux de la\nsanté” (article 1 de la Charte de l’environnement de 2004).\n- “Toute personne a le devoir de prendre part à la préservation et à l’amélioration de\nl’environnement” (article 2 de la Charte de l’environnement de 2004).\nElle s’inscrit dans le respect des valeurs républicaines :\n\n- Liberté, en choisissant de consommer et de se déplacer de manière responsable ;\n- Égalité, pour que chacun ait accès à un environnement sain ;\n- Fraternité, pour les générations futures et le bien commun.",
             "subTheme": "droits_fondamentaux",
@@ -1638,7 +1638,7 @@
             }
         },
         {
-            "id": 131,
+            "id": "test_civic_131",
             "question": "Exemples d'actions concrètes :",
             "explanation": "- trier ses déchets et réduire ses déchets plastiques ;\n- éviter le gaspillage des aliments et de l’énergie ;\n- privilégier les transports en commun et le vélo ;\n- respecter les espaces communs et ne pas y jeter de déchets ;\n- participer à des actions locales pour l’environnement (exemple : nettoyage collectif).",
             "subTheme": "droits_fondamentaux",

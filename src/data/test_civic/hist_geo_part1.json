@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "test_civic_1",
         "question": "Quel était le régime politique de la France avant 1789 ?",
         "correctAnswer": "L'Ancien Régime (Monarchie absolue de droit divin).",
         "incorrectAnswers": [
@@ -13,7 +13,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 2,
+        "id": "test_civic_2",
         "question": "Quels régimes politiques se succèdent de 1789 à 1958 ?",
         "correctAnswer": "Une succession de monarchies, d'empires et de républiques.",
         "incorrectAnswers": [
@@ -26,7 +26,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 3,
+        "id": "test_civic_3",
         "question": "Depuis quand la Ve République est-elle en vigueur ?",
         "correctAnswer": "Depuis 1958.",
         "incorrectAnswers": [
@@ -39,7 +39,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 4,
+        "id": "test_civic_4",
         "question": "Qui sont les trois grands rois qui ont construit la France (Mérovingiens, Carolingiens, Capétiens) ?",
         "correctAnswer": "Clovis, Charlemagne et Hugues Capet.",
         "incorrectAnswers": [
@@ -52,7 +52,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 5,
+        "id": "test_civic_5",
         "question": "Quel est l'apport principal de la période royale au système actuel ?",
         "correctAnswer": "L'organisation administrative (fiefs, centralisation).",
         "incorrectAnswers": [
@@ -65,7 +65,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 6,
+        "id": "test_civic_6",
         "question": "Comment était organisée la société sous l'Ancien Régime ?",
         "correctAnswer": "En trois ordres : le Clergé, la Noblesse et le Tiers-État.",
         "incorrectAnswers": [
@@ -78,7 +78,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 7,
+        "id": "test_civic_7",
         "question": "Quels étaient les droits des citoyens sous l'Ancien Régime ?",
         "correctAnswer": "Très limités, il n'y avait pas d'égalité devant la loi.",
         "incorrectAnswers": [
@@ -91,7 +91,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 8,
+        "id": "test_civic_8",
         "question": "Quel héritage l'Ancien Régime a-t-il laissé ?",
         "correctAnswer": "La centralisation du pouvoir.",
         "incorrectAnswers": [
@@ -104,7 +104,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 9,
+        "id": "test_civic_9",
         "question": "Quel événement marque la fin de la monarchie absolue en 1789 ?",
         "correctAnswer": "La Révolution française et la réunion des États généraux.",
         "incorrectAnswers": [
@@ -117,7 +117,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 10,
+        "id": "test_civic_10",
         "question": "Quel texte fondamental est adopté en 1789 ?",
         "correctAnswer": "La Déclaration des Droits de l'Homme et du Citoyen.",
         "incorrectAnswers": [
@@ -130,7 +130,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 11,
+        "id": "test_civic_11",
         "question": "Quels principes la Révolution a-t-elle établis ?",
         "correctAnswer": "L'abolition des privilèges, la souveraineté populaire et la séparation des pouvoirs.",
         "incorrectAnswers": [
@@ -143,7 +143,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 12,
+        "id": "test_civic_12",
         "question": "Qu'est-ce que la 1ère République (1792-1804) ?",
         "correctAnswer": "Le régime proclamé après la chute de la royauté, marqué par la Terreur puis le Consulat.",
         "incorrectAnswers": [
@@ -156,7 +156,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 13,
+        "id": "test_civic_13",
         "question": "Quel changement la 1ère République apporte-t-elle aux droits des citoyens ?",
         "correctAnswer": "La séparation progressive entre l'Église et l'État.",
         "incorrectAnswers": [
@@ -169,7 +169,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 14,
+        "id": "test_civic_14",
         "question": "Quel est l'apport administratif de la 1ère République ?",
         "correctAnswer": "La création des départements.",
         "incorrectAnswers": [
@@ -182,7 +182,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 15,
+        "id": "test_civic_15",
         "question": "Qu'est-ce que le Consulat (1799-1804) ?",
         "correctAnswer": "Le régime dirigé par Napoléon Bonaparte (Premier Consul).",
         "incorrectAnswers": [
@@ -195,7 +195,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 16,
+        "id": "test_civic_16",
         "question": "Comment évoluent les droits politiques sous le Consulat ?",
         "correctAnswer": "L'exécutif est fort, le pouvoir législatif est affaibli.",
         "incorrectAnswers": [
@@ -208,7 +208,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 17,
+        "id": "test_civic_17",
         "question": "Quelle institution administrative majeure date du Consulat ?",
         "correctAnswer": "Les préfets.",
         "incorrectAnswers": [
@@ -221,7 +221,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 18,
+        "id": "test_civic_18",
         "question": "Qu'est-ce que le 1er Empire (1804-1815) ?",
         "correctAnswer": "Le régime où Napoléon 1er est Empereur.",
         "incorrectAnswers": [
@@ -234,7 +234,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 19,
+        "id": "test_civic_19",
         "question": "Quel grand texte juridique date du 1er Empire ?",
         "correctAnswer": "Le Code Civil (1804).",
         "incorrectAnswers": [
@@ -247,7 +247,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 20,
+        "id": "test_civic_20",
         "question": "Quel héritage le 1er Empire a-t-il laissé à l'éducation ?",
         "correctAnswer": "Les lycées et le baccalauréat.",
         "incorrectAnswers": [
@@ -260,7 +260,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 21,
+        "id": "test_civic_21",
         "question": "Quels régimes marquent le retour de la monarchie au XIXe siècle ?",
         "correctAnswer": "La Restauration et la Monarchie de Juillet.",
         "incorrectAnswers": [
@@ -273,7 +273,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 22,
+        "id": "test_civic_22",
         "question": "Qui avait le droit de vote sous ces monarchies ?",
         "correctAnswer": "Seulement les hommes les plus riches (suffrage censitaire).",
         "incorrectAnswers": [
@@ -286,7 +286,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 23,
+        "id": "test_civic_23",
         "question": "Quel progrès politique apparaît sous la monarchie parlementaire ?",
         "correctAnswer": "L'importance croissante du Parlement et des débats politiques.",
         "incorrectAnswers": [
@@ -299,7 +299,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 24,
+        "id": "test_civic_24",
         "question": "Comment se termine la Monarchie de Juillet en 1848 ?",
         "correctAnswer": "Par une Révolution et la proclamation de la 2e République.",
         "incorrectAnswers": [
@@ -312,7 +312,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 25,
+        "id": "test_civic_25",
         "question": "Quel droit majeur est instauré en 1848 ?",
         "correctAnswer": "Le suffrage universel masculin.",
         "incorrectAnswers": [
@@ -325,7 +325,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 26,
+        "id": "test_civic_26",
         "question": "Quelle grande abolition a lieu en 1848 ?",
         "correctAnswer": "L'abolition définitive de l'esclavage (par Victor Schœlcher).",
         "incorrectAnswers": [
@@ -338,7 +338,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 27,
+        "id": "test_civic_27",
         "question": "Qui met fin à la 2e République ?",
         "correctAnswer": "Louis-Napoléon Bonaparte par un coup d'État en 1851.",
         "incorrectAnswers": [
@@ -351,7 +351,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 28,
+        "id": "test_civic_28",
         "question": "Qu'est-ce que le Second Empire (1852-1870) ?",
         "correctAnswer": "Le régime impérial de Napoléon III.",
         "incorrectAnswers": [
@@ -364,7 +364,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 29,
+        "id": "test_civic_29",
         "question": "Quel droit social est accordé en 1864 ?",
         "correctAnswer": "Le droit de grève.",
         "incorrectAnswers": [
@@ -377,7 +377,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 30,
+        "id": "test_civic_30",
         "question": "Comment s'effondre le Second Empire ?",
         "correctAnswer": "Après la défaite militaire contre la Prusse en 1870.",
         "incorrectAnswers": [
@@ -390,7 +390,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 31,
+        "id": "test_civic_31",
         "question": "Quels droits sont affirmés sous la 3e République ?",
         "correctAnswer": "Liberté de réunion, liberté de la presse, liberté syndicale.",
         "incorrectAnswers": [
@@ -403,7 +403,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 32,
+        "id": "test_civic_32",
         "question": "Quelles lois scolaires sont votées sous la 3e République (Jules Ferry) ?",
         "correctAnswer": "L'école gratuite, laïque et obligatoire.",
         "incorrectAnswers": [
@@ -416,7 +416,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 33,
+        "id": "test_civic_33",
         "question": "Qu'est-ce que le régime de Vichy (1940-1944) ?",
         "correctAnswer": "Un régime autoritaire qui collabore avec l'occupant nazi.",
         "incorrectAnswers": [
@@ -429,7 +429,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 34,
+        "id": "test_civic_34",
         "question": "Quelle est la situation des Juifs sous Vichy ?",
         "correctAnswer": "Ils sont persécutés, arrêtés et déportés (lois antisémites).",
         "incorrectAnswers": [
@@ -442,7 +442,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 35,
+        "id": "test_civic_35",
         "question": "Quel est le bilan politique du régime de Vichy ?",
         "correctAnswer": "Il est nul, c'est une rupture avec les valeurs républicaines.",
         "incorrectAnswers": [
@@ -455,7 +455,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 36,
+        "id": "test_civic_36",
         "question": "Qui dirige le Gouvernement Provisoire à la Libération (1944) ?",
         "correctAnswer": "Le Général de Gaulle.",
         "incorrectAnswers": [
@@ -468,7 +468,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 37,
+        "id": "test_civic_37",
         "question": "Quelle grande réforme sociale date de la Libération (1945) ?",
         "correctAnswer": "La création de la Sécurité Sociale.",
         "incorrectAnswers": [
@@ -481,7 +481,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 38,
+        "id": "test_civic_38",
         "question": "Quel a été le rôle du Gouvernement Provisoire ?",
         "correctAnswer": "Rétablir la République et reconstruire la France.",
         "incorrectAnswers": [
@@ -494,7 +494,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 39,
+        "id": "test_civic_39",
         "question": "Pourquoi la 4e République était-elle instable ?",
         "correctAnswer": "Le pouvoir exécutif était trop faible face au Parlement.",
         "incorrectAnswers": [
@@ -507,7 +507,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 40,
+        "id": "test_civic_40",
         "question": "Quel droit obtiennent les femmes en 1944 ?",
         "correctAnswer": "Le droit de vote.",
         "incorrectAnswers": [
@@ -520,7 +520,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 41,
+        "id": "test_civic_41",
         "question": "Quel est l'héritage de la 4e République ?",
         "correctAnswer": "La reconstruction économique et la construction européenne.",
         "incorrectAnswers": [
@@ -533,7 +533,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 42,
+        "id": "test_civic_42",
         "question": "Pourquoi la Ve République a-t-elle été créée en 1958 ?",
         "correctAnswer": "Pour résoudre la crise algérienne et donner un pouvoir fort à l'État.",
         "incorrectAnswers": [
@@ -546,7 +546,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 43,
+        "id": "test_civic_43",
         "question": "Quel changement démocratique a lieu en 1974 ?",
         "correctAnswer": "La majorité passe de 21 ans à 18 ans.",
         "incorrectAnswers": [
@@ -559,7 +559,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 44,
+        "id": "test_civic_44",
         "question": "Quels sont les atouts de la Constitution de la Ve République ?",
         "correctAnswer": "La stabilité du gouvernement et un Président arbitre.",
         "incorrectAnswers": [
@@ -572,7 +572,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 45,
+        "id": "test_civic_45",
         "question": "Qui a fondé la Ve République ?",
         "correctAnswer": "Charles de Gaulle (Président 1958-1969).",
         "incorrectAnswers": [
@@ -585,7 +585,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 46,
+        "id": "test_civic_46",
         "question": "Quel président a modernisé l'industrie française (TGV, Airbus) ?",
         "correctAnswer": "Georges Pompidou (1969-1974).",
         "incorrectAnswers": [
@@ -598,7 +598,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 47,
+        "id": "test_civic_47",
         "question": "Quel président a dépénalisé l'avortement ?",
         "correctAnswer": "Valéry Giscard d'Estaing (1974-1981).",
         "incorrectAnswers": [
@@ -611,7 +611,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 48,
+        "id": "test_civic_48",
         "question": "Quel président a aboli la peine de mort ?",
         "correctAnswer": "François Mitterrand (1981-1995).",
         "incorrectAnswers": [
@@ -624,7 +624,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 49,
+        "id": "test_civic_49",
         "question": "Quel président a réduit le mandat présidentiel à 5 ans (quinquennat) ?",
         "correctAnswer": "Jacques Chirac (1995-2007).",
         "incorrectAnswers": [
@@ -637,7 +637,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 50,
+        "id": "test_civic_50",
         "question": "Quel président a géré la crise financière de 2008 ?",
         "correctAnswer": "Nicolas Sarkozy (2007-2012).",
         "incorrectAnswers": [
@@ -650,7 +650,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 51,
+        "id": "test_civic_51",
         "question": "Quel président a fait voter le mariage pour tous ?",
         "correctAnswer": "François Hollande (2012-2017).",
         "incorrectAnswers": [
@@ -663,7 +663,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 52,
+        "id": "test_civic_52",
         "question": "Qui est le président actuel (depuis 2017) ?",
         "correctAnswer": "Emmanuel Macron.",
         "incorrectAnswers": [
@@ -676,7 +676,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 53,
+        "id": "test_civic_53",
         "question": "Qu'est-ce que la peine de mort ?",
         "correctAnswer": "L'exécution d'une personne condamnée pour un crime.",
         "incorrectAnswers": [
@@ -689,7 +689,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 54,
+        "id": "test_civic_54",
         "question": "Quand la peine de mort a-t-elle été totalement abolie en France ?",
         "correctAnswer": "En 1981.",
         "incorrectAnswers": [
@@ -702,7 +702,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 55,
+        "id": "test_civic_55",
         "question": "La peine de mort peut-elle être rétablie en France ?",
         "correctAnswer": "Non, son abolition est inscrite dans la Constitution.",
         "incorrectAnswers": [
@@ -715,7 +715,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 56,
+        "id": "test_civic_56",
         "question": "Qu'est-ce que l'IVG ?",
         "correctAnswer": "L'Interruption Volontaire de Grossesse (Avortement).",
         "incorrectAnswers": [
@@ -728,7 +728,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 57,
+        "id": "test_civic_57",
         "question": "Depuis quand l'IVG est-elle autorisée (loi Veil) ?",
         "correctAnswer": "1975.",
         "incorrectAnswers": [
@@ -741,7 +741,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 58,
+        "id": "test_civic_58",
         "question": "L'IVG est-elle remboursée ?",
         "correctAnswer": "Oui, à 100% par la Sécurité sociale.",
         "incorrectAnswers": [
@@ -754,7 +754,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 59,
+        "id": "test_civic_59",
         "question": "Quels étaient les droits des couples homosexuels avant 2013 ?",
         "correctAnswer": "Ils pouvaient se pacser mais pas se marier.",
         "incorrectAnswers": [
@@ -767,7 +767,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 60,
+        "id": "test_civic_60",
         "question": "Pourquoi le mariage pour tous a-t-il fait débat ?",
         "correctAnswer": "C'était une évolution majeure de la société qui divisait l'opinion.",
         "incorrectAnswers": [
@@ -780,7 +780,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 61,
+        "id": "test_civic_61",
         "question": "Que permet la loi du 17 mai 2013 ?",
         "correctAnswer": "Le mariage et l'adoption pour les couples de même sexe.",
         "incorrectAnswers": [
@@ -793,7 +793,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 62,
+        "id": "test_civic_62",
         "question": "Quel événement a déclenché la Première Guerre mondiale ?",
         "correctAnswer": "L'attentat de Sarajevo (assassinat de l'archiduc François-Ferdinand).",
         "incorrectAnswers": [
@@ -806,7 +806,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 63,
+        "id": "test_civic_63",
         "question": "Qu'est-ce que la guerre de tranchées (1915-1917) ?",
         "correctAnswer": "Une phase où les soldats s'enterrent pour tenir leurs positions.",
         "incorrectAnswers": [
@@ -819,7 +819,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 64,
+        "id": "test_civic_64",
         "question": "Quand a été signé l'Armistice de la Première Guerre mondiale ?",
         "correctAnswer": "Le 11 novembre 1918.",
         "incorrectAnswers": [
@@ -832,7 +832,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 65,
+        "id": "test_civic_65",
         "question": "Quelle bataille de 1916 est le symbole de l'horreur de la guerre ?",
         "correctAnswer": "La bataille de Verdun.",
         "incorrectAnswers": [
@@ -845,7 +845,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 66,
+        "id": "test_civic_66",
         "question": "Pourquoi appelle-t-on ce conflit la 'Grande Guerre' ?",
         "correctAnswer": "Car il a mobilisé énormément de pays et de soldats.",
         "incorrectAnswers": [
@@ -858,7 +858,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 67,
+        "id": "test_civic_67",
         "question": "Qui sont les 'Gueules cassées' ?",
         "correctAnswer": "Les soldats défigurés par les blessures de guerre.",
         "incorrectAnswers": [
@@ -871,7 +871,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 68,
+        "id": "test_civic_68",
         "question": "Qui prend le pouvoir en Allemagne en 1933 ?",
         "correctAnswer": "Adolf Hitler et les nazis.",
         "incorrectAnswers": [
@@ -884,7 +884,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 69,
+        "id": "test_civic_69",
         "question": "Quel événement déclenche la Seconde Guerre mondiale le 1er septembre 1939 ?",
         "correctAnswer": "L'invasion de la Pologne par l'Allemagne.",
         "incorrectAnswers": [
@@ -897,7 +897,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 70,
+        "id": "test_civic_70",
         "question": "Quels sont les deux camps qui s'opposent ?",
         "correctAnswer": "Les Alliés (France, UK, USA, URSS) contre l'Axe (Allemagne, Italie, Japon).",
         "incorrectAnswers": [
@@ -910,7 +910,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 71,
+        "id": "test_civic_71",
         "question": "Quel est le tournant de la guerre en 1942-1943 ?",
         "correctAnswer": "Les victoires alliées (Stalingrad, El Alamein).",
         "incorrectAnswers": [
@@ -923,7 +923,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 72,
+        "id": "test_civic_72",
         "question": "Quand a lieu le débarquement en Normandie ?",
         "correctAnswer": "Le 6 juin 1944 (D-Day).",
         "incorrectAnswers": [
@@ -936,7 +936,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 73,
+        "id": "test_civic_73",
         "question": "Quand l'Allemagne capitule-t-elle ?",
         "correctAnswer": "Le 8 mai 1945.",
         "incorrectAnswers": [
@@ -949,7 +949,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 74,
+        "id": "test_civic_74",
         "question": "Qu'est-ce qu'une 'guerre d'anéantissement' ?",
         "correctAnswer": "Une guerre où l'on veut détruire totalement l'adversaire (civils compris).",
         "incorrectAnswers": [
@@ -962,7 +962,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 75,
+        "id": "test_civic_75",
         "question": "Quel est le bilan humain de la Seconde Guerre mondiale ?",
         "correctAnswer": "60 millions de morts.",
         "incorrectAnswers": [
@@ -975,7 +975,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 76,
+        "id": "test_civic_76",
         "question": "Quelle organisation internationale est créée en 1945 ?",
         "correctAnswer": "L'ONU (Organisation des Nations Unies).",
         "incorrectAnswers": [
@@ -988,7 +988,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 77,
+        "id": "test_civic_77",
         "question": "Qu'est-ce que l'Armistice du 22 juin 1940 ?",
         "correctAnswer": "L'arrêt des combats signé par Pétain qui consacre la défaite de la France.",
         "incorrectAnswers": [
@@ -1001,7 +1001,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 78,
+        "id": "test_civic_78",
         "question": "Quelle est la devise du Régime de Vichy ?",
         "correctAnswer": "Travail, Famille, Patrie.",
         "incorrectAnswers": [
@@ -1014,7 +1014,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 79,
+        "id": "test_civic_79",
         "question": "Qui a lancé l'Appel du 18 juin 1940 ?",
         "correctAnswer": "Le Général de Gaulle.",
         "incorrectAnswers": [
@@ -1027,7 +1027,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 80,
+        "id": "test_civic_80",
         "question": "Quels étaient les actes de la Résistance ?",
         "correctAnswer": "Sabotage, renseignement, tracts, lutte armée.",
         "incorrectAnswers": [
@@ -1040,7 +1040,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 81,
+        "id": "test_civic_81",
         "question": "Qu'est-ce que la décolonisation ?",
         "correctAnswer": "Le processus par lequel les colonies deviennent indépendantes.",
         "incorrectAnswers": [
@@ -1053,7 +1053,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 82,
+        "id": "test_civic_82",
         "question": "Quelles guerres de décolonisation la France a-t-elle menées ?",
         "correctAnswer": "La guerre d'Indochine et la guerre d'Algérie.",
         "incorrectAnswers": [
@@ -1066,7 +1066,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 83,
+        "id": "test_civic_83",
         "question": "Quand l'Algérie devient-elle indépendante ?",
         "correctAnswer": "En 1962 (Accords d'Évian).",
         "incorrectAnswers": [
@@ -1079,7 +1079,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 84,
+        "id": "test_civic_84",
         "question": "Comment s'est passée la décolonisation en Afrique noire ?",
         "correctAnswer": "Pacifiquement, par la négociation (vers 1960).",
         "incorrectAnswers": [
@@ -1092,7 +1092,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 85,
+        "id": "test_civic_85",
         "question": "Quels sont les objectifs de l'Union Européenne ?",
         "correctAnswer": "La paix et la prospérité économique en Europe.",
         "incorrectAnswers": [
@@ -1105,7 +1105,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 86,
+        "id": "test_civic_86",
         "question": "Quels sont les pays fondateurs de l'Europe (CEE) en 1957 ?",
         "correctAnswer": "France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg.",
         "incorrectAnswers": [
@@ -1118,7 +1118,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 87,
+        "id": "test_civic_87",
         "question": "Quelle est la monnaie commune de l'Europe ?",
         "correctAnswer": "L'Euro (mis en circulation en 2002).",
         "incorrectAnswers": [
@@ -1131,7 +1131,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 88,
+        "id": "test_civic_88",
         "question": "Quelles sont les institutions de l'UE ?",
         "correctAnswer": "La Commission, le Parlement, le Conseil.",
         "incorrectAnswers": [
@@ -1144,7 +1144,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 89,
+        "id": "test_civic_89",
         "question": "Qu'est-ce que l'Empire colonial français ?",
         "correctAnswer": "L'ensemble des territoires conquis et dominés par la France.",
         "incorrectAnswers": [
@@ -1157,7 +1157,7 @@
         "questionType": "knowledge"
     },
     {
-        "id": 90,
+        "id": "test_civic_90",
         "question": "Qu'était le commerce triangulaire ?",
         "correctAnswer": "La traite des esclaves entre l'Afrique, l'Amérique et l'Europe.",
         "incorrectAnswers": [

@@ -6,103 +6,103 @@
     "description": "Déclaration des Droits de l'Homme et du Citoyen",
     "questions": [
         {
-            "id": 1,
+            "id": "livret_1",
             "question": "Art 1. Comment naissent les hommes ?",
             "explanation": "Libres et égaux en droits.",
             "image": null
         },
         {
-            "id": 2,
+            "id": "livret_2",
             "question": "Art 2. Quels sont les droits naturels et imprescriptibles ?",
             "explanation": "La liberté, la propriété, la sûreté et la résistance à l'oppression.",
             "image": null
         },
         {
-            "id": 3,
+            "id": "livret_3",
             "question": "Art 3. Où réside la souveraineté ?",
             "explanation": "Dans la **Nation**.",
             "image": null
         },
         {
-            "id": 4,
+            "id": "livret_4",
             "question": "Art 4. Qu'est-ce que la liberté ?",
             "explanation": "Pouvoir faire tout ce qui ne nuit pas à autrui.",
             "image": null
         },
         {
-            "id": 5,
+            "id": "livret_5",
             "question": "Art 5. Que peut interdire la loi ?",
             "explanation": "La loi ne défend que les actions nuisibles à la société ; ce qui n'est pas défendu par la loi ne peut être empêché.",
             "image": null
         },
         {
-            "id": 6,
+            "id": "livret_6",
             "question": "Art 6. Qu'est-ce que la Loi ?",
             "explanation": "L'expression de la volonté générale. Elle doit être la même pour tous.",
             "image": null
         },
         {
-            "id": 7,
+            "id": "livret_7",
             "question": "Art 7. Dans quels cas peut-on être arrêté ?",
             "explanation": "Nul ne peut être accusé, arrêté ni détenu que dans les cas prévus par la loi et selon les formes qu'elle prescrit.",
             "image": null
         },
         {
-            "id": 8,
+            "id": "livret_8",
             "question": "Art 8. Quelles limites pour les peines ?",
             "explanation": "La loi ne doit établir que des peines strictement et évidemment nécessaires, applicables uniquement à des faits antérieurs à la loi.",
             "image": null
         },
         {
-            "id": 9,
+            "id": "livret_9",
             "question": "Art 9. Quelle est la présomption concernant tout homme ?",
             "explanation": "Tout homme est présumé **innocent** jusqu'à ce qu'il ait été déclaré coupable.",
             "image": null
         },
         {
-            "id": 10,
+            "id": "livret_10",
             "question": "Art 10. Peut-on être inquiété pour ses opinions ?",
             "explanation": "Non, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public.",
             "image": null
         },
         {
-            "id": 11,
+            "id": "livret_11",
             "question": "Art 11. Quel est un des droits les plus précieux ?",
             "explanation": "La libre communication des pensées et des opinions.",
             "image": null
         },
         {
-            "id": 12,
+            "id": "livret_12",
             "question": "Art 12. À quoi sert la force publique ?",
             "explanation": "À garantir les droits de tous ; elle est instituée pour l'avantage de tous, non pour l'intérêt de quelques-uns.",
             "image": null
         },
         {
-            "id": 13,
+            "id": "livret_13",
             "question": "Art 13. Pourquoi l'impôt est-il nécessaire ?",
             "explanation": "Pour l'entretien de la force publique et les dépenses d'administration. Il doit être réparti également en raison des facultés de chacun.",
             "image": null
         },
         {
-            "id": 14,
+            "id": "livret_14",
             "question": "Art 14. Quel est le droit des citoyens sur la contribution publique ?",
             "explanation": "Les citoyens ont le droit de constater la nécessité de la contribution publique, d’y consentir librement, d’en suivre l’emploi et d’en déterminer la quotité, l’assiette, le recouvrement et la durée.",
             "image": null
         },
         {
-            "id": 15,
+            "id": "livret_15",
             "question": "Art 15. Que peut exiger la société des agents publics ?",
             "explanation": "La société a le droit de demander compte à tout agent public de son administration.",
             "image": null
         },
         {
-            "id": 16,
+            "id": "livret_16",
             "question": "Art 16. Quand une société a-t-elle une Constitution ?",
             "explanation": "Toute société dans laquelle la garantie des droits n'est pas assurée ni la séparation des pouvoirs déterminée n'a point de Constitution.",
             "image": null
         },
         {
-            "id": 17,
+            "id": "livret_17",
             "question": "Art 17. Le droit de propriété est-il protégé ?",
             "explanation": "Oui, c'est un droit inviolable et sacré (sauf nécessité publique et avec indemnité).",
             "image": null
