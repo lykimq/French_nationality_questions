@@ -6,169 +6,169 @@
     "description": "Les piliers de l'identité républicaine française",
     "questions": [
         {
-            "id": "LIV-001",
+            "id": 1,
             "question": "Quelles sont les valeurs de la République (la devise) ?",
             "explanation": "Les trois valeurs sont Liberté, Égalité, Fraternité.",
             "image": null
         },
         {
-            "id": "LIV-002",
+            "id": 2,
             "question": "Quels sont les symboles de la République ?",
             "explanation": "L'hymne national (La Marseillaise), la Marianne, le drapeau tricolore (bleu, blanc, rouge), le 14 juillet (fête nationale), le coq gaulois, le faisceau de licteur et le sceau.",
             "image": null
         },
         {
-            "id": "LIV-003",
+            "id": 3,
             "question": "Que représente le 14 juillet ?",
             "explanation": "C'est la fête nationale. Elle commémore la prise de la Bastille (14 juillet 1789) marquant la fin de l'absolutisme, et la Fête de la Fédération (14 juillet 1790) symbolisant l'unité nationale.",
             "image": null
         },
         {
-            "id": "LIV-004",
+            "id": 4,
             "question": "Quelles sont les couleurs du drapeau français et que signifient-elles ?",
             "explanation": "Bleu, Blanc, Rouge. Le blanc est la couleur historique de la monarchie (Bourbon). Le bleu et le rouge sont les couleurs de la ville de Paris, portées par les révolutionnaires.",
             "image": null
         },
         {
-            "id": "LIV-005",
+            "id": 5,
             "question": "Qui est Marianne ?",
             "explanation": "C'est une figure allégorique de la République. Elle porte le bonnet phrygien (symbole de liberté) et son buste est présent dans toutes les mairies.",
             "image": null
         },
         {
-            "id": "LIV-006",
+            "id": 6,
             "question": "Quel est l'hymne national français ?",
             "explanation": "C'est La Marseillaise, écrite par Rouget de Lisle en 1792.",
             "image": null
         },
         {
-            "id": "LIV-007",
+            "id": 7,
             "question": "Quel animal symbolise la France ?",
             "explanation": "Le coq gaulois. Il représente la fierté, la bravoure et l'esprit combatif.",
             "image": null
         },
         {
-            "id": "LIV-001",
+            "id": 1,
             "question": "Quels sont les principes et les valeurs de la République ? La devise de la France ?",
             "explanation": "Les valeurs de la République sont Liberté, Égalité, Fraternité, qui est également la devise de la France. Ces principes de la République comprennent son caractère indivisible, laïque, démocratique et social, tels que définis par la Constitution du 4 octobre 1958. L'indivisibilité signifie que les lois s'appliquent de manière égale sur l'ensemble du territoire français, sans distinction entre les territoires. La souveraineté nationale appartient au peuple et est exercée par ses représentants élus et par le biais du référendum. La France est une république sociale qui vise à répondre aux besoins de la population dans des domaines tels que l'éducation, le logement, l'emploi et la santé, garantissant ainsi une couverture sociale. En d'autres termes, la nation assure à l'individu et à la famille les conditions nécessaires à leur développement.",
             "image": null
         },
         {
-            "id": "LIV-002",
+            "id": 2,
             "question": "Quelle est L'hymne national française ?",
             "explanation": "L'hymne national français est La Marseillaise. Il s'agit d'un chant révolutionnaire écrit par Claude Joseph Rouget de L’Isle en 1792. Il est devenu l'hymne officiel de la France en 1795. La Marseillaise est un symbole de la lutte pour la liberté, l'égalité et la fraternité, ainsi que de la résistance et du patriotisme.",
             "image": null
         },
         {
-            "id": "LIV-003",
+            "id": 3,
             "question": "Quels sont les valeurs (ou la devise) de la république Française ?",
             "explanation": "Liberté, Egalité, Fraternité.",
             "image": null
         },
         {
-            "id": "LIV-004",
+            "id": 4,
             "question": "Quels sont les symboles de la république Française ?",
             "explanation": "- Le Drapeau Tricolore.  - La marseillaise.  - Marianne.  - Le bonnet Phrygien.  - La devise \"Liberté, égalité, Fraternité\".  - La fleur de Lys.  - Le 14 Juillet.",
             "image": null
         },
         {
-            "id": "LIV-005",
+            "id": 5,
             "question": "Quelles sont les couleurs du drapeau Français ?",
             "explanation": "Bleu, Blanc, Rouge  - Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime.  - Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France.  - Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.",
             "image": null
         },
         {
-            "id": "LIV-006",
+            "id": 6,
             "question": "Que représentent les couleurs du drapeau Français ?",
             "explanation": "Le bleu représente la couleur de Paris, le blanc la couleur des Rois, et le rouge (également la couleur de Paris) en référence au sang versé pour la libération du peuple.",
             "image": null
         },
         {
-            "id": "LIV-007",
+            "id": 7,
             "question": "Quelle est l'hymne de la France ?",
             "explanation": "C'est la Marseillaise.",
             "image": null
         },
         {
-            "id": "LIV-008",
+            "id": 8,
             "question": "Quelle est la devise de l'union européenne ?",
             "explanation": "Unis dans la diversité.",
             "image": null
         },
         {
-            "id": "LIV-009",
+            "id": 9,
             "question": "Connaissez vous l'hymne de l'union européenne ?",
             "explanation": "C'est L'ode de la joie de Beethoven.",
             "image": null
         },
         {
-            "id": "LIV-010",
+            "id": 10,
             "question": "Quels sont les symboles de l'union européenne ?",
             "explanation": "La monnaie européenne : l'euro. Le drapeau Européen. La devise de l'Europe. L'hymne européen. La journée de l'Europe (9 Mai).",
             "image": null
         },
         {
-            "id": "LIV-011",
+            "id": 11,
             "question": "Que s'est-il passé le 14 juillet 1789 ?",
             "explanation": "La Prise de la Bastille par le peuple de Paris, symbole de la Révolution française.",
             "image": null
         },
         {
-            "id": "LIV-012",
+            "id": 12,
             "question": "Que célèbre-t-on le 14 juillet ?",
             "explanation": "La Fête de la Fédération (14 juillet 1790), symbole d'unité nationale.",
             "image": null
         },
         {
-            "id": "LIV-013",
+            "id": 13,
             "question": "Que fête-on le 14 juillet ?",
             "explanation": "C'est la fête nationale en France, le 14 juillet est généralement associé à la prise de la Bastille en 1789, c'est dans les faits le 14 juillet 1790, la fête de la Fédération, qui est officiellement commémoré en France depuis plus d'un siècle.",
             "image": null
         },
         {
-            "id": "LIV-014",
+            "id": 14,
             "question": "Pourquoi célèbre-t-on le 14 juillet en France ?",
             "explanation": "Le 14 juillet, connu comme la Fête Nationale française, commémore la prise de la Bastille en 1789, un événement symbolique de la lutte contre l'oppression et un tournant majeur de la Révolution Française.",
             "image": null
         },
         {
-            "id": "LIV-015",
+            "id": 15,
             "question": "Pourquoi la prise de la Bastille est-elle un symbole fort ?",
             "explanation": "La Bastille était une prison royale symbolisant l’absolutisme du roi. Sa prise le 14 juillet 1789 marque le début de la Révolution et la révolte du peuple contre l’autorité monarchique.",
             "image": null
         },
         {
-            "id": "LIV-016",
+            "id": 16,
             "question": "Pourquoi Jean Moulin est-il un symbole de la Résistance ?",
             "explanation": "Il incarne l’unité et le courage de la Résistance face à l’occupation nazie. Il a donné sa vie pour la libération de la France et repose depuis 1964 au Panthéon, un honneur réservé aux grandes figures de l’histoire nationale.",
             "image": null
         },
         {
-            "id": "LIV-017",
+            "id": 17,
             "question": "Quel est le sens des couleurs du drapeau français ?",
             "explanation": "Le drapeau est composé de 3 couleurs sous formes de bandes verticales.",
             "image": null
         },
         {
-            "id": "LIV-018",
+            "id": 18,
             "question": "Qui a composé l'hymne européen ?",
             "explanation": "Ludwig van Beethoven, L'Ode à la joie de sa 9ème symphonie.",
             "image": null
         },
         {
-            "id": "LIV-019",
+            "id": 19,
             "question": "Quel est le drapeau de l'Union européenne ?",
             "explanation": "Le drapeau de l'UE est bleu avec 12 étoiles d'or en cercle.",
             "image": null
         },
         {
-            "id": "LIV-020",
+            "id": 20,
             "question": "Quel est l'hymne de l'Union européenne ?",
             "explanation": "L'hymne de l'UE est l'Ode à la Joie de la 9e Symphonie de Beethoven.",
             "image": null
         },
         {
-            "id": "LIV-021",
+            "id": 21,
             "question": "Quelle est la devise officielle de l'Union européenne ?",
             "explanation": "La devise officielle de l'UE est 'Unie dans la diversité'.",
             "image": null

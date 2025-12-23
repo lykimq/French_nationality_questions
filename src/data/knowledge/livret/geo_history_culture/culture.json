@@ -6,97 +6,97 @@
     "description": "Le rayonnement culturel de la France",
     "questions": [
         {
-            "id": "LIV-051",
+            "id": 51,
             "question": "Qui était Molière ?",
             "explanation": "Le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies (ex : L'Avare, Le Malade imaginaire).",
             "image": null
         },
         {
-            "id": "LIV-052",
+            "id": 52,
             "question": "Citez des écrivains français célèbres.",
             "explanation": "Victor Hugo (Les Misérables), Voltaire, Jean-Jacques Rousseau, Albert Camus (L'Étranger), Gustave Flaubert (Madame Bovary).",
             "image": null
         },
         {
-            "id": "LIV-053",
+            "id": 53,
             "question": "Quel monument a été construit pour l'Exposition universelle de 1889 ?",
             "explanation": "La Tour Eiffel, conçue par Gustave Eiffel.",
             "image": null
         },
         {
-            "id": "LIV-054",
+            "id": 54,
             "question": "Quel est le musée le plus visité de France ?",
             "explanation": "Le musée du Louvre à Paris.",
             "image": null
         },
         {
-            "id": "LIV-055",
+            "id": 55,
             "question": "Citez quelques plats typiques de la gastronomie française.",
             "explanation": "Le pot-au-feu, la quiche lorraine, la bouillabaisse, le coq au vin, les crêpes bretonnes.",
             "image": null
         },
         {
-            "id": "LIV-056",
+            "id": 56,
             "question": "Qui était Marie Curie ?",
             "explanation": "Une physicienne et chimiste d'origine polonaise naturalisée française, première femme à recevoir le Prix Nobel et seule personne à l'avoir reçu dans deux domaines scientifiques différents.",
             "image": null
         },
         {
-            "id": "LIV-329",
+            "id": 329,
             "question": "Quel monument est offert par la France aux États-Unis pour célébrer le centenaire de leur indépendance ?",
             "explanation": "La Statue de la Liberté.",
             "image": null
         },
         {
-            "id": "LIV-330",
+            "id": 330,
             "question": "Citez des monuments historiques Français que vous connaissez ?",
             "explanation": "La tour Eiffel. L'arc de triomphe. Le château de Versailles. Le château de Vincennes. Le Louvre. Le château de la Loire. Le château de Chambord. Le pont du Gard etc…",
             "image": null
         },
         {
-            "id": "LIV-331",
+            "id": 331,
             "question": "Quels sont les plats typiques Français que vous connaissez ?",
             "explanation": "La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L'aligot etc…",
             "image": null
         },
         {
-            "id": "LIV-332",
+            "id": 332,
             "question": "Quel est le monument principal en France ?",
             "explanation": "C'est la tour Eiffel à Paris.",
             "image": null
         },
         {
-            "id": "LIV-333",
+            "id": 333,
             "question": "Comment intégrez-vous vos cultures ou traditions familiales dans votre vie en France ?",
             "explanation": "Nous intégrons nos traditions en (par exemple : célébrant des fêtes spécifiques, cuisinant des plats traditionnels), ce qui enrichit notre expérience culturelle en France.",
             "image": null
         },
         {
-            "id": "LIV-334",
+            "id": 334,
             "question": "Citez un monument historique connu de votre choix et présentez-le ?",
             "explanation": "La Tour Eiffel est l’un des monuments les plus emblématiques de la France. Située à Paris, elle a été construite par Gustave Eiffel pour l’Exposition universelle de 1889.",
             "image": null
         },
         {
-            "id": "LIV-335",
+            "id": 335,
             "question": "Citez quelques plats typiques de la cuisine française ?",
             "explanation": "Coq au vin, Bœuf bourguignon, Ratatouille, Tartiflette, Soupe à l'oignon, Quiche Lorraine Crêpes, Bouillabaisse…",
             "image": null
         },
         {
-            "id": "LIV-336",
+            "id": 336,
             "question": "Quel monument historique est situé sur l'île de la Cité à Paris ?",
             "explanation": "La Cathédrale Notre-Dame de Paris.",
             "image": null
         },
         {
-            "id": "LIV-337",
+            "id": 337,
             "question": "Citez des peintres Français célèbres",
             "explanation": "Cézanne, Delacroix, Monet etc…",
             "image": null
         },
         {
-            "id": "LIV-338",
+            "id": 338,
             "question": "Nommez un célèbre peintre impressionniste français.",
             "explanation": "Claude Monet.",
             "image": null

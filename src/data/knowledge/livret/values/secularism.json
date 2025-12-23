@@ -6,79 +6,79 @@
     "description": "Le principe de séparation des Églises et de l'État",
     "questions": [
         {
-            "id": "LIV-008",
+            "id": 8,
             "question": "Qu'est-ce que la Laïcité ?",
             "explanation": "C'est un principe fondamental (loi de 1905) qui sépare le religieux de la sphère publique. L'État ne reconnaît, ne salarie, ni ne subventionne aucun culte. Il garantit la liberté de conscience (croire ou ne pas croire).",
             "image": null
         },
         {
-            "id": "LIV-009",
+            "id": 9,
             "question": "Peut-on porter des signes religieux dans l'espace public ?",
             "explanation": "Oui, c'est autorisé dans l'espace public général, mais interdit pour les élèves dans les écoles publiques (loi de 2004) et pour les fonctionnaires dans l'exercice de leurs fonctions.",
             "image": null
         },
         {
-            "id": "LIV-010",
+            "id": 10,
             "question": "Qu'est-ce que le blasphème en France ?",
             "explanation": "En France, le délit de blasphème n'existe pas. Tout le monde a le droit de critiquer une religion ou une idée, tant que cela ne constitue pas une incitation à la haine ou à la violence envers les personnes.",
             "image": null
         },
         {
-            "id": "LIV-011",
+            "id": 11,
             "question": "Qui était Samuel Paty ?",
             "explanation": "Un professeur d'histoire-géographie assassiné en 2020 pour avoir montré des caricatures dans un cours sur la liberté d'expression. Son assassinat a marqué la défense de la laïcité et de la liberté d'enseigner.",
             "image": null
         },
         {
-            "id": "LIV-012",
+            "id": 12,
             "question": "La France est-elle neutre face aux religions ?",
             "explanation": "Oui, l'État est neutre. Il ne favorise aucune religion et garantit à chacun le droit de pratiquer le culte de son choix ou de n'en pratiquer aucun.",
             "image": null
         },
         {
-            "id": "LIV-022",
+            "id": 22,
             "question": "Pourquoi les signes religieux ostensibles sont-ils interdits à l'école publique ?",
             "explanation": "Selon la loi du 15 mars 2004, l'école doit être neutre pour former tous les citoyens et protéger les mineurs contre les pressions.",
             "image": null
         },
         {
-            "id": "LIV-023",
+            "id": 23,
             "question": "– C’est quoi le Blasphème ?",
             "explanation": "Le blasphème désigne une parole, un acte ou un geste qui offense ou manque de respect à une religion, à ses croyances, ou à ses symboles sacrés, autrement dit, critiquer une idée une religion ou une croyance. Selon les cultures et les religions, ce qui est considéré comme blasphématoire peut varier. En France, il n'est pas interdit par la loi, car tout le monde a le droit de s'exprimer librement tout en restant dans la limite prévue par la loi.",
             "image": null
         },
         {
-            "id": "LIV-024",
+            "id": 24,
             "question": "– La laïcité est-elle respectée en France ?",
             "explanation": "La laïcité est un principe fondamental de la République française, garantissant la neutralité de l’État et la liberté de conscience de chacun.",
             "image": null
         },
         {
-            "id": "LIV-025",
+            "id": 25,
             "question": "Quelle est votre opinion sur la liberté d'expression et le blasphème en France ?",
             "explanation": "La liberté d'expression en France est essentielle, permettant à chacun de s'exprimer librement, même sur des sujets sensibles comme la religion. Le blasphème, fait partie de ce droit, car il reflète la diversité des opinions et la liberté de penser sans tomber dans un discours haineux ou incitant à la violence ou tout ce qui peut être interdit par la loi.",
             "image": null
         },
         {
-            "id": "LIV-026",
+            "id": 26,
             "question": "Que s’est-il passé lors de l’affaire Samuel Paty ?",
             "explanation": "Il a été victime d’une attaque terroriste après avoir été la cible d’une campagne de haine sur les réseaux sociaux liée à un cours qu’il donnait sur la liberté d’expression.",
             "image": null
         },
         {
-            "id": "LIV-027",
+            "id": 27,
             "question": "En quoi la laïcité est-elle bénéfique ?",
             "explanation": "La laïcité garantit la liberté de conscience et d’expression de chacun, tout en assurant la neutralité de l’État. Elle permet à tous de pratiquer une religion ou de ne pas en avoir, dans le respect des lois et des valeurs républicaines.",
             "image": null
         },
         {
-            "id": "LIV-028",
+            "id": 28,
             "question": "Est-il permis de porter des signes religieux en public en France ?",
             "explanation": "En France, il est permis de porter des signes religieux dans les espaces publics, mais il existe des restrictions dans les écoles publiques et pour les fonctionnaires en fonction, afin de respecter la laïcité.",
             "image": null
         },
         {
-            "id": "LIV-029",
+            "id": 29,
             "question": "Avons-nous le droit en France de porter des signes religieux dans l'espace public ?",
             "explanation": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
             "image": null
