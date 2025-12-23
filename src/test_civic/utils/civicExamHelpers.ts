@@ -1,5 +1,5 @@
 import type { CivicExamSession, CivicExamProgress, CivicExamStatistics, CivicExamQuestion } from '../types';
-import type { TestAnswer } from '../../test/types';
+import type { TestAnswer } from '../types';
 import { DEFAULT_THEME_PERFORMANCE } from './civicExamDefaults';
 
 export const updateThemePerformance = (

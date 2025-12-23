@@ -1,7 +1,11 @@
-import { calculateTestScore } from '../../test/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 
 // ==================== SCORING ====================
+
+const calculateTestScore = (correctAnswers: number, totalQuestions: number): number => {
+    if (totalQuestions === 0) return 0;
+    return Math.round((correctAnswers / totalQuestions) * 100);
+};
 
 export const calculateCivicExamScore = (correctAnswers: number, totalQuestions: number): number => {
     return calculateTestScore(correctAnswers, totalQuestions);

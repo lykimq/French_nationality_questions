@@ -8,7 +8,7 @@ import type {
     CivicExamQuestion,
     CivicExamResult,
 } from '../types';
-import type { TestAnswer } from '../../test/types';
+import type { TestAnswer } from '../types';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 
 const logger = createLogger('CivicExamSessionContext');

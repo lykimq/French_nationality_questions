@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
 import { createLogger } from '../../shared/utils/logger';
 import { useData } from '../../shared/contexts/DataContext';
-import { processAllQuestions } from '../../test/utils/testDataUtils';
+import { processAllQuestions } from '../../shared/utils/questionUtils';
 import { loadCivicExamQuestions } from '../utils/civicExamDataLoader';
 import { CivicExamSessionProvider, useCivicExamSession } from './CivicExamSessionContext';
 import { CivicExamProgressProvider, useCivicExamProgress } from './CivicExamProgressContext';
@@ -12,8 +12,8 @@ import type {
     CivicExamSession,
     CivicExamProgress,
     CivicExamStatistics,
+    TestAnswer,
 } from '../types';
-import type { TestAnswer } from '../../test/types';
 
 const logger = createLogger('CivicExamContext');
 

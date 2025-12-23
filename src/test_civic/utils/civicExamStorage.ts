@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createLogger } from '../../shared/utils/logger';
-import { safeParseDate, applyMemoryLimits } from '../../test/utils/testDataUtils';
+import { safeParseDate, applyMemoryLimits } from '../../shared/utils/questionUtils';
 import type { CivicExamProgress, CivicExamStatistics, CivicExamTheme } from '../types';
 import {
     DEFAULT_THEME_PERFORMANCE,
