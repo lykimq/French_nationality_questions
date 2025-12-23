@@ -93,7 +93,9 @@ const CivicExamQuestionScreen = () => {
         setSelectedAnswer(index);
 
         if (isPracticeMode) {
-            const isCorrect = currentQuestion.correctAnswer === index;
+            const correctAnswerIndex = currentQuestion.correctAnswer;
+            const isCorrect = correctAnswerIndex !== undefined && 
+                             correctAnswerIndex === index;
             setIsAnswerCorrect(isCorrect);
             setAnswerSubmitted(true);
 
@@ -130,7 +132,9 @@ const CivicExamQuestionScreen = () => {
         if (!isPracticeMode) {
             try {
                 const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
-                const isCorrect = currentQuestion.correctAnswer === selectedAnswer;
+                const correctAnswerIndex = currentQuestion.correctAnswer;
+                const isCorrect = correctAnswerIndex !== undefined && 
+                                 correctAnswerIndex === selectedAnswer;
 
                 await submitAnswer({
                     questionId: currentQuestion.id,

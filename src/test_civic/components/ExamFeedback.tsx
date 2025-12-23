@@ -42,7 +42,7 @@ export const ExamFeedback: React.FC<ExamFeedbackProps> = ({
                 </View>
             )}
 
-            {explanation && (
+            {!isCorrect && explanation && (
                 <View style={styles.explanationTextContainer}>
                     <FormattedText style={[styles.explanationTitle, { color: theme.colors.text }]}>
                         Explication:

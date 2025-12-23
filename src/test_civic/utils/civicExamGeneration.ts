@@ -14,6 +14,8 @@ import {
     getQuestionsByThemes,
     enrichQuestionsWithMetadata,
 } from './civicExamUtils';
+import { shuffleQuestionOptions } from './civicExamQuestionUtils';
+import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 
 // ==================== QUESTION SELECTION ====================
 
@@ -274,7 +276,19 @@ export const generateCivicExamQuestions = (
     const targetCount = Math.min(uniqueQuestions.length, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
     const shuffled = shuffleArray(uniqueQuestions).slice(0, targetCount);
     
-    return enrichQuestionsWithMetadata(shuffled);
+    const enriched = enrichQuestionsWithMetadata(shuffled);
+    
+    if (config.shuffleOptions) {
+        return enriched.map(q => {
+            if ('options' in q && 'correctAnswer' in q && Array.isArray(q.options) && q.options.length > 0) {
+                const shuffled = shuffleQuestionOptions(q as CivicExamQuestionWithOptions);
+                return shuffled as CivicExamQuestion;
+            }
+            return q;
+        });
+    }
+    
+    return enriched;
 };
 
 // ==================== VALIDATION ====================

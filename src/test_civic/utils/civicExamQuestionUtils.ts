@@ -103,6 +103,45 @@ export const parseUserAnswerIndex = (userAnswer: string | null | undefined): num
 };
 
 /**
+ * Shuffles the options array and updates the correctAnswer index accordingly.
+ * 
+ * @param question - The question with options and correctAnswer
+ * @returns A new question object with shuffled options and updated correctAnswer index
+ */
+export const shuffleQuestionOptions = (
+    question: CivicExamQuestionWithOptions
+): CivicExamQuestionWithOptions => {
+    if (!question.options || question.options.length === 0) {
+        return question;
+    }
+
+    const correctAnswerIndex = question.correctAnswer;
+    if (correctAnswerIndex === undefined || correctAnswerIndex < 0 || correctAnswerIndex >= question.options.length) {
+        return question;
+    }
+
+    const options = [...question.options];
+    const correctAnswerText = options[correctAnswerIndex];
+
+    for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+    }
+
+    const newCorrectAnswerIndex = options.findIndex(opt => opt === correctAnswerText);
+    
+    if (newCorrectAnswerIndex === -1) {
+        return question;
+    }
+
+    return {
+        ...question,
+        options,
+        correctAnswer: newCorrectAnswerIndex,
+    };
+};
+
+/**
  * Gets answer information for a question including user answer and correct answer
  * 
  * @param question - The question with options
