@@ -199,6 +199,29 @@ const transformCivicQuestion = (
     
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
 
+    const resolveCorrectAnswerIndex = (): number | undefined => {
+        // Numeric index provided
+        if (typeof q.correctAnswer === 'number' && isFinite(q.correctAnswer)) {
+            return validateAnswerIndex(q.correctAnswer, options.length);
+        }
+
+        // String answer provided: try to match against options
+        if (typeof q.correctAnswer === 'string') {
+            const trimmed = sanitizeString(q.correctAnswer);
+            if (trimmed && options.length > 0) {
+                const matchIndex = options.findIndex(opt => opt.toLowerCase() === trimmed.toLowerCase());
+                if (matchIndex >= 0) return matchIndex;
+            }
+        }
+
+        // If options were synthesized with correct answer first, default to 0
+        if (options.length > 0 && typeof q.correctAnswer === 'string') {
+            return 0;
+        }
+
+        return undefined;
+    };
+
     return {
         id: CIVIC_ID_OFFSET + baseNumber,
         question: sanitizeString(q.question),
@@ -210,7 +233,7 @@ const transformCivicQuestion = (
         subTheme,
         questionType,
         options,
-        correctAnswer: validateAnswerIndex(q.correctAnswer, options.length),
+        correctAnswer: resolveCorrectAnswerIndex(),
         explanationOptions,
         correctExplanationAnswer: validateAnswerIndex(q.correctExplanationAnswer, explanationOptions.length),
     };

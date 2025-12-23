@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode, useCallback, useMemo } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useCallback, useMemo, useEffect } from 'react';
 import { createLogger } from '../../shared/utils/logger';
 import { generateCivicExamQuestions } from '../utils/civicExamGeneration';
 import { calculateCivicExamScore, isCivicExamPassed } from '../utils/civicExamScoring';
@@ -10,6 +10,7 @@ import type {
 } from '../types';
 import type { TestAnswer, TestQuestion } from '../types';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
+import { loadStoredSession, saveSession, clearStoredSession } from '../utils/civicExamSessionStorage';
 
 const logger = createLogger('CivicExamSessionContext');
 
@@ -37,6 +38,19 @@ export const CivicExamSessionProvider: React.FC<{
 }> = ({ children, allProcessedQuestions }) => {
     const [currentSession, setCurrentSession] = useState<CivicExamSession | null>(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+    useEffect(() => {
+        loadStoredSession()
+            .then(session => {
+                if (session) {
+                    setCurrentSession(session);
+                    setCurrentQuestionIndex(
+                        Math.min(session.answers.length, session.totalQuestions - 1)
+                    );
+                }
+            })
+            .catch(error => logger.error('Failed to hydrate stored civic exam session', error));
+    }, []);
 
     const startExam = useCallback(async (config: CivicExamConfig, allQuestions: readonly TestQuestion[]): Promise<void> => {
         const questions = generateCivicExamQuestions(allQuestions, config);
@@ -86,6 +100,7 @@ export const CivicExamSessionProvider: React.FC<{
 
         setCurrentSession(newSession);
         setCurrentQuestionIndex(0);
+        await saveSession(newSession);
     }, []);
 
     const submitAnswer = useCallback(async (answer: TestAnswer, autoAdvance: boolean = true): Promise<void> => {
@@ -110,6 +125,7 @@ export const CivicExamSessionProvider: React.FC<{
         };
 
         setCurrentSession(updatedSession);
+        await saveSession(updatedSession);
 
         if (autoAdvance && currentQuestionIndex < currentSession.questions.length - 1) {
             setCurrentQuestionIndex(prev => prev + 1);
@@ -153,6 +169,9 @@ export const CivicExamSessionProvider: React.FC<{
             incorrectQuestionIds.includes(q.id)
         ) as CivicExamQuestion[];
 
+        // Clear persisted active session once finished
+        saveSession(null);
+
         return {
             session: finishedSession,
             passed,
@@ -167,6 +186,7 @@ export const CivicExamSessionProvider: React.FC<{
     const cancelExam = useCallback(() => {
         setCurrentSession(null);
         setCurrentQuestionIndex(0);
+        clearStoredSession();
     }, []);
 
     const getCurrentQuestion = useCallback((): CivicExamQuestion | null => {

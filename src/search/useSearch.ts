@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useData } from '../shared/contexts/DataContext';
+import { buildQuestionTokens, tokenize, scoreTokens } from '../shared/utils/searchIndex';
 
 // Define the search result question type
 export interface SearchResultQuestion {
@@ -50,10 +51,23 @@ export const useSearch = () => {
 
         questionsData.categories.forEach(category => {
             category.questions.forEach(question => {
+                // Normalize id to number (extract numeric part if string)
+                const normalizedId = typeof question.id === 'number' 
+                    ? question.id 
+                    : (typeof question.id === 'string' 
+                        ? (() => {
+                            const match = question.id.match(/(\d+)/);
+                            return match ? Number(match[1]) : 0;
+                        })()
+                        : 0);
+
                 questions.push({
-                    ...question,
+                    id: normalizedId,
+                    question: question.question,
+                    explanation: question.explanation || '',
                     categoryId: category.id,
                     categoryTitle: category.title,
+                    image: question.image,
                     hasImage: !!question.image,
                 });
             });
@@ -61,6 +75,8 @@ export const useSearch = () => {
 
         return questions;
     }, [questionsData]);
+
+    const questionTokens = useMemo(() => buildQuestionTokens(allQuestions), [allQuestions]);
 
     // Get available categories for filter
     const availableCategories = useMemo(() => {
@@ -100,17 +116,14 @@ export const useSearch = () => {
             }
         });
 
-        // Add common keyword suggestions based on question content
+        // Add common keyword suggestions based on question tokens
         const commonKeywords = new Map<string, number>();
-        allQuestions.forEach(q => {
-            const text = q.question;
-            const words = text.toLowerCase().split(/\s+/).filter(word =>
-                word.length > 3 && word.includes(normalizedQuery)
-            );
-
-            words.forEach(word => {
-                commonKeywords.set(word, (commonKeywords.get(word) || 0) + 1);
-            });
+        questionTokens.forEach(tokens => {
+            tokens
+                .filter(word => word.includes(normalizedQuery))
+                .forEach(word => {
+                    commonKeywords.set(word, (commonKeywords.get(word) || 0) + 1);
+                });
         });
 
         // Add top keyword suggestions
@@ -138,7 +151,7 @@ export const useSearch = () => {
         }
 
         return suggestions.slice(0, 8);
-    }, [availableCategories, allQuestions]);
+    }, [availableCategories, questionTokens]);
 
     // Enhanced search function with advanced filters
     const performSearch = useCallback((query: string, appliedFilters: SearchFilters = filters) => {
@@ -148,6 +161,7 @@ export const useSearch = () => {
         }
 
         const normalizedQuery = query.toLowerCase().trim();
+        const queryTokens = tokenize(normalizedQuery);
         let filteredQuestions = allQuestions;
 
         // Apply category filter
@@ -183,6 +197,7 @@ export const useSearch = () => {
             const questionText = (item.question || '').toLowerCase();
             const explanationText = (item.explanation || '').toLowerCase();
             const categoryText = (item.categoryTitle || '').toLowerCase();
+            const tokens = questionTokens.get(item.id) || [];
 
             if (appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both')) {
                 // Exact phrase match
@@ -191,14 +206,12 @@ export const useSearch = () => {
                     matches.push('question_exact');
                 }
 
-                // Word-based matching
-                const queryWords = normalizedQuery.split(/\s+/);
-                queryWords.forEach(word => {
-                    if (word.length > 2 && questionText.includes(word)) {
-                        matchScore += 50;
-                        matches.push('question_word');
-                    }
-                });
+                // Token-based matching
+                const tokenScore = scoreTokens(queryTokens, tokens);
+                if (tokenScore > 0) {
+                    matchScore += tokenScore * 10;
+                    matches.push('question_word');
+                }
             }
 
             if (appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both')) {
@@ -207,13 +220,11 @@ export const useSearch = () => {
                     matches.push('explanation_exact');
                 }
 
-                const queryWords = normalizedQuery.split(/\s+/);
-                queryWords.forEach(word => {
-                    if (word.length > 2 && explanationText.includes(word)) {
-                        matchScore += 30;
-                        matches.push('explanation_word');
-                    }
-                });
+                const explanationScore = scoreTokens(queryTokens, tokens);
+                if (explanationScore > 0) {
+                    matchScore += explanationScore * 5;
+                    matches.push('explanation_word');
+                }
             }
 
             // Category name matching
@@ -236,7 +247,7 @@ export const useSearch = () => {
         if (query.trim() && !searchHistory.includes(query.trim())) {
             setSearchHistory(prev => [query.trim(), ...prev.slice(0, 9)]);
         }
-    }, [allQuestions, filters, searchHistory]);
+    }, [allQuestions, filters, searchHistory, questionTokens]);
 
     // Handle suggestions and debounced search
     useEffect(() => {

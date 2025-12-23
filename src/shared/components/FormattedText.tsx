@@ -17,9 +17,9 @@ const FormattedText: React.FC<FormattedTextProps> = ({
 
         // Handle StyleSheet objects by flattening them first
         const flattened = StyleSheet.flatten(styleObj as Parameters<typeof StyleSheet.flatten>[0]);
-        if (!flattened) return null;
+        if (!flattened || typeof flattened !== 'object') return null;
 
-        const { fontSize, ...otherProps } = flattened;
+        const { fontSize, ...otherProps } = flattened as Record<string, unknown>;
         return otherProps as Record<string, unknown>;
     };
 

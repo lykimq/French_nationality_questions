@@ -29,6 +29,7 @@ export const serializeCivicExamResult = (result: CivicExamResult): SerializableC
     return {
         session: {
             ...result.session,
+            questions: result.session.questions as readonly CivicExamQuestion[],
             answers: result.session.answers.map(answer => ({
                 ...answer,
                 timestamp: answer.timestamp.toISOString(),
@@ -41,7 +42,7 @@ export const serializeCivicExamResult = (result: CivicExamResult): SerializableC
         score: result.score,
         correctAnswers: result.correctAnswers,
         totalQuestions: result.totalQuestions,
-        incorrectQuestions: result.incorrectQuestions,
+        incorrectQuestions: result.incorrectQuestions as readonly CivicExamQuestion[],
         timeSpent: result.timeSpent,
     };
 };
