@@ -142,6 +142,44 @@ export const shuffleQuestionOptions = (
 };
 
 /**
+ * Checks if a user's answer index matches the correct answer index.
+ * 
+ * @param question - The question with correctAnswer
+ * @param userAnswerIndex - The user's selected answer index
+ * @returns true if the answer is correct, false otherwise
+ */
+export const isAnswerCorrect = (
+    question: CivicExamQuestionWithOptions | null | undefined,
+    userAnswerIndex: number | null | undefined
+): boolean => {
+    if (!question || userAnswerIndex === null || userAnswerIndex === undefined) {
+        return false;
+    }
+
+    const correctAnswerIndex = question.correctAnswer;
+    return correctAnswerIndex !== undefined && correctAnswerIndex === userAnswerIndex;
+};
+
+/**
+ * Checks if an option at a given index is the correct answer.
+ * 
+ * @param question - The question with correctAnswer
+ * @param optionIndex - The index of the option to check
+ * @returns true if the option is the correct answer, false otherwise
+ */
+export const isOptionCorrect = (
+    question: CivicExamQuestionWithOptions | null | undefined,
+    optionIndex: number
+): boolean => {
+    if (!question) {
+        return false;
+    }
+
+    const correctAnswerIndex = question.correctAnswer;
+    return correctAnswerIndex !== undefined && correctAnswerIndex === optionIndex;
+};
+
+/**
  * Gets answer information for a question including user answer and correct answer
  * 
  * @param question - The question with options
@@ -158,10 +196,7 @@ export const getQuestionAnswerInfo = (
 } => {
     const userAnswerText = getUserAnswerText(question, userAnswerIndex);
     const correctAnswerText = getCorrectAnswerText(question);
-    const correctAnswerIndex = question?.correctAnswer;
-    const isCorrect = userAnswerIndex !== null && 
-                     correctAnswerIndex !== undefined && 
-                     userAnswerIndex === correctAnswerIndex;
+    const isCorrect = isAnswerCorrect(question, userAnswerIndex);
 
     return {
         userAnswerText,

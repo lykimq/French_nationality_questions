@@ -16,7 +16,7 @@ import { useCivicExam } from '../contexts/CivicExamContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
-import { getCivicExamExplanationText } from '../utils/civicExamQuestionUtils';
+import { getCivicExamExplanationText, isAnswerCorrect } from '../utils/civicExamQuestionUtils';
 import { useCountdownTimer } from '../../shared/hooks/useCountdownTimer';
 import { ExamHeader } from '../components/ExamHeader';
 import { ExamFeedback } from '../components/ExamFeedback';
@@ -42,7 +42,7 @@ const CivicExamQuestionScreen = () => {
 
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [answerSubmitted, setAnswerSubmitted] = useState(false);
-    const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
+    const [answerIsCorrect, setAnswerIsCorrect] = useState<boolean | null>(null);
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const previousQuestionIndexRef = useRef<number>(-1);
 
@@ -76,7 +76,7 @@ const CivicExamQuestionScreen = () => {
         previousQuestionIndexRef.current = currentQuestionIndex;
         setSelectedAnswer(null);
         setAnswerSubmitted(false);
-        setIsAnswerCorrect(null);
+        setAnswerIsCorrect(null);
         setQuestionStartTime(new Date());
     }, [currentQuestionIndex, currentQuestion]);
 
@@ -93,16 +93,15 @@ const CivicExamQuestionScreen = () => {
         setSelectedAnswer(index);
 
         if (isPracticeMode) {
-            const correctAnswerIndex = currentQuestion.correctAnswer;
-            const isCorrect = correctAnswerIndex !== undefined && 
-                             correctAnswerIndex === index;
-            setIsAnswerCorrect(isCorrect);
+            const isCorrect = isAnswerCorrect(currentQuestion, index);
+            setAnswerIsCorrect(isCorrect);
             setAnswerSubmitted(true);
 
             try {
                 const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
+                const questionId = typeof currentQuestion.id === 'number' ? currentQuestion.id : parseInt(String(currentQuestion.id), 10);
                 await submitAnswer({
-                    questionId: currentQuestion.id,
+                    questionId,
                     isCorrect,
                     userAnswer: index.toString(),
                     timeSpent,
@@ -132,12 +131,11 @@ const CivicExamQuestionScreen = () => {
         if (!isPracticeMode) {
             try {
                 const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
-                const correctAnswerIndex = currentQuestion.correctAnswer;
-                const isCorrect = correctAnswerIndex !== undefined && 
-                                 correctAnswerIndex === selectedAnswer;
+                const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswer);
+                const questionId = typeof currentQuestion.id === 'number' ? currentQuestion.id : parseInt(String(currentQuestion.id), 10);
 
                 await submitAnswer({
-                    questionId: currentQuestion.id,
+                    questionId,
                     isCorrect,
                     userAnswer: selectedAnswer.toString(),
                     timeSpent,
@@ -200,7 +198,7 @@ const CivicExamQuestionScreen = () => {
 
                     {isPracticeMode && answerSubmitted && (
                         <ExamFeedback
-                            isCorrect={isAnswerCorrect || false}
+                            isCorrect={answerIsCorrect || false}
                             explanation={getCivicExamExplanationText(currentQuestion)}
                         />
                     )}

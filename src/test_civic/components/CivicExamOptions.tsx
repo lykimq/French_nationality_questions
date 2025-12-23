@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { FormattedText } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { OptionButton } from './OptionButton';
+import { isOptionCorrect } from '../utils/civicExamQuestionUtils';
 import type { CivicExamQuestion } from '../types';
 
 interface CivicExamOptionsProps {
@@ -34,7 +35,7 @@ export const CivicExamOptions: React.FC<CivicExamOptionsProps> = ({
                     index={index}
                     option={option}
                     isSelected={selectedAnswer === index}
-                    isCorrect={currentQuestion.correctAnswer === index}
+                    isCorrect={isOptionCorrect(currentQuestion, index)}
                     showResult={isPracticeMode && answerSubmitted}
                     onPress={onAnswerSelect}
                 />
