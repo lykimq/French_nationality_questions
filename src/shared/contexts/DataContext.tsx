@@ -1,8 +1,6 @@
 import React, { createContext, useState, useContext, useEffect, useCallback, useRef } from 'react';
 import { preloadAllData, preloadImages } from '../utils';
 import type {
-    HistoryCategory,
-    HistorySubcategory,
     FrenchCategory,
     FrenchQuestionsData,
     DataContextType,
@@ -11,8 +9,6 @@ import type {
 
 const DataContext = createContext<DataContextType>({
     questionsData: { categories: [] } as FrenchQuestionsData,
-    historyCategories: null,
-    historySubcategories: {},
     isDataLoading: true,
     dataLoadingError: null,
 });
@@ -21,25 +17,20 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     const [questionsData, setQuestionsData] = useState<FrenchQuestionsData>(
         { categories: [] } as FrenchQuestionsData
     );
-    const [historyCategories, setHistoryCategories] = useState<HistoryCategory | null>(null);
-    const [historySubcategories, setHistorySubcategories] = useState<Record<string, HistorySubcategory>>({});
     const [isDataLoading, setIsDataLoading] = useState(true);
     const [dataLoadingError, setDataLoadingError] = useState<string | null>(null);
 
     const isMountedRef = useRef(true);
 
-    const processMainData = useCallback(async (mainData: any) => {
+    const processLivretData = useCallback(async (subcategoryData: Record<string, FrenchCategory>) => {
         try {
-            if (!mainData?.personal || !mainData?.geography) {
-                throw new Error('Invalid data structure: missing required categories');
+            const categories = Object.values(subcategoryData) as FrenchCategory[];
+
+            if (!categories.length) {
+                throw new Error('Invalid data structure: no categories available');
             }
 
-            const personalCategory = mainData.personal as FrenchCategory;
-            const geographyCategory = mainData.geography as FrenchCategory;
-
-            const frenchData: FrenchQuestionsData = {
-                categories: [personalCategory, geographyCategory]
-            };
+            const frenchData: FrenchQuestionsData = { categories };
 
             if (isMountedRef.current) {
                 setQuestionsData(frenchData);
@@ -65,15 +56,12 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
                 setIsDataLoading(true);
                 setDataLoadingError(null);
 
-                const { mainData, historyData, subcategoryData } = await preloadAllData();
+                const { subcategoryData } = await preloadAllData();
 
                 if (!isActive) return;
 
-                if (mainData) {
-                    setHistoryCategories(historyData as HistoryCategory);
-                    setHistorySubcategories(subcategoryData);
-
-                    await processMainData(mainData);
+                if (subcategoryData && Object.keys(subcategoryData).length > 0) {
+                    await processLivretData(subcategoryData as Record<string, FrenchCategory>);
                 } else {
                     setDataLoadingError('Failed to load question data. Please check your connection or Firebase configuration.');
                 }
@@ -94,7 +82,7 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
         return () => {
             isActive = false;
         };
-    }, [processMainData]);
+    }, [processLivretData]);
 
     useEffect(() => {
         return () => {
@@ -105,8 +93,6 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     return (
         <DataContext.Provider value={{
             questionsData,
-            historyCategories,
-            historySubcategories,
             isDataLoading,
             dataLoadingError,
         }}>

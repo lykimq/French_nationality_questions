@@ -96,7 +96,7 @@ const CivicExamContextInternal: React.FC<{
 };
 
 export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { questionsData, historySubcategories } = useData();
+    const { questionsData } = useData();
     const [civicQuestions, setCivicQuestions] = useState<ReturnType<typeof processAllQuestions>>([]);
 
     useEffect(() => {
@@ -106,9 +106,9 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
     }, []);
 
     const allProcessedQuestions = useMemo(() => {
-        const regularQuestions = processAllQuestions(questionsData, historySubcategories);
+        const regularQuestions = processAllQuestions(questionsData);
         return [...regularQuestions, ...civicQuestions];
-    }, [questionsData, historySubcategories, civicQuestions]);
+    }, [questionsData, civicQuestions]);
 
     return (
         <CivicExamProgressProvider>

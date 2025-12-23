@@ -4,8 +4,6 @@ import { DataProvider } from '../contexts/DataContext';
 import { IconProvider } from '../contexts/IconContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { TextFormattingProvider } from '../contexts/TextFormattingContext';
-import { DisplaySettingsProvider } from '../../test/contexts/DisplaySettingsContext';
-import { TestProvider } from '../../test/contexts/TestContext';
 import { CivicExamProvider } from '../../test_civic/contexts/CivicExamContext';
 
 interface AppProvidersProps {
@@ -17,13 +15,9 @@ const AppProviders: React.FC<AppProvidersProps> = ({ children }) => (
         <IconProvider>
             <ThemeProvider>
                 <TextFormattingProvider>
-                    <DisplaySettingsProvider>
-                        <TestProvider>
-                            <CivicExamProvider>
-                                {children}
-                            </CivicExamProvider>
-                        </TestProvider>
-                    </DisplaySettingsProvider>
+                    <CivicExamProvider>
+                        {children}
+                    </CivicExamProvider>
                 </TextFormattingProvider>
             </ThemeProvider>
         </IconProvider>

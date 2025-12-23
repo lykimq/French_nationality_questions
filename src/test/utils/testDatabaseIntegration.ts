@@ -38,74 +38,8 @@ export const testDatabaseIntegration = async (): Promise<DatabaseTestResult> => 
     };
 
     try {
-        // Load all data
-        const { mainData, historyData, subcategoryData } = await preloadAllData();
-
-        // Test main data
-        if (mainData) {
-            // Test personal questions
-            if (mainData.personal) {
-                const validation = validateDataStructure(mainData.personal, 'personal');
-                result.categoriesLoaded.push('personal');
-                result.totalQuestions += validation.summary.totalQuestions;
-
-                if (!validation.isValid) {
-                    result.issues.push(`Personal questions validation failed: ${validation.errors.join(', ')}`);
-                }
-
-                // Add sample questions
-                if (mainData.personal.questions) {
-                    const sampleCount = Math.min(3, mainData.personal.questions.length);
-                    for (let i = 0; i < sampleCount; i++) {
-                        const q = mainData.personal.questions[i];
-                        result.questionSamples.push({
-                            id: q.id,
-                            category: 'personal',
-                            hasFrench: !!q.question,
-                            hasExplanation: !!q.explanation
-                        });
-                    }
-                }
-            } else {
-                result.issues.push('Personal questions data not found');
-            }
-
-            // Test geography questions
-            if (mainData.geography) {
-                const validation = validateDataStructure(mainData.geography, 'geography');
-                result.categoriesLoaded.push('geography');
-                result.totalQuestions += validation.summary.totalQuestions;
-
-                if (!validation.isValid) {
-                    result.issues.push(`Geography questions validation failed: ${validation.errors.join(', ')}`);
-                }
-
-                // Add sample questions
-                if (mainData.geography.questions) {
-                    const sampleCount = Math.min(3, mainData.geography.questions.length);
-                    for (let i = 0; i < sampleCount; i++) {
-                        const q = mainData.geography.questions[i];
-                        result.questionSamples.push({
-                            id: q.id,
-                            category: 'geography',
-                            hasFrench: !!q.question,
-                            hasExplanation: !!q.explanation
-                        });
-                    }
-                }
-            } else {
-                result.issues.push('Geography questions data not found');
-            }
-        } else {
-            result.issues.push('Main data failed to load');
-        }
-
-        // Test history data
-        if (historyData) {
-            // History categories data loaded successfully
-        } else {
-            result.issues.push('History categories data not found');
-        }
+        // Load Livret data
+        const { subcategoryData } = await preloadAllData();
 
         // Test subcategory data
         Object.entries(subcategoryData).forEach(([key, data]) => {
@@ -158,10 +92,6 @@ const generateRecommendations = (result: DatabaseTestResult): string[] => {
         recommendations.push('Critical: No questions loaded. Check Firebase Storage configuration and data files.');
     }
 
-    if (result.categoriesLoaded.length === 0) {
-        recommendations.push('Critical: No main categories loaded. Check personal and geography data files.');
-    }
-
     if (result.subcategoriesLoaded.length < 10) {
         recommendations.push('Warning: Some subcategories may not have loaded. Check subcategories folder in Firebase Storage.');
     }
@@ -198,25 +128,8 @@ export const testQuestionIdUniqueness = async (): Promise<{
     };
 
     try {
-        const { mainData, subcategoryData } = await preloadAllData();
+        const { subcategoryData } = await preloadAllData();
         const allIds: number[] = [];
-
-        // Collect IDs from main data
-        if (mainData?.personal?.questions) {
-            mainData.personal.questions.forEach((q: any) => {
-                if (typeof q.id === 'number') {
-                    allIds.push(q.id);
-                }
-            });
-        }
-
-        if (mainData?.geography?.questions) {
-            mainData.geography.questions.forEach((q: any) => {
-                if (typeof q.id === 'number') {
-                    allIds.push(q.id);
-                }
-            });
-        }
 
         // Collect IDs from subcategories
         Object.values(subcategoryData).forEach((subcategory: any) => {
@@ -262,35 +175,14 @@ export const testQuestionIdUniqueness = async (): Promise<{
  */
 export const logDatabaseStatistics = async (): Promise<void> => {
     try {
-        const { mainData, historyData, subcategoryData } = await preloadAllData();
+        const { subcategoryData } = await preloadAllData();
 
         let totalQuestions = 0;
         let questionsWithImages = 0;
 
         const categoryStats: { [key: string]: number } = {};
 
-        // Process main data
-        if (mainData?.personal?.questions) {
-            const count = mainData.personal.questions.length;
-            totalQuestions += count;
-            categoryStats['personal'] = count;
-
-            mainData.personal.questions.forEach((q: any) => {
-                if (q.image) questionsWithImages++;
-            });
-        }
-
-        if (mainData?.geography?.questions) {
-            const count = mainData.geography.questions.length;
-            totalQuestions += count;
-            categoryStats['geography'] = count;
-
-            mainData.geography.questions.forEach((q: any) => {
-                if (q.image) questionsWithImages++;
-            });
-        }
-
-        // Process subcategories
+        // Process Livret subcategories
         Object.entries(subcategoryData).forEach(([key, subcategory]) => {
             if (subcategory && typeof subcategory === 'object' && 'questions' in subcategory && Array.isArray((subcategory as any).questions)) {
                 const count = (subcategory as any).questions.length;

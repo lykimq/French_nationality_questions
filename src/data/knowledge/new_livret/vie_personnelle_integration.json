@@ -1,0 +1,615 @@
+{
+    "theme": "Vie Personnelle et Intégration",
+    "id": "vie_personnelle_integration",
+    "title": "Vie personnelle et intégration",
+    "icon": "user",
+    "description": "Vie personnelle et intégration",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Pourquoi voulez-vous devenir Français ?",
+            "explanation": "Exprimez votre amour et votre attachement à la France :\n- Vous avez toujours aimé la culture, l’histoire et le peuple français\n- Vous souhaitez vous intégrer davantage à la société française\n- Vous souhaitez contribuer à la construction et au développement de la France\n\nProfitez des avantages de la nationalité française :\n- Liberté de circulation, de résidence et de travail dans l’UE\n- Droits à l’éducation, à la santé et à la sécurité sociale\n- Participation aux activités politiques et sociales",
+            "image": null
+        },
+        {
+            "id": 2,
+            "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+            "explanation": "- Indiquez votre fréquence (ex. une fois par an) et la raison principale (famille, fêtes).\n- Si vous y allez rarement, mentionnez les contraintes (travail, coût, distance).",
+            "image": null
+        },
+        {
+            "id": 3,
+            "question": "Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+            "explanation": "- Précisez votre statut (célibataire, marié(e), pacsé(e), en couple).\n- Si applicable, indiquez brièvement votre conjoint/partenaire (nationalité, situation professionnelle).",
+            "image": null
+        },
+        {
+            "id": 4,
+            "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
+            "explanation": "- Mentionnez si vous vivez ensemble en France ; sinon, précisez où il/elle réside (travail, études, famille).",
+            "image": null
+        },
+        {
+            "id": 5,
+            "question": "Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?",
+            "explanation": "- Citez 2-3 activités partagées (voyages, cuisine, sport, sorties culturelles) ou précisez que vous êtes célibataire.",
+            "image": null
+        },
+        {
+            "id": 6,
+            "question": "Avez-vous des enfants ? Comptez-vous en avoir prochainement ?",
+            "explanation": "- Indiquez si vous avez des enfants (prénoms/âges) ou si vous n’en avez pas ; précisez vos intentions futures si besoin.",
+            "image": null
+        },
+        {
+            "id": 7,
+            "question": "Qui s’occupe des enfants ? Qui s’occupe des tâches ménagères ?",
+            "explanation": "- Décrivez le partage : garde des enfants (si applicable) et répartition des tâches ménagères entre vous / conjoint / aide familiale.",
+            "image": null
+        },
+        {
+            "id": 8,
+            "question": "Avez-vous vos liens personnels et familiaux en France ?",
+            "explanation": "- Mentionnez vos amis, collègues ou proches en France et la fréquence des rencontres (repas, fêtes, loisirs).\n- Si vous avez de la famille en France, précisez le lien (parents, frères/sœurs, cousins).",
+            "image": null
+        },
+        {
+            "id": 9,
+            "question": "Quelle langue utilisez-vous au travail et à la maison ?",
+            "explanation": "- Indiquez la langue principale au travail (français/anglais) et celles parlées à la maison (français + langue maternelle).",
+            "image": null
+        },
+        {
+            "id": 10,
+            "question": "Faites-vous partie d’une association ? Si oui, laquelle et depuis quand ?",
+            "explanation": "- Citez l’association (solidarité, sport, culture), votre rôle et depuis quand vous y participez.",
+            "image": null
+        },
+        {
+            "id": 11,
+            "question": "Où se trouve le siège de cette association ?",
+            "explanation": "- Précisez la ville ou le quartier où elle est basée.",
+            "image": null
+        },
+        {
+            "id": 12,
+            "question": "Pratiquez vous une religion ?",
+            "explanation": "- Indiquez si vous êtes croyant(e) ou non, en rappelant le respect de la laïcité.",
+            "image": null
+        },
+        {
+            "id": 13,
+            "question": "Quels sont vos loisirs ?",
+            "explanation": "- Citez 2-3 loisirs (sport, musique, lecture, sorties culturelles) que vous pratiquez régulièrement.",
+            "image": null
+        },
+        {
+            "id": 14,
+            "question": "Pourquoi êtes-vous venu en France la toute première fois ?",
+            "explanation": "- Indiquez l’année et le motif de votre première venue (stage, études, emploi, rapprochement familial).",
+            "image": null
+        },
+        {
+            "id": 15,
+            "question": "Qu’avez-vous en France que vous n’avez pas dans votre pays d’origine ?",
+            "explanation": "- Mettez en avant ce que vous appréciez : stabilité, libertés, santé, culture, opportunités professionnelles.",
+            "image": null
+        },
+        {
+            "id": 16,
+            "question": "Ou avez-vous appris le Français ?",
+            "explanation": "- Indiquez où vous l’avez appris : école/université/cours particuliers, puis pratique quotidienne en France.",
+            "image": null
+        },
+        {
+            "id": 17,
+            "question": "Pendant combien de temps avez-vous étudier le Français ?",
+            "explanation": "- Donnez une durée approximative (ex. plusieurs années) et précisez que vous continuez à progresser au quotidien.",
+            "image": null
+        },
+        {
+            "id": 18,
+            "question": "Utilisez vous la langue Française au travail ?",
+            "explanation": "- Précisez si le français est la langue principale au travail et si vous utilisez ponctuellement l’anglais ou une autre langue.",
+            "image": null
+        },
+        {
+            "id": 19,
+            "question": "Parlez-vous d’autres langues ? Si oui, lesquelles ?",
+            "explanation": "- Listez vos langues (français, anglais, langue maternelle) et les contextes d’usage.",
+            "image": null
+        },
+        {
+            "id": 20,
+            "question": "Quelle langue vous parait la plus facile ? Pourquoi ?",
+            "explanation": "- Indiquez la langue la plus facile pour vous et liez-la à votre usage quotidien (français, langue maternelle, etc.).",
+            "image": null
+        },
+        {
+            "id": 21,
+            "question": "Envoyez vous de l’argent dans votre pays d’origine ? Si oui à qui ?",
+            "explanation": "- Indiquez si vous envoyez un soutien (montant/fréquence) et à qui (parents, proches).",
+            "image": null
+        },
+        {
+            "id": 22,
+            "question": "Avez-vous de la famille proche ou lointaine dans votre pays d’origine ? Si oui comptez-vous les faire venir en France ?",
+            "explanation": "- Mentionnez qui vit encore au pays (parents, frères/sœurs) et si vous envisagez ou non une venue en France.",
+            "image": null
+        },
+        {
+            "id": 23,
+            "question": "Ou passez vous vos vacances ?",
+            "explanation": "- Indiquez si vous privilégiez les vacances en France (découverte des régions) et/ou à l’étranger (famille, voyages).",
+            "image": null
+        },
+        {
+            "id": 24,
+            "question": "Quelles sont les nationalités des personnes de votre entourage ?",
+            "explanation": "- Soulignez la diversité : majorité d’amis français et quelques amis d’autres nationalités.",
+            "image": null
+        },
+        {
+            "id": 25,
+            "question": "Depuis quand habitez-vous à cette adresse ?",
+            "explanation": "- Indiquez la durée (ex. trois ans) et la localisation (ville, département).",
+            "image": null
+        },
+        {
+            "id": 26,
+            "question": "Où avez-vous appris le français ?",
+            "explanation": "- Précisez votre parcours : école/université/cours, puis pratique quotidienne en France.",
+            "image": null
+        },
+        {
+            "id": 27,
+            "question": "Regardez-vous la télévision française ?",
+            "explanation": "- Indiquez oui/non et citez les types de programmes (info, culture, documentaires).",
+            "image": null
+        },
+        {
+            "id": 28,
+            "question": "Écoutez-vous la radio en France ?",
+            "explanation": "- Indiquez oui/non et les formats écoutés (stations généralistes, podcasts, info/culture).",
+            "image": null
+        },
+        {
+            "id": 29,
+            "question": "Lisez-vous la presse française ?",
+            "explanation": "- Indiquez oui/non et si vous lisez la presse en ligne ou papier pour suivre l’actualité.",
+            "image": null
+        },
+        {
+            "id": 30,
+            "question": "Pourquoi avez-vous quitté votre pays d’origine ?",
+            "explanation": "- Expliquez brièvement (études, opportunité professionnelle, rapprochement familial) et le choix d’un cadre stable en France.",
+            "image": null
+        },
+        {
+            "id": 31,
+            "question": "Quand êtes-vous arrivé(e) en France ?",
+            "explanation": "- Donnez l’année de votre arrivée et précisez que vous résidez en France depuis.",
+            "image": null
+        },
+        {
+            "id": 32,
+            "question": "Avez-vous des proches de votre famille qui vivent en France ?",
+            "explanation": "- Indiquez si vous avez des proches (parents, frères/sœurs, cousins) en France et en quoi cela aide.",
+            "image": null
+        },
+        {
+            "id": 33,
+            "question": "Êtes-vous marié(e) ? Depuis quand ?",
+            "explanation": "- Précisez votre statut (marié(e)/pacsé(e)/célibataire) et, si applicable, la date.",
+            "image": null
+        },
+        {
+            "id": 34,
+            "question": "Vivez-vous ensemble ? Depuis combien de temps ?",
+            "explanation": "- Si vous avez un conjoint/partenaire, indiquez depuis quand vous vivez ensemble ; sinon, précisez que vous vivez seul(e).",
+            "image": null
+        },
+        {
+            "id": 35,
+            "question": "Avez-vous d'autres membres de votre famille en France ?",
+            "explanation": "- Mentionnez si d’autres membres de la famille vivent en France et où se trouve le reste de la famille.",
+            "image": null
+        },
+        {
+            "id": 36,
+            "question": "Passez-vous souvent du temps avec votre belle-famille ?",
+            "explanation": "- Précisez la fréquence des rencontres (repas, fêtes) ou indiquez si la distance limite les échanges.",
+            "image": null
+        },
+        {
+            "id": 37,
+            "question": "Avez-vous des animaux de compagnie ?",
+            "explanation": "- Indiquez si vous avez un animal (chien, chat, etc.) ou non.",
+            "image": null
+        },
+        {
+            "id": 38,
+            "question": "Pourquoi les autres membres de votre famille n’ont-ils pas demandé la nationalité ?",
+            "explanation": "- Expliquez que c’est un choix personnel, lié à leur situation et à leurs projets.",
+            "image": null
+        },
+        {
+            "id": 39,
+            "question": "Comment célébrez-vous les fêtes en famille ?",
+            "explanation": "- Décrivez brièvement vos habitudes : repas familiaux, échanges de cadeaux, moments conviviaux.",
+            "image": null
+        },
+        {
+            "id": 40,
+            "question": "Envisagez-vous d'avoir des enfants ? Si oui, combien ?",
+            "explanation": "- Indiquez si vous avez un projet d’enfants et, le cas échéant, combien.",
+            "image": null
+        },
+        {
+            "id": 41,
+            "question": "Envisagez-vous de faire venir votre famille en France ?",
+            "explanation": "- Indiquez si vous avez ce projet et dans quelles conditions (opportunités, regroupement familial, études).",
+            "image": null
+        },
+        {
+            "id": 42,
+            "question": "Quand la peine de mort a-t-elle été abolie en France ?",
+            "explanation": "La peine de mort a été abolie en France le 9 octobre 1981.",
+            "image": null
+        },
+        {
+            "id": 43,
+            "question": "Où siège l’Assemblée nationale ?",
+            "explanation": "Au Palais Bourbon, à Paris.",
+            "image": null
+        },
+        {
+            "id": 44,
+            "question": "Où siège la plus haute juridiction judiciaire en France?",
+            "explanation": "À la Cour de cassation, située au Palais de Justice de Paris.",
+            "image": null
+        },
+        {
+            "id": 45,
+            "question": "Où siège le Conseil d’État?",
+            "explanation": "Au Palais-Royal, à Paris.",
+            "image": null
+        },
+        {
+            "id": 46,
+            "question": "Peut-on avoir une double nationalité en France ?",
+            "explanation": "Oui, selon les accords entre pays.",
+            "image": null
+        },
+        {
+            "id": 47,
+            "question": "Combien de temps dure le mandat des conseillers municipaux ?",
+            "explanation": "6 ans.",
+            "image": null
+        },
+        {
+            "id": 48,
+            "question": "Comment Louis XVI (16) a-t-il été jugé ?",
+            "explanation": "Il a été jugé par la Convention nationale, reconnu coupable de trahison et guillotiné le 21 janvier 1793.",
+            "image": null
+        },
+        {
+            "id": 49,
+            "question": "Pourquoi la Terreur a-t-elle eu lieu ?",
+            "explanation": "Entre 1793 et 1794, le gouvernement a instauré la Terreur pour éliminer les ennemis de la Révolution. Environ 16 000 personnes ont été exécutées sous l'autorité du Comité de salut public, dirigé par Robespierre.",
+            "image": null
+        },
+        {
+            "id": 50,
+            "question": "Comment Jean Moulin est-il mort ?",
+            "explanation": "Il a été arrêté par la Gestapo le 21 juin 1943 à Caluire, près de Lyon, après une trahison. Torturé par Klaus Barbie, chef de la Gestapo à Lyon, il est mort des suites de ses blessures durant son transfert vers l'Allemagne, le 8 juillet 1943.",
+            "image": null
+        },
+        {
+            "id": 51,
+            "question": "Quand l’esclavage a-t-il été aboli en France ?",
+            "explanation": "L’abolition de l’esclavage en France date du 27 avril 1848, sous l’impulsion de Victor Schœlcher.",
+            "image": null
+        },
+        {
+            "id": 52,
+            "question": "Qui était l'épouse de Louis XVI (16) ?",
+            "explanation": "Marie-Antoinette était l'épouse de Louis XVI (16).",
+            "image": null
+        },
+        {
+            "id": 53,
+            "question": "Qui est à lʼorigine de la Tour Eiffel ?",
+            "explanation": "Gustave Eiffel.",
+            "image": null
+        },
+        {
+            "id": 54,
+            "question": "Qui a construit le château de Versailles ?",
+            "explanation": "Louis XIV (14).",
+            "image": null
+        },
+        {
+            "id": 55,
+            "question": "Pourquoi est-elle célèbre ?",
+            "explanation": "- Elle représente le savoir-faire français en ingénierie.\n\n- Elle attire plus de 6 millions de visiteurs par an.\n\n- Elle est un symbole mondial de la France et de Paris.",
+            "image": null
+        },
+        {
+            "id": 56,
+            "question": "Comment est-elle souvent appelée?",
+            "explanation": "La tour Eiffel est souvent appelée La Grande Dame de Fer.",
+            "image": null
+        },
+        {
+            "id": 57,
+            "question": "Qui est l'auteur du roman \"Madame Bovary\" ?",
+            "explanation": "Gustave Flaubert.",
+            "image": null
+        },
+        {
+            "id": 58,
+            "question": "Qui est l'auteur de L'Étranger ?",
+            "explanation": "Albert Camus.",
+            "image": null
+        },
+        {
+            "id": 59,
+            "question": "Qui est le créateur de la série de bandes dessinées Astérix ?",
+            "explanation": "René Goscinny et Albert Uderzo.",
+            "image": null
+        },
+        {
+            "id": 60,
+            "question": "Où faut-il déclarer la naissance d'un enfant ?",
+            "explanation": "À la mairie du lieu de naissance, pour établir l'acte de naissance.",
+            "image": null
+        },
+        {
+            "id": 61,
+            "question": "Quelle action peut réaliser le locataire d'un logement sans l'autorisation du propriété ?",
+            "explanation": "Seules les petites réparations ou l'entretien courant (ex. changer un joint, poser des étagères) sans modifier le logement.",
+            "image": null
+        },
+        {
+            "id": 62,
+            "question": "Quel marriage est reconnu légalement ?",
+            "explanation": "Le mariage civil célébré en mairie est le seul reconnu par la loi française.",
+            "image": null
+        },
+        {
+            "id": 63,
+            "question": "Le stationnement sur une place réservée aux personnes handicapées :",
+            "explanation": "Est interdit sans carte mobilité inclusion ; c'est une infraction lourdement sanctionnée.",
+            "image": null
+        },
+        {
+            "id": 64,
+            "question": "Si une machine à laver est cassée, il est possible de :",
+            "explanation": "La faire réparer ou la remplacer ; si l'appareil appartient au bailleur et figurait dans le bail, le prévenir pour prise en charge.",
+            "image": null
+        },
+        {
+            "id": 65,
+            "question": "Dans quel cas faut-il déclarer son enfant au service d'état civil ?",
+            "explanation": "À chaque naissance (et en cas de reconnaissance d'un enfant).",
+            "image": null
+        },
+        {
+            "id": 66,
+            "question": "Quand faut-il déclarer son enfant au service d'état civil ?",
+            "explanation": "Dans les 5 jours ouvrables suivant la naissance.",
+            "image": null
+        },
+        {
+            "id": 67,
+            "question": "Quel numéro d'urgence permet d'appeler la police ?",
+            "explanation": "Le 17 (ou le 112, numéro d'urgence européen).",
+            "image": null
+        },
+        {
+            "id": 68,
+            "question": "Quel numéro d'urgence permit d'appeler le SAMU ?",
+            "explanation": "Le 15 (ou le 112, numéro d'urgence européen).",
+            "image": null
+        },
+        {
+            "id": 69,
+            "question": "Auprès de chaque institution les parents peuvent inscire leurs enfants à l'école publique ?",
+            "explanation": "L'inscription se fait d'abord en mairie puis auprès de l'école publique affectée ; l'accès est gratuit et obligatoire.",
+            "image": null
+        },
+        {
+            "id": 70,
+            "question": "En cas de divorce, qui exerce l'autorité parentale ?",
+            "explanation": "En principe les deux parents conjointement, sauf décision contraire du juge.",
+            "image": null
+        },
+        {
+            "id": 71,
+            "question": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
+            "explanation": "L'aide juridictionnelle, attribuée sous conditions de ressources.",
+            "image": null
+        },
+        {
+            "id": 72,
+            "question": "Qui peut demander le divorce de personnes mariées ?",
+            "explanation": "L'un ou l'autre époux, ou les deux d'un commun accord (divorce par consentement mutuel).",
+            "image": null
+        },
+        {
+            "id": 73,
+            "question": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
+            "explanation": "Auprès de l'Assurance Maladie (CPAM) via la carte Vitale.",
+            "image": null
+        },
+        {
+            "id": 74,
+            "question": "La contraception :",
+            "explanation": "Est légale et accessible ; certains moyens sont remboursés, la confidentialité est garantie pour les mineurs dans certaines conditions.",
+            "image": null
+        },
+        {
+            "id": 75,
+            "question": "Qu'est-ce que le principe de confidentialité dans le domaine de la santé ?",
+            "explanation": "Le secret médical : les informations de santé sont protégées et ne peuvent être divulguées sans accord du patient.",
+            "image": null
+        },
+        {
+            "id": 76,
+            "question": "À quoi sert la carte Vitale ?",
+            "explanation": "Elle atteste des droits à l'Assurance Maladie et permet le remboursement électronique des soins.",
+            "image": null
+        },
+        {
+            "id": 77,
+            "question": "À quoi sert une mutuelle santé ?",
+            "explanation": "À compléter les remboursements de l'Assurance Maladie pour réduire le reste à charge.",
+            "image": null
+        },
+        {
+            "id": 78,
+            "question": "L'inscription à l'Assurance maladie est :",
+            "explanation": "Obligatoire pour être couvert et remboursé des soins (affiliation à la Sécurité sociale).",
+            "image": null
+        },
+        {
+            "id": 79,
+            "question": "L'avortement est-il possible en France ?",
+            "explanation": "Oui, l'IVG est légale et encadrée (délai de 14 semaines de grossesse, prise en charge médicale).",
+            "image": null
+        },
+        {
+            "id": 80,
+            "question": "Travailler sans être déclaré est :",
+            "explanation": "Du travail dissimulé : c'est illégal et pénalement sanctionné.",
+            "image": null
+        },
+        {
+            "id": 81,
+            "question": "Quelle est la première démarche à réaliser pour chercher un emploi ?",
+            "explanation": "Mettre à jour son CV et s'inscrire auprès de France Travail (ex-Pôle emploi) pour accéder aux offres et droits.",
+            "image": null
+        },
+        {
+            "id": 82,
+            "question": "Quelle est la durée légale du temps de travail par semaine ?",
+            "explanation": "35 heures hebdomadaires (hors heures supplémentaires possibles).",
+            "image": null
+        },
+        {
+            "id": 83,
+            "question": "Qui peut demander un congé parental d'éducation ?",
+            "explanation": "Le père ou la mère salarié(e), sous conditions d'ancienneté, après une naissance ou adoption.",
+            "image": null
+        },
+        {
+            "id": 84,
+            "question": "Une personne étrangère, en situation régulière, peut créé son entreprise :",
+            "explanation": "Oui, si son titre de séjour autorise le travail ou comporte la mention permettant l'activité indépendante.",
+            "image": null
+        },
+        {
+            "id": 85,
+            "question": "Une femme peut-elle créé son entreprise ?",
+            "explanation": "Oui, sans restriction : l'entrepreneuriat est ouvert à toutes et tous.",
+            "image": null
+        },
+        {
+            "id": 86,
+            "question": "Quels sont les textes qui définissant les règles au travail ?",
+            "explanation": "Principalement le Code du travail, complété par les conventions collectives et le contrat de travail.",
+            "image": null
+        },
+        {
+            "id": 87,
+            "question": "Quelles sont les'affaires traitées par le conseil de prud'homme ?",
+            "explanation": "Les litiges entre employeurs et salariés liés au contrat de travail (licenciement, salaires, conditions de travail...).",
+            "image": null
+        },
+        {
+            "id": 88,
+            "question": "Qui a le droit de se syndiquer ?",
+            "explanation": "Tout salarié (secteur privé ou public) peut adhérer librement à un syndicat.",
+            "image": null
+        },
+        {
+            "id": 89,
+            "question": "Est-il possible de licencer une femme enceinte ou en congé maternité, en raison de sa grossesse ?",
+            "explanation": "Non, le licenciement pour ce motif est interdit ; seules exceptions : faute grave non liée ou impossibilité de maintenir le contrat.",
+            "image": null
+        },
+        {
+            "id": 90,
+            "question": "L'instruction des enfants est obligatoire de :",
+            "explanation": "De 3 à 16 ans en France.",
+            "image": null
+        },
+        {
+            "id": 91,
+            "question": "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
+            "explanation": "Jusqu'à 6 mois d'emprisonnement et 7 500 € d'amende (article 227-17-1 du Code pénal).",
+            "image": null
+        },
+        {
+            "id": 92,
+            "question": "Quelle est la définition de l'autorité parentale ?",
+            "explanation": "Ensemble de droits et devoirs pour protéger, éduquer et veiller aux intérêts de l'enfant jusqu'à sa majorité.",
+            "image": null
+        },
+        {
+            "id": 93,
+            "question": "Quel motif d'absence est accepté par l'école ?",
+            "explanation": "Maladie (avec justificatif), événement familial grave, obligations civiques ou religieuses reconnues.",
+            "image": null
+        },
+        {
+            "id": 94,
+            "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
+            "explanation": "Jusqu'à 16 ans révolus.",
+            "image": null
+        },
+        {
+            "id": 95,
+            "question": "À quel âge commence l'instruction obligatoire des enfants ?",
+            "explanation": "Dès 3 ans.",
+            "image": null
+        },
+        {
+            "id": 96,
+            "question": "Comment s'appellent les établissements scolaires que les élèves intègrent après l'école élémentaire ?",
+            "explanation": "Le collège (puis le lycée).",
+            "image": null
+        },
+        {
+            "id": 97,
+            "question": "En tant que parent d'élève, il est possible de :",
+            "explanation": "Rencontrer les enseignants, être représentant des parents, participer aux conseils d'école ou d'administration.",
+            "image": null
+        },
+        {
+            "id": 98,
+            "question": "Quelle instruction est prévue pour les enfants qui ne parlent pas français ?",
+            "explanation": "Des dispositifs d'accueil et de soutien (UPE2A, cours de français langue étrangère) pour apprendre le français et suivre la scolarité.",
+            "image": null
+        },
+        {
+            "id": 99,
+            "question": "S'agissant de l'accueil des enfants en situation de handicap à l'école, laquelle des propositions est vraie ?",
+            "explanation": "L'école publique accueille tous les enfants ; des aménagements et aides (AESH, adaptations) sont prévus selon les besoins.",
+            "image": null
+        },
+        {
+            "id": 100,
+            "question": "Depuis le 1er juillet 2021, qu'elle est la durée du congé paternité ?",
+            "explanation": "28 jours (dont 7 jours obligatoires : 3 de naissance + 4 supplémentaires).",
+            "image": null
+        },
+        {
+            "id": 101,
+            "question": "Est-ce possible de punir physiquement ses enfants ?",
+            "explanation": "Non, la loi interdit les violences éducatives ordinaires (loi du 10 juillet 2019).",
+            "image": null
+        }
+    ]
+}

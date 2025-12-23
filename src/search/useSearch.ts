@@ -30,7 +30,7 @@ export interface SearchSuggestion {
 }
 
 export const useSearch = () => {
-    const { questionsData, historyCategories, historySubcategories } = useData();
+    const { questionsData } = useData();
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
     const [searchHistory, setSearchHistory] = useState<string[]>([]);
@@ -44,11 +44,10 @@ export const useSearch = () => {
         searchIn: ['both'],
     });
 
-    // Create a comprehensive list of all questions including history questions
+    // Create a comprehensive list of all questions
     const allQuestions = useMemo(() => {
         const questions: SearchResultQuestion[] = [];
 
-        // Add main category questions
         questionsData.categories.forEach(category => {
             category.questions.forEach(question => {
                 questions.push({
@@ -60,32 +59,8 @@ export const useSearch = () => {
             });
         });
 
-        // Add history questions from subcategories
-        if (historyCategories && historySubcategories) {
-            Object.values(historySubcategories).forEach(subcategory => {
-                if (subcategory.questions) {
-                    subcategory.questions.forEach((question: any) => {
-                        const searchQuestion: SearchResultQuestion = {
-                            id: question.id,
-                            categoryId: (subcategory as any).id,
-                            categoryTitle: (subcategory as any).title,
-                            question: question.question || '',
-                            explanation: question.explanation || '',
-                            hasImage: !!question.image,
-                        };
-
-                        if (question.image) {
-                            searchQuestion.image = question.image;
-                        }
-
-                        questions.push(searchQuestion);
-                    });
-                }
-            });
-        }
-
         return questions;
-    }, [questionsData, historyCategories, historySubcategories]);
+    }, [questionsData]);
 
     // Get available categories for filter
     const availableCategories = useMemo(() => {

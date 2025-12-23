@@ -1,0 +1,285 @@
+{
+    "theme": "Géographie et Sites Remarquables",
+    "id": "geographie_sites",
+    "title": "Géographie et sites remarquables",
+    "icon": "map",
+    "description": "Géographie et sites remarquables",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quel est le point culminant ?",
+            "explanation": "Le **Mont-Blanc** (4810 m) dans les Alpes.",
+            "image": null
+        },
+        {
+            "id": 2,
+            "question": "Citez des fleuves français.",
+            "explanation": "La **Loire** (le plus long), la Seine, le Rhône, la Garonne, le Rhin.",
+            "image": null
+        },
+        {
+            "id": 3,
+            "question": "Citez grandes métropoles françaises.",
+            "explanation": "Paris, Lyon, Marseille, Lille, Toulouse, Bordeaux, Nice, Nantes, Strasbourg, Rennes.",
+            "image": null
+        },
+        {
+            "id": 4,
+            "question": "Citez des sites touristiques célèbres.",
+            "explanation": "La **Tour Eiffel**, le **Mont-Saint-Michel**, le Château de Versailles, les Châteaux de la Loire.",
+            "image": null
+        },
+        {
+            "id": 5,
+            "question": "Citez les trois plus grandes villes Françaises",
+            "explanation": "Paris, Marseille et Lyon sont les trois plus grandes villes de France.",
+            "image": null
+        },
+        {
+            "id": 6,
+            "question": "Citez trois départements Français",
+            "explanation": "Haut-Rhin, Bas-Rhin, Haute-Garonne sont les trois départements de France.",
+            "image": null
+        },
+        {
+            "id": 7,
+            "question": "Citez trois départements d'outre-mer",
+            "explanation": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion sont les cinq départements d'outre-mer de France.",
+            "image": null
+        },
+        {
+            "id": 8,
+            "question": "Citez trois régions Françaises",
+            "explanation": "Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d’Azur, Occitanie v.v…",
+            "image": null
+        },
+        {
+            "id": 9,
+            "question": "Enumérez les trois types de collectivités Françaises",
+            "explanation": "Il y a trois types de collectivités en France. 1. Les communes : Il y a 36 000 communes en France. 2. Les régions : La France compte 12 régions en Métropole en plus de la corse (qui n’est pas une région en soit mais qui en a les compétences) ainsi que 5 régions en outre-mer. 3. Les Départements : La France compte 101 département s, 96 département se trouvent en métropole et 5 en Outre-mer.",
+            "image": null
+        },
+        {
+            "id": 10,
+            "question": "Citez des fleuves Français que vous connaissez",
+            "explanation": "La Loire, le Rhône, La Seine, le Rhin, la Garonne, La Marne, La Dordogne…",
+            "image": null
+        },
+        {
+            "id": 11,
+            "question": "Citez des chaines de montagne en France que vous connaissez",
+            "explanation": "Le Massif central, les Alpes, les Pyrénées, les Vosges, le Jura.",
+            "image": null
+        },
+        {
+            "id": 12,
+            "question": "En France quel est le point culminant ?",
+            "explanation": "C’est le Mont-Blanc [avec une altitude de 4809m il se trouve entre la France et l’Italie].",
+            "image": null
+        },
+        {
+            "id": 13,
+            "question": "Quels sont les pays frontaliers ou limitrophes avec la France ?",
+            "explanation": "L’Espagne, L’Italie, la Suisse, L’Allemagne, le Luxembourg Andorre, Monaco et la Belgique.",
+            "image": null
+        },
+        {
+            "id": 14,
+            "question": "Dans quelle région sommes-nous ?",
+            "explanation": "Nous sommes en Île-de-France, c’est la région où se trouve Paris et ses alentours, y compris Boulogne-Billancourt où j’habite.",
+            "image": null
+        },
+        {
+            "id": 15,
+            "question": "Dans quel département sommes-nous ?",
+            "explanation": "Nous sommes dans le département des Hauts-de-Seine, c’est le département numéro 92. Il se trouve juste à l’ouest de Paris.",
+            "image": null
+        },
+        {
+            "id": 16,
+            "question": "Avez-vous déjà voyagé en France ?",
+            "explanation": "Oui, j’ai visité (Nom des villes).",
+            "image": null
+        },
+        {
+            "id": 17,
+            "question": "Où et quand vous êtes-vous mariés ?",
+            "explanation": "Nous nous sommes mariés à (Ville, Pays) le (JJ/MM/AAAA).",
+            "image": null
+        },
+        {
+            "id": 18,
+            "question": "Pouvez-vous citer des noms de grandes villes françaises ?",
+            "explanation": "Parmi les grandes villes françaises, on peut citer Paris, Marseille, Lyon, Toulouse, Nice, Nantes, Montpellier, Strasbourg, Bordeaux et Lille.",
+            "image": null
+        },
+        {
+            "id": 19,
+            "question": "Citez des villes proches des grandes chaînes de montagnes en France.",
+            "explanation": "- Alpes : Grenoble, Annecy, Chamonix.\n\n- Pyrénées : Pau, Tarbes, Perpignan.\n\n- Massif central : Clermont-Ferrand, Saint-Étienne.\n\n- Jura : Besançon.\n\n- Vosges : Épinal, Colmar.",
+            "image": null
+        },
+        {
+            "id": 20,
+            "question": "Pourquoi l'année 1958 est importante pour la France ?",
+            "explanation": "1958 correspond à l'adoption de la Constitution de la Ve République, qui fonde les institutions politiques actuelles de la France.",
+            "image": null
+        },
+        {
+            "id": 21,
+            "question": "Simone Veil est une figure importante de l'histoire française. Elle a notamment :",
+            "explanation": "Fait adopter en 1975 la loi légalisant l'IVG en France et œuvré pour les droits des femmes après avoir survécu à la Shoah.",
+            "image": null
+        },
+        {
+            "id": 22,
+            "question": "Dans quelle région est située une partie des plages du débarquement ayant permis d'engager la libération de la France ?",
+            "explanation": "En Normandie (plages comme Omaha, Utah, Gold, Juno, Sword).",
+            "image": null
+        },
+        {
+            "id": 23,
+            "question": "Dans quelle ville les rois de France étaient-ils couronnés ?",
+            "explanation": "À Reims, dans la cathédrale Notre-Dame de Reims.",
+            "image": null
+        },
+        {
+            "id": 24,
+            "question": "Lors de la seconde guerre mondiale, à quelle date la ville de Paris a-t-elle été libérée ?",
+            "explanation": "Le 25 août 1944.",
+            "image": null
+        },
+        {
+            "id": 25,
+            "question": "Quel était le principal port français impliqué dans latraite négrière au XVIIIe siècle ?",
+            "explanation": "Nantes fut le principal port français de la traite négrière au XVIIIe siècle.",
+            "image": null
+        },
+        {
+            "id": 26,
+            "question": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
+            "explanation": "Les Alpes séparent la France de l'Italie.",
+            "image": null
+        },
+        {
+            "id": 27,
+            "question": "Quel monument historique se trouve sur une Île en Normandie ?",
+            "explanation": "Le Mont-Saint-Michel, abbaye médiévale située sur un îlot rocheux en Normandie.",
+            "image": null
+        },
+        {
+            "id": 28,
+            "question": "Quelle ville française fait partie des 10 plus grandes métropoles du pays ?",
+            "explanation": "Exemple : Lyon (avec Paris, Marseille, Lille, Toulouse, Bordeaux, Nice, Nantes, Strasbourg, Rennes...).",
+            "image": null
+        },
+        {
+            "id": 29,
+            "question": "Quelle Île fait partie des Antilles françaises ?",
+            "explanation": "La Guadeloupe ou la Martinique sont des îles des Antilles françaises.",
+            "image": null
+        },
+        {
+            "id": 30,
+            "question": "Quelle Île est française ?",
+            "explanation": "La Corse est une île française de Méditerranée.",
+            "image": null
+        },
+        {
+            "id": 31,
+            "question": "Quelle Île française est située dans l'océan indien ?",
+            "explanation": "La Réunion est une île française de l'océan Indien.",
+            "image": null
+        },
+        {
+            "id": 32,
+            "question": "Quel département français a une frontière avec le Brésil ?",
+            "explanation": "La Guyane française partage une frontière terrestre avec le Brésil.",
+            "image": null
+        },
+        {
+            "id": 33,
+            "question": "De quelle ville française décolle la fusée Ariane ?",
+            "explanation": "Depuis le Centre spatial guyanais à Kourou (Guyane française).",
+            "image": null
+        },
+        {
+            "id": 34,
+            "question": "Quelle mer ou océan borde la France métropolitaine ?",
+            "explanation": "La Manche, la mer du Nord, l'océan Atlantique et la mer Méditerranée.",
+            "image": null
+        },
+        {
+            "id": 35,
+            "question": "Quelle mer se situe entre la France et l'Angleterre ?",
+            "explanation": "La Manche sépare la France de l'Angleterre.",
+            "image": null
+        },
+        {
+            "id": 36,
+            "question": "Quelle Île est un département d'outre-mer français ?",
+            "explanation": "La Martinique (comme la Guadeloupe, La Réunion, Mayotte) est un département d'outre-mer.",
+            "image": null
+        },
+        {
+            "id": 37,
+            "question": "Qu'est-ce que la France d'outre-mer ?",
+            "explanation": "L'ensemble des territoires français hors d'Europe : DOM, COM, collectivités et territoires à statut particulier.",
+            "image": null
+        },
+        {
+            "id": 38,
+            "question": "Combien y a-t-il de régions en France métropolitaine ?",
+            "explanation": "Depuis 2016, la métropole compte 13 régions.",
+            "image": null
+        },
+        {
+            "id": 39,
+            "question": "Quelle chaîne de montagnes est située entre la France et l'Espagne ?",
+            "explanation": "Les Pyrénées séparent la France et l'Espagne.",
+            "image": null
+        },
+        {
+            "id": 40,
+            "question": "Quelle Île française se trouve au sud-est du continent african ?",
+            "explanation": "Mayotte, dans le canal du Mozambique, au sud-est de l'Afrique.",
+            "image": null
+        },
+        {
+            "id": 41,
+            "question": "Quel est le chef-lieu de la région Auvergne-Rhône-Alpes ?",
+            "explanation": "Lyon est le chef-lieu de la région Auvergne-Rhône-Alpes.",
+            "image": null
+        },
+        {
+            "id": 42,
+            "question": "Quel est le chef-lieu de la région Bretagne ?",
+            "explanation": "Rennes est le chef-lieu de la Bretagne.",
+            "image": null
+        },
+        {
+            "id": 43,
+            "question": "Quel est le chef-lieu de la région Provence-Alpes-Côte d'Azur ?",
+            "explanation": "Marseille est le chef-lieu de Provence-Alpes-Côte d'Azur.",
+            "image": null
+        },
+        {
+            "id": 44,
+            "question": "Quel est le 101ème département français depuis 2011 ?",
+            "explanation": "Mayotte est devenu le 101e département français en 2011.",
+            "image": null
+        },
+        {
+            "id": 45,
+            "question": "Quelle région française est réputée pour ses stations de ski ?",
+            "explanation": "La région Auvergne-Rhône-Alpes, notamment les Alpes, est très réputée pour le ski.",
+            "image": null
+        },
+        {
+            "id": 46,
+            "question": "Quel fleuve traverse Paris ?",
+            "explanation": "La Seine traverse Paris.",
+            "image": null
+        }
+    ]
+}

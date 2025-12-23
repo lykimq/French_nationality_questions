@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
 import type { BaseEntity, VisualEntity } from './core';
-import type { Question, CategoryType, HistoryCategory, HistorySubcategory, NavigationQuestion } from '../welcome/types';
+import type { Question, CategoryType, NavigationQuestion } from '../welcome/types';
 import type { FrenchQuestionsData } from './questionsData';
 
 // ==================== COMPONENT BASE PATTERNS ====================
@@ -139,8 +139,6 @@ export interface HOCProps<P extends Record<string, any> = {}> {
 // Data context type (provides questions data, not language switching)
 export interface DataContextType {
     readonly questionsData: FrenchQuestionsData;
-    readonly historyCategories: HistoryCategory | null;
-    readonly historySubcategories: Record<string, HistorySubcategory>;
     readonly isDataLoading: boolean;
     readonly dataLoadingError: string | null;
 }

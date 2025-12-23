@@ -1,0 +1,2115 @@
+{
+    "theme": "Démocratie et Organisation Politique",
+    "id": "democratie_politique",
+    "title": "Démocratie et organisation politique",
+    "icon": "government",
+    "description": "Démocratie et organisation politique",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quel texte définit l'organisation de l'État ?",
+            "explanation": "La **Constitution** de la Ve République (adoptée en 1958).",
+            "image": null
+        },
+        {
+            "id": 2,
+            "question": "Sur quel principe sont fondées les institutions françaises ?",
+            "explanation": "Sur la **séparation des pouvoirs** : législatif, exécutif et autorité judiciaire.",
+            "image": null
+        },
+        {
+            "id": 3,
+            "question": "Qui est élu au suffrage universel ?",
+            "explanation": "Le Président de la République, les députés (suffrage direct), les sénateurs (suffrage indirect) et les maires.",
+            "image": null
+        },
+        {
+            "id": 4,
+            "question": "Qu'est-ce que le suffrage universel ?",
+            "explanation": "C'est le droit de vote pour tous les citoyens majeurs (18 ans) disposant de leurs droits civils et politiques.",
+            "image": null
+        },
+        {
+            "id": 5,
+            "question": "Comment est élu le Président de la République et pour combien de temps ?",
+            "explanation": "Il est élu au suffrage universel direct pour **cinq ans**.",
+            "image": null
+        },
+        {
+            "id": 6,
+            "question": "Qui dirige le Gouvernement ?",
+            "explanation": "Le **Premier ministre**, nommé par le Président de la République.",
+            "image": null
+        },
+        {
+            "id": 7,
+            "question": "Quel est le rôle du Parlement (Assemblée nationale et Sénat) ?",
+            "explanation": "Il vote les lois et contrôle le Gouvernement.",
+            "image": null
+        },
+        {
+            "id": 8,
+            "question": "Quel est le rôle de la Justice ?",
+            "explanation": "Elle règle les litiges et sanctionne les infractions aux lois. Elle est indépendante.",
+            "image": null
+        },
+        {
+            "id": 9,
+            "question": "Qu'est-ce que pour vous la démocratie ?",
+            "explanation": "La démocratie représente un système politique dans lequel le peuple est souverain, c'est un régime politique dans lequel tous les citoyens participent aux décisions publiques et à la vie politique du pays.",
+            "image": null
+        },
+        {
+            "id": 10,
+            "question": "Quelles sont les formes de la démocratie ?",
+            "explanation": "Il y a trois formes de démocraties, la démocratie directe, participative et représentative.",
+            "image": null
+        },
+        {
+            "id": 11,
+            "question": "Êtes-vous d'accord avec le régime démocratique ?",
+            "explanation": "Absolument !",
+            "image": null
+        },
+        {
+            "id": 12,
+            "question": "Quelles formes libertés sont garanties en démocratie ?",
+            "explanation": "La liberté de penser, la liberté de croire ou de ne pas croire, la liberté d'expression etc…",
+            "image": null
+        },
+        {
+            "id": 13,
+            "question": "Pensez-vous que la liberté d'expression est absolue ?",
+            "explanation": "Non, la liberté est garantie mais elle n'est pas absolue car les libertés des uns s'arrêtent là où commencent celles des autres.",
+            "image": null
+        },
+        {
+            "id": 14,
+            "question": "Qu'est-ce que la discrimination pour vous?",
+            "explanation": "La discrimination c'est par exemple de ne pas recruter quelqu'un à cause de son origine, ou de son appartenance à une ethnie ou une religion ou même de son sexe, le seul et unique critère d'embauche doit être la compétence.",
+            "image": null
+        },
+        {
+            "id": 15,
+            "question": "La discrimination est-elle légale en France?",
+            "explanation": "Non pas du tout, c'est un délit passible de graves et lourdes sanctions judiciaires.",
+            "image": null
+        },
+        {
+            "id": 16,
+            "question": "Les citoyens sont-ils toujours satisfaits des choix du gouvernement ?",
+            "explanation": "Non, les citoyens ne sont pas toujours d'accord avec les décisions du gouvernement.",
+            "image": null
+        },
+        {
+            "id": 17,
+            "question": "Comment manifestent ils leur désaccord ?",
+            "explanation": "En manifestant, en faisant grève, en signant des pétitions ou en votant autrement pour exprimer leur désaccord de manière pacifique.",
+            "image": null
+        },
+        {
+            "id": 18,
+            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
+            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "image": null
+        },
+        {
+            "id": 19,
+            "question": "Quel a été le fait marquant de la 5éme république ?",
+            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": 20,
+            "question": "Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?",
+            "explanation": "Elle a eu lieu le 09 Décembre 1905.",
+            "image": null
+        },
+        {
+            "id": 21,
+            "question": "Quelles personnages de l'histoire de France vous ont le plus marqué et marqué l'histoire ?",
+            "explanation": "Charles de Gaulle, Napoléon, Jeanne d'Arc, Louis XIV, Victor Hugo, Marie Curie, Simone Veil…",
+            "image": null
+        },
+        {
+            "id": 22,
+            "question": "Avons-nous le droit en France de porter des signes religieux dans l'espace public ?",
+            "explanation": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
+            "image": null
+        },
+        {
+            "id": 23,
+            "question": "Qu'est-ce que la loi de 2004 ?",
+            "explanation": "Elle interdit le port de signes religieux ostensibles dans les établissements scolaires publics.",
+            "image": null
+        },
+        {
+            "id": 24,
+            "question": "En quelle année a été aboli l'esclavage en France ?",
+            "explanation": "Le 27 avril 1848.",
+            "image": null
+        },
+        {
+            "id": 25,
+            "question": "L'école est-elle obligatoire en France ?",
+            "explanation": "Oui, de 3 à 16 ans, pour tous les enfants.",
+            "image": null
+        },
+        {
+            "id": 26,
+            "question": "Depuis quand l'école est-elle obligatoire en France ?",
+            "explanation": "Depuis le 28 mars 1882.",
+            "image": null
+        },
+        {
+            "id": 27,
+            "question": "Qui a rendu l'école obligatoire en France ?",
+            "explanation": "C'est l'ancien maire de Paris Jules Ferry.",
+            "image": null
+        },
+        {
+            "id": 28,
+            "question": "Les femmes ont-elles le droit de vote en France ?",
+            "explanation": "Oui",
+            "image": null
+        },
+        {
+            "id": 29,
+            "question": "Depuis quand les femmes ont elles le droit de vote en France ?",
+            "explanation": "Depuis le 21 avril 1944.",
+            "image": null
+        },
+        {
+            "id": 30,
+            "question": "Quels sont les valeurs (ou la devise) de la république Française ?",
+            "explanation": "Liberté, Egalité, Fraternité.",
+            "image": null
+        },
+        {
+            "id": 31,
+            "question": "Si l'on devait rajouter une valeur quelle sera-t-elle selon vous ?",
+            "explanation": "La Laïcité.",
+            "image": null
+        },
+        {
+            "id": 32,
+            "question": "Quels sont les droits et devoirs du citoyen Français ?",
+            "explanation": "Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété.   Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.",
+            "image": null
+        },
+        {
+            "id": 33,
+            "question": "Quels sont les symboles de la république Française ?",
+            "explanation": "- Le Drapeau Tricolore.\n- La marseillaise.\n- Marianne.\n- Le bonnet Phrygien.\n- La devise \"Liberté, égalité, Fraternité\".\n- La fleur de Lys.\n- Le 14 Juillet.",
+            "image": null
+        },
+        {
+            "id": 34,
+            "question": "Quelles sont les couleurs du drapeau Français ?",
+            "explanation": "Bleu, Blanc, Rouge\n\n- Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime.\n\n- Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France.\n\n- Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.",
+            "image": null
+        },
+        {
+            "id": 35,
+            "question": "Que représentent les couleurs du drapeau Français ?",
+            "explanation": "Le bleu représente la couleur de Paris, le blanc la couleur des Rois, et le rouge (également la couleur de Paris) en référence au sang versé pour la libération du peuple.",
+            "image": null
+        },
+        {
+            "id": 36,
+            "question": "Qui est aujourd'hui le président de la république ?",
+            "explanation": "C'est Emmanuel Macron.",
+            "image": null
+        },
+        {
+            "id": 37,
+            "question": "Qui était président de la république avant lui/Emmanuel Macron ?",
+            "explanation": "C'était François Hollande.",
+            "image": null
+        },
+        {
+            "id": 38,
+            "question": "Qui est le premier ministre actuel ?",
+            "explanation": "C'est Gabriel Attal.",
+            "image": null
+        },
+        {
+            "id": 39,
+            "question": "Qui était premier ministre avant lui/Elle ?",
+            "explanation": "C'était Elisabeth Borne.",
+            "image": null
+        },
+        {
+            "id": 40,
+            "question": "Dans quelle république sommes nous ?",
+            "explanation": "Nous sommes dans la cinquième république.",
+            "image": null
+        },
+        {
+            "id": 41,
+            "question": "Quand sont les dates des républiques précédentes?",
+            "explanation": "- La première république : 1792-1804\n\n- La deuxième république : 1848 – 1852\n\n- La troisième république : 1870 – 1940\n\n- La quatrième république : 1946-1958\n\n- La cinquième république : 1958 – aujourd'hui.",
+            "image": null
+        },
+        {
+            "id": 42,
+            "question": "Qui a instauré la cinquième république ?",
+            "explanation": "C'est le général Charles de Gaule.",
+            "image": null
+        },
+        {
+            "id": 43,
+            "question": "Ou se trouve le siège de la présidence de la république ?",
+            "explanation": "Il se trouve au Palais de l’Élysée.",
+            "image": null
+        },
+        {
+            "id": 44,
+            "question": "Citez dans l'ordre les présidents de la cinquième république.",
+            "explanation": "- Charles de Gaulle.\n\n- George Pompidou.\n\n- Valérie Giscard d'Estaing.\n\n- François Mitterrand.\n\n- Jacques Chirac.\n\n- Nicolas Sarkozy.\n\n- François Hollande.\n\n- Emmanuel Macron.",
+            "image": null
+        },
+        {
+            "id": 45,
+            "question": "Citez trois anciens premiers ministres Français de la cinquième république.",
+            "explanation": "- Edouard Philippe.\n\n- Manuel Valls.\n\n- François Fillon.",
+            "image": null
+        },
+        {
+            "id": 46,
+            "question": "Citez trois ministres du gouvernement actuel.",
+            "explanation": "- Gerald Darmanin.\n\n- Bruno Le Maire.\n\n- Eric Dupond-Moretti.",
+            "image": null
+        },
+        {
+            "id": 47,
+            "question": "Pour combien de temps est élu le président de la république ?",
+            "explanation": "Le président est élu pour un mandat de 5 ans.",
+            "image": null
+        },
+        {
+            "id": 48,
+            "question": "Par quel scrutin et pour combien de mandats peut être élu le président de la république ?",
+            "explanation": "Le président est élu au suffrage universel direct, à la majorité absolue en deux tours. Il peut faire au maximum deux mandats de cinq ans.",
+            "image": null
+        },
+        {
+            "id": 49,
+            "question": "Qui a le droit de voter aux élections ?",
+            "explanation": "Tout citoyen Français majeur.",
+            "image": null
+        },
+        {
+            "id": 50,
+            "question": "Quel est l'âge de la majorité en France ?",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": 51,
+            "question": "Qu'est-ce que le parlement ?",
+            "explanation": "Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres:\n\n- La chambre haute (le Sénat).\n\n- La chambre basse (l’Assemblée nationale).",
+            "image": null
+        },
+        {
+            "id": 52,
+            "question": "Quel est le rôle exact du parlement ?",
+            "explanation": "Le Parlement en France discute, modifie et vote les lois. Il détient le pouvoir législatif.",
+            "image": null
+        },
+        {
+            "id": 53,
+            "question": "Citez les différentes institutions politiques en France ?",
+            "explanation": "- Le pouvoir exécutif.\n\n- Le pouvoir législatif.\n\n- Le pouvoir judiciaire.",
+            "image": null
+        },
+        {
+            "id": 54,
+            "question": "Qu'est-ce que le pouvoir Exécutif et quel est son rôle ?",
+            "explanation": "Le pouvoir exécutif est exercé par le président de la République et son gouvernement. Il applique les lois et conduit la politique nationale. Il peut édicter des règlements et dispose de l’administration et de l’armée.",
+            "image": null
+        },
+        {
+            "id": 55,
+            "question": "Qu'est-ce que le pouvoir législatif et quel est son rôle ?",
+            "explanation": "En France, le pouvoir législatif appartient au Sénat et à l’Assemblée nationale. Il rédige, discute et vote les lois, et contrôle l’action du pouvoir exécutif.",
+            "image": null
+        },
+        {
+            "id": 56,
+            "question": "Qu'est-ce que le pouvoir judiciaire et quel est son rôle ?",
+            "explanation": "Le pouvoir judiciaire est exercé par les juges et magistrats. Il veille au respect des lois, sanctionne les infractions et garantit la séparation des pouvoirs.",
+            "image": null
+        },
+        {
+            "id": 57,
+            "question": "Comment sont élus les députés ?",
+            "explanation": "Les députés sont élus au suffrage universel direct uninominal majoritaire à deux tours.",
+            "image": null
+        },
+        {
+            "id": 58,
+            "question": "Pour combien d'années sont élus les députés ?",
+            "explanation": "Les députés sont élus pour un mandat de cinq ans.",
+            "image": null
+        },
+        {
+            "id": 59,
+            "question": "Ou se trouve le siège de l'assemblée nationale ?",
+            "explanation": "Elle se trouve au palais Bourbon, c’est le nom communément donné au bâtiment qui abrite l’Assemblée nationale française, il est situé sur le quai d’Orsay.",
+            "image": null
+        },
+        {
+            "id": 60,
+            "question": "Qui est le député (ou la députée) de votre département ?",
+            "explanation": "En 2025, la députée de Boulogne-Billancourt (92100), située dans les Hauts-de-Seine, est Élisabeth de Maistre (Les Républicains), élue en février 2025.",
+            "image": null
+        },
+        {
+            "id": 61,
+            "question": "Qui constitue le gouvernement ?",
+            "explanation": "- Le premier ministre.\n\n- Les ministres.\n\n- Les secrétaires d’état.",
+            "image": null
+        },
+        {
+            "id": 62,
+            "question": "Qui est le président de l'assemblée Nationale ?",
+            "explanation": "C’est Yaël Braun-Pivet depuis 2022.",
+            "image": null
+        },
+        {
+            "id": 63,
+            "question": "Pour combien d'année est son mandat ?",
+            "explanation": "Son mandat est de 5 ans.",
+            "image": null
+        },
+        {
+            "id": 64,
+            "question": "Qu'est-ce que la chambre basse ?",
+            "explanation": "C’est l’assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": 65,
+            "question": "Qu'est-ce que la chambre haute ?",
+            "explanation": "C’est le Sénat.",
+            "image": null
+        },
+        {
+            "id": 66,
+            "question": "Qu'est-ce que le Sénat ?",
+            "explanation": "Le Sénat constitue la chambre haute du Parlement français, c’est là où siègent les sénateurs, il détient le pouvoir législatif avec l’assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": 67,
+            "question": "Comment sont élus les sénateurs ?",
+            "explanation": "Les sénateurs français sont élus au suffrage universel indirect, par un collège de « grands électeurs » 150 000 grands électeurs (maires, conseillers généraux etc…).",
+            "image": null
+        },
+        {
+            "id": 68,
+            "question": "Pour combien d'années sont élus les sénateurs ?",
+            "explanation": "Le Sénat est renouvelé par moitié tous les trois ans ; la durée totale du mandat est donc de six ans.",
+            "image": null
+        },
+        {
+            "id": 69,
+            "question": "Quelle est la différence entre un député et un sénateur ?",
+            "explanation": "Le rôle du sénateur est d’examiner très en détail les lois et les voter, ainsi que de contrôler l’action du gouvernement. Mais à la différence des députés et de l’Assemblée nationale, les sénateurs et le Sénat défendent en plus les intérêts des communes, des départements et des régions, c’est ce qu’on appelle les “collectivités territoriales",
+            "image": null
+        },
+        {
+            "id": 70,
+            "question": "Constitutionnellement qui a le pouvoir de diriger le pays en cas de décès du président de la république ?",
+            "explanation": "C’est le président du Sénat.",
+            "image": null
+        },
+        {
+            "id": 71,
+            "question": "Qui est le président actuel du Sénat ?",
+            "explanation": "C’est Gérard Larcher.",
+            "image": null
+        },
+        {
+            "id": 72,
+            "question": "Qu'est-ce que le conseil constitutionnel ?",
+            "explanation": "Le Conseil constitutionnel est une institution française créée par la Constitution de la Cinquième République du 4 octobre 1958. Il se prononce sur la conformité à la Constitution des lois et de certains règlements dont il est saisi. Il veille à la régularité des élections nationales et référendums.",
+            "image": null
+        },
+        {
+            "id": 73,
+            "question": "Qui est le président du conseil constitutionnel ?",
+            "explanation": "En 2024 c’est Laurent Fabius.",
+            "image": null
+        },
+        {
+            "id": 74,
+            "question": "Quelle est la dernière loi votée à l'assemblée nationale ?",
+            "explanation": "La dernière loi votée à l'Assemblée nationale est la loi n°2025-486 du 2 juin 2025, relative au transfert à l'État des personnels enseignants du premier degré dans les îles Wallis et Futuna.",
+            "image": null
+        },
+        {
+            "id": 75,
+            "question": "Savez vous ce qu'est la cohabitation politique ?",
+            "explanation": "La cohabitation politique désigne la coexistence institutionnelle entre un chef de l’État et un chef du gouvernement (issu de la majorité parlementaire) politiquement antagonistes.",
+            "image": null
+        },
+        {
+            "id": 76,
+            "question": "Citez un exemple de cohabitation politique en France ?",
+            "explanation": "- Mitterrand (PS) / Chirac (RPR). - Chirac (RPR) / Jospin (PS).",
+            "image": null
+        },
+        {
+            "id": 77,
+            "question": "Qui nomme les ministres ?",
+            "explanation": "C’est le premier ministre qui nomme les ministres et les secrétaires d’état.",
+            "image": null
+        },
+        {
+            "id": 78,
+            "question": "Qui nomme le premier ministre ?",
+            "explanation": "C’est le président de la république.",
+            "image": null
+        },
+        {
+            "id": 79,
+            "question": "Où se trouvent les bureaux du premier ministre ?",
+            "explanation": "Ils se trouvent à l’hôtel Matignon à Paris.",
+            "image": null
+        },
+        {
+            "id": 80,
+            "question": "Quelle est l'hymne de la France ?",
+            "explanation": "C'est la Marseillaise.",
+            "image": null
+        },
+        {
+            "id": 81,
+            "question": "Qui a écrit la Marseillaise ?",
+            "explanation": "C'est Claude Joseph Rouget de Lisle.",
+            "image": null
+        },
+        {
+            "id": 82,
+            "question": "Connaissez vous le premier couplet de la Marseillaise ?",
+            "explanation": "Allons enfants de la Patrie, Le jour de gloire est arrivé !  Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes !  Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !",
+            "image": null
+        },
+        {
+            "id": 83,
+            "question": "À quelle occasion la Marseillaise a-t-elle été écrite ?",
+            "explanation": "Dans la nuit du 25 au 26 avril 1792, à la suite de la déclaration de guerre du roi d'Autriche, elle fut composée chez le maire de Strasbourg, dénommé Dietrich, la marseillaise s'intitula \"Chant de guerre pour l'armée du Rhin\".",
+            "image": null
+        },
+        {
+            "id": 84,
+            "question": "Quelle est la devise de l'union européenne ?",
+            "explanation": "Unis dans la diversité.",
+            "image": null
+        },
+        {
+            "id": 85,
+            "question": "Connaissez vous l'hymne de l'union européenne ?",
+            "explanation": "C'est L'ode de la joie de Beethoven.",
+            "image": null
+        },
+        {
+            "id": 86,
+            "question": "Combien de pays compte l'union européenne ?",
+            "explanation": "En 2024 l'union Européennes compte 27 états membres. (Le Royaume-Uni a quitté l'union Européenne en 2020 durant le Brexit)",
+            "image": null
+        },
+        {
+            "id": 87,
+            "question": "Dans quel intérêt les pays européens rejoignent l'union européenne ?",
+            "explanation": "Pour bénéficier d’un marché commun, assurer la paix, favoriser la coopération économique et politique.",
+            "image": null
+        },
+        {
+            "id": 88,
+            "question": "Ou se trouve le siège du parlement Européen ?",
+            "explanation": "Il se trouve à Strasbourg en France.",
+            "image": null
+        },
+        {
+            "id": 89,
+            "question": "Ou se trouve le siège de la commission européenne ?",
+            "explanation": "Il se trouve à Bruxelles en Belgique.",
+            "image": null
+        },
+        {
+            "id": 90,
+            "question": "Quel pays détient la présidence de l'union européenne cette année (2025) ?",
+            "explanation": "En 2025, la Pologne détient la présidence tournante du Conseil de l'Union européenne du 1er janvier au 30 juin. Cette présidence vise à renforcer la sécurité européenne et à promouvoir la coopération entre les États membres.",
+            "image": null
+        },
+        {
+            "id": 91,
+            "question": "Combien d'étoiles comporte-t-il ?",
+            "explanation": "Il comporte 12 étoiles disposées en cercle.",
+            "image": null
+        },
+        {
+            "id": 92,
+            "question": "Que symbolisent ces étoiles ?",
+            "explanation": "Elles symbolisent les idéaux d'unité, de solidarité et d'harmonie entre les peuples européens.",
+            "image": null
+        },
+        {
+            "id": 93,
+            "question": "Que représente la journée du 09 Mai ?",
+            "explanation": "C'est la journée de l'Europe qui représente le jour de la paix.",
+            "image": null
+        },
+        {
+            "id": 94,
+            "question": "Quels sont les symboles de l'union européenne ?",
+            "explanation": "La monnaie européenne : l'euro. Le drapeau Européen. La devise de l'Europe. L'hymne européen. La journée de l'Europe (9 Mai).",
+            "image": null
+        },
+        {
+            "id": 95,
+            "question": "Que connaissez vous sur le traité de Rome ? et quand a-il-eu lieu ?",
+            "explanation": "Le 25 mars 1957, l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas signent à Rome deux traités : le premier crée la Communauté économique européenne (CEE) ; le second crée la Communauté européenne de l'énergie atomique (CEEA ou Euratom)",
+            "image": null
+        },
+        {
+            "id": 96,
+            "question": "Qu'est-ce que la Loi Veil ?",
+            "explanation": "C'est la loi qui encadre l'interruption volontaire de grossesse IVG préparée par la ministre de l'époque Simone Veil et votée le 17 Janvier 1975.",
+            "image": null
+        },
+        {
+            "id": 97,
+            "question": "Que pensez vous de la loi Veil ?",
+            "explanation": "La loi Veil, qui a légalisé l’interruption volontaire de grossesse en 1975, est une avancée majeure pour les droits des femmes en France. Elle garantit la liberté de choix et protège la santé des femmes, bien qu’elle reste un sujet de débats pour certains.",
+            "image": null
+        },
+        {
+            "id": 98,
+            "question": "Que pensez vous de la parité hommes femmes ?",
+            "explanation": "La parité hommes-femmes est un objectif important pour assurer l'égalité des droits et des opportunités entre les sexes. Malgré des progrès significatifs, il reste encore des efforts à faire dans certains domaines, notamment en politique, dans les entreprises et au niveau salarial.",
+            "image": null
+        },
+        {
+            "id": 99,
+            "question": "Avons-nous atteint cette parité dans tous les domaines ?",
+            "explanation": "Non, la parité hommes-femmes n'est pas encore atteinte dans tous les domaines, notamment en politique, dans certains secteurs professionnels, et en matière de salaires.",
+            "image": null
+        },
+        {
+            "id": 100,
+            "question": "Quels seront les prochaines élections ?",
+            "explanation": "Les prochaines élections seront les élections présidentielles françaises prévues en avril 2027.",
+            "image": null
+        },
+        {
+            "id": 101,
+            "question": "Qui décidera de vous octroyer ou non la nationalité française ?",
+            "explanation": "C’est le ministre de l’Intérieur qui décide de vous accorder ou non la nationalité française.",
+            "image": null
+        },
+        {
+            "id": 102,
+            "question": "Quel ministre gère les relations entre l'état et les institutions religieuses ?",
+            "explanation": "C’est le ministre de l’Intérieur qui est en charge des relations entre l’État et les cultes.",
+            "image": null
+        },
+        {
+            "id": 103,
+            "question": "En quelle année les citoyens Français sont-ils devenus Européens ?",
+            "explanation": "Les citoyens français sont devenus citoyens européens en 1992, avec l'entrée en vigueur du traité de Maastricht.",
+            "image": null
+        },
+        {
+            "id": 104,
+            "question": "Qui a le droit d'accéder à l'emploi public ?",
+            "explanation": "Les citoyens français étant égaux, ils peuvent accéder à tout emploi public selon leurs capacités.",
+            "image": null
+        },
+        {
+            "id": 105,
+            "question": "En cas de conflit armé qui pourra être appelé à défendre la patrie ?",
+            "explanation": "Tous les citoyens français peuvent être appelés à défendre la patrie en cas de conflit armé, notamment par le biais du service national ou de la mobilisation générale.",
+            "image": null
+        },
+        {
+            "id": 106,
+            "question": "Qu'est-ce que le système de sécurité sociale ?",
+            "explanation": "Le système de Sécurité sociale se compose d’un ensemble d’institutions qui ont pour fonction de protéger les individus des conséquences de divers événements ou situations, généralement qualifiés de risques sociaux.",
+            "image": null
+        },
+        {
+            "id": 107,
+            "question": "Par qui est-il financé ?",
+            "explanation": "Il est financé par les entreprises et les gens qui travaillent (c’est une application de la fraternité)",
+            "image": null
+        },
+        {
+            "id": 108,
+            "question": "Qui finance les services publics ?",
+            "explanation": "Ce sont les gens qui travaillent à travers les impôts.",
+            "image": null
+        },
+        {
+            "id": 109,
+            "question": "Etes-vous obligé de payer vos impôts ?",
+            "explanation": "C’est l’une des rares questions piège de l’entretien de naturalisation Française. Payer ses impôts est obligatoire !",
+            "image": null
+        },
+        {
+            "id": 110,
+            "question": "Si vous obtenez la nationalité Française comptez-vous vivre en France ?",
+            "explanation": "Encore une question piège de l’entretien de naturalisation Française, vous obtenez la nationalité Française pour vivre principalement en France !",
+            "image": null
+        },
+        {
+            "id": 111,
+            "question": "Que pensez-vous du système éducatif français, soit pour vous-même, soit pour vos enfants ?",
+            "explanation": "Le système éducatif français est reconnu pour sa rigueur, son accessibilité et son excellence, notamment dans des domaines comme les sciences, la littérature et la philosophie. Il garantit à chacun les mêmes chances de réussite grâce à un enseignement de qualité et un accès à l’éducation pour tous. Son ouverture à la réflexion critique et à la culture générale en fait un pilier essentiel de la République, formant des citoyens éclairés et responsables.",
+            "image": null
+        },
+        {
+            "id": 112,
+            "question": "Pouvez-vous citer trois sujets d'actualité récents en France qui vous ont particulièrement marqué ?",
+            "explanation": "Trois sujets qui m'ont marqué sont :\n- Utilisation de l’article 49.3 pour le budget 2025 : Début février 2025, le gouvernement a fait appel à l’article 49.3 pour faire adopter le budget de l’année.\n- Réduction des tarifs de l’électricité : Depuis le 1ᵉʳ février 2025, une baisse de 15 % des prix de l’électricité a été appliquée, apportant un soulagement à de nombreux foyers français.\n- Projet de rénovation du Louvre : Le célèbre musée parisien a annoncé une initiative majeure visant à moderniser ses infrastructures et à améliorer l’accueil des visiteurs, tout en renforçant la préservation de ses collections. La réponse est à développer en fonction de l’actualité en France.",
+            "image": null
+        },
+        {
+            "id": 113,
+            "question": "La loi sur le mariage pour tous a été adoptée sous quel président de la république ?",
+            "explanation": "La loi sur le mariage pour tous a été adoptée sous la présidence de François Hollande,",
+            "image": null
+        },
+        {
+            "id": 114,
+            "question": "Pouvez-vous citer quelques partis politiques français ?",
+            "explanation": "Parmi les principaux partis politiques en France, on trouve Renaissance (ex-La République en Marche), Les Républicains, le Parti Socialiste, La France Insoumise et le Rassemblement National.",
+            "image": null
+        },
+        {
+            "id": 115,
+            "question": "Pourquoi vote-t-on en démocratie ?",
+            "explanation": "Le vote est un droit et un devoir civique permettant aux citoyens d’exprimer leurs choix politiques et d’influencer les décisions publiques.",
+            "image": null
+        },
+        {
+            "id": 116,
+            "question": "Pourquoi la France a-t-elle organisé des élections législatives anticipées en 2024 ?",
+            "explanation": "La dissolution de l'Assemblée nationale par le président Emmanuel Macron a entraîné des élections anticipées en raison d'une impasse législative suite aux élections européennes qui ont eu lieu en juin 2024. Le gouvernement ne parvenait pas à rassembler une majorité pour faire voter certaines lois importantes, ce qui reflétait des tensions politiques persistantes.",
+            "image": null
+        },
+        {
+            "id": 117,
+            "question": "Quels blocs politiques se sont démarqués lors de ces élections ?",
+            "explanation": "Les élections ont été marquées par l’avancée de trois grands blocs : le Rassemblement National (RN), la coalition pro-présidentielle (Ensemble) et le Nouveau Front Populaire, représentant la gauche. Le RN, qui a remporté le plus de voix au premier tour. Ensuite, le nouveau front populaire est arrivé en tête au second tour avec une majorité relative.",
+            "image": null
+        },
+        {
+            "id": 118,
+            "question": "Les élections ont-elles permis de former une majorité au Parlement ?",
+            "explanation": "Non, aucun groupe politique n’a obtenu de majorité absolue, ce qui a laissé l'Assemblée nationale fragmentée. Les partis doivent donc négocier des accords pour former une majorité de gouvernance, faute de quoi de nouvelles élections pourraient être envisagées.",
+            "image": null
+        },
+        {
+            "id": 119,
+            "question": "Si l'on devait ajouter une cinquième valeur aux principes fondamentaux de la République française, que serait-elle selon vous ?",
+            "explanation": "L'indivisibilité : signifie que la République ne peut être fragmentée : il n’existe qu’un seul peuple français, avec les mêmes lois sur tout le territoire.",
+            "image": null
+        },
+        {
+            "id": 120,
+            "question": "Que signifie Le faisceau de licteur ?",
+            "explanation": "Le faisceau de licteur est un symbole de l'autorité de l'État en France. Il représente l'unité et la force collective du peuple français. Il est composé d'un faisceau de verges entourant une hache, rappelant l'autorité de la République et la puissance de l'État.",
+            "image": null
+        },
+        {
+            "id": 121,
+            "question": "Que signifie Le sceau de la république ?",
+            "explanation": "Le sceau de la République française est utilisé pour authentifier les actes officiels du gouvernement. Il représente l'État et est généralement gravé sur les documents officiels et les pièces de monnaie. Le sceau peut varier dans sa représentation, mais il symbolise l'autorité et l'authenticité des décisions et des actes de l'État.",
+            "image": null
+        },
+        {
+            "id": 122,
+            "question": "Que signifie la république pour vous ?",
+            "explanation": "La république est un mode d'organisation d'un pays dans lequel le pouvoir est exercé par des représentants élus de la population (directement ou indirectement). Le chef de l'État exerçant un mandat temporaire est désigné pour un mandat limité (souvent par élection) et ne détient pas le pouvoir de manière exclusive.",
+            "image": null
+        },
+        {
+            "id": 123,
+            "question": "Quelle est la différence entre République et démocratie ?",
+            "explanation": "- Une république n'a pas de roi, mais cela ne signifie pas que c’est une démocratie, tandis qu'une démocratie signifie que le peuple a le pouvoir, et cela peut exister dans une république ou une monarchie.\n- Une république n’est pas forcément une démocratie. Ex : La Chine est une république mais pas une démocratie (régime autoritaire).\n- Une démocratie n’est pas forcément une république. Ex : Le Royaume-Uni est une démocratie mais reste une monarchie.",
+            "image": null
+        },
+        {
+            "id": 124,
+            "question": "Quels sont les différents types de Monarchies ?",
+            "explanation": "- Monarchie absolue → Le roi détient tous les pouvoirs (ex : Arabie Saoudite).\n- Monarchie constitutionnelle → Le roi règne mais ne gouverne pas, il partage le pouvoir avec un gouvernement élu (ex : Royaume-Uni, Espagne).\n- Monarchie parlementaire → Le roi a un rôle symbolique, tout le pouvoir appartient au parlement élu (ex : Suède, Belgique).",
+            "image": null
+        },
+        {
+            "id": 125,
+            "question": "Quels sont les différents types de Républiques",
+            "explanation": "- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil).\n- République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie).\n- République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie).\n- République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).",
+            "image": null
+        },
+        {
+            "id": 126,
+            "question": "Qui occupe actuellement la fonction de président de la République ?",
+            "explanation": "Le président de la République actuel est Emmanuel Macron. Il est le huitième président de la Cinquième République.",
+            "image": null
+        },
+        {
+            "id": 127,
+            "question": "Où se situe le siège de la Présidence de la République ?",
+            "explanation": "Le siège de la Présidence de la République est situé à l'Élysée.",
+            "image": null
+        },
+        {
+            "id": 128,
+            "question": "Quelle est la durée du mandat présidentiel?",
+            "explanation": "Le président de la République est élu pour un mandat de 5 ans",
+            "image": null
+        },
+        {
+            "id": 129,
+            "question": "Comment est élu le président de la république ?",
+            "explanation": "Le président est élu par le biais d'un suffrage universel direct. L'élection se déroule en deux tours, et pour être élu, un candidat doit obtenir la majorité absolue des voix. Le droit de vote est accordé aux citoyens français majeurs.",
+            "image": null
+        },
+        {
+            "id": 130,
+            "question": "Dans quelle république nous trouvons-nous actuellement ?",
+            "explanation": "Nous nous trouvons actuellement dans la Cinquième République, instaurée par Charles de Gaulle.",
+            "image": null
+        },
+        {
+            "id": 131,
+            "question": "Quand la Cinquième République a-t- elle été instaurée et quel événement marquant l'a accompagnée ?",
+            "explanation": "La Constitution de la Cinquième République a été adoptée en 1958, marquant ainsi la séparation des pouvoirs exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": 132,
+            "question": "Pouvez-vous citer les présidents de la Cinquième République dans l’ordre ?",
+            "explanation": "Les présidents de la Cinquième République sont :\n- Charles De Gaulle : 1959 - 1969\n- Georges Pompidou : 1969- 1974\n- Valéry Giscard d'Estaing : 1974-1981\n- François Mitterrand : 1981-1995\n- Jacques Chirac : 1995-2007\n- Nicolas Sarkozy : 2007-2012\n- François Hollande : 2012 - 2017\n- Emmanuel Macron : 2017- Mandat en cours",
+            "image": null
+        },
+        {
+            "id": 133,
+            "question": "Qui détient le commandement de l'armée ?",
+            "explanation": "Le président de la République.",
+            "image": null
+        },
+        {
+            "id": 134,
+            "question": "Comment le président gouverne-t-il le pays ?",
+            "explanation": "Le président gouverne en dirigeant l'exécutif, en prenant des décisions politiques, en promulguant des lois, et en représentant le pays à l'international.",
+            "image": null
+        },
+        {
+            "id": 135,
+            "question": "En quelle année le droit de vote des femmes a-t-il été introduit en France ?",
+            "explanation": "1944.",
+            "image": null
+        },
+        {
+            "id": 136,
+            "question": "En quelle année le droit de vote des hommes a-t-il été introduit en France ?",
+            "explanation": "Le droit de vote des hommes a été introduit en 1848, pendant la Deuxième République, avec le suffrage universel masculin.",
+            "image": null
+        },
+        {
+            "id": 137,
+            "question": "Quel est le système politique de la France ?",
+            "explanation": "Une république semi-présidentielle.",
+            "image": null
+        },
+        {
+            "id": 138,
+            "question": "Quel est le régime politique de la France ?",
+            "explanation": "La France est une république démocratique.",
+            "image": null
+        },
+        {
+            "id": 139,
+            "question": "Quel est le rôle du Premier ministre en France ?",
+            "explanation": "Diriger le gouvernement et mettre en œuvre la politique nationale.",
+            "image": null
+        },
+        {
+            "id": 140,
+            "question": "Où se trouve le siège du Premier ministre ?",
+            "explanation": "À l’Hôtel de Matignon, à Paris.",
+            "image": null
+        },
+        {
+            "id": 141,
+            "question": "Quels types d’élections ont lieu en France ?",
+            "explanation": "En France, on trouve les élections présidentielles (5ans), législatives (5ans), municipales (6ans), régionales (6ans), européennes (5ans), et les élections départementales (6ans).",
+            "image": null
+        },
+        {
+            "id": 142,
+            "question": "Quelles sont les dernières élections qui ont eu lieu en France ?",
+            "explanation": "- Élections législatives : Les élections législatives ont eu lieu les 30 juin et 7 juillet 2024 pour élire les membres de la 17ᵉ Assemblée nationale.\n- Élections européennes : Elles se sont déroulées le 9 juin 2024 pour élire les représentants français au Parlement européen.\n- Élections présidentielles : Les élections présidentielles ont eu lieu les 10 et 24 avril 2022, et ont abouti à la réélection d'Emmanuel Macron.",
+            "image": null
+        },
+        {
+            "id": 143,
+            "question": "Quelles sont les prochaines élections ?",
+            "explanation": "Les prochaines élections en France sont les suivantes :\n- Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes.\n- Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat.\n- Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans.\n- Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen.  Ils peuvent avoir d’autres élections en fonction de l’actualité.",
+            "image": null
+        },
+        {
+            "id": 144,
+            "question": "Quelles sont les principales institutions de la République française ?",
+            "explanation": "Les institutions comprennent :\n- Le pouvoir exécutif : Ce pouvoir est détenu par le président de la République et le gouvernement dirigé par le Premier ministre. Ils sont responsables de l’application des lois et de la gestion de la politique nationale et internationale. Le président nomme le Premier ministre, préside le Conseil des ministres, et peut proposer des référendums ou dissoudre l’Assemblée nationale.\n- Le pouvoir législatif : Ce pouvoir est exercé par le Parlement, composé de deux chambres, chambre basse « l’Assemblée nationale » et la chambre haute « du Sénat ». Leur mission est de voter les lois et de contrôler le gouvernement. Les députés de l’Assemblée nationale sont élus au suffrage direct pour cinq ans, tandis que les sénateurs sont élus au suffrage indirect pour six ans. L'Assemblée a une prépondérance en cas de désaccord entre les deux chambres.\n- Le pouvoir judiciaire : Ce pouvoir est indépendant et exercé par les juges et magistrats. Son rôle est de garantir le respect des lois et de trancher les litiges, protégeant ainsi les droits des citoyens. Le Conseil constitutionnel veille, quant à lui, à la conformité des lois à la Constitution.",
+            "image": null
+        },
+        {
+            "id": 145,
+            "question": "C’est quoi le gouvernement ?",
+            "explanation": "Le gouvernement est l'organe exécutif chargé de mettre en œuvre les lois et de gérer le pays. Il est dirigé par le Premier ministre et comprend des ministres, chacun responsable d'un secteur particulier comme l'économie ou la santé. Les secrétaires d'État sont des membres du gouvernement qui assistent les ministres dans des domaines spécifiques. Ils ont un rôle plus restreint que les ministres, mais aident à la gestion des affaires publiques. Le gouvernement agit sous l'autorité du président de la République.",
+            "image": null
+        },
+        {
+            "id": 146,
+            "question": "De quoi est composé le parlement français ?",
+            "explanation": "Le parlement français est composé de deux chambres (bicaméral), c'est-à-dire:\n- Le Sénat, appelée « chambre haute », avec 348 sénateurs,\n- L’Assemblée nationale, dite « chambre basse », avec 577 députés.",
+            "image": null
+        },
+        {
+            "id": 147,
+            "question": "Qu'est-ce que le Sénat en France ?",
+            "explanation": "Le Sénat est la chambre haute du Parlement français. Il est composé de 348 sénateurs élus au suffrage universel indirect pour un mandat de 6 ans. Le Sénat participe à l'élaboration des lois, les examine et peut les amender, mais il ne peut pas empêcher leur adoption.",
+            "image": null
+        },
+        {
+            "id": 148,
+            "question": "Qu'est-ce que l'Assemblée nationale ?",
+            "explanation": "L'Assemblée nationale est la chambre basse du Parlement français. Elle est composée de 577 députés élus par les citoyens au suffrage universel direct pour un mandat de 5 ans. L'Assemblée nationale vote les lois et contrôle le gouvernement.",
+            "image": null
+        },
+        {
+            "id": 149,
+            "question": "C'est quoi le suffrage universel ?",
+            "explanation": "Le suffrage universel est un système de vote où tous les citoyens adultes, sans distinction de sexe, de richesse ou de statut, ont le droit de participer aux élections. En France, il est utilisé pour élire les députés, le président de la République et d'autres représentants. Il peut être direct (le peuple vote directement pour les candidats) ou indirect (les électeurs désignent des représentants qui choisiront les élus).",
+            "image": null
+        },
+        {
+            "id": 150,
+            "question": "En cas de désaccord entre le sénat et l’assemble, qui a le dernier mot ?",
+            "explanation": "L’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres (AN et Sénat). Si l'Assemblée nationale adopte un texte de loi après un désaccord avec le Sénat, elle peut décider de l'adopter définitivement sans l'accord du Sénat. Toutefois, le Sénat peut proposer des modifications et renvoyer le texte à l'Assemblée nationale. En cas de blocage, c'est l'Assemblée nationale qui a le pouvoir d'imposer sa version.",
+            "image": null
+        },
+        {
+            "id": 151,
+            "question": "Quelle est la durée du mandat d'un député à l'Assemblée nationale ?",
+            "explanation": "5 ans.",
+            "image": null
+        },
+        {
+            "id": 152,
+            "question": "Quelle est la durée du mandat d'un Sénateur ?",
+            "explanation": "6 ans.",
+            "image": null
+        },
+        {
+            "id": 153,
+            "question": "Où siège le Sénat ?",
+            "explanation": "Au Palais du Luxembourg, à Paris.",
+            "image": null
+        },
+        {
+            "id": 154,
+            "question": "Qui est le chef de l’Assemblée nationale ?",
+            "explanation": "Le président de l’Assemblée nationale, élu par les députés.",
+            "image": null
+        },
+        {
+            "id": 155,
+            "question": "Qui est le président du Séant actuel ?",
+            "explanation": "Gérard Larcher",
+            "image": null
+        },
+        {
+            "id": 156,
+            "question": "Comment est élu le président du Sénat ?",
+            "explanation": "Il est élu au scrutin secret par les sénateurs lors de chaque renouvellement partiel du Sénat, tous les 3 ans.",
+            "image": null
+        },
+        {
+            "id": 157,
+            "question": "Qui peut être candidat à la présidence du Sénat ?",
+            "explanation": "Tout sénateur peut se présenter.",
+            "image": null
+        },
+        {
+            "id": 158,
+            "question": "Quelle est la durée du mandat du président du Sénat?",
+            "explanation": "3 ans, renouvelable.",
+            "image": null
+        },
+        {
+            "id": 159,
+            "question": "Pourquoi le président du Sénat est-il élu tous les 3 ans ?",
+            "explanation": "Parce que le Sénat est renouvelé par moitié tous les 3 ans, et à chaque renouvellement, les sénateurs élisent un président.",
+            "image": null
+        },
+        {
+            "id": 160,
+            "question": "Pourquoi parle-t-on de \"renouvellement partiel\" du Sénat ?",
+            "explanation": "Contrairement à l’Assemblée nationale, qui est renouvelée entièrement tous les 5 ans, le Sénat est renouvelé par moitié tous les 3 ans pour assurer une certaine stabilité institutionnelle.",
+            "image": null
+        },
+        {
+            "id": 161,
+            "question": "Quel est le rôle du président du Sénat ?",
+            "explanation": "Il dirige les débats, assure le bon fonctionnement du Sénat et remplace le président de la République en cas de vacance du pouvoir.",
+            "image": null
+        },
+        {
+            "id": 162,
+            "question": "Qui est le président l’assemblée nationale actuel ?",
+            "explanation": "Yaël Braun-Pivet élue le Jeudi 18 juillet 2024.",
+            "image": null
+        },
+        {
+            "id": 163,
+            "question": "Comment est élu le président de l’Assemblée nationale ?",
+            "explanation": "Il est élu à la majorité absolue par les députés lors de la première séance de la législature, après les élections législatives.",
+            "image": null
+        },
+        {
+            "id": 164,
+            "question": "Quelle est la durée du mandat du président de l’Assemblée nationale ?",
+            "explanation": "5 ans, soit la durée de la législature.",
+            "image": null
+        },
+        {
+            "id": 165,
+            "question": "Quel est le rôle du président de l’Assemblée nationale ?",
+            "explanation": "Il dirige les débats, veille au respect du règlement et représente l’Assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": 166,
+            "question": "Quelle est la principale différence entre le Sénat et l'Assemblée nationale ?",
+            "explanation": "L'Assemblée nationale est élue par le peuple, tandis que le Sénat est élu par un collège électoral.",
+            "image": null
+        },
+        {
+            "id": 167,
+            "question": "Pourquoi le président de l’Assemblée nationale est-il élu pour 5 ans ?",
+            "explanation": "Parce que l’Assemblée nationale est entièrement renouvelée à chaque élection législative, qui a lieu tous les 5 ans.",
+            "image": null
+        },
+        {
+            "id": 168,
+            "question": "Pourquoi l’Assemblée nationale est-elle renouvelée entièrement et pas partiellement comme le Sénat ?",
+            "explanation": "Car elle représente directement les citoyens, élus au suffrage universel direct. Un renouvellement total assure une représentation fidèle des choix électoraux.",
+            "image": null
+        },
+        {
+            "id": 169,
+            "question": "Quel est le rôle du Parlement français ?",
+            "explanation": "Il vote les lois et contrôle le gouvernement.",
+            "image": null
+        },
+        {
+            "id": 170,
+            "question": "Le président de la République peut-il dissoudre le Sénat ?",
+            "explanation": "Non, la Constitution ne lui donne pas ce pouvoir.",
+            "image": null
+        },
+        {
+            "id": 171,
+            "question": "Le président de la République peut-il dissoudre l’Assemblée nationale ?",
+            "explanation": "Oui, selon l’article 12 de la Constitution, il peut dissoudre l’Assemblée nationale à tout moment, après consultation du Premier ministre et des présidents des deux assemblées.",
+            "image": null
+        },
+        {
+            "id": 172,
+            "question": "Pourquoi ne peut-il pas dissoudre le Sénat ?",
+            "explanation": "Parce que le Sénat est élu au suffrage indirect par un collège de grands électeurs. Il incarne une stabilité institutionnelle, et sa dissolution pourrait fragiliser l’équilibre des pouvoirs.",
+            "image": null
+        },
+        {
+            "id": 173,
+            "question": "C'est quoi l'article 49.3 ?",
+            "explanation": "L'article 49.3 de la constitution permet au gouvernement de faire passer une loi sans vote à l’Assemblée nationale. Les députés peuvent répondre en déposant une motion de censure. Si elle est votée, le gouvernement tombe. Sinon, la loi est adoptée automatiquement.",
+            "image": null
+        },
+        {
+            "id": 174,
+            "question": "C'est quoi une motion de censure ?",
+            "explanation": "Une motion de censure est un vote organisé par l’Assemblée nationale pour exprimer un désaccord avec le gouvernement. Si la majorité des députés vote cette motion, le gouvernement doit démissionner.",
+            "image": null
+        },
+        {
+            "id": 175,
+            "question": "Le Sénat peut-il déposer une motion de censure ?",
+            "explanation": "Non, le Sénat ne peut pas déposer de motion de censure contre le gouvernement. Seule l’Assemblée nationale détient ce pouvoir, car elle représente directement les citoyens par le suffrage universel direct.",
+            "image": null
+        },
+        {
+            "id": 176,
+            "question": "L'article 49.3 s'applique-t-il devant l'Assemblée nationale et le Sénat ?",
+            "explanation": "L'article 49.3 de la Constitution ne peut être utilisé que devant l'Assemblée nationale. Il permet au Premier ministre d’engager la responsabilité du gouvernement sur un texte de loi, ce qui entraîne son adoption sans vote, sauf si une motion de censure est déposée et adoptée par 289 députés (majorité absolue).\n\nLe Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa  responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement.\n\nCependant, le Sénat peut débattre et voter des lois, mais son opposition ne bloque pas définitivement un texte, puisque l’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres.",
+            "image": null
+        },
+        {
+            "id": 177,
+            "question": "Quelles sont les conditions pour adopter une motion de censure ?",
+            "explanation": "Pour qu'une motion de censure soit adoptée à l’Assemblée nationale, elle doit respecter plusieurs conditions notamment :\n- Être déposée par au moins 1/10ᵉ des députés (soit 58 sur 577).\n- Être votée à la majorité absolue des députés, soit au moins 289 voix sur 577. Si elle est adoptée, le gouvernement doit démissionner immédiatement.",
+            "image": null
+        },
+        {
+            "id": 178,
+            "question": "Quel est le délai pour déposer une motion de censure après l’utilisation du 49.3 ?",
+            "explanation": "Après l’engagement de la responsabilité du gouvernement sur un texte avec l’article 49.3, les députés ont un délai de 24 heures pour déposer une motion de censure. Passé ce délai, aucune motion ne peut être enregistrée, et la loi est adoptée automatiquement si aucune motion n’a été votée.",
+            "image": null
+        },
+        {
+            "id": 179,
+            "question": "Le président de la République représente quel pouvoir ?",
+            "explanation": "Il représente le pouvoir exécutif et est le garant des institutions, du respect de la Constitution et de l’indépendance nationale. Il nomme le Premier ministre et veille au bon fonctionnement des pouvoirs publics.",
+            "image": null
+        },
+        {
+            "id": 180,
+            "question": "Qui détient le pouvoir exécutif et par qui est-il dirigé ?",
+            "explanation": "Le pouvoir exécutif est détenu par le président de la République et le gouvernement, dirigé par le Premier ministre. Le gouvernement met en œuvre les décisions politiques sous l’autorité du président.",
+            "image": null
+        },
+        {
+            "id": 181,
+            "question": "Qu'est-ce que la cohabitation en politique française ?",
+            "explanation": "Une période où le Président de la République et le Premier ministre appartiennent à des camps politiques opposés.",
+            "image": null
+        },
+        {
+            "id": 182,
+            "question": "Quel est l’âge légal pour voter en France ?",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": 183,
+            "question": "Comment est élu le maire ?",
+            "explanation": "Le maire est élu au suffrage indirect. Cela signifie que ce ne sont pas directement les habitants qui votent pour lui, mais les membres du conseil municipal.",
+            "image": null
+        },
+        {
+            "id": 184,
+            "question": "Comment est élu le conseil municipal ?",
+            "explanation": "- Lors des élections municipales, les habitants de la commune votent pour élire les conseillers municipaux. Ces élections ont lieu tous les 6 ans.\n- Le mode de scrutin dépend de la taille de la commune (majoritaire pour les petites communes, proportionnel pour les grandes).\n- Une fois élus, les conseillers municipaux se réunissent lors de leur première séance.\n- Ils votent pour choisir le maire parmi eux.\n- L’élection se fait à bulletin secret et le maire doit obtenir la majorité absolue (plus de la moitié des voix).",
+            "image": null
+        },
+        {
+            "id": 185,
+            "question": "Comment sont élus les adjoints aux maires :",
+            "explanation": "Les adjoints au maire sont élus par le conseil municipal lors de sa première réunion après les élections municipales. L’élection se fait au scrutin de liste à la majorité absolue. Leur nombre est déterminé en fonction de la taille de la commune, et ils assistent le maire dans ses fonctions en recevant des délégations de compétences.",
+            "image": null
+        },
+        {
+            "id": 186,
+            "question": "Pendant combien de mois après l’acquisition de la nationalité est-on autorisée à voter ?",
+            "explanation": "Dès l’inscription sur les listes électorales, généralement dans les mois suivant l’acquisition de la nationalité.",
+            "image": null
+        },
+        {
+            "id": 187,
+            "question": "Citez le nom du président de votre région",
+            "explanation": "Exemple : Valérie Pécresse – Région île de France ; Xavier Bertrand : Hauts-de-France…",
+            "image": null
+        },
+        {
+            "id": 188,
+            "question": "Comment sont élus les conseillers régionaux ?",
+            "explanation": "Les conseillers régionaux sont élus pour six ans au suffrage universel direct lors des élections régionales. Le scrutin majoritaire est un vote de liste à deux tours.",
+            "image": null
+        },
+        {
+            "id": 189,
+            "question": "Comment sont élus les présidents de région et de départements ?",
+            "explanation": "Les présidents du conseil régional et du conseil départemental sont élus au suffrage universel indirect, car ils ne sont pas élus directement par les citoyens mais par les conseillers régionaux et départementaux.",
+            "image": null
+        },
+        {
+            "id": 190,
+            "question": "Qui dirige la France en cas de décès ou d’empêchement du Président de la République ?",
+            "explanation": "En cas de décès, démission ou empêchement du Président de la République, le Président du Sénat assure l’intérim.",
+            "image": null
+        },
+        {
+            "id": 191,
+            "question": "Quelle est la différence entre un décret et une loi en France ?",
+            "explanation": "Une loi est votée par le Parlement, tandis qu'un décret est un acte administratif pris par le Président ou le Premier ministre.",
+            "image": null
+        },
+        {
+            "id": 192,
+            "question": "Quels sont certains droits et devoirs des citoyens français ?",
+            "explanation": "Les citoyens français ont le droit de voter, de circuler librement, d’accéder à la justice, et à l’éducation. Parmi leurs devoirs figurent le respect des lois, le paiement des impôts, et la participation au jury d’assises si nécessaire.",
+            "image": null
+        },
+        {
+            "id": 193,
+            "question": "Qui est le nouveau président du conseil constitutionnel?",
+            "explanation": "Richard Ferrand nommé le 19 février 2025.",
+            "image": null
+        },
+        {
+            "id": 194,
+            "question": "Comment est nommé le président du Conseil constitutionnel ?",
+            "explanation": "Le président du Conseil constitutionnel est désigné par le président de la République parmi les membres du Conseil. Sa nomination doit être validée par les commissions des lois de l'Assemblée nationale et du Sénat.",
+            "image": null
+        },
+        {
+            "id": 195,
+            "question": "Quel document établit les droits fondamentaux des citoyens français ?",
+            "explanation": "La Constitution de la Ve République.",
+            "image": null
+        },
+        {
+            "id": 196,
+            "question": "Qui était le général Charles de Gaulle ?",
+            "explanation": "Leader de la France libre pendant la Seconde Guerre mondiale et premier président de la Ve République.",
+            "image": null
+        },
+        {
+            "id": 197,
+            "question": "Quelle est la fonction du Médiateur de la République ?",
+            "explanation": "Aider à résoudre les litiges entre les citoyens et l'administration.",
+            "image": null
+        },
+        {
+            "id": 198,
+            "question": "Combien y a-t-il eu de présidents sous la Cinquième République ?",
+            "explanation": "Huit (8) présidents élus depuis 1958.",
+            "image": null
+        },
+        {
+            "id": 199,
+            "question": "Quels sont les quatre premières personnalités de l'État en France ?",
+            "explanation": "- Le Président de la République → Chef de l'État, garant des institutions et de la Constitution.\n- Le Premier ministre → Chef du gouvernement, responsable de la politique nationale.\n- Le Président du Sénat → Deuxième personnage de l’État, il assure l’intérim en cas de vacance de la présidence.\n- Le Président de l’Assemblée nationale → Dirige les débats à l’Assemblée et joue un rôle clé dans le processus législatif. Cet ordre définit aussi la hiérarchie dans les cérémonies et l’État.",
+            "image": null
+        },
+        {
+            "id": 200,
+            "question": "Quelles sont les dates clés de la Révolution française ?",
+            "explanation": "- 5 mai 1789 : Ouverture des États généraux par Louis XVI (16).\n- 17 juin 1789 : Le tiers état se proclame Assemblée nationale.\n- 20 juin 1789 : Serment du Jeu de Paume, engagement de donner une constitution à la France.\n- 14 juillet 1789 : Prise de la Bastille, symbole du début de la Révolution.\n- 26 août 1789 : Adoption de la Déclaration des Droits de l’Homme et du Citoyen.\n- 21 juin 1791 : Fuite du roi à Varennes, qui fragilise la monarchie.\n- 10 août 1792 : Prise des Tuileries, arrestation du roi.\n- 21 janvier 1793 : Exécution de Louis XVI (16).\n- 16 octobre 1793 : Exécution de Marie-Antoinette.\n- 9 novembre 1799: Coup d’État de Napoléon Bonaparte, fin de la Révolution.",
+            "image": null
+        },
+        {
+            "id": 201,
+            "question": "quel était le résultat de cette ouverture ?",
+            "explanation": "Chaque ordre devait exprimer ses doléances (revendications) durant cette réunion. Le Tiers-État, frustré par l'injustice du système de vote, se proclame Assemblée nationale le 17 juin 1789, marquant ainsi le début de la Révolution française.",
+            "image": null
+        },
+        {
+            "id": 202,
+            "question": "Citez Quelques événements marquants de la Révolution ?",
+            "explanation": "- La Nuit du 4 août 1789 : Abolition des privilèges et des droits féodaux.\n\n- La Constitution de 1791 : Instauration d’une monarchie constitutionnelle.\n\n- La République proclamée le 22 septembre 1792 : Fin de la monarchie, début de la Première République.\n\n- La Terreur (1793-1794) : Période marquée par des exécutions massives sous la direction de Robespierre.\n\n- Le Directoire (1795-1799) : Période de gouvernement instable avant l’arrivée de Napoléon.",
+            "image": null
+        },
+        {
+            "id": 203,
+            "question": "Quelles sont les principales réformes de la Révolution ?",
+            "explanation": "- Abolition des privilèges et des droits féodaux (4 août 1789).\n\n- Déclaration des Droits de l’Homme et du Citoyen (26 août 1789).\n\n- Constitution de 1791 instaurant une monarchie constitutionnelle.\n\n- Création du suffrage universel masculin en 1792.\n\n- Instauration du calendrier républicain (1793-1805).",
+            "image": null
+        },
+        {
+            "id": 204,
+            "question": "Quand et pourquoi la Première République a-t-elle été proclamée ?",
+            "explanation": "Elle a été proclamée le 21 septembre 1792 après la chute de la monarchie. La fuite du roi en 1791 et son procès pour trahison ont contribué à son abolition.",
+            "image": null
+        },
+        {
+            "id": 205,
+            "question": "Quels étaient les pouvoirs sous la Première République ?",
+            "explanation": "- La Convention nationale (1792-1795), qui gouvernait et adoptait les lois.\n\n- Le Comité de salut public (1793-1794), dirigé par Robespierre, qui a exercé un pouvoir fort pendant la Terreur.\n\n- Le Directoire (1795-1799), un gouvernement plus modéré avec cinq directeurs.",
+            "image": null
+        },
+        {
+            "id": 206,
+            "question": "Quand la Première République prend-elle fin?",
+            "explanation": "Le 2 décembre 1804, Napoléon Bonaparte se fait sacrer Empereur des Français, mettant fin à la Première République et établissant le Premier Empire.",
+            "image": null
+        },
+        {
+            "id": 207,
+            "question": "Quand et pourquoi la Deuxième République a-t-elle été proclamée ?",
+            "explanation": "Elle est proclamée le 24 février 1848, après la révolution de février qui entraîne l'abdication du roi Louis-Philippe Ier et la fin de la monarchie de Juillet.",
+            "image": null
+        },
+        {
+            "id": 208,
+            "question": "Quelles sont les premières grandes mesures de la Deuxième République ?",
+            "explanation": "- Établissement du suffrage universel masculin (27 millions de citoyens peuvent voter).\n\n- Abolition définitive de l'esclavage dans les colonies françaises (27 avril 1848, sous l'impulsion de Victor Schœlcher).\n\n- Création des Ateliers nationaux pour fournir du travail aux ouvriers (abandonnés après peu de temps).",
+            "image": null
+        },
+        {
+            "id": 209,
+            "question": "Qui est élu premier président de la République ?",
+            "explanation": "Louis-Napoléon Bonaparte, élu au suffrage universel masculin le 10 décembre 1848 avec 74% des voix.",
+            "image": null
+        },
+        {
+            "id": 210,
+            "question": "Comment la Deuxième République prend-elle fin ?",
+            "explanation": "Par le coup d'État du 2 décembre 1851, où Louis-Napoléon Bonaparte dissout l’Assemblée nationale et établit un pouvoir personnel.",
+            "image": null
+        },
+        {
+            "id": 211,
+            "question": "Que devient la France après la Deuxième République ?",
+            "explanation": "Un an après son coup d’État, Louis-Napoléon Bonaparte se fait proclamer empereur sous le nom de Napoléon III, marquant le début du Second Empire (1852-1870).",
+            "image": null
+        },
+        {
+            "id": 212,
+            "question": "Quand et pourquoi la Troisième République est-elle proclamée ?",
+            "explanation": "Le 4 septembre 1870, après la défaite de Napoléon III face à la Prusse lors de la bataille de Sedan (Guerre franco-prussienne).",
+            "image": null
+        },
+        {
+            "id": 213,
+            "question": "Comment la Troisième République prend-elle fin ?",
+            "explanation": "Elle prend fin le 10 juillet 1940, lorsque le maréchal Pétain obtient les pleins pouvoirs et met en place l’État français (régime de Vichy).",
+            "image": null
+        },
+        {
+            "id": 214,
+            "question": "Qu'est-ce que le régime de Vichy et pourquoi a-t-il été instauré ?",
+            "explanation": "Le régime de Vichy, officiellement \"l’État français\", est le gouvernement mis en place après la défaite de la France face à l'Allemagne nazie en juin 1940. Le 10 juillet 1940, l’Assemblée nationale vote les pleins pouvoirs au maréchal Philippe Pétain, mettant ainsi fin à la Troisième République.",
+            "image": null
+        },
+        {
+            "id": 215,
+            "question": "Quand la Quatrième République est-elle instaurée ?",
+            "explanation": "Après la Seconde Guerre mondiale, la nouvelle Constitution est adoptée par référendum le 13 octobre 1946, rétablissant la République.",
+            "image": null
+        },
+        {
+            "id": 216,
+            "question": "Comment fonctionne la Quatrième République ?",
+            "explanation": "Un régime parlementaire, où le président de la République a peu de pouvoirs. Un gouvernement responsable devant l'Assemblée nationale, qui peut le renverser par une motion de censure.",
+            "image": null
+        },
+        {
+            "id": 217,
+            "question": "Quels sont les grands événements sous la Quatrième République ?",
+            "explanation": "- Reconstruction économique après la guerre.",
+            "image": null
+        },
+        {
+            "id": 218,
+            "question": "Pourquoi la Quatrième République prend-elle fin ?",
+            "explanation": "L’instabilité politique (plus de 20 gouvernements en 12 ans) et la crise de la guerre d’Algérie mènent au retour du général de Gaulle, qui propose une nouvelle Constitution en 1958, donnant naissance à la Cinquième République.",
+            "image": null
+        },
+        {
+            "id": 219,
+            "question": "Quels sont les principaux personnages de la Première Guerre mondiale ?",
+            "explanation": "- Georges Clemenceau : Président du Conseil français surnommé \"Le Tigre\".\n\n- Maréchal Foch : Commandant en chef des forces alliées.\n\n- Wilhelm II : Empereur d’Allemagne.",
+            "image": null
+        },
+        {
+            "id": 220,
+            "question": "Quels sont les principaux personnages de la Seconde Guerre mondiale ?",
+            "explanation": "- Charles de Gaulle : Chef de la France libre et futur président.\n\n- Jean Moulin : Héros de la Résistance française.\n\n- Winston Churchill : Premier ministre du Royaume-Uni.\n\n- Franklin D. Roosevelt : Président des États-Unis.\n\n- Joseph Staline : Dirigeant de l’URSS.",
+            "image": null
+        },
+        {
+            "id": 221,
+            "question": "Qu'est-ce que la Convention nationale ?",
+            "explanation": "La Convention nationale était l'assemblée qui gouvernait la France du 21 septembre 1792 au 26 octobre 1795, pendant la Première République. Elle a aboli la monarchie, proclamé la République et jugé Louis XVI (16). Elle était composée de députés élus au suffrage universel masculin et divisée en plusieurs courants politiques, comme les Montagnards et les Girondins.",
+            "image": null
+        },
+        {
+            "id": 222,
+            "question": "Quel est le contexte de la Déclaration de guerre de la France à la Prusse en 1870 ?",
+            "explanation": "La déclaration de guerre de la France à la Prusse en 1870, qui a déclenché la Guerre francoprussienne, est survenue dans un contexte de tensions diplomatiques et de rivalités nationales. La défaite de la France a conduit à la chute du Second Empire et à la proclamation de la Troisième République.",
+            "image": null
+        },
+        {
+            "id": 223,
+            "question": "Qui est Simone Veil ?",
+            "explanation": "Simone Veil (1927-2017) était une femme politique française, rescapée de la déportation pendant la Seconde Guerre mondiale. Elle est principalement connue pour avoir porté la loi dépénalisant l’interruption volontaire de grossesse (IVG) en 1975 lorsqu'elle était ministre de la Santé. Elle a également été présidente du Parlement européen et membre de l'Académie française. Son engagement en faveur des droits des femmes et de la mémoire de la Shoah a marqué l’histoire de la France. Elle repose au Panthéon depuis 2018.",
+            "image": null
+        },
+        {
+            "id": 224,
+            "question": "Comment s'est terminé le régime de Napoléon III ?",
+            "explanation": "Le régime de Napoléon III, également connu sous le nom de Second Empire, s'est terminé après la défaite de la France dans la Guerre franco-prussienne en 1870. Sa capture à la bataille de Sedan a mené à sa déposition et à la proclamation de la Troisième République.",
+            "image": null
+        },
+        {
+            "id": 225,
+            "question": "Combien y a-t-il eu de Napoléon et quelle est la différence entre eux ?",
+            "explanation": "- Il y a eu trois Napoléon qui ont régné en France : 1. Napoléon Ier (Napoléon Bonaparte) – 1804-1815\n\n- Premier empereur des Français (sacré en 1804).\n\n- Grand stratège militaire, il conquiert une grande partie de l’Europe.\n\n- Défait en 1814, revient au pouvoir en 1815 (les Cent-Jours) mais perd à Waterloo, ce qui marque sa chute définitive. 2. Napoléon II (1815, mais ne règne pas réellement)\n\n- Fils de Napoléon Ier et Marie-Louise d’Autriche.\n\n- Désigné empereur après l’abdication de son père en 1815, mais il n’a jamais régné (resté en Autriche sous contrôle autrichien).\n\n- Mort jeune, surnommé \"L'Aiglon\".  3. Napoléon III (1852-1870)\n\n- Neveu de Napoléon Ier.\n\n- Élu président de la République en 1848, il prend le pouvoir par un coup d’État en 1851.\n\n- Se proclame empereur en 1852 et instaure le Second Empire.\n\n- Renversé en 1870 après la défaite contre la Prusse (bataille de Sedan).",
+            "image": null
+        },
+        {
+            "id": 226,
+            "question": "Quels sont les moments clés de la Cinquième République ?",
+            "explanation": "- 1958 : Adoption de la Constitution de la Ve République.\n\n- 1962 : Élection du président au suffrage universel direct.\n\n- 1981 : Alternance politique et abolition de la peine de mort.\n\n- 2000 : Passage du septennat au quinquennat (mandat de 5 ans).\n\n- 2008 : Grande révision constitutionnelle (renforcement du rôle du Parlement et des droits des citoyens).",
+            "image": null
+        },
+        {
+            "id": 227,
+            "question": "Qu’est-ce qui change avec la Cinquième République ?",
+            "explanation": "- La Cinquième République se distingue notamment par :\n\n- Le président est élu au suffrage universel direct (depuis 1962).\n\n- Le président a le pouvoir de nommer le Premier ministre, dissoudre l’Assemblée nationale et recourir à des pouvoirs exceptionnels (article 16).\n\n- Fin du régime d’instabilité gouvernementale de la Quatrième République (fréquents changements de gouvernement).\n\n- Introduction du 49.3, permettant au gouvernement d’adopter une loi sans vote du Parlement sauf en cas de motion de censure.\n\n- Le Parlement (Assemblée nationale et Sénat) conserve un rôle de contrôle, mais il ne peut plus renverser facilement le gouvernement.\n\n- Le Sénat ne peut pas bloquer définitivement une loi, contrairement à l’Assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": 228,
+            "question": "Qui était le président de la France lors des événements de Mai 68 ?",
+            "explanation": "Charles de Gaulle.",
+            "image": null
+        },
+        {
+            "id": 229,
+            "question": "Quel est le nom du président français pendant la Seconde Guerre mondiale ?",
+            "explanation": "Charles de Gaulle, chef de la France Libre.",
+            "image": null
+        },
+        {
+            "id": 230,
+            "question": "Qui est Édith Cresson ?",
+            "explanation": "Édith Cresson est une femme politique française qui a été la première et à ce jour la seule femme à occuper le poste de Premier ministre en France. Elle a exercé cette fonction de 1991 à 1992 sous la présidence de François Mitterrand. Avant cela, elle a occupé plusieurs postes ministériels et a ensuite été commissaire européenne.",
+            "image": null
+        },
+        {
+            "id": 231,
+            "question": "En quelle année a été adoptée la Ve République en France ?",
+            "explanation": "1958.",
+            "image": null
+        },
+        {
+            "id": 232,
+            "question": "À quelles dates ont été établies les cinq Républiques françaises ?",
+            "explanation": "- Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie.\n\n- Deuxième République : instaurée le 24 février 1848 par le gouvernement provisoire à la suite de la Révolution de 1848.\n\n- Troisième République : proclamée le 4 septembre 1870 par Léon Gambetta et d'autres républicains après la défaite de Napoléon III.\n\n- Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération.\n\n- Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.",
+            "image": null
+        },
+        {
+            "id": 233,
+            "question": "Qui est Léon Blum ?",
+            "explanation": "Léon Blum fut un homme politique français, leader du Parti Socialiste et Premier ministre du Front Populaire en 1936. Il est célèbre pour avoir instauré des réformes sociales majeures, comme la semaine de travail de 40 heures et les congés payés. Sa politique a marqué l'histoire de la France en renforçant les droits des travailleurs et en modernisant le pays sur le plan social.",
+            "image": null
+        },
+        {
+            "id": 234,
+            "question": "Comment la France a-t-elle obtenu la Corse ?",
+            "explanation": "La Corse a été cédée à la France par la République de Gênes en 1768. Cette acquisition a été importante pour la France, tant pour des raisons stratégiques que culturelles, la Corse étant la terre natale de Napoléon Bonaparte.",
+            "image": null
+        },
+        {
+            "id": 235,
+            "question": "Qui est François Mitterrand ?",
+            "explanation": "François Mitterrand fut le président de la République française de 1981 à 1995, un des plus longs mandats de l’histoire de la France. Il a mis en place des réformes majeures, notamment l’abolition de la peine de mort, la décentralisation et des politiques sociales. Mitterrand a également joué un rôle déterminant dans la construction de l’Union européenne.",
+            "image": null
+        },
+        {
+            "id": 236,
+            "question": "Qui était le président sous la Première République française ?",
+            "explanation": "Sous la Première République (1792-1804), il n’y avait pas de président de la République, mais un gouvernement dirigé par la Convention nationale, puis par le Directoire. Napoléon Bonaparte a ensuite instauré le Consulat en 1799 avant de devenir empereur en 1804.",
+            "image": null
+        },
+        {
+            "id": 237,
+            "question": "Qu'est-ce que le Parlement européen ?",
+            "explanation": "Le Parlement européen est l'organe législatif de l'UE, où les députés élus représentent les citoyens européens.",
+            "image": null
+        },
+        {
+            "id": 238,
+            "question": "Où se trouve le siège principal du Parlement européen ?",
+            "explanation": "Le siège principal du Parlement européen est également à Bruxelles, en Belgique. Cependant, le Parlement européen a des sessions à Strasbourg, en France, où il se réunit périodiquement.",
+            "image": null
+        },
+        {
+            "id": 239,
+            "question": "Qui est le président de l'Union européenne ?",
+            "explanation": "L'Union européenne n'a pas un \"président\" unique, mais plutôt plusieurs institutions. Cependant, la fonction la plus proche d'un \"président\" est celle du président de la Commission européenne. Actuellement, cette position est occupée par Ursula von der Leyen, qui a été élue en 2019.",
+            "image": null
+        },
+        {
+            "id": 240,
+            "question": "Quels pays font partie de l'Union européenne mais pas de la zone euro ?",
+            "explanation": "- Certaines nations membres de l'Union européenne n'ont pas adopté l'euro comme monnaie officielle. Ces pays continuent à utiliser leur propre monnaie nationale. Voici quelques exemples :\n\n- Suède (utilise la couronne suédoise)\n\n- Danemark (utilise la couronne danoise)\n\n- Pologne (utilise le złoty)\n\n- Hongrie (utilise le forint)\n\n- République tchèque (utilise la couronne tchèque)\n\n- Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro.  Fin de la seconde édition",
+            "image": null
+        },
+        {
+            "id": 241,
+            "question": "À quoi sert le droit de grève?",
+            "explanation": "Le droit de grève permet aux salariés de cesser le travail pour défendre leurs intérêts professionnels ou leurs revendications sociales.",
+            "image": null
+        },
+        {
+            "id": 242,
+            "question": "Au nom de quoi l'État justifie-t-il la restriction des droits?",
+            "explanation": "Pour protéger l'ordre public, la sécurité, la santé ou les droits et libertés d'autrui, dans les limites fixées par la loi.",
+            "image": null
+        },
+        {
+            "id": 243,
+            "question": "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'Homme et du Citoyen de 1789?",
+            "explanation": "Les hommes naissent et demeurent libres et égaux en droits (article 1 de la DDHC de 1789).",
+            "image": null
+        },
+        {
+            "id": 244,
+            "question": "L'article 4 de la Déclaration des droits de l'homme et du citoyen affirme que \"la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autreui\". Qu'est-ce que cela signifie?",
+            "explanation": "La liberté s'exerce tant qu'elle ne porte pas atteinte aux droits d'autrui ; ces limites sont fixées par la loi pour protéger chacun.",
+            "image": null
+        },
+        {
+            "id": 245,
+            "question": "Que dit l'article 1er de la Constitution française?",
+            "explanation": "La France est une République indivisible, laïque, démocratique et sociale ; elle assure l'égalité devant la loi sans distinction d'origine, de race ou de religion.",
+            "image": null
+        },
+        {
+            "id": 246,
+            "question": "Que garantit la liberté de la presse?",
+            "explanation": "Le droit d'informer et d'être informé sans censure préalable, sous réserve des limites légales (diffamation, incitation à la haine, secrets protégés).",
+            "image": null
+        },
+        {
+            "id": 247,
+            "question": "Que permet la liberté de circulation?",
+            "explanation": "Se déplacer et résider librement sur le territoire français (et, pour les citoyens de l'UE, dans l'Union), sauf restrictions légales ou judiciaires.",
+            "image": null
+        },
+        {
+            "id": 248,
+            "question": "Que signifie être citoyen d'un État?",
+            "explanation": "Avoir la nationalité de cet État, avec des droits civiques (vote, éligibilité) et des devoirs (respect des lois, impôts).",
+            "image": null
+        },
+        {
+            "id": 249,
+            "question": "Que sont les droits fondamentaux?",
+            "explanation": "Les droits et libertés essentiels protégés par la Constitution et les traités (dignité, vie, sûreté, expression, religion, égalité, propriété...).",
+            "image": null
+        },
+        {
+            "id": 250,
+            "question": "Quel droit protège une personne contre une arréstation arbitraire?",
+            "explanation": "Le droit à la sûreté : aucune arrestation ou détention ne peut intervenir sans base légale et contrôle du juge (art. 66 de la Constitution).",
+            "image": null
+        },
+        {
+            "id": 251,
+            "question": "Quel est le texte fondateur établissant les droits et les devoirs de chaque citoyen?",
+            "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789, intégrée au bloc de constitutionnalité.",
+            "image": null
+        },
+        {
+            "id": 252,
+            "question": "Quel texte affirme que tous les hommes naissent libres et égaux en droits?",
+            "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789 (article 1).",
+            "image": null
+        },
+        {
+            "id": 253,
+            "question": "Quelle situation est une atteinte à la dignité humaine?",
+            "explanation": "Toute humiliation, traitement dégradant, torture ou discrimination grave porte atteinte à la dignité humaine.",
+            "image": null
+        },
+        {
+            "id": 254,
+            "question": "Qu'est-ce que la liberté d'expression?",
+            "explanation": "Le droit d'exprimer ses opinions, d'informer et de critiquer, dans le respect de la loi (pas d'injure, diffamation, incitation à la haine).",
+            "image": null
+        },
+        {
+            "id": 255,
+            "question": "Suite à une interpellation par la police, il est possible de :",
+            "explanation": "Garder le silence, demander un avocat, prévenir un proche et un médecin en garde à vue selon les droits prévus par la loi.",
+            "image": null
+        },
+        {
+            "id": 256,
+            "question": "Tous les citoyens français ont-ils une religion?",
+            "explanation": "Non. Chacun est libre de croire ou de ne pas croire (liberté de conscience).",
+            "image": null
+        },
+        {
+            "id": 257,
+            "question": "À quel âge est la majorité numérique en France?",
+            "explanation": "À 15 ans pour consentir seul au traitement de ses données en ligne (RGPD en France).",
+            "image": null
+        },
+        {
+            "id": 258,
+            "question": "Dans lequel de ces endroits est-on autorisé à fumer?",
+            "explanation": "Uniquement dans les espaces où la loi l'autorise (zones fumeurs) ; il est interdit de fumer dans les lieux publics fermés et transports.",
+            "image": null
+        },
+        {
+            "id": 259,
+            "question": "En France, la conduite sans permis d'une moto est :",
+            "explanation": "Un délit pénal passible d'amende, d'immobilisation du véhicule et d'éventuelles peines complémentaires.",
+            "image": null
+        },
+        {
+            "id": 260,
+            "question": "En quoi consiste le devoir de solidarité?",
+            "explanation": "Contribuer à l'aide aux plus vulnérables (impôts, cotisations sociales) et porter assistance à une personne en danger.",
+            "image": null
+        },
+        {
+            "id": 261,
+            "question": "Est-ce légal d'être marié à plusieurs personnes en même temps?",
+            "explanation": "Non, la polygamie est interdite en France.",
+            "image": null
+        },
+        {
+            "id": 262,
+            "question": "Est-ce obligatoire de déclarer ses impôts chaque année en France?",
+            "explanation": "Oui, la déclaration annuelle de revenus est obligatoire, même en cas d'absence de revenu imposable.",
+            "image": null
+        },
+        {
+            "id": 263,
+            "question": "Est-il obligatoire de porter secours à une personne en danger?",
+            "explanation": "Oui, l'obligation de porter assistance s'applique si cela peut être fait sans danger pour soi ou pour autrui.",
+            "image": null
+        },
+        {
+            "id": 264,
+            "question": "Être juré d'assises est :",
+            "explanation": "Une obligation civique pour un citoyen tiré au sort, chargé de juger les crimes avec les magistrats professionnels.",
+            "image": null
+        },
+        {
+            "id": 265,
+            "question": "La vente d'alcool en France est interdite aux personnes de moins de :",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": 266,
+            "question": "Le non-respect du code de la route est :",
+            "explanation": "Une infraction (contravention ou délit) passible de sanctions (amende, retrait de points, suspension).",
+            "image": null
+        },
+        {
+            "id": 267,
+            "question": "Lequel de ces crimes ou délipts peut entrainer la privation des droits civils et politiques par un juge?",
+            "explanation": "Des crimes ou délits graves (corruption, violences, crimes) peuvent entraîner une interdiction des droits civiques prononcée par le juge.",
+            "image": null
+        },
+        {
+            "id": 268,
+            "question": "Pourobtenir une carte d'identité, il faut :",
+            "explanation": "Être de nationalité française et fournir justificatifs d'identité, de domicile et photos conformes ; présence obligatoire du demandeur.",
+            "image": null
+        },
+        {
+            "id": 269,
+            "question": "Pour quel motif peut-on limiter la liberté d'expression?",
+            "explanation": "Pour protéger l'ordre public, les droits d'autrui, prévenir la diffamation, l'injure ou l'incitation à la haine ou à la violence.",
+            "image": null
+        },
+        {
+            "id": 270,
+            "question": "Que doit faire un citoyen s'il est appelé à être juré dans un procès d'assises ?",
+            "explanation": "Répondre à la convocation et siéger, sauf motif légitime d'exemption reconnu par le tribunal.",
+            "image": null
+        },
+        {
+            "id": 271,
+            "question": "Quel est l'un des devoirs principaux d'un citoyen français ?",
+            "explanation": "Respecter la loi, payer ses impôts et participer à la vie civique (vote, défense du pays si besoin).",
+            "image": null
+        },
+        {
+            "id": 272,
+            "question": "Quelle est l'infraction la plus grave ?",
+            "explanation": "Le crime est l'infraction la plus grave (au-dessus du délit et de la contravention).",
+            "image": null
+        },
+        {
+            "id": 273,
+            "question": "Qu'est-ce que la citoyenneté numérique ?",
+            "explanation": "Le fait d'utiliser les outils numériques de manière responsable et légale (respect de la vie privée, des droits d'auteur, des autres).",
+            "image": null
+        },
+        {
+            "id": 274,
+            "question": "Qui peut être appelé à faire partie d'un jury d'assises en France ?",
+            "explanation": "Tout citoyen français majeur inscrit sur les listes électorales, tiré au sort et déclaré apte.",
+            "image": null
+        },
+        {
+            "id": 275,
+            "question": "Une personne est privée de ses droits civils et politiques pendant 5 ans suite à une condamnation. Parmi ces propositions laquelle est correcte ? Pendant 5 ans,...",
+            "explanation": "Elle ne pourra ni voter ni être candidate, ni exercer certaines fonctions publiques pendant la durée de l'interdiction.",
+            "image": null
+        },
+        {
+            "id": 276,
+            "question": "Complétez les paroles de la Marseillaise \"Allons enfants de la patrie...\"",
+            "explanation": "Allons enfants de la Patrie, le jour de gloire est arrivé !",
+            "image": null
+        },
+        {
+            "id": 277,
+            "question": "Dans le cadre d'un entretien d'embauche, que peut-on demander au candidat?",
+            "explanation": "Seules les informations ayant un lien direct et nécessaire avec le poste (compétences, expériences) ; pas de questions discriminatoires ou sans rapport.",
+            "image": null
+        },
+        {
+            "id": 278,
+            "question": "Déclarer ses revenus aux services fiscaux est :",
+            "explanation": "Une obligation légale annuelle pour tout contribuable.",
+            "image": null
+        },
+        {
+            "id": 279,
+            "question": "En France, les impôts permettent de financier les dépenses publiques. Quelle proposition est correcte?",
+            "explanation": "Ils servent à financer les services publics et les solidarités (éducation, santé, sécurité, transports, justice...).",
+            "image": null
+        },
+        {
+            "id": 280,
+            "question": "La liberté d'association est :",
+            "explanation": "Le droit de créer ou d'adhérer à une association loi 1901, sauf activités illicites.",
+            "image": null
+        },
+        {
+            "id": 281,
+            "question": "La liberté d'expression sur les réseaux sociaux en France est :",
+            "explanation": "Soumise aux mêmes lois que partout ailleurs : interdiction de la diffamation, de l'injure, de l'incitation à la haine ou à la violence.",
+            "image": null
+        },
+        {
+            "id": 282,
+            "question": "Lequel de ces prénoms évoque un symbole de la République ?",
+            "explanation": "Marianne est le prénom associé à l'allégorie de la République française.",
+            "image": null
+        },
+        {
+            "id": 283,
+            "question": "Où peut-on voir la devise de la République ?",
+            "explanation": "Sur les frontons des mairies, des écoles et certains bâtiments officiels, et sur les pièces ou documents publics.",
+            "image": null
+        },
+        {
+            "id": 284,
+            "question": "Peut-on brûler publiquement un drapeau français ?",
+            "explanation": "Non, c'est un outrage puni par la loi (amende et éventuelles peines complémentaires).",
+            "image": null
+        },
+        {
+            "id": 285,
+            "question": "Quand la sécurité sociale a-t-elle étée établie en France ?",
+            "explanation": "En 1945, par les ordonnances fondant la Sécurité sociale.",
+            "image": null
+        },
+        {
+            "id": 286,
+            "question": "Que commémore la fête nationale ?",
+            "explanation": "Le 14 juillet commémore la prise de la Bastille (1789) et la Fête de la Fédération (1790).",
+            "image": null
+        },
+        {
+            "id": 287,
+            "question": "Que porte Marianne sur la tête ?",
+            "explanation": "Un bonnet phrygien, symbole de liberté.",
+            "image": null
+        },
+        {
+            "id": 288,
+            "question": "Que signifie le mot \"fraternité\" dans la devise française ?",
+            "explanation": "La solidarité et l'entraide entre citoyens.",
+            "image": null
+        },
+        {
+            "id": 289,
+            "question": "Quel symbole de la République peut-on voir sur les maillots de l'équipe de France de football ?",
+            "explanation": "Le coq gaulois.",
+            "image": null
+        },
+        {
+            "id": 290,
+            "question": "Qu'est-ce que la liberté d'association ?",
+            "explanation": "Le droit de s'organiser collectivement (association, syndicat) dans le respect de la loi.",
+            "image": null
+        },
+        {
+            "id": 291,
+            "question": "Qu'est-ce qu'une liberté ?",
+            "explanation": "Un droit garanti par la loi, limité par le respect des droits d'autrui et de l'ordre public.",
+            "image": null
+        },
+        {
+            "id": 292,
+            "question": "Selon la Constitution, la France est une République...",
+            "explanation": "Indivisible, laïque, démocratique et sociale.",
+            "image": null
+        },
+        {
+            "id": 293,
+            "question": "Surquel document peut-on voir Marianne ?",
+            "explanation": "On la voit notamment sur les timbres, certaines pièces de monnaie et les frontons des mairies.",
+            "image": null
+        },
+        {
+            "id": 294,
+            "question": "Une des valeurs de la devise républicaine est l'égalité. Qu'est-ce que cela signifie ?",
+            "explanation": "Tous les citoyens ont les mêmes droits et sont égaux devant la loi sans discrimination.",
+            "image": null
+        },
+        {
+            "id": 295,
+            "question": "Une personne peut-elle changer librement de religion en France ?",
+            "explanation": "Oui, la liberté de conscience permet de choisir ou de changer de religion, ou de n'en avoir aucune.",
+            "image": null
+        },
+        {
+            "id": 296,
+            "question": "Selon le principe de laïcité, que signifie la neutralité de l'État ?",
+            "explanation": "L'État ne favorise ni ne finance aucun culte et traite toutes les convictions de manière égale.",
+            "image": null
+        },
+        {
+            "id": 297,
+            "question": "Que peut faire un usager du service public dans une mairie ?",
+            "explanation": "Demander des actes (état civil), informations ou démarches administratives, dans le respect du service public et de la neutralité.",
+            "image": null
+        },
+        {
+            "id": 298,
+            "question": "En France, il est possible pour l'État de financier :",
+            "explanation": "Des activités d'intérêt général; le financement direct des cultes est en principe interdit (sauf exceptions patrimoniales).",
+            "image": null
+        },
+        {
+            "id": 299,
+            "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle étée votée ?",
+            "explanation": "En 1905.",
+            "image": null
+        },
+        {
+            "id": 300,
+            "question": "Que dit la loi de 1905 ?",
+            "explanation": "Elle garantit la liberté de conscience, organise la neutralité de l'État et met fin au financement public des cultes.",
+            "image": null
+        },
+        {
+            "id": 301,
+            "question": "Que garantit le principe de laïcité ?",
+            "explanation": "La liberté de conscience, l'égalité des citoyens quelles que soient leurs convictions et la neutralité de l'État.",
+            "image": null
+        },
+        {
+            "id": 302,
+            "question": "Quel jour célèbre-t-on officièlement la laïcité en France ?",
+            "explanation": "Le 9 décembre, date anniversaire de la loi de 1905.",
+            "image": null
+        },
+        {
+            "id": 303,
+            "question": "Quel symbole religieux peut être porté dans une école publique dans le respect de la laïcité ?",
+            "explanation": "Seuls les signes religieux discrets sont autorisés ; les signes ostensibles sont interdits pour les élèves.",
+            "image": null
+        },
+        {
+            "id": 304,
+            "question": "Quel terme désigné précisément la haine ou les préjugés contre les Juifs ?",
+            "explanation": "L'antisémitisme.",
+            "image": null
+        },
+        {
+            "id": 305,
+            "question": "Quel texte est considéré comme le texte fondateur de la laïcité ?",
+            "explanation": "La loi du 9 décembre 1905 de séparation des Églises et de l'État.",
+            "image": null
+        },
+        {
+            "id": 306,
+            "question": "Quelle institution française doit rester neutre en matière de religion ?",
+            "explanation": "L'État et l'ensemble des services publics (dont l'école publique).",
+            "image": null
+        },
+        {
+            "id": 307,
+            "question": "À l'école, la charte de la laïcité permet de :",
+            "explanation": "Rappeler les règles de neutralité et de respect des convictions, pour bien vivre ensemble à l'école.",
+            "image": null
+        },
+        {
+            "id": 308,
+            "question": "Qui doit respecter et veiller à la neutralité religieuse dans les services publics ?",
+            "explanation": "Les agents publics sont tenus à la neutralité et doivent la faire respecter dans le service.",
+            "image": null
+        },
+        {
+            "id": 309,
+            "question": "Une personne déclare ne croire enaucun dieu. On peut dire :",
+            "explanation": "Qu'elle est athée ou non-croyante ; c'est protégé par la liberté de conscience.",
+            "image": null
+        },
+        {
+            "id": 310,
+            "question": "Comment est désigné le Premier ministe ?",
+            "explanation": "Il est nommé par le Président de la République.",
+            "image": null
+        },
+        {
+            "id": 311,
+            "question": "Qui peut seprésenter aux élections présidentielles ?",
+            "explanation": "Tout citoyen français âgé d'au moins 18 ans, jouissant de ses droits civiques et obtenant 500 parrainages d'élus.",
+            "image": null
+        },
+        {
+            "id": 312,
+            "question": "À qui apparient la souverinété nationale ?",
+            "explanation": "À la Nation, qui l'exerce par ses représentants et par le référendum (article 3 de la Constitution).",
+            "image": null
+        },
+        {
+            "id": 313,
+            "question": "L'inscription sur les listedes élctorales est :",
+            "explanation": "Une démarche nécessaire pour voter ; elle est volontaire mais indispensable pour participer aux scrutins.",
+            "image": null
+        },
+        {
+            "id": 314,
+            "question": "Quelle condition est nécessaire pour voter aux élections présidentielles ?",
+            "explanation": "Être Français, majeur (18 ans), inscrit sur les listes électorales et ne pas être privé de ses droits civiques.",
+            "image": null
+        },
+        {
+            "id": 315,
+            "question": "Quelle condition faut-il replir pour être candidat aux élections municipales ?",
+            "explanation": "Être majeur, électeur (citoyen français ou européen résidant dans la commune) et inscrit sur les listes électorales de la commune.",
+            "image": null
+        },
+        {
+            "id": 316,
+            "question": "Parmi ces autorités, laquelle est élue ?",
+            "explanation": "Le maire et les conseillers municipaux sont élus ; d'autres autorités (préfet...) sont nommées.",
+            "image": null
+        },
+        {
+            "id": 317,
+            "question": "Quelles sont les fonctions du maire ?",
+            "explanation": "Il exécute les décisions du conseil municipal, gère la commune, exerce des fonctions d'officier d'état civil et de police municipale.",
+            "image": null
+        },
+        {
+            "id": 318,
+            "question": "Une personne, n'avant pas d'accès à internet, veut s'inscrite sur les listedes élctorales pour pouvoir voter aux prochaines élections politiques. À où peut-elle s'inscrite ?",
+            "explanation": "En se rendant à la mairie avec une pièce d'identité et un justificatif de domicile.",
+            "image": null
+        },
+        {
+            "id": 319,
+            "question": "À quel âge peut-on devenir éllecteur ?",
+            "explanation": "À 18 ans, en s'inscrivant sur les listes électorales.",
+            "image": null
+        },
+        {
+            "id": 320,
+            "question": "En France, est-ce obligatoire de voter ?",
+            "explanation": "Non, le vote n'est pas obligatoire mais c'est un droit et un devoir civique.",
+            "image": null
+        },
+        {
+            "id": 321,
+            "question": "A-t-on le droit de ne pas respecter une loi ?",
+            "explanation": "Non, nul n'est censé ignorer la loi ; on peut la contester par les voies légales, pas la violer.",
+            "image": null
+        },
+        {
+            "id": 322,
+            "question": "Qui vote les loi ?",
+            "explanation": "Le Parlement : Assemblée nationale et Sénat (l'Assemblée a le dernier mot en cas de désaccord).",
+            "image": null
+        },
+        {
+            "id": 323,
+            "question": "La séparation desouviers est un principe fondamental. Quels sont les troisouviers concernés ?",
+            "explanation": "La séparation des pouvoirs : exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": 324,
+            "question": "Qu'est-ce que l'État de droit ?",
+            "explanation": "Un système où l'État et les citoyens sont soumis à la loi, contrôlés par des juges indépendants, garantissant les droits fondamentaux.",
+            "image": null
+        },
+        {
+            "id": 325,
+            "question": "Quelles sont les durées du mandat du conseil municipal et du maire ?",
+            "explanation": "6 ans pour le conseil municipal et le maire.",
+            "image": null
+        },
+        {
+            "id": 326,
+            "question": "Qui est élu lors des élections législatives ?",
+            "explanation": "Les députés à l'Assemblée nationale.",
+            "image": null
+        },
+        {
+            "id": 327,
+            "question": "Quelle est la durée du mandat des députés ?",
+            "explanation": "5 ans (sauf dissolution ou exceptions).",
+            "image": null
+        },
+        {
+            "id": 328,
+            "question": "En France, est-ce possible d'adhérer à un parti politique ?",
+            "explanation": "Oui, c'est un droit garanti par la liberté d'association et d'opinion.",
+            "image": null
+        },
+        {
+            "id": 329,
+            "question": "Qui sanctionne l'auteur d'un vol ?",
+            "explanation": "Les tribunaux (autorité judiciaire) prononcent les sanctions pénales.",
+            "image": null
+        },
+        {
+            "id": 330,
+            "question": "Qui gère les collèges publics ?",
+            "explanation": "Les départements gèrent les collèges publics.",
+            "image": null
+        },
+        {
+            "id": 331,
+            "question": "Qui gère les écoles primaires et maternelles publiques ?",
+            "explanation": "Les communes gèrent les écoles publiques du premier degré.",
+            "image": null
+        },
+        {
+            "id": 332,
+            "question": "Comment sont désignés les maires ?",
+            "explanation": "Ils sont élus par les conseillers municipaux lors de la première séance après les élections municipales.",
+            "image": null
+        },
+        {
+            "id": 333,
+            "question": "Quelle collectivité territoriale est responsable des transports régionaux?",
+            "explanation": "La région organise les transports régionaux (trains TER, parfois cars régionaux).",
+            "image": null
+        },
+        {
+            "id": 334,
+            "question": "Quelle est l'une des voies possibles pour modifier la Constitution?",
+            "explanation": "Par référendum ou par le Congrès (Parlement réuni, adoption à la majorité des 3/5).",
+            "image": null
+        },
+        {
+            "id": 335,
+            "question": "Qui assure l'intérim du préident de la République en cas de décès?",
+            "explanation": "Le président du Sénat assure l'intérim en cas de vacance de la présidence.",
+            "image": null
+        },
+        {
+            "id": 336,
+            "question": "Quelle condition est obligatoire pour seprésenter à l'élection stratégienne?",
+            "explanation": "Être de nationalité française, majeur et jouir de ses droits civiques (éligibilité au Sénat : au moins 24 ans).",
+            "image": null
+        },
+        {
+            "id": 337,
+            "question": "Combien y a-t-il de départements en France ?",
+            "explanation": "101 départements (dont 5 en outre-mer).",
+            "image": null
+        },
+        {
+            "id": 338,
+            "question": "Comment estOrganisé le découvertage administratif de la France ?",
+            "explanation": "En communes, départements et régions, plus des collectivités d'outre-mer.",
+            "image": null
+        },
+        {
+            "id": 339,
+            "question": "Qel est le role du Préident de la République ?",
+            "explanation": "Chef de l'État, garant de la Constitution, il nomme le Premier ministre, conduit la politique étrangère et la défense, peut dissoudre l'Assemblée.",
+            "image": null
+        },
+        {
+            "id": 340,
+            "question": "Qel est le role du Défenseur des droits ?",
+            "explanation": "Autorité indépendante qui protège les droits et libertés, lutte contre les discriminations et veille à la déontologie des services publics.",
+            "image": null
+        },
+        {
+            "id": 341,
+            "question": "En quelle année la citoyenneté européen nea-t-elle ete créé ?",
+            "explanation": "Par le traité de Maastricht, entré en vigueur en 1993 (signé en 1992).",
+            "image": null
+        },
+        {
+            "id": 342,
+            "question": "Quand est célébrée la journée de l'Europe ?",
+            "explanation": "Le 9 mai, en souvenir de la déclaration Schuman (1950).",
+            "image": null
+        },
+        {
+            "id": 343,
+            "question": "Où est le siège de la Banque centrale européen ?",
+            "explanation": "À Francfort (Allemagne).",
+            "image": null
+        },
+        {
+            "id": 344,
+            "question": "Qui siège au Parlement européen ?",
+            "explanation": "Les députés européens élus au suffrage universel direct dans chaque État membre.",
+            "image": null
+        },
+        {
+            "id": 345,
+            "question": "Les citoyens de l'Union Européenne peuvent-ils voter aux élections locales dans un autre État de l'Union ?",
+            "explanation": "Oui, ils peuvent voter et être éligibles aux élections municipales et européennes dans leur État de résidence.",
+            "image": null
+        },
+        {
+            "id": 346,
+            "question": "Combien d'États font partie de l'Union Européenne au 1er janvier 2025 ?",
+            "explanation": "27 États membres.",
+            "image": null
+        },
+        {
+            "id": 347,
+            "question": "En quelle année letraité de Maastricht, qui marque la fondation de l'Union Européenne, a-t-il eté signé ?",
+            "explanation": "Signé en 1992, entré en vigueur en 1993.",
+            "image": null
+        },
+        {
+            "id": 348,
+            "question": "Qeltraité concerne la construction de l'Union Européenne ?",
+            "explanation": "Le traité de Rome (1957) fonde la CEE; Maastricht (1992) fonde l'Union européenne.",
+            "image": null
+        },
+        {
+            "id": 349,
+            "question": "Qel État a quitté l'Union Européenne en 2020 ?",
+            "explanation": "Le Royaume-Uni (Brexit).",
+            "image": null
+        },
+        {
+            "id": 350,
+            "question": "De quoi est composé le drapeau européen ?",
+            "explanation": "Un cercle de 12 étoiles dorées sur fond bleu, symbolisant l'unité et l'harmonie.",
+            "image": null
+        },
+        {
+            "id": 351,
+            "question": "Qui élit les députés européens ?",
+            "explanation": "Les citoyens de l'Union, au suffrage universel direct tous les cinq ans.",
+            "image": null
+        }
+    ]
+}

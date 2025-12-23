@@ -4,31 +4,23 @@
  */
 
 export const DATA_FILES = {
-    MAIN: {
-        PERSONAL: 'knowledge/personal_fr_vi.json',
-        GEOGRAPHY: 'knowledge/geography_fr_vi.json',
-    },
-    HISTORY: {
-        CATEGORIES: 'knowledge/history_categories.json',
-    },
+    /**
+     * Unified data source from Livret du Citoyen.
+     * Total: 1053 questions with explanations across all categories.
+     */
     SUBCATEGORIES: {
-        DIRECTORY: 'knowledge/subcategories/',
+        DIRECTORY: 'knowledge/new_livret/',
         FILES: [
-            'local_gov.json',
-            'monarchy.json',
-            'revolution.json',
-            'wars.json',
-            'republic.json',
-            'democracy.json',
-            'economy.json',
-            'culture.json',
-            'arts.json',
-            'celebrities.json',
-            'sports.json',
-            'holidays.json',
-            'history_general.json',
-            'geography.json',
-            'society.json'
+            'administration_locale.json',
+            'arts_culture_sports.json',
+            'ddhc.json',
+            'democratie_politique.json',
+            'droits_devoirs.json',
+            'france_europe_monde.json',
+            'geographie_sites.json',
+            'principes_valeurs.json',
+            'reperes_historiques.json',
+            'vie_personnelle_integration.json'
         ] as const
     },
     TESTS: {
@@ -56,24 +48,17 @@ export const DATA_FILES = {
  * This is necessary because React Native's 'require' must be static.
  */
 export const LOCAL_DATA_MAP: Record<string, any> = {
-    [DATA_FILES.MAIN.PERSONAL]: require('../../data/knowledge/personal_fr_vi.json'),
-    [DATA_FILES.MAIN.GEOGRAPHY]: require('../../data/knowledge/geography_fr_vi.json'),
-    [DATA_FILES.HISTORY.CATEGORIES]: require('../../data/knowledge/history_categories.json'),
-    'knowledge/subcategories/local_gov.json': require('../../data/knowledge/subcategories/local_gov.json'),
-    'knowledge/subcategories/monarchy.json': require('../../data/knowledge/subcategories/monarchy.json'),
-    'knowledge/subcategories/revolution.json': require('../../data/knowledge/subcategories/revolution.json'),
-    'knowledge/subcategories/wars.json': require('../../data/knowledge/subcategories/wars.json'),
-    'knowledge/subcategories/republic.json': require('../../data/knowledge/subcategories/republic.json'),
-    'knowledge/subcategories/democracy.json': require('../../data/knowledge/subcategories/democracy.json'),
-    'knowledge/subcategories/economy.json': require('../../data/knowledge/subcategories/economy.json'),
-    'knowledge/subcategories/culture.json': require('../../data/knowledge/subcategories/culture.json'),
-    'knowledge/subcategories/arts.json': require('../../data/knowledge/subcategories/arts.json'),
-    'knowledge/subcategories/celebrities.json': require('../../data/knowledge/subcategories/celebrities.json'),
-    'knowledge/subcategories/sports.json': require('../../data/knowledge/subcategories/sports.json'),
-    'knowledge/subcategories/holidays.json': require('../../data/knowledge/subcategories/holidays.json'),
-    'knowledge/subcategories/history_general.json': require('../../data/knowledge/subcategories/history_general.json'),
-    'knowledge/subcategories/geography.json': require('../../data/knowledge/subcategories/geography.json'),
-    'knowledge/subcategories/society.json': require('../../data/knowledge/subcategories/society.json'),
+    'knowledge/new_livret/administration_locale.json': require('../../data/knowledge/new_livret/administration_locale.json'),
+    'knowledge/new_livret/arts_culture_sports.json': require('../../data/knowledge/new_livret/arts_culture_sports.json'),
+    'knowledge/new_livret/ddhc.json': require('../../data/knowledge/new_livret/ddhc.json'),
+    'knowledge/new_livret/democratie_politique.json': require('../../data/knowledge/new_livret/democratie_politique.json'),
+    'knowledge/new_livret/droits_devoirs.json': require('../../data/knowledge/new_livret/droits_devoirs.json'),
+    'knowledge/new_livret/france_europe_monde.json': require('../../data/knowledge/new_livret/france_europe_monde.json'),
+    'knowledge/new_livret/geographie_sites.json': require('../../data/knowledge/new_livret/geographie_sites.json'),
+    'knowledge/new_livret/principes_valeurs.json': require('../../data/knowledge/new_livret/principes_valeurs.json'),
+    'knowledge/new_livret/reperes_historiques.json': require('../../data/knowledge/new_livret/reperes_historiques.json'),
+    'knowledge/new_livret/vie_personnelle_integration.json': require('../../data/knowledge/new_livret/vie_personnelle_integration.json'),
+    // Formation data
     'knowledge/formation/principes_et_valeurs.json': require('../../data/knowledge/formation/principes_et_valeurs.json'),
     'knowledge/formation/histoire_geographie_et_culture.json': require('../../data/knowledge/formation/histoire_geographie_et_culture.json'),
     'knowledge/formation/droits_et_devoirs.json': require('../../data/knowledge/formation/droits_et_devoirs.json'),

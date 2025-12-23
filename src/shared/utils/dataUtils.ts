@@ -119,34 +119,6 @@ const loadJsonCollection = async (
 };
 
 
-export const loadMainQuestionData = async () => {
-    try {
-        const [personal, geography] = await Promise.all([
-            getFirebaseJsonData(DATA_FILES.MAIN.PERSONAL),
-            getFirebaseJsonData(DATA_FILES.MAIN.GEOGRAPHY)
-        ]);
-
-        if (!personal || !geography) {
-            logger.error('Failed to load one or more main data files');
-            return null;
-        }
-
-        return { personal, geography };
-    } catch (error) {
-        logger.error('Error loading main question data:', error);
-        return null;
-    }
-};
-
-export const loadHistoryData = async () => {
-    try {
-        return await getFirebaseJsonData(DATA_FILES.HISTORY.CATEGORIES);
-    } catch (error) {
-        logger.error('Error loading history data:', error);
-        return null;
-    }
-};
-
 export const loadSubcategoryData = async () => {
     return loadJsonCollection(DATA_FILES.SUBCATEGORIES.FILES, DATA_FILES.SUBCATEGORIES.DIRECTORY);
 };
@@ -157,12 +129,8 @@ export const loadPart1SubcategoryTestData = async () => {
 
 export const preloadAllData = async () => {
     try {
-        const [mainData, historyData, subcategoryData] = await Promise.all([
-            loadMainQuestionData(),
-            loadHistoryData(),
-            loadSubcategoryData()
-        ]);
-        return { mainData, historyData, subcategoryData };
+        const subcategoryData = await loadSubcategoryData();
+        return { subcategoryData };
     } catch (error) {
         logger.error('Error during data preloading:', error);
         throw error;

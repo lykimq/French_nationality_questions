@@ -1,6 +1,6 @@
-### Droits et devoirs
+# Droits et devoirs
 
-#### Droits fondamentaux
+## Droits fondamentaux
 
 1. Qu'est-ce que la Déclaration des Droits de l'Homme et du Citoyen ?
 
@@ -40,13 +40,13 @@ Oui, elle est limitée par le respect des droits des autres. Il est interdit de 
 
 10. Que pensez-vous de l'impact des attaques contre Charlie Hebdo sur la liberté d'expression ?
 
-À mon avis, cela a souligné l'importance cruciale de la liberté d'expression, tout en montrant la nécessité de dialoguer sur ses limites respectueuses.
+Formulez votre avis sur l'impact de ces attaques, en soulignant à la fois la protection de la liberté d'expression et les limites fixées par la loi.
 
 11. Pensez-vous que la liberté d'expression est absolue ?
 
 Non, la liberté est garantie mais elle n'est pas absolue car les libertés des uns s'arrêtent là où commencent celles des autres.
 
-#### Obligations et devoirs des personnes résidant en France
+## Obligations et devoirs des personnes résidant en France
 
 12. Quel est le devoir principal de tout citoyen ?
 
@@ -134,7 +134,7 @@ Oui/Non, j’achète souvent dans les commerces de proximité (ou non car j’ha
 
 33. Quels sont vos horaires de travail ?
 
-Je travaille de (Heure) à (Heure), du (Jour) au (Jour).
+Indiquez vos horaires habituels (heures de début/fin) et les jours travaillés.
 
 34. Comment vous rendez-vous au travail ?
 
@@ -146,11 +146,11 @@ Depuis (Date).
 
 36. Comment envisagez-vous votre futur en France ?
 
-Je me vois construire un avenir stable en France, m’impliquer dans la société, contribuer professionnellement et exercer pleinement mes droits et devoirs de citoyen.
+Décrivez brièvement vos projets en France (vie professionnelle, engagement social, intégration).
 
 37. Quelle langue parlez-vous au travail ?
 
-Au travail, je communique principalement en français pour favoriser l'intégration et la communication avec mes collègues.
+Précisez la langue principale utilisée au travail et, si besoin, les autres langues pratiquées.
 
 38. Êtes-vous pratiquant(e) ?
 
@@ -158,7 +158,7 @@ C’est une question personnelle, et chacun est libre de vivre sa foi selon ses 
 
 39. Que faites dans votre temps libre ?
 
-Dans mon temps libre, j'aime (activités de loisirs, par exemple : lire, faire du sport, voyager).
+Citez vos activités de loisirs principales (sport, lecture, voyages, etc.).
 
 40. Avez-vous déjà été victime de discrimination ?
 
@@ -166,15 +166,15 @@ Oui / Non (selon l'expérience personnelle).
 
 41. Comment avez-vous rencontré votre conjoint(e) ?
 
-Nous nous sommes rencontrés en (Année) à (Lieu : travail, école, amis communs, en ligne…).
+Expliquez brièvement le contexte de votre rencontre (lieu, année, situation).
 
 42. Comment vous et votre partenaire gérez-vous les tâches ménagères ?
 
-Nous partageons équitablement les tâches ménagères en fonction de nos emplois du temps et préférences, pour maintenir un équilibre dans notre vie de couple.
+Indiquez comment les tâches sont réparties (partage équilibré, organisation selon disponibilités).
 
 43. Quelle langue parlez-vous à la maison ? Et au travail ?
 
-À la maison, nous parlons le français pour favoriser l’intégration de mes enfants dans la société française, en même temps (langue), pour préserver notre héritage culturel.
+Précisez les langues utilisées à la maison et au travail, ainsi que leurs usages (intégration, maintien culturel).
 
 44. En quelle année la loi sur le mariage pour tous a été adoptée ?
 
@@ -202,7 +202,7 @@ Le 17 janvier 2025 marque les 50 ans de la loi Veil, adoptée en 1975, qui a lé
 
 50. Connaissez-vous les paroles de "La Marseillaise" ?
 
-Oui, voici les paroles du premier couplet et du refrain de "La Marseillaise" : COUPLET 1 : " Allons ! Enfants de la Patrie ! Le jour de gloire est arrivé ! Contre nous de la tyrannie, L'étendard sanglant est levé ! (Bis) Entendez-vous dans les campagnes Mugir ces féroces soldats ? Ils viennent jusque dans vos bras Égorger vos fils, vos compagnes Refrain Aux armes, citoyens ! Formez vos bataillons ! Marchons, marchons ! Qu'un sang impur... Abreuve nos sillons !
+Récitez ou résumez le premier couplet et le refrain de l'hymne national.
 
 51. Quel est le rôle de la Cour de cassation?
 
@@ -345,9 +345,9 @@ L'expression de la volonté générale. Elle doit être la même pour tous.
 Pour l'entretien de la force publique et les dépenses d'administration. Il doit être réparti également en raison des facultés de chacun.
 
 
-### Histoire, géographie et culture
+# Histoire, géographie et culture
 
-#### Culture, arts et littérature française
+## Culture, arts et littérature française
 
 86. Qui était Molière ?
 
@@ -413,7 +413,7 @@ Cézanne, Delacroix, Monet etc…
 
 Claude Monet.
 
-#### Géographie de la France
+## Géographie de la France
 
 102. Quels sont les principaux fleuves de France ?
 
@@ -585,13 +585,13 @@ Parmi les grandes villes françaises, on peut citer Paris, Marseille, Lyon, Toul
 
 144. Citez des villes proches des grandes chaînes de montagnes en France.
 
--
+Exemples : Grenoble, Chambéry, Annecy (Alpes) ; Perpignan, Pau, Tarbes (Pyrénées) ; Clermont-Ferrand (Massif central) ; Besançon (Jura) ; Mulhouse, Colmar (Vosges).
 
 145. Avez-vous visité des territoires d’Outre-mer ?
 
 Non, mais je connais leur importance pour la France. / Oui, j’ai visité (nom du territoire) et découvert sa culture.
 
-#### Histoire de France
+## Histoire de France
 
 146. Qui était Clovis ?
 
@@ -962,9 +962,9 @@ La libre communication des pensées et des opinions.
 Oui, c'est un droit inviolable et sacré (sauf nécessité publique et avec indemnité).
 
 
-### Principes et valeurs de la République
+# Principes et valeurs de la République
 
-#### Devise et symboles de la République
+## Devise et symboles de la République
 
 238. Quelles sont les valeurs de la République (la devise) ?
 
@@ -1078,7 +1078,7 @@ L'hymne de l'UE est l'Ode à la Joie de la 9e Symphonie de Beethoven.
 
 La devise officielle de l'UE est 'Unie dans la diversité'.
 
-#### Laïcité
+## Laïcité
 
 266. Qu'est-ce que la Laïcité ?
 
@@ -1133,9 +1133,9 @@ En France, il est permis de porter des signes religieux dans les espaces publics
 Oui, mais pas dans les écoles, les collèges et les lycées publics.
 
 
-### Système institutionnel et politique
+# Système institutionnel et politique
 
-#### Démocratie et droit de vote
+## Démocratie et droit de vote
 
 279. Qu'est-ce que pour vous la démocratie ?
 
@@ -1241,7 +1241,7 @@ La démocratie est une forme de gouvernement dans laquelle la souveraineté appa
 
 Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles  j'ai choisi de vivre en France.
 
-#### Organisation de la République française
+## Organisation de la République française
 
 305. Quel texte définit l'organisation de l'État ?
 
@@ -1616,9 +1616,9 @@ Parce que l’Assemblée nationale est élue au suffrage universel direct, elle 
 Au Palais Bourbon, à Paris.
 
 
-### Vivre dans la société française
+# Vivre dans la société française
 
-#### Démarches Administratives
+## Démarches Administratives
 
 398. Quel est le rôle de la mairie (ou hôtel de ville) ?
 
@@ -3240,13 +3240,13 @@ J'ai plusieurs amis français avec qui j'ai des liens solides. Je leur rends sou
 
 Oui, je fais partie d’une église locale appelée La Cité. Je suis membre actifve de cette communauté.
 
-803. DOu se trouve le siège de cette association ?
+803. Ou se trouve le siège de cette association ?
 
 Le siège de l’église La Cité se trouve au 24 Rue Antoine-Julien Hénard, 75012 Paris.
 
 804. Pratiquez vous une religion ?
 
-Oui, je suis chrétienne.
+Indiquez si vous pratiquez une religion, et précisez laquelle ou mentionnez que vous n'en avez pas.
 
 805. Pourquoi êtes-vous venu en France la toute première fois ?
 
@@ -3408,7 +3408,7 @@ Tout homme est présumé innocent jusqu'à ce qu'il ait été déclaré coupable
 
 Non, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public.
 
-#### Emploi et monde du travail
+## Emploi et monde du travail
 
 845. Qui a le droit d'accéder aux emplois publics ?
 
@@ -3430,7 +3430,7 @@ J’utilise principalement l’anglais pour mes conversations en milieu professi
 
 Je n’utilise pas beaucoup le français au travail, j’utilise principalement l’anglais. Cependant, je parle français dans la vie quotidienne et avec mes amis.
 
-#### Santé et protection sociale
+## Santé et protection sociale
 
 850. Qu'est-ce que le système de sécurité sociale ?
 
@@ -3460,7 +3460,7 @@ La Sécurité Sociale.
 
 Louis XIV (14).
 
-#### Parentalité et famille
+## Parentalité et famille
 
 857. L'école est-elle obligatoire en France ?
 

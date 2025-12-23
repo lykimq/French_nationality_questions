@@ -75,8 +75,7 @@ export const safeAverage = (values: number[]): number => {
 
 // Process all questions from different sources
 export const processAllQuestions = (
-    questionsData: any,
-    historySubcategories: any
+    questionsData: any
 ): TestQuestion[] => {
     const questions: TestQuestion[] = [];
     const seenIds = new Set<number>();
@@ -101,23 +100,6 @@ export const processAllQuestions = (
             questions.push(processQuestionData(question, category.id, category.title));
         });
     });
-
-    // Process history subcategories with safety check
-    if (historySubcategories) {
-        Object.values(historySubcategories).forEach((subcategory: any) => {
-            if (!subcategory?.questions) return;
-
-            subcategory.questions.forEach((question: any) => {
-                if (seenIds.has(question.id)) {
-                    logger.warn(`Duplicate question ID: ${question.id} in history subcategory ${subcategory.id}`);
-                    return;
-                }
-                seenIds.add(question.id);
-
-                questions.push(processQuestionData(question, subcategory.id, subcategory.title));
-            });
-        });
-    }
 
     return questions;
 };

@@ -1,0 +1,159 @@
+{
+    "theme": "Arts, Culture et Sports",
+    "id": "arts_culture_sports",
+    "title": "Arts, culture et sports",
+    "icon": "music-note",
+    "description": "Arts, culture et sports",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Citez des personnages littéraires Français célèbres",
+            "explanation": "Thénardier, jean valjean (Les misérables), Rémy (Sans famille), le petit prince,…",
+            "image": null
+        },
+        {
+            "id": 2,
+            "question": "Citez des peintres Français célèbres",
+            "explanation": "Cézanne, Delacroix, Monet etc…",
+            "image": null
+        },
+        {
+            "id": 3,
+            "question": "Citez des artistes Français connus",
+            "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+            "image": null
+        },
+        {
+            "id": 4,
+            "question": "Citez des écrivains Français Célèbres",
+            "explanation": "Beaumarchais, Molière, Victor Hugo etc…",
+            "image": null
+        },
+        {
+            "id": 5,
+            "question": "Citez des œuvres littéraires célèbres",
+            "explanation": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+            "image": null
+        },
+        {
+            "id": 6,
+            "question": "Qui a écrit les trois mousquetaires ?",
+            "explanation": "Alexandre Dumas et Auguste Maquet.",
+            "image": null
+        },
+        {
+            "id": 7,
+            "question": "Qui était Voltaire ?",
+            "explanation": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+            "image": null
+        },
+        {
+            "id": 8,
+            "question": "À Quel mouvement voltaire appartient-il ?",
+            "explanation": "Il appartenait au mouvement de la philosophie des lumières et il en est l'un des représentants les plus connus.",
+            "image": null
+        },
+        {
+            "id": 9,
+            "question": "Citez des philosophes connus des lumières ?",
+            "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+            "image": null
+        },
+        {
+            "id": 10,
+            "question": "Qu'est-ce que la philosophie des lumières ?",
+            "explanation": "C'est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du xviie siècle avec plusieurs philosophes comme voltaire, rousseau etc… et qui par leur engagement contre les oppressions religieuses et politiques, se voyaient comme une élite avancée œuvrant pour un progrès du monde. Combattant l'irrationnel, l'arbitraire, l'obscurantisme et la « superstition » des siècles passés, ils ont procédé au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. L'influence de leurs écrits a été déterminante dans les grands événements de la fin du xviiie siècle que sont la Déclaration d'indépendance des États-Unis et la Révolution française.",
+            "image": null
+        },
+        {
+            "id": 11,
+            "question": "Quel grand évènement sportif Français connaissez-vous ?",
+            "explanation": "- Vous pouvez citer une épreuve cycliste comme le Tour de France.\n\n- Une épreuve de tennis comme le tournoi de Roland Garros.\n\n- Une compétition de course automobile comme les 24h du Mans.\n\n- Une course comme le Marathon de Paris.",
+            "image": null
+        },
+        {
+            "id": 12,
+            "question": "Connaissez-vous des sportifs Français(e)s ?",
+            "explanation": "- Dans le football : Michel Platini, Zinedine Zidane.\n\n- Dans le cyclisme : Richard Virenque.\n\n- Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.\n\n- Dans le judo : Teddy Riner.",
+            "image": null
+        },
+        {
+            "id": 13,
+            "question": "Vivez-vous en appartement ou en maison ?",
+            "explanation": "J’habite dans un(e) (Appartement/Maison).",
+            "image": null
+        },
+        {
+            "id": 14,
+            "question": "Pouvez-vous nous parler de votre parcours avant d'arriver en France ?",
+            "explanation": "Originaire de (pays), j'ai décidé de venir en France pour (raison, par exemple : poursuivre mes études, opportunités professionnelles, rejoindre ma famille). J'ai été attiré par la qualité de vie, la culture et les opportunités qu'offre la France.",
+            "image": null
+        },
+        {
+            "id": 15,
+            "question": "Comment la Terreur a-t-elle pris fin ?",
+            "explanation": "Le 27 juillet 1794 (9 thermidor an II), Robespierre et ses partisans sont arrêtés et exécutés.",
+            "image": null
+        },
+        {
+            "id": 16,
+            "question": "Qui a peint la Joconde et où est-elle exposée ?",
+            "explanation": "Léonard de Vinci, et elle est exposée au musée du Louvre.",
+            "image": null
+        },
+        {
+            "id": 17,
+            "question": "Nommez un célèbre peintre impressionniste français.",
+            "explanation": "Claude Monet.",
+            "image": null
+        },
+        {
+            "id": 18,
+            "question": "Avez-vous visité des territoires d’Outre-mer ?",
+            "explanation": "Non, mais je connais leur importance pour la France. / Oui, j’ai visité (nom du territoire) et découvert sa culture.",
+            "image": null
+        },
+        {
+            "id": 19,
+            "question": "Quelle œuvre a été écrite par Victor Hugo ?",
+            "explanation": "Victor Hugo a écrit notamment \"Les Misérables\" (1862) et \"Notre-Dame de Paris\" (1831), deux romans majeurs de la littérature française.",
+            "image": null
+        },
+        {
+            "id": 20,
+            "question": "Quel peintre est français ?",
+            "explanation": "Des peintres français célèbres : Claude Monet (impressionnisme), Paul Cézanne (postimpressionnisme), Eugène Delacroix (romantisme).",
+            "image": null
+        },
+        {
+            "id": 21,
+            "question": "Quel plat est une spécialité de la cuisine française ?",
+            "explanation": "Exemples emblématiques : le bœuf bourguignon, le coq au vin, la bouillabaisse, la quiche lorraine.",
+            "image": null
+        },
+        {
+            "id": 22,
+            "question": "Dansquel grand musée parisien est exposée la Joconde ?",
+            "explanation": "La Joconde est exposée au musée du Louvre, à Paris.",
+            "image": null
+        },
+        {
+            "id": 23,
+            "question": "Quel peintre célèbre a peint les Nymphéas ?",
+            "explanation": "Les \"Nymphéas\" sont une série de toiles de Claude Monet, peintes à Giverny à la fin de sa vie.",
+            "image": null
+        },
+        {
+            "id": 24,
+            "question": "À quelle occasion a été construite la Tour Eiffel ?",
+            "explanation": "Elle a été construite pour l'Exposition universelle de 1889 à Paris.",
+            "image": null
+        },
+        {
+            "id": 25,
+            "question": "Quel musée est situé à Paris ?",
+            "explanation": "Parmi les grands musées parisiens : le Louvre, le musée d'Orsay, le Centre Pompidou.",
+            "image": null
+        }
+    ]
+}
