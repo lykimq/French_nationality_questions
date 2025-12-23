@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { getQuestionText, getExplanationText, formatExplanation } from '../utils';
 import ImageModal from './ImageModal';
@@ -34,6 +34,14 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         }
     };
 
+    const displayId = useMemo(() => {
+        if (typeof id === 'string') {
+            const numeric = id.match(/\d+/);
+            return numeric ? numeric[0] : id;
+        }
+        return String(id);
+    }, [id]);
+
     const handleImagePress = () => {
         if (imageSource && !imageError && !imageLoading) {
             setIsImageModalVisible(true);
@@ -66,8 +74,16 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 android_ripple={!alwaysExpanded ? { color: theme.colors.primary + '20' } : undefined}
                 disabled={alwaysExpanded}
             >
-                <View style={[styles.idContainer, { backgroundColor: theme.colors.primary }]}>
-                    <FormattedText style={[styles.id, { color: theme.colors.buttonText }]}>{id}</FormattedText>
+                <View style={styles.idWrapper}>
+                    <Icon3D
+                        name="ellipse"
+                        size={28}
+                        color={theme.colors.primary}
+                        variant="glass"
+                        backgroundColor={theme.colors.card}
+                        containerStyle={styles.idIconContainer}
+                    />
+                    <FormattedText style={[styles.id, { color: theme.colors.buttonText }]}>{displayId}</FormattedText>
                 </View>
                 <View style={styles.questionContainer}>
                     <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={isExpanded ? 0 : 2}>
@@ -190,17 +206,20 @@ const styles = StyleSheet.create({
     headerPressed: {
         borderRadius: 8,
     },
-    idContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
+    idWrapper: {
+        width: 40,
+        height: 40,
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 12,
     },
+    idIconContainer: {
+        position: 'absolute',
+    },
     id: {
         fontWeight: 'bold',
         fontSize: 16,
+        textAlign: 'center',
     },
     questionContainer: {
         flex: 1,
@@ -215,7 +234,8 @@ const styles = StyleSheet.create({
         padding: 4,
     },
     expandedContent: {
-        paddingTop: 16,
+        marginTop: 8,
+        paddingTop: 20,
     },
     imageContainer: {
         borderRadius: 8,

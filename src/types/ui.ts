@@ -86,7 +86,7 @@ export interface TextFormattingSettings {
 
 // Question card component props
 export interface QuestionCardProps {
-    readonly id: number;
+    readonly id: number | string;
     readonly question: string;
     readonly explanation: string;
     readonly image?: string | null;

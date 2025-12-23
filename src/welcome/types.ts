@@ -2,9 +2,9 @@ import type { TitledEntity, VisualEntity, CategorizableEntity } from '../types';
 
 // ==================== QUESTION DOMAIN ====================
 
-// Base entity for numeric IDs (questions use numbers)
+// Base entity for question IDs (numeric or prefixed string like "livret_1")
 export interface NumberEntity {
-    readonly id: number;
+    readonly id: number | string;
 }
 
 // Core question structure - immutable and functional
@@ -68,7 +68,7 @@ export type ExtractCategories<T extends { categories: readonly any[] }> = T['cat
 
 // Question structure for navigation params
 export interface NavigationQuestion {
-    readonly id: number;
+    readonly id: number | string;
     readonly question: string;
     readonly explanation?: string;
     readonly image?: string | null;
