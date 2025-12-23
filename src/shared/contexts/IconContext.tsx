@@ -4,6 +4,21 @@ import { iconSets, jsonIconSets, jsonIconColors } from '../../config/iconConfig'
 
 const DEFAULT_ICON_SET: IconSetType = 'filled';
 
+// Mapping from JSON file icon names to JsonIconMapping keys
+// Each category gets a unique icon to avoid duplicates
+const iconNameToKeyMap: Record<string, keyof JsonIconMapping> = {
+    'office-building': 'business',      // administration_locale - local administration
+    'scale': 'shield',                  // ddhc - rights declaration
+    'user': 'person',                   // vie_personnelle_integration - personal
+    'government': 'library',            // democratie_politique - democracy/political institutions
+    'history': 'book',                  // reperes_historiques - history
+    'music-note': 'brush',              // arts_culture_sports - arts/culture
+    'balance': 'people',                // droits_devoirs - citizen rights/duties (changed from shield)
+    'globe': 'star',                    // france_europe_monde - France in the world (changed from map)
+    'map': 'map',                       // geographie_sites - geography
+    'flag': 'flag',                     // principes_valeurs - republic values
+};
+
 // Context interface
 interface IconContextType {
     iconSet: IconSetType;
@@ -41,15 +56,21 @@ export const IconProvider: React.FC<IconProviderProps> = ({ children }) => {
     }, []);
 
     const getJsonIconName = useCallback((iconKey: keyof JsonIconMapping | string): string => {
-        if (iconKey in jsonIconSets[jsonIconSet]) {
-            return jsonIconSets[jsonIconSet][iconKey as keyof JsonIconMapping];
+        // Map icon name from JSON file to JsonIconMapping key if needed
+        const mappedKey = iconNameToKeyMap[iconKey] || iconKey;
+        
+        if (mappedKey in jsonIconSets[jsonIconSet]) {
+            return jsonIconSets[jsonIconSet][mappedKey as keyof JsonIconMapping];
         }
         return jsonIconSets[jsonIconSet].default;
     }, []);
 
     const getJsonIconColor = useCallback((iconKey: keyof JsonIconMapping | string): string => {
-        if (iconKey in jsonIconColors) {
-            return jsonIconColors[iconKey as keyof JsonIconMapping];
+        // Map icon name from JSON file to JsonIconMapping key if needed
+        const mappedKey = iconNameToKeyMap[iconKey] || iconKey;
+        
+        if (mappedKey in jsonIconColors) {
+            return jsonIconColors[mappedKey as keyof JsonIconMapping];
         }
         return jsonIconColors.default;
     }, []);
