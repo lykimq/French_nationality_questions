@@ -4,6 +4,7 @@ import {
     StyleSheet,
     TouchableOpacity,
     PanResponder,
+    type PanResponderGestureState,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { FormattedText } from '../../shared/components';
@@ -52,7 +53,7 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
         return Math.max(minimumValue, Math.min(maximumValue, steppedValue));
     };
 
-    const handlePositionChange = (event: any) => {
+    const handlePositionChange = (event: PanResponderGestureState) => {
         if (trackRef.current) {
             trackRef.current.measure((x, y, width, height, pageX, pageY) => {
                 const touchX = event.nativeEvent.pageX - pageX;

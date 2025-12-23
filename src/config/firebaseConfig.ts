@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getStorage } from 'firebase/storage';
+import { initializeApp, FirebaseApp } from 'firebase/app';
+import { getStorage, FirebaseStorage } from 'firebase/storage';
 import { createLogger } from '../shared/utils/logger';
 
 const logger = createLogger('FirebaseConfig');
@@ -22,8 +22,8 @@ const firebaseConfig = {
 const requiredFields = ['apiKey', 'projectId', 'storageBucket'] as const;
 const missingFields = requiredFields.filter(field => !firebaseConfig[field]);
 
-let app: any = null;
-let storage: any = null;
+let app: FirebaseApp | null = null;
+let storage: FirebaseStorage | null = null;
 
 if (missingFields.length > 0) {
     const platform = typeof window !== 'undefined' ? 'Web' : 'Native';

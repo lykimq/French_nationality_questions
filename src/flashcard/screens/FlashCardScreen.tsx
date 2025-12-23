@@ -88,7 +88,7 @@ const FlashCardScreen: React.FC = () => {
 
         setDataState((prev) => ({ ...prev, loading: true, error: null }));
 
-        const loadPromise = (async () => {
+        const loadPromise = (async (): Promise<{ [key: string]: FormationCategory } | null> => {
             try {
                 const data = await loadFlashCardData();
                 globalFlashCardDataCache = data;
@@ -98,6 +98,7 @@ const FlashCardScreen: React.FC = () => {
                     loading: false,
                     error: data ? null : 'Impossible de charger les données',
                 });
+                return data;
             } catch (err) {
                 globalFlashCardDataPromise = null;
                 setDataState({
@@ -105,10 +106,11 @@ const FlashCardScreen: React.FC = () => {
                     loading: false,
                     error: 'Erreur lors du chargement des données',
                 });
+                return null;
             }
         })();
 
-        globalFlashCardDataPromise = loadPromise as any;
+        globalFlashCardDataPromise = loadPromise;
         loadingPromiseRef.current = loadPromise;
         await loadPromise;
     }, []);

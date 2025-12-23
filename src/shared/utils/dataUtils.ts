@@ -3,17 +3,18 @@ import { storage } from '../../config/firebaseConfig';
 import { LOCAL_DATA_MAP, DATA_FILES } from '../config/dataConfig';
 import { createLogger } from './logger';
 import { validateDataStructure } from './dataValidation';
+import type { FrenchQuestionsData } from '../../types/questionsData';
 
 const logger = createLogger('dataUtils');
 
 type DataCache = {
-    [key: string]: any;
+    [key: string]: FrenchQuestionsData | Record<string, unknown> | null;
 };
 
 let firebaseDataCache: DataCache = {};
 let failedDataCache: Set<string> = new Set();
 
-const getLocalJsonData = async (dataPath: string): Promise<any> => {
+const getLocalJsonData = async (dataPath: string): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {
     try {
         const localData = LOCAL_DATA_MAP[dataPath];
         if (localData) {
@@ -27,7 +28,7 @@ const getLocalJsonData = async (dataPath: string): Promise<any> => {
     }
 };
 
-const getFirebaseJsonData = async (dataPath: string): Promise<any> => {
+const getFirebaseJsonData = async (dataPath: string): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {
     try {
         if (firebaseDataCache[dataPath]) {
             return firebaseDataCache[dataPath];
@@ -91,17 +92,19 @@ const loadJsonCollection = async (
     directoryPrefix: string = '',
     keySuffixToRemove: string = '.json',
     useIdAsKey: boolean = false
-): Promise<{ [key: string]: any }> => {
+): Promise<Record<string, FrenchQuestionsData | Record<string, unknown>>> => {
     try {
         const promises = files.map(async (filename) => {
             const fallbackKey = filename.replace(keySuffixToRemove, '');
             const data = await getFirebaseJsonData(`${directoryPrefix}${filename}`);
-            const key = useIdAsKey && data?.id ? data.id : fallbackKey;
+            const key = useIdAsKey && data && typeof data === 'object' && 'id' in data && typeof data.id === 'string'
+                ? data.id
+                : fallbackKey;
             return { key, data };
         });
 
         const results = await Promise.all(promises);
-        const dataMap: { [key: string]: any } = {};
+        const dataMap: Record<string, FrenchQuestionsData | Record<string, unknown>> = {};
 
         results.forEach(({ key, data }) => {
             if (data) {
@@ -150,7 +153,7 @@ export const preloadAllPart1TestData = async () => {
     }
 };
 
-export const loadPart1TestData = async (): Promise<any> => {
+export const loadPart1TestData = async (): Promise<Record<string, unknown>> => {
     return {
         id: "test_part1",
         title: "Première partie : Tests de connaissances",

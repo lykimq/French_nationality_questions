@@ -36,7 +36,9 @@ const getFirebaseImageUrl = async (imagePath: string): Promise<string | null> =>
     }
 };
 
-export const getImageSource = async (imagePath: string | null): Promise<any> => {
+import type { ImageSourcePropType } from 'react-native';
+
+export const getImageSource = async (imagePath: string | null): Promise<ImageSourcePropType | null> => {
     if (!imagePath) return null;
 
     try {
@@ -69,7 +71,7 @@ export const getImageSource = async (imagePath: string | null): Promise<any> => 
     }
 };
 
-export const getCachedImageSource = (imagePath: string | null): any => {
+export const getCachedImageSource = (imagePath: string | null): ImageSourcePropType | null => {
     if (!imagePath) return null;
 
     if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
@@ -87,14 +89,16 @@ export const getCachedImageSource = (imagePath: string | null): any => {
     return firebaseImageCache[filename] || null;
 };
 
-export const preloadImages = async (questionsData: any): Promise<void> => {
+import type { FrenchQuestionsData } from '../../types/questionsData';
+
+export const preloadImages = async (questionsData: FrenchQuestionsData | null | undefined): Promise<void> => {
     try {
         const imagePaths: string[] = [];
 
         if (questionsData && questionsData.categories) {
-            questionsData.categories.forEach((category: any) => {
+            questionsData.categories.forEach((category) => {
                 if (category.questions) {
-                    category.questions.forEach((question: any) => {
+                    category.questions.forEach((question) => {
                         if (question.image) {
                             imagePaths.push(question.image);
                         }

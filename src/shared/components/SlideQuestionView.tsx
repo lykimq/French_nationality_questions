@@ -7,6 +7,7 @@ import QuestionCard from './QuestionCard';
 import FormattedText from './FormattedText';
 import Icon3D from './Icon3D';
 import { createLogger } from '../utils/logger';
+import type { Question } from '../../welcome/types';
 
 const logger = createLogger('SlideQuestionView');
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -14,7 +15,7 @@ const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
 
 export interface SlideQuestionViewProps {
-    question: any;
+    question: Question | null;
     currentIndex: number;
     totalCount: number;
     title?: string;
@@ -45,7 +46,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     const chevronForwardIcon = getIcon('chevronForward');
 
     // Track the question ID to detect changes for animation reset
-    const prevQuestionIdRef = useRef<string | null>(null);
+    const prevQuestionIdRef = useRef<string | number | null>(null);
 
     // Reset scroll when question changes
     const handleScrollReset = useCallback(() => {
@@ -54,7 +55,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
 
     // Effect to handle animation reset when question changes
     useEffect(() => {
-        const currentId = question?.id;
+        const currentId = question?.id ?? null;
         if (currentId !== prevQuestionIdRef.current) {
             if (isAnimating) {
                 translateX.setValue(0);
@@ -215,7 +216,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                             key={question.id}
                             id={question.id}
                             question={question.question}
-                            explanation={question.explanation}
+                            explanation={question.explanation || ''}
                             image={question.image || null}
                             alwaysExpanded={true}
                         />

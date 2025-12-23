@@ -54,7 +54,7 @@ export const useSearch = () => {
                     ...question,
                     categoryId: category.id,
                     categoryTitle: category.title,
-                    hasImage: !!(question as any).image,
+                    hasImage: !!question.image,
                 });
             });
         });

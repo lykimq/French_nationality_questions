@@ -1,3 +1,5 @@
+import type { RawQuestion, RawCategory, RawDataStructure } from '../types';
+
 export interface ValidationResult {
     isValid: boolean;
     errors: string[];
@@ -12,7 +14,7 @@ export interface ValidationResult {
 }
 
 const validateQuestion = (
-    question: any,
+    question: RawQuestion,
     index: number,
     errors: string[],
     summary: ValidationResult['summary']
@@ -40,7 +42,7 @@ const validateQuestion = (
     }
 };
 
-export const validateDataStructure = (data: any, dataType: string): ValidationResult => {
+export const validateDataStructure = (data: unknown, dataType: string): ValidationResult => {
     const errors: string[] = [];
     const summary: ValidationResult['summary'] = {
         totalQuestions: 0,
@@ -52,14 +54,16 @@ export const validateDataStructure = (data: any, dataType: string): ValidationRe
     };
 
     try {
-        if (!data) {
+        if (!data || typeof data !== 'object') {
             errors.push('Data is null or undefined');
             return { isValid: false, errors, summary };
         }
 
-        if (data.id && data.title && data.subcategories && Array.isArray(data.subcategories)) {
-            summary.categoryInfo = `Category Metadata: ${data.id} - ${data.title}`;
-            data.subcategories.forEach((subcategory: any, index: number) => {
+        const typedData = data as RawDataStructure;
+
+        if (typedData.id && typedData.title && typedData.subcategories && Array.isArray(typedData.subcategories)) {
+            summary.categoryInfo = `Category Metadata: ${typedData.id} - ${typedData.title}`;
+            typedData.subcategories.forEach((subcategory: RawCategory, index: number) => {
                 if (!subcategory.id || typeof subcategory.id !== 'string') {
                     errors.push(`Subcategory at index ${index} missing ID`);
                 }
@@ -71,9 +75,9 @@ export const validateDataStructure = (data: any, dataType: string): ValidationRe
                 }
             });
             return { isValid: errors.length === 0, errors, summary };
-        } else if (data.questions && Array.isArray(data.questions)) {
-            summary.totalQuestions = data.questions.length;
-            data.questions.forEach((question: any, index: number) => 
+        } else if (typedData.questions && Array.isArray(typedData.questions)) {
+            summary.totalQuestions = typedData.questions.length;
+            typedData.questions.forEach((question: RawQuestion, index: number) => 
                 validateQuestion(question, index, errors, summary)
             );
         } else {
@@ -84,7 +88,8 @@ export const validateDataStructure = (data: any, dataType: string): ValidationRe
         const isValid = errors.length === 0 && (!requiresQuestions || summary.totalQuestions > 0);
         return { isValid, errors, summary };
     } catch (error) {
-        errors.push(`Exception during validation: ${error}`);
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        errors.push(`Exception during validation: ${errorMessage}`);
         return { isValid: false, errors, summary };
     }
 };

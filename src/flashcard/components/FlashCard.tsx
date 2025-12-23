@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import { StyleSheet, View, TouchableOpacity, Pressable, Animated, Dimensions, ScrollView, Image, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Pressable, Animated, Dimensions, ScrollView, Image, ActivityIndicator, type NativeSyntheticEvent, type NativeScrollEvent, type LayoutChangeEvent } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { FormattedText } from '../../shared/components';
@@ -34,7 +34,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
         scrollViewRef.current?.scrollTo({ y: 0, animated: false });
     }, [question.id]);
 
-    const handleScroll = (event: any) => {
+    const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
         const { contentOffset } = event.nativeEvent;
         setScrollOffset(contentOffset.y);
     };
@@ -43,7 +43,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
         setContentHeight(contentHeight);
     };
 
-    const handleLayout = (event: any) => {
+    const handleLayout = (event: LayoutChangeEvent) => {
         const { height } = event.nativeEvent.layout;
         setScrollViewHeight(height);
     };

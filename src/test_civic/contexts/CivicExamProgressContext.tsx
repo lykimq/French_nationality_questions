@@ -21,6 +21,7 @@ import type {
     CivicExamStatistics,
     CivicExamResult,
     CivicExamQuestion,
+    TestQuestion,
 } from '../types';
 
 const logger = createLogger('CivicExamProgressContext');
@@ -33,7 +34,7 @@ interface CivicExamProgressContextType {
     updateProgressFromSession: (session: CivicExamSession, result: Omit<CivicExamResult, 'statistics'>) => Promise<CivicExamResult>;
     refreshProgress: () => Promise<void>;
     resetProgress: () => Promise<void>;
-    getIncorrectQuestions: (allQuestions: any[]) => CivicExamQuestion[];
+    getIncorrectQuestions: (allQuestions: readonly TestQuestion[]) => CivicExamQuestion[];
 }
 
 const CivicExamProgressContext = createContext<CivicExamProgressContextType | undefined>(undefined);
@@ -141,7 +142,7 @@ export const CivicExamProgressProvider: React.FC<{ children: ReactNode }> = ({ c
         }
     }, []);
 
-    const getIncorrectQuestions = useCallback((allQuestions: any[]): CivicExamQuestion[] => {
+    const getIncorrectQuestions = useCallback((allQuestions: readonly TestQuestion[]): CivicExamQuestion[] => {
         if (examProgress.incorrectQuestions.length === 0) {
             return [];
         }

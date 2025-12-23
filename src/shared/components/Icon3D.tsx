@@ -27,7 +27,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
         const containerScale = isSmall ? 1.6 : 1.8;
         const iconElement = (
             <Ionicons 
-                name={name as any} 
+                name={name as keyof typeof Ionicons.glyphMap} 
                 size={size} 
                 color={variant === 'glass' ? color + 'DD' : color} 
             />

@@ -32,7 +32,7 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
             >
                 <View style={styles.headerLeft}>
                     <View style={[sharedStyles.iconContainer, { backgroundColor: iconColor + '15' }]}>
-                        <Ionicons name={icon as any} size={20} color={iconColor} />
+                        <Ionicons name={icon as keyof typeof Ionicons.glyphMap} size={20} color={iconColor} />
                     </View>
                     <FormattedText style={[styles.title, { color: theme.colors.text }]}>
                         {title}

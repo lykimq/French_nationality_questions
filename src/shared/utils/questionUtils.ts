@@ -1,5 +1,7 @@
 import type { Question } from '../../welcome/types';
 import type { TestQuestion } from '../../welcome/types';
+import type { FrenchQuestionsData } from '../../types/questionsData';
+import type { RawQuestion, RawCategory, RawQuestionsData } from '../types';
 import { createLogger } from './logger';
 
 const logger = createLogger('QuestionUtils');
@@ -52,7 +54,7 @@ export const formatExplanation = (text: string): string => {
 // ==================== QUESTION PROCESSING UTILITIES ====================
 
 // Type validation helpers
-const extractNumericId = (rawId: any): number | undefined => {
+const extractNumericId = (rawId: number | string | undefined): number | undefined => {
     if (typeof rawId === 'number') {
         return rawId;
     }
@@ -66,23 +68,23 @@ const extractNumericId = (rawId: any): number | undefined => {
     return undefined;
 };
 
-const getBaseQuestionNumber = (question: any): number | undefined => {
+const getBaseQuestionNumber = (question: RawQuestion | null | undefined): number | undefined => {
     if (question && question.id !== undefined) {
         return extractNumericId(question.id);
     }
     return undefined;
 };
 
-export const isValidQuestionData = (question: any): boolean => {
+export const isValidQuestionData = (question: RawQuestion | null | undefined): boolean => {
+    if (!question) return false;
     const baseNumber = getBaseQuestionNumber(question);
-    return question &&
-        typeof baseNumber === 'number' &&
+    return typeof baseNumber === 'number' &&
         (typeof question.question === 'string' || typeof question.question === 'object');
 };
 
 // Helper function to safely process questions
 export const processQuestionData = (
-    question: any,
+    question: RawQuestion,
     categoryId: string,
     categoryTitle: string,
     idOffset: number = 0
@@ -103,14 +105,22 @@ export const processQuestionData = (
 
     const finalId = baseNumber + idOffset;
 
+    const questionText = typeof question.question === 'string'
+        ? question.question
+        : (typeof question.question === 'object' && question.question !== null
+            ? String(question.question)
+            : '');
+
+    const explanationText = typeof question.explanation === 'string'
+        ? question.explanation
+        : (typeof question.explanation === 'object' && question.explanation !== null
+            ? String(question.explanation)
+            : 'No explanation provided');
+
     return {
         id: finalId,
-        question: typeof question.question === 'string'
-            ? question.question
-            : question.question || '',
-        explanation: typeof question.explanation === 'string'
-            ? question.explanation
-            : question.explanation || 'No explanation provided',
+        question: questionText,
+        explanation: explanationText,
         image: question.image,
         categoryId,
         categoryTitle: categoryTitle || categoryId,
@@ -119,7 +129,7 @@ export const processQuestionData = (
 
 // Process all questions from different sources
 export const processAllQuestions = (
-    questionsData: any
+    questionsData: RawQuestionsData | FrenchQuestionsData
 ): TestQuestion[] => {
     const questions: TestQuestion[] = [];
     const seenKeys = new Set<string>();
@@ -131,22 +141,25 @@ export const processAllQuestions = (
     }
 
     // Process main categories
-    questionsData.categories.forEach((category: any, categoryIndex: number) => {
+    questionsData.categories.forEach((category: RawCategory | { id: string; title: string; questions: readonly Question[] }, categoryIndex: number) => {
         if (!category?.questions) return;
 
         const idOffset = categoryIndex * 1000;
+        const categoryId = category.id || 'unknown';
+        const categoryTitle = ('title' in category && category.title) ? category.title : categoryId;
 
-        category.questions.forEach((question: any) => {
-            const baseNumber = getBaseQuestionNumber(question);
-            const dedupeKey = `${category.id || 'unknown'}:${question?.id ?? baseNumber ?? 'invalid'}`;
+        category.questions.forEach((question: RawQuestion | Question) => {
+            const baseNumber = getBaseQuestionNumber(question as RawQuestion);
+            const questionId = 'id' in question ? question.id : baseNumber;
+            const dedupeKey = `${categoryId}:${questionId ?? baseNumber ?? 'invalid'}`;
 
             if (seenKeys.has(dedupeKey)) {
-                logger.warn(`Duplicate question ID: ${question.id} in category ${category.id}`);
+                logger.warn(`Duplicate question ID: ${questionId} in category ${categoryId}`);
                 return;
             }
             seenKeys.add(dedupeKey);
 
-            questions.push(processQuestionData(question, category.id, category.title, idOffset));
+            questions.push(processQuestionData(question as RawQuestion, categoryId, categoryTitle || categoryId, idOffset));
         });
     });
 
@@ -156,7 +169,7 @@ export const processAllQuestions = (
 // ==================== DATE UTILITIES ====================
 
 // Helper function to safely parse dates
-export const safeParseDate = (dateValue: any): Date | undefined => {
+export const safeParseDate = (dateValue: unknown): Date | undefined => {
     if (!dateValue) return undefined;
 
     try {
@@ -179,6 +192,7 @@ export const safeParseDate = (dateValue: any): Date | undefined => {
 
 // Apply memory limits to arrays to prevent unbounded growth
 export const applyMemoryLimits = <T>(array: T[], limit: number): T[] => {
+    if (limit <= 0) return [];
     return array.slice(-limit);
 };
 

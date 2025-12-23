@@ -82,8 +82,10 @@ const CategoryBasedQuestionsScreen = () => {
 
 export default CategoryBasedQuestionsScreen;
 
+import type { Theme } from '../shared/contexts/ThemeContext';
+
 // These styles are used by other components, so we'll keep them as a function that takes the theme
-export const getCommonStyles = (theme: any) => StyleSheet.create({
+export const getCommonStyles = (theme: Theme) => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: theme.colors.background,

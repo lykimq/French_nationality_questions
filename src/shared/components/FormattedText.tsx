@@ -12,15 +12,15 @@ const FormattedText: React.FC<FormattedTextProps> = ({
     const formattedStyles = getTextStyles(settings);
 
     // Create a function to strip fontSize from styles
-    const stripFontSize = (styleObj: any): any => {
-        if (!styleObj || typeof styleObj !== 'object') return styleObj;
+    const stripFontSize = (styleObj: unknown): Record<string, unknown> | null => {
+        if (!styleObj || typeof styleObj !== 'object') return null;
 
         // Handle StyleSheet objects by flattening them first
-        const flattened = StyleSheet.flatten(styleObj);
+        const flattened = StyleSheet.flatten(styleObj as Parameters<typeof StyleSheet.flatten>[0]);
         if (!flattened) return null;
 
         const { fontSize, ...otherProps } = flattened;
-        return otherProps;
+        return otherProps as Record<string, unknown>;
     };
 
     // Process the style prop to remove fontSize

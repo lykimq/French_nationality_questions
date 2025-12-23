@@ -1,18 +1,12 @@
-import type { CivicExamResult, CivicExamSession, CivicExamTheme } from '../types';
+import type { CivicExamResult, CivicExamSession, CivicExamTheme, CivicExamQuestion, TestAnswer, CivicExamStatistics } from '../types';
 
 // Serializable civic exam result for navigation (dates as ISO strings)
 export interface SerializableCivicExamResult {
     readonly session: {
         readonly id: string;
         readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
-        readonly questions: readonly any[];
-        readonly answers: readonly {
-            readonly questionId: number;
-            readonly isCorrect: boolean;
-            readonly userAnswer?: string;
-            readonly timeSpent: number;
-            readonly timestamp: string; // ISO string
-        }[];
+        readonly questions: readonly CivicExamQuestion[];
+        readonly answers: readonly (Omit<TestAnswer, 'timestamp'> & { readonly timestamp: string })[];
         readonly startTime: string; // ISO string
         readonly endTime?: string; // ISO string
         readonly isCompleted: boolean;
@@ -22,12 +16,12 @@ export interface SerializableCivicExamResult {
         readonly themes?: readonly string[];
         readonly isPracticeMode: boolean;
     };
-    readonly statistics: any;
+    readonly statistics: CivicExamStatistics;
     readonly passed: boolean;
     readonly score: number;
     readonly correctAnswers: number;
     readonly totalQuestions: number;
-    readonly incorrectQuestions: readonly any[];
+    readonly incorrectQuestions: readonly CivicExamQuestion[];
     readonly timeSpent: number;
 }
 

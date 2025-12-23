@@ -18,11 +18,12 @@ const defaultSettings: TextFormattingSettings = {
 const STORAGE_KEY = '@text_formatting_settings';
 
 // Helper function to validate loaded settings
-const isValidSettings = (settings: any): settings is TextFormattingSettings => {
+const isValidSettings = (settings: unknown): settings is TextFormattingSettings => {
     return (
         typeof settings === 'object' &&
         settings !== null &&
-        typeof settings.fontSize === 'number'
+        'fontSize' in settings &&
+        typeof (settings as { fontSize: unknown }).fontSize === 'number'
     );
 };
 

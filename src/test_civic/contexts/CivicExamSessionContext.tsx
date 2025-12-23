@@ -8,7 +8,7 @@ import type {
     CivicExamQuestion,
     CivicExamResult,
 } from '../types';
-import type { TestAnswer } from '../types';
+import type { TestAnswer, TestQuestion } from '../types';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 
 const logger = createLogger('CivicExamSessionContext');
@@ -18,7 +18,7 @@ interface CivicExamSessionContextType {
     isExamActive: boolean;
     currentQuestionIndex: number;
 
-    startExam: (config: CivicExamConfig, allQuestions: any[]) => Promise<void>;
+    startExam: (config: CivicExamConfig, allQuestions: readonly TestQuestion[]) => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishExam: () => Omit<CivicExamResult, 'statistics'> & { session: CivicExamSession };
@@ -33,12 +33,12 @@ const CivicExamSessionContext = createContext<CivicExamSessionContextType | unde
 
 export const CivicExamSessionProvider: React.FC<{
     children: ReactNode;
-    allProcessedQuestions: any[];
+    allProcessedQuestions: readonly TestQuestion[];
 }> = ({ children, allProcessedQuestions }) => {
     const [currentSession, setCurrentSession] = useState<CivicExamSession | null>(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-    const startExam = useCallback(async (config: CivicExamConfig, allQuestions: any[]): Promise<void> => {
+    const startExam = useCallback(async (config: CivicExamConfig, allQuestions: readonly TestQuestion[]): Promise<void> => {
         const questions = generateCivicExamQuestions(allQuestions, config);
 
         if (questions.length === 0) {
