@@ -13,18 +13,19 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
-import { sharedStyles, getCardContainerStyle } from '../../shared/utils';
+import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
 import type { FormationCategory } from '../types';
 import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
 
 type CategorySelectionScreenNavigationProp = NativeStackNavigationProp<FlashCardStackParamList>;
 
-const CATEGORY_ICONS: { [key: string]: string } = {
+const CATEGORY_ICON_KEYS: { [key: string]: string } = {
     principes_et_valeurs: 'flag',
-    histoire_geographie_et_culture: 'globe',
-    droits_et_devoirs: 'shield-checkmark',
+    histoire_geographie_et_culture: 'map',
+    droits_et_devoirs: 'shield',
     system_et_politique: 'business',
     vivre_dans_la_societe_francaise: 'people',
 };
@@ -32,6 +33,7 @@ const CATEGORY_ICONS: { [key: string]: string } = {
 const CategorySelectionScreen: React.FC = () => {
     const navigation = useNavigation<CategorySelectionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
+    const { getJsonIconName, getJsonIconColor } = useIcons();
     const [categories, setCategories] = useState<FormationCategory[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -103,55 +105,18 @@ const CategorySelectionScreen: React.FC = () => {
                     showsVerticalScrollIndicator={true}
                 >
                     {categories.map((category) => {
-                        const iconName = CATEGORY_ICONS[category.id] || 'book';
+                        const iconKey = CATEGORY_ICON_KEYS[category.id] || 'book';
                         const questionCount = category.questions?.length || 0;
 
                         return (
-                            <TouchableOpacity
+                            <CategoryCard
                                 key={category.id}
-                                style={[
-                                    styles.categoryCard,
-                                    sharedStyles.mediumShadow,
-                                    getCardContainerStyle(theme),
-                                ]}
+                                title={category.title}
+                                description={category.description}
+                                icon={iconKey}
+                                count={questionCount}
                                 onPress={() => handleCategoryPress(category)}
-                                activeOpacity={0.7}
-                            >
-                                <View
-                                    style={[
-                                        sharedStyles.largeIconContainer,
-                                        { backgroundColor: theme.colors.primary + '15' },
-                                    ]}
-                                >
-                                    <Ionicons
-                                        name={iconName as any}
-                                        size={32}
-                                        color={theme.colors.primary}
-                                    />
-                                </View>
-                                <View style={styles.categoryContent}>
-                                    <FormattedText style={[styles.categoryTitle, { color: theme.colors.text }]}>
-                                        {category.title}
-                                    </FormattedText>
-                                    <FormattedText
-                                        style={[styles.categoryDescription, { color: theme.colors.textSecondary }]}
-                                        numberOfLines={2}
-                                    >
-                                        {category.description}
-                                    </FormattedText>
-                                    <View style={[styles.countBadge, { backgroundColor: theme.colors.primary + '15' }]}>
-                                        <FormattedText style={[styles.countText, { color: theme.colors.primary }]}>
-                                            {questionCount} {questionCount === 1 ? 'carte' : 'cartes'}
-                                        </FormattedText>
-                                    </View>
-                                </View>
-                                <Ionicons
-                                    name="chevron-forward"
-                                    size={24}
-                                    color={theme.colors.primary}
-                                    style={styles.arrowIcon}
-                                />
-                            </TouchableOpacity>
+                            />
                         );
                     })}
                 </ScrollView>
@@ -186,41 +151,6 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         padding: 20,
-    },
-    categoryCard: {
-        flexDirection: 'row',
-        borderRadius: 12,
-        padding: 16,
-        marginBottom: 16,
-        alignItems: 'center',
-        borderWidth: 1,
-    },
-    categoryContent: {
-        flex: 1,
-        marginLeft: 16,
-    },
-    categoryTitle: {
-        fontSize: 18,
-        fontWeight: '600',
-        marginBottom: 4,
-    },
-    categoryDescription: {
-        fontSize: 14,
-        marginBottom: 8,
-        lineHeight: 20,
-    },
-    countBadge: {
-        alignSelf: 'flex-start',
-        paddingVertical: 4,
-        paddingHorizontal: 8,
-        borderRadius: 12,
-    },
-    countText: {
-        fontSize: 12,
-        fontWeight: '600',
-    },
-    arrowIcon: {
-        marginLeft: 8,
     },
     loadingText: {
         fontSize: 16,
