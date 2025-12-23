@@ -7,8 +7,9 @@ import type {
     CivicExamSession,
     CivicExamQuestion,
     CivicExamResult,
+    TestAnswer,
 } from '../types';
-import type { TestAnswer, TestQuestion } from '../types';
+import type { TestQuestion } from '../../types';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import { loadStoredSession, saveSession, clearStoredSession } from '../utils/civicExamSessionStorage';
 
@@ -43,17 +44,28 @@ export const CivicExamSessionProvider: React.FC<{
         loadStoredSession()
             .then(session => {
                 if (session) {
+                    const actualQuestionCount = session.questions.length;
+                    if (session.totalQuestions !== actualQuestionCount) {
+                        logger.warn(
+                            `Session totalQuestions (${session.totalQuestions}) doesn't match questions.length (${actualQuestionCount}). ` +
+                            `Fixing mismatch.`
+                        );
+                        session = {
+                            ...session,
+                            totalQuestions: actualQuestionCount,
+                        };
+                    }
                     setCurrentSession(session);
-                    setCurrentQuestionIndex(
-                        Math.min(session.answers.length, session.totalQuestions - 1)
-                    );
+                    const maxIndex = Math.max(0, actualQuestionCount - 1);
+                    const targetIndex = Math.min(session.answers.length, maxIndex);
+                    setCurrentQuestionIndex(targetIndex);
                 }
             })
             .catch(error => logger.error('Failed to hydrate stored civic exam session', error));
     }, []);
 
     const startExam = useCallback(async (config: CivicExamConfig, allQuestions: readonly TestQuestion[]): Promise<void> => {
-        const questions = generateCivicExamQuestions(allQuestions, config);
+        const questions = generateCivicExamQuestions([...allQuestions], config);
 
         if (questions.length === 0) {
             throw new Error('No questions available for this exam configuration');
@@ -62,10 +74,15 @@ export const CivicExamSessionProvider: React.FC<{
         const questionIds = new Set<number>();
         const duplicateIds: number[] = [];
         questions.forEach(q => {
-            if (questionIds.has(q.id)) {
-                duplicateIds.push(q.id);
+            const questionId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
+            if (isNaN(questionId)) {
+                logger.warn(`Question ${q.id} has invalid ID, skipping duplicate check`);
+                return;
+            }
+            if (questionIds.has(questionId)) {
+                duplicateIds.push(questionId);
             } else {
-                questionIds.add(q.id);
+                questionIds.add(questionId);
             }
         });
 
@@ -84,6 +101,7 @@ export const CivicExamSessionProvider: React.FC<{
             );
         }
 
+        const actualQuestionCount = questions.length;
         const newSession: CivicExamSession = {
             id: Date.now().toString(),
             mode: config.mode,
@@ -92,11 +110,13 @@ export const CivicExamSessionProvider: React.FC<{
             startTime: new Date(),
             isCompleted: false,
             score: 0,
-            totalQuestions: questions.length,
+            totalQuestions: actualQuestionCount,
             correctAnswers: 0,
             themes: config.selectedThemes,
             isPracticeMode,
         };
+
+        logger.info(`Created exam session with ${actualQuestionCount} questions`);
 
         setCurrentSession(newSession);
         setCurrentQuestionIndex(0);
@@ -122,6 +142,7 @@ export const CivicExamSessionProvider: React.FC<{
         const updatedSession: CivicExamSession = {
             ...currentSession,
             answers: [...currentSession.answers, answer],
+            totalQuestions: currentSession.questions.length,
         };
 
         setCurrentSession(updatedSession);
@@ -146,8 +167,9 @@ export const CivicExamSessionProvider: React.FC<{
             throw new Error('No active exam session');
         }
 
+        const actualQuestionCount = currentSession.questions.length;
         const correctAnswers = currentSession.answers.filter((answer: TestAnswer) => answer.isCorrect).length;
-        const score = calculateCivicExamScore(correctAnswers, currentSession.totalQuestions);
+        const score = calculateCivicExamScore(correctAnswers, actualQuestionCount);
         const passed = isCivicExamPassed(score);
 
         const endTime = new Date();
@@ -159,15 +181,22 @@ export const CivicExamSessionProvider: React.FC<{
             isCompleted: true,
             score,
             correctAnswers,
+            totalQuestions: actualQuestionCount,
         };
 
         const incorrectQuestionIds = currentSession.answers
             .filter(a => !a.isCorrect)
             .map(a => a.questionId);
 
-        const incorrectQuestions = currentSession.questions.filter(q =>
-            incorrectQuestionIds.includes(q.id)
-        ) as CivicExamQuestion[];
+        const incorrectQuestions = currentSession.questions.filter(q => {
+            const questionId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
+            return !isNaN(questionId) && incorrectQuestionIds.includes(questionId);
+        }) as CivicExamQuestion[];
+
+        logger.info(
+            `Finished exam: ${correctAnswers}/${actualQuestionCount} correct, ` +
+            `score=${score}%, passed=${passed}`
+        );
 
         // Clear persisted active session once finished
         saveSession(null);
@@ -177,7 +206,7 @@ export const CivicExamSessionProvider: React.FC<{
             passed,
             score,
             correctAnswers,
-            totalQuestions: finishedSession.totalQuestions,
+            totalQuestions: actualQuestionCount,
             incorrectQuestions,
             timeSpent,
         };
@@ -190,10 +219,52 @@ export const CivicExamSessionProvider: React.FC<{
     }, []);
 
     const getCurrentQuestion = useCallback((): CivicExamQuestion | null => {
-        if (!currentSession || currentQuestionIndex >= currentSession.questions.length) {
+        if (!currentSession || currentSession.questions.length === 0) {
             return null;
         }
-        return currentSession.questions[currentQuestionIndex] as CivicExamQuestion;
+        
+        const actualQuestionCount = currentSession.questions.length;
+        if (currentSession.totalQuestions !== actualQuestionCount) {
+            logger.warn(
+                `Session inconsistency: totalQuestions=${currentSession.totalQuestions}, ` +
+                `questions.length=${actualQuestionCount}. Using questions.length as source of truth.`
+            );
+        }
+        
+        if (currentQuestionIndex < 0 || currentQuestionIndex >= actualQuestionCount) {
+            logger.warn(
+                `Invalid question index: ${currentQuestionIndex}, questions length: ${actualQuestionCount}, ` +
+                `totalQuestions: ${currentSession.totalQuestions}. Resetting to valid index.`
+            );
+            const validIndex = Math.max(0, Math.min(currentQuestionIndex, actualQuestionCount - 1));
+            setCurrentQuestionIndex(validIndex);
+            return currentSession.questions[validIndex] as CivicExamQuestion;
+        }
+        
+        const question = currentSession.questions[currentQuestionIndex];
+        if (!question) {
+            logger.error(
+                `Question is null at index ${currentQuestionIndex}, ` +
+                `questions.length=${actualQuestionCount}, totalQuestions=${currentSession.totalQuestions}`
+            );
+            return null;
+        }
+        
+        const questionWithOptions = question as CivicExamQuestion & { options?: string[] };
+        if (currentSession.isPracticeMode) {
+            const hasOptions = 'options' in questionWithOptions && 
+                              Array.isArray(questionWithOptions.options) && 
+                              questionWithOptions.options.length > 0;
+            if (!hasOptions) {
+                logger.warn(
+                    `Question at index ${currentQuestionIndex} (ID: ${question.id}) has no options in practice mode. ` +
+                    `Options: ${JSON.stringify(questionWithOptions.options)}, ` +
+                    `Question type: ${'questionType' in question ? question.questionType : 'unknown'}`
+                );
+            }
+        }
+        
+        return question as CivicExamQuestion;
     }, [currentSession, currentQuestionIndex]);
 
     const getNextQuestion = useCallback((): CivicExamQuestion | null => {

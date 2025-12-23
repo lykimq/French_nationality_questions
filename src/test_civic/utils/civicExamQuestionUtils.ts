@@ -123,11 +123,13 @@ export const shuffleQuestionOptions = (
     const options = [...question.options];
     const correctAnswerText = options[correctAnswerIndex];
 
+    // Shuffle options
     for (let i = options.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [options[i], options[j]] = [options[j], options[i]];
     }
 
+    // Find new index of correct answer after shuffle
     const newCorrectAnswerIndex = options.findIndex(opt => opt === correctAnswerText);
     
     if (newCorrectAnswerIndex === -1) {

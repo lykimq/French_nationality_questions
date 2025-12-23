@@ -133,6 +133,30 @@ const validateQuestionData = (
         return false;
     }
 
+    const isKnowledgeQuestion = questionType === 'knowledge';
+    
+    if (isKnowledgeQuestion) {
+        const correctAnswer = question.correctAnswer;
+        const incorrectAnswers = question.incorrectAnswers;
+        
+        if (!isNonEmptyString(correctAnswer)) {
+            onInvalid?.(`Question ${questionId} (knowledge type) missing or empty correctAnswer`);
+            return false;
+        }
+        
+        if (!Array.isArray(incorrectAnswers) || incorrectAnswers.length === 0) {
+            onInvalid?.(`Question ${questionId} (knowledge type) missing or empty incorrectAnswers array`);
+            return false;
+        }
+        
+        const validIncorrectAnswers = incorrectAnswers.filter((ans: unknown) => isNonEmptyString(ans));
+        if (validIncorrectAnswers.length === 0) {
+            onInvalid?.(`Question ${questionId} (knowledge type) incorrectAnswers array contains no valid strings`);
+            return false;
+        }
+        
+    }
+
     return true;
 };
 
@@ -145,28 +169,12 @@ const validateAnswerIndex = (index: unknown, maxLength: number): number | undefi
 };
 
 /**
- * Resolves the correct answer index from the correctAnswer string.
+ * Returns the correct answer index.
  * Since options are built as [correctAnswer, ...incorrectAnswers],
  * the correct answer is always at index 0.
  */
-const resolveCorrectAnswerIndex = (correctAnswer: unknown, options: string[]): number | undefined => {
-    if (options.length === 0) {
-        return undefined;
-    }
-
-    // All data uses string correctAnswer, and options are built with correctAnswer first
-    if (typeof correctAnswer === 'string') {
-        const trimmed = sanitizeString(correctAnswer);
-        if (!trimmed) {
-            return undefined;
-        }
-        
-        // Try case-insensitive match for safety
-        const matchIndex = options.findIndex(opt => opt.toLowerCase() === trimmed.toLowerCase());
-        return matchIndex >= 0 ? matchIndex : 0;
-    }
-
-    return undefined;
+const resolveCorrectAnswerIndex = (options: string[]): number | undefined => {
+    return options.length > 0 ? 0 : undefined;
 };
 
 const CIVIC_ID_OFFSET = 1_000_000;
@@ -189,7 +197,7 @@ const transformCivicQuestion = (
     
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
     
-    const correctAnswerIndex = resolveCorrectAnswerIndex(q.correctAnswer, options);
+    const correctAnswerIndex = resolveCorrectAnswerIndex(options);
     const correctExplanationIndex = validateAnswerIndex(q.correctExplanationAnswer, explanationOptions.length);
 
     return {
@@ -250,18 +258,12 @@ const loadQuestionsFromFileData = (
             });
             return isValid;
         })
-        .map(q => transformCivicQuestion(q, theme!));
+        .map(q => transformCivicQuestion(q, theme!))
+        .filter(q => q.options && Array.isArray(q.options) && q.options.length > 0);
 
-    if (validQuestions.length < questions.length) {
-        const invalidCount = questions.length - validQuestions.length;
-        if (invalidCount > 0) {
-            logger.warn(`Skipped ${invalidCount} invalid civic exam question(s)`);
-            if (validationErrors.length > 0) {
-                const errorSummary = validationErrors.slice(0, 5).join('; ');
-                const moreErrors = validationErrors.length > 5 ? ` (and ${validationErrors.length - 5} more)` : '';
-                logger.warn(`Validation errors: ${errorSummary}${moreErrors}`);
-            }
-        }
+    if (validQuestions.length < questions.length && validationErrors.length > 0) {
+        const errorSummary = validationErrors.slice(0, 3).join('; ');
+        logger.warn(`Skipped ${questions.length - validQuestions.length} invalid question(s): ${errorSummary}`);
     }
 
     return validQuestions;
@@ -291,10 +293,6 @@ export const loadCivicExamQuestions = async (): Promise<CivicExamQuestionWithOpt
 
         const vivreData = require('../../data/test_civic/vivre_dans_la_societe_francaise.json');
         allQuestions.push(...loadQuestionsFromFileData(vivreData));
-
-        if (allQuestions.length === 0) {
-            logger.warn('No valid civic exam questions found after loading all files');
-        }
 
         return allQuestions;
     } catch (error) {

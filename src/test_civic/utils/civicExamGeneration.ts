@@ -1,6 +1,7 @@
 import type { TestQuestion } from '../../types';
 import type { CivicExamTheme, CivicExamSubTheme, CivicExamQuestion, CivicExamConfig } from '../types';
 import { extractNumericId } from '../../shared/utils/idUtils';
+import { createLogger } from '../../shared/utils/logger';
 import {
     CIVIC_EXAM_DISTRIBUTION,
     CIVIC_EXAM_CONFIG,
@@ -16,6 +17,8 @@ import {
 } from './civicExamUtils';
 import { shuffleQuestionOptions } from './civicExamQuestionUtils';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
+
+const logger = createLogger('CivicExamGeneration');
 
 // ==================== QUESTION SELECTION ====================
 
@@ -278,17 +281,24 @@ export const generateCivicExamQuestions = (
     
     const enriched = enrichQuestionsWithMetadata(shuffled);
     
+    let processedQuestions: CivicExamQuestion[];
+    
     if (config.shuffleOptions) {
-        return enriched.map(q => {
+        processedQuestions = enriched.map((q) => {
             if ('options' in q && 'correctAnswer' in q && Array.isArray(q.options) && q.options.length > 0) {
-                const shuffled = shuffleQuestionOptions(q as CivicExamQuestionWithOptions);
-                return shuffled as CivicExamQuestion;
+                return shuffleQuestionOptions(q as CivicExamQuestionWithOptions) as CivicExamQuestion;
             }
             return q;
         });
+    } else {
+        processedQuestions = enriched;
     }
     
-    return enriched;
+    if (isPracticeMode) {
+        return filterQuestionsWithOptions(processedQuestions) as CivicExamQuestion[];
+    }
+    
+    return processedQuestions;
 };
 
 // ==================== VALIDATION ====================

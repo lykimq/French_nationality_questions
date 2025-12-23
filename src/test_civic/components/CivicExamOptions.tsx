@@ -23,6 +23,22 @@ export const CivicExamOptions: React.FC<CivicExamOptionsProps> = ({
 }) => {
     const { theme } = useTheme();
     const options = currentQuestion.options || [];
+    const hasOptions = 'options' in currentQuestion && 
+                      Array.isArray(currentQuestion.options) && 
+                      currentQuestion.options.length > 0;
+
+    if (!hasOptions) {
+        return (
+            <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card }]}>
+                <FormattedText style={[styles.optionsTitle, { color: theme.colors.text }]}>
+                    Choisissez votre réponse:
+                </FormattedText>
+                <FormattedText style={[styles.errorText, { color: theme.colors.error }]}>
+                    Aucune option disponible pour cette question.
+                </FormattedText>
+            </View>
+        );
+    }
 
     return (
         <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card }]}>
@@ -54,5 +70,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
         marginBottom: 16,
+    },
+    errorText: {
+        fontSize: 15,
+        fontStyle: 'italic',
+        marginTop: 8,
     },
 });

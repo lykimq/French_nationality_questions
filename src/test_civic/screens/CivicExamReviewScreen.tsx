@@ -49,8 +49,9 @@ const CivicExamReviewScreen = () => {
         return null;
     }
 
+    const actualQuestionCount = currentSession.questions.length;
     const answeredCount = currentSession.answers.length;
-    const unansweredCount = currentSession.totalQuestions - answeredCount;
+    const unansweredCount = actualQuestionCount - answeredCount;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -74,7 +75,7 @@ const CivicExamReviewScreen = () => {
                         </FormattedText>
                         <View style={styles.summaryRow}>
                             <FormattedText style={[styles.summaryText, { color: theme.colors.text }]}>
-                                Questions répondues: {answeredCount} / {currentSession.totalQuestions}
+                                Questions répondues: {answeredCount} / {actualQuestionCount}
                             </FormattedText>
                         </View>
                         {unansweredCount > 0 && (

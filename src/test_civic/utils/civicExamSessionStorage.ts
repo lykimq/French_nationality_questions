@@ -42,11 +42,22 @@ const deserializeSession = (raw: string | null): CivicExamSession | null => {
         if (!startTime) return null;
         const endTime = parseDate(parsed.endTime);
 
+        const actualQuestionCount = parsed.questions?.length || 0;
+        const storedTotalQuestions = parsed.totalQuestions || 0;
+        
+        if (actualQuestionCount !== storedTotalQuestions) {
+            logger.warn(
+                `Deserialized session has mismatch: totalQuestions=${storedTotalQuestions}, ` +
+                `questions.length=${actualQuestionCount}. Fixing to use questions.length.`
+            );
+        }
+
         return {
             ...parsed,
             startTime,
             endTime,
-            questions: parsed.questions,
+            questions: parsed.questions || [],
+            totalQuestions: actualQuestionCount,
             answers: parsed.answers.map(a => ({
                 ...a,
                 timestamp: parseDate(a.timestamp) || new Date(),

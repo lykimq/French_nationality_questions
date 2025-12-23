@@ -69,6 +69,16 @@ const CivicExamQuestionScreen = () => {
         correctAnswer?: number;
     }) | null;
 
+    useEffect(() => {
+        if (currentQuestion && currentSession) {
+            const options = currentQuestion.options || [];
+            const hasOptions = 'options' in currentQuestion && 
+                              Array.isArray(currentQuestion.options) && 
+                              currentQuestion.options.length > 0;
+            
+        }
+    }, [currentQuestion, currentQuestionIndex, currentSession, isPracticeMode]);
+
     // Reset selected answer when question changes
     useEffect(() => {
         if (!currentQuestion || previousQuestionIndexRef.current === currentQuestionIndex) return;
@@ -116,8 +126,9 @@ const CivicExamQuestionScreen = () => {
     const handleNextQuestion = () => {
         if (!currentSession) return;
 
+        const actualQuestionCount = currentSession.questions.length;
         if (isPracticeMode) {
-            if (currentQuestionIndex < currentSession.totalQuestions - 1) {
+            if (currentQuestionIndex < actualQuestionCount - 1) {
                 goToNextQuestion();
             } else {
                 navigation.navigate('CivicExamReview');
@@ -142,7 +153,8 @@ const CivicExamQuestionScreen = () => {
                     timestamp: new Date(),
                 });
 
-                if (currentQuestionIndex >= currentSession.totalQuestions - 1) {
+                const actualQuestionCount = currentSession.questions.length;
+                if (currentQuestionIndex >= actualQuestionCount - 1) {
                     navigation.navigate('CivicExamReview');
                 }
             } catch (error) {
@@ -152,7 +164,7 @@ const CivicExamQuestionScreen = () => {
         }
     };
 
-    if (!currentSession || !currentQuestion) {
+    if (!currentSession) {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
                 <ActivityIndicator size="large" color={theme.colors.primary} />
@@ -163,7 +175,22 @@ const CivicExamQuestionScreen = () => {
         );
     }
 
-    const progress = ((currentQuestionIndex + 1) / currentSession.totalQuestions) * 100;
+    if (!currentQuestion) {
+        return (
+            <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
+                <ActivityIndicator size="large" color={theme.colors.primary} />
+                <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
+                    Question non disponible...
+                </FormattedText>
+            </View>
+        );
+    }
+
+    const actualTotalQuestions = currentSession.questions.length;
+    const progress = actualTotalQuestions > 0 
+        ? ((currentQuestionIndex + 1) / actualTotalQuestions) * 100 
+        : 0;
+
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -172,7 +199,7 @@ const CivicExamQuestionScreen = () => {
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <ExamHeader
                     currentQuestionIndex={currentQuestionIndex}
-                    totalQuestions={currentSession.totalQuestions}
+                    totalQuestions={actualTotalQuestions}
                     timeLeft={timeLeft}
                     formattedTime={formattedTime}
                     progress={progress}
@@ -209,7 +236,7 @@ const CivicExamQuestionScreen = () => {
                     answerSubmitted={answerSubmitted}
                     isPracticeMode={isPracticeMode}
                     currentQuestionIndex={currentQuestionIndex}
-                    totalQuestions={currentSession.totalQuestions}
+                    totalQuestions={actualTotalQuestions}
                     onNextQuestion={handleNextQuestion}
                     onSubmitAnswer={handleSubmitAnswer}
                 />
