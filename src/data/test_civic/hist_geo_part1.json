@@ -9,7 +9,7 @@
             "La Monarchie constitutionnelle."
         ],
         "explanation": "C'était une monarchie absolue où le roi détenait tous les pouvoirs.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -22,7 +22,7 @@
             "Une dictature militaire permanente."
         ],
         "explanation": "La France a cherché son équilibre politique traversant 3 monarchies, 2 empires et 4 républiques avant 1958.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -35,7 +35,7 @@
             "Depuis 2000."
         ],
         "explanation": "C'est le régime actuel, fondé par Charles de Gaulle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -48,7 +48,7 @@
             "César, Vercingétorix, Attila."
         ],
         "explanation": "Ils ont fondé les trois premières dynasties royales : Mérovingiens, Carolingiens et Capétiens.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -61,7 +61,7 @@
             "La laïcité."
         ],
         "explanation": "La construction territoriale et l'autorité centrale datent de cette époque.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -74,7 +74,7 @@
             "En castes intouchables."
         ],
         "explanation": "Le Clergé et la Noblesse avaient des privilèges, le Tiers-État (90% du peuple) payait les impôts.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -87,7 +87,7 @@
             "Ils élisaient le Roi."
         ],
         "explanation": "Les sujets obéissaient au Roi et les inégalités étaient la règle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -100,7 +100,7 @@
             "La séparation des pouvoirs."
         ],
         "explanation": "L'administration centralisée autour de l'État est un héritage direct.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -113,7 +113,7 @@
             "L'élection du Président."
         ],
         "explanation": "Le Tiers-État se proclame Assemblée nationale et met fin à l'absolutisme.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -126,7 +126,7 @@
             "L'Edit de Nantes."
         ],
         "explanation": "Elle pose les principes de liberté et d'égalité devant la loi.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -139,7 +139,7 @@
             "La domination de l'Église."
         ],
         "explanation": "C'est la base de notre démocratie actuelle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -152,7 +152,7 @@
             "Une monarchie parlementaire."
         ],
         "explanation": "Elle nait dans la guerre et se termine par le sacre de Napoléon.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -165,7 +165,7 @@
             "La liberté totale sans lois."
         ],
         "explanation": "L'influence religieuse diminue au profit de l'état civil.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -178,7 +178,7 @@
             "La création des syndicats."
         ],
         "explanation": "Le territoire est découpé en départements pour mieux le gérer.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -191,7 +191,7 @@
             "Un tribunal révolutionnaire."
         ],
         "explanation": "Napoléon concentre les pouvoirs et réorganise la France.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -204,7 +204,7 @@
             "Il n'y a plus de lois."
         ],
         "explanation": "Napoléon contrôle le pouvoir.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -217,7 +217,7 @@
             "Les juges."
         ],
         "explanation": "Les préfets représentent l'État dans chaque département.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -230,7 +230,7 @@
             "La monarchie de Juillet."
         ],
         "explanation": "C'est une période de guerres et de réformes majeures.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -243,7 +243,7 @@
             "La Déclaration des droits de l'homme."
         ],
         "explanation": "Il unifie le droit pour tous les Français.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -256,7 +256,7 @@
             "L'apprentissage."
         ],
         "explanation": "Ces institutions structurent encore le système éducatif.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -269,7 +269,7 @@
             "La Commune."
         ],
         "explanation": "Louis XVIII, Charles X puis Louis-Philippe règnent.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -282,7 +282,7 @@
             "Les soldats."
         ],
         "explanation": "Le peuple était exclu du vote.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -295,7 +295,7 @@
             "L'interdiction des partis."
         ],
         "explanation": "C'est l'apprentissage du parlementarisme.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -308,7 +308,7 @@
             "Par un référendum."
         ],
         "explanation": "Le peuple de Paris se soulève.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -321,7 +321,7 @@
             "Le vote par internet."
         ],
         "explanation": "Tous les hommes peuvent voter, plus besoin d'être riche.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -334,7 +334,7 @@
             "L'abolition de l'armée."
         ],
         "explanation": "C'est une avancée majeure des droits humains.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -347,7 +347,7 @@
             "Le Général de Gaulle."
         ],
         "explanation": "Il devient ensuite Napoléon III.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -360,7 +360,7 @@
             "Une démocratie parfaite."
         ],
         "explanation": "C'est une période de développement industriel et économique.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -373,7 +373,7 @@
             "Le télétravail."
         ],
         "explanation": "Les ouvriers peuvent cesser le travail pour revendiquer.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -386,7 +386,7 @@
             "À cause d'une crise économique."
         ],
         "explanation": "La défaite de Sedan marque la fin du régime.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -399,7 +399,7 @@
             "Droit de censurer les journaux."
         ],
         "explanation": "C'est l'âge d'or des libertés publiques.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -412,7 +412,7 @@
             "L'interdiction de l'école."
         ],
         "explanation": "En 1881-1882, l'instruction devient accessible à tous les enfants.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -425,7 +425,7 @@
             "La République en exil."
         ],
         "explanation": "Dirigé par le Maréchal Pétain, il supprime la République.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -438,7 +438,7 @@
             "Ils dirigent le gouvernement."
         ],
         "explanation": "Le régime participe activement à la Shoah.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -451,7 +451,7 @@
             "Il a créé l'Europe."
         ],
         "explanation": "La République se reconstruira contre ce que Vichy représentait.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -464,7 +464,7 @@
             "Napoléon."
         ],
         "explanation": "Il rétablit la légitimité républicaine.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -477,7 +477,7 @@
             "L'assurance chômage."
         ],
         "explanation": "Elle protège les Français face aux risques de la vie (maladie, vieillesse).",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -490,7 +490,7 @@
             "Diviser le pays."
         ],
         "explanation": "Il a permis la transition vers la 4e République.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -503,7 +503,7 @@
             "Le peuple se révoltait tout le temps."
         ],
         "explanation": "Les gouvernements changeaient très souvent.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -516,7 +516,7 @@
             "Le droit d'aller à l'école."
         ],
         "explanation": "Elles votent pour la première fois en 1945.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -529,7 +529,7 @@
             "La conquête spatiale."
         ],
         "explanation": "Malgré l'instabilité, elle a modernisé la France et lancé l'Europe.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -542,7 +542,7 @@
             "Par hasard."
         ],
         "explanation": "De Gaulle voulait un exécutif stable capable de décider.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -555,7 +555,7 @@
             "La suppression du Sénat."
         ],
         "explanation": "Les jeunes participent plus tôt à la vie politique.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -568,7 +568,7 @@
             "Le pouvoir total du Parlement."
         ],
         "explanation": "Elle a permis l'alternance politique sans crise de régime.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -581,7 +581,7 @@
             "Georges Pompidou."
         ],
         "explanation": "Il a mis fin à la guerre d'Algérie et instauré l'élection présidentielle au suffrage universel.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -594,7 +594,7 @@
             "Charles de Gaulle."
         ],
         "explanation": "Il a favorisé l'industrialisation rapide de la France.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -607,7 +607,7 @@
             "Jacques Chirac."
         ],
         "explanation": "La loi Veil a été votée sous son mandat.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -620,7 +620,7 @@
             "François Hollande."
         ],
         "explanation": "Il a aussi réalisé de grands travaux (Louvre, Bibliothèque).",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -633,7 +633,7 @@
             "Charles de Gaulle."
         ],
         "explanation": "Il a aussi refusé la guerre en Irak en 2003.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -646,7 +646,7 @@
             "Emmanuel Macron."
         ],
         "explanation": "Il a aussi réformé les retraites.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -659,7 +659,7 @@
             "Jacques Chirac."
         ],
         "explanation": "Il a aussi dû faire face aux attentats terroristes de 2015.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -672,7 +672,7 @@
             "Jean-Luc Mélenchon."
         ],
         "explanation": "Il a géré la crise des Gilets jaunes et la pandémie Covid-19.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -685,7 +685,7 @@
             "Une amende très forte."
         ],
         "explanation": "Elle a été considérée longtemps comme indispensable avant d'être abolie.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -698,7 +698,7 @@
             "En 2000."
         ],
         "explanation": "Par Robert Badinter sous la présidence Mitterrand.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -711,7 +711,7 @@
             "Peut-être dans certains cas."
         ],
         "explanation": "Nul ne peut être condamné à la peine de mort (Art 66-1).",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -724,7 +724,7 @@
             "Une aide financière."
         ],
         "explanation": "C'est un droit pour les femmes de disposer de leur corps.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -737,7 +737,7 @@
             "2010."
         ],
         "explanation": "Simone Veil a porté ce combat difficile.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -750,7 +750,7 @@
             "Cela dépend des revenus."
         ],
         "explanation": "L'État garantit l'accès égal à ce droit.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -763,7 +763,7 @@
             "C'était interdit par la loi."
         ],
         "explanation": "Le PACS était la seule union civile possible.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -776,7 +776,7 @@
             "Cela coûtait trop cher."
         ],
         "explanation": "Il y a eu de grandes manifestations pour et contre.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -789,7 +789,7 @@
             "Rien de nouveau."
         ],
         "explanation": "C'est l'égalité des droits au mariage.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -802,7 +802,7 @@
             "L'invasion de la Pologne."
         ],
         "explanation": "Le jeu des alliances a entraîné l'Europe dans la guerre en 1914.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -815,7 +815,7 @@
             "Une guerre éclair."
         ],
         "explanation": "Les conditions de vie étaient terribles (boue, rats, froid).",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -828,7 +828,7 @@
             "Le 1er janvier 1900."
         ],
         "explanation": "Ce jour est férié en France pour commémorer la paix.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -841,7 +841,7 @@
             "La bataille d'Austerlitz."
         ],
         "explanation": "Elle a fait des centaines de milliers de morts.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -854,7 +854,7 @@
             "Car la France était grande."
         ],
         "explanation": "C'était une guerre totale industrielle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -867,7 +867,7 @@
             "Les prisonniers de guerre."
         ],
         "explanation": "Ils symbolisent le traumatisme de 14-18.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -880,7 +880,7 @@
             "Franco."
         ],
         "explanation": "Il installe un régime totalitaire et antisémite.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -893,7 +893,7 @@
             "L'invasion de la Russie."
         ],
         "explanation": "La France et le Royaume-Uni déclarent alors la guerre.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -906,7 +906,7 @@
             "Les Riches contre les Pauvres."
         ],
         "explanation": "C'est un conflit mondial.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -919,7 +919,7 @@
             "L'invention de l'avion."
         ],
         "explanation": "L'Axe commence à reculer.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -932,7 +932,7 @@
             "Le 11 novembre 1918."
         ],
         "explanation": "Il marque le début de la Libération de la France.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -945,7 +945,7 @@
             "Le 6 juin 1944."
         ],
         "explanation": "C'est la fin de la guerre en Europe.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -958,7 +958,7 @@
             "Une guerre économique."
         ],
         "explanation": "Toutes les limites morales ont été franchies.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -971,7 +971,7 @@
             "100 000 morts."
         ],
         "explanation": "C'est le conflit le plus meurtrier de l'histoire.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -984,7 +984,7 @@
             "La Croix-Rouge."
         ],
         "explanation": "Pour maintenir la paix dans le monde.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -997,7 +997,7 @@
             "La paix définitive."
         ],
         "explanation": "La France est coupée en deux (Zone occupée / Zone libre).",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1010,7 +1010,7 @@
             "Force et Honneur."
         ],
         "explanation": "Elle remplace la devise républicaine.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1023,7 +1023,7 @@
             "Winston Churchill."
         ],
         "explanation": "Il refuse la défaite et appelle à la Résistance.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1036,7 +1036,7 @@
             "Partir en vacances."
         ],
         "explanation": "Ils ont préparé la Libération.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1049,7 +1049,7 @@
             "La fin de la guerre."
         ],
         "explanation": "Elle a lieu surtout entre 1945 et 1962.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1062,7 +1062,7 @@
             "La guerre de Sécession."
         ],
         "explanation": "La France a tenté de garder ses colonies par la force.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1075,7 +1075,7 @@
             "En 1980."
         ],
         "explanation": "Après 8 ans de guerre.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1088,7 +1088,7 @@
             "Par des référendums truqués."
         ],
         "explanation": "La plupart des pays sont devenus indépendants sans guerre.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1101,7 +1101,7 @@
             "Supprimer les langues nationales."
         ],
         "explanation": "C'est une union politique et économique unique.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1114,7 +1114,7 @@
             "Suède, Norvège, Finlande."
         ],
         "explanation": "Ils ont signé le Traité de Rome.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1127,7 +1127,7 @@
             "Le Mark."
         ],
         "explanation": "Elle facilite les échanges commerciaux.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1140,7 +1140,7 @@
             "Le Vatican."
         ],
         "explanation": "Elles créent les lois européennes.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1153,7 +1153,7 @@
             "Les pays alliés."
         ],
         "explanation": "Il s'étendait en Afrique, Asie et Amérique.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -1166,7 +1166,7 @@
             "Le commerce équitable."
         ],
         "explanation": "Des millions d'Africains ont été déportés.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     }
 ]

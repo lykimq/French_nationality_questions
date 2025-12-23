@@ -25,42 +25,39 @@ interface CivicExamDataFile {
     questions?: CivicExamQuestionData[];
 }
 
-const THEME_ID_MAP: Record<string, CivicExamTheme> = {
-    'principes_et_valeurs': 'principles_values',
-    'system_et_politique': 'institutional_political',
-    'droits_et_devoirs': 'rights_duties',
-    'histoire_geographie_et_culture': 'history_geography_culture',
-    'vivre_dans_la_societe_francaise': 'living_society',
+const VALID_THEMES: readonly CivicExamTheme[] = [
+    'principles_values',
+    'institutional_political',
+    'rights_duties',
+    'history_geography_culture',
+    'living_society',
+] as const;
+
+const VALID_SUBTHEMES: readonly CivicExamSubTheme[] = [
+    'devise_symboles',
+    'laicite',
+    'situational_principles',
+    'democracy_vote',
+    'organization_republic',
+    'european_institutions',
+    'fundamental_rights',
+    'obligations_duties',
+    'situational_rights',
+    'historical_periods',
+    'territories_geography',
+    'heritage',
+    'residence',
+    'healthcare',
+    'work',
+    'parental_authority_education',
+] as const;
+
+const isValidTheme = (value: string): value is CivicExamTheme => {
+    return VALID_THEMES.includes(value as CivicExamTheme);
 };
 
-const SUBTHEME_MAP: Record<string, CivicExamSubTheme> = {
-    'devise_symboles': 'devise_symboles',
-    'laicite': 'laicite',
-    'principes_situation': 'situational_principles',
-    'situational_principles': 'situational_principles',
-    'democratie_vote': 'democracy_vote',
-    'democracy_vote': 'democracy_vote',
-    'organisation_republique': 'organization_republic',
-    'organization_republic': 'organization_republic',
-    'european_institutions': 'european_institutions',
-    'droits_fondamentaux': 'fundamental_rights',
-    'fundamental_rights': 'fundamental_rights',
-    'obligations_devoirs': 'obligations_duties',
-    'obligations_duties': 'obligations_duties',
-    'droits_situation': 'situational_rights',
-    'situational_rights': 'situational_rights',
-    'histoire': 'historical_periods',
-    'historical_periods': 'historical_periods',
-    'geographie': 'territories_geography',
-    'territories_geography': 'territories_geography',
-    'culture': 'heritage',
-    'heritage': 'heritage',
-    'residence': 'residence',
-    'healthcare': 'healthcare',
-    'work': 'work',
-    'parental_authority_education': 'parental_authority_education',
-    'demarches_administratives': 'residence',
-    'services_publics': 'residence',
+const isValidSubTheme = (value: string): value is CivicExamSubTheme => {
+    return VALID_SUBTHEMES.includes(value as CivicExamSubTheme);
 };
 
 const normalizeQuestionType = (questionType: string): 'knowledge' | 'situational' => {
@@ -142,11 +139,17 @@ const validateQuestionData = (
     }
 
     const theme = question.theme as string | undefined;
-    const hasValidTheme = theme ? THEME_ID_MAP[theme] !== undefined : defaultTheme !== undefined;
+    const hasValidTheme = theme ? isValidTheme(theme) : defaultTheme !== undefined;
 
     if (!hasValidTheme) {
         const themeStr = theme ? `"${theme}"` : 'undefined';
-        onInvalid?.(`Question ${questionId} has invalid theme: ${themeStr} (no default theme provided)`);
+        onInvalid?.(`Question ${questionId} has invalid theme: ${themeStr} (must be one of: ${VALID_THEMES.join(', ')})`);
+        return false;
+    }
+
+    const subTheme = question.subTheme as string;
+    if (!isValidSubTheme(subTheme)) {
+        onInvalid?.(`Question ${questionId} has invalid subTheme: "${subTheme}" (must be one of: ${VALID_SUBTHEMES.join(', ')})`);
         return false;
     }
 
@@ -171,8 +174,11 @@ const validateAnswerIndex = (index: unknown, maxLength: number): number | undefi
 };
 
 const normalizeSubTheme = (subTheme: string): CivicExamSubTheme => {
-    const normalized = subTheme.toLowerCase().trim();
-    return SUBTHEME_MAP[normalized] || 'devise_symboles';
+    if (!isValidSubTheme(subTheme)) {
+        logger.warn(`Invalid subTheme: "${subTheme}", validation should have caught this`);
+        throw new Error(`Invalid subTheme: "${subTheme}"`);
+    }
+    return subTheme;
 };
 
 const CIVIC_ID_OFFSET = 1_000_000;
@@ -182,7 +188,7 @@ const transformCivicQuestion = (
     defaultTheme: CivicExamTheme
 ): CivicExamQuestionWithOptions => {
     const baseNumber = extractCivicId(q.id) ?? 0;
-    const theme = q.theme ? (THEME_ID_MAP[q.theme] || defaultTheme) : defaultTheme;
+    const theme = q.theme ? (isValidTheme(q.theme) ? q.theme : defaultTheme) : defaultTheme;
     const subTheme = normalizeSubTheme(q.subTheme);
     const questionType = normalizeQuestionType(q.questionType);
     
@@ -251,7 +257,11 @@ const loadQuestionsFromFileData = (
     } else if (fileData.questions && Array.isArray(fileData.questions)) {
         questions = fileData.questions;
         if (fileData.themeId) {
-            theme = THEME_ID_MAP[fileData.themeId];
+            if (isValidTheme(fileData.themeId)) {
+                theme = fileData.themeId;
+            } else {
+                logger.warn(`Invalid themeId in file: "${fileData.themeId}"`);
+            }
         }
     } else {
         logger.warn('Unexpected data structure in civic exam file');

@@ -1,5 +1,5 @@
 {
-    "themeId": "histoire_geographie_et_culture",
+    "themeId": "history_geography_culture",
     "themeTitle": "Histoire, géographie et culture",
     "questions": [
         {
@@ -12,7 +12,7 @@
                 "La Démocratie"
             ],
             "explanation": "Avant la Révolution française de 1789, le régime politique était une monarchie absolue de droit divin. On appelle cette période l'Ancien Régime.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -25,7 +25,7 @@
                 "Les Normands, les Plantagenêts et les Stuarts"
             ],
             "explanation": "Trois grandes dynasties royales se sont succédées : les Mérovingiens (Clovis), les Carolingiens (Charlemagne) et les Capétiens (Hugues Capet).",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -38,7 +38,7 @@
                 "Louis XIV"
             ],
             "explanation": "Clovis fonde la dynastie mérovingienne à la fin du Ve siècle et se convertit au christianisme.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -51,7 +51,7 @@
                 "En 1066"
             ],
             "explanation": "Le roi carolingien Charlemagne est couronné empereur en 800. Après sa mort, son empire est partagé entre ses héritiers.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -64,7 +64,7 @@
                 "En 1337"
             ],
             "explanation": "Sacré roi en 987, Hugues Capet fonde la dynastie des Capétiens, une dynastie longue et stable qui consolide la monarchie.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -77,7 +77,7 @@
                 "Les nobles, les bourgeois et les artisans"
             ],
             "explanation": "La société était organisée en trois ordres : le clergé (premier ordre), la noblesse (deuxième ordre) et le tiers état (troisième ordre, 90% de la population).",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -90,7 +90,7 @@
                 "François Ier"
             ],
             "explanation": "Le roi Louis XIV, surnommé le Roi-Soleil, est l'une des personnes importantes de l'Ancien Régime. Il incarne la monarchie absolue.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -103,7 +103,7 @@
                 "Le 21 septembre 1792"
             ],
             "explanation": "La Déclaration des droits de l'homme et du citoyen est adoptée le 26 août 1789, quelques semaines après la prise de la Bastille.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -116,7 +116,7 @@
                 "Robespierre"
             ],
             "explanation": "Le marquis de La Fayette joue un rôle central pendant la Révolution française. Il contribue notamment à la rédaction de la Déclaration des droits de l'homme et du citoyen.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -129,7 +129,7 @@
                 "Le 10 août 1792"
             ],
             "explanation": "La 1re République est proclamée le 22 septembre 1792, après le renversement du roi Louis XVI le 10 août 1792.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -142,7 +142,7 @@
                 "Danton"
             ],
             "explanation": "Maximilien Robespierre est célèbre pour son engagement en faveur de l'égalité et de la République, mais aussi pour avoir dirigé la Terreur.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -155,7 +155,7 @@
                 "En 1799"
             ],
             "explanation": "Louis XVI est exécuté en 1793 pendant la Terreur, période où le gouvernement surveille strictement les ennemis de la Révolution.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -168,7 +168,7 @@
                 "En 1815"
             ],
             "explanation": "En 1799, Napoléon Bonaparte prend le pouvoir par un coup d'État et la période du Consulat s'ouvre.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -181,7 +181,7 @@
                 "Le député"
             ],
             "explanation": "En 1800, une nouvelle fonction administrative est créée : le préfet, qui dirige chaque département et représente le gouvernement.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -194,7 +194,7 @@
                 "Le 18 juin 1815"
             ],
             "explanation": "Napoléon est proclamé empereur le 18 mai 1804, marquant le début du 1er Empire.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -207,7 +207,7 @@
                 "Le Code pénal"
             ],
             "explanation": "Le Code civil de 1804 garantit l'égalité devant la loi et règle la vie en société. Il est toujours en vigueur aujourd'hui.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -220,7 +220,7 @@
                 "L'école maternelle et l'école élémentaire"
             ],
             "explanation": "Le 1er Empire crée des institutions comme le lycée et le baccalauréat, qui structurent toujours le système éducatif français.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -233,7 +233,7 @@
                 "En 1821, à la mort de Napoléon"
             ],
             "explanation": "Napoléon abdique définitivement le 7 juillet 1815 après la bataille de Waterloo. Le 1er Empire prend fin et la monarchie est rétablie.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -246,7 +246,7 @@
                 "En 1944, après la Libération"
             ],
             "explanation": "La 2e République instaure le suffrage universel masculin en 1848, remplaçant le suffrage censitaire réservé aux plus riches.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -259,7 +259,7 @@
                 "En 1870, sous la 3e République"
             ],
             "explanation": "L'esclavage est définitivement aboli dans les colonies françaises grâce au décret du 27 avril 1848 rédigé par Victor Schœlcher.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -272,7 +272,7 @@
                 "Le 14 juillet 1880"
             ],
             "explanation": "La 3e République est proclamée le 4 septembre 1870 par Léon Gambetta, après la chute du Second Empire de Napoléon III.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -285,7 +285,7 @@
                 "Le premier conseil municipal élu"
             ],
             "explanation": "En 1871, la Commune de Paris, mouvement d'insurrection parisien et républicain, se forme en opposition à la nouvelle Assemblée monarchiste.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -298,7 +298,7 @@
                 "En 1905, avec la loi de séparation"
             ],
             "explanation": "La 3e République généralise l'école publique gratuite en 1881 et l'école laïque et obligatoire en 1882, grâce aux lois de Jules Ferry.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -311,7 +311,7 @@
                 "En 1882"
             ],
             "explanation": "La loi de 1905 sur la séparation des Églises et de l'État fonde la laïcité en France.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -324,7 +324,7 @@
                 "Une période de la Révolution française"
             ],
             "explanation": "Le régime de Vichy est le régime dirigé par le maréchal Pétain de 1940 à 1944, qui collabore avec l'Allemagne nazie.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -337,7 +337,7 @@
                 "En 1958"
             ],
             "explanation": "Le droit de vote est accordé aux femmes en avril 1944 par le Gouvernement provisoire de la République française.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -350,7 +350,7 @@
                 "En 1968, après mai 68"
             ],
             "explanation": "Le GPRF met en place d'importantes réformes, dont la préparation de la Sécurité sociale, créée en 1945.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -363,7 +363,7 @@
                 "Le 14 juillet 1958"
             ],
             "explanation": "La 5e République est instaurée le 4 octobre 1958, face à une crise politique liée à la guerre d'Algérie.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -376,7 +376,7 @@
                 "Valéry Giscard d'Estaing"
             ],
             "explanation": "Charles de Gaulle est le fondateur et premier président de la 5e République. Il a façonné ses institutions et renforcé le pouvoir exécutif.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -389,7 +389,7 @@
                 "Depuis 1981"
             ],
             "explanation": "En 1974, sous Valéry Giscard d'Estaing, les jeunes peuvent voter dès 18 ans (contre 21 ans auparavant).",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -402,7 +402,7 @@
                 "En 2000"
             ],
             "explanation": "La peine de mort est totalement abolie en 1981. C'est Robert Badinter, ministre de la Justice de François Mitterrand, qui a soutenu cette abolition.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -415,7 +415,7 @@
                 "Jacques Chirac"
             ],
             "explanation": "Robert Badinter, ministre de la Justice de François Mitterrand, a soutenu l'abolition totale de la peine de mort en 1981.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -428,7 +428,7 @@
                 "En 2000"
             ],
             "explanation": "Depuis la loi \"Veil\" du 17 janvier 1975, l'avortement est dépénalisé. Cette loi a été présentée par Simone Veil, ministre de la Santé.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -441,7 +441,7 @@
                 "En 2017"
             ],
             "explanation": "Le 4 mars 2024, le Parlement a inscrit dans la Constitution le droit des femmes à recourir à l'IVG. La France est le premier pays au monde à le faire.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -454,7 +454,7 @@
                 "En 2020"
             ],
             "explanation": "La loi du 17 mai 2013 ouvre le mariage et l'adoption aux couples homosexuels. Le premier mariage homosexuel a été célébré à Montpellier le 29 mai 2013.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -467,7 +467,7 @@
                 "Simone Veil"
             ],
             "explanation": "Soutenue par la ministre de la Justice Christiane Taubira, la loi du 17 mai 2013 ouvre le mariage et l'adoption aux couples homosexuels.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -480,7 +480,7 @@
                 "1905-1910"
             ],
             "explanation": "La Première Guerre mondiale a duré de 1914 à 1918. L'Armistice a été signé le 11 novembre 1918.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -493,7 +493,7 @@
                 "La Révolution russe"
             ],
             "explanation": "Le 28 juin 1914, l'assassinat à Sarajevo de l'archiduc François-Ferdinand, héritier de l'empire d'Autriche-Hongrie, déclenche le conflit.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -506,7 +506,7 @@
                 "L'alliance entre l'Espagne, le Portugal et l'Italie"
             ],
             "explanation": "La Triple Entente réunissait la France, le Royaume-Uni et la Russie. Elle s'opposait à la Triple Alliance (Allemagne, Autriche-Hongrie, Italie).",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -519,7 +519,7 @@
                 "Les Tommies"
             ],
             "explanation": "Les soldats français de la Première Guerre mondiale sont appelés les \"Poilus\". Ils ont combattu dans les tranchées.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -532,7 +532,7 @@
                 "En 1918"
             ],
             "explanation": "En avril 1917, l'entrée en guerre des États-Unis aux côtés de la Triple Entente relance la guerre.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -545,7 +545,7 @@
                 "Le 14 juillet 1919"
             ],
             "explanation": "L'Armistice est signé le 11 novembre 1918. Le traité de Versailles du 28 juin 1919 met officiellement fin à la guerre.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -558,7 +558,7 @@
                 "Environ 5 millions"
             ],
             "explanation": "La Première Guerre mondiale a fait plus de 10 millions de morts (dont 9 millions de soldats) et des millions de blessés.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -571,7 +571,7 @@
                 "1935-1945"
             ],
             "explanation": "La Seconde Guerre mondiale a duré de 1939 (invasion de la Pologne) à 1945 (capitulation du Japon le 2 septembre).",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -584,7 +584,7 @@
                 "La signature du traité de Versailles"
             ],
             "explanation": "La Seconde Guerre mondiale est déclenchée le 1er septembre 1939 par l'invasion de la Pologne par l'armée allemande commandée par Hitler.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -597,7 +597,7 @@
                 "Le 25 août 1944"
             ],
             "explanation": "Vaincue, la France signe l'armistice avec l'Allemagne le 22 juin 1940.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -610,7 +610,7 @@
                 "Le 25 août 1944"
             ],
             "explanation": "Le 18 juin 1940, le général de Gaulle appelle à continuer le combat depuis Londres. C'est l'appel du 18 juin.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -623,7 +623,7 @@
                 "Winston Churchill"
             ],
             "explanation": "En 1943, Jean Moulin unifie les mouvements de Résistance en créant le Conseil national de la Résistance (CNR).",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -636,7 +636,7 @@
                 "Le 8 mai 1945"
             ],
             "explanation": "Le 6 juin 1944, le débarquement des Alliés en Normandie marque le début de la Libération de la France et de l'Europe.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -649,7 +649,7 @@
                 "Le 14 juillet 1944"
             ],
             "explanation": "Paris est libéré le 25 août 1944, marquant la fin du régime de Vichy.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -662,7 +662,7 @@
                 "Le 11 novembre 1945"
             ],
             "explanation": "L'Allemagne capitule le 8 mai 1945. C'est la fin de la guerre en Europe.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -675,7 +675,7 @@
                 "Plus de 100 millions"
             ],
             "explanation": "La Seconde Guerre mondiale a fait plus de 60 millions de morts (soldats et civils), dont 6 millions de Juifs dans la Shoah.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -688,7 +688,7 @@
                 "Une organisation de résistance"
             ],
             "explanation": "La Shoah désigne le génocide perpétré pendant la Seconde Guerre mondiale. Plus de 6 millions de Juifs ont été tués dans les camps d'extermination.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -701,7 +701,7 @@
                 "En 1992, avec le traité de Maastricht"
             ],
             "explanation": "L'ONU (Organisation des Nations Unies) a été créée en 1945 pour maintenir la paix dans le monde après la Seconde Guerre mondiale.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -714,7 +714,7 @@
                 "1958-1968"
             ],
             "explanation": "La guerre d'Algérie a duré de 1954 à 1962, entre la France et le Front de libération nationale algérien.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -727,7 +727,7 @@
                 "1950-1960"
             ],
             "explanation": "La guerre d'Indochine a duré de 1946 à 1954. La défaite française a entraîné la fin de l'Indochine française.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -740,7 +740,7 @@
                 "En 1975"
             ],
             "explanation": "1960 est l'année de l'indépendance des colonies françaises d'Afrique ainsi que de Madagascar.",
-            "subTheme": "guerres",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -753,7 +753,7 @@
                 "En 2007, par le traité de Lisbonne"
             ],
             "explanation": "En 1951, le traité de Paris crée la CECA (Communauté Européenne du Charbon et de l'Acier), première étape de la construction européenne.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -766,7 +766,7 @@
                 "En 2002, avec l'euro"
             ],
             "explanation": "En 1957, le traité de Rome crée la CEE (Communauté Économique Européenne) pour former un marché commun.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -779,7 +779,7 @@
                 "Le traité de Lisbonne en 2007"
             ],
             "explanation": "Le traité de Maastricht de 1992 crée l'Union européenne (UE). Les marchandises, les personnes et les capitaux peuvent circuler librement.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -792,7 +792,7 @@
                 "Le Nil, l'Amazone et le Mississippi"
             ],
             "explanation": "Les cinq principaux fleuves français sont la Seine, la Loire (le plus long avec 1012 km), le Rhône, la Garonne et le Rhin (fleuve frontalier).",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -805,7 +805,7 @@
                 "Le Grand Ballon dans les Vosges"
             ],
             "explanation": "Le Mont Blanc, situé dans les Alpes à la frontière franco-italienne, est le point culminant de France avec 4 810 mètres d'altitude.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -818,7 +818,7 @@
                 "La Mer Rouge et le Golfe Persique"
             ],
             "explanation": "La France métropolitaine est bordée par la Mer du Nord au nord, la Manche au nord-ouest, l'Océan Atlantique à l'ouest et la Mer Méditerranée au sud.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -831,7 +831,7 @@
                 "Les Rocheuses et les Appalaches"
             ],
             "explanation": "Les principaux massifs montagneux français sont les Alpes, les Pyrénées, le Massif central, le Jura et les Vosges.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -844,7 +844,7 @@
                 "2 : La Réunion et Mayotte"
             ],
             "explanation": "Il y a 5 DROM : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte. Ils ont le même statut que les départements métropolitains.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -857,7 +857,7 @@
                 "Une zone économique spéciale"
             ],
             "explanation": "Les COM (Collectivités d'Outre-Mer) comme la Polynésie française ou Saint-Pierre-et-Miquelon disposent d'une plus grande autonomie que les DROM.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -870,7 +870,7 @@
                 "Paris, Lille et Nantes"
             ],
             "explanation": "Les trois plus grandes villes de France par population sont Paris (la capitale), Marseille et Lyon.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -883,7 +883,7 @@
                 "Italie, Grèce et Croatie"
             ],
             "explanation": "La France métropolitaine partage ses frontières avec 8 pays : Belgique, Luxembourg, Allemagne, Suisse, Italie, Monaco, Espagne et Andorre.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -896,7 +896,7 @@
                 "La Garonne"
             ],
             "explanation": "La Seine traverse Paris, séparant la ville en rive droite et rive gauche.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -909,7 +909,7 @@
                 "Bordeaux"
             ],
             "explanation": "Lyon est surnommée la 'Capitale des Gaules' en référence à son importance historique sous l'Empire romain.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -922,7 +922,7 @@
                 "Burdigala"
             ],
             "explanation": "Paris s'appelait Lutèce (Lutetia) sous les Romains. C'était la ville des Parisii, un peuple gaulois.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -935,7 +935,7 @@
                 "Dans l'océan Indien"
             ],
             "explanation": "La Corse est une île française située dans la mer Méditerranée, au large de la côte sud-est de la France.",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -948,7 +948,7 @@
                 "10 régions"
             ],
             "explanation": "Depuis 2016, la France métropolitaine compte 13 régions : 12 régions plus la Corse (collectivité territoriale unique).",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -961,7 +961,7 @@
                 "75 départements"
             ],
             "explanation": "La France compte 101 départements : 96 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, Réunion, Mayotte).",
-            "subTheme": "géographie",
+            "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
@@ -974,7 +974,7 @@
                 "Un philosophe des Lumières"
             ],
             "explanation": "Molière est le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies comme L'Avare et Le Malade imaginaire.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -987,7 +987,7 @@
                 "Le Louvre"
             ],
             "explanation": "La Tour Eiffel a été construite par Gustave Eiffel pour l'Exposition universelle de 1889, célébrant le centenaire de la Révolution française.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1000,7 +1000,7 @@
                 "Le château de Versailles"
             ],
             "explanation": "Le musée du Louvre à Paris est le musée le plus visité de France et du monde, abritant notamment la Joconde.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1013,7 +1013,7 @@
                 "Une résistante de la Seconde Guerre mondiale"
             ],
             "explanation": "Marie Curie, d'origine polonaise naturalisée française, est la première femme à recevoir le Prix Nobel et la seule personne à l'avoir reçu dans deux domaines scientifiques différents.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1026,7 +1026,7 @@
                 "L'Obélisque de la Concorde"
             ],
             "explanation": "La Statue de la Liberté a été offerte par la France aux États-Unis en 1886 pour célébrer le centenaire de l'indépendance américaine.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1039,7 +1039,7 @@
                 "Cervantes, Dante et Homère"
             ],
             "explanation": "Parmi les écrivains français célèbres : Victor Hugo (Les Misérables), Voltaire, Jean-Jacques Rousseau, Albert Camus (L'Étranger), Gustave Flaubert (Madame Bovary).",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1052,7 +1052,7 @@
                 "Le Panthéon"
             ],
             "explanation": "La Cathédrale Notre-Dame de Paris est située sur l'île de la Cité, au cœur de Paris.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1065,7 +1065,7 @@
                 "Léonard de Vinci"
             ],
             "explanation": "Claude Monet est l'un des fondateurs du mouvement impressionniste français. D'autres peintres français célèbres incluent Cézanne, Delacroix et Renoir.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1078,7 +1078,7 @@
                 "Une écrivaine du XIXe siècle"
             ],
             "explanation": "Jeanne d'Arc est une héroïne nationale du XVe siècle qui a combattu les Anglais pendant la guerre de Cent Ans et aidé à libérer la France.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -1091,7 +1091,7 @@
                 "L'Édit de Paris"
             ],
             "explanation": "L'Édit de Nantes, signé par Henri IV en 1598, a accordé la liberté de culte aux protestants et mis fin aux guerres de religion.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -1104,7 +1104,7 @@
                 "François Ier"
             ],
             "explanation": "Le château de Versailles a été construit sous Louis XIV, symbole de la monarchie absolue de l'Ancien Régime.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1117,7 +1117,7 @@
                 "Le curry, le naan et le biryani"
             ],
             "explanation": "La gastronomie française comprend des plats typiques comme le pot-au-feu, la quiche lorraine, la bouillabaisse, le coq au vin et les crêpes bretonnes.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1130,7 +1130,7 @@
                 "Une guerre religieuse au XVIe siècle"
             ],
             "explanation": "La guerre de Cent Ans (1337-1453) était un conflit entre les rois de France et les rois d'Angleterre, durant lequel Jeanne d'Arc a joué un rôle crucial.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -1143,7 +1143,7 @@
                 "Un code vestimentaire de la cour"
             ],
             "explanation": "Le Code Napoléon, ou Code civil des Français, a été établi sous Napoléon Bonaparte en 1804. Il régit toujours la vie civile en France.",
-            "subTheme": "histoire",
+            "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
@@ -1156,7 +1156,7 @@
                 "Gustave Flaubert"
             ],
             "explanation": "Les Trois Mousquetaires a été écrit par Alexandre Dumas (avec Auguste Maquet), un célèbre romancier français du XIXe siècle.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
@@ -1169,7 +1169,7 @@
                 "Le Château de Blois"
             ],
             "explanation": "Léonard de Vinci a vécu au Clos Lucé, près du Château d'Amboise, sur invitation du roi François Ier.",
-            "subTheme": "culture",
+            "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {

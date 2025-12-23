@@ -9,7 +9,7 @@
             "Une mission humanitaire."
         ],
         "explanation": "C'est une domination politique, économique et culturelle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -22,7 +22,7 @@
             "Au Pôle Nord."
         ],
         "explanation": "C'est le Premier Empire colonial.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -35,7 +35,7 @@
             "Au Brésil."
         ],
         "explanation": "C'est le Second Empire colonial.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -48,7 +48,7 @@
             "Sur le hasard."
         ],
         "explanation": "Les populations colonisées n'avaient pas les mêmes droits.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -61,7 +61,7 @@
             "Protéger la nature."
         ],
         "explanation": "La France voulait étendre sa puissance et ses marchés.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -74,7 +74,7 @@
             "La pollution des mers."
         ],
         "explanation": "C'est un crime contre l'humanité.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -87,7 +87,7 @@
             "Déménager dans la même ville."
         ],
         "explanation": "La France est une terre d'accueil depuis longtemps.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -100,7 +100,7 @@
             "Par hasard."
         ],
         "explanation": "Les raisons sont économiques, politiques ou familiales.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -113,7 +113,7 @@
             "Expulser tout le monde."
         ],
         "explanation": "L'État cherche à maîtriser l'immigration légale.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -126,7 +126,7 @@
             "Paix."
         ],
         "explanation": "L'extermination planifiée par les nazis.",
-        "subTheme": "upload",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -139,7 +139,7 @@
             "En les envoyant en Suisse."
         ],
         "explanation": "L'État français a collaboré à la déportation.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -152,7 +152,7 @@
             "Pour punir les Allemands."
         ],
         "explanation": "C'est une leçon pour défendre les droits de l'homme.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -165,7 +165,7 @@
             "10 000."
         ],
         "explanation": "C'est un génocide industriel.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -178,7 +178,7 @@
             "Plus riches qu'avant."
         ],
         "explanation": "La pénurie alimentaire et la répression étaient quotidiennes.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -191,7 +191,7 @@
             "Winston Churchill."
         ],
         "explanation": "Il a rassemblé les différents mouvements sous l'autorité de De Gaulle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -204,7 +204,7 @@
             "Une épidémie."
         ],
         "explanation": "Les combats continuent jusqu'en 1945.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -217,7 +217,7 @@
             "Elle est punie comme l'Allemagne."
         ],
         "explanation": "Grâce à la Résistance et à De Gaulle.",
-        "subTheme": "histoire",
+            "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -230,7 +230,7 @@
             "De la France et de la Belgique."
         ],
         "explanation": "C'est un territoire réparti sur tous les océans.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -243,7 +243,7 @@
             "Réunion, Maurice, Seychelles."
         ],
         "explanation": "Ils ont le même statut que les départements de l'Hexagone.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -256,7 +256,7 @@
             "5 pays."
         ],
         "explanation": "La France est un carrefour européen.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -269,7 +269,7 @@
             "La forêt amazonienne."
         ],
         "explanation": "Les montagnes et les fleuves délimitent le territoire.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -282,7 +282,7 @@
             "Le Rhône, le Rhin, la Volga."
         ],
         "explanation": "La Loire est le plus long fleuve entièrement français.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -295,7 +295,7 @@
             "100 millions."
         ],
         "explanation": "C'est le 2ème pays le plus peuplé de l'UE.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -308,7 +308,7 @@
             "Elle reste identique."
         ],
         "explanation": "L'espérance de vie augmente et la natalité baisse.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -321,7 +321,7 @@
             "Dans les DROM."
         ],
         "explanation": "80% de la population est urbaine.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -334,7 +334,7 @@
             "Un département."
         ],
         "explanation": "C'est l'espace de vie quotidien autour des villes.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -347,7 +347,7 @@
             "La pollution de l'air."
         ],
         "explanation": "Les métropoles attirent les emplois et les richesses.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -360,7 +360,7 @@
             "Nice, Toulon, Cannes."
         ],
         "explanation": "Elles rayonnent sur leur région.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -373,7 +373,7 @@
             "Elle ne produit que du vin."
         ],
         "explanation": "La France est un grand exportateur (céréales, vin, lait).",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -386,7 +386,7 @@
             "Tabac uniquement."
         ],
         "explanation": "La diversité des climats permet des productions variées.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -399,7 +399,7 @@
             "Supprimer les fermes."
         ],
         "explanation": "L'agriculture doit devenir plus durable.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -412,7 +412,7 @@
             "Charbon et acier."
         ],
         "explanation": "Des grands groupes mondiaux (Airbus, LVMH, Sanofi, Danone).",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -425,7 +425,7 @@
             "À Strasbourg."
         ],
         "explanation": "C'est le siège d'Airbus.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -438,7 +438,7 @@
             "Polluer plus."
         ],
         "explanation": "Produire en France pour être plus indépendant.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -451,7 +451,7 @@
             "50e puissance mondiale."
         ],
         "explanation": "C'est un pays riche et développé.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -464,7 +464,7 @@
             "Le chômage."
         ],
         "explanation": "80% des emplois sont dans les services.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -477,7 +477,7 @@
             "Le manque de routes."
         ],
         "explanation": "L'État dépense plus qu'il ne gagne.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -490,7 +490,7 @@
             "Elle est au centre du monde."
         ],
         "explanation": "C'est un hub pour les échanges.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -503,7 +503,7 @@
             "L'Italie."
         ],
         "explanation": "La France est le 2ème.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -516,7 +516,7 @@
             "Tout passe par Lyon."
         ],
         "explanation": "Le TGV et les autoroutes partent souvent de la capitale.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -529,7 +529,7 @@
             "La route des vins."
         ],
         "explanation": "Ils relient l'Europe du Nord à la Méditerranée.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -542,7 +542,7 @@
             "Parce qu'elle est petite."
         ],
         "explanation": "Des Alpes à la forêt amazonienne (Guyane).",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -555,7 +555,7 @@
             "Un club de vacances."
         ],
         "explanation": "La France y contribue fortement pour protéger les espèces.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -568,7 +568,7 @@
             "Trop d'arbres."
         ],
         "explanation": "L'État s'engage pour une transition écologique.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -581,7 +581,7 @@
             "Cela n'existe pas."
         ],
         "explanation": "C'est une composante majeure des paysages.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -594,7 +594,7 @@
             "Le coton."
         ],
         "explanation": "Le vin français est célèbre mondialement.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -607,7 +607,7 @@
             "Le nom du président."
         ],
         "explanation": "Il mesure la puissance économique.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -620,7 +620,7 @@
             "Plus grand que la Chine."
         ],
         "explanation": "550 000 km² en métropole.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -633,7 +633,7 @@
             "Cela ne compte pas."
         ],
         "explanation": "Loin derrière la Chine ou l'Inde.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -646,7 +646,7 @@
             "Elle achète tout aux USA."
         ],
         "explanation": "C'est l'une des 5 puissances du Conseil de Sécurité.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -659,7 +659,7 @@
             "Elle n'a pas d'amis."
         ],
         "explanation": "Sa voix porte dans le monde.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -672,7 +672,7 @@
             "Une plage privée."
         ],
         "explanation": "La France a la 2ème plus grande ZEE du monde.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -685,7 +685,7 @@
             "C'est dangereux."
         ],
         "explanation": "C'est une richesse stratégique d'avenir.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -698,7 +698,7 @@
             "Ils ne servent qu'à la pêche."
         ],
         "explanation": "Le Havre et Marseille sont les plus grands.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -711,7 +711,7 @@
             "Strasbourg (port fluvial)."
         ],
         "explanation": "Sur les façades maritimes.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -724,7 +724,7 @@
             "C'est moins cher que le vélo."
         ],
         "explanation": "La France est un hub aérien mondial.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -737,7 +737,7 @@
             "Lyon."
         ],
         "explanation": "C'est l'un des plus grands d'Europe.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -750,7 +750,7 @@
             "L'agriculture."
         ],
         "explanation": "C'est un employeur majeur.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -763,7 +763,7 @@
             "Dernière destination."
         ],
         "explanation": "100 millions de visiteurs par an.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -776,7 +776,7 @@
             "Pour apprendre l'anglais."
         ],
         "explanation": "La Tour Eiffel, le Louvre, la Côte d'Azur attirent le monde.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -789,7 +789,7 @@
             "Dans le Sud-Ouest."
         ],
         "explanation": "C'est une région industrielle et montagneuse.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -802,7 +802,7 @@
             "Clermont-Ferrand."
         ],
         "explanation": "Lyon est la 2ème métropole de France.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -815,7 +815,7 @@
             "Désertique."
         ],
         "explanation": "C'est la 2ème région économique.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -828,7 +828,7 @@
             "Au Nord."
         ],
         "explanation": "Célèbre pour ses vins et son industrie.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -841,7 +841,7 @@
             "Mâcon."
         ],
         "explanation": "Capitale de la Bourgogne.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -854,7 +854,7 @@
             "Le champagne."
         ],
         "explanation": "Région de gastronomie.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -867,7 +867,7 @@
             "Au Centre."
         ],
         "explanation": "Rennes, Brest, Quimper.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -880,7 +880,7 @@
             "Vannes."
         ],
         "explanation": "Un pôle numérique et étudiant.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -893,7 +893,7 @@
             "Le ski."
         ],
         "explanation": "1ère région agroalimentaire.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -906,7 +906,7 @@
             "En Alsace."
         ],
         "explanation": "Orléans, Tours, les Châteaux.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -919,7 +919,7 @@
             "Blois."
         ],
         "explanation": "Ville libérée par Jeanne d'Arc.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -932,7 +932,7 @@
             "La jungle."
         ],
         "explanation": "C'est le 'jardin de la France'.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -945,7 +945,7 @@
             "Dans les Caraïbes."
         ],
         "explanation": "L'île de Beauté, Ajaccio, Bastia.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -958,7 +958,7 @@
             "Calvi."
         ],
         "explanation": "Ville natale de Napoléon.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -971,7 +971,7 @@
             "Le pétrole."
         ],
         "explanation": "Ses paysages attirent beaucoup de visiteurs.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -984,7 +984,7 @@
             "Au Centre."
         ],
         "explanation": "Frontalier avec l'Allemagne et la Belgique.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -997,7 +997,7 @@
             "Mulhouse."
         ],
         "explanation": "Siège du Parlement européen.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1010,7 +1010,7 @@
             "La vodka."
         ],
         "explanation": "Vignobles prestigieux.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1023,7 +1023,7 @@
             "À l'Ouest."
         ],
         "explanation": "Frontalier avec la Belgique.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1036,7 +1036,7 @@
             "Dunkerque."
         ],
         "explanation": "Grande métropole européenne.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1049,7 +1049,7 @@
             "Toujours riche."
         ],
         "explanation": "La région a une forte tradition ouvrière.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1062,7 +1062,7 @@
             "À la montagne."
         ],
         "explanation": "C'est la région capitale.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1075,7 +1075,7 @@
             "La plus agricole."
         ],
         "explanation": "1 Français sur 5 y vit.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1088,7 +1088,7 @@
             "Ce n'est que du tourisme."
         ],
         "explanation": "Centre de décision et d'affaires.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1101,7 +1101,7 @@
             "Dans les Alpes."
         ],
         "explanation": "Célèbre pour le débarquement et ses vaches.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1114,7 +1114,7 @@
             "Cherbourg."
         ],
         "explanation": "Ville historique (Jeanne d'Arc y est morte).",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1127,7 +1127,7 @@
             "Le riz."
         ],
         "explanation": "Tourisme et agriculture.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1140,7 +1140,7 @@
             "Dans le Nord."
         ],
         "explanation": "La plus grande région de France.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1153,7 +1153,7 @@
             "La Rochelle."
         ],
         "explanation": "Capitale mondiale du vin.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1166,7 +1166,7 @@
             "La pêche en eau douce."
         ],
         "explanation": "Région attractive et variée.",
-        "subTheme": "geographie",
+            "subTheme": "territories_geography",
         "questionType": "knowledge"
     }
 ]

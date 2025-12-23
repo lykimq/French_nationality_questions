@@ -1,5 +1,5 @@
 {
-    "themeId": "principes_et_valeurs",
+    "themeId": "principles_values",
     "themeTitle": "Principes et valeurs de la République",
     "questions": [
         {
@@ -51,7 +51,7 @@
                 "Suivre les règles de sa communauté"
             ],
             "explanation": "En France, chaque personne peut penser, s'exprimer et vivre comme elle le souhaite. La seule limite est de ne pas empêcher une autre personne d'en faire autant.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -64,7 +64,7 @@
                 "Le traité de Versailles"
             ],
             "explanation": "La liberté est une valeur fondamentale garantie par la Déclaration des droits de l'homme et du citoyen de 1789.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -77,7 +77,7 @@
                 "Les libertés publiques et les libertés privées"
             ],
             "explanation": "Il existe les libertés de chaque personne (se déplacer, avoir une religion, exprimer une opinion) et les libertés collectives (se rassembler, manifester, adhérer à un syndicat).",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -90,7 +90,7 @@
                 "Dans le règlement intérieur des entreprises"
             ],
             "explanation": "L'égalité est un principe fondamental inscrit dans la Constitution de 1958 et dans la Déclaration des droits de l'homme et du citoyen.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -103,7 +103,7 @@
                 "Tous ont le même niveau d'éducation"
             ],
             "explanation": "L'égalité devant la loi signifie que la loi est la même pour toutes les personnes, sans distinction.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -116,7 +116,7 @@
                 "Non, c'est une forme de discrimination"
             ],
             "explanation": "Le principe d'égalité n'empêche pas de traiter différemment des personnes dans des situations différentes (tarifs réduits pour chômeurs, étudiants, personnes âgées).",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "situation"
         },
         {
@@ -129,7 +129,7 @@
                 "Dans la Charte de l'environnement"
             ],
             "explanation": "L'égalité entre les femmes et les hommes est inscrite dans le Préambule de la Constitution de 1946 : \"la loi garantit à la femme, dans tous les domaines, des droits égaux à ceux de l'homme\".",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -142,7 +142,7 @@
                 "Oui, Christine Lagarde en 2012"
             ],
             "explanation": "Les femmes sont devenues plus nombreuses dans la vie politique, mais il n'y a pas de parité dans les postes à haute responsabilité. Il n'y a encore jamais eu de Présidente de la République.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -155,7 +155,7 @@
                 "Préférer un restaurant à un autre"
             ],
             "explanation": "On parle de discrimination lorsqu'une personne est moins bien traitée qu'une autre en raison d'un critère interdit par la loi (handicap, religion, orientation sexuelle, origine...).",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -168,7 +168,7 @@
                 "15 critères exactement"
             ],
             "explanation": "La loi française reconnaît plus de 26 critères de discrimination : origine, sexe, apparence physique, âge, handicap, grossesse, orientation sexuelle, opinions politiques, religion...",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -181,7 +181,7 @@
                 "La relation entre collègues de travail"
             ],
             "explanation": "La fraternité, c'est la solidarité entre les citoyens. C'est ce qui permet aux personnes de vivre ensemble avec harmonie et de former une société.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -194,7 +194,7 @@
                 "Dans le traité de Rome de 1957"
             ],
             "explanation": "La fraternité n'est pas présente dans la DDHC de 1789. Elle apparaît pour la première fois dans le Préambule de la Constitution de la 2e République en 1848.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -207,7 +207,7 @@
                 "L'aide familiale entre générations"
             ],
             "explanation": "La solidarité collective est une aide organisée surtout par des institutions publiques (État, département) et financée par l'impôt ou des cotisations. Exemples : Sécurité sociale, RSA, aide au logement.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -220,7 +220,7 @@
                 "Par les bénéfices des entreprises"
             ],
             "explanation": "C'est la solidarité entre les générations : les retraites sont financées par les cotisations des personnes plus jeunes, celles qui travaillent.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -233,7 +233,7 @@
                 "La loi de 1946 sur la Sécurité sociale"
             ],
             "explanation": "La liberté d'association est inscrite dans une loi qui date de 1901. Chaque personne en France peut s'engager librement dans une association.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -246,7 +246,7 @@
                 "Dix personnes"
             ],
             "explanation": "Pour créer une association, il faut réunir au moins deux personnes, choisir un objectif non lucratif, rédiger les statuts et faire une déclaration à la préfecture.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -688,7 +688,7 @@
                 "Il n'y a pas de langue officielle"
             ],
             "explanation": "Le français est inscrit dans la Constitution depuis 1992 : \"la langue de la République est le français\". C'est la seule langue officielle en France.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -701,7 +701,7 @@
                 "Non, elles n'existent plus"
             ],
             "explanation": "Le breton, le corse, l'alsacien, le basque ou le créole peuvent être enseignés à l'école. Ce ne sont pas des langues officielles, mais elles font partie du patrimoine français.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -714,7 +714,7 @@
                 "Un engagement pour les fonctionnaires"
             ],
             "explanation": "Le contrat d'engagement à respecter les principes de la République est un document obligatoire pour toute personne étrangère demandant un titre de séjour.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -727,7 +727,7 @@
                 "Un avertissement écrit"
             ],
             "explanation": "Si la personne ne respecte pas un principe républicain, le titre de séjour peut être retiré ou non renouvelé. Aucun titre de séjour ne peut être délivré sans ce contrat signé.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -740,7 +740,7 @@
                 "Juste le paiement des impôts"
             ],
             "explanation": "Le contrat inclut : la liberté personnelle, la liberté d'expression et de conscience, l'égalité femmes-hommes, la dignité, la devise et les symboles de la République, la laïcité.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -753,7 +753,7 @@
                 "Non, ils ont un contrat différent"
             ],
             "explanation": "Les personnes qui bénéficient d'une protection internationale (réfugiés, apatrides, protection subsidiaire) doivent également signer le contrat d'engagement.",
-            "subTheme": "principes_situation",
+            "subTheme": "situational_principles",
             "questionType": "knowledge"
         },
         {
@@ -766,7 +766,7 @@
                 "Paix et prospérité"
             ],
             "explanation": "La devise officielle de l'Union européenne est 'Unis dans la diversité', symbolisant l'unité des peuples européens tout en respectant leurs différences.",
-            "subTheme": "symboles_europeens",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -779,7 +779,7 @@
                 "God Save the King"
             ],
             "explanation": "L'hymne de l'Union européenne est l'Ode à la Joie, tirée de la 9e Symphonie de Ludwig van Beethoven.",
-            "subTheme": "symboles_europeens",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -792,7 +792,7 @@
                 "Blanc avec 27 étoiles pour chaque pays membre"
             ],
             "explanation": "Le drapeau de l'UE est bleu avec 12 étoiles d'or disposées en cercle. Le nombre 12 symbolise la perfection et l'unité, pas le nombre de pays membres.",
-            "subTheme": "symboles_europeens",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -805,7 +805,7 @@
                 "Le 25 décembre"
             ],
             "explanation": "Le 9 mai est la journée de l'Europe, commémorant la déclaration Schuman de 1950 qui a lancé la construction européenne.",
-            "subTheme": "symboles_europeens",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -818,7 +818,7 @@
                 "La livre"
             ],
             "explanation": "L'euro est la monnaie commune des pays de la zone euro. Il a été introduit en 2002 pour remplacer les monnaies nationales.",
-            "subTheme": "symboles_europeens",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -831,7 +831,7 @@
                 "Claude Debussy"
             ],
             "explanation": "L'Ode à la Joie, hymne européen, est tirée de la 9e Symphonie composée par Ludwig van Beethoven.",
-            "subTheme": "symboles_europeens",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {

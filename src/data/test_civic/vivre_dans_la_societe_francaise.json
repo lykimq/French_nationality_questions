@@ -1,5 +1,5 @@
 {
-    "themeId": "vivre_dans_la_societe_francaise",
+    "themeId": "living_society",
     "themeTitle": "Vivre dans la société française",
     "questions": [
         {
@@ -12,7 +12,7 @@
                 "Un titre de propriété"
             ],
             "explanation": "La domiciliation est une adresse administrative attribuée aux personnes qui ne peuvent pas recevoir leur courrier de façon constante et confidentielle à une adresse stable.",
-            "subTheme": "démarches administratives",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -25,7 +25,7 @@
                 "1 an maximum"
             ],
             "explanation": "Quand vous changez de logement, le changement d'adresse doit être fait le plus rapidement possible, 3 mois maximum après le déménagement.",
-            "subTheme": "démarches administratives",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -38,7 +38,7 @@
                 "Imprimer les billets de banque français"
             ],
             "explanation": "La Banque de France gère des services à l'économie : droit au compte, accompagnement des personnes en surendettement, stratégie monétaire et stabilité des prix.",
-            "subTheme": "démarches administratives",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -51,7 +51,7 @@
                 "Une carte grise et un certificat médical"
             ],
             "explanation": "Pour conduire une voiture en France, il est obligatoire d'avoir un permis de conduire valide, une carte grise du véhicule à jour et une assurance automobile.",
-            "subTheme": "démarches administratives",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -64,7 +64,7 @@
                 "21 ans"
             ],
             "explanation": "Il est nécessaire d'avoir 17 ans au minimum et être résident en France pour passer l'examen du permis de conduire.",
-            "subTheme": "démarches administratives",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -77,7 +77,7 @@
                 "Le devoir de respecter le code de la route"
             ],
             "explanation": "La responsabilité civile est l'obligation de chacun de réparer les dommages matériels, corporels ou moraux que l'on peut causer sans le vouloir à d'autres personnes.",
-            "subTheme": "démarches administratives",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -90,7 +90,7 @@
                 "Uniquement les personnes gagnant plus du SMIC"
             ],
             "explanation": "Toute personne de plus de 18 ans, résidant en France (citoyen français ou pas) doit déclarer ses revenus, même si ses revenus sont faibles ou nuls.",
-            "subTheme": "impôts",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -103,7 +103,7 @@
                 "Tous les trimestres"
             ],
             "explanation": "La déclaration annuelle des revenus a lieu entre avril et mai de chaque année : vous déclarez les revenus que vous avez reçus l'année précédente.",
-            "subTheme": "impôts",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -116,7 +116,7 @@
                 "Le jour de l'expiration"
             ],
             "explanation": "La demande de renouvellement de titre de séjour doit être faite au moins 3 mois avant la fin de validité de votre titre de séjour.",
-            "subTheme": "titre de séjour",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -129,7 +129,7 @@
                 "Dans le mois qui suit"
             ],
             "explanation": "La déclaration de naissance est obligatoire et doit être réalisée dans les 5 jours qui suivent la naissance, à la mairie du lieu de naissance.",
-            "subTheme": "état civil",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -142,7 +142,7 @@
                 "Être de religions différentes"
             ],
             "explanation": "Pour se marier en France, il faut avoir plus de 18 ans, ne pas avoir de lien de parenté ou d'alliance, et pouvoir donner un consentement libre et éclairé.",
-            "subTheme": "état civil",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -155,7 +155,7 @@
                 "Le mariage coutumier"
             ],
             "explanation": "Le mariage civil est le seul mariage reconnu en France. Deux personnes, de sexe différent ou de même sexe, peuvent se marier.",
-            "subTheme": "état civil",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -168,7 +168,7 @@
                 "Le 112"
             ],
             "explanation": "Le 15 est le numéro du SAMU, à appeler en cas d'urgence médicale. Ces appels sont gratuits et disponibles 24h/24.",
-            "subTheme": "urgences",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -181,7 +181,7 @@
                 "Le 18"
             ],
             "explanation": "Le 112 est le numéro d'urgence européen, utilisable pour toute urgence médicale, infraction ou situation de péril/accident.",
-            "subTheme": "urgences",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -194,7 +194,7 @@
                 "Le 112"
             ],
             "explanation": "Le 119 est le numéro à appeler en cas de mise en danger de l'enfance (violence physique, psychologique, sexuelle...).",
-            "subTheme": "urgences",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -207,7 +207,7 @@
                 "Se rendre en pharmacie pour un diagnostic"
             ],
             "explanation": "Le parcours de soins coordonnés consiste à consulter d'abord son médecin traitant, qui va ensuite orienter le patient vers d'autres professionnels de santé si nécessaire.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -220,7 +220,7 @@
                 "Une aide uniquement pour les personnes sans emploi"
             ],
             "explanation": "La PUMa garantit un droit à la prise en charge financière des frais de santé pour toute personne qui travaille ou réside en France de manière stable et régulière.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -233,7 +233,7 @@
                 "Un service payant pour tous"
             ],
             "explanation": "La C2S est une couverture complémentaire qui prend en charge les dépenses de santé des personnes aux ressources modestes. Elle peut être gratuite ou coûter moins de 1€ par jour.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -246,7 +246,7 @@
                 "La confidentialité des prix des consultations"
             ],
             "explanation": "Le secret médical protège toutes les informations connues par le professionnel de santé : état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de la consultation.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -259,7 +259,7 @@
                 "Un examen réservé aux personnes âgées"
             ],
             "explanation": "Le dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes, permettant un traitement rapide.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -272,7 +272,7 @@
                 "Elle est uniquement esthétique"
             ],
             "explanation": "La vaccination est un moyen simple, sûr et efficace de se protéger des maladies dangereuses. Elle utilise les défenses naturelles de l'organisme pour renforcer le système immunitaire.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -285,7 +285,7 @@
                 "Une association de bénévoles"
             ],
             "explanation": "France Travail est un organisme public qui accompagne les personnes à la recherche d'un emploi. L'inscription permet d'être accompagné pour trouver un travail ou suivre une formation.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -298,7 +298,7 @@
                 "Uniquement les personnes ayant déjà travaillé en France"
             ],
             "explanation": "Chaque personne étrangère en situation régulière (titre de séjour, réfugiée, ou bénéficiaire de la protection internationale) et sans travail doit être inscrite à France Travail.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -311,7 +311,7 @@
                 "Un certificat de nationalité"
             ],
             "explanation": "L'attestation de comparabilité est un document fourni par le Centre Enic-Naric pour mieux comprendre le parcours de formation suivi à l'étranger.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -324,7 +324,7 @@
                 "Un test de niveau en français"
             ],
             "explanation": "La VAE permet de faire reconnaître vos compétences de manière officielle, comme un diplôme reçu après une formation. Il faut avoir au moins un an d'expérience en lien avec le diplôme visé.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -337,7 +337,7 @@
                 "Le contrat de stage"
             ],
             "explanation": "Le CDI (Contrat à Durée Indéterminée) est le contrat de travail le plus courant en France. Il n'a pas de date de fin.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -350,7 +350,7 @@
                 "24 mois"
             ],
             "explanation": "Le CDD (Contrat à Durée Déterminée) a une date de fin et est utilisé pour une tâche précise et limitée dans le temps. En général, sa durée maximale est de 18 mois.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -363,7 +363,7 @@
                 "40 heures par semaine"
             ],
             "explanation": "Le droit du travail détermine une référence pour la durée de travail des salariés à temps complet : 35 heures par semaine. Cette durée s'applique à toutes les entreprises.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -376,7 +376,7 @@
                 "21 ans"
             ],
             "explanation": "Il est possible de travailler dès l'âge de 16 ans. Tout mineur doit y être autorisé par son représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -389,7 +389,7 @@
                 "Le salaire médian"
             ],
             "explanation": "Il est interdit de verser un salaire inférieur au SMIC (Salaire Minimum Interprofessionnel de Croissance), qui est le salaire horaire minimum en France.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -402,7 +402,7 @@
                 "Le droit de licencier des employés"
             ],
             "explanation": "En France, chaque salarié a le droit de se syndiquer, c'est-à-dire de créer, adhérer ou participer à un syndicat qui défend les droits des travailleurs.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -415,7 +415,7 @@
                 "Un service de médiation familiale"
             ],
             "explanation": "Le Conseil de Prud'hommes est un lieu de Justice qui décide dans les conflits entre salariés et employeurs concernant le contrat de travail (licenciement, salaire...).",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -428,7 +428,7 @@
                 "Changer les horaires de travail"
             ],
             "explanation": "On parle de discrimination au travail quand une personne est moins bien traitée que les autres par l'employeur en raison d'un critère interdit par la loi (origine, sexe, âge...).",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -441,7 +441,7 @@
                 "Une association de bénévoles"
             ],
             "explanation": "L'Inspection du travail est un service de l'État qui veille au respect du droit du travail. Elle informe et conseille les employeurs, les salariés et les représentants du personnel.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -454,7 +454,7 @@
                 "Une protection juridique renforcée"
             ],
             "explanation": "Un salarié qui travaille sans être déclaré ne cotise ni à l'assurance chômage, ni pour sa retraite. Il n'a pas droit à la sécurité sociale ni aux congés payés.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -467,7 +467,7 @@
                 "Le pouvoir de l'État sur les familles"
             ],
             "explanation": "L'autorité parentale correspond à l'ensemble des droits et devoirs des parents vis-à-vis de leur enfant de moins de 18 ans. Les deux parents ont l'autorité parentale.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -480,7 +480,7 @@
                 "Quand l'enfant quitte le domicile familial"
             ],
             "explanation": "L'autorité parentale se termine quand l'enfant a 18 ans ou s'il est émancipé (devient adulte avant 18 ans).",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -493,7 +493,7 @@
                 "Une convention sur l'éducation scolaire"
             ],
             "explanation": "En 1989, 196 États ont signé la Convention Internationale des Droits de l'Enfant dans le cadre de l'ONU. Ce document présente les droits fondamentaux des enfants.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -506,7 +506,7 @@
                 "La tutelle de l'État"
             ],
             "explanation": "L'intérêt de l'enfant est supérieur à sa volonté et à celle de ses parents. L'enfant peut choisir lui-même son avenir, sauf si ses décisions le mettent en danger.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -519,7 +519,7 @@
                 "De 4 à 15 ans"
             ],
             "explanation": "Français ou étrangers, tous les enfants âgés de 3 à 16 ans, qui habitent en France, doivent aller à l'école. C'est une obligation.",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -532,7 +532,7 @@
                 "Petite école, grande école, faculté et institut"
             ],
             "explanation": "L'école est organisée en 4 temps : la maternelle (3-6 ans), le cours élémentaire (6-11 ans), le collège (11-15 ans) et le lycée (15-18 ans).",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -545,7 +545,7 @@
                 "Le CAP"
             ],
             "explanation": "À la fin du collège, l'enfant passe un diplôme qui s'appelle le brevet des collèges, ou diplôme national du brevet (DNB).",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -558,7 +558,7 @@
                 "Le diplôme national du brevet"
             ],
             "explanation": "À la fin du lycée, l'enfant passe un diplôme qui s'appelle le baccalauréat (BAC), qui permet de poursuivre des études supérieures.",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -571,7 +571,7 @@
                 "L'obéissance et la discipline militaire"
             ],
             "explanation": "L'École républicaine, gratuite, laïque et obligatoire, est au cœur de la transmission des valeurs de la République : citoyenneté, laïcité, engagement et lutte contre les discriminations.",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -584,7 +584,7 @@
                 "Un service de garde après l'école"
             ],
             "explanation": "OEPRE (Ouvrir l'École aux Parents pour la Réussite des Enfants) est un dispositif pour les parents étrangers, permettant de travailler la langue française, les valeurs de la République et le fonctionnement de l'école.",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -597,7 +597,7 @@
                 "Un certificat de résidence"
             ],
             "explanation": "Le bail est un contrat écrit entre le bailleur (propriétaire) et le locataire. C'est le seul document qui autorise à vivre dans un logement.",
-            "subTheme": "logement",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -610,7 +610,7 @@
                 "1 an"
             ],
             "explanation": "Le locataire peut quitter le logement à tout moment en respectant le délai de préavis de 3 mois (1 mois sous certaines conditions comme un logement meublé ou en zone tendue).",
-            "subTheme": "logement",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -623,7 +623,7 @@
                 "L'assurance santé"
             ],
             "explanation": "Le locataire a l'obligation de souscrire une assurance habitation couvrant les risques locatifs (incendie, dégât des eaux...).",
-            "subTheme": "logement",
+            "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
@@ -636,7 +636,7 @@
                 "Un numéro de compte bancaire"
             ],
             "explanation": "Le numéro de sécurité sociale est un identifiant unique et personnel à 15 chiffres qui atteste que vous avez l'Assurance maladie. Il est inscrit sur la carte Vitale.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -649,7 +649,7 @@
                 "Un remboursement après 3 mois"
             ],
             "explanation": "Le système de tiers-payant permet de ne pas avancer la somme d'argent que l'Assurance maladie rembourse. Le professionnel de santé est directement payé par l'Assurance maladie.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -662,7 +662,7 @@
                 "Le 119"
             ],
             "explanation": "Le 3919 est le numéro à appeler pour une femme victime de violence. C'est un numéro d'écoute et d'orientation.",
-            "subTheme": "urgences",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -675,7 +675,7 @@
                 "Le 119"
             ],
             "explanation": "Le 3114 est le numéro national de prévention du suicide, disponible 24h/24.",
-            "subTheme": "urgences",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -688,7 +688,7 @@
                 "Des centres de formation professionnelle"
             ],
             "explanation": "Les UPE2A (Unités Pédagogiques pour Élèves étrangers Allophones Arrivants) sont déployées pour les élèves qui ne parlent pas bien français à leur arrivée en France.",
-            "subTheme": "école",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -701,7 +701,7 @@
                 "Non, sauf pour les ressortissants européens"
             ],
             "explanation": "Vous pouvez créer une entreprise en France, même si vous n'avez pas la nationalité française. Vous n'avez pas besoin de diplôme, sauf pour certaines activités.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -714,7 +714,7 @@
                 "Un diplôme professionnel"
             ],
             "explanation": "Le CV est un document qu'une personne envoie à une entreprise dans le but d'être embauché. Il présente son expérience professionnelle, son parcours de formation et ses compétences.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -727,7 +727,7 @@
                 "Une école pour les parents"
             ],
             "explanation": "Le soutien à la parentalité est un ensemble d'actions décidées par l'État pour aider les parents qui ont du mal à assurer l'éducation de leurs enfants.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -740,7 +740,7 @@
                 "Une aide financière pour les familles"
             ],
             "explanation": "La médiation familiale permet de trouver une solution en cas de conflit familial (séparation, difficulté à assurer l'autorité parentale...).",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -753,7 +753,7 @@
                 "Le 112"
             ],
             "explanation": "Le 30 20 est le numéro à appeler en cas de harcèlement de l'enfant. Les parents doivent signaler toute violence.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -766,7 +766,7 @@
                 "Un compte pour les allocations chômage"
             ],
             "explanation": "Le CPF (Compte Personnel de Formation) permet de financer des formations. Toute personne qui travaille a un CPF qui augmente de 500€ maximum à la fin de chaque année de travail.",
-            "subTheme": "emploi",
+            "subTheme": "work",
             "questionType": "knowledge"
         },
         {
@@ -779,7 +779,7 @@
                 "Uniquement dans les centres de loisirs"
             ],
             "explanation": "Les enfants de moins de 3 ans peuvent être gardés en crèche, micro-crèche, halte-garderie, chez une assistante maternelle ou à domicile par une personne employée par les parents.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -792,7 +792,7 @@
                 "Non, car cela crée des problèmes de discipline"
             ],
             "explanation": "L'école mixte en France favorise l'égalité entre les sexes, la diversité et la compréhension mutuelle dès le plus jeune âge. C'est un vecteur d'égalité.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -805,7 +805,7 @@
                 "Victor Hugo"
             ],
             "explanation": "Jules Ferry, ancien maire de Paris, a rendu l'école obligatoire, gratuite et laïque avec les lois de 1881-1882.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -818,7 +818,7 @@
                 "Depuis 1958"
             ],
             "explanation": "L'école est obligatoire en France depuis le 28 mars 1882, grâce aux lois de Jules Ferry.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -831,7 +831,7 @@
                 "Mixte, bilingue et sélective"
             ],
             "explanation": "L'école publique française repose sur trois principes fondamentaux : elle est gratuite, laïque et obligatoire.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -844,7 +844,7 @@
                 "Le regroupement d'élèves de différents niveaux"
             ],
             "explanation": "La mixité à l'école signifie que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes. C'est un vecteur d'égalité dès le plus jeune âge.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
@@ -857,7 +857,7 @@
                 "La Mutuelle Générale"
             ],
             "explanation": "Le système de santé publique en France s'appelle la Sécurité Sociale. Elle a été créée en 1945.",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -870,7 +870,7 @@
                 "Par des dons privés"
             ],
             "explanation": "La Sécurité sociale est financée par les cotisations sociales prélevées sur les salaires (employeurs et salariés) et par l'impôt (CSG).",
-            "subTheme": "santé",
+            "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
@@ -883,7 +883,7 @@
                 "Seulement les accompagner à l'école"
             ],
             "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
-            "subTheme": "parentalité",
+            "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {

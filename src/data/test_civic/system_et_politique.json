@@ -1,5 +1,5 @@
 {
-    "themeId": "system_et_politique",
+    "themeId": "institutional_political",
     "themeTitle": "Système institutionnel et politique",
     "questions": [
         {
@@ -12,7 +12,7 @@
                 "Un État sans gouvernement"
             ],
             "explanation": "Un État de droit est un système dans lequel la loi est la même pour tous, y compris pour l'État. Le droit est supérieur aux pouvoirs et aux autorités politiques.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -25,7 +25,7 @@
                 "Travail, famille, patrie"
             ],
             "explanation": "L'État de droit repose sur : la primauté du droit, l'égalité devant la loi, la séparation des pouvoirs, la légalité, la sécurité juridique et une protection juridictionnelle effective.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -38,7 +38,7 @@
                 "Le pouvoir civil, militaire et religieux"
             ],
             "explanation": "En France, la séparation des 3 pouvoirs signifie que les pouvoirs législatif (Parlement), exécutif (Gouvernement) et judiciaire (juges) ne sont pas entre les mains des mêmes personnes.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -51,7 +51,7 @@
                 "Le Conseil constitutionnel"
             ],
             "explanation": "Le pouvoir législatif est exercé par le Parlement, composé de 2 chambres : l'Assemblée nationale (577 députés) et le Sénat (348 sénateurs). Le Parlement vote la loi.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -64,7 +64,7 @@
                 "650 députés"
             ],
             "explanation": "L'Assemblée nationale compte 577 députés, élus par les citoyens au suffrage universel direct.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -77,7 +77,7 @@
                 "400 sénateurs"
             ],
             "explanation": "Le Sénat compte 348 sénateurs, élus par les grands électeurs au suffrage universel indirect.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -90,7 +90,7 @@
                 "Les maires et préfets"
             ],
             "explanation": "Le pouvoir exécutif est exercé par le Président de la République (chef de l'État) et le Gouvernement (Premier ministre et ministres).",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -103,7 +103,7 @@
                 "Au Palais du Luxembourg"
             ],
             "explanation": "Le Président de la République, chef de l'État et des armées, réside au Palais de l'Élysée.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -116,7 +116,7 @@
                 "Au Château de Versailles"
             ],
             "explanation": "Le Premier ministre, nommé par le Président de la République, réside à l'Hôtel de Matignon.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -129,7 +129,7 @@
                 "Le Conseil constitutionnel"
             ],
             "explanation": "Le Premier ministre est nommé par le Président de la République selon la majorité parlementaire.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -142,7 +142,7 @@
                 "Les avocats"
             ],
             "explanation": "L'autorité judiciaire est exercée par les juges et les magistrats, recrutés par concours et non choisis par le pouvoir. Ils appliquent les lois et rendent la justice.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -155,7 +155,7 @@
                 "La justice publique et la justice privée"
             ],
             "explanation": "Le pouvoir judiciaire est réparti entre deux ordres : la justice judiciaire (civile et pénale) et la justice administrative (litiges avec l'État).",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -168,7 +168,7 @@
                 "Les affaires internationales"
             ],
             "explanation": "La justice civile s'occupe des litiges entre citoyens, par exemple un conflit entre locataire et propriétaire.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -181,7 +181,7 @@
                 "Les divorces"
             ],
             "explanation": "La justice pénale punit les infractions des citoyens à la loi, comme un vol ou un excès de vitesse.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -194,7 +194,7 @@
                 "Le tribunal correctionnel"
             ],
             "explanation": "Les tribunaux sont organisés en pyramide : première instance, cour d'appel, puis Cour de cassation (judiciaire) ou Conseil d'État (administratif) comme dernier niveau.",
-            "subTheme": "etat_de_droit",
+            "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
@@ -207,7 +207,7 @@
                 "\"Pouvoir de l'armée\""
             ],
             "explanation": "Le mot démocratie vient du grec \"Dêmos Krátos\" qui signifie \"Peuple Pouvoir\". C'est le régime où le pouvoir appartient au peuple.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -220,7 +220,7 @@
                 "Avoir fait son service militaire"
             ],
             "explanation": "Le droit de vote est accordé à tout citoyen de nationalité française, de plus de 18 ans, qui a ses droits civiques et qui est inscrit sur les listes électorales.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -233,7 +233,7 @@
                 "\"L'union fait la force\""
             ],
             "explanation": "La Constitution de 1958 indique que la démocratie c'est : \"le gouvernement du peuple, par le peuple et pour le peuple\".",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -246,7 +246,7 @@
                 "\"Gouvernement des sages\""
             ],
             "explanation": "Le mot République vient du latin \"Res Publica\" qui signifie \"chose publique\". C'est un système où le pouvoir est détenu par des représentants élus.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -259,7 +259,7 @@
                 "7 ans"
             ],
             "explanation": "Le Président de la République est élu pour 5 ans au suffrage universel directement par les citoyens français.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -272,7 +272,7 @@
                 "7 ans"
             ],
             "explanation": "Les 577 députés de l'Assemblée nationale sont élus au suffrage direct par les Français, tous les 5 ans (sauf dissolution).",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -285,7 +285,7 @@
                 "7 ans"
             ],
             "explanation": "Les 348 sénateurs sont élus au suffrage indirect par les grands électeurs, pour un mandat de 6 ans (renouvellement par moitié tous les 3 ans).",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -298,7 +298,7 @@
                 "Au suffrage indirect"
             ],
             "explanation": "Les élus municipaux (maire et conseillers municipaux) sont élus pour 6 ans lors des élections municipales au suffrage direct.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -311,7 +311,7 @@
                 "Le vote des personnes instruites"
             ],
             "explanation": "Le suffrage universel signifie que tous les citoyens français majeurs, ayant leurs droits civiques et inscrits sur les listes électorales, peuvent voter sans distinction.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -324,7 +324,7 @@
                 "Seulement s'il a la double nationalité"
             ],
             "explanation": "Un ressortissant d'un pays membre de l'UE résidant en France peut voter aux élections européennes et municipales s'il habite dans la commune depuis plus de 6 mois.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "situation"
         },
         {
@@ -337,7 +337,7 @@
                 "Seulement pour les élections présidentielles"
             ],
             "explanation": "Le vote n'est pas obligatoire en France, c'est un droit. Cependant, la carte d'électeur porte la mention \"Voter est un droit, c'est aussi un devoir civique\".",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -350,7 +350,7 @@
                 "Collectif, guidé et vérifié"
             ],
             "explanation": "En France, le vote est strictement personnel (on vote soi-même), libre (pas de contrainte) et secret (isoloir obligatoire).",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -363,7 +363,7 @@
                 "Seulement les élections nationales"
             ],
             "explanation": "Les citoyens votent directement pour : les présidentielles, législatives, municipales, départementales, régionales et européennes. Les sénatoriales sont au suffrage indirect.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -376,7 +376,7 @@
                 "Elle complique la prise de décision"
             ],
             "explanation": "La pluralité des partis politiques est un principe fondamental de la démocratie. Le Conseil constitutionnel a affirmé que \"le respect du pluralisme constitue le fondement de la démocratie\".",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -389,7 +389,7 @@
                 "Uniquement pendant les campagnes"
             ],
             "explanation": "D'après la loi du 30 septembre 1986, les médias ont l'obligation d'être équitables entre les partis politiques. Pendant les campagnes, tous les partis ont autant de temps de parole.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -402,7 +402,7 @@
                 "Le Conseil constitutionnel"
             ],
             "explanation": "L'initiative de la loi peut être faite par le Gouvernement (projet de loi) ou par le Parlement - députés ou sénateurs (proposition de loi).",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -415,7 +415,7 @@
                 "Le vote électronique au Parlement"
             ],
             "explanation": "La navette parlementaire est l'échange du texte de loi entre les deux chambres jusqu'à ce qu'elles valident le même texte.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -428,7 +428,7 @@
                 "La loi est abandonnée"
             ],
             "explanation": "Une commission paritaire mixte (7 députés et 7 sénateurs) est appelée. Si elle n'aboutit pas, l'Assemblée nationale décide.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -441,7 +441,7 @@
                 "Le Conseil constitutionnel"
             ],
             "explanation": "La loi est validée et signée par le Président de la République dans un délai de 15 jours. Une fois promulguée, elle est publiée au Journal officiel.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -454,7 +454,7 @@
                 "La suppression des régions"
             ],
             "explanation": "La décentralisation, c'est l'État qui transfère des compétences et des moyens à d'autres autorités appelées collectivités territoriales.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -467,7 +467,7 @@
                 "Les tribunaux et cours"
             ],
             "explanation": "Les collectivités territoriales sont : les communes (plus de 35 000), les départements (101) et les régions (18).",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -480,7 +480,7 @@
                 "Moins de 1 000"
             ],
             "explanation": "La commune est la collectivité la plus répandue sur le territoire. Il y a plus de 34 000 communes en France.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -493,7 +493,7 @@
                 "50 départements"
             ],
             "explanation": "Il y a 101 départements en France, dont 5 en outre-mer. Le département agit surtout dans l'action sociale et gère les collèges.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -506,7 +506,7 @@
                 "27 régions"
             ],
             "explanation": "Il y a 18 régions en France, dont 5 en outre-mer. La région gère les lycées et contribue au développement économique.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -519,7 +519,7 @@
                 "Les départements"
             ],
             "explanation": "Les communes gèrent les écoles maternelles et primaires. Les départements gèrent les collèges, les régions gèrent les lycées.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -532,7 +532,7 @@
                 "L'État central"
             ],
             "explanation": "Les départements gèrent les collèges. C'est un exemple de décentralisation des compétences de l'Éducation nationale.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -545,7 +545,7 @@
                 "Le ministère de l'Éducation"
             ],
             "explanation": "Les régions gèrent les lycées. L'État définit les programmes et recrute les enseignants, mais les régions s'occupent des bâtiments et équipements.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -558,7 +558,7 @@
                 "Juger les affaires administratives"
             ],
             "explanation": "Le Préfet est le représentant de l'État dans le département. Il dirige les services de l'État et veille à la continuité de l'État.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -571,7 +571,7 @@
                 "En 2007, par le traité de Lisbonne"
             ],
             "explanation": "Le traité de Maastricht de 1992 crée l'Union européenne (UE). La CEE existait depuis 1957 et la CECA depuis 1951.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -584,7 +584,7 @@
                 "9 pays"
             ],
             "explanation": "En 1957, la CEE est créée avec 6 pays : Allemagne de l'Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -597,7 +597,7 @@
                 "30 États membres"
             ],
             "explanation": "L'UE compte 27 États membres depuis 2020, après le départ du Royaume-Uni (Brexit). C'est la première fois qu'un pays quitte l'UE.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -610,7 +610,7 @@
                 "Les 12 apôtres"
             ],
             "explanation": "Sur un fond bleu, douze étoiles jaunes forment un cercle. Ce cercle d'étoiles symbolise l'unité, la solidarité et l'harmonie entre les peuples d'Europe.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -623,7 +623,7 @@
                 "God Save the King"
             ],
             "explanation": "L'hymne européen est l'\"Ode à la joie\", une mélodie écrite par Beethoven. Il symbolise la liberté, la paix et la solidarité.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -636,7 +636,7 @@
                 "\"Paix et prospérité\""
             ],
             "explanation": "La devise de l'Union européenne est \"Unie dans la diversité\" depuis 2000. Elle illustre comment les Européens se sont rassemblés dans le respect de leurs diverses cultures.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -649,7 +649,7 @@
                 "Le 11 novembre"
             ],
             "explanation": "Chaque année, le 9 mai, tous les pays membres de l'UE fêtent la Journée de l'Europe. Cette date marque l'anniversaire de la \"déclaration Schuman\" du 9 mai 1950.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -662,7 +662,7 @@
                 "À Paris"
             ],
             "explanation": "Le Parlement européen siège à Strasbourg. Il vote le budget et les lois avec le Conseil de l'Union européenne.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -675,7 +675,7 @@
                 "À Francfort"
             ],
             "explanation": "La Commission européenne est située à Bruxelles. Elle représente les intérêts communs, propose le budget et les lois.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -688,7 +688,7 @@
                 "50 eurodéputés"
             ],
             "explanation": "Depuis les élections de 2024, la France compte 81 eurodéputés. Le nombre dépend de la population du pays.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -701,7 +701,7 @@
                 "Tous les 7 ans"
             ],
             "explanation": "Les élections européennes sont organisées tous les 5 ans. Les citoyens de l'UE votent pour désigner les membres du Parlement européen.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -714,7 +714,7 @@
                 "En 2007"
             ],
             "explanation": "L'euro est devenu la monnaie officielle de plusieurs pays membres en 2002. Le traité de Maastricht de 1992 avait prévu sa création.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -727,7 +727,7 @@
                 "Gérer la monnaie unique"
             ],
             "explanation": "Le Conseil européen donne les grandes orientations politiques et budgétaires de l'UE. Il réunit les 27 chefs d'État ou de gouvernement.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -740,7 +740,7 @@
                 "À La Haye"
             ],
             "explanation": "La Cour de justice est située à Luxembourg. Elle rend la justice à l'échelle européenne et vérifie que les États appliquent le droit européen.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -753,7 +753,7 @@
                 "En 2002, avec la mise en circulation de l'euro"
             ],
             "explanation": "La Banque centrale européenne a été créée en 1998, au moment de la création de l'euro comme monnaie unique.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -766,7 +766,7 @@
                 "Par l'Assemblée nationale"
             ],
             "explanation": "Les sénateurs sont élus au suffrage universel indirect par un collège d'environ 150 000 grands électeurs (maires, conseillers généraux, etc.).",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -779,7 +779,7 @@
                 "Le député a plus de pouvoir que le sénateur"
             ],
             "explanation": "Le sénateur examine les lois et contrôle le gouvernement, mais défend aussi les intérêts des communes, départements et régions (collectivités territoriales).",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -792,7 +792,7 @@
                 "Le Conseil constitutionnel"
             ],
             "explanation": "En cas de décès, démission ou empêchement du Président de la République, le Président du Sénat assure l'intérim.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -805,7 +805,7 @@
                 "Oui, mais seulement en cas de crise"
             ],
             "explanation": "Le Président de la République ne peut pas dissoudre le Sénat. Le Sénat incarne une stabilité institutionnelle et est élu au suffrage indirect.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -818,7 +818,7 @@
                 "Uniquement en temps de guerre"
             ],
             "explanation": "Selon l'article 12 de la Constitution, le Président peut dissoudre l'Assemblée nationale à tout moment, après consultation du Premier ministre et des présidents des deux assemblées.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -831,7 +831,7 @@
                 "Un article sur l'organisation des élections"
             ],
             "explanation": "L'article 49.3 permet au Premier ministre d'engager la responsabilité du gouvernement sur un texte de loi, qui est adopté sans vote sauf si une motion de censure est votée.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -844,7 +844,7 @@
                 "Oui, mais seulement pour les questions budgétaires"
             ],
             "explanation": "Le Sénat ne peut pas déposer de motion de censure contre le gouvernement. Seule l'Assemblée nationale détient ce pouvoir car elle représente directement les citoyens.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -857,7 +857,7 @@
                 "L'Assemblée nationale"
             ],
             "explanation": "Le Président de la République représente le pouvoir exécutif et est le garant des institutions, du respect de la Constitution et de l'indépendance nationale.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -870,7 +870,7 @@
                 "Par le Préfet de région"
             ],
             "explanation": "Les conseillers régionaux sont élus pour six ans au suffrage universel direct lors des élections régionales. Le scrutin est un vote de liste à deux tours.",
-            "subTheme": "democratie",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
@@ -883,7 +883,7 @@
                 "7 ans"
             ],
             "explanation": "Le président de l'Assemblée nationale est élu pour 5 ans, soit la durée de la législature, car l'Assemblée est entièrement renouvelée à chaque élection législative.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -896,7 +896,7 @@
                 "7 ans"
             ],
             "explanation": "Le président du Sénat est élu tous les 3 ans car le Sénat est renouvelé par moitié tous les 3 ans.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -909,7 +909,7 @@
                 "Le Conseil constitutionnel"
             ],
             "explanation": "L'Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres. Elle peut décider d'adopter définitivement un texte sans l'accord du Sénat.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -922,7 +922,7 @@
                 "Commander les armées"
             ],
             "explanation": "Le Premier ministre dirige le gouvernement et met en œuvre la politique nationale. Il est nommé par le Président de la République.",
-            "subTheme": "institutions",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -935,7 +935,7 @@
                 "La banque centrale européenne"
             ],
             "explanation": "Le Parlement européen est l'organe législatif de l'UE où les députés européens élus représentent les citoyens des États membres.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -948,7 +948,7 @@
                 "Le roi d'Espagne"
             ],
             "explanation": "L'Union européenne n'a pas un 'président' unique. La fonction la plus proche est celle du président de la Commission européenne.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
@@ -961,7 +961,7 @@
                 "Pour imposer une langue commune"
             ],
             "explanation": "L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale, en favorisant la coopération économique et politique.",
-            "subTheme": "union_europeenne",
+            "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
