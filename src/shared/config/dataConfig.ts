@@ -45,7 +45,14 @@ export const DATA_FILES = {
 
 /**
  * Maps Firebase data paths to local require statements.
- * This is necessary because React Native's 'require' must be static.
+ * 
+ * This mapping is necessary because:
+ * 1. React Native's 'require' must be static (cannot use dynamic paths)
+ * 2. Provides offline fallback when Firebase is unavailable
+ * 3. Enables faster initial load from bundled assets
+ * 
+ * Each entry maps a Firebase Storage path to its corresponding local asset.
+ * The paths must match exactly with the Firebase Storage structure.
  */
 export const LOCAL_DATA_MAP: Record<string, any> = {
     'knowledge/new_livret/administration_locale.json': require('../../data/knowledge/new_livret/administration_locale.json'),
@@ -68,7 +75,11 @@ export const LOCAL_DATA_MAP: Record<string, any> = {
 
 /**
  * Maps image paths to local require statements.
- * This is necessary because React Native's 'require' must be static.
+ * 
+ * Similar to LOCAL_DATA_MAP, this provides:
+ * 1. Static require statements for React Native bundler
+ * 2. Offline image access
+ * 3. Immediate image availability without network requests
  */
 export const LOCAL_IMAGE_MAP: Record<string, any> = {
     'pics/card.png': require('../../data/knowledge/pics/card.png'),

@@ -11,68 +11,49 @@ type FlashCardAction =
     | { type: 'PREVIOUS' }
     | { type: 'GO_TO'; index: number }
     | { type: 'FLIP' }
-    | { type: 'RESET' }
-    | { type: 'RESET_QUESTIONS'; questionsKey: string };
+    | { type: 'RESET' };
 
 interface FlashCardReducerState {
     currentIndex: number;
     isFlipped: boolean;
     viewedCards: Set<number>;
-    questionsKey: string;
-    totalCards: number;
 }
 
-const createInitialState = (questions: readonly FormationQuestion[], questionsKey: string): FlashCardReducerState => ({
+const createInitialState = (questionsLength: number): FlashCardReducerState => ({
     currentIndex: 0,
     isFlipped: false,
-    viewedCards: questions.length > 0 ? new Set([0]) : new Set(),
-    questionsKey,
-    totalCards: questions.length,
+    viewedCards: questionsLength > 0 ? new Set([0]) : new Set(),
 });
 
 const flashCardReducer = (
     state: FlashCardReducerState,
-    action: FlashCardAction,
-    questions: readonly FormationQuestion[]
+    action: FlashCardAction
 ): FlashCardReducerState => {
-    const totalCards = questions.length;
     switch (action.type) {
         case 'NEXT': {
-            if (state.currentIndex >= totalCards - 1) {
-                return state;
-            }
             const newIndex = state.currentIndex + 1;
             return {
                 ...state,
                 currentIndex: newIndex,
                 isFlipped: false,
                 viewedCards: new Set([...state.viewedCards, newIndex]),
-                totalCards,
             };
         }
         case 'PREVIOUS': {
-            if (state.currentIndex <= 0) {
-                return state;
-            }
             const newIndex = state.currentIndex - 1;
             return {
                 ...state,
                 currentIndex: newIndex,
                 isFlipped: false,
                 viewedCards: new Set([...state.viewedCards, newIndex]),
-                totalCards,
             };
         }
         case 'GO_TO': {
-            if (action.index < 0 || action.index >= totalCards) {
-                return state;
-            }
             return {
                 ...state,
                 currentIndex: action.index,
                 isFlipped: false,
                 viewedCards: new Set([...state.viewedCards, action.index]),
-                totalCards,
             };
         }
         case 'FLIP': {
@@ -89,87 +70,40 @@ const flashCardReducer = (
                 viewedCards: new Set([0]),
             };
         }
-        case 'RESET_QUESTIONS': {
-            if (state.questionsKey === action.questionsKey) {
-                return state;
-            }
-            return createInitialState(questions, action.questionsKey);
-        }
         default:
             return state;
     }
 };
 
 export const useFlashCard = ({ questions, key }: UseFlashCardProps) => {
+    // Generate a stable key for questions array to detect changes
     const questionsKey = useMemo(() => {
         if (key) return key;
         return questions.length > 0 ? questions.map(q => q.id).join(',') : '';
     }, [questions, key]);
 
-    const questionsRef = useRef<readonly FormationQuestion[]>(questions);
-    const questionsKeyRef = useRef<string>(questionsKey);
-    
-    questionsRef.current = questions;
-    questionsKeyRef.current = questionsKey;
-
-    const stableReducer = useCallback(
-        (state: FlashCardReducerState, action: FlashCardAction): FlashCardReducerState => {
-            const currentQuestionsKey = questionsKeyRef.current;
-            const currentQuestions = questionsRef.current;
-            const currentTotalCards = currentQuestions.length;
-            
-            if (state.questionsKey !== currentQuestionsKey) {
-                return createInitialState(currentQuestions, currentQuestionsKey);
-            }
-            
-            if (action.type === 'RESET_QUESTIONS') {
-                if (state.questionsKey === action.questionsKey) {
-                    return {
-                        ...state,
-                        totalCards: currentTotalCards,
-                    };
-                }
-                return createInitialState(currentQuestions, action.questionsKey);
-            }
-            
-            const newState = flashCardReducer(state, action, currentQuestions);
-            if (newState.totalCards !== currentTotalCards) {
-                return {
-                    ...newState,
-                    totalCards: currentTotalCards,
-                };
-            }
-            return newState;
-        },
-        []
-    );
-
+    // Create initial state based on questions length
     const initialState = useMemo(
-        () => createInitialState(questions, questionsKey),
-        [questions, questionsKey]
+        () => createInitialState(questions.length),
+        [questionsKey] // Reset when questions change
     );
 
-    const [state, dispatch] = useReducer(stableReducer, initialState);
+    const [state, dispatch] = useReducer(flashCardReducer, initialState);
 
     const totalCards = questions.length;
+    
+    // Normalize index to handle edge cases
     const normalizedIndex = useMemo(() => {
         if (totalCards === 0) return 0;
-        if (state.currentIndex >= totalCards) return 0;
-        if (state.currentIndex < 0) return 0;
-        return state.currentIndex;
+        return Math.max(0, Math.min(state.currentIndex, totalCards - 1));
     }, [state.currentIndex, totalCards]);
 
     const currentQuestion = useMemo(
-        () => {
-            if (questions.length === 0 || normalizedIndex >= questions.length) {
-                return null;
-            }
-            return questions[normalizedIndex] || null;
-        },
+        () => questions[normalizedIndex] || null,
         [questions, normalizedIndex]
     );
 
-    const hasNext = normalizedIndex < totalCards - 1;
+    const hasNext = totalCards > 0 && normalizedIndex < totalCards - 1;
     const hasPrevious = normalizedIndex > 0;
 
     const flipCard = useCallback(() => {

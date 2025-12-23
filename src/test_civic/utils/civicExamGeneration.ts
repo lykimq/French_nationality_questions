@@ -1,5 +1,6 @@
 import type { TestQuestion } from '../../types';
 import type { CivicExamTheme, CivicExamSubTheme, CivicExamQuestion, CivicExamConfig } from '../types';
+import { extractNumericId } from '../../shared/utils/idUtils';
 import {
     CIVIC_EXAM_DISTRIBUTION,
     CIVIC_EXAM_CONFIG,
@@ -12,10 +13,55 @@ import {
     filterQuestionsWithOptions,
     getQuestionsByThemes,
     enrichQuestionsWithMetadata,
-    getQuestionTypeFromQuestion,
 } from './civicExamUtils';
 
 // ==================== QUESTION SELECTION ====================
+
+/**
+ * Gets the numeric ID from a question if it exists and is valid.
+ */
+const getQuestionNumericId = (question: TestQuestion): number | undefined => {
+    return extractNumericId(question.id);
+};
+
+/**
+ * Filters questions to exclude those with IDs already in the used set.
+ */
+const filterUnusedQuestions = (questions: TestQuestion[], usedIds: Set<number>): TestQuestion[] => {
+    return questions.filter(q => {
+        const numericId = getQuestionNumericId(q);
+        return numericId === undefined || !usedIds.has(numericId);
+    });
+};
+
+/**
+ * Adds question IDs to one or more Sets, tracking which questions have been used.
+ */
+const trackUsedQuestionIds = (
+    questions: TestQuestion[],
+    ...usedIdSets: Set<number>[]
+): void => {
+    questions.forEach(q => {
+        const numericId = getQuestionNumericId(q);
+        if (numericId !== undefined) {
+            usedIdSets.forEach(usedIds => usedIds.add(numericId));
+        }
+    });
+};
+
+/**
+ * Creates a unique map of questions by their numeric ID, removing duplicates.
+ */
+const createUniqueQuestionMap = (questions: TestQuestion[]): Map<number, TestQuestion> => {
+    const uniqueMap = new Map<number, TestQuestion>();
+    questions.forEach(q => {
+        const numericId = getQuestionNumericId(q);
+        if (numericId !== undefined && !uniqueMap.has(numericId)) {
+            uniqueMap.set(numericId, q);
+        }
+    });
+    return uniqueMap;
+};
 
 const shuffleArray = <T>(array: T[]): T[] => {
     const shuffled = [...array];
@@ -56,7 +102,7 @@ const selectQuestionsForSubTheme = (
     }
     
     if (usedIds) {
-        candidates = candidates.filter(q => !usedIds.has(q.id));
+        candidates = filterUnusedQuestions(candidates, usedIds);
     }
     
     const isSituational = isSituationalSubTheme(subTheme);
@@ -97,12 +143,7 @@ const selectQuestionsForTheme = (
                     combinedUsedIds
                 );
                 // Track locally used IDs
-                subThemeQuestions.forEach(q => {
-                    localUsedIds.add(q.id);
-                    if (globalUsedIds) {
-                        globalUsedIds.add(q.id);
-                    }
-                });
+                trackUsedQuestionIds(subThemeQuestions, localUsedIds, ...(globalUsedIds ? [globalUsedIds] : []));
                 selectedQuestions.push(...subThemeQuestions);
             }
         }
@@ -113,7 +154,7 @@ const selectQuestionsForTheme = (
         const remaining = distribution.total - selectedQuestions.length;
         // Combine local and global used IDs
         const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
-        const available = themeQuestions.filter(q => !combinedUsedIds.has(q.id));
+        const available = filterUnusedQuestions(themeQuestions, combinedUsedIds);
         
         // Filter by question type in practice mode
         const filtered = isPracticeMode 
@@ -122,23 +163,12 @@ const selectQuestionsForTheme = (
         
         const additional = selectRandomQuestions(filtered, remaining);
         // Track additional questions
-        additional.forEach(q => {
-            localUsedIds.add(q.id);
-            if (globalUsedIds) {
-                globalUsedIds.add(q.id);
-            }
-        });
+        trackUsedQuestionIds(additional, localUsedIds, ...(globalUsedIds ? [globalUsedIds] : []));
         selectedQuestions.push(...additional);
     }
     
-    // Remove duplicates using Set (more efficient than findIndex)
-    const uniqueMap = new Map<number, TestQuestion>();
-    selectedQuestions.forEach(q => {
-        if (!uniqueMap.has(q.id)) {
-            uniqueMap.set(q.id, q);
-        }
-    });
-    
+    // Remove duplicates using unique map
+    const uniqueMap = createUniqueQuestionMap(selectedQuestions);
     return Array.from(uniqueMap.values()).slice(0, distribution.total);
 };
 
@@ -166,8 +196,10 @@ export const generateCivicExamQuestions = (
                 }
             }
             
-            const themeQuestions = getQuestionsByTheme(availableQuestions, theme)
-                .filter(q => !usedQuestionIds.has(q.id));
+            const themeQuestions = filterUnusedQuestions(
+                getQuestionsByTheme(availableQuestions, theme),
+                usedQuestionIds
+            );
             
             if (themeQuestions.length === 0) {
                 return;
@@ -181,14 +213,14 @@ export const generateCivicExamQuestions = (
                 usedQuestionIds
             );
             
-            selected.forEach(q => usedQuestionIds.add(q.id));
+            trackUsedQuestionIds(selected, usedQuestionIds);
             selectedQuestions.push(...selected);
         }
     );
     
     if (selectedQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
         const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - selectedQuestions.length;
-        const unusedQuestions = availableQuestions.filter(q => !usedQuestionIds.has(q.id));
+        const unusedQuestions = filterUnusedQuestions(availableQuestions, usedQuestionIds);
         
         let filtered = unusedQuestions;
         if (isPracticeMode) {
@@ -201,8 +233,9 @@ export const generateCivicExamQuestions = (
         if (filtered.length > 0) {
             const additional = selectRandomQuestions(filtered, remaining);
             additional.forEach(q => {
-                if (!usedQuestionIds.has(q.id)) {
-                    usedQuestionIds.add(q.id);
+                const numericId = getQuestionNumericId(q);
+                if (numericId !== undefined && !usedQuestionIds.has(numericId)) {
+                    trackUsedQuestionIds([q], usedQuestionIds);
                     selectedQuestions.push(q);
                 }
             });
@@ -215,29 +248,28 @@ export const generateCivicExamQuestions = (
     
     if (isPracticeMode && finalQuestions.length < CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
         const remaining = CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS - finalQuestions.length;
-        const finalUsedIds = new Set(finalQuestions.map(q => q.id));
-        const available = availableQuestions.filter(
-            q => !finalUsedIds.has(q.id) && 
-                 'options' in q && 
-                 Array.isArray(q.options) && 
-                 q.options.length > 0
-        );
+        const finalUsedIds = new Set<number>();
+        trackUsedQuestionIds(finalQuestions, finalUsedIds);
+        
+        const available = availableQuestions.filter(q => {
+            const numericId = getQuestionNumericId(q);
+            return numericId !== undefined && 
+                   !finalUsedIds.has(numericId) && 
+                   'options' in q && 
+                   Array.isArray(q.options) && 
+                   q.options.length > 0;
+        });
         const additional = selectRandomQuestions(available, remaining);
         additional.forEach(q => {
-            if (!finalUsedIds.has(q.id)) {
-                finalUsedIds.add(q.id);
+            const numericId = getQuestionNumericId(q);
+            if (numericId !== undefined && !finalUsedIds.has(numericId)) {
+                trackUsedQuestionIds([q], finalUsedIds);
                 finalQuestions.push(q);
             }
         });
     }
     
-    const uniqueMap = new Map<number, TestQuestion>();
-    finalQuestions.forEach(q => {
-        if (!uniqueMap.has(q.id)) {
-            uniqueMap.set(q.id, q);
-        }
-    });
-    
+    const uniqueMap = createUniqueQuestionMap(finalQuestions);
     const uniqueQuestions = Array.from(uniqueMap.values());
     const targetCount = Math.min(uniqueQuestions.length, CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS);
     const shuffled = shuffleArray(uniqueQuestions).slice(0, targetCount);
@@ -260,10 +292,13 @@ export const validateQuestionDistribution = (
     const questionIds = new Set<number>();
     const duplicateIds: number[] = [];
     questions.forEach(q => {
-        if (questionIds.has(q.id)) {
-            duplicateIds.push(q.id);
-        } else {
-            questionIds.add(q.id);
+        const numericId = getQuestionNumericId(q);
+        if (numericId !== undefined) {
+            if (questionIds.has(numericId)) {
+                duplicateIds.push(numericId);
+            } else {
+                questionIds.add(numericId);
+            }
         }
     });
     

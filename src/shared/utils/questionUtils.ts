@@ -3,6 +3,8 @@ import type { TestQuestion } from '../../welcome/types';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 import type { RawQuestion, RawCategory, RawQuestionsData } from '../types';
 import { createLogger } from './logger';
+import { extractNumericId } from './idUtils';
+import { ensureString } from './stringUtils';
 
 const logger = createLogger('QuestionUtils');
 
@@ -43,21 +45,6 @@ export const formatExplanation = (text: string): string => {
 
 // ==================== QUESTION PROCESSING UTILITIES ====================
 
-// Type validation helpers
-const extractNumericId = (rawId: number | string | undefined): number | undefined => {
-    if (typeof rawId === 'number') {
-        return rawId;
-    }
-    if (typeof rawId === 'string') {
-        const match = rawId.match(/(\d+)/);
-        if (match) {
-            const value = Number(match[1]);
-            return Number.isFinite(value) ? value : undefined;
-        }
-    }
-    return undefined;
-};
-
 const getBaseQuestionNumber = (question: RawQuestion | null | undefined): number | undefined => {
     if (question && question.id !== undefined) {
         return extractNumericId(question.id);
@@ -95,17 +82,8 @@ export const processQuestionData = (
 
     const finalId = baseNumber + idOffset;
 
-    const questionText = typeof question.question === 'string'
-        ? question.question
-        : (typeof question.question === 'object' && question.question !== null
-            ? String(question.question)
-            : '');
-
-    const explanationText = typeof question.explanation === 'string'
-        ? question.explanation
-        : (typeof question.explanation === 'object' && question.explanation !== null
-            ? String(question.explanation)
-            : 'No explanation provided');
+    const questionText = ensureString(question.question);
+    const explanationText = ensureString(question.explanation, 'No explanation provided');
 
     return {
         id: finalId,

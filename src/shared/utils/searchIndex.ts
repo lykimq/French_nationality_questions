@@ -1,11 +1,9 @@
-// Normalize text for tokenization
-export const normalizeText = (text: string): string =>
-    (text || '').toLowerCase().trim();
+import { normalizeForSearch } from './textNormalization';
 
 // Split text into tokens with a minimum length
 export const tokenize = (text: string, minLength: number = 3): string[] => {
     if (!text) return [];
-    return normalizeText(text)
+    return normalizeForSearch(text)
         .split(/\s+/)
         .filter(token => token.length >= minLength);
 };

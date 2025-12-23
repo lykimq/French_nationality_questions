@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useData } from '../shared/contexts/DataContext';
 import { buildQuestionTokens, tokenize, scoreTokens } from '../shared/utils/searchIndex';
+import { extractNumericId } from '../shared/utils/idUtils';
 
 // Define the search result question type
 export interface SearchResultQuestion {
@@ -51,15 +52,7 @@ export const useSearch = () => {
 
         questionsData.categories.forEach(category => {
             category.questions.forEach(question => {
-                // Normalize id to number (extract numeric part if string)
-                const normalizedId = typeof question.id === 'number' 
-                    ? question.id 
-                    : (typeof question.id === 'string' 
-                        ? (() => {
-                            const match = question.id.match(/(\d+)/);
-                            return match ? Number(match[1]) : 0;
-                        })()
-                        : 0);
+                const normalizedId = extractNumericId(question.id) ?? 0;
 
                 questions.push({
                     id: normalizedId,

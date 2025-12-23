@@ -1,9 +1,16 @@
 import { createLogger } from '../../shared/utils/logger';
+import { extractNumericId, isValidId } from '../../shared/utils/idUtils';
+import { sanitizeString, sanitizeStringArray, isNonEmptyString } from '../../shared/utils/stringUtils';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 import type { CivicExamTheme, CivicExamSubTheme } from '../types';
 
 const logger = createLogger('CivicExamDataLoader');
 
+/**
+ * Raw civic exam question data structure as stored in JSON files.
+ * Questions use correctAnswer (string) + incorrectAnswers (array) format,
+ * which are combined into an options array during transformation.
+ */
 interface CivicExamQuestionData {
     id: number;
     question: string;
@@ -12,11 +19,10 @@ interface CivicExamQuestionData {
     theme?: string;
     subTheme: string;
     questionType: string;
-    options?: string[];
-    correctAnswer?: number;
+    correctAnswer?: string;
+    incorrectAnswers?: string[];
     explanationOptions?: string[];
     correctExplanationAnswer?: number;
-    incorrectAnswers?: string[];
 }
 
 interface CivicExamDataFile {
@@ -68,20 +74,6 @@ const normalizeQuestionType = (questionType: string): 'knowledge' | 'situational
     return 'knowledge';
 };
 
-const extractCivicId = (rawId: unknown): number | undefined => {
-    if (typeof rawId === 'number') {
-        return Number.isFinite(rawId) ? rawId : undefined;
-    }
-    if (typeof rawId === 'string') {
-        const match = rawId.match(/(\d+)/);
-        if (match) {
-            const value = Number(match[1]);
-            return Number.isFinite(value) ? value : undefined;
-        }
-    }
-    return undefined;
-};
-
 const validateQuestionData = (
     q: unknown, 
     defaultTheme?: CivicExamTheme,
@@ -94,36 +86,24 @@ const validateQuestionData = (
 
     const question = q as Record<string, unknown>;
     const questionId = question.id;
-    const numericId = extractCivicId(questionId);
+    const numericId = extractNumericId(questionId);
 
-    const hasValidId = typeof numericId === 'number' &&
-        isFinite(numericId) &&
-        numericId > 0;
-    
-    if (!hasValidId) {
+    if (!isValidId(numericId)) {
         onInvalid?.(`Question ${questionId || 'unknown'} has invalid ID (must contain a positive number)`);
         return false;
     }
     
-    const hasValidQuestion = typeof question.question === 'string' &&
-        question.question.length > 0;
-    
-    if (!hasValidQuestion) {
+    if (!isNonEmptyString(question.question)) {
         onInvalid?.(`Question ${questionId} missing or empty question text`);
         return false;
     }
     
-    const hasValidExplanation = typeof question.explanation === 'string';
-    
-    if (!hasValidExplanation) {
+    if (!isNonEmptyString(question.explanation)) {
         onInvalid?.(`Question ${questionId} missing explanation`);
         return false;
     }
     
-    const hasValidSubTheme = typeof question.subTheme === 'string' &&
-        question.subTheme.length > 0;
-    
-    if (!hasValidSubTheme) {
+    if (!isNonEmptyString(question.subTheme)) {
         onInvalid?.(`Question ${questionId} missing or empty subTheme`);
         return false;
     }
@@ -156,21 +136,37 @@ const validateQuestionData = (
     return true;
 };
 
-const sanitizeString = (str: unknown): string => {
-    if (typeof str !== 'string') return '';
-    return str.trim();
-};
-
-const sanitizeStringArray = (arr: unknown): string[] => {
-    if (!Array.isArray(arr)) return [];
-    return arr
-        .filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
-        .map(item => item.trim());
-};
-
+/**
+ * Validates that an answer index is within valid bounds.
+ */
 const validateAnswerIndex = (index: unknown, maxLength: number): number | undefined => {
     if (typeof index !== 'number' || !isFinite(index)) return undefined;
     return index >= 0 && index < maxLength ? index : undefined;
+};
+
+/**
+ * Resolves the correct answer index from the correctAnswer string.
+ * Since options are built as [correctAnswer, ...incorrectAnswers],
+ * the correct answer is always at index 0.
+ */
+const resolveCorrectAnswerIndex = (correctAnswer: unknown, options: string[]): number | undefined => {
+    if (options.length === 0) {
+        return undefined;
+    }
+
+    // All data uses string correctAnswer, and options are built with correctAnswer first
+    if (typeof correctAnswer === 'string') {
+        const trimmed = sanitizeString(correctAnswer);
+        if (!trimmed) {
+            return undefined;
+        }
+        
+        // Try case-insensitive match for safety
+        const matchIndex = options.findIndex(opt => opt.toLowerCase() === trimmed.toLowerCase());
+        return matchIndex >= 0 ? matchIndex : 0;
+    }
+
+    return undefined;
 };
 
 const CIVIC_ID_OFFSET = 1_000_000;
@@ -179,46 +175,22 @@ const transformCivicQuestion = (
     q: CivicExamQuestionData,
     defaultTheme: CivicExamTheme
 ): CivicExamQuestionWithOptions => {
-    const baseNumber = extractCivicId(q.id) ?? 0;
-    const theme = q.theme ? (isValidTheme(q.theme) ? q.theme : defaultTheme) : defaultTheme;
+    // At this point, validation has already passed, so we can trust the data structure
+    const baseNumber = extractNumericId(q.id) ?? 0;
+    const theme = (q.theme && isValidTheme(q.theme)) ? q.theme : defaultTheme;
     const subTheme = q.subTheme as CivicExamSubTheme;
     const questionType = normalizeQuestionType(q.questionType);
     
-    let options = sanitizeStringArray(q.options);
-    
-    if (options.length === 0 && q.incorrectAnswers && Array.isArray(q.incorrectAnswers)) {
-        const incorrectAnswers = sanitizeStringArray(q.incorrectAnswers);
-        const correctAnswer = sanitizeString(q.correctAnswer as string | undefined || '');
-        
-        if (incorrectAnswers.length > 0 || correctAnswer) {
-            options = [correctAnswer, ...incorrectAnswers].filter(opt => opt.length > 0);
-        }
-    }
+    // Build options array from correctAnswer + incorrectAnswers
+    // The correct answer is always placed first in the options array
+    const correctAnswer = sanitizeString(q.correctAnswer);
+    const incorrectAnswers = sanitizeStringArray(q.incorrectAnswers);
+    const options = [correctAnswer, ...incorrectAnswers].filter(opt => opt.length > 0);
     
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
-
-    const resolveCorrectAnswerIndex = (): number | undefined => {
-        // Numeric index provided
-        if (typeof q.correctAnswer === 'number' && isFinite(q.correctAnswer)) {
-            return validateAnswerIndex(q.correctAnswer, options.length);
-        }
-
-        // String answer provided: try to match against options
-        if (typeof q.correctAnswer === 'string') {
-            const trimmed = sanitizeString(q.correctAnswer);
-            if (trimmed && options.length > 0) {
-                const matchIndex = options.findIndex(opt => opt.toLowerCase() === trimmed.toLowerCase());
-                if (matchIndex >= 0) return matchIndex;
-            }
-        }
-
-        // If options were synthesized with correct answer first, default to 0
-        if (options.length > 0 && typeof q.correctAnswer === 'string') {
-            return 0;
-        }
-
-        return undefined;
-    };
+    
+    const correctAnswerIndex = resolveCorrectAnswerIndex(q.correctAnswer, options);
+    const correctExplanationIndex = validateAnswerIndex(q.correctExplanationAnswer, explanationOptions.length);
 
     return {
         id: CIVIC_ID_OFFSET + baseNumber,
@@ -231,9 +203,9 @@ const transformCivicQuestion = (
         subTheme,
         questionType,
         options,
-        correctAnswer: resolveCorrectAnswerIndex(),
+        correctAnswer: correctAnswerIndex,
         explanationOptions,
-        correctExplanationAnswer: validateAnswerIndex(q.correctExplanationAnswer, explanationOptions.length),
+        correctExplanationAnswer: correctExplanationIndex,
     };
 };
 

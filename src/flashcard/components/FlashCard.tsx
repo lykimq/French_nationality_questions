@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { FormattedText } from '../../shared/components';
 import { formatExplanation } from '../../shared/utils/questionUtils';
+import { normalizeForComparison } from '../../shared/utils/textNormalization';
 import { sharedStyles } from '../../shared/utils';
 import { useFirebaseImage } from '../../shared/hooks/useFirebaseImage';
 import type { FormationQuestion } from '../types';
@@ -114,19 +115,16 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
     let explanationText = question.explanation || '';
 
     // Robust Deduplication Logic
-    const normalizeText = (text: string) => text.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const normalizedQuestion = normalizeText(questionText);
+    const normalizedQuestion = normalizeForComparison(questionText);
 
     // Split by newline to check the first paragraph/line
     const lines = explanationText.split('\n');
     if (lines.length > 0) {
         const firstLine = lines[0];
-        const normalizedFirstLine = normalizeText(firstLine);
+        const normalizedFirstLine = normalizeForComparison(firstLine);
 
         // If the first line is substantially similar to the question (contains it or is contained by it)
         // or effectively equal, remove it.
-        // We check if the normalized first line *starts with* the normalized question
-        // OR if the normalized question *starts with* the normalized first line (handle partial header)
         if (normalizedFirstLine.length > 0 &&
             (normalizedFirstLine.includes(normalizedQuestion) || normalizedQuestion.includes(normalizedFirstLine))) {
             explanationText = lines.slice(1).join('\n').trim();

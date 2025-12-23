@@ -84,6 +84,11 @@ export const getQuestionsByThemes = (
 
 // ==================== QUESTION ENRICHMENT ====================
 
+/**
+ * Enriches a question with required civic exam metadata.
+ * Requires theme and subTheme to be present - questions without metadata
+ * should not be used in civic exams.
+ */
 export const enrichQuestionWithMetadata = (
     question: TestQuestion
 ): CivicExamQuestion => {
@@ -91,10 +96,18 @@ export const enrichQuestionWithMetadata = (
     const subTheme = getSubThemeFromQuestion(question);
     const questionType = getQuestionTypeFromQuestion(question);
 
+    if (!theme) {
+        throw new Error(`Question ${question.id} missing required theme metadata`);
+    }
+
+    if (!subTheme) {
+        throw new Error(`Question ${question.id} missing required subTheme metadata`);
+    }
+
     return {
         ...question,
-        theme: theme || 'principles_values', // Default fallback
-        subTheme: subTheme || 'devise_symboles', // Default fallback
+        theme,
+        subTheme,
         questionType,
     };
 };
