@@ -169,12 +169,17 @@ const validateAnswerIndex = (index: unknown, maxLength: number): number | undefi
 };
 
 /**
- * Returns the correct answer index.
- * Since options are built as [correctAnswer, ...incorrectAnswers],
- * the correct answer is always at index 0.
+ * Finds the index of the correct answer text in the options array.
+ * This ensures we find the actual correct answer, not just assume it's at index 0.
  */
-const resolveCorrectAnswerIndex = (options: string[]): number | undefined => {
-    return options.length > 0 ? 0 : undefined;
+const resolveCorrectAnswerIndex = (correctAnswerText: string, options: string[]): number | undefined => {
+    if (!correctAnswerText || options.length === 0) {
+        return undefined;
+    }
+    
+    // Find the index of the correct answer text in the options array
+    const index = options.findIndex(opt => opt === correctAnswerText);
+    return index >= 0 ? index : undefined;
 };
 
 const CIVIC_ID_OFFSET = 1_000_000;
@@ -190,14 +195,26 @@ const transformCivicQuestion = (
     const questionType = normalizeQuestionType(q.questionType);
     
     // Build options array from correctAnswer + incorrectAnswers
-    // The correct answer is always placed first in the options array
     const correctAnswer = sanitizeString(q.correctAnswer);
     const incorrectAnswers = sanitizeStringArray(q.incorrectAnswers);
-    const options = [correctAnswer, ...incorrectAnswers].filter(opt => opt.length > 0);
+    
+    // Build options array and filter out empty strings
+    const allOptions = [correctAnswer, ...incorrectAnswers];
+    const options = allOptions.filter(opt => opt.length > 0);
+    
+    // Find the index of the correct answer in the filtered options array
+    // This ensures we get the actual index, even if some options were filtered out
+    const correctAnswerIndex = resolveCorrectAnswerIndex(correctAnswer, options);
+    
+    // Validate that we found the correct answer
+    if (correctAnswerIndex === undefined) {
+        logger.warn(
+            `Question ${q.id}: Could not find correct answer "${correctAnswer}" in options array. ` +
+            `This should not happen if validation is working correctly.`
+        );
+    }
     
     const explanationOptions = sanitizeStringArray(q.explanationOptions);
-    
-    const correctAnswerIndex = resolveCorrectAnswerIndex(options);
     const correctExplanationIndex = validateAnswerIndex(q.correctExplanationAnswer, explanationOptions.length);
 
     return {
