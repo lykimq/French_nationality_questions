@@ -6,11 +6,7 @@
             "id": "test_civic_1",
             "question": "Comment s'appelle le régime politique avant la Révolution de 1789 ?",
             "correctAnswer": "L'Ancien Régime, une monarchie absolue de droit divin",
-            "incorrectAnswers": [
-                "La République",
-                "L'Empire",
-                "La Démocratie"
-            ],
+            "incorrectAnswers": ["La République", "L'Empire", "La Démocratie"],
             "explanation": "Avant la Révolution française de 1789, le régime politique était une monarchie absolue de droit divin. On appelle cette période l'Ancien Régime.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -32,11 +28,7 @@
             "id": "test_civic_3",
             "question": "Qui a fondé la dynastie mérovingienne ?",
             "correctAnswer": "Clovis, roi des Francs converti au christianisme",
-            "incorrectAnswers": [
-                "Charlemagne",
-                "Hugues Capet",
-                "Louis XIV"
-            ],
+            "incorrectAnswers": ["Charlemagne", "Hugues Capet", "Louis XIV"],
             "explanation": "Clovis fonde la dynastie mérovingienne à la fin du Ve siècle et se convertit au christianisme.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -45,11 +37,7 @@
             "id": "test_civic_4",
             "question": "Quand Charlemagne a-t-il été couronné empereur ?",
             "correctAnswer": "En 800",
-            "incorrectAnswers": [
-                "En 481",
-                "En 987",
-                "En 1066"
-            ],
+            "incorrectAnswers": ["En 481", "En 987", "En 1066"],
             "explanation": "Le roi carolingien Charlemagne est couronné empereur en 800. Après sa mort, son empire est partagé entre ses héritiers.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -58,11 +46,7 @@
             "id": "test_civic_5",
             "question": "Quand Hugues Capet a-t-il été sacré roi ?",
             "correctAnswer": "En 987",
-            "incorrectAnswers": [
-                "En 800",
-                "En 1066",
-                "En 1337"
-            ],
+            "incorrectAnswers": ["En 800", "En 1066", "En 1337"],
             "explanation": "Sacré roi en 987, Hugues Capet fonde la dynastie des Capétiens, une dynastie longue et stable qui consolide la monarchie.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -84,11 +68,7 @@
             "id": "test_civic_7",
             "question": "Quel roi incarne la monarchie absolue sous l'Ancien Régime ?",
             "correctAnswer": "Louis XIV, surnommé le Roi-Soleil",
-            "incorrectAnswers": [
-                "Louis XVI",
-                "Henri IV",
-                "François Ier"
-            ],
+            "incorrectAnswers": ["Louis XVI", "Henri IV", "François Ier"],
             "explanation": "Le roi Louis XIV, surnommé le Roi-Soleil, est l'une des personnes importantes de l'Ancien Régime. Il incarne la monarchie absolue.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -136,11 +116,7 @@
             "id": "test_civic_11",
             "question": "Qui a dirigé la Terreur pendant la Révolution ?",
             "correctAnswer": "Maximilien Robespierre",
-            "incorrectAnswers": [
-                "Napoléon Bonaparte",
-                "La Fayette",
-                "Danton"
-            ],
+            "incorrectAnswers": ["Napoléon Bonaparte", "La Fayette", "Danton"],
             "explanation": "Maximilien Robespierre est célèbre pour son engagement en faveur de l'égalité et de la République, mais aussi pour avoir dirigé la Terreur.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -149,11 +125,7 @@
             "id": "test_civic_12",
             "question": "Quand Louis XVI a-t-il été exécuté ?",
             "correctAnswer": "En 1793",
-            "incorrectAnswers": [
-                "En 1789",
-                "En 1791",
-                "En 1799"
-            ],
+            "incorrectAnswers": ["En 1789", "En 1791", "En 1799"],
             "explanation": "Louis XVI est exécuté en 1793 pendant la Terreur, période où le gouvernement surveille strictement les ennemis de la Révolution.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -162,11 +134,7 @@
             "id": "test_civic_13",
             "question": "Quand Napoléon Bonaparte a-t-il pris le pouvoir ?",
             "correctAnswer": "En 1799, par un coup d'État",
-            "incorrectAnswers": [
-                "En 1789",
-                "En 1804",
-                "En 1815"
-            ],
+            "incorrectAnswers": ["En 1789", "En 1804", "En 1815"],
             "explanation": "En 1799, Napoléon Bonaparte prend le pouvoir par un coup d'État et la période du Consulat s'ouvre.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -175,11 +143,7 @@
             "id": "test_civic_14",
             "question": "Quelle fonction administrative Napoléon a-t-il créée en 1800 ?",
             "correctAnswer": "Le préfet, représentant du gouvernement dans chaque département",
-            "incorrectAnswers": [
-                "Le maire",
-                "Le sénateur",
-                "Le député"
-            ],
+            "incorrectAnswers": ["Le maire", "Le sénateur", "Le député"],
             "explanation": "En 1800, une nouvelle fonction administrative est créée : le préfet, qui dirige chaque département et représente le gouvernement.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -305,11 +269,7 @@
             "id": "test_civic_24",
             "question": "Quand la loi de séparation des Églises et de l'État a-t-elle été votée ?",
             "correctAnswer": "En 1905",
-            "incorrectAnswers": [
-                "En 1789",
-                "En 1848",
-                "En 1882"
-            ],
+            "incorrectAnswers": ["En 1789", "En 1848", "En 1882"],
             "explanation": "La loi de 1905 sur la séparation des Églises et de l'État fonde la laïcité en France.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -331,11 +291,7 @@
             "id": "test_civic_26",
             "question": "Quand les femmes ont-elles obtenu le droit de vote en France ?",
             "correctAnswer": "En avril 1944",
-            "incorrectAnswers": [
-                "En 1848",
-                "En 1905",
-                "En 1958"
-            ],
+            "incorrectAnswers": ["En 1848", "En 1905", "En 1958"],
             "explanation": "Le droit de vote est accordé aux femmes en avril 1944 par le Gouvernement provisoire de la République française.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -383,11 +339,7 @@
             "id": "test_civic_30",
             "question": "Depuis quand les jeunes peuvent-ils voter à 18 ans ?",
             "correctAnswer": "Depuis 1974, sous Valéry Giscard d'Estaing",
-            "incorrectAnswers": [
-                "Depuis 1944",
-                "Depuis 1958",
-                "Depuis 1981"
-            ],
+            "incorrectAnswers": ["Depuis 1944", "Depuis 1958", "Depuis 1981"],
             "explanation": "En 1974, sous Valéry Giscard d'Estaing, les jeunes peuvent voter dès 18 ans (contre 21 ans auparavant).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -396,11 +348,7 @@
             "id": "test_civic_31",
             "question": "Quand la peine de mort a-t-elle été abolie en France ?",
             "correctAnswer": "En 1981, sous François Mitterrand",
-            "incorrectAnswers": [
-                "En 1848",
-                "En 1958",
-                "En 2000"
-            ],
+            "incorrectAnswers": ["En 1848", "En 1958", "En 2000"],
             "explanation": "La peine de mort est totalement abolie en 1981. C'est Robert Badinter, ministre de la Justice de François Mitterrand, qui a soutenu cette abolition.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -422,11 +370,7 @@
             "id": "test_civic_33",
             "question": "Quand l'avortement a-t-il été dépénalisé en France ?",
             "correctAnswer": "Le 17 janvier 1975, avec la loi Veil",
-            "incorrectAnswers": [
-                "En 1968",
-                "En 1981",
-                "En 2000"
-            ],
+            "incorrectAnswers": ["En 1968", "En 1981", "En 2000"],
             "explanation": "Depuis la loi \"Veil\" du 17 janvier 1975, l'avortement est dépénalisé. Cette loi a été présentée par Simone Veil, ministre de la Santé.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -448,11 +392,7 @@
             "id": "test_civic_35",
             "question": "Quand le mariage pour tous a-t-il été légalisé ?",
             "correctAnswer": "Le 17 mai 2013",
-            "incorrectAnswers": [
-                "En 1999, avec le PACS",
-                "En 2008",
-                "En 2020"
-            ],
+            "incorrectAnswers": ["En 1999, avec le PACS", "En 2008", "En 2020"],
             "explanation": "La loi du 17 mai 2013 ouvre le mariage et l'adoption aux couples homosexuels. Le premier mariage homosexuel a été célébré à Montpellier le 29 mai 2013.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -474,11 +414,7 @@
             "id": "test_civic_37",
             "question": "Quelles sont les dates de la Première Guerre mondiale ?",
             "correctAnswer": "1914-1918",
-            "incorrectAnswers": [
-                "1939-1945",
-                "1870-1871",
-                "1905-1910"
-            ],
+            "incorrectAnswers": ["1939-1945", "1870-1871", "1905-1910"],
             "explanation": "La Première Guerre mondiale a duré de 1914 à 1918. L'Armistice a été signé le 11 novembre 1918.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -513,11 +449,7 @@
             "id": "test_civic_40",
             "question": "Comment appelle-t-on les soldats français de la Première Guerre mondiale ?",
             "correctAnswer": "Les Poilus",
-            "incorrectAnswers": [
-                "Les Grognards",
-                "Les Bleus",
-                "Les Tommies"
-            ],
+            "incorrectAnswers": ["Les Grognards", "Les Bleus", "Les Tommies"],
             "explanation": "Les soldats français de la Première Guerre mondiale sont appelés les \"Poilus\". Ils ont combattu dans les tranchées.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -526,11 +458,7 @@
             "id": "test_civic_41",
             "question": "Quand les États-Unis sont-ils entrés dans la Première Guerre mondiale ?",
             "correctAnswer": "En avril 1917",
-            "incorrectAnswers": [
-                "En 1914",
-                "En 1916",
-                "En 1918"
-            ],
+            "incorrectAnswers": ["En 1914", "En 1916", "En 1918"],
             "explanation": "En avril 1917, l'entrée en guerre des États-Unis aux côtés de la Triple Entente relance la guerre.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -565,11 +493,7 @@
             "id": "test_civic_44",
             "question": "Quelles sont les dates de la Seconde Guerre mondiale ?",
             "correctAnswer": "1939-1945",
-            "incorrectAnswers": [
-                "1914-1918",
-                "1940-1944",
-                "1935-1945"
-            ],
+            "incorrectAnswers": ["1914-1918", "1940-1944", "1935-1945"],
             "explanation": "La Seconde Guerre mondiale a duré de 1939 (invasion de la Pologne) à 1945 (capitulation du Japon le 2 septembre).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -708,11 +632,7 @@
             "id": "test_civic_55",
             "question": "Quelles sont les dates de la guerre d'Algérie ?",
             "correctAnswer": "1954-1962",
-            "incorrectAnswers": [
-                "1946-1954",
-                "1939-1945",
-                "1958-1968"
-            ],
+            "incorrectAnswers": ["1946-1954", "1939-1945", "1958-1968"],
             "explanation": "La guerre d'Algérie a duré de 1954 à 1962, entre la France et le Front de libération nationale algérien.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -721,11 +641,7 @@
             "id": "test_civic_56",
             "question": "Quelles sont les dates de la guerre d'Indochine ?",
             "correctAnswer": "1946-1954",
-            "incorrectAnswers": [
-                "1954-1962",
-                "1939-1945",
-                "1950-1960"
-            ],
+            "incorrectAnswers": ["1954-1962", "1939-1945", "1950-1960"],
             "explanation": "La guerre d'Indochine a duré de 1946 à 1954. La défaite française a entraîné la fin de l'Indochine française.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -734,11 +650,7 @@
             "id": "test_civic_57",
             "question": "Quand les colonies françaises d'Afrique sont-elles devenues indépendantes ?",
             "correctAnswer": "En 1960 pour la plupart",
-            "incorrectAnswers": [
-                "En 1945",
-                "En 1954",
-                "En 1975"
-            ],
+            "incorrectAnswers": ["En 1945", "En 1954", "En 1975"],
             "explanation": "1960 est l'année de l'indépendance des colonies françaises d'Afrique ainsi que de Madagascar.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
@@ -890,11 +802,7 @@
             "id": "test_civic_69",
             "question": "Quel fleuve traverse Paris ?",
             "correctAnswer": "La Seine",
-            "incorrectAnswers": [
-                "La Loire",
-                "Le Rhône",
-                "La Garonne"
-            ],
+            "incorrectAnswers": ["La Loire", "Le Rhône", "La Garonne"],
             "explanation": "La Seine traverse Paris, séparant la ville en rive droite et rive gauche.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
@@ -903,11 +811,7 @@
             "id": "test_civic_70",
             "question": "Quelle ville est surnommée la 'Capitale des Gaules' ?",
             "correctAnswer": "Lyon",
-            "incorrectAnswers": [
-                "Paris",
-                "Marseille",
-                "Bordeaux"
-            ],
+            "incorrectAnswers": ["Paris", "Marseille", "Bordeaux"],
             "explanation": "Lyon est surnommée la 'Capitale des Gaules' en référence à son importance historique sous l'Empire romain.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
@@ -916,11 +820,7 @@
             "id": "test_civic_71",
             "question": "Quel est l'ancien nom de Paris sous les Romains ?",
             "correctAnswer": "Lutèce",
-            "incorrectAnswers": [
-                "Lugdunum",
-                "Massilia",
-                "Burdigala"
-            ],
+            "incorrectAnswers": ["Lugdunum", "Massilia", "Burdigala"],
             "explanation": "Paris s'appelait Lutèce (Lutetia) sous les Romains. C'était la ville des Parisii, un peuple gaulois.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
@@ -942,11 +842,7 @@
             "id": "test_civic_73",
             "question": "Combien y a-t-il de régions en France métropolitaine ?",
             "correctAnswer": "13 régions (12 + la Corse)",
-            "incorrectAnswers": [
-                "22 régions",
-                "18 régions",
-                "10 régions"
-            ],
+            "incorrectAnswers": ["22 régions", "18 régions", "10 régions"],
             "explanation": "Depuis 2016, la France métropolitaine compte 13 régions : 12 régions plus la Corse (collectivité territoriale unique).",
             "subTheme": "territories_geography",
             "questionType": "knowledge"

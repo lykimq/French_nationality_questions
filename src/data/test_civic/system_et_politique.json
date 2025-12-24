@@ -58,11 +58,7 @@
             "id": "test_civic_5",
             "question": "Combien y a-t-il de députés à l'Assemblée nationale ?",
             "correctAnswer": "577 députés",
-            "incorrectAnswers": [
-                "348 députés",
-                "500 députés",
-                "650 députés"
-            ],
+            "incorrectAnswers": ["348 députés", "500 députés", "650 députés"],
             "explanation": "L'Assemblée nationale compte 577 députés, élus par les citoyens au suffrage universel direct.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
@@ -253,11 +249,7 @@
             "id": "test_civic_20",
             "question": "Pour combien d'années le Président de la République est-il élu ?",
             "correctAnswer": "5 ans (quinquennat)",
-            "incorrectAnswers": [
-                "4 ans",
-                "6 ans",
-                "7 ans"
-            ],
+            "incorrectAnswers": ["4 ans", "6 ans", "7 ans"],
             "explanation": "Le Président de la République est élu pour 5 ans au suffrage universel directement par les citoyens français.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
@@ -266,11 +258,7 @@
             "id": "test_civic_21",
             "question": "Pour combien d'années les députés sont-ils élus ?",
             "correctAnswer": "5 ans",
-            "incorrectAnswers": [
-                "4 ans",
-                "6 ans",
-                "7 ans"
-            ],
+            "incorrectAnswers": ["4 ans", "6 ans", "7 ans"],
             "explanation": "Les 577 députés de l'Assemblée nationale sont élus au suffrage direct par les Français, tous les 5 ans (sauf dissolution).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
@@ -279,11 +267,7 @@
             "id": "test_civic_22",
             "question": "Pour combien d'années les sénateurs sont-ils élus ?",
             "correctAnswer": "6 ans",
-            "incorrectAnswers": [
-                "5 ans",
-                "4 ans",
-                "7 ans"
-            ],
+            "incorrectAnswers": ["5 ans", "4 ans", "7 ans"],
             "explanation": "Les 348 sénateurs sont élus au suffrage indirect par les grands électeurs, pour un mandat de 6 ans (renouvellement par moitié tous les 3 ans).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
@@ -500,11 +484,7 @@
             "id": "test_civic_39",
             "question": "Combien y a-t-il de régions en France ?",
             "correctAnswer": "18 régions, dont 5 en outre-mer",
-            "incorrectAnswers": [
-                "13 régions",
-                "22 régions",
-                "27 régions"
-            ],
+            "incorrectAnswers": ["13 régions", "22 régions", "27 régions"],
             "explanation": "Il y a 18 régions en France, dont 5 en outre-mer. La région gère les lycées et contribue au développement économique.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -578,11 +558,7 @@
             "id": "test_civic_45",
             "question": "Combien de pays fondateurs avait la CEE en 1957 ?",
             "correctAnswer": "6 pays : Allemagne, Belgique, France, Italie, Luxembourg, Pays-Bas",
-            "incorrectAnswers": [
-                "12 pays",
-                "15 pays",
-                "9 pays"
-            ],
+            "incorrectAnswers": ["12 pays", "15 pays", "9 pays"],
             "explanation": "En 1957, la CEE est créée avec 6 pays : Allemagne de l'Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -656,11 +632,7 @@
             "id": "test_civic_51",
             "question": "Où siège le Parlement européen ?",
             "correctAnswer": "À Strasbourg",
-            "incorrectAnswers": [
-                "À Bruxelles",
-                "À Luxembourg",
-                "À Paris"
-            ],
+            "incorrectAnswers": ["À Bruxelles", "À Luxembourg", "À Paris"],
             "explanation": "Le Parlement européen siège à Strasbourg. Il vote le budget et les lois avec le Conseil de l'Union européenne.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -669,11 +641,7 @@
             "id": "test_civic_52",
             "question": "Où siège la Commission européenne ?",
             "correctAnswer": "À Bruxelles",
-            "incorrectAnswers": [
-                "À Strasbourg",
-                "À Luxembourg",
-                "À Francfort"
-            ],
+            "incorrectAnswers": ["À Strasbourg", "À Luxembourg", "À Francfort"],
             "explanation": "La Commission européenne est située à Bruxelles. Elle représente les intérêts communs, propose le budget et les lois.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -708,11 +676,7 @@
             "id": "test_civic_55",
             "question": "Quand l'euro est-il devenu la monnaie officielle ?",
             "correctAnswer": "En 2002",
-            "incorrectAnswers": [
-                "En 1992",
-                "En 1999",
-                "En 2007"
-            ],
+            "incorrectAnswers": ["En 1992", "En 1999", "En 2007"],
             "explanation": "L'euro est devenu la monnaie officielle de plusieurs pays membres en 2002. Le traité de Maastricht de 1992 avait prévu sa création.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -734,11 +698,7 @@
             "id": "test_civic_57",
             "question": "Où siège la Cour de justice de l'UE ?",
             "correctAnswer": "À Luxembourg",
-            "incorrectAnswers": [
-                "À Bruxelles",
-                "À Strasbourg",
-                "À La Haye"
-            ],
+            "incorrectAnswers": ["À Bruxelles", "À Strasbourg", "À La Haye"],
             "explanation": "La Cour de justice est située à Luxembourg. Elle rend la justice à l'échelle européenne et vérifie que les États appliquent le droit européen.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -877,11 +837,7 @@
             "id": "test_civic_68",
             "question": "Quelle est la durée du mandat du président de l'Assemblée nationale ?",
             "correctAnswer": "5 ans, soit la durée de la législature",
-            "incorrectAnswers": [
-                "3 ans",
-                "6 ans",
-                "7 ans"
-            ],
+            "incorrectAnswers": ["3 ans", "6 ans", "7 ans"],
             "explanation": "Le président de l'Assemblée nationale est élu pour 5 ans, soit la durée de la législature, car l'Assemblée est entièrement renouvelée à chaque élection législative.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
@@ -890,11 +846,7 @@
             "id": "test_civic_69",
             "question": "Quelle est la durée du mandat du président du Sénat ?",
             "correctAnswer": "3 ans, renouvelable",
-            "incorrectAnswers": [
-                "5 ans",
-                "6 ans",
-                "7 ans"
-            ],
+            "incorrectAnswers": ["5 ans", "6 ans", "7 ans"],
             "explanation": "Le président du Sénat est élu tous les 3 ans car le Sénat est renouvelé par moitié tous les 3 ans.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"

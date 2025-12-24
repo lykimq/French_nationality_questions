@@ -279,11 +279,7 @@
             "id": "test_civic_22",
             "question": "Quand le drapeau tricolore est-il devenu officiel ?",
             "correctAnswer": "En 1794",
-            "incorrectAnswers": [
-                "En 1789",
-                "En 1830",
-                "En 1848"
-            ],
+            "incorrectAnswers": ["En 1789", "En 1830", "En 1848"],
             "explanation": "Le drapeau tricolore est devenu le drapeau officiel de la France en 1794. Il a perdu les couleurs bleue et rouge lors du retour de la monarchie, puis est revenu définitivement en 1830.",
             "subTheme": "devise_symboles",
             "questionType": "knowledge"
@@ -318,11 +314,7 @@
             "id": "test_civic_25",
             "question": "Quand La Marseillaise a-t-elle été composée ?",
             "correctAnswer": "En 1792",
-            "incorrectAnswers": [
-                "En 1789",
-                "En 1848",
-                "En 1879"
-            ],
+            "incorrectAnswers": ["En 1789", "En 1848", "En 1879"],
             "explanation": "En avril 1792, quelques jours après le début de la guerre contre l'Autriche, un officier français compose le \"Chant de guerre pour l'armée du Rhin\", qui deviendra La Marseillaise.",
             "subTheme": "devise_symboles",
             "questionType": "knowledge"
@@ -383,11 +375,7 @@
             "id": "test_civic_30",
             "question": "Quel est le jour de la fête nationale française ?",
             "correctAnswer": "Le 14 juillet",
-            "incorrectAnswers": [
-                "Le 11 novembre",
-                "Le 8 mai",
-                "Le 1er mai"
-            ],
+            "incorrectAnswers": ["Le 11 novembre", "Le 8 mai", "Le 1er mai"],
             "explanation": "Le 14 juillet est le jour de la fête nationale depuis 1880. Cette date commémore la prise de la Bastille (1789) et la Fête de la Fédération (1790).",
             "subTheme": "devise_symboles",
             "questionType": "knowledge"
@@ -474,11 +462,7 @@
             "id": "test_civic_37",
             "question": "Quelle est la religion la plus représentée en France ?",
             "correctAnswer": "La religion catholique",
-            "incorrectAnswers": [
-                "L'islam",
-                "Le protestantisme",
-                "Le judaïsme"
-            ],
+            "incorrectAnswers": ["L'islam", "Le protestantisme", "Le judaïsme"],
             "explanation": "La France est un pays de diversité religieuse. La religion la plus représentée est la religion catholique. La communauté musulmane, juive et bouddhiste en France sont les plus importantes d'Europe.",
             "subTheme": "laicite",
             "questionType": "knowledge"
@@ -500,11 +484,7 @@
             "id": "test_civic_39",
             "question": "Quand l'État et les Églises ont-ils été séparés en France ?",
             "correctAnswer": "En 1905",
-            "incorrectAnswers": [
-                "En 1789",
-                "En 1848",
-                "En 1958"
-            ],
+            "incorrectAnswers": ["En 1789", "En 1848", "En 1958"],
             "explanation": "En France, l'État et les Églises sont séparés en 1905, plus de 200 ans après l'apparition du principe de liberté de conscience dans la DDHC de 1789.",
             "subTheme": "laicite",
             "questionType": "knowledge"
@@ -812,11 +792,7 @@
             "id": "test_civic_63",
             "question": "Quelle est la monnaie commune de la zone euro ?",
             "correctAnswer": "L'euro",
-            "incorrectAnswers": [
-                "Le franc",
-                "Le mark",
-                "La livre"
-            ],
+            "incorrectAnswers": ["Le franc", "Le mark", "La livre"],
             "explanation": "L'euro est la monnaie commune des pays de la zone euro. Il a été introduit en 2002 pour remplacer les monnaies nationales.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"

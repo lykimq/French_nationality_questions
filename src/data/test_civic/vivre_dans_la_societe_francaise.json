@@ -58,11 +58,7 @@
             "id": "test_civic_5",
             "question": "À quel âge minimum peut-on passer le permis de conduire en France ?",
             "correctAnswer": "17 ans",
-            "incorrectAnswers": [
-                "16 ans",
-                "18 ans",
-                "21 ans"
-            ],
+            "incorrectAnswers": ["16 ans", "18 ans", "21 ans"],
             "explanation": "Il est nécessaire d'avoir 17 ans au minimum et être résident en France pour passer l'examen du permis de conduire.",
             "subTheme": "residence",
             "questionType": "knowledge"
@@ -162,11 +158,7 @@
             "id": "test_civic_13",
             "question": "Quel est le numéro du SAMU pour les urgences médicales ?",
             "correctAnswer": "Le 15",
-            "incorrectAnswers": [
-                "Le 17",
-                "Le 18",
-                "Le 112"
-            ],
+            "incorrectAnswers": ["Le 17", "Le 18", "Le 112"],
             "explanation": "Le 15 est le numéro du SAMU, à appeler en cas d'urgence médicale. Ces appels sont gratuits et disponibles 24h/24.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
@@ -175,11 +167,7 @@
             "id": "test_civic_14",
             "question": "Quel est le numéro d'urgence européen ?",
             "correctAnswer": "Le 112",
-            "incorrectAnswers": [
-                "Le 15",
-                "Le 17",
-                "Le 18"
-            ],
+            "incorrectAnswers": ["Le 15", "Le 17", "Le 18"],
             "explanation": "Le 112 est le numéro d'urgence européen, utilisable pour toute urgence médicale, infraction ou situation de péril/accident.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
@@ -188,11 +176,7 @@
             "id": "test_civic_15",
             "question": "Quel numéro appeler pour signaler un enfant en danger ?",
             "correctAnswer": "Le 119",
-            "incorrectAnswers": [
-                "Le 15",
-                "Le 17",
-                "Le 112"
-            ],
+            "incorrectAnswers": ["Le 15", "Le 17", "Le 112"],
             "explanation": "Le 119 est le numéro à appeler en cas de mise en danger de l'enfance (violence physique, psychologique, sexuelle...).",
             "subTheme": "healthcare",
             "questionType": "knowledge"
@@ -344,11 +328,7 @@
             "id": "test_civic_27",
             "question": "Quelle est la durée maximale d'un CDD en général ?",
             "correctAnswer": "18 mois",
-            "incorrectAnswers": [
-                "6 mois",
-                "12 mois",
-                "24 mois"
-            ],
+            "incorrectAnswers": ["6 mois", "12 mois", "24 mois"],
             "explanation": "Le CDD (Contrat à Durée Déterminée) a une date de fin et est utilisé pour une tâche précise et limitée dans le temps. En général, sa durée maximale est de 18 mois.",
             "subTheme": "work",
             "questionType": "knowledge"
@@ -370,11 +350,7 @@
             "id": "test_civic_29",
             "question": "À partir de quel âge peut-on travailler en France ?",
             "correctAnswer": "16 ans, avec autorisation du représentant légal",
-            "incorrectAnswers": [
-                "14 ans",
-                "18 ans",
-                "21 ans"
-            ],
+            "incorrectAnswers": ["14 ans", "18 ans", "21 ans"],
             "explanation": "Il est possible de travailler dès l'âge de 16 ans. Tout mineur doit y être autorisé par son représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
             "subTheme": "work",
             "questionType": "knowledge"
@@ -604,11 +580,7 @@
             "id": "test_civic_47",
             "question": "Quel est le délai de préavis standard pour quitter un logement ?",
             "correctAnswer": "3 mois (1 mois sous certaines conditions)",
-            "incorrectAnswers": [
-                "1 semaine",
-                "6 mois",
-                "1 an"
-            ],
+            "incorrectAnswers": ["1 semaine", "6 mois", "1 an"],
             "explanation": "Le locataire peut quitter le logement à tout moment en respectant le délai de préavis de 3 mois (1 mois sous certaines conditions comme un logement meublé ou en zone tendue).",
             "subTheme": "residence",
             "questionType": "knowledge"
@@ -656,11 +628,7 @@
             "id": "test_civic_51",
             "question": "Quel numéro appeler pour une femme victime de violence ?",
             "correctAnswer": "Le 3919",
-            "incorrectAnswers": [
-                "Le 15",
-                "Le 17",
-                "Le 119"
-            ],
+            "incorrectAnswers": ["Le 15", "Le 17", "Le 119"],
             "explanation": "Le 3919 est le numéro à appeler pour une femme victime de violence. C'est un numéro d'écoute et d'orientation.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
@@ -669,11 +637,7 @@
             "id": "test_civic_52",
             "question": "Quel numéro appeler pour la prévention du suicide ?",
             "correctAnswer": "Le 3114",
-            "incorrectAnswers": [
-                "Le 15",
-                "Le 112",
-                "Le 119"
-            ],
+            "incorrectAnswers": ["Le 15", "Le 112", "Le 119"],
             "explanation": "Le 3114 est le numéro national de prévention du suicide, disponible 24h/24.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
@@ -747,11 +711,7 @@
             "id": "test_civic_58",
             "question": "Quel numéro appeler en cas de harcèlement d'un enfant ?",
             "correctAnswer": "Le 30 20",
-            "incorrectAnswers": [
-                "Le 15",
-                "Le 17",
-                "Le 112"
-            ],
+            "incorrectAnswers": ["Le 15", "Le 17", "Le 112"],
             "explanation": "Le 30 20 est le numéro à appeler en cas de harcèlement de l'enfant. Les parents doivent signaler toute violence.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
@@ -812,11 +772,7 @@
             "id": "test_civic_63",
             "question": "Depuis quand l'école est-elle obligatoire en France ?",
             "correctAnswer": "Depuis le 28 mars 1882",
-            "incorrectAnswers": [
-                "Depuis 1789",
-                "Depuis 1945",
-                "Depuis 1958"
-            ],
+            "incorrectAnswers": ["Depuis 1789", "Depuis 1945", "Depuis 1958"],
             "explanation": "L'école est obligatoire en France depuis le 28 mars 1882, grâce aux lois de Jules Ferry.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"

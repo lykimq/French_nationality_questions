@@ -305,11 +305,7 @@
             "id": "test_civic_24",
             "question": "Combien d'articles contient la Déclaration des droits de l'homme et du citoyen ?",
             "correctAnswer": "17 articles",
-            "incorrectAnswers": [
-                "10 articles",
-                "25 articles",
-                "30 articles"
-            ],
+            "incorrectAnswers": ["10 articles", "25 articles", "30 articles"],
             "explanation": "La Déclaration des droits de l'homme et du citoyen est composée d'une introduction et de 17 articles. Elle affirme les droits universels de l'Homme et du citoyen.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
@@ -370,11 +366,7 @@
             "id": "test_civic_29",
             "question": "Quand la Charte de l'environnement a-t-elle été ajoutée à la Constitution ?",
             "correctAnswer": "En 2005",
-            "incorrectAnswers": [
-                "En 2000",
-                "En 2010",
-                "En 2015"
-            ],
+            "incorrectAnswers": ["En 2000", "En 2010", "En 2015"],
             "explanation": "La Charte de l'environnement a été validée en 2004 et ajoutée à la Constitution de 1958 en 2005, après le discours de Jacques Chirac au Sommet mondial de 2002.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
@@ -578,11 +570,7 @@
             "id": "test_civic_45",
             "question": "À partir de quel âge peut-on être juré aux assises ?",
             "correctAnswer": "23 ans",
-            "incorrectAnswers": [
-                "18 ans",
-                "25 ans",
-                "30 ans"
-            ],
+            "incorrectAnswers": ["18 ans", "25 ans", "30 ans"],
             "explanation": "Tout citoyen français âgé de plus de 23 ans, qui a tous ses droits civiques et qui est inscrit sur les listes électorales, peut être tiré au sort pour être juré lors d'un procès d'assises.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
@@ -877,11 +865,7 @@
             "id": "test_civic_68",
             "question": "En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?",
             "correctAnswer": "2001",
-            "incorrectAnswers": [
-                "1848",
-                "1981",
-                "2013"
-            ],
+            "incorrectAnswers": ["1848", "1981", "2013"],
             "explanation": "La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crime contre l'humanité.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"

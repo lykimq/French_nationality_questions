@@ -9,33 +9,25 @@
             "Une mission humanitaire."
         ],
         "explanation": "C'est une domination politique, économique et culturelle.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_2",
         "question": "Où se situaient les premières colonies françaises (XVIe siècle) ?",
         "correctAnswer": "En Amérique (Canada, Louisiane, Antilles).",
-        "incorrectAnswers": [
-            "En Australie.",
-            "En Chine.",
-            "Au Pôle Nord."
-        ],
+        "incorrectAnswers": ["En Australie.", "En Chine.", "Au Pôle Nord."],
         "explanation": "C'est le Premier Empire colonial.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_3",
         "question": "Où la France a-t-elle colonisé au XIXe siècle ?",
         "correctAnswer": "En Afrique (Maghreb, Afrique noire) et en Asie (Indochine).",
-        "incorrectAnswers": [
-            "Aux États-Unis.",
-            "En Russie.",
-            "Au Brésil."
-        ],
+        "incorrectAnswers": ["Aux États-Unis.", "En Russie.", "Au Brésil."],
         "explanation": "C'est le Second Empire colonial.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -48,7 +40,7 @@
             "Sur le hasard."
         ],
         "explanation": "Les populations colonisées n'avaient pas les mêmes droits.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -61,7 +53,7 @@
             "Protéger la nature."
         ],
         "explanation": "La France voulait étendre sa puissance et ses marchés.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -74,7 +66,7 @@
             "La pollution des mers."
         ],
         "explanation": "C'est un crime contre l'humanité.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -87,7 +79,7 @@
             "Déménager dans la même ville."
         ],
         "explanation": "La France est une terre d'accueil depuis longtemps.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -100,7 +92,7 @@
             "Par hasard."
         ],
         "explanation": "Les raisons sont économiques, politiques ou familiales.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -113,20 +105,16 @@
             "Expulser tout le monde."
         ],
         "explanation": "L'État cherche à maîtriser l'immigration légale.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_10",
         "question": "Que signifie le mot 'Shoah' ?",
         "correctAnswer": "Catastrophe (en hébreu), désignant le génocide des Juifs.",
-        "incorrectAnswers": [
-            "Guerre.",
-            "Victoire.",
-            "Paix."
-        ],
+        "incorrectAnswers": ["Guerre.", "Victoire.", "Paix."],
         "explanation": "L'extermination planifiée par les nazis.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -139,7 +127,7 @@
             "En les envoyant en Suisse."
         ],
         "explanation": "L'État français a collaboré à la déportation.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -152,20 +140,16 @@
             "Pour punir les Allemands."
         ],
         "explanation": "C'est une leçon pour défendre les droits de l'homme.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_13",
         "question": "Combien de victimes juives a fait la Shoah ?",
         "correctAnswer": "6 millions.",
-        "incorrectAnswers": [
-            "1 million.",
-            "100 000.",
-            "10 000."
-        ],
+        "incorrectAnswers": ["1 million.", "100 000.", "10 000."],
         "explanation": "C'est un génocide industriel.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -178,7 +162,7 @@
             "Plus riches qu'avant."
         ],
         "explanation": "La pénurie alimentaire et la répression étaient quotidiennes.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -191,7 +175,7 @@
             "Winston Churchill."
         ],
         "explanation": "Il a rassemblé les différents mouvements sous l'autorité de De Gaulle.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -204,7 +188,7 @@
             "Une épidémie."
         ],
         "explanation": "Les combats continuent jusqu'en 1945.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -217,7 +201,7 @@
             "Elle est punie comme l'Allemagne."
         ],
         "explanation": "Grâce à la Résistance et à De Gaulle.",
-            "subTheme": "historical_periods",
+        "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
     {
@@ -230,7 +214,7 @@
             "De la France et de la Belgique."
         ],
         "explanation": "C'est un territoire réparti sur tous les océans.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -243,20 +227,16 @@
             "Réunion, Maurice, Seychelles."
         ],
         "explanation": "Ils ont le même statut que les départements de l'Hexagone.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_20",
         "question": "Combien de pays ont une frontière terrestre avec la France Métropolitaine ?",
         "correctAnswer": "8 pays (Belgique, Luxembourg, Allemagne, Suisse, Italie, Espagne, Andorre, Monaco).",
-        "incorrectAnswers": [
-            "3 pays.",
-            "12 pays.",
-            "5 pays."
-        ],
+        "incorrectAnswers": ["3 pays.", "12 pays.", "5 pays."],
         "explanation": "La France est un carrefour européen.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -269,7 +249,7 @@
             "La forêt amazonienne."
         ],
         "explanation": "Les montagnes et les fleuves délimitent le territoire.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -282,20 +262,16 @@
             "Le Rhône, le Rhin, la Volga."
         ],
         "explanation": "La Loire est le plus long fleuve entièrement français.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_23",
         "question": "Quelle est la population de la France (environ) ?",
         "correctAnswer": "68 millions d'habitants.",
-        "incorrectAnswers": [
-            "50 millions.",
-            "80 millions.",
-            "100 millions."
-        ],
+        "incorrectAnswers": ["50 millions.", "80 millions.", "100 millions."],
         "explanation": "C'est le 2ème pays le plus peuplé de l'UE.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -308,7 +284,7 @@
             "Elle reste identique."
         ],
         "explanation": "L'espérance de vie augmente et la natalité baisse.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -321,7 +297,7 @@
             "Dans les DROM."
         ],
         "explanation": "80% de la population est urbaine.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -334,7 +310,7 @@
             "Un département."
         ],
         "explanation": "C'est l'espace de vie quotidien autour des villes.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -347,7 +323,7 @@
             "La pollution de l'air."
         ],
         "explanation": "Les métropoles attirent les emplois et les richesses.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -360,7 +336,7 @@
             "Nice, Toulon, Cannes."
         ],
         "explanation": "Elles rayonnent sur leur région.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -373,7 +349,7 @@
             "Elle ne produit que du vin."
         ],
         "explanation": "La France est un grand exportateur (céréales, vin, lait).",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -386,7 +362,7 @@
             "Tabac uniquement."
         ],
         "explanation": "La diversité des climats permet des productions variées.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -399,7 +375,7 @@
             "Supprimer les fermes."
         ],
         "explanation": "L'agriculture doit devenir plus durable.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -412,20 +388,16 @@
             "Charbon et acier."
         ],
         "explanation": "Des grands groupes mondiaux (Airbus, LVMH, Sanofi, Danone).",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_33",
         "question": "Où se concentre l'industrie aéronautique ?",
         "correctAnswer": "À Toulouse et dans le Sud-Ouest.",
-        "incorrectAnswers": [
-            "À Paris.",
-            "À Lille.",
-            "À Strasbourg."
-        ],
+        "incorrectAnswers": ["À Paris.", "À Lille.", "À Strasbourg."],
         "explanation": "C'est le siège d'Airbus.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -438,7 +410,7 @@
             "Polluer plus."
         ],
         "explanation": "Produire en France pour être plus indépendant.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -451,7 +423,7 @@
             "50e puissance mondiale."
         ],
         "explanation": "C'est un pays riche et développé.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -464,7 +436,7 @@
             "Le chômage."
         ],
         "explanation": "80% des emplois sont dans les services.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -477,7 +449,7 @@
             "Le manque de routes."
         ],
         "explanation": "L'État dépense plus qu'il ne gagne.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -490,20 +462,16 @@
             "Elle est au centre du monde."
         ],
         "explanation": "C'est un hub pour les échanges.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_39",
         "question": "Quel est le pays le plus peuplé d'Europe ?",
         "correctAnswer": "L'Allemagne.",
-        "incorrectAnswers": [
-            "La France.",
-            "Le Royaume-Uni.",
-            "L'Italie."
-        ],
+        "incorrectAnswers": ["La France.", "Le Royaume-Uni.", "L'Italie."],
         "explanation": "La France est le 2ème.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -516,7 +484,7 @@
             "Tout passe par Lyon."
         ],
         "explanation": "Le TGV et les autoroutes partent souvent de la capitale.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -529,7 +497,7 @@
             "La route des vins."
         ],
         "explanation": "Ils relient l'Europe du Nord à la Méditerranée.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -542,7 +510,7 @@
             "Parce qu'elle est petite."
         ],
         "explanation": "Des Alpes à la forêt amazonienne (Guyane).",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -555,7 +523,7 @@
             "Un club de vacances."
         ],
         "explanation": "La France y contribue fortement pour protéger les espèces.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -568,33 +536,25 @@
             "Trop d'arbres."
         ],
         "explanation": "L'État s'engage pour une transition écologique.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_45",
         "question": "Quelle est la part de l'agriculture dans le territoire français ?",
         "correctAnswer": "La moitié du territoire (50%).",
-        "incorrectAnswers": [
-            "10%.",
-            "90%.",
-            "Cela n'existe pas."
-        ],
+        "incorrectAnswers": ["10%.", "90%.", "Cela n'existe pas."],
         "explanation": "C'est une composante majeure des paysages.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_46",
         "question": "Quelles sont les principales exportations agricoles ?",
         "correctAnswer": "Le vin et les céréales.",
-        "incorrectAnswers": [
-            "Le riz.",
-            "Le café.",
-            "Le coton."
-        ],
+        "incorrectAnswers": ["Le riz.", "Le café.", "Le coton."],
         "explanation": "Le vin français est célèbre mondialement.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -607,7 +567,7 @@
             "Le nom du président."
         ],
         "explanation": "Il mesure la puissance économique.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -620,7 +580,7 @@
             "Plus grand que la Chine."
         ],
         "explanation": "550 000 km² en métropole.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -633,7 +593,7 @@
             "Cela ne compte pas."
         ],
         "explanation": "Loin derrière la Chine ou l'Inde.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -646,7 +606,7 @@
             "Elle achète tout aux USA."
         ],
         "explanation": "C'est l'une des 5 puissances du Conseil de Sécurité.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -659,7 +619,7 @@
             "Elle n'a pas d'amis."
         ],
         "explanation": "Sa voix porte dans le monde.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -672,7 +632,7 @@
             "Une plage privée."
         ],
         "explanation": "La France a la 2ème plus grande ZEE du monde.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -685,7 +645,7 @@
             "C'est dangereux."
         ],
         "explanation": "C'est une richesse stratégique d'avenir.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -698,7 +658,7 @@
             "Ils ne servent qu'à la pêche."
         ],
         "explanation": "Le Havre et Marseille sont les plus grands.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -711,7 +671,7 @@
             "Strasbourg (port fluvial)."
         ],
         "explanation": "Sur les façades maritimes.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -724,33 +684,25 @@
             "C'est moins cher que le vélo."
         ],
         "explanation": "La France est un hub aérien mondial.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_57",
         "question": "Quel est le plus grand aéroport français ?",
         "correctAnswer": "Paris-Charles de Gaulle (Roissy).",
-        "incorrectAnswers": [
-            "Orly.",
-            "Nice.",
-            "Lyon."
-        ],
+        "incorrectAnswers": ["Orly.", "Nice.", "Lyon."],
         "explanation": "C'est l'un des plus grands d'Europe.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_58",
         "question": "Quel secteur industriel est lié à l'aérien ?",
         "correctAnswer": "L'aéronautique (Airbus, Safran).",
-        "incorrectAnswers": [
-            "L'automobile.",
-            "Le textile.",
-            "L'agriculture."
-        ],
+        "incorrectAnswers": ["L'automobile.", "Le textile.", "L'agriculture."],
         "explanation": "C'est un employeur majeur.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -763,7 +715,7 @@
             "Dernière destination."
         ],
         "explanation": "100 millions de visiteurs par an.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -776,20 +728,16 @@
             "Pour apprendre l'anglais."
         ],
         "explanation": "La Tour Eiffel, le Louvre, la Côte d'Azur attirent le monde.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_61",
         "question": "Où se trouve la région Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Au Sud-Est (Lyon, Alpes, Massif Central).",
-        "incorrectAnswers": [
-            "Au Nord.",
-            "En Bretagne.",
-            "Dans le Sud-Ouest."
-        ],
+        "incorrectAnswers": ["Au Nord.", "En Bretagne.", "Dans le Sud-Ouest."],
         "explanation": "C'est une région industrielle et montagneuse.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -802,98 +750,70 @@
             "Clermont-Ferrand."
         ],
         "explanation": "Lyon est la 2ème métropole de France.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_63",
         "question": "Quelle est la caractéristique économique d'Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Très dynamique (chimie, industrie, tourisme ski).",
-        "incorrectAnswers": [
-            "Pauvre.",
-            "Agricole uniquement.",
-            "Désertique."
-        ],
+        "incorrectAnswers": ["Pauvre.", "Agricole uniquement.", "Désertique."],
         "explanation": "C'est la 2ème région économique.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_64",
         "question": "Où se trouve la Bourgogne-Franche-Comté ?",
         "correctAnswer": "À l'Est (Dijon, Besançon, Jura).",
-        "incorrectAnswers": [
-            "Au Sud.",
-            "À l'Ouest.",
-            "Au Nord."
-        ],
+        "incorrectAnswers": ["Au Sud.", "À l'Ouest.", "Au Nord."],
         "explanation": "Célèbre pour ses vins et son industrie.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_65",
         "question": "Quelle ville est célèbre pour sa moutarde et ses ducs ?",
         "correctAnswer": "Dijon.",
-        "incorrectAnswers": [
-            "Auxerre.",
-            "Nevers.",
-            "Mâcon."
-        ],
+        "incorrectAnswers": ["Auxerre.", "Nevers.", "Mâcon."],
         "explanation": "Capitale de la Bourgogne.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_66",
         "question": "Quelle est une spécialité de Bourgogne-Franche-Comté ?",
         "correctAnswer": "Le vin de Bourgogne et le Comté.",
-        "incorrectAnswers": [
-            "Le cidre.",
-            "L'huile d'olive.",
-            "Le champagne."
-        ],
+        "incorrectAnswers": ["Le cidre.", "L'huile d'olive.", "Le champagne."],
         "explanation": "Région de gastronomie.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_67",
         "question": "Où se trouve la Bretagne ?",
         "correctAnswer": "À l'Ouest (péninsule atlantique).",
-        "incorrectAnswers": [
-            "À l'Est.",
-            "Au Sud.",
-            "Au Centre."
-        ],
+        "incorrectAnswers": ["À l'Est.", "Au Sud.", "Au Centre."],
         "explanation": "Rennes, Brest, Quimper.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_68",
         "question": "Quelle est la capitale de la Bretagne ?",
         "correctAnswer": "Rennes.",
-        "incorrectAnswers": [
-            "Brest.",
-            "Lorient.",
-            "Vannes."
-        ],
+        "incorrectAnswers": ["Brest.", "Lorient.", "Vannes."],
         "explanation": "Un pôle numérique et étudiant.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_69",
         "question": "Quelle est l'activité majeure de la Bretagne ?",
         "correctAnswer": "L'agroalimentaire, la pêche et le tourisme.",
-        "incorrectAnswers": [
-            "L'industrie automobile.",
-            "La mine.",
-            "Le ski."
-        ],
+        "incorrectAnswers": ["L'industrie automobile.", "La mine.", "Le ski."],
         "explanation": "1ère région agroalimentaire.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -906,33 +826,25 @@
             "En Alsace."
         ],
         "explanation": "Orléans, Tours, les Châteaux.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_71",
         "question": "Quelle est la capitale du Centre-Val de Loire ?",
         "correctAnswer": "Orléans.",
-        "incorrectAnswers": [
-            "Tours.",
-            "Bourges.",
-            "Blois."
-        ],
+        "incorrectAnswers": ["Tours.", "Bourges.", "Blois."],
         "explanation": "Ville libérée par Jeanne d'Arc.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_72",
         "question": "Pour quoi est connu le Centre-Val de Loire ?",
         "correctAnswer": "Les Châteaux de la Loire et l'agriculture (céréales).",
-        "incorrectAnswers": [
-            "Les volcans.",
-            "Les gratte-ciels.",
-            "La jungle."
-        ],
+        "incorrectAnswers": ["Les volcans.", "Les gratte-ciels.", "La jungle."],
         "explanation": "C'est le 'jardin de la France'.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -945,20 +857,16 @@
             "Dans les Caraïbes."
         ],
         "explanation": "L'île de Beauté, Ajaccio, Bastia.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_74",
         "question": "Quelle est la capitale (préfecture) de la Corse ?",
         "correctAnswer": "Ajaccio.",
-        "incorrectAnswers": [
-            "Bastia.",
-            "Corte.",
-            "Calvi."
-        ],
+        "incorrectAnswers": ["Bastia.", "Corte.", "Calvi."],
         "explanation": "Ville natale de Napoléon.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -971,72 +879,52 @@
             "Le pétrole."
         ],
         "explanation": "Ses paysages attirent beaucoup de visiteurs.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_76",
         "question": "Où se trouve le Grand Est ?",
         "correctAnswer": "Au Nord-Est (Strasbourg, Reims, Metz).",
-        "incorrectAnswers": [
-            "Au Sud-Ouest.",
-            "En Bretagne.",
-            "Au Centre."
-        ],
+        "incorrectAnswers": ["Au Sud-Ouest.", "En Bretagne.", "Au Centre."],
         "explanation": "Frontalier avec l'Allemagne et la Belgique.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_77",
         "question": "Quelle ville est la capitale européenne située dans le Grand Est ?",
         "correctAnswer": "Strasbourg.",
-        "incorrectAnswers": [
-            "Nancy.",
-            "Metz.",
-            "Mulhouse."
-        ],
+        "incorrectAnswers": ["Nancy.", "Metz.", "Mulhouse."],
         "explanation": "Siège du Parlement européen.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_78",
         "question": "Pour quels produits le Grand Est est-il connu ?",
         "correctAnswer": "Le Champagne et le vin d'Alsace.",
-        "incorrectAnswers": [
-            "Le cidre.",
-            "Le rhum.",
-            "La vodka."
-        ],
+        "incorrectAnswers": ["Le cidre.", "Le rhum.", "La vodka."],
         "explanation": "Vignobles prestigieux.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_79",
         "question": "Où se trouvent les Hauts-de-France ?",
         "correctAnswer": "Tout au Nord (Lille, Amiens).",
-        "incorrectAnswers": [
-            "Tout au Sud.",
-            "À l'Est.",
-            "À l'Ouest."
-        ],
+        "incorrectAnswers": ["Tout au Sud.", "À l'Est.", "À l'Ouest."],
         "explanation": "Frontalier avec la Belgique.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_80",
         "question": "Quelle est la capitale des Hauts-de-France ?",
         "correctAnswer": "Lille.",
-        "incorrectAnswers": [
-            "Amiens.",
-            "Calais.",
-            "Dunkerque."
-        ],
+        "incorrectAnswers": ["Amiens.", "Calais.", "Dunkerque."],
         "explanation": "Grande métropole européenne.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1049,7 +937,7 @@
             "Toujours riche."
         ],
         "explanation": "La région a une forte tradition ouvrière.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1062,7 +950,7 @@
             "À la montagne."
         ],
         "explanation": "C'est la région capitale.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1075,7 +963,7 @@
             "La plus agricole."
         ],
         "explanation": "1 Français sur 5 y vit.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1088,72 +976,52 @@
             "Ce n'est que du tourisme."
         ],
         "explanation": "Centre de décision et d'affaires.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_85",
         "question": "Où se trouve la Normandie ?",
         "correctAnswer": "Au Nord-Ouest (Rouen, Caen, Le Havre).",
-        "incorrectAnswers": [
-            "Au Sud-Est.",
-            "En Corse.",
-            "Dans les Alpes."
-        ],
+        "incorrectAnswers": ["Au Sud-Est.", "En Corse.", "Dans les Alpes."],
         "explanation": "Célèbre pour le débarquement et ses vaches.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_86",
         "question": "Quelle est la capitale administrative de la Normandie ?",
         "correctAnswer": "Rouen.",
-        "incorrectAnswers": [
-            "Caen.",
-            "Le Havre.",
-            "Cherbourg."
-        ],
+        "incorrectAnswers": ["Caen.", "Le Havre.", "Cherbourg."],
         "explanation": "Ville historique (Jeanne d'Arc y est morte).",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_87",
         "question": "Pour quoi est connue la Normandie ?",
         "correctAnswer": "Le Mont-Saint-Michel, le Camembert, le cidre.",
-        "incorrectAnswers": [
-            "Le Champagne.",
-            "Les olives.",
-            "Le riz."
-        ],
+        "incorrectAnswers": ["Le Champagne.", "Les olives.", "Le riz."],
         "explanation": "Tourisme et agriculture.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_88",
         "question": "Où se trouve la Nouvelle-Aquitaine ?",
         "correctAnswer": "Au Sud-Ouest (Bordeaux, Poitiers, Limoges).",
-        "incorrectAnswers": [
-            "Au Nord-Est.",
-            "En Alsace.",
-            "Dans le Nord."
-        ],
+        "incorrectAnswers": ["Au Nord-Est.", "En Alsace.", "Dans le Nord."],
         "explanation": "La plus grande région de France.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
         "id": "test_civic_89",
         "question": "Quelle est la capitale de la Nouvelle-Aquitaine ?",
         "correctAnswer": "Bordeaux.",
-        "incorrectAnswers": [
-            "Limoges.",
-            "Poitiers.",
-            "La Rochelle."
-        ],
+        "incorrectAnswers": ["Limoges.", "Poitiers.", "La Rochelle."],
         "explanation": "Capitale mondiale du vin.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
     {
@@ -1166,7 +1034,7 @@
             "La pêche en eau douce."
         ],
         "explanation": "Région attractive et variée.",
-            "subTheme": "territories_geography",
+        "subTheme": "territories_geography",
         "questionType": "knowledge"
     }
 ]
