@@ -55,7 +55,6 @@ French_nationality_questions/
 ### 1. Entry Point & Configuration
 - **`index.ts`**: Expo root component registration, imports `App.tsx`
 - **`App.tsx`**: Main application wrapper with:
-  - Font loading (Kalam, PatrickHand, DancingScript)
   - SafeAreaProvider and GestureHandlerRootView setup
   - AppProviders wrapper
   - AppNavigator integration
@@ -267,12 +266,9 @@ DataProvider (outermost)
 }
 ```
 
-### Styling & Fonts
+### Styling
 ```json
 {
-  "@expo-google-fonts/kalam": "^0.4.0",
-  "@expo-google-fonts/patrick-hand": "^0.4.0",
-  "@expo-google-fonts/dancing-script": "^0.4.0",
   "expo-linear-gradient": "~15.0.8"
 }
 ```
@@ -317,7 +313,6 @@ DataProvider (outermost)
 ### Theme System
 - **Multiple Color Schemes**: Various theme options
 - **Icon Customization**: Different icon sets with 3D variants
-- **Font Options**: Multiple font families (Kalam, PatrickHand, DancingScript)
 - **Text Formatting**: Customizable text size and formatting
 - **Dark/Light Mode**: Theme mode support
 - **Responsive**: Adapts to device and platform

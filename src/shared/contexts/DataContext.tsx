@@ -1,11 +1,14 @@
 import React, { createContext, useState, useContext, useEffect, useCallback, useRef } from 'react';
 import { preloadAllData, preloadImages } from '../utils';
+import { createLogger } from '../utils/logger';
 import type {
     FrenchCategory,
     FrenchQuestionsData,
     DataContextType,
     DataProviderProps,
 } from '../../types';
+
+const logger = createLogger('DataContext');
 
 const DataContext = createContext<DataContextType>({
     questionsData: { categories: [] } as FrenchQuestionsData,
@@ -22,6 +25,18 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
 
     const isMountedRef = useRef(true);
 
+    const isFrenchCategory = (obj: unknown): obj is FrenchCategory => {
+        if (!obj || typeof obj !== 'object') return false;
+        const category = obj as Record<string, unknown>;
+        return (
+            typeof category.id === 'string' &&
+            typeof category.title === 'string' &&
+            typeof category.icon === 'string' &&
+            typeof category.description === 'string' &&
+            Array.isArray(category.questions)
+        );
+    };
+
     const processLivretData = useCallback(async (subcategoryData: Record<string, FrenchCategory>) => {
         try {
             const categories = Object.values(subcategoryData) as FrenchCategory[];
@@ -35,8 +50,8 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
             if (isMountedRef.current) {
                 setQuestionsData(frenchData);
 
-                preloadImages(frenchData).catch(() => {
-                    // Silent error handling for non-critical image preloading
+                preloadImages(frenchData).catch((error) => {
+                    logger.warn('Unexpected error during image preloading (non-critical):', error);
                 });
             }
         } catch (error) {
@@ -61,7 +76,18 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
                 if (!isActive) return;
 
                 if (subcategoryData && Object.keys(subcategoryData).length > 0) {
-                    await processLivretData(subcategoryData as Record<string, FrenchCategory>);
+                    const validatedData: Record<string, FrenchCategory> = {};
+                    for (const [key, value] of Object.entries(subcategoryData)) {
+                        if (isFrenchCategory(value)) {
+                            validatedData[key] = value;
+                        }
+                    }
+                    
+                    if (Object.keys(validatedData).length > 0) {
+                        await processLivretData(validatedData);
+                    } else {
+                        setDataLoadingError('Failed to load question data. Invalid data structure.');
+                    }
                 } else {
                     setDataLoadingError('Failed to load question data. Please check your connection or Firebase configuration.');
                 }
