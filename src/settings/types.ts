@@ -92,7 +92,6 @@ export interface IconMapping {
     close: string;
 
     // Feature icons
-    language: string;
     textFormat: string;
     share: string;
     star: string;

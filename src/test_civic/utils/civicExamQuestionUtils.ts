@@ -65,7 +65,6 @@ export const getAnswerTextFromOptions = (
  * 
  * @param question - The question with options
  * @param userAnswerIndex - The index of the user's answer
- * @param language - The language for fallback messages
  * @returns The user's answer text
  */
 export const getUserAnswerText = (

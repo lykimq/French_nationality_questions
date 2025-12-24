@@ -45,11 +45,10 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     // Get icons from IconContext with better error handling
-    let iconContext: ReturnType<typeof useIcons> | null = null;
     let icons: IconMapping;
 
     try {
-        iconContext = useIcons();
+        const iconContext = useIcons();
         icons = iconContext.icons;
     } catch (error) {
         // Provide fallback icons to prevent runtime errors
@@ -63,7 +62,6 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             chevronForward: 'chevron-forward',
             chevronBack: 'chevron-back',
             close: 'close',
-            language: 'language',
             textFormat: 'text',
             share: 'share-social',
             star: 'star',

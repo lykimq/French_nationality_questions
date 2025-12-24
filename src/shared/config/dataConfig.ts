@@ -23,14 +23,6 @@ export const DATA_FILES = {
             'vie_personnelle_integration.json'
         ] as const
     },
-    TESTS: {
-        DIRECTORY: 'tests/',
-        PART1: [
-            'test_personal_fr_vi.json',
-            'test_opinions_fr_vi.json',
-            'test_daily_life_fr_vi.json'
-        ] as const
-    },
     FORMATION: {
         DIRECTORY: 'knowledge/formation/',
         FILES: [

@@ -1,24 +1,8 @@
-import type { ImageSourcePropType } from 'react-native';
 import { createLogger } from './logger';
-import { loadImageResource, getCachedImage } from '../services/dataService';
+import { loadImageResource } from '../services/dataService';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 
 const logger = createLogger('ImageUtils');
-
-export const getImageSource = async (imagePath: string | null): Promise<ImageSourcePropType | null> => {
-    if (!imagePath) return null;
-    try {
-        return await loadImageResource(imagePath);
-    } catch (error) {
-        logger.error(`Failed to get image source: ${imagePath}`, error);
-        return null;
-    }
-};
-
-export const getCachedImageSource = (imagePath: string | null): ImageSourcePropType | null => {
-    if (!imagePath) return null;
-    return getCachedImage(imagePath);
-};
 
 export const preloadImages = async (questionsData: FrenchQuestionsData | null | undefined): Promise<void> => {
     try {

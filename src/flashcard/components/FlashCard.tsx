@@ -295,7 +295,6 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                                     <View style={styles.explanationTextContainer}>
                                         <FormattedText
                                             style={[styles.explanationText, { color: theme.colors.text }]}
-                                        // Removed numberOfLines={0} to allow full text display
                                         >
                                             {explanationText}
                                         </FormattedText>

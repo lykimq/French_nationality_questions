@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { ImageSourcePropType } from 'react-native';
-import { getImageSource, getCachedImageSource } from '../utils';
+import { loadImageResource, getCachedImage } from '../services/dataService';
 import { createLogger } from '../utils/logger';
 
 const logger = createLogger('useFirebaseImage');
@@ -35,7 +35,7 @@ export const useFirebaseImage = (imagePath: string | null | undefined): UseFireb
 
             try {
                 // Try cache first
-                const cachedSource = getCachedImageSource(imagePath);
+                const cachedSource = getCachedImage(imagePath);
                 if (cachedSource) {
                     if (isMounted) {
                         setImageSource(cachedSource);
@@ -45,7 +45,7 @@ export const useFirebaseImage = (imagePath: string | null | undefined): UseFireb
                 }
 
                 // Load from Firebase
-                const source = await getImageSource(imagePath);
+                const source = imagePath ? await loadImageResource(imagePath) : null;
                 if (isMounted) {
                     if (source) {
                         setImageSource(source);

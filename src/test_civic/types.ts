@@ -3,28 +3,7 @@ import type { TimestampedEntity } from '../types/core';
 
 // ==================== BASE TEST TYPES (used by civic exam) ====================
 
-export type TestMode =
-    | 'geography_only'
-    | 'history_culture_comprehensive'
-    | 'mock_interview'
-    | 'subcategory_local_gov'
-    | 'subcategory_monarchy'
-    | 'subcategory_revolution'
-    | 'subcategory_wars'
-    | 'subcategory_republic'
-    | 'subcategory_democracy'
-    | 'subcategory_economy'
-    | 'subcategory_culture'
-    | 'subcategory_arts'
-    | 'subcategory_celebrities'
-    | 'subcategory_sports'
-    | 'subcategory_holidays'
-    | 'part1_test_personal'
-    | 'part1_test_opinions'
-    | 'part1_test_daily_life';
-
 export interface TestConfig {
-    readonly mode: TestMode;
     readonly questionCount: number;
     readonly timeLimit?: number;
     readonly categoryIds?: readonly string[];
@@ -44,7 +23,6 @@ export interface TestAnswer extends TimestampedEntity {
 
 export interface TestSession extends TimestampedEntity {
     readonly id: string;
-    readonly mode: TestMode;
     readonly questions: readonly TestQuestion[];
     readonly answers: readonly TestAnswer[];
     readonly startTime: Date;
@@ -112,7 +90,7 @@ export type QuestionType = 'knowledge' | 'situational';
 
 // ==================== CIVIC EXAM CONFIGURATION ====================
 
-export interface CivicExamConfig extends Omit<TestConfig, 'mode'> {
+export interface CivicExamConfig extends TestConfig {
     readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
     readonly selectedThemes?: readonly CivicExamTheme[];
     readonly questionCount: 40; // Fixed at 40 for civic exam
@@ -121,7 +99,7 @@ export interface CivicExamConfig extends Omit<TestConfig, 'mode'> {
 
 // ==================== CIVIC EXAM SESSION ====================
 
-export interface CivicExamSession extends Omit<TestSession, 'mode'> {
+export interface CivicExamSession extends TestSession {
     readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
     readonly themes?: readonly CivicExamTheme[];
     readonly isPracticeMode: boolean;

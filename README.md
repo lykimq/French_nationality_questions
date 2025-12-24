@@ -1,12 +1,11 @@
 # French Nationality Questions App
 
-A comprehensive React Native mobile application built with Expo for studying French citizenship questions. The app features bilingual support (French and Vietnamese) with customizable themes, interactive testing functionality, and detailed progress tracking.
+A comprehensive React Native mobile application built with Expo for studying French citizenship questions. The app features customizable themes, interactive testing functionality, and detailed progress tracking.
 
 ## 📱 Overview
 
 This is a cross-platform mobile application that helps users prepare for French nationality/citizenship tests. It provides:
-- **Bilingual interface** (French 🇫🇷 / Vietnamese 🇻🇳)
-- **Interactive question practice** with multiple test modes
+- **Interactive question practice** with civic exam functionality
 - **Progress tracking** and detailed analytics
 - **Customizable themes** and display settings
 - **Offline-capable** with Firebase integration
@@ -46,49 +45,52 @@ French_nationality_questions/
 
 ### 2. Navigation System (`src/navigation/`)
 - **`AppNavigator.tsx`**: Main navigation controller
-  - Creates bottom tab navigation with 4 tabs: Home, Search, Test, Settings
+  - Creates bottom tab navigation with 5 tabs: Home, Search, Civic Exam, Flash Cards, Settings
   - Implements stack navigators for each tab
-  - Handles theme-based styling and multilingual tab labels
-  - **Dependencies**: All screen components, theme/language contexts
+  - Handles theme-based styling
+  - **Dependencies**: All screen components, theme contexts
 
-### 3. Context Management (`src/contexts/`)
+### 3. Context Management (`src/shared/contexts/` and `src/test_civic/contexts/`)
 **Context Provider Hierarchy** (from App.tsx):
 ```
-LanguageProvider (outermost)
+DataProvider (outermost)
 ├── IconProvider
     ├── ThemeProvider
         ├── TextFormattingProvider
-            ├── DisplaySettingsProvider
-                └── TestProvider (innermost)
+            └── CivicExamProvider (innermost)
 ```
 
-- **`LanguageContext.tsx`**: Manages bilingual content (French/Vietnamese)
+- **`DataContext.tsx`**: Manages data loading and question data
 - **`IconContext.tsx`**: Icon theme management
 - **`ThemeContext.tsx`**: Color themes and visual styling
 - **`TextFormattingContext.tsx`**: Text display customization
-- **`TestContext.tsx`**: Test state management and progress tracking
+- **`CivicExamContext.tsx`**: Civic exam state management and progress tracking
+- **`CivicExamSessionContext.tsx`**: Civic exam session state management
+- **`CivicExamProgressContext.tsx`**: Civic exam progress and statistics tracking
 
-### 4. Screen Components (`src/screens/`)
-Screens are organized into logical folders for better navigation:
+### 4. Screen Components
 
-**Welcome Screens** (`src/screens/welcome/`):
+**Welcome Screens** (`src/welcome/`):
 - **`HomeScreen.tsx`**: Landing page with category navigation
 - **`CategoryQuestionsScreen.tsx`**: Category-based question browsing
 - **`CategoryBasedQuestionsScreen.tsx`**: Specific category question sets
 
-**Search Screens** (`src/screens/search/`):
-- **`SearchScreen.tsx`**: Advanced question search and filtering (largest file: 1018 lines)
+**Search Screens** (`src/search/`):
+- **`SearchScreen.tsx`**: Advanced question search and filtering
 
-**Test Screens** (`src/screens/test/`):
-- **`TestScreen.tsx`**: Test mode selection and configuration
-- **`ConversationTestScreen.tsx`**: Part 1 conversation tests (personal info, opinions, daily life)
-- **`SubcategoryTestScreen.tsx`**: Subcategory-specific tests
-- **`TestQuestionScreen.tsx`**: Individual question display during tests
-- **`TestResultScreen.tsx`**: Test completion and results
-- **`ProgressScreen.tsx`**: Detailed progress analytics
-- **`ReviewScreen.tsx`**: Question review and study mode
+**Civic Exam Screens** (`src/test_civic/screens/`):
+- **`CivicExamHomeScreen.tsx`**: Civic exam home and mode selection
+- **`CivicExamInfoScreen.tsx`**: Information about the civic exam
+- **`CivicExamPracticeScreen.tsx`**: Practice mode configuration
+- **`CivicExamQuestionScreen.tsx`**: Individual question display during exam
+- **`CivicExamReviewScreen.tsx`**: Review answers before submission
+- **`CivicExamResultScreen.tsx`**: Exam completion and results
 
-**Settings Screens** (`src/screens/settings/`):
+**Flash Card Screens** (`src/flashcard/screens/`):
+- **`CategorySelectionScreen.tsx`**: Select category for flash cards
+- **`FlashCardScreen.tsx`**: Flash card study interface
+
+**Settings Screens** (`src/settings/`):
 - **`SettingsScreen.tsx`**: App configuration and preferences
 
 ### 5. Reusable Components (`src/components/`)
@@ -118,25 +120,38 @@ Screens are organized into logical folders for better navigation:
 - **`navigation.ts`**: Navigation parameter types
 
 ### 7. Data Management (`src/data/`)
-- **JSON files**: Structured question data by category
-  - `geography_fr_vi.json`: Geography questions
-  - `personal_fr_vi.json`: Personal/citizenship questions
-  - `history_categories.json`: Historical categories
-- **`subcategories/`**: Detailed subcategory data
-- **`tests/`**: Pre-configured test sets
+- **`knowledge/new_livret/`**: Detailed subcategory data from Livret du Citoyen
+- **`knowledge/formation/`**: Formation data for civic exam preparation
+- **`test_civic/`**: Civic exam test questions organized by themes
 
-### 8. Utility Functions (`src/utils/`)
+### 8. Utility Functions (`src/shared/utils/`)
 **Core Utilities**:
-- **`dataUtils.ts`**: Data processing and question management (largest: 480 lines)
-- **`testDatabaseIntegration.ts`**: Database connectivity
-- **`colorThemes.ts`**: Theme definitions and calculations
-- **`testCalculationUtils.ts`**: Test scoring and analytics
+- **`dataUtils.ts`**: Data loading and processing
+- **`dataValidation.ts`**: Data structure validation
+- **`questionUtils.ts`**: Question processing and transformation
+- **`searchIndex.ts`**: Search indexing and querying
+- **`stringUtils.ts`**: String manipulation utilities
+- **`textNormalization.ts`**: Text normalization for search
+- **`idUtils.ts`**: ID extraction and processing
+- **`imageUtils.ts`**: Image loading and caching
+- **`logger.ts`**: Logging utilities
+- **`alertUtils.ts`**: Alert dialog utilities
+- **`sharedStyles.ts`**: Shared style definitions
 
-**Specialized Utilities**:
-- **`firebaseUtils.ts`**: Firebase integration
-- **`imageUtils.ts`**: Image processing
-- **`testStorageUtils.ts`**: Local storage management
-- **`sharedStyles.ts`**: Common styling utilities
+**Civic Exam Utilities** (`src/test_civic/utils/`):
+- **`civicExamDataLoader.ts`**: Loads civic exam questions from JSON files
+- **`civicExamGeneration.ts`**: Generates exam questions based on configuration
+- **`civicExamScoring.ts`**: Calculates exam scores and pass/fail status
+- **`civicExamStorage.ts`**: Manages exam progress and statistics persistence
+- **`civicExamSessionStorage.ts`**: Manages exam session state persistence
+- **`civicExamSerialization.ts`**: Serializes/deserializes exam results
+- **`civicExamHelpers.ts`**: Helper functions for exam logic
+- **`civicExamQuestionUtils.ts`**: Question text and answer processing
+- **`civicExamUtils.ts`**: General civic exam utilities
+- **`civicExamDefaults.ts`**: Default values and configurations
+
+### 9. Theme System (`src/theme/`)
+- **`colorThemes.ts`**: Color theme definitions and configurations
 
 ## 🔗 Key Dependencies & Integrations
 
@@ -180,21 +195,16 @@ Screens are organized into logical folders for better navigation:
 ## 🎯 Core Functionality
 
 ### Question Management
-- **Data Source**: Static JSON files with bilingual questions
+- **Data Source**: Static JSON files with French questions
 - **Categories**: History, geography, culture, arts, sports, etc.
-- **Format**: Each question has French and Vietnamese translations
-- **IDs**: Questions numbered 36-200 (168 total questions)
+- **Format**: Questions in French with explanations
+- **Data Structure**: Organized by themes and subcategories
 
-### Test Modes
-1. **Category-based**: Practice specific topics
-2. **Full tests**: Complete citizenship simulation
-3. **Subcategory tests**: Focused topic areas
-4. **Review mode**: Study previous attempts
-
-### Multilingual Support
-- **Primary languages**: French (fr) and Vietnamese (vi)
-- **Context-driven**: Language selection affects entire app
-- **Consistent**: All UI elements, questions, and responses translated
+### Civic Exam Functionality
+- **Practice Mode**: Practice with customizable question sets
+- **Naturalization Mode**: Full 40-question exam simulation
+- **Theme Selection**: Focus on specific civic exam themes
+- **Progress Tracking**: Detailed statistics and performance analytics
 
 ### Theme System
 - **Multiple color schemes**: Various theme options
@@ -259,7 +269,7 @@ npx expo start --web    # Web
 ```
 Questions Data (JSON) → dataUtils → Context Providers → Screens → Components
                     ↓
-              Firebase Storage ← testStorageUtils ← Test Results
+              Firebase Storage ← dataService ← Civic Exam Questions
 ```
 
 ## 🔧 Key Features
@@ -268,7 +278,7 @@ Questions Data (JSON) → dataUtils → Context Providers → Screens → Compon
 - **Offline functionality** with local storage
 - **Customizable user interface** (themes, fonts, icons)
 - **Comprehensive test analytics** and progress tracking
-- **Bilingual content** with seamless language switching
+- **Comprehensive question database** with detailed explanations
 - **Responsive design** adapting to different screen sizes
 - **Firebase integration** for data synchronization
 

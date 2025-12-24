@@ -52,13 +52,6 @@ const getBaseQuestionNumber = (question: RawQuestion | null | undefined): number
     return undefined;
 };
 
-export const isValidQuestionData = (question: RawQuestion | null | undefined): boolean => {
-    if (!question) return false;
-    const baseNumber = getBaseQuestionNumber(question);
-    return typeof baseNumber === 'number' &&
-        (typeof question.question === 'string' || typeof question.question === 'object');
-};
-
 // Helper function to safely process questions
 export const processQuestionData = (
     question: RawQuestion,
