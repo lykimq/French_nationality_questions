@@ -1,15 +1,6 @@
 import type { IconMapping, JsonIconMapping, JsonIconColorMapping, Icon3DVariant } from '../types';
 
-// Modern 3D icon variants for the application
-export const icon3DVariants: Record<string, Icon3DVariant> = {
-    navigation: 'gradient',
-    category: 'elevated',
-    action: 'glass',
-    feature: 'glass',
-    status: 'neon',
-};
-
-// Base icon names with modern Ionicons
+// Base icon names mapped to Ionicons
 const baseIcons = {
     home: 'home',
     search: 'search',
@@ -51,10 +42,9 @@ const baseIcons = {
     arrowBack: 'arrow-back',
 } as const;
 
-// Modern icon configurations
 export const iconSets: IconMapping = baseIcons;
 
-// JSON category icons with modern design
+// Category icons for JSON data files
 export const jsonIconSets: JsonIconMapping = {
     map: 'map',
     person: 'person',
@@ -72,7 +62,7 @@ export const jsonIconSets: JsonIconMapping = {
     default: 'help-circle',
 };
 
-// Modern vibrant colors with 3D-friendly palettes
+// Color mapping for JSON category icons
 export const jsonIconColors: JsonIconColorMapping = {
     map: '#00B4D8',
     person: '#9D4EDD',
@@ -90,7 +80,7 @@ export const jsonIconColors: JsonIconColorMapping = {
     default: '#6C757D',
 };
 
-// 3D variant assignments for different icon types
+// 3D variant assignments for UI icons
 export const iconVariantMap: Record<keyof IconMapping, Icon3DVariant> = {
     home: 'gradient',
     search: 'glass',
@@ -149,32 +139,3 @@ export const jsonIconVariantMap: Record<keyof JsonIconMapping, Icon3DVariant> = 
     calendar: 'elevated',
     default: 'glass',
 };
-
-// 3D icon style metadata
-export const icon3DStyleOptions: Array<{ id: Icon3DVariant; name: string; description: string }> = [
-    {
-        id: 'default',
-        name: 'Simple',
-        description: 'Style moderne et épuré',
-    },
-    {
-        id: 'gradient',
-        name: 'Dégradé',
-        description: 'Effet de dégradé 3D vibrant',
-    },
-    {
-        id: 'elevated',
-        name: 'Élevé',
-        description: 'Effet de profondeur et d\'ombre',
-    },
-    {
-        id: 'neon',
-        name: 'Néon',
-        description: 'Effet lumineux néon moderne',
-    },
-    {
-        id: 'glass',
-        name: 'Verre',
-        description: 'Effet glassmorphism transparent',
-    },
-];

@@ -1,56 +1,41 @@
-// Theme types
+// Light or dark mode selection
 export type ThemeMode = 'light' | 'dark';
+
+// Available color theme schemes
 export type ColorTheme = 'classic' | 'ocean' | 'sunset' | 'forest' | 'lavender' | 'coral' | 'midnight' | 'neon';
 
+// Complete color palette for UI components
+// Used by ThemeContext to provide colors throughout the app
 export interface ThemeColors {
-    // Background colors
     background: string;
     surface: string;
     card: string;
-
-    // Text colors
     text: string;
     textSecondary: string;
     textMuted: string;
-
-    // Primary colors
     primary: string;
     primaryLight: string;
     primaryDark: string;
     accent: string;
     accentLight: string;
-
-    // UI element colors
     border: string;
     divider: string;
     overlay: string;
-
-    // Status colors
     success: string;
     warning: string;
     error: string;
     info: string;
-
-    // Interactive elements
     buttonBackground: string;
     buttonText: string;
     switchTrack: string;
     switchThumb: string;
-
-    // Question card specific
     questionCardBackground: string;
     questionCardBorder: string;
     questionIdBackground: string;
-
-    // Header colors
     headerBackground: string;
     headerText: string;
-
-    // Modal colors
     modalBackground: string;
     modalOverlay: string;
-
-    // New vibrant colors for Gen Z appeal
     vibrant1: string;
     vibrant2: string;
     vibrant3: string;
@@ -58,6 +43,8 @@ export interface ThemeColors {
     gradient2: string;
 }
 
+// Metadata for color theme selection UI
+// Contains display name, description, and preview colors for theme picker
 export interface ColorThemeInfo {
     id: ColorTheme;
     name: string;
@@ -67,48 +54,41 @@ export interface ColorThemeInfo {
     isGradient?: boolean;
 }
 
+// Complete theme configuration combining mode, color scheme, and color values
+// Used by ThemeContext as the main theme object provided to components
 export interface Theme {
     mode: ThemeMode;
     colorTheme: ColorTheme;
     colors: ThemeColors;
 }
 
-// 3D Icon variant types
+// Visual style variants for 3D icon rendering
+// Used by Icon3D component to apply different visual effects
 export type Icon3DVariant = 'default' | 'gradient' | 'elevated' | 'neon' | 'glass';
 
-// Icon mapping interface for UI elements
+// Icon name mapping for UI elements (navigation, actions, features)
+// Maps icon keys to Ionicons names, used by IconContext to provide icons throughout the app
 export interface IconMapping {
-    // Navigation icons
     home: string;
     search: string;
     settings: string;
     categories: string;
-
-    // Action icons
     chevronDown: string;
     chevronUp: string;
     chevronForward: string;
     chevronBack: string;
     close: string;
-
-    // Feature icons
     textFormat: string;
     share: string;
     star: string;
     info: string;
     refresh: string;
-
-    // Theme specific icons
     sun: string;
     moon: string;
     palette: string;
-
-    // Question related icons
     image: string;
     expand: string;
     collapse: string;
-
-    // Test screen specific icons
     analytics: string;
     helpCircle: string;
     time: string;
@@ -129,47 +109,40 @@ export interface IconMapping {
     arrowBack: string;
 }
 
-// JSON Category icon mapping interface - for Firebase JSON file icons
+// Icon name mapping for question categories from JSON data files
+// Maps category keys to Ionicons names, used to display category icons
 export interface JsonIconMapping {
-    // Category icons from JSON files
-    map: string;           // geography
-    person: string;        // personal
-    book: string;          // history main category
-    business: string;      // local_gov, republic
-    star: string;          // monarchy
-    flag: string;          // revolution
-    shield: string;        // wars
-    people: string;        // democracy, celebrities
-    cash: string;          // economy
-    library: string;       // culture
-    brush: string;         // arts
-    football: string;      // sports
-    calendar: string;      // holidays
-    default: string;       // fallback icon
+    map: string;
+    person: string;
+    book: string;
+    business: string;
+    star: string;
+    flag: string;
+    shield: string;
+    people: string;
+    cash: string;
+    library: string;
+    brush: string;
+    football: string;
+    calendar: string;
+    default: string;
 }
 
-// Vibrant color mapping for JSON category icons
+// Color values for JSON category icons
+// Provides consistent colors for each category type in the UI
 export interface JsonIconColorMapping {
-    map: string;           // geography - blue/teal
-    person: string;        // personal - purple/pink
-    book: string;          // history - amber/orange
-    business: string;      // local_gov, republic - green
-    star: string;          // monarchy - gold/yellow
-    flag: string;          // revolution - red
-    shield: string;        // wars - dark blue/navy
-    people: string;        // democracy, celebrities - pink/magenta
-    cash: string;          // economy - green/emerald
-    library: string;       // culture - purple
-    brush: string;         // arts - rainbow/creative colors
-    football: string;      // sports - energetic orange/red
-    calendar: string;      // holidays - festive colors
-    default: string;       // fallback color
+    map: string;
+    person: string;
+    book: string;
+    business: string;
+    star: string;
+    flag: string;
+    shield: string;
+    people: string;
+    cash: string;
+    library: string;
+    brush: string;
+    football: string;
+    calendar: string;
+    default: string;
 }
-
-// 3D Icon style information for UI display
-export interface Icon3DStyleInfo {
-    id: Icon3DVariant;
-    name: string;
-    description: string;
-}
-

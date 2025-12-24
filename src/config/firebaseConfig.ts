@@ -5,8 +5,7 @@ import { createLogger } from '../shared/utils/logger';
 const logger = createLogger('FirebaseConfig');
 
 // Firebase configuration from environment variables
-// IMPORTANT: Never commit actual keys to git. Use .env file (which is gitignored)
-// All credentials should be in .env file with EXPO_PUBLIC_ prefix
+// Credentials must be in .env file with EXPO_PUBLIC_ prefix (never commit to git)
 const firebaseConfig = {
     apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN ||
@@ -18,7 +17,7 @@ const firebaseConfig = {
     appId: process.env.EXPO_PUBLIC_FIREBASE_MOBILE_SDK_APP_ID
 };
 
-// Validate configuration - warn if required values are missing but don't crash the app
+// Validate required fields and initialize Firebase if configuration is complete
 const requiredFields = ['apiKey', 'projectId', 'storageBucket'] as const;
 const missingFields = requiredFields.filter(field => !firebaseConfig[field]);
 
@@ -37,10 +36,7 @@ if (missingFields.length > 0) {
     logger.warn(errorMessage);
 } else {
     try {
-        // Initialize Firebase
         app = initializeApp(firebaseConfig);
-
-        // Initialize Cloud Storage and get a reference to the service
         storage = getStorage(app);
     } catch (error) {
         logger.error('Failed to initialize Firebase:', error);
