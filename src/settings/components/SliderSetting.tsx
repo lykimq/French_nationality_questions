@@ -53,10 +53,10 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
         return Math.max(minimumValue, Math.min(maximumValue, steppedValue));
     };
 
-    const handlePositionChange = (event: PanResponderGestureState) => {
+    const handlePositionChange = (_event: any, gestureState: PanResponderGestureState) => {
         if (trackRef.current) {
             trackRef.current.measure((x, y, width, height, pageX, pageY) => {
-                const touchX = event.nativeEvent.pageX - pageX;
+                const touchX = gestureState.moveX - x;
                 const newValue = calculateValueFromPosition(touchX, width);
                 onValueChange(newValue);
             });
@@ -66,9 +66,9 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
     const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
         onMoveShouldSetPanResponder: () => true,
-        onPanResponderGrant: (event) => {
+        onPanResponderGrant: (event, gestureState) => {
             setIsPressed(true);
-            handlePositionChange(event);
+            handlePositionChange(event, gestureState);
         },
         onPanResponderMove: handlePositionChange,
         onPanResponderRelease: () => {
