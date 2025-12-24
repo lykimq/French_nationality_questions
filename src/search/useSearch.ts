@@ -230,161 +230,158 @@ export const useSearch = () => {
 
         setIsSearching(true);
 
-        const normalizedQuery = normalizeForSearch(trimmedQuery);
-        const queryTokens = tokenize(normalizedQuery);
-        
-        // Early exit if no query tokens
-        if (queryTokens.length === 0 && !/^\d+$/.test(normalizedQuery)) {
-            setSearchResults([]);
-            setIsSearching(false);
-            return;
-        }
+        // Use setTimeout to make search asynchronous and non-blocking, allowing UI to update immediately
+        setTimeout(() => {
+            const normalizedQuery = normalizeForSearch(trimmedQuery);
+            const queryTokens = tokenize(normalizedQuery);
+            
+            // Early exit if no query tokens
+            if (queryTokens.length === 0 && !/^\d+$/.test(normalizedQuery)) {
+                setSearchResults([]);
+                setIsSearching(false);
+                return;
+            }
 
-        // Pre-filter questions for better performance
-        let filteredQuestions = allQuestions;
+            // Pre-filter questions for better performance
+            let filteredQuestions = allQuestions;
 
-        // Apply category filter (use Set for O(1) lookup)
-        if (appliedFilters.categories.length > 0) {
-            const categorySet = new Set(appliedFilters.categories);
-            filteredQuestions = filteredQuestions.filter(q => categorySet.has(q.categoryId));
-        }
+            // Apply category filter (use Set for O(1) lookup)
+            if (appliedFilters.categories.length > 0) {
+                const categorySet = new Set(appliedFilters.categories);
+                filteredQuestions = filteredQuestions.filter(q => categorySet.has(q.categoryId));
+            }
 
-        // Apply image filter
-        if (appliedFilters.hasImage !== 'all') {
-            const hasImageFilter = appliedFilters.hasImage === 'with';
-            filteredQuestions = filteredQuestions.filter(q => q.hasImage === hasImageFilter);
-        }
+            // Apply image filter
+            if (appliedFilters.hasImage !== 'all') {
+                const hasImageFilter = appliedFilters.hasImage === 'with';
+                filteredQuestions = filteredQuestions.filter(q => q.hasImage === hasImageFilter);
+            }
 
-        // Apply question ID range filter
-        const { min, max } = appliedFilters.questionRange;
-        if (min > 1 || max < 200) {
-            filteredQuestions = filteredQuestions.filter(q => q.id >= min && q.id <= max);
-        }
+            // Apply question ID range filter
+            const { min, max } = appliedFilters.questionRange;
+            if (min > 1 || max < 200) {
+                filteredQuestions = filteredQuestions.filter(q => q.id >= min && q.id <= max);
+            }
 
-        // Pre-compute search settings for performance
-        const searchInQuestion = appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both');
-        const searchInExplanation = appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both');
-        const queryId = /^\d+$/.test(normalizedQuery) ? parseInt(normalizedQuery) : null;
+            // Pre-compute search settings for performance
+            const searchInQuestion = appliedFilters.searchIn.includes('question') || appliedFilters.searchIn.includes('both');
+            const searchInExplanation = appliedFilters.searchIn.includes('explanation') || appliedFilters.searchIn.includes('both');
+            const queryId = /^\d+$/.test(normalizedQuery) ? parseInt(normalizedQuery) : null;
 
-        const results = filteredQuestions.map(item => {
-            let matchScore = 0;
-            const matches: string[] = [];
+            // Early exit for exact ID match - fastest path
+            if (queryId !== null) {
+                const exactMatch = filteredQuestions.find(q => q.id === queryId);
+                if (exactMatch) {
+                    setSearchResults([{
+                        ...exactMatch,
+                        matchScore: 1000,
+                        matches: ['ID']
+                    }]);
+                    setIsSearching(false);
+                    if (query.trim() && !searchHistory.includes(query.trim())) {
+                        setSearchHistory(prev => [query.trim(), ...prev.slice(0, 9)]);
+                    }
+                    return;
+                }
+            }
 
-            // Check if searching by ID (early exit for exact ID match)
-            if (queryId !== null && item.id === queryId) {
+            const results = filteredQuestions.map(item => {
+                let matchScore = 0;
+                const matches: string[] = [];
+
+                // Get text content and tokens (cached)
+                const questionText = item.question || '';
+                const explanationText = item.explanation || '';
+                const categoryText = item.categoryTitle || '';
+                const tokens = questionTokens.get(item.id) || [];
+
+                // Search in question
+                if (searchInQuestion) {
+                    const questionMatch = textContainsQuery(questionText, trimmedQuery);
+                    if (questionMatch.matched) {
+                        matchScore += questionMatch.score;
+                        matches.push(questionMatch.score >= 50 ? 'question_exact' : 'question_partial');
+                    }
+
+                    // Token-based matching (only if no high-scoring match for performance)
+                    if (matchScore === 0 || (questionMatch.matched && questionMatch.score < 50)) {
+                        const tokenScore = scoreTokens(queryTokens, tokens);
+                        if (tokenScore > 0) {
+                            matchScore += tokenScore * 3;
+                            if (matches.length === 0) {
+                                matches.push('question_word');
+                            }
+                        }
+                    }
+                }
+
+                // Search in explanation (only if needed and no strong question match)
+                if (searchInExplanation && matchScore < 50) {
+                    const explanationMatch = textContainsQuery(explanationText, trimmedQuery);
+                    if (explanationMatch.matched) {
+                        matchScore += explanationMatch.score * 0.8;
+                        matches.push(explanationMatch.score >= 50 ? 'explanation_exact' : 'explanation_partial');
+                    } else if (matchScore === 0) {
+                        // Token-based matching for explanation (only if no phrase match)
+                        const explanationTokens = tokenize(explanationText);
+                        const explanationTokenScore = scoreTokens(queryTokens, explanationTokens);
+                        if (explanationTokenScore > 0) {
+                            matchScore += explanationTokenScore * 2;
+                            if (!matches.some(m => m.includes('explanation'))) {
+                                matches.push('explanation_word');
+                            }
+                        }
+                    }
+                }
+
+                // Category name matching (lightweight check)
+                if (categoryText && categoryText.toLowerCase().includes(normalizedQuery)) {
+                    matchScore += 20;
+                    matches.push('category');
+                }
+
                 return {
                     ...item,
-                    matchScore: 1000,
-                    matches: ['ID']
+                    matchScore,
+                    matches
                 };
-            }
-
-            // Get text content and tokens (cached)
-            const questionText = item.question || '';
-            const explanationText = item.explanation || '';
-            const categoryText = item.categoryTitle || '';
-            const tokens = questionTokens.get(item.id) || [];
-
-            // Search in question
-            if (searchInQuestion) {
-                const questionMatch = textContainsQuery(questionText, trimmedQuery);
-                if (questionMatch.matched) {
-                    matchScore += questionMatch.score;
-                    matches.push(questionMatch.score >= 50 ? 'question_exact' : 'question_partial');
-                }
-
-                // Token-based matching (only if no high-scoring match for performance)
-                if (matchScore === 0 || (questionMatch.matched && questionMatch.score < 50)) {
-                    const tokenScore = scoreTokens(queryTokens, tokens);
-                    if (tokenScore > 0) {
-                        matchScore += tokenScore * 3;
-                        if (matches.length === 0) {
-                            matches.push('question_word');
-                        }
+            }).filter(item => item.matchScore > 0)
+                .sort((a, b) => {
+                    // Sort by score first
+                    if (b.matchScore !== a.matchScore) {
+                        return b.matchScore - a.matchScore;
                     }
-                }
-            }
-
-            // Search in explanation (only if needed)
-            if (searchInExplanation) {
-                const explanationMatch = textContainsQuery(explanationText, trimmedQuery);
-                if (explanationMatch.matched) {
-                    matchScore += explanationMatch.score * 0.8;
-                    matches.push(explanationMatch.score >= 50 ? 'explanation_exact' : 'explanation_partial');
-                } else {
-                    // Token-based matching for explanation (only if no phrase match)
-                    const explanationTokens = tokenize(explanationText);
-                    const explanationTokenScore = scoreTokens(queryTokens, explanationTokens);
-                    if (explanationTokenScore > 0) {
-                        matchScore += explanationTokenScore * 2;
-                        if (!matches.some(m => m.includes('explanation'))) {
-                            matches.push('explanation_word');
-                        }
+                    // If scores are equal, prioritize exact matches
+                    const aHasExact = a.matches?.some(m => m.includes('exact')) || false;
+                    const bHasExact = b.matches?.some(m => m.includes('exact')) || false;
+                    if (aHasExact !== bHasExact) {
+                        return bHasExact ? 1 : -1;
                     }
-                }
+                    // Finally, sort by ID
+                    return a.id - b.id;
+                });
+
+            setSearchResults(results);
+            setIsSearching(false);
+
+            // Add to search history
+            if (query.trim() && !searchHistory.includes(query.trim())) {
+                setSearchHistory(prev => [query.trim(), ...prev.slice(0, 9)]);
             }
-
-            // Category name matching (lightweight check)
-            if (categoryText && categoryText.toLowerCase().includes(normalizedQuery)) {
-                matchScore += 20;
-                matches.push('category');
-            }
-
-            return {
-                ...item,
-                matchScore,
-                matches
-            };
-        }).filter(item => item.matchScore > 0)
-            .sort((a, b) => {
-                // Sort by score first
-                if (b.matchScore !== a.matchScore) {
-                    return b.matchScore - a.matchScore;
-                }
-                // If scores are equal, prioritize exact matches
-                const aHasExact = a.matches?.some(m => m.includes('exact')) || false;
-                const bHasExact = b.matches?.some(m => m.includes('exact')) || false;
-                if (aHasExact !== bHasExact) {
-                    return bHasExact ? 1 : -1;
-                }
-                // Finally, sort by ID
-                return a.id - b.id;
-            });
-
-        setSearchResults(results);
-        setIsSearching(false);
-
-        // Add to search history
-        if (query.trim() && !searchHistory.includes(query.trim())) {
-            setSearchHistory(prev => [query.trim(), ...prev.slice(0, 9)]);
-        }
+        }, 0);
     }, [allQuestions, filters, searchHistory, questionTokens]);
 
-    // Handle suggestions and instant search
+    // Handle suggestions only (no automatic search)
     useEffect(() => {
         const queryLength = searchQuery.length;
         
-        // Show suggestions for queries of length 2-6 (extended to allow suggestions for longer words)
+        // Show suggestions for queries of length 2-6
         if (queryLength >= 2 && queryLength <= 6) {
             setSearchSuggestions(generateSuggestions(searchQuery));
         } else {
             setSearchSuggestions([]);
         }
-
-        // Perform search instantly or with minimal delay
-        if (queryLength === 0) {
-            // Clear results immediately
-            performSearch('');
-        } else {
-            // For all queries, use very minimal debounce (30ms) for near-instant results
-            // This makes typing feel responsive even for longer words
-            const timeoutId = setTimeout(() => {
-                performSearch(searchQuery);
-            }, 30);
-
-            return () => clearTimeout(timeoutId);
-        }
-    }, [searchQuery, generateSuggestions, performSearch]);
+    }, [searchQuery, generateSuggestions]);
 
     const getSearchStats = useCallback(() => {
         const totalQuestions = allQuestions.length;

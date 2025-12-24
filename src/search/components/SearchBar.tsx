@@ -10,6 +10,7 @@ export interface SearchBarProps {
     onToggleAdvanced: () => void;
     showAdvanced: boolean;
     onClear: () => void;
+    onSearch: () => void;
     isSearching?: boolean;
 }
 
@@ -19,29 +20,41 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     onToggleAdvanced,
     showAdvanced,
     onClear,
+    onSearch,
     isSearching = false,
 }) => {
     const { theme } = useTheme();
-    const { getIconName, getIconVariant } = useIcons();
+    const { getIconName } = useIcons();
 
     const searchIconName = getIconName('search');
-    const searchVariant = getIconVariant('search');
-    const closeIconName = getIconName('close');
-    const closeVariant = getIconVariant('close');
+
+    const handleSubmitEditing = () => {
+        if (searchQuery.trim()) {
+            onSearch();
+        }
+    };
 
     return (
         <View style={[styles.searchBar, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
-            <Icon3D
-                name={searchIconName}
-                size={16}
-                color={theme.colors.textMuted}
-                variant="default"
-            />
+            <TouchableOpacity
+                onPress={onSearch}
+                disabled={!searchQuery.trim() || isSearching}
+                style={styles.searchIconButton}
+            >
+                <Icon3D
+                    name={searchIconName}
+                    size={16}
+                    color={searchQuery.trim() && !isSearching ? theme.colors.primary : theme.colors.textMuted}
+                    variant="default"
+                />
+            </TouchableOpacity>
             <TextInput
                 style={[styles.input, { color: theme.colors.text }]}
                 placeholder="Rechercher une question..."
                 value={searchQuery}
                 onChangeText={onSearchChange}
+                onSubmitEditing={handleSubmitEditing}
+                returnKeyType="search"
                 placeholderTextColor={theme.colors.textMuted}
                 autoCorrect={false}
                 autoCapitalize="none"
@@ -92,6 +105,9 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
         elevation: 2,
         gap: 8,
+    },
+    searchIconButton: {
+        padding: 4,
     },
     input: {
         flex: 1,

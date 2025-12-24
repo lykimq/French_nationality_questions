@@ -67,6 +67,7 @@ const SearchScreen = () => {
         if (selectionTimeoutRef.current) {
             clearTimeout(selectionTimeoutRef.current);
         }
+        performSearch('');
     };
 
     const handleSearchChange = (query: string) => {
@@ -103,8 +104,14 @@ const SearchScreen = () => {
             setSuggestionsDismissed(true);
             setShowSuggestions(false);
         }, 200);
-        // Immediately perform search when suggestion is selected (bypass debounce)
-        performSearch(suggestion.text);
+    };
+
+    const handleSearch = () => {
+        if (searchQuery.trim()) {
+            performSearch(searchQuery.trim());
+            setSuggestionsDismissed(true);
+            setShowSuggestions(false);
+        }
     };
 
     const clearSearchHistory = () => {
@@ -133,6 +140,7 @@ const SearchScreen = () => {
                     onToggleAdvanced={toggleAdvancedSearch}
                     showAdvanced={showAdvancedSearch}
                     onClear={clearSearch}
+                    onSearch={handleSearch}
                     isSearching={isSearching}
                 />
 
@@ -161,10 +169,13 @@ const SearchScreen = () => {
                 />
             </View>
 
-            {searchQuery === '' && (
+            {searchQuery === '' && searchResults.length === 0 && (
                 <SearchHistory
                     history={searchHistory}
-                    onSelectQuery={setSearchQuery}
+                    onSelectQuery={(query) => {
+                        setSearchQuery(query);
+                        performSearch(query);
+                    }}
                     onClearHistory={clearSearchHistory}
                 />
             )}
