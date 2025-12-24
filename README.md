@@ -72,7 +72,6 @@ French_nationality_questions/
 - **`HomeStack.tsx`**: Stack navigator for home screens
   - Home screen
   - CategoryQuestions screen
-  - CategoryBasedQuestions screen
 
 ### 3. Context Management (`src/shared/contexts/` and `src/test_civic/contexts/`)
 **Context Provider Hierarchy** (from AppProviders.tsx):
@@ -102,9 +101,7 @@ DataProvider (outermost)
 **Home Screens** (`src/welcome/`):
 - **`HomeScreen.tsx`**: Landing page with category navigation
 - **`CategoryQuestionsScreen.tsx`**: Category-based question browsing
-- **`CategoryBasedQuestionsScreen.tsx`**: Specific category question sets
 - **`CategoryCard.tsx`**: Category navigation cards
-- **`CategorySlideView.tsx`**: Category carousel view
 - **`QuestionSlideView.tsx`**: Question pagination view
 
 **Search Screens** (`src/search/`):

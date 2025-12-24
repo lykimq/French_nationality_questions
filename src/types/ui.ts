@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
 import type { BaseEntity, VisualEntity } from './core';
-import type { Question, CategoryType, NavigationQuestion } from '../welcome/types';
+import type { Question, CategoryType } from '../welcome/types';
 import type { FrenchQuestionsData } from './questionsData';
 
 // ==================== COMPONENT BASE PATTERNS ====================
@@ -101,18 +101,6 @@ export interface CategoryCardProps extends TitleProps, InteractiveProps, VisualP
 // Question slide view props
 export interface QuestionSlideViewProps {
     readonly questions: readonly Question[];
-}
-
-// Category slide view props
-export interface CategorySlideViewProps {
-    readonly categories: readonly (BaseEntity & TitleProps & VisualEntity & {
-        readonly questions: readonly (Question | NavigationQuestion)[];
-    })[];
-}
-
-// Category selection view props
-export interface CategorySelectionViewProps extends CategorySlideViewProps {
-    readonly onSelectCategory: (categoryIndex: number) => void;
 }
 
 // ==================== LOADING & DATA COMPONENTS ====================

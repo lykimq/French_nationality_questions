@@ -66,32 +66,11 @@ export type ExtractCategories<T extends { categories: readonly any[] }> = T['cat
 
 // ==================== HOME STACK NAVIGATION ====================
 
-// Question structure for navigation params
-export interface NavigationQuestion {
-    readonly id: number | string;
-    readonly question: string;
-    readonly explanation?: string;
-    readonly image?: string | null;
-}
-
-// Category structure for navigation params
-export interface NavigationCategory {
-    readonly id: string;
-    readonly title: string;
-    readonly description?: string;
-    readonly icon?: string;
-    readonly questions: readonly NavigationQuestion[];
-}
-
 // Home stack navigation parameters
 export type HomeStackParamList = Readonly<{
     Home: undefined;
     CategoryQuestions: {
         readonly categoryId: string;
-    };
-    CategoryBasedQuestions: {
-        readonly categories: readonly NavigationCategory[];
-        readonly title: string;
     };
     QuestionDetail: {
         readonly categoryId: string;
