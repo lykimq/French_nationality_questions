@@ -171,9 +171,6 @@ DataProvider (outermost)
   - `livret/`: Livret du Citoyen data
   - `new_livret/`: Updated livret data
   - `pics/`: Image assets
-  - `geography_fr_vi.json`: Geography questions (French-Vietnamese)
-  - `personal_fr_vi.json`: Personal questions (French-Vietnamese)
-  - `history_categories.json`: History categories
 - **`test_civic/`**: Civic exam test questions organized by themes
   - `principes_et_valeurs.json`: Principles and values
   - `system_et_politique.json`: System and politics
