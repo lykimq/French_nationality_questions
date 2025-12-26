@@ -30,7 +30,7 @@
         {
             "id": "formation_5",
             "question": "Le pouvoir exécutif, c’est quoi ?",
-            "explanation": "Le pouvoir exécutif est exercé par :\n\n- le président de la République (le chef de l’État et des armées) qui réside au Palais de l’Élysée ;\n- le Gouvernement (le Premier ministre et les ministres). Le Premier ministre, qui réside à l'hôtel de Matignon, est nommé par le président de la République.\n\nLe président de la République et le Gouvernement appliquent et font respecter les lois (créées par le pouvoir législatif).\n\nLe président de la République et le Gouvernement doivent aussi :\n\n- diriger l’Administration ;\n\n- conduire la politique nationale (intérieure et extérieure).",
+            "explanation": "Le pouvoir exécutif est exercé par :\n\n- le président de la République (le chef de l’État et des armées) qui réside au Palais de l’Élysée ;\n\n- le Gouvernement (le Premier ministre et les ministres). Le Premier ministre, qui réside à l'hôtel de Matignon, est nommé par le président de la République.\n\nLe président de la République et le Gouvernement appliquent et font respecter les lois (créées par le pouvoir législatif).\n\nLe président de la République et le Gouvernement doivent aussi :\n\n- diriger l’Administration ;\n\n- conduire la politique nationale (intérieure et extérieure).",
             "image": null
         },
         {
@@ -48,7 +48,7 @@
         {
             "id": "formation_8",
             "question": "Comment sont organisées ces institutions judiciaires ?",
-            "explanation": "Les tribunaux de chaque ordre sont organisés en pyramide :\n\n- une juridiction de première instance (premier procès) ;\n\n- une juridiction d'appel (quand un deuxième procès est demandé, il va en cours d’appel) ;\n\n- une juridiction de cassation : la Cour de cassation (justice judiciaire) ou le\n\nConseil d’État (justice administrative). C’est le dernier niveau de juridiction en France.",
+            "explanation": "Les tribunaux de chaque ordre sont organisés en pyramide :\n\n- une juridiction de première instance (premier procès) ;\n\n- une juridiction d'appel (quand un deuxième procès est demandé, il va en cours d’appel) ;\n\n- une juridiction de cassation : la Cour de cassation (justice judiciaire) ou le Conseil d’État (justice administrative). C’est le dernier niveau de juridiction en France.",
             "image": null
         },
         {
@@ -66,7 +66,7 @@
         {
             "id": "formation_11",
             "question": "La République, c’est quoi ?",
-            "explanation": "La République vient du mot vient du latin \"Res Publica\" qui signifie \"chose publique\". La République appartient au peuple. L’ensemble des biens, des droits et des services (domaine public, services publics, fonction publique…) appartiennent à tous les citoyens.\n\nLa République est un système politique dans lequel le pouvoir est détenu par des représentants élus.\n\nLa République s’oppose par exemple à la monarchie (pouvoir héréditaire).",
+            "explanation": "La République vient du latin \"Res Publica\" qui signifie \"chose publique\". La République appartient au peuple. L'ensemble des biens, des droits et des services (domaine public, services publics, fonction publique…) appartiennent à tous les citoyens.\n\nLa République est un système politique dans lequel le pouvoir est détenu par des représentants élus.\n\nLa République s'oppose par exemple à la monarchie (pouvoir héréditaire).",
             "image": null
         },
         {
@@ -84,7 +84,7 @@
         {
             "id": "formation_14",
             "question": "Qui sont les acteurs politiques au niveau local ?",
-            "explanation": "- Les élus municipaux (maire et conseillers municipaux, élus pour 6 ans lors des élections municipales au suffrage direct) : ils représentent les citoyens sur la commune ;\n\n- les conseillers départementaux (élus pour 6 ans aux élections départementales au suffrage direct) : ils forment l’assemblée départementale qui prend des décisions concernant le département ;\n\n- les conseillers régionaux (élus pour 6 ans au élections régionales au suffrage direct) : ils forment l’assemblée régionale qui prend des décisions concernant la région.",
+            "explanation": "- Les élus municipaux (maire et conseillers municipaux, élus pour 6 ans lors des élections municipales au suffrage direct) : ils représentent les citoyens sur la commune ;\n\n- les conseillers départementaux (élus pour 6 ans aux élections départementales au suffrage direct) : ils forment l'assemblée départementale qui prend des décisions concernant le département ;\n\n- les conseillers régionaux (élus pour 6 ans aux élections régionales au suffrage direct) : ils forment l'assemblée régionale qui prend des décisions concernant la région.",
             "image": null
         },
         {
@@ -126,7 +126,7 @@
         {
             "id": "formation_21",
             "question": "Beaucoup de partis politiques différents, à quoi ça sert ?",
-            "explanation": "Les partis politiques participent à la vie politique (ils peuvent être présents à l’Assemblée et au Sénat).\n\nIl ont 2 fonctions :\n\n1. Ils proposent des programmes politiques qu'ils souhaitent mettre en œuvre. Les partis politiques sont les intermédiaires entre les citoyens et le Gouvernement.\n\n2. Ils sélectionnent les candidats pour les faire élire. Quand un membre d’un parti est élu à l’Assemblée ou au Sénat (pouvoir législatif) ou élu en tant que président de la République ou choisi en tant que Premier ministre (pouvoir exécutif), le parti politique dirige le pays (ils y participent).",
+            "explanation": "Les partis politiques participent à la vie politique (ils peuvent être présents à l'Assemblée et au Sénat).\n\nIls ont 2 fonctions :\n\n1. Ils proposent des programmes politiques qu'ils souhaitent mettre en œuvre. Les partis politiques sont les intermédiaires entre les citoyens et le Gouvernement.\n\n2. Ils sélectionnent les candidats pour les faire élire. Quand un membre d'un parti est élu à l'Assemblée ou au Sénat (pouvoir législatif) ou élu en tant que président de la République ou choisi en tant que Premier ministre (pouvoir exécutif), le parti politique dirige le pays (ils y participent).",
             "image": null
         },
         {
@@ -288,7 +288,7 @@
         {
             "id": "formation_48",
             "question": "La Cour de justice",
-            "explanation": "La cour de Justice est située à Luxembourg.\n\nElle rend la justice à l’échelle européenne. Par exemple, elle traite les conflits juridiques entre des institutions et/ou des États membres de l’UE.\n\nElle vérifie également que les États appliquent correctement le droit européen.",
+            "explanation": "La Cour de justice est située à Luxembourg.\n\nElle rend la justice à l'échelle européenne. Par exemple, elle traite les conflits juridiques entre des institutions et/ou des États membres de l'UE.\n\nElle vérifie également que les États appliquent correctement le droit européen.",
             "image": null
         },
         {

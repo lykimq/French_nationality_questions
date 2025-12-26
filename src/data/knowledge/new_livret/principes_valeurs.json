@@ -8,13 +8,13 @@
         {
             "id": "livret_1",
             "question": "Quelles sont les valeurs de la République (la devise) ?",
-            "explanation": "Les trois valeurs sont **Liberté, Égalité, Fraternité**.",
+            "explanation": "Les trois valeurs sont Liberté, Égalité, Fraternité.",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Quels sont les symboles de la République ?",
-            "explanation": "L'hymne national (**La Marseillaise**), la **Marianne**, le **drapeau tricolore** (bleu, blanc, rouge) et le 14 juillet (fête nationale).",
+            "explanation": "L'hymne national (La Marseillaise), la Marianne, le drapeau tricolore (bleu, blanc, rouge) et le 14 juillet (fête nationale).",
             "image": null
         },
         {
@@ -38,7 +38,7 @@
         {
             "id": "livret_6",
             "question": "Qu'est-ce qui illustre le principe de Fraternité et de solidarité ?",
-            "explanation": "Le **système de sécurité sociale**, financé par les cotisations et les impôts, illustre la solidarité entre les citoyens.",
+            "explanation": "Le système de sécurité sociale, financé par les cotisations et les impôts, illustre la solidarité entre les citoyens.",
             "image": null
         },
         {
@@ -56,13 +56,13 @@
         {
             "id": "livret_9",
             "question": "Quand l'État peut-il restreindre la manifestation de la religion en public ?",
-            "explanation": "Pour préserver **l'ordre public**. Nul ne peut se prévaloir de ses croyances pour s'affranchir des règles communes.",
+            "explanation": "Pour préserver l'ordre public. Nul ne peut se prévaloir de ses croyances pour s'affranchir des règles communes.",
             "image": null
         },
         {
             "id": "livret_10",
             "question": "Pourquoi les signes religieux ostensibles sont-ils interdits à l'école publique ?",
-            "explanation": "Selon la loi du 15 mars 2004, l'école doit être **neutre** pour former tous les citoyens et protéger les mineurs contre les pressions.",
+            "explanation": "Selon la loi du 15 mars 2004, l'école doit être neutre pour former tous les citoyens et protéger les mineurs contre les pressions.",
             "image": null
         },
         {
@@ -98,7 +98,7 @@
         {
             "id": "livret_16",
             "question": "Avez-vous une croyance religieuse ?",
-            "explanation": "Oui/Non, je suis (religion/non), ce qui est une partie importante de ma/une vie personnelle non religieuse pour moi.",
+            "explanation": "Cette question personnelle évalue votre compréhension de la laïcité. Répondez honnêtement sur vos convictions religieuses ou votre absence de religion. En France, la laïcité garantit la liberté de conscience : chacun est libre de croire ou de ne pas croire, et de pratiquer sa religion dans le respect de la loi et de l'ordre public.",
             "image": null
         },
         {

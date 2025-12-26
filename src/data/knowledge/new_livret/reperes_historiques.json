@@ -32,7 +32,7 @@
         {
             "id": "livret_5",
             "question": "Qu'a fait Henri IV en 1598 ?",
-            "explanation": "Il a signé l'**Édit de Nantes**, accordant la liberté de culte aux protestants pour rétablir la paix.",
+            "explanation": "Il a signé l'Édit de Nantes, accordant la liberté de culte aux protestants pour rétablir la paix.",
             "image": null
         },
         {
@@ -50,13 +50,13 @@
         {
             "id": "livret_8",
             "question": "Qui sont les philosophes des Lumières ?",
-            "explanation": "Voltaire, Rousseau, Diderot... Ils ont combattu pour la tolérance et la liberté au XVIIIe siècle.",
+            "explanation": "Les philosophes des Lumières sont des penseurs du XVIIIe siècle qui ont combattu pour la tolérance, la liberté et le progrès. Les plus célèbres sont : Voltaire (critique de l'intolérance religieuse), Jean-Jacques Rousseau (théoricien de la démocratie), Denis Diderot (éditeur de l'Encyclopédie), Montesquieu (séparation des pouvoirs), et d'Alembert. Leurs idées ont influencé la Révolution française.",
             "image": null
         },
         {
             "id": "livret_9",
             "question": "Que s'est-il passé le 14 juillet 1789 ?",
-            "explanation": "La **Prise de la Bastille** par le peuple de Paris, symbole de la Révolution française.",
+            "explanation": "La Prise de la Bastille par le peuple de Paris, symbole de la Révolution française.",
             "image": null
         },
         {
@@ -68,43 +68,43 @@
         {
             "id": "livret_11",
             "question": "Quand la Ire République a-t-elle été proclamée ?",
-            "explanation": "En **1792**.",
+            "explanation": "En 1792.",
             "image": null
         },
         {
             "id": "livret_12",
             "question": "Qui a créé le Code civil ?",
-            "explanation": "**Napoléon Ier** (Empire).",
+            "explanation": "Napoléon Ier (Empire).",
             "image": null
         },
         {
             "id": "livret_13",
             "question": "Quand l'esclavage a-t-il été aboli ?",
-            "explanation": "En **1848**.",
+            "explanation": "En 1848.",
             "image": null
         },
         {
             "id": "livret_14",
             "question": "Qui est Victor Hugo ?",
-            "explanation": "Grand écrivain du XIXe siècle (*Les Misérables*), engagé contre la misère et la peine de mort.",
+            "explanation": "Grand écrivain du XIXe siècle (Les Misérables), engagé contre la misère et la peine de mort.",
             "image": null
         },
         {
             "id": "livret_15",
             "question": "Quand la IIIe République s'est-elle installée et qu'a fait Jules Ferry ?",
-            "explanation": "Vers 1875. Jules Ferry a rendu l'école primaire **gratuite, laïque et obligatoire** (années 1880).",
+            "explanation": "Vers 1875. Jules Ferry a rendu l'école primaire gratuite, laïque et obligatoire (années 1880).",
             "image": null
         },
         {
             "id": "livret_16",
             "question": "Que commémore le 11 novembre ?",
-            "explanation": "L'armistice de la **Première Guerre mondiale** (1914-1918).",
+            "explanation": "L'armistice de la Première Guerre mondiale (1914-1918).",
             "image": null
         },
         {
             "id": "livret_17",
             "question": "Que commémore le 8 mai ?",
-            "explanation": "La victoire des Alliés lors de la **Seconde Guerre mondiale** (1939-1945).",
+            "explanation": "La victoire des Alliés lors de la Seconde Guerre mondiale (1939-1945).",
             "image": null
         },
         {
@@ -134,25 +134,25 @@
         {
             "id": "livret_22",
             "question": "Quand la majorité est-elle passée à 18 ans ?",
-            "explanation": "En **1974**.",
+            "explanation": "En 1974.",
             "image": null
         },
         {
             "id": "livret_23",
             "question": "Qui a porté la loi sur l'IVG (avortement) ?",
-            "explanation": "**Simone Veil** en 1975.",
+            "explanation": "Simone Veil en 1975.",
             "image": null
         },
         {
             "id": "livret_24",
             "question": "Quand la peine de mort a-t-elle été abolie ?",
-            "explanation": "En **1981**.",
+            "explanation": "En 1981.",
             "image": null
         },
         {
             "id": "livret_25",
             "question": "Citez des personnalités naturalisées célèbres.",
-            "explanation": "**Marie Curie** (Physique), **Joséphine Baker** (Artiste/Résistante), Georges Charpak (Physique), Romain Gary (Écrivain), etc.",
+            "explanation": "Marie Curie (Physique), Joséphine Baker (Artiste/Résistante), Georges Charpak (Physique), Romain Gary (Écrivain), etc.",
             "image": null
         },
         {
@@ -170,7 +170,7 @@
         {
             "id": "livret_28",
             "question": "Citez des animateurs de télévision Français que vous connaissez ?",
-            "explanation": "Christophe de Chavannes – Vincent Lagaf – Jean-Pierre Foucault etc…",
+            "explanation": "Parmi les animateurs de télévision français connus, on peut citer : Christophe Dechavanne, Vincent Lagaf', Jean-Pierre Foucault, Stéphane Bern, Nagui, Cyril Hanouna, Laurent Ruquier, et bien d'autres. Cette question évalue votre connaissance de la culture populaire française.",
             "image": null
         },
         {
@@ -211,14 +211,14 @@
         },
         {
             "id": "livret_35",
-            "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
+            "question": "Avez-vous mangé des spécialités locales lors de vos voyages en France ?",
             "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
             "image": null
         },
         {
             "id": "livret_36",
             "question": "Quels sont les plats typiques Français que vous connaissez ?",
-            "explanation": "La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L'aligot etc…",
+            "explanation": "Parmi les plats typiques français, on peut citer : la bouillabaisse (spécialité marseillaise), le pot-au-feu, la quiche lorraine, les galettes bretonnes, le steak tartare, l'aligot (spécialité auvergnate), le coq au vin, le bœuf bourguignon, la ratatouille, la choucroute alsacienne, et bien d'autres. La cuisine française est reconnue au patrimoine mondial de l'UNESCO.",
             "image": null
         },
         {
@@ -278,19 +278,19 @@
         {
             "id": "livret_46",
             "question": "Qui est le/la maire de votre département ?",
-            "explanation": "Le maire du département des Hauts-de-Seine est Pierre-Christophe Baguet. Cependant, il a annoncé le 13 mars 2025 se mettre temporairement en retrait de ses fonctions après un conseil municipal houleux.",
+            "explanation": "Note : Les départements n'ont pas de maire, mais un président du conseil départemental. Si la question concerne votre ville, indiquez le nom du maire de votre commune. Les maires sont élus par le conseil municipal pour 6 ans. Vous pouvez trouver cette information sur le site de votre mairie ou en consultant les résultats des dernières élections municipales.",
             "image": null
         },
         {
             "id": "livret_47",
             "question": "Qu'est-ce que l'hôtel de ville ?",
-            "explanation": "C'est la mairie principale d'une grande ville ou d'une ville importante.",
+            "explanation": "L'hôtel de ville est le bâtiment qui abrite la mairie et les services municipaux. C'est le siège de l'administration communale où se réunit le conseil municipal et où le maire exerce ses fonctions. Dans les grandes villes, l'hôtel de ville est souvent un bâtiment historique et symbolique.",
             "image": null
         },
         {
             "id": "livret_48",
             "question": "Qui est le maire de votre ville ?",
-            "explanation": "Le maire de Boulogne-Billancourt est Pierre-Christophe Baguet. Comme mentionné précédemment, il a décidé de se mettre temporairement en retrait de ses fonctions.",
+            "explanation": "Indiquez le nom du maire de votre commune. Les maires sont élus par le conseil municipal pour un mandat de 6 ans lors des élections municipales. Pour connaître le maire de votre ville, vous pouvez consulter le site de votre mairie ou vous rendre directement à la mairie.",
             "image": null
         },
         {
@@ -308,7 +308,7 @@
         {
             "id": "livret_51",
             "question": "Citez des Reines de France",
-            "explanation": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+            "explanation": "Parmi les reines de France célèbres, on peut citer : Catherine de Médicis (épouse d'Henri II), Aliénor d'Aquitaine (épouse de Louis VII puis d'Henri II d'Angleterre), Marie-Antoinette (épouse de Louis XVI), Anne d'Autriche (épouse de Louis XIII et mère de Louis XIV), Anne de Bretagne (épouse de Charles VIII puis de Louis XII), et Marie de Médicis (épouse d'Henri IV).",
             "image": null
         },
         {
@@ -319,7 +319,7 @@
         },
         {
             "id": "livret_53",
-            "question": "Qui été le Roi de France durant la révolution Française ?",
+            "question": "Qui était le Roi de France durant la révolution Française ?",
             "explanation": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
             "image": null
         },
@@ -349,7 +349,7 @@
         },
         {
             "id": "livret_58",
-            "question": "Quel été le rôle de la Bastille avant sa démolition ?",
+            "question": "Quel était le rôle de la Bastille avant sa démolition ?",
             "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
             "image": null
         },
@@ -368,13 +368,13 @@
         {
             "id": "livret_61",
             "question": "Quelles sont les dates des deux dernières guerres mondiales ?",
-            "explanation": "- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18).\n\n- La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
+            "explanation": "- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 - 18).\n\n- La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945",
             "image": null
         },
         {
             "id": "livret_62",
             "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
-            "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale il a été envoyer par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française, il a malheureusement été arrêter par la Gestapo puis torturer, il a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+            "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale. Il a été envoyé par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française. Il a malheureusement été arrêté par la Gestapo puis torturé, et a succombé à ses blessures dans le train qui le transportait en Allemagne.",
             "image": null
         },
         {
@@ -397,7 +397,7 @@
         },
         {
             "id": "livret_66",
-            "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
+            "question": "Quel était le surnom des soldats Français durant la première guerre mondiale ?",
             "explanation": "On les appelait les Poilus.",
             "image": null
         },
@@ -463,7 +463,7 @@
         },
         {
             "id": "livret_77",
-            "question": "– Qu’est-ce qu’une Monarchie ?",
+            "question": "Qu'est-ce qu'une Monarchie ?",
             "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
             "image": null
         },
@@ -595,7 +595,7 @@
         },
         {
             "id": "livret_99",
-            "question": "Qu'est-ce qui s'est passé le 3 août 1914 ??",
+            "question": "Qu'est-ce qui s'est passé le 3 août 1914 ?",
             "explanation": "Le 3 août 1914, à 18 heures, l'Allemagne annonce son entrée en guerre contre la France.",
             "image": null
         },
@@ -679,8 +679,8 @@
         },
         {
             "id": "livret_113",
-            "question": "Pourquoi l’abolition de l’esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?",
-            "explanation": "- L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates :\n\n- 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802.",
+            "question": "Pourquoi l'abolition de l'esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?",
+            "explanation": "L'abolition de l'esclavage en France s'est faite en plusieurs étapes : 1794 : Première abolition sous la Révolution française (par la Convention nationale). 1802 : Napoléon Bonaparte rétablit l'esclavage dans les colonies françaises. 1848 : Abolition définitive le 27 avril 1848, sous l'impulsion de Victor Schœlcher, ministre de la Marine sous la IIe République. Cette date de 1848 est la date définitive de l'abolition de l'esclavage en France.",
             "image": null
         },
         {
@@ -691,7 +691,7 @@
         },
         {
             "id": "livret_115",
-            "question": ": Que s'est-il passé en France durant la Seconde Guerre mondiale ?",
+            "question": "Que s'est-il passé en France durant la Seconde Guerre mondiale ?",
             "explanation": "La France a été envahie par l'Allemagne en 1940, entraînant une occupation jusqu'en 1944, des mouvements de résistance à travers le pays, et la collaboration du régime de Vichy, jusqu'à la libération par les Alliés.",
             "image": null
         },
@@ -901,7 +901,7 @@
         },
         {
             "id": "livret_150",
-            "question": "Quel château célèbre se trouveopsis de Paris et symbolise le pouvoir royal de Louis XIV ?",
+            "question": "Quel château célèbre se trouve près de Paris et symbolise le pouvoir royal de Louis XIV ?",
             "explanation": "Le château de Versailles, résidence emblématique de Louis XIV.",
             "image": null
         },
@@ -913,7 +913,7 @@
         },
         {
             "id": "livret_152",
-            "question": "Quel est l'objectif des lois scolaires de la Ille République ?",
+            "question": "Quel est l'objectif des lois scolaires de la IIIe République ?",
             "explanation": "Rendre l'école gratuite, laïque et obligatoire (lois Ferry, 1881-1882).",
             "image": null
         },

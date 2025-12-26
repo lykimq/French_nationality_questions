@@ -88,6 +88,11 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
     // Remove markdown image links from explanation if image is displayed separately
     let explanationText = question.explanation || '';
 
+    // Remove markdown image syntax (e.g., ![](path) or ![alt](path))
+    if (question.image) {
+        explanationText = explanationText.replace(/!\[([^\]]*)\]\([^)]+\)/g, '').trim();
+    }
+
     // Robust Deduplication Logic
     const normalizedQuestion = normalizeForComparison(questionText);
 

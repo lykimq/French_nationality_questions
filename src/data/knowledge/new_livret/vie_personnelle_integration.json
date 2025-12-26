@@ -409,13 +409,13 @@
         },
         {
             "id": "livret_68",
-            "question": "Quel numéro d'urgence permit d'appeler le SAMU ?",
+            "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
             "explanation": "Le 15 (ou le 112, numéro d'urgence européen).",
             "image": null
         },
         {
             "id": "livret_69",
-            "question": "Auprès de chaque institution les parents peuvent inscire leurs enfants à l'école publique ?",
+            "question": "Auprès de quelle institution les parents peuvent-ils inscrire leurs enfants à l'école publique ?",
             "explanation": "L'inscription se fait d'abord en mairie puis auprès de l'école publique affectée ; l'accès est gratuit et obligatoire.",
             "image": null
         },
@@ -517,13 +517,13 @@
         },
         {
             "id": "livret_86",
-            "question": "Quels sont les textes qui définissant les règles au travail ?",
+            "question": "Quels sont les textes qui définissent les règles au travail ?",
             "explanation": "Principalement le Code du travail, complété par les conventions collectives et le contrat de travail.",
             "image": null
         },
         {
             "id": "livret_87",
-            "question": "Quelles sont les'affaires traitées par le conseil de prud'homme ?",
+            "question": "Quelles sont les affaires traitées par le conseil de prud'homme ?",
             "explanation": "Les litiges entre employeurs et salariés liés au contrat de travail (licenciement, salaires, conditions de travail...).",
             "image": null
         },
@@ -601,7 +601,7 @@
         },
         {
             "id": "livret_100",
-            "question": "Depuis le 1er juillet 2021, qu'elle est la durée du congé paternité ?",
+            "question": "Depuis le 1er juillet 2021, quelle est la durée du congé paternité ?",
             "explanation": "28 jours (dont 7 jours obligatoires : 3 de naissance + 4 supplémentaires).",
             "image": null
         },

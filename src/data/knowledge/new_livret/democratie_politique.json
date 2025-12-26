@@ -8,19 +8,19 @@
         {
             "id": "livret_1",
             "question": "Quel texte définit l'organisation de l'État ?",
-            "explanation": "La **Constitution** de la Ve République (adoptée en 1958).",
+            "explanation": "La Constitution de la Ve République (adoptée en 1958).",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Sur quel principe sont fondées les institutions françaises ?",
-            "explanation": "Sur la **séparation des pouvoirs** : législatif, exécutif et autorité judiciaire.",
+            "explanation": "Sur la séparation des pouvoirs : législatif, exécutif et autorité judiciaire.",
             "image": null
         },
         {
             "id": "livret_3",
             "question": "Qui est élu au suffrage universel ?",
-            "explanation": "Le Président de la République, les députés (suffrage direct), les sénateurs (suffrage indirect) et les maires.",
+            "explanation": "Le Président de la République et les députés sont élus au suffrage universel direct (par tous les citoyens). Les sénateurs sont élus au suffrage universel indirect (par les grands électeurs : maires, conseillers municipaux, députés). Les maires sont élus par le conseil municipal (suffrage indirect).",
             "image": null
         },
         {
@@ -32,13 +32,13 @@
         {
             "id": "livret_5",
             "question": "Comment est élu le Président de la République et pour combien de temps ?",
-            "explanation": "Il est élu au suffrage universel direct pour **cinq ans**.",
+            "explanation": "Il est élu au suffrage universel direct pour cinq ans.",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Qui dirige le Gouvernement ?",
-            "explanation": "Le **Premier ministre**, nommé par le Président de la République.",
+            "explanation": "Le Premier ministre, nommé par le Président de la République.",
             "image": null
         },
         {
@@ -62,19 +62,19 @@
         {
             "id": "livret_10",
             "question": "Quelles sont les formes de la démocratie ?",
-            "explanation": "Il y a trois formes de démocraties, la démocratie directe, participative et représentative.",
+            "explanation": "Il existe trois formes principales de démocratie : la démocratie directe (les citoyens votent directement sur les lois, comme dans les référendums), la démocratie participative (les citoyens sont consultés et participent aux décisions, comme dans les conseils de quartier), et la démocratie représentative (les citoyens élisent des représentants qui votent les lois en leur nom, comme en France avec les députés et sénateurs). La France combine ces trois formes.",
             "image": null
         },
         {
             "id": "livret_11",
             "question": "Êtes-vous d'accord avec le régime démocratique ?",
-            "explanation": "Absolument !",
+            "explanation": "Cette question évalue votre adhésion aux valeurs démocratiques. Répondez en exprimant votre soutien à la démocratie, en expliquant pourquoi vous appréciez ce système (liberté, égalité, participation citoyenne, respect des droits, etc.) et comment vous vous engagez à respecter et défendre les principes démocratiques en tant que futur citoyen français.",
             "image": null
         },
         {
             "id": "livret_12",
             "question": "Quelles formes libertés sont garanties en démocratie ?",
-            "explanation": "La liberté de penser, la liberté de croire ou de ne pas croire, la liberté d'expression etc…",
+            "explanation": "En démocratie, plusieurs libertés fondamentales sont garanties : la liberté de penser, la liberté de croire ou de ne pas croire (liberté de conscience), la liberté d'expression, la liberté de la presse, la liberté de réunion, la liberté d'association, la liberté de circulation, et la liberté de manifestation. Ces libertés sont encadrées par la loi pour garantir le respect des droits d'autrui.",
             "image": null
         },
         {
@@ -103,26 +103,26 @@
         },
         {
             "id": "livret_17",
-            "question": "Comment manifestent ils leur désaccord ?",
+            "question": "Comment manifestent-ils leur désaccord ?",
             "explanation": "En manifestant, en faisant grève, en signant des pétitions ou en votant autrement pour exprimer leur désaccord de manière pacifique.",
             "image": null
         },
         {
             "id": "livret_18",
-            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
-            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "question": "Quand est-ce qu'a été instituée la Ve République ?",
+            "explanation": "La Ve République a été instituée par la Constitution du 4 octobre 1958, adoptée par référendum. Cette Constitution a été rédigée sous l'impulsion du général Charles de Gaulle pour mettre fin à l'instabilité de la IVe République et renforcer le pouvoir exécutif. Elle est toujours en vigueur aujourd'hui.",
             "image": null
         },
         {
             "id": "livret_19",
-            "question": "Quel a été le fait marquant de la 5éme république ?",
+            "question": "Quel a été le fait marquant de la Ve République ?",
             "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
             "image": null
         },
         {
             "id": "livret_20",
             "question": "Quand est-ce qu'a eu lieu la séparation de l'église et de l'état ?",
-            "explanation": "Elle a eu lieu le 09 Décembre 1905.",
+            "explanation": "La loi de séparation des Églises et de l'État a été adoptée le 9 décembre 1905. Cette loi établit la laïcité en France : elle met fin au financement public des cultes, garantit la liberté de conscience et de religion, et affirme la neutralité de l'État en matière religieuse.",
             "image": null
         },
         {
@@ -146,7 +146,7 @@
         {
             "id": "livret_24",
             "question": "En quelle année a été aboli l'esclavage en France ?",
-            "explanation": "Le 27 avril 1848.",
+            "explanation": "L'abolition définitive de l'esclavage en France date du 27 avril 1848, sous l'impulsion de Victor Schœlcher, ministre de la Marine sous la IIe République. Il y avait eu une première abolition en 1794 sous la Révolution, mais Napoléon Bonaparte l'avait rétabli en 1802. L'abolition de 1848 est définitive et s'applique à toutes les colonies françaises.",
             "image": null
         },
         {
@@ -158,7 +158,7 @@
         {
             "id": "livret_26",
             "question": "Depuis quand l'école est-elle obligatoire en France ?",
-            "explanation": "Depuis le 28 mars 1882.",
+            "explanation": "L'école est devenue obligatoire depuis la loi du 28 mars 1882, portée par Jules Ferry, ministre de l'Instruction publique. Cette loi rend l'instruction obligatoire pour les enfants de 6 à 13 ans (âge porté à 16 ans en 1959, puis à 3 ans en 2019). L'école publique est également gratuite et laïque depuis les lois Ferry de 1881-1882.",
             "image": null
         },
         {
@@ -176,7 +176,7 @@
         {
             "id": "livret_29",
             "question": "Depuis quand les femmes ont elles le droit de vote en France ?",
-            "explanation": "Depuis le 21 avril 1944.",
+            "explanation": "Les femmes ont obtenu le droit de vote en France le 21 avril 1944, par une ordonnance du gouvernement provisoire de la République française présidé par le général de Gaulle. Elles ont voté pour la première fois aux élections municipales d'avril 1945, puis aux élections législatives d'octobre 1945. La France a été l'un des derniers pays européens à accorder le droit de vote aux femmes.",
             "image": null
         },
         {
@@ -200,7 +200,7 @@
         {
             "id": "livret_33",
             "question": "Quels sont les symboles de la république Française ?",
-            "explanation": "- Le Drapeau Tricolore.\n- La marseillaise.\n- Marianne.\n- Le bonnet Phrygien.\n- La devise \"Liberté, égalité, Fraternité\".\n- La fleur de Lys.\n- Le 14 Juillet.",
+            "explanation": "Les symboles de la République française sont : le drapeau tricolore (bleu, blanc, rouge), La Marseillaise (hymne national), Marianne (allégorie de la République), le bonnet phrygien, la devise \"Liberté, Égalité, Fraternité\", le coq gaulois, et le 14 juillet (fête nationale). La fleur de lys est un symbole de la monarchie, pas de la République.",
             "image": null
         },
         {
@@ -248,7 +248,7 @@
         {
             "id": "livret_41",
             "question": "Quand sont les dates des républiques précédentes?",
-            "explanation": "- La première république : 1792-1804\n\n- La deuxième république : 1848 – 1852\n\n- La troisième république : 1870 – 1940\n\n- La quatrième république : 1946-1958\n\n- La cinquième république : 1958 – aujourd'hui.",
+            "explanation": "La France a connu cinq Républiques : Première République (1792-1804) : proclamée après la chute de la monarchie, se termine avec l'avènement de Napoléon Ier. Deuxième République (1848-1852) : instaurée après la Révolution de 1848, se termine avec le coup d'État de Napoléon III. Troisième République (1870-1940) : proclamée après la défaite de 1870, se termine avec l'instauration du régime de Vichy. Quatrième République (1946-1958) : établie après la Libération, se termine avec la crise algérienne et l'avènement de la Ve République. Cinquième République (1958-aujourd'hui) : fondée par Charles de Gaulle, régime actuel.",
             "image": null
         },
         {
@@ -259,7 +259,7 @@
         },
         {
             "id": "livret_43",
-            "question": "Ou se trouve le siège de la présidence de la république ?",
+            "question": "Où se trouve le siège de la présidence de la république ?",
             "explanation": "Il se trouve au Palais de l’Élysée.",
             "image": null
         },
@@ -355,14 +355,14 @@
         },
         {
             "id": "livret_59",
-            "question": "Ou se trouve le siège de l'assemblée nationale ?",
+            "question": "Où se trouve le siège de l'assemblée nationale ?",
             "explanation": "Elle se trouve au palais Bourbon, c’est le nom communément donné au bâtiment qui abrite l’Assemblée nationale française, il est situé sur le quai d’Orsay.",
             "image": null
         },
         {
             "id": "livret_60",
             "question": "Qui est le député (ou la députée) de votre département ?",
-            "explanation": "En 2025, la députée de Boulogne-Billancourt (92100), située dans les Hauts-de-Seine, est Élisabeth de Maistre (Les Républicains), élue en février 2025.",
+            "explanation": "Cette information varie selon votre circonscription. Les députés sont élus pour 5 ans au suffrage universel direct. Pour connaître le député de votre circonscription, vous pouvez consulter le site de l'Assemblée nationale ou contacter votre mairie. Les dernières élections législatives ont eu lieu en 2024.",
             "image": null
         },
         {
@@ -374,7 +374,7 @@
         {
             "id": "livret_62",
             "question": "Qui est le président de l'assemblée Nationale ?",
-            "explanation": "C’est Yaël Braun-Pivet depuis 2022.",
+            "explanation": "Le président de l'Assemblée nationale est élu par les députés pour la durée de la législature (5 ans). Depuis 2022, c'est Yaël Braun-Pivet. Cette fonction peut changer après chaque élection législative. Le président dirige les débats et représente l'Assemblée nationale.",
             "image": null
         },
         {
@@ -404,7 +404,7 @@
         {
             "id": "livret_67",
             "question": "Comment sont élus les sénateurs ?",
-            "explanation": "Les sénateurs français sont élus au suffrage universel indirect, par un collège de « grands électeurs » 150 000 grands électeurs (maires, conseillers généraux etc…).",
+            "explanation": "Les sénateurs français sont élus au suffrage universel indirect, par un collège d'environ 150 000 grands électeurs. Ces grands électeurs sont principalement : les maires, les conseillers municipaux, les conseillers départementaux, les conseillers régionaux, et les députés.",
             "image": null
         },
         {
@@ -440,13 +440,13 @@
         {
             "id": "livret_73",
             "question": "Qui est le président du conseil constitutionnel ?",
-            "explanation": "En 2024 c’est Laurent Fabius.",
+            "explanation": "Le président du Conseil constitutionnel est nommé par le Président de la République parmi les membres du Conseil. En 2024, c'était Laurent Fabius. Cette fonction peut changer. Le Conseil constitutionnel vérifie la conformité des lois à la Constitution.",
             "image": null
         },
         {
             "id": "livret_74",
             "question": "Quelle est la dernière loi votée à l'assemblée nationale ?",
-            "explanation": "La dernière loi votée à l'Assemblée nationale est la loi n°2025-486 du 2 juin 2025, relative au transfert à l'État des personnels enseignants du premier degré dans les îles Wallis et Futuna.",
+            "explanation": "Les lois sont votées régulièrement par l'Assemblée nationale. Pour connaître la dernière loi votée, il faut consulter le Journal officiel ou le site de l'Assemblée nationale (www.assemblee-nationale.fr). Les lois sont numérotées et publiées au Journal officiel après leur promulgation par le Président de la République.",
             "image": null
         },
         {
@@ -458,7 +458,7 @@
         {
             "id": "livret_76",
             "question": "Citez un exemple de cohabitation politique en France ?",
-            "explanation": "- Mitterrand (PS) / Chirac (RPR). - Chirac (RPR) / Jospin (PS).",
+            "explanation": "La cohabitation est une situation où le Président de la République et le Premier ministre appartiennent à des partis politiques opposés. Exemples historiques : François Mitterrand (PS, président) avec Jacques Chirac (RPR, Premier ministre) de 1986 à 1988, puis avec Édouard Balladur (RPR) de 1993 à 1995. Jacques Chirac (RPR, président) avec Lionel Jospin (PS, Premier ministre) de 1997 à 2002.",
             "image": null
         },
         {
@@ -500,7 +500,7 @@
         {
             "id": "livret_83",
             "question": "À quelle occasion la Marseillaise a-t-elle été écrite ?",
-            "explanation": "Dans la nuit du 25 au 26 avril 1792, à la suite de la déclaration de guerre du roi d'Autriche, elle fut composée chez le maire de Strasbourg, dénommé Dietrich, la marseillaise s'intitula \"Chant de guerre pour l'armée du Rhin\".",
+            "explanation": "La Marseillaise a été composée dans la nuit du 25 au 26 avril 1792 par Claude Joseph Rouget de Lisle, officier français. Elle fut écrite à Strasbourg, à la demande du maire de la ville, Frédéric de Dietrich, après la déclaration de guerre de la France à l'Autriche. Initialement intitulée \"Chant de guerre pour l'armée du Rhin\", elle fut reprise par les volontaires marseillais qui l'entonnèrent en arrivant à Paris, d'où son nom \"La Marseillaise\". Elle devient l'hymne national en 1795.",
             "image": null
         },
         {
@@ -518,7 +518,7 @@
         {
             "id": "livret_86",
             "question": "Combien de pays compte l'union européenne ?",
-            "explanation": "En 2024 l'union Européennes compte 27 états membres. (Le Royaume-Uni a quitté l'union Européenne en 2020 durant le Brexit)",
+            "explanation": "L'Union européenne compte 27 États membres depuis le départ du Royaume-Uni en 2020 (Brexit). Les pays fondateurs en 1957 étaient 6 : Allemagne, Belgique, France, Italie, Luxembourg et Pays-Bas. L'UE s'est ensuite élargie progressivement pour atteindre 27 membres aujourd'hui.",
             "image": null
         },
         {
@@ -529,20 +529,20 @@
         },
         {
             "id": "livret_88",
-            "question": "Ou se trouve le siège du parlement Européen ?",
+            "question": "Où se trouve le siège du parlement Européen ?",
             "explanation": "Il se trouve à Strasbourg en France.",
             "image": null
         },
         {
             "id": "livret_89",
-            "question": "Ou se trouve le siège de la commission européenne ?",
+            "question": "Où se trouve le siège de la commission européenne ?",
             "explanation": "Il se trouve à Bruxelles en Belgique.",
             "image": null
         },
         {
             "id": "livret_90",
             "question": "Quel pays détient la présidence de l'union européenne cette année (2025) ?",
-            "explanation": "En 2025, la Pologne détient la présidence tournante du Conseil de l'Union européenne du 1er janvier au 30 juin. Cette présidence vise à renforcer la sécurité européenne et à promouvoir la coopération entre les États membres.",
+            "explanation": "La présidence du Conseil de l'Union européenne est tournante et change tous les 6 mois selon un ordre prédéfini. En 2025, la Pologne a détenu la présidence au premier semestre. Cette présidence organise les travaux du Conseil, fixe l'ordre du jour et représente le Conseil dans les relations avec les autres institutions européennes.",
             "image": null
         },
         {
@@ -602,7 +602,7 @@
         {
             "id": "livret_100",
             "question": "Quels seront les prochaines élections ?",
-            "explanation": "Les prochaines élections seront les élections présidentielles françaises prévues en avril 2027.",
+            "explanation": "Les élections en France suivent un calendrier régulier : élections présidentielles (tous les 5 ans), législatives (tous les 5 ans, sauf dissolution), municipales (tous les 6 ans), régionales et départementales (tous les 6 ans), et européennes (tous les 5 ans). Les prochaines élections présidentielles sont prévues en 2027. Pour connaître les dates exactes, consultez le site du ministère de l'Intérieur.",
             "image": null
         },
         {
@@ -674,7 +674,7 @@
         {
             "id": "livret_112",
             "question": "Pouvez-vous citer trois sujets d'actualité récents en France qui vous ont particulièrement marqué ?",
-            "explanation": "Trois sujets qui m'ont marqué sont :\n- Utilisation de l’article 49.3 pour le budget 2025 : Début février 2025, le gouvernement a fait appel à l’article 49.3 pour faire adopter le budget de l’année.\n- Réduction des tarifs de l’électricité : Depuis le 1ᵉʳ février 2025, une baisse de 15 % des prix de l’électricité a été appliquée, apportant un soulagement à de nombreux foyers français.\n- Projet de rénovation du Louvre : Le célèbre musée parisien a annoncé une initiative majeure visant à moderniser ses infrastructures et à améliorer l’accueil des visiteurs, tout en renforçant la préservation de ses collections. La réponse est à développer en fonction de l’actualité en France.",
+            "explanation": "Cette question évalue votre suivi de l'actualité française. Citez trois événements récents qui vous ont marqué, en expliquant pourquoi. Exemples de sujets d'actualité possibles : réformes gouvernementales, événements culturels, questions sociales, environnement, économie, etc. Montrez que vous suivez l'actualité française via la presse, la télévision, ou les réseaux sociaux, et que vous comprenez les enjeux de la société française.",
             "image": null
         },
         {
@@ -1124,7 +1124,7 @@
         {
             "id": "livret_187",
             "question": "Citez le nom du président de votre région",
-            "explanation": "Exemple : Valérie Pécresse – Région île de France ; Xavier Bertrand : Hauts-de-France…",
+            "explanation": "Indiquez le nom du président du conseil régional de votre région. Les présidents de région sont élus par les conseillers régionaux (suffrage indirect) pour 6 ans. Pour connaître le président de votre région, vous pouvez consulter le site de votre conseil régional ou vous renseigner auprès de votre mairie. Les dernières élections régionales ont eu lieu en 2021.",
             "image": null
         },
         {
@@ -1250,7 +1250,7 @@
         {
             "id": "livret_208",
             "question": "Quelles sont les premières grandes mesures de la Deuxième République ?",
-            "explanation": "- Établissement du suffrage universel masculin (27 millions de citoyens peuvent voter).\n\n- Abolition définitive de l'esclavage dans les colonies françaises (27 avril 1848, sous l'impulsion de Victor Schœlcher).\n\n- Création des Ateliers nationaux pour fournir du travail aux ouvriers (abandonnés après peu de temps).",
+            "explanation": "Les premières grandes mesures de la IIe République (1848-1852) sont : l'établissement du suffrage universel masculin (tous les hommes de plus de 21 ans peuvent voter, sans condition de fortune), l'abolition définitive de l'esclavage dans les colonies françaises le 27 avril 1848 sous l'impulsion de Victor Schœlcher, et la création des Ateliers nationaux pour fournir du travail aux ouvriers (mesure abandonnée rapidement).",
             "image": null
         },
         {
@@ -1496,7 +1496,7 @@
         {
             "id": "livret_249",
             "question": "Que sont les droits fondamentaux?",
-            "explanation": "Les droits et libertés essentiels protégés par la Constitution et les traités (dignité, vie, sûreté, expression, religion, égalité, propriété...).",
+            "explanation": "Les droits fondamentaux sont les droits et libertés essentiels protégés par la Constitution française et les traités internationaux. Ils incluent notamment : la dignité humaine, le droit à la vie, la sûreté, la liberté d'expression, la liberté de religion, l'égalité, le droit de propriété, le droit à un procès équitable, et la présomption d'innocence. Ces droits sont garantis à tous les citoyens français.",
             "image": null
         },
         {
@@ -1676,7 +1676,7 @@
         {
             "id": "livret_279",
             "question": "En France, les impôts permettent de financier les dépenses publiques. Quelle proposition est correcte?",
-            "explanation": "Ils servent à financer les services publics et les solidarités (éducation, santé, sécurité, transports, justice...).",
+            "explanation": "Les impôts servent à financer les services publics et les solidarités nationales. Ils permettent notamment de financer : l'éducation (écoles, collèges, lycées, universités), la santé (hôpitaux, sécurité sociale), la sécurité (police, gendarmerie), les transports publics, la justice, les infrastructures (routes, ponts), et les aides sociales (RSA, allocations familiales, etc.).",
             "image": null
         },
         {
@@ -1898,7 +1898,7 @@
         {
             "id": "livret_316",
             "question": "Parmi ces autorités, laquelle est élue ?",
-            "explanation": "Le maire et les conseillers municipaux sont élus ; d'autres autorités (préfet...) sont nommées.",
+            "explanation": "Le maire et les conseillers municipaux sont élus au suffrage universel direct lors des élections municipales. D'autres autorités sont nommées : le préfet (représentant de l'État dans le département, nommé par le gouvernement), les juges (nommés par le pouvoir exécutif sur proposition du Conseil supérieur de la magistrature), et les hauts fonctionnaires.",
             "image": null
         },
         {

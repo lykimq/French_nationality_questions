@@ -20,7 +20,7 @@
         {
             "id": "livret_3",
             "question": "Art 3. Où réside la souveraineté ?",
-            "explanation": "Dans la **Nation**.",
+            "explanation": "Dans la Nation.",
             "image": null
         },
         {
@@ -56,7 +56,7 @@
         {
             "id": "livret_9",
             "question": "Art 9. Quelle est la présomption concernant tout homme ?",
-            "explanation": "Tout homme est présumé **innocent** jusqu'à ce qu'il ait été déclaré coupable.",
+            "explanation": "Tout homme est présumé innocent jusqu'à ce qu'il ait été déclaré coupable.",
             "image": null
         },
         {

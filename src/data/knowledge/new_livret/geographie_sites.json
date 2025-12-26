@@ -8,13 +8,13 @@
         {
             "id": "livret_1",
             "question": "Quel est le point culminant ?",
-            "explanation": "Le **Mont-Blanc** (4810 m) dans les Alpes.",
+            "explanation": "Le Mont-Blanc, situé dans les Alpes, est le point culminant de France avec une altitude d'environ 4809 mètres. Il se trouve à la frontière entre la France et l'Italie.",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Citez des fleuves français.",
-            "explanation": "La **Loire** (le plus long), la Seine, le Rhône, la Garonne, le Rhin.",
+            "explanation": "La Loire (le plus long), la Seine, le Rhône, la Garonne, le Rhin.",
             "image": null
         },
         {
@@ -26,7 +26,7 @@
         {
             "id": "livret_4",
             "question": "Citez des sites touristiques célèbres.",
-            "explanation": "La **Tour Eiffel**, le **Mont-Saint-Michel**, le Château de Versailles, les Châteaux de la Loire.",
+            "explanation": "La Tour Eiffel, le Mont-Saint-Michel, le Château de Versailles, les Châteaux de la Loire.",
             "image": null
         },
         {
@@ -38,7 +38,7 @@
         {
             "id": "livret_6",
             "question": "Citez trois départements Français",
-            "explanation": "Haut-Rhin, Bas-Rhin, Haute-Garonne sont les trois départements de France.",
+            "explanation": "La France compte 101 départements au total (96 en métropole et 5 en outre-mer). Exemples de départements : Haut-Rhin (68), Bas-Rhin (67), Haute-Garonne (31), Paris (75), Bouches-du-Rhône (13), Rhône (69), Nord (59), etc. Chaque département a un numéro et un chef-lieu.",
             "image": null
         },
         {
@@ -50,13 +50,13 @@
         {
             "id": "livret_8",
             "question": "Citez trois régions Françaises",
-            "explanation": "Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d’Azur, Occitanie v.v…",
+            "explanation": "La France métropolitaine compte 13 régions : Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Pays de la Loire, Centre-Val de Loire, Bourgogne-Franche-Comté, et Grand Est. Il y a également 5 régions d'outre-mer.",
             "image": null
         },
         {
             "id": "livret_9",
             "question": "Enumérez les trois types de collectivités Françaises",
-            "explanation": "Il y a trois types de collectivités en France. 1. Les communes : Il y a 36 000 communes en France. 2. Les régions : La France compte 12 régions en Métropole en plus de la corse (qui n’est pas une région en soit mais qui en a les compétences) ainsi que 5 régions en outre-mer. 3. Les Départements : La France compte 101 département s, 96 département se trouvent en métropole et 5 en Outre-mer.",
+            "explanation": "Il y a trois types de collectivités territoriales en France : 1. Les communes : environ 35 000 communes en France, administrées par un maire et un conseil municipal. 2. Les régions : 13 régions en métropole (la Corse a un statut particulier mais exerce les compétences d'une région) plus 5 régions d'outre-mer. 3. Les départements : 101 départements au total, dont 96 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte).",
             "image": null
         },
         {
@@ -86,13 +86,13 @@
         {
             "id": "livret_14",
             "question": "Dans quelle région sommes-nous ?",
-            "explanation": "Nous sommes en Île-de-France, c’est la région où se trouve Paris et ses alentours, y compris Boulogne-Billancourt où j’habite.",
+            "explanation": "Indiquez la région où vous résidez. La France métropolitaine compte 13 régions (par exemple : Île-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, etc.). Vous pouvez également mentionner les 5 régions d'outre-mer si vous y résidez.",
             "image": null
         },
         {
             "id": "livret_15",
             "question": "Dans quel département sommes-nous ?",
-            "explanation": "Nous sommes dans le département des Hauts-de-Seine, c’est le département numéro 92. Il se trouve juste à l’ouest de Paris.",
+            "explanation": "Indiquez le département où vous résidez. La France compte 101 départements (96 en métropole et 5 en outre-mer). Chaque département a un numéro (par exemple : 75 pour Paris, 13 pour les Bouches-du-Rhône, 69 pour le Rhône).",
             "image": null
         },
         {
@@ -151,7 +151,7 @@
         },
         {
             "id": "livret_25",
-            "question": "Quel était le principal port français impliqué dans latraite négrière au XVIIIe siècle ?",
+            "question": "Quel était le principal port français impliqué dans la traite négrière au XVIIIe siècle ?",
             "explanation": "Nantes fut le principal port français de la traite négrière au XVIIIe siècle.",
             "image": null
         },
@@ -170,7 +170,7 @@
         {
             "id": "livret_28",
             "question": "Quelle ville française fait partie des 10 plus grandes métropoles du pays ?",
-            "explanation": "Exemple : Lyon (avec Paris, Marseille, Lille, Toulouse, Bordeaux, Nice, Nantes, Strasbourg, Rennes...).",
+            "explanation": "Les plus grandes métropoles françaises sont : Paris, Marseille, Lyon, Toulouse, Nice, Nantes, Montpellier, Strasbourg, Bordeaux, et Lille. Ces villes sont classées selon leur population et leur aire urbaine.",
             "image": null
         },
         {

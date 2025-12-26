@@ -8,7 +8,7 @@
         {
             "id": "livret_1",
             "question": "Combien y a-t-il de communes et qui les administre ?",
-            "explanation": "Environ **35 000 communes** (34 965 en 2021), administrées par un **maire** et un conseil municipal.",
+            "explanation": "Environ 35 000 communes (34 965 en 2021), administrées par un maire et un conseil municipal.",
             "image": null
         },
         {
@@ -20,25 +20,25 @@
         {
             "id": "livret_3",
             "question": "Qui administre le département et quelles sont ses compétences ?",
-            "explanation": "Le conseil départemental (101 départements). Il gère les **collèges**, la protection sociale (enfance, personnes âgées).",
+            "explanation": "Le conseil départemental (101 départements). Il gère les collèges, la protection sociale (enfance, personnes âgées).",
             "image": null
         },
         {
             "id": "livret_4",
             "question": "Quelles sont les compétences de la région ?",
-            "explanation": "Le conseil régional (13 régions métropolitaines) gère les **lycées**, la formation professionnelle et les transports.",
+            "explanation": "Le conseil régional (13 régions métropolitaines) gère les lycées, la formation professionnelle et les transports.",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Combien y a-t-il de territoires d'Outre-mer ?",
-            "explanation": "**12 territoires** (Départements/Régions et Collectivités d'Outre-mer).",
+            "explanation": "12 territoires (Départements/Régions et Collectivités d'Outre-mer).",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Qui représente l'État dans les départements et régions ?",
-            "explanation": "Le **Préfet**.",
+            "explanation": "Le Préfet.",
             "image": null
         },
         {
@@ -92,7 +92,7 @@
         {
             "id": "livret_15",
             "question": "Citez un plat typique de votre région ?",
-            "explanation": "Provence-Alpes-Côte d'Azur : La ratatouille – Bretagne : Les crêpes – Normandie : Le camembert –",
+            "explanation": "Provence-Alpes-Côte d'Azur : La ratatouille - Bretagne : Les crêpes - Normandie : Le camembert",
             "image": null
         },
         {
@@ -134,13 +134,13 @@
         {
             "id": "livret_22",
             "question": "Quelle est la première femme à avoir été élue maire d'une grande ville en France ?",
-            "explanation": "Catherine Trautmann, maire de Strasbourg en 1989.",
+            "explanation": "Catherine Trautmann a été la première femme élue maire d'une grande ville française (Strasbourg) en 1989. Elle a été réélue en 1995 et a exercé cette fonction jusqu'en 2001. Cette élection a marqué un tournant dans la représentation des femmes dans la vie politique locale française.",
             "image": null
         },
         {
             "id": "livret_23",
             "question": "Dans quelle région vous trouvez-vous ?",
-            "explanation": "Selon votre cas, exemple : le Nord.",
+            "explanation": "Indiquez la région où vous résidez actuellement. La France métropolitaine compte 13 régions : Île-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Hauts-de-France, Grand Est, Pays de la Loire, Normandie, Bretagne, Bourgogne-Franche-Comté, Centre-Val de Loire, et Corse. Il y a également 5 régions d'outre-mer.",
             "image": null
         },
         {
@@ -169,7 +169,7 @@
         },
         {
             "id": "livret_28",
-            "question": "de quel côté se trouvent-ils ?",
+            "question": "De quel côté se trouvent les mers et océans qui bordent la France ?",
             "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine.\n\n- Au nord, la Manche sépare la France du Royaume-Uni.\n\n- Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.\n\n- Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
             "image": null
         },

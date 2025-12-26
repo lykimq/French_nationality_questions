@@ -8,7 +8,7 @@
         {
             "id": "livret_1",
             "question": "À quel âge obtient-on le droit de vote ?",
-            "explanation": "À **18 ans**.",
+            "explanation": "À 18 ans.",
             "image": null
         },
         {
@@ -20,31 +20,31 @@
         {
             "id": "livret_3",
             "question": "Quel est le devoir fondamental face à la loi ?",
-            "explanation": "**Respecter la loi** (\"Nul n'est censé ignorer la loi\").",
+            "explanation": "Respecter la loi (\"Nul n'est censé ignorer la loi\").",
             "image": null
         },
         {
             "id": "livret_4",
             "question": "Comment les citoyens contribuent-ils aux services publics ?",
-            "explanation": "En payant des **impôts** à la hauteur de leurs moyens.",
+            "explanation": "En payant des impôts à la hauteur de leurs moyens.",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Quel devoir concerne les jeunes dès 16 ans ?",
-            "explanation": "Le recensement à la mairie pour participer à la **Journée défense et citoyenneté**.",
+            "explanation": "Le recensement à la mairie pour participer à la Journée défense et citoyenneté.",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Où trouver les lois et règlements ?",
-            "explanation": "Sur les sites officiels comme **www.legifrance.gouv.fr** ou **www.vie-publique.fr**.",
+            "explanation": "Sur les sites officiels comme www.legifrance.gouv.fr ou www.vie-publique.fr.",
             "image": null
         },
         {
             "id": "livret_7",
             "question": "Faites-vous vos courses dans le quartier ?",
-            "explanation": "Oui/Non, j’achète souvent dans les commerces de proximité (ou non car j’habite loin des commerces…).",
+            "explanation": "Cette question évalue votre intégration dans votre environnement de vie. Répondez honnêtement sur vos habitudes d'achat : si vous fréquentez les commerces de proximité, les marchés locaux, ou si vous préférez les grandes surfaces. Mentionnez également votre participation à la vie économique locale.",
             "image": null
         },
         {
@@ -92,7 +92,7 @@
         {
             "id": "livret_15",
             "question": "Avez-vous déjà été victime de discrimination ?",
-            "explanation": "Oui / Non (selon l'expérience personnelle).",
+            "explanation": "Répondez honnêtement selon votre expérience personnelle. Si vous avez été victime de discrimination, vous pouvez mentionner les recours possibles : signalement à la Halde (Haute Autorité de lutte contre les discriminations et pour l'égalité), dépôt de plainte, ou contact avec des associations de défense des droits. La discrimination est interdite en France et punie par la loi.",
             "image": null
         },
         {

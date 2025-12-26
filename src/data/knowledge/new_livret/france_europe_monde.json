@@ -8,13 +8,13 @@
         {
             "id": "livret_1",
             "question": "Quand a été créé la CEE (Communauté Économique Européenne) ?",
-            "explanation": "En **1957** (Traité de Rome), la France est un pays fondateur.",
+            "explanation": "La CEE a été créée le 25 mars 1957 par le Traité de Rome, signé par six pays fondateurs : l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas. La France est l'un de ces pays fondateurs.",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Combien d'États compte l'Union Européenne ?",
-            "explanation": "**27 États membres**.",
+            "explanation": "27 États membres.",
             "image": null
         },
         {
@@ -26,25 +26,25 @@
         {
             "id": "livret_4",
             "question": "Quelle est la monnaie commune ?",
-            "explanation": "L'**Euro** (depuis 2002 pour les pièces/billets, 2000 marché).",
+            "explanation": "L'Euro (depuis 2002 pour les pièces/billets, 2000 marché).",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Quelle est la place de la France à l'ONU ?",
-            "explanation": "Membre permanent du **Conseil de sécurité**.",
+            "explanation": "Membre permanent du Conseil de sécurité.",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Combien de personnes parlent français dans le monde ?",
-            "explanation": "Environ **320 millions** de locuteurs dans le monde (OIF 2023, dont ~255 millions d'usage quotidien).",
+            "explanation": "Environ 320 millions de locuteurs dans le monde (OIF 2023, dont ~255 millions d'usage quotidien).",
             "image": null
         },
         {
             "id": "livret_7",
             "question": "Quel est le rang économique de la France ?",
-            "explanation": "**6ème puissance économique** mondiale.",
+            "explanation": "La France se classe parmi les principales puissances économiques mondiales. En 2023, elle occupait la 7ème place avec un PIB d'environ 2 800 milliards de dollars. Le classement peut varier selon les années et les critères utilisés (PIB nominal, PIB en parité de pouvoir d'achat).",
             "image": null
         },
         {
@@ -56,19 +56,19 @@
         {
             "id": "livret_9",
             "question": "Connaissez-vous vos voisins ?",
-            "explanation": "Oui/Non, pas tous par manque de temps mais nous nous saluons régulièrement…",
+            "explanation": "Cette question personnelle permet d'évaluer votre intégration dans votre environnement de vie. Répondez honnêtement sur vos relations avec vos voisins, en mentionnant par exemple si vous les saluez, participez à des événements de quartier, ou si vous avez développé des relations amicales.",
             "image": null
         },
         {
             "id": "livret_10",
             "question": "Quel est le nom de votre employeur ?",
-            "explanation": "Mon employeur est (Nom de l’entreprise).",
+            "explanation": "Indiquez le nom de l'entreprise ou de l'organisme pour lequel vous travaillez actuellement. Si vous êtes à votre compte, précisez votre statut professionnel.",
             "image": null
         },
         {
             "id": "livret_11",
             "question": "Avez-vous des amis ou des contacts français ?",
-            "explanation": "Oui, j'ai développé des amitiés solides avec des Français, qui ont enrichi mon expérience ici en France (exemples d'influence, par exemple : m'invitant à des événements locaux, me faisant découvrir des parties moins connues de la culture française, m'aidant à naviguer dans certaines formalités administratives). Ces relations m'ont permis de me sentir plus chez moi en France et de mieux comprendre les subtilités de la société française.",
+            "explanation": "Cette question évalue votre intégration sociale. Décrivez vos relations avec des Français : amis, collègues, voisins, ou membres d'associations. Mentionnez comment ces relations vous ont aidé à mieux comprendre la culture française et à vous intégrer dans la société.",
             "image": null
         },
         {
@@ -86,7 +86,7 @@
         {
             "id": "livret_14",
             "question": "Faites-vous du sport ?",
-            "explanation": "Oui, je pratique (nom du sport). / Non, mais je m’intéresse au sport et au bien-être.",
+            "explanation": "Cette question évalue votre intégration et votre mode de vie. Répondez honnêtement : si vous pratiquez un sport, mentionnez lequel et à quelle fréquence. Si vous ne pratiquez pas de sport, vous pouvez mentionner votre intérêt pour le sport, le bien-être, ou d'autres activités de loisirs. Le sport est une partie importante de la culture française.",
             "image": null
         },
         {
@@ -242,7 +242,7 @@
         {
             "id": "livret_40",
             "question": "En quelle année la France est devenue démocratique ?",
-            "explanation": "La France est devenue démocratique tels qu’elle est connue à nos jour, le 4 octobre 1958",
+            "explanation": "La France a connu plusieurs régimes démocratiques. La Ve République, régime démocratique actuel, a été établie le 4 octobre 1958 avec l'adoption de la Constitution de la Ve République. Cependant, la France avait déjà connu des régimes démocratiques auparavant, notamment la IIIe République (1870-1940).",
             "image": null
         },
         {
@@ -392,7 +392,7 @@
         {
             "id": "livret_65",
             "question": "Quelles sont les principales caractéristiques de la Tour Eiffel ?",
-            "explanation": "La Tour Eiffel mesure 330 mètres de haut, est construite en fer puddlé et pèse 10 100 tonnes.",
+            "explanation": "La Tour Eiffel mesure 330 mètres de haut (324 mètres jusqu'au sommet de l'antenne), est construite en fer puddlé et pèse environ 10 100 tonnes. Elle a été construite par Gustave Eiffel pour l'Exposition universelle de 1889 à Paris.",
             "image": null
         },
         {
@@ -470,7 +470,7 @@
         {
             "id": "livret_78",
             "question": "Quel est le dernier film que vous avez vu au cinéma ? Qui est le réalisateur et l'acteur principal ?",
-            "explanation": "Cela dépend des goûts et de l'actualité du cinéma, mais par exemple : Le dernier film que j'ai vu est Le Comte de Monte-Cristo, réalisé par Matthieu Delaporte et Alexandre de La Patellière. L'acteur principal est Pierre Niney, qui interprète le rôle d'Edmond Dantès.",
+            "explanation": "Cette question évalue votre intérêt pour la culture française, notamment le cinéma. Répondez en mentionnant un film français récent que vous avez vu, son réalisateur et les acteurs principaux. Le cinéma français est reconnu internationalement avec des réalisateurs comme François Truffaut, Jean-Luc Godard, ou plus récemment des films comme \"Intouchables\", \"Le Fabuleux Destin d'Amélie Poulain\", etc.",
             "image": null
         },
         {
@@ -596,7 +596,7 @@
         {
             "id": "livret_99",
             "question": "Citez quelques personnages français connus ?",
-            "explanation": "",
+            "explanation": "Parmi les personnages français connus, on peut citer des figures historiques comme Charles de Gaulle (fondateur de la Ve République), Napoléon Bonaparte (empereur), Louis XIV (Roi Soleil), Jeanne d'Arc (héroïne nationale), des écrivains comme Victor Hugo, Molière, Voltaire, des scientifiques comme Marie Curie (physicienne, double prix Nobel), Louis Pasteur (pionnier de la microbiologie), des artistes comme Brigitte Bardot (actrice), Édith Piaf (chanteuse), Charles Aznavour (chanteur), et des personnalités politiques comme Simone Veil (ministre, défenseure des droits des femmes).",
             "image": null
         },
         {
@@ -662,7 +662,7 @@
         {
             "id": "livret_110",
             "question": "Quelle est la hauteur de la Tour Eiffel ?",
-            "explanation": "Environ 324 mètres.",
+            "explanation": "La Tour Eiffel mesure 330 mètres de haut jusqu'au sommet de la structure, et 324 mètres jusqu'au sommet de l'antenne radio. Elle a été construite en 1889 par Gustave Eiffel pour l'Exposition universelle de Paris.",
             "image": null
         },
         {
@@ -751,8 +751,8 @@
         },
         {
             "id": "livret_125",
-            "question": "Quel est le nom du désert situé dans le sud de la France ?",
-            "explanation": "Le désert situé dans le sud de la France est le désert des Bardenas Reales.",
+            "question": "Y a-t-il un désert en France ?",
+            "explanation": "Non, il n'y a pas de désert en France métropolitaine. Le désert des Bardenas Reales se trouve en Espagne, non en France.",
             "image": null
         },
         {
@@ -806,7 +806,7 @@
         {
             "id": "livret_134",
             "question": "Quelles sont les frontières de la France d'outre-mer ?",
-            "explanation": "Guyane : Frontière avec le Brésil et le Suriname, Saint-Martin : Frontière avec Sint Maarten (Pays-Bas), Saint-Pierre-et-Miquelon : Frontière maritime avec le Canada, Mayotte : Frontière maritime avec les Comores et Madagascar, Réunion : Pas de frontière terrestre, mais située à proximité de Madagascar, Nouvelle-Calédonie : Frontières maritimes avec Vanuatu et la Papouasie-Nouvelle-Guinée, Polynésie",
+            "explanation": "Les frontières de la France d'outre-mer : Guyane : Frontière terrestre avec le Brésil et le Suriname. Saint-Martin : Frontière terrestre avec Sint Maarten (Pays-Bas). Saint-Pierre-et-Miquelon : Frontière maritime avec le Canada. Mayotte : Frontière maritime avec les Comores et Madagascar. La Réunion : Pas de frontière terrestre, mais située à proximité de Madagascar. Nouvelle-Calédonie : Frontières maritimes avec Vanuatu et la Papouasie-Nouvelle-Guinée. Polynésie française : Frontières maritimes dans le Pacifique, entourée par les eaux internationales.",
             "image": null
         },
         {

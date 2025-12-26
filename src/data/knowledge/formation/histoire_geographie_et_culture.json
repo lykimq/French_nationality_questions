@@ -618,14 +618,14 @@
         {
             "id": "formation_103",
             "question": "Quelles sont les frontières naturelles de la France ?",
-            "explanation": "Plusieurs frontières naturelles sont présentes dans le pays. Elles ont aidé la France à façonner son territoire et à protéger ses limites au cours de l’histoire.\n\nFleuves et montagnes\n\n- À l’est : le Rhin sépare la France et l’Allemagne sur une partie de la frontière. Les massifs du Jura et des Vosges jouent également un rôle de frontière avec la Suisse et\nl’Allemagne.\n\n- Au sud : les Pyrénées forment une barrière montagneuse entre la France et l’Espagne.\n\n- Au sud-est : les Alpes marquent la limite entre la France et l’Italie et, en partie, la Suisse.\n\nMers et océans:\n\nLa France est bordée par plusieurs façades maritimes.\n\n- Au nord-ouest : la mer du Nord et la Manche.\n\n- À l’ouest : l’océan Atlantique.\n\n- Au sud : la mer Méditerranée.\n\nCes frontières naturelles offrent à la France une grande diversité de paysages et une ouverture stratégique vers le monde.",
+            "explanation": "Plusieurs frontières naturelles sont présentes dans le pays. Elles ont aidé la France à façonner son territoire et à protéger ses limites au cours de l’histoire.\n\nFleuves et montagnes\n\n- À l’est : le Rhin sépare la France et l’Allemagne sur une partie de la frontière. Les massifs du Jura et des Vosges jouent également un rôle de frontière avec la Suisse et\nl’Allemagne.\n\n- Au sud : les Pyrénées forment une barrière montagneuse entre la France et l’Espagne.\n\n- Au sud-est : les Alpes marquent la limite entre la France et l’Italie et, en partie, la Suisse.\n\nMers et océans: La France est bordée par plusieurs façades maritimes.\n\n- Au nord-ouest : la mer du Nord et la Manche.\n\n- À l’ouest : l’océan Atlantique.\n\n- Au sud : la mer Méditerranée.\n\nCes frontières naturelles offrent à la France une grande diversité de paysages et une ouverture stratégique vers le monde.",
             "image": null
         },
         {
             "id": "formation_104",
-            "question": "Les frontières et l’espace maritime de la France",
-            "explanation": "![](./pics/card.png)",
-            "image": null
+            "question": "Les frontières et l'espace maritime de la France",
+            "explanation": "La France possède des frontières terrestres et maritimes étendues qui font d'elle une puissance géographique mondiale.\n\nFrontières terrestres :\n\n- En Europe hexagonale : 3 000 km de frontières terrestres partagées avec 8 pays : la Belgique, le Luxembourg, l'Allemagne, la Suisse, l'Italie, l'Espagne, ainsi que les principautés d'Andorre et de Monaco.\n\n- En outre-mer : frontières avec le Brésil et le Suriname en Amérique du Sud (Guyane).\n\nFrontières maritimes :\n\n- En métropole : 5 500 km de côtes le long de la mer du Nord, de la Manche, de l'océan Atlantique et de la mer Méditerranée.\n\n- Au total : plus de 22 000 km de frontières maritimes, faisant de la France le pays voisin de plus de 30 pays par la mer, plus que tout autre pays au monde.\n\nEspace maritime (ZEE) :\n\nGrâce à ses territoires d'outre-mer, la France possède la deuxième plus grande Zone Économique Exclusive (ZEE) au monde, avec plus de 10 millions de km² d'espaces maritimes sous souveraineté française, couvrant presque tous les océans : Atlantique, Indien, Pacifique et Antarctique.",
+            "image": "pics/card.png"
         },
         {
             "id": "formation_105",
