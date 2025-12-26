@@ -39,6 +39,7 @@ const CivicExamQuestionScreen = () => {
         submitAnswer,
         goToNextQuestion,
         cancelExam,
+        abandonPausedSession,
     } = useCivicExam();
 
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -128,6 +129,20 @@ const CivicExamQuestionScreen = () => {
                                     text: 'Continuer',
                                     style: 'cancel',
                                     onPress: () => {},
+                                },
+                                {
+                                    text: 'Abandonner',
+                                    style: 'destructive',
+                                    onPress: async () => {
+                                        isNavigatingAwayRef.current = true;
+                                        await abandonPausedSession();
+                                        navigation.dispatch(
+                                            CommonActions.reset({
+                                                index: 0,
+                                                routes: [{ name: 'CivicExamHome' }],
+                                            })
+                                        );
+                                    },
                                 },
                                 {
                                     text: 'Pause',
@@ -235,6 +250,20 @@ const CivicExamQuestionScreen = () => {
                     {
                         text: 'Continuer',
                         style: 'cancel',
+                    },
+                    {
+                        text: 'Abandonner',
+                        style: 'destructive',
+                        onPress: async () => {
+                            isNavigatingAwayRef.current = true;
+                            await abandonPausedSession();
+                            navigation.dispatch(
+                                CommonActions.reset({
+                                    index: 0,
+                                    routes: [{ name: 'CivicExamHome' }],
+                                })
+                            );
+                        },
                     },
                     {
                         text: 'Pause',

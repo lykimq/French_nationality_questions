@@ -23,6 +23,7 @@ interface CivicExamSessionContextType {
 
     startExam: (config: CivicExamConfig, allQuestions: readonly TestQuestion[]) => Promise<void>;
     resumeSession: () => Promise<void>;
+    abandonPausedSession: () => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishExam: () => Omit<CivicExamResult, 'statistics'> & { session: CivicExamSession };
@@ -102,6 +103,20 @@ export const CivicExamSessionProvider: React.FC<{
         // Clear paused session
         setPausedSession(null);
     }, [pausedSession]);
+
+    const abandonPausedSession = useCallback(async (): Promise<void> => {
+        // Clear paused session if it exists
+        if (pausedSession) {
+            await clearStoredSession();
+            setPausedSession(null);
+        }
+        // Clear current session if it exists (when abandoning during active practice)
+        if (currentSession?.isPracticeMode) {
+            await clearStoredSession();
+            setCurrentSession(null);
+            setCurrentQuestionIndex(0);
+        }
+    }, [pausedSession, currentSession]);
 
     const startExam = useCallback(async (config: CivicExamConfig, allQuestions: readonly TestQuestion[]): Promise<void> => {
         // If there's a paused session and we're starting a new practice session, clear it
@@ -340,6 +355,7 @@ export const CivicExamSessionProvider: React.FC<{
         pausedSession,
         startExam,
         resumeSession,
+        abandonPausedSession,
         submitAnswer,
         goToNextQuestion,
         finishExam,
@@ -353,6 +369,7 @@ export const CivicExamSessionProvider: React.FC<{
         pausedSession,
         startExam,
         resumeSession,
+        abandonPausedSession,
         submitAnswer,
         goToNextQuestion,
         finishExam,

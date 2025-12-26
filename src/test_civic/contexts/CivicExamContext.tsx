@@ -28,6 +28,7 @@ interface CivicExamContextType {
     examStatistics: CivicExamStatistics;
     startExam: (config: CivicExamConfig) => Promise<void>;
     resumeSession: () => Promise<void>;
+    abandonPausedSession: () => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishExam: () => Promise<CivicExamResult>;
@@ -70,6 +71,10 @@ const CivicExamContextInternal: React.FC<{
         await sessionContext.resumeSession();
     }, [sessionContext]);
 
+    const abandonPausedSession = useCallback(async (): Promise<void> => {
+        await sessionContext.abandonPausedSession();
+    }, [sessionContext]);
+
     const contextValue = useMemo((): CivicExamContextType => ({
         currentSession: sessionContext.currentSession,
         isExamActive: sessionContext.isExamActive,
@@ -79,6 +84,7 @@ const CivicExamContextInternal: React.FC<{
         examStatistics: progressContext.examStatistics,
         startExam,
         resumeSession,
+        abandonPausedSession,
         submitAnswer: sessionContext.submitAnswer,
         goToNextQuestion: sessionContext.goToNextQuestion,
         finishExam,
@@ -95,6 +101,7 @@ const CivicExamContextInternal: React.FC<{
         progressContext,
         startExam,
         resumeSession,
+        abandonPausedSession,
         finishExam,
         getIncorrectQuestions,
     ]);
