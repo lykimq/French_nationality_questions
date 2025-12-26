@@ -3,840 +3,884 @@
     "themeTitle": "Vivre dans la société française",
     "questions": [
         {
-            "id": "test_civic_1",
+            "id": "vsf_1",
             "question": "Qu'est-ce que la domiciliation ?",
-            "correctAnswer": "Une adresse administrative pour les personnes sans domicile fixe ou en habitat précaire",
+            "correctAnswer": "Une adresse administrative pour les personnes sans domicile fixe ou en habitat précaire.",
             "incorrectAnswers": [
-                "Un contrat de location",
-                "Une assurance habitation",
-                "Un titre de propriété"
+                "Un contrat de location.",
+                "Une assurance habitation.",
+                "Un titre de propriété."
             ],
             "explanation": "La domiciliation est une adresse administrative attribuée aux personnes qui ne peuvent pas recevoir leur courrier de façon constante et confidentielle à une adresse stable.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_2",
+            "id": "vsf_2",
             "question": "Dans quel délai doit-on signaler un changement d'adresse ?",
-            "correctAnswer": "3 mois maximum après le déménagement",
+            "correctAnswer": "3 mois maximum après le déménagement.",
             "incorrectAnswers": [
-                "1 mois maximum",
-                "6 mois maximum",
-                "1 an maximum"
+                "1 mois maximum.",
+                "6 mois maximum.",
+                "1 an maximum."
             ],
             "explanation": "Quand vous changez de logement, le changement d'adresse doit être fait le plus rapidement possible, 3 mois maximum après le déménagement.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_3",
+            "id": "vsf_3",
             "question": "Quel est le rôle de la Banque de France ?",
-            "correctAnswer": "Gérer le droit au compte, accompagner les personnes en surendettement et assurer la stabilité des prix",
+            "correctAnswer": "Gérer le droit au compte, accompagner les personnes en surendettement et assurer la stabilité des prix.",
             "incorrectAnswers": [
-                "Accorder des prêts immobiliers aux particuliers",
-                "Gérer les comptes courants des citoyens",
-                "Imprimer les billets de banque français"
+                "Accorder des prêts immobiliers aux particuliers.",
+                "Gérer les comptes courants des citoyens.",
+                "Définir les taux d'intérêt des crédits bancaires privés."
             ],
             "explanation": "La Banque de France gère des services à l'économie : droit au compte, accompagnement des personnes en surendettement, stratégie monétaire et stabilité des prix.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_4",
+            "id": "vsf_4",
             "question": "Quels documents sont obligatoires pour conduire une voiture en France ?",
-            "correctAnswer": "Un permis de conduire valide, une carte grise à jour et une assurance automobile",
+            "correctAnswer": "Un permis de conduire valide, une carte grise à jour et une assurance automobile.",
             "incorrectAnswers": [
-                "Uniquement un permis de conduire",
-                "Un permis de conduire et une carte d'identité",
-                "Une carte grise et un certificat médical"
+                "Uniquement un permis de conduire.",
+                "Un permis de conduire et une carte d'identité.",
+                "Une carte grise et un certificat médical."
             ],
             "explanation": "Pour conduire une voiture en France, il est obligatoire d'avoir un permis de conduire valide, une carte grise du véhicule à jour et une assurance automobile.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_5",
+            "id": "vsf_5",
             "question": "À quel âge minimum peut-on passer le permis de conduire en France ?",
-            "correctAnswer": "17 ans",
-            "incorrectAnswers": ["16 ans", "18 ans", "21 ans"],
+            "correctAnswer": "17 ans.",
+            "incorrectAnswers": [
+                "16 ans.",
+                "18 ans.",
+                "21 ans."
+            ],
             "explanation": "Il est nécessaire d'avoir 17 ans au minimum et être résident en France pour passer l'examen du permis de conduire.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_6",
+            "id": "vsf_6",
             "question": "Qu'est-ce que la responsabilité civile ?",
-            "correctAnswer": "L'obligation de réparer les dommages causés involontairement à d'autres personnes",
+            "correctAnswer": "L'obligation de réparer les dommages causés involontairement à d'autres personnes.",
             "incorrectAnswers": [
-                "Le droit de vote aux élections",
-                "L'obligation de payer ses impôts",
-                "Le devoir de respecter le code de la route"
+                "La responsabilité pénale pour les infractions commises volontairement.",
+                "L'obligation de souscrire une assurance habitation.",
+                "Le devoir de signaler les accidents à la police."
             ],
             "explanation": "La responsabilité civile est l'obligation de chacun de réparer les dommages matériels, corporels ou moraux que l'on peut causer sans le vouloir à d'autres personnes.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_7",
+            "id": "vsf_7",
             "question": "Qui doit déclarer ses impôts en France ?",
-            "correctAnswer": "Toute personne de plus de 18 ans résidant en France, même avec des revenus nuls",
+            "correctAnswer": "Toute personne de plus de 18 ans résidant en France, même avec des revenus nuls.",
             "incorrectAnswers": [
-                "Uniquement les personnes qui travaillent",
-                "Uniquement les citoyens français",
-                "Uniquement les personnes gagnant plus du SMIC"
+                "Uniquement les personnes qui travaillent.",
+                "Uniquement les citoyens français.",
+                "Uniquement les personnes gagnant plus du SMIC."
             ],
             "explanation": "Toute personne de plus de 18 ans, résidant en France (citoyen français ou pas) doit déclarer ses revenus, même si ses revenus sont faibles ou nuls.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_8",
+            "id": "vsf_8",
             "question": "Quand doit-on déclarer ses revenus annuels ?",
-            "correctAnswer": "Entre avril et mai de chaque année",
+            "correctAnswer": "Entre avril et mai de chaque année.",
             "incorrectAnswers": [
-                "En janvier de chaque année",
-                "En décembre de chaque année",
-                "Tous les trimestres"
+                "En janvier de chaque année.",
+                "En décembre de chaque année.",
+                "Tous les trimestres."
             ],
             "explanation": "La déclaration annuelle des revenus a lieu entre avril et mai de chaque année : vous déclarez les revenus que vous avez reçus l'année précédente.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_9",
+            "id": "vsf_9",
             "question": "Combien de temps avant la fin de validité doit-on demander le renouvellement du titre de séjour ?",
-            "correctAnswer": "Au moins 3 mois avant",
+            "correctAnswer": "Au moins 3 mois avant.",
             "incorrectAnswers": [
-                "1 mois avant",
-                "6 mois avant",
-                "Le jour de l'expiration"
+                "1 mois avant.",
+                "6 mois avant.",
+                "Le jour de l'expiration."
             ],
             "explanation": "La demande de renouvellement de titre de séjour doit être faite au moins 3 mois avant la fin de validité de votre titre de séjour.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_10",
+            "id": "vsf_10",
             "question": "Dans quel délai doit-on déclarer une naissance ?",
-            "correctAnswer": "Dans les 5 jours qui suivent la naissance",
+            "correctAnswer": "Dans les 5 jours qui suivent la naissance.",
             "incorrectAnswers": [
-                "Dans les 24 heures",
-                "Dans les 15 jours",
-                "Dans le mois qui suit"
+                "Dans les 24 heures.",
+                "Dans les 15 jours.",
+                "Dans le mois qui suit."
             ],
             "explanation": "La déclaration de naissance est obligatoire et doit être réalisée dans les 5 jours qui suivent la naissance, à la mairie du lieu de naissance.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_11",
+            "id": "vsf_11",
             "question": "Quelles sont les conditions pour se marier civilement en France ?",
-            "correctAnswer": "Avoir plus de 18 ans, pas de lien de parenté proche, et donner un consentement libre",
+            "correctAnswer": "Avoir plus de 18 ans, pas de lien de parenté proche, et donner un consentement libre.",
             "incorrectAnswers": [
-                "Être de nationalité française",
-                "Avoir un emploi stable",
-                "Être de religions différentes"
+                "Être de nationalité française.",
+                "Avoir un emploi stable.",
+                "Être de religions différentes."
             ],
             "explanation": "Pour se marier en France, il faut avoir plus de 18 ans, ne pas avoir de lien de parenté ou d'alliance, et pouvoir donner un consentement libre et éclairé.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_12",
+            "id": "vsf_12",
             "question": "Quel est le seul type de mariage reconnu en France ?",
-            "correctAnswer": "Le mariage civil",
+            "correctAnswer": "Le mariage civil.",
             "incorrectAnswers": [
-                "Le mariage religieux",
-                "Le mariage traditionnel",
-                "Le mariage coutumier"
+                "Le mariage religieux.",
+                "Le mariage traditionnel.",
+                "Le mariage coutumier."
             ],
             "explanation": "Le mariage civil est le seul mariage reconnu en France. Deux personnes, de sexe différent ou de même sexe, peuvent se marier.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_13",
+            "id": "vsf_13",
             "question": "Quel est le numéro du SAMU pour les urgences médicales ?",
-            "correctAnswer": "Le 15",
-            "incorrectAnswers": ["Le 17", "Le 18", "Le 112"],
+            "correctAnswer": "Le 15.",
+            "incorrectAnswers": [
+                "Le 17.",
+                "Le 18.",
+                "Le 112."
+            ],
             "explanation": "Le 15 est le numéro du SAMU, à appeler en cas d'urgence médicale. Ces appels sont gratuits et disponibles 24h/24.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_14",
+            "id": "vsf_14",
             "question": "Quel est le numéro d'urgence européen ?",
-            "correctAnswer": "Le 112",
-            "incorrectAnswers": ["Le 15", "Le 17", "Le 18"],
+            "correctAnswer": "Le 112.",
+            "incorrectAnswers": [
+                "Le 15.",
+                "Le 17.",
+                "Le 18."
+            ],
             "explanation": "Le 112 est le numéro d'urgence européen, utilisable pour toute urgence médicale, infraction ou situation de péril/accident.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_15",
+            "id": "vsf_15",
             "question": "Quel numéro appeler pour signaler un enfant en danger ?",
-            "correctAnswer": "Le 119",
-            "incorrectAnswers": ["Le 15", "Le 17", "Le 112"],
+            "correctAnswer": "Le 119.",
+            "incorrectAnswers": [
+                "Le 15.",
+                "Le 17.",
+                "Le 112."
+            ],
             "explanation": "Le 119 est le numéro à appeler en cas de mise en danger de l'enfance (violence physique, psychologique, sexuelle...).",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_16",
+            "id": "vsf_16",
             "question": "Qu'est-ce que le parcours de soins coordonnés ?",
-            "correctAnswer": "Consulter d'abord son médecin traitant qui oriente vers d'autres professionnels si nécessaire",
+            "correctAnswer": "Consulter d'abord son médecin traitant qui oriente vers d'autres professionnels si nécessaire.",
             "incorrectAnswers": [
-                "Aller directement aux urgences de l'hôpital",
-                "Consulter plusieurs médecins spécialistes en même temps",
-                "Se rendre en pharmacie pour un diagnostic"
+                "Aller directement aux urgences de l'hôpital.",
+                "Consulter plusieurs médecins spécialistes en même temps.",
+                "Se rendre en pharmacie pour un diagnostic."
             ],
             "explanation": "Le parcours de soins coordonnés consiste à consulter d'abord son médecin traitant, qui va ensuite orienter le patient vers d'autres professionnels de santé si nécessaire.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_17",
+            "id": "vsf_17",
             "question": "Qu'est-ce que la protection universelle maladie (PUMa) ?",
-            "correctAnswer": "La garantie de prise en charge des frais de santé pour toute personne travaillant ou résidant en France",
+            "correctAnswer": "La garantie de prise en charge des frais de santé pour toute personne travaillant ou résidant en France.",
             "incorrectAnswers": [
-                "Une assurance privée facultative",
-                "Un service réservé aux citoyens français",
-                "Une aide uniquement pour les personnes sans emploi"
+                "Une assurance privée facultative.",
+                "Un service réservé aux citoyens français.",
+                "Une aide uniquement pour les personnes sans emploi."
             ],
             "explanation": "La PUMa garantit un droit à la prise en charge financière des frais de santé pour toute personne qui travaille ou réside en France de manière stable et régulière.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_18",
+            "id": "vsf_18",
             "question": "Qu'est-ce que la Complémentaire Santé Solidaire (C2S) ?",
-            "correctAnswer": "Une couverture complémentaire pour les personnes aux ressources modestes",
+            "correctAnswer": "Une couverture complémentaire pour les personnes aux ressources modestes.",
             "incorrectAnswers": [
-                "L'assurance maladie obligatoire",
-                "Une mutuelle réservée aux retraités",
-                "Un service payant pour tous"
+                "L'assurance maladie obligatoire.",
+                "Une mutuelle réservée aux retraités.",
+                "Un service payant pour tous."
             ],
             "explanation": "La C2S est une couverture complémentaire qui prend en charge les dépenses de santé des personnes aux ressources modestes. Elle peut être gratuite ou coûter moins de 1€ par jour.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_19",
+            "id": "vsf_19",
             "question": "Qu'est-ce que le secret médical ?",
-            "correctAnswer": "La protection de toutes les informations connues par le professionnel de santé sur le patient",
+            "correctAnswer": "La protection de toutes les informations connues par le professionnel de santé sur le patient.",
             "incorrectAnswers": [
-                "Le droit du médecin de ne pas révéler ses méthodes",
-                "L'interdiction de parler de médecine en public",
-                "La confidentialité des prix des consultations"
+                "Le droit du médecin de ne pas révéler ses méthodes de traitement.",
+                "L'obligation de ne partager les informations qu'avec la famille du patient.",
+                "La protection uniquement des diagnostics graves."
             ],
             "explanation": "Le secret médical protège toutes les informations connues par le professionnel de santé : état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de la consultation.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_20",
+            "id": "vsf_20",
             "question": "Qu'est-ce que le dépistage médical ?",
-            "correctAnswer": "Une méthode pour repérer une maladie avant l'apparition des symptômes",
+            "correctAnswer": "Une méthode pour repérer une maladie avant l'apparition des symptômes.",
             "incorrectAnswers": [
-                "Un traitement contre les maladies graves",
-                "Une vaccination obligatoire",
-                "Un examen réservé aux personnes âgées"
+                "Un traitement contre les maladies graves.",
+                "Une vaccination obligatoire.",
+                "Un examen réservé aux personnes âgées."
             ],
             "explanation": "Le dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes, permettant un traitement rapide.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_21",
+            "id": "vsf_21",
             "question": "Pourquoi la vaccination est-elle importante ?",
-            "correctAnswer": "Elle protège des maladies dangereuses en renforçant le système immunitaire",
+            "correctAnswer": "Elle protège des maladies dangereuses en renforçant le système immunitaire.",
             "incorrectAnswers": [
-                "Elle guérit les maladies existantes",
-                "Elle remplace les médicaments",
-                "Elle est uniquement esthétique"
+                "Elle guérit les maladies existantes.",
+                "Elle remplace les médicaments.",
+                "Elle est uniquement esthétique."
             ],
             "explanation": "La vaccination est un moyen simple, sûr et efficace de se protéger des maladies dangereuses. Elle utilise les défenses naturelles de l'organisme pour renforcer le système immunitaire.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_22",
+            "id": "vsf_22",
             "question": "Qu'est-ce que France Travail ?",
-            "correctAnswer": "Un organisme public qui accompagne les personnes à la recherche d'un emploi",
+            "correctAnswer": "Un organisme public qui accompagne les personnes à la recherche d'un emploi.",
             "incorrectAnswers": [
-                "Une entreprise privée de recrutement",
-                "Un ministère du gouvernement",
-                "Une association de bénévoles"
+                "Une entreprise privée de recrutement.",
+                "Un ministère du gouvernement.",
+                "Une association de bénévoles."
             ],
             "explanation": "France Travail est un organisme public qui accompagne les personnes à la recherche d'un emploi. L'inscription permet d'être accompagné pour trouver un travail ou suivre une formation.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_23",
+            "id": "vsf_23",
             "question": "Qui peut s'inscrire à France Travail ?",
-            "correctAnswer": "Toute personne étrangère en situation régulière sans emploi",
+            "correctAnswer": "Toute personne étrangère en situation régulière sans emploi.",
             "incorrectAnswers": [
-                "Uniquement les citoyens français",
-                "Uniquement les personnes de moins de 25 ans",
-                "Uniquement les personnes ayant déjà travaillé en France"
+                "Uniquement les citoyens français.",
+                "Uniquement les personnes de moins de 25 ans.",
+                "Uniquement les personnes ayant déjà travaillé en France."
             ],
             "explanation": "Chaque personne étrangère en situation régulière (titre de séjour, réfugiée, ou bénéficiaire de la protection internationale) et sans travail doit être inscrite à France Travail.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_24",
+            "id": "vsf_24",
             "question": "Qu'est-ce que l'attestation de comparabilité ?",
-            "correctAnswer": "Un document du Centre Enic-Naric qui explique la valeur d'un diplôme étranger en France",
+            "correctAnswer": "Un document du Centre Enic-Naric qui explique la valeur d'un diplôme étranger en France.",
             "incorrectAnswers": [
-                "Un diplôme français équivalent",
-                "Une traduction officielle du diplôme",
-                "Un certificat de nationalité"
+                "Un diplôme français équivalent.",
+                "Une traduction officielle du diplôme.",
+                "Un certificat de nationalité."
             ],
             "explanation": "L'attestation de comparabilité est un document fourni par le Centre Enic-Naric pour mieux comprendre le parcours de formation suivi à l'étranger.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_25",
+            "id": "vsf_25",
             "question": "Qu'est-ce que la VAE (Validation des Acquis de l'Expérience) ?",
-            "correctAnswer": "Un dispositif permettant de faire reconnaître ses compétences professionnelles comme un diplôme",
+            "correctAnswer": "Un dispositif permettant de faire reconnaître ses compétences professionnelles comme un diplôme.",
             "incorrectAnswers": [
-                "Un examen pour obtenir la nationalité française",
-                "Une formation obligatoire pour les demandeurs d'emploi",
-                "Un test de niveau en français"
+                "Un examen pour obtenir la nationalité française.",
+                "Une formation obligatoire pour les demandeurs d'emploi.",
+                "Un test de niveau en français."
             ],
             "explanation": "La VAE permet de faire reconnaître vos compétences de manière officielle, comme un diplôme reçu après une formation. Il faut avoir au moins un an d'expérience en lien avec le diplôme visé.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_26",
+            "id": "vsf_26",
             "question": "Quel est le type de contrat de travail le plus courant en France ?",
-            "correctAnswer": "Le CDI (Contrat à Durée Indéterminée)",
+            "correctAnswer": "Le CDI (Contrat à Durée Indéterminée).",
             "incorrectAnswers": [
-                "Le CDD (Contrat à Durée Déterminée)",
-                "Le contrat d'intérim",
-                "Le contrat de stage"
+                "Le CDD (Contrat à Durée Déterminée).",
+                "Le contrat d'intérim.",
+                "Le contrat de stage."
             ],
             "explanation": "Le CDI (Contrat à Durée Indéterminée) est le contrat de travail le plus courant en France. Il n'a pas de date de fin.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_27",
+            "id": "vsf_27",
             "question": "Quelle est la durée maximale d'un CDD en général ?",
-            "correctAnswer": "18 mois",
-            "incorrectAnswers": ["6 mois", "12 mois", "24 mois"],
+            "correctAnswer": "18 mois.",
+            "incorrectAnswers": [
+                "6 mois.",
+                "12 mois.",
+                "24 mois."
+            ],
             "explanation": "Le CDD (Contrat à Durée Déterminée) a une date de fin et est utilisé pour une tâche précise et limitée dans le temps. En général, sa durée maximale est de 18 mois.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_28",
+            "id": "vsf_28",
             "question": "Quelle est la durée légale du travail pour un salarié à temps complet ?",
-            "correctAnswer": "35 heures par semaine",
+            "correctAnswer": "35 heures par semaine.",
             "incorrectAnswers": [
-                "32 heures par semaine",
-                "39 heures par semaine",
-                "40 heures par semaine"
+                "32 heures par semaine.",
+                "39 heures par semaine.",
+                "40 heures par semaine."
             ],
             "explanation": "Le droit du travail détermine une référence pour la durée de travail des salariés à temps complet : 35 heures par semaine. Cette durée s'applique à toutes les entreprises.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_29",
+            "id": "vsf_29",
             "question": "À partir de quel âge peut-on travailler en France ?",
-            "correctAnswer": "16 ans, avec autorisation du représentant légal",
-            "incorrectAnswers": ["14 ans", "18 ans", "21 ans"],
+            "correctAnswer": "16 ans, avec autorisation du représentant légal.",
+            "incorrectAnswers": [
+                "14 ans.",
+                "18 ans.",
+                "21 ans."
+            ],
             "explanation": "Il est possible de travailler dès l'âge de 16 ans. Tout mineur doit y être autorisé par son représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_30",
+            "id": "vsf_30",
             "question": "Quel est le salaire minimum en France ?",
-            "correctAnswer": "Le SMIC (Salaire Minimum Interprofessionnel de Croissance)",
+            "correctAnswer": "Le SMIC (Salaire Minimum Interprofessionnel de Croissance).",
             "incorrectAnswers": [
-                "Le salaire moyen national",
-                "Le revenu de solidarité active",
-                "Le salaire médian"
+                "Le salaire moyen national.",
+                "Le revenu de solidarité active.",
+                "Le salaire médian."
             ],
             "explanation": "Il est interdit de verser un salaire inférieur au SMIC (Salaire Minimum Interprofessionnel de Croissance), qui est le salaire horaire minimum en France.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_31",
+            "id": "vsf_31",
             "question": "Qu'est-ce que le droit syndical ?",
-            "correctAnswer": "Le droit de créer, adhérer ou participer à un syndicat qui défend les droits des travailleurs",
+            "correctAnswer": "Le droit de créer, adhérer ou participer à un syndicat qui défend les droits des travailleurs.",
             "incorrectAnswers": [
-                "L'obligation de rejoindre un syndicat",
-                "Le droit de faire grève sans préavis",
-                "Le droit de licencier des employés"
+                "L'obligation de rejoindre un syndicat.",
+                "Le droit de faire grève sans préavis.",
+                "Le droit de licencier des employés."
             ],
             "explanation": "En France, chaque salarié a le droit de se syndiquer, c'est-à-dire de créer, adhérer ou participer à un syndicat qui défend les droits des travailleurs.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_32",
+            "id": "vsf_32",
             "question": "Qu'est-ce que le Conseil de Prud'hommes ?",
-            "correctAnswer": "Un tribunal qui règle les conflits entre salariés et employeurs concernant le contrat de travail",
+            "correctAnswer": "Un tribunal qui règle les conflits entre salariés et employeurs concernant le contrat de travail.",
             "incorrectAnswers": [
-                "Un conseil municipal",
-                "Une association de défense des consommateurs",
-                "Un service de médiation familiale"
+                "Un conseil municipal.",
+                "Une association de défense des consommateurs.",
+                "Un service de médiation familiale."
             ],
             "explanation": "Le Conseil de Prud'hommes est un lieu de Justice qui décide dans les conflits entre salariés et employeurs concernant le contrat de travail (licenciement, salaire...).",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_33",
+            "id": "vsf_33",
             "question": "Qu'est-ce que la discrimination au travail ?",
-            "correctAnswer": "Traiter une personne moins bien que les autres en raison d'un critère interdit par la loi",
+            "correctAnswer": "Traiter une personne moins bien que les autres en raison d'un critère interdit par la loi.",
             "incorrectAnswers": [
-                "Refuser une augmentation de salaire",
-                "Demander des heures supplémentaires",
-                "Changer les horaires de travail"
+                "Refuser une augmentation de salaire.",
+                "Demander des heures supplémentaires.",
+                "Changer les horaires de travail."
             ],
             "explanation": "On parle de discrimination au travail quand une personne est moins bien traitée que les autres par l'employeur en raison d'un critère interdit par la loi (origine, sexe, âge...).",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_34",
+            "id": "vsf_34",
             "question": "Qu'est-ce que l'Inspection du travail ?",
-            "correctAnswer": "Un service de l'État qui veille au respect du droit du travail",
+            "correctAnswer": "Un service de l'État qui veille au respect du droit du travail.",
             "incorrectAnswers": [
-                "Une entreprise privée de conseil",
-                "Un syndicat de travailleurs",
-                "Une association de bénévoles"
+                "Une entreprise privée de conseil.",
+                "Un syndicat de travailleurs.",
+                "Une association de bénévoles."
             ],
             "explanation": "L'Inspection du travail est un service de l'État qui veille au respect du droit du travail. Elle informe et conseille les employeurs, les salariés et les représentants du personnel.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_35",
+            "id": "vsf_35",
             "question": "Quelles sont les conséquences du travail non déclaré pour le salarié ?",
-            "correctAnswer": "Pas de cotisation retraite, pas de sécurité sociale, pas de congés payés",
+            "correctAnswer": "Pas de cotisation retraite, pas de sécurité sociale, pas de congés payés.",
             "incorrectAnswers": [
-                "Un salaire plus élevé",
-                "Plus de jours de congés",
-                "Une protection juridique renforcée"
+                "Un salaire plus élevé.",
+                "Plus de jours de congés.",
+                "Une protection juridique renforcée."
             ],
             "explanation": "Un salarié qui travaille sans être déclaré ne cotise ni à l'assurance chômage, ni pour sa retraite. Il n'a pas droit à la sécurité sociale ni aux congés payés.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_36",
+            "id": "vsf_36",
             "question": "Qu'est-ce que l'autorité parentale ?",
-            "correctAnswer": "L'ensemble des droits et devoirs des parents vis-à-vis de leur enfant de moins de 18 ans",
+            "correctAnswer": "L'ensemble des droits et devoirs des parents vis-à-vis de leur enfant de moins de 18 ans.",
             "incorrectAnswers": [
-                "Le droit de punir physiquement son enfant",
-                "L'autorité de l'école sur les enfants",
-                "Le pouvoir de l'État sur les familles"
+                "Le droit de punir physiquement son enfant.",
+                "L'autorité de l'école sur les enfants.",
+                "Le pouvoir de l'État sur les familles."
             ],
             "explanation": "L'autorité parentale correspond à l'ensemble des droits et devoirs des parents vis-à-vis de leur enfant de moins de 18 ans. Les deux parents ont l'autorité parentale.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_37",
+            "id": "vsf_37",
             "question": "Quand se termine l'autorité parentale ?",
-            "correctAnswer": "Quand l'enfant a 18 ans ou s'il est émancipé",
+            "correctAnswer": "Quand l'enfant a 18 ans ou s'il est émancipé.",
             "incorrectAnswers": [
-                "Quand l'enfant commence à travailler",
-                "Quand l'enfant entre au lycée",
-                "Quand l'enfant quitte le domicile familial"
+                "Quand l'enfant commence à travailler.",
+                "Quand l'enfant entre au lycée.",
+                "Quand l'enfant quitte le domicile familial."
             ],
             "explanation": "L'autorité parentale se termine quand l'enfant a 18 ans ou s'il est émancipé (devient adulte avant 18 ans).",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_38",
+            "id": "vsf_38",
             "question": "Qu'est-ce que la Convention Internationale des Droits de l'Enfant ?",
-            "correctAnswer": "Un document signé par 196 États présentant les droits fondamentaux des enfants",
+            "correctAnswer": "Un document signé par 196 États présentant les droits fondamentaux des enfants.",
             "incorrectAnswers": [
-                "Une loi française uniquement",
-                "Un accord commercial international",
-                "Une convention sur l'éducation scolaire"
+                "Une loi française uniquement.",
+                "Un accord commercial international.",
+                "Une convention sur l'éducation scolaire."
             ],
             "explanation": "En 1989, 196 États ont signé la Convention Internationale des Droits de l'Enfant dans le cadre de l'ONU. Ce document présente les droits fondamentaux des enfants.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_39",
+            "id": "vsf_39",
             "question": "Quel principe signifie que l'intérêt de l'enfant prime sur la volonté des parents ?",
-            "correctAnswer": "L'intérêt supérieur de l'enfant",
+            "correctAnswer": "L'intérêt supérieur de l'enfant.",
             "incorrectAnswers": [
-                "L'autorité parentale exclusive",
-                "Le droit de garde",
-                "La tutelle de l'État"
+                "L'autorité parentale exclusive.",
+                "Le droit de garde.",
+                "La tutelle de l'État."
             ],
             "explanation": "L'intérêt de l'enfant est supérieur à sa volonté et à celle de ses parents. L'enfant peut choisir lui-même son avenir, sauf si ses décisions le mettent en danger.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_40",
+            "id": "vsf_40",
             "question": "Jusqu'à quel âge l'école est-elle obligatoire en France ?",
-            "correctAnswer": "De 3 à 16 ans",
+            "correctAnswer": "De 3 à 16 ans.",
             "incorrectAnswers": [
-                "De 6 à 14 ans",
-                "De 5 à 18 ans",
-                "De 4 à 15 ans"
+                "De 6 à 14 ans.",
+                "De 5 à 18 ans.",
+                "De 4 à 15 ans."
             ],
             "explanation": "Français ou étrangers, tous les enfants âgés de 3 à 16 ans, qui habitent en France, doivent aller à l'école. C'est une obligation.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_41",
+            "id": "vsf_41",
             "question": "Quels sont les 4 niveaux de l'organisation scolaire en France ?",
-            "correctAnswer": "Maternelle, cours élémentaire, collège et lycée",
+            "correctAnswer": "Maternelle, cours élémentaire, collège et lycée.",
             "incorrectAnswers": [
-                "Primaire, secondaire, supérieur et professionnel",
-                "Crèche, école, université et doctorat",
-                "Petite école, grande école, faculté et institut"
+                "Primaire, secondaire, supérieur et professionnel.",
+                "Crèche, école, université et doctorat.",
+                "Petite école, grande école, faculté et institut."
             ],
             "explanation": "L'école est organisée en 4 temps : la maternelle (3-6 ans), le cours élémentaire (6-11 ans), le collège (11-15 ans) et le lycée (15-18 ans).",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_42",
+            "id": "vsf_42",
             "question": "Quel diplôme obtient-on à la fin du collège ?",
-            "correctAnswer": "Le brevet des collèges (DNB)",
+            "correctAnswer": "Le brevet des collèges (DNB).",
             "incorrectAnswers": [
-                "Le baccalauréat",
-                "Le certificat d'études",
-                "Le CAP"
+                "Le baccalauréat.",
+                "Le certificat d'études.",
+                "Le CAP."
             ],
             "explanation": "À la fin du collège, l'enfant passe un diplôme qui s'appelle le brevet des collèges, ou diplôme national du brevet (DNB).",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_43",
+            "id": "vsf_43",
             "question": "Quel diplôme obtient-on à la fin du lycée ?",
-            "correctAnswer": "Le baccalauréat (BAC)",
+            "correctAnswer": "Le baccalauréat (BAC).",
             "incorrectAnswers": [
-                "Le brevet des collèges",
-                "Le certificat d'aptitude professionnelle",
-                "Le diplôme national du brevet"
+                "Le brevet des collèges.",
+                "Le certificat d'aptitude professionnelle.",
+                "Le diplôme national du brevet."
             ],
             "explanation": "À la fin du lycée, l'enfant passe un diplôme qui s'appelle le baccalauréat (BAC), qui permet de poursuivre des études supérieures.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_44",
+            "id": "vsf_44",
             "question": "Quelles sont les valeurs transmises par l'école républicaine ?",
-            "correctAnswer": "La citoyenneté, la laïcité, la culture de l'engagement et la lutte contre les discriminations",
+            "correctAnswer": "La citoyenneté, la laïcité, la culture de l'engagement et la lutte contre les discriminations.",
             "incorrectAnswers": [
-                "La compétition et la réussite individuelle",
-                "Les traditions religieuses régionales",
-                "L'obéissance et la discipline militaire"
+                "La compétition et la réussite individuelle.",
+                "Les traditions religieuses régionales.",
+                "L'obéissance et la discipline militaire."
             ],
             "explanation": "L'École républicaine, gratuite, laïque et obligatoire, est au cœur de la transmission des valeurs de la République : citoyenneté, laïcité, engagement et lutte contre les discriminations.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_45",
+            "id": "vsf_45",
             "question": "Qu'est-ce que le dispositif OEPRE ?",
-            "correctAnswer": "Un programme pour aider les parents étrangers à comprendre l'école et améliorer leur français",
+            "correctAnswer": "Un programme pour aider les parents étrangers à comprendre l'école et améliorer leur français.",
             "incorrectAnswers": [
-                "Un examen pour les élèves étrangers",
-                "Une bourse d'études pour les enfants",
-                "Un service de garde après l'école"
+                "Un examen pour les élèves étrangers.",
+                "Une bourse d'études pour les enfants.",
+                "Un service de garde après l'école."
             ],
             "explanation": "OEPRE (Ouvrir l'École aux Parents pour la Réussite des Enfants) est un dispositif pour les parents étrangers, permettant de travailler la langue française, les valeurs de la République et le fonctionnement de l'école.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_46",
+            "id": "vsf_46",
             "question": "Qu'est-ce que le bail (contrat de location) ?",
-            "correctAnswer": "Un contrat écrit entre le propriétaire et le locataire pour louer un logement",
+            "correctAnswer": "Un contrat écrit entre le propriétaire et le locataire pour louer un logement.",
             "incorrectAnswers": [
-                "Un titre de propriété",
-                "Une assurance habitation",
-                "Un certificat de résidence"
+                "Un titre de propriété.",
+                "Une assurance habitation.",
+                "Un certificat de résidence."
             ],
             "explanation": "Le bail est un contrat écrit entre le bailleur (propriétaire) et le locataire. C'est le seul document qui autorise à vivre dans un logement.",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_47",
+            "id": "vsf_47",
             "question": "Quel est le délai de préavis standard pour quitter un logement ?",
-            "correctAnswer": "3 mois (1 mois sous certaines conditions)",
-            "incorrectAnswers": ["1 semaine", "6 mois", "1 an"],
+            "correctAnswer": "3 mois (1 mois sous certaines conditions).",
+            "incorrectAnswers": [
+                "1 semaine.",
+                "6 mois.",
+                "1 an."
+            ],
             "explanation": "Le locataire peut quitter le logement à tout moment en respectant le délai de préavis de 3 mois (1 mois sous certaines conditions comme un logement meublé ou en zone tendue).",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_48",
+            "id": "vsf_48",
             "question": "Quelle assurance est obligatoire pour un locataire ?",
-            "correctAnswer": "L'assurance habitation couvrant les risques locatifs",
+            "correctAnswer": "L'assurance habitation couvrant les risques locatifs.",
             "incorrectAnswers": [
-                "L'assurance vie",
-                "L'assurance automobile",
-                "L'assurance santé"
+                "L'assurance vie.",
+                "L'assurance automobile.",
+                "L'assurance santé."
             ],
             "explanation": "Le locataire a l'obligation de souscrire une assurance habitation couvrant les risques locatifs (incendie, dégât des eaux...).",
             "subTheme": "residence",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_49",
+            "id": "vsf_49",
             "question": "Qu'est-ce que le numéro de sécurité sociale ?",
-            "correctAnswer": "Un identifiant unique à 15 chiffres attestant l'affiliation à l'Assurance maladie",
+            "correctAnswer": "Un identifiant unique à 15 chiffres attestant l'affiliation à l'Assurance maladie.",
             "incorrectAnswers": [
-                "Un numéro de téléphone d'urgence",
-                "Un code pour accéder aux services en ligne",
-                "Un numéro de compte bancaire"
+                "Un numéro de téléphone d'urgence.",
+                "Un code pour accéder aux services en ligne.",
+                "Un numéro de compte bancaire."
             ],
             "explanation": "Le numéro de sécurité sociale est un identifiant unique et personnel à 15 chiffres qui atteste que vous avez l'Assurance maladie. Il est inscrit sur la carte Vitale.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_50",
+            "id": "vsf_50",
             "question": "Qu'est-ce que le tiers-payant ?",
-            "correctAnswer": "Un système où le professionnel de santé est directement payé par l'Assurance maladie",
+            "correctAnswer": "Un système où le professionnel de santé est directement payé par l'Assurance maladie.",
             "incorrectAnswers": [
-                "Un impôt sur les soins médicaux",
-                "Une cotisation mensuelle obligatoire",
-                "Un remboursement après 3 mois"
+                "Un impôt sur les soins médicaux.",
+                "Une cotisation mensuelle obligatoire.",
+                "Un remboursement après 3 mois."
             ],
             "explanation": "Le système de tiers-payant permet de ne pas avancer la somme d'argent que l'Assurance maladie rembourse. Le professionnel de santé est directement payé par l'Assurance maladie.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_51",
+            "id": "vsf_51",
             "question": "Quel numéro appeler pour une femme victime de violence ?",
-            "correctAnswer": "Le 3919",
-            "incorrectAnswers": ["Le 15", "Le 17", "Le 119"],
+            "correctAnswer": "Le 3919.",
+            "incorrectAnswers": [
+                "Le 15.",
+                "Le 17.",
+                "Le 119."
+            ],
             "explanation": "Le 3919 est le numéro à appeler pour une femme victime de violence. C'est un numéro d'écoute et d'orientation.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_52",
+            "id": "vsf_52",
             "question": "Quel numéro appeler pour la prévention du suicide ?",
-            "correctAnswer": "Le 3114",
-            "incorrectAnswers": ["Le 15", "Le 112", "Le 119"],
+            "correctAnswer": "Le 3114.",
+            "incorrectAnswers": [
+                "Le 15.",
+                "Le 112.",
+                "Le 119."
+            ],
             "explanation": "Le 3114 est le numéro national de prévention du suicide, disponible 24h/24.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_53",
+            "id": "vsf_53",
             "question": "Que sont les UPE2A ?",
-            "correctAnswer": "Des unités pédagogiques pour élèves étrangers allophones arrivants",
+            "correctAnswer": "Des unités pédagogiques pour élèves étrangers allophones arrivants.",
             "incorrectAnswers": [
-                "Des universités pour adultes",
-                "Des écoles privées internationales",
-                "Des centres de formation professionnelle"
+                "Des universités pour adultes.",
+                "Des écoles privées internationales.",
+                "Des centres de formation professionnelle."
             ],
             "explanation": "Les UPE2A (Unités Pédagogiques pour Élèves étrangers Allophones Arrivants) sont déployées pour les élèves qui ne parlent pas bien français à leur arrivée en France.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_54",
+            "id": "vsf_54",
             "question": "Peut-on créer une entreprise en France sans avoir la nationalité française ?",
-            "correctAnswer": "Oui, la nationalité n'est pas requise pour créer une entreprise",
+            "correctAnswer": "Oui, la nationalité n'est pas requise pour créer une entreprise.",
             "incorrectAnswers": [
-                "Non, il faut être citoyen français",
-                "Oui, mais uniquement avec un visa entrepreneur",
-                "Non, sauf pour les ressortissants européens"
+                "Non, il faut être citoyen français.",
+                "Oui, mais uniquement avec un visa entrepreneur.",
+                "Non, sauf pour les ressortissants européens."
             ],
             "explanation": "Vous pouvez créer une entreprise en France, même si vous n'avez pas la nationalité française. Vous n'avez pas besoin de diplôme, sauf pour certaines activités.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_55",
+            "id": "vsf_55",
             "question": "Qu'est-ce que le CV (Curriculum Vitae) ?",
-            "correctAnswer": "Un document présentant l'expérience, la formation et les compétences d'une personne pour un emploi",
+            "correctAnswer": "Un document présentant l'expérience, la formation et les compétences d'une personne pour un emploi.",
             "incorrectAnswers": [
-                "Un contrat de travail",
-                "Une lettre de recommandation",
-                "Un diplôme professionnel"
+                "Un contrat de travail.",
+                "Une lettre de recommandation.",
+                "Un diplôme professionnel."
             ],
             "explanation": "Le CV est un document qu'une personne envoie à une entreprise dans le but d'être embauché. Il présente son expérience professionnelle, son parcours de formation et ses compétences.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_56",
+            "id": "vsf_56",
             "question": "Qu'est-ce que le soutien à la parentalité ?",
-            "correctAnswer": "Un ensemble d'actions de l'État pour aider les parents dans l'éducation de leurs enfants",
+            "correctAnswer": "Un ensemble d'actions de l'État pour aider les parents dans l'éducation de leurs enfants.",
             "incorrectAnswers": [
-                "Une aide financière pour les familles nombreuses",
-                "Un service de garde d'enfants gratuit",
-                "Une école pour les parents"
+                "Une aide financière pour les familles nombreuses.",
+                "Un service de garde d'enfants gratuit.",
+                "Une école pour les parents."
             ],
             "explanation": "Le soutien à la parentalité est un ensemble d'actions décidées par l'État pour aider les parents qui ont du mal à assurer l'éducation de leurs enfants.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_57",
+            "id": "vsf_57",
             "question": "Qu'est-ce que la médiation familiale ?",
-            "correctAnswer": "Un service pour trouver une solution en cas de conflit familial",
+            "correctAnswer": "Un service pour trouver une solution en cas de conflit familial.",
             "incorrectAnswers": [
-                "Un tribunal pour les divorces",
-                "Une thérapie de couple obligatoire",
-                "Une aide financière pour les familles"
+                "Un tribunal pour les divorces.",
+                "Une thérapie de couple obligatoire.",
+                "Une aide financière pour les familles."
             ],
             "explanation": "La médiation familiale permet de trouver une solution en cas de conflit familial (séparation, difficulté à assurer l'autorité parentale...).",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_58",
+            "id": "vsf_58",
             "question": "Quel numéro appeler en cas de harcèlement d'un enfant ?",
-            "correctAnswer": "Le 30 20",
-            "incorrectAnswers": ["Le 15", "Le 17", "Le 112"],
+            "correctAnswer": "Le 30 20.",
+            "incorrectAnswers": [
+                "Le 15.",
+                "Le 17.",
+                "Le 112."
+            ],
             "explanation": "Le 30 20 est le numéro à appeler en cas de harcèlement de l'enfant. Les parents doivent signaler toute violence.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_59",
+            "id": "vsf_59",
             "question": "Qu'est-ce que le Compte Personnel de Formation (CPF) ?",
-            "correctAnswer": "Un compte qui permet de financer des formations professionnelles",
+            "correctAnswer": "Un compte qui permet de financer des formations professionnelles.",
             "incorrectAnswers": [
-                "Un compte bancaire pour les salariés",
-                "Un compte d'épargne retraite",
-                "Un compte pour les allocations chômage"
+                "Un compte bancaire pour les salariés.",
+                "Un compte d'épargne retraite.",
+                "Un compte pour les allocations chômage."
             ],
             "explanation": "Le CPF (Compte Personnel de Formation) permet de financer des formations. Toute personne qui travaille a un CPF qui augmente de 500€ maximum à la fin de chaque année de travail.",
             "subTheme": "work",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_60",
+            "id": "vsf_60",
             "question": "Où se font les modes de garde des enfants de moins de 3 ans ?",
-            "correctAnswer": "En crèche, micro-crèche, halte-garderie, chez une assistante maternelle ou à domicile",
+            "correctAnswer": "En crèche, micro-crèche, halte-garderie, chez une assistante maternelle ou à domicile.",
             "incorrectAnswers": [
-                "Uniquement à l'école maternelle",
-                "Uniquement chez les grands-parents",
-                "Uniquement dans les centres de loisirs"
+                "Uniquement à l'école maternelle.",
+                "Uniquement chez les grands-parents.",
+                "Uniquement dans les centres de loisirs."
             ],
             "explanation": "Les enfants de moins de 3 ans peuvent être gardés en crèche, micro-crèche, halte-garderie, chez une assistante maternelle ou à domicile par une personne employée par les parents.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_61",
+            "id": "vsf_61",
             "question": "Êtes-vous d'accord avec le principe de l'école mixte ?",
-            "correctAnswer": "Oui, car elle favorise l'égalité, la diversité et la compréhension mutuelle dès le plus jeune âge",
+            "correctAnswer": "Oui, car elle favorise l'égalité, la diversité et la compréhension mutuelle dès le plus jeune âge.",
             "incorrectAnswers": [
-                "Non, car les garçons et filles doivent être séparés",
-                "Cela dépend de la religion des familles",
-                "Non, car cela crée des problèmes de discipline"
+                "Non, car les garçons et filles doivent être séparés.",
+                "Cela dépend de la religion des familles.",
+                "Non, car cela crée des problèmes de discipline."
             ],
             "explanation": "L'école mixte en France favorise l'égalité entre les sexes, la diversité et la compréhension mutuelle dès le plus jeune âge. C'est un vecteur d'égalité.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_62",
+            "id": "vsf_62",
             "question": "Qui a rendu l'école obligatoire en France ?",
-            "correctAnswer": "Jules Ferry, ancien maire de Paris, avec les lois de 1881-1882",
+            "correctAnswer": "Jules Ferry, ancien maire de Paris, avec les lois de 1881-1882.",
             "incorrectAnswers": [
-                "Napoléon Bonaparte",
-                "Charles de Gaulle",
-                "Victor Hugo"
+                "Napoléon Bonaparte.",
+                "Charles de Gaulle.",
+                "Victor Hugo."
             ],
             "explanation": "Jules Ferry, ancien maire de Paris, a rendu l'école obligatoire, gratuite et laïque avec les lois de 1881-1882.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_63",
+            "id": "vsf_63",
             "question": "Depuis quand l'école est-elle obligatoire en France ?",
-            "correctAnswer": "Depuis le 28 mars 1882",
-            "incorrectAnswers": ["Depuis 1789", "Depuis 1945", "Depuis 1958"],
+            "correctAnswer": "Depuis le 28 mars 1882.",
+            "incorrectAnswers": [
+                "Depuis 1789.",
+                "Depuis 1945.",
+                "Depuis 1958."
+            ],
             "explanation": "L'école est obligatoire en France depuis le 28 mars 1882, grâce aux lois de Jules Ferry.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_64",
+            "id": "vsf_64",
             "question": "Quels sont les trois principes de l'école publique française ?",
-            "correctAnswer": "Gratuite, laïque et obligatoire",
+            "correctAnswer": "Gratuite, laïque et obligatoire.",
             "incorrectAnswers": [
-                "Privée, religieuse et facultative",
-                "Payante, neutre et recommandée",
-                "Mixte, bilingue et sélective"
+                "Privée, religieuse et facultative.",
+                "Payante, neutre et recommandée.",
+                "Mixte, bilingue et sélective."
             ],
             "explanation": "L'école publique française repose sur trois principes fondamentaux : elle est gratuite, laïque et obligatoire.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_65",
+            "id": "vsf_65",
             "question": "Qu'est-ce que la mixité à l'école ?",
-            "correctAnswer": "Le fait que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes",
+            "correctAnswer": "Le fait que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes.",
             "incorrectAnswers": [
-                "Le mélange d'élèves de différentes nationalités",
-                "L'enseignement de plusieurs langues",
-                "Le regroupement d'élèves de différents niveaux"
+                "Le mélange d'élèves de différentes nationalités.",
+                "L'enseignement de plusieurs langues.",
+                "Le regroupement d'élèves de différents niveaux."
             ],
             "explanation": "La mixité à l'école signifie que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes. C'est un vecteur d'égalité dès le plus jeune âge.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_66",
+            "id": "vsf_66",
             "question": "Comment s'appelle le système de santé publique en France ?",
-            "correctAnswer": "La Sécurité Sociale",
+            "correctAnswer": "La Sécurité Sociale.",
             "incorrectAnswers": [
-                "L'Assurance Maladie Privée",
-                "Le Service National de Santé",
-                "La Mutuelle Générale"
+                "L'Assurance Maladie Privée.",
+                "Le Service National de Santé.",
+                "La Mutuelle Générale."
             ],
             "explanation": "Le système de santé publique en France s'appelle la Sécurité Sociale. Elle a été créée en 1945.",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_67",
+            "id": "vsf_67",
             "question": "Par qui est financée la Sécurité sociale ?",
-            "correctAnswer": "Par les cotisations sociales des employeurs et salariés, et par l'impôt (CSG)",
+            "correctAnswer": "Par les cotisations sociales des employeurs et salariés, et par l'impôt (CSG).",
             "incorrectAnswers": [
-                "Uniquement par l'État",
-                "Uniquement par les entreprises",
-                "Par des dons privés"
+                "Uniquement par l'État.",
+                "Uniquement par les entreprises.",
+                "Par des dons privés."
             ],
             "explanation": "La Sécurité sociale est financée par les cotisations sociales prélevées sur les salaires (employeurs et salariés) et par l'impôt (CSG).",
             "subTheme": "healthcare",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_68",
+            "id": "vsf_68",
             "question": "Quel est le rôle des parents dans l'éducation ?",
-            "correctAnswer": "Assurer l'éducation de leurs enfants, veiller à leur santé, sécurité et leur transmettre les valeurs républicaines",
+            "correctAnswer": "Assurer l'éducation de leurs enfants, veiller à leur santé, sécurité et leur transmettre les valeurs républicaines.",
             "incorrectAnswers": [
-                "Uniquement les nourrir et les loger",
-                "Laisser l'école s'occuper de tout",
-                "Seulement les accompagner à l'école"
+                "Uniquement les nourrir et les loger.",
+                "Laisser l'école s'occuper de tout.",
+                "Seulement les accompagner à l'école."
             ],
             "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
             "subTheme": "parental_authority_education",

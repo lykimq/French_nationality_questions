@@ -3,959 +3,975 @@
     "themeTitle": "Droits et devoirs",
     "questions": [
         {
-            "id": "test_civic_1",
+            "id": "dd_1",
             "question": "Que garantissent les droits fondamentaux à chaque personne ?",
-            "correctAnswer": "La dignité, le respect, l'égalité et la justice",
+            "correctAnswer": "La dignité, le respect, l'égalité et la justice.",
             "incorrectAnswers": [
-                "Uniquement le droit de vote et la liberté d'expression",
-                "Le droit au travail et au logement gratuit",
-                "La protection contre les impôts et les taxes"
+                "Uniquement le droit de vote et la liberté d'expression.",
+                "Le droit au travail et au logement gratuit.",
+                "L'exemption de toutes les obligations civiques."
             ],
             "explanation": "Les droits fondamentaux garantissent à chacun : la dignité, le respect, l'égalité et la justice. Ces droits sont les mêmes pour tout le monde, peu importe le sexe, l'âge, les croyances ou la façon de vivre.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_2",
+            "id": "dd_2",
             "question": "Combien de catégories de droits fondamentaux existe-t-il ?",
-            "correctAnswer": "3 catégories : droits liés à la personne, droits économiques et sociaux, droits de troisième génération",
+            "correctAnswer": "3 catégories : droits liés à la personne, droits économiques et sociaux, droits de troisième génération.",
             "incorrectAnswers": [
-                "2 catégories : droits civiques et droits politiques",
-                "4 catégories : droits naturels, sociaux, économiques et culturels",
-                "5 catégories incluant les droits religieux et sportifs"
+                "2 catégories : droits civiques et droits politiques.",
+                "4 catégories : droits naturels, sociaux, économiques et culturels.",
+                "5 catégories incluant les droits religieux et sportifs."
             ],
             "explanation": "Les droits fondamentaux peuvent être répartis en 3 catégories : les droits liés à la personne humaine, les droits sociaux et économiques, et les droits dits \"de troisième génération\" qui sont collectifs.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_3",
+            "id": "dd_3",
             "question": "Quel texte fondamental de 1789 garantit les droits et libertés ?",
-            "correctAnswer": "La Déclaration des droits de l'homme et du citoyen",
+            "correctAnswer": "La Déclaration des droits de l'homme et du citoyen.",
             "incorrectAnswers": [
-                "Le Code civil de Napoléon",
-                "La Constitution de la Ve République",
-                "La Charte de l'environnement"
+                "Le Code civil de Napoléon.",
+                "La Constitution de la Ve République.",
+                "La Charte de l'environnement."
             ],
             "explanation": "Les droits et libertés fondamentaux sont inscrits dans plusieurs textes, dont la Déclaration des droits de l'homme et du citoyen de 1789, qui est le texte fondateur.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_4",
+            "id": "dd_4",
             "question": "Quels sont les quatre droits naturels de la personne selon la DDHC ?",
-            "correctAnswer": "L'égalité devant la loi, la liberté, la sûreté et la résistance à l'oppression",
+            "correctAnswer": "L'égalité devant la loi, la liberté, la sûreté et la résistance à l'oppression.",
             "incorrectAnswers": [
-                "Le travail, le logement, la santé et l'éducation",
-                "Le vote, la propriété, le mariage et la nationalité",
-                "La religion, l'expression, la réunion et l'association"
+                "Le travail, le logement, la santé et l'éducation.",
+                "Le vote, la propriété, le mariage et la nationalité.",
+                "La religion, l'expression, la réunion et l'association."
             ],
             "explanation": "Chaque personne a droit à : l'égalité devant la loi, la liberté, la sûreté (la sécurité) et la résistance à l'oppression. Ces droits fondamentaux sont des libertés fondamentales inaltérables.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_5",
+            "id": "dd_5",
             "question": "Qu'est-ce que la présomption d'innocence ?",
-            "correctAnswer": "Toute personne accusée est considérée innocente tant que sa culpabilité n'a pas été prouvée",
+            "correctAnswer": "Toute personne accusée est considérée innocente tant que sa culpabilité n'a pas été prouvée.",
             "incorrectAnswers": [
-                "Toute personne accusée doit prouver elle-même son innocence",
-                "Seuls les citoyens français bénéficient de ce droit",
-                "L'accusé est présumé coupable jusqu'à preuve du contraire"
+                "Toute personne accusée doit prouver elle-même son innocence.",
+                "Seuls les citoyens français bénéficient de ce droit.",
+                "L'accusé est présumé coupable jusqu'à preuve du contraire."
             ],
             "explanation": "La présomption d'innocence signifie que toute personne accusée est dite \"innocente\" tant que sa culpabilité n'a pas été prouvée. C'est un droit fondamental lié à la sûreté.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_6",
+            "id": "dd_6",
             "question": "Où est inscrit le droit à l'emploi en France ?",
-            "correctAnswer": "Dans le Préambule de la Constitution de 1946",
+            "correctAnswer": "Dans le Préambule de la Constitution de 1946.",
             "incorrectAnswers": [
-                "Dans le Code du travail uniquement",
-                "Dans la Charte de l'environnement de 2004",
-                "Dans le traité de Maastricht de 1992"
+                "Dans le Code du travail uniquement.",
+                "Dans la Charte de l'environnement de 2004.",
+                "Dans le traité de Maastricht de 1992."
             ],
             "explanation": "Le droit à l'emploi est inscrit dans l'article 5 du Préambule de la Constitution de 1946 : \"Chacun a le devoir de travailler et le droit d'obtenir un emploi.\"",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_7",
+            "id": "dd_7",
             "question": "Que sont les droits de \"troisième génération\" ?",
-            "correctAnswer": "Des droits collectifs fondés sur la solidarité : paix, environnement, générations futures",
+            "correctAnswer": "Des droits collectifs fondés sur la solidarité : paix, environnement, générations futures.",
             "incorrectAnswers": [
-                "Les droits accordés aux personnes de plus de 60 ans",
-                "Les droits numériques et technologiques",
-                "Les droits réservés aux petits-enfants de citoyens français"
+                "Les droits accordés aux personnes de plus de 60 ans.",
+                "Les droits numériques et technologiques.",
+                "Les droits liés à la propriété intellectuelle et artistique."
             ],
             "explanation": "Les droits de troisième génération sont fondés sur la solidarité collective et concernent des enjeux internationaux : la paix, un environnement sain, les générations futures et l'assistance humanitaire.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_8",
+            "id": "dd_8",
             "question": "Qu'est-ce que la dignité humaine ?",
-            "correctAnswer": "Le fait que chaque personne a de la valeur et mérite le respect simplement parce qu'elle est un être humain",
+            "correctAnswer": "Le fait que chaque personne a de la valeur et mérite le respect simplement parce qu'elle est un être humain.",
             "incorrectAnswers": [
-                "Le droit de vivre dans un logement décent",
-                "La capacité de gagner suffisamment d'argent pour vivre",
-                "Le respect accordé uniquement aux personnes âgées"
+                "Le droit de vivre dans un logement décent.",
+                "La capacité de gagner suffisamment d'argent pour vivre.",
+                "Le respect accordé uniquement aux personnes âgées."
             ],
             "explanation": "La dignité humaine, c'est le fait que chaque personne a de la valeur et mérite un respect inconditionnel, peu importe son âge, son sexe, son état de santé, sa condition sociale, sa religion ou son origine.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_9",
+            "id": "dd_9",
             "question": "Dans quel texte européen la dignité humaine est-elle inscrite ?",
-            "correctAnswer": "La Charte des droits fondamentaux de l'Union européenne de 2000",
+            "correctAnswer": "La Charte des droits fondamentaux de l'Union européenne de 2000.",
             "incorrectAnswers": [
-                "Le traité de Rome de 1957",
-                "La Convention de Genève de 1949",
-                "Le traité de Lisbonne de 2007"
+                "Le traité de Rome de 1957.",
+                "La Convention de Genève de 1949.",
+                "Le traité de Lisbonne de 2007."
             ],
             "explanation": "La dignité humaine est inscrite dans le premier chapitre de la Charte des droits fondamentaux de l'Union européenne de 2000, parmi 5 droits essentiels liés au respect de la personne humaine.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_10",
+            "id": "dd_10",
             "question": "Pourquoi le trafic d'organes est-il interdit en France ?",
-            "correctAnswer": "Parce que le corps humain ne peut pas être une source de profit",
+            "correctAnswer": "Parce que le corps humain ne peut pas être une source de profit.",
             "incorrectAnswers": [
-                "Parce que les organes français ne sont pas compatibles avec les étrangers",
-                "Parce que seul l'État peut vendre des organes",
-                "Parce que les hôpitaux n'ont pas la capacité de le faire"
+                "Parce que le don d'organes est réservé aux citoyens français uniquement.",
+                "Parce que seul l'État peut organiser les dons d'organes.",
+                "Parce que cela nécessite une autorisation médicale spéciale."
             ],
             "explanation": "L'article 3 de la Charte des droits fondamentaux de l'UE dit que le corps humain ne peut être une source de profit. Le trafic d'organe est interdit, ainsi que les pratiques eugéniques et le clonage.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_11",
+            "id": "dd_11",
             "question": "Qu'est-ce que le droit de disposer de son corps ?",
-            "correctAnswer": "La liberté pour chaque personne de faire ses propres choix concernant son corps",
+            "correctAnswer": "La liberté pour chaque personne de faire ses propres choix concernant son corps.",
             "incorrectAnswers": [
-                "Le droit de vendre ses organes à qui on veut",
-                "L'obligation de faire don de son corps à la science",
-                "Le droit de modifier l'apparence physique des autres"
+                "Le droit de vendre ses organes à qui on veut.",
+                "L'obligation de faire don de son corps à la science.",
+                "Le droit de refuser tout traitement médical dans tous les cas."
             ],
             "explanation": "Le droit de disposer de son corps est la liberté pour chaque personne de faire elle-même ses propres choix concernant son corps, notamment pour la contraception et l'IVG.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_12",
+            "id": "dd_12",
             "question": "La contraception est-elle accessible aux mineurs en France ?",
-            "correctAnswer": "Oui, de façon anonyme et gratuite sur demande du \"secret\"",
+            "correctAnswer": "Oui, de façon anonyme et gratuite sur demande du \"secret\".",
             "incorrectAnswers": [
-                "Non, il faut avoir 18 ans minimum",
-                "Oui, mais uniquement avec l'autorisation des parents",
-                "Non, sauf pour les mineurs émancipés"
+                "Non, il faut avoir 18 ans minimum.",
+                "Oui, mais uniquement avec l'autorisation des parents.",
+                "Non, sauf pour les mineurs émancipés."
             ],
             "explanation": "Les consultations et prescriptions de contraception aux moins de 18 ans peuvent être anonymes et gratuites sur demande du \"secret\". La contraception d'urgence peut aussi être obtenue gratuitement.",
             "subTheme": "fundamental_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_13",
+            "id": "dd_13",
             "question": "Jusqu'à quel âge la contraception est-elle prise en charge à 100% ?",
-            "correctAnswer": "Jusqu'à 26 ans pour les femmes assurées sociales",
+            "correctAnswer": "Jusqu'à 26 ans pour les femmes assurées sociales.",
             "incorrectAnswers": [
-                "Jusqu'à 18 ans uniquement",
-                "Jusqu'à 30 ans pour tous",
-                "Jusqu'à 21 ans pour les étudiants seulement"
+                "Jusqu'à 18 ans uniquement.",
+                "Jusqu'à 30 ans pour tous.",
+                "Jusqu'à 21 ans pour les étudiants seulement."
             ],
             "explanation": "La contraception des femmes assurées sociales de moins de 26 ans est prise en charge par l'Assurance Maladie sans avance de frais. Les préservatifs pour les hommes de moins de 26 ans sont aussi gratuits.",
             "subTheme": "fundamental_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_14",
+            "id": "dd_14",
             "question": "Une mineure a-t-elle besoin de l'autorisation parentale pour avorter ?",
-            "correctAnswer": "Non, mais elle doit être accompagnée d'une personne majeure de son choix",
+            "correctAnswer": "Non, mais elle doit être accompagnée d'une personne majeure de son choix.",
             "incorrectAnswers": [
-                "Oui, l'autorisation des deux parents est obligatoire",
-                "Non, elle peut y aller seule sans accompagnement",
-                "Oui, sauf si elle est émancipée juridiquement"
+                "Oui, l'autorisation des deux parents est obligatoire.",
+                "Non, elle peut y aller seule sans accompagnement.",
+                "Oui, sauf si elle est émancipée juridiquement."
             ],
             "explanation": "L'IVG est possible pour toutes les femmes, sans condition d'âge. Les mineures n'ont pas besoin d'une autorisation de leurs parents pour avorter mais elles doivent être accompagnées d'une personne majeure de leur choix.",
             "subTheme": "fundamental_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_15",
+            "id": "dd_15",
             "question": "L'IVG est-elle prise en charge par l'Assurance Maladie ?",
-            "correctAnswer": "Oui, à 100% sans avance de frais pour les femmes assurées sociales",
+            "correctAnswer": "Oui, à 100% sans avance de frais pour les femmes assurées sociales.",
             "incorrectAnswers": [
-                "Non, c'est entièrement à la charge de la patiente",
-                "Partiellement, à hauteur de 50%",
-                "Uniquement pour les femmes de moins de 25 ans"
+                "Non, c'est entièrement à la charge de la patiente.",
+                "Partiellement, à hauteur de 50%.",
+                "Uniquement pour les femmes de moins de 25 ans."
             ],
             "explanation": "L'avortement et les actes médicaux adjacents des femmes assurées sociales sont pris en charge à 100% par l'Assurance Maladie sans avance de frais.",
             "subTheme": "fundamental_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_16",
+            "id": "dd_16",
             "question": "Le mariage entre personnes de même sexe est-il autorisé en France ?",
-            "correctAnswer": "Oui, depuis la loi du 17 mai 2013",
+            "correctAnswer": "Oui, depuis la loi du 17 mai 2013.",
             "incorrectAnswers": [
-                "Non, seul le PACS est autorisé pour les couples de même sexe",
-                "Oui, mais uniquement pour les citoyens français",
-                "Non, c'est interdit par la Constitution"
+                "Non, seul le PACS est autorisé pour les couples de même sexe.",
+                "Oui, mais uniquement pour les citoyens français.",
+                "Non, c'est interdit par la Constitution."
             ],
             "explanation": "Un couple est une union entre deux personnes de sexe différent ou de même sexe, qui ont une vie commune. Le mariage pour tous a été légalisé en 2013.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_17",
+            "id": "dd_17",
             "question": "Quelle est la condition essentielle de validité du mariage en France ?",
-            "correctAnswer": "Le consentement libre des deux personnes",
+            "correctAnswer": "Le consentement libre des deux personnes.",
             "incorrectAnswers": [
-                "L'accord des parents des deux époux",
-                "La signature d'un contrat de mariage chez le notaire",
-                "La cérémonie religieuse préalable"
+                "L'accord des parents des deux époux.",
+                "La signature d'un contrat de mariage chez le notaire.",
+                "La cérémonie religieuse préalable."
             ],
             "explanation": "Le consentement libre est une condition essentielle de la validité du mariage (article 146 du Code civil). Chacun est libre de choisir son conjoint, quel que soit son sexe.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_18",
+            "id": "dd_18",
             "question": "Comment peut-on mettre fin à un PACS ?",
-            "correctAnswer": "Par un simple passage à la mairie",
+            "correctAnswer": "Par un simple passage à la mairie.",
             "incorrectAnswers": [
-                "Uniquement par décision d'un juge",
-                "Par une procédure de divorce obligatoire",
-                "Par un acte notarié coûteux"
+                "Uniquement par décision d'un juge.",
+                "Par une procédure de divorce obligatoire.",
+                "Par un acte notarié coûteux."
             ],
             "explanation": "La liberté conjugale permet à chaque conjoint de mettre fin à l'union. Le PACS peut être rompu par un simple passage à la mairie, le concubinage peut s'arrêter sans formalité.",
             "subTheme": "fundamental_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_19",
+            "id": "dd_19",
             "question": "La PMA est-elle ouverte aux femmes célibataires ?",
-            "correctAnswer": "Oui, depuis la loi bioéthique du 2 août 2021",
+            "correctAnswer": "Oui, depuis la loi bioéthique du 2 août 2021.",
             "incorrectAnswers": [
-                "Non, uniquement aux couples hétérosexuels mariés",
-                "Oui, mais seulement aux femmes de plus de 35 ans",
-                "Non, elle est réservée aux couples infertiles"
+                "Non, uniquement aux couples hétérosexuels mariés.",
+                "Oui, mais seulement aux femmes de plus de 35 ans.",
+                "Non, elle est réservée aux couples infertiles."
             ],
             "explanation": "La PMA (Procréation Médicalement Assistée) est ouverte à toutes les femmes (en couple ou seules) depuis le 2 août 2021 grâce à la loi bioéthique.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_20",
+            "id": "dd_20",
             "question": "Quels droits possède un citoyen français ?",
-            "correctAnswer": "Des droits civiques et politiques comme le droit de vote, et des devoirs comme respecter les lois et payer les impôts",
+            "correctAnswer": "Des droits civiques et politiques comme le droit de vote, et des devoirs comme respecter les lois et payer les impôts.",
             "incorrectAnswers": [
-                "Uniquement le droit de vote et la liberté de circulation",
-                "Seulement des droits, sans aucun devoir",
-                "Les mêmes droits qu'un résident étranger"
+                "Uniquement le droit de vote et la liberté de circulation.",
+                "Des droits politiques uniquement, sans devoirs civiques.",
+                "Les mêmes droits qu'un résident étranger."
             ],
             "explanation": "Le citoyen français a des droits civiques et politiques (comme le droit de vote) et des devoirs (respecter les lois, payer les impôts, remplir ses devoirs militaires).",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_21",
+            "id": "dd_21",
             "question": "Où est inscrit le droit à la citoyenneté française ?",
-            "correctAnswer": "Dans la Déclaration des droits de l'homme et du citoyen de 1789",
+            "correctAnswer": "Dans la Déclaration des droits de l'homme et du citoyen de 1789.",
             "incorrectAnswers": [
-                "Dans le Code de la nationalité uniquement",
-                "Dans la Constitution de 1958 seulement",
-                "Dans le traité de Maastricht de 1992"
+                "Dans le Code de la nationalité uniquement.",
+                "Dans la Constitution de 1958 seulement.",
+                "Dans le traité de Maastricht de 1992."
             ],
             "explanation": "La citoyenneté française est un droit fondamental inscrit dans la Déclaration des droits de l'homme et du citoyen de 1789.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_22",
+            "id": "dd_22",
             "question": "Qu'est-ce que la déchéance de nationalité ?",
-            "correctAnswer": "Une décision administrative de l'État qui retire la nationalité française dans certaines conditions",
+            "correctAnswer": "Une décision administrative de l'État qui retire la nationalité française dans certaines conditions.",
             "incorrectAnswers": [
-                "L'abandon volontaire de la nationalité française",
-                "La perte automatique après 10 ans à l'étranger",
-                "Le refus de renouveler un passeport"
+                "L'abandon volontaire de la nationalité française.",
+                "La perte automatique après 10 ans à l'étranger.",
+                "Le refus de renouveler un passeport."
             ],
             "explanation": "La déchéance de nationalité est une décision administrative de l'État qui retire à une personne sa nationalité française dans certaines conditions, impliquant la perte des droits liés à la citoyenneté.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_23",
+            "id": "dd_23",
             "question": "Quand la Déclaration des droits de l'homme et du citoyen a-t-elle été adoptée ?",
-            "correctAnswer": "Le 26 août 1789",
+            "correctAnswer": "Le 26 août 1789.",
             "incorrectAnswers": [
-                "Le 14 juillet 1789",
-                "Le 4 octobre 1958",
-                "Le 10 décembre 1948"
+                "Le 14 juillet 1789.",
+                "Le 4 octobre 1958.",
+                "Le 10 décembre 1948."
             ],
             "explanation": "Adoptée le 26 août 1789, la Déclaration des droits de l'homme et du citoyen marque une rupture avec l'Ancien Régime et fixe les objectifs de la Révolution française.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_24",
+            "id": "dd_24",
             "question": "Combien d'articles contient la Déclaration des droits de l'homme et du citoyen ?",
-            "correctAnswer": "17 articles",
-            "incorrectAnswers": ["10 articles", "25 articles", "30 articles"],
+            "correctAnswer": "17 articles.",
+            "incorrectAnswers": [
+                "10 articles.",
+                "25 articles.",
+                "30 articles."
+            ],
             "explanation": "La Déclaration des droits de l'homme et du citoyen est composée d'une introduction et de 17 articles. Elle affirme les droits universels de l'Homme et du citoyen.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_25",
+            "id": "dd_25",
             "question": "Qu'est-ce qu'une Constitution ?",
-            "correctAnswer": "Un acte fondateur qui établit l'organisation de l'État et les droits fondamentaux",
+            "correctAnswer": "Un acte fondateur qui établit l'organisation de l'État et les droits fondamentaux.",
             "incorrectAnswers": [
-                "Un simple règlement intérieur du gouvernement",
-                "Une liste des ministres et leurs fonctions",
-                "Un accord entre les partis politiques"
+                "Un simple règlement intérieur du gouvernement.",
+                "Une liste des ministres et leurs fonctions.",
+                "Un accord entre les partis politiques."
             ],
             "explanation": "Une Constitution est un acte fondateur par lequel une société se constitue une identité et décide de son organisation, déterminant l'organisation de l'État et les droits fondamentaux.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_26",
+            "id": "dd_26",
             "question": "Quand la Constitution de la Ve République a-t-elle été adoptée ?",
-            "correctAnswer": "Le 4 octobre 1958",
+            "correctAnswer": "Le 4 octobre 1958.",
             "incorrectAnswers": [
-                "Le 14 juillet 1958",
-                "Le 28 septembre 1958",
-                "Le 1er janvier 1959"
+                "Le 14 juillet 1958.",
+                "Le 28 septembre 1958.",
+                "Le 1er janvier 1959."
             ],
             "explanation": "La Constitution du 4 octobre 1958 est le texte fondateur de la Ve République. Elle a été approuvée par référendum à 82% des voix le 28 septembre 1958 et adoptée le 4 octobre 1958.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_27",
+            "id": "dd_27",
             "question": "Quels textes forment le \"bloc de constitutionnalité\" ?",
-            "correctAnswer": "La Constitution de 1958, la DDHC de 1789, le Préambule de 1946 et la Charte de l'environnement de 2004",
+            "correctAnswer": "La Constitution de 1958, la DDHC de 1789, le Préambule de 1946 et la Charte de l'environnement de 2004.",
             "incorrectAnswers": [
-                "Uniquement la Constitution de 1958",
-                "La Constitution et le Code civil",
-                "Tous les textes votés par le Parlement"
+                "Uniquement la Constitution de 1958.",
+                "La Constitution et le Code civil.",
+                "Tous les textes votés par le Parlement."
             ],
             "explanation": "Le bloc de constitutionnalité est formé par la Constitution de 1958, la DDHC de 1789, le Préambule de la Constitution de 1946 et la Charte de l'environnement de 2004.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_28",
+            "id": "dd_28",
             "question": "Qui est chargé de faire respecter la Constitution ?",
-            "correctAnswer": "Le Conseil constitutionnel",
+            "correctAnswer": "Le Conseil constitutionnel.",
             "incorrectAnswers": [
-                "Le Président de la République uniquement",
-                "Le Premier ministre",
-                "La Cour de cassation"
+                "Le Président de la République uniquement.",
+                "Le Premier ministre.",
+                "La Cour de cassation."
             ],
             "explanation": "Le Conseil constitutionnel est chargé de faire respecter la Constitution, la norme suprême en droit français. Toutes les lois françaises doivent respecter le bloc de constitutionnalité.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_29",
+            "id": "dd_29",
             "question": "Quand la Charte de l'environnement a-t-elle été ajoutée à la Constitution ?",
-            "correctAnswer": "En 2005",
-            "incorrectAnswers": ["En 2000", "En 2010", "En 2015"],
+            "correctAnswer": "En 2005.",
+            "incorrectAnswers": [
+                "En 2000.",
+                "En 2010.",
+                "En 2015."
+            ],
             "explanation": "La Charte de l'environnement a été validée en 2004 et ajoutée à la Constitution de 1958 en 2005, après le discours de Jacques Chirac au Sommet mondial de 2002.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_30",
+            "id": "dd_30",
             "question": "Quelle citation célèbre de Jacques Chirac concerne l'environnement ?",
-            "correctAnswer": "\"Notre maison brûle et nous regardons ailleurs\"",
+            "correctAnswer": "\"Notre maison brûle et nous regardons ailleurs\".",
             "incorrectAnswers": [
-                "\"L'environnement est notre avenir\"",
-                "\"La planète n'a pas de frontières\"",
-                "\"Protéger la nature, c'est protéger l'homme\""
+                "\"L'environnement est notre avenir\".",
+                "\"La planète n'a pas de frontières\".",
+                "\"Protéger la nature, c'est protéger l'homme\"."
             ],
             "explanation": "Au Sommet mondial sur le développement durable de 2002, le président Jacques Chirac a dit : \"Notre maison brûle et nous regardons ailleurs.\"",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_31",
+            "id": "dd_31",
             "question": "Où peut-on déposer une plainte en France ?",
-            "correctAnswer": "Au commissariat de police ou à la brigade de gendarmerie",
+            "correctAnswer": "Au commissariat de police ou à la brigade de gendarmerie.",
             "incorrectAnswers": [
-                "Uniquement à la mairie de sa commune",
-                "Seulement au tribunal de grande instance",
-                "Exclusivement par courrier au procureur"
+                "Uniquement à la mairie de sa commune.",
+                "Seulement au tribunal de grande instance.",
+                "Exclusivement par courrier au procureur."
             ],
             "explanation": "Vous pouvez vous rendre au commissariat de police ou à la brigade de gendarmerie la plus proche pour déposer une plainte contre quelqu'un ou contre X si vous ne connaissez pas l'identité du responsable.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_32",
+            "id": "dd_32",
             "question": "Quel est le rôle du Défenseur des droits ?",
-            "correctAnswer": "Défendre les personnes dont les droits ne sont pas respectés et lutter contre la discrimination",
+            "correctAnswer": "Défendre les personnes dont les droits ne sont pas respectés et lutter contre la discrimination.",
             "incorrectAnswers": [
-                "Représenter les accusés devant les tribunaux",
-                "Voter les lois au Parlement",
-                "Diriger la police nationale"
+                "Représenter les accusés devant les tribunaux.",
+                "Voter les lois au Parlement.",
+                "Diriger la police nationale."
             ],
             "explanation": "Le Défenseur des droits est une autorité administrative indépendante chargée de veiller au respect des droits, de défendre les personnes et de permettre l'égalité pour tous.",
             "subTheme": "situational_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_33",
+            "id": "dd_33",
             "question": "Quelle est la limite de nos droits et libertés selon la DDHC ?",
-            "correctAnswer": "\"La liberté consiste à faire tout ce qui ne nuit pas à autrui\"",
+            "correctAnswer": "\"La liberté consiste à faire tout ce qui ne nuit pas à autrui\".",
             "incorrectAnswers": [
-                "Il n'y a aucune limite aux droits fondamentaux",
-                "La limite est fixée par chaque individu lui-même",
-                "Les droits s'arrêtent à la frontière du pays"
+                "Il n'y a aucune limite aux droits fondamentaux.",
+                "La limite est fixée par chaque individu lui-même.",
+                "Les droits s'arrêtent à la frontière du pays."
             ],
             "explanation": "Nos droits et libertés individuels sont limités par les droits des autres : \"La liberté consiste à faire tout ce qui ne nuit pas à autrui\" (article 4 de la DDHC).",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_34",
+            "id": "dd_34",
             "question": "Par quoi nos libertés peuvent-elles être limitées ?",
-            "correctAnswer": "L'intérêt général, les libertés des autres, l'ordre public et la dignité humaine",
+            "correctAnswer": "L'intérêt général, les libertés des autres, l'ordre public et la dignité humaine.",
             "incorrectAnswers": [
-                "Uniquement par décision du Président de la République",
-                "Seulement en cas de guerre déclarée",
-                "Par la volonté des partis politiques majoritaires"
+                "Uniquement par décision du Président de la République.",
+                "Seulement en cas de guerre déclarée.",
+                "Par la volonté des partis politiques majoritaires."
             ],
             "explanation": "Nos droits et libertés sont limités par : l'intérêt général, les libertés des autres, la défense de l'ordre public (sécurité, tranquillité, salubrité) et le respect de la dignité humaine.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_35",
+            "id": "dd_35",
             "question": "Qu'est-ce qu'une contravention ?",
-            "correctAnswer": "L'infraction la moins grave, punie par une amende de maximum 3 000 €",
+            "correctAnswer": "L'infraction la moins grave, punie par une amende de maximum 3 000 €.",
             "incorrectAnswers": [
-                "Un crime passible de prison à vie",
-                "Un délit puni de 2 à 10 ans de prison",
-                "Une infraction uniquement routière"
+                "Un crime passible de prison à vie.",
+                "Un délit puni de 2 à 10 ans de prison.",
+                "Une infraction uniquement routière."
             ],
             "explanation": "La contravention est l'infraction la moins grave (exemple : excès de vitesse, tapage nocturne). Elle est punie par une amende de maximum 3 000 € sans peine de prison possible.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_36",
+            "id": "dd_36",
             "question": "Quelle est la peine maximale pour un délit ?",
-            "correctAnswer": "Une amende d'au moins 3 750 € et jusqu'à 10 ans de prison",
+            "correctAnswer": "Une amende d'au moins 3 750 € et jusqu'à 10 ans de prison.",
             "incorrectAnswers": [
-                "Une amende de 500 € maximum sans prison",
-                "La prison à vie obligatoire",
-                "Uniquement des travaux d'intérêt général"
+                "Une amende de 500 € maximum sans prison.",
+                "La prison à vie obligatoire.",
+                "Uniquement des travaux d'intérêt général."
             ],
             "explanation": "Le délit est une infraction intermédiaire (vol, fraude fiscale, harcèlement). Il est puni par une amende supérieure ou égale à 3 750 € et une peine d'emprisonnement entre 2 mois et 10 ans.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_37",
+            "id": "dd_37",
             "question": "Quel tribunal juge les crimes ?",
-            "correctAnswer": "La cour d'assises et la cour criminelle",
+            "correctAnswer": "La cour d'assises et la cour criminelle.",
             "incorrectAnswers": [
-                "Le tribunal de police",
-                "Le tribunal correctionnel",
-                "Le conseil des prud'hommes"
+                "Le tribunal de police.",
+                "Le tribunal correctionnel.",
+                "Le conseil des prud'hommes."
             ],
             "explanation": "Le crime est l'infraction la plus grave (assassinat, meurtre, viol, terrorisme). Il est jugé par la cour d'assises et la cour criminelle, avec des peines de 15 ans à la perpétuité.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_38",
+            "id": "dd_38",
             "question": "Quelle est la différence entre la police et la gendarmerie ?",
-            "correctAnswer": "La police agit en ville, la gendarmerie en zone rurale et périurbaine",
+            "correctAnswer": "La police agit en ville, la gendarmerie en zone rurale et périurbaine.",
             "incorrectAnswers": [
-                "La police est pour les crimes, la gendarmerie pour les délits",
-                "La police est nationale, la gendarmerie est locale",
-                "Il n'y a aucune différence, ce sont les mêmes"
+                "La police est pour les crimes, la gendarmerie pour les délits.",
+                "La police est nationale, la gendarmerie est locale.",
+                "Il n'y a aucune différence, ce sont les mêmes."
             ],
             "explanation": "La police assure le respect des lois en ville, tandis que la gendarmerie agit en zone rurale et périurbaine. Les gendarmes ont le statut de militaires.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_39",
+            "id": "dd_39",
             "question": "Quelles sont les missions des forces de l'ordre ?",
-            "correctAnswer": "Prévention des infractions, maintien de l'ordre, protection des personnes et des biens, enquêtes",
+            "correctAnswer": "Prévention des infractions, maintien de l'ordre, protection des personnes et des biens, enquêtes.",
             "incorrectAnswers": [
-                "Uniquement la distribution des amendes",
-                "Seulement la protection du Président",
-                "Exclusivement la lutte contre le terrorisme"
+                "Uniquement la distribution des amendes.",
+                "Seulement la protection du Président.",
+                "Exclusivement la lutte contre le terrorisme."
             ],
             "explanation": "La police et la gendarmerie se chargent de : la prévention des infractions, le maintien de l'ordre public, la protection des personnes et des biens, l'investigation sur les infractions.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_40",
+            "id": "dd_40",
             "question": "Quelles sont les obligations de toute personne résidant en France ?",
-            "correctAnswer": "Payer des impôts, être en situation régulière, porter assistance aux personnes en danger, protéger l'environnement",
+            "correctAnswer": "Payer des impôts, être en situation régulière, porter assistance aux personnes en danger, protéger l'environnement.",
             "incorrectAnswers": [
-                "Uniquement voter aux élections",
-                "Seulement parler français couramment",
-                "Juste respecter le Code de la route"
+                "Uniquement voter aux élections.",
+                "Seulement parler français couramment.",
+                "Juste respecter le Code de la route."
             ],
             "explanation": "Toute personne en France doit : payer des impôts, être en situation régulière (pour les étrangers), assurer l'assistance à personne en danger et défendre l'environnement.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_41",
+            "id": "dd_41",
             "question": "Où est inscrite l'obligation de payer des impôts ?",
-            "correctAnswer": "Dans la Déclaration des droits de l'homme et du citoyen de 1789",
+            "correctAnswer": "Dans la Déclaration des droits de l'homme et du citoyen de 1789.",
             "incorrectAnswers": [
-                "Dans le Code des impôts uniquement",
-                "Dans la Constitution de 1958 seulement",
-                "Dans le traité de Maastricht"
+                "Dans le Code des impôts uniquement.",
+                "Dans la Constitution de 1958 seulement.",
+                "Dans le traité de Maastricht."
             ],
             "explanation": "L'obligation de payer des impôts est inscrite dans la Déclaration des droits de l'homme et du citoyen de 1789. L'impôt permet à l'État de financer les services publics.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_42",
+            "id": "dd_42",
             "question": "Que risque-t-on si on n'aide pas une personne en danger ?",
-            "correctAnswer": "Une condamnation pour \"non-assistance à personne en danger\"",
+            "correctAnswer": "Une condamnation pour \"non-assistance à personne en danger\".",
             "incorrectAnswers": [
-                "Rien, ce n'est pas obligatoire",
-                "Une simple amende de 50 €",
-                "Un avertissement de la mairie"
+                "Rien, ce n'est pas obligatoire.",
+                "Une simple amende de 50 €.",
+                "Un avertissement de la mairie."
             ],
             "explanation": "Assurer l'assistance à personne en danger est une obligation. Si une personne voit quelqu'un en danger et n'aide pas, elle peut être condamnée pour \"non-assistance à personne en danger\".",
             "subTheme": "obligations_duties",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_43",
+            "id": "dd_43",
             "question": "Quels sont les devoirs spécifiques du citoyen français ?",
-            "correctAnswer": "Participer à la vie politique, à la défense du pays et au fonctionnement de la justice",
+            "correctAnswer": "Participer à la vie politique, à la défense du pays et au fonctionnement de la justice.",
             "incorrectAnswers": [
-                "Uniquement voter aux élections présidentielles",
-                "Seulement payer plus d'impôts que les résidents étrangers",
-                "Juste respecter les symboles de la République"
+                "Uniquement voter aux élections présidentielles.",
+                "Seulement payer plus d'impôts que les résidents étrangers.",
+                "Juste respecter les symboles de la République."
             ],
             "explanation": "Les citoyens doivent participer : à la vie politique (vote), à la défense du pays (JDC), et au fonctionnement de la justice (possibilité d'être juré aux assises).",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_44",
+            "id": "dd_44",
             "question": "Qu'a remplacé le service national suspendu en 1997 ?",
-            "correctAnswer": "La Journée Défense et Citoyenneté (JDC)",
+            "correctAnswer": "La Journée Défense et Citoyenneté (JDC).",
             "incorrectAnswers": [
-                "Le service civique obligatoire",
-                "Le bénévolat militaire",
-                "Rien, il n'y a plus d'obligation"
+                "Le service civique obligatoire.",
+                "Le bénévolat militaire.",
+                "Rien, il n'y a plus d'obligation."
             ],
             "explanation": "Le service national, suspendu en 1997, a été remplacé par la JAPD puis par la Journée Défense et Citoyenneté (JDC), qui sensibilise les jeunes à leurs responsabilités de sécurité nationale.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_45",
+            "id": "dd_45",
             "question": "À partir de quel âge peut-on être juré aux assises ?",
-            "correctAnswer": "23 ans",
-            "incorrectAnswers": ["18 ans", "25 ans", "30 ans"],
+            "correctAnswer": "23 ans.",
+            "incorrectAnswers": [
+                "18 ans.",
+                "25 ans.",
+                "30 ans."
+            ],
             "explanation": "Tout citoyen français âgé de plus de 23 ans, qui a tous ses droits civiques et qui est inscrit sur les listes électorales, peut être tiré au sort pour être juré lors d'un procès d'assises.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_46",
+            "id": "dd_46",
             "question": "Quels sont les trois types de violence ?",
-            "correctAnswer": "Violence psychologique, violence physique et violence économique",
+            "correctAnswer": "Violence psychologique, violence physique et violence économique.",
             "incorrectAnswers": [
-                "Violence verbale, violence sportive et violence culturelle",
-                "Violence domestique, violence professionnelle et violence scolaire",
-                "Violence directe, violence indirecte et violence passive"
+                "Violence verbale, violence sportive et violence culturelle.",
+                "Violence domestique, violence professionnelle et violence scolaire.",
+                "Violence directe, violence indirecte et violence passive."
             ],
             "explanation": "Il existe trois types de violences : la violence psychologique (insultes, menaces), la violence physique (coups, gifles) et la violence économique (contrôle de l'argent du partenaire).",
             "subTheme": "situational_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_47",
+            "id": "dd_47",
             "question": "Les gifles et fessées sont-elles autorisées pour éduquer un enfant ?",
-            "correctAnswer": "Non, toutes les violences physiques et psychologiques sont interdites",
+            "correctAnswer": "Non, toutes les violences physiques et psychologiques sont interdites.",
             "incorrectAnswers": [
-                "Oui, si c'est pour l'éducation",
-                "Oui, mais seulement une fois par jour",
-                "Oui, si les parents sont d'accord"
+                "Oui, si c'est pour l'éducation.",
+                "Oui, mais seulement une fois par jour.",
+                "Oui, si les parents sont d'accord."
             ],
             "explanation": "La violence n'apprend rien et ne peut pas être utilisée pour éduquer un enfant ; c'est inscrit dans la loi. Les gifles, fessées, humiliations et autres violences sont interdites.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_48",
+            "id": "dd_48",
             "question": "Le harcèlement scolaire est-il puni par la loi ?",
-            "correctAnswer": "Oui, c'est un délit puni par la loi",
+            "correctAnswer": "Oui, c'est un délit puni par la loi.",
             "incorrectAnswers": [
-                "Non, c'est une affaire interne à l'école",
-                "Seulement si la victime est hospitalisée",
-                "Non, ce n'est qu'un problème de discipline"
+                "Non, c'est une affaire interne à l'école.",
+                "Seulement si la victime est hospitalisée.",
+                "Non, ce n'est qu'un problème de discipline."
             ],
             "explanation": "Le harcèlement scolaire est un délit. Il est puni par la loi quand un élève subit de manière répétée des violences verbales, morales ou physiques de la part d'autres élèves.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_49",
+            "id": "dd_49",
             "question": "Les mutilations sexuelles féminines sont-elles punies même si commises à l'étranger ?",
-            "correctAnswer": "Oui, elles sont sévèrement punies même si commises à l'étranger",
+            "correctAnswer": "Oui, elles sont sévèrement punies même si commises à l'étranger.",
             "incorrectAnswers": [
-                "Non, la loi française ne s'applique pas à l'étranger",
-                "Seulement si la victime porte plainte en France",
-                "Non, c'est considéré comme une tradition culturelle"
+                "Non, la loi française ne s'applique pas à l'étranger.",
+                "Seulement si la victime porte plainte en France.",
+                "Non, c'est considéré comme une tradition culturelle."
             ],
             "explanation": "Les mutilations sexuelles féminines sont interdites et sévèrement punies par la loi, y compris lorsqu'elles sont commises à l'étranger. Aucune tradition ne peut justifier ces actes.",
             "subTheme": "situational_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_50",
+            "id": "dd_50",
             "question": "Qu'est-ce que le viol selon la loi française ?",
-            "correctAnswer": "Un acte de pénétration sexuelle imposé par violence, menace, contrainte ou surprise",
+            "correctAnswer": "Un acte de pénétration sexuelle imposé par violence, menace, contrainte ou surprise.",
             "incorrectAnswers": [
-                "Uniquement un rapport forcé entre inconnus",
-                "Un acte sexuel sans témoin",
-                "Une agression dans un lieu public"
+                "Uniquement un rapport forcé entre inconnus.",
+                "Un acte sexuel sans témoin.",
+                "Une agression dans un lieu public."
             ],
             "explanation": "Le viol est un acte de pénétration sexuelle imposé par une personne à une autre en utilisant des violences, menaces, contrainte physique ou psychologique, ou par surprise. C'est un crime.",
             "subTheme": "situational_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_51",
+            "id": "dd_51",
             "question": "Le silence vaut-il consentement en matière sexuelle ?",
-            "correctAnswer": "Non, le silence n'est pas un consentement",
+            "correctAnswer": "Non, le silence n'est pas un consentement.",
             "incorrectAnswers": [
-                "Oui, si la personne ne dit pas non explicitement",
-                "Oui, après un certain délai de silence",
-                "Cela dépend de la situation"
+                "Oui, si la personne ne dit pas non explicitement.",
+                "Oui, après un certain délai de silence.",
+                "Cela dépend de la situation."
             ],
             "explanation": "Le silence n'est pas un consentement. Le consentement doit être réciproque et mutuel. Si une personne n'est pas en état de donner son consentement (alcool, sommeil), c'est un refus.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_52",
+            "id": "dd_52",
             "question": "Le viol entre époux existe-t-il juridiquement ?",
-            "correctAnswer": "Oui, personne n'a le droit d'imposer un acte sexuel non désiré, y compris dans un couple",
+            "correctAnswer": "Oui, personne n'a le droit d'imposer un acte sexuel non désiré, y compris dans un couple.",
             "incorrectAnswers": [
-                "Non, le mariage implique le consentement permanent",
-                "Seulement en cas de violence physique prouvée",
-                "Non, c'est un problème privé du couple"
+                "Non, le mariage implique le consentement permanent.",
+                "Seulement en cas de violence physique prouvée.",
+                "Non, c'est un problème privé du couple."
             ],
             "explanation": "Ces violences portent atteinte aux droits fondamentaux. Personne n'a le droit d'imposer un acte sexuel non désiré, y compris dans un couple.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_53",
+            "id": "dd_53",
             "question": "Qu'est-ce que la traite des êtres humains ?",
-            "correctAnswer": "Recruter, transporter ou héberger une personne pour l'exploiter",
+            "correctAnswer": "Recruter, transporter ou héberger une personne pour l'exploiter.",
             "incorrectAnswers": [
-                "Le commerce international légal de main-d'œuvre",
-                "L'immigration clandestine uniquement",
-                "Le travail saisonnier agricole"
+                "Le commerce international légal de main-d'œuvre.",
+                "L'immigration clandestine uniquement.",
+                "Le travail saisonnier agricole."
             ],
             "explanation": "La traite des êtres humains c'est le fait de recruter, transporter, transférer, héberger ou accueillir une personne pour l'exploiter. Elle est interdite en France.",
             "subTheme": "situational_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_54",
+            "id": "dd_54",
             "question": "L'achat d'actes sexuels est-il légal en France ?",
-            "correctAnswer": "Non, l'achat d'actes sexuels est interdit",
+            "correctAnswer": "Non, l'achat d'actes sexuels est interdit.",
             "incorrectAnswers": [
-                "Oui, entre adultes consentants",
-                "Oui, dans certaines zones autorisées",
-                "Seulement pour les personnes majeures"
+                "Oui, entre adultes consentants.",
+                "Oui, dans certaines zones autorisées.",
+                "Seulement pour les personnes majeures."
             ],
             "explanation": "L'achat d'actes sexuels est interdit en France. Les clients et les proxénètes peuvent être punis par la loi. Un Parcours de Sortie de Prostitution existe pour aider les personnes concernées.",
             "subTheme": "situational_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_55",
+            "id": "dd_55",
             "question": "Que faire en premier quand on est victime de violence ?",
-            "correctAnswer": "En parler à une personne de confiance ou un professionnel",
+            "correctAnswer": "En parler à une personne de confiance ou un professionnel.",
             "incorrectAnswers": [
-                "Attendre que la situation s'améliore d'elle-même",
-                "Répondre par la violence pour se défendre",
-                "Garder le silence pour ne pas aggraver les choses"
+                "Attendre que la situation s'améliore d'elle-même.",
+                "Répondre par la violence pour se défendre.",
+                "Garder le silence pour ne pas aggraver les choses."
             ],
             "explanation": "Il ne faut pas rester seul. Exprimer sa souffrance permet de sortir de l'isolement. Vous pouvez vous adresser à une personne de confiance ou un professionnel (médecin, psychologue).",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_56",
+            "id": "dd_56",
             "question": "Où peut-on porter plainte pour violence ?",
-            "correctAnswer": "Dans tous les commissariats ou gendarmeries, ou par courrier au procureur",
+            "correctAnswer": "Dans tous les commissariats ou gendarmeries, ou par courrier au procureur.",
             "incorrectAnswers": [
-                "Uniquement à la mairie de sa commune",
-                "Seulement au tribunal de son quartier",
-                "Exclusivement en ligne sur internet"
+                "Uniquement à la mairie de sa commune.",
+                "Seulement au tribunal de son quartier.",
+                "Exclusivement en ligne sur internet."
             ],
             "explanation": "En tant que victime, vous pouvez : déposer plainte dans tous les commissariats ou gendarmeries, envoyer un courrier au procureur, ou utiliser les plateformes de signalement en ligne.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_57",
+            "id": "dd_57",
             "question": "Que doit faire un témoin de violence ?",
-            "correctAnswer": "Agir sans se mettre en danger : écouter la victime, orienter vers des aides, appeler les forces de l'ordre",
+            "correctAnswer": "Agir sans se mettre en danger : écouter la victime, orienter vers des aides, appeler les forces de l'ordre.",
             "incorrectAnswers": [
-                "Ne rien faire car ce n'est pas son problème",
-                "Intervenir physiquement dans tous les cas",
-                "Attendre que la victime demande de l'aide"
+                "Ne rien faire car ce n'est pas son problème.",
+                "Intervenir physiquement dans tous les cas.",
+                "Attendre que la victime demande de l'aide."
             ],
             "explanation": "En tant que témoin, on doit agir : écouter et soutenir la victime, l'orienter vers des aides, intervenir sans se mettre en danger, et pouvoir témoigner ou signaler les faits.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_58",
+            "id": "dd_58",
             "question": "Peut-on faire un signalement anonyme de violence ?",
-            "correctAnswer": "Oui, il est possible de faire un signalement anonyme ou une main courante",
+            "correctAnswer": "Oui, il est possible de faire un signalement anonyme ou une main courante.",
             "incorrectAnswers": [
-                "Non, il faut toujours donner son identité",
-                "Seulement pour les crimes très graves",
-                "Non, l'anonymat n'est jamais possible"
+                "Non, il faut toujours donner son identité.",
+                "Seulement pour les crimes très graves.",
+                "Non, l'anonymat n'est jamais possible."
             ],
             "explanation": "Il est possible de faire un signalement anonyme ou d'envoyer une main courante (signaler des faits sans déposer plainte) pour que les faits soient enregistrés.",
             "subTheme": "situational_rights",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_59",
+            "id": "dd_59",
             "question": "Où est inscrit le devoir de protéger l'environnement ?",
-            "correctAnswer": "Dans la Charte de l'environnement de 2004",
+            "correctAnswer": "Dans la Charte de l'environnement de 2004.",
             "incorrectAnswers": [
-                "Dans le Code de l'environnement uniquement",
-                "Dans le traité de Paris sur le climat",
-                "Dans la loi sur la transition énergétique"
+                "Dans le Code de l'environnement uniquement.",
+                "Dans le traité de Paris sur le climat.",
+                "Dans la loi sur la transition énergétique."
             ],
             "explanation": "\"Chacun a le droit de vivre dans un environnement équilibré et respectueux de la santé\" et \"Toute personne a le devoir de prendre part à la préservation de l'environnement\" (Charte de 2004).",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_60",
+            "id": "dd_60",
             "question": "Quelles actions concrètes protègent l'environnement au quotidien ?",
-            "correctAnswer": "Trier les déchets, éviter le gaspillage, utiliser les transports en commun, participer au recyclage",
+            "correctAnswer": "Trier les déchets, éviter le gaspillage, utiliser les transports en commun, participer au recyclage.",
             "incorrectAnswers": [
-                "Acheter uniquement des produits importés",
-                "Utiliser sa voiture pour tous les déplacements",
-                "Jeter tous les déchets ensemble"
+                "Acheter uniquement des produits importés.",
+                "Utiliser sa voiture pour tous les déplacements.",
+                "Jeter tous les déchets ensemble."
             ],
             "explanation": "Actions concrètes : trier ses déchets, éviter le gaspillage des aliments et de l'énergie, privilégier les transports en commun et le vélo, respecter les espaces communs.",
             "subTheme": "obligations_duties",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_61",
+            "id": "dd_61",
             "question": "Qu'est-ce que la loi de 1905 ?",
-            "correctAnswer": "La loi de séparation des Églises et de l'État, fondant la laïcité en France",
+            "correctAnswer": "La loi de séparation des Églises et de l'État, fondant la laïcité en France.",
             "incorrectAnswers": [
-                "La loi sur l'école obligatoire",
-                "La loi sur le droit de vote des femmes",
-                "La loi sur la Sécurité sociale"
+                "La loi sur l'école obligatoire.",
+                "La loi sur le droit de vote des femmes.",
+                "La loi sur la Sécurité sociale."
             ],
             "explanation": "La Loi de séparation des Églises et de l'État, adoptée en 1905, a établi la laïcité en France, mettant fin au financement public des religions.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_62",
+            "id": "dd_62",
             "question": "Qu'est-ce que la loi de 2004 sur les signes religieux ?",
-            "correctAnswer": "Elle interdit le port de signes religieux ostensibles dans les établissements scolaires publics",
+            "correctAnswer": "Elle interdit le port de signes religieux ostensibles dans les établissements scolaires publics.",
             "incorrectAnswers": [
-                "Elle autorise tous les signes religieux à l'école",
-                "Elle interdit toutes les religions en France",
-                "Elle impose un cours de religion à l'école"
+                "Elle autorise tous les signes religieux à l'école.",
+                "Elle interdit toutes les religions en France.",
+                "Elle impose un cours de religion à l'école."
             ],
             "explanation": "La loi du 15 mars 2004 interdit le port de signes religieux ostensibles dans les écoles, collèges et lycées publics.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_63",
+            "id": "dd_63",
             "question": "Quelle est la différence entre un décret et une loi ?",
-            "correctAnswer": "Une loi est votée par le Parlement, un décret est un acte administratif pris par le Président ou le Premier ministre",
+            "correctAnswer": "Une loi est votée par le Parlement, un décret est un acte administratif pris par le Président ou le Premier ministre.",
             "incorrectAnswers": [
-                "Il n'y a aucune différence",
-                "Un décret est plus important qu'une loi",
-                "Seul le Sénat peut voter des décrets"
+                "Il n'y a aucune différence.",
+                "Un décret est plus important qu'une loi.",
+                "Seul le Sénat peut voter des décrets."
             ],
             "explanation": "Une loi est votée par le Parlement (Assemblée nationale et Sénat), tandis qu'un décret est un acte administratif pris par le Président ou le Premier ministre.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_64",
+            "id": "dd_64",
             "question": "Quel est le rôle de la Cour de cassation ?",
-            "correctAnswer": "Vérifier que les lois sont bien appliquées par les tribunaux",
+            "correctAnswer": "Vérifier que les lois sont bien appliquées par les tribunaux.",
             "incorrectAnswers": [
-                "Voter les nouvelles lois",
-                "Juger les crimes les plus graves",
-                "Élire le Président de la République"
+                "Voter les nouvelles lois.",
+                "Juger les crimes les plus graves.",
+                "Élire le Président de la République."
             ],
             "explanation": "La Cour de cassation est la plus haute juridiction de l'ordre judiciaire. Elle vérifie que les lois sont bien appliquées par les tribunaux.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_65",
+            "id": "dd_65",
             "question": "Quelle est la différence entre la justice civile et la justice pénale ?",
-            "correctAnswer": "La justice civile règle les litiges entre personnes, la justice pénale s'occupe des infractions à la loi",
+            "correctAnswer": "La justice civile règle les litiges entre personnes, la justice pénale s'occupe des infractions à la loi.",
             "incorrectAnswers": [
-                "Il n'y a aucune différence",
-                "La justice civile juge les crimes, la pénale les délits",
-                "La justice pénale est réservée aux militaires"
+                "Il n'y a aucune différence.",
+                "La justice civile juge les crimes, la pénale les délits.",
+                "La justice pénale est réservée aux militaires."
             ],
             "explanation": "La justice civile règle les litiges entre personnes (divorces, contrats), tandis que la justice pénale s'occupe des infractions à la loi (crimes, délits, contraventions).",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_66",
+            "id": "dd_66",
             "question": "Quelle loi a instauré la semaine de 35 heures en France ?",
-            "correctAnswer": "La loi Aubry, en 2000",
+            "correctAnswer": "La loi Aubry, en 2000.",
             "incorrectAnswers": [
-                "La loi Veil en 1975",
-                "La loi Ferry en 1882",
-                "La loi Badinter en 1981"
+                "La loi Veil en 1975.",
+                "La loi Ferry en 1882.",
+                "La loi Badinter en 1981."
             ],
             "explanation": "La loi Aubry, adoptée en 2000, a instauré la durée légale du travail à 35 heures par semaine en France.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_67",
+            "id": "dd_67",
             "question": "Qu'est-ce que le RSA ?",
-            "correctAnswer": "Le Revenu de Solidarité Active, aide financière pour les personnes sans ressources",
+            "correctAnswer": "Le Revenu de Solidarité Active, aide financière pour les personnes sans ressources.",
             "incorrectAnswers": [
-                "Le Régime Social des Artistes",
-                "La Retraite Supplémentaire Annuelle",
-                "Le Remboursement des Soins Ambulatoires"
+                "Le Régime Social des Artistes.",
+                "La Retraite Supplémentaire Annuelle.",
+                "Le Remboursement des Soins Ambulatoires."
             ],
             "explanation": "Le RSA (Revenu de Solidarité Active) est une aide financière pour les personnes sans ressources ou ayant des ressources faibles.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_68",
+            "id": "dd_68",
             "question": "En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?",
-            "correctAnswer": "2001",
-            "incorrectAnswers": ["1848", "1981", "2013"],
+            "correctAnswer": "2001.",
+            "incorrectAnswers": [
+                "1848.",
+                "1981.",
+                "2013."
+            ],
             "explanation": "La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crime contre l'humanité.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_69",
+            "id": "dd_69",
             "question": "Quelle loi française interdit de fumer dans les lieux publics fermés ?",
-            "correctAnswer": "La loi Évin, en vigueur depuis 2007 pour les lieux publics fermés",
+            "correctAnswer": "La loi Évin, en vigueur depuis 2007 pour les lieux publics fermés.",
             "incorrectAnswers": [
-                "La loi Veil de 1975",
-                "La loi Aubry de 2000",
-                "La loi Ferry de 1882"
+                "La loi Veil de 1975.",
+                "La loi Aubry de 2000.",
+                "La loi Ferry de 1882."
             ],
             "explanation": "La loi Évin, renforcée en 2007, interdit de fumer dans les lieux publics fermés et couverts.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_70",
+            "id": "dd_70",
             "question": "Quelle réforme a introduit l'école obligatoire en France ?",
-            "correctAnswer": "Les lois Jules Ferry en 1881-1882",
+            "correctAnswer": "Les lois Jules Ferry en 1881-1882.",
             "incorrectAnswers": [
-                "La loi Veil en 1975",
-                "La Constitution de 1958",
-                "La loi de 1905"
+                "La loi Veil en 1975.",
+                "La Constitution de 1958.",
+                "La loi de 1905."
             ],
             "explanation": "Les lois Jules Ferry de 1881-1882 ont rendu l'école primaire gratuite, laïque et obligatoire en France.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_71",
+            "id": "dd_71",
             "question": "Quel est l'âge de l'obligation scolaire en France ?",
-            "correctAnswer": "De 3 à 16 ans",
+            "correctAnswer": "De 3 à 16 ans.",
             "incorrectAnswers": [
-                "De 6 à 14 ans",
-                "De 5 à 18 ans",
-                "De 4 à 15 ans"
+                "De 6 à 14 ans.",
+                "De 5 à 18 ans.",
+                "De 4 à 15 ans."
             ],
             "explanation": "Depuis 2019, l'école est obligatoire de 3 à 16 ans en France pour tous les enfants résidant sur le territoire.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_72",
+            "id": "dd_72",
             "question": "L'administration peut-elle refuser la nationalité pour non-respect de l'égalité femmes-hommes ?",
-            "correctAnswer": "Oui, même si la personne est mariée à un(e) Français(e)",
+            "correctAnswer": "Oui, même si la personne est mariée à un(e) Français(e).",
             "incorrectAnswers": [
-                "Non, ce n'est pas un critère",
-                "Seulement pour les hommes",
-                "Uniquement en cas de condamnation pénale"
+                "Non, ce n'est pas un critère.",
+                "Seulement pour les hommes.",
+                "Uniquement en cas de condamnation pénale."
             ],
             "explanation": "L'égalité entre les femmes et les hommes est une valeur essentielle de la République. L'administration peut refuser la nationalité pour non-respect de ce principe.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_73",
+            "id": "dd_73",
             "question": "Qui a le droit d'accéder aux emplois publics ?",
-            "correctAnswer": "Tous les citoyens français selon leurs capacités, par voie de concours",
+            "correctAnswer": "Tous les citoyens français selon leurs capacités, par voie de concours.",
             "incorrectAnswers": [
-                "Uniquement les personnes nées en France",
-                "Seulement les diplômés de grandes écoles",
-                "Uniquement les hommes de plus de 25 ans"
+                "Uniquement les personnes nées en France.",
+                "Seulement les diplômés de grandes écoles.",
+                "Uniquement les hommes de plus de 25 ans."
             ],
             "explanation": "Tous les citoyens français sont égaux devant l'accès à l'emploi public, selon leurs capacités et par voie de concours.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_74",
+            "id": "dd_74",
             "question": "Quelle est la durée légale du travail en France ?",
-            "correctAnswer": "35 heures par semaine",
+            "correctAnswer": "35 heures par semaine.",
             "incorrectAnswers": [
-                "40 heures par semaine",
-                "32 heures par semaine",
-                "39 heures par semaine"
+                "40 heures par semaine.",
+                "32 heures par semaine.",
+                "39 heures par semaine."
             ],
             "explanation": "La durée légale du travail en France est de 35 heures par semaine depuis la loi Aubry de 2000.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_75",
+            "id": "dd_75",
             "question": "Un employeur peut-il discriminer un candidat lors d'une embauche ?",
-            "correctAnswer": "Non, la discrimination est un délit sévèrement puni par la loi",
+            "correctAnswer": "Non, la discrimination est un délit sévèrement puni par la loi.",
             "incorrectAnswers": [
-                "Oui, c'est son droit en tant qu'employeur",
-                "Seulement pour des raisons religieuses",
-                "Oui, s'il a moins de 10 salariés"
+                "Oui, c'est son droit en tant qu'employeur.",
+                "Seulement pour des raisons religieuses.",
+                "Oui, s'il a moins de 10 salariés."
             ],
             "explanation": "La discrimination fondée sur l'origine, le sexe, la religion, l'âge ou l'orientation sexuelle est un délit sévèrement puni par la loi.",
             "subTheme": "fundamental_rights",

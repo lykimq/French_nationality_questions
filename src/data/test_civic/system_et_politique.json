@@ -3,914 +3,962 @@
     "themeTitle": "Système institutionnel et politique",
     "questions": [
         {
-            "id": "test_civic_1",
+            "id": "sp_1",
             "question": "Qu'est-ce qu'un État de droit ?",
-            "correctAnswer": "Un système où la loi est la même pour tous, y compris pour l'État",
+            "correctAnswer": "Un système où la loi est la même pour tous, y compris pour l'État.",
             "incorrectAnswers": [
-                "Un État dirigé par des juristes",
-                "Un pays avec beaucoup de lois",
-                "Un État sans gouvernement"
+                "Un État dirigé par des juristes.",
+                "Un pays avec beaucoup de lois.",
+                "Un système où le gouvernement peut ignorer les lois."
             ],
             "explanation": "Un État de droit est un système dans lequel la loi est la même pour tous, y compris pour l'État. Le droit est supérieur aux pouvoirs et aux autorités politiques.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_2",
+            "id": "sp_2",
             "question": "Quels sont les principes de l'État de droit ?",
-            "correctAnswer": "Primauté du droit, égalité devant la loi, séparation des pouvoirs, légalité, sécurité juridique",
+            "correctAnswer": "Primauté du droit, égalité devant la loi, séparation des pouvoirs, légalité, sécurité juridique.",
             "incorrectAnswers": [
-                "Monarchie, aristocratie, démocratie",
-                "Liberté, égalité, fraternité uniquement",
-                "Travail, famille, patrie"
+                "Monarchie, aristocratie, démocratie.",
+                "Liberté, égalité, fraternité uniquement.",
+                "Travail, famille, patrie."
             ],
             "explanation": "L'État de droit repose sur : la primauté du droit, l'égalité devant la loi, la séparation des pouvoirs, la légalité, la sécurité juridique et une protection juridictionnelle effective.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_3",
+            "id": "sp_3",
             "question": "Quels sont les trois pouvoirs séparés en France ?",
-            "correctAnswer": "Le pouvoir législatif, le pouvoir exécutif et le pouvoir judiciaire",
+            "correctAnswer": "Le pouvoir législatif, le pouvoir exécutif et le pouvoir judiciaire.",
             "incorrectAnswers": [
-                "Le pouvoir présidentiel, ministériel et parlementaire",
-                "Le pouvoir national, régional et local",
-                "Le pouvoir civil, militaire et religieux"
+                "Le pouvoir présidentiel, ministériel et parlementaire.",
+                "Le pouvoir national, régional et local.",
+                "Le pouvoir civil, militaire et religieux."
             ],
             "explanation": "En France, la séparation des 3 pouvoirs signifie que les pouvoirs législatif (Parlement), exécutif (Gouvernement) et judiciaire (juges) ne sont pas entre les mains des mêmes personnes.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_4",
+            "id": "sp_4",
             "question": "Qui exerce le pouvoir législatif en France ?",
-            "correctAnswer": "Le Parlement, composé de l'Assemblée nationale et du Sénat",
+            "correctAnswer": "Le Parlement, composé de l'Assemblée nationale et du Sénat.",
             "incorrectAnswers": [
-                "Le Président de la République",
-                "Le Premier ministre",
-                "Le Conseil constitutionnel"
+                "Le Président de la République.",
+                "Le Premier ministre.",
+                "Le Conseil constitutionnel."
             ],
             "explanation": "Le pouvoir législatif est exercé par le Parlement, composé de 2 chambres : l'Assemblée nationale (577 députés) et le Sénat (348 sénateurs). Le Parlement vote la loi.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_5",
+            "id": "sp_5",
             "question": "Combien y a-t-il de députés à l'Assemblée nationale ?",
-            "correctAnswer": "577 députés",
-            "incorrectAnswers": ["348 députés", "500 députés", "650 députés"],
+            "correctAnswer": "577 députés.",
+            "incorrectAnswers": [
+                "348 députés.",
+                "500 députés.",
+                "650 députés."
+            ],
             "explanation": "L'Assemblée nationale compte 577 députés, élus par les citoyens au suffrage universel direct.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_6",
+            "id": "sp_6",
             "question": "Combien y a-t-il de sénateurs au Sénat ?",
-            "correctAnswer": "348 sénateurs",
+            "correctAnswer": "348 sénateurs.",
             "incorrectAnswers": [
-                "577 sénateurs",
-                "250 sénateurs",
-                "400 sénateurs"
+                "577 sénateurs.",
+                "250 sénateurs.",
+                "400 sénateurs."
             ],
             "explanation": "Le Sénat compte 348 sénateurs, élus par les grands électeurs au suffrage universel indirect.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_7",
+            "id": "sp_7",
             "question": "Qui exerce le pouvoir exécutif en France ?",
-            "correctAnswer": "Le Président de la République et le Gouvernement",
+            "correctAnswer": "Le Président de la République et le Gouvernement.",
             "incorrectAnswers": [
-                "Le Parlement uniquement",
-                "Les juges et magistrats",
-                "Les maires et préfets"
+                "Le Parlement uniquement.",
+                "Les juges et magistrats.",
+                "Le Conseil constitutionnel et le Conseil d'État."
             ],
             "explanation": "Le pouvoir exécutif est exercé par le Président de la République (chef de l'État) et le Gouvernement (Premier ministre et ministres).",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_8",
+            "id": "sp_8",
             "question": "Où réside le Président de la République ?",
-            "correctAnswer": "Au Palais de l'Élysée",
+            "correctAnswer": "Au Palais de l'Élysée.",
             "incorrectAnswers": [
-                "À l'Hôtel de Matignon",
-                "Au Palais Bourbon",
-                "Au Palais du Luxembourg"
+                "À l'Hôtel de Matignon.",
+                "Au Palais Bourbon.",
+                "Au Palais du Luxembourg."
             ],
             "explanation": "Le Président de la République, chef de l'État et des armées, réside au Palais de l'Élysée.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_9",
+            "id": "sp_9",
             "question": "Où réside le Premier ministre ?",
-            "correctAnswer": "À l'Hôtel de Matignon",
+            "correctAnswer": "À l'Hôtel de Matignon.",
             "incorrectAnswers": [
-                "Au Palais de l'Élysée",
-                "Au Palais Bourbon",
-                "Au Château de Versailles"
+                "Au Palais de l'Élysée.",
+                "Au Palais Bourbon.",
+                "Au Château de Versailles."
             ],
             "explanation": "Le Premier ministre, nommé par le Président de la République, réside à l'Hôtel de Matignon.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_10",
+            "id": "sp_10",
             "question": "Qui nomme le Premier ministre ?",
-            "correctAnswer": "Le Président de la République",
+            "correctAnswer": "Le Président de la République.",
             "incorrectAnswers": [
-                "L'Assemblée nationale",
-                "Le Sénat",
-                "Le Conseil constitutionnel"
+                "L'Assemblée nationale.",
+                "Le Sénat.",
+                "Le Conseil constitutionnel."
             ],
             "explanation": "Le Premier ministre est nommé par le Président de la République selon la majorité parlementaire.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_11",
+            "id": "sp_11",
             "question": "Qui exerce l'autorité judiciaire en France ?",
-            "correctAnswer": "Les juges et les magistrats, recrutés par concours",
+            "correctAnswer": "Les juges et les magistrats, recrutés par concours.",
             "incorrectAnswers": [
-                "Le Président de la République",
-                "Le ministre de la Justice",
-                "Les avocats"
+                "Le Président de la République.",
+                "Le ministre de la Justice.",
+                "Les avocats."
             ],
             "explanation": "L'autorité judiciaire est exercée par les juges et les magistrats, recrutés par concours et non choisis par le pouvoir. Ils appliquent les lois et rendent la justice.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_12",
+            "id": "sp_12",
             "question": "Quels sont les deux ordres de justice en France ?",
-            "correctAnswer": "La justice judiciaire et la justice administrative",
+            "correctAnswer": "La justice judiciaire et la justice administrative.",
             "incorrectAnswers": [
-                "La justice civile et la justice pénale",
-                "La justice nationale et la justice européenne",
-                "La justice publique et la justice privée"
+                "La justice civile et la justice pénale.",
+                "La justice nationale et la justice européenne.",
+                "La justice publique et la justice privée."
             ],
             "explanation": "Le pouvoir judiciaire est réparti entre deux ordres : la justice judiciaire (civile et pénale) et la justice administrative (litiges avec l'État).",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_13",
+            "id": "sp_13",
             "question": "Que juge la justice civile ?",
-            "correctAnswer": "Les litiges entre citoyens (exemple : conflit locataire-propriétaire)",
+            "correctAnswer": "Les litiges entre citoyens (exemple : conflit locataire-propriétaire).",
             "incorrectAnswers": [
-                "Les crimes et délits",
-                "Les conflits avec l'administration",
-                "Les affaires internationales"
+                "Les crimes et délits.",
+                "Les conflits avec l'administration.",
+                "Les affaires internationales."
             ],
             "explanation": "La justice civile s'occupe des litiges entre citoyens, par exemple un conflit entre locataire et propriétaire.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_14",
+            "id": "sp_14",
             "question": "Que juge la justice pénale ?",
-            "correctAnswer": "Les infractions des citoyens à la loi (vol, excès de vitesse...)",
+            "correctAnswer": "Les infractions des citoyens à la loi (vol, excès de vitesse...).",
             "incorrectAnswers": [
-                "Les conflits entre entreprises",
-                "Les litiges de voisinage",
-                "Les divorces"
+                "Les conflits entre entreprises.",
+                "Les litiges de voisinage.",
+                "Les divorces."
             ],
             "explanation": "La justice pénale punit les infractions des citoyens à la loi, comme un vol ou un excès de vitesse.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_15",
+            "id": "sp_15",
             "question": "Quel est le dernier niveau de juridiction en France ?",
-            "correctAnswer": "La Cour de cassation (judiciaire) ou le Conseil d'État (administratif)",
+            "correctAnswer": "La Cour de cassation (judiciaire) ou le Conseil d'État (administratif).",
             "incorrectAnswers": [
-                "Le tribunal de première instance",
-                "La cour d'appel",
-                "Le tribunal correctionnel"
+                "Le tribunal de première instance.",
+                "La cour d'appel.",
+                "Le tribunal correctionnel."
             ],
             "explanation": "Les tribunaux sont organisés en pyramide : première instance, cour d'appel, puis Cour de cassation (judiciaire) ou Conseil d'État (administratif) comme dernier niveau.",
             "subTheme": "organization_republic",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_16",
+            "id": "sp_16",
             "question": "Que signifie le mot \"démocratie\" ?",
-            "correctAnswer": "\"Pouvoir du peuple\" (du grec Dêmos Krátos)",
+            "correctAnswer": "\"Pouvoir du peuple\" (du grec Dêmos Krátos).",
             "incorrectAnswers": [
-                "\"Pouvoir des élites\"",
-                "\"Pouvoir de l'argent\"",
-                "\"Pouvoir de l'armée\""
+                "\"Pouvoir des élites\".",
+                "\"Pouvoir de l'argent\".",
+                "\"Pouvoir de l'armée\"."
             ],
             "explanation": "Le mot démocratie vient du grec \"Dêmos Krátos\" qui signifie \"Peuple Pouvoir\". C'est le régime où le pouvoir appartient au peuple.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_17",
+            "id": "sp_17",
             "question": "Quelles sont les conditions pour voter en France ?",
-            "correctAnswer": "Être français, majeur (18 ans), avoir ses droits civiques et être inscrit sur les listes électorales",
+            "correctAnswer": "Être français, majeur (18 ans), avoir ses droits civiques et être inscrit sur les listes électorales.",
             "incorrectAnswers": [
-                "Être résident en France depuis 5 ans",
-                "Avoir un emploi et payer des impôts",
-                "Avoir fait son service militaire"
+                "Être résident en France depuis 5 ans.",
+                "Avoir un emploi et payer des impôts.",
+                "Avoir fait son service militaire."
             ],
             "explanation": "Le droit de vote est accordé à tout citoyen de nationalité française, de plus de 18 ans, qui a ses droits civiques et qui est inscrit sur les listes électorales.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_18",
+            "id": "sp_18",
             "question": "Comment la Constitution définit-elle la démocratie ?",
-            "correctAnswer": "\"Le gouvernement du peuple, par le peuple et pour le peuple\"",
+            "correctAnswer": "\"Le gouvernement du peuple, par le peuple et pour le peuple\".",
             "incorrectAnswers": [
-                "\"Le pouvoir aux plus méritants\"",
-                "\"La loi du plus fort\"",
-                "\"L'union fait la force\""
+                "\"Le pouvoir aux plus méritants\".",
+                "\"La loi du plus fort\".",
+                "\"L'union fait la force\"."
             ],
             "explanation": "La Constitution de 1958 indique que la démocratie c'est : \"le gouvernement du peuple, par le peuple et pour le peuple\".",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_19",
+            "id": "sp_19",
             "question": "Que signifie \"République\" ?",
-            "correctAnswer": "\"Chose publique\" (du latin Res Publica) - le pouvoir est exercé par des représentants élus",
+            "correctAnswer": "\"Chose publique\" (du latin Res Publica) - le pouvoir est exercé par des représentants élus.",
             "incorrectAnswers": [
-                "\"Pouvoir du roi\"",
-                "\"État militaire\"",
-                "\"Gouvernement des sages\""
+                "\"Pouvoir du roi\".",
+                "\"État militaire\".",
+                "\"Gouvernement des sages\"."
             ],
             "explanation": "Le mot République vient du latin \"Res Publica\" qui signifie \"chose publique\". C'est un système où le pouvoir est détenu par des représentants élus.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_20",
+            "id": "sp_20",
             "question": "Pour combien d'années le Président de la République est-il élu ?",
-            "correctAnswer": "5 ans (quinquennat)",
-            "incorrectAnswers": ["4 ans", "6 ans", "7 ans"],
+            "correctAnswer": "5 ans (quinquennat).",
+            "incorrectAnswers": [
+                "4 ans.",
+                "6 ans.",
+                "7 ans."
+            ],
             "explanation": "Le Président de la République est élu pour 5 ans au suffrage universel directement par les citoyens français.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_21",
+            "id": "sp_21",
             "question": "Pour combien d'années les députés sont-ils élus ?",
-            "correctAnswer": "5 ans",
-            "incorrectAnswers": ["4 ans", "6 ans", "7 ans"],
+            "correctAnswer": "5 ans.",
+            "incorrectAnswers": [
+                "4 ans.",
+                "6 ans.",
+                "7 ans."
+            ],
             "explanation": "Les 577 députés de l'Assemblée nationale sont élus au suffrage direct par les Français, tous les 5 ans (sauf dissolution).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_22",
+            "id": "sp_22",
             "question": "Pour combien d'années les sénateurs sont-ils élus ?",
-            "correctAnswer": "6 ans",
-            "incorrectAnswers": ["5 ans", "4 ans", "7 ans"],
+            "correctAnswer": "6 ans.",
+            "incorrectAnswers": [
+                "5 ans.",
+                "4 ans.",
+                "7 ans."
+            ],
             "explanation": "Les 348 sénateurs sont élus au suffrage indirect par les grands électeurs, pour un mandat de 6 ans (renouvellement par moitié tous les 3 ans).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_23",
+            "id": "sp_23",
             "question": "Comment sont élus les conseillers municipaux ?",
-            "correctAnswer": "Au suffrage universel direct, pour 6 ans",
+            "correctAnswer": "Au suffrage universel direct, pour 6 ans.",
             "incorrectAnswers": [
-                "Par le maire de la commune",
-                "Par le préfet du département",
-                "Au suffrage indirect"
+                "Par le maire de la commune.",
+                "Par le préfet du département.",
+                "Au suffrage indirect."
             ],
             "explanation": "Les élus municipaux (maire et conseillers municipaux) sont élus pour 6 ans lors des élections municipales au suffrage direct.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_24",
+            "id": "sp_24",
             "question": "Qu'est-ce que le suffrage universel ?",
-            "correctAnswer": "Le droit de vote pour tous les citoyens sans distinction de sexe, origine ou religion",
+            "correctAnswer": "Le droit de vote pour tous les citoyens sans distinction de sexe, origine ou religion.",
             "incorrectAnswers": [
-                "Le vote réservé aux propriétaires",
-                "Le vote des hommes uniquement",
-                "Le vote des personnes instruites"
+                "Le vote réservé aux propriétaires.",
+                "Le vote des hommes uniquement.",
+                "Le vote des personnes instruites."
             ],
             "explanation": "Le suffrage universel signifie que tous les citoyens français majeurs, ayant leurs droits civiques et inscrits sur les listes électorales, peuvent voter sans distinction.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_25",
+            "id": "sp_25",
             "question": "Un citoyen européen résidant en France peut-il voter aux élections municipales ?",
-            "correctAnswer": "Oui, s'il habite dans la commune depuis plus de 6 mois et y est inscrit",
+            "correctAnswer": "Oui, s'il habite dans la commune depuis plus de 6 mois et y est inscrit.",
             "incorrectAnswers": [
-                "Non, seuls les Français peuvent voter",
-                "Oui, sans aucune condition",
-                "Seulement s'il a la double nationalité"
+                "Non, seuls les Français peuvent voter.",
+                "Oui, sans aucune condition.",
+                "Seulement s'il a la double nationalité."
             ],
             "explanation": "Un ressortissant d'un pays membre de l'UE résidant en France peut voter aux élections européennes et municipales s'il habite dans la commune depuis plus de 6 mois.",
             "subTheme": "democracy_vote",
             "questionType": "situation"
         },
         {
-            "id": "test_civic_26",
+            "id": "sp_26",
             "question": "Le vote est-il obligatoire en France ?",
-            "correctAnswer": "Non, le vote est un droit et non un devoir obligatoire",
+            "correctAnswer": "Non, le vote est un droit et non un devoir obligatoire.",
             "incorrectAnswers": [
-                "Oui, sous peine d'amende",
-                "Oui, c'est inscrit dans la Constitution",
-                "Seulement pour les élections présidentielles"
+                "Oui, sous peine d'amende.",
+                "Oui, c'est inscrit dans la Constitution.",
+                "Seulement pour les élections présidentielles."
             ],
             "explanation": "Le vote n'est pas obligatoire en France, c'est un droit. Cependant, la carte d'électeur porte la mention \"Voter est un droit, c'est aussi un devoir civique\".",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_27",
+            "id": "sp_27",
             "question": "Quelles sont les caractéristiques du vote en France ?",
-            "correctAnswer": "Personnel, libre et secret",
+            "correctAnswer": "Personnel, libre et secret.",
             "incorrectAnswers": [
-                "Public, obligatoire et contrôlé",
-                "Familial, ouvert et enregistré",
-                "Collectif, guidé et vérifié"
+                "Public, obligatoire et contrôlé.",
+                "Familial, ouvert et enregistré.",
+                "Collectif, guidé et vérifié."
             ],
             "explanation": "En France, le vote est strictement personnel (on vote soi-même), libre (pas de contrainte) et secret (isoloir obligatoire).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_28",
+            "id": "sp_28",
             "question": "Quels types d'élections existent au suffrage universel direct en France ?",
-            "correctAnswer": "Présidentielles, législatives, municipales, départementales, régionales, européennes",
+            "correctAnswer": "Présidentielles, législatives, municipales, départementales, régionales, européennes.",
             "incorrectAnswers": [
-                "Uniquement présidentielles et législatives",
-                "Toutes les élections sans exception",
-                "Seulement les élections nationales"
+                "Uniquement présidentielles et législatives.",
+                "Toutes les élections sans exception.",
+                "Seulement les élections nationales."
             ],
             "explanation": "Les citoyens votent directement pour : les présidentielles, législatives, municipales, départementales, régionales et européennes. Les sénatoriales sont au suffrage indirect.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_29",
+            "id": "sp_29",
             "question": "Pourquoi la pluralité des partis politiques est-elle importante ?",
-            "correctAnswer": "Elle garantit la liberté d'expression des opinions politiques de tous les citoyens",
+            "correctAnswer": "Elle garantit la liberté d'expression des opinions politiques de tous les citoyens.",
             "incorrectAnswers": [
-                "Elle permet de créer plus d'emplois",
-                "Elle rend les élections plus longues",
-                "Elle complique la prise de décision"
+                "Elle permet une meilleure représentation des intérêts économiques uniquement.",
+                "Elle simplifie le processus électoral.",
+                "Elle garantit la stabilité gouvernementale à long terme."
             ],
             "explanation": "La pluralité des partis politiques est un principe fondamental de la démocratie. Le Conseil constitutionnel a affirmé que \"le respect du pluralisme constitue le fondement de la démocratie\".",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_30",
+            "id": "sp_30",
             "question": "Les médias doivent-ils être équitables entre les partis politiques ?",
-            "correctAnswer": "Oui, la loi de 1986 garantit le pluralisme politique dans les médias",
+            "correctAnswer": "Oui, la loi de 1986 garantit le pluralisme politique dans les médias.",
             "incorrectAnswers": [
-                "Non, ils sont libres de choisir",
-                "Seulement les médias publics",
-                "Uniquement pendant les campagnes"
+                "Non, ils sont libres de choisir.",
+                "Seulement les médias publics.",
+                "Uniquement pendant les campagnes."
             ],
             "explanation": "D'après la loi du 30 septembre 1986, les médias ont l'obligation d'être équitables entre les partis politiques. Pendant les campagnes, tous les partis ont autant de temps de parole.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_31",
+            "id": "sp_31",
             "question": "Qui peut proposer une loi ?",
-            "correctAnswer": "Le Gouvernement (projet de loi) ou le Parlement (proposition de loi)",
+            "correctAnswer": "Le Gouvernement (projet de loi) ou le Parlement (proposition de loi).",
             "incorrectAnswers": [
-                "Uniquement le Président",
-                "Seulement les citoyens par pétition",
-                "Le Conseil constitutionnel"
+                "Uniquement le Président.",
+                "Seulement les citoyens par pétition.",
+                "Le Conseil constitutionnel."
             ],
             "explanation": "L'initiative de la loi peut être faite par le Gouvernement (projet de loi) ou par le Parlement - députés ou sénateurs (proposition de loi).",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_32",
+            "id": "sp_32",
             "question": "Qu'est-ce que la navette parlementaire ?",
-            "correctAnswer": "L'échange d'un texte de loi entre l'Assemblée nationale et le Sénat jusqu'à accord",
+            "correctAnswer": "L'échange d'un texte de loi entre l'Assemblée nationale et le Sénat jusqu'à accord.",
             "incorrectAnswers": [
-                "Le transport des parlementaires",
-                "La visite des écoles par les députés",
-                "Le vote électronique au Parlement"
+                "Le transport des parlementaires.",
+                "La visite des écoles par les députés.",
+                "Le vote électronique au Parlement."
             ],
             "explanation": "La navette parlementaire est l'échange du texte de loi entre les deux chambres jusqu'à ce qu'elles valident le même texte.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_33",
+            "id": "sp_33",
             "question": "Que se passe-t-il si députés et sénateurs ne sont pas d'accord sur une loi ?",
-            "correctAnswer": "Une commission mixte paritaire est créée, puis l'Assemblée nationale décide",
+            "correctAnswer": "Une commission mixte paritaire est créée, puis l'Assemblée nationale décide.",
             "incorrectAnswers": [
-                "Le Président tranche",
-                "Un référendum est organisé",
-                "La loi est abandonnée"
+                "Le Président tranche.",
+                "Un référendum est organisé.",
+                "La loi est abandonnée."
             ],
             "explanation": "Une commission paritaire mixte (7 députés et 7 sénateurs) est appelée. Si elle n'aboutit pas, l'Assemblée nationale décide.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_34",
+            "id": "sp_34",
             "question": "Qui signe et promulgue les lois ?",
-            "correctAnswer": "Le Président de la République, dans un délai de 15 jours",
+            "correctAnswer": "Le Président de la République, dans un délai de 15 jours.",
             "incorrectAnswers": [
-                "Le Premier ministre",
-                "Le président de l'Assemblée nationale",
-                "Le Conseil constitutionnel"
+                "Le Premier ministre.",
+                "Le président de l'Assemblée nationale.",
+                "Le Conseil constitutionnel."
             ],
             "explanation": "La loi est validée et signée par le Président de la République dans un délai de 15 jours. Une fois promulguée, elle est publiée au Journal officiel.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_35",
+            "id": "sp_35",
             "question": "Qu'est-ce que la décentralisation ?",
-            "correctAnswer": "Le transfert de compétences de l'État aux collectivités territoriales",
+            "correctAnswer": "Le transfert de compétences de l'État aux collectivités territoriales.",
             "incorrectAnswers": [
-                "La concentration du pouvoir à Paris",
-                "La privatisation des services publics",
-                "La suppression des régions"
+                "La concentration du pouvoir à Paris.",
+                "La privatisation des services publics.",
+                "La suppression des régions."
             ],
             "explanation": "La décentralisation, c'est l'État qui transfère des compétences et des moyens à d'autres autorités appelées collectivités territoriales.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_36",
+            "id": "sp_36",
             "question": "Quelles sont les collectivités territoriales en France ?",
-            "correctAnswer": "Les communes, les départements et les régions",
+            "correctAnswer": "Les communes, les départements et les régions.",
             "incorrectAnswers": [
-                "Les préfectures et sous-préfectures",
-                "Les ministères et agences",
-                "Les tribunaux et cours"
+                "Les préfectures et sous-préfectures.",
+                "Les ministères et agences.",
+                "Les tribunaux et cours."
             ],
             "explanation": "Les collectivités territoriales sont : les communes (plus de 35 000), les départements (101) et les régions (18).",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_37",
+            "id": "sp_37",
             "question": "Combien y a-t-il de communes en France ?",
-            "correctAnswer": "Plus de 34 000 communes",
+            "correctAnswer": "Plus de 34 000 communes.",
             "incorrectAnswers": [
-                "Environ 10 000",
-                "Exactement 101",
-                "Moins de 1 000"
+                "Environ 10 000.",
+                "Exactement 101.",
+                "Moins de 1 000."
             ],
             "explanation": "La commune est la collectivité la plus répandue sur le territoire. Il y a plus de 34 000 communes en France.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_38",
+            "id": "sp_38",
             "question": "Combien y a-t-il de départements en France ?",
-            "correctAnswer": "101 départements, dont 5 en outre-mer",
+            "correctAnswer": "101 départements, dont 5 en outre-mer.",
             "incorrectAnswers": [
-                "96 départements",
-                "18 départements",
-                "50 départements"
+                "96 départements.",
+                "18 départements.",
+                "50 départements."
             ],
             "explanation": "Il y a 101 départements en France, dont 5 en outre-mer. Le département agit surtout dans l'action sociale et gère les collèges.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_39",
+            "id": "sp_39",
             "question": "Combien y a-t-il de régions en France ?",
-            "correctAnswer": "18 régions, dont 5 en outre-mer",
-            "incorrectAnswers": ["13 régions", "22 régions", "27 régions"],
+            "correctAnswer": "18 régions, dont 5 en outre-mer.",
+            "incorrectAnswers": [
+                "13 régions.",
+                "22 régions.",
+                "27 régions."
+            ],
             "explanation": "Il y a 18 régions en France, dont 5 en outre-mer. La région gère les lycées et contribue au développement économique.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_40",
+            "id": "sp_40",
             "question": "Qui gère les écoles maternelles et primaires ?",
-            "correctAnswer": "Les communes",
+            "correctAnswer": "Les communes.",
             "incorrectAnswers": [
-                "L'État central",
-                "Les régions",
-                "Les départements"
+                "L'État central.",
+                "Les régions.",
+                "Les départements."
             ],
             "explanation": "Les communes gèrent les écoles maternelles et primaires. Les départements gèrent les collèges, les régions gèrent les lycées.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_41",
+            "id": "sp_41",
             "question": "Qui gère les collèges ?",
-            "correctAnswer": "Les départements",
+            "correctAnswer": "Les départements.",
             "incorrectAnswers": [
-                "Les communes",
-                "Les régions",
-                "L'État central"
+                "Les communes.",
+                "Les régions.",
+                "L'État central."
             ],
             "explanation": "Les départements gèrent les collèges. C'est un exemple de décentralisation des compétences de l'Éducation nationale.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_42",
+            "id": "sp_42",
             "question": "Qui gère les lycées ?",
-            "correctAnswer": "Les régions",
+            "correctAnswer": "Les régions.",
             "incorrectAnswers": [
-                "Les communes",
-                "Les départements",
-                "Le ministère de l'Éducation"
+                "Les communes.",
+                "Les départements.",
+                "Le ministère de l'Éducation."
             ],
             "explanation": "Les régions gèrent les lycées. L'État définit les programmes et recrute les enseignants, mais les régions s'occupent des bâtiments et équipements.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_43",
+            "id": "sp_43",
             "question": "Quel est le rôle du Préfet ?",
-            "correctAnswer": "Représenter l'État dans le département et diriger les services de l'État",
+            "correctAnswer": "Représenter l'État dans le département et diriger les services de l'État.",
             "incorrectAnswers": [
-                "Diriger la région",
-                "Présider le conseil départemental",
-                "Juger les affaires administratives"
+                "Diriger la région.",
+                "Présider le conseil départemental.",
+                "Juger les affaires administratives."
             ],
             "explanation": "Le Préfet est le représentant de l'État dans le département. Il dirige les services de l'État et veille à la continuité de l'État.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_44",
+            "id": "sp_44",
             "question": "Quand l'Union européenne a-t-elle été créée ?",
-            "correctAnswer": "En 1992, par le traité de Maastricht",
+            "correctAnswer": "En 1992, par le traité de Maastricht.",
             "incorrectAnswers": [
-                "En 1957, par le traité de Rome",
-                "En 1951, par le traité de Paris",
-                "En 2007, par le traité de Lisbonne"
+                "En 1957, par le traité de Rome.",
+                "En 1951, par le traité de Paris.",
+                "En 2007, par le traité de Lisbonne."
             ],
             "explanation": "Le traité de Maastricht de 1992 crée l'Union européenne (UE). La CEE existait depuis 1957 et la CECA depuis 1951.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_45",
+            "id": "sp_45",
             "question": "Combien de pays fondateurs avait la CEE en 1957 ?",
-            "correctAnswer": "6 pays : Allemagne, Belgique, France, Italie, Luxembourg, Pays-Bas",
-            "incorrectAnswers": ["12 pays", "15 pays", "9 pays"],
+            "correctAnswer": "6 pays : Allemagne, Belgique, France, Italie, Luxembourg, Pays-Bas.",
+            "incorrectAnswers": [
+                "12 pays.",
+                "15 pays.",
+                "9 pays."
+            ],
             "explanation": "En 1957, la CEE est créée avec 6 pays : Allemagne de l'Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_46",
+            "id": "sp_46",
             "question": "Combien d'États membres compte l'Union européenne aujourd'hui ?",
-            "correctAnswer": "27 États membres (depuis le Brexit en 2020)",
+            "correctAnswer": "27 États membres (depuis le Brexit en 2020).",
             "incorrectAnswers": [
-                "28 États membres",
-                "25 États membres",
-                "30 États membres"
+                "28 États membres.",
+                "25 États membres.",
+                "30 États membres."
             ],
             "explanation": "L'UE compte 27 États membres depuis 2020, après le départ du Royaume-Uni (Brexit). C'est la première fois qu'un pays quitte l'UE.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_47",
+            "id": "sp_47",
             "question": "Que symbolise le drapeau européen ?",
-            "correctAnswer": "L'unité, la solidarité et l'harmonie entre les peuples d'Europe",
+            "correctAnswer": "L'unité, la solidarité et l'harmonie entre les peuples d'Europe.",
             "incorrectAnswers": [
-                "Les 12 pays fondateurs",
-                "Les 12 mois de l'année",
-                "Les 12 apôtres"
+                "Les 12 pays fondateurs.",
+                "Les 12 mois de l'année.",
+                "Les 12 apôtres."
             ],
             "explanation": "Sur un fond bleu, douze étoiles jaunes forment un cercle. Ce cercle d'étoiles symbolise l'unité, la solidarité et l'harmonie entre les peuples d'Europe.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_48",
+            "id": "sp_48",
             "question": "Quel est l'hymne européen ?",
-            "correctAnswer": "L'\"Ode à la joie\" de Beethoven",
+            "correctAnswer": "L'\"Ode à la joie\" de Beethoven.",
             "incorrectAnswers": [
-                "La Marseillaise",
-                "L'Internationale",
-                "God Save the King"
+                "La Marseillaise.",
+                "L'Internationale.",
+                "God Save the King."
             ],
             "explanation": "L'hymne européen est l'\"Ode à la joie\", une mélodie écrite par Beethoven. Il symbolise la liberté, la paix et la solidarité.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_49",
+            "id": "sp_49",
             "question": "Quelle est la devise de l'Union européenne ?",
-            "correctAnswer": "\"Unie dans la diversité\"",
+            "correctAnswer": "\"Unie dans la diversité\".",
             "incorrectAnswers": [
-                "\"Liberté, Égalité, Fraternité\"",
-                "\"L'union fait la force\"",
-                "\"Paix et prospérité\""
+                "\"Liberté, Égalité, Fraternité\".",
+                "\"L'union fait la force\".",
+                "\"Paix et prospérité\"."
             ],
             "explanation": "La devise de l'Union européenne est \"Unie dans la diversité\" depuis 2000. Elle illustre comment les Européens se sont rassemblés dans le respect de leurs diverses cultures.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_50",
+            "id": "sp_50",
             "question": "Quand est la Journée de l'Europe ?",
-            "correctAnswer": "Le 9 mai",
+            "correctAnswer": "Le 9 mai.",
             "incorrectAnswers": [
-                "Le 1er janvier",
-                "Le 14 juillet",
-                "Le 11 novembre"
+                "Le 1er janvier.",
+                "Le 14 juillet.",
+                "Le 11 novembre."
             ],
             "explanation": "Chaque année, le 9 mai, tous les pays membres de l'UE fêtent la Journée de l'Europe. Cette date marque l'anniversaire de la \"déclaration Schuman\" du 9 mai 1950.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_51",
+            "id": "sp_51",
             "question": "Où siège le Parlement européen ?",
-            "correctAnswer": "À Strasbourg",
-            "incorrectAnswers": ["À Bruxelles", "À Luxembourg", "À Paris"],
+            "correctAnswer": "À Strasbourg.",
+            "incorrectAnswers": [
+                "À Bruxelles.",
+                "À Luxembourg.",
+                "À Paris."
+            ],
             "explanation": "Le Parlement européen siège à Strasbourg. Il vote le budget et les lois avec le Conseil de l'Union européenne.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_52",
+            "id": "sp_52",
             "question": "Où siège la Commission européenne ?",
-            "correctAnswer": "À Bruxelles",
-            "incorrectAnswers": ["À Strasbourg", "À Luxembourg", "À Francfort"],
+            "correctAnswer": "À Bruxelles.",
+            "incorrectAnswers": [
+                "À Strasbourg.",
+                "À Luxembourg.",
+                "À Francfort."
+            ],
             "explanation": "La Commission européenne est située à Bruxelles. Elle représente les intérêts communs, propose le budget et les lois.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_53",
+            "id": "sp_53",
             "question": "Combien de députés européens la France a-t-elle ?",
-            "correctAnswer": "81 eurodéputés (depuis 2024)",
+            "correctAnswer": "81 eurodéputés (depuis 2024).",
             "incorrectAnswers": [
-                "74 eurodéputés",
-                "96 eurodéputés",
-                "50 eurodéputés"
+                "74 eurodéputés.",
+                "96 eurodéputés.",
+                "50 eurodéputés."
             ],
             "explanation": "Depuis les élections de 2024, la France compte 81 eurodéputés. Le nombre dépend de la population du pays.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_54",
+            "id": "sp_54",
             "question": "Tous les combien les élections européennes ont-elles lieu ?",
-            "correctAnswer": "Tous les 5 ans",
+            "correctAnswer": "Tous les 5 ans.",
             "incorrectAnswers": [
-                "Tous les 4 ans",
-                "Tous les 6 ans",
-                "Tous les 7 ans"
+                "Tous les 4 ans.",
+                "Tous les 6 ans.",
+                "Tous les 7 ans."
             ],
             "explanation": "Les élections européennes sont organisées tous les 5 ans. Les citoyens de l'UE votent pour désigner les membres du Parlement européen.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_55",
+            "id": "sp_55",
             "question": "Quand l'euro est-il devenu la monnaie officielle ?",
-            "correctAnswer": "En 2002",
-            "incorrectAnswers": ["En 1992", "En 1999", "En 2007"],
+            "correctAnswer": "En 2002.",
+            "incorrectAnswers": [
+                "En 1992.",
+                "En 1999.",
+                "En 2007."
+            ],
             "explanation": "L'euro est devenu la monnaie officielle de plusieurs pays membres en 2002. Le traité de Maastricht de 1992 avait prévu sa création.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_56",
+            "id": "sp_56",
             "question": "Quel est le rôle du Conseil européen ?",
-            "correctAnswer": "Donner les grandes orientations politiques et budgétaires de l'UE",
+            "correctAnswer": "Donner les grandes orientations politiques et budgétaires de l'UE.",
             "incorrectAnswers": [
-                "Voter les lois européennes",
-                "Juger les affaires européennes",
-                "Gérer la monnaie unique"
+                "Voter les lois européennes.",
+                "Juger les affaires européennes.",
+                "Gérer la monnaie unique."
             ],
             "explanation": "Le Conseil européen donne les grandes orientations politiques et budgétaires de l'UE. Il réunit les 27 chefs d'État ou de gouvernement.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_57",
+            "id": "sp_57",
             "question": "Où siège la Cour de justice de l'UE ?",
-            "correctAnswer": "À Luxembourg",
-            "incorrectAnswers": ["À Bruxelles", "À Strasbourg", "À La Haye"],
+            "correctAnswer": "À Luxembourg.",
+            "incorrectAnswers": [
+                "À Bruxelles.",
+                "À Strasbourg.",
+                "À La Haye."
+            ],
             "explanation": "La Cour de justice est située à Luxembourg. Elle rend la justice à l'échelle européenne et vérifie que les États appliquent le droit européen.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_58",
+            "id": "sp_58",
             "question": "Quand la Banque centrale européenne a-t-elle été créée ?",
-            "correctAnswer": "En 1998, au moment de la création de l'euro",
+            "correctAnswer": "En 1998, au moment de la création de l'euro.",
             "incorrectAnswers": [
-                "En 1957, avec la CEE",
-                "En 1992, avec le traité de Maastricht",
-                "En 2002, avec la mise en circulation de l'euro"
+                "En 1957, avec la CEE.",
+                "En 1992, avec le traité de Maastricht.",
+                "En 2002, avec la mise en circulation de l'euro."
             ],
             "explanation": "La Banque centrale européenne a été créée en 1998, au moment de la création de l'euro comme monnaie unique.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_59",
+            "id": "sp_59",
             "question": "Comment sont élus les sénateurs ?",
-            "correctAnswer": "Au suffrage universel indirect, par un collège de grands électeurs",
+            "correctAnswer": "Au suffrage universel indirect, par un collège de grands électeurs.",
             "incorrectAnswers": [
-                "Au suffrage universel direct par les citoyens",
-                "Par le Président de la République",
-                "Par l'Assemblée nationale"
+                "Au suffrage universel direct par les citoyens.",
+                "Par le Président de la République.",
+                "Par l'Assemblée nationale."
             ],
             "explanation": "Les sénateurs sont élus au suffrage universel indirect par un collège d'environ 150 000 grands électeurs (maires, conseillers généraux, etc.).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_60",
+            "id": "sp_60",
             "question": "Quelle est la différence entre un député et un sénateur ?",
-            "correctAnswer": "Le sénateur défend les collectivités territoriales en plus de voter les lois",
+            "correctAnswer": "Le sénateur défend les collectivités territoriales en plus de voter les lois.",
             "incorrectAnswers": [
-                "Il n'y a aucune différence",
-                "Le sénateur est élu directement par les citoyens",
-                "Le député a plus de pouvoir que le sénateur"
+                "Il n'y a aucune différence.",
+                "Le sénateur est élu directement par les citoyens.",
+                "Le député a plus de pouvoir que le sénateur."
             ],
             "explanation": "Le sénateur examine les lois et contrôle le gouvernement, mais défend aussi les intérêts des communes, départements et régions (collectivités territoriales).",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_61",
+            "id": "sp_61",
             "question": "Qui dirige la France en cas de décès ou d'empêchement du Président ?",
-            "correctAnswer": "Le Président du Sénat assure l'intérim",
+            "correctAnswer": "Le Président du Sénat assure l'intérim.",
             "incorrectAnswers": [
-                "Le Premier ministre",
-                "Le Président de l'Assemblée nationale",
-                "Le Conseil constitutionnel"
+                "Le Premier ministre.",
+                "Le Président de l'Assemblée nationale.",
+                "Le Conseil constitutionnel."
             ],
             "explanation": "En cas de décès, démission ou empêchement du Président de la République, le Président du Sénat assure l'intérim.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_62",
+            "id": "sp_62",
             "question": "Le Président peut-il dissoudre le Sénat ?",
-            "correctAnswer": "Non, la Constitution ne lui donne pas ce pouvoir",
+            "correctAnswer": "Non, la Constitution ne lui donne pas ce pouvoir.",
             "incorrectAnswers": [
-                "Oui, à tout moment",
-                "Oui, avec l'accord du Premier ministre",
-                "Oui, mais seulement en cas de crise"
+                "Oui, à tout moment.",
+                "Oui, avec l'accord du Premier ministre.",
+                "Oui, mais seulement en cas de crise."
             ],
             "explanation": "Le Président de la République ne peut pas dissoudre le Sénat. Le Sénat incarne une stabilité institutionnelle et est élu au suffrage indirect.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_63",
+            "id": "sp_63",
             "question": "Le Président peut-il dissoudre l'Assemblée nationale ?",
-            "correctAnswer": "Oui, selon l'article 12 de la Constitution",
+            "correctAnswer": "Oui, selon l'article 12 de la Constitution.",
             "incorrectAnswers": [
-                "Non, c'est interdit",
-                "Seulement avec l'accord du Sénat",
-                "Uniquement en temps de guerre"
+                "Non, c'est interdit.",
+                "Seulement avec l'accord du Sénat.",
+                "Uniquement en temps de guerre."
             ],
             "explanation": "Selon l'article 12 de la Constitution, le Président peut dissoudre l'Assemblée nationale à tout moment, après consultation du Premier ministre et des présidents des deux assemblées.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_64",
+            "id": "sp_64",
             "question": "Qu'est-ce que l'article 49.3 ?",
-            "correctAnswer": "Un article permettant d'adopter une loi sans vote en engageant la responsabilité du gouvernement",
+            "correctAnswer": "Un article permettant d'adopter une loi sans vote en engageant la responsabilité du gouvernement.",
             "incorrectAnswers": [
-                "Un article sur le droit de vote",
-                "Un article sur la liberté d'expression",
-                "Un article sur l'organisation des élections"
+                "Un article sur le droit de vote.",
+                "Un article sur la liberté d'expression.",
+                "Un article sur l'organisation des élections."
             ],
             "explanation": "L'article 49.3 permet au Premier ministre d'engager la responsabilité du gouvernement sur un texte de loi, qui est adopté sans vote sauf si une motion de censure est votée.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_65",
+            "id": "sp_65",
             "question": "Le Sénat peut-il déposer une motion de censure ?",
-            "correctAnswer": "Non, seule l'Assemblée nationale détient ce pouvoir",
+            "correctAnswer": "Non, seule l'Assemblée nationale détient ce pouvoir.",
             "incorrectAnswers": [
-                "Oui, comme l'Assemblée nationale",
-                "Oui, mais avec l'accord du Président",
-                "Oui, mais seulement pour les questions budgétaires"
+                "Oui, comme l'Assemblée nationale.",
+                "Oui, mais avec l'accord du Président.",
+                "Oui, mais seulement pour les questions budgétaires."
             ],
             "explanation": "Le Sénat ne peut pas déposer de motion de censure contre le gouvernement. Seule l'Assemblée nationale détient ce pouvoir car elle représente directement les citoyens.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_66",
+            "id": "sp_66",
             "question": "Qui est le garant de l'indépendance nationale et du respect de la Constitution ?",
-            "correctAnswer": "Le Président de la République",
+            "correctAnswer": "Le Président de la République.",
             "incorrectAnswers": [
-                "Le Premier ministre",
-                "Le Conseil constitutionnel",
-                "L'Assemblée nationale"
+                "Le Premier ministre.",
+                "Le Conseil constitutionnel.",
+                "L'Assemblée nationale."
             ],
             "explanation": "Le Président de la République représente le pouvoir exécutif et est le garant des institutions, du respect de la Constitution et de l'indépendance nationale.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_67",
+            "id": "sp_67",
             "question": "Comment sont élus les conseillers régionaux ?",
-            "correctAnswer": "Au suffrage universel direct lors des élections régionales, pour 6 ans",
+            "correctAnswer": "Au suffrage universel direct lors des élections régionales, pour 6 ans.",
             "incorrectAnswers": [
-                "Par le Président de la République",
-                "Au suffrage indirect par les maires",
-                "Par le Préfet de région"
+                "Par le Président de la République.",
+                "Au suffrage indirect par les maires.",
+                "Par le Préfet de région."
             ],
             "explanation": "Les conseillers régionaux sont élus pour six ans au suffrage universel direct lors des élections régionales. Le scrutin est un vote de liste à deux tours.",
             "subTheme": "democracy_vote",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_68",
+            "id": "sp_68",
             "question": "Quelle est la durée du mandat du président de l'Assemblée nationale ?",
-            "correctAnswer": "5 ans, soit la durée de la législature",
-            "incorrectAnswers": ["3 ans", "6 ans", "7 ans"],
+            "correctAnswer": "5 ans, soit la durée de la législature.",
+            "incorrectAnswers": [
+                "3 ans.",
+                "6 ans.",
+                "7 ans."
+            ],
             "explanation": "Le président de l'Assemblée nationale est élu pour 5 ans, soit la durée de la législature, car l'Assemblée est entièrement renouvelée à chaque élection législative.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_69",
+            "id": "sp_69",
             "question": "Quelle est la durée du mandat du président du Sénat ?",
-            "correctAnswer": "3 ans, renouvelable",
-            "incorrectAnswers": ["5 ans", "6 ans", "7 ans"],
+            "correctAnswer": "3 ans, renouvelable.",
+            "incorrectAnswers": [
+                "5 ans.",
+                "6 ans.",
+                "7 ans."
+            ],
             "explanation": "Le président du Sénat est élu tous les 3 ans car le Sénat est renouvelé par moitié tous les 3 ans.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_70",
+            "id": "sp_70",
             "question": "En cas de désaccord entre le Sénat et l'Assemblée, qui a le dernier mot ?",
-            "correctAnswer": "L'Assemblée nationale",
+            "correctAnswer": "L'Assemblée nationale.",
             "incorrectAnswers": [
-                "Le Sénat",
-                "Le Président de la République",
-                "Le Conseil constitutionnel"
+                "Le Sénat.",
+                "Le Président de la République.",
+                "Le Conseil constitutionnel."
             ],
             "explanation": "L'Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres. Elle peut décider d'adopter définitivement un texte sans l'accord du Sénat.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_71",
+            "id": "sp_71",
             "question": "Quel est le rôle du Premier ministre ?",
-            "correctAnswer": "Diriger le gouvernement et mettre en œuvre la politique nationale",
+            "correctAnswer": "Diriger le gouvernement et mettre en œuvre la politique nationale.",
             "incorrectAnswers": [
-                "Présider le Conseil constitutionnel",
-                "Représenter la France à l'étranger",
-                "Commander les armées"
+                "Présider le Conseil constitutionnel.",
+                "Représenter la France à l'étranger.",
+                "Commander les armées."
             ],
             "explanation": "Le Premier ministre dirige le gouvernement et met en œuvre la politique nationale. Il est nommé par le Président de la République.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_72",
+            "id": "sp_72",
             "question": "Qu'est-ce que le Parlement européen ?",
-            "correctAnswer": "L'organe législatif de l'UE où les députés élus représentent les citoyens européens",
+            "correctAnswer": "L'organe législatif de l'UE où les députés élus représentent les citoyens européens.",
             "incorrectAnswers": [
-                "Le gouvernement de l'Union européenne",
-                "La cour de justice européenne",
-                "La banque centrale européenne"
+                "Le gouvernement de l'Union européenne.",
+                "La cour de justice européenne.",
+                "La banque centrale européenne."
             ],
             "explanation": "Le Parlement européen est l'organe législatif de l'UE où les députés européens élus représentent les citoyens des États membres.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_73",
+            "id": "sp_73",
             "question": "Qui est le président de l'Union européenne ?",
-            "correctAnswer": "L'UE n'a pas un président unique, mais plusieurs institutions avec leurs présidents",
+            "correctAnswer": "L'UE n'a pas un président unique, mais plusieurs institutions avec leurs présidents.",
             "incorrectAnswers": [
-                "Le Président de la France",
-                "Le Premier ministre allemand",
-                "Le roi d'Espagne"
+                "Le Président de la France.",
+                "Le Premier ministre allemand.",
+                "Le roi d'Espagne."
             ],
             "explanation": "L'Union européenne n'a pas un 'président' unique. La fonction la plus proche est celle du président de la Commission européenne.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_74",
+            "id": "sp_74",
             "question": "Pourquoi l'Union européenne a-t-elle été créée ?",
-            "correctAnswer": "Pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale",
+            "correctAnswer": "Pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale.",
             "incorrectAnswers": [
-                "Pour créer une armée européenne",
-                "Pour remplacer les gouvernements nationaux",
-                "Pour imposer une langue commune"
+                "Pour créer une armée européenne.",
+                "Pour remplacer les gouvernements nationaux.",
+                "Pour imposer une langue commune."
             ],
             "explanation": "L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale, en favorisant la coopération économique et politique.",
             "subTheme": "european_institutions",

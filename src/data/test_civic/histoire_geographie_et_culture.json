@@ -3,1066 +3,1170 @@
     "themeTitle": "Histoire, géographie et culture",
     "questions": [
         {
-            "id": "test_civic_1",
+            "id": "hgc_1",
             "question": "Comment s'appelle le régime politique avant la Révolution de 1789 ?",
-            "correctAnswer": "L'Ancien Régime, une monarchie absolue de droit divin",
-            "incorrectAnswers": ["La République", "L'Empire", "La Démocratie"],
+            "correctAnswer": "L'Ancien Régime, une monarchie absolue de droit divin.",
+            "incorrectAnswers": [
+                "La République.",
+                "L'Empire.",
+                "La Démocratie."
+            ],
             "explanation": "Avant la Révolution française de 1789, le régime politique était une monarchie absolue de droit divin. On appelle cette période l'Ancien Régime.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_2",
+            "id": "hgc_2",
             "question": "Quelles sont les trois dynasties royales qui ont régné en France ?",
-            "correctAnswer": "Les Mérovingiens, les Carolingiens et les Capétiens",
+            "correctAnswer": "Les Mérovingiens, les Carolingiens et les Capétiens.",
             "incorrectAnswers": [
-                "Les Bourbons, les Orléans et les Bonaparte",
-                "Les Valois, les Tudors et les Habsbourg",
-                "Les Normands, les Plantagenêts et les Stuarts"
+                "Les Bourbons, les Orléans et les Bonaparte.",
+                "Les Valois, les Tudors et les Habsbourg.",
+                "Les Normands, les Plantagenêts et les Stuarts."
             ],
             "explanation": "Trois grandes dynasties royales se sont succédées : les Mérovingiens (Clovis), les Carolingiens (Charlemagne) et les Capétiens (Hugues Capet).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_3",
+            "id": "hgc_3",
             "question": "Qui a fondé la dynastie mérovingienne ?",
-            "correctAnswer": "Clovis, roi des Francs converti au christianisme",
-            "incorrectAnswers": ["Charlemagne", "Hugues Capet", "Louis XIV"],
+            "correctAnswer": "Clovis, roi des Francs converti au christianisme.",
+            "incorrectAnswers": [
+                "Charlemagne.",
+                "Hugues Capet.",
+                "Louis XIV."
+            ],
             "explanation": "Clovis fonde la dynastie mérovingienne à la fin du Ve siècle et se convertit au christianisme.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_4",
+            "id": "hgc_4",
             "question": "Quand Charlemagne a-t-il été couronné empereur ?",
-            "correctAnswer": "En 800",
-            "incorrectAnswers": ["En 481", "En 987", "En 1066"],
+            "correctAnswer": "En 800.",
+            "incorrectAnswers": [
+                "En 481.",
+                "En 987.",
+                "En 1066."
+            ],
             "explanation": "Le roi carolingien Charlemagne est couronné empereur en 800. Après sa mort, son empire est partagé entre ses héritiers.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_5",
+            "id": "hgc_5",
             "question": "Quand Hugues Capet a-t-il été sacré roi ?",
-            "correctAnswer": "En 987",
-            "incorrectAnswers": ["En 800", "En 1066", "En 1337"],
+            "correctAnswer": "En 987.",
+            "incorrectAnswers": [
+                "En 800.",
+                "En 1066.",
+                "En 1337."
+            ],
             "explanation": "Sacré roi en 987, Hugues Capet fonde la dynastie des Capétiens, une dynastie longue et stable qui consolide la monarchie.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_6",
+            "id": "hgc_6",
             "question": "Quels étaient les trois ordres de la société sous l'Ancien Régime ?",
-            "correctAnswer": "Le clergé, la noblesse et le tiers état",
+            "correctAnswer": "Le clergé, la noblesse et le tiers état.",
             "incorrectAnswers": [
-                "Les riches, les pauvres et les esclaves",
-                "Les militaires, les marchands et les paysans",
-                "Les nobles, les bourgeois et les artisans"
+                "Les propriétaires terriens, les commerçants et les ouvriers.",
+                "Les militaires, les marchands et les paysans.",
+                "Les nobles, les bourgeois et les artisans."
             ],
             "explanation": "La société était organisée en trois ordres : le clergé (premier ordre), la noblesse (deuxième ordre) et le tiers état (troisième ordre, 90% de la population).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_7",
+            "id": "hgc_7",
             "question": "Quel roi incarne la monarchie absolue sous l'Ancien Régime ?",
-            "correctAnswer": "Louis XIV, surnommé le Roi-Soleil",
-            "incorrectAnswers": ["Louis XVI", "Henri IV", "François Ier"],
+            "correctAnswer": "Louis XIV, surnommé le Roi-Soleil.",
+            "incorrectAnswers": [
+                "Louis XVI.",
+                "Henri IV.",
+                "François Ier."
+            ],
             "explanation": "Le roi Louis XIV, surnommé le Roi-Soleil, est l'une des personnes importantes de l'Ancien Régime. Il incarne la monarchie absolue.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_8",
+            "id": "hgc_8",
             "question": "Quand la Déclaration des droits de l'homme et du citoyen a-t-elle été adoptée ?",
-            "correctAnswer": "Le 26 août 1789",
+            "correctAnswer": "Le 26 août 1789.",
             "incorrectAnswers": [
-                "Le 14 juillet 1789",
-                "Le 4 août 1789",
-                "Le 21 septembre 1792"
+                "Le 14 juillet 1789.",
+                "Le 4 août 1789.",
+                "Le 21 septembre 1792."
             ],
             "explanation": "La Déclaration des droits de l'homme et du citoyen est adoptée le 26 août 1789, quelques semaines après la prise de la Bastille.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_9",
+            "id": "hgc_9",
             "question": "Qui a contribué à la rédaction de la DDHC de 1789 ?",
-            "correctAnswer": "Le marquis de La Fayette",
+            "correctAnswer": "Le marquis de La Fayette.",
             "incorrectAnswers": [
-                "Napoléon Bonaparte",
-                "Louis XVI",
-                "Robespierre"
+                "Napoléon Bonaparte.",
+                "Louis XVI.",
+                "Robespierre."
             ],
             "explanation": "Le marquis de La Fayette joue un rôle central pendant la Révolution française. Il contribue notamment à la rédaction de la Déclaration des droits de l'homme et du citoyen.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_10",
+            "id": "hgc_10",
             "question": "Quand la Première République a-t-elle été proclamée ?",
-            "correctAnswer": "Le 22 septembre 1792",
+            "correctAnswer": "Le 22 septembre 1792.",
             "incorrectAnswers": [
-                "Le 14 juillet 1789",
-                "Le 26 août 1789",
-                "Le 10 août 1792"
+                "Le 14 juillet 1789.",
+                "Le 26 août 1789.",
+                "Le 10 août 1792."
             ],
             "explanation": "La 1re République est proclamée le 22 septembre 1792, après le renversement du roi Louis XVI le 10 août 1792.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_11",
+            "id": "hgc_11",
             "question": "Qui a dirigé la Terreur pendant la Révolution ?",
-            "correctAnswer": "Maximilien Robespierre",
-            "incorrectAnswers": ["Napoléon Bonaparte", "La Fayette", "Danton"],
+            "correctAnswer": "Maximilien Robespierre.",
+            "incorrectAnswers": [
+                "Napoléon Bonaparte.",
+                "La Fayette.",
+                "Danton."
+            ],
             "explanation": "Maximilien Robespierre est célèbre pour son engagement en faveur de l'égalité et de la République, mais aussi pour avoir dirigé la Terreur.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_12",
+            "id": "hgc_12",
             "question": "Quand Louis XVI a-t-il été exécuté ?",
-            "correctAnswer": "En 1793",
-            "incorrectAnswers": ["En 1789", "En 1791", "En 1799"],
+            "correctAnswer": "En 1793.",
+            "incorrectAnswers": [
+                "En 1789.",
+                "En 1791.",
+                "En 1799."
+            ],
             "explanation": "Louis XVI est exécuté en 1793 pendant la Terreur, période où le gouvernement surveille strictement les ennemis de la Révolution.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_13",
+            "id": "hgc_13",
             "question": "Quand Napoléon Bonaparte a-t-il pris le pouvoir ?",
-            "correctAnswer": "En 1799, par un coup d'État",
-            "incorrectAnswers": ["En 1789", "En 1804", "En 1815"],
+            "correctAnswer": "En 1799, par un coup d'État.",
+            "incorrectAnswers": [
+                "En 1789.",
+                "En 1804.",
+                "En 1815."
+            ],
             "explanation": "En 1799, Napoléon Bonaparte prend le pouvoir par un coup d'État et la période du Consulat s'ouvre.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_14",
+            "id": "hgc_14",
             "question": "Quelle fonction administrative Napoléon a-t-il créée en 1800 ?",
-            "correctAnswer": "Le préfet, représentant du gouvernement dans chaque département",
-            "incorrectAnswers": ["Le maire", "Le sénateur", "Le député"],
+            "correctAnswer": "Le préfet, représentant du gouvernement dans chaque département.",
+            "incorrectAnswers": [
+                "Le maire.",
+                "Le sénateur.",
+                "Le député."
+            ],
             "explanation": "En 1800, une nouvelle fonction administrative est créée : le préfet, qui dirige chaque département et représente le gouvernement.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_15",
+            "id": "hgc_15",
             "question": "Quand Napoléon a-t-il été proclamé empereur ?",
-            "correctAnswer": "Le 18 mai 1804",
+            "correctAnswer": "Le 18 mai 1804.",
             "incorrectAnswers": [
-                "Le 13 décembre 1799",
-                "Le 2 décembre 1804",
-                "Le 18 juin 1815"
+                "Le 13 décembre 1799.",
+                "Le 2 décembre 1804.",
+                "Le 18 juin 1815."
             ],
             "explanation": "Napoléon est proclamé empereur le 18 mai 1804, marquant le début du 1er Empire.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_16",
+            "id": "hgc_16",
             "question": "Quel texte fondamental Napoléon a-t-il promulgué en 1804 ?",
-            "correctAnswer": "Le Code civil",
+            "correctAnswer": "Le Code civil.",
             "incorrectAnswers": [
-                "La Constitution",
-                "La Déclaration des droits de l'homme",
-                "Le Code pénal"
+                "La Constitution.",
+                "La Déclaration des droits de l'homme.",
+                "Le Code pénal."
             ],
             "explanation": "Le Code civil de 1804 garantit l'égalité devant la loi et règle la vie en société. Il est toujours en vigueur aujourd'hui.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_17",
+            "id": "hgc_17",
             "question": "Quelles institutions éducatives Napoléon a-t-il créées ?",
-            "correctAnswer": "Le lycée et le baccalauréat",
+            "correctAnswer": "Le lycée et le baccalauréat.",
             "incorrectAnswers": [
-                "L'école primaire et le collège",
-                "L'université et les grandes écoles",
-                "L'école maternelle et l'école élémentaire"
+                "L'école primaire et le collège.",
+                "L'université et les grandes écoles.",
+                "L'école maternelle et l'école élémentaire."
             ],
             "explanation": "Le 1er Empire crée des institutions comme le lycée et le baccalauréat, qui structurent toujours le système éducatif français.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_18",
+            "id": "hgc_18",
             "question": "Quand le 1er Empire a-t-il pris fin ?",
-            "correctAnswer": "Le 7 juillet 1815, après la bataille de Waterloo",
+            "correctAnswer": "Le 7 juillet 1815, après la bataille de Waterloo.",
             "incorrectAnswers": [
-                "En 1812, après la campagne de Russie",
-                "En 1814, après la première abdication",
-                "En 1821, à la mort de Napoléon"
+                "En 1812, après la campagne de Russie.",
+                "En 1814, après la première abdication.",
+                "En 1821, à la mort de Napoléon."
             ],
             "explanation": "Napoléon abdique définitivement le 7 juillet 1815 après la bataille de Waterloo. Le 1er Empire prend fin et la monarchie est rétablie.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_19",
+            "id": "hgc_19",
             "question": "Quand le suffrage universel masculin a-t-il été instauré ?",
-            "correctAnswer": "En 1848, sous la 2e République",
+            "correctAnswer": "En 1848, sous la 2e République.",
             "incorrectAnswers": [
-                "En 1789, pendant la Révolution",
-                "En 1870, sous la 3e République",
-                "En 1944, après la Libération"
+                "En 1789, pendant la Révolution.",
+                "En 1870, sous la 3e République.",
+                "En 1944, après la Libération."
             ],
             "explanation": "La 2e République instaure le suffrage universel masculin en 1848, remplaçant le suffrage censitaire réservé aux plus riches.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_20",
+            "id": "hgc_20",
             "question": "Quand l'esclavage a-t-il été définitivement aboli dans les colonies françaises ?",
-            "correctAnswer": "Le 27 avril 1848, par le décret de Victor Schœlcher",
+            "correctAnswer": "Le 27 avril 1848, par le décret de Victor Schœlcher.",
             "incorrectAnswers": [
-                "En 1794, pendant la Révolution",
-                "En 1815, après Waterloo",
-                "En 1870, sous la 3e République"
+                "En 1794, pendant la Révolution.",
+                "En 1815, après Waterloo.",
+                "En 1870, sous la 3e République."
             ],
             "explanation": "L'esclavage est définitivement aboli dans les colonies françaises grâce au décret du 27 avril 1848 rédigé par Victor Schœlcher.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_21",
+            "id": "hgc_21",
             "question": "Quand la 3e République a-t-elle été proclamée ?",
-            "correctAnswer": "Le 4 septembre 1870",
+            "correctAnswer": "Le 4 septembre 1870.",
             "incorrectAnswers": [
-                "Le 24 février 1848",
-                "Le 2 décembre 1851",
-                "Le 14 juillet 1880"
+                "Le 24 février 1848.",
+                "Le 2 décembre 1851.",
+                "Le 14 juillet 1880."
             ],
             "explanation": "La 3e République est proclamée le 4 septembre 1870 par Léon Gambetta, après la chute du Second Empire de Napoléon III.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_22",
+            "id": "hgc_22",
             "question": "Qu'est-ce que la Commune de Paris ?",
-            "correctAnswer": "Un mouvement d'insurrection parisien et républicain en 1871",
+            "correctAnswer": "Un mouvement d'insurrection parisien et républicain en 1871.",
             "incorrectAnswers": [
-                "Le gouvernement de Paris pendant la Révolution",
-                "Une fête populaire annuelle",
-                "Le premier conseil municipal élu"
+                "Le gouvernement de Paris pendant la Révolution.",
+                "Une fête populaire annuelle.",
+                "Le premier conseil municipal élu."
             ],
             "explanation": "En 1871, la Commune de Paris, mouvement d'insurrection parisien et républicain, se forme en opposition à la nouvelle Assemblée monarchiste.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_23",
+            "id": "hgc_23",
             "question": "Quand l'école primaire publique est-elle devenue gratuite et obligatoire ?",
-            "correctAnswer": "En 1881-1882, avec les lois de Jules Ferry",
+            "correctAnswer": "En 1881-1882, avec les lois de Jules Ferry.",
             "incorrectAnswers": [
-                "En 1789, pendant la Révolution",
-                "En 1848, sous la 2e République",
-                "En 1905, avec la loi de séparation"
+                "En 1789, pendant la Révolution.",
+                "En 1848, sous la 2e République.",
+                "En 1905, avec la loi de séparation."
             ],
             "explanation": "La 3e République généralise l'école publique gratuite en 1881 et l'école laïque et obligatoire en 1882, grâce aux lois de Jules Ferry.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_24",
+            "id": "hgc_24",
             "question": "Quand la loi de séparation des Églises et de l'État a-t-elle été votée ?",
-            "correctAnswer": "En 1905",
-            "incorrectAnswers": ["En 1789", "En 1848", "En 1882"],
+            "correctAnswer": "En 1905.",
+            "incorrectAnswers": [
+                "En 1789.",
+                "En 1848.",
+                "En 1882."
+            ],
             "explanation": "La loi de 1905 sur la séparation des Églises et de l'État fonde la laïcité en France.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_25",
+            "id": "hgc_25",
             "question": "Qu'est-ce que le régime de Vichy ?",
-            "correctAnswer": "Un régime autoritaire et collaborationniste dirigé par Pétain (1940-1944)",
+            "correctAnswer": "Un régime autoritaire et collaborationniste dirigé par Pétain (1940-1944).",
             "incorrectAnswers": [
-                "Une station thermale célèbre",
-                "Le gouvernement de la 3e République",
-                "Une période de la Révolution française"
+                "Une station thermale célèbre.",
+                "Le gouvernement de la 3e République.",
+                "Une période de la Révolution française."
             ],
             "explanation": "Le régime de Vichy est le régime dirigé par le maréchal Pétain de 1940 à 1944, qui collabore avec l'Allemagne nazie.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_26",
+            "id": "hgc_26",
             "question": "Quand les femmes ont-elles obtenu le droit de vote en France ?",
-            "correctAnswer": "En avril 1944",
-            "incorrectAnswers": ["En 1848", "En 1905", "En 1958"],
+            "correctAnswer": "En avril 1944.",
+            "incorrectAnswers": [
+                "En 1848.",
+                "En 1905.",
+                "En 1958."
+            ],
             "explanation": "Le droit de vote est accordé aux femmes en avril 1944 par le Gouvernement provisoire de la République française.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_27",
+            "id": "hgc_27",
             "question": "Quand la Sécurité sociale a-t-elle été créée ?",
-            "correctAnswer": "En 1945, après la Libération",
+            "correctAnswer": "En 1945, après la Libération.",
             "incorrectAnswers": [
-                "En 1936, sous le Front populaire",
-                "En 1958, sous la 5e République",
-                "En 1968, après mai 68"
+                "En 1936, sous le Front populaire.",
+                "En 1958, sous la 5e République.",
+                "En 1968, après mai 68."
             ],
             "explanation": "Le GPRF met en place d'importantes réformes, dont la préparation de la Sécurité sociale, créée en 1945.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_28",
+            "id": "hgc_28",
             "question": "Quand la 5e République a-t-elle été instaurée ?",
-            "correctAnswer": "Le 4 octobre 1958",
+            "correctAnswer": "Le 4 octobre 1958.",
             "incorrectAnswers": [
-                "Le 28 septembre 1958",
-                "Le 1er janvier 1959",
-                "Le 14 juillet 1958"
+                "Le 28 septembre 1958.",
+                "Le 1er janvier 1959.",
+                "Le 14 juillet 1958."
             ],
             "explanation": "La 5e République est instaurée le 4 octobre 1958, face à une crise politique liée à la guerre d'Algérie.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_29",
+            "id": "hgc_29",
             "question": "Qui est le fondateur de la 5e République ?",
-            "correctAnswer": "Charles de Gaulle",
+            "correctAnswer": "Charles de Gaulle.",
             "incorrectAnswers": [
-                "Georges Pompidou",
-                "François Mitterrand",
-                "Valéry Giscard d'Estaing"
+                "Georges Pompidou.",
+                "François Mitterrand.",
+                "Valéry Giscard d'Estaing."
             ],
             "explanation": "Charles de Gaulle est le fondateur et premier président de la 5e République. Il a façonné ses institutions et renforcé le pouvoir exécutif.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_30",
+            "id": "hgc_30",
             "question": "Depuis quand les jeunes peuvent-ils voter à 18 ans ?",
-            "correctAnswer": "Depuis 1974, sous Valéry Giscard d'Estaing",
-            "incorrectAnswers": ["Depuis 1944", "Depuis 1958", "Depuis 1981"],
+            "correctAnswer": "Depuis 1974, sous Valéry Giscard d'Estaing.",
+            "incorrectAnswers": [
+                "Depuis 1944.",
+                "Depuis 1958.",
+                "Depuis 1981."
+            ],
             "explanation": "En 1974, sous Valéry Giscard d'Estaing, les jeunes peuvent voter dès 18 ans (contre 21 ans auparavant).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_31",
+            "id": "hgc_31",
             "question": "Quand la peine de mort a-t-elle été abolie en France ?",
-            "correctAnswer": "En 1981, sous François Mitterrand",
-            "incorrectAnswers": ["En 1848", "En 1958", "En 2000"],
+            "correctAnswer": "En 1981, sous François Mitterrand.",
+            "incorrectAnswers": [
+                "En 1848.",
+                "En 1958.",
+                "En 2000."
+            ],
             "explanation": "La peine de mort est totalement abolie en 1981. C'est Robert Badinter, ministre de la Justice de François Mitterrand, qui a soutenu cette abolition.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_32",
+            "id": "hgc_32",
             "question": "Qui a fait abolir la peine de mort en France ?",
-            "correctAnswer": "Robert Badinter, ministre de la Justice",
+            "correctAnswer": "Robert Badinter, ministre de la Justice.",
             "incorrectAnswers": [
-                "François Mitterrand lui-même",
-                "Simone Veil",
-                "Jacques Chirac"
+                "François Mitterrand lui-même.",
+                "Simone Veil.",
+                "Jacques Chirac."
             ],
             "explanation": "Robert Badinter, ministre de la Justice de François Mitterrand, a soutenu l'abolition totale de la peine de mort en 1981.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_33",
+            "id": "hgc_33",
             "question": "Quand l'avortement a-t-il été dépénalisé en France ?",
-            "correctAnswer": "Le 17 janvier 1975, avec la loi Veil",
-            "incorrectAnswers": ["En 1968", "En 1981", "En 2000"],
+            "correctAnswer": "Le 17 janvier 1975, avec la loi Veil.",
+            "incorrectAnswers": [
+                "En 1968.",
+                "En 1981.",
+                "En 2000."
+            ],
             "explanation": "Depuis la loi \"Veil\" du 17 janvier 1975, l'avortement est dépénalisé. Cette loi a été présentée par Simone Veil, ministre de la Santé.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_34",
+            "id": "hgc_34",
             "question": "Quand l'IVG a-t-elle été inscrite dans la Constitution ?",
-            "correctAnswer": "Le 4 mars 2024, une première mondiale",
+            "correctAnswer": "Le 4 mars 2024, une première mondiale.",
             "incorrectAnswers": [
-                "En 1975, avec la loi Veil",
-                "En 2000",
-                "En 2017"
+                "En 1975, avec la loi Veil.",
+                "En 2000.",
+                "En 2017."
             ],
             "explanation": "Le 4 mars 2024, le Parlement a inscrit dans la Constitution le droit des femmes à recourir à l'IVG. La France est le premier pays au monde à le faire.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_35",
+            "id": "hgc_35",
             "question": "Quand le mariage pour tous a-t-il été légalisé ?",
-            "correctAnswer": "Le 17 mai 2013",
-            "incorrectAnswers": ["En 1999, avec le PACS", "En 2008", "En 2020"],
+            "correctAnswer": "Le 17 mai 2013.",
+            "incorrectAnswers": [
+                "En 1999, avec le PACS.",
+                "En 2008.",
+                "En 2020."
+            ],
             "explanation": "La loi du 17 mai 2013 ouvre le mariage et l'adoption aux couples homosexuels. Le premier mariage homosexuel a été célébré à Montpellier le 29 mai 2013.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_36",
+            "id": "hgc_36",
             "question": "Qui a soutenu la loi sur le mariage pour tous ?",
-            "correctAnswer": "Christiane Taubira, ministre de la Justice",
+            "correctAnswer": "Christiane Taubira, ministre de la Justice.",
             "incorrectAnswers": [
-                "François Hollande lui-même",
-                "Manuel Valls",
-                "Simone Veil"
+                "François Hollande lui-même.",
+                "Manuel Valls.",
+                "Simone Veil."
             ],
             "explanation": "Soutenue par la ministre de la Justice Christiane Taubira, la loi du 17 mai 2013 ouvre le mariage et l'adoption aux couples homosexuels.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_37",
+            "id": "hgc_37",
             "question": "Quelles sont les dates de la Première Guerre mondiale ?",
-            "correctAnswer": "1914-1918",
-            "incorrectAnswers": ["1939-1945", "1870-1871", "1905-1910"],
+            "correctAnswer": "1914-1918.",
+            "incorrectAnswers": [
+                "1939-1945.",
+                "1870-1871.",
+                "1905-1910."
+            ],
             "explanation": "La Première Guerre mondiale a duré de 1914 à 1918. L'Armistice a été signé le 11 novembre 1918.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_38",
+            "id": "hgc_38",
             "question": "Quel événement a déclenché la Première Guerre mondiale ?",
-            "correctAnswer": "L'assassinat de l'archiduc François-Ferdinand à Sarajevo le 28 juin 1914",
+            "correctAnswer": "L'assassinat de l'archiduc François-Ferdinand à Sarajevo le 28 juin 1914.",
             "incorrectAnswers": [
-                "L'invasion de la Pologne",
-                "L'attaque de Pearl Harbor",
-                "La Révolution russe"
+                "L'invasion de la Pologne.",
+                "L'attaque de Pearl Harbor.",
+                "La Révolution russe."
             ],
             "explanation": "Le 28 juin 1914, l'assassinat à Sarajevo de l'archiduc François-Ferdinand, héritier de l'empire d'Autriche-Hongrie, déclenche le conflit.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_39",
+            "id": "hgc_39",
             "question": "Qu'est-ce que la Triple Entente pendant la Première Guerre mondiale ?",
-            "correctAnswer": "L'alliance entre la France, le Royaume-Uni et la Russie",
+            "correctAnswer": "L'alliance entre la France, le Royaume-Uni et la Russie.",
             "incorrectAnswers": [
-                "L'alliance entre l'Allemagne, l'Autriche et l'Italie",
-                "L'alliance entre les États-Unis, le Japon et la Chine",
-                "L'alliance entre l'Espagne, le Portugal et l'Italie"
+                "L'alliance entre l'Allemagne, l'Autriche et l'Italie.",
+                "L'alliance entre les États-Unis, le Japon et la Chine.",
+                "L'alliance entre l'Espagne, le Portugal et l'Italie."
             ],
             "explanation": "La Triple Entente réunissait la France, le Royaume-Uni et la Russie. Elle s'opposait à la Triple Alliance (Allemagne, Autriche-Hongrie, Italie).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_40",
+            "id": "hgc_40",
             "question": "Comment appelle-t-on les soldats français de la Première Guerre mondiale ?",
-            "correctAnswer": "Les Poilus",
-            "incorrectAnswers": ["Les Grognards", "Les Bleus", "Les Tommies"],
+            "correctAnswer": "Les Poilus.",
+            "incorrectAnswers": [
+                "Les Grognards.",
+                "Les Bleus.",
+                "Les Tommies."
+            ],
             "explanation": "Les soldats français de la Première Guerre mondiale sont appelés les \"Poilus\". Ils ont combattu dans les tranchées.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_41",
+            "id": "hgc_41",
             "question": "Quand les États-Unis sont-ils entrés dans la Première Guerre mondiale ?",
-            "correctAnswer": "En avril 1917",
-            "incorrectAnswers": ["En 1914", "En 1916", "En 1918"],
+            "correctAnswer": "En avril 1917.",
+            "incorrectAnswers": [
+                "En 1914.",
+                "En 1916.",
+                "En 1918."
+            ],
             "explanation": "En avril 1917, l'entrée en guerre des États-Unis aux côtés de la Triple Entente relance la guerre.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_42",
+            "id": "hgc_42",
             "question": "Quand l'Armistice de la Première Guerre mondiale a-t-il été signé ?",
-            "correctAnswer": "Le 11 novembre 1918",
+            "correctAnswer": "Le 11 novembre 1918.",
             "incorrectAnswers": [
-                "Le 28 juin 1919",
-                "Le 8 mai 1945",
-                "Le 14 juillet 1919"
+                "Le 28 juin 1919.",
+                "Le 8 mai 1945.",
+                "Le 14 juillet 1919."
             ],
             "explanation": "L'Armistice est signé le 11 novembre 1918. Le traité de Versailles du 28 juin 1919 met officiellement fin à la guerre.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_43",
+            "id": "hgc_43",
             "question": "Combien de morts la Première Guerre mondiale a-t-elle fait ?",
-            "correctAnswer": "Plus de 10 millions de morts",
+            "correctAnswer": "Plus de 10 millions de morts.",
             "incorrectAnswers": [
-                "Environ 1 million",
-                "Plus de 60 millions",
-                "Environ 5 millions"
+                "Environ 1 million.",
+                "Plus de 60 millions.",
+                "Environ 5 millions."
             ],
             "explanation": "La Première Guerre mondiale a fait plus de 10 millions de morts (dont 9 millions de soldats) et des millions de blessés.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_44",
+            "id": "hgc_44",
             "question": "Quelles sont les dates de la Seconde Guerre mondiale ?",
-            "correctAnswer": "1939-1945",
-            "incorrectAnswers": ["1914-1918", "1940-1944", "1935-1945"],
+            "correctAnswer": "1939-1945.",
+            "incorrectAnswers": [
+                "1914-1918.",
+                "1940-1944.",
+                "1935-1945."
+            ],
             "explanation": "La Seconde Guerre mondiale a duré de 1939 (invasion de la Pologne) à 1945 (capitulation du Japon le 2 septembre).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_45",
+            "id": "hgc_45",
             "question": "Quel événement a déclenché la Seconde Guerre mondiale ?",
-            "correctAnswer": "L'invasion de la Pologne par l'Allemagne le 1er septembre 1939",
+            "correctAnswer": "L'invasion de la Pologne par l'Allemagne le 1er septembre 1939.",
             "incorrectAnswers": [
-                "L'assassinat de l'archiduc François-Ferdinand",
-                "L'attaque de Pearl Harbor",
-                "La signature du traité de Versailles"
+                "L'assassinat de l'archiduc François-Ferdinand.",
+                "L'attaque de Pearl Harbor.",
+                "La signature du traité de Versailles."
             ],
             "explanation": "La Seconde Guerre mondiale est déclenchée le 1er septembre 1939 par l'invasion de la Pologne par l'armée allemande commandée par Hitler.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_46",
+            "id": "hgc_46",
             "question": "Quand la France a-t-elle signé l'armistice avec l'Allemagne ?",
-            "correctAnswer": "Le 22 juin 1940",
+            "correctAnswer": "Le 22 juin 1940.",
             "incorrectAnswers": [
-                "Le 10 mai 1940",
-                "Le 18 juin 1940",
-                "Le 25 août 1944"
+                "Le 10 mai 1940.",
+                "Le 18 juin 1940.",
+                "Le 25 août 1944."
             ],
             "explanation": "Vaincue, la France signe l'armistice avec l'Allemagne le 22 juin 1940.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_47",
+            "id": "hgc_47",
             "question": "Quand le général de Gaulle a-t-il lancé l'appel à la Résistance ?",
-            "correctAnswer": "Le 18 juin 1940",
+            "correctAnswer": "Le 18 juin 1940.",
             "incorrectAnswers": [
-                "Le 22 juin 1940",
-                "Le 14 juillet 1940",
-                "Le 25 août 1944"
+                "Le 22 juin 1940.",
+                "Le 14 juillet 1940.",
+                "Le 25 août 1944."
             ],
             "explanation": "Le 18 juin 1940, le général de Gaulle appelle à continuer le combat depuis Londres. C'est l'appel du 18 juin.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_48",
+            "id": "hgc_48",
             "question": "Qui a unifié les mouvements de Résistance en 1943 ?",
-            "correctAnswer": "Jean Moulin, en créant le Conseil national de la Résistance",
+            "correctAnswer": "Jean Moulin, en créant le Conseil national de la Résistance.",
             "incorrectAnswers": [
-                "Charles de Gaulle depuis Londres",
-                "Philippe Pétain",
-                "Winston Churchill"
+                "Charles de Gaulle depuis Londres.",
+                "Philippe Pétain.",
+                "Winston Churchill."
             ],
             "explanation": "En 1943, Jean Moulin unifie les mouvements de Résistance en créant le Conseil national de la Résistance (CNR).",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_49",
+            "id": "hgc_49",
             "question": "Quand le débarquement en Normandie a-t-il eu lieu ?",
-            "correctAnswer": "Le 6 juin 1944",
+            "correctAnswer": "Le 6 juin 1944.",
             "incorrectAnswers": [
-                "Le 15 août 1944",
-                "Le 25 août 1944",
-                "Le 8 mai 1945"
+                "Le 15 août 1944.",
+                "Le 25 août 1944.",
+                "Le 8 mai 1945."
             ],
             "explanation": "Le 6 juin 1944, le débarquement des Alliés en Normandie marque le début de la Libération de la France et de l'Europe.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_50",
+            "id": "hgc_50",
             "question": "Quand Paris a-t-il été libéré ?",
-            "correctAnswer": "Le 25 août 1944",
+            "correctAnswer": "Le 25 août 1944.",
             "incorrectAnswers": [
-                "Le 6 juin 1944",
-                "Le 8 mai 1945",
-                "Le 14 juillet 1944"
+                "Le 6 juin 1944.",
+                "Le 8 mai 1945.",
+                "Le 14 juillet 1944."
             ],
             "explanation": "Paris est libéré le 25 août 1944, marquant la fin du régime de Vichy.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_51",
+            "id": "hgc_51",
             "question": "Quand l'Allemagne a-t-elle capitulé ?",
-            "correctAnswer": "Le 8 mai 1945",
+            "correctAnswer": "Le 8 mai 1945.",
             "incorrectAnswers": [
-                "Le 25 août 1944",
-                "Le 2 septembre 1945",
-                "Le 11 novembre 1945"
+                "Le 25 août 1944.",
+                "Le 2 septembre 1945.",
+                "Le 11 novembre 1945."
             ],
             "explanation": "L'Allemagne capitule le 8 mai 1945. C'est la fin de la guerre en Europe.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_52",
+            "id": "hgc_52",
             "question": "Combien de morts la Seconde Guerre mondiale a-t-elle fait ?",
-            "correctAnswer": "Plus de 60 millions de morts (soldats et civils)",
+            "correctAnswer": "Plus de 60 millions de morts (soldats et civils).",
             "incorrectAnswers": [
-                "Environ 10 millions",
-                "Environ 20 millions",
-                "Plus de 100 millions"
+                "Environ 10 millions.",
+                "Environ 20 millions.",
+                "Plus de 100 millions."
             ],
             "explanation": "La Seconde Guerre mondiale a fait plus de 60 millions de morts (soldats et civils), dont 6 millions de Juifs dans la Shoah.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_53",
+            "id": "hgc_53",
             "question": "Qu'est-ce que la Shoah ?",
-            "correctAnswer": "Le génocide des Juifs par le régime nazi pendant la Seconde Guerre mondiale",
+            "correctAnswer": "Le génocide des Juifs par le régime nazi pendant la Seconde Guerre mondiale.",
             "incorrectAnswers": [
-                "Une bataille célèbre de la guerre",
-                "Un camp de prisonniers",
-                "Une organisation de résistance"
+                "Une bataille célèbre de la guerre.",
+                "Un camp de prisonniers.",
+                "Une organisation de résistance."
             ],
             "explanation": "La Shoah désigne le génocide perpétré pendant la Seconde Guerre mondiale. Plus de 6 millions de Juifs ont été tués dans les camps d'extermination.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_54",
+            "id": "hgc_54",
             "question": "Quand l'ONU a-t-elle été créée ?",
-            "correctAnswer": "En 1945, après la Seconde Guerre mondiale",
+            "correctAnswer": "En 1945, après la Seconde Guerre mondiale.",
             "incorrectAnswers": [
-                "En 1919, après la Première Guerre mondiale",
-                "En 1957, avec la CEE",
-                "En 1992, avec le traité de Maastricht"
+                "En 1919, après la Première Guerre mondiale.",
+                "En 1957, avec la CEE.",
+                "En 1992, avec le traité de Maastricht."
             ],
             "explanation": "L'ONU (Organisation des Nations Unies) a été créée en 1945 pour maintenir la paix dans le monde après la Seconde Guerre mondiale.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_55",
+            "id": "hgc_55",
             "question": "Quelles sont les dates de la guerre d'Algérie ?",
-            "correctAnswer": "1954-1962",
-            "incorrectAnswers": ["1946-1954", "1939-1945", "1958-1968"],
+            "correctAnswer": "1954-1962.",
+            "incorrectAnswers": [
+                "1946-1954.",
+                "1939-1945.",
+                "1958-1968."
+            ],
             "explanation": "La guerre d'Algérie a duré de 1954 à 1962, entre la France et le Front de libération nationale algérien.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_56",
+            "id": "hgc_56",
             "question": "Quelles sont les dates de la guerre d'Indochine ?",
-            "correctAnswer": "1946-1954",
-            "incorrectAnswers": ["1954-1962", "1939-1945", "1950-1960"],
+            "correctAnswer": "1946-1954.",
+            "incorrectAnswers": [
+                "1954-1962.",
+                "1939-1945.",
+                "1950-1960."
+            ],
             "explanation": "La guerre d'Indochine a duré de 1946 à 1954. La défaite française a entraîné la fin de l'Indochine française.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_57",
+            "id": "hgc_57",
             "question": "Quand les colonies françaises d'Afrique sont-elles devenues indépendantes ?",
-            "correctAnswer": "En 1960 pour la plupart",
-            "incorrectAnswers": ["En 1945", "En 1954", "En 1975"],
+            "correctAnswer": "En 1960 pour la plupart.",
+            "incorrectAnswers": [
+                "En 1945.",
+                "En 1954.",
+                "En 1975."
+            ],
             "explanation": "1960 est l'année de l'indépendance des colonies françaises d'Afrique ainsi que de Madagascar.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_58",
+            "id": "hgc_58",
             "question": "Quand la CECA a-t-elle été créée ?",
-            "correctAnswer": "En 1951, par le traité de Paris",
+            "correctAnswer": "En 1951, par le traité de Paris.",
             "incorrectAnswers": [
-                "En 1957, par le traité de Rome",
-                "En 1992, par le traité de Maastricht",
-                "En 2007, par le traité de Lisbonne"
+                "En 1957, par le traité de Rome.",
+                "En 1992, par le traité de Maastricht.",
+                "En 2007, par le traité de Lisbonne."
             ],
             "explanation": "En 1951, le traité de Paris crée la CECA (Communauté Européenne du Charbon et de l'Acier), première étape de la construction européenne.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_59",
+            "id": "hgc_59",
             "question": "Quand la CEE a-t-elle été créée ?",
-            "correctAnswer": "En 1957, par le traité de Rome",
+            "correctAnswer": "En 1957, par le traité de Rome.",
             "incorrectAnswers": [
-                "En 1951, par le traité de Paris",
-                "En 1992, par le traité de Maastricht",
-                "En 2002, avec l'euro"
+                "En 1951, par le traité de Paris.",
+                "En 1992, par le traité de Maastricht.",
+                "En 2002, avec l'euro."
             ],
             "explanation": "En 1957, le traité de Rome crée la CEE (Communauté Économique Européenne) pour former un marché commun.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_60",
+            "id": "hgc_60",
             "question": "Quel traité a créé l'Union européenne ?",
-            "correctAnswer": "Le traité de Maastricht en 1992",
+            "correctAnswer": "Le traité de Maastricht en 1992.",
             "incorrectAnswers": [
-                "Le traité de Rome en 1957",
-                "Le traité de Paris en 1951",
-                "Le traité de Lisbonne en 2007"
+                "Le traité de Rome en 1957.",
+                "Le traité de Paris en 1951.",
+                "Le traité de Lisbonne en 2007."
             ],
             "explanation": "Le traité de Maastricht de 1992 crée l'Union européenne (UE). Les marchandises, les personnes et les capitaux peuvent circuler librement.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_61",
+            "id": "hgc_61",
             "question": "Quels sont les principaux fleuves de France ?",
-            "correctAnswer": "La Seine, la Loire (le plus long), le Rhône, la Garonne et le Rhin",
+            "correctAnswer": "La Seine, la Loire (le plus long), le Rhône, la Garonne et le Rhin.",
             "incorrectAnswers": [
-                "La Tamise, le Danube et le Pô",
-                "La Marne, la Dordogne et l'Oise uniquement",
-                "Le Nil, l'Amazone et le Mississippi"
+                "La Tamise, le Danube et le Pô.",
+                "La Marne, la Dordogne et l'Oise uniquement.",
+                "Le Nil, l'Amazone et le Mississippi."
             ],
             "explanation": "Les cinq principaux fleuves français sont la Seine, la Loire (le plus long avec 1012 km), le Rhône, la Garonne et le Rhin (fleuve frontalier).",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_62",
+            "id": "hgc_62",
             "question": "Quel est le point culminant de France ?",
-            "correctAnswer": "Le Mont Blanc (4 810 m) dans les Alpes",
+            "correctAnswer": "Le Mont Blanc (4 810 m) dans les Alpes.",
             "incorrectAnswers": [
-                "Le Puy de Dôme dans le Massif central",
-                "Le Pic du Midi dans les Pyrénées",
-                "Le Grand Ballon dans les Vosges"
+                "Le Puy de Dôme dans le Massif central.",
+                "Le Pic du Midi dans les Pyrénées.",
+                "Le Grand Ballon dans les Vosges."
             ],
             "explanation": "Le Mont Blanc, situé dans les Alpes à la frontière franco-italienne, est le point culminant de France avec 4 810 mètres d'altitude.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_63",
+            "id": "hgc_63",
             "question": "Quelles mers et océans bordent la France métropolitaine ?",
-            "correctAnswer": "La Mer du Nord, la Manche, l'Océan Atlantique et la Mer Méditerranée",
+            "correctAnswer": "La Mer du Nord, la Manche, l'Océan Atlantique et la Mer Méditerranée.",
             "incorrectAnswers": [
-                "L'Océan Pacifique et l'Océan Indien",
-                "La Mer Baltique et la Mer Noire",
-                "La Mer Rouge et le Golfe Persique"
+                "L'Océan Pacifique et l'Océan Indien.",
+                "La Mer Baltique et la Mer Noire.",
+                "La Mer Rouge et le Golfe Persique."
             ],
             "explanation": "La France métropolitaine est bordée par la Mer du Nord au nord, la Manche au nord-ouest, l'Océan Atlantique à l'ouest et la Mer Méditerranée au sud.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_64",
+            "id": "hgc_64",
             "question": "Quels sont les massifs montagneux en France ?",
-            "correctAnswer": "Les Alpes, les Pyrénées, le Massif central, le Jura et les Vosges",
+            "correctAnswer": "Les Alpes, les Pyrénées, le Massif central, le Jura et les Vosges.",
             "incorrectAnswers": [
-                "Les Apennins, les Carpates et les Balkans",
-                "L'Himalaya et les Andes",
-                "Les Rocheuses et les Appalaches"
+                "Les Apennins, les Carpates et les Balkans.",
+                "L'Himalaya et les Andes.",
+                "Les Rocheuses et les Appalaches."
             ],
             "explanation": "Les principaux massifs montagneux français sont les Alpes, les Pyrénées, le Massif central, le Jura et les Vosges.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_65",
+            "id": "hgc_65",
             "question": "Combien y a-t-il de Départements et Régions d'Outre-Mer (DROM) ?",
-            "correctAnswer": "5 : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte",
+            "correctAnswer": "5 : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte.",
             "incorrectAnswers": [
-                "3 : Martinique, Guadeloupe et Guyane",
-                "7 : incluant la Polynésie et la Nouvelle-Calédonie",
-                "2 : La Réunion et Mayotte"
+                "3 : Martinique, Guadeloupe et Guyane.",
+                "7 : incluant la Polynésie et la Nouvelle-Calédonie.",
+                "2 : La Réunion et Mayotte."
             ],
             "explanation": "Il y a 5 DROM : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte. Ils ont le même statut que les départements métropolitains.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_66",
+            "id": "hgc_66",
             "question": "Qu'est-ce qu'une COM ?",
-            "correctAnswer": "Une Collectivité d'Outre-Mer avec plus d'autonomie que les DROM",
+            "correctAnswer": "Une Collectivité d'Outre-Mer avec plus d'autonomie que les DROM.",
             "incorrectAnswers": [
-                "Une Commission Outre-Mer du gouvernement",
-                "Un département métropolitain",
-                "Une zone économique spéciale"
+                "Une Commission Outre-Mer du gouvernement.",
+                "Un département métropolitain.",
+                "Une zone économique spéciale."
             ],
             "explanation": "Les COM (Collectivités d'Outre-Mer) comme la Polynésie française ou Saint-Pierre-et-Miquelon disposent d'une plus grande autonomie que les DROM.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_67",
+            "id": "hgc_67",
             "question": "Quelles sont les trois plus grandes villes de France ?",
-            "correctAnswer": "Paris, Marseille et Lyon",
+            "correctAnswer": "Paris, Marseille et Lyon.",
             "incorrectAnswers": [
-                "Paris, Bordeaux et Toulouse",
-                "Paris, Nice et Strasbourg",
-                "Paris, Lille et Nantes"
+                "Paris, Bordeaux et Toulouse.",
+                "Paris, Nice et Strasbourg.",
+                "Paris, Lille et Nantes."
             ],
             "explanation": "Les trois plus grandes villes de France par population sont Paris (la capitale), Marseille et Lyon.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_68",
+            "id": "hgc_68",
             "question": "Quels pays partagent une frontière terrestre avec la France métropolitaine ?",
-            "correctAnswer": "Belgique, Luxembourg, Allemagne, Suisse, Italie, Monaco, Espagne et Andorre",
+            "correctAnswer": "Belgique, Luxembourg, Allemagne, Suisse, Italie, Monaco, Espagne et Andorre.",
             "incorrectAnswers": [
-                "Allemagne, Pologne et Autriche",
-                "Royaume-Uni, Pays-Bas et Portugal",
-                "Italie, Grèce et Croatie"
+                "Allemagne, Pologne et Autriche.",
+                "Royaume-Uni, Pays-Bas et Portugal.",
+                "Italie, Grèce et Croatie."
             ],
             "explanation": "La France métropolitaine partage ses frontières avec 8 pays : Belgique, Luxembourg, Allemagne, Suisse, Italie, Monaco, Espagne et Andorre.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_69",
+            "id": "hgc_69",
             "question": "Quel fleuve traverse Paris ?",
-            "correctAnswer": "La Seine",
-            "incorrectAnswers": ["La Loire", "Le Rhône", "La Garonne"],
+            "correctAnswer": "La Seine.",
+            "incorrectAnswers": [
+                "La Loire.",
+                "Le Rhône.",
+                "La Garonne."
+            ],
             "explanation": "La Seine traverse Paris, séparant la ville en rive droite et rive gauche.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_70",
+            "id": "hgc_70",
             "question": "Quelle ville est surnommée la 'Capitale des Gaules' ?",
-            "correctAnswer": "Lyon",
-            "incorrectAnswers": ["Paris", "Marseille", "Bordeaux"],
+            "correctAnswer": "Lyon.",
+            "incorrectAnswers": [
+                "Paris.",
+                "Marseille.",
+                "Bordeaux."
+            ],
             "explanation": "Lyon est surnommée la 'Capitale des Gaules' en référence à son importance historique sous l'Empire romain.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_71",
+            "id": "hgc_71",
             "question": "Quel est l'ancien nom de Paris sous les Romains ?",
-            "correctAnswer": "Lutèce",
-            "incorrectAnswers": ["Lugdunum", "Massilia", "Burdigala"],
+            "correctAnswer": "Lutèce.",
+            "incorrectAnswers": [
+                "Lugdunum.",
+                "Massilia.",
+                "Burdigala."
+            ],
             "explanation": "Paris s'appelait Lutèce (Lutetia) sous les Romains. C'était la ville des Parisii, un peuple gaulois.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_72",
+            "id": "hgc_72",
             "question": "Où se trouve la Corse ?",
-            "correctAnswer": "Dans la mer Méditerranée, au sud-est de la France",
+            "correctAnswer": "Dans la mer Méditerranée, au sud-est de la France.",
             "incorrectAnswers": [
-                "Dans l'océan Atlantique",
-                "Dans la Manche",
-                "Dans l'océan Indien"
+                "Dans l'océan Atlantique.",
+                "Dans la Manche.",
+                "Dans l'océan Indien."
             ],
             "explanation": "La Corse est une île française située dans la mer Méditerranée, au large de la côte sud-est de la France.",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_73",
+            "id": "hgc_73",
             "question": "Combien y a-t-il de régions en France métropolitaine ?",
-            "correctAnswer": "13 régions (12 + la Corse)",
-            "incorrectAnswers": ["22 régions", "18 régions", "10 régions"],
+            "correctAnswer": "13 régions (12 + la Corse).",
+            "incorrectAnswers": [
+                "22 régions.",
+                "18 régions.",
+                "10 régions."
+            ],
             "explanation": "Depuis 2016, la France métropolitaine compte 13 régions : 12 régions plus la Corse (collectivité territoriale unique).",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_74",
+            "id": "hgc_74",
             "question": "Combien y a-t-il de départements en France ?",
-            "correctAnswer": "101 départements (96 en métropole + 5 outre-mer)",
+            "correctAnswer": "101 départements (96 en métropole + 5 outre-mer).",
             "incorrectAnswers": [
-                "95 départements",
-                "110 départements",
-                "75 départements"
+                "95 départements.",
+                "110 départements.",
+                "75 départements."
             ],
             "explanation": "La France compte 101 départements : 96 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, Réunion, Mayotte).",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_75",
+            "id": "hgc_75",
             "question": "Qui était Molière ?",
-            "correctAnswer": "Le plus célèbre dramaturge français du XVIIe siècle",
+            "correctAnswer": "Le plus célèbre dramaturge français du XVIIe siècle.",
             "incorrectAnswers": [
-                "Un roi de France",
-                "Un général de Napoléon",
-                "Un philosophe des Lumières"
+                "Un roi de France.",
+                "Un général de Napoléon.",
+                "Un philosophe des Lumières."
             ],
             "explanation": "Molière est le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies comme L'Avare et Le Malade imaginaire.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_76",
+            "id": "hgc_76",
             "question": "Quel monument a été construit pour l'Exposition universelle de 1889 ?",
-            "correctAnswer": "La Tour Eiffel, conçue par Gustave Eiffel",
+            "correctAnswer": "La Tour Eiffel, conçue par Gustave Eiffel.",
             "incorrectAnswers": [
-                "L'Arc de Triomphe",
-                "Le Sacré-Cœur",
-                "Le Louvre"
+                "L'Arc de Triomphe.",
+                "Le Sacré-Cœur.",
+                "Le Louvre."
             ],
             "explanation": "La Tour Eiffel a été construite par Gustave Eiffel pour l'Exposition universelle de 1889, célébrant le centenaire de la Révolution française.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_77",
+            "id": "hgc_77",
             "question": "Quel est le musée le plus visité de France ?",
-            "correctAnswer": "Le musée du Louvre à Paris",
+            "correctAnswer": "Le musée du Louvre à Paris.",
             "incorrectAnswers": [
-                "Le musée d'Orsay",
-                "Le Centre Pompidou",
-                "Le château de Versailles"
+                "Le musée d'Orsay.",
+                "Le Centre Pompidou.",
+                "Le château de Versailles."
             ],
             "explanation": "Le musée du Louvre à Paris est le musée le plus visité de France et du monde, abritant notamment la Joconde.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_78",
+            "id": "hgc_78",
             "question": "Qui était Marie Curie ?",
-            "correctAnswer": "Une physicienne et chimiste, première femme à recevoir le Prix Nobel",
+            "correctAnswer": "Une physicienne et chimiste, première femme à recevoir le Prix Nobel.",
             "incorrectAnswers": [
-                "Une reine de France",
-                "Une écrivaine du XIXe siècle",
-                "Une résistante de la Seconde Guerre mondiale"
+                "Une reine de France.",
+                "Une écrivaine du XIXe siècle.",
+                "Une résistante de la Seconde Guerre mondiale."
             ],
             "explanation": "Marie Curie, d'origine polonaise naturalisée française, est la première femme à recevoir le Prix Nobel et la seule personne à l'avoir reçu dans deux domaines scientifiques différents.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_79",
+            "id": "hgc_79",
             "question": "Quel monument français a été offert aux États-Unis ?",
-            "correctAnswer": "La Statue de la Liberté",
+            "correctAnswer": "La Statue de la Liberté.",
             "incorrectAnswers": [
-                "La Tour Eiffel",
-                "L'Arc de Triomphe",
-                "L'Obélisque de la Concorde"
+                "La Tour Eiffel.",
+                "L'Arc de Triomphe.",
+                "L'Obélisque de la Concorde."
             ],
             "explanation": "La Statue de la Liberté a été offerte par la France aux États-Unis en 1886 pour célébrer le centenaire de l'indépendance américaine.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_80",
+            "id": "hgc_80",
             "question": "Citez des écrivains français célèbres.",
-            "correctAnswer": "Victor Hugo, Voltaire, Jean-Jacques Rousseau, Albert Camus, Gustave Flaubert",
+            "correctAnswer": "Victor Hugo, Voltaire, Jean-Jacques Rousseau, Albert Camus, Gustave Flaubert.",
             "incorrectAnswers": [
-                "Shakespeare, Dickens et Hemingway",
-                "Goethe, Kafka et Tolstoï",
-                "Cervantes, Dante et Homère"
+                "Shakespeare, Dickens et Hemingway.",
+                "Goethe, Kafka et Tolstoï.",
+                "Cervantes, Dante et Homère."
             ],
             "explanation": "Parmi les écrivains français célèbres : Victor Hugo (Les Misérables), Voltaire, Jean-Jacques Rousseau, Albert Camus (L'Étranger), Gustave Flaubert (Madame Bovary).",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_81",
+            "id": "hgc_81",
             "question": "Quel monument historique est situé sur l'île de la Cité à Paris ?",
-            "correctAnswer": "La Cathédrale Notre-Dame de Paris",
+            "correctAnswer": "La Cathédrale Notre-Dame de Paris.",
             "incorrectAnswers": [
-                "La Tour Eiffel",
-                "Le Sacré-Cœur",
-                "Le Panthéon"
+                "La Tour Eiffel.",
+                "Le Sacré-Cœur.",
+                "Le Panthéon."
             ],
             "explanation": "La Cathédrale Notre-Dame de Paris est située sur l'île de la Cité, au cœur de Paris.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_82",
+            "id": "hgc_82",
             "question": "Nommez un célèbre peintre impressionniste français.",
-            "correctAnswer": "Claude Monet",
+            "correctAnswer": "Claude Monet.",
             "incorrectAnswers": [
-                "Pablo Picasso",
-                "Vincent van Gogh",
-                "Léonard de Vinci"
+                "Pablo Picasso.",
+                "Vincent van Gogh.",
+                "Léonard de Vinci."
             ],
             "explanation": "Claude Monet est l'un des fondateurs du mouvement impressionniste français. D'autres peintres français célèbres incluent Cézanne, Delacroix et Renoir.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_83",
+            "id": "hgc_83",
             "question": "Qui était Jeanne d'Arc ?",
-            "correctAnswer": "Une héroïne nationale du XVe siècle qui a combattu les Anglais",
+            "correctAnswer": "Une héroïne nationale du XVe siècle qui a combattu les Anglais.",
             "incorrectAnswers": [
-                "Une reine de France",
-                "Une révolutionnaire de 1789",
-                "Une écrivaine du XIXe siècle"
+                "Une reine de France.",
+                "Une révolutionnaire de 1789.",
+                "Une écrivaine du XIXe siècle."
             ],
             "explanation": "Jeanne d'Arc est une héroïne nationale du XVe siècle qui a combattu les Anglais pendant la guerre de Cent Ans et aidé à libérer la France.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_84",
+            "id": "hgc_84",
             "question": "Quel édit a mis fin aux guerres de religion en 1598 ?",
-            "correctAnswer": "L'Édit de Nantes, signé par Henri IV",
+            "correctAnswer": "L'Édit de Nantes, signé par Henri IV.",
             "incorrectAnswers": [
-                "L'Édit de Fontainebleau",
-                "L'Édit de Versailles",
-                "L'Édit de Paris"
+                "L'Édit de Fontainebleau.",
+                "L'Édit de Versailles.",
+                "L'Édit de Paris."
             ],
             "explanation": "L'Édit de Nantes, signé par Henri IV en 1598, a accordé la liberté de culte aux protestants et mis fin aux guerres de religion.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_85",
+            "id": "hgc_85",
             "question": "Qui a construit le château de Versailles ?",
-            "correctAnswer": "Louis XIV (le Roi-Soleil)",
+            "correctAnswer": "Louis XIV (le Roi-Soleil).",
             "incorrectAnswers": [
-                "Louis XVI",
-                "Napoléon Bonaparte",
-                "François Ier"
+                "Louis XVI.",
+                "Napoléon Bonaparte.",
+                "François Ier."
             ],
             "explanation": "Le château de Versailles a été construit sous Louis XIV, symbole de la monarchie absolue de l'Ancien Régime.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_86",
+            "id": "hgc_86",
             "question": "Citez quelques plats typiques de la gastronomie française.",
-            "correctAnswer": "Le pot-au-feu, la quiche lorraine, la bouillabaisse, le coq au vin",
+            "correctAnswer": "Le pot-au-feu, la quiche lorraine, la bouillabaisse, le coq au vin.",
             "incorrectAnswers": [
-                "La pizza, les spaghettis et le tiramisu",
-                "Le sushi, le ramen et le tempura",
-                "Le curry, le naan et le biryani"
+                "La pizza, les spaghettis et le tiramisu.",
+                "Le sushi, le ramen et le tempura.",
+                "Le curry, le naan et le biryani."
             ],
             "explanation": "La gastronomie française comprend des plats typiques comme le pot-au-feu, la quiche lorraine, la bouillabaisse, le coq au vin et les crêpes bretonnes.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_87",
+            "id": "hgc_87",
             "question": "Qu'est-ce que la guerre de Cent Ans ?",
-            "correctAnswer": "Un conflit entre la France et l'Angleterre de 1337 à 1453",
+            "correctAnswer": "Un conflit entre la France et l'Angleterre de 1337 à 1453.",
             "incorrectAnswers": [
-                "Une guerre civile française au XIXe siècle",
-                "Un conflit entre la France et l'Allemagne",
-                "Une guerre religieuse au XVIe siècle"
+                "Une guerre civile française au XIXe siècle.",
+                "Un conflit entre la France et l'Allemagne.",
+                "Une guerre religieuse au XVIe siècle."
             ],
             "explanation": "La guerre de Cent Ans (1337-1453) était un conflit entre les rois de France et les rois d'Angleterre, durant lequel Jeanne d'Arc a joué un rôle crucial.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_88",
+            "id": "hgc_88",
             "question": "Qu'est-ce que le Code Napoléon ?",
-            "correctAnswer": "Le Code civil des Français établi sous Napoléon Bonaparte en 1804",
+            "correctAnswer": "Le Code civil des Français établi sous Napoléon Bonaparte en 1804.",
             "incorrectAnswers": [
-                "Un code militaire secret",
-                "Un système de cryptage",
-                "Un code vestimentaire de la cour"
+                "Un code militaire secret.",
+                "Un système de cryptage.",
+                "Un code vestimentaire de la cour."
             ],
             "explanation": "Le Code Napoléon, ou Code civil des Français, a été établi sous Napoléon Bonaparte en 1804. Il régit toujours la vie civile en France.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_89",
+            "id": "hgc_89",
             "question": "Qui a écrit Les Trois Mousquetaires ?",
-            "correctAnswer": "Alexandre Dumas",
+            "correctAnswer": "Alexandre Dumas.",
             "incorrectAnswers": [
-                "Victor Hugo",
-                "Émile Zola",
-                "Gustave Flaubert"
+                "Victor Hugo.",
+                "Émile Zola.",
+                "Gustave Flaubert."
             ],
             "explanation": "Les Trois Mousquetaires a été écrit par Alexandre Dumas (avec Auguste Maquet), un célèbre romancier français du XIXe siècle.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
         {
-            "id": "test_civic_90",
+            "id": "hgc_90",
             "question": "Quel célèbre château de la Loire a été la résidence de Léonard de Vinci ?",
-            "correctAnswer": "Le Château d'Amboise (Clos Lucé)",
+            "correctAnswer": "Le Château d'Amboise (Clos Lucé).",
             "incorrectAnswers": [
-                "Le Château de Chambord",
-                "Le Château de Chenonceau",
-                "Le Château de Blois"
+                "Le Château de Chambord.",
+                "Le Château de Chenonceau.",
+                "Le Château de Blois."
             ],
             "explanation": "Léonard de Vinci a vécu au Clos Lucé, près du Château d'Amboise, sur invitation du roi François Ier.",
             "subTheme": "heritage",
