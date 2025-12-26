@@ -117,7 +117,24 @@ const selectQuestionsForSubTopic = (
     if (isPracticeMode) {
         candidates = filterKnowledgeQuestions(candidates);
     } else if (isSituational) {
-        candidates = filterSituationalQuestions(candidates);
+        const situationalCandidates = filterSituationalQuestions(candidates);
+        if (situationalCandidates.length >= count) {
+            candidates = situationalCandidates;
+        } else {
+            const knowledgeCandidates = filterKnowledgeQuestions(candidates);
+            const combined = [...situationalCandidates, ...knowledgeCandidates];
+            if (combined.length > 0) {
+                candidates = combined;
+                if (situationalCandidates.length < count) {
+                    logger.warn(
+                        `SubTopic ${subTopic}: Only ${situationalCandidates.length} situational question(s) available, ` +
+                        `falling back to knowledge questions to meet requirement of ${count} questions.`
+                    );
+                }
+            } else {
+                candidates = situationalCandidates;
+            }
+        }
     } else {
         candidates = filterKnowledgeQuestions(candidates);
     }
@@ -394,6 +411,47 @@ export const validateQuestionDistribution = (
                     `Topic ${topic}: expected ${distribution.total} questions, got ${topicCounts[topic]}`
                 );
             }
+        }
+    );
+    
+    // Count questions per subtopic
+    const subTopicCounts: Record<CivicExamSubTopic, number> = {
+        devise_symboles: 0,
+        laicite: 0,
+        situational_principles: 0,
+        democracy_vote: 0,
+        organization_republic: 0,
+        european_institutions: 0,
+        fundamental_rights: 0,
+        obligations_duties: 0,
+        situational_rights: 0,
+        historical_periods: 0,
+        territories_geography: 0,
+        heritage: 0,
+        residence: 0,
+        healthcare: 0,
+        work: 0,
+        parental_authority_education: 0,
+    };
+    
+    questions.forEach(q => {
+        if (q.subTopic) {
+            subTopicCounts[q.subTopic]++;
+        }
+    });
+    
+    // Validate subtopic distribution
+    (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTopic, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTopic]][]).forEach(
+        ([topic, distribution]) => {
+            (Object.entries(distribution.subTopics) as [CivicExamSubTopic, number][]).forEach(
+                ([subTopic, expectedCount]) => {
+                    if (expectedCount > 0 && subTopicCounts[subTopic] !== expectedCount) {
+                        errors.push(
+                            `SubTopic ${subTopic} (topic ${topic}): expected ${expectedCount} question(s), got ${subTopicCounts[subTopic]}`
+                        );
+                    }
+                }
+            );
         }
     );
     
