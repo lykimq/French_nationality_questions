@@ -432,12 +432,6 @@
             "image": null
         },
         {
-            "id": "livret_72",
-            "question": "Où a eu lieu le débarquement des alliés pendant la Seconde Guerre mondiale?",
-            "explanation": "En Normandie.",
-            "image": null
-        },
-        {
             "id": "livret_73",
             "question": "Avez-vous des projets de voyage avec votre famille ? Vers quelle destination ?",
             "explanation": "Oui, nous aimons découvrir de nouveaux lieux. Notre prochain projet est de visiter (destination), pour explorer sa culture et son histoire avec nos enfants.",
@@ -465,12 +459,6 @@
             "id": "livret_77",
             "question": "Qu'est-ce qu'une Monarchie ?",
             "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
-            "image": null
-        },
-        {
-            "id": "livret_78",
-            "question": "Quel est le principe du droit du sol en matière de nationalité française ?",
-            "explanation": "Le fait d'acquérir la nationalité française par la naissance en France, sous certaines conditions.",
             "image": null
         },
         {
@@ -687,12 +675,6 @@
             "id": "livret_114",
             "question": "Quelle est l'histoire derrière la construction du Château de Versailles ?",
             "explanation": "Le Château de Versailles, construit sous Louis XIV (14), est un symbole de la monarchie absolue de l'Ancien Régime. Il a servi de résidence royale et de centre du pouvoir jusqu'à la Révolution  Française, et est reconnu pour son architecture et ses jardins somptueux.",
-            "image": null
-        },
-        {
-            "id": "livret_115",
-            "question": "Que s'est-il passé en France durant la Seconde Guerre mondiale ?",
-            "explanation": "La France a été envahie par l'Allemagne en 1940, entraînant une occupation jusqu'en 1944, des mouvements de résistance à travers le pays, et la collaboration du régime de Vichy, jusqu'à la libération par les Alliés.",
             "image": null
         },
         {
@@ -1167,18 +1149,6 @@
             "id": "livret_194",
             "question": "Citez les dates des deux dernières guerres mondiales.",
             "explanation": "La Première Guerre mondiale : 1914-1918. La Seconde Guerre mondiale : 1939-1945.",
-            "image": null
-        },
-        {
-            "id": "livret_195",
-            "question": "Qui été le Roi de France durant la révolution Française ?",
-            "explanation": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
-            "image": null
-        },
-        {
-            "id": "livret_196",
-            "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
-            "explanation": "On les appelait les Poilus.",
             "image": null
         },
         {

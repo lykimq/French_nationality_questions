@@ -762,12 +762,6 @@
             "image": null
         },
         {
-            "id": "livret_127",
-            "question": "Où se situe le siège de la Présidence de la République ?",
-            "explanation": "Le siège de la Présidence de la République est situé à l'Élysée.",
-            "image": null
-        },
-        {
             "id": "livret_128",
             "question": "Quelle est la durée du mandat présidentiel?",
             "explanation": "Le président de la République est élu pour un mandat de 5 ans",
@@ -813,12 +807,6 @@
             "id": "livret_135",
             "question": "En quelle année le droit de vote des femmes a-t-il été introduit en France ?",
             "explanation": "1944.",
-            "image": null
-        },
-        {
-            "id": "livret_136",
-            "question": "En quelle année le droit de vote des hommes a-t-il été introduit en France ?",
-            "explanation": "Le droit de vote des hommes a été introduit en 1848, pendant la Deuxième République, avec le suffrage universel masculin.",
             "image": null
         },
         {
@@ -2151,18 +2139,6 @@
             "id": "livret_358",
             "question": "Qui était président de la république avant lui ?",
             "explanation": "C'était François Hollande.",
-            "image": null
-        },
-        {
-            "id": "livret_359",
-            "question": "Ou se trouve le siège de l'assemblée nationale ?",
-            "explanation": "Elle se trouve au palais Bourbon, c’est le nom communément donné au bâtiment qui abrite l’Assemblée nationale française, il est situé sur le quai d’Orsay.",
-            "image": null
-        },
-        {
-            "id": "livret_360",
-            "question": "Ou se trouve le siège du parlement Européen ?",
-            "explanation": "Il se trouve à Strasbourg en France.",
             "image": null
         }
     ]

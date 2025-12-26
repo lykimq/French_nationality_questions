@@ -96,12 +96,6 @@
             "image": null
         },
         {
-            "id": "livret_16",
-            "question": "Ou avez-vous appris le Français ?",
-            "explanation": "- Indiquez où vous l’avez appris : école/université/cours particuliers, puis pratique quotidienne en France.",
-            "image": null
-        },
-        {
             "id": "livret_17",
             "question": "Pendant combien de temps avez-vous étudier le Français ?",
             "explanation": "- Donnez une durée approximative (ex. plusieurs années) et précisez que vous continuez à progresser au quotidien.",

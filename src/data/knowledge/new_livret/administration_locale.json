@@ -216,18 +216,6 @@
             "image": null
         },
         {
-            "id": "livret_36",
-            "question": "Ou se trouve le siège de la présidence de la république ?",
-            "explanation": "Il se trouve au Palais de l’Élysée.",
-            "image": null
-        },
-        {
-            "id": "livret_37",
-            "question": "Ou se trouve le siège de la commission européenne ?",
-            "explanation": "Il se trouve à Bruxelles en Belgique.",
-            "image": null
-        },
-        {
             "id": "livret_38",
             "question": "de quel côté se trouvent-ils ?",
             "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine. - Au nord, la Manche sépare la France du Royaume-Uni. - Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur. - Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
@@ -249,18 +237,6 @@
             "id": "livret_41",
             "question": "– Qu’est-ce qu’une Monarchie ?",
             "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
-            "image": null
-        },
-        {
-            "id": "livret_42",
-            "question": "Qu'est-ce qui s'est passé le 3 août 1914 ??",
-            "explanation": "Le 3 août 1914, à 18 heures, l'Allemagne annonce son entrée en guerre contre la France.",
-            "image": null
-        },
-        {
-            "id": "livret_43",
-            "question": "Pourquoi l’abolition de l’esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?",
-            "explanation": "L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates : - 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802. -",
             "image": null
         },
         {
