@@ -32,6 +32,18 @@ export const DATA_FILES = {
             'system_et_politique.json',
             'vivre_dans_la_societe_francaise.json'
         ] as const
+    },
+    TEST_CIVIC: {
+        DIRECTORY: 'test_civic/',
+        FILES: [
+            'principes_et_valeurs.json',
+            'system_et_politique.json',
+            'droits_et_devoirs.json',
+            'histoire_geographie_et_culture.json',
+            'hist_geo_part1.json',
+            'hist_geo_part2.json',
+            'vivre_dans_la_societe_francaise.json'
+        ] as const
     }
 };
 
@@ -63,6 +75,14 @@ export const LOCAL_DATA_MAP: Record<string, any> = {
     'knowledge/formation/droits_et_devoirs.json': require('../../data/knowledge/formation/droits_et_devoirs.json'),
     'knowledge/formation/system_et_politique.json': require('../../data/knowledge/formation/system_et_politique.json'),
     'knowledge/formation/vivre_dans_la_societe_francaise.json': require('../../data/knowledge/formation/vivre_dans_la_societe_francaise.json'),
+    // Test civic data
+    'test_civic/principes_et_valeurs.json': require('../../data/test_civic/principes_et_valeurs.json'),
+    'test_civic/system_et_politique.json': require('../../data/test_civic/system_et_politique.json'),
+    'test_civic/droits_et_devoirs.json': require('../../data/test_civic/droits_et_devoirs.json'),
+    'test_civic/histoire_geographie_et_culture.json': require('../../data/test_civic/histoire_geographie_et_culture.json'),
+    'test_civic/hist_geo_part1.json': require('../../data/test_civic/hist_geo_part1.json'),
+    'test_civic/hist_geo_part2.json': require('../../data/test_civic/hist_geo_part2.json'),
+    'test_civic/vivre_dans_la_societe_francaise.json': require('../../data/test_civic/vivre_dans_la_societe_francaise.json'),
 };
 
 /**

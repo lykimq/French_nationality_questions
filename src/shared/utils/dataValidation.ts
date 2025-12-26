@@ -19,7 +19,7 @@ const validateQuestion = (
     errors: string[],
     summary: ValidationResult['summary']
 ): void => {
-    if (typeof question.id === 'number') {
+    if (typeof question.id === 'string' && question.id.trim()) {
         summary.questionsWithIds++;
     } else {
         errors.push(`Question at index ${index} missing or invalid ID`);
@@ -75,9 +75,15 @@ export const validateDataStructure = (data: unknown, dataType: string): Validati
                 }
             });
             return { isValid: errors.length === 0, errors, summary };
+        } else if (Array.isArray(data)) {
+            // Handle arrays of questions directly (e.g., hist_geo_part1.json)
+            summary.totalQuestions = data.length;
+            data.forEach((question: RawQuestion, index: number) =>
+                validateQuestion(question, index, errors, summary)
+            );
         } else if (typedData.questions && Array.isArray(typedData.questions)) {
             summary.totalQuestions = typedData.questions.length;
-            typedData.questions.forEach((question: RawQuestion, index: number) => 
+            typedData.questions.forEach((question: RawQuestion, index: number) =>
                 validateQuestion(question, index, errors, summary)
             );
         } else {

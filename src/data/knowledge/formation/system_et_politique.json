@@ -4,307 +4,307 @@
     "description": "Démocratie et droit de vote ; Organisation de la République française",
     "questions": [
         {
-            "id": 1,
+            "id": "formation_1",
             "question": "L’État de droit, c’est quoi ?",
             "explanation": "Un État de droit est un système dans lequel la loi est la même pour tous, y compris pour l’État. Le droit est donc supérieur aux pouvoirs et aux autorités politiques. Ce système garantit le respect des droits fondamentaux et de la démocratie.\n\nExemple : le droit à la sûreté protège les individus contre les arrestations et les emprisonnements arbitraires des autorités publiques.\n\nL’État de droit est donc une condition de la démocratie, et c'est le contraire de l’État arbitraire puisque les autorités publiques agissent toujours en respectant la loi.\n\nDes juges indépendants contrôlent les autorités publiques.",
             "image": null
         },
         {
-            "id": 2,
+            "id": "formation_2",
             "question": "Les principes de l’État de droit, quels sont-ils ?",
             "explanation": "On définit l’État de droit selon 6 principes :\n\n- la primauté du droit : le droit s’impose à tous, y compris à l’État et à ses représentants ;\n\n- l’égalité devant la loi (tout le monde est soumis aux mêmes lois et a les mêmes droits et devoirs, qu’il soit politicien ou pas) ;\n\n- la séparation des pouvoirs.\n\nOn y ajoute :\n\n- la légalité : les lois sont créées dans un processus transparent, responsable, démocratique et dans lequel chaque parti politique a pu s’exprimer ;\n\n- la sécurité juridique : on peut avoir confiance en la loi, elle est claire et ne change pas tout le temps ;\n\n- une protection juridictionnelle effective : la justice protège réellement.\n\nL’État de droit doit toujours respecter la Constitution française et la Déclaration des droits de l'homme et du citoyen de 1789, citée dans l’introduction de la Constitution.",
             "image": null
         },
         {
-            "id": 3,
+            "id": "formation_3",
             "question": "Le principe de séparation des pouvoirs, c’est quoi ?",
             "explanation": "En France, la séparation des 3 pouvoirs signifie que les pouvoirs législatif (le Parlement vote les lois), exécutif (le Gouvernement applique et fait respecter la loi) et judiciaire (l’autorité judiciaire contrôle l’application des lois) ne sont pas entre les mains des mêmes personnes.\n\nCe principe permet de garantir les droits fondamentaux et de conserver un équilibre : les pouvoirs se contrôlent mutuellement, ils sont neutres et ne peuvent s’exercer de façon arbitraire.\n\nExemple : un ministre qui ne respecte pas la loi peut être sanctionné comme tout citoyen.\n\nLe principe de séparation des pouvoirs est inscrit dans la Constitution, qui cite la Déclaration des droits de l’homme et du citoyen de 1789.",
             "image": null
         },
         {
-            "id": 4,
+            "id": "formation_4",
             "question": "Le pouvoir législatif, c’est quoi ?",
             "explanation": "Le pouvoir législatif est exercé par le Parlement, composé de 2 entités, qu’on appelle “chambres” :\n\n- l’Assemblée nationale (où siègent les 577 députés, élus par les citoyens) ;\n\n- le Sénat (où siègent les 348 sénateurs, élus par les grands électeurs).\n\nLe Parlement vote la loi.\n\nLes deux chambres doivent :\n\n- proposer ;\n\n- négocier ;\n\n- voter la loi.\n\nElles vérifient aussi que le Gouvernement agit selon la loi et évaluent les politiques publiques.",
             "image": null
         },
         {
-            "id": 5,
+            "id": "formation_5",
             "question": "Le pouvoir exécutif, c’est quoi ?",
             "explanation": "Le pouvoir exécutif est exercé par :\n\n- le président de la République (le chef de l’État et des armées) qui réside au Palais de l’Élysée ;\n- le Gouvernement (le Premier ministre et les ministres). Le Premier ministre, qui réside à l'hôtel de Matignon, est nommé par le président de la République.\n\nLe président de la République et le Gouvernement appliquent et font respecter les lois (créées par le pouvoir législatif).\n\nLe président de la République et le Gouvernement doivent aussi :\n\n- diriger l’Administration ;\n\n- conduire la politique nationale (intérieure et extérieure).",
             "image": null
         },
         {
-            "id": 6,
+            "id": "formation_6",
             "question": "L'autorité judiciaire, c’est quoi ?",
             "explanation": "L'autorité judiciaire est exercée par les juges et les magistrats (recrutés par concours et non choisis par le pouvoir).\n\nLes juges et les magistrats appliquent les lois. Ils jugent et rendent la justice.\n\nLa justice est indépendante, elle rend un jugement impartial et équitable. Une aide juridictionnelle financière existe pour que chacun (peu importe sa nationalité, son âge, ses revenus) soit défendu de manière juste.\n\n![](pics/judiciaire.png)",
             "image": "pics/judiciaire.png"
         },
         {
-            "id": 7,
+            "id": "formation_7",
             "question": "Quelle justice pour quel conflit ?",
             "explanation": "La justice protège, décide et sanctionne impartialement. Selon les parties qui s’opposent, le pouvoir judiciaire s’exerce différemment, réparti entre deux ordres : la justice judiciaire et la justice administrative.\n\nLa justice judiciaire comprend :\n\n- la justice civile, qui s’occupe des litiges entre citoyens (exemple : un conflit entre locataire et propriétaire) ;\n\n- la justice pénale, qui punit les infractions des citoyens à la loi (exemple : un vol, un excès de vitesse en voiture).\n\n- la justice administrative juge les litiges entre les citoyens (individus) et l’État (administrations et collectivités publiques) (exemple : une fausse déclaration à la CAF).",
             "image": null
         },
         {
-            "id": 8,
+            "id": "formation_8",
             "question": "Comment sont organisées ces institutions judiciaires ?",
             "explanation": "Les tribunaux de chaque ordre sont organisés en pyramide :\n\n- une juridiction de première instance (premier procès) ;\n\n- une juridiction d'appel (quand un deuxième procès est demandé, il va en cours d’appel) ;\n\n- une juridiction de cassation : la Cour de cassation (justice judiciaire) ou le\n\nConseil d’État (justice administrative). C’est le dernier niveau de juridiction en France.",
             "image": null
         },
         {
-            "id": 9,
+            "id": "formation_9",
             "question": "La démocratie, c’est quoi ?",
             "explanation": "Le mot démocratie vient du grec \"Dêmos Krátos\" qui signifie \"Peuple Pouvoir\". La démocratie est le régime politique dans lequel le pouvoir appartient au peuple sans distinction de sexe, de religion, de richesse ou d'origine sociale. \n\nElle repose sur le principe de la consultation régulière du peuple (le vote : élections de représentants et référendum), de la séparation des pouvoirs et de la pluralité des partis politiques.\n\nLa démocratie s’oppose à la dictature (pouvoir détenu par une personne ou un groupe restreint de personnes).",
             "image": null
         },
         {
-            "id": 10,
+            "id": "formation_10",
             "question": "La France est une démocratie",
             "explanation": "La France est une démocratie dans le sens où le pouvoir vient du peuple : les citoyens votent pour choisir leurs représentants au suffrage universel.\n\nLe droit de vote est accordé à tout citoyen :\n\n- de nationalité française ;\n\n- de plus de 18 ans (être majeur) ;\n\n- qui a ses droits civils et politiques (n’est pas condamné) ;\n\n- qui est inscrit sur les listes électorales.\n\nLa Constitution de 1958 indique que la démocratie c'est : \"le gouvernement du peuple, par le peuple et pour le peuple\".",
             "image": null
         },
         {
-            "id": 11,
+            "id": "formation_11",
             "question": "La République, c’est quoi ?",
             "explanation": "La République vient du mot vient du latin \"Res Publica\" qui signifie \"chose publique\". La République appartient au peuple. L’ensemble des biens, des droits et des services (domaine public, services publics, fonction publique…) appartiennent à tous les citoyens.\n\nLa République est un système politique dans lequel le pouvoir est détenu par des représentants élus.\n\nLa République s’oppose par exemple à la monarchie (pouvoir héréditaire).",
             "image": null
         },
         {
-            "id": 12,
+            "id": "formation_12",
             "question": "La France est une République",
             "explanation": "La France est une République où le pouvoir est exercé par un ensemble de représentants élus par le peuple. La France n’est plus une monarchie : le pouvoir n’appartient plus à une seule personne.\n\nEn résumé, la démocratie se concentre sur la participation du peuple au processus de prise de décision, tandis que la République se concentre sur la forme de gouvernement et la manière dont le pouvoir est exercé. Une démocratie peut être une République, mais une République n'est pas nécessairement une démocratie.",
             "image": null
         },
         {
-            "id": 13,
+            "id": "formation_13",
             "question": "Qui sont les acteurs politiques au niveau national ?",
             "explanation": "- Le président de la République, élu pour 5 ans au suffrage universel directement par les citoyens français. Il nomme le Premier ministre selon la majorité ;\n\n- le Gouvernement (les ministres sont proposés par le Premier ministre au président de la République) ;\n\n- les 577 députés de l’Assemblée nationale (élus au suffrage direct par les Français, tous les 5 ans) et les 348 sénateurs du Sénat (élection au suffrage indirect, par les grands électeurs choisis par les français, tous les 6 ans). L’Assemblée nationale et le Sénat forment le Parlement.",
             "image": null
         },
         {
-            "id": 14,
+            "id": "formation_14",
             "question": "Qui sont les acteurs politiques au niveau local ?",
             "explanation": "- Les élus municipaux (maire et conseillers municipaux, élus pour 6 ans lors des élections municipales au suffrage direct) : ils représentent les citoyens sur la commune ;\n\n- les conseillers départementaux (élus pour 6 ans aux élections départementales au suffrage direct) : ils forment l’assemblée départementale qui prend des décisions concernant le département ;\n\n- les conseillers régionaux (élus pour 6 ans au élections régionales au suffrage direct) : ils forment l’assemblée régionale qui prend des décisions concernant la région.",
             "image": null
         },
         {
-            "id": 15,
+            "id": "formation_15",
             "question": "Le droit de vote, c’est quoi ?",
             "explanation": "Le droit de vote est le droit d’exprimer sa volonté à une élection. Les citoyens élisent leurs représentants.",
             "image": null
         },
         {
-            "id": 16,
+            "id": "formation_16",
             "question": "Le suffrage universel, c’est quoi ?",
             "explanation": "Le suffrage universel signifie que tous les citoyens\n\n- qui ont la nationalité française ;\n\n- majeurs (de plus de 18 ans) ;\n\n- ayant leurs droits civiques et politiques (n’est pas condamné) ;\n\n- inscrits sur les listes électorales (à leur demande, auprès de la mairie de son lieu de résidence depuis plus de 6 mois), pouvant voter sans distinction de sexe, d'origine, de religion ou d'idéaux politiques.\n\nUn ressortissant d’un pays membre de l’Union européenne, résidant en France, a le droit de vote aux élections européennes (inscription aux listes électorales requise) et aux élections municipales (s’il habite dans la même ville depuis plus de 6 mois et y est inscrit sur la liste électorale).\n\nLe vote n'est pas obligatoire, c'est un droit et non un devoir.\n\nIl est possible de voter pour une autre personne uniquement si elle a fait une procuration de vote.",
             "image": null
         },
         {
-            "id": 17,
+            "id": "formation_17",
             "question": "Les droits civiques et politiques, c’est quoi ?",
             "explanation": "Le citoyen a plusieurs droits civiques et politiques liés au droit de vote :\n\n- droit de se présenter à des élections et d’être élu (élections législatives, communales...) ;\n\n- droit d’exercer une fonction juridictionnelle (être juge) ;\n\n- droit de servir dans l’armée.\n\nUn citoyen puni par la loi (condamné à une peine d’emprisonnement) peut être privé de ses droits civiques et politiques.\n\nEn France, le droit de vote est un droit fondamental. Il est inscrit dans la Déclaration des droits de l’homme et du citoyen, de 1789. L’article 3 de la Constitution de la Ve République de 1958 le précise.\n\nEn France, le vote est strictement :\n\n- personnel ;\n\n- libre ;\n\n- secret.\n\nPar le vote, le peuple exprime sa volonté, qui se traduit ensuite en lois, qui s’imposent à tous. Tous les votes sont comptabilisés, peu importe le sexe, l’âge, l’origine ou la religion.",
             "image": null
         },
         {
-            "id": 18,
+            "id": "formation_18",
             "question": "Quels sont les différents types d’élection ?",
             "explanation": "Les citoyens français peuvent participer à plusieurs types d’élections au suffrage universel direct en France :\n\n1. les élections présidentielles pour élire le président de la République (tous les 5 ans) ;\n\n2. les élections législatives pour élire les députés à l’Assemblée nationale (tous les 5 ans sauf s’il y a une dissolution) ;\n\n3. les élections municipales pour élire les conseillers municipaux (tous les 6 ans) ;\n\n4. les élections départementales pour élire les conseillers départementaux (tous les 6 ans) ;\n\n5. les élections régionales pour élire les conseillers régionaux (tous les 6 ans) ;\n\n6. les élections européennes pour élire les députés au Parlement européen (tous les 5 ans). Les citoyens de l’Union européenne résidant en France peuvent également voter.\n\nPar contre, les élections sénatoriales, qui permettent d'élire les sénateurs, sont au suffrage universel indirect (tous les 3 ans renouvellement par moitié). Seuls les grands électeurs (maires, conseillers municipaux, députés) votent.",
             "image": null
         },
         {
-            "id": 19,
+            "id": "formation_19",
             "question": "La pluralité des partis politiques, c’est quoi ?",
             "explanation": "La pluralité des partis politiques (beaucoup de partis différents) est un principe fondamental de la démocratie française. Le Conseil constitutionnel a affirmé que “Le respect du pluralisme constitue le fondement de la démocratie”.\n\nLa pluralité des partis garantit la liberté d’expression des opinions politiques de tous les citoyens.\n\nChaque citoyen peut librement rejoindre un parti politique correspondant à ses convictions. Ce droit est garanti par l'article 4 de la Constitution française, qui dispose que “Les partis et groupements politiques concourent à l’expression du suffrage”.",
             "image": null
         },
         {
-            "id": 20,
+            "id": "formation_20",
             "question": "Les médias sont-ils équitables entre les partis ?",
             "explanation": "D’après la loi du 30 septembre 1986 sur la liberté de communication, les médias ont l’obligation d’être équitables entre les partis politiques. Cette loi garantit le pluralisme politique.\n\nExemple : pendant les campagnes électorales, tous les partis ont autant de temps de parole.",
             "image": null
         },
         {
-            "id": 21,
+            "id": "formation_21",
             "question": "Beaucoup de partis politiques différents, à quoi ça sert ?",
             "explanation": "Les partis politiques participent à la vie politique (ils peuvent être présents à l’Assemblée et au Sénat).\n\nIl ont 2 fonctions :\n\n1. Ils proposent des programmes politiques qu'ils souhaitent mettre en œuvre. Les partis politiques sont les intermédiaires entre les citoyens et le Gouvernement.\n\n2. Ils sélectionnent les candidats pour les faire élire. Quand un membre d’un parti est élu à l’Assemblée ou au Sénat (pouvoir législatif) ou élu en tant que président de la République ou choisi en tant que Premier ministre (pouvoir exécutif), le parti politique dirige le pays (ils y participent).",
             "image": null
         },
         {
-            "id": 22,
+            "id": "formation_22",
             "question": "Qui propose les lois ?",
             "explanation": "L’initiative de la loi peut être faite par :\n\n- Le Gouvernement (les ministres), qui peut présenter un projet de loi.\n\n- Le Parlement (les députés ou les sénateurs), qui peut présenter une proposition de loi.",
             "image": null
         },
         {
-            "id": 23,
+            "id": "formation_23",
             "question": "Que se passe-t-il après ?",
             "explanation": "La loi est déposée auprès d’une commission parlementaire (qui dépend du Sénat ou du Parlement) qui va examiner la loi et rendre un rapport sur le sujet.\n\nCette commission désigne quelqu’un, un rapporteur, pour modifier le texte (amendements).",
             "image": null
         },
         {
-            "id": 24,
+            "id": "formation_24",
             "question": "Comment la loi est-elle validée ?",
             "explanation": "Quand le texte de loi a été validé par la commission parlementaire, il est transmis à l’Assemblée nationale ou au Sénat pour être discuté et amendé (modifications) en séances publiques.\n\nChaque article et chaque amendement sont votés un par un. Puis, l’ensemble du texte de loi est validé.\n\nLes deux chambres parlementaires (le Sénat et l’Assemblée nationale) doivent valider un texte de loi identique pour qu’il soit appliqué.\n\nLa loi est l'expression de la volonté générale.\n\n![loi](./pics/parcours_dune_loi.png)",
             "image": "pics/parcours_dune_loi.png"
         },
         {
-            "id": 25,
+            "id": "formation_25",
             "question": "La navette parlementaire, c’est quoi ?",
             "explanation": "Quand le texte de loi a été validé par une des chambres parlementaires (l’Assemblée nationale ou le Sénat), le texte de loi est envoyé à l’autre chambre.\n\nExemple : l’Assemblée nationale a amendé (modifié) le texte de loi et l’a validé. Le texte de loi est transmis au Sénat.\n\n- Si les deux assemblées valident le même texte de loi (sans modification), alors le texte de loi est définitivement adopté.\n\n- Si des amendements sont ajoutés (modifications) par la deuxième chambre parlementaire, alors le texte de loi est de nouveau transmis à la première assemblée : on parle de navette parlementaire.",
             "image": null
         },
         {
-            "id": 26,
+            "id": "formation_26",
             "question": "Et si les députés et les sénateurs ne sont pas d’accord ?",
             "explanation": "Une commission paritaire mixte, composée de 7 députés et 7 sénateurs, est appelée pour se mettre d’accord sur un texte de loi.\n\nS’ils n’arrivent pas à se mettre d’accord : l’Assemblée nationale décide (les députés peuvent choisir quels amendements/modifications faire, ou ne pas faire, à la loi).",
             "image": null
         },
         {
-            "id": 27,
+            "id": "formation_27",
             "question": "Que se passe-t-il après, quand la loi est adoptée par les deux chambres ?",
             "explanation": "La loi est validée et signée par le président de la République dans un délai de 15 jours.\n\nPendant ce délai :\n\n- le président peut demander un nouvel examen ;\n\n- le Conseil constitutionnel peut être saisi pour vérifier la conformité à la Constitution.\n\nUne fois promulguée, la loi est publiée au Journal officiel et entre en vigueur.",
             "image": null
         },
         {
-            "id": 28,
+            "id": "formation_28",
             "question": "La décentralisation, qu’est-ce que c’est ?",
             "explanation": "La décentralisation, c’est l’État qui transfère des compétences et des moyens à d’autres autorités, appelées collectivités territoriales.\n\nIl existe plusieurs niveaux de collectivités territoriales : les communes, les départements, les régions, les collectivités à statut particulier (c’est-à-dire qui ont leurs propres caractéristiques), et les collectivités d’outre-mer.",
             "image": null
         },
         {
-            "id": 29,
+            "id": "formation_29",
             "question": "À quoi servent les collectivités territoriales ?",
             "explanation": "- La commune a de nombreuses compétences, surtout en urbanisme, logement et action sociale. Elle gère les écoles primaires et maternelles et les services de proximité. C’est la collectivité la plus répandue sur le territoire (il y a plus de 35 000 communes en France). Elle est dirigée par des personnes élues, dont le maire.\n\n- Le département agit surtout dans l’action sociale (exemples : aide aux personnes handicapées, gestion du RSA). Il gère aussi les collèges, et a des compétences partagées avec les autres collectivités territoriales. Il y a 101 départements en France.\n\n- La région contribue notamment à gérer les lycées, à développer l’activité économique et à aménager le territoire. Il y a 18 régions en France.",
             "image": null
         },
         {
-            "id": 30,
+            "id": "formation_30",
             "question": "Exemples de collectivités à statut particulier",
             "explanation": "- Paris a à la fois les compétences de la commune et du département.\n\n- La métropole de Lyon a, à la fois, les compétences du département et de la commune.\n\n- La collectivité européenne d'Alsace a les compétences du département et des compétences spécifiques adaptées aux particularités de l’Alsace.\n\n- Les collectivités d’outre-mer ne sont pas des collectivités à statut particulier, mais elles ont elles aussi des caractéristiques particulières. Par exemple, elles peuvent adapter les lois et les règlements en fonction de leurs contraintes locales et fixer des règles applicables sur leur territoire (sauf la Réunion).",
             "image": null
         },
         {
-            "id": 31,
+            "id": "formation_31",
             "question": "Le rôle du Préfet",
             "explanation": "Le Préfet est le représentant de l’État dans le département.\n\nIl dirige les services de l’État dans un département.\n\nIl ne s’occupe ni de la justice ni de l’armée mais il veille à la continuité de l’État.",
             "image": null
         },
         {
-            "id": 32,
+            "id": "formation_32",
             "question": "Les principales missions de la préfecture et du Préfet",
             "explanation": "- Organiser la sécurité des personnes et des biens avec la police, la gendarmerie et les secours.\n\n- Délivrer les titres et autorisations administratives.\n\n- Vérifier que les collectivités territoriales respectent les lois.\n\n- Coordonner les aides pour les personnes en difficulté, notamment pour l’emploi, la santé et le logement selon les besoins du territoire.\n\n- Soutenir le développement économique et social : elle aide à créer des entreprises par exemple.",
             "image": null
         },
         {
-            "id": 33,
+            "id": "formation_33",
             "question": "Le découpage administratif en France, qu’est-ce que c’est ?",
             "explanation": "- Les ministères, qui mettent en œuvre les décisions du Gouvernement : l'administration centrale définit et encadre les politiques à l’échelle nationale ;\n\n- Les collectivités territoriales : \n\n    - les communes (34 875) ;\n\n    - les départements (101 dont 5 en outre-mer) ;\n\n    - les régions (18 dont 5 outre-mer).\n\nLes ministères et les collectivités territoriales sont chargés, selon leurs compétences, de gérer le pays et chacun des territoires.",
             "image": null
         },
         {
-            "id": 34,
+            "id": "formation_34",
             "question": "Exemple de répartition des compétences entre l’État et les collectivités territoriales : l’école en France",
             "explanation": "Le service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n\n    - définit les programmes scolaires ;\n   \n    - recrute, forme et gère les enseignants ;\n    \n    - valide les manuels scolaires ;\n    \n    - supervise les universités.\n\n- Les régions gèrent les lycées ;\n\n- Les départements gèrent les collèges ;\n\n- Les communes gèrent les écoles maternelles et primaires.\n\nGérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine.\n\n![](./pics/territories.png)",
             "image": "pics/territories.png"
         },
         {
-            "id": 35,
+            "id": "formation_35",
             "question": "L’Union européenne, une construction progressive",
             "explanation": "L’Union européenne n’a jamais cessé d’évoluer depuis sa création en 1952. Elle a évolué à deux niveaux :\n\n1. ses domaines d’action ont été élargis à chaque nouveau traité ;\n\n2. son territoire s’est étendu à de nouveaux pays.",
             "image": null
         },
         {
-            "id": 36,
+            "id": "formation_36",
             "question": "L’élargissement des domaines d’action",
             "explanation": "- En 1951, le traité de Paris crée la CECA (communauté européenne du charbon et de l’acier).\n\n- En 1957, le traité de Rome crée la CEE (communauté économique européenne), dont l’objectif est de créer un marché commun, et la CEEA (communauté européenne de l’énergie atomique).\n\n- En 1992, le traité de Maastricht crée l’Union européenne (UE). Désormais, les marchandises, les personnes et les capitaux peuvent circuler librement au sein de l’UE. La libre circulation des personnes au sein de l'UE signifie notamment que tout citoyen peut se déplacer dans un autre pays de l'UE.\n\n- En 2007, le traité de Lisbonne adapte les règles des anciens traités pour permettre une meilleure coordination des pays membres, modifie les institutions et assouplit la prise de décision. La lutte contre le changement climatique est ajoutée aux objectifs de l’UE.",
             "image": null
         },
         {
-            "id": 37,
+            "id": "formation_37",
             "question": "Les dates clés de l’extension géographique",
             "explanation": "- En 1957, la CEE est créée avec 6 pays : Allemagne de l’Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.\n\n- En 1973, 3 nouveaux pays entrent dans la CEE : Danemark, Irlande et Royaume-Uni.\n\n- En 1981, la Grèce intègre l’Europe.\n\n- En 1986, c’est au tour de l’Espagne et du Portugal.\n\n- En 1995, l’Autriche, la Finlande et la Suède intègrent l’UE.\n\n- En 2004, l’extension géographique concerne de nombreux pays : Chypre, Estonie, Hongrie, Lettonie, Lituanie, Malte, Pologne, République tchèque, Slovaquie et Slovénie.\n\n- En 2007, la Bulgarie et la Roumanie intègrent l’UE.\n\n- En 2013, c’est au tour de la Croatie.\n\n- En 2020, pour la première fois, un pays quitte l’UE : le Royaume-Uni.\n\n![](./pics/euro.png)",
             "image": "pics/euro.png"
         },
         {
-            "id": 38,
+            "id": "formation_38",
             "question": "Quelle est la signification du drapeau européen ?",
             "explanation": "Le drapeau européen est un des symboles de l’Union européenne.\n\nSur un fond bleu, douze étoiles jaunes forment un cercle. Ce cercle d’étoiles symbolise l’unité, la solidarité et l’harmonie entre les peuples d’Europe.\n\nCe drapeau est présent sur les façades des institutions européennes, sur les passeports et cartes d’identité de certains États européens…",
             "image": null
         },
         {
-            "id": 39,
+            "id": "formation_39",
             "question": "Les dates clés du drapeau européen",
             "explanation": "- 1955 : le drapeau devient l’emblème officiel du Conseil de l’Europe.\n\n- 1985 : le drapeau devient l’emblème officiel de la CEE.\n\n- 1986 : le drapeau est hissé pour la première fois devant le bâtiment de la Commission européenne, à Bruxelles.",
             "image": null
         },
         {
-            "id": 40,
+            "id": "formation_40",
             "question": "L’hymne européen",
             "explanation": "L’hymne européen est l' \"Ode à la joie\", une mélodie écrite par le compositeur allemand Ludwig von Beethoven.\n\nCet hymne est un des symboles de l'Union européenne. Il symbolise la liberté, la paix et la solidarité.\n\nCette mélodie est devenue l’hymne officiel du Conseil de l'Europe en 1972. En 1985, elle devient un symbole de l'Union européenne.\n\nOn peut l’entendre lors des évènements officiels, notamment la Journée de l’Europe (le 9 mai).",
             "image": null
         },
         {
-            "id": 41,
+            "id": "formation_41",
             "question": "La devise européenne",
             "explanation": "La devise de l'Union européenne est « Unie dans la diversité » depuis 2000.\n\nElle illustre la manière dont les Européens se sont rassemblés en créant l’Union européenne pour partager la paix et la prospérité, dans le respect de leurs diverses cultures, traditions et langues.\n\nElle est traduite dans toutes les langues officielles de l’Union européenne.\n\nElle est présente dans des discours officiels, des documents pédagogiques…",
             "image": null
         },
         {
-            "id": 42,
+            "id": "formation_42",
             "question": "La Journée de l’Europe",
             "explanation": "Chaque année, le 9 mai, tous les pays membres de l’Union européenne fêtent la Journée de l’Europe en organisant des évènements.\n\nCette date marque l’anniversaire de la \"déclaration Schuman\" du 9 mai 1950, un texte fondateur de la construction européenne.\n\nCette journée a plusieurs objectifs :\n\n- Rappeler les valeurs qui fondent l’Union européenne ;\n\n- Faire découvrir l’Europe à travers des évènements culturels, éducatifs et citoyens ;\n\n- Renforcer le sentiment d’appartenance à un espace commun.",
             "image": null
         },
         {
-            "id": 43,
+            "id": "formation_43",
             "question": "Les institutions européennes, le résultat de l’histoire",
             "explanation": "Les institutions européennes qui existent aujourd'hui sont le résultat d’une évolution constante :\n\nLes institutions fondatrices ont été réorganisées par les traités ; De nouvelles institutions sont apparues de manière progressive.",
             "image": null
         },
         {
-            "id": 44,
+            "id": "formation_44",
             "question": "L’évolution des institutions fondatrices",
             "explanation": "En 1951, la CECA est organisée avec quatre institutions :\n\n- la Haute Autorité représente l’intérêt général de la CECA ;\n\n- l’Assemblée commune représente les peuples des pays membres ;\n\n- le Conseil spécial des ministres représente les États membres ;\n\n- la Cour de justice assure le respect et l'application du traité de Paris.\n\nEn 1957, la Haute Autorité est remplacée par la Commission. Cette nouvelle institution propose les lois et contrôle leur exécution. Et l’Assemblée commune devient l’Assemblée européenne consultative.\n\nEn 1962, l’Assemblée européenne consultative devient le Parlement européen. Ses pouvoirs sont élargis.",
             "image": null
         },
         {
-            "id": 45,
+            "id": "formation_45",
             "question": "L’apparition des autres institutions",
             "explanation": "La Cour des comptes européenne est créée en 1975.\n\nLa Banque centrale européenne est créée en 1998, au moment de la création de l’euro comme monnaie unique.\n\nLe Conseil européen, apparu dans les années 1960 sous la forme de réunions irrégulières, devient une institution en 2009.",
             "image": null
         },
         {
-            "id": 46,
+            "id": "formation_46",
             "question": "Le Conseil européen et le Conseil de l’Union européenne",
             "explanation": "Ces deux institutions sont toutes les deux situées à Bruxelles. Elles ont des noms similaires mais elles n’ont pas les mêmes rôles, pas les mêmes membres.\n\nLe Conseil européen donne les grandes orientations politiques et budgétaires de l’Union européenne (UE).\n\nIl réunit les 27 chefs d’État ou de gouvernement des pays membres de l’UE.\n\nLe Conseil de l'Union européenne coordonne les politiques communes, conclut des accords internationaux, vote le budget de l’UE, élabore la politique étrangère et de sécurité de l’UE, coordonne les politiques des États membres dans certains domaines.\n\nIl n’a pas de membres permanents : il réunit les ministres des pays membres, choisis en fonction des domaines à traiter (agriculture, économie...).",
             "image": null
         },
         {
-            "id": 47,
+            "id": "formation_47",
             "question": "La Commission européenne et le Parlement européen",
             "explanation": "La Commission européenne est située à Bruxelles et le Parlement européen à Strasbourg.\n\nLa Commission européenne représente les intérêts communs, propose le budget et propose les lois.\n\nElle réunit les 27 commissaires européens, un pour chaque pays membre. Chaque commissaire européen est chargé d’un domaine : agriculture, justice, égalité...La commission exécute les décisions du Conseil et du Parlement\n\nLe Parlement européen vote le budget et vote les lois, avec le Conseil de l’Union européenne. Il contrôle la Commission européenne.\n\nIl réunit 720 députés européens, répartis en groupes politiques (sociaux-démocrates, libéraux, libéraux, etc.).",
             "image": null
         },
         {
-            "id": 48,
+            "id": "formation_48",
             "question": "La Cour de justice",
             "explanation": "La cour de Justice est située à Luxembourg.\n\nElle rend la justice à l’échelle européenne. Par exemple, elle traite les conflits juridiques entre des institutions et/ou des États membres de l’UE.\n\nElle vérifie également que les États appliquent correctement le droit européen.",
             "image": null
         },
         {
-            "id": 49,
+            "id": "formation_49",
             "question": "Qui élit-on lors des élections européennes ?",
             "explanation": "Les élections européennes sont organisées tous les cinq ans. Les citoyens et les citoyennes de l’Union européenne votent pour désigner les membres du Parlement européen. On les appelle les députés européens, ou eurodéputés.\n\nLe nombre d’eurodéputés par État dépend de la population du pays. Depuis les élections de 2024, la France compte 81 eurodéputés.\n\nLes électeurs votent pour des listes de partis politiques, et non pour des candidats uniques.",
             "image": null
         },
         {
-            "id": 50,
+            "id": "formation_50",
             "question": "Qui peut voter ?",
             "explanation": "Pour avoir le droit de voter en France lors des élections européennes, il faut :\n\n- Avoir la nationalité d’un pays membre de l’Union européenne ;\n\n- Habiter en France ;\n\n- Avoir au moins 18 ans la veille du 1er tour de l’élection ;\n\n- Être inscrit sur les listes électorales françaises.",
             "image": null
         },
         {
-            "id": 51,
+            "id": "formation_51",
             "question": "Qui peut être candidat ?",
             "explanation": "Pour être candidat aux élections européennes organisées en France, il faut :\n\n- Avoir la nationalité d’un pays membre de l’Union européenne ;\n\n- Habiter en France ;\n\n- Avoir au moins 18 ans la veille du 1er tour de l’élection ;\n\n- Ne pas être privé de ses droits civils et politiques.",
             "image": null

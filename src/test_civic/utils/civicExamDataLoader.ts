@@ -1,6 +1,8 @@
 import { createLogger } from '../../shared/utils/logger';
 import { extractNumericId, isValidId } from '../../shared/utils/idUtils';
 import { sanitizeString, sanitizeStringArray, isNonEmptyString } from '../../shared/utils/stringUtils';
+import { DATA_FILES } from '../../shared/config/dataConfig';
+import { loadJsonCollection } from '../../shared/services/dataService';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 import type { CivicExamTheme, CivicExamSubTheme } from '../types';
 
@@ -290,26 +292,45 @@ export const loadCivicExamQuestions = async (): Promise<CivicExamQuestionWithOpt
     try {
         const allQuestions: CivicExamQuestionWithOptions[] = [];
 
-        const principesData = require('../../data/test_civic/principes_et_valeurs.json');
-        allQuestions.push(...loadQuestionsFromFileData(principesData));
+        const dataMap = await loadJsonCollection(
+            DATA_FILES.TEST_CIVIC.FILES,
+            DATA_FILES.TEST_CIVIC.DIRECTORY
+        );
 
-        const systemData = require('../../data/test_civic/system_et_politique.json');
-        allQuestions.push(...loadQuestionsFromFileData(systemData));
+        const principesData = dataMap['principes_et_valeurs'];
+        if (principesData) {
+            allQuestions.push(...loadQuestionsFromFileData(principesData as CivicExamDataFile | CivicExamQuestionData[]));
+        }
 
-        const droitsData = require('../../data/test_civic/droits_et_devoirs.json');
-        allQuestions.push(...loadQuestionsFromFileData(droitsData));
+        const systemData = dataMap['system_et_politique'];
+        if (systemData) {
+            allQuestions.push(...loadQuestionsFromFileData(systemData as CivicExamDataFile | CivicExamQuestionData[]));
+        }
 
-        const histoireData = require('../../data/test_civic/histoire_geographie_et_culture.json');
-        allQuestions.push(...loadQuestionsFromFileData(histoireData));
+        const droitsData = dataMap['droits_et_devoirs'];
+        if (droitsData) {
+            allQuestions.push(...loadQuestionsFromFileData(droitsData as CivicExamDataFile | CivicExamQuestionData[]));
+        }
 
-        const histGeoPart1Data = require('../../data/test_civic/hist_geo_part1.json');
-        allQuestions.push(...loadQuestionsFromFileData(histGeoPart1Data, 'history_geography_culture'));
+        const histoireData = dataMap['histoire_geographie_et_culture'];
+        if (histoireData) {
+            allQuestions.push(...loadQuestionsFromFileData(histoireData as CivicExamDataFile | CivicExamQuestionData[]));
+        }
 
-        const histGeoPart2Data = require('../../data/test_civic/hist_geo_part2.json');
-        allQuestions.push(...loadQuestionsFromFileData(histGeoPart2Data, 'history_geography_culture'));
+        const histGeoPart1Data = dataMap['hist_geo_part1'];
+        if (histGeoPart1Data) {
+            allQuestions.push(...loadQuestionsFromFileData(histGeoPart1Data as CivicExamDataFile | CivicExamQuestionData[], 'history_geography_culture'));
+        }
 
-        const vivreData = require('../../data/test_civic/vivre_dans_la_societe_francaise.json');
-        allQuestions.push(...loadQuestionsFromFileData(vivreData));
+        const histGeoPart2Data = dataMap['hist_geo_part2'];
+        if (histGeoPart2Data) {
+            allQuestions.push(...loadQuestionsFromFileData(histGeoPart2Data as CivicExamDataFile | CivicExamQuestionData[], 'history_geography_culture'));
+        }
+
+        const vivreData = dataMap['vivre_dans_la_societe_francaise'];
+        if (vivreData) {
+            allQuestions.push(...loadQuestionsFromFileData(vivreData as CivicExamDataFile | CivicExamQuestionData[]));
+        }
 
         return allQuestions;
     } catch (error) {
