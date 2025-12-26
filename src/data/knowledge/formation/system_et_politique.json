@@ -308,6 +308,12 @@
             "question": "Qui peut être candidat ?",
             "explanation": "Pour être candidat aux élections européennes organisées en France, il faut :\n\n- Avoir la nationalité d’un pays membre de l’Union européenne ;\n\n- Habiter en France ;\n\n- Avoir au moins 18 ans la veille du 1er tour de l’élection ;\n\n- Ne pas être privé de ses droits civils et politiques.",
             "image": null
+        },
+        {
+            "id": "formation_52",
+            "question": "Exemple de répartition des compétences entre l’État et les collectivités",
+            "explanation": "territoriales : l’école en France Le service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n\n- définit les programmes scolaires ;\n\n- recrute, forme et gère les enseignants ;\n\n- valide les manuels scolaires ;\n\n- supervise les universités.\n\n- Les régions gèrent les lycées ;\n\n- Les départements gèrent les collèges ;\n\n- Les communes gèrent les écoles maternelles et primaires. Gérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine. ![](./pics/territories.png)",
+            "image": null
         }
     ]
 }

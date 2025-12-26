@@ -436,12 +436,6 @@
             "image": null
         },
         {
-            "id": "formation_73",
-            "question": "Êtes-vous concerné ?",
-            "explanation": "Votre inscription à France Travail est automatique si :\n\n- vous avez demandé le Revenu de Solidarité Active (RSA) ;\n\n- vous avez une relation officielle (mariage, concubinage, PACS) avec une personne qui a demandé le RSA ;\n\n- vous avez demandé un accompagnement à une Mission locale pour vous aider à trouver un travail.\n\nLa démarche pour bénéficier des services de France Travail\n\nVotre inscription est automatique mais vous devez faire une démarche pour bénéficier des services de France Travail.\n\n- si la demande de RSA a été faite par internet, vous recevez par email un lien d’inscription et le questionnaire d’orientation à remplir ;\n\n- si la demande de RSA a été faite en remplissant des papiers, vous recevez par courrier un document d’inscription et le questionnaire d’orientation à remplir ;\n\n- si vous êtes déjà suivi par une Mission locale, c’est elle qui vous aide pour vous inscrire à France Travail et transmet à France Travail vos réponses au questionnaire.",
-            "image": null
-        },
-        {
             "id": "formation_74",
             "question": "S’inscrire France Travail.",
             "explanation": "L’inscription à France Travail est automatique pour les personnes bénéficiaires du RSA ou inscrites en Mission locale.\n\nLes autres personnes doivent s’inscrire par elles-mêmes.",
@@ -889,6 +883,276 @@
             "id": "formation_148",
             "question": "Quels types d’action soutiennent la parentalité ?",
             "explanation": "La politique nationale de soutien à la parentalité se concrétise par 6 grands types d’actions, partout en France :\n\n- se former : les Réseaux d’Écoute, d’Appui et d’Accompagnement des Parents (REAAP) proposent des activités et des ressources pour développer les compétences des parents ;\n\n- rencontrer : les Lieux d’accueil enfant-parent (Laep) favorisent les rencontres et les échanges entre différents parents et leurs enfants de moins de 6 ans ;\n\n- se retrouver : les espaces de rencontre sont des lieux où peuvent se retrouver, pendant un moment, des parents séparés et leurs enfants, par exemple dans le cas d’un divorce difficile ;\n\n- s’informer : les Points info famille (Pif) mettent à disposition des parents de l’information et facilitent leurs démarches administratives ; suivre la scolarité : les Contrats locaux d’accompagnement à la scolarité (Clas) organisent des actions pour aider les parents dans le suivi scolaire de leurs enfants ;\n\n- résoudre un conflit : la médiation familiale permet de trouver une solution, par exemple en cas de conflit familial (séparation, difficulté à assurer l’autorité parentale...).",
+            "image": null
+        },
+        {
+            "id": "formation_149",
+            "question": "La déclaration de décès en France",
+            "explanation": "La déclaration de décès est obligatoire, gratuite et doit être faite à la mairie dès que possible après la constatation du décès. Elle permet d’officialiser le décès et de débuter les obsèques. La déclaration du décès à la mairie peut être faite par toute personne majeure qui possède des renseignements sur l’état civil du défunt.",
+            "image": null
+        },
+        {
+            "id": "formation_150",
+            "question": "La prise en charge pendant la période de maternité",
+            "explanation": "Lors des 5 premiers mois de grossesse\n\n- L'Assurance maladie prend en charge à 100% avec dispense d'avance de frais (tiers payant) les examens médicaux obligatoires dans le cadre du suivi de la grossesse.\n\n- Les 2 premières échographies réalisées avant la fin du 5e mois de grossesse sont prises en charge à 70%.\n\n- À compter du 4ème mois de grossesse, il est possible de bénéficier d'un examen de prévention bucco-dentaire pris en charge à 100% par l'Assurance maladie. Du 6e mois de grossesse à l’accouchement\n\n- Tous les frais médicaux remboursables sont pris en charge à 100%. Il n’y a pas d’avance de frais à faire (tiers payant). Cette prise en charge s'applique à tous les frais médicaux, qu’ils soient ou non en rapport avec la grossesse.\n\n- La 3e échographie bénéficie de la prise en charge à 100%. Les frais d'accouchement et les frais de séjour, dans la limite de 12 jours sont pris en charge à 100% dans un hôpital ou une clinique conventionnée. Pendant les 12 jours après l’accouchement\n\n- Tous les frais médicaux remboursables sont pris en charge à 100%. Il n’y a pas d’avance de frais à faire (tiers payant). Cette prise en charge s’applique à tous les frais médicaux, qu’ils soient ou non en rapport avec la grossesse.\n\n- Il est possible d’être suivi par une sage-femme (également pris en charge à 100% dans cette période).",
+            "image": null
+        },
+        {
+            "id": "formation_151",
+            "question": "L’application Travailler en France",
+            "explanation": "L’application Travailler en France explique de manière simple les services utiles pour trouver un travail. Les explications existent en plusieurs langues. Cette application :\n\n- propose des offres de travail traduites dans plusieurs langues ;\n\n- regroupe des informations utiles, par exemple pour créer un CV facilement sans maîtriser le français.",
+            "image": null
+        },
+        {
+            "id": "formation_152",
+            "question": "L’inscription automatique",
+            "explanation": "L’inscription à France Travail est automatique pour deux catégories de personnes. Ces personnes n’ont aucune démarche à faire pour s’inscrire. Cette fiche présente la première catégorie.",
+            "image": null
+        },
+        {
+            "id": "formation_153",
+            "question": "La démarche pour bénéficier des services de France Travail",
+            "explanation": "Votre inscription est automatique mais vous devez faire une démarche pour bénéficier des services de France Travail. 1. Vous répondez au questionnaire d’orientation. 2. Vous vous connectez sur le site internet francetravail.fr. 3. Vous allez sur votre espace personnel en utilisant les codes que vous avez reçus par courrier ou par e-mail. Votre espace personnel vous permet de gérer vos rendez-vous, envoyer des informations…",
+            "image": null
+        },
+        {
+            "id": "formation_155",
+            "question": "S’inscrire France Travail",
+            "explanation": "L’inscription à France Travail est automatique pour les personnes bénéficiaires du RSA ou inscrites en Mission locale. Les autres personnes doivent s’inscrire par elles-mêmes.",
+            "image": null
+        },
+        {
+            "id": "formation_156",
+            "question": "Rester inscrit avec un nouveau document de séjour",
+            "explanation": "Si vous devez renouveler votre document de séjour, vous avez des démarches à faire pour rester inscrit à France Travail. 1. Vous allez à la préfecture pour commencer les démarches à partir de 120 jours avant la fin de votre titre de séjour. Après avoir demandé le renouvellement de votre titre de séjour, vous recevez un document. 2. Vous apportez ce document dès que possible à l’accueil de votre agence France Travail. 3. Dès que vous recevez votre nouveau titre de séjour, vous l’apportez à l’accueil de votre agence France Travail.",
+            "image": null
+        },
+        {
+            "id": "formation_157",
+            "question": "Au niveau national",
+            "explanation": "- France Travail aide les personnes à trouver un travail et aide les entreprises qui recrutent.\n\n- L’Office Français de l’Immigration et de l’Intégration (OFII) organise le parcours d’intégration et oriente les personnes vers des structures d’accompagnement à l’emploi.",
+            "image": null
+        },
+        {
+            "id": "formation_158",
+            "question": "La reconnaissance en France d’un diplôme obtenu à l’étranger",
+            "explanation": "Vous souhaitez étudier ou travailler en France ? Vous pouvez faire reconnaître votre diplôme obtenu dans un autre pays que la France. Les critères sont différents :\n\n- selon votre parcours et les exigences de la formation souhaitée, si vous voulez étudier en France ;\n\n- selon le métier que vous souhaitez exercer en France. La reconnaissance du diplôme est délivrée uniquement par l’organisation où vous souhaitez étudier, ou par l’employeur où vous souhaitez travailler.",
+            "image": null
+        },
+        {
+            "id": "formation_159",
+            "question": "Les étapes pour faire reconnaître son diplôme",
+            "explanation": "Les étapes pour faire reconnaître votre diplôme : 1. vérifiez que votre situation permet de faire reconnaître votre diplôme en France ; 2. préparez les documents (pièce d’identité, diplôme, relevés de notes et leurs traductions officielles) ; 3. déposez votre dossier sur le site internet de Enic-Naric ; 4. payez les frais (20 € au moment du dépôt, puis 100 € pour l’analyse du dossier). Vous n’avez pas à payer si vous êtes demandeur d’asile ou réfugié ou bénéficiaire de la protection subsidiaire ou temporaire. Vous recevrez la réponse 4 à 6 mois environ après votre demande. Ces étapes concernent les formations de plus de 200 heures et les métiers qui ne sont pas réglementés. Exemples de métiers réglementés : avocat, médecin, architecte, mécanicien, coiffeur.",
+            "image": null
+        },
+        {
+            "id": "formation_160",
+            "question": "Les principales étapes pour obtenir une VAE",
+            "explanation": "1. Déposez votre candidature sur (Ouvre une nouvelle fenêtre)le site internet de France VAE. 2. Complétez un dossier avec le détail de vos expériences en lien avec le diplôme visé. 3. Passez un entretien avec un jury.",
+            "image": null
+        },
+        {
+            "id": "formation_161",
+            "question": "Exemples d’expériences prises en compte pour une VAE",
+            "explanation": "- Activité professionnelle salariée ou non.\n\n- Bénévolat ou volontariat.\n\n- Inscription sur la liste des sportifs de haut niveau.\n\n- Participation à des activités d’économie solidaire, si la personne est accueillie et accompagnée par un organisme assurant l’accueil et l’accompagnement des personnes en difficultés.\n\n- Responsabilités syndicales.",
+            "image": null
+        },
+        {
+            "id": "formation_162",
+            "question": "Le contrat à durée indéterminée (CDI)",
+            "explanation": "C’est le contrat de travail le plus courant en France. Il n’a pas de date de fin. Il peut être à temps plein ou à temps partiel. Un contrat à temps partiel doit être écrit. Un contrat à temps plein n’est pas obligatoirement écrit, mais c’est préférable. Le CDI peut être rompu dans différents cas :\n\n- décision de l'employeur (licenciement, mise à la retraite) ;\n\n- décision du salarié (démission, départ à la retraite) ;\n\n- événement imprévisible exceptionnel (exemple : destruction totale de l'entreprise en raison d’un incendie) ;\n\n- accord entre le salarié et l’employeur (rupture conventionnelle).",
+            "image": null
+        },
+        {
+            "id": "formation_163",
+            "question": "Le contrat à durée déterminée (CDD)",
+            "explanation": "Ce contrat de travail a une date de fin. Il est utilisé pour une tâche précise et limitée dans le temps. Exemple : remplacer un autre salarié pendant son absence limitée dans le temps, faire face à une augmentation d’activité limitée dans le temps. Le CDD doit être écrit. En général, sa durée maximale est de 18 mois.",
+            "image": null
+        },
+        {
+            "id": "formation_164",
+            "question": "Les autres types de contrat de travail",
+            "explanation": "Le contrat temporaire (on l’appelle aussi le contrat d’intérim) : il est conclu entre un salarié, une entreprise de travail temporaire et une entreprise où le salarié réalise sa mission. Ce contrat est utilisé uniquement pour une mission de courte durée (quelques jours, quelques mois). Ce contrat doit être écrit et signé. Le contrat de professionnalisation : il est conclu entre un salarié et un employeur, dans le cadre de certaines formations. Le CDD d’usage (on l’appelle aussi le contrat d'extra) : c’est un CDD particulier. Il permet à l’employeur d’embaucher une personne pour réaliser une tâche précise et temporaire pendant une très courte durée (quelques heures, une journée ou quelques journées qui se suivent sans interruption).",
+            "image": null
+        },
+        {
+            "id": "formation_165",
+            "question": "Les étapes pour construire votre projet",
+            "explanation": "1. Clarifier vos envies et celles de vos futurs clients. 2. Discutez de votre idée avec différentes personnes pour avoir un regard extérieur. 3. Vérifiez qu’une autre personne n’a pas eu la même idée que vous. Pour cela, il suffit de faire une recherche sur le site internet de l’INPI (Institut National de la Propriété Industrielle). Une idée est protégée par un brevet d’invention. L’INPI recense tous les brevets d’invention. 4. Construisez votre projet avec une étude de marché (analyse des entreprises concurrentes, des clients, de l’environnement économique) et un business plan (présentation du service ou du produit, stratégie, plan financier…).",
+            "image": null
+        },
+        {
+            "id": "formation_166",
+            "question": "Les principales démarches pour créer votre entreprise",
+            "explanation": "- Choisir une adresse officielle pour l’entreprise (ce n’est pas forcément l’adresse du lieu de travail).\n\n- Enregistrer les statuts de votre société (nom, forme juridique, adresse, montant du capital, comment seront prises les décisions…).\n\n- Déclarer votre entreprise (on appelle cette démarche l’immatriculation).\n\n- Publier dans un journal d’annonces légales.",
+            "image": null
+        },
+        {
+            "id": "formation_167",
+            "question": "Sur le site internet de France Travail",
+            "explanation": "Vous pouvez transmettre votre candidature en utilisant un des nombreux sites internet généralistes qui diffusent des offres de travail dans la plupart des secteurs d’activité et partout en France. Le site internet de France Travail est la référence pour trouver un travail en France. Environ 160 000 offres sont mises à jour chaque jour. Il vous propose aussi des conseils et des informations utiles pour trouver un travail (fiches de présentation de métiers, témoignages de personnes exerçant un métier...)",
+            "image": null
+        },
+        {
+            "id": "formation_168",
+            "question": "Sur des sites internet spécialisés",
+            "explanation": "Il existe aussi des sites internet spécialisés. Certains diffusent des offres limitées à un secteur géographique proche de chez vous. D’autres diffusent des offres dans un secteur professionnel. Exemples :\n\n- le site internet Choisir le service public propose uniquement des offres dans le service public ;\n\n- le site internet L’industrie recrute propose uniquement des offres d’emploi dans l’industrie Grâce aux moteurs de recherche, vous pouvez cibler les sites en fonction de votre profil. Vous pouvez aussi envoyer une candidature en passant directement par le site internet d’une entreprise qui vous intéresse.",
+            "image": null
+        },
+        {
+            "id": "formation_169",
+            "question": "Les informations importantes du CV",
+            "explanation": "Il est important de réaliser un CV en fonction des informations demandées par l’entreprise dans son offre.\n\n- Nom, prénom, email, numéro de téléphone, âge.\n\n- Principales expériences professionnelles ou uniquement celles qui ont un lien avec l'offre.\n\n- Formation (diplôme le plus élevé ou celui qui a un lien avec l'offre).\n\n- Photographie d'identité (ce n’est pas obligatoire).",
+            "image": null
+        },
+        {
+            "id": "formation_170",
+            "question": "Les points de vigilance",
+            "explanation": "Pour l’entreprise qui diffuse l’offre : Les informations demandées dans l’offre de travail doivent avoir un lien direct avec le travail proposé. Pour la personne qui élabore son CV : Une personne qui a été embauchée sur la base d’un CV comportant des fausses informations (diplôme, expérience professionnelle…) peut être licenciée.",
+            "image": null
+        },
+        {
+            "id": "formation_171",
+            "question": "Faites-vous aider",
+            "explanation": "Il est utile de faire relire vos premières candidatures (CV, lettre de motivation) pour avoir un regard extérieur. Choisissez des personnes proches de vous (famille, amis…), en lesquelles vous avez confiance. Elles vous aideront à améliorer votre candidature. Pour vous préparer à un rendez-vous d’embauche, n’hésitez pas à vous entraîner à l’oral. Pour cela, faites des simulations avec des personnes proches de vous.",
+            "image": null
+        },
+        {
+            "id": "formation_172",
+            "question": "La durée du travail et l'âge pour commencer à travailler",
+            "explanation": "Le droit du travail détermine une référence pour la durée de travail des salariés à temps complet : 35 heures par semaine. Cette durée s’applique à toutes les entreprises. Les salariés à temps partiel travaillent moins de 35 heures par semaine. Les salariés à temps complet peuvent travailler plus de 35 heures. Au-delà de 35 heures, on parle \"d’heures supplémentaires\". L’employeur doit payer ces heures supplémentaires au salarié ou lui permettre de les rattraper. Il existe aussi un temps de travail maximal à ne pas dépasser. Il est possible de travailler dès l'âge de 16 ans. Tout mineur doit y être autorisé par son représentant légal (père ou mère, par exemple), sauf s'il est émancipé.",
+            "image": null
+        },
+        {
+            "id": "formation_173",
+            "question": "Le droit syndical",
+            "explanation": "En France, chaque salarié a le droit de se syndiquer. Cela veut dire qu’il peut créer, adhérer ou participer à un syndicat. Un syndicat est une organisation qui défend les droits des travailleurs : le salaire, les conditions de travail, la sécurité... Personne ne peut obliger un salarié à rejoindre un syndicat, et personne ne peut le punir s’il en fait partie. C’est une liberté importante dans le monde du travail.",
+            "image": null
+        },
+        {
+            "id": "formation_174",
+            "question": "Le conseil de Prud’hommes",
+            "explanation": "Si le salarié et l’employeur ne sont pas d'accord concernant le contrat de travail (licenciement, salaire…), le salarié peut contacter le Conseil de Prud’hommes. C’est un lieu de Justice qui décide dans ce type de conflit. Il peut imposer à l’employeur de payer une indemnité au salarié, de le réintégrer dans l’entreprise…",
+            "image": null
+        },
+        {
+            "id": "formation_175",
+            "question": "Le service de renseignements en droit du travail",
+            "explanation": "Un salarié qui pense que son employeur ne respecte pas le droit du travail peut se renseigner en appelant le service des renseignements en droit du travail : 0 806 000 126. Ce service répond à des questions juridiques mais, contrairement à l’inspection du travail, il ne peut pas intervenir dans l’entreprise.",
+            "image": null
+        },
+        {
+            "id": "formation_176",
+            "question": "Les conséquences pour l’employeur",
+            "explanation": "Un employeur qui ne déclare pas un salarié peut être puni jusqu’à 3 ans de prison et 45 000 euros d’amende. Les peines peuvent aller jusqu’à 5 ans de prison et 75 000 euros d’amende dans certaines situations (exemple : travail non déclaré d’une personne de moins de 18 ans). L’employeur peut aussi avoir des sanctions complémentaires. Exemples : fermeture de l’entreprise pendant 3 mois maximum, impossibilité de travailler dans le cadre d’un marché public. Sur le plan financier, l’entreprise doit rembourser les aides publiques perçues, payer un montant supérieur aux cotisations sociales qui n’ont pas été payées, et verser au salarié l’équivalent de 6 mois de salaire.",
+            "image": null
+        },
+        {
+            "id": "formation_177",
+            "question": "Les conséquences pour le salarié",
+            "explanation": "Un salarié qui travaille sans être déclaré ne cotise ni à l’assurance chômage, ni pour sa retraite. Il n’a pas droit à la sécurité sociale en cas de maladie ou d’accident du travail. Il n’a pas de congé payé. Il ne peut pas se défendre en cas de conflit avec l’employeur. Il peut être licencié du jour au lendemain, sans annonce préalable. S’il a reçu des aides sociales (RSA, CAF…), le salarié risque de devoir les rembourser ou de payer une amende.",
+            "image": null
+        },
+        {
+            "id": "formation_178",
+            "question": "La Convention internationale des droits de l’enfant",
+            "explanation": "En 1989, 196 États ont signé un document sur les droits de l’enfant dans le cadre de l’Organisation des Nations Unies (ONU). Ce document s’appelle la Convention Internationale des Droits de l’Enfant. Seuls les États-Unis ne l’ont pas signé. Ce document présente les droits fondamentaux des enfants. Il impose des contraintes aux États qui l’ont signé. Il assure donc la protection des enfants. C’est le fondement de toute l’action de l’UNICEF, une organisation qui dépend de l’ONU.",
+            "image": null
+        },
+        {
+            "id": "formation_179",
+            "question": "L’intérêt de l’enfant est supérieur",
+            "explanation": "L’intérêt de l’enfant est supérieur à sa volonté et à celle de ses parents. C’est l’un des principes de la Convention. Ce principe signifie que l'enfant peut choisir lui-même son avenir. Ce ne sont pas ses parents qui décident à sa place, sauf si les décisions de l’enfant le mettent en danger. Les principaux droits de l’enfant\n\n- L’égalité.\n\n- Avoir un nom, une identité.\n\n- Vivre en famille.\n\n- Être soigné, protégé des maladies, avoir une alimentation suffisante et équilibrée.\n\n- Bénéficier d’une justice adaptée à son âge.\n\n- Aller à l’école et avoir des loisirs.\n\n- Protection de la vie privée.\n\n- Ne pas faire la guerre ni la subir : être protégé en temps de guerre.\n\n- Protection contre la violence.\n\n- Protection contre l'exploitation.\n\n- Liberté de s’informer et de s’exprimer, d’être entendu sur les questions qui le concernent.\n\n- Enfant en situation de handicap : vivre avec et comme les autres, ils peuvent bénéficier d'un emploi du temps aménagé. ![](./pics/child.png)",
+            "image": null
+        },
+        {
+            "id": "formation_180",
+            "question": "L’intérêt de l’enfant",
+            "explanation": "Les parents exercent leurs droits et devoirs dans l'intérêt de leur enfant et dans le respect de leur enfant. Ils n’utilisent ni la violence physique, ni la violence psychologique. Les parents associent leur enfant aux décisions qui le concernent, selon son âge et sa maturité.",
+            "image": null
+        },
+        {
+            "id": "formation_181",
+            "question": "La loi française prime sur les valeurs culturelles et familiales",
+            "explanation": "La loi française est prioritaire sur les valeurs culturelles et familiales. Cela signifie que si des valeurs culturelles et familiales contredisent la loi française, elles ne peuvent pas être transmises ou appliquées. Exemple : le principe d’égalité entre les filles et les garçons doit être respecté, même dans la sphère privée.",
+            "image": null
+        },
+        {
+            "id": "formation_182",
+            "question": "Les devoirs sur les biens de l’enfant",
+            "explanation": "Les parents ont le droit et le devoir de gérer les biens de leur enfant, par exemple un appartement issu d’un héritage. Ils ont également la jouissance légale des biens de l'enfant jusqu'à ses 16 ans. Cela signifie, par exemple, qu’ils peuvent s’approprier les revenus liés à la location d’un appartement dont leur enfant est propriétaire.",
+            "image": null
+        },
+        {
+            "id": "formation_183",
+            "question": "Faire garder son enfant par des professionnels",
+            "explanation": "Les enfants de moins de 3 ans qui ne vont pas encore à l’école peuvent être gardés par des professionnels spécialisés dans la garde d’enfant. Ce service est payant, mais il existe des aides financières pour les personnes à faibles revenus. Il existe différents lieux de garde d’enfant. Un des avantages : les enfants sont en contact avec d’autres enfants. Ces lieux gardent des enfants à partir de 2 mois et demi. Dans certains cas, ils gardent des enfants jusqu’à 6 ans.",
+            "image": null
+        },
+        {
+            "id": "formation_184",
+            "question": "L’organisation de l’école en France",
+            "explanation": "Français ou étrangers, tous les enfants âgés de 3 à 16 ans, qui habitent en France, doivent aller à l’école. C’est une obligation. L’école est organisée en 4 temps :\n\n- la maternelle, (de 3 à 6 ans). Il y a 3 niveaux : petite section, moyenne section, et grande section ;\n\n- le cours élémentaire (de 6 à 11 ans). Il y a 5 niveaux : CP, CE1, CE2, CM1 et CM2 ;\n\n- le collège (de 11 à 15 ans). Il y a 4 niveaux : 6e, 5e, 4e et 3e. À la fin du collège, l’enfant passe un diplôme qui s’appelle le brevet des collèges, ou diplôme national du brevet (DNB) ;\n\n- le lycée (de 15 à 18 ans). Il y a 3 niveaux : Seconde, Première, Terminale. À la fin du lycée l’enfant passe un diplôme qui s’appelle le baccalauréat (BAC), qui permet de poursuivre des études et d’être orienté vers de nombreux parcours dans l’enseignement supérieur. Une cantine est accessible à tous les enfants qui le souhaitent dans tous les établissements scolaires.",
+            "image": null
+        },
+        {
+            "id": "formation_185",
+            "question": "L’école après 16 ans",
+            "explanation": "Après 16 ans, l’école n’est plus obligatoire mais tous les enfants peuvent poursuivre leurs études. Il existe de nombreuses possibilités : apprentissage (agriculture, bâtiment…), université (sport, langues, sciences…), écoles d’ingénieur, écoles de commerce…",
+            "image": null
+        },
+        {
+            "id": "formation_186",
+            "question": "L’ \"école à la maison\"",
+            "explanation": "Un parent peut exceptionnellement \"faire l’école\" lui-même à son enfant. Il faut une autorisation spéciale, en fonction de certains motifs. Exemples : l’état de santé de l’enfant, l’enfant pratique un sport de manière intensive, l’enfant a un handicap. Les motifs sont très encadrés par la loi.",
+            "image": null
+        },
+        {
+            "id": "formation_187",
+            "question": "L’école accueille tous les enfants",
+            "explanation": "En France, tous les enfants de 3 à 16 ans doivent aller à l’école. Cette obligation concerne donc aussi les enfants non francophones (c’est-à-dire ceux dont la langue maternelle n’est pas le français). Plus d’un tiers des enfants qui vont à l’école parlent une autre langue que le français à la maison.",
+            "image": null
+        },
+        {
+            "id": "formation_188",
+            "question": "Des cours adaptés pour apprendre le français",
+            "explanation": "Au moment de l’entrée dans l’école, l’enfant qui ne parle pas bien (ou pas du tout) le français passe un test de positionnement pour déterminer son niveau en français et l'orienter vers l'un des dispositifs suivants :\n\n- Unités Pédagogiques pour Élèves étrangers Allophones Arrivants\n\n- UPE2A : déployées pour les élèves allophones nouvellement arrivés ;\n\n- Unités Pédagogiques pour Élèves Allophones Arrivants, Non Scolarisés Antérieurement\n\n- UPE2A-NSA : destinées aux élèves allophones non scolarisés avant leur arrivée, ces unités leur offrent la possibilité de prolonger d’une année supplémentaire le dispositif UPE2A. Selon son niveau, il peut suivre des cours adaptés. Entouré d’enfants et d’adultes qui parlent le français, il apprend vite la langue française dans le cadre de l’école. Une fois qu’il maîtrise le français, il peut suivre les mêmes cours que les autres enfants.",
+            "image": null
+        },
+        {
+            "id": "formation_189",
+            "question": "L’information des parents",
+            "explanation": "L’école doit informer régulièrement les parents :\n\n- des résultats de leur enfant lors des évaluations ;\n\n- de son comportement à l’école. Ces informations sont transmises de manière régulière par l’intermédiaire du livret scolaire (pendant le cours élémentaire) puis du bulletin scolaire (pendant le collège et le lycée).",
+            "image": null
+        },
+        {
+            "id": "formation_190",
+            "question": "Les devoirs des parents",
+            "explanation": "Les parents ont des devoirs pour accompagner la scolarité de leur enfant :\n\n- lire le livret scolaire ou le bulletin scolaire ;\n\n- consulter le carnet de liaison (il est souvent numérique) : sur l'espace numérique de travail (ENT) de l'école ;\n\n- communiquer avec les professeurs ;\n\n- participer aux réunions parents-professeurs ;\n\n- faire les démarches administratives (inscriptions…).",
+            "image": null
+        },
+        {
+            "id": "formation_191",
+            "question": "Le rôle des parents",
+            "explanation": "Les parents doivent soutenir leur enfant et suivre ses devoirs à la maison. Les parents peuvent participer à la vie de l’école de plusieurs façons :\n\n- en rejoignant l’association de parents d’élèves qui défend les intérêts des enfants ;\n\n- en se présentant aux élections de représentants des parents d’élèves. Les représentants des parents d’élèves participent aux décisions importantes concernant l’organisation de l’école.",
+            "image": null
+        },
+        {
+            "id": "formation_192",
+            "question": "OEPRE en pratique",
+            "explanation": "Les ateliers ont lieu dans les écoles, collèges et lycées, partout en France. Ils sont organisés pendant la semaine, à des horaires qui facilitent l’accès au plus grand nombre de parents. La formation dure entre 60 heures et 120 heures réparties dans l’année scolaire. Pour trouver l’adresse de l’atelier le plus proche de chez vous, consultez ce site : http://www.intercariforef.org/formations/recherche-formations-dian.html",
+            "image": null
+        },
+        {
+            "id": "formation_193",
+            "question": "Les grands principes du soutien à la parentalité",
+            "explanation": "Les actions de soutien à la parentalité se fondent sur des grands principes. Ces principes ont été définis par un document officiel : la charte nationale de soutien à la parentalité. Les grands principes :\n\n- valoriser les rôles, le projet et les compétences des parents ;\n\n- s’adresser à toutes les familles, partout en France ;\n\n- accompagner les parents de manière globale et en fonction du contexte familial ;\n\n- accompagner avant la naissance de l’enfant et jusqu’à ses 18 ans ;\n\n- respecter l’égalité entre les femmes et les hommes ;\n\n- permettre à chaque parent d’occuper, dans la mesure du possible, sa place dans le développement de son enfant ;\n\n- proposer des interventions diverses et neutres sur les plans politique, philosophique et religieux ;\n\n- garantir que les bénévoles ou professionnels qui interviennent sont compétents en matière de parentalité. ![](./pics/parent.png)",
+            "image": null
+        },
+        {
+            "id": "formation_194",
+            "question": "Protéger son enfant : un devoir des parents",
+            "explanation": "Les parents ont le devoir de protéger leur enfant : ne pas le laisser seul, éviter les situations dangereuses, porter attention à tout signe de mal-être… Les parents doivent signaler toute violence :\n\n- en contactant l’école : si la violence se passe à l’école ou en lien avec la vie à l’école (exemple : harcèlement) ;\n\n- en contactant la police ou la gendarmerie : en cas de violences graves (exemple : incitation à consommer de la drogue) ;\n\n- en appelant le numéro 119 : en cas de mise en danger de l’enfance (exemples : violence physique, psychologique, sexuelle...) ;\n\n- en appelant le numéro 30 20 : en cas de harcèlement de l'enfant.",
             "image": null
         }
     ]

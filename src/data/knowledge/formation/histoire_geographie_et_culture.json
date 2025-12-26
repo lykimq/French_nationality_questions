@@ -58,33 +58,9 @@
             "image": null
         },
         {
-            "id": "formation_10",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "La Déclaration des droits de l’homme et du citoyen de 1789 affirme des principes universels, comme la liberté ou l’égalité devant la loi.\n\nLe droit de vote est instauré pour la première fois, mais il est réservé aux hommes de plus de 25 ans qui paient un impôt.",
-            "image": null
-        },
-        {
-            "id": "formation_11",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "Cette période met fin aux privilèges héréditaires et abolit la société d’ordres (clergé, noblesse et tiers état). Elle établit les bases de notre démocratie en affirmant les droits fondamentaux qui figurent encore aujourd’hui dans la Constitution française.\n\nElle introduit aussi l’idée de souveraineté populaire, de représentation nationale et de séparation des pouvoirs. Ces principes guideront les régimes républicains à venir.",
-            "image": null
-        },
-        {
             "id": "formation_12",
             "question": "Qu’est-ce que la 1re République ?",
             "explanation": "La 1re République est la période qui succède à la monarchie constitutionnelle. Héritière de la Révolution française, elle est proclamée le 22 septembre 1792.\n\nÀ cette époque, la France est confrontée à de nombreuses menaces : des guerres avec d’autres pays et des révoltes à l’intérieur du pays. Pour protéger la République, le gouvernement met en place la Terreur. Il surveille strictement les ennemis de la Révolution et utilise la guillotine contre ceux qu’il considère comme des traîtres. Louis XVI est ainsi exécuté en 1793.\n\nEn 1799, Napoléon Bonaparte prend le pouvoir et la période du Consulat s'ouvre. La 1re République disparaît le 18 mai 1804, lorsqu’il est proclamé empereur.\n\nPersonnage clé : Maximilien Robespierre est une figure centrale de la Révolution française. Il est célèbre pour son engagement en faveur de l’égalité et de la République, mais aussi pour avoir dirigé la Terreur.",
-            "image": null
-        },
-        {
-            "id": "formation_13",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "Le citoyen n’est plus sujet d’un roi, mais membre d’une République, où le pouvoir vient du peuple.\n\nLa séparation progressive entre l’Église et l’État réduit l’influence religieuse.",
-            "image": null
-        },
-        {
-            "id": "formation_14",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "La volonté de séparer l’Église et l’État annonce l’introduction progressive de la laïcité.\n\nOn doit aussi à la 1re République la réorganisation de l’administration du territoire, avec la création des départements qui améliorent la gestion et le contrôle des régions.",
             "image": null
         },
         {
@@ -94,33 +70,9 @@
             "image": null
         },
         {
-            "id": "formation_16",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "Sous le Consulat, le pouvoir législatif est affaibli car il est partagé entre plusieurs assemblées. Le pouvoir exécutif est donc plus fort que le pouvoir législatif.",
-            "image": null
-        },
-        {
-            "id": "formation_17",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "Le Consulat conserve le découpage du territoire en départements, mais met en place une administration centralisée. En 1800, une nouvelle fonction administrative est ainsi créée : le préfet, qui dirige chaque département et représente le gouvernement. Le système actuel est l’héritier de cette organisation centralisée.",
-            "image": null
-        },
-        {
             "id": "formation_18",
             "question": "Qu’est-ce que le 1er Empire ?",
             "explanation": "Le 1er Empire correspond à la période où Napoléon 1er est au pouvoir. Il commence le 18 mai 1804, date à laquelle Napoléon est nommé empereur.\n\nPendant cette période, Napoléon 1er mène plusieurs guerres en Europe pour étendre son empire et centralise le pouvoir en contrôlant la presse et les opposants. Affaibli par ses défaites, notamment en Russie en 1812, l’empereur abdique en 1814, puis définitivement le 7 juillet 1815 après la bataille de Waterloo. Le 1er Empire prend fin et la monarchie est rétablie.\n\nPersonnage clé : Napoléon Bonaparte est le fondateur et le chef du 1er Empire, sous le nom de Napoléon 1er. Il concentre entre ses mains le pouvoir politique, militaire et administratif et incarne l’autorité impériale en France.",
-            "image": null
-        },
-        {
-            "id": "formation_19",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "Le citoyen conserve l’égalité devant la loi, garantie par le Code civil de 1804. Celui-ci fixe des règles communes à tous, notamment sur la famille, la propriété et les contrats.\n\nMais sous l’Empire, les libertés politiques sont limitées : Napoléon concentre le pouvoir et contrôle la presse. Il rétablit l’esclavage en 1802 puis abolit la traite des noirs en 1815.",
-            "image": null
-        },
-        {
-            "id": "formation_20",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "Le 1er Empire laisse un héritage durable avec le Code civil, qui garantit encore aujourd’hui l’égalité devant la loi et règle la vie en société.\n\nIl crée aussi des institutions, comme le lycée et le baccalauréat, qui structurent toujours le système éducatif français.",
             "image": null
         },
         {
@@ -148,33 +100,9 @@
             "image": null
         },
         {
-            "id": "formation_25",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "Le droit de vote est élargi : le suffrage censitaire (réservé à une élite) est remplacé par le suffrage universel pour tous les hommes âgés d’au moins 21 ans.\n\nLe gouvernement provisoire affirme la liberté de la presse et la liberté de réunion.",
-            "image": null
-        },
-        {
-            "id": "formation_26",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "La 2e République instaure le suffrage universel masculin.\n\nElle supprime la peine de mort pour les délits politiques : c’est un premier pas vers l’abolition totale de la peine de mort en France.\n\nC’est aussi à cette époque que l’esclavage est définitivement aboli dans les colonies françaises, grâce au décret du 27 avril 1848 rédigé par Victor Schœlcher, sous-secrétaire d’État chargé des colonies.",
-            "image": null
-        },
-        {
             "id": "formation_27",
             "question": "Qu’est-ce que le Second Empire ?",
             "explanation": "Louis-Napoléon Bonaparte organise un coup d’État en décembre 1851 et devient empereur des Français sous le nom de Napoléon III, le 2 décembre 1852.\n\nLe Second Empire est d’abord un régime autoritaire, avant de se libéraliser dans les années 1860 : les libertés sont alors plus importantes et le pouvoir du Parlement est renforcé. Pendant cette période, l’économie se modernise et la France s’ouvre à l’Europe.\n\nLe Second Empire s’achève le 4 septembre 1870, après la défaite des troupes françaises contre la Prusse.\n\nPersonnage clé : Louis-Napoléon Bonaparte, qui gouverne sous le nom de Napoléon III, est le neveu de Napoléon Ier. Il concentre les pouvoirs et limite les libertés. Malgré quelques réformes, son autorité diminue jusqu’à sa chute après la défaite contre la Prusse en 1870.",
-            "image": null
-        },
-        {
-            "id": "formation_28",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "Le suffrage universel masculin est maintenu, mais les élections sont contrôlées et encadrées pour protéger le pouvoir en place.\n\nEn 1864, le droit de grève est partiellement autorisé.",
-            "image": null
-        },
-        {
-            "id": "formation_29",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "Pendant sa phase libérale, le Second Empire renforce progressivement les droits du Parlement. En 1870, une réforme constitutionnelle instaure un régime de type parlementaire avec deux chambres législatives mais l’empereur peut toujours nommer et révoquer les ministres.",
             "image": null
         },
         {
@@ -184,33 +112,9 @@
             "image": null
         },
         {
-            "id": "formation_31",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "La 3e République affirme de grandes libertés républicaines, comme la liberté de réunion publique sans autorisation ou la liberté de syndicat (sauf dans la fonction publique).\n\nAvec la loi du 5 avril 1884 sur l’organisation municipale, les citoyens masculins peuvent élire le conseil municipal de leur commune.",
-            "image": null
-        },
-        {
-            "id": "formation_32",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "La 3e République établit une démocratie parlementaire stable avec :\n\n- un président ;\n\n- un Parlement composé de deux chambres (les députés et les sénateurs) ;\n\n- et un Gouvernement (les ministres) responsable devant ce parlement.\n\nElle généralise l’école publique gratuite en 1881 et l’école laïque et obligatoire en 1882, grâce aux lois de Jules Ferry.\n\nElle instaure la loi de 1905 sur la séparation des Églises et de l’État, qui fonde la laïcité.",
-            "image": null
-        },
-        {
             "id": "formation_33",
             "question": "Qu’est-ce que le régime de Vichy ?",
             "explanation": "On appelle “régime de Vichy” le régime dirigé par le maréchal Pétain à partir du 10 juillet 1940, après la défaite de la France face à l’Allemagne. Installé à Vichy, le gouvernement abolit la République et instaure un régime autoritaire et collaborationniste avec l’occupant nazi.\n\nLe régime de Vichy supprime les libertés et persécute les opposants et les minorités, en particulier les Juifs.\n\nIl prend fin le 22 août 1944 avec la Libération.\n\nPersonnage clé : le maréchal Philippe Pétain, héros de la Première Guerre mondiale, devient chef de l’État français en 1940 et dirige le régime autoritaire de Vichy.",
-            "image": null
-        },
-        {
-            "id": "formation_34",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "Les libertés et droits fondamentaux (liberté d’expression, de réunion, de la presse, droit de vote) sont supprimés.\n\nLe régime impose une société hiérarchisée, fondée sur des valeurs conservatrices et autoritaires. Une large partie de la population est exclue de la pleine citoyenneté.",
-            "image": null
-        },
-        {
-            "id": "formation_35",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "Le régime de Vichy n’a pas laissé d’apports positifs au système actuel. Au contraire, il marque une rupture avec les valeurs démocratiques et républicaines, ce qui conduit, après la Libération, à renforcer la défense des droits et libertés fondamentales en France.",
             "image": null
         },
         {
@@ -220,33 +124,9 @@
             "image": null
         },
         {
-            "id": "formation_37",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "La démocratie est rétablie et les citoyens retrouvent leurs droits civiques.\n\nLe droit de vote est accordé aux femmes en avril 1944.\n\nLa sécurité sociale et d’autres mesures sont mises en place pour renforcer la protection des citoyens et l’égalité sociale.",
-            "image": null
-        },
-        {
-            "id": "formation_38",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "Le Gouvernement provisoire restaure la légitimité républicaine après la Seconde Guerre mondiale et prépare les institutions de la 4e République. Grâce à ses réformes, il assure la continuité de l’État français et pose les bases d’un système politique moderne et stable, qui servira de référence pour les gouvernements suivants.",
-            "image": null
-        },
-        {
             "id": "formation_39",
             "question": "Qu’est-ce que la 4e République ?",
             "explanation": "La 4e République naît le 27 octobre 1946, après la Seconde Guerre mondiale et la Libération. Une nouvelle Constitution est adoptée, qui confirme la prédominance du pouvoir législatif (détenu par le Parlement) sur le pouvoir exécutif (détenu par le président du Conseil des ministres).\n\nLe déséquilibre des pouvoirs, l’absence de majorité au Parlement et l’instabilité gouvernementale affaiblissent le régime. Il s’effondre le 4 octobre 1958, en pleine guerre d’Algérie.\n\nPersonnages clés : Vincent Auriol (1947-1954) et René Coty (1954-1958) sont les deux présidents de la 4e République. Cette période se caractérise par une forte instabilité gouvernementale avec de nombreux changements de gouvernement.",
-            "image": null
-        },
-        {
-            "id": "formation_40",
-            "question": "Quels sont les droits des citoyens pendant cette période ?",
-            "explanation": "La Constitution garantit pour la première fois l’égalité entre les femmes et les hommes, dans la continuité du droit de vote accordé aux femmes depuis le 21 avril 1944.\n\nLa protection sociale se développe, ce qui améliore les droits sociaux des citoyens.",
-            "image": null
-        },
-        {
-            "id": "formation_41",
-            "question": "Quels sont les apports de ce régime au système français actuel ?",
-            "explanation": "La 4e République pose les bases de l’État-providence : elle élargit la sécurité sociale et développe les services publics, un modèle que l’on conserve toujours aujourd’hui.\n\nL’État devient un acteur central de la reconstruction et du développement économique. Il intervient directement dans des secteurs clés (planification, nationalisations, entreprises publiques).",
             "image": null
         },
         {
@@ -388,12 +268,6 @@
             "image": null
         },
         {
-            "id": "formation_65",
-            "question": "À retenir",
-            "explanation": "Dates clés\n\n- Date de la Seconde Guerre mondiale : 1939-1945\n\n- Création de l’ONU : 1945\n\nÉlément déclencheur\n\n- Invasion de la Pologne par l’armée allemande\n\nPays concernés\n\n- États-Unis, Royaume-Uni, URSS (les Alliés)\n\n- Allemagne, Italie, Japon (l’Axe)",
-            "image": null
-        },
-        {
             "id": "formation_66",
             "question": "Comment est qualifiée la Seconde Guerre mondiale ?",
             "explanation": "La Seconde Guerre mondiale est une guerre d’anéantissement car chaque camp veut détruire totalement l’autre, en attaquant son armée, son économie et sa population. Les violences contre les civils sont extrêmes (bombardements, génocides, déportations) et les combats menés jusqu’à ce que l’ennemi soit vaincu.\n\nLa Seconde Guerre mondiale est une guerre idéologique car chaque camp défend des idées opposées. Exemple : l’Allemagne nazie veut conquérir son « espace vital » et anéantir les Juifs d’Europe, les Japonais veulent dominer l’Asie orientale, les Alliés en Europe et en Asie sont rassemblés autour des valeurs démocratiques, l’URSS veut affirmer la supériorité du système communiste.\n\nLa Seconde Guerre mondiale est totale car elle a mobilisé toute la société. Toute l’économie, la culture, la propagande (volonté d’influencer l’opinion publique) de la société se sont engagées dans le conflit. L’Allemagne, l’URSS et le Japon s'appuient même sur le travail forcé.",
@@ -403,12 +277,6 @@
             "id": "formation_67",
             "question": "Quelles sont les conséquences de la Seconde Guerre mondiale ?",
             "explanation": "Sur le plan humain, la Seconde Guerre mondiale a fait plus de 60 millions de morts (soldats et civils),\n\nLe régime nazi mène une politique d’extermination : plus de 11 millions de personnes ont été tuées, dont 6 millions de Juifs et 25 000 Tziganes à cause des génocides.\n\nLa Shoah désigne le génocide perpétré pendant la Seconde Guerre mondiale. Les Juifs, opposants politiques, tziganes (roms, gitans, manouches), hommes homosexuels (ou accusés), malades et handicapés mentaux...étaient déportés dans des camps de concentration (Auschwitz-Birkenau, Treblinka...) où les conditions de vie y sont inhumaines (froid, faim, travail forcé, humiliation, violence...). Ces personnes déportées y étaient ensuite gazées puis incinérées dans des fours crématoires. La volonté du régime était de faire disparaître totalement ces populations qui constituaient selon lui une menace et étaient jugées « indésirables ».\n\nSur le plan politique :\n\n- Division de l’Allemagne en plusieurs zones gérées par les vainqueurs,\n\n- Jugement des responsables nazis pour leur crime au procès de Nuremberg (20 novembre 1945 – octobre 1946),\n\n- Création de l’ONU en 1945 pour maintenir la paix,\n\n- Début de la guerre froide entre les États-Unis et l’URSS.",
-            "image": null
-        },
-        {
-            "id": "formation_68",
-            "question": "À retenir",
-            "explanation": "Bilan humain: Plus de 60 millions de morts et des millions de blessés\n\nPersonnes clés\n\n- Adolf Hitler : dictateur qui a dirigé l'Allemagne de 1933 à 1945\n\n- Heinrich Himmler : organise l’extermination des Juifs (Shoah)\n\n- Winston Churchill : Premier ministre britannique, il mène la \"bataille d’Angleterre\" face aux bombardements allemands",
             "image": null
         },
         {
@@ -430,30 +298,6 @@
             "image": null
         },
         {
-            "id": "formation_72",
-            "question": "À retenir",
-            "explanation": "Dates clés\n\n- Appel du général de Gaulle : 18 juin 1940\n\n- Libération de Paris : août 1944\n\nPersonnes clés\n\n- Philippe Pétain : chef de l’État entre 1940 et 1944, il collabore avec l’Allemagne\n\n- Charles de Gaulle : lance un appel à la résistance avec l’appel du 18 juin. À la Libération, il devient chef du Gouvernement provisoire.\n\n- Jean Moulin : figure clé de la Résistance Française",
-            "image": null
-        },
-        {
-            "id": "formation_73",
-            "question": "Comment est qualifiée la Seconde Guerre mondiale ?",
-            "explanation": "La Seconde Guerre mondiale est une guerre d’anéantissement car chaque camp veut détruire totalement l’autre, en attaquant son armée, son économie et sa population. Les violences contre les civils sont extrêmes (bombardements, génocides, déportations) et les combats menés jusqu’à ce que l’ennemi soit vaincu.\n\nLa Seconde Guerre mondiale est une guerre idéologique car chaque camp défend des idées opposées. Exemple : l’Allemagne nazie veut conquérir son \"espace vital\" et anéantir les Juifs d’Europe, les Japonais veulent dominer l’Asie orientale, les Alliés en Europe et en Asie sont rassemblés autour des valeurs démocratiques, l’URSS veut affirmer la supériorité du système communiste.\n\nLa Seconde Guerre mondiale est totale car elle a mobilisé toute la société. Toute l’économie, la culture, la propagande (volonté d’influencer l’opinion publique) de la société se sont engagées dans le conflit. L’Allemagne, l’URSS et le Japon s’appuient même sur le travail forcé.",
-            "image": null
-        },
-        {
-            "id": "formation_74",
-            "question": "Quelles sont les conséquences de la Seconde Guerre mondiale ?",
-            "explanation": "Sur le plan humain, la Seconde Guerre mondiale a fait plus de 60 millions de morts (soldats et civils),\n\nLe régime nazi mène une politique d’extermination : plus de 11 millions de personnes ont été tuées, dont 6 millions de Juifs et 25 000 Tziganes à cause des génocides.\n\nSur le plan politique :\n\n- division de l’Allemagne en plusieurs zones gérées par les vainqueurs ;\n\n- création de l’ONU en 1945 pour maintenir la paix ;\n\n- début de la guerre froide entre les États-Unis et l’URSS ;\n\n- jugement des responsables nazis pour leur crime au procès de Nuremberg (20 novembre 1945 – octobre 1946).",
-            "image": null
-        },
-        {
-            "id": "formation_75",
-            "question": "À retenir",
-            "explanation": "Bilan humain\n\n- Plus de 60 millions de morts et des millions de blessés.\n\nPersonnes clés\n\n- Adolf Hitler : dictateur qui a dirigé l'Allemagne de 1933 à 1945 ;\n\n- Winston Churchill : Premier ministre britannique, il mène la \"bataille d’Angleterre\" face aux bombardements allemands.",
-            "image": null
-        },
-        {
             "id": "formation_76",
             "question": "Pourquoi les colonies souhaitent peu à peu leur indépendance ?",
             "explanation": "Après la Seconde Guerre mondiale, les puissances coloniales européennes sont affaiblies (France, Belgique, Royaume-Uni) et les promesses non tenues faites aux colonies (droits, réformes) alimentent la frustration.\n\nDans les colonies, les mouvements nationalistes et anticolonialistes se développent (manifestations, émeutes...). Certaines colonies veulent plus d'autonomie, voire l'indépendance totale.\n\nLe soutien de nouveaux acteurs internationaux renforce ces luttes :\n\n- l’ONU (créée en 1945) défend le droit des peuples à disposer d’eux-mêmes ;\n\n- les États-Unis et l’URSS s’opposent au colonialisme.",
@@ -463,12 +307,6 @@
             "id": "formation_77",
             "question": "Comment les colonies deviennent-elles indépendantes ?",
             "explanation": "La décolonisation peut être :\n\n- pacifique : une négociation convient de l’indépendance.\n\nExemple : l’Afrique subsaharienne française obtient l’indépendance en 1960.\n\n- violente : une guerre aboutit à l’indépendance.\n\nExemples : la défaite de la France à la guerre d’Indochine (1946-1954) entraîne la fin de l'Indochine française et la division du Vietnam. La guerre d’Algérie (1954-1962)\nentre la France et le Front de libération nationale (Algérie).",
-            "image": null
-        },
-        {
-            "id": "formation_78",
-            "question": "À retenir",
-            "explanation": "Dates clés\n\n1946-1954 : guerre d’Indochine ;\n\n1954-1962 : guerre d’Algérie ;\n\n1960 : indépendance des colonies françaises d’Afrique ainsi que Madagascar.",
             "image": null
         },
         {
@@ -505,12 +343,6 @@
             "id": "formation_84",
             "question": "Quelles sont les premières colonies françaises ?",
             "explanation": "En 1608, le Québec est fondé au Canada (qui fait partie de la Nouvelle-France), par un Français (Amérique du Nord).\n\nEn 1635, la Guadeloupe et la Martinique deviennent des territoires français (Caraïbes).\n\nEn 1697, Saint-Domingue, qui était espagnole, devient une colonie française (Caraïbes).\n\nQuels territoires ont ensuite été colonisés par la France ?\n\nEn 1830, l’Algérie est conquise par l’armée française (Afrique du Nord).\n\nEn 1841, Mayotte devient un protectorat français (Afrique).\n\nEn 1854, la France prend possession de la Nouvelle-Calédonie (Océanie).\n\nEn 1880, la Polynésie, protectorat français, devient une colonie de la France (Océanie).\n\nEn 1881, la Tunisie est conquise et placée sous protectorat français (Afrique du Nord).\n\nEn 1887, l’Indochine (Union indochinoise) est créée, placée sous un gouvernement français (Asie du Sud-Est).\n\nEn 1895, Madagascar est placé sous protectorat français (Afrique).\n\nEn 1912, le Maroc est placé sous protectorat français (Afrique du Nord).\n\nAprès une colonisation progressive, dès 1850 :\n\n- l'Afrique Occidentale Française (AOF) est créée en 1895 par l'union du Sénégal, du Soudan français, de la Guinée et de la Côte d'Ivoire ;\n\n- l'Afrique Équatoriale Française (AEF) est créée en 1910 en regroupant les quatre colonies du Gabon, du Moyen-Congo, de l'Oubangui-Chari et du Tchad.",
-            "image": null
-        },
-        {
-            "id": "formation_85",
-            "question": "La colonisation, c’est quoi ?",
-            "explanation": "La colonisation désigne la conquête et le contrôle d’un territoire par un autre.\n\nÀ partir du XVe siècle, l’Europe commence la colonisation, mais c’est surtout après le XVIIIe siècle qu’elle s’accélère fortement.",
             "image": null
         },
         {
@@ -562,12 +394,6 @@
             "image": null
         },
         {
-            "id": "formation_94",
-            "question": "À retenir",
-            "explanation": "Bilan humain\n\n- 6 millions de Juifs assassinés.\n\nPersonnes clés\n\n- Heinrich Himmler : il organise l’extermination des Juifs (Shoah).\n\n- Reinhard Heydrich : organisateur de la “solution finale” c'est-à-dire la façon dont doivent être traitées les populations juives européennes qui doivent disparaître, selon les nazis.\n\n- Philippe Pétain, couramment appelé le maréchal Pétain : chef de l’État français entre 1940 et 1944, il collabore avec l’Allemagne.",
-            "image": null
-        },
-        {
             "id": "formation_95",
             "question": "Quel est le contexte en France à partir de 1940 ?",
             "explanation": "En juin 1940, la France est battue par l’Allemagne. L’armistice du 22 juin 1940 marque la fin de la 3e République. C’est le début de “l'Occupation”.\n\nLe pays est alors divisé en deux zones :\n\n1. la zone nord est occupée directement par l’Allemagne ;\n\n2. la zone sud, dite “zone libre”, est dirigée par le régime de Vichy du maréchal Pétain. Ce régime met en place une politique autoritaire. Il réprime les opposants et collabore avec l’occupant allemand.",
@@ -583,12 +409,6 @@
             "id": "formation_97",
             "question": "Comment est libérée la France ?",
             "explanation": "La libération de la France s’accélère en 1944 avec le débarquement allié en Normandie en juin, auquel participent aussi les résistants. Paris est libérée en août 1944. Le reste du territoire est peu à peu libéré, ce qui permet de rétablir l’autorité française.\n\nLa guerre se termine le 8 mai 1945 en Europe avec la capitulation de l’Allemagne. Charles de Gaulle devient chef du gouvernement provisoire et prépare le retour à une République démocratique.",
-            "image": null
-        },
-        {
-            "id": "formation_98",
-            "question": "À retenir",
-            "explanation": "Dates clés\n\n- Appel du général de Gaulle : 18 juin 1940.\n\n- Libération de Paris : août 1944.\n\nPersonnes clés\n\n- Charles de Gaulle : lance un appel à la résistance. À la Libération, il devient chef du Gouvernement provisoire.\n\n- Jean Moulin : figure phare de la Résistance lors de la Seconde Guerre mondiale.",
             "image": null
         },
         {
@@ -880,12 +700,6 @@
             "image": null
         },
         {
-            "id": "formation_147",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 2,8 millions d’habitants. C’est une région avec une faible densité de population et des zones rurales importantes.\n\nSecteurs économiques clés:\n\n- Industrie (automobile, agroalimentaire, microtechniques), viticulture (vins de Bourgogne), horlogerie, bois, tourisme vert et tourisme culturel.\n\nSituation du marché du travail:\n\n- Le taux de chômage est généralement bas, mais varie selon les zones. Plusieurs pôles industriels sont présents dans la région.",
-            "image": null
-        },
-        {
             "id": "formation_148",
             "question": "Où est située la région de la Bretagne ?",
             "explanation": "La région de la Bretagne est située à l’extrême ouest de la France. Bordée par la Manche et l’océan Atlantique, c’est une péninsule avec un long littoral.",
@@ -895,12 +709,6 @@
             "id": "formation_149",
             "question": "Quels sont les départements et les grandes villes de la Bretagne ?",
             "explanation": "La Bretagne compte 4 départements : Côtes-d’Armor, Finistère, Ille-et-Vilaine, Morbihan.\n\nSes principales villes sont Rennes (préfecture), Brest, Lorient, Quimper, Vannes et Saint-Malo.",
-            "image": null
-        },
-        {
-            "id": "formation_150",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 3,5 millions d’habitants. La population est en augmentation, surtout autour de Rennes et dans le sud du Morbihan.\n\nSecteurs économiques clés:\n\n- Agroalimentaire (première région de France dans ce secteur), numérique (à Rennes et à Lannion), construction navale, énergies marines, pêche, tourisme, culture bretonne.\n\nSituation du marché du travail:\n\n- Le taux de chômage est inférieur à la moyenne nationale. Le marché de l’emploi est dynamique dans les grandes villes, notamment dans les secteurs du numérique et des services.",
             "image": null
         },
         {
@@ -916,12 +724,6 @@
             "image": null
         },
         {
-            "id": "formation_153",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 2,6 millions d’habitants. La région est moyennement dense et sa population reste stable, avec toutefois des variations entre les zones urbaines et rurales.\n\nSecteurs économiques clés:\n\n- Industrie (pharmaceutique, aéronautique, cosmétique), agriculture (grandes cultures, vignes), tourisme (châteaux de la Loire), agroalimentaire.\n\nSituation du marché du travail:\n\n- Le taux de chômage est proche de la moyenne nationale. Les zones rurales sont plus fragiles, mais les pôles autour de Tours et Orléans sont dynamiques.",
-            "image": null
-        },
-        {
             "id": "formation_154",
             "question": "Où est située la région de la Corse ?",
             "explanation": "La région de la Corse est une île située dans la mer Méditerranée, au sud-est de la France continentale.",
@@ -931,12 +733,6 @@
             "id": "formation_155",
             "question": "Quels sont les départements et les grandes villes de la Corse ?",
             "explanation": "La Corse compte 2 départements : Corse-du-Sud et Haute-Corse.\n\nSes principales villes sont Ajaccio (préfecture), Bastia, Corte, Porto-Vecchio et Calvi.",
-            "image": null
-        },
-        {
-            "id": "formation_156",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 360 000 habitants. La densité de la population est faible. La population corse vieillit, mais elle augmente dernièrement grâce à l’attractivité de la région.\n\nSecteurs économiques clés:\n\n- Tourisme, agriculture (élevage, vignes, huile d’olive), artisanat, construction, services.\n\nSituation du marché du travail:\n\n- Le taux de chômage est supérieur à la moyenne nationale, surtout en dehors de la saison touristique. L’économie est fortement liée aux saisons du tourisme.",
             "image": null
         },
         {
@@ -952,12 +748,6 @@
             "image": null
         },
         {
-            "id": "formation_159",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 5,6 millions d’habitants. La population se concentre surtout autour des grandes villes et diminue dans certaines zones rurales ou industrielles.\n\nSecteurs économiques clés:\n\n- Industrie (automobile, chimie, métallurgie), vignes (vins de Champagne et d'Alsace), agriculture, logistique, tourisme patrimonial et de mémoire (Première et Seconde guerres mondiales).\n\nSituation du marché du travail:\n\n- Le taux de chômage est proche de la moyenne nationale, mais varie selon les territoires. Il est plus élevé dans les zones industrielles en reconversion et plus bas autour de Strasbourg.",
-            "image": null
-        },
-        {
             "id": "formation_160",
             "question": "Où est située la région des Hauts-de-France ?",
             "explanation": "La région des Hauts-de-France est située au nord de la France, à la frontière avec la Belgique. Elle est bordée par la Manche et reliée au Royaume-Uni par le tunnel sous la Manche.",
@@ -967,12 +757,6 @@
             "id": "formation_161",
             "question": "Quels sont les départements et les grandes villes des Hauts-de-France ?",
             "explanation": "Les Hauts-de-France comptent 5 départements : Aisne, Nord, Oise, Pas-de-Calais, Somme.\n\nSes principales villes sont Lille (préfecture), Amiens, Dunkerque, Roubaix, Tourcoing, Calais et Beauvais.",
-            "image": null
-        },
-        {
-            "id": "formation_162",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 6 millions d’habitants. La population est jeune, concentrée dans les villes, mais connaît de fortes disparités socio-économiques.\n\nSecteurs économiques clés:\n\n- Industrie (automobile, ferroviaire, agroalimentaire), logistique, textile, numérique, agriculture, tourisme côtier et de mémoire (Première et Seconde guerres mondiales).\n\nSituation du marché du travail:\n\n- Le taux de chômage est supérieur à la moyenne nationale. La région connaît des difficultés liées à son passé industriel, mais certaines villes comme Lille se reconvertissent activement.",
             "image": null
         },
         {
@@ -988,12 +772,6 @@
             "image": null
         },
         {
-            "id": "formation_165",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 12,4 millions d’habitants. C’est la région la plus peuplée de France, avec une forte densité de population et une forte urbanisation.\n\nSecteurs économiques clés:\n\n- Services (finance, numérique, communication), industrie de pointe, recherche, tourisme, culture, construction, logistique, activités de siège et centres de décision.\n\nSituation du marché du travail:\n\n- Le taux de chômage est proche de la moyenne nationale. Il existe de forts contrastes entre l’ouest de la région, plus favorisé, et l’est, plus fragile socialement et économiquement.",
-            "image": null
-        },
-        {
             "id": "formation_166",
             "question": "Où est située la région de la Normandie ?",
             "explanation": "La région de la Normandie est située au nord-ouest de la France et bordée par la Manche. Elle est proche de l’Île-de-France et du Royaume-Uni.",
@@ -1003,12 +781,6 @@
             "id": "formation_167",
             "question": "Quels sont les départements et les grandes villes de la Normandie ?",
             "explanation": "La Normandie compte 5 départements : Calvados, Eure, Manche, Orne, Seine-Maritime.\n\nSes principales villes sont Rouen (préfecture), Caen, Le Havre, Cherbourg-en-Cotentin, Évreux, Alençon.",
-            "image": null
-        },
-        {
-            "id": "formation_168",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 3,5 millions d’habitants. La population vieillit et le nombre d’habitants augmente peu, mais les villes portuaires et universitaires sont dynamiques.\n\nSecteurs économiques clés:\n\n- Industrie (automobile, aéronautique, énergie), logistique (ports), agriculture et élevage, pêche, tourisme de mémoire (Seconde Guerre mondiale), de patrimoine et de littoral, énergies marines.\n\nSituation du marché du travail:\n\n- Le taux de chômage est proche de la moyenne nationale. Les pôles d’activités majeurs sont Caen, Le Havre et Rouen.",
             "image": null
         },
         {
@@ -1024,12 +796,6 @@
             "image": null
         },
         {
-            "id": "formation_171",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 6,2 millions d’habitants. La population augmente rapidement, surtout dans les départements du bord de mer, qui sont attractifs.\n\nSecteurs économiques clés:\n\n- Aéronautique, agriculture (vignes, élevage, céréales), agroalimentaire, tourisme (littoral, patrimoine, montagne), numérique, forêt/bois, énergie.\n\nSituation du marché du travail:\n\n- Le taux de chômage est inférieur à la moyenne nationale, mais varie fortement selon les départements.",
-            "image": null
-        },
-        {
             "id": "formation_172",
             "question": "Où est située la région de l’Occitanie ?",
             "explanation": "La région de l’Occitanie est située dans le sud de la France. Elle est bordée par la mer Méditerranée à l’est et l’Espagne au sud-ouest. C’est une région vaste, qui comprend à la fois des côtes, des montagnes (les Pyrénées) et des plaines agricoles.",
@@ -1039,12 +805,6 @@
             "id": "formation_173",
             "question": "Quels sont les départements et les grandes villes de l’Occitanie ?",
             "explanation": "L’Occitanie compte 13 départements : Ariège, Aude, Aveyron, Gard, Gers, Haute-Garonne, Hautes-Pyrénées, Hérault, Lot, Lozère, Pyrénées-Orientales, Tarn, Tarn-et-Garonne. \nSes principales villes sont Toulouse (préfecture), Montpellier, Nîmes, Perpignan, Béziers, Albi et Tarbes.",
-            "image": null
-        },
-        {
-            "id": "formation_174",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 6,2 millions d’habitants. La population augmente fortement, notamment autour de Toulouse et Montpellier. C’est une région jeune et attractive.\n\nSecteurs économiques clés:\n\n- Aéronautique et spatial (Airbus à Toulouse), agriculture et vignes, tourisme (mer Méditerranée, montagne, patrimoine), santé, numérique.\n\nSituation du marché du travail:\n\n- Le taux de chômage est plus élevé que la moyenne nationale. L’économie est dynamique dans les grandes villes, mais plus fragile dans les zones rurales et montagneuses.",
             "image": null
         },
         {
@@ -1060,12 +820,6 @@
             "image": null
         },
         {
-            "id": "formation_177",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 3,9 millions d’habitants. La population augmente rapidement, notamment dans les villes de Nantes, Angers et Le Mans.\n\nSecteurs économiques clés:\n\n- Industrie (navale, agroalimentaire, aéronautique), agriculture, numérique, énergies renouvelables, tourisme (littoral vendéen, châteaux, patrimoine culturel).\n\nSituation du marché du travail:\n\n- Le taux de chômage est inférieur à la moyenne nationale. L’économie est dynamique, avec une région attractive et des travailleurs qualifiés.",
-            "image": null
-        },
-        {
             "id": "formation_178",
             "question": "Où est située la région de la Provence-Alpes-Côte d’Azur ?",
             "explanation": "La région de la Provence-Alpes-Côte d’Azur est située dans le sud-est de la France. Elle est bordée par l’Italie et la mer Méditerranée. C’est une région à la fois côtière\net montagneuse (Alpes du Sud).",
@@ -1075,12 +829,6 @@
             "id": "formation_179",
             "question": "Quels sont les départements et les grandes villes de la Provence-Alpes-Côte d’Azur ?",
             "explanation": "La Provence-Alpes-Côte d’Azur compte 6 départements : Alpes-de-Haute-Provence, Alpes-Maritimes, Bouches-du-Rhône, Hautes-Alpes, Var, Vaucluse.\n\nSes principales villes sont Marseille (préfecture), Nice, Toulon, Avignon, Aix-en-Provence, Gap.",
-            "image": null
-        },
-        {
-            "id": "formation_180",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 5,2 millions d’habitants. La région est très urbanisée sur le littoral et plus rurale et montagneuse dans les Alpes. Elle reste attractive, même si sa population vieillit.\n\nSecteurs économiques clés:\n\n- Tourisme, industrie (portuaire, chimie, aéronautique), numérique, agriculture méditerranéenne.\n\nSituation du marché du travail:\n\n- Le taux de chômage est plus élevé que la moyenne nationale, notamment dans les grandes métropoles. Le littoral est dynamique, tandis que l’arrière-pays est confronté à plus de difficultés.",
             "image": null
         },
         {
@@ -1096,12 +844,6 @@
             "image": null
         },
         {
-            "id": "formation_183",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 380 400 habitants. La population vieillit et diminue, en raison de l’émigration des jeunes vers la France métropolitaine.\n\nSecteurs économiques clés:\n\n- Tourisme, agriculture (canne à sucre, banane), pêche, énergie (géothermie), services publics. La Guadeloupe dépend fortement des importations.\n\nSituation du marché du travail:\n\n- Le taux de chômage est élevé. L’activité économique se concentre autour des services et du commerce.",
-            "image": null
-        },
-        {
             "id": "formation_184",
             "question": "Où est située la Martinique ?",
             "explanation": "La Martinique est une île située dans les Caraïbes, au sein de l’archipel des Petites Antilles.",
@@ -1111,12 +853,6 @@
             "id": "formation_185",
             "question": "Quels sont les départements et les grandes villes de la Martinique ?",
             "explanation": "La Martinique est à la fois un département et une région d’outre-mer (DROM).\n\nSes principales villes sont Fort-de-France (préfecture), Le Lamentin, Schœlcher, Le Robert et Sainte-Marie.",
-            "image": null
-        },
-        {
-            "id": "formation_186",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 355 500 habitants. La Martinique connaît un vieillissement et une légère diminution de sa population, en raison de la baisse de la natalité et de l’émigration des jeunes.\n\nSecteurs économiques clés:\n\n- Tourisme, agriculture (banane, rhum), pêche, services publics, commerce portuaire. La Martinique dépend fortement des importations et de l’économie de la France métropolitaine.\n\nSituation du marché du travail:\n\n- Le taux de chômage est élevé. Le marché de l’emploi est marqué par la saisonnalité touristique et le secteur public.",
             "image": null
         },
         {
@@ -1132,12 +868,6 @@
             "image": null
         },
         {
-            "id": "formation_189",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 292 400 habitants. La population est jeune : plus de la moitié a moins de 30 ans.\n\nSecteurs économiques clés:\n\n- Centre spatial (CNES à Kourou), pêche, extraction d’or, agriculture, services publics.\n\nSituation du marché du travail:\n\n- Le taux de chômage est très élevé. Les services et les formations sont difficiles d’accès dans l’intérieur du territoire.",
-            "image": null
-        },
-        {
             "id": "formation_190",
             "question": "Où est située La Réunion ?",
             "explanation": "La Réunion est une île volcanique située dans l’océan Indien, à l’est de Madagascar et au sud-ouest de l’île Maurice.",
@@ -1150,12 +880,6 @@
             "image": null
         },
         {
-            "id": "formation_192",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\nEnviron 885 700 habitants. Sa population est jeune, mais vieillit progressivement.\n\nSecteurs économiques clés:\n\n- Tourisme, agriculture (canne à sucre, fruits tropicaux), construction, énergies renouvelables (géothermie, solaire), technologies de l’information et de la communication, services publics.\n\nSituation du marché du travail:\n\n- Le taux de chômage est élevé (environ 19 % de la population active). Les inégalités sociales et territoriales sont importantes et l’île dépend fortement des transferts publics.",
-            "image": null
-        },
-        {
             "id": "formation_193",
             "question": "Où est située Mayotte ?",
             "explanation": "Mayotte est une île située dans l’océan Indien, entre Madagascar et le continent africain (Mozambique). Elle fait partie de l’archipel des Comores.",
@@ -1165,12 +889,6 @@
             "id": "formation_194",
             "question": "Quels sont les départements et les grandes villes de Mayotte ?",
             "explanation": "Mayotte est à la fois un département et une région d’outre-mer (DROM).\n\nSes grandes villes sont Mamoudzou (préfecture), Dzaoudzi, Koungou, Dembéni et Bandraboua.",
-            "image": null
-        },
-        {
-            "id": "formation_195",
-            "question": "Quelles sont ses caractéristiques ?",
-            "explanation": "Démographie:\n\n- Environ 321 000 habitants (estimation). La population est en forte augmentation et est très jeune (la moitié a moins de 18 ans).\n\nSecteurs économiques clés:\n\n- Agriculture vivrière, pêche, administration, construction, petits commerces. Projets de développement dans les infrastructures et la santé.\n\nSituation du marché du travail:\n\n- Le taux de chômage est très élevé (environ 35 % de la population active). Le niveau de vie est beaucoup plus bas que la moyenne nationale.",
             "image": null
         },
         {
@@ -1363,6 +1081,12 @@
             "id": "formation_227",
             "question": "Où trouver des informations sur les événements et lieux culturels ?",
             "explanation": "Aujourd’hui, de nombreuses ressources permettent de découvrir facilement les événements, expositions et lieux à visiter en France :\n\n- Internet : les sites officiels comme culture.gouv.fr, pass.culture.fr, ou ceux des musées, opéras, théâtres... publient régulièrement leurs programmes. Des plateformes pécialisées listent aussi les événements culturels.\n\n- Les réseaux sociaux sont des canaux utilisés par les structures et lieux culturels. Vous pouvez suivre leur actualité culturelle ou découvrir de nouveaux lieux.\n\n- Les offices de tourisme : ce sont des structures locales implantées dans presque toutes les villes et régions de France. Les offices de tourisme donnent gratuitement des informations et des conseils sur les lieux à découvrir et activités à faire aux visiteurs et habitants. On y trouve des brochures, plans, guides culturels, qui listent les musées, expositions, spectacles, festivals, visites guidées ou circuits patrimoniaux de la région.",
+            "image": null
+        },
+        {
+            "id": "formation_228",
+            "question": "Les frontières et l’espace maritime de la France",
+            "explanation": "La France possède un vaste espace maritime qui s'étend sur plusieurs océans et mers. \n\nLes frontières maritimes de la France comprennent :\n\n- Les eaux territoriales : 12 milles nautiques (environ 22 km) depuis la côte, où la France exerce sa souveraineté complète.\n\n- La zone économique exclusive (ZEE) : 200 milles nautiques (environ 370 km) depuis la côte, où la France a des droits exclusifs pour l'exploitation des ressources naturelles (pêche, pétrole, gaz, etc.).\n\n- Le plateau continental : extension naturelle du territoire sous-marin, qui peut s'étendre au-delà de 200 milles nautiques dans certains cas.\n\nGrâce à ses territoires d'outre-mer (DOM-TOM), la France possède la deuxième plus grande ZEE au monde après les États-Unis, couvrant environ 11 millions de km² dans l'Atlantique, le Pacifique, l'océan Indien et la Méditerranée.\n\nCes espaces maritimes sont importants pour la pêche, l'exploitation des ressources énergétiques, la protection de l'environnement marin, et la souveraineté nationale.",
             "image": null
         }
     ]

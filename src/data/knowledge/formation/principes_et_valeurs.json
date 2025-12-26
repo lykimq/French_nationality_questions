@@ -304,21 +304,15 @@
             "image": null
         },
         {
-            "id": "formation_52",
-            "question": "La charte de la laïcité dans les services publics",
-            "explanation": "Il existe un document qui rappelle les droits et les devoirs pour respecter la laïcité dans les services publics. Il s’adresse aux usagers et aux personnes qui travaillent dans ces services. C’est la Charte de la laïcité dans les services publics.",
-            "image": null
-        },
-        {
             "id": "formation_51",
             "question": "Le prosélytisme, qu’est-ce que c’est ?",
             "explanation": "Une personne qui fait du prosélytisme religieux cherche à convaincre d’autres personnes de choisir sa religion. Cela peut se traduire par différentes actions : parler avec une personne, distribuer des documents, ou inviter une personne à une pratique religieuse (prière, culte…).",
             "image": null
         },
         {
-            "id": "formation_72",
-            "question": "Le prosélytisme, une attitude autorisée en France",
-            "explanation": "En France, le prosélytisme religieux est autorisé, car chaque personne a la liberté d’avoir une religion ou pas.\n\nMais il ne doit pas consister à forcer quelqu'un à croire en une religion.\n\nLe harcèlement religieux est interdit : le prosélytisme ne doit pas utiliser la contrainte physique ou psychologique. Ne pas respecter cette règle peut entraîner une sanction.",
+            "id": "formation_52",
+            "question": "La charte de la laïcité dans les services publics",
+            "explanation": "Il existe un document qui rappelle les droits et les devoirs pour respecter la laïcité dans les services publics. Il s’adresse aux usagers et aux personnes qui travaillent dans ces services. C’est la Charte de la laïcité dans les services publics.",
             "image": null
         },
         {
@@ -433,6 +427,18 @@
             "id": "formation_71",
             "question": "Les cas particuliers",
             "explanation": "Les personnes qui bénéficient d’une protection internationale (réfugiés, apatrides, protection subsidiaire) doivent également signer le contrat d’engagement.",
+            "image": null
+        },
+        {
+            "id": "formation_72",
+            "question": "Le prosélytisme, une attitude autorisée en France",
+            "explanation": "En France, le prosélytisme religieux est autorisé, car chaque personne a la liberté d’avoir une religion ou pas.\n\nMais il ne doit pas consister à forcer quelqu'un à croire en une religion.\n\nLe harcèlement religieux est interdit : le prosélytisme ne doit pas utiliser la contrainte physique ou psychologique. Ne pas respecter cette règle peut entraîner une sanction.",
+            "image": null
+        },
+        {
+            "id": "formation_73",
+            "question": "Manifester sa religion, c’est possible…",
+            "explanation": "En France, toute personne a le droit de manifester sa religion dans l’espace public, c’est-à-dire dans les lieux ouverts à tous : rues, restaurants, marchés, magasins, transports... Cela signifie qu’une personne peut :\n\n- porter des signes religieux (voile, kippa, croix, turban...) ;\n\n- participer à des célébrations ou rassemblements religieux ;\n\n- exprimer ses convictions religieuses, dans le respect des lois de la République française.",
             "image": null
         }
     ]
