@@ -1,30 +1,30 @@
 import type { CivicExamSession, CivicExamProgress, CivicExamStatistics, CivicExamQuestion } from '../types';
 import type { TestAnswer } from '../types';
-import { DEFAULT_THEME_PERFORMANCE } from './civicExamDefaults';
+import { DEFAULT_TOPIC_PERFORMANCE } from './civicExamDefaults';
 
-export const updateThemePerformance = (
+export const updateTopicPerformance = (
     session: CivicExamSession,
-    currentThemePerformance: CivicExamProgress['themePerformance']
-): CivicExamProgress['themePerformance'] => {
-    const updated = { ...currentThemePerformance };
+    currentTopicPerformance: CivicExamProgress['topicPerformance']
+): CivicExamProgress['topicPerformance'] => {
+    const updated = { ...currentTopicPerformance };
 
     session.questions.forEach((question) => {
         const answer = session.answers.find(a => a.questionId === question.id);
         if (!answer) return;
 
-        const theme = (question as CivicExamQuestion).theme;
-        if (!theme) return;
+        const topic = (question as CivicExamQuestion).topic;
+        if (!topic) return;
 
-        if (!updated[theme]) {
-            updated[theme] = { ...DEFAULT_THEME_PERFORMANCE[theme] };
+        if (!updated[topic]) {
+            updated[topic] = { ...DEFAULT_TOPIC_PERFORMANCE[topic] };
         }
 
-        updated[theme].questionsAttempted += 1;
+        updated[topic].questionsAttempted += 1;
         if (answer.isCorrect) {
-            updated[theme].correctAnswers += 1;
+            updated[topic].correctAnswers += 1;
         }
-        updated[theme].accuracy = Math.round(
-            (updated[theme].correctAnswers / updated[theme].questionsAttempted) * 100
+        updated[topic].accuracy = Math.round(
+            (updated[topic].correctAnswers / updated[topic].questionsAttempted) * 100
         );
     });
 
@@ -38,7 +38,7 @@ export const updateExamStatistics = (
 ): CivicExamStatistics => {
     const updated = { ...currentStatistics };
 
-    updated.themeBreakdown = { ...updatedProgress.themePerformance };
+    updated.topicBreakdown = { ...updatedProgress.topicPerformance };
 
     const allTimes = session.answers
         .map(a => a.timeSpent)
@@ -97,7 +97,7 @@ export const calculateProgressUpdates = (
         failedExams: newFailedExams,
         recentScores: [...currentProgress.recentScores.slice(-9), score],
         incorrectQuestions: [...currentProgress.incorrectQuestions, ...incorrectQuestionIds].slice(-100),
-        themePerformance: updateThemePerformance(session, currentProgress.themePerformance),
+        topicPerformance: updateTopicPerformance(session, currentProgress.topicPerformance),
     };
 };
 

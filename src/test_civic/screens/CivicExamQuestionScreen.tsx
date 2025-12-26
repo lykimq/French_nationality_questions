@@ -8,7 +8,7 @@ import {
     ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect, CommonActions } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
@@ -38,6 +38,7 @@ const CivicExamQuestionScreen = () => {
         getCurrentQuestion,
         submitAnswer,
         goToNextQuestion,
+        cancelExam,
     } = useCivicExam();
 
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -45,6 +46,7 @@ const CivicExamQuestionScreen = () => {
     const [answerIsCorrect, setAnswerIsCorrect] = useState<boolean | null>(null);
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const previousQuestionIndexRef = useRef<number>(-1);
+    const isNavigatingAwayRef = useRef<boolean>(false);
 
     const isExamMode = currentSession?.mode === 'civic_exam_naturalization';
     const isPracticeMode = currentSession?.isPracticeMode || false;
@@ -72,10 +74,10 @@ const CivicExamQuestionScreen = () => {
     useEffect(() => {
         if (currentQuestion && currentSession) {
             const options = currentQuestion.options || [];
-            const hasOptions = 'options' in currentQuestion && 
-                              Array.isArray(currentQuestion.options) && 
-                              currentQuestion.options.length > 0;
-            
+            const hasOptions = 'options' in currentQuestion &&
+                Array.isArray(currentQuestion.options) &&
+                currentQuestion.options.length > 0;
+
         }
     }, [currentQuestion, currentQuestionIndex, currentSession, isPracticeMode]);
 
@@ -96,6 +98,94 @@ const CivicExamQuestionScreen = () => {
             navigation.navigate('CivicExamHome');
         }
     }, [currentSession, navigation]);
+
+    // Prevent back navigation without confirmation
+    useFocusEffect(
+        useCallback(() => {
+            const onBackPress = (e: { preventDefault: () => void; data: { action: any } }) => {
+                // Skip if we're already programmatically navigating away
+                if (isNavigatingAwayRef.current) {
+                    return;
+                }
+
+                if (!currentSession) {
+                    return;
+                }
+
+                const action = e.data.action;
+                const isBackAction = action.type === 'GO_BACK' || 
+                                   (action.type === 'NAVIGATE' && action.payload?.name === 'CivicExamHome');
+                
+                if (isBackAction) {
+                    e.preventDefault();
+                    
+                    if (isPracticeMode) {
+                        Alert.alert(
+                            'Mettre en pause',
+                            'Voulez-vous mettre en pause votre pratique ? Vous pourrez reprendre plus tard.',
+                            [
+                                {
+                                    text: 'Continuer',
+                                    style: 'cancel',
+                                    onPress: () => {},
+                                },
+                                {
+                                    text: 'Pause',
+                                    style: 'default',
+                                    onPress: () => {
+                                        isNavigatingAwayRef.current = true;
+                                        cancelExam();
+                                        navigation.dispatch(
+                                            CommonActions.reset({
+                                                index: 0,
+                                                routes: [{ name: 'CivicExamHome' }],
+                                            })
+                                        );
+                                    },
+                                },
+                            ],
+                            { cancelable: true }
+                        );
+                    } else {
+                        Alert.alert(
+                            'Quitter l\'examen',
+                            'Êtes-vous sûr de vouloir quitter l\'examen ? Votre progression sera perdue.',
+                            [
+                                {
+                                    text: 'Annuler',
+                                    style: 'cancel',
+                                    onPress: () => {},
+                                },
+                                {
+                                    text: 'Quitter',
+                                    style: 'destructive',
+                                    onPress: () => {
+                                        isNavigatingAwayRef.current = true;
+                                        cancelExam();
+                                        navigation.dispatch(
+                                            CommonActions.reset({
+                                                index: 0,
+                                                routes: [{ name: 'CivicExamHome' }],
+                                            })
+                                        );
+                                    },
+                                },
+                            ],
+                            { cancelable: true }
+                        );
+                    }
+                }
+            };
+
+            const unsubscribe = navigation.addListener('beforeRemove', onBackPress);
+
+            return () => {
+                unsubscribe();
+                // Reset flag when component loses focus
+                isNavigatingAwayRef.current = false;
+            };
+        }, [navigation, isPracticeMode, cancelExam, currentSession])
+    );
 
     const handleAnswerSelect = async (index: number) => {
         if (!currentQuestion || answerSubmitted) return;
@@ -135,6 +225,62 @@ const CivicExamQuestionScreen = () => {
             }
         }
     };
+
+    const handleExitPress = useCallback(() => {
+        if (isPracticeMode) {
+            Alert.alert(
+                'Mettre en pause',
+                'Voulez-vous mettre en pause votre pratique ? Vous pourrez reprendre plus tard.',
+                [
+                    {
+                        text: 'Continuer',
+                        style: 'cancel',
+                    },
+                    {
+                        text: 'Pause',
+                        style: 'default',
+                        onPress: () => {
+                            isNavigatingAwayRef.current = true;
+                            cancelExam();
+                            navigation.dispatch(
+                                CommonActions.reset({
+                                    index: 0,
+                                    routes: [{ name: 'CivicExamHome' }],
+                                })
+                            );
+                        },
+                    },
+                ],
+                { cancelable: true }
+            );
+        } else {
+            Alert.alert(
+                'Quitter l\'examen',
+                'Êtes-vous sûr de vouloir quitter l\'examen ? Votre progression sera perdue.',
+                [
+                    {
+                        text: 'Annuler',
+                        style: 'cancel',
+                    },
+                    {
+                        text: 'Quitter',
+                        style: 'destructive',
+                        onPress: () => {
+                            isNavigatingAwayRef.current = true;
+                            cancelExam();
+                            navigation.dispatch(
+                                CommonActions.reset({
+                                    index: 0,
+                                    routes: [{ name: 'CivicExamHome' }],
+                                })
+                            );
+                        },
+                    },
+                ],
+                { cancelable: true }
+            );
+        }
+    }, [isPracticeMode, cancelExam, navigation]);
 
     const handleSubmitAnswer = async () => {
         if (selectedAnswer === null || !currentQuestion || !currentSession) return;
@@ -187,8 +333,8 @@ const CivicExamQuestionScreen = () => {
     }
 
     const actualTotalQuestions = currentSession.questions.length;
-    const progress = actualTotalQuestions > 0 
-        ? ((currentQuestionIndex + 1) / actualTotalQuestions) * 100 
+    const progress = actualTotalQuestions > 0
+        ? ((currentQuestionIndex + 1) / actualTotalQuestions) * 100
         : 0;
 
 
@@ -203,6 +349,7 @@ const CivicExamQuestionScreen = () => {
                     timeLeft={timeLeft}
                     formattedTime={formattedTime}
                     progress={progress}
+                    onExit={handleExitPress}
                 />
 
                 <ScrollView

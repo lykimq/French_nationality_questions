@@ -1,6 +1,6 @@
-import type { CivicExamProgress, CivicExamStatistics, CivicExamTheme } from '../types';
+import type { CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
 
-export const DEFAULT_THEME_PERFORMANCE: Record<CivicExamTheme, {
+export const DEFAULT_TOPIC_PERFORMANCE: Record<CivicExamTopic, {
     questionsAttempted: number;
     correctAnswers: number;
     accuracy: number;
@@ -23,7 +23,7 @@ export const createDefaultCivicExamProgress = (): CivicExamProgress => ({
     correctAnswersTotal: 0,
     incorrectQuestions: [],
     recentScores: [],
-    themePerformance: { ...DEFAULT_THEME_PERFORMANCE },
+    topicPerformance: { ...DEFAULT_TOPIC_PERFORMANCE },
     createdAt: new Date(),
     updatedAt: new Date(),
 });
@@ -38,6 +38,6 @@ export const createDefaultCivicExamStatistics = (): CivicExamStatistics => ({
     improvementTrend: 'stable',
     masteredQuestions: [],
     strugglingQuestions: [],
-    themeBreakdown: { ...DEFAULT_THEME_PERFORMANCE },
+    topicBreakdown: { ...DEFAULT_TOPIC_PERFORMANCE },
 });
 

@@ -23,13 +23,15 @@ const CivicExamHomeScreen = () => {
     const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { getIcon } = useIcon3D();
-    const { examProgress, isLoading, refreshProgress } = useCivicExam();
+    const { examProgress, isLoading, refreshProgress, pausedSession, resumeSession } = useCivicExam();
 
     const arrowBackIcon = getIcon('arrowBack');
 
     useFocusEffect(
         React.useCallback(() => {
             refreshProgress();
+            // Reload paused session when screen is focused
+            // This is handled by the session context's useEffect
         }, [refreshProgress])
     );
 
@@ -39,6 +41,15 @@ const CivicExamHomeScreen = () => {
 
     const handlePracticeMode = () => {
         navigation.navigate('CivicExamPractice');
+    };
+
+    const handleResumePractice = async () => {
+        try {
+            await resumeSession();
+            navigation.navigate('CivicExamQuestion');
+        } catch (error) {
+            console.error('Error resuming practice:', error);
+        }
     };
 
     if (isLoading) {
@@ -121,6 +132,24 @@ const CivicExamHomeScreen = () => {
                             </FormattedText>
                         </View>
                     </View>
+
+                    {pausedSession && (
+                        <TouchableOpacity
+                            style={[styles.resumeButton, { backgroundColor: theme.colors.warning || '#FF9800', borderColor: theme.colors.border }]}
+                            onPress={handleResumePractice}
+                            activeOpacity={0.8}
+                        >
+                            <Icon3D
+                                name="play"
+                                size={20}
+                                color="#FFFFFF"
+                                variant="gradient"
+                            />
+                            <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
+                                Reprendre la pratique
+                            </FormattedText>
+                        </TouchableOpacity>
+                    )}
 
                     <TouchableOpacity
                         style={[styles.primaryButton, { backgroundColor: theme.colors.primary }]}
@@ -244,6 +273,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 12,
         padding: 16,
+        borderWidth: 2,
+        gap: 12,
+    },
+    resumeButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 12,
+        padding: 16,
+        marginBottom: 12,
         borderWidth: 2,
         gap: 12,
     },

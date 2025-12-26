@@ -19,8 +19,10 @@ interface CivicExamSessionContextType {
     currentSession: CivicExamSession | null;
     isExamActive: boolean;
     currentQuestionIndex: number;
+    pausedSession: CivicExamSession | null;
 
     startExam: (config: CivicExamConfig, allQuestions: readonly TestQuestion[]) => Promise<void>;
+    resumeSession: () => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishExam: () => Omit<CivicExamResult, 'statistics'> & { session: CivicExamSession };
@@ -39,11 +41,19 @@ export const CivicExamSessionProvider: React.FC<{
 }> = ({ children, allProcessedQuestions }) => {
     const [currentSession, setCurrentSession] = useState<CivicExamSession | null>(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [pausedSession, setPausedSession] = useState<CivicExamSession | null>(null);
 
     useEffect(() => {
         loadStoredSession()
             .then(session => {
                 if (session) {
+                    if (session.isPaused) {
+                        // Store paused session separately, don't auto-resume
+                        setPausedSession(session);
+                        return;
+                    }
+
+                    // Load active (non-paused) session
                     const actualQuestionCount = session.questions.length;
                     if (session.totalQuestions !== actualQuestionCount) {
                         logger.warn(
@@ -64,7 +74,42 @@ export const CivicExamSessionProvider: React.FC<{
             .catch(error => logger.error('Failed to hydrate stored civic exam session', error));
     }, []);
 
+    const resumeSession = useCallback(async (): Promise<void> => {
+        if (!pausedSession) {
+            throw new Error('No paused session to resume');
+        }
+
+        // Clear the paused flag and restore the session
+        const resumedSession: CivicExamSession = {
+            ...pausedSession,
+            isPaused: false,
+            pausedAt: undefined,
+        };
+
+        const actualQuestionCount = resumedSession.questions.length;
+        if (resumedSession.totalQuestions !== actualQuestionCount) {
+            resumedSession.totalQuestions = actualQuestionCount;
+        }
+
+        setCurrentSession(resumedSession);
+        const maxIndex = Math.max(0, actualQuestionCount - 1);
+        const targetIndex = Math.min(resumedSession.answers.length, maxIndex);
+        setCurrentQuestionIndex(targetIndex);
+        
+        // Save the resumed session
+        await saveSession(resumedSession);
+        
+        // Clear paused session
+        setPausedSession(null);
+    }, [pausedSession]);
+
     const startExam = useCallback(async (config: CivicExamConfig, allQuestions: readonly TestQuestion[]): Promise<void> => {
+        // If there's a paused session and we're starting a new practice session, clear it
+        if (pausedSession && config.mode === 'civic_exam_practice') {
+            await clearStoredSession();
+            setPausedSession(null);
+        }
+
         const questions = generateCivicExamQuestions([...allQuestions], config);
 
         if (questions.length === 0) {
@@ -112,14 +157,14 @@ export const CivicExamSessionProvider: React.FC<{
             score: 0,
             totalQuestions: actualQuestionCount,
             correctAnswers: 0,
-            themes: config.selectedThemes,
+            topics: config.selectedTopics,
             isPracticeMode,
         };
 
         setCurrentSession(newSession);
         setCurrentQuestionIndex(0);
         await saveSession(newSession);
-    }, []);
+    }, [pausedSession]);
 
     const submitAnswer = useCallback(async (answer: TestAnswer, autoAdvance: boolean = true): Promise<void> => {
         if (!currentSession) {
@@ -206,16 +251,30 @@ export const CivicExamSessionProvider: React.FC<{
     }, [currentSession]);
 
     const cancelExam = useCallback(() => {
+        if (currentSession?.isPracticeMode) {
+            // For practice mode, save the session with isPaused flag
+            const paused: CivicExamSession = {
+                ...currentSession,
+                isPaused: true,
+                pausedAt: new Date(),
+            };
+            saveSession(paused);
+            setPausedSession(paused);
+        } else {
+            // For exam mode, clear everything
+            clearStoredSession();
+        }
+
+        // Reset local state
         setCurrentSession(null);
         setCurrentQuestionIndex(0);
-        clearStoredSession();
-    }, []);
+    }, [currentSession]);
 
     const getCurrentQuestion = useCallback((): CivicExamQuestion | null => {
         if (!currentSession || currentSession.questions.length === 0) {
             return null;
         }
-        
+
         const actualQuestionCount = currentSession.questions.length;
         if (currentSession.totalQuestions !== actualQuestionCount) {
             logger.warn(
@@ -223,7 +282,7 @@ export const CivicExamSessionProvider: React.FC<{
                 `questions.length=${actualQuestionCount}. Using questions.length as source of truth.`
             );
         }
-        
+
         if (currentQuestionIndex < 0 || currentQuestionIndex >= actualQuestionCount) {
             logger.warn(
                 `Invalid question index: ${currentQuestionIndex}, questions length: ${actualQuestionCount}, ` +
@@ -233,7 +292,7 @@ export const CivicExamSessionProvider: React.FC<{
             setCurrentQuestionIndex(validIndex);
             return currentSession.questions[validIndex] as CivicExamQuestion;
         }
-        
+
         const question = currentSession.questions[currentQuestionIndex];
         if (!question) {
             logger.error(
@@ -242,12 +301,12 @@ export const CivicExamSessionProvider: React.FC<{
             );
             return null;
         }
-        
+
         const questionWithOptions = question as CivicExamQuestion & { options?: string[] };
         if (currentSession.isPracticeMode) {
-            const hasOptions = 'options' in questionWithOptions && 
-                              Array.isArray(questionWithOptions.options) && 
-                              questionWithOptions.options.length > 0;
+            const hasOptions = 'options' in questionWithOptions &&
+                Array.isArray(questionWithOptions.options) &&
+                questionWithOptions.options.length > 0;
             if (!hasOptions) {
                 logger.warn(
                     `Question at index ${currentQuestionIndex} (ID: ${question.id}) has no options in practice mode. ` +
@@ -256,7 +315,7 @@ export const CivicExamSessionProvider: React.FC<{
                 );
             }
         }
-        
+
         return question as CivicExamQuestion;
     }, [currentSession, currentQuestionIndex]);
 
@@ -278,7 +337,9 @@ export const CivicExamSessionProvider: React.FC<{
         currentSession,
         isExamActive: currentSession !== null,
         currentQuestionIndex,
+        pausedSession,
         startExam,
+        resumeSession,
         submitAnswer,
         goToNextQuestion,
         finishExam,
@@ -289,7 +350,9 @@ export const CivicExamSessionProvider: React.FC<{
     }), [
         currentSession,
         currentQuestionIndex,
+        pausedSession,
         startExam,
+        resumeSession,
         submitAnswer,
         goToNextQuestion,
         finishExam,

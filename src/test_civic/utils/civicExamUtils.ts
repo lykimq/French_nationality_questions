@@ -1,29 +1,56 @@
 import type { TestQuestion } from '../../types';
-import type { CivicExamTheme, CivicExamSubTheme, QuestionType, CivicExamQuestion } from '../types';
-import { CATEGORY_TO_THEME_MAP, SUBTHEME_TO_CATEGORY_MAP } from '../constants/civicExamConstants';
+import type { CivicExamTopic, CivicExamSubTopic, QuestionType, CivicExamQuestion } from '../types';
+import { createLogger } from '../../shared/utils/logger';
 
-// ==================== THEME MAPPING ====================
+const logger = createLogger('CivicExamUtils');
 
-export const mapCategoryToTheme = (categoryId: string): CivicExamTheme | null => {
-    return CATEGORY_TO_THEME_MAP[categoryId] || null;
-};
+// ==================== TOPIC MAPPING ====================
 
-export const getThemeFromQuestion = (question: TestQuestion): CivicExamTheme | null => {
-    // First check if question has explicit theme metadata
-    if ('theme' in question && question.theme) {
-        return question.theme as CivicExamTheme;
+/**
+ * Gets the topic from a question.
+ * 
+ * Design Principle: Topic/subTopic metadata is ONLY for civic exam questions.
+ * General knowledge questions use categoryId for their own categorization.
+ * 
+ * @param question - The question to get topic from
+ * @returns The topic if present, null otherwise
+ */
+export const getTopicFromQuestion = (question: TestQuestion): CivicExamTopic | null => {
+    // Civic exam questions should always have explicit topic metadata
+    if ('topic' in question && question.topic) {
+        return question.topic as CivicExamTopic;
     }
     
-    // Fall back to category mapping
-    return mapCategoryToTheme(question.categoryId);
-};
-
-export const getSubThemeFromQuestion = (question: TestQuestion): CivicExamSubTheme | null => {
-    // Check if question has explicit subTheme metadata
-    if ('subTheme' in question && question.subTheme) {
-        return question.subTheme as CivicExamSubTheme;
+    // For civic exam questions, topic should always be present in the data
+    if (question.categoryId === 'civic_exam') {
+        logger.warn(
+            `Civic exam question ${question.id} is missing topic metadata. ` +
+            `This should be fixed in the JSON data file.`
+        );
+        return null;
     }
     
+    // General knowledge questions don't have topics - this is by design
+    // They use categoryId for their own categorization system
+    return null;
+};
+
+/**
+ * Gets the subTopic from a question.
+ * 
+ * Design Principle: SubTopic metadata is ONLY for civic exam questions.
+ * General knowledge questions don't need subTopics.
+ * 
+ * @param question - The question to get subTopic from
+ * @returns The subTopic if present, null otherwise
+ */
+export const getSubTopicFromQuestion = (question: TestQuestion): CivicExamSubTopic | null => {
+    // Check if question has explicit subTopic metadata
+    if ('subTopic' in question && question.subTopic) {
+        return question.subTopic as CivicExamSubTopic;
+    }
+    
+    // General knowledge questions don't have subTopics - this is by design
     return null;
 };
 
@@ -39,18 +66,28 @@ export const getQuestionTypeFromQuestion = (question: TestQuestion): QuestionTyp
 
 // ==================== QUESTION FILTERING ====================
 
-export const getQuestionsByTheme = (
+export const getQuestionsByTopic = (
     questions: TestQuestion[],
-    theme: CivicExamTheme
+    topic: CivicExamTopic
 ): TestQuestion[] => {
-    return questions.filter(q => getThemeFromQuestion(q) === theme);
+    return questions.filter(q => getTopicFromQuestion(q) === topic);
 };
 
-export const getQuestionsBySubTheme = (
+/**
+ * Filters questions by subTopic.
+ * 
+ * Note: Only civic exam questions have subTopics. This function will only
+ * return civic exam questions that match the specified subTopic.
+ * 
+ * @param questions - Array of questions to filter
+ * @param subTopic - The subTopic to filter by
+ * @returns Questions that match the subTopic (only civic exam questions)
+ */
+export const getQuestionsBySubTopic = (
     questions: TestQuestion[],
-    subTheme: CivicExamSubTheme
+    subTopic: CivicExamSubTopic
 ): TestQuestion[] => {
-    return questions.filter(q => getSubThemeFromQuestion(q) === subTheme);
+    return questions.filter(q => getSubTopicFromQuestion(q) === subTopic);
 };
 
 export const filterQuestionsWithOptions = (questions: TestQuestion[]): TestQuestion[] => {
@@ -72,13 +109,26 @@ export const filterSituationalQuestions = (questions: TestQuestion[]): TestQuest
     return questions.filter(q => getQuestionTypeFromQuestion(q) === 'situational');
 };
 
-export const getQuestionsByThemes = (
+/**
+ * Filters questions by multiple themes.
+ * 
+/**
+ * Filters questions by multiple topics.
+ * 
+ * Note: Only civic exam questions have topics. This function will only
+ * return civic exam questions that match any of the specified topics.
+ * 
+ * @param questions - Array of questions to filter
+ * @param topics - Array of topics to filter by
+ * @returns Questions that match any of the topics (only civic exam questions)
+ */
+export const getQuestionsByTopics = (
     questions: TestQuestion[],
-    themes: readonly CivicExamTheme[]
+    topics: readonly CivicExamTopic[]
 ): TestQuestion[] => {
     return questions.filter(q => {
-        const questionTheme = getThemeFromQuestion(q);
-        return questionTheme !== null && themes.includes(questionTheme);
+        const questionTopic = getTopicFromQuestion(q);
+        return questionTopic !== null && topics.includes(questionTopic);
     });
 };
 
@@ -86,28 +136,28 @@ export const getQuestionsByThemes = (
 
 /**
  * Enriches a question with required civic exam metadata.
- * Requires theme and subTheme to be present - questions without metadata
+ * Requires topic and subTopic to be present - questions without metadata
  * should not be used in civic exams.
  */
 export const enrichQuestionWithMetadata = (
     question: TestQuestion
 ): CivicExamQuestion => {
-    const theme = getThemeFromQuestion(question);
-    const subTheme = getSubThemeFromQuestion(question);
+    const topic = getTopicFromQuestion(question);
+    const subTopic = getSubTopicFromQuestion(question);
     const questionType = getQuestionTypeFromQuestion(question);
 
-    if (!theme) {
-        throw new Error(`Question ${question.id} missing required theme metadata`);
+    if (!topic) {
+        throw new Error(`Question ${question.id} missing required topic metadata`);
     }
 
-    if (!subTheme) {
-        throw new Error(`Question ${question.id} missing required subTheme metadata`);
+    if (!subTopic) {
+        throw new Error(`Question ${question.id} missing required subTopic metadata`);
     }
 
     return {
         ...question,
-        theme,
-        subTheme,
+        topic,
+        subTopic,
         questionType,
     };
 };
@@ -115,17 +165,43 @@ export const enrichQuestionWithMetadata = (
 export const enrichQuestionsWithMetadata = (
     questions: TestQuestion[]
 ): CivicExamQuestion[] => {
-    return questions.map(enrichQuestionWithMetadata);
+    const validQuestions: CivicExamQuestion[] = [];
+    const invalidQuestionIds: (string | number)[] = [];
+    
+    questions.forEach(question => {
+        const topic = getTopicFromQuestion(question);
+        const subTopic = getSubTopicFromQuestion(question);
+        
+        if (!topic || !subTopic) {
+            invalidQuestionIds.push(question.id);
+            return;
+        }
+        
+        try {
+            const enriched = enrichQuestionWithMetadata(question);
+            validQuestions.push(enriched);
+        } catch (error) {
+            invalidQuestionIds.push(question.id);
+        }
+    });
+    
+    if (invalidQuestionIds.length > 0) {
+        logger.warn(
+            `Skipped ${invalidQuestionIds.length} question(s) missing required metadata: ${invalidQuestionIds.slice(0, 5).join(', ')}${invalidQuestionIds.length > 5 ? '...' : ''}`
+        );
+    }
+    
+    return validQuestions;
 };
 
 // ==================== VALIDATION ====================
 
-export const hasThemeMetadata = (question: TestQuestion): boolean => {
-    return 'theme' in question && question.theme !== undefined;
+export const hasTopicMetadata = (question: TestQuestion): boolean => {
+    return 'topic' in question && question.topic !== undefined;
 };
 
-export const hasSubThemeMetadata = (question: TestQuestion): boolean => {
-    return 'subTheme' in question && question.subTheme !== undefined;
+export const hasSubTopicMetadata = (question: TestQuestion): boolean => {
+    return 'subTopic' in question && question.subTopic !== undefined;
 };
 
 export const hasQuestionTypeMetadata = (question: TestQuestion): boolean => {

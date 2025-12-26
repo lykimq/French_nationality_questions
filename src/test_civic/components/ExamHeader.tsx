@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useIcon3D } from '../../shared/hooks';
@@ -11,6 +11,7 @@ interface ExamHeaderProps {
     timeLeft: number;
     formattedTime: string;
     progress: number;
+    onExit?: () => void;
 }
 
 export const ExamHeader: React.FC<ExamHeaderProps> = ({
@@ -18,12 +19,14 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
     totalQuestions,
     timeLeft,
     formattedTime,
-    progress
+    progress,
+    onExit
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
-    
+
     const timeIcon = getIcon('time');
+    const closeIcon = getIcon('close');
 
     const passingScore = Math.ceil((totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
     const passingText = totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS
@@ -33,6 +36,22 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
     return (
         <View style={styles.header}>
             <View style={styles.headerTop}>
+                {onExit && (
+                    <TouchableOpacity
+                        onPress={onExit}
+                        style={styles.exitButton}
+                        activeOpacity={0.7}
+                        accessibilityLabel="Quitter l'examen"
+                        accessibilityRole="button"
+                    >
+                        <Icon3D
+                            name={closeIcon.name}
+                            size={20}
+                            color={theme.colors.text}
+                            variant={closeIcon.variant}
+                        />
+                    </TouchableOpacity>
+                )}
                 <View style={styles.questionCounter}>
                     <FormattedText style={[styles.questionCounterText, { color: theme.colors.text }]}>
                         {currentQuestionIndex + 1} / {totalQuestions}
@@ -46,7 +65,7 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
                         name={timeIcon.name}
                         size={14}
                         color="#FFFFFF"
-                        variant="default"
+                        variant={timeIcon.variant}
                     />
                     <FormattedText style={styles.timerText}>{formattedTime}</FormattedText>
                 </View>
@@ -68,9 +87,16 @@ const styles = StyleSheet.create({
     },
     headerTop: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 8,
+    },
+    exitButton: {
+        padding: 8,
+        marginRight: 8,
+        minWidth: 36,
+        minHeight: 36,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     questionCounter: {
         flex: 1,

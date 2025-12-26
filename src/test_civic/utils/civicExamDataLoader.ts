@@ -4,7 +4,7 @@ import { sanitizeString, sanitizeStringArray, isNonEmptyString } from '../../sha
 import { DATA_FILES } from '../../shared/config/dataConfig';
 import { loadJsonCollection } from '../../shared/services/dataService';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
-import type { CivicExamTheme, CivicExamSubTheme } from '../types';
+import type { CivicExamTopic, CivicExamSubTopic } from '../types';
 
 const logger = createLogger('CivicExamDataLoader');
 
@@ -18,8 +18,8 @@ interface CivicExamQuestionData {
     question: string;
     explanation: string;
     image?: string | null;
-    theme?: string;
-    subTheme: string;
+    theme?: string; // JSON property name (will be transformed to 'topic')
+    subTheme: string; // JSON property name (will be transformed to 'subTopic')
     questionType: string;
     correctAnswer?: string;
     incorrectAnswers?: string[];
@@ -28,12 +28,12 @@ interface CivicExamQuestionData {
 }
 
 interface CivicExamDataFile {
-    themeId?: string;
+    themeId?: string; // JSON property name (legacy, maps to topic)
     themeTitle?: string;
     questions?: CivicExamQuestionData[];
 }
 
-const VALID_THEMES: readonly CivicExamTheme[] = [
+const VALID_TOPICS: readonly CivicExamTopic[] = [
     'principles_values',
     'institutional_political',
     'rights_duties',
@@ -41,7 +41,7 @@ const VALID_THEMES: readonly CivicExamTheme[] = [
     'living_society',
 ] as const;
 
-const VALID_SUBTHEMES: readonly CivicExamSubTheme[] = [
+const VALID_SUBTOPICS: readonly CivicExamSubTopic[] = [
     'devise_symboles',
     'laicite',
     'situational_principles',
@@ -60,12 +60,12 @@ const VALID_SUBTHEMES: readonly CivicExamSubTheme[] = [
     'parental_authority_education',
 ] as const;
 
-const isValidTheme = (value: string): value is CivicExamTheme => {
-    return VALID_THEMES.includes(value as CivicExamTheme);
+const isValidTopic = (value: string): value is CivicExamTopic => {
+    return VALID_TOPICS.includes(value as CivicExamTopic);
 };
 
-const isValidSubTheme = (value: string): value is CivicExamSubTheme => {
-    return VALID_SUBTHEMES.includes(value as CivicExamSubTheme);
+const isValidSubTopic = (value: string): value is CivicExamSubTopic => {
+    return VALID_SUBTOPICS.includes(value as CivicExamSubTopic);
 };
 
 const normalizeQuestionType = (questionType: string): 'knowledge' | 'situational' => {
@@ -78,9 +78,9 @@ const normalizeQuestionType = (questionType: string): 'knowledge' | 'situational
 
 const validateQuestionData = (
     q: unknown, 
-    defaultTheme?: CivicExamTheme,
+    defaultTopic?: CivicExamTopic,
     onInvalid?: (reason: string) => void
-): q is CivicExamQuestionData & { theme: CivicExamTheme } => {
+): q is CivicExamQuestionData & { theme: CivicExamTopic } => {
     if (typeof q !== 'object' || q === null) {
         onInvalid?.('Question is not an object');
         return false;
@@ -121,17 +121,17 @@ const validateQuestionData = (
     }
 
     const theme = question.theme as string | undefined;
-    const hasValidTheme = theme ? isValidTheme(theme) : defaultTheme !== undefined;
+    const hasValidTopic = theme ? isValidTopic(theme) : defaultTopic !== undefined;
 
-    if (!hasValidTheme) {
+    if (!hasValidTopic) {
         const themeStr = theme ? `"${theme}"` : 'undefined';
-        onInvalid?.(`Question ${questionId} has invalid theme: ${themeStr} (must be one of: ${VALID_THEMES.join(', ')})`);
+        onInvalid?.(`Question ${questionId} has invalid topic: ${themeStr} (must be one of: ${VALID_TOPICS.join(', ')})`);
         return false;
     }
 
     const subTheme = question.subTheme as string;
-    if (!isValidSubTheme(subTheme)) {
-        onInvalid?.(`Question ${questionId} has invalid subTheme: "${subTheme}" (must be one of: ${VALID_SUBTHEMES.join(', ')})`);
+    if (!isValidSubTopic(subTheme)) {
+        onInvalid?.(`Question ${questionId} has invalid subTopic: "${subTheme}" (must be one of: ${VALID_SUBTOPICS.join(', ')})`);
         return false;
     }
 
@@ -188,12 +188,14 @@ const CIVIC_ID_OFFSET = 1_000_000;
 
 const transformCivicQuestion = (
     q: CivicExamQuestionData,
-    defaultTheme: CivicExamTheme
+    defaultTopic: CivicExamTopic
 ): CivicExamQuestionWithOptions => {
     // At this point, validation has already passed, so we can trust the data structure
     const baseNumber = extractNumericId(q.id) ?? 0;
-    const theme = (q.theme && isValidTheme(q.theme)) ? q.theme : defaultTheme;
-    const subTheme = q.subTheme as CivicExamSubTheme;
+    // Transform JSON property 'theme' to TypeScript property 'topic'
+    const topic = (q.theme && isValidTopic(q.theme)) ? q.theme : defaultTopic;
+    // Transform JSON property 'subTheme' to TypeScript property 'subTopic'
+    const subTopic = q.subTheme as CivicExamSubTopic;
     const questionType = normalizeQuestionType(q.questionType);
     
     // Build options array from correctAnswer + incorrectAnswers
@@ -226,8 +228,8 @@ const transformCivicQuestion = (
         image: typeof q.image === 'string' && q.image.trim().length > 0 ? q.image.trim() : undefined,
         categoryId: 'civic_exam',
         categoryTitle: 'Examen Civique',
-        theme,
-        subTheme,
+        topic, // Transformed from JSON 'theme' property
+        subTopic, // Transformed from JSON 'subTheme' property
         questionType,
         options,
         correctAnswer: correctAnswerIndex,
@@ -238,20 +240,21 @@ const transformCivicQuestion = (
 
 const loadQuestionsFromFileData = (
     fileData: CivicExamDataFile | CivicExamQuestionData[],
-    defaultTheme?: CivicExamTheme
+    defaultTopic?: CivicExamTopic
 ): CivicExamQuestionWithOptions[] => {
     let questions: CivicExamQuestionData[] = [];
-    let theme: CivicExamTheme | undefined = defaultTheme;
+    let topic: CivicExamTopic | undefined = defaultTopic;
 
     if (Array.isArray(fileData)) {
         questions = fileData;
     } else if (fileData.questions && Array.isArray(fileData.questions)) {
         questions = fileData.questions;
         if (fileData.themeId) {
-            if (isValidTheme(fileData.themeId)) {
-                theme = fileData.themeId;
+            // Transform JSON 'themeId' to TypeScript 'topic'
+            if (isValidTopic(fileData.themeId)) {
+                topic = fileData.themeId;
             } else {
-                logger.warn(`Invalid themeId in file: "${fileData.themeId}"`);
+                logger.warn(`Invalid topicId (themeId in JSON) in file: "${fileData.themeId}"`);
             }
         }
     } else {
@@ -264,20 +267,20 @@ const loadQuestionsFromFileData = (
         return [];
     }
 
-    if (!theme) {
-        logger.warn('Could not determine theme for civic exam questions, skipping');
+    if (!topic) {
+        logger.warn('Could not determine topic for civic exam questions, skipping');
         return [];
     }
 
     const validationErrors: string[] = [];
     const validQuestions = questions
         .filter(q => {
-            const isValid = validateQuestionData(q, theme, (reason) => {
+            const isValid = validateQuestionData(q, topic, (reason) => {
                 validationErrors.push(reason);
             });
             return isValid;
         })
-        .map(q => transformCivicQuestion(q, theme!))
+        .map(q => transformCivicQuestion(q, topic!))
         .filter(q => q.options && Array.isArray(q.options) && q.options.length > 0);
 
     if (validQuestions.length < questions.length && validationErrors.length > 0) {

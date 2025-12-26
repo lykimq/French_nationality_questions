@@ -59,16 +59,16 @@ export interface TestStatistics {
     strugglingQuestions: number[];
 }
 
-// ==================== CIVIC EXAM THEMES ====================
+// ==================== CIVIC EXAM TOPICS ====================
 
-export type CivicExamTheme =
+export type CivicExamTopic =
     | 'principles_values'
     | 'institutional_political'
     | 'rights_duties'
     | 'history_geography_culture'
     | 'living_society';
 
-export type CivicExamSubTheme =
+export type CivicExamSubTopic =
     | 'devise_symboles'
     | 'laicite'
     | 'situational_principles'
@@ -92,7 +92,7 @@ export type QuestionType = 'knowledge' | 'situational';
 
 export interface CivicExamConfig extends TestConfig {
     readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
-    readonly selectedThemes?: readonly CivicExamTheme[];
+    readonly selectedTopics?: readonly CivicExamTopic[];
     readonly questionCount: 40; // Fixed at 40 for civic exam
     readonly timeLimit: 45; // Fixed at 45 minutes
 }
@@ -101,8 +101,10 @@ export interface CivicExamConfig extends TestConfig {
 
 export interface CivicExamSession extends TestSession {
     readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
-    readonly themes?: readonly CivicExamTheme[];
+    readonly topics?: readonly CivicExamTopic[];
     readonly isPracticeMode: boolean;
+    readonly isPaused?: boolean;
+    readonly pausedAt?: Date;
 }
 
 // ==================== CIVIC EXAM PROGRESS ====================
@@ -118,7 +120,7 @@ export interface CivicExamProgress extends TimestampedEntity {
     correctAnswersTotal: number;
     incorrectQuestions: number[];
     recentScores: number[];
-    themePerformance: Record<CivicExamTheme, {
+    topicPerformance: Record<CivicExamTopic, {
         questionsAttempted: number;
         correctAnswers: number;
         accuracy: number;
@@ -126,7 +128,7 @@ export interface CivicExamProgress extends TimestampedEntity {
 }
 
 export interface CivicExamStatistics extends TestStatistics {
-    themeBreakdown: Record<CivicExamTheme, {
+    topicBreakdown: Record<CivicExamTopic, {
         questionsAttempted: number;
         correctAnswers: number;
         accuracy: number;
@@ -166,8 +168,8 @@ export type { SerializableCivicExamResult };
 // ==================== QUESTION METADATA ====================
 
 export interface CivicExamQuestionMetadata {
-    readonly theme: CivicExamTheme;
-    readonly subTheme: CivicExamSubTheme;
+    readonly topic: CivicExamTopic;
+    readonly subTopic: CivicExamSubTopic;
     readonly questionType: QuestionType;
 }
 

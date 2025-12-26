@@ -1,9 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createLogger } from '../../shared/utils/logger';
 import { safeParseDate, applyMemoryLimits } from '../../shared/utils/questionUtils';
-import type { CivicExamProgress, CivicExamStatistics, CivicExamTheme } from '../types';
+import type { CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
 import {
-    DEFAULT_THEME_PERFORMANCE,
+    DEFAULT_TOPIC_PERFORMANCE,
     createDefaultCivicExamProgress,
     createDefaultCivicExamStatistics,
 } from './civicExamDefaults';
@@ -58,12 +58,12 @@ export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
 
         const progress = parsedProgress as Record<string, unknown>;
 
-        const loadThemePerformance = (theme: CivicExamTheme) => {
-            const themeData = (progress.themePerformance as Record<string, unknown>)?.[theme] as Record<string, unknown> | undefined;
+        const loadTopicPerformance = (topic: CivicExamTopic) => {
+            const topicData = (progress.topicPerformance as Record<string, unknown>)?.[topic] as Record<string, unknown> | undefined;
             return {
-                questionsAttempted: validateNumber(themeData?.questionsAttempted, 0),
-                correctAnswers: validateNumber(themeData?.correctAnswers, 0),
-                accuracy: validateNumber(themeData?.accuracy, 0),
+                questionsAttempted: validateNumber(topicData?.questionsAttempted, 0),
+                correctAnswers: validateNumber(topicData?.correctAnswers, 0),
+                accuracy: validateNumber(topicData?.accuracy, 0),
             };
         };
 
@@ -92,12 +92,12 @@ export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
                 validateArray(progress.recentScores, validateScore),
                 MEMORY_LIMITS.MAX_RECENT_SCORES
             ),
-            themePerformance: {
-                principles_values: loadThemePerformance('principles_values'),
-                institutional_political: loadThemePerformance('institutional_political'),
-                rights_duties: loadThemePerformance('rights_duties'),
-                history_geography_culture: loadThemePerformance('history_geography_culture'),
-                living_society: loadThemePerformance('living_society'),
+            topicPerformance: {
+                principles_values: loadTopicPerformance('principles_values'),
+                institutional_political: loadTopicPerformance('institutional_political'),
+                rights_duties: loadTopicPerformance('rights_duties'),
+                history_geography_culture: loadTopicPerformance('history_geography_culture'),
+                living_society: loadTopicPerformance('living_society'),
             },
             createdAt: progress.createdAt ? safeParseDate(progress.createdAt) : new Date(),
             updatedAt: progress.updatedAt ? safeParseDate(progress.updatedAt) : new Date(),
@@ -162,10 +162,10 @@ export const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> =>
                 validateArray(stats.strugglingQuestions, validateQuestionId),
                 200
             ),
-            themeBreakdown: {
-                ...DEFAULT_CIVIC_EXAM_STATISTICS.themeBreakdown,
-                ...(typeof stats.themeBreakdown === 'object' && stats.themeBreakdown !== null
-                    ? stats.themeBreakdown
+            topicBreakdown: {
+                ...DEFAULT_CIVIC_EXAM_STATISTICS.topicBreakdown,
+                ...(typeof stats.topicBreakdown === 'object' && stats.topicBreakdown !== null
+                    ? stats.topicBreakdown
                     : {}),
             },
         };

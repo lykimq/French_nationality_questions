@@ -17,14 +17,14 @@ import { useCivicExam } from '../contexts/CivicExamContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
-import { THEME_DISPLAY_NAMES } from '../constants/civicExamConstants';
-import type { CivicExamStackParamList, CivicExamTheme } from '../types';
+import { TOPIC_DISPLAY_NAMES } from '../constants/civicExamConstants';
+import type { CivicExamStackParamList, CivicExamTopic } from '../types';
 
 const logger = createLogger('CivicExamPractice');
 
 type CivicExamPracticeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 
-const ALL_THEMES: CivicExamTheme[] = [
+const ALL_TOPICS: CivicExamTopic[] = [
     'principles_values',
     'institutional_political',
     'rights_duties',
@@ -36,29 +36,29 @@ const CivicExamPracticeScreen = () => {
     const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { startExam } = useCivicExam();
-    const [selectedThemes, setSelectedThemes] = useState<CivicExamTheme[]>(ALL_THEMES);
+    const [selectedTopics, setSelectedTopics] = useState<CivicExamTopic[]>(ALL_TOPICS);
     const [isStarting, setIsStarting] = useState(false);
 
-    const toggleTheme = (themeId: CivicExamTheme) => {
-        setSelectedThemes(prev => {
-            if (prev.includes(themeId)) {
-                return prev.filter(t => t !== themeId);
+    const toggleTopic = (topicId: CivicExamTopic) => {
+        setSelectedTopics(prev => {
+            if (prev.includes(topicId)) {
+                return prev.filter(t => t !== topicId);
             } else {
-                return [...prev, themeId];
+                return [...prev, topicId];
             }
         });
     };
 
     const selectAll = () => {
-        setSelectedThemes(ALL_THEMES);
+        setSelectedTopics(ALL_TOPICS);
     };
 
     const deselectAll = () => {
-        setSelectedThemes([]);
+        setSelectedTopics([]);
     };
 
     const handleStartPractice = async () => {
-        if (selectedThemes.length === 0) {
+        if (selectedTopics.length === 0) {
             Alert.alert(
                 'Aucun thème sélectionné',
                 'Veuillez sélectionner au moins un thème pour commencer.'
@@ -76,7 +76,7 @@ const CivicExamPracticeScreen = () => {
                 shuffleQuestions: true,
                 shuffleOptions: true,
                 showProgress: true,
-                selectedThemes,
+                selectedTopics,
             });
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
@@ -139,12 +139,12 @@ const CivicExamPracticeScreen = () => {
                     </View>
 
                     <View style={styles.themesContainer}>
-                        {ALL_THEMES.map((themeId) => {
-                            const isSelected = selectedThemes.includes(themeId);
-                            const themeInfo = THEME_DISPLAY_NAMES[themeId];
+                        {ALL_TOPICS.map((topicId) => {
+                            const isSelected = selectedTopics.includes(topicId);
+                            const topicInfo = TOPIC_DISPLAY_NAMES[topicId];
                             return (
                                 <TouchableOpacity
-                                    key={themeId}
+                                    key={topicId}
                                     style={[
                                         styles.themeCard,
                                         {
@@ -152,7 +152,7 @@ const CivicExamPracticeScreen = () => {
                                             borderColor: isSelected ? theme.colors.primary : theme.colors.border,
                                         }
                                     ]}
-                                    onPress={() => toggleTheme(themeId)}
+                                    onPress={() => toggleTopic(topicId)}
                                     activeOpacity={0.7}
                                 >
                                     <View style={styles.themeCardContent}>
@@ -163,7 +163,7 @@ const CivicExamPracticeScreen = () => {
                                         />
                                         <View style={styles.themeTextContainer}>
                                             <FormattedText style={[styles.themeTitle, { color: theme.colors.text }]}>
-                                                {themeInfo}
+                                                {topicInfo}
                                             </FormattedText>
                                         </View>
                                     </View>
@@ -176,12 +176,12 @@ const CivicExamPracticeScreen = () => {
                         style={[
                             styles.startButton,
                             {
-                                backgroundColor: selectedThemes.length > 0 ? theme.colors.primary : theme.colors.textMuted,
+                                backgroundColor: selectedTopics.length > 0 ? theme.colors.primary : theme.colors.textMuted,
                                 opacity: isStarting ? 0.6 : 1,
                             }
                         ]}
                         onPress={handleStartPractice}
-                        disabled={selectedThemes.length === 0 || isStarting}
+                        disabled={selectedTopics.length === 0 || isStarting}
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>

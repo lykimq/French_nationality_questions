@@ -1,5 +1,5 @@
 import type { TestQuestion } from '../../types';
-import type { CivicExamTheme, CivicExamSubTheme, CivicExamQuestion, CivicExamConfig } from '../types';
+import type { CivicExamTopic, CivicExamSubTopic, CivicExamQuestion, CivicExamConfig } from '../types';
 import { extractNumericId } from '../../shared/utils/idUtils';
 import { createLogger } from '../../shared/utils/logger';
 import {
@@ -7,13 +7,15 @@ import {
     CIVIC_EXAM_CONFIG,
 } from '../constants/civicExamConstants';
 import {
-    getQuestionsByTheme,
-    getQuestionsBySubTheme,
+    getQuestionsByTopic,
+    getQuestionsBySubTopic,
     filterKnowledgeQuestions,
     filterSituationalQuestions,
     filterQuestionsWithOptions,
-    getQuestionsByThemes,
+    getQuestionsByTopics,
     enrichQuestionsWithMetadata,
+    getTopicFromQuestion,
+    getSubTopicFromQuestion,
 } from './civicExamUtils';
 import { shuffleQuestionOptions } from './civicExamQuestionUtils';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
@@ -89,18 +91,18 @@ const selectRandomQuestions = (
     return shuffled.slice(0, count);
 };
 
-const isSituationalSubTheme = (subTheme: CivicExamSubTheme): boolean => {
-    return subTheme === 'situational_principles' || subTheme === 'situational_rights';
+const isSituationalSubTopic = (subTopic: CivicExamSubTopic): boolean => {
+    return subTopic === 'situational_principles' || subTopic === 'situational_rights';
 };
 
-const selectQuestionsForSubTheme = (
-    subTheme: CivicExamSubTheme,
+const selectQuestionsForSubTopic = (
+    subTopic: CivicExamSubTopic,
     count: number,
     availableQuestions: TestQuestion[],
     isPracticeMode: boolean,
     usedIds?: Set<number>
 ): TestQuestion[] => {
-    let candidates = getQuestionsBySubTheme(availableQuestions, subTheme);
+    let candidates = getQuestionsBySubTopic(availableQuestions, subTopic);
     
     if (candidates.length === 0) {
         return [];
@@ -110,7 +112,7 @@ const selectQuestionsForSubTheme = (
         candidates = filterUnusedQuestions(candidates, usedIds);
     }
     
-    const isSituational = isSituationalSubTheme(subTheme);
+    const isSituational = isSituationalSubTopic(subTopic);
     
     if (isPracticeMode) {
         candidates = filterKnowledgeQuestions(candidates);
@@ -123,43 +125,43 @@ const selectQuestionsForSubTheme = (
     return selectRandomQuestions(candidates, count);
 };
 
-const selectQuestionsForTheme = (
-    theme: CivicExamTheme,
-    distribution: typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTheme],
+const selectQuestionsForTopic = (
+    topic: CivicExamTopic,
+    distribution: typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTopic],
     availableQuestions: TestQuestion[],
     isPracticeMode: boolean,
     globalUsedIds?: Set<number>
 ): TestQuestion[] => {
     const selectedQuestions: TestQuestion[] = [];
     const localUsedIds = new Set<number>();
-    const themeQuestions = getQuestionsByTheme(availableQuestions, theme);
+    const topicQuestions = getQuestionsByTopic(availableQuestions, topic);
     
-    // Select questions for each sub-theme
-    (Object.entries(distribution.subThemes) as [CivicExamSubTheme, number][]).forEach(
-        ([subTheme, count]) => {
+    // Select questions for each sub-topic
+    (Object.entries(distribution.subTopics) as [CivicExamSubTopic, number][]).forEach(
+        ([subTopic, count]) => {
             if (count > 0) {
                 // Combine local and global used IDs to prevent duplicates
                 const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
-                const subThemeQuestions = selectQuestionsForSubTheme(
-                    subTheme,
+                const subTopicQuestions = selectQuestionsForSubTopic(
+                    subTopic,
                     count,
-                    themeQuestions,
+                    topicQuestions,
                     isPracticeMode,
                     combinedUsedIds
                 );
                 // Track locally used IDs
-                trackUsedQuestionIds(subThemeQuestions, localUsedIds, ...(globalUsedIds ? [globalUsedIds] : []));
-                selectedQuestions.push(...subThemeQuestions);
+                trackUsedQuestionIds(subTopicQuestions, localUsedIds, ...(globalUsedIds ? [globalUsedIds] : []));
+                selectedQuestions.push(...subTopicQuestions);
             }
         }
     );
     
-    // If we don't have enough questions from sub-themes, fill from theme
+    // If we don't have enough questions from sub-topics, fill from topic
     if (selectedQuestions.length < distribution.total) {
         const remaining = distribution.total - selectedQuestions.length;
         // Combine local and global used IDs
         const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
-        const available = filterUnusedQuestions(themeQuestions, combinedUsedIds);
+        const available = filterUnusedQuestions(topicQuestions, combinedUsedIds);
         
         // Filter by question type in practice mode
         const filtered = isPracticeMode 
@@ -184,36 +186,73 @@ export const generateCivicExamQuestions = (
     config: CivicExamConfig
 ): CivicExamQuestion[] => {
     const isPracticeMode = config.mode === 'civic_exam_practice';
-    let availableQuestions = shuffleArray([...allQuestions]);
     
-    if (isPracticeMode && config.selectedThemes && config.selectedThemes.length > 0) {
-        availableQuestions = getQuestionsByThemes(availableQuestions, config.selectedThemes);
+    const civicExamQuestions = allQuestions.filter(q => {
+        return q.categoryId === 'civic_exam';
+    });
+    
+    if (civicExamQuestions.length === 0) {
+        logger.error('No civic exam questions found. Only questions with categoryId="civic_exam" can be used.');
+        throw new Error('No civic exam questions available. Please ensure civic exam questions are loaded correctly.');
+    }
+    
+    if (civicExamQuestions.length < allQuestions.length) {
+        const skippedCount = allQuestions.length - civicExamQuestions.length;
+        logger.warn(
+            `Filtered out ${skippedCount} non-civic question(s). ` +
+            `Civic exams only use questions with categoryId="civic_exam".`
+        );
+    }
+    
+    const questionsWithMetadata = civicExamQuestions.filter(q => {
+        const topic = getTopicFromQuestion(q);
+        const subTopic = getSubTopicFromQuestion(q);
+        return topic !== null && subTopic !== null;
+    });
+    
+    if (questionsWithMetadata.length === 0) {
+        logger.error('No civic exam questions with required topic/subTopic metadata found');
+        throw new Error('No valid civic exam questions available. All civic exam questions must have topic and subTopic metadata.');
+    }
+    
+    if (questionsWithMetadata.length < civicExamQuestions.length) {
+        const skippedCount = civicExamQuestions.length - questionsWithMetadata.length;
+        logger.warn(
+            `Filtered out ${skippedCount} civic exam question(s) missing required topic/subTopic metadata. ` +
+            `These questions should be fixed in the JSON data files.`
+        );
+    }
+    
+    let availableQuestions = shuffleArray([...questionsWithMetadata]);
+    
+    if (isPracticeMode && config.selectedTopics && config.selectedTopics.length > 0) {
+        availableQuestions = getQuestionsByTopics(availableQuestions, config.selectedTopics);
     }
     
     const selectedQuestions: TestQuestion[] = [];
     const usedQuestionIds = new Set<number>();
     
-    (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTheme, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTheme]][]).forEach(
-        ([theme, distribution]) => {
-            if (isPracticeMode && config.selectedThemes && config.selectedThemes.length > 0) {
-                if (!config.selectedThemes.includes(theme)) {
+    (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTopic, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTopic]][]).forEach(
+        ([topic, distribution]) => {
+            if (isPracticeMode && config.selectedTopics && config.selectedTopics.length > 0) {
+                if (!config.selectedTopics.includes(topic)) {
                     return;
                 }
             }
             
-            const themeQuestions = filterUnusedQuestions(
-                getQuestionsByTheme(availableQuestions, theme),
+            const topicQuestions = filterUnusedQuestions(
+                getQuestionsByTopic(availableQuestions, topic),
                 usedQuestionIds
             );
             
-            if (themeQuestions.length === 0) {
+            if (topicQuestions.length === 0) {
                 return;
             }
             
-            const selected = selectQuestionsForTheme(
-                theme,
+            const selected = selectQuestionsForTopic(
+                topic,
                 distribution,
-                themeQuestions,
+                topicQuestions,
                 isPracticeMode,
                 usedQuestionIds
             );
@@ -332,8 +371,8 @@ export const validateQuestionDistribution = (
         );
     }
     
-    // Count questions per theme
-    const themeCounts: Record<CivicExamTheme, number> = {
+    // Count questions per topic
+    const topicCounts: Record<CivicExamTopic, number> = {
         principles_values: 0,
         institutional_political: 0,
         rights_duties: 0,
@@ -342,17 +381,17 @@ export const validateQuestionDistribution = (
     };
     
     questions.forEach(q => {
-        if (q.theme) {
-            themeCounts[q.theme]++;
+        if (q.topic) {
+            topicCounts[q.topic]++;
         }
     });
     
-    // Validate theme distribution
-    (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTheme, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTheme]][]).forEach(
-        ([theme, distribution]) => {
-            if (themeCounts[theme] !== distribution.total) {
+    // Validate topic distribution
+    (Object.entries(CIVIC_EXAM_DISTRIBUTION) as [CivicExamTopic, typeof CIVIC_EXAM_DISTRIBUTION[CivicExamTopic]][]).forEach(
+        ([topic, distribution]) => {
+            if (topicCounts[topic] !== distribution.total) {
                 errors.push(
-                    `Theme ${theme}: expected ${distribution.total} questions, got ${themeCounts[theme]}`
+                    `Topic ${topic}: expected ${distribution.total} questions, got ${topicCounts[topic]}`
                 );
             }
         }

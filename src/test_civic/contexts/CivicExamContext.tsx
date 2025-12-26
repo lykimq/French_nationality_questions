@@ -14,6 +14,8 @@ import type {
     CivicExamStatistics,
     TestAnswer,
 } from '../types';
+import type { CivicExamQuestionWithOptions } from '../utils/civicExamQuestionUtils';
+import type { TestQuestion } from '../../types';
 
 const logger = createLogger('CivicExamContext');
 
@@ -21,9 +23,11 @@ interface CivicExamContextType {
     currentSession: CivicExamSession | null;
     isExamActive: boolean;
     currentQuestionIndex: number;
+    pausedSession: CivicExamSession | null;
     examProgress: CivicExamProgress;
     examStatistics: CivicExamStatistics;
     startExam: (config: CivicExamConfig) => Promise<void>;
+    resumeSession: () => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
     finishExam: () => Promise<CivicExamResult>;
@@ -62,13 +66,19 @@ const CivicExamContextInternal: React.FC<{
         return progressContext.getIncorrectQuestions(allProcessedQuestions);
     }, [progressContext, allProcessedQuestions]);
 
+    const resumeSession = useCallback(async (): Promise<void> => {
+        await sessionContext.resumeSession();
+    }, [sessionContext]);
+
     const contextValue = useMemo((): CivicExamContextType => ({
         currentSession: sessionContext.currentSession,
         isExamActive: sessionContext.isExamActive,
         currentQuestionIndex: sessionContext.currentQuestionIndex,
+        pausedSession: sessionContext.pausedSession,
         examProgress: progressContext.examProgress,
         examStatistics: progressContext.examStatistics,
         startExam,
+        resumeSession,
         submitAnswer: sessionContext.submitAnswer,
         goToNextQuestion: sessionContext.goToNextQuestion,
         finishExam,
@@ -84,6 +94,7 @@ const CivicExamContextInternal: React.FC<{
         sessionContext,
         progressContext,
         startExam,
+        resumeSession,
         finishExam,
         getIncorrectQuestions,
     ]);
@@ -96,19 +107,18 @@ const CivicExamContextInternal: React.FC<{
 };
 
 export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { questionsData } = useData();
-    const [civicQuestions, setCivicQuestions] = useState<ReturnType<typeof processAllQuestions>>([]);
+    const [civicQuestions, setCivicQuestions] = useState<CivicExamQuestionWithOptions[]>([]);
 
     useEffect(() => {
-        loadCivicExamQuestions().then(setCivicQuestions).catch(() => {
-            logger.warn('Could not load civic exam questions');
+        loadCivicExamQuestions().then(setCivicQuestions).catch((error) => {
+            logger.warn('Could not load civic exam questions:', error);
+            setCivicQuestions([]);
         });
     }, []);
 
     const allProcessedQuestions = useMemo(() => {
-        const regularQuestions = processAllQuestions(questionsData);
-        return [...regularQuestions, ...civicQuestions];
-    }, [questionsData, civicQuestions]);
+        return civicQuestions as TestQuestion[];
+    }, [civicQuestions]);
 
     return (
         <CivicExamProgressProvider>

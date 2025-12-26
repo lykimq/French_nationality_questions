@@ -1,14 +1,14 @@
-import type { CivicExamTheme, CivicExamSubTheme } from '../types';
+import type { CivicExamTopic, CivicExamSubTopic } from '../types';
 
 // ==================== QUESTION DISTRIBUTION ====================
 
-export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTheme, {
+export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTopic, {
     total: number;
-    subThemes: Record<CivicExamSubTheme, number>;
+    subTopics: Record<CivicExamSubTopic, number>;
 }> = {
     principles_values: {
         total: 11,
-        subThemes: {
+        subTopics: {
             devise_symboles: 3,
             laicite: 2,
             situational_principles: 6,
@@ -29,7 +29,7 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTheme, {
     },
     institutional_political: {
         total: 6,
-        subThemes: {
+        subTopics: {
             devise_symboles: 0,
             laicite: 0,
             situational_principles: 0,
@@ -50,7 +50,7 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTheme, {
     },
     rights_duties: {
         total: 11,
-        subThemes: {
+        subTopics: {
             devise_symboles: 0,
             laicite: 0,
             situational_principles: 0,
@@ -71,7 +71,7 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTheme, {
     },
     history_geography_culture: {
         total: 8,
-        subThemes: {
+        subTopics: {
             devise_symboles: 0,
             laicite: 0,
             situational_principles: 0,
@@ -92,7 +92,7 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTheme, {
     },
     living_society: {
         total: 4,
-        subThemes: {
+        subTopics: {
             devise_symboles: 0,
             laicite: 0,
             situational_principles: 0,
@@ -113,9 +113,11 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTheme, {
     },
 };
 
-// ==================== CATEGORY TO THEME MAPPING ====================
+// ==================== CATEGORY TO TOPIC MAPPING ====================
+// Note: This mapping is deprecated and not used. Kept for reference only.
+// General knowledge questions use categoryId, not topics.
 
-export const CATEGORY_TO_THEME_MAP: Record<string, CivicExamTheme> = {
+export const CATEGORY_TO_TOPIC_MAP: Record<string, CivicExamTopic> = {
     democracy: 'principles_values',
     republic: 'institutional_political',
     local_gov: 'institutional_political',
@@ -128,9 +130,10 @@ export const CATEGORY_TO_THEME_MAP: Record<string, CivicExamTheme> = {
     personal: 'living_society',
 };
 
-// ==================== SUBTHEME TO CATEGORY MAPPING ====================
+// ==================== SUBTOPIC TO CATEGORY MAPPING ====================
+// Note: This mapping is deprecated and not used. Kept for reference only.
 
-export const SUBTHEME_TO_CATEGORY_MAP: Partial<Record<CivicExamSubTheme, string[]>> = {
+export const SUBTOPIC_TO_CATEGORY_MAP: Partial<Record<CivicExamSubTopic, string[]>> = {
     devise_symboles: ['democracy'],
     laicite: ['democracy'],
     democracy_vote: ['democracy', 'republic'],
@@ -157,9 +160,9 @@ export const CIVIC_EXAM_CONFIG = {
     PASSING_PERCENTAGE: 80,
 } as const;
 
-// ==================== THEME DISPLAY NAMES ====================
+// ==================== TOPIC DISPLAY NAMES ====================
 
-export const THEME_DISPLAY_NAMES: Record<CivicExamTheme, string> = {
+export const TOPIC_DISPLAY_NAMES: Record<CivicExamTopic, string> = {
     principles_values: 'Principes et valeurs de la République',
     institutional_political: 'Système institutionnel et politique',
     rights_duties: 'Droits et devoirs',
@@ -167,9 +170,9 @@ export const THEME_DISPLAY_NAMES: Record<CivicExamTheme, string> = {
     living_society: 'Vivre dans la société française',
 };
 
-// ==================== SUBTHEME DISPLAY NAMES ====================
+// ==================== SUBTOPIC DISPLAY NAMES ====================
 
-export const SUBTHEME_DISPLAY_NAMES: Record<CivicExamSubTheme, string> = {
+export const SUBTOPIC_DISPLAY_NAMES: Record<CivicExamSubTopic, string> = {
     devise_symboles: 'Devise et symboles de la République',
     laicite: 'Laïcité',
     situational_principles: 'Mises en situation',

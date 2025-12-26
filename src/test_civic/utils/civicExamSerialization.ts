@@ -1,4 +1,4 @@
-import type { CivicExamResult, CivicExamSession, CivicExamTheme, CivicExamQuestion, TestAnswer, CivicExamStatistics } from '../types';
+import type { CivicExamResult, CivicExamSession, CivicExamTopic, CivicExamQuestion, TestAnswer, CivicExamStatistics } from '../types';
 
 // Serializable civic exam result for navigation (dates as ISO strings)
 export interface SerializableCivicExamResult {
@@ -56,7 +56,7 @@ export const deserializeCivicExamResult = (serialized: SerializableCivicExamResu
         })),
         startTime: new Date(serialized.session.startTime),
         endTime: serialized.session.endTime ? new Date(serialized.session.endTime) : undefined,
-        themes: serialized.session.themes as readonly CivicExamTheme[] | undefined,
+        topics: serialized.session.topics as readonly CivicExamTopic[] | undefined,
     };
     
 
