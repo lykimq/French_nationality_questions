@@ -2110,6 +2110,60 @@
             "question": "Qui élit les députés européens ?",
             "explanation": "Les citoyens de l'Union, au suffrage universel direct tous les cinq ans.",
             "image": null
+        },
+        {
+            "id": "livret_352",
+            "question": "Quel est l'âge de la majorité et du droit de vote en France ?",
+            "explanation": "18 ans.",
+            "image": null
+        },
+        {
+            "id": "livret_353",
+            "question": "Citez quelques types d'élections en France.",
+            "explanation": "Présidentielles, législatives (députés), municipales (maires), départementales, régionales et européennes.",
+            "image": null
+        },
+        {
+            "id": "livret_354",
+            "question": "Quels sont les trois pouvoirs en France ?",
+            "explanation": "Le pouvoir exécutif (Président et Gouvernement), le pouvoir législatif (Parlement : Assemblée nationale et Sénat) et le pouvoir judiciaire (Juges et magistrats).",
+            "image": null
+        },
+        {
+            "id": "livret_355",
+            "question": "Qui est le chef de l'État et comment est-il élu ?",
+            "explanation": "Le Président de la République (actuellement Emmanuel Macron). Il est élu au suffrage universel direct pour un mandat de 5 ans (quinquennat).",
+            "image": null
+        },
+        {
+            "id": "livret_356",
+            "question": "Quel est le rôle du Parlement ?",
+            "explanation": "Il vote les lois, discute les projets de loi et contrôle l'action du Gouvernement. Il est composé de l'Assemblée nationale (députés) et du Sénat (sénateurs).",
+            "image": null
+        },
+        {
+            "id": "livret_357",
+            "question": "Où siège l'Assemblée nationale et le Sénat ?",
+            "explanation": "L'Assemblée nationale siège au Palais Bourbon. Le Sénat siège au Palais du Luxembourg.",
+            "image": null
+        },
+        {
+            "id": "livret_358",
+            "question": "Qui était président de la république avant lui ?",
+            "explanation": "C'était François Hollande.",
+            "image": null
+        },
+        {
+            "id": "livret_359",
+            "question": "Ou se trouve le siège de l'assemblée nationale ?",
+            "explanation": "Elle se trouve au palais Bourbon, c’est le nom communément donné au bâtiment qui abrite l’Assemblée nationale française, il est situé sur le quai d’Orsay.",
+            "image": null
+        },
+        {
+            "id": "livret_360",
+            "question": "Ou se trouve le siège du parlement Européen ?",
+            "explanation": "Il se trouve à Strasbourg en France.",
+            "image": null
         }
     ]
 }

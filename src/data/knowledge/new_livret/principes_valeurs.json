@@ -448,6 +448,42 @@
             "question": "Qu'ont en commun les pays européens ?",
             "explanation": "Les pays européens partagent une histoire, des valeurs culturelles, économiques et politiques similaires. La plupart sont membres de l'Union européenne (UE), qui favorise la coopération économique, politique et sociale. Ils adhèrent à des principes communs comme la démocratie, les droits de l'homme et l'état de droit. De plus, de nombreux pays européens utilisent l'euro comme monnaie et participent à des accords communs comme l'espace Schengen.",
             "image": null
+        },
+        {
+            "id": "livret_75",
+            "question": "Quelles sont les couleurs du drapeau français et que signifient-elles ?",
+            "explanation": "Bleu, Blanc, Rouge. Le blanc est la couleur historique de la monarchie (Bourbon). Le bleu et le rouge sont les couleurs de la ville de Paris, portées par les révolutionnaires.",
+            "image": null
+        },
+        {
+            "id": "livret_76",
+            "question": "Quel est l'hymne national français ?",
+            "explanation": "C'est La Marseillaise, écrite par Rouget de Lisle en 1792.",
+            "image": null
+        },
+        {
+            "id": "livret_77",
+            "question": "Quel animal symbolise la France ?",
+            "explanation": "Le coq gaulois. Il représente la fierté, la bravoure et l'esprit combatif.",
+            "image": null
+        },
+        {
+            "id": "livret_78",
+            "question": "Peut-on porter des signes religieux dans l'espace public ?",
+            "explanation": "Oui, c'est autorisé dans l'espace public général, mais interdit pour les élèves dans les écoles publiques (loi de 2004) et pour les fonctionnaires dans l'exercice de leurs fonctions.",
+            "image": null
+        },
+        {
+            "id": "livret_79",
+            "question": "Qu'est-ce que le blasphème en France ?",
+            "explanation": "En France, le délit de blasphème n'existe pas. Tout le monde a le droit de critiquer une religion ou une idée, tant que cela ne constitue pas une incitation à la haine ou à la violence envers les personnes.",
+            "image": null
+        },
+        {
+            "id": "livret_80",
+            "question": "La France est-elle neutre face aux religions ?",
+            "explanation": "Oui, l'État est neutre. Il ne favorise aucune religion et garantit à chacun le droit de pratiquer le culte de son choix ou de n'en pratiquer aucun.",
+            "image": null
         }
     ]
 }

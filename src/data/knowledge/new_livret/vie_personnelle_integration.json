@@ -610,6 +610,126 @@
             "question": "Est-ce possible de punir physiquement ses enfants ?",
             "explanation": "Non, la loi interdit les violences éducatives ordinaires (loi du 10 juillet 2019).",
             "image": null
+        },
+        {
+            "id": "livret_102",
+            "question": "Quels sont les trois principes de l'école publique ?",
+            "explanation": "Elle est gratuite, laïque et obligatoire.",
+            "image": null
+        },
+        {
+            "id": "livret_103",
+            "question": "Qu'est-ce que la mixité à l'école ?",
+            "explanation": "C'est le fait que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes. C'est un vecteur d'égalité dès le plus jeune âge.",
+            "image": null
+        },
+        {
+            "id": "livret_104",
+            "question": "Quel est le rôle des parents dans l'éducation ?",
+            "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
+            "image": null
+        },
+        {
+            "id": "livret_105",
+            "question": "Avez-vous des enfants ? Quels sont leurs prénoms et leurs dates de naissance ?",
+            "explanation": "Oui, j’ai (Nombre) enfant(s). Ils s’appellent (Prénoms) et sont nés le (Dates de naissance). (Ou: Non, je n’ai pas d’enfant.)",
+            "image": null
+        },
+        {
+            "id": "livret_106",
+            "question": "Quelles sont vos activités en famille ?",
+            "explanation": "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc.",
+            "image": null
+        },
+        {
+            "id": "livret_107",
+            "question": "Qui s'occupe principalement des enfants ?",
+            "explanation": "Nous nous partageons les responsabilités parentales autant que possible, en nous adaptant à nos horaires professionnels respectifs.",
+            "image": null
+        },
+        {
+            "id": "livret_108",
+            "question": "Comment votre partenaire et vous pensez-vous des décisions importantes pour la famille ?",
+            "explanation": "Nous prenons les décisions importantes ensemble, après avoir discuté de toutes les options et conséquences, pour nous assurer que nous agissons dans le meilleur intérêt de notre famille.",
+            "image": null
+        },
+        {
+            "id": "livret_109",
+            "question": "Envoyez-vous de l'argent à votre famille dans votre pays d'origine ?",
+            "explanation": "Oui/NON, j'envoie /ou pas occasionnellement de l'argent pour soutenir ma famille. Cela me permet de rester connecté à eux et de contribuer à leur bien-être.",
+            "image": null
+        },
+        {
+            "id": "livret_110",
+            "question": "Par qui est financée la Sécurité sociale ?",
+            "explanation": "Elle est financée par les cotisations sociales prélevées sur les salaires (employeurs et salariés) et par l'impôt (CSG).",
+            "image": null
+        },
+        {
+            "id": "livret_111",
+            "question": "Qui a le droit d'accéder aux emplois publics ?",
+            "explanation": "Tous les citoyens français sont égaux devant l'accès à l'emploi public, selon leurs capacités et par voie de concours.",
+            "image": null
+        },
+        {
+            "id": "livret_112",
+            "question": "Quelle est la durée légale du travail en France ?",
+            "explanation": "La durée légale est de 35 heures par semaine.",
+            "image": null
+        },
+        {
+            "id": "livret_113",
+            "question": "Un employeur peut-il discriminer un candidat lors d'une embauche ?",
+            "explanation": "Non. La discrimination fondée sur l'origine, le sexe, la religion, l'âge ou l'orientation sexuelle est un délit sévèrement puni par la loi.",
+            "image": null
+        },
+        {
+            "id": "livret_114",
+            "question": "Qu'est-ce que l'assimilation à la communauté française ?",
+            "explanation": "C'est l'adhésion aux valeurs de la République, la maîtrise de la langue française (niveau B2 requis depuis janvier 2026), une connaissance suffisante de l'histoire et de la culture de la France, et la réussite à l'examen civique qui évalue les connaissances sur l'histoire, la culture et les valeurs françaises.",
+            "image": null
+        },
+        {
+            "id": "livret_115",
+            "question": "Qui décide de l'octroi de la nationalité française ?",
+            "explanation": "C'est le ministre de l'Intérieur qui prend la décision finale après enquête. Depuis janvier 2026, les critères sont plus stricts : niveau de français B2 (au lieu de B1), réussite à un examen civique de 40 questions, et démonstration d'une stabilité financière et professionnelle en France.",
+            "image": null
+        },
+        {
+            "id": "livret_116",
+            "question": "Quel est le but de l'entretien réglementaire en préfecture ?",
+            "explanation": "L'entretien vise à évaluer le degré d'assimilation du candidat, sa connaissance de la société française, de ses principes et valeurs essentiels, ainsi que son adhésion à ceux-ci. Depuis janvier 2026, cet entretien s'accompagne d'un examen civique écrit de 40 questions à choix multiples portant sur l'histoire, la culture et les valeurs françaises. Le candidat doit également démontrer un niveau de français B2 et une stabilité professionnelle et financière.",
+            "image": null
+        },
+        {
+            "id": "livret_117",
+            "question": "Pourquoi voulez-vous devenir un citoyen français ou française?",
+            "explanation": "Dès mon arrivée en France, j'ai ressenti un profond attachement pour ce pays, bien au-delà d'un simple lieu de résidence : la France est devenue ma maison. Chaque jour, je me sens un peu plus français, non seulement par ma manière de vivre, mais aussi par mon adhésion totale aux valeurs de la République : liberté, égalité, fraternité. Ces principes ne sont pas de simples mots pour moi: ils sont le fondement d'une société juste et solidaire, dans laquelle je veux pleinement m'inscrire. Mon sentiment d'appartenance va bien au-delà d'une simple appréciation : il est ancré dans ma vie quotidienne. La France est le pays où j'ai construit (ou je compte construire) mon avenir, où j'ai tissé des liens solides, tant sur le plan personnel que professionnel. Mon entourage, mon travail, mes ambitions… tout se dessine ici. Je partage la culture française, son attachement à la démocratie, aux droits de l'homme, à la laïcité, qui permet à chacun de vivre librement, dans le respect des autres. La France est aussi un pays dont le rayonnement international me rend fier. Son histoire, sa place de leader dans des domaines d'excellence comme l'aéronautique, la recherche scientifique, le luxe ou encore la gastronomie témoignent de son dynamisme et de son influence dans le monde. Être citoyen français, c'est appartenir à une nation qui porte haut les valeurs de progrès et d'innovation, tout en défendant un modèle social protecteur et solidaire. Au-delà de ses réussites économiques et scientifiques, la France est un pays où la culture et l'art occupent une place centrale. J'ai une profonde admiration pour son patrimoine, sa littérature, son cinéma, sa musique… Cette richesse culturelle, qui traverse les siècles et continue d'inspirer le monde entier, me passionne et me nourrit au quotidien. Mais être français, c'est aussi un engagement. Ce n'est pas seulement un privilège, c'est une responsabilité. Obtenir la nationalité française me permettrait de renforcer encore mon implication dans la société, notamment en exerçant mon droit de vote. Pour moi, voter n'est pas juste un droit, c'est un devoir citoyen, une façon d'être acteur de la démocratie et de contribuer au futur de ce pays que j'aime. Aujourd'hui, je souhaite aller au bout de mon intégration et affirmer officiellement mon appartenance à cette nation qui m'a accueilli et dans laquelle je me reconnais pleinement. Devenir citoyen français, c'est l'aboutissement d'un parcours de vie, mais c'est surtout un engagement du cœur. (Note : Depuis janvier 2026, les candidats doivent également réussir un examen civique et démontrer un niveau de français B2 ainsi qu'une stabilité professionnelle et financière.)",
+            "image": null
+        },
+        {
+            "id": "livret_118",
+            "question": "Que changera pour vous le fait de devenir français ?",
+            "explanation": "Cela me donnera accès aux droits et devoirs des citoyens français, notamment le droit de vote, la protection de l'État, la possibilité de participer pleinement à la vie démocratique, et l'accès à tous les services publics. En contrepartie, je devrai respecter les obligations civiques comme le paiement des impôts, le respect des lois, et la participation à la défense nationale si nécessaire.",
+            "image": null
+        },
+        {
+            "id": "livret_119",
+            "question": "Quelle est la date de naissance de votre conjoint(e) ?",
+            "explanation": "Il/elle est né(e) le (JJ/MM/AAAA).",
+            "image": null
+        },
+        {
+            "id": "livret_120",
+            "question": "Quelle est la nationalité de votre conjoint(e) ?",
+            "explanation": "Il/elle est (Nationalité).",
+            "image": null
+        },
+        {
+            "id": "livret_121",
+            "question": "L'administration peut-elle refuser la nationalité française pour non-respect de l'égalité femmes-hommes ?",
+            "explanation": "Oui, même si la personne est mariée à un(e) français(e), car l'égalité entre les femmes et les hommes est une valeur essentielle de la République.",
+            "image": null
         }
     ]
 }

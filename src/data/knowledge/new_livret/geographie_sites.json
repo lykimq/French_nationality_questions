@@ -280,6 +280,36 @@
             "question": "Quel fleuve traverse Paris ?",
             "explanation": "La Seine traverse Paris.",
             "image": null
+        },
+        {
+            "id": "livret_47",
+            "question": "Quels sont les principaux fleuves de France ?",
+            "explanation": "La Seine, la Loire (le plus long), le Rhône, la Garonne et le Rhin (fleuve frontalier).",
+            "image": null
+        },
+        {
+            "id": "livret_48",
+            "question": "Qu'est-ce qu'un DROM ?",
+            "explanation": "Un Département et Région d'Outre-Mer. Il y en a 5 : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte. Ils ont le même statut que les départements métropolitains.",
+            "image": null
+        },
+        {
+            "id": "livret_49",
+            "question": "Qu'est-ce qu'une COM ?",
+            "explanation": "Une Collectivité d'Outre-Mer (ex: Polynésie française, Saint-Pierre-et-Miquelon). Elles disposent d'une plus grande autonomie que les DROM.",
+            "image": null
+        },
+        {
+            "id": "livret_50",
+            "question": "Quels sont les massifs montagneux en France ?",
+            "explanation": "Les Alpes (point culminant : le Mont Blanc), les Pyrénées, le Massif central, le Jura et les Vosges.",
+            "image": null
+        },
+        {
+            "id": "livret_51",
+            "question": "Citez quelques grandes villes françaises.",
+            "explanation": "Paris (la capitale), Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg.",
+            "image": null
         }
     ]
 }

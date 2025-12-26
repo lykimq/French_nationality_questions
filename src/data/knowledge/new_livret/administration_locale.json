@@ -178,6 +178,108 @@
             "question": "Qu'est-ce que l'eurozone ?",
             "explanation": "L'eurozone est un groupe de pays de l'UE qui ont adopté l'euro comme monnaie commune.",
             "image": null
+        },
+        {
+            "id": "livret_30",
+            "question": "Quel est le rôle de la mairie (ou hôtel de ville) ?",
+            "explanation": "C'est l'institution de proximité. Elle gère l'état civil (naissances, mariages, décès), les écoles primaires, l'urbanisme et la vie locale.",
+            "image": null
+        },
+        {
+            "id": "livret_31",
+            "question": "Qui représente l'État dans un département ?",
+            "explanation": "Le Préfet.",
+            "image": null
+        },
+        {
+            "id": "livret_32",
+            "question": "Tout citoyen peut-il créer une association ?",
+            "explanation": "Oui, la liberté d'association est garantie (loi de 1901). Les associations jouent un rôle majeur dans la solidarité et la vie culturelle.",
+            "image": null
+        },
+        {
+            "id": "livret_33",
+            "question": "Comment manifestent ils leur désaccord ?",
+            "explanation": "En manifestant, en faisant grève etc…",
+            "image": null
+        },
+        {
+            "id": "livret_34",
+            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
+            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "image": null
+        },
+        {
+            "id": "livret_35",
+            "question": "Quel a été le fait marquant de la 5éme république ?",
+            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": "livret_36",
+            "question": "Ou se trouve le siège de la présidence de la république ?",
+            "explanation": "Il se trouve au Palais de l’Élysée.",
+            "image": null
+        },
+        {
+            "id": "livret_37",
+            "question": "Ou se trouve le siège de la commission européenne ?",
+            "explanation": "Il se trouve à Bruxelles en Belgique.",
+            "image": null
+        },
+        {
+            "id": "livret_38",
+            "question": "de quel côté se trouvent-ils ?",
+            "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine. - Au nord, la Manche sépare la France du Royaume-Uni. - Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur. - Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
+            "image": null
+        },
+        {
+            "id": "livret_39",
+            "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
+            "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
+            "image": null
+        },
+        {
+            "id": "livret_40",
+            "question": "Quel été le rôle de la Bastille avant sa démolition ?",
+            "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
+            "image": null
+        },
+        {
+            "id": "livret_41",
+            "question": "– Qu’est-ce qu’une Monarchie ?",
+            "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
+            "image": null
+        },
+        {
+            "id": "livret_42",
+            "question": "Qu'est-ce qui s'est passé le 3 août 1914 ??",
+            "explanation": "Le 3 août 1914, à 18 heures, l'Allemagne annonce son entrée en guerre contre la France.",
+            "image": null
+        },
+        {
+            "id": "livret_43",
+            "question": "Pourquoi l’abolition de l’esclavage en France a-t-elle plusieurs dates ? Quelle est la date définitive?",
+            "explanation": "L’abolition de l’esclavage en France s’est faite en plusieurs étapes, ce qui explique la diversité des dates : - 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802. -",
+            "image": null
+        },
+        {
+            "id": "livret_44",
+            "question": "Pratiquez-vous des activités ensemble ?",
+            "explanation": "Oui, nous aimons (activité, par exemple : randonner, cuisiner, visiter des musées) ensemble. Cela nous aide à renforcer notre lien.",
+            "image": null
+        },
+        {
+            "id": "livret_45",
+            "question": "Y a-t-il un désert dans le sud de la France ?",
+            "explanation": "Non, il n'existe pas de véritable désert dans le sud de la France. Cependant, on trouve des zones semi-arides comme la Crau (Bouches-du-Rhône), une plaine steppique située entre Arles et l'étang de Berre, caractérisée par un paysage sec et une végétation adaptée à la sécheresse.",
+            "image": null
+        },
+        {
+            "id": "livret_46",
+            "question": "DOu se trouve le siège de cette association ?",
+            "explanation": "Le siège de l’église La Cité se trouve au 24 Rue Antoine-Julien Hénard, 75012 Paris.",
+            "image": null
         }
     ]
 }

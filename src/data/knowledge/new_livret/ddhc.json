@@ -106,6 +106,12 @@
             "question": "Art 17. Le droit de propriété est-il protégé ?",
             "explanation": "Oui, c'est un droit inviolable et sacré (sauf nécessité publique et avec indemnité).",
             "image": null
+        },
+        {
+            "id": "livret_18",
+            "question": "Que signifie 'Les hommes naissent et demeurent libres et égaux en droits' ?",
+            "explanation": "C'est l'article 1er de la DDHC. Cela signifie qu'aucune distinction sociale ne peut être fondée sur la naissance ou le statut ; tous les citoyens ont les mêmes droits.",
+            "image": null
         }
     ]
 }

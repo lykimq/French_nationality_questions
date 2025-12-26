@@ -328,6 +328,54 @@
             "question": "Pourquoi l'Union européenne a-t-elle été créée ?",
             "explanation": "L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale. Son objectif principal est de favoriser la coopération économique et politique entre les pays membres afin d'éviter les conflits, d'assurer un marché commun et d'améliorer la vie des citoyens européens par des politiques communes en matière d'économie, d'environnement, de droits humains, et de sécurité.",
             "image": null
+        },
+        {
+            "id": "livret_55",
+            "question": "La liberté d'expression est-elle absolue ?",
+            "explanation": "Non. Elle est garantie mais limitée par la loi pour respecter les droits d'autrui (interdiction de l'incitation à la haine, diffamation, injure).",
+            "image": null
+        },
+        {
+            "id": "livret_56",
+            "question": "Quelle est la position de la France sur l'égalité femmes-hommes ?",
+            "explanation": "C'est une valeur essentielle de la République. La loi garantit aux femmes les mêmes droits qu'aux hommes dans tous les domaines (professionnel, politique, civil).",
+            "image": null
+        },
+        {
+            "id": "livret_57",
+            "question": "Qu'est-ce que le mariage pour tous ?",
+            "explanation": "C'est la loi de 2013 qui permet aux couples de même sexe de se marier et d'adopter.",
+            "image": null
+        },
+        {
+            "id": "livret_58",
+            "question": "Quel est le devoir principal de tout citoyen ?",
+            "explanation": "Respecter la loi, les droits des autres et l'environnement.",
+            "image": null
+        },
+        {
+            "id": "livret_59",
+            "question": "Payer ses impôts est-il une obligation ?",
+            "explanation": "Oui, c'est obligatoire. Ils servent à financer les services publics (écoles, hôpitaux, police) et sont répartis selon les facultés de chacun.",
+            "image": null
+        },
+        {
+            "id": "livret_60",
+            "question": "Qu'est-ce que la Journée Défense et Citoyenneté (JDC) ?",
+            "explanation": "C'est une journée obligatoire pour tous les jeunes français (après le recensement à 16 ans) pour les sensibiliser aux enjeux de la défense et de la citoyenneté.",
+            "image": null
+        },
+        {
+            "id": "livret_61",
+            "question": "Peut-on être appelé à défendre la patrie ?",
+            "explanation": "Oui, tous les citoyens français peuvent être appelés à participer à la défense nationale en cas de conflit armé ou de menace grave.",
+            "image": null
+        },
+        {
+            "id": "livret_62",
+            "question": "Un citoyen doit-il participer à un jury d'assises s'il est tiré au sort ?",
+            "explanation": "Oui, c'est un devoir civique. Sauf motif grave, on ne peut pas refuser de siéger comme juré.",
+            "image": null
         }
     ]
 }

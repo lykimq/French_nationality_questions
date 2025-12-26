@@ -1114,6 +1114,78 @@
             "question": "Quelle organisation a été créée en 1945 après la Seconde Guerre mondiale ?",
             "explanation": "L'Organisation des Nations unies (ONU) est créée en 1945 pour maintenir la paix internationale.",
             "image": null
+        },
+        {
+            "id": "livret_186",
+            "question": "Qui était Clovis ?",
+            "explanation": "Premier roi des Francs à s'être converti au christianisme (en 496), il a unifié une grande partie du territoire qui deviendra la France.",
+            "image": null
+        },
+        {
+            "id": "livret_187",
+            "question": "Quel édit a mis fin aux guerres de religion en 1598 ?",
+            "explanation": "L'Édit de Nantes, signé par Henri IV, accordant la liberté de culte aux protestants.",
+            "image": null
+        },
+        {
+            "id": "livret_188",
+            "question": "Qui était le 'Roi-Soleil' ?",
+            "explanation": "Louis XIV, symbole de la monarchie absolue, qui a fait construire le château de Versailles.",
+            "image": null
+        },
+        {
+            "id": "livret_189",
+            "question": "Quel événement marque le début de la Révolution française ?",
+            "explanation": "La prise de la Bastille, le 14 juillet 1789.",
+            "image": null
+        },
+        {
+            "id": "livret_190",
+            "question": "Qui était Napoléon Bonaparte ?",
+            "explanation": "Général puis Empereur des Français (Napoléon Ier). On lui doit notamment le Code civil et de nombreuses réformes administratives.",
+            "image": null
+        },
+        {
+            "id": "livret_191",
+            "question": "Quel est le rôle du Général de Gaulle dans l'histoire de France ?",
+            "explanation": "Chef de la France libre pendant la Seconde Guerre mondiale (Appel du 18 juin 1940) et fondateur de la Ve République en 1958.",
+            "image": null
+        },
+        {
+            "id": "livret_192",
+            "question": "Quand l'esclavage a-t-il été définitivement aboli en France ?",
+            "explanation": "Le 27 avril 1848, sous l'impulsion de Victor Schœlcher.",
+            "image": null
+        },
+        {
+            "id": "livret_193",
+            "question": "Qui était Jeanne d'Arc ?",
+            "explanation": "Héroïne nationale du XVe siècle qui a combattu les Anglais pendant la guerre de Cent Ans et aidé à libérer la France.",
+            "image": null
+        },
+        {
+            "id": "livret_194",
+            "question": "Citez les dates des deux dernières guerres mondiales.",
+            "explanation": "La Première Guerre mondiale : 1914-1918. La Seconde Guerre mondiale : 1939-1945.",
+            "image": null
+        },
+        {
+            "id": "livret_195",
+            "question": "Qui été le Roi de France durant la révolution Française ?",
+            "explanation": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
+            "image": null
+        },
+        {
+            "id": "livret_196",
+            "question": "Quel été le surnom des soldats Français durant la première guerre mondiale ?",
+            "explanation": "On les appelait les Poilus.",
+            "image": null
+        },
+        {
+            "id": "livret_197",
+            "question": ": Que s'est-il passé en France durant la Seconde Guerre mondiale ?",
+            "explanation": "La France a été envahie par l'Allemagne en 1940, entraînant une occupation jusqu'en 1944, des mouvements de résistance à travers le pays, et la collaboration du régime de Vichy, jusqu'à la libération par les Alliés.",
+            "image": null
         }
     ]
 }

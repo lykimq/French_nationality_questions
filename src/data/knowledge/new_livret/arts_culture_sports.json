@@ -154,6 +154,42 @@
             "question": "Quel musée est situé à Paris ?",
             "explanation": "Parmi les grands musées parisiens : le Louvre, le musée d'Orsay, le Centre Pompidou.",
             "image": null
+        },
+        {
+            "id": "livret_26",
+            "question": "Qui était Molière ?",
+            "explanation": "Le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies (ex : L'Avare, Le Malade imaginaire).",
+            "image": null
+        },
+        {
+            "id": "livret_27",
+            "question": "Citez des écrivains français célèbres.",
+            "explanation": "Victor Hugo (Les Misérables), Voltaire, Jean-Jacques Rousseau, Albert Camus (L'Étranger), Gustave Flaubert (Madame Bovary).",
+            "image": null
+        },
+        {
+            "id": "livret_28",
+            "question": "Quel monument a été construit pour l'Exposition universelle de 1889 ?",
+            "explanation": "La Tour Eiffel, conçue par Gustave Eiffel.",
+            "image": null
+        },
+        {
+            "id": "livret_29",
+            "question": "Quel est le musée le plus visité de France ?",
+            "explanation": "Le musée du Louvre à Paris.",
+            "image": null
+        },
+        {
+            "id": "livret_30",
+            "question": "Citez quelques plats typiques de la gastronomie française.",
+            "explanation": "Le pot-au-feu, la quiche lorraine, la bouillabaisse, le coq au vin, les crêpes bretonnes.",
+            "image": null
+        },
+        {
+            "id": "livret_31",
+            "question": "Comment intégrez-vous vos cultures ou traditions familiales dans votre vie en France ?",
+            "explanation": "Nous intégrons nos traditions en (par exemple : célébrant des fêtes spécifiques, cuisinant des plats traditionnels), ce qui enrichit notre expérience culturelle en France.",
+            "image": null
         }
     ]
 }
