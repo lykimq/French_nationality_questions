@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import { StyleSheet, View, TouchableOpacity, Pressable, Animated, Dimensions, ScrollView, Image, ActivityIndicator, type NativeSyntheticEvent, type NativeScrollEvent, type LayoutChangeEvent } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Pressable, Animated, Dimensions, ScrollView, Image, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { FormattedText } from '../../shared/components';
@@ -21,33 +21,11 @@ interface FlashCardProps {
 
 const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) => {
     const { theme } = useTheme();
-    const [contentHeight, setContentHeight] = React.useState(0);
-    const [scrollViewHeight, setScrollViewHeight] = React.useState(0);
-    const [scrollOffset, setScrollOffset] = React.useState(0);
-
-    // Derived state for scrollability with buffer
-    const isScrollable = contentHeight > scrollViewHeight + 1;
 
     useEffect(() => {
-        // Reset scroll state when question changes
-        setScrollOffset(0);
-        setContentHeight(0);
+        // Reset scroll position when question changes
         scrollViewRef.current?.scrollTo({ y: 0, animated: false });
     }, [question.id]);
-
-    const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-        const { contentOffset } = event.nativeEvent;
-        setScrollOffset(contentOffset.y);
-    };
-
-    const handleContentSizeChange = (_contentWidth: number, contentHeight: number) => {
-        setContentHeight(contentHeight);
-    };
-
-    const handleLayout = (event: LayoutChangeEvent) => {
-        const { height } = event.nativeEvent.layout;
-        setScrollViewHeight(height);
-    };
 
     const flipAnimation = useRef(new Animated.Value(0)).current;
     const prevQuestionIdRef = useRef<number | null>(null);
@@ -83,10 +61,6 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
         animationRef.current = anim;
         anim.start(() => {
             animationRef.current = null;
-            if (isFlipped) {
-                // Flash scroll indicators after animation completes
-                scrollViewRef.current?.flashScrollIndicators();
-            }
         });
     }, [isFlipped, flipAnimation]);
 
@@ -132,29 +106,6 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
     }
 
     explanationText = formatExplanation(explanationText);
-
-    // Calculate scrollbar thumb metrics
-    let thumbHeight = 0;
-    let thumbTop = 0;
-
-    if (isScrollable && contentHeight > 0 && scrollViewHeight > 0) {
-        // Calculate proportional height
-        thumbHeight = (scrollViewHeight / contentHeight) * scrollViewHeight;
-        // Ensure minimum thumb height
-        thumbHeight = Math.max(thumbHeight, 30);
-
-        // Calculate position
-        const maxScrollOffset = contentHeight - scrollViewHeight;
-        // Avoid division by zero
-        if (maxScrollOffset > 0) {
-            const scrollRatio = scrollOffset / maxScrollOffset;
-            const maxThumbTop = scrollViewHeight - thumbHeight;
-            thumbTop = scrollRatio * maxThumbTop;
-
-            // Clamp values
-            thumbTop = Math.max(0, Math.min(thumbTop, maxThumbTop));
-        }
-    }
 
     return (
         <View style={styles.container}>
@@ -247,15 +198,13 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                                 style={styles.explanationScrollView}
                                 contentContainerStyle={styles.explanationScrollContent}
                                 showsVerticalScrollIndicator={false}
+                                showsHorizontalScrollIndicator={false}
                                 persistentScrollbar={false}
                                 nestedScrollEnabled={true}
                                 bounces={true}
                                 alwaysBounceVertical={false}
                                 scrollEnabled={true}
                                 removeClippedSubviews={false}
-                                onScroll={handleScroll}
-                                onContentSizeChange={handleContentSizeChange}
-                                onLayout={handleLayout}
                                 scrollEventThrottle={16}
                             >
                                 <Pressable onPress={onFlip} style={styles.contentPressable}>
@@ -301,22 +250,6 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                                     </View>
                                 </Pressable>
                             </ScrollView>
-
-                            {/* Custom Scrollbar */}
-                            {isScrollable && (
-                                <View style={[styles.customScrollbarTrack]}>
-                                    <View
-                                        style={[
-                                            styles.customScrollbarThumb,
-                                            {
-                                                height: thumbHeight,
-                                                top: thumbTop,
-                                                backgroundColor: theme.colors.textMuted + '80' // Semi-transparent
-                                            }
-                                        ]}
-                                    />
-                                </View>
-                            )}
                         </View>
 
                         <TouchableOpacity
@@ -421,7 +354,6 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         position: 'relative',
-        paddingRight: 6,
     },
     explanationScrollView: {
         flex: 1,
@@ -429,7 +361,6 @@ const styles = StyleSheet.create({
     },
     explanationScrollContent: {
         paddingBottom: 16,
-        paddingHorizontal: 4,
         flexGrow: 1,
     },
     headerPressable: {
@@ -480,20 +411,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 16,
         borderRadius: 12,
-    },
-    customScrollbarTrack: {
-        position: 'absolute',
-        right: -4,
-        top: 0,
-        bottom: 0,
-        width: 4,
-        backgroundColor: 'transparent',
-    },
-    customScrollbarThumb: {
-        width: 4,
-        borderRadius: 2,
-        position: 'absolute',
-        right: 0,
     },
     flipHint: {
         flexDirection: 'row',
