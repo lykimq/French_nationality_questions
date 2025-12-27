@@ -126,12 +126,14 @@ android {
                 keyAlias releaseKeyAlias
                 keyPassword releaseKeyPassword
             } else {
-                // Fallback to debug signing if release signing is not configured
-                // This allows the app to build and run during development
-                storeFile file('debug.keystore')
-                storePassword 'android'
-                keyAlias 'androiddebugkey'
-                keyPassword 'android'
+                // CRITICAL: Release builds MUST use a release keystore for production
+                // Do not fall back to debug signing for production builds
+                throw new RuntimeException(
+                    'Release signing is not configured. ' +
+                    'Please set MYAPP_RELEASE_STORE_FILE, MYAPP_RELEASE_KEY_ALIAS, ' +
+                    'MYAPP_RELEASE_STORE_PASSWORD, and MYAPP_RELEASE_KEY_PASSWORD in android/gradle.properties. ' +
+                    'See android/gradle.properties for instructions.'
+                )
             }
         }
     }
