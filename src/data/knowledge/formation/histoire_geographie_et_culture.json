@@ -5,19 +5,19 @@
     "questions": [
         {
             "id": "formation_1",
-            "question": "Jusqu’en 1789, l’Ancien Régime",
+            "question": "Qu'est-ce que l'Ancien Régime jusqu'en 1789 ?",
             "explanation": "Avant la Révolution française de 1789, le régime politique de France est celui d’une monarchie absolue de droit divin. On appelle cette période l’Ancien Régime. Les principales périodes sont les suivantes :\n\n- 481-751 : dynastie mérovingienne ;\n\n- 751-987 : dynastie carolingienne ;\n\n- 987-1789 : dynastie capétienne.",
             "image": null
         },
         {
             "id": "formation_2",
-            "question": "De 1789 à 1958, une succession de régimes politiques",
+            "question": "Quels régimes politiques se sont succédé de 1789 à 1958 ?",
             "explanation": "À partir de 1789, la France connaît plusieurs régimes politiques. Les principales périodes sont les suivantes :\n\n- 1789-1791 : Révolution française et transitions politiques. La Déclaration des droits de l’homme et du citoyen est publiée en 1789 ;\n\n- 1791-1792 : Monarchie constitutionnelle ;\n\n- 1792-1799 : 1re République ;\n\n- 1799-1804 : Consulat ;\n\n- 1804-1814 : 1er Empire. Napoléon promulgue le Code civil ;\n\n- 1814-1830 : Restauration de la monarchie ;\n\n- 1830-1848 : Monarchie de Juillet ;\n\n- 1848-1851 : 2e République ;\n\n- 1852-1870 : 2nd Empire ;\n\n- 1870-1940 : 3e République. En 1871, insurrection de la Commune de Paris ;\n\n- 1940-1944 : Régime de Vichy. En parallèle, la France libre puis le Comité français de libération nationale ;\n\n- 1944-1946 : Gouvernement provisoire de la République française ;\n\n- 1946-1958 : 4e République. La Sécurité sociale est créée. La Constitution garantit pour la première fois l’égalité entre les femmes et les hommes.",
             "image": null
         },
         {
             "id": "formation_3",
-            "question": "Depuis 1958, la Ve République",
+            "question": "Qu'est-ce que la Ve République depuis 1958 ?",
             "explanation": "Depuis 1958, le régime politique de la France est celui de la Ve République.\n\nLa République telle que nous la connaissons aujourd’hui s’est construite progressivement. Elle a hérité des acquis, des luttes et des transformations des différents régimes qui l’ont précédée.\n\n![](./pics/politiques.png)",
             "image": "pics/politiques.png"
         },
@@ -185,19 +185,19 @@
         },
         {
             "id": "formation_51",
-            "question": "Avant 2013, les couples de même sexe avaient des droits limités.",
+            "question": "Quels droits avaient les couples de même sexe avant 2013 ?",
             "explanation": "Avant 2013, les couples de même sexe pouvaient seulement conclure un PACS (Pacte Civil de Solidarité). Il donne quelques droits, mais pas autant que le mariage.",
             "image": null
         },
         {
             "id": "formation_52",
-            "question": "Un débat politique et sociétal majeur",
+            "question": "Pourquoi le mariage pour tous a-t-il été un débat politique et sociétal majeur ?",
             "explanation": "La question du mariage pour tous est dans le débat public. Les Pays-Bas, la Belgique ou l’Espagne, ont déjà adopté le mariage homosexuel, créant le débat en France.",
             "image": null
         },
         {
             "id": "formation_53",
-            "question": "En 2013, le mariage pour tous",
+            "question": "Qu'est-ce que le mariage pour tous en 2013 ?",
             "explanation": "Soutenue par la ministre de la Justice Christiane Taubira, la loi du 17 mai 2013 ouvre le mariage et l’adoption aux couples homosexuels. La loi aura rencontré une opposition dans la société et provoqué plusieurs manifestations.\n\nLe premier mariage homosexuel en France est célébré à la mairie de Montpellier le 29 mai 2013.\n\nC’est une grande avancée en termes d’égalité des droits.",
             "image": null
         },
@@ -221,7 +221,7 @@
         },
         {
             "id": "formation_57",
-            "question": "À retenir",
+            "question": "Quels sont les points à retenir ?",
             "explanation": "Dates clés:\n\n- Dates de la Première Guerre mondiale : 1914-1918.\n\n- Entrée en guerre des États-Unis : 1917.\n\nÉlément déclencheur:\n\n- L’assassinat de l’archiduc François-Ferdinand : 28 juin 1914.\n\nPays concernés:\n\n- France, le Royaume-Uni et la Russie (Triple-Entente) ;\n\n- Empires allemands et Austro-Hongrois et l’Italie (Triple-Alliance).",
             "image": null
         },
@@ -425,7 +425,7 @@
         },
         {
             "id": "formation_101",
-            "question": "La France en quelques chiffres clés",
+            "question": "Quels sont les chiffres clés de la France ?",
             "explanation": "Superficie : environ 543 000 km² pour la métropole, 120 000 km² pour les DROM et 4 600 km² pour les COM (667 000 km² au total).\n\n- Nombre d’habitants : 68,6 millions (au 1er janvier 2025).\n\n- Nombre de régions : 18 (13 en métropole et 5 en outre-mer).\n\n- Nombre de départements : 101 (96 en métropole et 5 en outre-mer).\n\n- Nombre de communes : environ 35 000 (France métropolitaine et DROM, au 1er janvier 2025).\n\n![](./pics/region.png)",
             "image": null
         },
@@ -443,7 +443,7 @@
         },
         {
             "id": "formation_104",
-            "question": "Les frontières et l'espace maritime de la France",
+            "question": "Quelles sont les frontières et l'espace maritime de la France ?",
             "explanation": "La France possède des frontières terrestres et maritimes étendues qui font d'elle une puissance géographique mondiale.\n\nFrontières terrestres :\n\n- En Europe hexagonale : 3 000 km de frontières terrestres partagées avec 8 pays : la Belgique, le Luxembourg, l'Allemagne, la Suisse, l'Italie, l'Espagne, ainsi que les principautés d'Andorre et de Monaco.\n\n- En outre-mer : frontières avec le Brésil et le Suriname en Amérique du Sud (Guyane).\n\nFrontières maritimes :\n\n- En métropole : 5 500 km de côtes le long de la mer du Nord, de la Manche, de l'océan Atlantique et de la mer Méditerranée.\n\n- Au total : plus de 22 000 km de frontières maritimes, faisant de la France le pays voisin de plus de 30 pays par la mer, plus que tout autre pays au monde.\n\nEspace maritime (ZEE) :\n\nGrâce à ses territoires d'outre-mer, la France possède la deuxième plus grande Zone Économique Exclusive (ZEE) au monde, avec plus de 10 millions de km² d'espaces maritimes sous souveraineté française, couvrant presque tous les océans : Atlantique, Indien, Pacifique et Antarctique.",
             "image": "pics/card.png"
         },
@@ -929,13 +929,13 @@
         },
         {
             "id": "formation_202",
-            "question": "La basilique de Fourvière : le symbole de Lyo",
+            "question": "Qu'est-ce que la basilique de Fourvière : le symbole de Lyon ?",
             "explanation": "La basilique de Fourvière se situe sur la colline Fourvière, la plus haute de la ville.\n\nŒuvre de l'architecte Pierre Bossan, elle a été construite entre 1872 et 1884.\n\nCette basilique est connue pour son style original et la richesse de sa décoration intérieure (mosaïques, vitraux, marbres).\n\nLa basilique est un lieu incontournable de la ville de Lyon et de sa région. Depuis son esplanade, on peut voir un panorama exceptionnel sur Lyon.\n\nAu mois de décembre, pendant la Fête des Lumières, la basilique et toute la ville de Lyon sont illuminées par des projections et lumières.\n\nDes millions de visiteurs la visitent chaque année.\n\nLa fondue savoyarde, spécialité traditionnelle de la région alpine:\n\n- La fondue savoyarde est un plat de montagne populaire dans les Alpes françaises.\n\nC’est un plat à base de fromage fondu français (comté, beaufort, emmental) dans lequel on trempe du pain. Le fromage est souvent parfumé avec du vin blanc et de l’ail.\n\nLa fondue savoyarde est appréciée en hiver dans les stations de ski.",
             "image": null
         },
         {
             "id": "formation_203",
-            "question": "L’abbaye de Fontenay, monument emblématique de Bourgogne",
+            "question": "Qu'est-ce que l'abbaye de Fontenay, monument emblématique de Bourgogne ?",
             "explanation": "L’abbaye de Fontenay se situe au nord de la Bourgogne, en pleine nature.\n\nFondée par Saint Bernard de Clairvaux en 1118, l’abbaye est l’un des plus anciens monastères de France encore existant. Son état de conservation est remarquable.\n\nL’abbaye est classée au patrimoine mondial de l’UNESCO depuis 1981. Le parc paysager a été classé “Jardin remarquable” en 2004.\n\nC’est un site touristique important en Bourgogne.\n\nLe bœuf bourguignon, plat typique de la gastronomie bourguignonne:\n\n- Le bœuf bourguignon est une spécialité culinaire qui vient de Bourgogne.\n\nC’est un plat composé de morceaux de bœuf mijotés longuement dans un vin rouge de Bourgogne, avec des oignons, des carottes, des champignons et du lard.\n\nLe bœuf bourguignon est un plat convivial, symbole de la gastronomie de Bourgogne-Franche-Comté, qu’on mange partout en France.",
             "image": null
         },
@@ -1085,7 +1085,7 @@
         },
         {
             "id": "formation_228",
-            "question": "Les frontières et l’espace maritime de la France",
+            "question": "Quelles sont les frontières et l'espace maritime de la France ?",
             "explanation": "La France possède un vaste espace maritime qui s'étend sur plusieurs océans et mers. \n\nLes frontières maritimes de la France comprennent :\n\n- Les eaux territoriales : 12 milles nautiques (environ 22 km) depuis la côte, où la France exerce sa souveraineté complète.\n\n- La zone économique exclusive (ZEE) : 200 milles nautiques (environ 370 km) depuis la côte, où la France a des droits exclusifs pour l'exploitation des ressources naturelles (pêche, pétrole, gaz, etc.).\n\n- Le plateau continental : extension naturelle du territoire sous-marin, qui peut s'étendre au-delà de 200 milles nautiques dans certains cas.\n\nGrâce à ses territoires d'outre-mer (DOM-TOM), la France possède la deuxième plus grande ZEE au monde après les États-Unis, couvrant environ 11 millions de km² dans l'Atlantique, le Pacifique, l'océan Indien et la Méditerranée.\n\nCes espaces maritimes sont importants pour la pêche, l'exploitation des ressources énergétiques, la protection de l'environnement marin, et la souveraineté nationale.",
             "image": null
         }

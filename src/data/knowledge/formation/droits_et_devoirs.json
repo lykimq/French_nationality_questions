@@ -113,7 +113,7 @@
         },
         {
             "id": "formation_19",
-            "question": "La déchéance de nationalité : la perte de la nationalité",
+            "question": "Qu'est-ce que la déchéance de nationalité ?",
             "explanation": "La déchéance de nationalité est une décision administrative de l'État qui retire à une personne sa nationalité française dans certaines conditions strictement définies par la loi (article 21-24 du Code civil).\n\nSelon la Charte des droits et devoirs du citoyen français, une personne qui a acquis la qualité de Français peut être déchue de la nationalité française si :\n\n- elle s'est soustraite à ses obligations de défense nationale ;\n\n- elle s'est livrée à des actes contraires aux intérêts fondamentaux de la France.\n\nCette mesure implique la perte des droits et libertés liés à la citoyenneté dont le droit de vote, le passeport français ou encore la protection diplomatique de l'État. La déchéance ne peut concerner que les personnes ayant acquis la nationalité française par naturalisation, et non celles nées françaises.",
             "image": null
         },
@@ -137,14 +137,14 @@
         },
         {
             "id": "formation_23",
-            "question": "La Constitution française du 4 octobre 1958",
+            "question": "Qu'est-ce que la Constitution française du 4 octobre 1958 ?",
             "explanation": "La Constitution du 4 octobre 1958 est le texte fondateur de la Ve République. C'est la Constitution qui est appliquée actuellement.\n\nElle a été rédigée en moins de trois mois par le Gouvernement du Général de Gaulle, dans un contexte de crise politique liée à la guerre d’Algérie. Elle a été approuvée par référendum (les citoyens votent par “oui” ou par “non” à une question posée par le président de la République) à 82% des voix le 28 septembre 1958. Elle est adoptée le 4 octobre 1958.\n\nLa Constitution est un texte très difficile à modifier mais quelques modifications ont pu être apportées. En 1962 par exemple, un référendum constitutionnel a validé que le président de la République ne serait plus élu au suffrage indirect (élu par des grands électeurs), mais au suffrage direct (par les citoyens eux-mêmes).",
             "image": null
         },
         {
             "id": "formation_24",
-            "question": "Le bloc de constitutionnalité",
-            "explanation": "La Constitution du 4 octobre 1958 est composée d’un Préambule et de 108 articles organisés en 17 parties.\n\nLe Préambule de la Constitution de la Ve République fait référence à 3 textes fondateurs :\n\n1. La Déclaration des droits de l’homme et du citoyen de 1789 ;\n\n2. Le Préambule de la Constitution de 1946 ;\n\n3. La Charte de l’environnement de 2004.\n\nCes trois textes fondateurs et la Constitution française du 4 octobre 1958 forment, ensemble, le \"bloc de constitutionnalité\".\n\nLe bloc de constitutionnalité est la référence juridique la plus haute : toutes les lois françaises doivent le respecter. Le Conseil constitutionnel est chargé de faire respecter la Constitution, la norme suprême en droit français.",
+            "question": "Qu'est-ce que le bloc de constitutionnalité ?",
+            "explanation": "La Constitution du 4 octobre 1958 est composée d'un Préambule et de 108 articles organisés en 17 parties.\n\nLe Préambule de la Constitution de la Ve République fait référence à 3 textes fondateurs :\n\n1. La Déclaration des droits de l’homme et du citoyen de 1789 ;\n\n2. Le Préambule de la Constitution de 1946 ;\n\n3. La Charte de l’environnement de 2004.\n\nCes trois textes fondateurs et la Constitution française du 4 octobre 1958 forment, ensemble, le \"bloc de constitutionnalité\".\n\nLe bloc de constitutionnalité est la référence juridique la plus haute : toutes les lois françaises doivent le respecter. Le Conseil constitutionnel est chargé de faire respecter la Constitution, la norme suprême en droit français.",
             "image": null
         },
         {
@@ -191,7 +191,7 @@
         },
         {
             "id": "formation_32",
-            "question": "Quelques exemples",
+            "question": "Quels sont quelques exemples de limites aux droits et libertés ?",
             "explanation": "Dans le cadre de la lutte contre le terrorisme certaines libertés individuelles (liberté de circulation, par exemple) ont été restreintes.\n\nLa mise en place de l'état d'urgence sanitaire contre le Covid-19 en mars 2020 a limité la liberté d'aller et venir, la liberté d'entreprendre et la liberté de réunion.\n\nEn milieu carcéral, la liberté de correspondance peut être restreinte pour des raisons de sécurité ou de maintien de l’ordre.\n\nDe même, il est interdit de circuler dans l'espace public avec une tenue qui vise à cacher son visage.",
             "image": null
         },
@@ -221,8 +221,8 @@
         },
         {
             "id": "formation_37",
-            "question": "Vivre en France : vivre ensemble selon des règles communes à tous",
-            "explanation": "Toute personne qui habite en France (peu importe sa nationalité, citoyen français ou non) doit respecter certaines obligations légales envers l’État et certaines règles qui relèvent du vivre-ensemble et du respect de la société.\n\nLes obligations des résidents français garantissent :\n\n- la cohésion sociale ;\n\n- la sécurité ;\n\n- le bon fonctionnement de la société.",
+            "question": "Quelles sont les obligations des personnes qui vivent en France ?",
+            "explanation": "Toute personne qui habite en France (peu importe sa nationalité, citoyen français ou non) doit respecter certaines obligations légales envers l'État et certaines règles qui relèvent du vivre-ensemble et du respect de la société.\n\nLes obligations des résidents français garantissent :\n\n- la cohésion sociale ;\n\n- la sécurité ;\n\n- le bon fonctionnement de la société.",
             "image": null
         },
         {
@@ -257,8 +257,8 @@
         },
         {
             "id": "formation_43",
-            "question": "Les violences entre enfants : le cas du harcèlement scolaire",
-            "explanation": "Un élève est victime de harcèlement scolaire lorsqu'il subit, de manière répétée, des violences verbales, morales ou physiques de la part d'un ou plusieurs autres élèves, à l’intérieur ou à l’extérieur de l’établissement scolaire.\n\nCes actes de violence sont, par exemple, des insultes, des moqueries, des brimades, des rejets d'un groupe, des bousculades, des coups, des vols.\n\nLe harcèlement scolaire est un délit. Il est puni par la loi.",
+            "question": "Qu'est-ce que le harcèlement scolaire ?",
+            "explanation": "Un élève est victime de harcèlement scolaire lorsqu'il subit, de manière répétée, des violences verbales, morales ou physiques de la part d'un ou plusieurs autres élèves, à l'intérieur ou à l'extérieur de l'établissement scolaire.\n\nCes actes de violence sont, par exemple, des insultes, des moqueries, des brimades, des rejets d'un groupe, des bousculades, des coups, des vols.\n\nLe harcèlement scolaire est un délit. Il est puni par la loi.",
             "image": null
         },
         {
@@ -275,13 +275,13 @@
         },
         {
             "id": "formation_46",
-            "question": "Que prévoit la loi ?",
+            "question": "Que prévoit la loi concernant les mutilations sexuelles féminines ?",
             "explanation": "Les mutilations sexuelles féminines sont interdites et sévèrement punies par la loi, y compris lorsqu'elles sont commises à l'étranger. Aucune tradition ne peut justifier de tels actes discriminatoires.\n\nLes parents sont responsables de la protection des droits fondamentaux de leur enfant.",
             "image": null
         },
         {
             "id": "formation_47",
-            "question": "La violence sexuelle, une violence interdite",
+            "question": "Qu'est-ce que la violence sexuelle ?",
             "explanation": "La violence sexuelle désigne tous les actes commis avec violence, contrainte, menace ou surprise en rapport avec une partie du corps considérée comme intime et sexuelle (la bouche, la poitrine, le sexe, les fesses et les cuisses).",
             "image": null
         },
@@ -317,7 +317,7 @@
         },
         {
             "id": "formation_53",
-            "question": "Témoin de violences : vous devez agir sans vous mettre en danger",
+            "question": "Que doit faire un témoin de violences ?",
             "explanation": "Quelle que soit la violence dont vous êtes témoin, vous devez agir. Votre action aidera la victime qui peut être un membre de votre famille, un collègue de travail, un inconnu dans la rue...",
             "image": null
         },
@@ -329,13 +329,13 @@
         },
         {
             "id": "formation_55",
-            "question": "Le devoir de protéger l'environnement",
-            "explanation": "Toutes les personnes qui habitent en France ont le devoir de protéger l’environnement, pour soi et pour les autres :\n\n- “Chacun a le droit de vivre dans un environnement équilibré et respectueux de la santé” (article 1 de la Charte de l’environnement de 2004).\n\n- “Toute personne a le devoir de prendre part à la préservation et à l’amélioration de l’environnement” (article 2 de la Charte de l’environnement de 2004). Elle s’inscrit dans le respect des valeurs républicaines :\n\n- Liberté, en choisissant de consommer et de se déplacer de manière responsable ;\n\n- Égalité, pour que chacun ait accès à un environnement sain ;\n\n- Fraternité, pour les générations futures et le bien commun.",
+            "question": "Quel est le devoir de protéger l'environnement ?",
+            "explanation": "Toutes les personnes qui habitent en France ont le devoir de protéger l'environnement, pour soi et pour les autres :\n\n- “Chacun a le droit de vivre dans un environnement équilibré et respectueux de la santé” (article 1 de la Charte de l’environnement de 2004).\n\n- “Toute personne a le devoir de prendre part à la préservation et à l’amélioration de l’environnement” (article 2 de la Charte de l’environnement de 2004). Elle s’inscrit dans le respect des valeurs républicaines :\n\n- Liberté, en choisissant de consommer et de se déplacer de manière responsable ;\n\n- Égalité, pour que chacun ait accès à un environnement sain ;\n\n- Fraternité, pour les générations futures et le bien commun.",
             "image": null
         },
         {
             "id": "formation_56",
-            "question": "Exemples d'actions concrètes :",
+            "question": "Quels sont des exemples d'actions concrètes pour protéger l'environnement ?",
             "explanation": "- trier ses déchets et réduire ses déchets plastiques ;\n\n- éviter le gaspillage des aliments et de l’énergie ;\n\n- privilégier les transports en commun et le vélo ;\n\n- respecter les espaces communs et ne pas y jeter de déchets ;\n\n- participer à des actions locales pour l’environnement (exemple : nettoyage collectif).",
             "image": null
         }

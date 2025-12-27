@@ -157,7 +157,7 @@
         },
         {
             "id": "livret_26",
-            "question": "Citez des personnes naturalisées Français(e)",
+            "question": "Citez des personnes naturalisées Français(e).",
             "explanation": "Marie Curie, Joséphine Baker",
             "image": null
         },
@@ -223,7 +223,7 @@
         },
         {
             "id": "livret_37",
-            "question": "Citez des plats de votre région/Ville/Département",
+            "question": "Citez des plats de votre région/Ville/Département.",
             "explanation": "Baguette, Croissant, Soupe à l’oignon, Quiche Lorraine, Steak frites, Tarte Tatin, Île flottante, Brie de Meaux, Pâté en croûte, Escargots de Bourgogne, Crêpes, Galettes, Macarons, Chausson aux pommes",
             "image": null
         },
@@ -301,13 +301,13 @@
         },
         {
             "id": "livret_50",
-            "question": "Citez trois rois de France",
+            "question": "Citez trois rois de France.",
             "explanation": "Parmi les rois de France célèbres, on peut citer : Charlemagne (roi des Francs et empereur, 768-814), François Ier (1515-1547), Henri IV (1589-1610), Louis XIV (1643-1715, le Roi Soleil), Louis XVI (1774-1792, dernier roi avant la Révolution).",
             "image": null
         },
         {
             "id": "livret_51",
-            "question": "Citez des Reines de France",
+            "question": "Citez des Reines de France.",
             "explanation": "Parmi les reines de France célèbres, on peut citer : Catherine de Médicis (épouse d'Henri II), Aliénor d'Aquitaine (épouse de Louis VII puis d'Henri II d'Angleterre), Marie-Antoinette (épouse de Louis XVI), Anne d'Autriche (épouse de Louis XIII et mère de Louis XIV), Anne de Bretagne (épouse de Charles VIII puis de Louis XII), et Marie de Médicis (épouse d'Henri IV).",
             "image": null
         },
@@ -451,7 +451,7 @@
         },
         {
             "id": "livret_76",
-            "question": "Que signifie chaque couleur:",
+            "question": "Que signifie chaque couleur du drapeau français ?",
             "explanation": "Le blanc est la couleur historique des rois de France, le bleu et le rouge représentent la ville de Paris.",
             "image": null
         },
@@ -1003,7 +1003,7 @@
         },
         {
             "id": "livret_170",
-            "question": "Qui a peint \"La liberté guidant le peuple\"?",
+            "question": "Qui a peint \"La liberté guidant le peuple\" ?",
             "explanation": "Le tableau a été peint par Eugène Delacroix en 1830.",
             "image": null
         },

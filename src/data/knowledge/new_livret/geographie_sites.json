@@ -19,7 +19,7 @@
         },
         {
             "id": "livret_3",
-            "question": "Citez grandes métropoles françaises.",
+            "question": "Citez de grandes métropoles françaises.",
             "explanation": "Paris, Lyon, Marseille, Lille, Toulouse, Bordeaux, Nice, Nantes, Strasbourg, Rennes.",
             "image": null
         },
@@ -31,43 +31,43 @@
         },
         {
             "id": "livret_5",
-            "question": "Citez les trois plus grandes villes Françaises",
+            "question": "Citez les trois plus grandes villes françaises.",
             "explanation": "Paris, Marseille et Lyon sont les trois plus grandes villes de France.",
             "image": null
         },
         {
             "id": "livret_6",
-            "question": "Citez trois départements Français",
+            "question": "Citez trois départements français.",
             "explanation": "La France compte 101 départements au total (96 en métropole et 5 en outre-mer). Exemples de départements : Haut-Rhin (68), Bas-Rhin (67), Haute-Garonne (31), Paris (75), Bouches-du-Rhône (13), Rhône (69), Nord (59), Gironde (33), Loire-Atlantique (44), etc. Chaque département a un numéro et un chef-lieu (préfecture).",
             "image": null
         },
         {
             "id": "livret_7",
-            "question": "Citez trois départements d'outre-mer",
+            "question": "Citez trois départements d'outre-mer.",
             "explanation": "Guadeloupe, Mayotte, Martinique, Guyane, Réunion sont les cinq départements d'outre-mer de France.",
             "image": null
         },
         {
             "id": "livret_8",
-            "question": "Citez trois régions Françaises",
+            "question": "Citez trois régions françaises.",
             "explanation": "La France métropolitaine compte 13 régions depuis la réforme de 2016 : Île-de-France, Bretagne, Normandie, Corse (statut particulier), Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Pays de la Loire, Centre-Val de Loire, Bourgogne-Franche-Comté, et Grand Est. Il y a également 5 régions d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte).",
             "image": null
         },
         {
             "id": "livret_9",
-            "question": "Enumérez les trois types de collectivités Françaises",
+            "question": "Énumérez les trois types de collectivités françaises.",
             "explanation": "Il y a trois types de collectivités territoriales en France : 1. Les communes : environ 35 000 communes en France, administrées par un maire et un conseil municipal. Elles gèrent notamment les écoles primaires, l'état civil, les routes communales, et l'urbanisme. 2. Les régions : 13 régions en métropole (la Corse a un statut particulier mais exerce les compétences d'une région) plus 5 régions d'outre-mer. Elles gèrent les lycées, la formation professionnelle, et les transports régionaux. 3. Les départements : 101 départements au total, dont 96 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte). Ils gèrent les collèges, l'aide sociale, et les routes départementales.",
             "image": null
         },
         {
             "id": "livret_10",
-            "question": "Citez des fleuves Français que vous connaissez",
+            "question": "Citez des fleuves français que vous connaissez.",
             "explanation": "La Loire, le Rhône, La Seine, le Rhin, la Garonne, La Marne, La Dordogne…",
             "image": null
         },
         {
             "id": "livret_11",
-            "question": "Citez des chaines de montagne en France que vous connaissez",
+            "question": "Citez des chaînes de montagne en France que vous connaissez.",
             "explanation": "Le Massif central, les Alpes, les Pyrénées, les Vosges, le Jura.",
             "image": null
         },
@@ -127,7 +127,7 @@
         },
         {
             "id": "livret_21",
-            "question": "Simone Veil est une figure importante de l'histoire française. Elle a notamment :",
+            "question": "Simone Veil est une figure importante de l'histoire française. Qu'a-t-elle notamment fait ?",
             "explanation": "Fait adopter en 1975 la loi légalisant l'IVG en France et œuvré pour les droits des femmes après avoir survécu à la Shoah.",
             "image": null
         },

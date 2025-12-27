@@ -59,7 +59,7 @@
         },
         {
             "id": "formation_10",
-            "question": "La France est une démocratie",
+            "question": "La France est-elle une démocratie ?",
             "explanation": "La France est une démocratie dans le sens où le pouvoir vient du peuple : les citoyens votent pour choisir leurs représentants au suffrage universel.\n\nLe droit de vote est accordé à tout citoyen :\n\n- de nationalité française ;\n\n- de plus de 18 ans (être majeur) ;\n\n- qui a ses droits civils et politiques (n’est pas condamné) ;\n\n- qui est inscrit sur les listes électorales.\n\nLa Constitution de 1958 indique que la démocratie c'est : \"le gouvernement du peuple, par le peuple et pour le peuple\".",
             "image": null
         },
@@ -71,7 +71,7 @@
         },
         {
             "id": "formation_12",
-            "question": "La France est une République",
+            "question": "La France est-elle une République ?",
             "explanation": "La France est une République où le pouvoir est exercé par un ensemble de représentants élus par le peuple. La France n’est plus une monarchie : le pouvoir n’appartient plus à une seule personne.\n\nEn résumé, la démocratie se concentre sur la participation du peuple au processus de prise de décision, tandis que la République se concentre sur la forme de gouvernement et la manière dont le pouvoir est exercé. Une démocratie peut être une République, mais une République n'est pas nécessairement une démocratie.",
             "image": null
         },
@@ -179,19 +179,19 @@
         },
         {
             "id": "formation_30",
-            "question": "Exemples de collectivités à statut particulier",
+            "question": "Quels sont des exemples de collectivités à statut particulier ?",
             "explanation": "- Paris a à la fois les compétences de la commune et du département.\n\n- La métropole de Lyon a, à la fois, les compétences du département et de la commune.\n\n- La collectivité européenne d'Alsace a les compétences du département et des compétences spécifiques adaptées aux particularités de l’Alsace.\n\n- Les collectivités d’outre-mer ne sont pas des collectivités à statut particulier, mais elles ont elles aussi des caractéristiques particulières. Par exemple, elles peuvent adapter les lois et les règlements en fonction de leurs contraintes locales et fixer des règles applicables sur leur territoire (sauf la Réunion).",
             "image": null
         },
         {
             "id": "formation_31",
-            "question": "Le rôle du Préfet",
+            "question": "Quel est le rôle du Préfet ?",
             "explanation": "Le Préfet est le représentant de l’État dans le département.\n\nIl dirige les services de l’État dans un département.\n\nIl ne s’occupe ni de la justice ni de l’armée mais il veille à la continuité de l’État.",
             "image": null
         },
         {
             "id": "formation_32",
-            "question": "Les principales missions de la préfecture et du Préfet",
+            "question": "Quelles sont les principales missions de la préfecture et du Préfet ?",
             "explanation": "- Organiser la sécurité des personnes et des biens avec la police, la gendarmerie et les secours.\n\n- Délivrer les titres et autorisations administratives.\n\n- Vérifier que les collectivités territoriales respectent les lois.\n\n- Coordonner les aides pour les personnes en difficulté, notamment pour l’emploi, la santé et le logement selon les besoins du territoire.\n\n- Soutenir le développement économique et social : elle aide à créer des entreprises par exemple.",
             "image": null
         },
@@ -203,25 +203,25 @@
         },
         {
             "id": "formation_34",
-            "question": "Exemple de répartition des compétences entre l’État et les collectivités territoriales : l’école en France",
+            "question": "Quel est un exemple de répartition des compétences entre l'État et les collectivités territoriales : l'école en France ?",
             "explanation": "Le service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n\n    - définit les programmes scolaires ;\n   \n    - recrute, forme et gère les enseignants ;\n    \n    - valide les manuels scolaires ;\n    \n    - supervise les universités.\n\n- Les régions gèrent les lycées ;\n\n- Les départements gèrent les collèges ;\n\n- Les communes gèrent les écoles maternelles et primaires.\n\nGérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine.\n\n![](./pics/territories.png)",
             "image": "pics/territories.png"
         },
         {
             "id": "formation_35",
-            "question": "L’Union européenne, une construction progressive",
+            "question": "Comment l'Union européenne s'est-elle construite progressivement ?",
             "explanation": "L’Union européenne n’a jamais cessé d’évoluer depuis sa création en 1952. Elle a évolué à deux niveaux :\n\n1. ses domaines d’action ont été élargis à chaque nouveau traité ;\n\n2. son territoire s’est étendu à de nouveaux pays.",
             "image": null
         },
         {
             "id": "formation_36",
-            "question": "L’élargissement des domaines d’action",
+            "question": "Comment se sont élargis les domaines d'action de l'Union européenne ?",
             "explanation": "- En 1951, le traité de Paris crée la CECA (communauté européenne du charbon et de l’acier).\n\n- En 1957, le traité de Rome crée la CEE (communauté économique européenne), dont l’objectif est de créer un marché commun, et la CEEA (communauté européenne de l’énergie atomique).\n\n- En 1992, le traité de Maastricht crée l’Union européenne (UE). Désormais, les marchandises, les personnes et les capitaux peuvent circuler librement au sein de l’UE. La libre circulation des personnes au sein de l'UE signifie notamment que tout citoyen peut se déplacer dans un autre pays de l'UE.\n\n- En 2007, le traité de Lisbonne adapte les règles des anciens traités pour permettre une meilleure coordination des pays membres, modifie les institutions et assouplit la prise de décision. La lutte contre le changement climatique est ajoutée aux objectifs de l’UE.",
             "image": null
         },
         {
             "id": "formation_37",
-            "question": "Les dates clés de l’extension géographique",
+            "question": "Quelles sont les dates clés de l'extension géographique de l'Union européenne ?",
             "explanation": "- En 1957, la CEE est créée avec 6 pays : Allemagne de l’Ouest, Belgique, France, Italie, Luxembourg et Pays-Bas.\n\n- En 1973, 3 nouveaux pays entrent dans la CEE : Danemark, Irlande et Royaume-Uni.\n\n- En 1981, la Grèce intègre l’Europe.\n\n- En 1986, c’est au tour de l’Espagne et du Portugal.\n\n- En 1995, l’Autriche, la Finlande et la Suède intègrent l’UE.\n\n- En 2004, l’extension géographique concerne de nombreux pays : Chypre, Estonie, Hongrie, Lettonie, Lituanie, Malte, Pologne, République tchèque, Slovaquie et Slovénie.\n\n- En 2007, la Bulgarie et la Roumanie intègrent l’UE.\n\n- En 2013, c’est au tour de la Croatie.\n\n- En 2020, pour la première fois, un pays quitte l’UE : le Royaume-Uni.\n\n![](./pics/euro.png)",
             "image": "pics/euro.png"
         },
@@ -233,61 +233,61 @@
         },
         {
             "id": "formation_39",
-            "question": "Les dates clés du drapeau européen",
+            "question": "Quelles sont les dates clés du drapeau européen ?",
             "explanation": "- 1955 : le drapeau devient l’emblème officiel du Conseil de l’Europe.\n\n- 1985 : le drapeau devient l’emblème officiel de la CEE.\n\n- 1986 : le drapeau est hissé pour la première fois devant le bâtiment de la Commission européenne, à Bruxelles.",
             "image": null
         },
         {
             "id": "formation_40",
-            "question": "L’hymne européen",
+            "question": "Quel est l'hymne européen ?",
             "explanation": "L’hymne européen est l' \"Ode à la joie\", une mélodie écrite par le compositeur allemand Ludwig von Beethoven.\n\nCet hymne est un des symboles de l'Union européenne. Il symbolise la liberté, la paix et la solidarité.\n\nCette mélodie est devenue l’hymne officiel du Conseil de l'Europe en 1972. En 1985, elle devient un symbole de l'Union européenne.\n\nOn peut l’entendre lors des évènements officiels, notamment la Journée de l’Europe (le 9 mai).",
             "image": null
         },
         {
             "id": "formation_41",
-            "question": "La devise européenne",
+            "question": "Quelle est la devise européenne ?",
             "explanation": "La devise de l'Union européenne est « Unie dans la diversité » depuis 2000.\n\nElle illustre la manière dont les Européens se sont rassemblés en créant l’Union européenne pour partager la paix et la prospérité, dans le respect de leurs diverses cultures, traditions et langues.\n\nElle est traduite dans toutes les langues officielles de l’Union européenne.\n\nElle est présente dans des discours officiels, des documents pédagogiques…",
             "image": null
         },
         {
             "id": "formation_42",
-            "question": "La Journée de l’Europe",
+            "question": "Qu'est-ce que la Journée de l'Europe ?",
             "explanation": "Chaque année, le 9 mai, tous les pays membres de l’Union européenne fêtent la Journée de l’Europe en organisant des évènements.\n\nCette date marque l’anniversaire de la \"déclaration Schuman\" du 9 mai 1950, un texte fondateur de la construction européenne.\n\nCette journée a plusieurs objectifs :\n\n- Rappeler les valeurs qui fondent l’Union européenne ;\n\n- Faire découvrir l’Europe à travers des évènements culturels, éducatifs et citoyens ;\n\n- Renforcer le sentiment d’appartenance à un espace commun.",
             "image": null
         },
         {
             "id": "formation_43",
-            "question": "Les institutions européennes, le résultat de l’histoire",
+            "question": "Comment les institutions européennes sont-elles le résultat de l'histoire ?",
             "explanation": "Les institutions européennes qui existent aujourd'hui sont le résultat d’une évolution constante :\n\nLes institutions fondatrices ont été réorganisées par les traités ; De nouvelles institutions sont apparues de manière progressive.",
             "image": null
         },
         {
             "id": "formation_44",
-            "question": "L’évolution des institutions fondatrices",
+            "question": "Comment ont évolué les institutions fondatrices de l'Union européenne ?",
             "explanation": "En 1951, la CECA est organisée avec quatre institutions :\n\n- la Haute Autorité représente l’intérêt général de la CECA ;\n\n- l’Assemblée commune représente les peuples des pays membres ;\n\n- le Conseil spécial des ministres représente les États membres ;\n\n- la Cour de justice assure le respect et l'application du traité de Paris.\n\nEn 1957, la Haute Autorité est remplacée par la Commission. Cette nouvelle institution propose les lois et contrôle leur exécution. Et l’Assemblée commune devient l’Assemblée européenne consultative.\n\nEn 1962, l’Assemblée européenne consultative devient le Parlement européen. Ses pouvoirs sont élargis.",
             "image": null
         },
         {
             "id": "formation_45",
-            "question": "L’apparition des autres institutions",
+            "question": "Quelles sont les autres institutions apparues dans l'Union européenne ?",
             "explanation": "La Cour des comptes européenne est créée en 1975.\n\nLa Banque centrale européenne est créée en 1998, au moment de la création de l’euro comme monnaie unique.\n\nLe Conseil européen, apparu dans les années 1960 sous la forme de réunions irrégulières, devient une institution en 2009.",
             "image": null
         },
         {
             "id": "formation_46",
-            "question": "Le Conseil européen et le Conseil de l’Union européenne",
+            "question": "Quelle est la différence entre le Conseil européen et le Conseil de l'Union européenne ?",
             "explanation": "Ces deux institutions sont toutes les deux situées à Bruxelles. Elles ont des noms similaires mais elles n’ont pas les mêmes rôles, pas les mêmes membres.\n\nLe Conseil européen donne les grandes orientations politiques et budgétaires de l’Union européenne (UE).\n\nIl réunit les 27 chefs d’État ou de gouvernement des pays membres de l’UE.\n\nLe Conseil de l'Union européenne coordonne les politiques communes, conclut des accords internationaux, vote le budget de l’UE, élabore la politique étrangère et de sécurité de l’UE, coordonne les politiques des États membres dans certains domaines.\n\nIl n’a pas de membres permanents : il réunit les ministres des pays membres, choisis en fonction des domaines à traiter (agriculture, économie...).",
             "image": null
         },
         {
             "id": "formation_47",
-            "question": "La Commission européenne et le Parlement européen",
+            "question": "Quels sont les rôles de la Commission européenne et du Parlement européen ?",
             "explanation": "La Commission européenne est située à Bruxelles et le Parlement européen à Strasbourg.\n\nLa Commission européenne représente les intérêts communs, propose le budget et propose les lois.\n\nElle réunit les 27 commissaires européens, un pour chaque pays membre. Chaque commissaire européen est chargé d’un domaine : agriculture, justice, égalité...La commission exécute les décisions du Conseil et du Parlement\n\nLe Parlement européen vote le budget et vote les lois, avec le Conseil de l’Union européenne. Il contrôle la Commission européenne.\n\nIl réunit 720 députés européens, répartis en groupes politiques (sociaux-démocrates, libéraux, libéraux, etc.).",
             "image": null
         },
         {
             "id": "formation_48",
-            "question": "La Cour de justice",
+            "question": "Quel est le rôle de la Cour de justice ?",
             "explanation": "La Cour de justice est située à Luxembourg.\n\nElle rend la justice à l'échelle européenne. Par exemple, elle traite les conflits juridiques entre des institutions et/ou des États membres de l'UE.\n\nElle vérifie également que les États appliquent correctement le droit européen.",
             "image": null
         },
@@ -311,7 +311,7 @@
         },
         {
             "id": "formation_52",
-            "question": "Exemple de répartition des compétences entre l’État et les collectivités",
+            "question": "Quel est un exemple de répartition des compétences entre l'État et les collectivités ?",
             "explanation": "territoriales : l’école en France Le service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n\n- définit les programmes scolaires ;\n\n- recrute, forme et gère les enseignants ;\n\n- valide les manuels scolaires ;\n\n- supervise les universités.\n\n- Les régions gèrent les lycées ;\n\n- Les départements gèrent les collèges ;\n\n- Les communes gèrent les écoles maternelles et primaires. Gérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine. ![](./pics/territories.png)",
             "image": null
         }

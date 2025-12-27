@@ -7,25 +7,25 @@
     "questions": [
         {
             "id": "livret_1",
-            "question": "Citez des personnages littéraires Français célèbres",
+            "question": "Citez des personnages littéraires français célèbres.",
             "explanation": "Parmi les personnages littéraires français célèbres : Jean Valjean et Thénardier (Les Misérables de Victor Hugo), Rémy (Sans famille d'Hector Malot), le Petit Prince (Le Petit Prince d'Antoine de Saint-Exupéry), d'Artagnan (Les Trois Mousquetaires d'Alexandre Dumas), Cyrano de Bergerac (Cyrano de Bergerac d'Edmond Rostand).",
             "image": null
         },
         {
             "id": "livret_2",
-            "question": "Citez des peintres Français célèbres",
+            "question": "Citez des peintres français célèbres.",
             "explanation": "Parmi les peintres français célèbres : Claude Monet (impressionnisme), Paul Cézanne (postimpressionnisme), Eugène Delacroix (romantisme), Auguste Renoir, Edgar Degas, Henri Matisse, Pierre-Auguste Renoir, Georges Seurat, Paul Gauguin.",
             "image": null
         },
         {
             "id": "livret_3",
-            "question": "Citez des artistes Français connus",
+            "question": "Citez des artistes français connus.",
             "explanation": "Parmi les artistes français connus : en musique classique, Hector Berlioz (compositeur) ; en chanson, Charles Aznavour, Joe Dassin, Édith Piaf, Jacques Brel ; en architecture, Gustave Eiffel (ingénieur et architecte, créateur de la Tour Eiffel) ; en sculpture, Auguste Rodin.",
             "image": null
         },
         {
             "id": "livret_5",
-            "question": "Citez des œuvres littéraires célèbres",
+            "question": "Citez des œuvres littéraires célèbres.",
             "explanation": "Parmi les œuvres littéraires françaises célèbres : Notre-Dame de Paris et Les Misérables (Victor Hugo), Le Malade imaginaire (Molière), Le Mariage de Figaro (Beaumarchais), Le Petit Prince (Antoine de Saint-Exupéry), Les Trois Mousquetaires (Alexandre Dumas), L'Étranger (Albert Camus), Madame Bovary (Gustave Flaubert).",
             "image": null
         },

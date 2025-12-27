@@ -271,7 +271,7 @@
         },
         {
             "id": "livret_45",
-            "question": "Citez trois anciens premiers ministres Français de la cinquième république.",
+            "question": "Citez trois anciens premiers ministres français de la cinquième république.",
             "explanation": "- Edouard Philippe.\n\n- Manuel Valls.\n\n- François Fillon.",
             "image": null
         },
@@ -751,7 +751,7 @@
         },
         {
             "id": "livret_125",
-            "question": "Quels sont les différents types de Républiques",
+            "question": "Quels sont les différents types de Républiques ?",
             "explanation": "- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil).\n- République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie).\n- République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie).\n- République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).",
             "image": null
         },
@@ -1099,7 +1099,7 @@
         },
         {
             "id": "livret_185",
-            "question": "Comment sont élus les adjoints aux maires :",
+            "question": "Comment sont élus les adjoints aux maires ?",
             "explanation": "Les adjoints au maire sont élus par le conseil municipal lors de sa première réunion après les élections municipales. L’élection se fait au scrutin de liste à la majorité absolue. Leur nombre est déterminé en fonction de la taille de la commune, et ils assistent le maire dans ses fonctions en recevant des délégations de compétences.",
             "image": null
         },
@@ -1111,7 +1111,7 @@
         },
         {
             "id": "livret_187",
-            "question": "Citez le nom du président de votre région",
+            "question": "Citez le nom du président de votre région.",
             "explanation": "Indiquez le nom du président du conseil régional de votre région. Les présidents de région sont élus par les conseillers régionaux (suffrage indirect) pour 6 ans. Pour connaître le président de votre région, vous pouvez consulter le site de votre conseil régional ou vous renseigner auprès de votre mairie. Les dernières élections régionales ont eu lieu en 2021.",
             "image": null
         },
@@ -1453,7 +1453,7 @@
         },
         {
             "id": "livret_244",
-            "question": "L'article 4 de la Déclaration des droits de l'homme et du citoyen affirme que \"la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autreui\". Qu'est-ce que cela signifie?",
+            "question": "L'article 4 de la Déclaration des droits de l'homme et du citoyen affirme que \"la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui\". Qu'est-ce que cela signifie ?",
             "explanation": "La liberté s'exerce tant qu'elle ne porte pas atteinte aux droits d'autrui ; ces limites sont fixées par la loi pour protéger chacun.",
             "image": null
         },
@@ -1519,7 +1519,7 @@
         },
         {
             "id": "livret_255",
-            "question": "Suite à une interpellation par la police, il est possible de :",
+            "question": "Suite à une interpellation par la police, que peut-on faire ?",
             "explanation": "Garder le silence, demander un avocat, prévenir un proche et un médecin en garde à vue selon les droits prévus par la loi.",
             "image": null
         },
@@ -1543,7 +1543,7 @@
         },
         {
             "id": "livret_259",
-            "question": "En France, la conduite sans permis d'une moto est :",
+            "question": "En France, qu'est-ce que la conduite sans permis d'une moto ?",
             "explanation": "Un délit pénal passible d'amende, d'immobilisation du véhicule et d'éventuelles peines complémentaires.",
             "image": null
         },
@@ -1573,19 +1573,19 @@
         },
         {
             "id": "livret_264",
-            "question": "Être juré d'assises est :",
+            "question": "Qu'est-ce qu'être juré d'assises ?",
             "explanation": "Une obligation civique pour un citoyen tiré au sort, chargé de juger les crimes avec les magistrats professionnels.",
             "image": null
         },
         {
             "id": "livret_265",
-            "question": "La vente d'alcool en France est interdite aux personnes de moins de :",
+            "question": "La vente d'alcool en France est interdite aux personnes de moins de quel âge ?",
             "explanation": "18 ans.",
             "image": null
         },
         {
             "id": "livret_266",
-            "question": "Le non-respect du code de la route est :",
+            "question": "Qu'est-ce que le non-respect du code de la route ?",
             "explanation": "Une infraction (contravention ou délit) passible de sanctions (amende, retrait de points, suspension).",
             "image": null
         },
@@ -1597,7 +1597,7 @@
         },
         {
             "id": "livret_268",
-            "question": "Pourobtenir une carte d'identité, il faut :",
+            "question": "Pour obtenir une carte d'identité, que faut-il faire ?",
             "explanation": "Être de nationalité française et fournir justificatifs d'identité, de domicile et photos conformes ; présence obligatoire du demandeur.",
             "image": null
         },
@@ -1657,7 +1657,7 @@
         },
         {
             "id": "livret_278",
-            "question": "Déclarer ses revenus aux services fiscaux est :",
+            "question": "Qu'est-ce que déclarer ses revenus aux services fiscaux ?",
             "explanation": "Une obligation légale annuelle pour tout contribuable.",
             "image": null
         },
@@ -1669,13 +1669,13 @@
         },
         {
             "id": "livret_280",
-            "question": "La liberté d'association est :",
+            "question": "Qu'est-ce que la liberté d'association ?",
             "explanation": "Le droit de créer ou d'adhérer à une association loi 1901, sauf activités illicites.",
             "image": null
         },
         {
             "id": "livret_281",
-            "question": "La liberté d'expression sur les réseaux sociaux en France est :",
+            "question": "Qu'est-ce que la liberté d'expression sur les réseaux sociaux en France ?",
             "explanation": "Soumise aux mêmes lois que partout ailleurs : interdiction de la diffamation, de l'injure, de l'incitation à la haine ou à la violence.",
             "image": null
         },
@@ -1741,7 +1741,7 @@
         },
         {
             "id": "livret_292",
-            "question": "Selon la Constitution, la France est une République...",
+            "question": "Selon la Constitution, qu'est-ce que la France ?",
             "explanation": "Indivisible, laïque, démocratique et sociale.",
             "image": null
         },
@@ -1777,7 +1777,7 @@
         },
         {
             "id": "livret_298",
-            "question": "En France, il est possible pour l'État de financier :",
+            "question": "En France, que peut financer l'État ?",
             "explanation": "Des activités d'intérêt général; le financement direct des cultes est en principe interdit (sauf exceptions patrimoniales).",
             "image": null
         },
@@ -1831,7 +1831,7 @@
         },
         {
             "id": "livret_307",
-            "question": "À l'école, la charte de la laïcité permet de :",
+            "question": "À l'école, que permet la charte de la laïcité ?",
             "explanation": "Rappeler les règles de neutralité et de respect des convictions, pour bien vivre ensemble à l'école.",
             "image": null
         },
@@ -1843,7 +1843,7 @@
         },
         {
             "id": "livret_309",
-            "question": "Une personne déclare ne croire enaucun dieu. On peut dire :",
+            "question": "Une personne déclare ne croire en aucun dieu. Que peut-on dire ?",
             "explanation": "Qu'elle est athée ou non-croyante ; c'est protégé par la liberté de conscience.",
             "image": null
         },
@@ -1867,7 +1867,7 @@
         },
         {
             "id": "livret_313",
-            "question": "L'inscription sur les listedes élctorales est :",
+            "question": "Qu'est-ce que l'inscription sur les listes électorales ?",
             "explanation": "Une démarche nécessaire pour voter ; elle est volontaire mais indispensable pour participer aux scrutins.",
             "image": null
         },
