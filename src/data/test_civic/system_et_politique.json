@@ -325,7 +325,7 @@
             ],
             "explanation": "Un ressortissant d'un pays membre de l'UE résidant en France peut voter aux élections européennes et municipales s'il habite dans la commune depuis plus de 6 mois.",
             "subTheme": "democracy_vote",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "sp_26",

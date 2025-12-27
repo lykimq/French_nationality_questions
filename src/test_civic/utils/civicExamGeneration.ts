@@ -16,6 +16,7 @@ import {
     enrichQuestionsWithMetadata,
     getTopicFromQuestion,
     getSubTopicFromQuestion,
+    getQuestionTypeFromQuestion,
 } from './civicExamUtils';
 import { shuffleQuestionOptions } from './civicExamQuestionUtils';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
@@ -117,18 +118,39 @@ const selectQuestionsForSubTopic = (
     if (isPracticeMode) {
         candidates = filterKnowledgeQuestions(candidates);
     } else if (isSituational) {
-        const situationalCandidates = filterSituationalQuestions(candidates);
+        // Single-pass filtering: split candidates into situational and knowledge in one iteration
+        const situationalCandidates: TestQuestion[] = [];
+        const knowledgeCandidates: TestQuestion[] = [];
+        
+        candidates.forEach(q => {
+            const questionType = getQuestionTypeFromQuestion(q);
+            const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
+            
+            if (hasOptions) {
+                if (questionType === 'situational') {
+                    situationalCandidates.push(q);
+                } else if (questionType === 'knowledge') {
+                    knowledgeCandidates.push(q);
+                }
+            }
+        });
+        
         if (situationalCandidates.length >= count) {
             candidates = situationalCandidates;
         } else {
-            const knowledgeCandidates = filterKnowledgeQuestions(candidates);
             const combined = [...situationalCandidates, ...knowledgeCandidates];
             if (combined.length > 0) {
                 candidates = combined;
-                if (situationalCandidates.length < count) {
+                // Only warn if there are NO situational questions at all (fallback is acceptable if some exist)
+                if (situationalCandidates.length === 0) {
                     logger.warn(
-                        `SubTopic ${subTopic}: Only ${situationalCandidates.length} situational question(s) available, ` +
-                        `falling back to knowledge questions to meet requirement of ${count} questions.`
+                        `SubTopic ${subTopic}: No situational questions available, ` +
+                        `using knowledge questions to meet requirement of ${count} questions.`
+                    );
+                } else if (situationalCandidates.length < count) {
+                    logger.info(
+                        `SubTopic ${subTopic}: ${situationalCandidates.length} situational question(s) available, ` +
+                        `supplementing with knowledge questions to meet requirement of ${count} questions.`
                     );
                 }
             } else {

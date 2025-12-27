@@ -57,7 +57,18 @@ export const getSubTopicFromQuestion = (question: TestQuestion): CivicExamSubTop
 export const getQuestionTypeFromQuestion = (question: TestQuestion): QuestionType => {
     // Check if question has explicit questionType metadata
     if ('questionType' in question && question.questionType) {
-        return question.questionType as QuestionType;
+        const questionType = question.questionType;
+        // Normalize for safety (source data should already be normalized to "situational")
+        if (typeof questionType === 'string') {
+            const normalized = questionType.toLowerCase().trim();
+            if (normalized === 'situation' || normalized === 'situational') {
+                return 'situational';
+            }
+            if (normalized === 'knowledge') {
+                return 'knowledge';
+            }
+        }
+        return questionType as QuestionType;
     }
     
     // Default to knowledge if not specified
@@ -106,7 +117,11 @@ export const filterKnowledgeQuestions = (questions: TestQuestion[]): TestQuestio
 };
 
 export const filterSituationalQuestions = (questions: TestQuestion[]): TestQuestion[] => {
-    return questions.filter(q => getQuestionTypeFromQuestion(q) === 'situational');
+    return questions.filter(q => {
+        const questionType = getQuestionTypeFromQuestion(q);
+        const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
+        return questionType === 'situational' && hasOptions;
+    });
 };
 
 /**

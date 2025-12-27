@@ -156,7 +156,7 @@
             ],
             "explanation": "Les consultations et prescriptions de contraception aux moins de 18 ans peuvent être anonymes et gratuites sur demande du \"secret\". La contraception d'urgence peut aussi être obtenue gratuitement.",
             "subTheme": "fundamental_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_13",
@@ -169,7 +169,7 @@
             ],
             "explanation": "La contraception des femmes assurées sociales de moins de 26 ans est prise en charge par l'Assurance Maladie sans avance de frais. Les préservatifs pour les hommes de moins de 26 ans sont aussi gratuits.",
             "subTheme": "fundamental_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_14",
@@ -182,7 +182,7 @@
             ],
             "explanation": "L'IVG est possible pour toutes les femmes, sans condition d'âge. Les mineures n'ont pas besoin d'une autorisation de leurs parents pour avorter mais elles doivent être accompagnées d'une personne majeure de leur choix.",
             "subTheme": "fundamental_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_15",
@@ -195,7 +195,7 @@
             ],
             "explanation": "L'avortement et les actes médicaux adjacents des femmes assurées sociales sont pris en charge à 100% par l'Assurance Maladie sans avance de frais.",
             "subTheme": "fundamental_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_16",
@@ -234,7 +234,7 @@
             ],
             "explanation": "La liberté conjugale permet à chaque conjoint de mettre fin à l'union. Le PACS peut être rompu par un simple passage à la mairie, le concubinage peut s'arrêter sans formalité.",
             "subTheme": "fundamental_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_19",
@@ -403,7 +403,7 @@
             ],
             "explanation": "Vous pouvez vous rendre au commissariat de police ou à la brigade de gendarmerie la plus proche pour déposer une plainte contre quelqu'un ou contre X si vous ne connaissez pas l'identité du responsable.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_32",
@@ -546,7 +546,7 @@
             ],
             "explanation": "Assurer l'assistance à personne en danger est une obligation. Si une personne voit quelqu'un en danger et n'aide pas, elle peut être condamnée pour \"non-assistance à personne en danger\".",
             "subTheme": "obligations_duties",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_43",
@@ -611,7 +611,7 @@
             ],
             "explanation": "La violence n'apprend rien et ne peut pas être utilisée pour éduquer un enfant ; c'est inscrit dans la loi. Les gifles, fessées, humiliations et autres violences sont interdites.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_48",
@@ -624,7 +624,7 @@
             ],
             "explanation": "Le harcèlement scolaire est un délit. Il est puni par la loi quand un élève subit de manière répétée des violences verbales, morales ou physiques de la part d'autres élèves.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_49",
@@ -663,7 +663,7 @@
             ],
             "explanation": "Le silence n'est pas un consentement. Le consentement doit être réciproque et mutuel. Si une personne n'est pas en état de donner son consentement (alcool, sommeil), c'est un refus.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_52",
@@ -676,7 +676,7 @@
             ],
             "explanation": "Ces violences portent atteinte aux droits fondamentaux. Personne n'a le droit d'imposer un acte sexuel non désiré, y compris dans un couple.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_53",
@@ -715,7 +715,7 @@
             ],
             "explanation": "Il ne faut pas rester seul. Exprimer sa souffrance permet de sortir de l'isolement. Vous pouvez vous adresser à une personne de confiance ou un professionnel (médecin, psychologue).",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_56",
@@ -728,7 +728,7 @@
             ],
             "explanation": "En tant que victime, vous pouvez : déposer plainte dans tous les commissariats ou gendarmeries, envoyer un courrier au procureur, ou utiliser les plateformes de signalement en ligne.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_57",
@@ -741,7 +741,7 @@
             ],
             "explanation": "En tant que témoin, on doit agir : écouter et soutenir la victime, l'orienter vers des aides, intervenir sans se mettre en danger, et pouvoir témoigner ou signaler les faits.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_58",
@@ -754,7 +754,7 @@
             ],
             "explanation": "Il est possible de faire un signalement anonyme ou d'envoyer une main courante (signaler des faits sans déposer plainte) pour que les faits soient enregistrés.",
             "subTheme": "situational_rights",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_59",
@@ -780,7 +780,7 @@
             ],
             "explanation": "Actions concrètes : trier ses déchets, éviter le gaspillage des aliments et de l'énergie, privilégier les transports en commun et le vélo, respecter les espaces communs.",
             "subTheme": "obligations_duties",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "dd_61",

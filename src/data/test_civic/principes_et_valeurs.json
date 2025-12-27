@@ -117,7 +117,7 @@
             ],
             "explanation": "Le principe d'égalité n'empêche pas de traiter différemment des personnes dans des situations différentes (tarifs réduits pour chômeurs, étudiants, personnes âgées).",
             "subTheme": "situational_principles",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "pv_10",
@@ -546,7 +546,7 @@
             ],
             "explanation": "En France, toute personne a le droit de manifester sa religion dans l'espace public (rues, restaurants, transports) : porter des signes religieux, participer à des célébrations...",
             "subTheme": "laicite",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "pv_43",
@@ -559,7 +559,7 @@
             ],
             "explanation": "Les personnes qui travaillent dans les services publics ne peuvent pas exprimer leur religion dans le cadre de leur travail. Elles doivent respecter la neutralité.",
             "subTheme": "laicite",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "pv_44",
@@ -572,7 +572,7 @@
             ],
             "explanation": "La neutralité ne s'impose pas aux usagers des services publics. Ils peuvent porter un signe religieux, mais doivent respecter les règles de fonctionnement du service.",
             "subTheme": "laicite",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "pv_45",
@@ -663,7 +663,7 @@
             ],
             "explanation": "Contrairement à l'agent public, le salarié peut exprimer ses opinions religieuses et porter des signes religieux, sauf si cela perturbe le fonctionnement de l'entreprise.",
             "subTheme": "laicite",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "pv_52",
@@ -676,7 +676,7 @@
             ],
             "explanation": "À l'école, il n'est pas possible de refuser, en raison de sa religion, une règle de fonctionnement ou un cours du programme (sports, sorties scolaires...).",
             "subTheme": "laicite",
-            "questionType": "situation"
+            "questionType": "situational"
         },
         {
             "id": "pv_53",
@@ -728,7 +728,7 @@
             ],
             "explanation": "Si la personne ne respecte pas un principe républicain, le titre de séjour peut être retiré ou non renouvelé. Aucun titre de séjour ne peut être délivré sans ce contrat signé.",
             "subTheme": "situational_principles",
-            "questionType": "knowledge"
+            "questionType": "situational"
         },
         {
             "id": "pv_57",
@@ -885,6 +885,58 @@
             "explanation": "Jean Moulin incarne l'unité et le courage de la Résistance face à l'occupation nazie. Il a donné sa vie pour la libération de la France et repose au Panthéon depuis 1964.",
             "subTheme": "devise_symboles",
             "questionType": "knowledge"
+        },
+        {
+            "id": "pv_69",
+            "question": "Un employeur peut-il refuser d'embaucher quelqu'un en raison de son origine ou de sa religion ?",
+            "correctAnswer": "Non, c'est une discrimination interdite par la loi.",
+            "incorrectAnswers": [
+                "Oui, si cela correspond aux valeurs de l'entreprise.",
+                "Oui, dans les petites entreprises de moins de 10 salariés.",
+                "Oui, si le candidat n'est pas français."
+            ],
+            "explanation": "La discrimination à l'embauche est strictement interdite en France. Les décisions d'embauche doivent être fondées exclusivement sur des critères professionnels (compétences, qualifications, expérience).",
+            "subTheme": "situational_principles",
+            "questionType": "situational"
+        },
+        {
+            "id": "pv_70",
+            "question": "Les femmes peuvent-elles s'habiller comme elles le souhaitent en France ?",
+            "correctAnswer": "Oui, la loi garantit la liberté vestimentaire dans le respect de l'ordre public.",
+            "incorrectAnswers": [
+                "Non, certaines tenues sont interdites par la loi.",
+                "Seulement dans les espaces privés.",
+                "Oui, mais uniquement pour les femmes françaises."
+            ],
+            "explanation": "En France, la loi garantit la liberté vestimentaire à toutes les personnes, dans le respect de l'ordre public. Cette liberté s'applique dans l'espace public, sous réserve des restrictions légales (comme l'interdiction de dissimuler son visage).",
+            "subTheme": "situational_principles",
+            "questionType": "situational"
+        },
+        {
+            "id": "pv_71",
+            "question": "Peut-on refuser l'accès à un service public à une personne en raison de sa religion ?",
+            "correctAnswer": "Non, l'accès aux services publics est garanti à tous sans discrimination.",
+            "incorrectAnswers": [
+                "Oui, si la personne ne respecte pas les valeurs républicaines.",
+                "Oui, dans certains services publics spécifiques.",
+                "Oui, si cela perturbe le fonctionnement du service."
+            ],
+            "explanation": "L'accès aux services publics (santé, éducation, administration) est garanti à tous les citoyens et résidents, sans discrimination fondée sur la religion, l'origine, le sexe ou tout autre critère interdit par la loi.",
+            "subTheme": "situational_principles",
+            "questionType": "situational"
+        },
+        {
+            "id": "pv_72",
+            "question": "Peut-on traiter différemment deux personnes dans une situation similaire en raison de leur origine ?",
+            "correctAnswer": "Non, c'est une discrimination interdite par la loi.",
+            "incorrectAnswers": [
+                "Oui, si cela correspond aux usages locaux.",
+                "Oui, dans le secteur privé uniquement.",
+                "Oui, si les deux personnes sont d'accord."
+            ],
+            "explanation": "Traiter différemment deux personnes dans une situation similaire en raison de leur origine, religion, sexe ou tout autre critère interdit constitue une discrimination. La loi garantit l'égalité de traitement pour tous.",
+            "subTheme": "situational_principles",
+            "questionType": "situational"
         }
     ]
 }
