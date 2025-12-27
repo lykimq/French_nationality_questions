@@ -3,7 +3,7 @@
     "id": "arts_culture_sports",
     "title": "Arts, culture et sports",
     "icon": "music-note",
-    "description": "Arts, culture et sports",
+    "description": "Patrimoine culturel français : littérature, arts, musique et événements sportifs.",
     "questions": [
         {
             "id": "livret_1",

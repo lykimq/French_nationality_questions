@@ -3,7 +3,7 @@
     "id": "administration_locale",
     "title": "Administration locale et territoriale",
     "icon": "office-building",
-    "description": "Administration locale et territoriale",
+    "description": "Organisation administrative : communes, départements, régions et leurs compétences.",
     "questions": [
         {
             "id": "livret_1",

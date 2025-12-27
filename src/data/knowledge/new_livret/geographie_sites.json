@@ -3,7 +3,7 @@
     "id": "geographie_sites",
     "title": "Géographie et sites remarquables",
     "icon": "map",
-    "description": "Géographie et sites remarquables",
+    "description": "Géographie de la France : relief, régions, départements et sites patrimoniaux.",
     "questions": [
         {
             "id": "livret_1",

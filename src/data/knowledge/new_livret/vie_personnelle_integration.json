@@ -3,7 +3,7 @@
     "id": "vie_personnelle_integration",
     "title": "Vie personnelle et intégration",
     "icon": "user",
-    "description": "Vie personnelle et intégration",
+    "description": "Vie quotidienne, intégration et critères d'assimilation pour la naturalisation.",
     "questions": [
         {
             "id": "livret_1",

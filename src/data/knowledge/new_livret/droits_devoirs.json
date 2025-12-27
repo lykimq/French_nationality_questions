@@ -3,7 +3,7 @@
     "id": "droits_devoirs",
     "title": "Droits et devoirs du citoyen",
     "icon": "balance",
-    "description": "Droits et devoirs du citoyen",
+    "description": "Droits fondamentaux et devoirs des citoyens français.",
     "questions": [
         {
             "id": "livret_1",
