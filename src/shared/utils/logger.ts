@@ -10,12 +10,13 @@ export enum LogLevel {
 
 let globalLogLevel: LogLevel = IS_DEV ? LogLevel.DEBUG : LogLevel.WARN;
 
-let Sentry: any = null;
-try {
-    Sentry = require('../../config/sentryConfig').Sentry;
-} catch {
-    Sentry = null;
-}
+const getSentry = (): any => {
+    try {
+        return require('../../config/sentryConfig').Sentry;
+    } catch {
+        return null;
+    }
+};
 
 class Logger {
     private prefix: string;
@@ -55,28 +56,31 @@ class Logger {
             console.error(`❌ ${this.formatMessage(message)}`, ...args);
         }
 
-        if (Sentry && !IS_DEV) {
-            const firstArg = args[0];
-            if (firstArg instanceof Error) {
-                Sentry.captureException(firstArg, {
-                    tags: {
-                        logger: this.prefix || 'default',
-                    },
-                    extra: {
-                        message: this.formatMessage(message),
-                        additionalArgs: args.slice(1),
-                    },
-                });
-            } else if (message) {
-                Sentry.captureMessage(this.formatMessage(message), {
-                    level: 'error',
-                    tags: {
-                        logger: this.prefix || 'default',
-                    },
-                    extra: {
-                        args,
-                    },
-                });
+        if (!IS_DEV) {
+            const Sentry = getSentry();
+            if (Sentry) {
+                const firstArg = args[0];
+                if (firstArg instanceof Error) {
+                    Sentry.captureException(firstArg, {
+                        tags: {
+                            logger: this.prefix || 'default',
+                        },
+                        extra: {
+                            message: this.formatMessage(message),
+                            additionalArgs: args.slice(1),
+                        },
+                    });
+                } else if (message) {
+                    Sentry.captureMessage(this.formatMessage(message), {
+                        level: 'error',
+                        tags: {
+                            logger: this.prefix || 'default',
+                        },
+                        extra: {
+                            args,
+                        },
+                    });
+                }
             }
         }
     }

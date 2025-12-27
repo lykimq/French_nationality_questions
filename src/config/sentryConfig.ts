@@ -18,7 +18,7 @@ export const initializeSentry = () => {
         Sentry.init({
             dsn,
             enableInExpoDevelopment: false,
-            debug: __DEV__,
+            debug: false,
             environment: __DEV__ ? 'development' : 'production',
             tracesSampleRate: __DEV__ ? 1.0 : 0.1,
             beforeSend(event, hint) {
