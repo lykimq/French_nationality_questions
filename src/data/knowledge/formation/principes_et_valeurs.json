@@ -72,7 +72,7 @@
         {
             "id": "formation_12",
             "question": "La parité dans la vie politique",
-            "explanation": "Des lois ont été votées pour permettre la parité, c’est-à-dire l’égalité entre les femmes et les hommes dans les responsabilités politiques.\n\nUne de ces lois, qui date de 2000, oblige les partis politiques à présenter autant de femmes que d’hommes dans les listes de candidats. Un parti qui ne respecte pas cette obligation doit payer une amende.\n\nLes femmes sont devenues plus nombreuses dans la vie politique, mais il n’y a pas de parité dans les postes à haute responsabilité. Par exemple, il n’y a encore jamais eu de Présidente de la République française.",
+            "explanation": "Des lois ont été votées pour permettre la parité, c'est-à-dire l'égalité entre les femmes et les hommes dans les responsabilités politiques.\n\nLa loi du 6 juin 2000 sur la parité oblige les partis politiques à présenter autant de femmes que d'hommes dans les listes de candidats pour les élections proportionnelles (élections européennes, régionales, municipales dans les communes de plus de 1 000 habitants). Un parti qui ne respecte pas cette obligation doit payer une amende financière.\n\nLes femmes sont devenues plus nombreuses dans la vie politique, mais il n'y a pas encore de parité complète dans tous les postes à haute responsabilité. Par exemple, il n'y a encore jamais eu de Présidente de la République française.",
             "image": null
         },
         {
@@ -150,13 +150,13 @@
         {
             "id": "formation_25",
             "question": "Le titre de l'hymne français",
-            "explanation": "L’hymne national de la France est un chant qui s’appelle La Marseillaise. Il évoque un grand moment de l’histoire de la France : la Révolution.\n\nCe chant a été composé en 1792 pour soutenir les soldats dans le cadre d’une guerre. La Marseillaise représente les valeurs de liberté, de résistance et d’unité du peuple français.",
+            "explanation": "L'hymne national de la France est un chant qui s'appelle La Marseillaise. Il évoque un grand moment de l'histoire de la France : la Révolution.\n\nCe chant a été composé dans la nuit du 25 au 26 avril 1792 par Claude Joseph Rouget de Lisle, un officier français, pour soutenir les soldats dans le cadre de la guerre contre l'Autriche. La Marseillaise représente les valeurs de liberté, de résistance et d'unité du peuple français.",
             "image": null
         },
         {
             "id": "formation_26",
             "question": "L’histoire de l’hymne français",
-            "explanation": "- En avril 1792, quelques jours après le début de la guerre de la France contre l'Autriche, un officier français compose le \"Chant de guerre pour l’armée du Rhin\". Ce chant est  repris par un bataillon d’habitants de Marseille lors d’une révolte à Paris en août 1792.\n\n- Le chant se diffuse rapidement partout en France. Face à ce succès, il est déclaré chant national le 14 juillet 1795. Il s’appelle désormais La Marseillaise.\n\n- Interdite pendant de longues années, la Marseillaise est à nouveau chantée lors de la Révolution de 1830. Berlioz, célèbre compositeur français, arrange le chant pour qu’il puisse être joué par un orchestre.\n\n- La Marseillaise devient l’hymne national en 1879 durant la 3e République.",
+            "explanation": "- Dans la nuit du 25 au 26 avril 1792, à la suite de la déclaration de guerre de la France contre l'Autriche, Claude Joseph Rouget de Lisle, un officier français, compose le \"Chant de guerre pour l'armée du Rhin\" chez le maire de Strasbourg, Dietrich.\n\n- Ce chant est repris par un bataillon d'habitants de Marseille lors d'une révolte à Paris en août 1792. Le chant se diffuse rapidement partout en France.\n\n- Face à ce succès, il est déclaré chant national le 14 juillet 1795. Il s'appelle désormais La Marseillaise.\n\n- Interdite pendant de longues années, la Marseillaise est à nouveau chantée lors de la Révolution de 1830. Berlioz, célèbre compositeur français, arrange le chant pour qu'il puisse être joué par un orchestre.\n\n- La Marseillaise devient l'hymne national en 1879 durant la 3e République.",
             "image": null
         },
         {
@@ -258,7 +258,7 @@
         {
             "id": "formation_43",
             "question": "La laïcité, une longue histoire",
-            "explanation": "En France, l’État et les Églises sont séparés en 1905, plus de 200 ans après l’apparition du principe fondateur de la laïcité dans la Déclaration des droits de l'homme et du citoyen de 1789.",
+            "explanation": "En France, l'État et les Églises sont séparés par la loi du 9 décembre 1905 sur la séparation des Églises et de l'État, plus de 200 ans après l'apparition du principe fondateur de la laïcité dans la Déclaration des droits de l'homme et du citoyen de 1789.",
             "image": null
         },
         {
@@ -270,7 +270,7 @@
         {
             "id": "formation_45",
             "question": "Les dates clés depuis la loi de 1905",
-            "explanation": "En 1905, une loi sépare l’Église et l’État :\n\n- l’État est indépendant des religions ;\n\n- l’État ne finance aucune religion ;\n\n- et les religions s’organisent de manière indépendante mais en respectant des règles fixées par l’État. Par exemple, il est interdit de commettre un délit au nom d’une religion.\n\nEn 2004, une loi interdit dans les écoles, collèges et lycées publics de porter, avec l’intention d’être vu, un signe ou un vêtement qui montre une appartenance à une religion.\n\nEn 2021, une loi renforce la laïcité et la neutralité dans les services publics et les associations.",
+            "explanation": "La loi du 9 décembre 1905 sur la séparation des Églises et de l'État établit la laïcité en France :\n\n- l'État est indépendant des religions ;\n\n- l'État ne reconnaît, ne salarie ni ne subventionne aucun culte ;\n\n- les religions s'organisent de manière indépendante mais en respectant des règles fixées par l'État. Par exemple, il est interdit de commettre un délit au nom d'une religion.\n\nLa loi du 15 mars 2004 interdit dans les écoles, collèges et lycées publics de porter des signes ou des tenues qui manifestent ostensiblement (de manière trop visible) une appartenance à une religion.\n\nLa loi du 24 août 2021 (dite \"loi confortant le respect des principes de la République\") renforce la laïcité et la neutralité dans les services publics et les associations.",
             "image": null
         },
         {
@@ -396,7 +396,7 @@
         {
             "id": "formation_66",
             "question": "Le français : l’unique langue officielle",
-            "explanation": "C’est en 1539 que la langue française a remplacé le latin dans les textes administratifs. À cette époque, la population utilise de nombreuses langues locales. C’est la première étape pour unifier la langue française.\n\nIl faut attendre 1992, au moment de la création de l’Union européenne et de la disparition de la monnaie française, pour que la langue française soit inscrite dans la Constitution : \"la langue de la République est le français\".\n\nLe français est donc la seule langue officielle en France. Elle est utilisée dans les écoles, l’administration, la justice, et plus largement dans la vie publique.\n\nCette unité de langue garantit l’égalité d’accès aux droits et à l’information, et renforce la cohésion nationale.",
+            "explanation": "C'est en 1539 que la langue française a remplacé le latin dans les textes administratifs (ordonnance de Villers-Cotterêts). À cette époque, la population utilise de nombreuses langues locales. C'est la première étape pour unifier la langue française.\n\nIl faut attendre 1992, au moment de la ratification du traité de Maastricht créant l'Union européenne, pour que la langue française soit inscrite dans la Constitution. L'article 2 de la Constitution de 1958 précise désormais que \"la langue de la République est le français\".\n\nLe français est donc la seule langue officielle en France. Elle est utilisée dans les écoles, l'administration, la justice, et plus largement dans la vie publique.\n\nCette unité de langue garantit l'égalité d'accès aux droits et à l'information, et renforce la cohésion nationale.",
             "image": null
         },
         {

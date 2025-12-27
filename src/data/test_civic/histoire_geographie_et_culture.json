@@ -7,9 +7,9 @@
             "question": "Comment s'appelle le régime politique avant la Révolution de 1789 ?",
             "correctAnswer": "L'Ancien Régime, une monarchie absolue de droit divin.",
             "incorrectAnswers": [
-                "La République.",
-                "L'Empire.",
-                "La Démocratie."
+                "La République française.",
+                "L'Empire napoléonien.",
+                "La monarchie constitutionnelle."
             ],
             "explanation": "Avant la Révolution française de 1789, le régime politique était une monarchie absolue de droit divin. On appelle cette période l'Ancien Régime.",
             "subTheme": "historical_periods",
@@ -20,9 +20,9 @@
             "question": "Quelles sont les trois dynasties royales qui ont régné en France ?",
             "correctAnswer": "Les Mérovingiens, les Carolingiens et les Capétiens.",
             "incorrectAnswers": [
-                "Les Bourbons, les Orléans et les Bonaparte.",
-                "Les Valois, les Tudors et les Habsbourg.",
-                "Les Normands, les Plantagenêts et les Stuarts."
+                "Les Mérovingiens, les Carolingiens et les Bourbons.",
+                "Les Mérovingiens, les Capétiens et les Valois.",
+                "Les Carolingiens, les Capétiens et les Valois."
             ],
             "explanation": "Trois grandes dynasties royales se sont succédées : les Mérovingiens (Clovis), les Carolingiens (Charlemagne) et les Capétiens (Hugues Capet).",
             "subTheme": "historical_periods",

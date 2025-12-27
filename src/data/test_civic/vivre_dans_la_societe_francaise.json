@@ -7,9 +7,9 @@
             "question": "Qu'est-ce que la domiciliation ?",
             "correctAnswer": "Une adresse administrative pour les personnes sans domicile fixe ou en habitat précaire.",
             "incorrectAnswers": [
-                "Un contrat de location.",
-                "Une assurance habitation.",
-                "Un titre de propriété."
+                "Un justificatif de domicile pour les démarches administratives.",
+                "Une attestation d'hébergement temporaire.",
+                "Un certificat de résidence principale."
             ],
             "explanation": "La domiciliation est une adresse administrative attribuée aux personnes qui ne peuvent pas recevoir leur courrier de façon constante et confidentielle à une adresse stable.",
             "subTheme": "residence",
@@ -33,9 +33,9 @@
             "question": "Quel est le rôle de la Banque de France ?",
             "correctAnswer": "Gérer le droit au compte, accompagner les personnes en surendettement et assurer la stabilité des prix.",
             "incorrectAnswers": [
-                "Accorder des prêts immobiliers aux particuliers.",
-                "Gérer les comptes courants des citoyens.",
-                "Définir les taux d'intérêt des crédits bancaires privés."
+                "Accorder des prêts immobiliers et personnels aux particuliers.",
+                "Gérer directement les comptes bancaires de tous les citoyens.",
+                "Définir et contrôler les taux d'intérêt de toutes les banques privées."
             ],
             "explanation": "La Banque de France gère des services à l'économie : droit au compte, accompagnement des personnes en surendettement, stratégie monétaire et stabilité des prix.",
             "subTheme": "residence",
@@ -46,9 +46,9 @@
             "question": "Quels documents sont obligatoires pour conduire une voiture en France ?",
             "correctAnswer": "Un permis de conduire valide, une carte grise à jour et une assurance automobile.",
             "incorrectAnswers": [
-                "Uniquement un permis de conduire.",
-                "Un permis de conduire et une carte d'identité.",
-                "Une carte grise et un certificat médical."
+                "Un permis de conduire et un certificat médical de moins de 3 mois.",
+                "Un permis de conduire, une carte d'identité et un justificatif de domicile.",
+                "Une carte grise, un certificat médical et une attestation d'assurance."
             ],
             "explanation": "Pour conduire une voiture en France, il est obligatoire d'avoir un permis de conduire valide, une carte grise du véhicule à jour et une assurance automobile.",
             "subTheme": "residence",
@@ -72,9 +72,9 @@
             "question": "Qu'est-ce que la responsabilité civile ?",
             "correctAnswer": "L'obligation de réparer les dommages causés involontairement à d'autres personnes.",
             "incorrectAnswers": [
-                "La responsabilité pénale pour les infractions commises volontairement.",
-                "L'obligation de souscrire une assurance habitation.",
-                "Le devoir de signaler les accidents à la police."
+                "La responsabilité pénale pour les infractions commises intentionnellement.",
+                "L'obligation légale de souscrire une assurance habitation ou automobile.",
+                "Le devoir civique de signaler tout accident à la police ou à la gendarmerie."
             ],
             "explanation": "La responsabilité civile est l'obligation de chacun de réparer les dommages matériels, corporels ou moraux que l'on peut causer sans le vouloir à d'autres personnes.",
             "subTheme": "residence",
@@ -85,9 +85,9 @@
             "question": "Qui doit déclarer ses impôts en France ?",
             "correctAnswer": "Toute personne de plus de 18 ans résidant en France, même avec des revenus nuls.",
             "incorrectAnswers": [
-                "Uniquement les personnes qui travaillent.",
-                "Uniquement les citoyens français.",
-                "Uniquement les personnes gagnant plus du SMIC."
+                "Uniquement les personnes ayant une activité professionnelle rémunérée.",
+                "Uniquement les citoyens français résidant en France.",
+                "Uniquement les personnes ayant des revenus supérieurs au SMIC."
             ],
             "explanation": "Toute personne de plus de 18 ans, résidant en France (citoyen français ou pas) doit déclarer ses revenus, même si ses revenus sont faibles ou nuls.",
             "subTheme": "residence",
@@ -137,9 +137,9 @@
             "question": "Quelles sont les conditions pour se marier civilement en France ?",
             "correctAnswer": "Avoir plus de 18 ans, pas de lien de parenté proche, et donner un consentement libre.",
             "incorrectAnswers": [
-                "Être de nationalité française.",
-                "Avoir un emploi stable.",
-                "Être de religions différentes."
+                "Avoir la nationalité française ou être résident depuis plus de 5 ans.",
+                "Avoir un emploi stable et des revenus suffisants.",
+                "Appartenir à des religions ou cultures différentes."
             ],
             "explanation": "Pour se marier en France, il faut avoir plus de 18 ans, ne pas avoir de lien de parenté ou d'alliance, et pouvoir donner un consentement libre et éclairé.",
             "subTheme": "residence",
@@ -150,9 +150,9 @@
             "question": "Quel est le seul type de mariage reconnu en France ?",
             "correctAnswer": "Le mariage civil.",
             "incorrectAnswers": [
-                "Le mariage religieux.",
-                "Le mariage traditionnel.",
-                "Le mariage coutumier."
+                "Le mariage religieux célébré dans un lieu de culte.",
+                "Le mariage traditionnel selon les coutumes familiales.",
+                "Le mariage coutumier reconnu par les communautés."
             ],
             "explanation": "Le mariage civil est le seul mariage reconnu en France. Deux personnes, de sexe différent ou de même sexe, peuvent se marier.",
             "subTheme": "residence",
@@ -202,9 +202,9 @@
             "question": "Qu'est-ce que le parcours de soins coordonnés ?",
             "correctAnswer": "Consulter d'abord son médecin traitant qui oriente vers d'autres professionnels si nécessaire.",
             "incorrectAnswers": [
-                "Aller directement aux urgences de l'hôpital.",
-                "Consulter plusieurs médecins spécialistes en même temps.",
-                "Se rendre en pharmacie pour un diagnostic."
+                "Aller directement aux urgences hospitalières sans passer par un médecin.",
+                "Consulter plusieurs médecins spécialistes simultanément sans ordonnance.",
+                "Se rendre en pharmacie pour obtenir un diagnostic médical."
             ],
             "explanation": "Le parcours de soins coordonnés consiste à consulter d'abord son médecin traitant, qui va ensuite orienter le patient vers d'autres professionnels de santé si nécessaire.",
             "subTheme": "healthcare",
@@ -215,9 +215,9 @@
             "question": "Qu'est-ce que la protection universelle maladie (PUMa) ?",
             "correctAnswer": "La garantie de prise en charge des frais de santé pour toute personne travaillant ou résidant en France.",
             "incorrectAnswers": [
-                "Une assurance privée facultative.",
-                "Un service réservé aux citoyens français.",
-                "Une aide uniquement pour les personnes sans emploi."
+                "Une assurance privée complémentaire facultative.",
+                "Un service réservé exclusivement aux citoyens français de naissance.",
+                "Une aide uniquement pour les personnes sans emploi ou en situation précaire."
             ],
             "explanation": "La PUMa garantit un droit à la prise en charge financière des frais de santé pour toute personne qui travaille ou réside en France de manière stable et régulière.",
             "subTheme": "healthcare",
@@ -241,9 +241,9 @@
             "question": "Qu'est-ce que le secret médical ?",
             "correctAnswer": "La protection de toutes les informations connues par le professionnel de santé sur le patient.",
             "incorrectAnswers": [
-                "Le droit du médecin de ne pas révéler ses méthodes de traitement.",
-                "L'obligation de ne partager les informations qu'avec la famille du patient.",
-                "La protection uniquement des diagnostics graves."
+                "Le droit du médecin de ne pas révéler ses méthodes et protocoles de traitement.",
+                "L'obligation de ne partager les informations qu'avec la famille proche du patient.",
+                "La protection uniquement des diagnostics graves et des maladies chroniques."
             ],
             "explanation": "Le secret médical protège toutes les informations connues par le professionnel de santé : état de santé, identité, ainsi que tout ce qui a été vu, entendu ou compris lors de la consultation.",
             "subTheme": "healthcare",
@@ -254,9 +254,9 @@
             "question": "Qu'est-ce que le dépistage médical ?",
             "correctAnswer": "Une méthode pour repérer une maladie avant l'apparition des symptômes.",
             "incorrectAnswers": [
-                "Un traitement contre les maladies graves.",
-                "Une vaccination obligatoire.",
-                "Un examen réservé aux personnes âgées."
+                "Un traitement préventif contre les maladies graves et chroniques.",
+                "Une vaccination obligatoire pour tous les citoyens.",
+                "Un examen médical réservé aux personnes âgées de plus de 60 ans."
             ],
             "explanation": "Le dépistage sert à repérer une maladie chez une personne qui ne présente pas encore de symptômes, permettant un traitement rapide.",
             "subTheme": "healthcare",
@@ -267,9 +267,9 @@
             "question": "Pourquoi la vaccination est-elle importante ?",
             "correctAnswer": "Elle protège des maladies dangereuses en renforçant le système immunitaire.",
             "incorrectAnswers": [
-                "Elle guérit les maladies existantes.",
-                "Elle remplace les médicaments.",
-                "Elle est uniquement esthétique."
+                "Elle guérit les maladies existantes et chroniques.",
+                "Elle remplace les médicaments et traitements conventionnels.",
+                "Elle est uniquement esthétique et préventive pour le bien-être."
             ],
             "explanation": "La vaccination est un moyen simple, sûr et efficace de se protéger des maladies dangereuses. Elle utilise les défenses naturelles de l'organisme pour renforcer le système immunitaire.",
             "subTheme": "healthcare",
@@ -280,9 +280,9 @@
             "question": "Qu'est-ce que France Travail ?",
             "correctAnswer": "Un organisme public qui accompagne les personnes à la recherche d'un emploi.",
             "incorrectAnswers": [
-                "Une entreprise privée de recrutement.",
-                "Un ministère du gouvernement.",
-                "Une association de bénévoles."
+                "Une entreprise privée spécialisée dans le recrutement et le placement.",
+                "Un ministère du gouvernement chargé de l'emploi et du travail.",
+                "Une association de bénévoles aidant à la recherche d'emploi."
             ],
             "explanation": "France Travail est un organisme public qui accompagne les personnes à la recherche d'un emploi. L'inscription permet d'être accompagné pour trouver un travail ou suivre une formation.",
             "subTheme": "work",
@@ -293,9 +293,9 @@
             "question": "Qui peut s'inscrire à France Travail ?",
             "correctAnswer": "Toute personne étrangère en situation régulière sans emploi.",
             "incorrectAnswers": [
-                "Uniquement les citoyens français.",
-                "Uniquement les personnes de moins de 25 ans.",
-                "Uniquement les personnes ayant déjà travaillé en France."
+                "Uniquement les citoyens français résidant en France.",
+                "Uniquement les personnes de moins de 25 ans en recherche d'emploi.",
+                "Uniquement les personnes ayant déjà travaillé en France pendant au moins 6 mois."
             ],
             "explanation": "Chaque personne étrangère en situation régulière (titre de séjour, réfugiée, ou bénéficiaire de la protection internationale) et sans travail doit être inscrite à France Travail.",
             "subTheme": "work",
@@ -306,9 +306,9 @@
             "question": "Qu'est-ce que l'attestation de comparabilité ?",
             "correctAnswer": "Un document du Centre Enic-Naric qui explique la valeur d'un diplôme étranger en France.",
             "incorrectAnswers": [
-                "Un diplôme français équivalent.",
-                "Une traduction officielle du diplôme.",
-                "Un certificat de nationalité."
+                "Un diplôme français équivalent délivré par l'État.",
+                "Une traduction officielle certifiée du diplôme étranger.",
+                "Un certificat de nationalité ou de résidence en France."
             ],
             "explanation": "L'attestation de comparabilité est un document fourni par le Centre Enic-Naric pour mieux comprendre le parcours de formation suivi à l'étranger.",
             "subTheme": "work",
@@ -319,9 +319,9 @@
             "question": "Qu'est-ce que la VAE (Validation des Acquis de l'Expérience) ?",
             "correctAnswer": "Un dispositif permettant de faire reconnaître ses compétences professionnelles comme un diplôme.",
             "incorrectAnswers": [
-                "Un examen pour obtenir la nationalité française.",
-                "Une formation obligatoire pour les demandeurs d'emploi.",
-                "Un test de niveau en français."
+                "Un examen permettant d'obtenir la nationalité française par naturalisation.",
+                "Une formation obligatoire pour tous les demandeurs d'emploi de longue durée.",
+                "Un test de niveau en français langue étrangère (FLE)."
             ],
             "explanation": "La VAE permet de faire reconnaître vos compétences de manière officielle, comme un diplôme reçu après une formation. Il faut avoir au moins un an d'expérience en lien avec le diplôme visé.",
             "subTheme": "work",
@@ -423,9 +423,9 @@
             "question": "Qu'est-ce que la discrimination au travail ?",
             "correctAnswer": "Traiter une personne moins bien que les autres en raison d'un critère interdit par la loi.",
             "incorrectAnswers": [
-                "Refuser une augmentation de salaire.",
-                "Demander des heures supplémentaires.",
-                "Changer les horaires de travail."
+                "Refuser une augmentation de salaire pour des raisons personnelles.",
+                "Demander des heures supplémentaires selon les besoins de l'entreprise.",
+                "Changer les horaires de travail en accord avec l'employeur."
             ],
             "explanation": "On parle de discrimination au travail quand une personne est moins bien traitée que les autres par l'employeur en raison d'un critère interdit par la loi (origine, sexe, âge...).",
             "subTheme": "work",
@@ -449,9 +449,9 @@
             "question": "Quelles sont les conséquences du travail non déclaré pour le salarié ?",
             "correctAnswer": "Pas de cotisation retraite, pas de sécurité sociale, pas de congés payés.",
             "incorrectAnswers": [
-                "Un salaire plus élevé.",
-                "Plus de jours de congés.",
-                "Une protection juridique renforcée."
+                "Un salaire généralement plus élevé que les emplois déclarés.",
+                "Plus de jours de congés et de flexibilité horaire.",
+                "Une protection juridique renforcée et des avantages sociaux supplémentaires."
             ],
             "explanation": "Un salarié qui travaille sans être déclaré ne cotise ni à l'assurance chômage, ni pour sa retraite. Il n'a pas droit à la sécurité sociale ni aux congés payés.",
             "subTheme": "work",
@@ -462,9 +462,9 @@
             "question": "Qu'est-ce que l'autorité parentale ?",
             "correctAnswer": "L'ensemble des droits et devoirs des parents vis-à-vis de leur enfant de moins de 18 ans.",
             "incorrectAnswers": [
-                "Le droit de punir physiquement son enfant.",
-                "L'autorité de l'école sur les enfants.",
-                "Le pouvoir de l'État sur les familles."
+                "Le droit exclusif de punir et discipliner son enfant comme on le souhaite.",
+                "L'autorité de l'école et des enseignants sur les enfants en dehors de l'école.",
+                "Le pouvoir de l'État d'intervenir directement dans toutes les décisions familiales."
             ],
             "explanation": "L'autorité parentale correspond à l'ensemble des droits et devoirs des parents vis-à-vis de leur enfant de moins de 18 ans. Les deux parents ont l'autorité parentale.",
             "subTheme": "parental_authority_education",
@@ -475,9 +475,9 @@
             "question": "Quand se termine l'autorité parentale ?",
             "correctAnswer": "Quand l'enfant a 18 ans ou s'il est émancipé.",
             "incorrectAnswers": [
-                "Quand l'enfant commence à travailler.",
-                "Quand l'enfant entre au lycée.",
-                "Quand l'enfant quitte le domicile familial."
+                "Quand l'enfant commence à travailler de manière autonome.",
+                "Quand l'enfant entre au lycée et devient plus indépendant.",
+                "Quand l'enfant quitte le domicile familial pour vivre seul."
             ],
             "explanation": "L'autorité parentale se termine quand l'enfant a 18 ans ou s'il est émancipé (devient adulte avant 18 ans).",
             "subTheme": "parental_authority_education",
@@ -488,9 +488,9 @@
             "question": "Qu'est-ce que la Convention Internationale des Droits de l'Enfant ?",
             "correctAnswer": "Un document signé par 196 États présentant les droits fondamentaux des enfants.",
             "incorrectAnswers": [
-                "Une loi française uniquement.",
-                "Un accord commercial international.",
-                "Une convention sur l'éducation scolaire."
+                "Une loi française uniquement applicable en France métropolitaine.",
+                "Un accord commercial et économique international entre pays.",
+                "Une convention internationale sur l'éducation scolaire et la formation."
             ],
             "explanation": "En 1989, 196 États ont signé la Convention Internationale des Droits de l'Enfant dans le cadre de l'ONU. Ce document présente les droits fondamentaux des enfants.",
             "subTheme": "parental_authority_education",
@@ -501,9 +501,9 @@
             "question": "Quel principe signifie que l'intérêt de l'enfant prime sur la volonté des parents ?",
             "correctAnswer": "L'intérêt supérieur de l'enfant.",
             "incorrectAnswers": [
-                "L'autorité parentale exclusive.",
-                "Le droit de garde.",
-                "La tutelle de l'État."
+                "L'autorité parentale exclusive d'un seul parent.",
+                "Le droit de garde et d'hébergement de l'enfant.",
+                "La tutelle de l'État et des services sociaux sur l'enfant."
             ],
             "explanation": "L'intérêt de l'enfant est supérieur à sa volonté et à celle de ses parents. L'enfant peut choisir lui-même son avenir, sauf si ses décisions le mettent en danger.",
             "subTheme": "parental_authority_education",
@@ -525,13 +525,13 @@
         {
             "id": "vsf_41",
             "question": "Quels sont les 4 niveaux de l'organisation scolaire en France ?",
-            "correctAnswer": "Maternelle, cours élémentaire, collège et lycée.",
+            "correctAnswer": "Maternelle, école primaire, collège et lycée.",
             "incorrectAnswers": [
                 "Primaire, secondaire, supérieur et professionnel.",
                 "Crèche, école, université et doctorat.",
                 "Petite école, grande école, faculté et institut."
             ],
-            "explanation": "L'école est organisée en 4 temps : la maternelle (3-6 ans), le cours élémentaire (6-11 ans), le collège (11-15 ans) et le lycée (15-18 ans).",
+            "explanation": "L'école est organisée en 4 temps : la maternelle (3-6 ans), l'école primaire (6-11 ans), le collège (11-15 ans) et le lycée (15-18 ans).",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
         },
@@ -592,9 +592,9 @@
             "question": "Qu'est-ce que le bail (contrat de location) ?",
             "correctAnswer": "Un contrat écrit entre le propriétaire et le locataire pour louer un logement.",
             "incorrectAnswers": [
-                "Un titre de propriété.",
-                "Une assurance habitation.",
-                "Un certificat de résidence."
+                "Un titre de propriété du logement.",
+                "Une assurance habitation obligatoire pour le locataire.",
+                "Un certificat de résidence principale délivré par la mairie."
             ],
             "explanation": "Le bail est un contrat écrit entre le bailleur (propriétaire) et le locataire. C'est le seul document qui autorise à vivre dans un logement.",
             "subTheme": "residence",
@@ -631,9 +631,9 @@
             "question": "Qu'est-ce que le numéro de sécurité sociale ?",
             "correctAnswer": "Un identifiant unique à 15 chiffres attestant l'affiliation à l'Assurance maladie.",
             "incorrectAnswers": [
-                "Un numéro de téléphone d'urgence.",
-                "Un code pour accéder aux services en ligne.",
-                "Un numéro de compte bancaire."
+                "Un numéro de téléphone d'urgence médicale ou sociale.",
+                "Un code personnel pour accéder aux services administratifs en ligne.",
+                "Un numéro de compte bancaire ou d'identité bancaire."
             ],
             "explanation": "Le numéro de sécurité sociale est un identifiant unique et personnel à 15 chiffres qui atteste que vous avez l'Assurance maladie. Il est inscrit sur la carte Vitale.",
             "subTheme": "healthcare",
@@ -644,9 +644,9 @@
             "question": "Qu'est-ce que le tiers-payant ?",
             "correctAnswer": "Un système où le professionnel de santé est directement payé par l'Assurance maladie.",
             "incorrectAnswers": [
-                "Un impôt sur les soins médicaux.",
-                "Une cotisation mensuelle obligatoire.",
-                "Un remboursement après 3 mois."
+                "Un impôt sur les soins médicaux et les consultations.",
+                "Une cotisation mensuelle obligatoire à l'Assurance maladie.",
+                "Un système de remboursement des frais après un délai de 3 mois."
             ],
             "explanation": "Le système de tiers-payant permet de ne pas avancer la somme d'argent que l'Assurance maladie rembourse. Le professionnel de santé est directement payé par l'Assurance maladie.",
             "subTheme": "healthcare",
@@ -709,9 +709,9 @@
             "question": "Qu'est-ce que le CV (Curriculum Vitae) ?",
             "correctAnswer": "Un document présentant l'expérience, la formation et les compétences d'une personne pour un emploi.",
             "incorrectAnswers": [
-                "Un contrat de travail.",
-                "Une lettre de recommandation.",
-                "Un diplôme professionnel."
+                "Un contrat de travail signé entre l'employeur et le salarié.",
+                "Une lettre de recommandation d'un ancien employeur ou formateur.",
+                "Un diplôme professionnel ou certificat de qualification."
             ],
             "explanation": "Le CV est un document qu'une personne envoie à une entreprise dans le but d'être embauché. Il présente son expérience professionnelle, son parcours de formation et ses compétences.",
             "subTheme": "work",
@@ -722,9 +722,9 @@
             "question": "Qu'est-ce que le soutien à la parentalité ?",
             "correctAnswer": "Un ensemble d'actions de l'État pour aider les parents dans l'éducation de leurs enfants.",
             "incorrectAnswers": [
-                "Une aide financière pour les familles nombreuses.",
-                "Un service de garde d'enfants gratuit.",
-                "Une école pour les parents."
+                "Une aide financière spécifique pour les familles nombreuses.",
+                "Un service de garde d'enfants gratuit pour tous les parents.",
+                "Une école ou formation obligatoire pour tous les parents."
             ],
             "explanation": "Le soutien à la parentalité est un ensemble d'actions décidées par l'État pour aider les parents qui ont du mal à assurer l'éducation de leurs enfants.",
             "subTheme": "parental_authority_education",
@@ -735,9 +735,9 @@
             "question": "Qu'est-ce que la médiation familiale ?",
             "correctAnswer": "Un service pour trouver une solution en cas de conflit familial.",
             "incorrectAnswers": [
-                "Un tribunal pour les divorces.",
-                "Une thérapie de couple obligatoire.",
-                "Une aide financière pour les familles."
+                "Un tribunal spécialisé dans les affaires de divorce et séparation.",
+                "Une thérapie de couple obligatoire avant toute procédure de séparation.",
+                "Une aide financière et matérielle pour les familles en difficulté."
             ],
             "explanation": "La médiation familiale permet de trouver une solution en cas de conflit familial (séparation, difficulté à assurer l'autorité parentale...).",
             "subTheme": "parental_authority_education",
@@ -761,9 +761,9 @@
             "question": "Qu'est-ce que le Compte Personnel de Formation (CPF) ?",
             "correctAnswer": "Un compte qui permet de financer des formations professionnelles.",
             "incorrectAnswers": [
-                "Un compte bancaire pour les salariés.",
-                "Un compte d'épargne retraite.",
-                "Un compte pour les allocations chômage."
+                "Un compte bancaire spécialement réservé aux salariés du secteur privé.",
+                "Un compte d'épargne retraite pour préparer la fin de carrière.",
+                "Un compte pour recevoir et gérer les allocations chômage."
             ],
             "explanation": "Le CPF (Compte Personnel de Formation) permet de financer des formations. Toute personne qui travaille a un CPF qui augmente de 500€ maximum à la fin de chaque année de travail.",
             "subTheme": "work",
@@ -774,9 +774,9 @@
             "question": "Où se font les modes de garde des enfants de moins de 3 ans ?",
             "correctAnswer": "En crèche, micro-crèche, halte-garderie, chez une assistante maternelle ou à domicile.",
             "incorrectAnswers": [
-                "Uniquement à l'école maternelle.",
-                "Uniquement chez les grands-parents.",
-                "Uniquement dans les centres de loisirs."
+                "Uniquement à l'école maternelle dès l'âge de 2 ans.",
+                "Uniquement chez les grands-parents ou membres de la famille.",
+                "Uniquement dans les centres de loisirs et structures associatives."
             ],
             "explanation": "Les enfants de moins de 3 ans peuvent être gardés en crèche, micro-crèche, halte-garderie, chez une assistante maternelle ou à domicile par une personne employée par les parents.",
             "subTheme": "parental_authority_education",
@@ -787,9 +787,9 @@
             "question": "Êtes-vous d'accord avec le principe de l'école mixte ?",
             "correctAnswer": "Oui, car elle favorise l'égalité, la diversité et la compréhension mutuelle dès le plus jeune âge.",
             "incorrectAnswers": [
-                "Non, car les garçons et filles doivent être séparés.",
-                "Cela dépend de la religion des familles.",
-                "Non, car cela crée des problèmes de discipline."
+                "Non, car les garçons et filles doivent être séparés pour un meilleur apprentissage.",
+                "Cela dépend de la religion et des valeurs culturelles des familles.",
+                "Non, car cela crée des problèmes de discipline et de concentration."
             ],
             "explanation": "L'école mixte en France favorise l'égalité entre les sexes, la diversité et la compréhension mutuelle dès le plus jeune âge. C'est un vecteur d'égalité.",
             "subTheme": "parental_authority_education",
@@ -865,9 +865,9 @@
             "question": "Par qui est financée la Sécurité sociale ?",
             "correctAnswer": "Par les cotisations sociales des employeurs et salariés, et par l'impôt (CSG).",
             "incorrectAnswers": [
-                "Uniquement par l'État.",
-                "Uniquement par les entreprises.",
-                "Par des dons privés."
+                "Uniquement par l'État et le budget national.",
+                "Uniquement par les entreprises et les cotisations patronales.",
+                "Par des dons privés et des contributions volontaires des citoyens."
             ],
             "explanation": "La Sécurité sociale est financée par les cotisations sociales prélevées sur les salaires (employeurs et salariés) et par l'impôt (CSG).",
             "subTheme": "healthcare",
@@ -878,9 +878,9 @@
             "question": "Quel est le rôle des parents dans l'éducation ?",
             "correctAnswer": "Assurer l'éducation de leurs enfants, veiller à leur santé, sécurité et leur transmettre les valeurs républicaines.",
             "incorrectAnswers": [
-                "Uniquement les nourrir et les loger.",
-                "Laisser l'école s'occuper de tout.",
-                "Seulement les accompagner à l'école."
+                "Uniquement les nourrir, les loger et subvenir à leurs besoins matériels.",
+                "Laisser l'école et les enseignants s'occuper de toute l'éducation.",
+                "Seulement les accompagner à l'école et suivre leur scolarité."
             ],
             "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
             "subTheme": "parental_authority_education",

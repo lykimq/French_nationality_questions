@@ -7,9 +7,9 @@
         "question": "Qu'est-ce que la colonisation ?",
         "correctAnswer": "L'occupation et l'exploitation d'un territoire étranger par la force.",
         "incorrectAnswers": [
-            "Un échange culturel entre nations égales.",
-            "Un partenariat économique mutuellement bénéfique.",
-            "Une coopération diplomatique entre États souverains."
+            "L'occupation et l'exploitation d'un territoire étranger par accord mutuel.",
+            "L'occupation et l'exploitation d'un territoire étranger uniquement pour des raisons économiques.",
+            "L'occupation et l'exploitation d'un territoire étranger uniquement pour des raisons religieuses."
         ],
         "explanation": "C'est une domination politique, économique et culturelle.",
         "subTheme": "historical_periods",
@@ -19,7 +19,11 @@
         "id": "hgp2_2",
         "question": "Où se situaient les premières colonies françaises (XVIe siècle) ?",
         "correctAnswer": "En Amérique (Canada, Louisiane, Antilles).",
-        "incorrectAnswers": ["En Afrique subsaharienne.", "En Asie du Sud-Est.", "En Océanie."],
+        "incorrectAnswers": [
+            "En Amérique (Brésil, Argentine, Chili).",
+            "En Amérique (Mexique, Pérou, Colombie).",
+            "En Amérique (États-Unis, Canada uniquement)."
+        ],
         "explanation": "C'est le Premier Empire colonial.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -28,7 +32,11 @@
         "id": "hgp2_3",
         "question": "Où la France a-t-elle colonisé au XIXe siècle ?",
         "correctAnswer": "En Afrique (Maghreb, Afrique noire) et en Asie (Indochine).",
-        "incorrectAnswers": ["Aux États-Unis.", "En Russie.", "Au Brésil."],
+        "incorrectAnswers": [
+            "En Afrique (Maghreb uniquement) et en Asie (Indochine uniquement).",
+            "En Afrique (Afrique noire uniquement) et en Asie (Indochine uniquement).",
+            "En Afrique (Maghreb, Afrique noire) et en Amérique (Antilles)."
+        ],
         "explanation": "C'est le Second Empire colonial.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -38,9 +46,9 @@
         "question": "Sur quoi repose la colonisation ?",
         "correctAnswer": "Sur la domination d'une puissance sur une autre population.",
         "incorrectAnswers": [
-            "Sur l'égalité des peuples.",
-            "Sur le partage des richesses.",
-            "Sur un accord mutuel entre nations."
+            "Sur la domination économique d'une puissance sur une autre population uniquement.",
+            "Sur la domination culturelle d'une puissance sur une autre population uniquement.",
+            "Sur la domination militaire d'une puissance sur une autre population uniquement."
         ],
         "explanation": "Les populations colonisées n'avaient pas les mêmes droits.",
         "subTheme": "historical_periods",
@@ -51,9 +59,9 @@
         "question": "Quelles étaient les motivations de la colonisation ?",
         "correctAnswer": "Économiques (ressources), politiques (puissance) et prétendument civilisatrices.",
         "incorrectAnswers": [
-            "Développer les échanges culturels uniquement.",
-            "Établir des relations diplomatiques pacifiques.",
-            "Promouvoir l'éducation et la santé publique."
+            "Économiques (ressources), politiques (puissance) et religieuses (évangélisation).",
+            "Économiques (ressources), politiques (puissance) et scientifiques (recherche).",
+            "Économiques (ressources), politiques (puissance) et démographiques (surpopulation)."
         ],
         "explanation": "La France voulait étendre sa puissance et ses marchés.",
         "subTheme": "historical_periods",
@@ -64,9 +72,9 @@
         "question": "Quelles souffrances le commerce triangulaire a-t-il causées ?",
         "correctAnswer": "La déportation et l'esclavage de millions d'Africains.",
         "incorrectAnswers": [
-            "La désorganisation des économies européennes.",
-            "La modification des routes commerciales traditionnelles.",
-            "La transformation des structures agricoles coloniales."
+            "La déportation et l'esclavage de millions d'Africains et d'Amérindiens.",
+            "La déportation et l'esclavage de millions d'Asiatiques.",
+            "La déportation et l'esclavage de millions d'Européens."
         ],
         "explanation": "C'est un crime contre l'humanité.",
         "subTheme": "historical_periods",
@@ -77,9 +85,9 @@
         "question": "Qu'est-ce que l'immigration ?",
         "correctAnswer": "Le fait de s'installer durablement dans un pays étranger.",
         "incorrectAnswers": [
-            "Un séjour temporaire à l'étranger pour études.",
-            "Un déplacement professionnel de courte durée.",
-            "Un changement de résidence à l'intérieur du même pays."
+            "Le fait de s'installer temporairement dans un pays étranger.",
+            "Le fait de voyager régulièrement dans un pays étranger.",
+            "Le fait de travailler dans un pays étranger sans s'y installer."
         ],
         "explanation": "La France est une terre d'accueil depuis longtemps.",
         "subTheme": "historical_periods",
@@ -90,9 +98,9 @@
         "question": "Pourquoi les immigrés viennent-ils en France ?",
         "correctAnswer": "Pour le travail, pour fuir la guerre ou pour rejoindre leur famille.",
         "incorrectAnswers": [
-            "Uniquement pour des raisons touristiques.",
-            "Exclusivement pour des études supérieures.",
-            "Principalement pour des raisons culturelles."
+            "Pour le travail, pour fuir la guerre ou pour des raisons touristiques.",
+            "Pour le travail, pour fuir la guerre ou pour des études uniquement.",
+            "Pour le travail, pour fuir la guerre ou pour des raisons religieuses uniquement."
         ],
         "explanation": "Les raisons sont économiques, politiques ou familiales.",
         "subTheme": "historical_periods",
@@ -103,9 +111,9 @@
         "question": "Quel est l'objectif des politiques migratoires actuelles ?",
         "correctAnswer": "Réguler les flux et favoriser l'intégration.",
         "incorrectAnswers": [
-            "Fermer complètement les frontières sans exception.",
-            "Autoriser l'entrée libre sans aucune condition.",
-            "Prioriser uniquement l'immigration économique."
+            "Réguler les flux et favoriser uniquement l'intégration économique.",
+            "Réguler les flux et favoriser uniquement l'intégration culturelle.",
+            "Réguler les flux et favoriser l'intégration sans contrôle des frontières."
         ],
         "explanation": "L'État cherche à maîtriser l'immigration légale.",
         "subTheme": "historical_periods",
@@ -115,7 +123,11 @@
         "id": "hgp2_10",
         "question": "Que signifie le mot 'Shoah' ?",
         "correctAnswer": "Catastrophe (en hébreu), désignant le génocide des Juifs.",
-        "incorrectAnswers": ["Guerre.", "Victoire.", "Paix."],
+        "incorrectAnswers": [
+            "Destruction (en hébreu), désignant le génocide des Juifs.",
+            "Extermination (en hébreu), désignant le génocide des Juifs.",
+            "Holocauste (en hébreu), désignant le génocide des Juifs."
+        ],
         "explanation": "L'extermination planifiée par les nazis.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -125,9 +137,9 @@
         "question": "Comment Vichy a-t-il participé à la Shoah ?",
         "correctAnswer": "En arrêtant et déportant les Juifs de France (Rafle du Vél' d'Hiv).",
         "incorrectAnswers": [
-            "En les protégeant.",
-            "En les cachant.",
-            "En les envoyant en Suisse."
+            "En arrêtant et déportant uniquement les Juifs étrangers de France.",
+            "En arrêtant et déportant uniquement les Juifs résistants de France.",
+            "En arrêtant et déportant les Juifs de France uniquement dans la zone occupée."
         ],
         "explanation": "L'État français a collaboré à la déportation.",
         "subTheme": "historical_periods",
@@ -138,9 +150,9 @@
         "question": "Pourquoi le devoir de mémoire est-il important ?",
         "correctAnswer": "Pour ne jamais oublier les victimes et éviter que cela recommence.",
         "incorrectAnswers": [
-            "Pour maintenir un sentiment de culpabilité collective.",
-            "Pour mémoriser uniquement les dates historiques.",
-            "Pour établir une responsabilité nationale exclusive."
+            "Pour ne jamais oublier les victimes et éviter que cela recommence uniquement en France.",
+            "Pour ne jamais oublier les victimes et éviter que cela recommence uniquement en Europe.",
+            "Pour ne jamais oublier les victimes et éviter que cela recommence uniquement contre les Juifs."
         ],
         "explanation": "C'est une leçon pour défendre les droits de l'homme.",
         "subTheme": "historical_periods",
@@ -150,7 +162,7 @@
         "id": "hgp2_13",
         "question": "Combien de victimes juives a fait la Shoah ?",
         "correctAnswer": "6 millions.",
-        "incorrectAnswers": ["1 million.", "100 000.", "10 000."],
+        "incorrectAnswers": ["5 millions.", "7 millions.", "8 millions."],
         "explanation": "C'est un génocide industriel.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -160,9 +172,9 @@
         "question": "Comment vivaient les Français sous l'Occupation ?",
         "correctAnswer": "Dans la peur, les restrictions et la perte de liberté.",
         "incorrectAnswers": [
-            "Dans une relative normalité économique et sociale.",
-            "Avec les mêmes libertés qu'avant la guerre.",
-            "Dans une période de prospérité économique."
+            "Dans la peur, les restrictions et la perte de liberté uniquement dans la zone occupée.",
+            "Dans la peur, les restrictions et la perte de liberté uniquement dans les grandes villes.",
+            "Dans la peur, les restrictions mais avec une liberté de mouvement préservée."
         ],
         "explanation": "La pénurie alimentaire et la répression étaient quotidiennes.",
         "subTheme": "historical_periods",
@@ -173,9 +185,9 @@
         "question": "Qui a unifié la Résistance intérieure (CNR) ?",
         "correctAnswer": "Jean Moulin.",
         "incorrectAnswers": [
-            "Charles de Gaulle.",
-            "Le Maréchal Pétain.",
-            "Winston Churchill."
+            "Jean Moulin et Charles de Gaulle ensemble.",
+            "Jean Moulin et le Général Leclerc ensemble.",
+            "Jean Moulin et Philippe Pétain ensemble."
         ],
         "explanation": "Il a rassemblé les différents mouvements sous l'autorité de De Gaulle.",
         "subTheme": "historical_periods",
@@ -186,9 +198,9 @@
         "question": "Qu'est-ce qui permet la Libération de la France en 1944 ?",
         "correctAnswer": "Le débarquement des Alliés et l'action des Résistants.",
         "incorrectAnswers": [
-            "La mort d'Hitler.",
-            "La capitulation spontanée des Allemands.",
-            "Une épidémie."
+            "Le débarquement des Alliés uniquement, sans action des Résistants.",
+            "L'action des Résistants uniquement, sans débarquement des Alliés.",
+            "Le débarquement des Alliés et la mort d'Hitler."
         ],
         "explanation": "Les combats continuent jusqu'en 1945.",
         "subTheme": "historical_periods",
@@ -199,9 +211,9 @@
         "question": "Quelle place la France retrouve-t-elle en 1945 ?",
         "correctAnswer": "Elle siège parmi les vainqueurs et les grandes puissances (ONU).",
         "incorrectAnswers": [
-            "Elle devient une colonie américaine.",
-            "Elle disparaît de la carte.",
-            "Elle est punie comme l'Allemagne."
+            "Elle siège parmi les vainqueurs mais pas parmi les grandes puissances.",
+            "Elle siège parmi les grandes puissances mais pas parmi les vainqueurs.",
+            "Elle siège parmi les vainqueurs et les grandes puissances mais pas à l'ONU."
         ],
         "explanation": "Grâce à la Résistance et à De Gaulle.",
         "subTheme": "historical_periods",
@@ -212,9 +224,9 @@
         "question": "De quoi est composé le territoire français ?",
         "correctAnswer": "De la Métropole (Hexagone) et des territoires d'Outre-mer.",
         "incorrectAnswers": [
-            "Seulement de la Métropole.",
-            "De la France et de ses colonies.",
-            "De la France et de la Belgique."
+            "De la Métropole (Hexagone) et des territoires d'Outre-mer uniquement dans l'Atlantique.",
+            "De la Métropole (Hexagone) et des territoires d'Outre-mer uniquement dans le Pacifique.",
+            "De la Métropole (Hexagone) et des territoires d'Outre-mer uniquement dans l'océan Indien."
         ],
         "explanation": "C'est un territoire réparti sur tous les océans.",
         "subTheme": "territories_geography",
@@ -225,9 +237,9 @@
         "question": "Quels sont les 5 Départements et Régions d'Outre-Mer (DROM) ?",
         "correctAnswer": "Guadeloupe, Martinique, Guyane, La Réunion, Mayotte.",
         "incorrectAnswers": [
-            "Tahiti, Nouvelle-Calédonie, Corse.",
-            "Guadeloupe, Martinique, Haïti.",
-            "Réunion, Maurice, Seychelles."
+            "Guadeloupe, Martinique, Guyane, La Réunion, Saint-Pierre-et-Miquelon.",
+            "Guadeloupe, Martinique, Guyane, La Réunion, Polynésie française.",
+            "Guadeloupe, Martinique, Guyane, La Réunion, Nouvelle-Calédonie."
         ],
         "explanation": "Ils ont le même statut que les départements de l'Hexagone.",
         "subTheme": "territories_geography",
@@ -237,7 +249,7 @@
         "id": "hgp2_20",
         "question": "Combien de pays ont une frontière terrestre avec la France Métropolitaine ?",
         "correctAnswer": "8 pays (Belgique, Luxembourg, Allemagne, Suisse, Italie, Espagne, Andorre, Monaco).",
-        "incorrectAnswers": ["3 pays.", "12 pays.", "5 pays."],
+        "incorrectAnswers": ["7 pays.", "9 pays.", "10 pays."],
         "explanation": "La France est un carrefour européen.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -247,9 +259,9 @@
         "question": "Quelles sont les frontières naturelles de la France ?",
         "correctAnswer": "Les Pyrénées, les Alpes, le Jura, les Vosges, le Rhin.",
         "incorrectAnswers": [
-            "La Grande Muraille.",
-            "Le désert.",
-            "La forêt amazonienne."
+            "Les Pyrénées, les Alpes, le Jura, les Vosges uniquement (sans le Rhin).",
+            "Les Pyrénées, les Alpes, le Jura, le Rhin uniquement (sans les Vosges).",
+            "Les Pyrénées, les Alpes, les Vosges, le Rhin uniquement (sans le Jura)."
         ],
         "explanation": "Les montagnes et les fleuves délimitent le territoire.",
         "subTheme": "territories_geography",
@@ -260,9 +272,9 @@
         "question": "Quels sont les 5 grands fleuves français ?",
         "correctAnswer": "La Seine, la Loire, la Garonne, le Rhône, le Rhin.",
         "incorrectAnswers": [
-            "La Seine, la Tamise, le Danube.",
-            "La Loire, le Nil, l'Amazon.",
-            "Le Rhône, le Rhin, la Volga."
+            "La Seine, la Loire, la Garonne, le Rhône, la Meuse.",
+            "La Seine, la Loire, la Garonne, le Rhône, la Saône.",
+            "La Seine, la Loire, la Garonne, le Rhône, la Dordogne."
         ],
         "explanation": "La Loire est le plus long fleuve entièrement français.",
         "subTheme": "territories_geography",
@@ -272,7 +284,7 @@
         "id": "hgp2_23",
         "question": "Quelle est la population de la France (environ) ?",
         "correctAnswer": "68 millions d'habitants.",
-        "incorrectAnswers": ["50 millions.", "80 millions.", "100 millions."],
+        "incorrectAnswers": ["65 millions.", "70 millions.", "75 millions."],
         "explanation": "C'est le 2ème pays le plus peuplé de l'UE.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -282,9 +294,9 @@
         "question": "Comment évolue la population française ?",
         "correctAnswer": "Elle vieillit (plus de personnes âgées).",
         "incorrectAnswers": [
-            "Elle rajeunit.",
-            "Elle diminue fortement.",
-            "Elle reste identique."
+            "Elle vieillit (plus de personnes âgées) et diminue fortement.",
+            "Elle vieillit (plus de personnes âgées) mais rajeunit aussi.",
+            "Elle vieillit (plus de personnes âgées) et reste identique en nombre."
         ],
         "explanation": "L'espérance de vie augmente et la natalité baisse.",
         "subTheme": "territories_geography",
@@ -295,9 +307,9 @@
         "question": "Où vit la majorité des Français ?",
         "correctAnswer": "En ville (dans les aires urbaines).",
         "incorrectAnswers": [
-            "À la campagne.",
-            "Dans les montagnes.",
-            "Dans les DROM."
+            "En ville (dans les aires urbaines) et à la campagne équitablement.",
+            "En ville (dans les aires urbaines) uniquement dans les grandes métropoles.",
+            "En ville (dans les aires urbaines) uniquement dans les villes de plus de 100 000 habitants."
         ],
         "explanation": "80% de la population est urbaine.",
         "subTheme": "territories_geography",
@@ -308,9 +320,9 @@
         "question": "Qu'est-ce qu'une aire urbaine ?",
         "correctAnswer": "Une ville-centre, sa banlieue et sa couronne périurbaine.",
         "incorrectAnswers": [
-            "Un parc naturel.",
-            "Une zone agricole.",
-            "Un département."
+            "Une ville-centre et sa banlieue uniquement (sans couronne périurbaine).",
+            "Une ville-centre et sa couronne périurbaine uniquement (sans banlieue).",
+            "Une ville-centre, sa banlieue et sa zone rurale."
         ],
         "explanation": "C'est l'espace de vie quotidien autour des villes.",
         "subTheme": "territories_geography",
@@ -321,9 +333,9 @@
         "question": "Qu'est-ce que la métropolisation ?",
         "correctAnswer": "La concentration des hommes et des activités dans les grandes villes.",
         "incorrectAnswers": [
-            "Le départ vers la campagne.",
-            "La construction de métros.",
-            "La pollution de l'air."
+            "La concentration des hommes uniquement dans les grandes villes (sans les activités).",
+            "La concentration des activités uniquement dans les grandes villes (sans les hommes).",
+            "La concentration des hommes et des activités dans les petites villes."
         ],
         "explanation": "Les métropoles attirent les emplois et les richesses.",
         "subTheme": "territories_geography",
@@ -334,9 +346,9 @@
         "question": "Quelles sont les plus grandes métropoles après Paris ?",
         "correctAnswer": "Lyon, Marseille, Lille, Bordeaux, Toulouse.",
         "incorrectAnswers": [
-            "Brest, Limoges, Perpignan.",
-            "Dijon, Reims, Amiens.",
-            "Nice, Toulon, Cannes."
+            "Lyon, Marseille, Lille, Bordeaux, Nantes.",
+            "Lyon, Marseille, Lille, Bordeaux, Strasbourg.",
+            "Lyon, Marseille, Lille, Nice, Toulouse."
         ],
         "explanation": "Elles rayonnent sur leur région.",
         "subTheme": "territories_geography",
@@ -347,9 +359,9 @@
         "question": "Quelle est la place de l'agriculture française en Europe ?",
         "correctAnswer": "Première puissance agricole de l'UE.",
         "incorrectAnswers": [
-            "Dernière puissance agricole.",
-            "Elle n'existe presque plus.",
-            "Elle ne produit que du vin."
+            "Deuxième puissance agricole de l'UE.",
+            "Troisième puissance agricole de l'UE.",
+            "Première puissance agricole de l'UE uniquement pour les céréales."
         ],
         "explanation": "La France est un grand exportateur (céréales, vin, lait).",
         "subTheme": "territories_geography",
@@ -360,9 +372,9 @@
         "question": "Quelles sont les grandes productions agricoles ?",
         "correctAnswer": "Céréales, vignes, élevage (lait, viande).",
         "incorrectAnswers": [
-            "Riz, coton, café.",
-            "Bananes, ananas (sauf outre-mer).",
-            "Tabac uniquement."
+            "Céréales, vignes, élevage (lait, viande) et riz.",
+            "Céréales, vignes, élevage (lait, viande) et café.",
+            "Céréales, vignes, élevage (lait, viande) et coton."
         ],
         "explanation": "La diversité des climats permet des productions variées.",
         "subTheme": "territories_geography",
@@ -373,9 +385,9 @@
         "question": "Quels sont les défis de l'agriculture aujourd'hui ?",
         "correctAnswer": "L'environnement (pesticides) et le revenu des agriculteurs.",
         "incorrectAnswers": [
-            "Il n'y a pas de défis.",
-            "Produire moins de qualité.",
-            "Supprimer les fermes."
+            "L'environnement (pesticides) uniquement, sans problème de revenu.",
+            "Le revenu des agriculteurs uniquement, sans problème environnemental.",
+            "L'environnement (pesticides), le revenu des agriculteurs et la surproduction."
         ],
         "explanation": "L'agriculture doit devenir plus durable.",
         "subTheme": "territories_geography",
@@ -386,9 +398,9 @@
         "question": "Quels sont les points forts de l'industrie française ?",
         "correctAnswer": "Aéronautique, luxe, pharmacie, agroalimentaire, énergie.",
         "incorrectAnswers": [
-            "Textile bas de gamme, jouets.",
-            "Informatique grand public.",
-            "Charbon et acier."
+            "Aéronautique, luxe, pharmacie, agroalimentaire, énergie et textile.",
+            "Aéronautique, luxe, pharmacie, agroalimentaire, énergie et automobile uniquement.",
+            "Aéronautique, luxe, pharmacie, agroalimentaire, énergie et pétrochimie uniquement."
         ],
         "explanation": "Des grands groupes mondiaux (Airbus, LVMH, Sanofi, Danone).",
         "subTheme": "territories_geography",
@@ -398,7 +410,11 @@
         "id": "hgp2_33",
         "question": "Où se concentre l'industrie aéronautique ?",
         "correctAnswer": "À Toulouse et dans le Sud-Ouest.",
-        "incorrectAnswers": ["À Paris.", "À Lille.", "À Strasbourg."],
+        "incorrectAnswers": [
+            "À Toulouse et dans le Sud-Ouest uniquement pour la recherche.",
+            "À Toulouse et dans le Sud-Est.",
+            "À Toulouse et dans le Nord-Ouest."
+        ],
         "explanation": "C'est le siège d'Airbus.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -408,9 +424,9 @@
         "question": "Quel est l'objectif industriel actuel de la France ?",
         "correctAnswer": "La réindustrialisation et l'innovation verte.",
         "incorrectAnswers": [
-            "Fermer toutes les usines.",
-            "Tout acheter en Chine.",
-            "Polluer plus."
+            "La réindustrialisation et l'innovation technologique uniquement.",
+            "La réindustrialisation et l'innovation numérique uniquement.",
+            "La réindustrialisation et l'innovation verte uniquement pour l'énergie."
         ],
         "explanation": "Produire en France pour être plus indépendant.",
         "subTheme": "territories_geography",
@@ -421,9 +437,9 @@
         "question": "Quelle est la puissance économique de la France ?",
         "correctAnswer": "7e puissance mondiale.",
         "incorrectAnswers": [
-            "1ère puissance mondiale.",
-            "20e puissance mondiale.",
-            "50e puissance mondiale."
+            "6e puissance mondiale.",
+            "8e puissance mondiale.",
+            "5e puissance mondiale."
         ],
         "explanation": "C'est un pays riche et développé.",
         "subTheme": "territories_geography",
@@ -434,9 +450,9 @@
         "question": "Dans quel secteur travaillent la majorité des Français ?",
         "correctAnswer": "Le secteur tertiaire (services : commerce, santé, éducation...).",
         "incorrectAnswers": [
-            "Le secteur primaire (agriculture).",
-            "Le secteur secondaire (usine).",
-            "Le chômage."
+            "Le secteur tertiaire (services : commerce, santé, éducation) et le secteur secondaire équitablement.",
+            "Le secteur tertiaire (services : commerce, santé, éducation) uniquement dans les grandes villes.",
+            "Le secteur tertiaire (services : commerce, santé, éducation) et le secteur primaire équitablement."
         ],
         "explanation": "80% des emplois sont dans les services.",
         "subTheme": "territories_geography",
@@ -447,9 +463,9 @@
         "question": "Quel est un problème économique majeur de l'État ?",
         "correctAnswer": "La dette publique et le déficit.",
         "incorrectAnswers": [
-            "Le trop plein d'argent.",
-            "L'absence de banques.",
-            "Le manque de routes."
+            "La dette publique uniquement, sans problème de déficit.",
+            "Le déficit uniquement, sans problème de dette publique.",
+            "La dette publique, le déficit et l'inflation."
         ],
         "explanation": "L'État dépense plus qu'il ne gagne.",
         "subTheme": "territories_geography",
@@ -460,9 +476,9 @@
         "question": "Pourquoi la position de la France est-elle un atout ?",
         "correctAnswer": "Elle est au carrefour de l'Europe avec une triple ouverture maritime.",
         "incorrectAnswers": [
-            "Elle est isolée sur une île.",
-            "Elle est protégée par des murs.",
-            "Elle est au centre du monde."
+            "Elle est au carrefour de l'Europe avec une double ouverture maritime.",
+            "Elle est au carrefour de l'Europe avec une quadruple ouverture maritime.",
+            "Elle est au carrefour de l'Europe avec une ouverture maritime unique."
         ],
         "explanation": "C'est un hub pour les échanges.",
         "subTheme": "territories_geography",
@@ -472,7 +488,11 @@
         "id": "hgp2_39",
         "question": "Quel est le pays le plus peuplé d'Europe ?",
         "correctAnswer": "L'Allemagne.",
-        "incorrectAnswers": ["La France.", "Le Royaume-Uni.", "L'Italie."],
+        "incorrectAnswers": [
+            "L'Allemagne, la France est le 1er.",
+            "L'Allemagne, la France est le 3ème.",
+            "L'Allemagne, la France est le 4ème."
+        ],
         "explanation": "La France est le 2ème.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -482,9 +502,9 @@
         "question": "Comment le réseau de transport français est-il organisé ?",
         "correctAnswer": "En étoile autour de Paris (centralisé).",
         "incorrectAnswers": [
-            "En quadrillage parfait.",
-            "Il n'y a pas de réseau.",
-            "Tout passe par Lyon."
+            "En étoile autour de Paris et de Lyon (bipolaire).",
+            "En étoile autour de Paris et de Marseille (bipolaire).",
+            "En étoile autour de Paris et de Lille (bipolaire)."
         ],
         "explanation": "Le TGV et les autoroutes partent souvent de la capitale.",
         "subTheme": "territories_geography",
@@ -495,9 +515,9 @@
         "question": "Quels corridors européens traversent la France ?",
         "correctAnswer": "L'axe Nord-Sud (Lille-Paris-Lyon-Marseille) et l'axe Atlantique.",
         "incorrectAnswers": [
-            "La route de la Soie.",
-            "La route 66.",
-            "La route des vins."
+            "L'axe Nord-Sud (Lille-Paris-Lyon-Marseille) uniquement, sans axe Atlantique.",
+            "L'axe Atlantique uniquement, sans axe Nord-Sud.",
+            "L'axe Est-Ouest (Strasbourg-Paris-Brest) et l'axe Atlantique."
         ],
         "explanation": "Ils relient l'Europe du Nord à la Méditerranée.",
         "subTheme": "territories_geography",
@@ -508,9 +528,9 @@
         "question": "Pourquoi la France a-t-elle une grande biodiversité ?",
         "correctAnswer": "Grâce à la variété de ses climats et à ses territoires d'Outre-mer.",
         "incorrectAnswers": [
-            "Parce qu'il pleut beaucoup.",
-            "Parce qu'il y a des zoos.",
-            "Parce qu'elle est petite."
+            "Grâce à la variété de ses climats uniquement, sans territoires d'Outre-mer.",
+            "Grâce à ses territoires d'Outre-mer uniquement, sans variété de climats.",
+            "Grâce à la variété de ses climats et à ses parcs naturels uniquement."
         ],
         "explanation": "Des Alpes à la forêt amazonienne (Guyane).",
         "subTheme": "territories_geography",
@@ -521,9 +541,9 @@
         "question": "Qu'est-ce que le réseau Natura 2000 ?",
         "correctAnswer": "Un réseau de sites naturels protégés en Europe.",
         "incorrectAnswers": [
-            "Un réseau d'autoroutes.",
-            "Un réseau informatique.",
-            "Un club de vacances."
+            "Un réseau de sites naturels protégés uniquement en France.",
+            "Un réseau de sites naturels protégés uniquement en Europe de l'Ouest.",
+            "Un réseau de sites naturels protégés dans le monde entier."
         ],
         "explanation": "La France y contribue fortement pour protéger les espèces.",
         "subTheme": "territories_geography",
@@ -534,9 +554,9 @@
         "question": "Quels sont les défis environnementaux de la France ?",
         "correctAnswer": "Le changement climatique, la pollution et la protection de la biodiversité.",
         "incorrectAnswers": [
-            "Le refroidissement climatique.",
-            "Le manque de soleil.",
-            "Trop d'arbres."
+            "Le changement climatique, la pollution et la protection de la biodiversité uniquement en métropole.",
+            "Le changement climatique, la pollution uniquement (sans protection de la biodiversité).",
+            "Le changement climatique, la protection de la biodiversité uniquement (sans pollution)."
         ],
         "explanation": "L'État s'engage pour une transition écologique.",
         "subTheme": "territories_geography",
@@ -546,7 +566,7 @@
         "id": "hgp2_45",
         "question": "Quelle est la part de l'agriculture dans le territoire français ?",
         "correctAnswer": "La moitié du territoire (50%).",
-        "incorrectAnswers": ["10%.", "90%.", "Cela n'existe pas."],
+        "incorrectAnswers": ["40%.", "60%.", "45%."],
         "explanation": "C'est une composante majeure des paysages.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -555,7 +575,11 @@
         "id": "hgp2_46",
         "question": "Quelles sont les principales exportations agricoles ?",
         "correctAnswer": "Le vin et les céréales.",
-        "incorrectAnswers": ["Le riz.", "Le café.", "Le coton."],
+        "incorrectAnswers": [
+            "Le vin, les céréales et le fromage.",
+            "Le vin, les céréales et la viande.",
+            "Le vin, les céréales et le lait."
+        ],
         "explanation": "Le vin français est célèbre mondialement.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -565,9 +589,9 @@
         "question": "Qu'est-ce que le PIB (Produit Intérieur Brut) ?",
         "correctAnswer": "La richesse produite par le pays en un an.",
         "incorrectAnswers": [
-            "Le nombre d'habitants.",
-            "La taille du pays.",
-            "Le nom du président."
+            "La richesse produite par le pays en un mois.",
+            "La richesse produite par le pays en un trimestre.",
+            "La richesse produite par le pays en cinq ans."
         ],
         "explanation": "Il mesure la puissance économique.",
         "subTheme": "territories_geography",
@@ -578,9 +602,9 @@
         "question": "La France est-elle un grand pays par la taille ?",
         "correctAnswer": "Moyen à l'échelle mondiale, mais le plus grand de l'UE.",
         "incorrectAnswers": [
-            "Le plus grand du monde.",
-            "Un tout petit pays.",
-            "Plus grand que la Chine."
+            "Moyen à l'échelle mondiale, mais le deuxième plus grand de l'UE.",
+            "Moyen à l'échelle mondiale, mais le plus grand de l'UE uniquement en métropole.",
+            "Grand à l'échelle mondiale, et le plus grand de l'UE."
         ],
         "explanation": "550 000 km² en métropole.",
         "subTheme": "territories_geography",
@@ -591,9 +615,9 @@
         "question": "Quelle est la place démographique de la France dans le monde ?",
         "correctAnswer": "22e rang mondial (moins de 1% de la population mondiale).",
         "incorrectAnswers": [
-            "1er rang.",
-            "Dernier rang.",
-            "Cela ne compte pas."
+            "20e rang mondial (moins de 1% de la population mondiale).",
+            "24e rang mondial (moins de 1% de la population mondiale).",
+            "25e rang mondial (moins de 1% de la population mondiale)."
         ],
         "explanation": "Loin derrière la Chine ou l'Inde.",
         "subTheme": "territories_geography",
@@ -604,9 +628,9 @@
         "question": "Pourquoi la France est-elle une puissance militaire ?",
         "correctAnswer": "Elle possède l'arme nucléaire et une armée capable d'intervenir partout.",
         "incorrectAnswers": [
-            "Elle a le plus de soldats au monde.",
-            "Elle aime la guerre.",
-            "Elle achète tout aux USA."
+            "Elle possède l'arme nucléaire uniquement, sans armée capable d'intervenir partout.",
+            "Elle possède une armée capable d'intervenir partout uniquement, sans arme nucléaire.",
+            "Elle possède l'arme nucléaire et une armée capable d'intervenir uniquement en Europe."
         ],
         "explanation": "C'est l'une des 5 puissances du Conseil de Sécurité.",
         "subTheme": "territories_geography",
@@ -617,9 +641,9 @@
         "question": "Pourquoi la France est-elle une puissance diplomatique ?",
         "correctAnswer": "Membre permanent du Conseil de sécurité de l'ONU et grand réseau d'ambassades.",
         "incorrectAnswers": [
-            "Elle dirige le monde.",
-            "Elle est neutre comme la Suisse.",
-            "Elle n'a pas d'amis."
+            "Membre permanent du Conseil de sécurité de l'ONU uniquement, sans grand réseau d'ambassades.",
+            "Grand réseau d'ambassades uniquement, sans être membre permanent du Conseil de sécurité.",
+            "Membre permanent du Conseil de sécurité de l'ONU et grand réseau d'ambassades uniquement en Europe."
         ],
         "explanation": "Sa voix porte dans le monde.",
         "subTheme": "territories_geography",
@@ -630,9 +654,9 @@
         "question": "Qu'est-ce que la ZEE (Zone Économique Exclusive) ?",
         "correctAnswer": "L'espace maritime où la France gère les ressources.",
         "incorrectAnswers": [
-            "Une zone interdite.",
-            "Un port de commerce.",
-            "Une plage privée."
+            "L'espace maritime où la France gère uniquement la pêche.",
+            "L'espace maritime où la France gère uniquement les ressources pétrolières.",
+            "L'espace maritime où la France gère les ressources et la navigation uniquement."
         ],
         "explanation": "La France a la 2ème plus grande ZEE du monde.",
         "subTheme": "territories_geography",
@@ -643,9 +667,9 @@
         "question": "Quel est l'atout de la ZEE française ?",
         "correctAnswer": "La biodiversité, la pêche et les ressources sous-marines.",
         "incorrectAnswers": [
-            "Il n'y en a pas.",
-            "Cela coûte cher.",
-            "C'est dangereux."
+            "La biodiversité, la pêche et les ressources sous-marines uniquement dans l'Atlantique.",
+            "La biodiversité, la pêche uniquement (sans ressources sous-marines).",
+            "La biodiversité, les ressources sous-marines uniquement (sans pêche)."
         ],
         "explanation": "C'est une richesse stratégique d'avenir.",
         "subTheme": "territories_geography",
@@ -656,9 +680,9 @@
         "question": "Quel rôle jouent les ports français ?",
         "correctAnswer": "Ils connectent la France au commerce mondial.",
         "incorrectAnswers": [
-            "Ils servent de parking.",
-            "Ils sont fermés.",
-            "Ils ne servent qu'à la pêche."
+            "Ils connectent la France au commerce mondial uniquement pour les importations.",
+            "Ils connectent la France au commerce mondial uniquement pour les exportations.",
+            "Ils connectent la France au commerce régional uniquement."
         ],
         "explanation": "Le Havre et Marseille sont les plus grands.",
         "subTheme": "territories_geography",
@@ -669,9 +693,9 @@
         "question": "Où sont situés les grands ports maritimes ?",
         "correctAnswer": "Le Havre, Marseille, Dunkerque, Nantes-Saint-Nazaire.",
         "incorrectAnswers": [
-            "Paris, Lyon, Toulouse.",
-            "Clermont-Ferrand.",
-            "Strasbourg (port fluvial)."
+            "Le Havre, Marseille, Dunkerque, Brest.",
+            "Le Havre, Marseille, Dunkerque, Calais.",
+            "Le Havre, Marseille, Dunkerque, La Rochelle."
         ],
         "explanation": "Sur les façades maritimes.",
         "subTheme": "territories_geography",
@@ -682,9 +706,9 @@
         "question": "Pourquoi le transport aérien est-il important ?",
         "correctAnswer": "Pour le tourisme et les échanges internationaux.",
         "incorrectAnswers": [
-            "Pour polluer.",
-            "Pour les oiseaux.",
-            "C'est moins cher que le vélo."
+            "Pour le tourisme uniquement, sans échanges internationaux.",
+            "Pour les échanges internationaux uniquement, sans tourisme.",
+            "Pour le tourisme, les échanges internationaux et le transport de marchandises uniquement."
         ],
         "explanation": "La France est un hub aérien mondial.",
         "subTheme": "territories_geography",
@@ -694,7 +718,11 @@
         "id": "hgp2_57",
         "question": "Quel est le plus grand aéroport français ?",
         "correctAnswer": "Paris-Charles de Gaulle (Roissy).",
-        "incorrectAnswers": ["Orly.", "Nice.", "Lyon."],
+        "incorrectAnswers": [
+            "Paris-Charles de Gaulle (Roissy) et Orly ensemble.",
+            "Paris-Orly uniquement.",
+            "Paris-Charles de Gaulle (Roissy) et Paris-Beauvais ensemble."
+        ],
         "explanation": "C'est l'un des plus grands d'Europe.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -703,7 +731,11 @@
         "id": "hgp2_58",
         "question": "Quel secteur industriel est lié à l'aérien ?",
         "correctAnswer": "L'aéronautique (Airbus, Safran).",
-        "incorrectAnswers": ["L'automobile.", "Le textile.", "L'agriculture."],
+        "incorrectAnswers": [
+            "L'aéronautique (Airbus, Safran) et l'automobile.",
+            "L'aéronautique (Airbus, Safran) et le spatial.",
+            "L'aéronautique (Airbus, Safran) et la défense."
+        ],
         "explanation": "C'est un employeur majeur.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -713,9 +745,9 @@
         "question": "Quelle est la place de la France dans le tourisme ?",
         "correctAnswer": "1ère destination touristique mondiale.",
         "incorrectAnswers": [
-            "10ème destination.",
-            "Personne ne vient.",
-            "Dernière destination."
+            "2ème destination touristique mondiale.",
+            "3ème destination touristique mondiale.",
+            "1ère destination touristique mondiale uniquement en Europe."
         ],
         "explanation": "100 millions de visiteurs par an.",
         "subTheme": "territories_geography",
@@ -726,9 +758,9 @@
         "question": "Pourquoi les touristes viennent-ils en France ?",
         "correctAnswer": "Pour le patrimoine, les paysages, la culture et la gastronomie.",
         "incorrectAnswers": [
-            "Parce que c'est gratuit.",
-            "Pour le climat tropical.",
-            "Pour apprendre l'anglais."
+            "Pour le patrimoine, les paysages, la culture uniquement (sans gastronomie).",
+            "Pour le patrimoine, les paysages, la gastronomie uniquement (sans culture).",
+            "Pour le patrimoine, la culture, la gastronomie uniquement (sans paysages)."
         ],
         "explanation": "La Tour Eiffel, le Louvre, la Côte d'Azur attirent le monde.",
         "subTheme": "territories_geography",
@@ -738,7 +770,11 @@
         "id": "hgp2_61",
         "question": "Où se trouve la région Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Au Sud-Est (Lyon, Alpes, Massif Central).",
-        "incorrectAnswers": ["Au Nord.", "En Bretagne.", "Dans le Sud-Ouest."],
+        "incorrectAnswers": [
+            "Au Sud-Est (Lyon, Alpes uniquement, sans Massif Central).",
+            "Au Sud-Est (Lyon, Massif Central uniquement, sans Alpes).",
+            "Au Sud-Est (Alpes, Massif Central uniquement, sans Lyon)."
+        ],
         "explanation": "C'est une région industrielle et montagneuse.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -748,9 +784,9 @@
         "question": "Quelle est la capitale de Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Lyon.",
         "incorrectAnswers": [
-            "Grenoble.",
-            "Saint-Étienne.",
-            "Clermont-Ferrand."
+            "Lyon et Grenoble ensemble (co-capitale).",
+            "Lyon et Saint-Étienne ensemble (co-capitale).",
+            "Lyon et Clermont-Ferrand ensemble (co-capitale)."
         ],
         "explanation": "Lyon est la 2ème métropole de France.",
         "subTheme": "territories_geography",
@@ -760,7 +796,11 @@
         "id": "hgp2_63",
         "question": "Quelle est la caractéristique économique d'Auvergne-Rhône-Alpes ?",
         "correctAnswer": "Très dynamique (chimie, industrie, tourisme ski).",
-        "incorrectAnswers": ["Pauvre.", "Agricole uniquement.", "Désertique."],
+        "incorrectAnswers": [
+            "Très dynamique (chimie, industrie uniquement, sans tourisme ski).",
+            "Très dynamique (chimie, tourisme ski uniquement, sans industrie).",
+            "Très dynamique (industrie, tourisme ski uniquement, sans chimie)."
+        ],
         "explanation": "C'est la 2ème région économique.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -769,7 +809,11 @@
         "id": "hgp2_64",
         "question": "Où se trouve la Bourgogne-Franche-Comté ?",
         "correctAnswer": "À l'Est (Dijon, Besançon, Jura).",
-        "incorrectAnswers": ["Au Sud.", "À l'Ouest.", "Au Nord."],
+        "incorrectAnswers": [
+            "À l'Est (Dijon, Besançon uniquement, sans Jura).",
+            "À l'Est (Dijon, Jura uniquement, sans Besançon).",
+            "À l'Est (Besançon, Jura uniquement, sans Dijon)."
+        ],
         "explanation": "Célèbre pour ses vins et son industrie.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -778,7 +822,11 @@
         "id": "hgp2_65",
         "question": "Quelle ville est célèbre pour sa moutarde et ses ducs ?",
         "correctAnswer": "Dijon.",
-        "incorrectAnswers": ["Auxerre.", "Nevers.", "Mâcon."],
+        "incorrectAnswers": [
+            "Dijon et Auxerre ensemble (co-capitale).",
+            "Dijon et Nevers ensemble (co-capitale).",
+            "Dijon et Mâcon ensemble (co-capitale)."
+        ],
         "explanation": "Capitale de la Bourgogne.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -787,7 +835,11 @@
         "id": "hgp2_66",
         "question": "Quelle est une spécialité de Bourgogne-Franche-Comté ?",
         "correctAnswer": "Le vin de Bourgogne et le Comté.",
-        "incorrectAnswers": ["Le cidre.", "L'huile d'olive.", "Le champagne."],
+        "incorrectAnswers": [
+            "Le vin de Bourgogne, le Comté et le cidre.",
+            "Le vin de Bourgogne, le Comté et l'huile d'olive.",
+            "Le vin de Bourgogne, le Comté et le champagne."
+        ],
         "explanation": "Région de gastronomie.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -796,7 +848,11 @@
         "id": "hgp2_67",
         "question": "Où se trouve la Bretagne ?",
         "correctAnswer": "À l'Ouest (péninsule atlantique).",
-        "incorrectAnswers": ["À l'Est.", "Au Sud.", "Au Centre."],
+        "incorrectAnswers": [
+            "À l'Ouest (péninsule atlantique) et au Nord.",
+            "À l'Ouest (péninsule atlantique) uniquement dans le Finistère.",
+            "À l'Ouest (péninsule atlantique) et au Sud."
+        ],
         "explanation": "Rennes, Brest, Quimper.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -805,7 +861,11 @@
         "id": "hgp2_68",
         "question": "Quelle est la capitale de la Bretagne ?",
         "correctAnswer": "Rennes.",
-        "incorrectAnswers": ["Brest.", "Lorient.", "Vannes."],
+        "incorrectAnswers": [
+            "Rennes et Brest ensemble (co-capitale).",
+            "Rennes et Lorient ensemble (co-capitale).",
+            "Rennes et Vannes ensemble (co-capitale)."
+        ],
         "explanation": "Un pôle numérique et étudiant.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -814,7 +874,11 @@
         "id": "hgp2_69",
         "question": "Quelle est l'activité majeure de la Bretagne ?",
         "correctAnswer": "L'agroalimentaire, la pêche et le tourisme.",
-        "incorrectAnswers": ["L'industrie automobile.", "La mine.", "Le ski."],
+        "incorrectAnswers": [
+            "L'agroalimentaire, la pêche et le tourisme uniquement dans les grandes villes.",
+            "L'agroalimentaire, la pêche uniquement (sans tourisme).",
+            "L'agroalimentaire, le tourisme uniquement (sans pêche)."
+        ],
         "explanation": "1ère région agroalimentaire.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -824,9 +888,9 @@
         "question": "Où se trouve le Centre-Val de Loire ?",
         "correctAnswer": "Au Sud de Paris, traversé par la Loire.",
         "incorrectAnswers": [
-            "Au bord de la mer.",
-            "À la montagne.",
-            "En Alsace."
+            "Au Sud de Paris, traversé par la Loire et la Seine.",
+            "Au Sud de Paris, traversé par la Loire et le Rhône.",
+            "Au Sud de Paris, traversé par la Loire uniquement dans le Loiret."
         ],
         "explanation": "Orléans, Tours, les Châteaux.",
         "subTheme": "territories_geography",
@@ -836,7 +900,11 @@
         "id": "hgp2_71",
         "question": "Quelle est la capitale du Centre-Val de Loire ?",
         "correctAnswer": "Orléans.",
-        "incorrectAnswers": ["Tours.", "Bourges.", "Blois."],
+        "incorrectAnswers": [
+            "Orléans et Tours ensemble (co-capitale).",
+            "Orléans et Bourges ensemble (co-capitale).",
+            "Orléans et Blois ensemble (co-capitale)."
+        ],
         "explanation": "Ville libérée par Jeanne d'Arc.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -845,7 +913,11 @@
         "id": "hgp2_72",
         "question": "Pour quoi est connu le Centre-Val de Loire ?",
         "correctAnswer": "Les Châteaux de la Loire et l'agriculture (céréales).",
-        "incorrectAnswers": ["Les volcans.", "Les gratte-ciels.", "La jungle."],
+        "incorrectAnswers": [
+            "Les Châteaux de la Loire, l'agriculture (céréales) et les vignobles.",
+            "Les Châteaux de la Loire, l'agriculture (céréales) et l'industrie.",
+            "Les Châteaux de la Loire uniquement (sans agriculture)."
+        ],
         "explanation": "C'est le 'jardin de la France'.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -855,9 +927,9 @@
         "question": "Où se trouve la Corse ?",
         "correctAnswer": "Île en Méditerranée, au sud-est.",
         "incorrectAnswers": [
-            "Dans l'Atlantique.",
-            "Dans la Manche.",
-            "Dans les Caraïbes."
+            "Île en Méditerranée, au sud-est et au sud-ouest.",
+            "Île en Méditerranée, au sud-est et au nord-est.",
+            "Île en Méditerranée, au sud-est uniquement près de l'Italie."
         ],
         "explanation": "L'île de Beauté, Ajaccio, Bastia.",
         "subTheme": "territories_geography",
@@ -867,7 +939,11 @@
         "id": "hgp2_74",
         "question": "Quelle est la capitale (préfecture) de la Corse ?",
         "correctAnswer": "Ajaccio.",
-        "incorrectAnswers": ["Bastia.", "Corte.", "Calvi."],
+        "incorrectAnswers": [
+            "Ajaccio et Bastia ensemble (co-capitale).",
+            "Ajaccio et Corte ensemble (co-capitale).",
+            "Ajaccio et Calvi ensemble (co-capitale)."
+        ],
         "explanation": "Ville natale de Napoléon.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -877,9 +953,9 @@
         "question": "Quelle est l'économie principale de la Corse ?",
         "correctAnswer": "Le tourisme.",
         "incorrectAnswers": [
-            "L'industrie lourde.",
-            "La finance.",
-            "Le pétrole."
+            "Le tourisme et l'agriculture équitablement.",
+            "Le tourisme et l'industrie équitablement.",
+            "Le tourisme uniquement dans les grandes villes."
         ],
         "explanation": "Ses paysages attirent beaucoup de visiteurs.",
         "subTheme": "territories_geography",
@@ -889,7 +965,11 @@
         "id": "hgp2_76",
         "question": "Où se trouve le Grand Est ?",
         "correctAnswer": "Au Nord-Est (Strasbourg, Reims, Metz).",
-        "incorrectAnswers": ["Au Sud-Ouest.", "En Bretagne.", "Au Centre."],
+        "incorrectAnswers": [
+            "Au Nord-Est (Strasbourg, Reims uniquement, sans Metz).",
+            "Au Nord-Est (Strasbourg, Metz uniquement, sans Reims).",
+            "Au Nord-Est (Reims, Metz uniquement, sans Strasbourg)."
+        ],
         "explanation": "Frontalier avec l'Allemagne et la Belgique.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -898,7 +978,11 @@
         "id": "hgp2_77",
         "question": "Quelle ville est la capitale européenne située dans le Grand Est ?",
         "correctAnswer": "Strasbourg.",
-        "incorrectAnswers": ["Nancy.", "Metz.", "Mulhouse."],
+        "incorrectAnswers": [
+            "Strasbourg et Nancy ensemble (co-capitale).",
+            "Strasbourg et Metz ensemble (co-capitale).",
+            "Strasbourg et Mulhouse ensemble (co-capitale)."
+        ],
         "explanation": "Siège du Parlement européen.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -907,7 +991,11 @@
         "id": "hgp2_78",
         "question": "Pour quels produits le Grand Est est-il connu ?",
         "correctAnswer": "Le Champagne et le vin d'Alsace.",
-        "incorrectAnswers": ["Le cidre.", "Le rhum.", "La vodka."],
+        "incorrectAnswers": [
+            "Le Champagne, le vin d'Alsace et le cidre.",
+            "Le Champagne, le vin d'Alsace et le rhum.",
+            "Le Champagne, le vin d'Alsace et la vodka."
+        ],
         "explanation": "Vignobles prestigieux.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -916,7 +1004,11 @@
         "id": "hgp2_79",
         "question": "Où se trouvent les Hauts-de-France ?",
         "correctAnswer": "Tout au Nord (Lille, Amiens).",
-        "incorrectAnswers": ["Tout au Sud.", "À l'Est.", "À l'Ouest."],
+        "incorrectAnswers": [
+            "Tout au Nord (Lille, Amiens) et au Nord-Est.",
+            "Tout au Nord (Lille uniquement, sans Amiens).",
+            "Tout au Nord (Amiens uniquement, sans Lille)."
+        ],
         "explanation": "Frontalier avec la Belgique.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -925,7 +1017,11 @@
         "id": "hgp2_80",
         "question": "Quelle est la capitale des Hauts-de-France ?",
         "correctAnswer": "Lille.",
-        "incorrectAnswers": ["Amiens.", "Calais.", "Dunkerque."],
+        "incorrectAnswers": [
+            "Lille et Amiens ensemble (co-capitale).",
+            "Lille et Calais ensemble (co-capitale).",
+            "Lille et Dunkerque ensemble (co-capitale)."
+        ],
         "explanation": "Grande métropole européenne.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -935,9 +1031,9 @@
         "question": "Quelle est l'histoire économique des Hauts-de-France ?",
         "correctAnswer": "Industrielle (charbon, textile) puis reconversion.",
         "incorrectAnswers": [
-            "Agricole seulement.",
-            "Touristique seulement.",
-            "Toujours riche."
+            "Industrielle (charbon, textile) puis reconversion uniquement dans les grandes villes.",
+            "Industrielle (charbon uniquement, sans textile) puis reconversion.",
+            "Industrielle (textile uniquement, sans charbon) puis reconversion."
         ],
         "explanation": "La région a une forte tradition ouvrière.",
         "subTheme": "territories_geography",
@@ -948,9 +1044,9 @@
         "question": "Où se trouve l'Île-de-France ?",
         "correctAnswer": "Autour de Paris.",
         "incorrectAnswers": [
-            "Au bord de la mer.",
-            "Sur une île.",
-            "À la montagne."
+            "Autour de Paris et de Lyon.",
+            "Autour de Paris uniquement dans le département de Paris.",
+            "Autour de Paris et de Versailles."
         ],
         "explanation": "C'est la région capitale.",
         "subTheme": "territories_geography",
@@ -961,9 +1057,9 @@
         "question": "Quelle est la particularité démographique de l'Île-de-France ?",
         "correctAnswer": "La plus peuplée (12 millions d'habitants).",
         "incorrectAnswers": [
-            "La moins peuplée.",
-            "La plus vieille.",
-            "La plus agricole."
+            "La plus peuplée (11 millions d'habitants).",
+            "La plus peuplée (13 millions d'habitants).",
+            "La plus peuplée (12 millions d'habitants) uniquement en comptant la banlieue."
         ],
         "explanation": "1 Français sur 5 y vit.",
         "subTheme": "territories_geography",
@@ -974,9 +1070,9 @@
         "question": "Quel est le poids économique de l'Île-de-France ?",
         "correctAnswer": "C'est la région la plus riche (30% du PIB).",
         "incorrectAnswers": [
-            "C'est une région pauvre.",
-            "C'est moyen.",
-            "Ce n'est que du tourisme."
+            "C'est la région la plus riche (25% du PIB).",
+            "C'est la région la plus riche (35% du PIB).",
+            "C'est la région la plus riche (30% du PIB) uniquement en comptant Paris."
         ],
         "explanation": "Centre de décision et d'affaires.",
         "subTheme": "territories_geography",
@@ -986,7 +1082,11 @@
         "id": "hgp2_85",
         "question": "Où se trouve la Normandie ?",
         "correctAnswer": "Au Nord-Ouest (Rouen, Caen, Le Havre).",
-        "incorrectAnswers": ["Au Sud-Est.", "En Corse.", "Dans les Alpes."],
+        "incorrectAnswers": [
+            "Au Nord-Ouest (Rouen, Caen uniquement, sans Le Havre).",
+            "Au Nord-Ouest (Rouen, Le Havre uniquement, sans Caen).",
+            "Au Nord-Ouest (Caen, Le Havre uniquement, sans Rouen)."
+        ],
         "explanation": "Célèbre pour le débarquement et ses vaches.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -995,7 +1095,11 @@
         "id": "hgp2_86",
         "question": "Quelle est la capitale administrative de la Normandie ?",
         "correctAnswer": "Rouen.",
-        "incorrectAnswers": ["Caen.", "Le Havre.", "Cherbourg."],
+        "incorrectAnswers": [
+            "Rouen et Caen ensemble (co-capitale).",
+            "Rouen et Le Havre ensemble (co-capitale).",
+            "Rouen et Cherbourg ensemble (co-capitale)."
+        ],
         "explanation": "Ville historique (Jeanne d'Arc y est morte).",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -1004,7 +1108,11 @@
         "id": "hgp2_87",
         "question": "Pour quoi est connue la Normandie ?",
         "correctAnswer": "Le Mont-Saint-Michel, le Camembert, le cidre.",
-        "incorrectAnswers": ["Le Champagne.", "Les olives.", "Le riz."],
+        "incorrectAnswers": [
+            "Le Mont-Saint-Michel, le Camembert, le cidre et le Champagne.",
+            "Le Mont-Saint-Michel, le Camembert, le cidre et les olives.",
+            "Le Mont-Saint-Michel, le Camembert, le cidre et le riz."
+        ],
         "explanation": "Tourisme et agriculture.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -1013,7 +1121,11 @@
         "id": "hgp2_88",
         "question": "Où se trouve la Nouvelle-Aquitaine ?",
         "correctAnswer": "Au Sud-Ouest (Bordeaux, Poitiers, Limoges).",
-        "incorrectAnswers": ["Au Nord-Est.", "En Alsace.", "Dans le Nord."],
+        "incorrectAnswers": [
+            "Au Sud-Ouest (Bordeaux, Poitiers uniquement, sans Limoges).",
+            "Au Sud-Ouest (Bordeaux, Limoges uniquement, sans Poitiers).",
+            "Au Sud-Ouest (Poitiers, Limoges uniquement, sans Bordeaux)."
+        ],
         "explanation": "La plus grande région de France.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -1022,7 +1134,11 @@
         "id": "hgp2_89",
         "question": "Quelle est la capitale de la Nouvelle-Aquitaine ?",
         "correctAnswer": "Bordeaux.",
-        "incorrectAnswers": ["Limoges.", "Poitiers.", "La Rochelle."],
+        "incorrectAnswers": [
+            "Bordeaux et Limoges ensemble (co-capitale).",
+            "Bordeaux et Poitiers ensemble (co-capitale).",
+            "Bordeaux et La Rochelle ensemble (co-capitale)."
+        ],
         "explanation": "Capitale mondiale du vin.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
@@ -1032,9 +1148,9 @@
         "question": "Quels sont les atouts de la Nouvelle-Aquitaine ?",
         "correctAnswer": "L'agriculture, le vin, l'aéronautique et le tourisme.",
         "incorrectAnswers": [
-            "Les mines de charbon.",
-            "L'industrie textile.",
-            "La pêche en eau douce."
+            "L'agriculture, le vin, l'aéronautique et le tourisme uniquement dans les grandes villes.",
+            "L'agriculture, le vin, l'aéronautique uniquement (sans tourisme).",
+            "L'agriculture, le vin, le tourisme uniquement (sans aéronautique)."
         ],
         "explanation": "Région attractive et variée.",
         "subTheme": "territories_geography",

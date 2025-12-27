@@ -24,7 +24,7 @@
         {
             "id": "formation_4",
             "question": "Le pouvoir législatif, c’est quoi ?",
-            "explanation": "Le pouvoir législatif est exercé par le Parlement, composé de 2 entités, qu’on appelle “chambres” :\n\n- l’Assemblée nationale (où siègent les 577 députés, élus par les citoyens) ;\n\n- le Sénat (où siègent les 348 sénateurs, élus par les grands électeurs).\n\nLe Parlement vote la loi.\n\nLes deux chambres doivent :\n\n- proposer ;\n\n- négocier ;\n\n- voter la loi.\n\nElles vérifient aussi que le Gouvernement agit selon la loi et évaluent les politiques publiques.",
+            "explanation": "Le pouvoir législatif est exercé par le Parlement, composé de 2 entités, qu'on appelle \"chambres\" :\n\n- l'Assemblée nationale (où siègent les 577 députés, élus par les citoyens au suffrage universel direct pour 5 ans). Elle siège au Palais Bourbon, à Paris ;\n\n- le Sénat (où siègent les 348 sénateurs, élus par les grands électeurs au suffrage universel indirect pour 6 ans, renouvelé par moitié tous les 3 ans). Il siège au Palais du Luxembourg, à Paris.\n\nLe Parlement vote la loi.\n\nLes deux chambres doivent :\n\n- proposer ;\n\n- négocier ;\n\n- voter la loi.\n\nElles vérifient aussi que le Gouvernement agit selon la loi et évaluent les politiques publiques.",
             "image": null
         },
         {
@@ -78,7 +78,7 @@
         {
             "id": "formation_13",
             "question": "Qui sont les acteurs politiques au niveau national ?",
-            "explanation": "- Le président de la République, élu pour 5 ans au suffrage universel directement par les citoyens français. Il nomme le Premier ministre selon la majorité ;\n\n- le Gouvernement (les ministres sont proposés par le Premier ministre au président de la République) ;\n\n- les 577 députés de l’Assemblée nationale (élus au suffrage direct par les Français, tous les 5 ans) et les 348 sénateurs du Sénat (élection au suffrage indirect, par les grands électeurs choisis par les français, tous les 6 ans). L’Assemblée nationale et le Sénat forment le Parlement.",
+            "explanation": "- Le président de la République, élu pour 5 ans (quinquennat) au suffrage universel direct par les citoyens français, à la majorité absolue en deux tours. Il peut exercer au maximum deux mandats consécutifs. Il nomme le Premier ministre selon la majorité parlementaire ;\n\n- le Gouvernement (les ministres sont proposés par le Premier ministre au président de la République) ;\n\n- les 577 députés de l’Assemblée nationale (élus au suffrage direct par les Français, tous les 5 ans) et les 348 sénateurs du Sénat (élection au suffrage indirect, par les grands électeurs choisis par les français, tous les 6 ans). L’Assemblée nationale et le Sénat forment le Parlement.",
             "image": null
         },
         {
@@ -90,7 +90,7 @@
         {
             "id": "formation_15",
             "question": "Le droit de vote, c’est quoi ?",
-            "explanation": "Le droit de vote est le droit d’exprimer sa volonté à une élection. Les citoyens élisent leurs représentants.",
+            "explanation": "Le droit de vote est le droit d'exprimer sa volonté à une élection. Les citoyens élisent leurs représentants. Ce droit est inscrit dans la Déclaration des droits de l'homme et du citoyen de 1789 et dans l'article 3 de la Constitution de 1958.",
             "image": null
         },
         {
@@ -108,7 +108,7 @@
         {
             "id": "formation_18",
             "question": "Quels sont les différents types d’élection ?",
-            "explanation": "Les citoyens français peuvent participer à plusieurs types d’élections au suffrage universel direct en France :\n\n1. les élections présidentielles pour élire le président de la République (tous les 5 ans) ;\n\n2. les élections législatives pour élire les députés à l’Assemblée nationale (tous les 5 ans sauf s’il y a une dissolution) ;\n\n3. les élections municipales pour élire les conseillers municipaux (tous les 6 ans) ;\n\n4. les élections départementales pour élire les conseillers départementaux (tous les 6 ans) ;\n\n5. les élections régionales pour élire les conseillers régionaux (tous les 6 ans) ;\n\n6. les élections européennes pour élire les députés au Parlement européen (tous les 5 ans). Les citoyens de l’Union européenne résidant en France peuvent également voter.\n\nPar contre, les élections sénatoriales, qui permettent d'élire les sénateurs, sont au suffrage universel indirect (tous les 3 ans renouvellement par moitié). Seuls les grands électeurs (maires, conseillers municipaux, députés) votent.",
+            "explanation": "Les citoyens français peuvent participer à plusieurs types d’élections au suffrage universel direct en France :\n\n1. les élections présidentielles pour élire le président de la République (tous les 5 ans) ;\n\n2. les élections législatives pour élire les députés à l'Assemblée nationale (tous les 5 ans, sauf en cas de dissolution de l'Assemblée nationale par le président de la République) ;\n\n3. les élections municipales pour élire les conseillers municipaux (tous les 6 ans) ;\n\n4. les élections départementales pour élire les conseillers départementaux (tous les 6 ans) ;\n\n5. les élections régionales pour élire les conseillers régionaux (tous les 6 ans) ;\n\n6. les élections européennes pour élire les députés au Parlement européen (tous les 5 ans). Les citoyens de l’Union européenne résidant en France peuvent également voter.\n\nPar contre, les élections sénatoriales, qui permettent d'élire les sénateurs, sont au suffrage universel indirect (tous les 3 ans renouvellement par moitié). Seuls les grands électeurs (maires, conseillers municipaux, députés) votent.",
             "image": null
         },
         {
@@ -162,7 +162,7 @@
         {
             "id": "formation_27",
             "question": "Que se passe-t-il après, quand la loi est adoptée par les deux chambres ?",
-            "explanation": "La loi est validée et signée par le président de la République dans un délai de 15 jours.\n\nPendant ce délai :\n\n- le président peut demander un nouvel examen ;\n\n- le Conseil constitutionnel peut être saisi pour vérifier la conformité à la Constitution.\n\nUne fois promulguée, la loi est publiée au Journal officiel et entre en vigueur.",
+            "explanation": "Une fois adoptée par les deux chambres, la loi est promulguée (signée) par le président de la République dans un délai de 15 jours.\n\nPendant ce délai :\n\n- le président peut demander un nouvel examen de la loi ou de certains de ses articles ;\n\n- le Conseil constitutionnel peut être saisi (par le président de la République, le Premier ministre, le président de l'Assemblée nationale, le président du Sénat, ou 60 députés ou 60 sénateurs) pour vérifier la conformité à la Constitution.\n\nUne fois promulguée, la loi est publiée au Journal officiel de la République française et entre en vigueur.",
             "image": null
         },
         {
@@ -198,7 +198,7 @@
         {
             "id": "formation_33",
             "question": "Le découpage administratif en France, qu’est-ce que c’est ?",
-            "explanation": "- Les ministères, qui mettent en œuvre les décisions du Gouvernement : l'administration centrale définit et encadre les politiques à l’échelle nationale ;\n\n- Les collectivités territoriales : \n\n    - les communes (34 875) ;\n\n    - les départements (101 dont 5 en outre-mer) ;\n\n    - les régions (18 dont 5 outre-mer).\n\nLes ministères et les collectivités territoriales sont chargés, selon leurs compétences, de gérer le pays et chacun des territoires.",
+            "explanation": "- Les ministères, qui mettent en œuvre les décisions du Gouvernement : l'administration centrale définit et encadre les politiques à l'échelle nationale ;\n\n- Les collectivités territoriales : \n\n    - les communes (environ 35 000, dont 34 875 en métropole et dans les DROM) ;\n\n    - les départements (101 dont 96 en métropole et 5 en outre-mer) ;\n\n    - les régions (18 dont 13 en métropole et 5 en outre-mer).\n\nLes ministères et les collectivités territoriales sont chargés, selon leurs compétences, de gérer le pays et chacun des territoires.",
             "image": null
         },
         {

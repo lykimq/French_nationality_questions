@@ -7,9 +7,9 @@
             "question": "Qu'est-ce qu'un État de droit ?",
             "correctAnswer": "Un système où la loi est la même pour tous, y compris pour l'État.",
             "incorrectAnswers": [
-                "Un État dirigé par des juristes.",
-                "Un pays avec beaucoup de lois.",
-                "Un système où le gouvernement peut ignorer les lois."
+                "Un État dirigé par des juristes et experts en droit.",
+                "Un système où toutes les décisions sont prises par référendum.",
+                "Un système où le gouvernement peut suspendre les lois en cas d'urgence."
             ],
             "explanation": "Un État de droit est un système dans lequel la loi est la même pour tous, y compris pour l'État. Le droit est supérieur aux pouvoirs et aux autorités politiques.",
             "subTheme": "organization_republic",
@@ -202,9 +202,9 @@
             "question": "Que signifie le mot \"démocratie\" ?",
             "correctAnswer": "\"Pouvoir du peuple\" (du grec Dêmos Krátos).",
             "incorrectAnswers": [
-                "\"Pouvoir des élites\".",
-                "\"Pouvoir de l'argent\".",
-                "\"Pouvoir de l'armée\"."
+                "\"Pouvoir des représentants élus\".",
+                "\"Pouvoir de la majorité parlementaire\".",
+                "\"Pouvoir des institutions démocratiques\"."
             ],
             "explanation": "Le mot démocratie vient du grec \"Dêmos Krátos\" qui signifie \"Peuple Pouvoir\". C'est le régime où le pouvoir appartient au peuple.",
             "subTheme": "democracy_vote",
@@ -228,9 +228,9 @@
             "question": "Comment la Constitution définit-elle la démocratie ?",
             "correctAnswer": "\"Le gouvernement du peuple, par le peuple et pour le peuple\".",
             "incorrectAnswers": [
-                "\"Le pouvoir aux plus méritants\".",
-                "\"La loi du plus fort\".",
-                "\"L'union fait la force\"."
+                "\"Le pouvoir aux plus méritants et compétents\".",
+                "\"Le gouvernement par les experts et technocrates\".",
+                "\"L'union fait la force et la stabilité\"."
             ],
             "explanation": "La Constitution de 1958 indique que la démocratie c'est : \"le gouvernement du peuple, par le peuple et pour le peuple\".",
             "subTheme": "democracy_vote",
@@ -241,9 +241,9 @@
             "question": "Que signifie \"République\" ?",
             "correctAnswer": "\"Chose publique\" (du latin Res Publica) - le pouvoir est exercé par des représentants élus.",
             "incorrectAnswers": [
-                "\"Pouvoir du roi\".",
-                "\"État militaire\".",
-                "\"Gouvernement des sages\"."
+                "\"Pouvoir monarchique héréditaire\".",
+                "\"État dirigé par une élite militaire\".",
+                "\"Gouvernement par les sages et les experts\"."
             ],
             "explanation": "Le mot République vient du latin \"Res Publica\" qui signifie \"chose publique\". C'est un système où le pouvoir est détenu par des représentants élus.",
             "subTheme": "democracy_vote",
@@ -306,9 +306,9 @@
             "question": "Qu'est-ce que le suffrage universel ?",
             "correctAnswer": "Le droit de vote pour tous les citoyens sans distinction de sexe, origine ou religion.",
             "incorrectAnswers": [
-                "Le vote réservé aux propriétaires.",
-                "Le vote des hommes uniquement.",
-                "Le vote des personnes instruites."
+                "Le vote réservé aux citoyens ayant un emploi stable.",
+                "Le vote des citoyens ayant résidé en France depuis plus de 10 ans.",
+                "Le vote des personnes ayant un niveau d'éducation minimum."
             ],
             "explanation": "Le suffrage universel signifie que tous les citoyens français majeurs, ayant leurs droits civiques et inscrits sur les listes électorales, peuvent voter sans distinction.",
             "subTheme": "democracy_vote",
@@ -319,9 +319,9 @@
             "question": "Un citoyen européen résidant en France peut-il voter aux élections municipales ?",
             "correctAnswer": "Oui, s'il habite dans la commune depuis plus de 6 mois et y est inscrit.",
             "incorrectAnswers": [
-                "Non, seuls les Français peuvent voter.",
-                "Oui, sans aucune condition.",
-                "Seulement s'il a la double nationalité."
+                "Non, seuls les citoyens français de naissance peuvent voter.",
+                "Oui, dès son arrivée en France sans condition de durée.",
+                "Seulement s'il possède la double nationalité française et européenne."
             ],
             "explanation": "Un ressortissant d'un pays membre de l'UE résidant en France peut voter aux élections européennes et municipales s'il habite dans la commune depuis plus de 6 mois.",
             "subTheme": "democracy_vote",
@@ -332,9 +332,9 @@
             "question": "Le vote est-il obligatoire en France ?",
             "correctAnswer": "Non, le vote est un droit et non un devoir obligatoire.",
             "incorrectAnswers": [
-                "Oui, sous peine d'amende.",
-                "Oui, c'est inscrit dans la Constitution.",
-                "Seulement pour les élections présidentielles."
+                "Oui, sous peine d'amende en cas d'absence injustifiée.",
+                "Oui, c'est un devoir civique inscrit dans la Constitution.",
+                "Seulement pour les élections présidentielles et législatives."
             ],
             "explanation": "Le vote n'est pas obligatoire en France, c'est un droit. Cependant, la carte d'électeur porte la mention \"Voter est un droit, c'est aussi un devoir civique\".",
             "subTheme": "democracy_vote",
@@ -345,9 +345,9 @@
             "question": "Quelles sont les caractéristiques du vote en France ?",
             "correctAnswer": "Personnel, libre et secret.",
             "incorrectAnswers": [
-                "Public, obligatoire et contrôlé.",
-                "Familial, ouvert et enregistré.",
-                "Collectif, guidé et vérifié."
+                "Public, obligatoire et supervisé par les autorités.",
+                "Transparent, ouvert et vérifiable par tous.",
+                "Collectif, organisé et enregistré officiellement."
             ],
             "explanation": "En France, le vote est strictement personnel (on vote soi-même), libre (pas de contrainte) et secret (isoloir obligatoire).",
             "subTheme": "democracy_vote",
@@ -371,9 +371,9 @@
             "question": "Pourquoi la pluralité des partis politiques est-elle importante ?",
             "correctAnswer": "Elle garantit la liberté d'expression des opinions politiques de tous les citoyens.",
             "incorrectAnswers": [
-                "Elle permet une meilleure représentation des intérêts économiques uniquement.",
-                "Elle simplifie le processus électoral.",
-                "Elle garantit la stabilité gouvernementale à long terme."
+                "Elle permet une meilleure représentation des intérêts économiques et financiers.",
+                "Elle simplifie et accélère le processus électoral et décisionnel.",
+                "Elle garantit exclusivement la stabilité et la continuité gouvernementale."
             ],
             "explanation": "La pluralité des partis politiques est un principe fondamental de la démocratie. Le Conseil constitutionnel a affirmé que \"le respect du pluralisme constitue le fondement de la démocratie\".",
             "subTheme": "democracy_vote",
@@ -384,9 +384,9 @@
             "question": "Les médias doivent-ils être équitables entre les partis politiques ?",
             "correctAnswer": "Oui, la loi de 1986 garantit le pluralisme politique dans les médias.",
             "incorrectAnswers": [
-                "Non, ils sont libres de choisir.",
-                "Seulement les médias publics.",
-                "Uniquement pendant les campagnes."
+                "Non, ils sont libres de choisir leurs sujets et orientations.",
+                "Seulement les médias publics financés par l'État.",
+                "Uniquement pendant les périodes de campagne électorale officielle."
             ],
             "explanation": "D'après la loi du 30 septembre 1986, les médias ont l'obligation d'être équitables entre les partis politiques. Pendant les campagnes, tous les partis ont autant de temps de parole.",
             "subTheme": "democracy_vote",
@@ -397,9 +397,9 @@
             "question": "Qui peut proposer une loi ?",
             "correctAnswer": "Le Gouvernement (projet de loi) ou le Parlement (proposition de loi).",
             "incorrectAnswers": [
-                "Uniquement le Président.",
-                "Seulement les citoyens par pétition.",
-                "Le Conseil constitutionnel."
+                "Uniquement le Président de la République.",
+                "Seulement les citoyens par pétition populaire.",
+                "Le Conseil constitutionnel et les institutions judiciaires."
             ],
             "explanation": "L'initiative de la loi peut être faite par le Gouvernement (projet de loi) ou par le Parlement - députés ou sénateurs (proposition de loi).",
             "subTheme": "european_institutions",
@@ -410,9 +410,9 @@
             "question": "Qu'est-ce que la navette parlementaire ?",
             "correctAnswer": "L'échange d'un texte de loi entre l'Assemblée nationale et le Sénat jusqu'à accord.",
             "incorrectAnswers": [
-                "Le transport des parlementaires.",
-                "La visite des écoles par les députés.",
-                "Le vote électronique au Parlement."
+                "Le processus de consultation entre les deux chambres.",
+                "La coordination des travaux législatifs entre députés et sénateurs.",
+                "Le système de vote alternatif entre les deux assemblées."
             ],
             "explanation": "La navette parlementaire est l'échange du texte de loi entre les deux chambres jusqu'à ce qu'elles valident le même texte.",
             "subTheme": "european_institutions",
@@ -423,9 +423,9 @@
             "question": "Que se passe-t-il si députés et sénateurs ne sont pas d'accord sur une loi ?",
             "correctAnswer": "Une commission mixte paritaire est créée, puis l'Assemblée nationale décide.",
             "incorrectAnswers": [
-                "Le Président tranche.",
-                "Un référendum est organisé.",
-                "La loi est abandonnée."
+                "Le Président de la République tranche en dernier ressort.",
+                "Un référendum est automatiquement organisé pour trancher.",
+                "La loi est abandonnée et doit être réécrite depuis le début."
             ],
             "explanation": "Une commission paritaire mixte (7 députés et 7 sénateurs) est appelée. Si elle n'aboutit pas, l'Assemblée nationale décide.",
             "subTheme": "european_institutions",
@@ -449,9 +449,9 @@
             "question": "Qu'est-ce que la décentralisation ?",
             "correctAnswer": "Le transfert de compétences de l'État aux collectivités territoriales.",
             "incorrectAnswers": [
-                "La concentration du pouvoir à Paris.",
-                "La privatisation des services publics.",
-                "La suppression des régions."
+                "La centralisation de toutes les décisions à Paris.",
+                "Le transfert des compétences publiques au secteur privé.",
+                "La réduction du nombre de collectivités territoriales."
             ],
             "explanation": "La décentralisation, c'est l'État qui transfère des compétences et des moyens à d'autres autorités appelées collectivités territoriales.",
             "subTheme": "european_institutions",
@@ -605,9 +605,9 @@
             "question": "Que symbolise le drapeau européen ?",
             "correctAnswer": "L'unité, la solidarité et l'harmonie entre les peuples d'Europe.",
             "incorrectAnswers": [
-                "Les 12 pays fondateurs.",
-                "Les 12 mois de l'année.",
-                "Les 12 apôtres."
+                "Les 12 pays fondateurs de l'Union européenne.",
+                "Les 12 mois de l'année civile.",
+                "Les 12 principes fondamentaux de l'Europe."
             ],
             "explanation": "Sur un fond bleu, douze étoiles jaunes forment un cercle. Ce cercle d'étoiles symbolise l'unité, la solidarité et l'harmonie entre les peuples d'Europe.",
             "subTheme": "european_institutions",
@@ -722,9 +722,9 @@
             "question": "Quel est le rôle du Conseil européen ?",
             "correctAnswer": "Donner les grandes orientations politiques et budgétaires de l'UE.",
             "incorrectAnswers": [
-                "Voter les lois européennes.",
-                "Juger les affaires européennes.",
-                "Gérer la monnaie unique."
+                "Voter et adopter directement les lois européennes.",
+                "Juger les affaires et litiges entre États membres.",
+                "Gérer la monnaie unique et la politique monétaire européenne."
             ],
             "explanation": "Le Conseil européen donne les grandes orientations politiques et budgétaires de l'UE. Il réunit les 27 chefs d'État ou de gouvernement.",
             "subTheme": "european_institutions",
@@ -774,9 +774,9 @@
             "question": "Quelle est la différence entre un député et un sénateur ?",
             "correctAnswer": "Le sénateur défend les collectivités territoriales en plus de voter les lois.",
             "incorrectAnswers": [
-                "Il n'y a aucune différence.",
-                "Le sénateur est élu directement par les citoyens.",
-                "Le député a plus de pouvoir que le sénateur."
+                "Il n'y a aucune différence, ils ont les mêmes pouvoirs.",
+                "Le sénateur est élu directement par les citoyens comme le député.",
+                "Le député a toujours plus de pouvoir législatif que le sénateur."
             ],
             "explanation": "Le sénateur examine les lois et contrôle le gouvernement, mais défend aussi les intérêts des communes, départements et régions (collectivités territoriales).",
             "subTheme": "democracy_vote",
@@ -800,9 +800,9 @@
             "question": "Le Président peut-il dissoudre le Sénat ?",
             "correctAnswer": "Non, la Constitution ne lui donne pas ce pouvoir.",
             "incorrectAnswers": [
-                "Oui, à tout moment.",
-                "Oui, avec l'accord du Premier ministre.",
-                "Oui, mais seulement en cas de crise."
+                "Oui, à tout moment comme pour l'Assemblée nationale.",
+                "Oui, avec l'accord du Premier ministre et du gouvernement.",
+                "Oui, mais seulement en cas de crise institutionnelle majeure."
             ],
             "explanation": "Le Président de la République ne peut pas dissoudre le Sénat. Le Sénat incarne une stabilité institutionnelle et est élu au suffrage indirect.",
             "subTheme": "european_institutions",
@@ -813,9 +813,9 @@
             "question": "Le Président peut-il dissoudre l'Assemblée nationale ?",
             "correctAnswer": "Oui, selon l'article 12 de la Constitution.",
             "incorrectAnswers": [
-                "Non, c'est interdit.",
-                "Seulement avec l'accord du Sénat.",
-                "Uniquement en temps de guerre."
+                "Non, c'est interdit par la Constitution.",
+                "Seulement avec l'accord préalable du Sénat.",
+                "Uniquement en temps de guerre ou d'état d'urgence."
             ],
             "explanation": "Selon l'article 12 de la Constitution, le Président peut dissoudre l'Assemblée nationale à tout moment, après consultation du Premier ministre et des présidents des deux assemblées.",
             "subTheme": "european_institutions",
@@ -826,9 +826,9 @@
             "question": "Qu'est-ce que l'article 49.3 ?",
             "correctAnswer": "Un article permettant d'adopter une loi sans vote en engageant la responsabilité du gouvernement.",
             "incorrectAnswers": [
-                "Un article sur le droit de vote.",
-                "Un article sur la liberté d'expression.",
-                "Un article sur l'organisation des élections."
+                "Un article sur le droit de vote et la participation citoyenne.",
+                "Un article sur la liberté d'expression des parlementaires.",
+                "Un article sur l'organisation et le fonctionnement du Parlement."
             ],
             "explanation": "L'article 49.3 permet au Premier ministre d'engager la responsabilité du gouvernement sur un texte de loi, qui est adopté sans vote sauf si une motion de censure est votée.",
             "subTheme": "european_institutions",
@@ -917,9 +917,9 @@
             "question": "Quel est le rôle du Premier ministre ?",
             "correctAnswer": "Diriger le gouvernement et mettre en œuvre la politique nationale.",
             "incorrectAnswers": [
-                "Présider le Conseil constitutionnel.",
-                "Représenter la France à l'étranger.",
-                "Commander les armées."
+                "Présider le Conseil constitutionnel et garantir la constitutionnalité des lois.",
+                "Représenter la France à l'étranger dans les relations internationales.",
+                "Commander les armées et diriger la défense nationale."
             ],
             "explanation": "Le Premier ministre dirige le gouvernement et met en œuvre la politique nationale. Il est nommé par le Président de la République.",
             "subTheme": "european_institutions",
@@ -930,9 +930,9 @@
             "question": "Qu'est-ce que le Parlement européen ?",
             "correctAnswer": "L'organe législatif de l'UE où les députés élus représentent les citoyens européens.",
             "incorrectAnswers": [
-                "Le gouvernement de l'Union européenne.",
-                "La cour de justice européenne.",
-                "La banque centrale européenne."
+                "Le gouvernement exécutif de l'Union européenne.",
+                "La cour de justice et le système judiciaire européen.",
+                "La banque centrale et les institutions financières européennes."
             ],
             "explanation": "Le Parlement européen est l'organe législatif de l'UE où les députés européens élus représentent les citoyens des États membres.",
             "subTheme": "european_institutions",
@@ -943,9 +943,9 @@
             "question": "Qui est le président de l'Union européenne ?",
             "correctAnswer": "L'UE n'a pas un président unique, mais plusieurs institutions avec leurs présidents.",
             "incorrectAnswers": [
-                "Le Président de la France.",
-                "Le Premier ministre allemand.",
-                "Le roi d'Espagne."
+                "Le Président de la France, pays fondateur de l'UE.",
+                "Le Premier ministre du pays assurant la présidence tournante du Conseil.",
+                "Le chef d'État du pays le plus peuplé de l'Union européenne."
             ],
             "explanation": "L'Union européenne n'a pas un 'président' unique. La fonction la plus proche est celle du président de la Commission européenne.",
             "subTheme": "european_institutions",
@@ -956,9 +956,9 @@
             "question": "Pourquoi l'Union européenne a-t-elle été créée ?",
             "correctAnswer": "Pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale.",
             "incorrectAnswers": [
-                "Pour créer une armée européenne.",
-                "Pour remplacer les gouvernements nationaux.",
-                "Pour imposer une langue commune."
+                "Pour créer une armée européenne unifiée.",
+                "Pour remplacer progressivement les gouvernements nationaux par un gouvernement unique.",
+                "Pour harmoniser toutes les politiques nationales sans exception."
             ],
             "explanation": "L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale, en favorisant la coopération économique et politique.",
             "subTheme": "european_institutions",

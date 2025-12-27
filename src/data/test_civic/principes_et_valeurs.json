@@ -33,9 +33,9 @@
             "question": "Où peut-on voir la devise de la République ?",
             "correctAnswer": "Sur les bâtiments publics, les pièces de monnaie, les documents officiels et dans la Constitution.",
             "incorrectAnswers": [
-                "Uniquement sur les billets de banque.",
-                "Seulement dans les tribunaux.",
-                "Exclusivement sur les passeports."
+                "Uniquement sur les documents administratifs officiels.",
+                "Seulement dans les institutions gouvernementales.",
+                "Exclusivement sur les monuments historiques."
             ],
             "explanation": "On peut voir la devise sur les bâtiments publics (mairies, écoles, tribunaux), sur certaines pièces de monnaie et timbres, sur les documents officiels et dans la Constitution.",
             "subTheme": "devise_symboles",
@@ -46,9 +46,9 @@
             "question": "Quelle est la seule limite à la liberté en France ?",
             "correctAnswer": "Ne pas empêcher une autre personne d'exercer sa propre liberté.",
             "incorrectAnswers": [
-                "Obéir aux ordres du gouvernement.",
-                "Respecter les traditions religieuses.",
-                "Suivre les règles de sa communauté."
+                "Respecter les lois et règlements en vigueur.",
+                "Respecter les traditions religieuses de la majorité.",
+                "Suivre les règles établies par les autorités locales."
             ],
             "explanation": "En France, chaque personne peut penser, s'exprimer et vivre comme elle le souhaite. La seule limite est de ne pas empêcher une autre personne d'en faire autant.",
             "subTheme": "situational_principles",
@@ -98,9 +98,9 @@
             "question": "Que signifie l'égalité devant la loi ?",
             "correctAnswer": "La loi est la même pour toutes les personnes.",
             "incorrectAnswers": [
-                "Tout le monde a le même salaire.",
-                "Chacun paie les mêmes impôts.",
-                "Tous ont le même niveau d'éducation."
+                "Tous les citoyens ont les mêmes droits économiques.",
+                "Chacun bénéficie des mêmes avantages sociaux.",
+                "Tous ont accès aux mêmes opportunités professionnelles."
             ],
             "explanation": "L'égalité devant la loi signifie que la loi est la même pour toutes les personnes, sans distinction.",
             "subTheme": "situational_principles",
@@ -111,9 +111,9 @@
             "question": "Peut-on appliquer des tarifs différents selon la situation des personnes ?",
             "correctAnswer": "Oui, car le principe d'égalité n'empêche pas de traiter différemment des personnes dans des situations différentes.",
             "incorrectAnswers": [
-                "Non, tout le monde doit payer le même prix.",
-                "Seulement pour les étrangers.",
-                "Non, c'est une forme de discrimination."
+                "Non, tout le monde doit payer le même prix sans exception.",
+                "Seulement pour les personnes bénéficiaires d'aides sociales.",
+                "Non, c'est toujours une forme de discrimination interdite."
             ],
             "explanation": "Le principe d'égalité n'empêche pas de traiter différemment des personnes dans des situations différentes (tarifs réduits pour chômeurs, étudiants, personnes âgées).",
             "subTheme": "situational_principles",
@@ -150,9 +150,9 @@
             "question": "Qu'est-ce que la discrimination ?",
             "correctAnswer": "Traiter une personne moins bien qu'une autre en raison d'un critère interdit par la loi.",
             "incorrectAnswers": [
-                "Faire une différence de prix selon les produits.",
-                "Choisir un candidat plus qualifié qu'un autre.",
-                "Préférer un restaurant à un autre."
+                "Faire une différence de traitement selon les compétences.",
+                "Choisir un candidat plus qualifié qu'un autre pour un poste.",
+                "Appliquer des règles différentes selon les circonstances."
             ],
             "explanation": "On parle de discrimination lorsqu'une personne est moins bien traitée qu'une autre en raison d'un critère interdit par la loi (handicap, religion, orientation sexuelle, origine...).",
             "subTheme": "situational_principles",
@@ -176,9 +176,9 @@
             "question": "Qu'est-ce que la fraternité ?",
             "correctAnswer": "La solidarité entre les citoyens pour vivre ensemble en harmonie.",
             "incorrectAnswers": [
-                "Le lien entre frères et sœurs biologiques.",
-                "L'amitié entre pays voisins.",
-                "La relation entre collègues de travail."
+                "L'entraide uniquement au sein de la famille.",
+                "La coopération entre les nations européennes.",
+                "La solidarité professionnelle dans l'entreprise."
             ],
             "explanation": "La fraternité, c'est la solidarité entre les citoyens. C'est ce qui permet aux personnes de vivre ensemble avec harmonie et de former une société.",
             "subTheme": "situational_principles",
@@ -254,9 +254,9 @@
             "question": "Quelles sont les couleurs du drapeau français ?",
             "correctAnswer": "Bleu, blanc et rouge (trois bandes verticales).",
             "incorrectAnswers": [
-                "Rouge, blanc et bleu (horizontal).",
-                "Bleu et rouge uniquement.",
-                "Blanc avec une fleur de lys."
+                "Rouge, blanc et bleu (bandes horizontales).",
+                "Bleu, blanc et rouge (bandes horizontales).",
+                "Blanc, bleu et rouge (trois bandes horizontales)."
             ],
             "explanation": "Le drapeau français est composé de trois bandes verticales : bleu, blanc et rouge. Le bleu et le rouge étaient les couleurs de Paris, le blanc était la couleur du roi.",
             "subTheme": "devise_symboles",
@@ -293,9 +293,9 @@
             "question": "Est-il interdit de faire outrage au drapeau français ?",
             "correctAnswer": "Oui, détruire ou utiliser le drapeau de manière dégradante en public est interdit.",
             "incorrectAnswers": [
-                "Non, c'est une forme de liberté d'expression.",
-                "Seulement pendant les cérémonies officielles.",
-                "Uniquement pour les fonctionnaires."
+                "Non, c'est une forme de liberté d'expression protégée.",
+                "Seulement si cela trouble l'ordre public.",
+                "Uniquement dans certains contextes spécifiques."
             ],
             "explanation": "Il est interdit de faire outrage au drapeau français, c'est-à-dire de détruire ou d'utiliser de manière dégradante le drapeau en public.",
             "subTheme": "devise_symboles",
@@ -358,9 +358,9 @@
             "question": "Que porte Marianne sur la tête ?",
             "correctAnswer": "Le bonnet phrygien, symbole de liberté.",
             "incorrectAnswers": [
-                "Une couronne royale.",
-                "Un casque de soldat.",
-                "Un bonnet de la République romaine."
+                "Une couronne de lauriers, symbole de victoire.",
+                "Un casque gaulois, symbole de résistance.",
+                "Un bonnet de la liberté, inspiré de l'Antiquité grecque."
             ],
             "explanation": "Marianne porte le bonnet phrygien, comme les esclaves de l'Antiquité qui avaient retrouvé leur liberté. C'est un symbole de liberté.",
             "subTheme": "devise_symboles",
@@ -371,9 +371,9 @@
             "question": "Où trouve-t-on le buste de Marianne ?",
             "correctAnswer": "Dans toutes les mairies de France.",
             "incorrectAnswers": [
-                "Uniquement à l'Élysée.",
-                "Seulement dans les tribunaux.",
-                "Dans les églises."
+                "Uniquement dans les bâtiments gouvernementaux.",
+                "Seulement dans les institutions judiciaires.",
+                "Dans les monuments historiques nationaux."
             ],
             "explanation": "Le buste de Marianne est présent dans toutes les mairies. On la trouve aussi sur la carte d'identité, les timbres, les pièces de monnaie et les documents administratifs.",
             "subTheme": "devise_symboles",
@@ -436,9 +436,9 @@
             "question": "Qu'est-ce que la laïcité ?",
             "correctAnswer": "La garantie de la liberté de conscience pour tous, avec ou sans religion.",
             "incorrectAnswers": [
-                "L'interdiction de toutes les religions.",
-                "La religion officielle de l'État.",
-                "L'obligation d'être athée."
+                "La séparation complète entre religion et société.",
+                "La neutralité religieuse imposée à tous les citoyens.",
+                "L'absence de toute référence religieuse dans l'espace public."
             ],
             "explanation": "La laïcité garantit la liberté de conscience pour tous : chaque personne est libre d'avoir ou de ne pas avoir de religion, d'en changer ou de ne plus en avoir.",
             "subTheme": "laicite",
@@ -449,9 +449,9 @@
             "question": "L'État français reconnaît-il des religions ?",
             "correctAnswer": "Non, l'État ne reconnaît, ne salarie ni ne subventionne aucun culte.",
             "incorrectAnswers": [
-                "Oui, le catholicisme est la religion officielle.",
-                "Oui, les trois grandes religions monothéistes.",
-                "Oui, toutes les religions sont reconnues."
+                "Oui, le catholicisme est reconnu comme religion historique de la France.",
+                "Oui, les religions traditionnellement établies en France sont reconnues.",
+                "Oui, toutes les religions sont reconnues et subventionnées par l'État."
             ],
             "explanation": "L'État français ne reconnaît aucune religion, ne salarie ni ne subventionne aucun culte, et ne participe pas au fonctionnement interne des organisations religieuses.",
             "subTheme": "laicite",
@@ -488,9 +488,9 @@
             "question": "A-t-on le droit de ne pas avoir de religion en France ?",
             "correctAnswer": "Oui, ne pas avoir de religion ou ne plus en avoir est un droit.",
             "incorrectAnswers": [
-                "Non, il faut déclarer une religion.",
-                "Seulement si on est né en France.",
-                "Oui, mais uniquement pour les personnes majeures."
+                "Oui, mais il faut le déclarer officiellement.",
+                "Seulement si on est citoyen français.",
+                "Oui, mais uniquement après l'âge de 18 ans."
             ],
             "explanation": "Ne pas avoir de religion ou choisir de ne plus avoir de religion est un droit. En France, beaucoup de personnes déclarent ne pas avoir de religion.",
             "subTheme": "laicite",
@@ -540,9 +540,9 @@
             "question": "Peut-on porter des signes religieux dans l'espace public ?",
             "correctAnswer": "Oui, toute personne peut manifester sa religion dans l'espace public.",
             "incorrectAnswers": [
-                "Non, c'est interdit partout en France.",
-                "Seulement dans les lieux de culte.",
-                "Uniquement le dimanche."
+                "Non, sauf dans les lieux privés.",
+                "Seulement dans certains espaces publics autorisés.",
+                "Oui, mais uniquement pour les signes discrets."
             ],
             "explanation": "En France, toute personne a le droit de manifester sa religion dans l'espace public (rues, restaurants, transports) : porter des signes religieux, participer à des célébrations...",
             "subTheme": "laicite",
@@ -553,9 +553,9 @@
             "question": "Un agent du service public peut-il porter un signe religieux au travail ?",
             "correctAnswer": "Non, les agents publics doivent respecter la neutralité.",
             "incorrectAnswers": [
-                "Oui, c'est leur droit personnel.",
-                "Seulement les signes discrets.",
-                "Uniquement le vendredi."
+                "Oui, si cela ne perturbe pas le service.",
+                "Seulement les signes discrets et non visibles.",
+                "Oui, mais uniquement en dehors des heures de service."
             ],
             "explanation": "Les personnes qui travaillent dans les services publics ne peuvent pas exprimer leur religion dans le cadre de leur travail. Elles doivent respecter la neutralité.",
             "subTheme": "laicite",
@@ -566,9 +566,9 @@
             "question": "Un usager du service public peut-il porter un signe religieux ?",
             "correctAnswer": "Oui, la neutralité ne s'impose pas aux usagers.",
             "incorrectAnswers": [
-                "Non, c'est interdit dans tous les cas.",
-                "Seulement dans les hôpitaux.",
-                "Uniquement avec une autorisation."
+                "Non, c'est interdit dans tous les services publics.",
+                "Seulement dans certains services publics spécifiques.",
+                "Oui, mais uniquement avec une autorisation préfectorale."
             ],
             "explanation": "La neutralité ne s'impose pas aux usagers des services publics. Ils peuvent porter un signe religieux, mais doivent respecter les règles de fonctionnement du service.",
             "subTheme": "laicite",
@@ -579,9 +579,9 @@
             "question": "Est-il interdit de dissimuler son visage dans l'espace public ?",
             "correctAnswer": "Oui, depuis 2010, il est interdit de dissimuler son visage (cagoule, masque, voile intégral).",
             "incorrectAnswers": [
-                "Non, c'est une liberté individuelle.",
-                "Seulement dans les banques.",
-                "Uniquement pendant les manifestations."
+                "Non, sauf pour des raisons médicales ou de sécurité.",
+                "Seulement dans certains lieux publics spécifiques.",
+                "Oui, mais uniquement avec une autorisation préalable."
             ],
             "explanation": "Depuis le 11 octobre 2010, il est interdit de dissimuler son visage dans l'espace public. Cette loi vise à protéger le vivre-ensemble et l'égalité femmes-hommes.",
             "subTheme": "laicite",
@@ -592,9 +592,9 @@
             "question": "Qu'est-ce que le prosélytisme ?",
             "correctAnswer": "Chercher à convaincre d'autres personnes de choisir sa religion.",
             "incorrectAnswers": [
-                "Pratiquer sa religion en public.",
+                "Partager sa foi avec d'autres personnes volontairement.",
                 "Changer de religion au cours de sa vie.",
-                "Respecter les pratiques religieuses des autres."
+                "Respecter et tolérer les pratiques religieuses des autres."
             ],
             "explanation": "Le prosélytisme religieux consiste à chercher à convaincre d'autres personnes de choisir sa religion, par la parole, des documents ou des invitations à des pratiques religieuses.",
             "subTheme": "laicite",
@@ -605,9 +605,9 @@
             "question": "Le prosélytisme est-il autorisé en France ?",
             "correctAnswer": "Oui, mais sans contrainte physique ou psychologique.",
             "incorrectAnswers": [
-                "Non, c'est totalement interdit.",
-                "Seulement pour les religions reconnues.",
-                "Uniquement dans les lieux de culte."
+                "Non, sauf avec autorisation préfectorale.",
+                "Seulement pour les religions historiquement établies en France.",
+                "Uniquement dans les espaces privés ou religieux."
             ],
             "explanation": "Le prosélytisme religieux est autorisé en France car chaque personne a la liberté de croire ou non. Mais il ne doit pas utiliser la contrainte. Le harcèlement religieux est interdit.",
             "subTheme": "laicite",
@@ -618,9 +618,9 @@
             "question": "Où le prosélytisme est-il interdit ?",
             "correctAnswer": "Dans les écoles publiques, les services publics, les hôpitaux publics et les entreprises privées.",
             "incorrectAnswers": [
-                "Nulle part, c'est toujours autorisé.",
-                "Seulement dans les églises.",
-                "Uniquement dans la rue."
+                "Nulle part, c'est toujours autorisé dans l'espace public.",
+                "Seulement dans les lieux de culte et espaces privés.",
+                "Uniquement dans les espaces publics non réglementés."
             ],
             "explanation": "Pour garantir la neutralité, le prosélytisme est interdit dans les écoles publiques, les services publics, les hôpitaux publics et les entreprises privées.",
             "subTheme": "laicite",
@@ -631,9 +631,9 @@
             "question": "Le blasphème est-il interdit en France ?",
             "correctAnswer": "Non, le blasphème n'est pas interdit en France.",
             "incorrectAnswers": [
-                "Oui, c'est un délit pénal.",
-                "Seulement pour certaines religions.",
-                "Oui, depuis la loi de 2004."
+                "Oui, c'est un délit pénal depuis 1881.",
+                "Seulement pour les religions reconnues par l'État.",
+                "Oui, depuis la loi sur la laïcité de 1905."
             ],
             "explanation": "En France, pays laïque, le blasphème n'est pas interdit. On a le droit de critiquer une religion et on ne peut pas être puni pour avoir dit quelque chose contre une religion.",
             "subTheme": "laicite",
@@ -657,9 +657,9 @@
             "question": "Un salarié du privé peut-il porter un signe religieux au travail ?",
             "correctAnswer": "Oui, sauf si cela perturbe le bon fonctionnement de l'entreprise.",
             "incorrectAnswers": [
-                "Non, c'est toujours interdit.",
-                "Seulement avec l'accord syndical.",
-                "Uniquement le week-end."
+                "Non, sauf si l'entreprise l'autorise explicitement.",
+                "Seulement avec l'accord du comité d'entreprise.",
+                "Oui, mais uniquement si cela ne gêne pas les clients."
             ],
             "explanation": "Contrairement à l'agent public, le salarié peut exprimer ses opinions religieuses et porter des signes religieux, sauf si cela perturbe le fonctionnement de l'entreprise.",
             "subTheme": "laicite",
@@ -670,9 +670,9 @@
             "question": "Un élève peut-il refuser un cours pour raison religieuse ?",
             "correctAnswer": "Non, il n'est pas possible de refuser un cours prévu dans le programme pour des motifs religieux.",
             "incorrectAnswers": [
-                "Oui, si les parents sont d'accord.",
-                "Seulement pour les cours de sport.",
-                "Oui, avec un certificat religieux."
+                "Oui, si les parents font une demande écrite.",
+                "Seulement pour certains cours optionnels.",
+                "Oui, avec une dispense médicale ou religieuse."
             ],
             "explanation": "À l'école, il n'est pas possible de refuser, en raison de sa religion, une règle de fonctionnement ou un cours du programme (sports, sorties scolaires...).",
             "subTheme": "laicite",
@@ -696,9 +696,9 @@
             "question": "Les langues régionales font-elles partie du patrimoine français ?",
             "correctAnswer": "Oui, elles font partie du patrimoine mais ne sont pas des langues officielles.",
             "incorrectAnswers": [
-                "Non, elles sont interdites.",
-                "Oui, elles sont toutes officielles.",
-                "Non, elles n'existent plus."
+                "Non, elles ne sont pas reconnues par l'État.",
+                "Oui, elles ont le même statut que le français.",
+                "Non, elles ne sont plus enseignées dans les écoles."
             ],
             "explanation": "Le breton, le corse, l'alsacien, le basque ou le créole peuvent être enseignés à l'école. Ce ne sont pas des langues officielles, mais elles font partie du patrimoine français.",
             "subTheme": "situational_principles",
@@ -709,9 +709,9 @@
             "question": "Qu'est-ce que le contrat d'engagement républicain ?",
             "correctAnswer": "Un document que doit signer toute personne étrangère demandant un titre de séjour.",
             "incorrectAnswers": [
-                "Un contrat de travail spécial.",
-                "Un document pour les associations.",
-                "Un engagement pour les fonctionnaires."
+                "Un contrat d'intégration pour les nouveaux arrivants.",
+                "Un document pour les demandeurs d'asile uniquement.",
+                "Un engagement pour les candidats à la naturalisation."
             ],
             "explanation": "Le contrat d'engagement à respecter les principes de la République est un document obligatoire pour toute personne étrangère demandant un titre de séjour.",
             "subTheme": "situational_principles",
@@ -722,9 +722,9 @@
             "question": "Que se passe-t-il si on ne respecte pas les principes républicains après avoir signé le contrat ?",
             "correctAnswer": "Le titre de séjour peut être retiré ou non renouvelé.",
             "incorrectAnswers": [
-                "Rien, c'est juste symbolique.",
-                "Une amende de 500 €.",
-                "Un avertissement écrit."
+                "Rien, mais cela peut affecter les futures demandes.",
+                "Une amende administrative pouvant aller jusqu'à 1000 €.",
+                "Un avertissement et une obligation de suivre une formation."
             ],
             "explanation": "Si la personne ne respecte pas un principe républicain, le titre de séjour peut être retiré ou non renouvelé. Aucun titre de séjour ne peut être délivré sans ce contrat signé.",
             "subTheme": "situational_principles",

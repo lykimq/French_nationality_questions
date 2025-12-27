@@ -7,9 +7,9 @@
         "question": "Quel était le régime politique de la France avant 1789 ?",
         "correctAnswer": "L'Ancien Régime (Monarchie absolue de droit divin).",
         "incorrectAnswers": [
-            "La République.",
-            "L'Empire.",
-            "La Monarchie constitutionnelle."
+            "La Monarchie constitutionnelle (pouvoirs limités du roi).",
+            "La Monarchie parlementaire avec un roi élu.",
+            "L'Empire avec un empereur élu par le peuple."
         ],
         "explanation": "C'était une monarchie absolue où le roi détenait tous les pouvoirs.",
         "subTheme": "historical_periods",
@@ -20,9 +20,9 @@
         "question": "Quels régimes politiques se succèdent de 1789 à 1958 ?",
         "correctAnswer": "Une succession de monarchies, d'empires et de républiques.",
         "incorrectAnswers": [
-            "Uniquement des républiques.",
-            "Uniquement des rois.",
-            "Une dictature militaire permanente."
+            "Une succession de républiques et d'empires uniquement.",
+            "Une succession de monarchies et de républiques uniquement.",
+            "Une succession de monarchies constitutionnelles et d'empires."
         ],
         "explanation": "La France a cherché son équilibre politique traversant 3 monarchies, 2 empires et 4 républiques avant 1958.",
         "subTheme": "historical_periods",
@@ -32,7 +32,7 @@
         "id": "hgp1_3",
         "question": "Depuis quand la Ve République est-elle en vigueur ?",
         "correctAnswer": "Depuis 1958.",
-        "incorrectAnswers": ["Depuis 1789.", "Depuis 1945.", "Depuis 2000."],
+        "incorrectAnswers": ["Depuis 1959.", "Depuis 1960.", "Depuis 1957."],
         "explanation": "C'est le régime actuel, fondé par Charles de Gaulle.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -42,9 +42,9 @@
         "question": "Qui sont les trois grands rois qui ont construit la France (Mérovingiens, Carolingiens, Capétiens) ?",
         "correctAnswer": "Clovis, Charlemagne et Hugues Capet.",
         "incorrectAnswers": [
-            "Louis XIV, Napoléon, De Gaulle.",
-            "François 1er, Henri IV, Louis XVI.",
-            "César, Vercingétorix, Attila."
+            "Clovis, Charlemagne et Louis XIV.",
+            "Charlemagne, Hugues Capet et Philippe Auguste.",
+            "Clovis, Pépin le Bref et Hugues Capet."
         ],
         "explanation": "Ils ont fondé les trois premières dynasties royales : Mérovingiens, Carolingiens et Capétiens.",
         "subTheme": "historical_periods",
@@ -55,9 +55,9 @@
         "question": "Quel est l'apport principal de la période royale au système actuel ?",
         "correctAnswer": "L'organisation administrative (fiefs, centralisation).",
         "incorrectAnswers": [
-            "La séparation des pouvoirs législatif, exécutif et judiciaire.",
-            "Le suffrage universel et le vote secret.",
-            "La liberté de conscience et la séparation Église-État."
+            "L'organisation administrative (provinces, décentralisation).",
+            "L'organisation administrative (communes, régions).",
+            "L'organisation administrative (paroisses, décentralisation)."
         ],
         "explanation": "La construction territoriale et l'autorité centrale datent de cette époque.",
         "subTheme": "historical_periods",
@@ -68,9 +68,9 @@
         "question": "Comment était organisée la société sous l'Ancien Régime ?",
         "correctAnswer": "En trois ordres : le Clergé, la Noblesse et le Tiers-État.",
         "incorrectAnswers": [
-            "En classes sociales basées sur l'argent.",
-            "En deux ordres : le clergé et le peuple.",
-            "En quatre ordres incluant les marchands."
+            "En trois ordres : le Clergé, la Noblesse et la Bourgeoisie.",
+            "En trois ordres : le Clergé, la Noblesse et le Peuple.",
+            "En trois ordres : le Clergé, la Noblesse et les Paysans."
         ],
         "explanation": "Le Clergé et la Noblesse avaient des privilèges, le Tiers-État (90% du peuple) payait les impôts.",
         "subTheme": "historical_periods",
@@ -81,9 +81,9 @@
         "question": "Quels étaient les droits des citoyens sous l'Ancien Régime ?",
         "correctAnswer": "Très limités, il n'y avait pas d'égalité devant la loi.",
         "incorrectAnswers": [
-            "Ils pouvaient participer aux États généraux régulièrement.",
-            "Ils avaient les mêmes droits que la noblesse.",
-            "Ils pouvaient critiquer librement le pouvoir royal."
+            "Ils avaient des droits limités mais pouvaient voter aux États généraux.",
+            "Ils avaient des droits limités mais bénéficiaient de l'égalité devant l'impôt.",
+            "Ils avaient des droits limités mais pouvaient accéder à la noblesse facilement."
         ],
         "explanation": "Les sujets obéissaient au Roi et les inégalités étaient la règle.",
         "subTheme": "historical_periods",
@@ -94,9 +94,9 @@
         "question": "Quel héritage l'Ancien Régime a-t-il laissé ?",
         "correctAnswer": "La centralisation du pouvoir.",
         "incorrectAnswers": [
-            "Les droits de l'homme.",
-            "La liberté de la presse.",
-            "La séparation des pouvoirs."
+            "La décentralisation du pouvoir et l'autonomie des régions.",
+            "La séparation des pouvoirs et le suffrage universel.",
+            "L'organisation en fiefs et la décentralisation administrative."
         ],
         "explanation": "L'administration centralisée autour de l'État est un héritage direct.",
         "subTheme": "historical_periods",
@@ -107,9 +107,9 @@
         "question": "Quel événement marque la fin de la monarchie absolue en 1789 ?",
         "correctAnswer": "La Révolution française et la réunion des États généraux.",
         "incorrectAnswers": [
-            "La convocation des États généraux en 1614.",
-            "La mort de Louis XIV en 1715.",
-            "La réforme administrative de 1787."
+            "La prise de la Bastille le 14 juillet 1789 uniquement.",
+            "L'adoption de la Déclaration des droits de l'homme le 26 août 1789 uniquement.",
+            "Le Serment du Jeu de Paume le 20 juin 1789 uniquement."
         ],
         "explanation": "Le Tiers-État se proclame Assemblée nationale et met fin à l'absolutisme.",
         "subTheme": "historical_periods",
@@ -120,9 +120,9 @@
         "question": "Quel texte fondamental est adopté en 1789 ?",
         "correctAnswer": "La Déclaration des Droits de l'Homme et du Citoyen.",
         "incorrectAnswers": [
-            "Le Code Civil.",
-            "La Constitution de la Ve République.",
-            "L'Edit de Nantes."
+            "La Constitution de 1791.",
+            "Le Code civil de 1804.",
+            "La Charte constitutionnelle de 1814."
         ],
         "explanation": "Elle pose les principes de liberté et d'égalité devant la loi.",
         "subTheme": "historical_periods",
@@ -133,9 +133,9 @@
         "question": "Quels principes la Révolution a-t-elle établis ?",
         "correctAnswer": "L'abolition des privilèges, la souveraineté populaire et la séparation des pouvoirs.",
         "incorrectAnswers": [
-            "Le maintien des privilèges de la noblesse.",
-            "La restauration de la monarchie de droit divin.",
-            "L'union du trône et de l'autel."
+            "L'abolition des privilèges, la souveraineté nationale et la démocratie directe.",
+            "L'abolition des privilèges, la souveraineté du peuple et l'égalité sociale.",
+            "L'abolition des privilèges, la liberté individuelle et la démocratie participative."
         ],
         "explanation": "C'est la base de notre démocratie actuelle.",
         "subTheme": "historical_periods",
@@ -146,9 +146,9 @@
         "question": "Qu'est-ce que la 1ère République (1792-1804) ?",
         "correctAnswer": "Le régime proclamé après la chute de la royauté, marqué par la Terreur puis le Consulat.",
         "incorrectAnswers": [
-            "Le régime de Napoléon III.",
-            "La période actuelle.",
-            "Une monarchie parlementaire."
+            "Le régime proclamé après la chute de la royauté, marqué uniquement par la Terreur.",
+            "Le régime proclamé après la chute de la royauté, marqué uniquement par le Consulat.",
+            "Le régime proclamé après la chute de la royauté, marqué par la monarchie constitutionnelle."
         ],
         "explanation": "Elle nait dans la guerre et se termine par le sacre de Napoléon.",
         "subTheme": "historical_periods",
@@ -159,9 +159,9 @@
         "question": "Quel changement la 1ère République apporte-t-elle aux droits des citoyens ?",
         "correctAnswer": "La séparation progressive entre l'Église et l'État.",
         "incorrectAnswers": [
-            "Le droit de vote pour les femmes.",
-            "La sécurité sociale.",
-            "L'abolition complète de toute autorité religieuse."
+            "La séparation complète et définitive entre l'Église et l'État.",
+            "La liberté de culte et la fin de toute influence religieuse.",
+            "La création d'une religion d'État républicaine."
         ],
         "explanation": "L'influence religieuse diminue au profit de l'état civil.",
         "subTheme": "historical_periods",
@@ -172,9 +172,9 @@
         "question": "Quel est l'apport administratif de la 1ère République ?",
         "correctAnswer": "La création des départements.",
         "incorrectAnswers": [
-            "La création des régions.",
-            "La création de l'Europe.",
-            "La création des syndicats."
+            "La création des communes et des régions.",
+            "La création des arrondissements et des cantons.",
+            "La création des provinces et des régions."
         ],
         "explanation": "Le territoire est découpé en départements pour mieux le gérer.",
         "subTheme": "historical_periods",
@@ -185,9 +185,9 @@
         "question": "Qu'est-ce que le Consulat (1799-1804) ?",
         "correctAnswer": "Le régime dirigé par Napoléon Bonaparte (Premier Consul).",
         "incorrectAnswers": [
-            "Le gouvernement des rois.",
-            "Une assemblée de religieux.",
-            "Un tribunal révolutionnaire."
+            "Le régime dirigé par un Directoire de cinq membres.",
+            "Le régime dirigé par l'Assemblée nationale constituante.",
+            "Le régime dirigé par le Comité de salut public."
         ],
         "explanation": "Napoléon concentre les pouvoirs et réorganise la France.",
         "subTheme": "historical_periods",
@@ -198,9 +198,9 @@
         "question": "Comment évoluent les droits politiques sous le Consulat ?",
         "correctAnswer": "L'exécutif est fort, le pouvoir législatif est affaibli.",
         "incorrectAnswers": [
-            "Le peuple décide de tout.",
-            "Le parlement est tout-puissant.",
-            "Il n'y a plus de lois."
+            "L'exécutif et le législatif sont équilibrés.",
+            "Le pouvoir législatif est renforcé, l'exécutif est affaibli.",
+            "Le pouvoir législatif contrôle totalement l'exécutif."
         ],
         "explanation": "Napoléon contrôle le pouvoir.",
         "subTheme": "historical_periods",
@@ -210,7 +210,11 @@
         "id": "hgp1_17",
         "question": "Quelle institution administrative majeure date du Consulat ?",
         "correctAnswer": "Les préfets.",
-        "incorrectAnswers": ["Les maires.", "Les députés.", "Les juges."],
+        "incorrectAnswers": [
+            "Les sous-préfets et les maires.",
+            "Les conseillers généraux et les maires.",
+            "Les préfets et les conseillers d'État."
+        ],
         "explanation": "Les préfets représentent l'État dans chaque département.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -220,9 +224,9 @@
         "question": "Qu'est-ce que le 1er Empire (1804-1815) ?",
         "correctAnswer": "Le régime où Napoléon 1er est Empereur.",
         "incorrectAnswers": [
-            "Le règne de Charlemagne.",
-            "La période coloniale.",
-            "La monarchie de Juillet."
+            "Le régime où Napoléon III est Empereur.",
+            "Le régime où Louis-Napoléon Bonaparte est Empereur.",
+            "Le régime où Napoléon II est Empereur."
         ],
         "explanation": "C'est une période de guerres et de réformes majeures.",
         "subTheme": "historical_periods",
@@ -233,9 +237,9 @@
         "question": "Quel grand texte juridique date du 1er Empire ?",
         "correctAnswer": "Le Code Civil (1804).",
         "incorrectAnswers": [
-            "Le Code de la route.",
-            "La Constitution de 1958.",
-            "La Déclaration des droits de l'homme."
+            "Le Code pénal de 1810.",
+            "Le Code de commerce de 1807.",
+            "La Constitution de l'an VIII (1799)."
         ],
         "explanation": "Il unifie le droit pour tous les Français.",
         "subTheme": "historical_periods",
@@ -246,9 +250,9 @@
         "question": "Quel héritage le 1er Empire a-t-il laissé à l'éducation ?",
         "correctAnswer": "Les lycées et le baccalauréat.",
         "incorrectAnswers": [
-            "L'école maternelle.",
-            "L'université pour tous.",
-            "L'apprentissage."
+            "Les lycées, le baccalauréat et l'université pour tous.",
+            "Les lycées, le baccalauréat et l'école primaire obligatoire.",
+            "Les lycées, le baccalauréat et les grandes écoles."
         ],
         "explanation": "Ces institutions structurent encore le système éducatif.",
         "subTheme": "historical_periods",
@@ -259,9 +263,9 @@
         "question": "Quels régimes marquent le retour de la monarchie au XIXe siècle ?",
         "correctAnswer": "La Restauration et la Monarchie de Juillet.",
         "incorrectAnswers": [
-            "Le Second Empire.",
-            "La Ve République.",
-            "La Commune."
+            "La Restauration uniquement.",
+            "La Monarchie de Juillet uniquement.",
+            "La Restauration et le Second Empire."
         ],
         "explanation": "Louis XVIII, Charles X puis Louis-Philippe règnent.",
         "subTheme": "historical_periods",
@@ -271,7 +275,11 @@
         "id": "hgp1_22",
         "question": "Qui avait le droit de vote sous ces monarchies ?",
         "correctAnswer": "Seulement les hommes les plus riches (suffrage censitaire).",
-        "incorrectAnswers": ["Tout le monde.", "Les femmes.", "Les soldats."],
+        "incorrectAnswers": [
+            "Seulement les hommes de plus de 25 ans et les plus riches.",
+            "Seulement les hommes propriétaires et les plus riches.",
+            "Seulement les hommes de plus de 30 ans et les plus riches."
+        ],
         "explanation": "Le peuple était exclu du vote.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -281,9 +289,9 @@
         "question": "Quel progrès politique apparaît sous la monarchie parlementaire ?",
         "correctAnswer": "L'importance croissante du Parlement et des débats politiques.",
         "incorrectAnswers": [
-            "La dictature totale.",
-            "La fin des journaux.",
-            "L'interdiction des partis."
+            "L'importance croissante du Roi et la diminution du Parlement.",
+            "L'importance croissante de l'Église et la diminution des débats politiques.",
+            "L'importance croissante de l'armée et la fin des débats politiques."
         ],
         "explanation": "C'est l'apprentissage du parlementarisme.",
         "subTheme": "historical_periods",
@@ -294,9 +302,9 @@
         "question": "Comment se termine la Monarchie de Juillet en 1848 ?",
         "correctAnswer": "Par une Révolution et la proclamation de la 2e République.",
         "incorrectAnswers": [
-            "Par la mort naturelle du roi.",
-            "Par une invasion étrangère.",
-            "Par un référendum."
+            "Par une Révolution et la proclamation de la 3e République.",
+            "Par une Révolution et la proclamation de la 1ère République.",
+            "Par une Révolution et la restauration de la monarchie absolue."
         ],
         "explanation": "Le peuple de Paris se soulève.",
         "subTheme": "historical_periods",
@@ -307,9 +315,9 @@
         "question": "Quel droit majeur est instauré en 1848 ?",
         "correctAnswer": "Le suffrage universel masculin.",
         "incorrectAnswers": [
-            "Le vote des femmes.",
-            "Le vote des étrangers.",
-            "Le vote par internet."
+            "Le suffrage universel (hommes et femmes).",
+            "Le suffrage universel masculin et le vote des femmes de plus de 30 ans.",
+            "Le suffrage universel masculin et le vote des propriétaires."
         ],
         "explanation": "Tous les hommes peuvent voter, plus besoin d'être riche.",
         "subTheme": "historical_periods",
@@ -320,9 +328,9 @@
         "question": "Quelle grande abolition a lieu en 1848 ?",
         "correctAnswer": "L'abolition définitive de l'esclavage (par Victor Schœlcher).",
         "incorrectAnswers": [
-            "L'abolition de la noblesse.",
-            "L'abolition de la monnaie.",
-            "L'abolition de l'armée."
+            "L'abolition définitive de l'esclavage en 1794 (première abolition).",
+            "L'abolition définitive de l'esclavage en 1833.",
+            "L'abolition définitive de l'esclavage en 1865."
         ],
         "explanation": "C'est une avancée majeure des droits humains.",
         "subTheme": "historical_periods",
@@ -333,9 +341,9 @@
         "question": "Qui met fin à la 2e République ?",
         "correctAnswer": "Louis-Napoléon Bonaparte par un coup d'État en 1851.",
         "incorrectAnswers": [
-            "Robespierre.",
-            "Louis XVI.",
-            "Le Général de Gaulle."
+            "Napoléon Bonaparte par un coup d'État en 1799.",
+            "Charles de Gaulle par un coup d'État en 1958.",
+            "Louis-Napoléon Bonaparte par un coup d'État en 1852."
         ],
         "explanation": "Il devient ensuite Napoléon III.",
         "subTheme": "historical_periods",
@@ -346,9 +354,9 @@
         "question": "Qu'est-ce que le Second Empire (1852-1870) ?",
         "correctAnswer": "Le régime impérial de Napoléon III.",
         "incorrectAnswers": [
-            "La suite de la Révolution.",
-            "Une période de récession.",
-            "Une démocratie parfaite."
+            "Le régime impérial de Napoléon Ier.",
+            "Le régime impérial de Louis-Napoléon Bonaparte avant 1852.",
+            "Le régime impérial de Napoléon II."
         ],
         "explanation": "C'est une période de développement industriel et économique.",
         "subTheme": "historical_periods",
@@ -359,9 +367,9 @@
         "question": "Quel droit social est accordé en 1864 ?",
         "correctAnswer": "Le droit de grève.",
         "incorrectAnswers": [
-            "Les congés payés.",
-            "La retraite à 60 ans.",
-            "Le télétravail."
+            "Le droit de grève et la liberté syndicale.",
+            "Le droit de grève et les congés payés.",
+            "Le droit de grève et la journée de 8 heures."
         ],
         "explanation": "Les ouvriers peuvent cesser le travail pour revendiquer.",
         "subTheme": "historical_periods",
@@ -372,9 +380,9 @@
         "question": "Comment s'effondre le Second Empire ?",
         "correctAnswer": "Après la défaite militaire contre la Prusse en 1870.",
         "incorrectAnswers": [
-            "Par une révolution pacifiste.",
-            "Par la mort de l'Empereur.",
-            "À cause d'une crise économique."
+            "Après la défaite militaire contre l'Autriche en 1870.",
+            "Après la défaite militaire contre la Russie en 1870.",
+            "Après la défaite militaire contre l'Angleterre en 1870."
         ],
         "explanation": "La défaite de Sedan marque la fin du régime.",
         "subTheme": "historical_periods",
@@ -385,9 +393,9 @@
         "question": "Quels droits sont affirmés sous la 3e République ?",
         "correctAnswer": "Liberté de réunion, liberté de la presse, liberté syndicale.",
         "incorrectAnswers": [
-            "Droit de porter des armes.",
-            "Droit de ne pas payer d'impôts.",
-            "Droit de censurer les journaux."
+            "Liberté de réunion, liberté de la presse et droit de vote des femmes.",
+            "Liberté de réunion, liberté de la presse et sécurité sociale.",
+            "Liberté de réunion, liberté de la presse et droit de grève."
         ],
         "explanation": "C'est l'âge d'or des libertés publiques.",
         "subTheme": "historical_periods",
@@ -398,9 +406,9 @@
         "question": "Quelles lois scolaires sont votées sous la 3e République (Jules Ferry) ?",
         "correctAnswer": "L'école gratuite, laïque et obligatoire.",
         "incorrectAnswers": [
-            "L'école payante pour tous.",
-            "L'école religieuse obligatoire.",
-            "L'interdiction de l'école."
+            "L'école gratuite, laïque et obligatoire de 6 à 14 ans.",
+            "L'école gratuite, religieuse et obligatoire.",
+            "L'école gratuite, laïque et facultative."
         ],
         "explanation": "En 1881-1882, l'instruction devient accessible à tous les enfants.",
         "subTheme": "historical_periods",
@@ -411,9 +419,9 @@
         "question": "Qu'est-ce que le régime de Vichy (1940-1944) ?",
         "correctAnswer": "Un régime autoritaire qui collabore avec l'occupant nazi.",
         "incorrectAnswers": [
-            "La Résistance.",
-            "Un gouvernement démocratique.",
-            "La République en exil."
+            "Un régime autoritaire qui résiste à l'occupant nazi.",
+            "Un régime démocratique qui collabore avec l'occupant nazi.",
+            "Un régime autoritaire qui reste neutre face à l'occupant nazi."
         ],
         "explanation": "Dirigé par le Maréchal Pétain, il supprime la République.",
         "subTheme": "historical_periods",
@@ -424,9 +432,9 @@
         "question": "Quelle est la situation des Juifs sous Vichy ?",
         "correctAnswer": "Ils sont persécutés, arrêtés et déportés (lois antisémites).",
         "incorrectAnswers": [
-            "Ils sont protégés par l'État.",
-            "Ils ont les mêmes droits que les autres.",
-            "Ils dirigent le gouvernement."
+            "Ils sont discriminés mais pas arrêtés ni déportés.",
+            "Ils sont arrêtés mais pas déportés.",
+            "Ils sont persécutés uniquement dans la zone occupée."
         ],
         "explanation": "Le régime participe activement à la Shoah.",
         "subTheme": "historical_periods",
@@ -437,9 +445,9 @@
         "question": "Quel est le bilan politique du régime de Vichy ?",
         "correctAnswer": "Il est nul, c'est une rupture avec les valeurs républicaines.",
         "incorrectAnswers": [
-            "Il a modernisé la France.",
-            "Il a sauvé la République.",
-            "Il a créé l'Europe."
+            "Il a modernisé la France tout en respectant les valeurs républicaines.",
+            "Il a préservé certains acquis républicains malgré la collaboration.",
+            "Il a préparé la reconstruction de la République après la guerre."
         ],
         "explanation": "La République se reconstruira contre ce que Vichy représentait.",
         "subTheme": "historical_periods",
@@ -450,9 +458,9 @@
         "question": "Qui dirige le Gouvernement Provisoire à la Libération (1944) ?",
         "correctAnswer": "Le Général de Gaulle.",
         "incorrectAnswers": [
-            "Le Maréchal Pétain.",
-            "François Mitterrand.",
-            "Napoléon."
+            "Le Général Leclerc.",
+            "Jean Moulin.",
+            "Philippe Pétain."
         ],
         "explanation": "Il rétablit la légitimité républicaine.",
         "subTheme": "historical_periods",
@@ -463,9 +471,9 @@
         "question": "Quelle grande réforme sociale date de la Libération (1945) ?",
         "correctAnswer": "La création de la Sécurité Sociale.",
         "incorrectAnswers": [
-            "Le RSA.",
-            "Les 35 heures.",
-            "L'assurance chômage."
+            "La création de la Sécurité Sociale et du RSA.",
+            "La création de la Sécurité Sociale et des 35 heures.",
+            "La création de la Sécurité Sociale et de l'assurance chômage."
         ],
         "explanation": "Elle protège les Français face aux risques de la vie (maladie, vieillesse).",
         "subTheme": "historical_periods",
@@ -476,9 +484,9 @@
         "question": "Quel a été le rôle du Gouvernement Provisoire ?",
         "correctAnswer": "Rétablir la République et reconstruire la France.",
         "incorrectAnswers": [
-            "Continuer la guerre.",
-            "Vendre les colonies.",
-            "Diviser le pays."
+            "Rétablir la République et continuer la guerre contre l'Allemagne.",
+            "Rétablir la République et vendre les colonies.",
+            "Rétablir la République et diviser le pays en régions autonomes."
         ],
         "explanation": "Il a permis la transition vers la 4e République.",
         "subTheme": "historical_periods",
@@ -489,9 +497,9 @@
         "question": "Pourquoi la 4e République était-elle instable ?",
         "correctAnswer": "Le pouvoir exécutif était trop faible face au Parlement.",
         "incorrectAnswers": [
-            "Le président avait trop de pouvoir.",
-            "Il n'y avait pas d'élections.",
-            "Le peuple se révoltait tout le temps."
+            "Le pouvoir exécutif était trop fort face au Parlement.",
+            "Le pouvoir législatif et l'exécutif étaient équilibrés mais instables.",
+            "Le peuple refusait de participer aux élections."
         ],
         "explanation": "Les gouvernements changeaient très souvent.",
         "subTheme": "historical_periods",
@@ -502,9 +510,9 @@
         "question": "Quel droit obtiennent les femmes en 1944 ?",
         "correctAnswer": "Le droit de vote.",
         "incorrectAnswers": [
-            "Le droit de travailler.",
-            "Le droit de conduire.",
-            "Le droit d'aller à l'école."
+            "Le droit de vote et le droit de se présenter aux élections.",
+            "Le droit de vote et le droit de travailler sans autorisation du mari.",
+            "Le droit de vote et le droit de divorcer."
         ],
         "explanation": "Elles votent pour la première fois en 1945.",
         "subTheme": "historical_periods",
@@ -515,9 +523,9 @@
         "question": "Quel est l'héritage de la 4e République ?",
         "correctAnswer": "La reconstruction économique et la construction européenne.",
         "incorrectAnswers": [
-            "L'arme nucléaire.",
-            "La décolonisation réussie.",
-            "La conquête spatiale."
+            "La reconstruction économique, la construction européenne et la décolonisation réussie.",
+            "La reconstruction économique, la construction européenne et l'arme nucléaire.",
+            "La reconstruction économique, la construction européenne et la conquête spatiale."
         ],
         "explanation": "Malgré l'instabilité, elle a modernisé la France et lancé l'Europe.",
         "subTheme": "historical_periods",
@@ -528,9 +536,9 @@
         "question": "Pourquoi la Ve République a-t-elle été créée en 1958 ?",
         "correctAnswer": "Pour résoudre la crise algérienne et donner un pouvoir fort à l'État.",
         "incorrectAnswers": [
-            "Pour restaurer la monarchie constitutionnelle.",
-            "Pour adopter le modèle parlementaire britannique.",
-            "Pour simplifier uniquement l'administration locale."
+            "Pour résoudre la crise algérienne et donner un pouvoir équilibré entre exécutif et législatif.",
+            "Pour résoudre la crise économique et donner un pouvoir fort à l'État.",
+            "Pour résoudre la crise sociale et simplifier uniquement l'administration locale."
         ],
         "explanation": "De Gaulle voulait un exécutif stable capable de décider.",
         "subTheme": "historical_periods",
@@ -541,9 +549,9 @@
         "question": "Quel changement démocratique a lieu en 1974 ?",
         "correctAnswer": "La majorité passe de 21 ans à 18 ans.",
         "incorrectAnswers": [
-            "Le vote à 16 ans.",
-            "Le vote obligatoire.",
-            "La suppression du Sénat."
+            "La majorité passe de 21 ans à 20 ans.",
+            "La majorité passe de 21 ans à 19 ans.",
+            "La majorité passe de 18 ans à 16 ans."
         ],
         "explanation": "Les jeunes participent plus tôt à la vie politique.",
         "subTheme": "historical_periods",
@@ -554,9 +562,9 @@
         "question": "Quels sont les atouts de la Constitution de la Ve République ?",
         "correctAnswer": "La stabilité du gouvernement et un Président arbitre.",
         "incorrectAnswers": [
-            "Le changement permanent de ministres.",
-            "L'absence de chef.",
-            "Le pouvoir total du Parlement."
+            "La stabilité du gouvernement et un Président avec pouvoir absolu.",
+            "La stabilité du gouvernement et un Parlement tout-puissant.",
+            "La stabilité du gouvernement et un Premier ministre arbitre."
         ],
         "explanation": "Elle a permis l'alternance politique sans crise de régime.",
         "subTheme": "historical_periods",
@@ -567,9 +575,9 @@
         "question": "Qui a fondé la Ve République ?",
         "correctAnswer": "Charles de Gaulle (Président 1958-1969).",
         "incorrectAnswers": [
-            "François Mitterrand.",
-            "Jacques Chirac.",
-            "Georges Pompidou."
+            "Charles de Gaulle (Président 1958-1970).",
+            "Charles de Gaulle (Président 1958-1968).",
+            "Charles de Gaulle (Président 1958-1974)."
         ],
         "explanation": "Il a mis fin à la guerre d'Algérie et instauré l'élection présidentielle au suffrage universel.",
         "subTheme": "historical_periods",
@@ -580,9 +588,9 @@
         "question": "Quel président a modernisé l'industrie française (TGV, Airbus) ?",
         "correctAnswer": "Georges Pompidou (1969-1974).",
         "incorrectAnswers": [
-            "Nicolas Sarkozy.",
-            "François Hollande.",
-            "Charles de Gaulle."
+            "Georges Pompidou (1969-1973).",
+            "Georges Pompidou (1969-1975).",
+            "Valéry Giscard d'Estaing (1974-1981)."
         ],
         "explanation": "Il a favorisé l'industrialisation rapide de la France.",
         "subTheme": "historical_periods",
@@ -593,9 +601,9 @@
         "question": "Quel président a dépénalisé l'avortement ?",
         "correctAnswer": "Valéry Giscard d'Estaing (1974-1981).",
         "incorrectAnswers": [
-            "François Mitterrand.",
-            "Emmanuel Macron.",
-            "Jacques Chirac."
+            "Valéry Giscard d'Estaing (1974-1980).",
+            "Valéry Giscard d'Estaing (1974-1982).",
+            "François Mitterrand (1981-1995)."
         ],
         "explanation": "La loi Veil a été votée sous son mandat.",
         "subTheme": "historical_periods",
@@ -606,9 +614,9 @@
         "question": "Quel président a aboli la peine de mort ?",
         "correctAnswer": "François Mitterrand (1981-1995).",
         "incorrectAnswers": [
-            "Valéry Giscard d'Estaing.",
-            "Nicolas Sarkozy.",
-            "François Hollande."
+            "François Mitterrand (1981-1994).",
+            "François Mitterrand (1981-1996).",
+            "Valéry Giscard d'Estaing (1974-1981)."
         ],
         "explanation": "Il a aussi réalisé de grands travaux (Louvre, Bibliothèque).",
         "subTheme": "historical_periods",
@@ -619,9 +627,9 @@
         "question": "Quel président a réduit le mandat présidentiel à 5 ans (quinquennat) ?",
         "correctAnswer": "Jacques Chirac (1995-2007).",
         "incorrectAnswers": [
-            "François Mitterrand.",
-            "Emmanuel Macron.",
-            "Charles de Gaulle."
+            "Jacques Chirac (1995-2006).",
+            "Jacques Chirac (1995-2008).",
+            "Nicolas Sarkozy (2007-2012)."
         ],
         "explanation": "Il a aussi refusé la guerre en Irak en 2003.",
         "subTheme": "historical_periods",
@@ -632,9 +640,9 @@
         "question": "Quel président a géré la crise financière de 2008 ?",
         "correctAnswer": "Nicolas Sarkozy (2007-2012).",
         "incorrectAnswers": [
-            "François Hollande.",
-            "Jacques Chirac.",
-            "Emmanuel Macron."
+            "Nicolas Sarkozy (2007-2011).",
+            "Nicolas Sarkozy (2007-2013).",
+            "François Hollande (2012-2017)."
         ],
         "explanation": "Il a aussi réformé les retraites.",
         "subTheme": "historical_periods",
@@ -645,9 +653,9 @@
         "question": "Quel président a fait voter le mariage pour tous ?",
         "correctAnswer": "François Hollande (2012-2017).",
         "incorrectAnswers": [
-            "Nicolas Sarkozy.",
-            "Emmanuel Macron.",
-            "Jacques Chirac."
+            "François Hollande (2012-2016).",
+            "François Hollande (2012-2018).",
+            "Emmanuel Macron (2017-2022)."
         ],
         "explanation": "Il a aussi dû faire face aux attentats terroristes de 2015.",
         "subTheme": "historical_periods",
@@ -658,9 +666,9 @@
         "question": "Qui est le président actuel (depuis 2017) ?",
         "correctAnswer": "Emmanuel Macron.",
         "incorrectAnswers": [
-            "François Hollande.",
-            "Marine Le Pen.",
-            "Jean-Luc Mélenchon."
+            "Emmanuel Macron (depuis 2016).",
+            "Emmanuel Macron (depuis 2018).",
+            "François Hollande (depuis 2012)."
         ],
         "explanation": "Il a géré la crise des Gilets jaunes et la pandémie Covid-19.",
         "subTheme": "historical_periods",
@@ -671,9 +679,9 @@
         "question": "Qu'est-ce que la peine de mort ?",
         "correctAnswer": "L'exécution d'une personne condamnée pour un crime.",
         "incorrectAnswers": [
-            "La prison à vie.",
-            "L'exil forcé.",
-            "Une amende très forte."
+            "L'exécution d'une personne condamnée pour un délit grave.",
+            "L'exécution d'une personne condamnée uniquement pour trahison.",
+            "L'exécution d'une personne condamnée uniquement en temps de guerre."
         ],
         "explanation": "Elle a été considérée longtemps comme indispensable avant d'être abolie.",
         "subTheme": "historical_periods",
@@ -683,7 +691,7 @@
         "id": "hgp1_54",
         "question": "Quand la peine de mort a-t-elle été totalement abolie en France ?",
         "correctAnswer": "En 1981.",
-        "incorrectAnswers": ["En 1789.", "En 1945.", "En 2000."],
+        "incorrectAnswers": ["En 1980.", "En 1982.", "En 1979."],
         "explanation": "Par Robert Badinter sous la présidence Mitterrand.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -693,9 +701,9 @@
         "question": "La peine de mort peut-elle être rétablie en France ?",
         "correctAnswer": "Non, son abolition est inscrite dans la Constitution.",
         "incorrectAnswers": [
-            "Oui, par un simple décret.",
-            "Oui, si le président le décide.",
-            "Peut-être dans certains cas."
+            "Non, son abolition est inscrite dans le Code pénal uniquement.",
+            "Non, son abolition est inscrite dans la Déclaration des droits de l'homme.",
+            "Oui, par une révision constitutionnelle avec référendum."
         ],
         "explanation": "Nul ne peut être condamné à la peine de mort (Art 66-1).",
         "subTheme": "historical_periods",
@@ -706,9 +714,9 @@
         "question": "Qu'est-ce que l'IVG ?",
         "correctAnswer": "L'Interruption Volontaire de Grossesse (Avortement).",
         "incorrectAnswers": [
-            "Une maladie grave.",
-            "Un vaccin.",
-            "Une aide financière."
+            "L'Interruption Médicale de Grossesse (avortement thérapeutique).",
+            "L'Interruption Thérapeutique de Grossesse (avortement médical).",
+            "L'Interruption Naturelle de Grossesse (fausse couche)."
         ],
         "explanation": "C'est un droit pour les femmes de disposer de leur corps.",
         "subTheme": "historical_periods",
@@ -718,7 +726,7 @@
         "id": "hgp1_57",
         "question": "Depuis quand l'IVG est-elle autorisée (loi Veil) ?",
         "correctAnswer": "1975.",
-        "incorrectAnswers": ["1950.", "1990.", "2010."],
+        "incorrectAnswers": ["1974.", "1976.", "1973."],
         "explanation": "Simone Veil a porté ce combat difficile.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -728,9 +736,9 @@
         "question": "L'IVG est-elle remboursée ?",
         "correctAnswer": "Oui, à 100% par la Sécurité sociale.",
         "incorrectAnswers": [
-            "Non, c'est payant.",
-            "Seulement à 50%.",
-            "Cela dépend des revenus."
+            "Oui, à 100% par la Sécurité sociale pour les femmes de moins de 18 ans uniquement.",
+            "Oui, à 100% par la Sécurité sociale pour les femmes de moins de 25 ans uniquement.",
+            "Oui, à 80% par la Sécurité sociale avec un reste à charge."
         ],
         "explanation": "L'État garantit l'accès égal à ce droit.",
         "subTheme": "historical_periods",
@@ -741,9 +749,9 @@
         "question": "Quels étaient les droits des couples homosexuels avant 2013 ?",
         "correctAnswer": "Ils pouvaient se pacser mais pas se marier.",
         "incorrectAnswers": [
-            "Ils pouvaient se marier.",
-            "Ils n'avaient aucun droit.",
-            "C'était interdit par la loi."
+            "Ils pouvaient se pacser et adopter des enfants.",
+            "Ils pouvaient se pacser mais pas adopter d'enfants.",
+            "Ils pouvaient se marier mais pas adopter d'enfants."
         ],
         "explanation": "Le PACS était la seule union civile possible.",
         "subTheme": "historical_periods",
@@ -754,9 +762,9 @@
         "question": "Pourquoi le mariage pour tous a-t-il fait débat ?",
         "correctAnswer": "C'était une évolution majeure de la société qui divisait l'opinion.",
         "incorrectAnswers": [
-            "Personne ne s'y intéressait.",
-            "Tout le monde était d'accord.",
-            "Cela coûtait trop cher."
+            "C'était une évolution mineure de la société qui ne divisait pas l'opinion.",
+            "C'était une évolution majeure de la société qui unissait toute l'opinion.",
+            "C'était une évolution majeure de la société qui ne concernait que les couples concernés."
         ],
         "explanation": "Il y a eu de grandes manifestations pour et contre.",
         "subTheme": "historical_periods",
@@ -767,9 +775,9 @@
         "question": "Que permet la loi du 17 mai 2013 ?",
         "correctAnswer": "Le mariage et l'adoption pour les couples de même sexe.",
         "incorrectAnswers": [
-            "Seulement le mariage.",
-            "Seulement l'adoption.",
-            "Rien de nouveau."
+            "Le mariage, l'adoption et la PMA pour les couples de même sexe.",
+            "Le mariage et la PMA pour les couples de même sexe uniquement.",
+            "Le mariage pour les couples de même sexe et le PACS pour tous."
         ],
         "explanation": "C'est l'égalité des droits au mariage.",
         "subTheme": "historical_periods",
@@ -780,9 +788,9 @@
         "question": "Quel événement a déclenché la Première Guerre mondiale ?",
         "correctAnswer": "L'attentat de Sarajevo (assassinat de l'archiduc François-Ferdinand).",
         "incorrectAnswers": [
-            "La prise de la Bastille.",
-            "La chute du mur de Berlin.",
-            "L'invasion de la Pologne."
+            "L'assassinat de l'archiduc François-Ferdinand à Vienne.",
+            "L'assassinat de l'archiduc François-Ferdinand à Budapest.",
+            "L'assassinat du roi de Serbie à Sarajevo."
         ],
         "explanation": "Le jeu des alliances a entraîné l'Europe dans la guerre en 1914.",
         "subTheme": "historical_periods",
@@ -793,9 +801,9 @@
         "question": "Qu'est-ce que la guerre de tranchées (1915-1917) ?",
         "correctAnswer": "Une phase où les soldats s'enterrent pour tenir leurs positions.",
         "incorrectAnswers": [
-            "Une guerre maritime.",
-            "Une guerre aérienne.",
-            "Une guerre éclair."
+            "Une phase où les soldats se battent uniquement en mer.",
+            "Une phase où les soldats se battent uniquement dans les airs.",
+            "Une phase où les soldats avancent rapidement sans s'arrêter."
         ],
         "explanation": "Les conditions de vie étaient terribles (boue, rats, froid).",
         "subTheme": "historical_periods",
@@ -806,9 +814,9 @@
         "question": "Quand a été signé l'Armistice de la Première Guerre mondiale ?",
         "correctAnswer": "Le 11 novembre 1918.",
         "incorrectAnswers": [
-            "Le 8 mai 1945.",
-            "Le 14 juillet 1789.",
-            "Le 1er janvier 1900."
+            "Le 11 novembre 1917.",
+            "Le 11 novembre 1919.",
+            "Le 11 novembre 1920."
         ],
         "explanation": "Ce jour est férié en France pour commémorer la paix.",
         "subTheme": "historical_periods",
@@ -819,9 +827,9 @@
         "question": "Quelle bataille de 1916 est le symbole de l'horreur de la guerre ?",
         "correctAnswer": "La bataille de Verdun.",
         "incorrectAnswers": [
-            "La bataille de Waterloo.",
-            "La bataille de Stalingrad.",
-            "La bataille d'Austerlitz."
+            "La bataille de la Marne en 1914.",
+            "La bataille de la Somme en 1916.",
+            "La bataille de Chemin des Dames en 1917."
         ],
         "explanation": "Elle a fait des centaines de milliers de morts.",
         "subTheme": "historical_periods",
@@ -832,9 +840,9 @@
         "question": "Pourquoi appelle-t-on ce conflit la 'Grande Guerre' ?",
         "correctAnswer": "Car il a mobilisé énormément de pays et de soldats.",
         "incorrectAnswers": [
-            "Car elle a duré 100 ans.",
-            "Car c'était la plus belle.",
-            "Car la France était grande."
+            "Car elle a mobilisé uniquement les pays européens.",
+            "Car elle a mobilisé uniquement la France et l'Allemagne.",
+            "Car elle a mobilisé uniquement les grandes puissances coloniales."
         ],
         "explanation": "C'était une guerre totale industrielle.",
         "subTheme": "historical_periods",
@@ -845,9 +853,9 @@
         "question": "Qui sont les 'Gueules cassées' ?",
         "correctAnswer": "Les soldats défigurés par les blessures de guerre.",
         "incorrectAnswers": [
-            "Les soldats déserteurs.",
-            "Les généraux incompétents.",
-            "Les prisonniers de guerre."
+            "Les soldats morts au combat.",
+            "Les soldats blessés légèrement.",
+            "Les soldats ayant subi des traumatismes psychologiques."
         ],
         "explanation": "Ils symbolisent le traumatisme de 14-18.",
         "subTheme": "historical_periods",
@@ -857,7 +865,11 @@
         "id": "hgp1_68",
         "question": "Qui prend le pouvoir en Allemagne en 1933 ?",
         "correctAnswer": "Adolf Hitler et les nazis.",
-        "incorrectAnswers": ["Mussolini.", "Staline.", "Franco."],
+        "incorrectAnswers": [
+            "Adolf Hitler et les fascistes italiens.",
+            "Adolf Hitler et les communistes.",
+            "Adolf Hitler et les socialistes."
+        ],
         "explanation": "Il installe un régime totalitaire et antisémite.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -867,9 +879,9 @@
         "question": "Quel événement déclenche la Seconde Guerre mondiale le 1er septembre 1939 ?",
         "correctAnswer": "L'invasion de la Pologne par l'Allemagne.",
         "incorrectAnswers": [
-            "L'attaque de la France.",
-            "Le bombardement de Londres.",
-            "L'invasion de la Russie."
+            "L'invasion de la Tchécoslovaquie par l'Allemagne.",
+            "L'invasion de l'Autriche par l'Allemagne.",
+            "L'invasion de la Belgique par l'Allemagne."
         ],
         "explanation": "La France et le Royaume-Uni déclarent alors la guerre.",
         "subTheme": "historical_periods",
@@ -880,9 +892,9 @@
         "question": "Quels sont les deux camps qui s'opposent ?",
         "correctAnswer": "Les Alliés (France, UK, USA, URSS) contre l'Axe (Allemagne, Italie, Japon).",
         "incorrectAnswers": [
-            "L'Europe contre l'Amérique.",
-            "Le Nord contre le Sud.",
-            "Les Riches contre les Pauvres."
+            "Les Alliés (France, UK, USA) contre l'Axe (Allemagne, Italie, Japon) sans l'URSS.",
+            "Les Alliés (France, UK, URSS) contre l'Axe (Allemagne, Italie, Japon) sans les USA.",
+            "Les Alliés (UK, USA, URSS) contre l'Axe (Allemagne, Italie, Japon) sans la France."
         ],
         "explanation": "C'est un conflit mondial.",
         "subTheme": "historical_periods",
@@ -893,9 +905,9 @@
         "question": "Quel est le tournant de la guerre en 1942-1943 ?",
         "correctAnswer": "Les victoires alliées (Stalingrad, El Alamein).",
         "incorrectAnswers": [
-            "La victoire de l'Allemagne.",
-            "La capitulation de la France.",
-            "L'invention de l'avion."
+            "Les victoires alliées (Normandie, Berlin) en 1944-1945.",
+            "Les victoires alliées (Pearl Harbor, Midway) en 1941-1942.",
+            "Les victoires alliées (Dunkerque, Londres) en 1940."
         ],
         "explanation": "L'Axe commence à reculer.",
         "subTheme": "historical_periods",
@@ -906,9 +918,9 @@
         "question": "Quand a lieu le débarquement en Normandie ?",
         "correctAnswer": "Le 6 juin 1944 (D-Day).",
         "incorrectAnswers": [
-            "Le 8 mai 1945.",
-            "Le 18 juin 1940.",
-            "Le 11 novembre 1918."
+            "Le 6 juin 1943.",
+            "Le 6 juin 1945.",
+            "Le 6 juillet 1944."
         ],
         "explanation": "Il marque le début de la Libération de la France.",
         "subTheme": "historical_periods",
@@ -919,9 +931,9 @@
         "question": "Quand l'Allemagne capitule-t-elle ?",
         "correctAnswer": "Le 8 mai 1945.",
         "incorrectAnswers": [
-            "Le 14 juillet 1945.",
-            "Le 2 septembre 1945.",
-            "Le 6 juin 1944."
+            "Le 8 mai 1944.",
+            "Le 8 mai 1946.",
+            "Le 7 mai 1945."
         ],
         "explanation": "C'est la fin de la guerre en Europe.",
         "subTheme": "historical_periods",
@@ -932,9 +944,9 @@
         "question": "Qu'est-ce qu'une 'guerre d'anéantissement' ?",
         "correctAnswer": "Une guerre où l'on veut détruire totalement l'adversaire (civils compris).",
         "incorrectAnswers": [
-            "Une guerre sans armes.",
-            "Une guerre rapide.",
-            "Une guerre économique."
+            "Une guerre où l'on veut vaincre l'adversaire sans le détruire totalement.",
+            "Une guerre où l'on veut détruire uniquement les forces armées adverses.",
+            "Une guerre où l'on veut conquérir les territoires sans tuer les civils."
         ],
         "explanation": "Toutes les limites morales ont été franchies.",
         "subTheme": "historical_periods",
@@ -945,9 +957,9 @@
         "question": "Quel est le bilan humain de la Seconde Guerre mondiale ?",
         "correctAnswer": "60 millions de morts.",
         "incorrectAnswers": [
-            "1 million de morts.",
-            "10 millions de morts.",
-            "100 000 morts."
+            "50 millions de morts.",
+            "70 millions de morts.",
+            "80 millions de morts."
         ],
         "explanation": "C'est le conflit le plus meurtrier de l'histoire.",
         "subTheme": "historical_periods",
@@ -958,9 +970,9 @@
         "question": "Quelle organisation internationale est créée en 1945 ?",
         "correctAnswer": "L'ONU (Organisation des Nations Unies).",
         "incorrectAnswers": [
-            "L'Union Européenne.",
-            "L'OTAN.",
-            "La Croix-Rouge."
+            "L'ONU (Organisation des Nations Unies) créée en 1944.",
+            "L'ONU (Organisation des Nations Unies) créée en 1946.",
+            "La SDN (Société des Nations) créée en 1945."
         ],
         "explanation": "Pour maintenir la paix dans le monde.",
         "subTheme": "historical_periods",
@@ -971,9 +983,9 @@
         "question": "Qu'est-ce que l'Armistice du 22 juin 1940 ?",
         "correctAnswer": "L'arrêt des combats signé par Pétain qui consacre la défaite de la France.",
         "incorrectAnswers": [
-            "La victoire de la France.",
-            "L'entrée en guerre des USA.",
-            "La paix définitive."
+            "L'arrêt des combats signé par de Gaulle qui consacre la victoire de la France.",
+            "L'arrêt des combats signé par Churchill qui consacre la défaite de l'Allemagne.",
+            "L'arrêt des combats signé par Pétain qui consacre la victoire de la France."
         ],
         "explanation": "La France est coupée en deux (Zone occupée / Zone libre).",
         "subTheme": "historical_periods",
@@ -984,9 +996,9 @@
         "question": "Quelle est la devise du Régime de Vichy ?",
         "correctAnswer": "Travail, Famille, Patrie.",
         "incorrectAnswers": [
-            "Liberté, Égalité, Fraternité.",
-            "Dieu et le Roi.",
-            "Force et Honneur."
+            "Travail, Famille, Patrie (devise républicaine modifiée).",
+            "Ordre, Travail, Patrie.",
+            "Famille, Travail, Nation."
         ],
         "explanation": "Elle remplace la devise républicaine.",
         "subTheme": "historical_periods",
@@ -997,9 +1009,9 @@
         "question": "Qui a lancé l'Appel du 18 juin 1940 ?",
         "correctAnswer": "Le Général de Gaulle.",
         "incorrectAnswers": [
-            "Jean Moulin.",
-            "Le Maréchal Pétain.",
-            "Winston Churchill."
+            "Le Général Leclerc.",
+            "Philippe Pétain.",
+            "Jean Moulin."
         ],
         "explanation": "Il refuse la défaite et appelle à la Résistance.",
         "subTheme": "historical_periods",
@@ -1010,9 +1022,9 @@
         "question": "Quels étaient les actes de la Résistance ?",
         "correctAnswer": "Sabotage, renseignement, tracts, lutte armée.",
         "incorrectAnswers": [
-            "Collaboration avec l'ennemi.",
-            "Attendre passivement.",
-            "Partir en vacances."
+            "Sabotage, renseignement, tracts uniquement (sans lutte armée).",
+            "Sabotage, renseignement, lutte armée uniquement (sans tracts).",
+            "Renseignement, tracts, lutte armée uniquement (sans sabotage)."
         ],
         "explanation": "Ils ont préparé la Libération.",
         "subTheme": "historical_periods",
@@ -1023,9 +1035,9 @@
         "question": "Qu'est-ce que la décolonisation ?",
         "correctAnswer": "Le processus par lequel les colonies deviennent indépendantes.",
         "incorrectAnswers": [
-            "La conquête de nouveaux territoires.",
-            "L'union de deux pays.",
-            "La fin de la guerre."
+            "Le processus par lequel les colonies deviennent des départements français.",
+            "Le processus par lequel les colonies s'unissent avec la métropole.",
+            "Le processus par lequel les colonies deviennent des protectorats."
         ],
         "explanation": "Elle a lieu surtout entre 1945 et 1962.",
         "subTheme": "historical_periods",
@@ -1036,9 +1048,9 @@
         "question": "Quelles guerres de décolonisation la France a-t-elle menées ?",
         "correctAnswer": "La guerre d'Indochine et la guerre d'Algérie.",
         "incorrectAnswers": [
-            "La guerre du Vietnam et la guerre de Corée.",
-            "La guerre du Golfe.",
-            "La guerre de Sécession."
+            "La guerre d'Indochine et la guerre du Vietnam.",
+            "La guerre d'Algérie et la guerre du Maroc.",
+            "La guerre d'Indochine et la guerre de Tunisie."
         ],
         "explanation": "La France a tenté de garder ses colonies par la force.",
         "subTheme": "historical_periods",
@@ -1048,7 +1060,7 @@
         "id": "hgp1_83",
         "question": "Quand l'Algérie devient-elle indépendante ?",
         "correctAnswer": "En 1962 (Accords d'Évian).",
-        "incorrectAnswers": ["En 1945.", "En 1958.", "En 1980."],
+        "incorrectAnswers": ["En 1960.", "En 1964.", "En 1961."],
         "explanation": "Après 8 ans de guerre.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -1058,9 +1070,9 @@
         "question": "Comment s'est passée la décolonisation en Afrique noire ?",
         "correctAnswer": "Pacifiquement, par la négociation (vers 1960).",
         "incorrectAnswers": [
-            "Par des guerres sanglantes.",
-            "Elle n'a jamais eu lieu.",
-            "Par des référendums truqués."
+            "Pacifiquement, par la négociation (vers 1958).",
+            "Pacifiquement, par la négociation (vers 1962).",
+            "Pacifiquement, par la négociation (vers 1955)."
         ],
         "explanation": "La plupart des pays sont devenus indépendants sans guerre.",
         "subTheme": "historical_periods",
@@ -1071,9 +1083,9 @@
         "question": "Quels sont les objectifs de l'Union Européenne ?",
         "correctAnswer": "La paix et la prospérité économique en Europe.",
         "incorrectAnswers": [
-            "Faire la guerre à la Russie.",
-            "Créer un seul pays.",
-            "Supprimer les langues nationales."
+            "La paix, la prospérité économique et la création d'un État fédéral unique.",
+            "La paix, la prospérité économique et la suppression des frontières nationales.",
+            "La paix, la prospérité économique et l'unification culturelle complète."
         ],
         "explanation": "C'est une union politique et économique unique.",
         "subTheme": "historical_periods",
@@ -1084,9 +1096,9 @@
         "question": "Quels sont les pays fondateurs de l'Europe (CEE) en 1957 ?",
         "correctAnswer": "France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg.",
         "incorrectAnswers": [
-            "France, Angleterre, Espagne.",
-            "Allemagne, Pologne, Autriche.",
-            "Suède, Norvège, Finlande."
+            "France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg et le Royaume-Uni.",
+            "France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg et l'Espagne.",
+            "France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg et le Portugal."
         ],
         "explanation": "Ils ont signé le Traité de Rome.",
         "subTheme": "historical_periods",
@@ -1096,7 +1108,11 @@
         "id": "hgp1_87",
         "question": "Quelle est la monnaie commune de l'Europe ?",
         "correctAnswer": "L'Euro (mis en circulation en 2002).",
-        "incorrectAnswers": ["Le Dollar.", "Le Franc.", "Le Mark."],
+        "incorrectAnswers": [
+            "L'Euro (mis en circulation en 2000).",
+            "L'Euro (mis en circulation en 2001).",
+            "L'Euro (mis en circulation en 2003)."
+        ],
         "explanation": "Elle facilite les échanges commerciaux.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
@@ -1106,9 +1122,9 @@
         "question": "Quelles sont les institutions de l'UE ?",
         "correctAnswer": "La Commission, le Parlement, le Conseil.",
         "incorrectAnswers": [
-            "L'Élysée, le Sénat, l'Assemblée.",
-            "La Maison Blanche, le Capitole.",
-            "Le Vatican."
+            "La Commission, le Parlement, le Conseil et la Cour de justice.",
+            "La Commission, le Parlement, le Conseil et la Banque centrale.",
+            "La Commission, le Parlement, le Conseil et le Conseil européen uniquement."
         ],
         "explanation": "Elles créent les lois européennes.",
         "subTheme": "historical_periods",
@@ -1119,9 +1135,9 @@
         "question": "Qu'est-ce que l'Empire colonial français ?",
         "correctAnswer": "L'ensemble des territoires conquis et dominés par la France.",
         "incorrectAnswers": [
-            "La France et ses voisins.",
-            "L'Europe.",
-            "Les pays alliés."
+            "L'ensemble des territoires conquis et dominés par la France uniquement en Afrique.",
+            "L'ensemble des territoires conquis et dominés par la France uniquement en Asie.",
+            "L'ensemble des territoires conquis et dominés par la France uniquement en Amérique."
         ],
         "explanation": "Il s'étendait en Afrique, Asie et Amérique.",
         "subTheme": "historical_periods",
@@ -1132,9 +1148,9 @@
         "question": "Qu'était le commerce triangulaire ?",
         "correctAnswer": "La traite des esclaves entre l'Afrique, l'Amérique et l'Europe.",
         "incorrectAnswers": [
-            "Le commerce de triangles.",
-            "Le commerce entre trois villes.",
-            "Le commerce équitable."
+            "La traite des esclaves entre l'Afrique, l'Amérique et l'Asie.",
+            "Le commerce d'épices entre l'Afrique, l'Amérique et l'Europe.",
+            "Le commerce de produits manufacturés entre l'Afrique, l'Amérique et l'Europe."
         ],
         "explanation": "Des millions d'Africains ont été déportés.",
         "subTheme": "historical_periods",
