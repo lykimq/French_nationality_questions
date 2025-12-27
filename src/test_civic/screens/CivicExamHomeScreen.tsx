@@ -15,7 +15,10 @@ import { useIcon3D } from '../../shared/hooks';
 import { useCivicExam } from '../contexts/CivicExamContext';
 import { FormattedText, Icon3D } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
+import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList } from '../types';
+
+const logger = createLogger('CivicExamHomeScreen');
 
 type CivicExamHomeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 
@@ -48,7 +51,7 @@ const CivicExamHomeScreen = () => {
             await resumeSession();
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
-            console.error('Error resuming practice:', error);
+            logger.error('Error resuming practice:', error);
         }
     };
 

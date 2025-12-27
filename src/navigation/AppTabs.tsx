@@ -5,7 +5,7 @@ import HomeStack from './HomeStack';
 import SearchScreen from '../search/SearchScreen';
 import CivicExamStack from '../test_civic/navigation/CivicExamStack';
 import FlashCardStack from '../flashcard/navigation/FlashCardStack';
-import SettingsScreen from '../settings/SettingsScreen';
+import SettingsStack from './SettingsStack';
 import { DataLoadingScreen, Icon3D } from '../shared/components';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
@@ -123,7 +123,7 @@ const AppTabs = () => {
             />
             <Tab.Screen
                 name="SettingsTab"
-                component={SettingsScreen}
+                component={SettingsStack}
                 options={{
                     title: tabLabels.settings,
                     tabBarIcon: ({ focused, color }: TabBarIconProps) => 

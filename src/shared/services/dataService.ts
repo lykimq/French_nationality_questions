@@ -182,11 +182,16 @@ export const loadImageResource = async (
         return cached?.value ?? null;
     }
 
-    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    if (imagePath.startsWith('https://')) {
         const value = { uri: imagePath };
         imageCache.set(imagePath, { value, fetchedAt: now() });
         failedImageCache.delete(imagePath);
         return value;
+    }
+    
+    if (imagePath.startsWith('http://')) {
+        logger.warn(`Blocked insecure HTTP image URL: ${imagePath}`);
+        return null;
     }
 
     const localImage = LOCAL_IMAGE_MAP[imagePath];

@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Share } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import SettingItem from './SettingItem';
 import { showSimpleAlert } from '../../shared/utils';
@@ -10,8 +12,16 @@ interface AppInfoSettingsProps {
 
 const APP_VERSION = '1.0.0';
 
+type SettingsStackParamList = {
+    Settings: undefined;
+    LegalDocument: { type: 'privacy' | 'terms' };
+};
+
+type AppInfoSettingsNavigationProp = NativeStackNavigationProp<SettingsStackParamList>;
+
 const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ onRateApp }) => {
     const { theme } = useTheme();
+    const navigation = useNavigation<AppInfoSettingsNavigationProp>();
 
     const shareApp = async () => {
         try {
@@ -52,6 +62,20 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ onRateApp }) => {
                 iconColor={theme.colors.info}
                 onPress={showAppVersion}
                 subtitle={`v${APP_VERSION}`}
+            />
+
+            <SettingItem
+                title="Politique de Confidentialité"
+                icon={theme.icons.info}
+                iconColor={theme.colors.info}
+                onPress={() => navigation.navigate('LegalDocument', { type: 'privacy' })}
+            />
+
+            <SettingItem
+                title="Conditions d'Utilisation"
+                icon={theme.icons.info}
+                iconColor={theme.colors.info}
+                onPress={() => navigation.navigate('LegalDocument', { type: 'terms' })}
             />
         </View>
     );
