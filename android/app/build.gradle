@@ -14,6 +14,7 @@ react {
     hermesCommand = new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + "/sdks/hermesc/%OS-BIN%/hermesc"
     codegenDir = new File(["node", "--print", "require.resolve('@react-native/codegen/package.json', { paths: [require.resolve('react-native/package.json')] })"].execute(null, rootDir).text.trim()).getParentFile().getAbsoluteFile()
 
+    enableBundleCompression = (findProperty('android.enableBundleCompression') ?: false).toBoolean()
     // Use Expo CLI to bundle the app, this ensures the Metro config
     // works correctly with Expo projects.
     cliFile = new File(["node", "--print", "require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })"].execute(null, rootDir).text.trim())
@@ -80,6 +81,8 @@ def enableMinifyInReleaseBuilds = (findProperty('android.enableMinifyInReleaseBu
  */
 def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
+apply from: new File(["node", "--print", "require('path').dirname(require.resolve('@sentry/react-native/package.json'))"].execute().text.trim(), "sentry.gradle")
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
@@ -103,47 +106,15 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        release {
-            // Release signing configuration
-            // To enable release signing, create a keystore and set these properties in android/gradle.properties:
-            // MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
-            // MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-            // MYAPP_RELEASE_STORE_PASSWORD=your-store-password
-            // MYAPP_RELEASE_KEY_PASSWORD=your-key-password
-            //
-            // Generate keystore with:
-            // keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
-            //
-            // If release signing is not configured, it will fall back to debug signing for development.
-            def releaseStoreFile = findProperty('MYAPP_RELEASE_STORE_FILE')
-            def releaseKeyAlias = findProperty('MYAPP_RELEASE_KEY_ALIAS')
-            def releaseStorePassword = findProperty('MYAPP_RELEASE_STORE_PASSWORD')
-            def releaseKeyPassword = findProperty('MYAPP_RELEASE_KEY_PASSWORD')
-            
-            if (releaseStoreFile && releaseKeyAlias && releaseStorePassword && releaseKeyPassword) {
-                storeFile file(releaseStoreFile)
-                storePassword releaseStorePassword
-                keyAlias releaseKeyAlias
-                keyPassword releaseKeyPassword
-            } else {
-                // CRITICAL: Release builds MUST use a release keystore for production
-                // Do not fall back to debug signing for production builds
-                throw new RuntimeException(
-                    'Release signing is not configured. ' +
-                    'Please set MYAPP_RELEASE_STORE_FILE, MYAPP_RELEASE_KEY_ALIAS, ' +
-                    'MYAPP_RELEASE_STORE_PASSWORD, and MYAPP_RELEASE_KEY_PASSWORD in android/gradle.properties. ' +
-                    'See android/gradle.properties for instructions.'
-                )
-            }
-        }
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
         }
         release {
-            // Uses release signing config if configured, otherwise falls back to debug for development
-            signingConfig signingConfigs.release
+            // Caution! In production, you need to generate your own keystore file.
+            // see https://reactnative.dev/docs/signed-apk-android.
+            signingConfig signingConfigs.debug
             def enableShrinkResources = findProperty('android.enableShrinkResourcesInReleaseBuilds') ?: 'false'
             shrinkResources enableShrinkResources.toBoolean()
             minifyEnabled enableMinifyInReleaseBuilds

@@ -10,6 +10,13 @@ export enum LogLevel {
 
 let globalLogLevel: LogLevel = IS_DEV ? LogLevel.DEBUG : LogLevel.WARN;
 
+let Sentry: any = null;
+try {
+    Sentry = require('../../config/sentryConfig').Sentry;
+} catch {
+    Sentry = null;
+}
+
 class Logger {
     private prefix: string;
 
@@ -46,6 +53,31 @@ class Logger {
     error(message: string, ...args: any[]): void {
         if (this.shouldLog(LogLevel.ERROR)) {
             console.error(`❌ ${this.formatMessage(message)}`, ...args);
+        }
+
+        if (Sentry && !IS_DEV) {
+            const firstArg = args[0];
+            if (firstArg instanceof Error) {
+                Sentry.captureException(firstArg, {
+                    tags: {
+                        logger: this.prefix || 'default',
+                    },
+                    extra: {
+                        message: this.formatMessage(message),
+                        additionalArgs: args.slice(1),
+                    },
+                });
+            } else if (message) {
+                Sentry.captureMessage(this.formatMessage(message), {
+                    level: 'error',
+                    tags: {
+                        logger: this.prefix || 'default',
+                    },
+                    extra: {
+                        args,
+                    },
+                });
+            }
         }
     }
 }

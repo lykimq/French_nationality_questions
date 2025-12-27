@@ -11,22 +11,4 @@
 -keep class com.swmansion.reanimated.** { *; }
 -keep class com.facebook.react.turbomodule.** { *; }
 
-# Firebase
--keep class com.google.firebase.** { *; }
--keep class com.google.android.gms.** { *; }
--dontwarn com.google.firebase.**
--dontwarn com.google.android.gms.**
-
-# React Native
--keep,allowobfuscation @interface com.facebook.proguard.annotations.DoNotStrip
--keep,allowobfuscation @interface com.facebook.proguard.annotations.KeepGettersAndSetters
--keep @com.facebook.proguard.annotations.DoNotStrip class *
--keepclassmembers class * {
-    @com.facebook.proguard.annotations.DoNotStrip *;
-}
-
-# Hermes
--keep class com.facebook.hermes.unicode.** { *; }
--keep class com.facebook.jni.** { *; }
-
 # Add any project specific keep options here:
