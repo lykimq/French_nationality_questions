@@ -15,7 +15,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Dimensions } from 'react-native';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, QuestionListModal, type QuestionListItem } from '../../shared/components';
 import { FlashCard } from '../components';
 import { useFlashCard } from '../hooks';
 import { loadFlashCardData, getCategoryById } from '../utils';
@@ -137,6 +137,7 @@ const FlashCardScreen: React.FC = () => {
     const translateX = useRef(new Animated.Value(0)).current;
     const opacity = useRef(new Animated.Value(1)).current;
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isQuestionListVisible, setIsQuestionListVisible] = useState(false);
     const prevQuestionIdRef = useRef<number | null>(null);
 
     const {
@@ -147,6 +148,7 @@ const FlashCardScreen: React.FC = () => {
         flipCard,
         nextCard,
         previousCard,
+        goToCard,
     } = useFlashCard({
         questions: category?.questions || [],
         key: categoryId,
@@ -197,6 +199,27 @@ const FlashCardScreen: React.FC = () => {
     const handlePreviousPress = useCallback(() => {
         if (hasPrevious) animateTransition('right', previousCard);
     }, [hasPrevious, animateTransition, previousCard]);
+
+    const handleQuestionSelect = useCallback((index: number) => {
+        if (index >= 0 && index < state.totalCards) {
+            const direction = index > state.currentIndex ? 'left' : 'right';
+            animateTransition(direction, () => {
+                goToCard(index);
+                setIsQuestionListVisible(false);
+            });
+        }
+    }, [state.currentIndex, state.totalCards, animateTransition, goToCard]);
+
+    const questionListData: QuestionListItem[] = useMemo(() => {
+        if (!category?.questions) return [];
+        return category.questions.map((q, index) => ({
+            index,
+            id: q.id,
+            questionText: q.question,
+        }));
+    }, [category?.questions]);
+
+    const progress = state.totalCards > 0 ? (state.currentIndex + 1) / state.totalCards : 0;
 
     const panGesture = Gesture.Pan()
         .activeOffsetX([-10, 10])
@@ -362,6 +385,16 @@ const FlashCardScreen: React.FC = () => {
                         >
                             {state.currentIndex + 1} / {state.totalCards}
                         </FormattedText>
+                        {state.totalCards > 1 && (
+                            <TouchableOpacity
+                                style={[styles.jumpButton, { backgroundColor: theme.colors.primary + '20' }]}
+                                onPress={() => setIsQuestionListVisible(true)}
+                            >
+                                <FormattedText style={[styles.jumpButtonText, { color: theme.colors.primary }]}>
+                                    Liste des questions
+                                </FormattedText>
+                            </TouchableOpacity>
+                        )}
                     </View>
                     <TouchableOpacity
                         style={styles.navButton}
@@ -375,6 +408,23 @@ const FlashCardScreen: React.FC = () => {
                         />
                     </TouchableOpacity>
                 </View>
+
+                {/* Progress Bar */}
+                {state.totalCards > 1 && (
+                    <View style={[styles.progressBarContainer, { backgroundColor: theme.colors.card }]}>
+                        <View style={[styles.progressBarBackground, { backgroundColor: theme.colors.divider }]}>
+                            <Animated.View
+                                style={[
+                                    styles.progressBarFill,
+                                    {
+                                        width: `${progress * 100}%`,
+                                        backgroundColor: theme.colors.primary,
+                                    }
+                                ]}
+                            />
+                        </View>
+                    </View>
+                )}
 
                 <GestureDetector gesture={panGesture}>
                     <Animated.View
@@ -453,6 +503,17 @@ const FlashCardScreen: React.FC = () => {
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
+
+            {/* Question List Modal */}
+            <QuestionListModal
+                visible={isQuestionListVisible}
+                onClose={() => setIsQuestionListVisible(false)}
+                questions={questionListData}
+                currentIndex={state.currentIndex}
+                totalCount={state.totalCards}
+                onSelectQuestion={handleQuestionSelect}
+                title={category?.title}
+            />
         </View>
     );
 };
@@ -491,6 +552,31 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '500',
         textAlign: 'center',
+    },
+    jumpButton: {
+        marginTop: 6,
+        paddingVertical: 4,
+        paddingHorizontal: 12,
+        borderRadius: 6,
+        alignSelf: 'center',
+    },
+    jumpButtonText: {
+        fontSize: 12,
+        fontWeight: '500',
+    },
+    progressBarContainer: {
+        paddingHorizontal: 20,
+        paddingVertical: 8,
+        borderBottomWidth: 1,
+    },
+    progressBarBackground: {
+        height: 4,
+        borderRadius: 2,
+        overflow: 'hidden',
+    },
+    progressBarFill: {
+        height: '100%',
+        borderRadius: 2,
     },
     content: {
         flex: 1,

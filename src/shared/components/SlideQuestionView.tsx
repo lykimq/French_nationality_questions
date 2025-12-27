@@ -1,12 +1,15 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { View, Animated, Dimensions, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react';
+import { View, Animated, Dimensions, StyleSheet, ScrollView, TouchableOpacity, Modal, TextInput, Alert } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcon3D } from '../hooks';
 import QuestionCard from './QuestionCard';
 import FormattedText from './FormattedText';
 import Icon3D from './Icon3D';
+import QuestionListModal, { type QuestionListItem } from './QuestionListModal';
 import { createLogger } from '../utils/logger';
+import { sharedStyles } from '../utils';
+import { getQuestionText } from '../utils/questionUtils';
 import type { Question } from '../../welcome/types';
 
 const logger = createLogger('SlideQuestionView');
@@ -19,8 +22,10 @@ export interface SlideQuestionViewProps {
     currentIndex: number;
     totalCount: number;
     title?: string;
+    questions?: Question[];
     onNext: () => void;
     onPrevious: () => void;
+    onGoToIndex?: (index: number) => void;
     hasNext: boolean;
     hasPrevious: boolean;
 }
@@ -30,8 +35,10 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     currentIndex,
     totalCount,
     title,
+    questions = [],
     onNext,
     onPrevious,
+    onGoToIndex,
     hasNext,
     hasPrevious
 }) => {
@@ -41,9 +48,13 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     const opacity = useRef(new Animated.Value(1)).current;
     const scrollViewRef = useRef<ScrollView>(null);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isJumpModalVisible, setIsJumpModalVisible] = useState(false);
+    const [isQuestionListVisible, setIsQuestionListVisible] = useState(false);
+    const [jumpInput, setJumpInput] = useState('');
 
     const chevronBackIcon = getIcon('chevronBack');
     const chevronForwardIcon = getIcon('chevronForward');
+    const closeIcon = getIcon('close');
 
     // Track the question ID to detect changes for animation reset
     const prevQuestionIdRef = useRef<string | number | null>(null);
@@ -98,6 +109,47 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     const handlePreviousPress = useCallback(() => {
         if (hasPrevious) animateTransition('right', onPrevious);
     }, [hasPrevious, animateTransition, onPrevious]);
+
+    const handleJumpToQuestion = useCallback(() => {
+        const questionNumber = parseInt(jumpInput, 10);
+        if (isNaN(questionNumber) || questionNumber < 1 || questionNumber > totalCount) {
+            Alert.alert(
+                'Numéro invalide',
+                `Veuillez entrer un numéro entre 1 et ${totalCount}.`,
+                [{ text: 'OK' }]
+            );
+            return;
+        }
+        const targetIndex = questionNumber - 1;
+        if (onGoToIndex) {
+            const direction = targetIndex > currentIndex ? 'left' : 'right';
+            animateTransition(direction, () => {
+                onGoToIndex(targetIndex);
+                setIsJumpModalVisible(false);
+                setJumpInput('');
+            });
+        }
+    }, [jumpInput, totalCount, currentIndex, onGoToIndex, animateTransition]);
+
+    const handleQuestionSelect = useCallback((index: number) => {
+        if (onGoToIndex && index >= 0 && index < totalCount) {
+            const direction = index > currentIndex ? 'left' : 'right';
+            animateTransition(direction, () => {
+                onGoToIndex(index);
+                setIsQuestionListVisible(false);
+            });
+        }
+    }, [currentIndex, totalCount, onGoToIndex, animateTransition]);
+
+    const questionListData: QuestionListItem[] = useMemo(() => {
+        return questions.map((q, index) => ({
+            index,
+            id: q.id,
+            questionText: getQuestionText(q.question),
+        }));
+    }, [questions]);
+
+    const progress = totalCount > 0 ? (currentIndex + 1) / totalCount : 0;
 
     const panGesture = Gesture.Pan()
         .activeOffsetX([-10, 10])
@@ -179,6 +231,16 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     <FormattedText style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}>
                         {currentIndex + 1} / {totalCount}
                     </FormattedText>
+                    {totalCount > 1 && (
+                        <TouchableOpacity
+                            style={[styles.jumpButton, { backgroundColor: theme.colors.primary + '20' }]}
+                            onPress={() => setIsQuestionListVisible(true)}
+                        >
+                            <FormattedText style={[styles.jumpButtonText, { color: theme.colors.primary }]}>
+                                Liste des questions
+                            </FormattedText>
+                        </TouchableOpacity>
+                    )}
                 </View>
                 <TouchableOpacity
                     style={styles.navButton}
@@ -193,6 +255,23 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     />
                 </TouchableOpacity>
             </View>
+
+            {/* Progress Bar */}
+            {totalCount > 1 && (
+                <View style={[styles.progressBarContainer, { backgroundColor: theme.colors.card }]}>
+                    <View style={[styles.progressBarBackground, { backgroundColor: theme.colors.divider }]}>
+                        <Animated.View
+                            style={[
+                                styles.progressBarFill,
+                                {
+                                    width: `${progress * 100}%`,
+                                    backgroundColor: theme.colors.primary,
+                                }
+                            ]}
+                        />
+                    </View>
+                </View>
+            )}
 
             {/* Content */}
             <GestureDetector gesture={panGesture}>
@@ -223,6 +302,86 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     </ScrollView>
                 </Animated.View>
             </GestureDetector>
+
+            {/* Jump to Question Modal */}
+            <Modal
+                visible={isJumpModalVisible}
+                transparent={true}
+                animationType="fade"
+                onRequestClose={() => {
+                    setIsJumpModalVisible(false);
+                    setJumpInput('');
+                }}
+            >
+                <View style={[sharedStyles.modalOverlay, { backgroundColor: 'rgba(0, 0, 0, 0.5)' }]}>
+                    <View style={[styles.modalContent, { backgroundColor: theme.colors.card }]}>
+                        <View style={[styles.modalHeader, { borderBottomColor: theme.colors.divider }]}>
+                            <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
+                                Aller à la question
+                            </FormattedText>
+                            <TouchableOpacity
+                                onPress={() => {
+                                    setIsJumpModalVisible(false);
+                                    setJumpInput('');
+                                }}
+                            >
+                                <Icon3D
+                                    name={closeIcon.name}
+                                    size={24}
+                                    color={theme.colors.text}
+                                    variant={closeIcon.variant}
+                                />
+                            </TouchableOpacity>
+                        </View>
+                        <View style={styles.modalBody}>
+                            <FormattedText style={[styles.modalLabel, { color: theme.colors.textSecondary }]}>
+                                Numéro de question (1 - {totalCount})
+                            </FormattedText>
+                            <TextInput
+                                style={[styles.modalInput, { backgroundColor: theme.colors.background, color: theme.colors.text, borderColor: theme.colors.divider }]}
+                                value={jumpInput}
+                                onChangeText={setJumpInput}
+                                placeholder="Ex: 25"
+                                placeholderTextColor={theme.colors.textMuted}
+                                keyboardType="number-pad"
+                                autoFocus={true}
+                                onSubmitEditing={handleJumpToQuestion}
+                            />
+                            <View style={styles.modalButtons}>
+                                <TouchableOpacity
+                                    style={[styles.modalButton, styles.modalButtonCancel, { backgroundColor: theme.colors.background, borderColor: theme.colors.divider }]}
+                                    onPress={() => {
+                                        setIsJumpModalVisible(false);
+                                        setJumpInput('');
+                                    }}
+                                >
+                                    <FormattedText style={[styles.modalButtonText, { color: theme.colors.text }]}>
+                                        Annuler
+                                    </FormattedText>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    style={[styles.modalButton, styles.modalButtonConfirm, { backgroundColor: theme.colors.primary }]}
+                                    onPress={handleJumpToQuestion}
+                                >
+                                    <FormattedText style={[styles.modalButtonText, { color: theme.colors.buttonText }]}>
+                                        Aller
+                                    </FormattedText>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
+
+            {/* Question List Modal */}
+            <QuestionListModal
+                visible={isQuestionListVisible}
+                onClose={() => setIsQuestionListVisible(false)}
+                questions={questionListData}
+                currentIndex={currentIndex}
+                totalCount={totalCount}
+                onSelectQuestion={handleQuestionSelect}
+            />
         </View>
     );
 };
@@ -269,6 +428,86 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 20,
         paddingBottom: 40,
+    },
+    progressBarContainer: {
+        paddingHorizontal: 20,
+        paddingVertical: 8,
+        borderBottomWidth: 1,
+    },
+    progressBarBackground: {
+        height: 4,
+        borderRadius: 2,
+        overflow: 'hidden',
+    },
+    progressBarFill: {
+        height: '100%',
+        borderRadius: 2,
+    },
+    jumpButton: {
+        marginTop: 6,
+        paddingVertical: 4,
+        paddingHorizontal: 12,
+        borderRadius: 6,
+        alignSelf: 'center',
+    },
+    jumpButtonText: {
+        fontSize: 12,
+        fontWeight: '500',
+    },
+    modalContent: {
+        width: '85%',
+        maxWidth: 400,
+        borderRadius: 16,
+        overflow: 'hidden',
+    },
+    modalHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 20,
+        paddingVertical: 16,
+        borderBottomWidth: 1,
+    },
+    modalTitle: {
+        fontSize: 18,
+        fontWeight: '600',
+    },
+    modalBody: {
+        padding: 20,
+    },
+    modalLabel: {
+        fontSize: 14,
+        marginBottom: 8,
+    },
+    modalInput: {
+        borderWidth: 1,
+        borderRadius: 8,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
+        fontSize: 16,
+        marginBottom: 20,
+    },
+    modalButtons: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        gap: 12,
+    },
+    modalButton: {
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 8,
+        minWidth: 100,
+        alignItems: 'center',
+    },
+    modalButtonCancel: {
+        borderWidth: 1,
+    },
+    modalButtonConfirm: {
+        marginLeft: 8,
+    },
+    modalButtonText: {
+        fontSize: 16,
+        fontWeight: '600',
     },
 });
 

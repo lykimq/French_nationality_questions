@@ -21,6 +21,12 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions }) => {
         }
     }, [currentIndex]);
 
+    const handleGoToIndex = useCallback((index: number) => {
+        if (index >= 0 && index < questions.length) {
+            setCurrentIndex(index);
+        }
+    }, [questions.length]);
+
     if (!questions || questions.length === 0) {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -36,8 +42,10 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions }) => {
             question={currentQuestion}
             currentIndex={currentIndex}
             totalCount={questions.length}
+            questions={questions}
             onNext={handleNext}
             onPrevious={handlePrevious}
+            onGoToIndex={handleGoToIndex}
             hasNext={currentIndex < questions.length - 1}
             hasPrevious={currentIndex > 0}
         />
