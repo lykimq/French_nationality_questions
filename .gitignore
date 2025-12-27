@@ -30,6 +30,7 @@ android/.gradle/
 android/local.properties
 android/gradle.properties
 android/app/debug.keystore
+android/app/my-release-key.keystore
 *.apk
 *.aab
 *.apks
