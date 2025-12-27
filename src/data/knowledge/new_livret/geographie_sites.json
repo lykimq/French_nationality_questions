@@ -8,13 +8,13 @@
         {
             "id": "livret_1",
             "question": "Quel est le point culminant ?",
-            "explanation": "Le Mont-Blanc, situé dans les Alpes, est le point culminant de France avec une altitude d'environ 4809 mètres. Il se trouve à la frontière entre la France et l'Italie.",
+            "explanation": "Le Mont-Blanc, situé dans les Alpes, est le point culminant de France avec une altitude de 4809 mètres (ou 4810 m selon les mesures). Il se trouve à la frontière entre la France et l'Italie, dans le massif du Mont-Blanc. C'est le plus haut sommet d'Europe occidentale.",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Citez des fleuves français.",
-            "explanation": "La Loire (le plus long), la Seine, le Rhône, la Garonne, le Rhin.",
+            "explanation": "Les principaux fleuves français sont : la Loire (le plus long fleuve entièrement en France, environ 1012 km), la Seine (traverse Paris), le Rhône (prend sa source en Suisse), la Garonne (prend sa source en Espagne), et le Rhin (fleuve frontalier avec l'Allemagne).",
             "image": null
         },
         {
@@ -38,7 +38,7 @@
         {
             "id": "livret_6",
             "question": "Citez trois départements Français",
-            "explanation": "La France compte 101 départements au total (96 en métropole et 5 en outre-mer). Exemples de départements : Haut-Rhin (68), Bas-Rhin (67), Haute-Garonne (31), Paris (75), Bouches-du-Rhône (13), Rhône (69), Nord (59), etc. Chaque département a un numéro et un chef-lieu.",
+            "explanation": "La France compte 101 départements au total (96 en métropole et 5 en outre-mer). Exemples de départements : Haut-Rhin (68), Bas-Rhin (67), Haute-Garonne (31), Paris (75), Bouches-du-Rhône (13), Rhône (69), Nord (59), Gironde (33), Loire-Atlantique (44), etc. Chaque département a un numéro et un chef-lieu (préfecture).",
             "image": null
         },
         {
@@ -50,13 +50,13 @@
         {
             "id": "livret_8",
             "question": "Citez trois régions Françaises",
-            "explanation": "La France métropolitaine compte 13 régions : Île-de-France, Bretagne, Normandie, Corse, Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Pays de la Loire, Centre-Val de Loire, Bourgogne-Franche-Comté, et Grand Est. Il y a également 5 régions d'outre-mer.",
+            "explanation": "La France métropolitaine compte 13 régions depuis la réforme de 2016 : Île-de-France, Bretagne, Normandie, Corse (statut particulier), Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Pays de la Loire, Centre-Val de Loire, Bourgogne-Franche-Comté, et Grand Est. Il y a également 5 régions d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte).",
             "image": null
         },
         {
             "id": "livret_9",
             "question": "Enumérez les trois types de collectivités Françaises",
-            "explanation": "Il y a trois types de collectivités territoriales en France : 1. Les communes : environ 35 000 communes en France, administrées par un maire et un conseil municipal. 2. Les régions : 13 régions en métropole (la Corse a un statut particulier mais exerce les compétences d'une région) plus 5 régions d'outre-mer. 3. Les départements : 101 départements au total, dont 96 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte).",
+            "explanation": "Il y a trois types de collectivités territoriales en France : 1. Les communes : environ 35 000 communes en France, administrées par un maire et un conseil municipal. Elles gèrent notamment les écoles primaires, l'état civil, les routes communales, et l'urbanisme. 2. Les régions : 13 régions en métropole (la Corse a un statut particulier mais exerce les compétences d'une région) plus 5 régions d'outre-mer. Elles gèrent les lycées, la formation professionnelle, et les transports régionaux. 3. Les départements : 101 départements au total, dont 96 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte). Ils gèrent les collèges, l'aide sociale, et les routes départementales.",
             "image": null
         },
         {
@@ -74,13 +74,13 @@
         {
             "id": "livret_12",
             "question": "En France quel est le point culminant ?",
-            "explanation": "C’est le Mont-Blanc [avec une altitude de 4809m il se trouve entre la France et l’Italie].",
+            "explanation": "Le point culminant de la France est le Mont-Blanc, avec une altitude de 4809 mètres (ou 4810 m selon les mesures). Il se trouve dans les Alpes, à la frontière entre la France et l'Italie, dans le massif du Mont-Blanc. C'est le plus haut sommet d'Europe occidentale.",
             "image": null
         },
         {
             "id": "livret_13",
             "question": "Quels sont les pays frontaliers ou limitrophes avec la France ?",
-            "explanation": "L’Espagne, L’Italie, la Suisse, L’Allemagne, le Luxembourg Andorre, Monaco et la Belgique.",
+            "explanation": "La France métropolitaine partage ses frontières avec 8 pays : l'Espagne (séparée par les Pyrénées), l'Italie (séparée par les Alpes), la Suisse, l'Allemagne, le Luxembourg, la Belgique, Andorre (principauté), et Monaco (principauté). La France a également des frontières avec le Brésil et le Suriname en Guyane, et avec les Pays-Bas à Saint-Martin.",
             "image": null
         },
         {
@@ -164,7 +164,7 @@
         {
             "id": "livret_27",
             "question": "Quel monument historique se trouve sur une Île en Normandie ?",
-            "explanation": "Le Mont-Saint-Michel, abbaye médiévale située sur un îlot rocheux en Normandie.",
+            "explanation": "Le Mont-Saint-Michel, abbaye médiévale bénédictine située sur un îlot rocheux en Normandie, dans la baie du Mont-Saint-Michel. C'est l'un des sites les plus visités de France et il est classé au patrimoine mondial de l'UNESCO. Le Mont-Saint-Michel est relié au continent par une digue-route.",
             "image": null
         },
         {
@@ -176,31 +176,31 @@
         {
             "id": "livret_29",
             "question": "Quelle Île fait partie des Antilles françaises ?",
-            "explanation": "La Guadeloupe ou la Martinique sont des îles des Antilles françaises.",
+            "explanation": "Les Antilles françaises comprennent principalement la Guadeloupe et la Martinique, qui sont des départements et régions d'outre-mer (DROM). La Guadeloupe est un archipel composé de plusieurs îles (Basse-Terre, Grande-Terre, Marie-Galante, etc.). La Martinique est une île unique. Toutes deux sont situées dans la mer des Caraïbes.",
             "image": null
         },
         {
             "id": "livret_30",
             "question": "Quelle Île est française ?",
-            "explanation": "La Corse est une île française de Méditerranée.",
+            "explanation": "La Corse est une île française de la mer Méditerranée, située au sud-est de la France métropolitaine. C'est une collectivité territoriale à statut particulier (elle exerce les compétences d'une région). La Corse a pour chef-lieu Ajaccio. Elle est la quatrième plus grande île de la Méditerranée.",
             "image": null
         },
         {
             "id": "livret_31",
             "question": "Quelle Île française est située dans l'océan indien ?",
-            "explanation": "La Réunion est une île française de l'océan Indien.",
+            "explanation": "La Réunion est une île française de l'océan Indien, située à l'est de Madagascar. C'est un département et région d'outre-mer (DROM). La Réunion est une île volcanique, avec le Piton de la Fournaise comme volcan actif. Le chef-lieu est Saint-Denis.",
             "image": null
         },
         {
             "id": "livret_32",
             "question": "Quel département français a une frontière avec le Brésil ?",
-            "explanation": "La Guyane française partage une frontière terrestre avec le Brésil.",
+            "explanation": "La Guyane française, département et région d'outre-mer (DROM), partage une frontière terrestre avec le Brésil (environ 730 km) et avec le Suriname (environ 510 km). La Guyane est située en Amérique du Sud, sur la côte atlantique. Le chef-lieu est Cayenne.",
             "image": null
         },
         {
             "id": "livret_33",
             "question": "De quelle ville française décolle la fusée Ariane ?",
-            "explanation": "Depuis le Centre spatial guyanais à Kourou (Guyane française).",
+            "explanation": "Les fusées Ariane (et d'autres lanceurs spatiaux) décollent depuis le Centre spatial guyanais (CSG) à Kourou, en Guyane française. Ce centre spatial, créé en 1964, est utilisé par l'Agence spatiale européenne (ESA) et le Centre national d'études spatiales (CNES). La position équatoriale de la Guyane est idéale pour les lancements spatiaux.",
             "image": null
         },
         {
@@ -224,13 +224,13 @@
         {
             "id": "livret_37",
             "question": "Qu'est-ce que la France d'outre-mer ?",
-            "explanation": "L'ensemble des territoires français hors d'Europe : DOM, COM, collectivités et territoires à statut particulier.",
+            "explanation": "La France d'outre-mer désigne l'ensemble des territoires français situés hors d'Europe. Elle comprend : 5 DROM (Départements et Régions d'Outre-Mer) : Guadeloupe, Martinique, Guyane, La Réunion, Mayotte ; et 7 COM (Collectivités d'Outre-Mer) : Polynésie française, Saint-Pierre-et-Miquelon, Wallis-et-Futuna, Saint-Martin, Saint-Barthélemy, ainsi que la Nouvelle-Calédonie (statut particulier) et les Terres australes et antarctiques françaises (TAAF).",
             "image": null
         },
         {
             "id": "livret_38",
             "question": "Combien y a-t-il de régions en France métropolitaine ?",
-            "explanation": "Depuis 2016, la métropole compte 13 régions.",
+            "explanation": "Depuis la réforme territoriale de 2016, la France métropolitaine compte 13 régions : Île-de-France, Bretagne, Normandie, Corse (statut particulier), Hauts-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Pays de la Loire, Centre-Val de Loire, Bourgogne-Franche-Comté, et Grand Est. Il y a également 5 régions d'outre-mer.",
             "image": null
         },
         {
@@ -242,7 +242,7 @@
         {
             "id": "livret_40",
             "question": "Quelle Île française se trouve au sud-est du continent african ?",
-            "explanation": "Mayotte, dans le canal du Mozambique, au sud-est de l'Afrique.",
+            "explanation": "Mayotte, archipel français situé dans le canal du Mozambique, au sud-est de l'Afrique, entre Madagascar et le Mozambique. Mayotte est devenue le 101e département français en 2011 et est également une région d'outre-mer (DROM). Le chef-lieu est Mamoudzou.",
             "image": null
         },
         {
@@ -284,25 +284,25 @@
         {
             "id": "livret_47",
             "question": "Quels sont les principaux fleuves de France ?",
-            "explanation": "La Seine, la Loire (le plus long), le Rhône, la Garonne et le Rhin (fleuve frontalier).",
+            "explanation": "Les principaux fleuves de France sont : la Loire (le plus long fleuve entièrement en France, environ 1012 km, prend sa source dans le Massif central et se jette dans l'océan Atlantique), la Seine (traverse Paris, prend sa source en Haute-Marne et se jette dans la Manche), le Rhône (prend sa source en Suisse, traverse Lyon et se jette dans la Méditerranée), la Garonne (prend sa source en Espagne et se jette dans l'océan Atlantique), et le Rhin (fleuve frontalier avec l'Allemagne).",
             "image": null
         },
         {
             "id": "livret_48",
             "question": "Qu'est-ce qu'un DROM ?",
-            "explanation": "Un Département et Région d'Outre-Mer. Il y en a 5 : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte. Ils ont le même statut que les départements métropolitains.",
+            "explanation": "Un DROM (Département et Région d'Outre-Mer) est une collectivité territoriale qui exerce à la fois les compétences d'un département et d'une région. Il y en a 5 : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte. Ils ont le même statut juridique que les départements métropolitains et appliquent les mêmes lois, sauf exceptions prévues par la loi. Les DROM font partie intégrante de la République française.",
             "image": null
         },
         {
             "id": "livret_49",
             "question": "Qu'est-ce qu'une COM ?",
-            "explanation": "Une Collectivité d'Outre-Mer (ex: Polynésie française, Saint-Pierre-et-Miquelon). Elles disposent d'une plus grande autonomie que les DROM.",
+            "explanation": "Une COM (Collectivité d'Outre-Mer) est une collectivité territoriale française située hors de métropole. Il y en a 7 : Polynésie française, Saint-Pierre-et-Miquelon, Wallis-et-Futuna, Saint-Martin, Saint-Barthélemy, ainsi que la Nouvelle-Calédonie (statut particulier) et les Terres australes et antarctiques françaises (TAAF). Les COM disposent d'une plus grande autonomie que les DROM et peuvent avoir des lois adaptées à leur situation spécifique.",
             "image": null
         },
         {
             "id": "livret_50",
             "question": "Quels sont les massifs montagneux en France ?",
-            "explanation": "Les Alpes (point culminant : le Mont Blanc), les Pyrénées, le Massif central, le Jura et les Vosges.",
+            "explanation": "Les principaux massifs montagneux en France sont : les Alpes (point culminant : le Mont Blanc à 4809 m, à la frontière avec l'Italie), les Pyrénées (séparent la France et l'Espagne, point culminant : le Pic d'Aneto à 3404 m en Espagne, côté français : Vignemale à 3298 m), le Massif central (point culminant : le Puy de Sancy à 1885 m), le Jura (point culminant : le Crêt de la Neige à 1720 m), et les Vosges (point culminant : le Grand Ballon à 1424 m).",
             "image": null
         },
         {

@@ -8,7 +8,7 @@
         {
             "id": "livret_1",
             "question": "Qu'est-ce que la grotte de Lascaux ?",
-            "explanation": "Une grotte préhistorique ornée de peintures datant de 18 000 av. J.-C.",
+            "explanation": "La grotte de Lascaux est une grotte préhistorique ornée de peintures rupestres datant d'environ 18 000 ans avant notre ère (période du Paléolithique supérieur). Située en Dordogne, dans le Périgord, elle est considérée comme l'un des plus importants sites d'art préhistorique au monde. Découverte en 1940, elle est classée au patrimoine mondial de l'UNESCO. La grotte originale est fermée au public pour sa préservation, mais une réplique (Lascaux II puis Lascaux IV) permet de découvrir ces œuvres.",
             "image": null
         },
         {
@@ -20,31 +20,31 @@
         {
             "id": "livret_3",
             "question": "Qui est Clovis ?",
-            "explanation": "Roi des Francs (466-511), il unifie le territoire et adopte la religion chrétienne.",
+            "explanation": "Clovis (466-511) est le premier roi des Francs à s'être converti au christianisme (baptême en 496 à Reims). Il a unifié une grande partie du territoire qui deviendra la France en conquérant les autres royaumes francs et en battant les Romains. Il est considéré comme le fondateur de la dynastie mérovingienne et le premier roi de France. Sa conversion au christianisme a renforcé son alliance avec l'Église catholique.",
             "image": null
         },
         {
             "id": "livret_4",
             "question": "Qui est Jeanne d'Arc ?",
-            "explanation": "Héroïne nationale (1412-1431) qui a combattu les Anglais pendant la guerre de Cent Ans et libéré une partie de la France.",
+            "explanation": "Jeanne d'Arc (1412-1431), surnommée la Pucelle d'Orléans, est une héroïne nationale française. Elle a combattu les Anglais pendant la guerre de Cent Ans et a contribué à libérer une partie de la France, notamment en levant le siège d'Orléans en 1429. Elle a permis le couronnement de Charles VII à Reims. Capturée par les Bourguignons, elle a été jugée et brûlée vive à Rouen en 1431. Elle a été canonisée comme sainte par l'Église catholique en 1920.",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Qu'a fait Henri IV en 1598 ?",
-            "explanation": "Il a signé l'Édit de Nantes, accordant la liberté de culte aux protestants pour rétablir la paix.",
+            "explanation": "Henri IV a signé l'Édit de Nantes le 13 avril 1598, accordant la liberté de culte aux protestants (Huguenots) pour rétablir la paix après les guerres de religion. Cet édit a mis fin à près de 40 ans de conflits religieux en France. Il a été révoqué par Louis XIV en 1685 avec l'Édit de Fontainebleau.",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Qui est Louis XIV ?",
-            "explanation": "Le \"Roi Soleil\" (1643-1715), monarque absolu qui a construit le château de Versailles et renforcé l'État centralisé.",
+            "explanation": "Louis XIV (1638-1715), surnommé le \"Roi Soleil\", a régné sur la France de 1643 à 1715, soit 72 ans de règne (le plus long de l'histoire de France). Monarque absolu, il a construit le château de Versailles et y a installé la cour en 1682. Il a renforcé l'État centralisé et le pouvoir royal. Son règne marque l'apogée de la monarchie absolue en France.",
             "image": null
         },
         {
             "id": "livret_7",
             "question": "Qui est Molière ?",
-            "explanation": "Célèbre dramaturge du XVIIe siècle (comédies).",
+            "explanation": "Molière (1622-1673), de son vrai nom Jean-Baptiste Poquelin, est le plus célèbre dramaturge français du XVIIe siècle. Il a écrit de nombreuses comédies comme \"Le Tartuffe\", \"Le Misanthrope\", \"L'Avare\", \"Les Fourberies de Scapin\", et \"Le Malade imaginaire\". Il était aussi acteur et directeur de troupe. Il est mort sur scène en jouant \"Le Malade imaginaire\".",
             "image": null
         },
         {
@@ -62,37 +62,37 @@
         {
             "id": "livret_10",
             "question": "Que célèbre-t-on le 14 juillet ?",
-            "explanation": "La Fête de la Fédération (14 juillet 1790), symbole d'unité nationale.",
+            "explanation": "Le 14 juillet est la fête nationale française. Elle commémore deux événements : la prise de la Bastille le 14 juillet 1789 (symbole du début de la Révolution française) et la Fête de la Fédération le 14 juillet 1790 (symbole d'unité nationale). C'est un jour férié célébré dans toute la France avec des défilés militaires et des feux d'artifice.",
             "image": null
         },
         {
             "id": "livret_11",
             "question": "Quand la Ire République a-t-elle été proclamée ?",
-            "explanation": "En 1792.",
+            "explanation": "La Première République a été proclamée le 22 septembre 1792 par la Convention nationale, après l'abolition de la monarchie le 21 septembre 1792. Elle a duré jusqu'en 1804, date à laquelle Napoléon Bonaparte a été proclamé empereur, mettant fin à la République et instaurant le Premier Empire.",
             "image": null
         },
         {
             "id": "livret_12",
             "question": "Qui a créé le Code civil ?",
-            "explanation": "Napoléon Ier (Empire).",
+            "explanation": "Le Code civil (appelé aussi Code Napoléon) a été créé sous l'impulsion de Napoléon Bonaparte (futur Napoléon Ier) et promulgué le 21 mars 1804. Il a été rédigé par une commission de juristes présidée par Jean-Jacques Régis de Cambacérès. Le Code civil unifie le droit français et influence encore aujourd'hui le système juridique français et de nombreux pays.",
             "image": null
         },
         {
             "id": "livret_13",
             "question": "Quand l'esclavage a-t-il été aboli ?",
-            "explanation": "En 1848.",
+            "explanation": "L'esclavage a été aboli définitivement en France le 27 avril 1848, sous l'impulsion de Victor Schœlcher, ministre de la Marine sous la IIe République. Il y avait eu une première abolition en 1794 pendant la Révolution française, mais Napoléon Bonaparte l'avait rétabli en 1802. La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crimes contre l'humanité.",
             "image": null
         },
         {
             "id": "livret_14",
             "question": "Qui est Victor Hugo ?",
-            "explanation": "Grand écrivain du XIXe siècle (Les Misérables), engagé contre la misère et la peine de mort.",
+            "explanation": "Victor Hugo (1802-1885) est un grand écrivain, poète et dramaturge français du XIXe siècle. Il est l'auteur de chefs-d'œuvre comme \"Les Misérables\" (1862), \"Notre-Dame de Paris\" (1831), et \"Le Dernier Jour d'un condamné\" (1829), plaidoyer contre la peine de mort. Il est aussi engagé politiquement contre la misère, la peine de mort, et pour la République. Il a été exilé sous le Second Empire (1851-1870) pour s'être opposé à Napoléon III.",
             "image": null
         },
         {
             "id": "livret_15",
             "question": "Quand la IIIe République s'est-elle installée et qu'a fait Jules Ferry ?",
-            "explanation": "Vers 1875. Jules Ferry a rendu l'école primaire gratuite, laïque et obligatoire (années 1880).",
+            "explanation": "La IIIe République s'est installée en 1870 (après la chute du Second Empire) et s'est consolidée avec les lois constitutionnelles de 1875. Jules Ferry, ministre de l'Instruction publique, a rendu l'école primaire gratuite (loi du 16 juin 1881), laïque et obligatoire (loi du 28 mars 1882) pour les enfants de 6 à 13 ans. Ces lois, dites \"lois Ferry\", ont fondé l'école républicaine française.",
             "image": null
         },
         {
@@ -104,19 +104,19 @@
         {
             "id": "livret_17",
             "question": "Que commémore le 8 mai ?",
-            "explanation": "La victoire des Alliés lors de la Seconde Guerre mondiale (1939-1945).",
+            "explanation": "Le 8 mai commémore la victoire des Alliés sur l'Allemagne nazie et la fin de la Seconde Guerre mondiale en Europe. Le 8 mai 1945, l'Allemagne nazie a capitulé sans condition. C'est un jour férié en France depuis 1981 (sauf entre 1975 et 1981 où il n'était plus férié). Cette date marque la fin des combats en Europe, mais la guerre mondiale s'est terminée le 2 septembre 1945 avec la capitulation du Japon.",
             "image": null
         },
         {
             "id": "livret_18",
             "question": "Qu'est-ce que le régime de Vichy ?",
-            "explanation": "Le régime dirigé par le Maréchal Pétain (1940-1944) qui a collaboré avec l'Allemagne nazie.",
+            "explanation": "Le régime de Vichy (1940-1944) est le régime autoritaire dirigé par le Maréchal Philippe Pétain après la défaite de la France en juin 1940. Installé à Vichy, il a collaboré avec l'Allemagne nazie et a participé à la déportation des Juifs. Le régime a été remplacé par le gouvernement provisoire de la République française dirigé par Charles de Gaulle après la Libération en 1944.",
             "image": null
         },
         {
             "id": "livret_19",
             "question": "Qui est Charles de Gaulle ?",
-            "explanation": "Chef de la Résistance (Appel du 18 juin), libérateur de la France, et fondateur de la Ve République (1958).",
+            "explanation": "Charles de Gaulle (1890-1970) est un général et homme d'État français. Chef de la France libre pendant la Seconde Guerre mondiale, il a lancé l'Appel du 18 juin 1940 depuis Londres pour continuer le combat contre l'Allemagne nazie. Il a dirigé le gouvernement provisoire de la République française après la Libération. Il est le fondateur et premier président de la Ve République (1958-1969), instaurée par la Constitution du 4 octobre 1958.",
             "image": null
         },
         {
@@ -128,7 +128,7 @@
         {
             "id": "livret_21",
             "question": "Qu'est-ce que Mai 68 ?",
-            "explanation": "Un grand mouvement social et étudiant qui a marqué la société française.",
+            "explanation": "Mai 68 désigne un grand mouvement social et étudiant qui a secoué la France en mai et juin 1968, sous la présidence de Charles de Gaulle. Ce mouvement a commencé par des manifestations étudiantes contre l'autorité et les structures traditionnelles, puis s'est étendu à des grèves générales massives. Il a conduit à des réformes significatives dans l'éducation (autonomie des universités) et le travail (amélioration des conditions de travail).",
             "image": null
         },
         {
@@ -146,7 +146,7 @@
         {
             "id": "livret_24",
             "question": "Quand la peine de mort a-t-elle été abolie ?",
-            "explanation": "En 1981.",
+            "explanation": "La peine de mort a été abolie en France le 9 octobre 1981, sous la présidence de François Mitterrand, grâce à la loi portée par Robert Badinter, ministre de la Justice. Cette abolition est une avancée majeure pour les droits de l'homme en France. La dernière exécution avait eu lieu en 1977.",
             "image": null
         },
         {
@@ -206,7 +206,7 @@
         {
             "id": "livret_34",
             "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
-            "explanation": "Elles ont été bâties au moyen-âge.",
+            "explanation": "Les cathédrales gothiques ont été principalement construites entre le XIIe et le XVIe siècle en France. L'architecture gothique se caractérise par ses voûtes en croisée d'ogives, ses arcs-boutants, et ses vitraux colorés. Exemples célèbres : Notre-Dame de Paris (commencée en 1163), Chartres, Reims, Amiens. Le style gothique succède au style roman.",
             "image": null
         },
         {
@@ -230,7 +230,7 @@
         {
             "id": "livret_38",
             "question": "Qui a été à l'origine de l'Arc de triomphe ?",
-            "explanation": "C'est Napoléon 1er.",
+            "explanation": "L'Arc de triomphe a été commandé par Napoléon Ier en 1806 pour célébrer ses victoires militaires. Conçu par l'architecte Jean-François Chalgrin, sa construction a été interrompue sous la Restauration et reprise sous Louis-Philippe. Il a été inauguré en 1836. L'Arc de triomphe est situé sur la place de l'Étoile (aujourd'hui place Charles-de-Gaulle) à Paris.",
             "image": null
         },
         {
@@ -302,7 +302,7 @@
         {
             "id": "livret_50",
             "question": "Citez trois rois de France",
-            "explanation": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+            "explanation": "Parmi les rois de France célèbres, on peut citer : Charlemagne (roi des Francs et empereur, 768-814), François Ier (1515-1547), Henri IV (1589-1610), Louis XIV (1643-1715, le Roi Soleil), Louis XVI (1774-1792, dernier roi avant la Révolution).",
             "image": null
         },
         {
@@ -314,7 +314,7 @@
         {
             "id": "livret_52",
             "question": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
-            "explanation": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+            "explanation": "Louis XIV est le plus connu principalement pour la durée exceptionnelle de son règne : 72 ans (1643-1715), le plus long de l'histoire de France. Il est aussi le symbole de la monarchie absolue : il concentrait tous les pouvoirs entre ses mains avec la formule \"L'État, c'est moi\". Il a fait construire le château de Versailles, résidence royale et symbole de son pouvoir. Son règne marque l'apogée de la puissance française en Europe.",
             "image": null
         },
         {
@@ -332,7 +332,7 @@
         {
             "id": "livret_55",
             "question": "À quelle date précise a eu lieu la révolution Française ?",
-            "explanation": "La révolution Française a eu lieu le 05 Mai 1789 avec l'ouverture des états généraux et s'est terminée le 09 Novembre 1799 avec le coup d'état du 18 brumaire de Napoléon Bonaparte.",
+            "explanation": "La Révolution française a commencé le 5 mai 1789 avec l'ouverture des États généraux à Versailles par Louis XVI. L'événement symbolique du début de la Révolution est la prise de la Bastille le 14 juillet 1789. La Révolution s'est terminée le 9 novembre 1799 (18 brumaire an VIII) avec le coup d'État de Napoléon Bonaparte qui met fin au Directoire et instaure le Consulat. La période révolutionnaire s'étend donc de 1789 à 1799.",
             "image": null
         },
         {
@@ -362,7 +362,7 @@
         {
             "id": "livret_60",
             "question": "Qui a instauré le code civil en France ?",
-            "explanation": "Le Code Civil en France a été instauré par Napoléon Bonaparte.",
+            "explanation": "Le Code civil (appelé aussi Code Napoléon) a été instauré sous l'impulsion de Napoléon Bonaparte (futur Napoléon Ier) et promulgué le 21 mars 1804. Il a été rédigé par une commission de juristes présidée par Jean-Jacques Régis de Cambacérès. Le Code civil unifie le droit français et influence encore aujourd'hui le système juridique français et de nombreux pays dans le monde.",
             "image": null
         },
         {
@@ -374,7 +374,7 @@
         {
             "id": "livret_62",
             "question": "Connaissez vous Jean Moulin ? pourquoi est-il connu ?",
-            "explanation": "Jean Moulin est un symbole de la résistance Française durant la seconde guerre mondiale. Il a été envoyé par le Général Charles De Gaulle en France afin de coordonner et unifier les mouvements de la résistance Française. Il a malheureusement été arrêté par la Gestapo puis torturé, et a succombé à ses blessures dans le train qui le transportait en Allemagne.",
+            "explanation": "Jean Moulin (1899-1943) est un symbole de la Résistance française durant la Seconde Guerre mondiale. Préfet et haut fonctionnaire, il a été envoyé par le général Charles de Gaulle en France en 1942 afin de coordonner et unifier les mouvements de la Résistance française. Il a créé le Conseil national de la Résistance (CNR) en 1943. Arrêté par la Gestapo le 21 juin 1943, il a été torturé et est mort le 8 juillet 1943 dans le train qui le transportait en Allemagne, sans avoir révélé d'informations. Il repose au Panthéon depuis 1964.",
             "image": null
         },
         {
@@ -386,13 +386,13 @@
         {
             "id": "livret_64",
             "question": "Qu'est-ce que la guerre de 100 ans ?",
-            "explanation": "C'est une guerre résultant d'un conflit entre les rois de France et les rois d'Angleterre durant le Moyen-Age. Ce conflit d'un siècle a en réalité duré 116 ans plus exactement !",
+            "explanation": "La guerre de Cent Ans (1337-1453) est un conflit entre les rois de France et les rois d'Angleterre durant le Moyen Âge. Elle a duré 116 ans, d'où son nom approximatif. Les causes principales sont les revendications territoriales et dynastiques des rois d'Angleterre sur le trône de France. Cette guerre a vu l'émergence de figures historiques importantes comme Jeanne d'Arc et a profondément affecté la société médiévale française.",
             "image": null
         },
         {
             "id": "livret_65",
             "question": "Connaissez-vous la bataille de Verdun ?",
-            "explanation": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande à la Lorraine pendant la première guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur !",
+            "explanation": "La bataille de Verdun (21 février - 18 décembre 1916) est l'une des plus longues et des plus sanglantes batailles de la Première Guerre mondiale. Elle a opposé l'armée française à l'armée allemande à Verdun, en Lorraine. Cette bataille d'usure a fait environ 300 000 morts (150 000 de chaque côté) et symbolise la résistance et la ténacité des forces françaises. Le général Pétain a organisé la défense avec la célèbre phrase : \"Ils ne passeront pas\". La France a finalement repoussé l'offensive allemande.",
             "image": null
         },
         {
@@ -512,25 +512,25 @@
         {
             "id": "livret_87",
             "question": "Quel événement marque la fin officielle de la monarchie ?",
-            "explanation": "La Convention nationale a voté l'abolition de la monarchie le 21 septembre 1792, mettant fin au règne de Louis XVI (16).",
+            "explanation": "La Convention nationale a voté l'abolition de la monarchie le 21 septembre 1792, mettant fin au règne de Louis XVI. Le lendemain, le 22 septembre 1792, la Première République est proclamée. Cette date marque la fin officielle de la monarchie en France et le début de la République. Louis XVI a été jugé, condamné à mort et guillotiné le 21 janvier 1793.",
             "image": null
         },
         {
             "id": "livret_88",
             "question": "Qu'est-ce que le Consulat en France ?",
-            "explanation": "Le Consulat a été une période de gouvernement en France après la Révolution, de 1799 à 1804. Dirigé par Napoléon Bonaparte en tant que Premier Consul, il a marqué la fin de la Révolution et a conduit à l'établissement du Premier Empire français.",
+            "explanation": "Le Consulat (1799-1804) a été une période de gouvernement en France après la Révolution, instauré par le coup d'État du 18 brumaire (9 novembre 1799). Dirigé par Napoléon Bonaparte en tant que Premier Consul (avec deux autres consuls), il a marqué la fin de la Révolution et du Directoire. Napoléon devient Consul à vie en 1802, puis se proclame empereur en 1804, mettant fin au Consulat et instaurant le Premier Empire français.",
             "image": null
         },
         {
             "id": "livret_89",
             "question": "Comment Napoléon Bonaparte a-t-il pris le pouvoir ?",
-            "explanation": "Par le coup d'État du (9 novembre 1799), où il renverse le Directoire avec l’aide de l'armée et instaure un nouveau régime.",
+            "explanation": "Napoléon Bonaparte a pris le pouvoir par le coup d'État du 9 novembre 1799 (18 brumaire an VIII), où il a renversé le Directoire avec l'aide de l'armée et de son frère Lucien Bonaparte, alors président du Conseil des Cinq-Cents. Il a instauré le Consulat, un nouveau régime où il devient Premier Consul, puis Consul à vie en 1802, avant de se faire proclamer empereur en 1804.",
             "image": null
         },
         {
             "id": "livret_90",
             "question": "Quel régime Napoléon met-il en place après le coup d'État ?",
-            "explanation": "Il met en place le Consulat (1799-1804), où il gouverne avec deux autres consuls, mais il devient rapidement le seul dirigeant.",
+            "explanation": "Après le coup d'État du 18 brumaire (9 novembre 1799), Napoléon met en place le Consulat (1799-1804). Il gouverne initialement avec deux autres consuls (Emmanuel Joseph Sieyès et Roger Ducos, puis Jean-Jacques Régis de Cambacérès et Charles-François Lebrun), mais il devient rapidement le seul dirigeant réel en tant que Premier Consul. Il se fait nommer Consul à vie en 1802, puis se proclame empereur en 1804, mettant fin au Consulat.",
             "image": null
         },
         {
@@ -614,19 +614,19 @@
         {
             "id": "livret_104",
             "question": "Qui était Jean Moulin ?",
-            "explanation": "Jean Moulin était un haut fonctionnaire et résistant français pendant la Seconde Guerre mondiale. Il est connu pour avoir unifié les mouvements de la Résistance sous l’autorité de la France libre dirigée par Charles de Gaulle.",
+            "explanation": "Jean Moulin (1899-1943) était un préfet et haut fonctionnaire français, devenu résistant pendant la Seconde Guerre mondiale. Il est connu pour avoir unifié les mouvements de la Résistance sous l'autorité de la France libre dirigée par Charles de Gaulle. Il a créé le Conseil national de la Résistance (CNR) en 1943. Arrêté par la Gestapo le 21 juin 1943, il a été torturé et est mort le 8 juillet 1943 sans avoir révélé d'informations. Il repose au Panthéon depuis 1964.",
             "image": null
         },
         {
             "id": "livret_105",
             "question": "Quel était son rôle dans la Résistance ?",
-            "explanation": "Jean Moulin a été chargé par Charles de Gaulle d’unifier les différents groupes de la Résistance en 1942. Il a créé le Conseil national de la Résistance (CNR) en 1943 pour coordonner les actions contre l’occupant allemand.",
+            "explanation": "Jean Moulin a été chargé par Charles de Gaulle d'unifier les différents groupes de la Résistance en 1942. Il a créé le Conseil national de la Résistance (CNR) le 27 mai 1943 pour coordonner les actions contre l'occupant allemand. Le CNR regroupait les différents mouvements de résistance, partis politiques et syndicats. Son rôle était crucial pour organiser la Résistance intérieure et la préparer à la Libération.",
             "image": null
         },
         {
             "id": "livret_106",
             "question": "Pourquoi Jean Moulin est-il un symbole de la Résistance ?",
-            "explanation": "Il incarne l’unité et le courage de la Résistance face à l’occupation nazie. Il a donné sa vie pour la libération de la France et repose depuis 1964 au Panthéon, un honneur réservé aux grandes figures de l’histoire nationale.",
+            "explanation": "Jean Moulin incarne l'unité et le courage de la Résistance face à l'occupation nazie. Il a unifié les mouvements de résistance et a donné sa vie pour la libération de la France, mourant sous la torture sans avoir révélé d'informations. Il repose depuis 1964 au Panthéon, un honneur réservé aux grandes figures de l'histoire nationale. Il est devenu le symbole de la Résistance française.",
             "image": null
         },
         {
@@ -650,13 +650,13 @@
         {
             "id": "livret_110",
             "question": "Quel est le rôle de Napoléon Bonaparte dans l'histoire de France ?",
-            "explanation": "Napoléon Bonaparte, général de la Révolution française, est devenu par la suite empereur des Français. Il a conduit la France à de nombreuses victoires militaires en Europe et a instauré des réformes importantes, dont le Code civil, qui a profondément influencé le système juridique français.",
+            "explanation": "Napoléon Bonaparte (1769-1821), général de la Révolution française, est devenu Premier Consul en 1799 puis empereur des Français (Napoléon Ier) en 1804. Il a conduit la France à de nombreuses victoires militaires en Europe, créant un vaste empire. Il a instauré des réformes importantes : le Code civil (1804), la création de la Banque de France (1800), le système des lycées, la Légion d'honneur. Le Code civil a profondément influencé le système juridique français et de nombreux pays. Il a été définitivement vaincu à Waterloo en 1815.",
             "image": null
         },
         {
             "id": "livret_111",
             "question": "Qu'est-ce que la Chute de l'Empire Napoléonien ?",
-            "explanation": "La chute de l'Empire Napoléonien a commencé avec la désastreuse campagne de Russie en 1812, suivie de défaites majeures. Napoléon a été finalement vaincu à la bataille de Waterloo en 1815, marquant la fin de son règne et un tournant majeur dans l'histoire européenne.",
+            "explanation": "La chute de l'Empire napoléonien a commencé avec la désastreuse campagne de Russie en 1812, où la Grande Armée a été décimée. Suivie de défaites majeures (bataille de Leipzig en 1813), Napoléon a été contraint d'abdiquer en 1814 et exilé à l'île d'Elbe. Il s'est échappé en 1815 (les Cent-Jours) mais a été finalement vaincu à la bataille de Waterloo le 18 juin 1815 par les armées britannique et prussienne. Il a été exilé à Sainte-Hélène où il est mort en 1821. Sa chute marque la fin de son règne et un tournant majeur dans l'histoire européenne.",
             "image": null
         },
         {
@@ -740,7 +740,7 @@
         {
             "id": "livret_126",
             "question": "Qui était François Ier ?",
-            "explanation": "François Ier (1494-1547) a régné sur la France de 1515 à 1547. Il a marqué l’histoire par son amour des arts et de la culture, invitant Léonard de Vinci en France. Il est aussi célèbre pour sa victoire à la bataille de Marignan en 1515 et sa rivalité avec l’empereur Charles Quint.",
+            "explanation": "François Ier (1494-1547) a régné sur la France de 1515 à 1547. Il a marqué l'histoire par son amour des arts et de la culture de la Renaissance, invitant Léonard de Vinci en France (qui y est mort en 1519). Il est célèbre pour sa victoire à la bataille de Marignan en 1515 contre les Suisses, et sa rivalité avec l'empereur Charles Quint. Il a fait construire de nombreux châteaux de la Renaissance, notamment Chambord et Fontainebleau.",
             "image": null
         },
         {
@@ -752,7 +752,7 @@
         {
             "id": "livret_128",
             "question": "Qu'est-ce que le Code Napoléon ?",
-            "explanation": "Le Code civil des Français, établi sous Napoléon Bonaparte en 1804.",
+            "explanation": "Le Code Napoléon est le nom donné au Code civil des Français, promulgué le 21 mars 1804 sous Napoléon Bonaparte (alors Premier Consul). Il a été rédigé par une commission de juristes présidée par Jean-Jacques Régis de Cambacérès. Le Code civil unifie le droit français et influence encore aujourd'hui le système juridique français et de nombreux pays dans le monde. Il a été renommé \"Code Napoléon\" en 1807, puis est redevenu \"Code civil\" après la chute de l'Empire.",
             "image": null
         },
         {
@@ -770,7 +770,7 @@
         {
             "id": "livret_131",
             "question": "Qui était Charlemagne et quel était son rôle dans l'histoire de France ?",
-            "explanation": "Charlemagne, roi des Francs et empereur d'Occident au tournant du 9e siècle, est célèbre pour avoir unifié une grande partie de l'Europe sous son règne. Il a joué un rôle clé dans la propagation du christianisme et le développement culturel et éducatif pendant ce qu'on appelle l'ère carolingienne.",
+            "explanation": "Charlemagne (742-814), roi des Francs (768-814) et empereur d'Occident (couronné en 800), est célèbre pour avoir unifié une grande partie de l'Europe occidentale sous son règne. Il a étendu son empire de la France actuelle à une grande partie de l'Europe. Il a joué un rôle clé dans la propagation du christianisme, le développement culturel et éducatif (Renaissance carolingienne), et l'organisation administrative de son empire. Il est considéré comme le fondateur de l'Europe médiévale.",
             "image": null
         },
         {
@@ -812,13 +812,13 @@
         {
             "id": "livret_138",
             "question": "Quel traité a mis fin à la Guerre de Cent Ans entre la France et l'Angleterre ?",
-            "explanation": "Le traité de Picquigny en 1475.",
+            "explanation": "La guerre de Cent Ans (1337-1453) s'est terminée sans traité formel unique. Les combats ont pris fin progressivement après la bataille de Castillon en 1453, dernière bataille de la guerre, où les Français ont vaincu les Anglais. Le traité de Picquigny en 1475 a officialisé la paix entre Louis XI et Édouard IV d'Angleterre, mais la guerre était déjà terminée depuis 1453. Les Anglais ont perdu toutes leurs possessions en France, sauf Calais.",
             "image": null
         },
         {
             "id": "livret_139",
-            "question": "Qui a construit l’Arc de Triomphe ?",
-            "explanation": "L'Arc de Triomphe, situé sur les Champs-Élysées est construit par Napoléon 1er en 1806.",
+            "question": "Qui a construit l'Arc de Triomphe ?",
+            "explanation": "L'Arc de Triomphe a été commandé par Napoléon Ier en 1806 pour célébrer ses victoires militaires. Il a été conçu par l'architecte Jean-François Chalgrin. Sa construction a été interrompue sous la Restauration et reprise sous Louis-Philippe. Il a été inauguré en 1836. L'Arc de Triomphe est situé sur la place de l'Étoile (aujourd'hui place Charles-de-Gaulle) à l'extrémité des Champs-Élysées à Paris.",
             "image": null
         },
         {
@@ -866,7 +866,7 @@
         {
             "id": "livret_147",
             "question": "Parmi ces textes, lequel a été adopté sous Napoléon ler ?",
-            "explanation": "Le Code civil (appelé Code Napoléon) a été promulgué en 1804 sous Napoléon Ier.",
+            "explanation": "Le Code civil (appelé Code Napoléon) a été promulgué le 21 mars 1804 sous Napoléon Ier (alors Premier Consul). Il a été rédigé par une commission de juristes présidée par Jean-Jacques Régis de Cambacérès. Le Code civil unifie le droit français et influence encore aujourd'hui le système juridique français et de nombreux pays dans le monde.",
             "image": null
         },
         {
@@ -878,7 +878,7 @@
         {
             "id": "livret_149",
             "question": "En quelle année Napoléon ler est-il devenu empereur ?",
-            "explanation": "Napoléon Ier est sacré empereur le 2 décembre 1804.",
+            "explanation": "Napoléon Bonaparte est devenu empereur des Français sous le nom de Napoléon Ier le 2 décembre 1804. Le sacre a eu lieu à Notre-Dame de Paris en présence du pape Pie VII. Napoléon s'est couronné lui-même, puis a couronné son épouse Joséphine comme impératrice. Cet événement marque la fin de la République et le début du Premier Empire français.",
             "image": null
         },
         {
@@ -890,13 +890,13 @@
         {
             "id": "livret_151",
             "question": "Qui a été président de la Ve République ?",
-            "explanation": "Exemples : Charles de Gaulle (1er président de la Ve), François Mitterrand, Jacques Chirac, Emmanuel Macron (actuel).",
+            "explanation": "Les présidents de la Ve République (depuis 1958) sont : Charles de Gaulle (1959-1969), Georges Pompidou (1969-1974), Valéry Giscard d'Estaing (1974-1981), François Mitterrand (1981-1995), Jacques Chirac (1995-2007), Nicolas Sarkozy (2007-2012), François Hollande (2012-2017), et Emmanuel Macron (depuis 2017).",
             "image": null
         },
         {
             "id": "livret_152",
             "question": "Quel est l'objectif des lois scolaires de la IIIe République ?",
-            "explanation": "Rendre l'école gratuite, laïque et obligatoire (lois Ferry, 1881-1882).",
+            "explanation": "L'objectif des lois scolaires de la IIIe République, dites \"lois Ferry\" (du nom de Jules Ferry, ministre de l'Instruction publique), est de rendre l'école primaire gratuite (loi du 16 juin 1881), laïque et obligatoire (loi du 28 mars 1882) pour les enfants de 6 à 13 ans. Ces lois, adoptées en 1881-1882, ont fondé l'école républicaine française et visent à former tous les citoyens dans un esprit laïque et républicain.",
             "image": null
         },
         {
@@ -920,7 +920,7 @@
         {
             "id": "livret_156",
             "question": "De quand date l'appel à la résistance du général de Gaulle ?",
-            "explanation": "Le 18 juin 1940 (Appel de Londres).",
+            "explanation": "L'appel du 18 juin 1940 est le discours prononcé par le général de Gaulle depuis Londres sur les ondes de la BBC. Dans ce discours, il appelle les Français à continuer le combat contre l'Allemagne nazie malgré la défaite et l'armistice demandé par le maréchal Pétain. Cet appel marque le début de la France libre et de la Résistance. Le 22 juin 1940, un second appel, plus connu, a été enregistré.",
             "image": null
         },
         {
@@ -938,25 +938,25 @@
         {
             "id": "livret_159",
             "question": "Depuis quand les Français élisent-ils le président de la République au suffrage universel direct ?",
-            "explanation": "Depuis le référendum de 1962 (première élection au suffrage universel direct en 1965).",
+            "explanation": "Les Français élisent le président de la République au suffrage universel direct depuis le référendum du 28 octobre 1962, initié par le général de Gaulle. Cette réforme constitutionnelle a été approuvée par 62% des votants. La première élection présidentielle au suffrage universel direct a eu lieu en 1965, remportée par Charles de Gaulle face à François Mitterrand. Avant 1962, le président était élu par un collège électoral.",
             "image": null
         },
         {
             "id": "livret_160",
             "question": "En quelle année l'Union Européenne a-t-elle été fondée?",
-            "explanation": "L'Union européenne naît juridiquement avec le traité de Maastricht, entré en vigueur en 1993.",
+            "explanation": "L'Union européenne naît juridiquement avec le traité de Maastricht, signé en 1992 et entré en vigueur le 1er novembre 1993. Ce traité transforme la Communauté économique européenne (CEE) en Union européenne (UE). Cependant, les bases de la construction européenne remontent à 1951 avec la création de la CECA (Communauté européenne du charbon et de l'acier) et à 1957 avec le traité de Rome créant la CEE.",
             "image": null
         },
         {
             "id": "livret_161",
             "question": "Que célèbre-t-on le 8 mai ?",
-            "explanation": "La victoire des Alliés sur l'Allemagne nazie (8 mai 1945) et la fin de la Seconde Guerre mondiale en Europe.",
+            "explanation": "Le 8 mai commémore la victoire des Alliés sur l'Allemagne nazie et la fin de la Seconde Guerre mondiale en Europe. Le 8 mai 1945, l'Allemagne nazie a capitulé sans condition. C'est un jour férié en France depuis 1981 (sauf entre 1975 et 1981 où il n'était plus férié). Cette date marque la fin des combats en Europe, mais la guerre mondiale s'est terminée le 2 septembre 1945 avec la capitulation du Japon.",
             "image": null
         },
         {
             "id": "livret_162",
             "question": "Quelle est la première étape de la construction Européenne en 1951 ?",
-            "explanation": "La création de la CECA (Communauté européenne du charbon et de l'acier) en 1951.",
+            "explanation": "La première étape de la construction européenne est la création de la CECA (Communauté européenne du charbon et de l'acier) le 18 avril 1951, proposée par Robert Schuman dans sa déclaration du 9 mai 1950. La CECA regroupe six pays : la France, l'Allemagne de l'Ouest, l'Italie, la Belgique, les Pays-Bas et le Luxembourg. Elle vise à mettre en commun la production de charbon et d'acier pour éviter de nouvelles guerres en Europe.",
             "image": null
         },
         {
@@ -968,19 +968,19 @@
         {
             "id": "livret_164",
             "question": "Qui a aboli l'esclavage en France ?",
-            "explanation": "L'abolition définitive de 1848 est portée par Victor Schœlcher (Deuxième République).",
+            "explanation": "L'abolition définitive de l'esclavage en France a été portée par Victor Schœlcher (1804-1893), ministre de la Marine sous la IIe République. Le décret d'abolition a été signé le 27 avril 1848 par le gouvernement provisoire. Il y avait eu une première abolition en 1794 pendant la Révolution française, mais Napoléon Bonaparte l'avait rétabli en 1802. La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crimes contre l'humanité.",
             "image": null
         },
         {
             "id": "livret_165",
             "question": "Depuis qu'elle années l'école publique est-elle gratuite ?",
-            "explanation": "Gratuite à partir des lois Ferry de 1881-1882 pour l'enseignement primaire public.",
+            "explanation": "L'école publique primaire est gratuite depuis la loi du 16 juin 1881, dite \"loi Ferry\" (du nom de Jules Ferry, ministre de l'Instruction publique). Cette loi, adoptée sous la IIIe République, rend l'enseignement primaire public gratuit. La loi du 28 mars 1882 rend également l'école obligatoire et laïque pour les enfants de 6 à 13 ans.",
             "image": null
         },
         {
             "id": "livret_166",
             "question": "En 1944, qu'est-ce qui a changé pour les femmes ?",
-            "explanation": "Elles obtiennent le droit de vote et d'éligibilité (ordonnance du 21 avril 1944).",
+            "explanation": "En 1944, les femmes obtiennent le droit de vote et d'éligibilité par l'ordonnance du 21 avril 1944 du gouvernement provisoire de la République française présidé par le général de Gaulle. Les femmes ont voté pour la première fois aux élections municipales d'avril 1945, puis aux élections législatives d'octobre 1945. La France était l'un des derniers pays d'Europe occidentale à accorder le droit de vote aux femmes.",
             "image": null
         },
         {
@@ -1100,19 +1100,19 @@
         {
             "id": "livret_186",
             "question": "Qui était Clovis ?",
-            "explanation": "Premier roi des Francs à s'être converti au christianisme (en 496), il a unifié une grande partie du territoire qui deviendra la France.",
+            "explanation": "Clovis (466-511) est le premier roi des Francs à s'être converti au christianisme (baptême en 496 à Reims par l'évêque Rémi). Il a unifié une grande partie du territoire qui deviendra la France en conquérant les autres royaumes francs et en battant les Romains. Il est considéré comme le fondateur de la dynastie mérovingienne et le premier roi de France. Sa conversion au christianisme a renforcé son alliance avec l'Église catholique.",
             "image": null
         },
         {
             "id": "livret_187",
             "question": "Quel édit a mis fin aux guerres de religion en 1598 ?",
-            "explanation": "L'Édit de Nantes, signé par Henri IV, accordant la liberté de culte aux protestants.",
+            "explanation": "L'Édit de Nantes, signé le 13 avril 1598 par Henri IV, a mis fin aux guerres de religion en France en accordant la liberté de culte aux protestants (Huguenots). Cet édit a mis fin à près de 40 ans de conflits religieux. Il a été révoqué par Louis XIV en 1685 avec l'Édit de Fontainebleau, provoquant l'exil de nombreux protestants.",
             "image": null
         },
         {
             "id": "livret_188",
             "question": "Qui était le 'Roi-Soleil' ?",
-            "explanation": "Louis XIV, symbole de la monarchie absolue, qui a fait construire le château de Versailles.",
+            "explanation": "Louis XIV (1638-1715), surnommé le \"Roi Soleil\", a régné sur la France de 1643 à 1715, soit 72 ans de règne (le plus long de l'histoire de France). Il est le symbole de la monarchie absolue et a fait construire le château de Versailles, où il a installé la cour en 1682. Son règne marque l'apogée de la puissance française en Europe.",
             "image": null
         },
         {
@@ -1124,25 +1124,25 @@
         {
             "id": "livret_190",
             "question": "Qui était Napoléon Bonaparte ?",
-            "explanation": "Général puis Empereur des Français (Napoléon Ier). On lui doit notamment le Code civil et de nombreuses réformes administratives.",
+            "explanation": "Napoléon Bonaparte (1769-1821) est un général de la Révolution française devenu Premier Consul (1799) puis Empereur des Français (Napoléon Ier, 1804-1814 et 1815). On lui doit notamment le Code civil (1804), la création de la Banque de France (1800), le système des lycées, la Légion d'honneur, et de nombreuses réformes administratives. Il a conduit la France à de nombreuses victoires militaires en Europe avant d'être définitivement vaincu à Waterloo en 1815.",
             "image": null
         },
         {
             "id": "livret_191",
             "question": "Quel est le rôle du Général de Gaulle dans l'histoire de France ?",
-            "explanation": "Chef de la France libre pendant la Seconde Guerre mondiale (Appel du 18 juin 1940) et fondateur de la Ve République en 1958.",
+            "explanation": "Charles de Gaulle (1890-1970) a joué un rôle majeur dans l'histoire de France : chef de la France libre pendant la Seconde Guerre mondiale (Appel du 18 juin 1940 depuis Londres), il a dirigé la Résistance et le gouvernement provisoire de la République française après la Libération. Il est le fondateur et premier président de la Ve République (1958-1969), instaurée par la Constitution du 4 octobre 1958. Il a démissionné en 1969 après l'échec d'un référendum.",
             "image": null
         },
         {
             "id": "livret_192",
             "question": "Quand l'esclavage a-t-il été définitivement aboli en France ?",
-            "explanation": "Le 27 avril 1848, sous l'impulsion de Victor Schœlcher.",
+            "explanation": "L'esclavage a été définitivement aboli en France le 27 avril 1848, sous l'impulsion de Victor Schœlcher (1804-1893), ministre de la Marine sous la IIe République. Le décret d'abolition a été signé par le gouvernement provisoire. Il y avait eu une première abolition en 1794 pendant la Révolution française, mais Napoléon Bonaparte l'avait rétabli en 1802. La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crimes contre l'humanité.",
             "image": null
         },
         {
             "id": "livret_193",
             "question": "Qui était Jeanne d'Arc ?",
-            "explanation": "Héroïne nationale du XVe siècle qui a combattu les Anglais pendant la guerre de Cent Ans et aidé à libérer la France.",
+            "explanation": "Jeanne d'Arc (1412-1431), surnommée la Pucelle d'Orléans, est une héroïne nationale française du XVe siècle. Elle a combattu les Anglais pendant la guerre de Cent Ans et a contribué à libérer une partie de la France, notamment en levant le siège d'Orléans en 1429. Elle a permis le couronnement de Charles VII à Reims. Capturée par les Bourguignons, elle a été jugée et brûlée vive à Rouen en 1431. Elle a été canonisée comme sainte par l'Église catholique en 1920.",
             "image": null
         },
         {

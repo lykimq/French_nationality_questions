@@ -14,7 +14,7 @@
         {
             "id": "livret_2",
             "question": "Quels sont les symboles de la République ?",
-            "explanation": "L'hymne national (La Marseillaise), la Marianne, le drapeau tricolore (bleu, blanc, rouge) et le 14 juillet (fête nationale).",
+            "explanation": "Les symboles de la République française sont : l'hymne national (La Marseillaise), la Marianne (allégorie de la République), le drapeau tricolore (bleu, blanc, rouge), le 14 juillet (fête nationale), le coq gaulois, le faisceau de licteur et le sceau de la République. La devise \"Liberté, Égalité, Fraternité\" est également un symbole fondamental.",
             "image": null
         },
         {
@@ -50,7 +50,7 @@
         {
             "id": "livret_8",
             "question": "Qu'est-ce que la Laïcité ?",
-            "explanation": "C'est un principe fondamental (loi de 1905) qui sépare les affaires religieuses et publiques. L'État garantit la liberté religieuse mais est neutre face aux religions.",
+            "explanation": "La laïcité est un principe fondamental de la République française, établi par la loi du 9 décembre 1905 sur la séparation des Églises et de l'État. Elle sépare les affaires religieuses et publiques. L'État garantit la liberté religieuse (liberté de conscience, liberté de croire ou de ne pas croire, liberté de changer de religion) mais est neutre face aux religions. L'État ne reconnaît, ne salarie ni ne subventionne aucun culte.",
             "image": null
         },
         {
@@ -266,7 +266,7 @@
         {
             "id": "livret_44",
             "question": "Quels sont les principes et les valeurs de la République ? La devise de la France ?",
-            "explanation": "Les valeurs de la République sont Liberté, Égalité, Fraternité, qui est également la devise de la France. Ces principes de la République comprennent son caractère indivisible, laïque, démocratique et social, tels que définis par la Constitution du 4 octobre 1958. L'indivisibilité signifie que les lois s'appliquent de manière égale sur l'ensemble du territoire français, sans distinction entre les territoires. La souveraineté nationale appartient au peuple et est exercée par ses représentants élus et par le biais du référendum. La France est une république sociale qui vise à répondre aux besoins de la population dans des domaines tels que l'éducation, le logement, l'emploi et la santé, garantissant ainsi une couverture sociale. En d'autres termes, la nation assure à l'individu et à la famille les conditions nécessaires à leur développement.",
+            "explanation": "Les valeurs de la République sont Liberté, Égalité, Fraternité, qui est également la devise de la France. Cette devise apparaît pendant la Révolution française en 1789, est adoptée officiellement en 1848 sous la IIe République, et est inscrite dans la Constitution de la Ve République du 4 octobre 1958. Les principes de la République comprennent son caractère indivisible, laïque, démocratique et social. L'indivisibilité signifie que les lois s'appliquent de manière égale sur l'ensemble du territoire français, sans distinction entre les territoires. La souveraineté nationale appartient au peuple et est exercée par ses représentants élus et par le biais du référendum. La France est une république sociale qui vise à répondre aux besoins de la population dans des domaines tels que l'éducation, le logement, l'emploi et la santé, garantissant ainsi une couverture sociale.",
             "image": null
         },
         {
@@ -284,7 +284,7 @@
         {
             "id": "livret_47",
             "question": "La signification de la Fraternité ?",
-            "explanation": "La France est construite sur le désir de cohabitation harmonieuse entre ses citoyens, exprimant ainsi la solidarité entre eux.",
+            "explanation": "La Fraternité est la troisième valeur de la devise républicaine. Elle exprime la solidarité entre les citoyens et le désir de cohabitation harmonieuse. La France est construite sur ce principe de fraternité, qui se manifeste notamment à travers le système de sécurité sociale, l'aide aux personnes en difficulté, et la solidarité nationale. La fraternité implique que tous les citoyens se sentent membres d'une même communauté nationale.",
             "image": null
         },
         {
@@ -302,25 +302,25 @@
         {
             "id": "livret_50",
             "question": "Quand la France est devenue laïque ?",
-            "explanation": "09 décembre 1905",
+            "explanation": "La France est devenue officiellement laïque avec la loi du 9 décembre 1905 sur la séparation des Églises et de l'État, promulguée sous la IIIe République. Cette loi, portée par Aristide Briand, a établi le principe de laïcité en France, mettant fin au financement public des religions et affirmant la neutralité de l'État en matière religieuse.",
             "image": null
         },
         {
             "id": "livret_51",
             "question": "Qui est Marianne ?",
-            "explanation": "Marianne est une figure allégorique féminine qui incarne la République française. Elle représente les valeurs républicaines telles que la liberté, l'égalité et la fraternité. Marianne est souvent représentée avec un bonnet phrygien, qui symbolise la liberté, et elle est présentée dans chaque mairie.",
+            "explanation": "Marianne est une figure allégorique féminine qui incarne la République française. Elle représente les valeurs républicaines telles que la liberté, l'égalité et la fraternité. Marianne est souvent représentée avec un bonnet phrygien, qui symbolise la liberté et était porté par les révolutionnaires. Elle est présente dans chaque mairie de France et apparaît sur les timbres, les pièces de monnaie et les documents officiels. Le nom \"Marianne\" est devenu le symbole de la République française.",
             "image": null
         },
         {
             "id": "livret_52",
             "question": "Quelle est L'hymne national française ?",
-            "explanation": "L'hymne national français est La Marseillaise. Il s'agit d'un chant révolutionnaire écrit par Claude Joseph Rouget de L’Isle en 1792. Il est devenu l'hymne officiel de la France en 1795. La Marseillaise est un symbole de la lutte pour la liberté, l'égalité et la fraternité, ainsi que de la résistance et du patriotisme.",
+            "explanation": "L'hymne national français est La Marseillaise. Il s'agit d'un chant révolutionnaire écrit par Claude Joseph Rouget de Lisle à Strasbourg en 1792, pendant la Révolution française. Il est devenu l'hymne officiel de la France en 1795, puis confirmé par la Constitution de la Ve République en 1958. La Marseillaise est un symbole de la lutte pour la liberté, l'égalité et la fraternité, ainsi que de la résistance et du patriotisme.",
             "image": null
         },
         {
             "id": "livret_53",
             "question": "Que représente Le 14 juillet ?",
-            "explanation": "Le 14 juillet est la fête nationale française, également connue sous le nom de Bastille Day. Elle commémore la prise de la Bastille le 14 juillet 1789, qui marque le début de la Révolution française. Le 14 juillet est un symbole de la lutte pour la liberté et l'établissement de la République en France.",
+            "explanation": "Le 14 juillet est la fête nationale française. Elle commémore deux événements : la prise de la Bastille le 14 juillet 1789, qui marque le début de la Révolution française et la fin de l'absolutisme, et la Fête de la Fédération du 14 juillet 1790, qui symbolise l'unité nationale. Le 14 juillet est un symbole de la lutte pour la liberté et l'établissement de la République en France. C'est un jour férié célébré dans toute la France avec des défilés militaires et des feux d'artifice.",
             "image": null
         },
         {
@@ -362,7 +362,7 @@
         {
             "id": "livret_60",
             "question": "Quelle est l'importance de la Loi de séparation des Églises et de l'État de 1905 ?",
-            "explanation": "La Loi de séparation des Églises et de l'État, adoptée en 1905, a établi la laïcité en France. Elle a mis fin au financement public des religions et a affirmé la neutralité de l'État en matière religieuse, jouant un rôle clé dans l'établissement de la liberté religieuse et de l'égalité de tous les citoyens devant la loi, indépendamment de leur croyance.",
+            "explanation": "La Loi de séparation des Églises et de l'État, adoptée le 9 décembre 1905 sous la IIIe République et portée par Aristide Briand, a établi la laïcité en France. Elle a mis fin au financement public des religions (le Concordat de 1801) et a affirmé la neutralité de l'État en matière religieuse, jouant un rôle clé dans l'établissement de la liberté religieuse et de l'égalité de tous les citoyens devant la loi, indépendamment de leur croyance. Cette loi est toujours en vigueur aujourd'hui.",
             "image": null
         },
         {
@@ -373,8 +373,8 @@
         },
         {
             "id": "livret_62",
-            "question": "Quelle est l’importance de l’abolition de l’esclavage ?",
-            "explanation": "L’abolition a marqué une avancée majeure pour les droits de l’Homme et la reconnaissance de l’égalité entre tous les citoyens.",
+            "question": "Quelle est l'importance de l'abolition de l'esclavage ?",
+            "explanation": "L'abolition de l'esclavage a marqué une avancée majeure pour les droits de l'Homme et la reconnaissance de l'égalité entre tous les citoyens. En France, l'esclavage a été aboli une première fois en 1794 pendant la Révolution, rétabli par Napoléon en 1802, puis définitivement aboli le 27 avril 1848 sous la IIe République par Victor Schœlcher. La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crimes contre l'humanité.",
             "image": null
         },
         {
@@ -416,7 +416,7 @@
         {
             "id": "livret_69",
             "question": "Qu'est-ce que le traité de Nantes ?",
-            "explanation": "Signé en 1598 par Henri IV, le traité de Nantes a mis fin aux guerres de religion en France en accordant des droits et une certaine liberté de culte aux protestants. Ce traité est considéré comme un pas important vers la tolérance religieuse.",
+            "explanation": "L'Édit de Nantes (et non \"traité\") a été signé le 13 avril 1598 par Henri IV. Il a mis fin aux guerres de religion en France en accordant des droits et une certaine liberté de culte aux protestants (Huguenots). Cet édit est considéré comme un pas important vers la tolérance religieuse. Il a été révoqué par Louis XIV en 1685 avec l'Édit de Fontainebleau.",
             "image": null
         },
         {
@@ -434,7 +434,7 @@
         {
             "id": "livret_72",
             "question": "Quel monument est offert par la France aux États-Unis pour célébrer le centenaire de leur indépendance ?",
-            "explanation": "La Statue de la Liberté.",
+            "explanation": "La Statue de la Liberté, offerte par la France aux États-Unis pour célébrer le centenaire de l'indépendance américaine (1776). Conçue par le sculpteur français Frédéric Auguste Bartholdi avec la collaboration de Gustave Eiffel pour la structure, elle a été inaugurée à New York le 28 octobre 1886. La statue symbolise la liberté et l'amitié entre les deux nations.",
             "image": null
         },
         {
@@ -452,7 +452,7 @@
         {
             "id": "livret_75",
             "question": "Quelles sont les couleurs du drapeau français et que signifient-elles ?",
-            "explanation": "Bleu, Blanc, Rouge. Le blanc est la couleur historique de la monarchie (Bourbon). Le bleu et le rouge sont les couleurs de la ville de Paris, portées par les révolutionnaires.",
+            "explanation": "Le drapeau français est composé de trois bandes verticales : bleu, blanc, rouge. Le blanc est la couleur historique de la monarchie (Bourbon). Le bleu et le rouge sont les couleurs de la ville de Paris, portées par la Garde nationale pendant la Révolution. Ensemble, elles symbolisent l'union du peuple (bleu et rouge) et de la monarchie (blanc), puis de la République. Le drapeau tricolore date de la Révolution française et est devenu l'emblème national officiel.",
             "image": null
         },
         {

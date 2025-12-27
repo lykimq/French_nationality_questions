@@ -248,7 +248,7 @@
         {
             "id": "livret_42",
             "question": "Quand la peine de mort a-t-elle été abolie en France ?",
-            "explanation": "La peine de mort a été abolie en France le 9 octobre 1981.",
+            "explanation": "La peine de mort a été abolie en France le 9 octobre 1981, sous la présidence de François Mitterrand, grâce à la loi portée par Robert Badinter, ministre de la Justice. Cette abolition est une avancée majeure pour les droits de l'homme en France. La dernière exécution avait eu lieu en 1977.",
             "image": null
         },
         {
@@ -260,7 +260,7 @@
         {
             "id": "livret_44",
             "question": "Où siège la plus haute juridiction judiciaire en France?",
-            "explanation": "À la Cour de cassation, située au Palais de Justice de Paris.",
+            "explanation": "La Cour de cassation, plus haute juridiction de l'ordre judiciaire en France, siège au Palais de Justice de Paris, quai de l'Horloge. Elle vérifie que les lois sont bien appliquées par les tribunaux et les cours d'appel. Elle ne juge pas les faits mais vérifie l'application correcte du droit.",
             "image": null
         },
         {
@@ -272,7 +272,7 @@
         {
             "id": "livret_46",
             "question": "Peut-on avoir une double nationalité en France ?",
-            "explanation": "Oui, selon les accords entre pays.",
+            "explanation": "Oui, la France autorise la double nationalité (ou plurinationalité). Un Français peut posséder une ou plusieurs autres nationalités en plus de la nationalité française, selon les accords entre pays et les législations des pays concernés. La France ne demande pas de renoncer à sa nationalité d'origine lors de la naturalisation, sauf si le pays d'origine l'exige.",
             "image": null
         },
         {
@@ -284,31 +284,31 @@
         {
             "id": "livret_48",
             "question": "Comment Louis XVI (16) a-t-il été jugé ?",
-            "explanation": "Il a été jugé par la Convention nationale, reconnu coupable de trahison et guillotiné le 21 janvier 1793.",
+            "explanation": "Louis XVI a été jugé par la Convention nationale en décembre 1792-janvier 1793. Il a été reconnu coupable de trahison et de complot contre la Révolution française. Accusé de vouloir restaurer l'absolutisme avec l'aide de puissances étrangères, il a été condamné à mort et guillotiné le 21 janvier 1793, place de la Révolution (aujourd'hui place de la Concorde) à Paris.",
             "image": null
         },
         {
             "id": "livret_49",
             "question": "Pourquoi la Terreur a-t-elle eu lieu ?",
-            "explanation": "Entre 1793 et 1794, le gouvernement a instauré la Terreur pour éliminer les ennemis de la Révolution. Environ 16 000 personnes ont été exécutées sous l'autorité du Comité de salut public, dirigé par Robespierre.",
+            "explanation": "La Terreur (1793-1794) a été instaurée par le gouvernement révolutionnaire pour éliminer les ennemis supposés de la Révolution et consolider l'autorité du gouvernement. Environ 16 000 à 17 000 personnes ont été exécutées sous l'autorité du Comité de salut public, dirigé par Maximilien Robespierre. La Terreur a pris fin le 27 juillet 1794 (9 thermidor an II) avec l'arrestation et l'exécution de Robespierre.",
             "image": null
         },
         {
             "id": "livret_50",
             "question": "Comment Jean Moulin est-il mort ?",
-            "explanation": "Il a été arrêté par la Gestapo le 21 juin 1943 à Caluire, près de Lyon, après une trahison. Torturé par Klaus Barbie, chef de la Gestapo à Lyon, il est mort des suites de ses blessures durant son transfert vers l'Allemagne, le 8 juillet 1943.",
+            "explanation": "Jean Moulin a été arrêté par la Gestapo le 21 juin 1943 à Caluire-et-Cuire, près de Lyon, après une trahison lors d'une réunion du Conseil national de la Résistance. Torturé par Klaus Barbie, chef de la Gestapo à Lyon, il est mort des suites de ses blessures durant son transfert vers l'Allemagne, le 8 juillet 1943, sans avoir révélé d'informations. Il repose au Panthéon depuis 1964.",
             "image": null
         },
         {
             "id": "livret_51",
-            "question": "Quand l’esclavage a-t-il été aboli en France ?",
-            "explanation": "L’abolition de l’esclavage en France date du 27 avril 1848, sous l’impulsion de Victor Schœlcher.",
+            "question": "Quand l'esclavage a-t-il été aboli en France ?",
+            "explanation": "L'esclavage a été définitivement aboli en France le 27 avril 1848, sous l'impulsion de Victor Schœlcher (1804-1893), ministre de la Marine sous la IIe République. Il y avait eu une première abolition en 1794 pendant la Révolution française, mais Napoléon Bonaparte l'avait rétabli en 1802. La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crimes contre l'humanité.",
             "image": null
         },
         {
             "id": "livret_52",
             "question": "Qui était l'épouse de Louis XVI (16) ?",
-            "explanation": "Marie-Antoinette était l'épouse de Louis XVI (16).",
+            "explanation": "Marie-Antoinette (1755-1793) était l'épouse de Louis XVI. Fille de l'impératrice Marie-Thérèse d'Autriche, elle est devenue reine de France en 1774. Elle a été guillotinée le 16 octobre 1793, neuf mois après son époux, après avoir été jugée par le Tribunal révolutionnaire.",
             "image": null
         },
         {
@@ -356,7 +356,7 @@
         {
             "id": "livret_60",
             "question": "Où faut-il déclarer la naissance d'un enfant ?",
-            "explanation": "À la mairie du lieu de naissance, pour établir l'acte de naissance.",
+            "explanation": "La naissance d'un enfant doit être déclarée à la mairie du lieu de naissance dans les 5 jours ouvrables suivant la naissance (le jour de la naissance n'est pas compté). Cette déclaration permet d'établir l'acte de naissance, document officiel essentiel. La déclaration peut être faite par le père, la mère, ou toute personne ayant assisté à l'accouchement.",
             "image": null
         },
         {
@@ -392,19 +392,19 @@
         {
             "id": "livret_66",
             "question": "Quand faut-il déclarer son enfant au service d'état civil ?",
-            "explanation": "Dans les 5 jours ouvrables suivant la naissance.",
+            "explanation": "La déclaration de naissance doit être faite dans les 5 jours ouvrables suivant la naissance (le jour de la naissance n'est pas compté). Si le 5e jour est un samedi, un dimanche ou un jour férié, le délai est prolongé jusqu'au premier jour ouvrable suivant. Passé ce délai, une procédure judiciaire est nécessaire.",
             "image": null
         },
         {
             "id": "livret_67",
             "question": "Quel numéro d'urgence permet d'appeler la police ?",
-            "explanation": "Le 17 (ou le 112, numéro d'urgence européen).",
+            "explanation": "Le numéro d'urgence pour appeler la police (ou la gendarmerie) est le 17. Le 112 est le numéro d'urgence européen unique qui permet d'accéder aux services de secours (police, pompiers, SAMU) dans tous les pays de l'Union européenne. En France, on peut aussi composer le 18 pour les pompiers et le 15 pour le SAMU.",
             "image": null
         },
         {
             "id": "livret_68",
             "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
-            "explanation": "Le 15 (ou le 112, numéro d'urgence européen).",
+            "explanation": "Le numéro d'urgence pour appeler le SAMU (Service d'Aide Médicale Urgente) est le 15. Le 112 est le numéro d'urgence européen unique qui permet d'accéder aux services de secours dans tous les pays de l'Union européenne. En France, les autres numéros d'urgence sont : 17 pour la police/gendarmerie, 18 pour les pompiers.",
             "image": null
         },
         {
@@ -470,7 +470,7 @@
         {
             "id": "livret_79",
             "question": "L'avortement est-il possible en France ?",
-            "explanation": "Oui, l'IVG est légale et encadrée (délai de 14 semaines de grossesse, prise en charge médicale).",
+            "explanation": "Oui, l'IVG (Interruption Volontaire de Grossesse) est légale en France depuis la loi Veil du 17 janvier 1975. Elle est encadrée : délai de 14 semaines de grossesse (16 semaines depuis 2022), prise en charge médicale, et remboursement par la Sécurité sociale. En mars 2024, la France est devenue le premier pays à graver la liberté de recourir à l'IVG dans sa Constitution.",
             "image": null
         },
         {
@@ -482,13 +482,13 @@
         {
             "id": "livret_81",
             "question": "Quelle est la première démarche à réaliser pour chercher un emploi ?",
-            "explanation": "Mettre à jour son CV et s'inscrire auprès de France Travail (ex-Pôle emploi) pour accéder aux offres et droits.",
+            "explanation": "La première démarche est de mettre à jour son CV et de s'inscrire auprès de France Travail (anciennement Pôle emploi) pour accéder aux offres d'emploi et aux droits liés au chômage. France Travail est le service public de l'emploi en France, créé en 2024 pour remplacer Pôle emploi. L'inscription permet aussi d'accéder à des formations et à un accompagnement personnalisé.",
             "image": null
         },
         {
             "id": "livret_82",
             "question": "Quelle est la durée légale du temps de travail par semaine ?",
-            "explanation": "35 heures hebdomadaires (hors heures supplémentaires possibles).",
+            "explanation": "La durée légale du temps de travail est de 35 heures par semaine, instaurée par la loi Aubry adoptée en 1998 et mise en application progressivement jusqu'en 2000. Cette durée peut être dépassée avec des heures supplémentaires, qui sont rémunérées ou compensées par des repos. La durée maximale est de 48 heures par semaine en moyenne sur 12 semaines.",
             "image": null
         },
         {
@@ -536,7 +536,7 @@
         {
             "id": "livret_90",
             "question": "L'instruction des enfants est obligatoire de :",
-            "explanation": "De 3 à 16 ans en France.",
+            "explanation": "L'instruction est obligatoire de 3 à 16 ans en France depuis la loi du 26 juillet 2019 \"pour une école de la confiance\". Avant cette loi, l'instruction était obligatoire de 6 à 16 ans. L'école maternelle est donc désormais obligatoire dès 3 ans. Les parents qui ne respectent pas cette obligation risquent jusqu'à 6 mois d'emprisonnement et 7 500 € d'amende.",
             "image": null
         },
         {
@@ -596,13 +596,13 @@
         {
             "id": "livret_100",
             "question": "Depuis le 1er juillet 2021, quelle est la durée du congé paternité ?",
-            "explanation": "28 jours (dont 7 jours obligatoires : 3 de naissance + 4 supplémentaires).",
+            "explanation": "Depuis le 1er juillet 2021, le congé paternité est de 28 jours (4 semaines) pour les pères salariés, dont 7 jours obligatoires (3 jours de naissance + 4 jours supplémentaires). Les 21 jours restants sont facultatifs. Ce congé est pris dans les 6 mois suivant la naissance et est indemnisé par la Sécurité sociale. Il peut être prolongé en cas de naissance multiple.",
             "image": null
         },
         {
             "id": "livret_101",
             "question": "Est-ce possible de punir physiquement ses enfants ?",
-            "explanation": "Non, la loi interdit les violences éducatives ordinaires (loi du 10 juillet 2019).",
+            "explanation": "Non, la loi interdit les violences éducatives ordinaires (VEO) depuis la loi du 10 juillet 2019. Cette loi, dite \"loi anti-fessée\", interdit toute forme de violence physique ou psychologique envers les enfants, y compris les châtiments corporels. La France a ainsi ratifié l'article 19 de la Convention internationale des droits de l'enfant. Les parents qui violent cette interdiction risquent des sanctions pénales.",
             "image": null
         },
         {
@@ -656,7 +656,7 @@
         {
             "id": "livret_110",
             "question": "Par qui est financée la Sécurité sociale ?",
-            "explanation": "Elle est financée par les cotisations sociales prélevées sur les salaires (employeurs et salariés) et par l'impôt (CSG).",
+            "explanation": "La Sécurité sociale est financée principalement par les cotisations sociales prélevées sur les salaires (versées par les employeurs et les salariés) et par l'impôt, notamment la CSG (Contribution Sociale Généralisée) créée en 1991. Elle peut aussi recevoir des subventions de l'État. Le système illustre le principe de solidarité nationale et de fraternité républicaine.",
             "image": null
         },
         {
@@ -668,7 +668,7 @@
         {
             "id": "livret_112",
             "question": "Quelle est la durée légale du travail en France ?",
-            "explanation": "La durée légale est de 35 heures par semaine.",
+            "explanation": "La durée légale du travail est de 35 heures par semaine, instaurée par la loi Aubry adoptée en 1998 et mise en application progressivement jusqu'en 2000. Cette durée peut être dépassée avec des heures supplémentaires, qui sont rémunérées ou compensées par des repos. La durée maximale est de 48 heures par semaine en moyenne sur 12 semaines.",
             "image": null
         },
         {
@@ -680,19 +680,19 @@
         {
             "id": "livret_114",
             "question": "Qu'est-ce que l'assimilation à la communauté française ?",
-            "explanation": "C'est l'adhésion aux valeurs de la République, la maîtrise de la langue française (niveau B2 requis depuis janvier 2026), une connaissance suffisante de l'histoire et de la culture de la France, et la réussite à l'examen civique qui évalue les connaissances sur l'histoire, la culture et les valeurs françaises.",
+            "explanation": "L'assimilation à la communauté française est l'adhésion aux valeurs de la République (liberté, égalité, fraternité, laïcité), la maîtrise de la langue française (niveau B2 requis depuis janvier 2026, au lieu de B1 auparavant), une connaissance suffisante de l'histoire et de la culture de la France, et la réussite à l'examen civique (40 questions, 80% de bonnes réponses requises depuis janvier 2026). Le candidat doit également démontrer une stabilité professionnelle et financière.",
             "image": null
         },
         {
             "id": "livret_115",
             "question": "Qui décide de l'octroi de la nationalité française ?",
-            "explanation": "C'est le ministre de l'Intérieur qui prend la décision finale après enquête. Depuis janvier 2026, les critères sont plus stricts : niveau de français B2 (au lieu de B1), réussite à un examen civique de 40 questions, et démonstration d'une stabilité financière et professionnelle en France.",
+            "explanation": "C'est le ministre de l'Intérieur qui prend la décision finale d'octroyer ou non la nationalité française après enquête administrative. Depuis le 1er janvier 2026, les critères sont renforcés : niveau de français B2 (au lieu de B1) selon le CECRL, réussite à un examen civique écrit de 40 questions à choix multiples (80% de bonnes réponses requises, soit 32/40), et démonstration d'une stabilité financière et professionnelle en France. L'entretien en préfecture évalue également l'adhésion aux valeurs républicaines.",
             "image": null
         },
         {
             "id": "livret_116",
             "question": "Quel est le but de l'entretien réglementaire en préfecture ?",
-            "explanation": "L'entretien vise à évaluer le degré d'assimilation du candidat, sa connaissance de la société française, de ses principes et valeurs essentiels, ainsi que son adhésion à ceux-ci. Depuis janvier 2026, cet entretien s'accompagne d'un examen civique écrit de 40 questions à choix multiples portant sur l'histoire, la culture et les valeurs françaises. Le candidat doit également démontrer un niveau de français B2 et une stabilité professionnelle et financière.",
+            "explanation": "L'entretien en préfecture vise à évaluer le degré d'assimilation du candidat, sa connaissance de la société française, de ses principes et valeurs essentiels (liberté, égalité, fraternité, laïcité), ainsi que son adhésion à ceux-ci. Depuis le 1er janvier 2026, cet entretien s'accompagne d'un examen civique écrit de 40 questions à choix multiples (QCM) sur support numérique, d'une durée de 45 minutes maximum, portant sur l'histoire, la culture, les valeurs françaises et la vie en société. Le candidat doit obtenir au moins 32 bonnes réponses sur 40 (80%) pour réussir. Il doit également démontrer un niveau de français B2 et une stabilité professionnelle et financière.",
             "image": null
         },
         {

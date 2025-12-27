@@ -8,13 +8,13 @@
         {
             "id": "livret_1",
             "question": "Quel texte définit l'organisation de l'État ?",
-            "explanation": "La Constitution de la Ve République (adoptée en 1958).",
+            "explanation": "La Constitution de la Ve République, adoptée le 4 octobre 1958. La Constitution est le texte fondamental qui définit l'organisation et le fonctionnement de l'État. Elle fixe les règles du pouvoir, les droits des citoyens et les principes de la République.",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Sur quel principe sont fondées les institutions françaises ?",
-            "explanation": "Sur la séparation des pouvoirs : législatif, exécutif et autorité judiciaire.",
+            "explanation": "Sur la séparation des pouvoirs : législatif, exécutif et autorité judiciaire. Ces pouvoirs ne doivent pas être exercés par la même autorité. Le pouvoir exécutif est exercé par le Président de la République et le Gouvernement, le pouvoir législatif par le Parlement (Assemblée nationale et Sénat), et l'autorité judiciaire par les juges et magistrats.",
             "image": null
         },
         {
@@ -56,7 +56,7 @@
         {
             "id": "livret_9",
             "question": "Qu'est-ce que pour vous la démocratie ?",
-            "explanation": "La démocratie représente un système politique dans lequel le peuple est souverain, c'est un régime politique dans lequel tous les citoyens participent aux décisions publiques et à la vie politique du pays.",
+            "explanation": "La démocratie est une forme de gouvernement dans laquelle la souveraineté appartient au peuple. En d'autres termes, c'est un système de gouvernement du peuple, par le peuple et pour le peuple. En France, la souveraineté nationale appartient au peuple qui l'exerce par ses représentants élus et par la voie du référendum.",
             "image": null
         },
         {
@@ -110,13 +110,13 @@
         {
             "id": "livret_18",
             "question": "Quand est-ce qu'a été instituée la Ve République ?",
-            "explanation": "La Ve République a été instituée par la Constitution du 4 octobre 1958, adoptée par référendum. Cette Constitution a été rédigée sous l'impulsion du général Charles de Gaulle pour mettre fin à l'instabilité de la IVe République et renforcer le pouvoir exécutif. Elle est toujours en vigueur aujourd'hui.",
+            "explanation": "La Ve République a été instituée par la Constitution du 4 octobre 1958, adoptée par référendum. Cette Constitution a été rédigée sous l'impulsion du général Charles de Gaulle pour mettre fin à l'instabilité de la IVe République (plus de 20 gouvernements en 12 ans) et renforcer le pouvoir exécutif. Elle est toujours en vigueur aujourd'hui et établit notamment la séparation des pouvoirs (exécutif, législatif, judiciaire).",
             "image": null
         },
         {
             "id": "livret_19",
             "question": "Quel a été le fait marquant de la Ve République ?",
-            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
+            "explanation": "La Ve République a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire. Elle a également renforcé le pouvoir exécutif avec l'élection du président au suffrage universel direct (depuis 1962), mis fin à l'instabilité gouvernementale de la IVe République, et établi un régime semi-présidentiel stable qui perdure encore aujourd'hui.",
             "image": null
         },
         {
@@ -182,7 +182,7 @@
         {
             "id": "livret_30",
             "question": "Quels sont les valeurs (ou la devise) de la république Française ?",
-            "explanation": "Liberté, Egalité, Fraternité.",
+            "explanation": "Liberté, Égalité, Fraternité. Cette devise est inscrite sur les frontons des mairies, des écoles et des bâtiments officiels. Elle constitue les valeurs fondamentales de la République française, garanties par la Constitution.",
             "image": null
         },
         {
@@ -194,7 +194,7 @@
         {
             "id": "livret_32",
             "question": "Quels sont les droits et devoirs du citoyen Français ?",
-            "explanation": "Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété.   Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.",
+            "explanation": "Les droits des citoyens français incluent : le droit de voter et d'être éligible, la liberté de circulation, la liberté d'expression, la liberté de conscience (croire ou ne pas croire), la liberté d'association, le droit à la propriété, le droit à l'éducation, le droit à la santé. Les devoirs des citoyens incluent : respecter la loi, respecter les droits des autres citoyens, payer les impôts et taxes, défendre la patrie si nécessaire, participer au jury d'assises si convoqué, porter assistance à une personne en danger.",
             "image": null
         },
         {
@@ -266,7 +266,7 @@
         {
             "id": "livret_44",
             "question": "Citez dans l'ordre les présidents de la cinquième république.",
-            "explanation": "- Charles de Gaulle.\n\n- George Pompidou.\n\n- Valérie Giscard d'Estaing.\n\n- François Mitterrand.\n\n- Jacques Chirac.\n\n- Nicolas Sarkozy.\n\n- François Hollande.\n\n- Emmanuel Macron.",
+            "explanation": "Les présidents de la Cinquième République dans l'ordre :\n- Charles de Gaulle (1959-1969)\n- Georges Pompidou (1969-1974)\n- Valéry Giscard d'Estaing (1974-1981)\n- François Mitterrand (1981-1995)\n- Jacques Chirac (1995-2007)\n- Nicolas Sarkozy (2007-2012)\n- François Hollande (2012-2017)\n- Emmanuel Macron (2017- en cours)",
             "image": null
         },
         {
@@ -290,7 +290,7 @@
         {
             "id": "livret_48",
             "question": "Par quel scrutin et pour combien de mandats peut être élu le président de la république ?",
-            "explanation": "Le président est élu au suffrage universel direct, à la majorité absolue en deux tours. Il peut faire au maximum deux mandats de cinq ans.",
+            "explanation": "Le président est élu au suffrage universel direct, à la majorité absolue en deux tours. Si aucun candidat n'obtient la majorité absolue au premier tour, un second tour est organisé entre les deux candidats arrivés en tête. Le président peut exercer au maximum deux mandats consécutifs de cinq ans.",
             "image": null
         },
         {
@@ -308,7 +308,7 @@
         {
             "id": "livret_51",
             "question": "Qu'est-ce que le parlement ?",
-            "explanation": "Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres:\n\n- La chambre haute (le Sénat).\n\n- La chambre basse (l’Assemblée nationale).",
+            "explanation": "Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres : la chambre haute (le Sénat, 348 sénateurs) et la chambre basse (l'Assemblée nationale, 577 députés). Le Parlement détient le pouvoir législatif : il vote les lois, discute les projets de loi et contrôle l'action du Gouvernement.",
             "image": null
         },
         {
@@ -404,7 +404,7 @@
         {
             "id": "livret_67",
             "question": "Comment sont élus les sénateurs ?",
-            "explanation": "Les sénateurs français sont élus au suffrage universel indirect, par un collège d'environ 150 000 grands électeurs. Ces grands électeurs sont principalement : les maires, les conseillers municipaux, les conseillers départementaux, les conseillers régionaux, et les députés.",
+            "explanation": "Les sénateurs français sont élus au suffrage universel indirect, par un collège d'environ 150 000 grands électeurs. Ces grands électeurs sont principalement : les maires, les conseillers municipaux, les conseillers départementaux, les conseillers régionaux, et les députés. Le Sénat est renouvelé par moitié tous les trois ans.",
             "image": null
         },
         {
@@ -434,13 +434,13 @@
         {
             "id": "livret_72",
             "question": "Qu'est-ce que le conseil constitutionnel ?",
-            "explanation": "Le Conseil constitutionnel est une institution française créée par la Constitution de la Cinquième République du 4 octobre 1958. Il se prononce sur la conformité à la Constitution des lois et de certains règlements dont il est saisi. Il veille à la régularité des élections nationales et référendums.",
+            "explanation": "Le Conseil constitutionnel est une institution française créée par la Constitution de la Cinquième République du 4 octobre 1958. Il se prononce sur la conformité à la Constitution des lois et de certains règlements dont il est saisi. Il veille à la régularité des élections nationales et référendums. Le Conseil est composé de neuf membres nommés pour neuf ans.",
             "image": null
         },
         {
             "id": "livret_73",
             "question": "Qui est le président du conseil constitutionnel ?",
-            "explanation": "Le président du Conseil constitutionnel est nommé par le Président de la République parmi les membres du Conseil. En 2024, c'était Laurent Fabius. Cette fonction peut changer. Le Conseil constitutionnel vérifie la conformité des lois à la Constitution.",
+            "explanation": "Le président du Conseil constitutionnel est nommé par le Président de la République parmi les membres du Conseil. Cette fonction peut changer. Le Conseil constitutionnel vérifie la conformité des lois à la Constitution et veille à la régularité des élections nationales et référendums.",
             "image": null
         },
         {
@@ -518,7 +518,7 @@
         {
             "id": "livret_86",
             "question": "Combien de pays compte l'union européenne ?",
-            "explanation": "L'Union européenne compte 27 États membres depuis le départ du Royaume-Uni en 2020 (Brexit). Les pays fondateurs en 1957 étaient 6 : Allemagne, Belgique, France, Italie, Luxembourg et Pays-Bas. L'UE s'est ensuite élargie progressivement pour atteindre 27 membres aujourd'hui.",
+            "explanation": "L'Union européenne compte 27 États membres depuis le départ du Royaume-Uni en 2020 (Brexit). Les pays fondateurs en 1957 étaient 6 : Allemagne, Belgique, France, Italie, Luxembourg et Pays-Bas. L'UE s'est ensuite élargie progressivement pour atteindre 27 membres aujourd'hui. Le Royaume-Uni a quitté l'UE le 31 janvier 2020.",
             "image": null
         },
         {
@@ -542,7 +542,7 @@
         {
             "id": "livret_90",
             "question": "Quel pays détient la présidence de l'union européenne cette année (2025) ?",
-            "explanation": "La présidence du Conseil de l'Union européenne est tournante et change tous les 6 mois selon un ordre prédéfini. En 2025, la Pologne a détenu la présidence au premier semestre. Cette présidence organise les travaux du Conseil, fixe l'ordre du jour et représente le Conseil dans les relations avec les autres institutions européennes.",
+            "explanation": "La présidence du Conseil de l'Union européenne est tournante et change tous les 6 mois selon un ordre prédéfini. Cette présidence organise les travaux du Conseil, fixe l'ordre du jour et représente le Conseil dans les relations avec les autres institutions européennes. Pour connaître le pays qui détient actuellement la présidence, consultez le site officiel de l'Union européenne.",
             "image": null
         },
         {
@@ -620,7 +620,7 @@
         {
             "id": "livret_103",
             "question": "En quelle année les citoyens Français sont-ils devenus Européens ?",
-            "explanation": "Les citoyens français sont devenus citoyens européens en 1992, avec l'entrée en vigueur du traité de Maastricht.",
+            "explanation": "Les citoyens français sont devenus citoyens européens en 1993, avec l'entrée en vigueur du traité de Maastricht (signé en 1992). Ce traité a créé la citoyenneté européenne, qui confère des droits supplémentaires aux citoyens des États membres de l'Union européenne.",
             "image": null
         },
         {
@@ -1148,7 +1148,7 @@
         {
             "id": "livret_193",
             "question": "Qui est le nouveau président du conseil constitutionnel?",
-            "explanation": "Richard Ferrand nommé le 19 février 2025.",
+            "explanation": "Le président du Conseil constitutionnel est nommé par le Président de la République parmi les membres du Conseil. Cette fonction peut changer. Pour connaître le président actuel, consultez le site officiel du Conseil constitutionnel (www.conseil-constitutionnel.fr).",
             "image": null
         },
         {
@@ -1160,7 +1160,7 @@
         {
             "id": "livret_195",
             "question": "Quel document établit les droits fondamentaux des citoyens français ?",
-            "explanation": "La Constitution de la Ve République.",
+            "explanation": "Les droits fondamentaux des citoyens français sont établis par plusieurs textes : la Constitution de la Ve République (1958), la Déclaration des Droits de l'Homme et du Citoyen de 1789 (intégrée au bloc de constitutionnalité), le Préambule de la Constitution de 1946, et la Charte de l'environnement de 2004.",
             "image": null
         },
         {
@@ -2036,7 +2036,7 @@
         {
             "id": "livret_341",
             "question": "En quelle année la citoyenneté européen nea-t-elle ete créé ?",
-            "explanation": "Par le traité de Maastricht, entré en vigueur en 1993 (signé en 1992).",
+            "explanation": "La citoyenneté européenne a été créée par le traité de Maastricht, signé en 1992 et entré en vigueur en 1993. Ce traité a fondé l'Union européenne et a établi la citoyenneté européenne, qui confère des droits supplémentaires aux citoyens des États membres.",
             "image": null
         },
         {

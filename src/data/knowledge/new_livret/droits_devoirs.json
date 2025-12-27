@@ -14,25 +14,25 @@
         {
             "id": "livret_2",
             "question": "Quel est le principe d'accès aux emplois publics ?",
-            "explanation": "Tous les citoyens y ont accès selon leurs qualités et compétences (concours).",
+            "explanation": "Tous les citoyens français ont accès aux emplois publics selon leurs qualités et compétences. L'accès se fait généralement par concours, garantissant l'égalité des chances. Le principe d'égalité devant l'emploi public est garanti par la Constitution : tous les citoyens étant égaux, ils peuvent accéder à tout emploi public selon leurs capacités.",
             "image": null
         },
         {
             "id": "livret_3",
             "question": "Quel est le devoir fondamental face à la loi ?",
-            "explanation": "Respecter la loi (\"Nul n'est censé ignorer la loi\").",
+            "explanation": "Respecter la loi est un devoir fondamental de tout citoyen. Le principe \"Nul n'est censé ignorer la loi\" signifie que chaque citoyen est supposé connaître les lois et doit les respecter. On peut contester une loi par les voies légales, mais on ne peut pas la violer.",
             "image": null
         },
         {
             "id": "livret_4",
             "question": "Comment les citoyens contribuent-ils aux services publics ?",
-            "explanation": "En payant des impôts à la hauteur de leurs moyens.",
+            "explanation": "Les citoyens contribuent aux services publics principalement en payant des impôts et des taxes, répartis selon leurs moyens (principe de progressivité). Ces contributions financières permettent de financer l'éducation, la santé, la sécurité, la justice, les transports publics, les infrastructures et les aides sociales. C'est une application du principe de fraternité et de solidarité nationale.",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Quel devoir concerne les jeunes dès 16 ans ?",
-            "explanation": "Le recensement à la mairie pour participer à la Journée défense et citoyenneté.",
+            "explanation": "Le recensement à la mairie est obligatoire pour tous les jeunes français (garçons et filles) dans les trois mois qui suivent leur 16e anniversaire. Ce recensement permet ensuite de participer à la Journée défense et citoyenneté (JDC), qui est obligatoire et se déroule généralement entre 16 et 18 ans.",
             "image": null
         },
         {
@@ -92,7 +92,7 @@
         {
             "id": "livret_15",
             "question": "Avez-vous déjà été victime de discrimination ?",
-            "explanation": "Répondez honnêtement selon votre expérience personnelle. Si vous avez été victime de discrimination, vous pouvez mentionner les recours possibles : signalement à la Halde (Haute Autorité de lutte contre les discriminations et pour l'égalité), dépôt de plainte, ou contact avec des associations de défense des droits. La discrimination est interdite en France et punie par la loi.",
+            "explanation": "Répondez honnêtement selon votre expérience personnelle. Si vous avez été victime de discrimination, vous pouvez mentionner les recours possibles : signalement au Défenseur des droits (qui a remplacé la Halde en 2011), dépôt de plainte, ou contact avec des associations de défense des droits. La discrimination est interdite en France et punie par la loi. Elle constitue un délit passible de sanctions judiciaires.",
             "image": null
         },
         {
@@ -128,7 +128,7 @@
         {
             "id": "livret_21",
             "question": "Quelle loi a aboli la peine de mort en France ?",
-            "explanation": "L’abolition de la peine de mort a été votée sous la présidence de François Mitterrand et portée par le ministre de la Justice Robert Badinter.",
+            "explanation": "L'abolition de la peine de mort a été votée en 1981 sous la présidence de François Mitterrand et portée par le ministre de la Justice Robert Badinter. La loi a été promulguée le 9 octobre 1981. Cette abolition est une avancée majeure pour les droits de l'homme en France.",
             "image": null
         },
         {
@@ -139,14 +139,14 @@
         },
         {
             "id": "livret_23",
-            "question": "Qu’est-ce que la Loi Veil et pourquoi est-elle liée à l’IVG en France ?",
-            "explanation": "La Loi Veil, adoptée en 1975, est la loi qui a légalisé l'interruption volontaire de grossesse (IVG) en France. Proposée par Simone Veil, alors ministre de la Santé, cette loi a permis aux femmes d'accéder légalement à l'avortement dans un cadre médicalisé, marquant un tournant majeur pour les droits des femmes et leur autonomie.",
+            "question": "Qu'est-ce que la Loi Veil et pourquoi est-elle liée à l'IVG en France ?",
+            "explanation": "La Loi Veil, adoptée le 17 janvier 1975, est la loi qui a légalisé l'interruption volontaire de grossesse (IVG) en France. Proposée par Simone Veil, alors ministre de la Santé, cette loi a permis aux femmes d'accéder légalement à l'avortement dans un cadre médicalisé, marquant un tournant majeur pour les droits des femmes et leur autonomie. En mars 2024, la France est devenue le premier pays à graver la liberté de recourir à l'IVG dans sa Constitution.",
             "image": null
         },
         {
             "id": "livret_24",
-            "question": "Pourquoi l’IVG est-elle un sujet d'actualité en janvier 2025 ?",
-            "explanation": "Le 17 janvier 2025 marque les 50 ans de la loi Veil, adoptée en 1975, qui a légalisé l’IVG en France. Cette date symbolique donne lieu à des commémorations et des débats sur l’évolution des droits des femmes et de la santé publique depuis un demi-siècle.",
+            "question": "Pourquoi l'IVG est-elle un sujet d'actualité en janvier 2025 ?",
+            "explanation": "Le 17 janvier 2025 marque les 50 ans de la loi Veil, adoptée en 1975, qui a légalisé l'IVG en France. Cette date symbolique donne lieu à des commémorations et des débats sur l'évolution des droits des femmes et de la santé publique depuis un demi-siècle. De plus, en mars 2024, la France a inscrit la liberté de recourir à l'IVG dans sa Constitution, renforçant ainsi la protection de ce droit fondamental.",
             "image": null
         },
         {
@@ -158,19 +158,19 @@
         {
             "id": "livret_26",
             "question": "Quel est le rôle de la Cour de cassation?",
-            "explanation": "Vérifier que les lois sont bien appliquées par les tribunaux.",
+            "explanation": "La Cour de cassation est la plus haute juridiction de l'ordre judiciaire en France. Elle vérifie que les lois sont bien appliquées par les tribunaux et les cours d'appel. Elle ne juge pas les faits mais vérifie l'application correcte du droit. Elle peut casser (annuler) les décisions qui ne respectent pas la loi et renvoyer l'affaire devant une autre juridiction.",
             "image": null
         },
         {
             "id": "livret_27",
             "question": "Quelle est la différence entre la justice civile et la justice pénale en France ?",
-            "explanation": "La justice civile règle les litiges entre personnes, tandis que la justice pénale s'occupe des infractions à la loi.",
+            "explanation": "La justice civile règle les litiges entre personnes privées (particuliers, entreprises) concernant leurs droits et obligations (contrats, propriété, famille, etc.). La justice pénale s'occupe des infractions à la loi (crimes, délits, contraventions) et sanctionne les auteurs d'infractions. La justice est indépendante et rendue au nom du peuple français.",
             "image": null
         },
         {
             "id": "livret_28",
             "question": "Quelle est la loi qui a instauré la semaine de 35 heures en France ?",
-            "explanation": "La loi Aubry, en 2000.",
+            "explanation": "La loi Aubry, adoptée en 1998 et mise en application progressivement jusqu'en 2000, a instauré la semaine de 35 heures de travail en France. Cette réforme, portée par Martine Aubry, alors ministre de l'Emploi et de la Solidarité, visait à créer des emplois et améliorer les conditions de travail.",
             "image": null
         },
         {
@@ -182,7 +182,7 @@
         {
             "id": "livret_30",
             "question": "Qu'est-ce que le RSA ?",
-            "explanation": "Le Revenu de Solidarité Active, aide financière pour les personnes sans ressources.",
+            "explanation": "Le Revenu de Solidarité Active (RSA) est une aide financière versée aux personnes sans ressources ou avec des ressources très faibles. Il illustre le principe de fraternité et de solidarité de la République. Le RSA est financé par les impôts et les cotisations sociales, montrant la solidarité entre les citoyens.",
             "image": null
         },
         {
@@ -206,19 +206,19 @@
         {
             "id": "livret_34",
             "question": "Quelle loi française interdit de fumer dans les lieux publics fermés ?",
-            "explanation": "La loi Évin, en vigueur depuis 2007.",
+            "explanation": "La loi Évin de 1991 a été renforcée par le décret du 15 novembre 2006, entré en vigueur le 1er février 2007. Cette loi interdit de fumer dans tous les lieux publics fermés et couverts (restaurants, bars, transports en commun, établissements de santé, etc.) pour protéger la santé publique.",
             "image": null
         },
         {
             "id": "livret_35",
             "question": "Qu'est-ce que le Front Populaire ?",
-            "explanation": "Le Front Populaire, une coalition de partis de gauche, a été au pouvoir en France dans les années 1930. Il est célèbre pour avoir mis en œuvre des réformes sociales importantes, dont la semaine de travail de 40 heures et les congés payés.",
+            "explanation": "Le Front Populaire, une coalition de partis de gauche (socialistes, communistes, radicaux), a été au pouvoir en France de 1936 à 1938 sous la direction de Léon Blum. Il est célèbre pour avoir mis en œuvre des réformes sociales importantes, dont la semaine de travail de 40 heures, les congés payés (15 jours), et les conventions collectives. Ces réformes ont marqué l'histoire sociale de la France.",
             "image": null
         },
         {
             "id": "livret_36",
             "question": "Qu'est-ce que le Mai 68 en France ?",
-            "explanation": "Mai 68 désigne une période de vastes manifestations étudiantes et de grèves générales. Ce mouvement social a contesté les structures traditionnelles et autoritaires, menant à des réformes significatives dans l'éducation et le travail.",
+            "explanation": "Mai 68 désigne une période de vastes manifestations étudiantes et de grèves générales qui ont secoué la France en mai et juin 1968. Ce mouvement social, qui a eu lieu sous la présidence de Charles de Gaulle, a contesté les structures traditionnelles et autoritaires, menant à des réformes significatives dans l'éducation (autonomie des universités) et le travail (amélioration des conditions de travail).",
             "image": null
         },
         {
@@ -230,13 +230,13 @@
         {
             "id": "livret_38",
             "question": "Quelle réforme a introduit l'école obligatoire en France ?",
-            "explanation": "Les lois Jules Ferry en 1882.",
+            "explanation": "Les lois Jules Ferry, adoptées en 1881-1882, ont introduit l'école obligatoire, gratuite et laïque en France. La loi du 28 mars 1882 rend l'instruction obligatoire pour les enfants de 6 à 13 ans (âge porté à 16 ans en 1959, puis à 3 ans en 2019). Jules Ferry était ministre de l'Instruction publique.",
             "image": null
         },
         {
             "id": "livret_39",
             "question": "Qui a écrit la Déclaration des Droits de l'Homme et du Citoyen ?",
-            "explanation": "Elle a été rédigée par l'Assemblée nationale constituante en 1789.",
+            "explanation": "La Déclaration des Droits de l'Homme et du Citoyen a été rédigée et adoptée par l'Assemblée nationale constituante le 26 août 1789, pendant la Révolution française. Elle définit les droits naturels et imprescriptibles de l'homme : la liberté, la propriété, la sûreté et la résistance à l'oppression. Elle est intégrée au bloc de constitutionnalité.",
             "image": null
         },
         {
@@ -332,13 +332,13 @@
         {
             "id": "livret_55",
             "question": "La liberté d'expression est-elle absolue ?",
-            "explanation": "Non. Elle est garantie mais limitée par la loi pour respecter les droits d'autrui (interdiction de l'incitation à la haine, diffamation, injure).",
+            "explanation": "Non. La liberté d'expression est garantie par la Déclaration des Droits de l'Homme et du Citoyen de 1789, mais elle est limitée par la loi pour respecter les droits d'autrui. Il est interdit de diffuser des injures, des propos diffamatoires, des provocations à la haine, de faire l'apologie de crimes contre l'humanité, ou d'inciter à la violence. La liberté des uns s'arrête là où commence celle des autres.",
             "image": null
         },
         {
             "id": "livret_56",
             "question": "Quelle est la position de la France sur l'égalité femmes-hommes ?",
-            "explanation": "C'est une valeur essentielle de la République. La loi garantit aux femmes les mêmes droits qu'aux hommes dans tous les domaines (professionnel, politique, civil).",
+            "explanation": "L'égalité entre les femmes et les hommes est une valeur essentielle de la République française. La loi garantit aux femmes les mêmes droits qu'aux hommes dans tous les domaines (professionnel, politique, civil). L'administration peut refuser la nationalité française à une personne ne respectant pas l'égalité femmes-hommes, même si cette personne est mariée avec un(e) Français(e).",
             "image": null
         },
         {
@@ -350,31 +350,31 @@
         {
             "id": "livret_58",
             "question": "Quel est le devoir principal de tout citoyen ?",
-            "explanation": "Respecter la loi, les droits des autres et l'environnement.",
+            "explanation": "Les devoirs principaux de tout citoyen français sont : respecter la loi (\"Nul n'est censé ignorer la loi\"), respecter les droits des autres citoyens, respecter l'environnement, payer les impôts et taxes, défendre la patrie si nécessaire, participer au jury d'assises si convoqué, et porter assistance à une personne en danger.",
             "image": null
         },
         {
             "id": "livret_59",
             "question": "Payer ses impôts est-il une obligation ?",
-            "explanation": "Oui, c'est obligatoire. Ils servent à financer les services publics (écoles, hôpitaux, police) et sont répartis selon les facultés de chacun.",
+            "explanation": "Oui, payer ses impôts est une obligation légale pour tous les citoyens français. Les impôts servent à financer les services publics (écoles, hôpitaux, police, justice, transports publics, infrastructures) et sont répartis selon les facultés de chacun (principe de progressivité). C'est une application du principe de fraternité et de solidarité nationale.",
             "image": null
         },
         {
             "id": "livret_60",
             "question": "Qu'est-ce que la Journée Défense et Citoyenneté (JDC) ?",
-            "explanation": "C'est une journée obligatoire pour tous les jeunes français (après le recensement à 16 ans) pour les sensibiliser aux enjeux de la défense et de la citoyenneté.",
+            "explanation": "La Journée Défense et Citoyenneté (JDC) est une journée obligatoire pour tous les jeunes français (garçons et filles) qui se déroule généralement entre 16 et 18 ans, après le recensement à la mairie. Elle a pour objectif de sensibiliser les jeunes aux enjeux de la défense nationale, de la citoyenneté, des valeurs républicaines et de la sécurité routière.",
             "image": null
         },
         {
             "id": "livret_61",
             "question": "Peut-on être appelé à défendre la patrie ?",
-            "explanation": "Oui, tous les citoyens français peuvent être appelés à participer à la défense nationale en cas de conflit armé ou de menace grave.",
+            "explanation": "Oui, tous les citoyens français peuvent être appelés à participer à la défense nationale en cas de conflit armé ou de menace grave. C'est un devoir civique. La défense de la patrie peut se faire par le biais du service national (si rétabli), de la mobilisation générale, ou de la réserve militaire.",
             "image": null
         },
         {
             "id": "livret_62",
             "question": "Un citoyen doit-il participer à un jury d'assises s'il est tiré au sort ?",
-            "explanation": "Oui, c'est un devoir civique. Sauf motif grave, on ne peut pas refuser de siéger comme juré.",
+            "explanation": "Oui, participer à un jury d'assises est un devoir civique pour tout citoyen français majeur inscrit sur les listes électorales et tiré au sort. Sauf motif grave reconnu par le tribunal (maladie, situation familiale exceptionnelle, etc.), on ne peut pas refuser de siéger comme juré. Les jurés participent au jugement des crimes avec les magistrats professionnels.",
             "image": null
         }
     ]

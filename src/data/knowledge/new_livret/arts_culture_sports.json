@@ -8,67 +8,67 @@
         {
             "id": "livret_1",
             "question": "Citez des personnages littéraires Français célèbres",
-            "explanation": "Thénardier, jean valjean (Les misérables), Rémy (Sans famille), le petit prince,…",
+            "explanation": "Parmi les personnages littéraires français célèbres : Jean Valjean et Thénardier (Les Misérables de Victor Hugo), Rémy (Sans famille d'Hector Malot), le Petit Prince (Le Petit Prince d'Antoine de Saint-Exupéry), d'Artagnan (Les Trois Mousquetaires d'Alexandre Dumas), Cyrano de Bergerac (Cyrano de Bergerac d'Edmond Rostand).",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Citez des peintres Français célèbres",
-            "explanation": "Cézanne, Delacroix, Monet etc…",
+            "explanation": "Parmi les peintres français célèbres : Claude Monet (impressionnisme), Paul Cézanne (postimpressionnisme), Eugène Delacroix (romantisme), Auguste Renoir, Edgar Degas, Henri Matisse, Pierre-Auguste Renoir, Georges Seurat, Paul Gauguin.",
             "image": null
         },
         {
             "id": "livret_3",
             "question": "Citez des artistes Français connus",
-            "explanation": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+            "explanation": "Parmi les artistes français connus : en musique classique, Hector Berlioz (compositeur) ; en chanson, Charles Aznavour, Joe Dassin, Édith Piaf, Jacques Brel ; en architecture, Gustave Eiffel (ingénieur et architecte, créateur de la Tour Eiffel) ; en sculpture, Auguste Rodin.",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Citez des œuvres littéraires célèbres",
-            "explanation": "Notre dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+            "explanation": "Parmi les œuvres littéraires françaises célèbres : Notre-Dame de Paris et Les Misérables (Victor Hugo), Le Malade imaginaire (Molière), Le Mariage de Figaro (Beaumarchais), Le Petit Prince (Antoine de Saint-Exupéry), Les Trois Mousquetaires (Alexandre Dumas), L'Étranger (Albert Camus), Madame Bovary (Gustave Flaubert).",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Qui a écrit les trois mousquetaires ?",
-            "explanation": "Alexandre Dumas et Auguste Maquet.",
+            "explanation": "Les Trois Mousquetaires a été écrit par Alexandre Dumas (père), avec la collaboration d'Auguste Maquet. Publié en 1844, ce roman d'aventures est l'une des œuvres les plus célèbres de la littérature française.",
             "image": null
         },
         {
             "id": "livret_7",
             "question": "Qui était Voltaire ?",
-            "explanation": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+            "explanation": "De son vrai nom François-Marie Arouet (1694-1778), Voltaire est un écrivain et philosophe français du XVIIIe siècle. Il est l'un des représentants les plus connus de la philosophie des Lumières, connu pour son esprit critique, sa défense de la liberté civile et de la séparation de l'Église et de l'État.",
             "image": null
         },
         {
             "id": "livret_8",
             "question": "À Quel mouvement voltaire appartient-il ?",
-            "explanation": "Il appartenait au mouvement de la philosophie des lumières et il en est l'un des représentants les plus connus.",
+            "explanation": "Voltaire appartenait au mouvement de la philosophie des Lumières et il en est l'un des représentants les plus connus. Les philosophes des Lumières, dont Voltaire, Rousseau et Diderot, ont combattu à travers leurs œuvres pour la tolérance et la liberté de pensée.",
             "image": null
         },
         {
             "id": "livret_9",
             "question": "Citez des philosophes connus des lumières ?",
-            "explanation": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+            "explanation": "Parmi les philosophes français des Lumières : Montesquieu (1689-1755), Voltaire (1694-1778), Diderot (1713-1784), Rousseau (1712-1778). Ces philosophes ont combattu pour la tolérance et la liberté de pensée au XVIIIe siècle. Note : Descartes (1596-1650) appartient au XVIIe siècle, avant les Lumières.",
             "image": null
         },
         {
             "id": "livret_10",
             "question": "Qu'est-ce que la philosophie des lumières ?",
-            "explanation": "C'est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du xviie siècle avec plusieurs philosophes comme voltaire, rousseau etc… et qui par leur engagement contre les oppressions religieuses et politiques, se voyaient comme une élite avancée œuvrant pour un progrès du monde. Combattant l'irrationnel, l'arbitraire, l'obscurantisme et la « superstition » des siècles passés, ils ont procédé au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. L'influence de leurs écrits a été déterminante dans les grands événements de la fin du xviiie siècle que sont la Déclaration d'indépendance des États-Unis et la Révolution française.",
+            "explanation": "La philosophie des Lumières est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du XVIIe siècle et se développe au XVIIIe siècle avec plusieurs philosophes comme Voltaire, Rousseau, Diderot et Montesquieu. Par leur engagement contre les oppressions religieuses et politiques, ils se voyaient comme une élite avancée œuvrant pour le progrès du monde. Combattant l'irrationnel, l'arbitraire, l'obscurantisme et la superstition des siècles passés, ils ont procédé au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. L'influence de leurs écrits a été déterminante dans les grands événements de la fin du XVIIIe siècle que sont la Déclaration d'indépendance des États-Unis et la Révolution française.",
             "image": null
         },
         {
             "id": "livret_11",
             "question": "Quel grand évènement sportif Français connaissez-vous ?",
-            "explanation": "- Vous pouvez citer une épreuve cycliste comme le Tour de France.\n\n- Une épreuve de tennis comme le tournoi de Roland Garros.\n\n- Une compétition de course automobile comme les 24h du Mans.\n\n- Une course comme le Marathon de Paris.",
+            "explanation": "Parmi les grands événements sportifs français : le Tour de France (épreuve cycliste annuelle, la plus prestigieuse au monde), le tournoi de Roland Garros (tournoi de tennis du Grand Chelem à Paris), les 24 Heures du Mans (compétition de course automobile d'endurance), le Marathon de Paris, le Championnat du monde de football 1998 (organisé en France).",
             "image": null
         },
         {
             "id": "livret_12",
             "question": "Connaissez-vous des sportifs Français(e)s ?",
-            "explanation": "- Dans le football : Michel Platini, Zinedine Zidane.\n\n- Dans le cyclisme : Richard Virenque.\n\n- Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.\n\n- Dans le judo : Teddy Riner.",
+            "explanation": "Parmi les sportifs français célèbres : dans le football, Michel Platini, Zinedine Zidane, Kylian Mbappé ; dans le cyclisme, Bernard Hinault, Richard Virenque ; dans le tennis, Yannick Noah, Jo-Wilfried Tsonga, Gaël Monfils ; dans le judo, Teddy Riner (multiple champion du monde et olympique) ; dans l'athlétisme, Marie-José Pérec, Renaud Lavillenie.",
             "image": null
         },
         {
@@ -92,7 +92,7 @@
         {
             "id": "livret_16",
             "question": "Qui a peint la Joconde et où est-elle exposée ?",
-            "explanation": "Léonard de Vinci, et elle est exposée au musée du Louvre.",
+            "explanation": "La Joconde (ou Mona Lisa) a été peinte par Léonard de Vinci au début du XVIe siècle. Elle est exposée au musée du Louvre à Paris, qui est le musée le plus visité de France.",
             "image": null
         },
         {
@@ -110,13 +110,13 @@
         {
             "id": "livret_19",
             "question": "Quelle œuvre a été écrite par Victor Hugo ?",
-            "explanation": "Victor Hugo a écrit notamment \"Les Misérables\" (1862) et \"Notre-Dame de Paris\" (1831), deux romans majeurs de la littérature française.",
+            "explanation": "Victor Hugo (1802-1885) a écrit de nombreuses œuvres majeures de la littérature française, notamment \"Les Misérables\" (1862), \"Notre-Dame de Paris\" (1831), \"Les Contemplations\" (poésie, 1856), \"Ruy Blas\" (théâtre, 1838). Il est aussi connu pour son engagement politique et social.",
             "image": null
         },
         {
             "id": "livret_20",
             "question": "Quel peintre est français ?",
-            "explanation": "Des peintres français célèbres : Claude Monet (impressionnisme), Paul Cézanne (postimpressionnisme), Eugène Delacroix (romantisme).",
+            "explanation": "Parmi les peintres français célèbres : Claude Monet (impressionnisme, auteur notamment des Nymphéas), Paul Cézanne (postimpressionnisme), Eugène Delacroix (romantisme, auteur de La Liberté guidant le peuple), Auguste Renoir, Edgar Degas, Henri Matisse.",
             "image": null
         },
         {
@@ -128,7 +128,7 @@
         {
             "id": "livret_22",
             "question": "Dans quel grand musée parisien est exposée la Joconde ?",
-            "explanation": "La Joconde est exposée au musée du Louvre, à Paris.",
+            "explanation": "La Joconde (Mona Lisa) est exposée au musée du Louvre à Paris. Le Louvre est le musée le plus visité de France et l'un des plus grands musées du monde.",
             "image": null
         },
         {
@@ -140,19 +140,19 @@
         {
             "id": "livret_24",
             "question": "À quelle occasion a été construite la Tour Eiffel ?",
-            "explanation": "Elle a été construite pour l'Exposition universelle de 1889 à Paris.",
+            "explanation": "La Tour Eiffel a été construite par Gustave Eiffel et ses collaborateurs pour l'Exposition universelle de 1889 à Paris, qui célébrait le centenaire de la Révolution française. Initialement controversée, elle est aujourd'hui un symbole emblématique de Paris et de la France, reconnue dans le monde entier. Elle mesure 330 mètres de haut.",
             "image": null
         },
         {
             "id": "livret_25",
             "question": "Quel musée est situé à Paris ?",
-            "explanation": "Parmi les grands musées parisiens : le Louvre, le musée d'Orsay, le Centre Pompidou.",
+            "explanation": "Parmi les grands musées parisiens : le musée du Louvre (le plus visité de France, abrite notamment la Joconde), le musée d'Orsay (art du XIXe siècle), le Centre Pompidou (art moderne et contemporain), le musée Rodin, le musée Picasso.",
             "image": null
         },
         {
             "id": "livret_26",
             "question": "Qui était Molière ?",
-            "explanation": "Le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies (ex : L'Avare, Le Malade imaginaire).",
+            "explanation": "Molière (1622-1673), de son vrai nom Jean-Baptiste Poquelin, est le plus célèbre auteur de théâtre français du XVIIe siècle. Il a vécu à l'époque de Louis XIV. On lui doit des comédies comme \"L'Avare\", \"Le Malade imaginaire\", \"Le Tartuffe\", \"Le Bourgeois gentilhomme\".",
             "image": null
         },
         {
@@ -164,7 +164,7 @@
         {
             "id": "livret_28",
             "question": "Quel monument a été construit pour l'Exposition universelle de 1889 ?",
-            "explanation": "La Tour Eiffel, conçue par Gustave Eiffel.",
+            "explanation": "La Tour Eiffel, conçue par Gustave Eiffel, a été construite pour l'Exposition universelle de 1889 à Paris. Cette exposition célébrait le centenaire de la Révolution française. La tour, haute de 330 mètres, est aujourd'hui l'un des monuments les plus emblématiques de la France.",
             "image": null
         },
         {

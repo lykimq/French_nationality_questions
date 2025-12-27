@@ -8,37 +8,37 @@
         {
             "id": "livret_1",
             "question": "Combien y a-t-il de communes et qui les administre ?",
-            "explanation": "Environ 35 000 communes (34 965 en 2021), administrées par un maire et un conseil municipal.",
+            "explanation": "La France compte environ 35 000 communes (34 965 au 1er janvier 2021 selon les données officielles). Elles sont administrées par un maire et un conseil municipal, élus pour six ans. Les communes sont regroupées en intercommunalités (communautés de communes, métropoles, etc.).",
             "image": null
         },
         {
             "id": "livret_2",
             "question": "Quelles sont les compétences de la commune ?",
-            "explanation": "Écoles primaires et maternelles, état civil (naissances, mariages, décès), voirie, activités culturelles et sportives.",
+            "explanation": "Les communes sont responsables notamment des écoles maternelles et primaires, des activités sportives et culturelles, de l'entretien de la voirie communale. Elles tiennent l'état civil, c'est-à-dire qu'elles enregistrent les naissances, les mariages, les décès.",
             "image": null
         },
         {
             "id": "livret_3",
             "question": "Qui administre le département et quelles sont ses compétences ?",
-            "explanation": "Le conseil départemental (101 départements). Il gère les collèges, la protection sociale (enfance, personnes âgées).",
+            "explanation": "Le conseil départemental administre les 101 départements. Il est responsable notamment des collèges, de la protection de l'enfance et de l'aide aux personnes âgées.",
             "image": null
         },
         {
             "id": "livret_4",
             "question": "Quelles sont les compétences de la région ?",
-            "explanation": "Le conseil régional (13 régions métropolitaines) gère les lycées, la formation professionnelle et les transports.",
+            "explanation": "Les 13 régions métropolitaines sont administrées par les conseils régionaux. Elles sont chargées notamment des transports publics, de la formation professionnelle, de la construction et de l'entretien des lycées.",
             "image": null
         },
         {
             "id": "livret_5",
             "question": "Combien y a-t-il de territoires d'Outre-mer ?",
-            "explanation": "12 territoires (Départements/Régions et Collectivités d'Outre-mer).",
+            "explanation": "La France compte 12 territoires d'outre-mer : 5 sont à la fois des départements et des régions (Guadeloupe, Guyane, Martinique, Mayotte et La Réunion), 7 sont des collectivités d'outre-mer (Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna).",
             "image": null
         },
         {
             "id": "livret_6",
             "question": "Qui représente l'État dans les départements et régions ?",
-            "explanation": "Le Préfet.",
+            "explanation": "Dans les départements et les régions de métropole et d'outre-mer, l'État est représenté par les préfets (ou par les hauts-commissaires dans certaines collectivités d'outre-mer).",
             "image": null
         },
         {
@@ -74,7 +74,7 @@
         {
             "id": "livret_12",
             "question": "Comment sont élus les conseillers départementaux ?",
-            "explanation": "Les conseillers départementaux sont élus pour six ans au suffrage universel direct, mais avec un scrutin binominal majoritaire à deux tours.",
+            "explanation": "Les conseillers départementaux sont élus pour six ans au suffrage universel direct, au scrutin binominal majoritaire à deux tours. Chaque canton élit un binôme (un homme et une femme) de conseillers départementaux.",
             "image": null
         },
         {
@@ -109,20 +109,20 @@
         },
         {
             "id": "livret_18",
-            "question": "Quelles sont les collectivités d’outre- mer ?",
-            "explanation": "Les collectivités d’outre-mer comprennent la Polynésie française, Saint-Barthélemy, SaintMartin, Saint-Pierre-et- Miquelon et Wallis-et-Futuna. Il existe également des statuts particuliers, notamment la Nouvelle-Calédonie, les Terres australes et antarctiques françaises, ainsi que l'île de Clipperton.",
+            "question": "Quelles sont les collectivités d'outre- mer ?",
+            "explanation": "Les collectivités d'outre-mer (COM) sont au nombre de 7 : Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna. Ces territoires ont plus d'autonomie que les départements d'outre-mer et peuvent avoir des règles spécifiques. La Nouvelle-Calédonie a un statut particulier avec une autonomie renforcée.",
             "image": null
         },
         {
             "id": "livret_19",
-            "question": "Combien y a-t-il de collectivités et territoires d’Outre-mer (COM-TOM) ?",
-            "explanation": "- Il y a 6 collectivités d’Outre-mer (COM) et 1 territoire spécial :\n\n- Polynésie française\n\n- Saint-Pierre-et-Miquelon\n\n- Saint-Barthélemy\n\n- Saint-Martin\n\n- Wallis-et-Futuna\n\n- Nouvelle-Calédonie (statut spécial) Ces territoires ont plus d’autonomie et des règles spécifiques.",
+            "question": "Combien y a-t-il de collectivités et territoires d'Outre-mer (COM-TOM) ?",
+            "explanation": "La France compte 12 territoires d'outre-mer au total : 5 départements et régions d'outre-mer (DROM) : Guadeloupe, Guyane, Martinique, Mayotte et La Réunion. 7 collectivités d'outre-mer (COM) : Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna. Les COM ont plus d'autonomie et peuvent avoir des règles spécifiques.",
             "image": null
         },
         {
             "id": "livret_20",
             "question": "Quelle est la région française réputée pour ses vignobles ?",
-            "explanation": "La Bourgogne.",
+            "explanation": "Plusieurs régions françaises sont réputées pour leurs vignobles, notamment la Bourgogne (Bourgogne-Franche-Comté), la région de Bordeaux (Nouvelle-Aquitaine), la Champagne, l'Alsace (Grand Est), la Vallée de la Loire et la Provence (Provence-Alpes-Côte d'Azur).",
             "image": null
         },
         {
@@ -152,19 +152,19 @@
         {
             "id": "livret_25",
             "question": "Quelle région française est connue pour ses vignobles et sa production de vin ?",
-            "explanation": "La région de Bordeaux est célèbre pour ses vignobles et sa production de vin.",
+            "explanation": "Plusieurs régions françaises sont réputées pour leurs vignobles. La région de Bordeaux (Nouvelle-Aquitaine) est particulièrement célèbre pour ses vins, ainsi que la Bourgogne, la Champagne, l'Alsace, la Vallée de la Loire et la Provence.",
             "image": null
         },
         {
             "id": "livret_26",
             "question": "Quelle est la plus grande région forestière de France ?",
-            "explanation": "La Forêt des Landes est la plus grande région forestière de France.",
+            "explanation": "La Forêt des Landes, située dans la région Nouvelle-Aquitaine, est la plus grande forêt de France. Elle s'étend sur environ un million d'hectares.",
             "image": null
         },
         {
             "id": "livret_27",
             "question": "Quelle région est connue comme le berceau de la Préhistoire en France ?",
-            "explanation": "La région connue comme le berceau de la Préhistoire en France est le Périgord, située en Dordogne, dans le sud- ouest du pays.",
+            "explanation": "Le Périgord, situé en Dordogne (région Nouvelle-Aquitaine), dans le sud-ouest de la France, est connu comme le berceau de la Préhistoire. Cette région abrite notamment la grotte de Lascaux, l'une des plus importantes grottes préhistoriques au monde, célèbre pour ses peintures rupestres datant d'environ 18 000 à 15 000 ans avant J.-C.",
             "image": null
         },
         {
@@ -176,19 +176,19 @@
         {
             "id": "livret_29",
             "question": "Qu'est-ce que l'eurozone ?",
-            "explanation": "L'eurozone est un groupe de pays de l'UE qui ont adopté l'euro comme monnaie commune.",
+            "explanation": "L'eurozone (ou zone euro) est l'ensemble des pays membres de l'Union européenne qui ont adopté l'euro comme monnaie officielle. La France fait partie de l'eurozone depuis la création de l'euro en 1999.",
             "image": null
         },
         {
             "id": "livret_30",
             "question": "Quel est le rôle de la mairie (ou hôtel de ville) ?",
-            "explanation": "C'est l'institution de proximité. Elle gère l'état civil (naissances, mariages, décès), les écoles primaires, l'urbanisme et la vie locale.",
+            "explanation": "La mairie est l'institution de proximité. Elle gère l'état civil (naissances, mariages, décès), les écoles maternelles et primaires, l'entretien de la voirie communale, les activités sportives et culturelles, ainsi que l'urbanisme et la vie locale.",
             "image": null
         },
         {
             "id": "livret_31",
             "question": "Qui représente l'État dans un département ?",
-            "explanation": "Le Préfet.",
+            "explanation": "Le préfet représente l'État dans le département. Dans certaines collectivités d'outre-mer, c'est le haut-commissaire qui représente l'État.",
             "image": null
         },
         {

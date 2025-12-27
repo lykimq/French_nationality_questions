@@ -8,7 +8,7 @@
         {
             "id": "livret_1",
             "question": "Quand a été créé la CEE (Communauté Économique Européenne) ?",
-            "explanation": "La CEE a été créée le 25 mars 1957 par le Traité de Rome, signé par six pays fondateurs : l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas. La France est l'un de ces pays fondateurs.",
+            "explanation": "La CEE (Communauté Économique Européenne) a été créée le 25 mars 1957 par le Traité de Rome, signé par six pays fondateurs : l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas. La France est l'un de ces pays fondateurs. Le traité de Rome a également créé la Communauté européenne de l'énergie atomique (Euratom).",
             "image": null
         },
         {
@@ -20,13 +20,13 @@
         {
             "id": "livret_3",
             "question": "Quel est l'objectif de l'UE ?",
-            "explanation": "Garantir la paix et établir une union étroite entre les peuples européens.",
+            "explanation": "L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale. Son objectif principal est de garantir la paix et établir une union étroite entre les peuples européens, favoriser la coopération économique et politique entre les pays membres, assurer un marché commun et améliorer la vie des citoyens européens par des politiques communes.",
             "image": null
         },
         {
             "id": "livret_4",
             "question": "Quelle est la monnaie commune ?",
-            "explanation": "L'Euro (depuis 2002 pour les pièces/billets, 2000 marché).",
+            "explanation": "L'euro (€) est la monnaie commune de la zone euro. L'euro a été introduit comme monnaie scripturale (comptes bancaires) en 1999 et comme monnaie fiduciaire (pièces et billets) le 1er janvier 2002. La France fait partie de l'eurozone depuis sa création.",
             "image": null
         },
         {
@@ -38,13 +38,13 @@
         {
             "id": "livret_6",
             "question": "Combien de personnes parlent français dans le monde ?",
-            "explanation": "Environ 320 millions de locuteurs dans le monde (OIF 2023, dont ~255 millions d'usage quotidien).",
+            "explanation": "Selon l'Organisation internationale de la Francophonie (OIF), environ 300 millions de personnes parlent français dans le monde, dont environ 200 millions le parlent couramment. Le français est la 5e langue la plus parlée au monde et est langue officielle dans 29 pays.",
             "image": null
         },
         {
             "id": "livret_7",
             "question": "Quel est le rang économique de la France ?",
-            "explanation": "La France se classe parmi les principales puissances économiques mondiales. En 2023, elle occupait la 7ème place avec un PIB d'environ 2 800 milliards de dollars. Le classement peut varier selon les années et les critères utilisés (PIB nominal, PIB en parité de pouvoir d'achat).",
+            "explanation": "La France se classe parmi les principales puissances économiques mondiales. Selon les données récentes, elle occupe généralement la 6ème ou 7ème place mondiale en termes de PIB. Le classement peut varier selon les années et les critères utilisés (PIB nominal, PIB en parité de pouvoir d'achat). La France est la deuxième économie de l'Union européenne après l'Allemagne.",
             "image": null
         },
         {
@@ -169,14 +169,14 @@
         },
         {
             "id": "livret_28",
-            "question": "Qu’est-ce que le Brexit ?",
-            "explanation": "Le Brexit désigne la sortie du Royaume-Uni de l’Union européenne, décidée par référendum en 2016 et effective depuis le 31 janvier 2020.",
+            "question": "Qu'est-ce que le Brexit ?",
+            "explanation": "Le Brexit (contraction de \"British exit\") désigne la sortie du Royaume-Uni de l'Union européenne, décidée par référendum le 23 juin 2016 et effective depuis le 31 janvier 2020. Cette sortie a réduit l'UE de 28 à 27 États membres. Le Royaume-Uni a quitté l'UE après une période de transition qui s'est terminée le 31 décembre 2020.",
             "image": null
         },
         {
             "id": "livret_29",
             "question": "Quelles ont été les conséquences du Brexit ?",
-            "explanation": "Le Brexit a eu des impacts économiques, politiques et administratifs sur les échanges entre le Royaume-Uni et l’Union européenne.",
+            "explanation": "Le Brexit a eu des impacts économiques, politiques et administratifs sur les échanges entre le Royaume-Uni et l'Union européenne. Les conséquences incluent : la fin de la libre circulation des personnes, la mise en place de contrôles douaniers, des impacts sur les échanges commerciaux, et des changements dans les relations diplomatiques. L'UE compte désormais 27 États membres au lieu de 28.",
             "image": null
         },
         {
@@ -212,13 +212,13 @@
         {
             "id": "livret_35",
             "question": "Quel est l'emblème de la France ?",
-            "explanation": "L'emblème de la France est le drapeau tricolore composé des couleurs rouge, bleue et blanche.",
+            "explanation": "L'emblème national de la France est le drapeau tricolore composé de trois bandes verticales : bleu, blanc, rouge. Le drapeau date de la Révolution française. Les autres symboles de la République française incluent : La Marseillaise (hymne national), Marianne (allégorie de la République), le coq gaulois, et la devise \"Liberté, Égalité, Fraternité\".",
             "image": null
         },
         {
             "id": "livret_36",
             "question": "Quel est le sens des couleurs du drapeau français ?",
-            "explanation": "Le drapeau est composé de 3 couleurs sous formes de bandes verticales.",
+            "explanation": "Le drapeau tricolore est composé de trois bandes verticales. Le bleu et le rouge sont les couleurs de Paris (couleurs de la Garde nationale), et le blanc est la couleur de la royauté. Ensemble, elles symbolisent l'union du peuple (bleu et rouge) et de la monarchie (blanc), puis de la République. Le drapeau date de la Révolution française.",
             "image": null
         },
         {
@@ -278,7 +278,7 @@
         {
             "id": "livret_46",
             "question": "Quelle est la population de la France ?",
-            "explanation": "En 2024, la population française est estimée à environ 68 millions d’habitants.",
+            "explanation": "Selon les données de l'INSEE, la population française (métropole et outre-mer) est estimée à environ 68 millions d'habitants en 2024. La France est le deuxième pays le plus peuplé de l'Union européenne après l'Allemagne.",
             "image": null
         },
         {
@@ -295,8 +295,8 @@
         },
         {
             "id": "livret_49",
-            "question": "Quelle est la nouvelle appellation de l’ENA depuis 2021 ?",
-            "explanation": "L'École Nationale d'Administration, devenue l'Institut national du service public (INSP).",
+            "question": "Quelle est la nouvelle appellation de l'ENA depuis 2021 ?",
+            "explanation": "L'École Nationale d'Administration (ENA), créée en 1945, a été remplacée en 2022 par l'Institut national du service public (INSP). Cette réforme visait à moderniser la formation des hauts fonctionnaires français.",
             "image": null
         },
         {
@@ -308,7 +308,7 @@
         {
             "id": "livret_51",
             "question": "Citez quelques personnalités françaises célèbres ayant acquis la nationalité française.",
-            "explanation": "Parmi les personnalités naturalisées, on trouve le chanteur Johnny Hallyday, l’artiste Pablo Picasso, l’actrice Marlène Dietrich, et l’écrivain Milan Kundera.",
+            "explanation": "Parmi les personnalités naturalisées françaises, on trouve : le chanteur Johnny Hallyday (naturalisé en 1976), l'artiste Pablo Picasso (naturalisé en 1940), l'actrice Marlène Dietrich (naturalisée en 1939), l'écrivain Milan Kundera (naturalisé en 1981), et la physicienne Marie Curie (naturalisée polonaise, devenue française par mariage).",
             "image": null
         },
         {
@@ -338,7 +338,7 @@
         {
             "id": "livret_56",
             "question": "Quelle est l'importance du traité de Maastricht pour la France ?",
-            "explanation": "Le traité de Maastricht, signé en 1992, a marqué une étape majeure dans l'intégration européenne. Pour la France, ce traité a signifié un engagement accru envers l'Union européenne, notamment à travers la création de l'Union économique et monétaire et l'introduction de l'euro.",
+            "explanation": "Le traité de Maastricht, signé en 1992 et entré en vigueur en 1993, a marqué une étape majeure dans l'intégration européenne. Pour la France, ce traité a signifié un engagement accru envers l'Union européenne, notamment à travers la création de l'Union économique et monétaire, l'introduction de l'euro, et la création de la citoyenneté européenne. Les citoyens français sont devenus citoyens européens en 1993.",
             "image": null
         },
         {
@@ -362,7 +362,7 @@
         {
             "id": "livret_60",
             "question": "Qu'est-ce que le Traité d'Amsterdam ?",
-            "explanation": "Un traité de l'Union européenne entré en vigueur en 1999.",
+            "explanation": "Le Traité d'Amsterdam, signé en 1997 et entré en vigueur en 1999, est un traité de l'Union européenne qui a modifié et consolidé les traités précédents. Il a renforcé les politiques communautaires, notamment en matière d'emploi, de justice et d'affaires intérieures, et a préparé l'élargissement de l'UE.",
             "image": null
         },
         {
@@ -374,7 +374,7 @@
         {
             "id": "livret_62",
             "question": "Quelle est la plus ancienne université de France ?",
-            "explanation": "L'Université de Paris, fondée en 1150.",
+            "explanation": "L'Université de Paris, connue sous le nom de Sorbonne, est la plus ancienne université de France. Elle a été fondée au XIIe siècle (vers 1150-1170). La Sorbonne était à l'origine un collège créé en 1257 par Robert de Sorbon pour les étudiants pauvres en théologie.",
             "image": null
         },
         {
@@ -506,7 +506,7 @@
         {
             "id": "livret_84",
             "question": "Qu'est-ce que la Francophonie ?",
-            "explanation": "L'ensemble des personnes et pays partageant la langue française.",
+            "explanation": "La Francophonie désigne l'ensemble des personnes et pays partageant la langue française. L'Organisation internationale de la Francophonie (OIF) regroupe 88 États et gouvernements membres, observateurs ou associés. Environ 300 millions de personnes parlent français dans le monde. La Francophonie promeut la langue française, la diversité culturelle et la coopération entre ses membres.",
             "image": null
         },
         {
@@ -572,7 +572,7 @@
         {
             "id": "livret_95",
             "question": "En quelle année la France a-t-elle adopté l'euro comme monnaie ?",
-            "explanation": "2002.",
+            "explanation": "La France a adopté l'euro comme monnaie scripturale (comptes bancaires) le 1er janvier 1999, et comme monnaie fiduciaire (pièces et billets) le 1er janvier 2002. Le franc français a été remplacé par l'euro à cette date.",
             "image": null
         },
         {
@@ -812,7 +812,7 @@
         {
             "id": "livret_135",
             "question": "Quels pays ne font pas partie de l'Union européenne mais font partie de l'espace Schengen ?",
-            "explanation": "- Certains pays ne font pas partie de l'Union européenne mais font partie de l'Espace Schengen, qui permet la libre circulation des personnes entre ses membres. Ces pays sont :\n\n- Norvège\n\n- Islande\n\n- Suisse\n\n- Liechtenstein Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'Espace Schengen, même s'ils ne sont pas membres de l'Union européenne.",
+            "explanation": "Certains pays ne font pas partie de l'Union européenne mais font partie de l'espace Schengen, qui permet la libre circulation des personnes entre ses membres. Ces pays sont : la Norvège, l'Islande, la Suisse et le Liechtenstein. Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'espace Schengen, même s'ils ne sont pas membres de l'Union européenne.",
             "image": null
         },
         {
@@ -830,19 +830,19 @@
         {
             "id": "livret_138",
             "question": "En quelle année la France est-elle devenue membre de l'Union Européenne ?",
-            "explanation": "1957, avec la signature du Traité de Rome (la France est l'un des membres fondateurs).",
+            "explanation": "La France est devenue membre fondateur de ce qui allait devenir l'Union européenne en 1957, avec la signature du Traité de Rome le 25 mars 1957. Ce traité a créé la Communauté économique européenne (CEE). La France est l'un des six pays fondateurs avec l'Allemagne, la Belgique, l'Italie, le Luxembourg et les Pays-Bas.",
             "image": null
         },
         {
             "id": "livret_139",
             "question": "Qui est Robert Schuman ?",
-            "explanation": "Robert Schuman était un homme politique français, ministre des Affaires étrangères, considéré comme l'un des pères fondateurs de l'Union européenne. Il est célèbre pour avoir proposé la Déclaration Schuman en 1950, qui a initié la création de la Communauté européenne du charbon et de l'acier, première étape vers l'intégration européenne.",
+            "explanation": "Robert Schuman (1886-1963) était un homme politique français, ministre des Affaires étrangères, considéré comme l'un des pères fondateurs de l'Union européenne. Il est célèbre pour avoir proposé la Déclaration Schuman le 9 mai 1950, qui a initié la création de la Communauté européenne du charbon et de l'acier (CECA), première étape vers l'intégration européenne. Le 9 mai est célébré comme le Jour de l'Europe.",
             "image": null
         },
         {
             "id": "livret_140",
             "question": "Qu'est-ce que l'Union européenne (UE) ?",
-            "explanation": "L'UE est une organisation politique et économique regroupant 27 pays européens.",
+            "explanation": "L'Union européenne (UE) est une organisation politique et économique regroupant 27 pays européens. Créée par le traité de Maastricht en 1992, elle a succédé à la Communauté économique européenne (CEE). L'UE vise à promouvoir la paix, la stabilité, la prospérité économique et la coopération entre ses membres. Elle dispose d'institutions communes (Parlement européen, Commission européenne, Conseil de l'UE, Cour de justice).",
             "image": null
         },
         {
@@ -866,7 +866,7 @@
         {
             "id": "livret_144",
             "question": "Quels pays européens ne font pas partie de l'UE ?",
-            "explanation": "Parmi les pays européens qui ne font pas partie de l'UE, on trouve la Norvège, la Suisse, et le RoyaumeUni.",
+            "explanation": "Parmi les pays européens qui ne font pas partie de l'UE, on trouve : la Norvège, la Suisse, le Liechtenstein, l'Islande, l'Andorre, Monaco, Saint-Marin, le Vatican, et le Royaume-Uni (qui a quitté l'UE en 2020 avec le Brexit). Certains de ces pays font partie de l'espace Schengen (Norvège, Suisse, Liechtenstein, Islande) sans être membres de l'UE.",
             "image": null
         },
         {
@@ -926,7 +926,7 @@
         {
             "id": "livret_154",
             "question": "Quel est le Jour de l'Europe ?",
-            "explanation": "Le Jour de l'Europe est célébré le 9 mai en l'honneur de la déclaration Schuman en 1950.",
+            "explanation": "Le Jour de l'Europe est célébré le 9 mai en l'honneur de la Déclaration Schuman du 9 mai 1950. Cette déclaration, proposée par Robert Schuman, ministre français des Affaires étrangères, est considérée comme l'acte fondateur de l'Union européenne. Elle proposait la création de la Communauté européenne du charbon et de l'acier (CECA).",
             "image": null
         },
         {
@@ -950,7 +950,7 @@
         {
             "id": "livret_158",
             "question": "C'est quoi l'espace Schengen ?",
-            "explanation": "L'espace Schengen est un ensemble de pays européens qui ont aboli les contrôles aux frontières internes entre eux. Cela permet la libre circulation des personnes à l'intérieur de cet espace, facilitant les voyages et les échanges. Il comprend la plupart des pays de l'UE, ainsi que quelques pays non membres de l'UE.",
+            "explanation": "L'espace Schengen est un ensemble de pays européens qui ont aboli les contrôles aux frontières internes entre eux. Cela permet la libre circulation des personnes à l'intérieur de cet espace, facilitant les voyages et les échanges. Il comprend la plupart des pays de l'UE (27 pays), ainsi que quelques pays non membres de l'UE : la Norvège, l'Islande, la Suisse et le Liechtenstein. L'espace Schengen a été créé par l'accord de Schengen signé en 1985.",
             "image": null
         },
         {
@@ -962,7 +962,7 @@
         {
             "id": "livret_160",
             "question": "Quel est le dernier pays à avoir rejoint l'Union européenne ?",
-            "explanation": "La Croatie est le dernier pays à avoir rejoint l'UE, le 1er juillet 2013.",
+            "explanation": "La Croatie est le dernier pays à avoir rejoint l'UE, le 1er juillet 2013. Depuis cette date, l'UE compte 27 États membres (après le départ du Royaume-Uni en 2020). D'autres pays sont candidats à l'adhésion, notamment l'Ukraine, la Moldavie, et plusieurs pays des Balkans.",
             "image": null
         },
         {
