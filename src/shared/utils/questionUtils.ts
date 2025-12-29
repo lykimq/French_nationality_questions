@@ -1,12 +1,65 @@
 import type { Question } from '../../welcome/types';
 import type { TestQuestion } from '../../welcome/types';
-import type { FrenchQuestionsData } from '../../types/questionsData';
+import type { FrenchQuestionsData, FrenchCategory, FrenchQuestion } from '../../types/questionsData';
 import type { RawQuestion, RawCategory, RawQuestionsData } from '../types';
 import { createLogger } from './logger';
 import { extractNumericId } from './idUtils';
 import { ensureString } from './stringUtils';
 
 const logger = createLogger('QuestionUtils');
+
+// ==================== TYPE GUARDS ====================
+
+const isRawCategory = (category: unknown): category is RawCategory => {
+    if (!category || typeof category !== 'object') return false;
+    const cat = category as Record<string, unknown>;
+    return (
+        (cat.id === undefined || typeof cat.id === 'string') &&
+        (cat.title === undefined || typeof cat.title === 'string') &&
+        (cat.questions === undefined || Array.isArray(cat.questions))
+    );
+};
+
+const isFrenchCategory = (category: unknown): category is FrenchCategory => {
+    if (!category || typeof category !== 'object') return false;
+    const cat = category as Record<string, unknown>;
+    return (
+        typeof cat.id === 'string' &&
+        typeof cat.title === 'string' &&
+        Array.isArray(cat.questions)
+    );
+};
+
+const isRawQuestion = (question: unknown): question is RawQuestion => {
+    if (!question || typeof question !== 'object') return false;
+    const q = question as Record<string, unknown>;
+    return (
+        (q.id === undefined || typeof q.id === 'number' || typeof q.id === 'string') &&
+        (q.question === undefined || typeof q.question === 'string' || (typeof q.question === 'object' && q.question !== null)) &&
+        (q.explanation === undefined || typeof q.explanation === 'string' || (typeof q.explanation === 'object' && q.explanation !== null))
+    );
+};
+
+const isQuestion = (question: unknown): question is Question => {
+    if (!question || typeof question !== 'object') return false;
+    const q = question as Record<string, unknown>;
+    return (
+        (typeof q.id === 'number' || typeof q.id === 'string') &&
+        typeof q.question === 'string'
+    );
+};
+
+type ProcessableCategory = RawCategory | FrenchCategory;
+
+const isProcessableCategory = (category: unknown): category is ProcessableCategory => {
+    return isRawCategory(category) || isFrenchCategory(category);
+};
+
+type ProcessableQuestion = RawQuestion | Question | FrenchQuestion;
+
+const isProcessableQuestion = (question: unknown): question is ProcessableQuestion => {
+    return isRawQuestion(question) || isQuestion(question);
+};
 
 /**
  * Sorts questions by their numeric ID in ascending order.
@@ -116,16 +169,50 @@ export const processAllQuestions = (
     }
 
     // Process main categories
-    questionsData.categories.forEach((category: RawCategory | { id: string; title: string; questions: readonly Question[] }, categoryIndex: number) => {
-        if (!category?.questions) return;
+    questionsData.categories.forEach((category: unknown, categoryIndex: number) => {
+        if (!isProcessableCategory(category)) {
+            logger.warn(`Invalid category at index ${categoryIndex}`);
+            return;
+        }
+
+        const categoryQuestions = category.questions;
+        if (!categoryQuestions || categoryQuestions.length === 0) {
+            return;
+        }
 
         const idOffset = categoryIndex * 1000;
         const categoryId = category.id || 'unknown';
-        const categoryTitle = ('title' in category && category.title) ? category.title : categoryId;
+        const categoryTitle = isFrenchCategory(category) 
+            ? category.title 
+            : (category.title || categoryId);
 
-        category.questions.forEach((question: RawQuestion | Question) => {
-            const baseNumber = getBaseQuestionNumber(question as RawQuestion);
-            const questionId = 'id' in question ? question.id : baseNumber;
+        categoryQuestions.forEach((question: unknown) => {
+            // Convert to RawQuestion format for processing
+            let rawQuestion: RawQuestion | null = null;
+            
+            if (isRawQuestion(question)) {
+                rawQuestion = question;
+            } else if (isQuestion(question)) {
+                // Convert Question/FrenchQuestion to RawQuestion format
+                const q = question as Question | FrenchQuestion;
+                rawQuestion = {
+                    id: q.id,
+                    question: q.question,
+                    explanation: 'explanation' in q ? q.explanation : undefined,
+                    image: 'image' in q ? q.image : undefined,
+                };
+            } else {
+                logger.warn(`Invalid question in category ${categoryId}`);
+                return;
+            }
+
+            if (!rawQuestion) {
+                logger.warn(`Failed to process question in category ${categoryId}`);
+                return;
+            }
+
+            const baseNumber = getBaseQuestionNumber(rawQuestion);
+            const questionId = rawQuestion.id ?? baseNumber;
             const dedupeKey = `${categoryId}:${questionId ?? baseNumber ?? 'invalid'}`;
 
             if (seenKeys.has(dedupeKey)) {
@@ -134,7 +221,7 @@ export const processAllQuestions = (
             }
             seenKeys.add(dedupeKey);
 
-            questions.push(processQuestionData(question as RawQuestion, categoryId, categoryTitle || categoryId, idOffset));
+            questions.push(processQuestionData(rawQuestion, categoryId, categoryTitle || categoryId, idOffset));
         });
     });
 
