@@ -2,6 +2,7 @@ import React, { createContext, useState, useContext, useEffect, useCallback, use
 import { preloadAllData, preloadImages } from '../utils';
 import { createLogger } from '../utils/logger';
 import { isFrenchCategory } from '../utils/typeGuards';
+import { getErrorMessage } from '../utils/errorUtils';
 import type {
     FrenchCategory,
     FrenchQuestionsData,
@@ -43,7 +44,7 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
                     logger.warn('Unexpected error during image preloading (non-critical):', error);
                 });
             }
-        } catch (error) {
+        } catch (error: unknown) {
             if (isMountedRef.current) {
                 throw error;
             }
@@ -86,9 +87,9 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
                 if (isMountedRef.current) {
                     setIsDataLoading(false);
                 }
-            } catch (error) {
+            } catch (error: unknown) {
                 if (isMountedRef.current) {
-                    setDataLoadingError(error instanceof Error ? error.message : 'Unknown error loading data');
+                    setDataLoadingError(getErrorMessage(error));
                     setIsDataLoading(false);
                 }
             }

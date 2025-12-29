@@ -54,8 +54,8 @@ export const useFirebaseImage = (imagePath: string | null | undefined): UseFireb
                     }
                     setIsLoading(false);
                 }
-            } catch (err) {
-                logger.error(`Error loading image: ${imagePath}`, err);
+            } catch (error: unknown) {
+                logger.error(`Error loading image: ${imagePath}`, error);
                 if (isMounted) {
                     setError(true);
                     setIsLoading(false);

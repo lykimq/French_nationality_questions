@@ -5,6 +5,7 @@ import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from '../config/dataConfig';
 import { validateDataStructure } from '../utils/dataValidation';
 import { createLogger } from '../utils/logger';
 import { LRUCache } from '../utils/lruCache';
+import { getErrorMessage } from '../utils/errorUtils';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 
 const logger = createLogger('DataService');
@@ -54,7 +55,7 @@ const getLocalJsonData = async (dataPath: string): Promise<FrenchQuestionsData |
             return localData;
         }
         return null;
-    } catch (error) {
+    } catch (error: unknown) {
         logger.error(`Failed to load local JSON data: ${dataPath}`, error);
         return null;
     }
@@ -108,7 +109,7 @@ export const loadJsonResource = async (
                 failedDataCache.delete(dataPath);
                 return remote;
             }
-        } catch (error) {
+        } catch (error: unknown) {
             lastError = error;
             if (attempt < retryCount) {
                 await delay(retryDelayMs);
@@ -125,6 +126,9 @@ export const loadJsonResource = async (
 
     failedDataCache.set(dataPath, now());
     logger.error(`Failed to load JSON data: ${dataPath}`, lastError);
+    if (lastError) {
+        logger.error(`Error details: ${getErrorMessage(lastError)}`);
+    }
     return cached?.value ?? null;
 };
 
@@ -223,7 +227,7 @@ export const loadImageResource = async (
                 failedImageCache.delete(imagePath);
                 return value;
             }
-        } catch (error) {
+        } catch (error: unknown) {
             lastError = error;
             if (attempt < retryCount) {
                 await delay(retryDelayMs);
@@ -233,6 +237,9 @@ export const loadImageResource = async (
 
     failedImageCache.set(imagePath, now());
     logger.error(`Failed to load image: ${imagePath}`, lastError);
+    if (lastError) {
+        logger.error(`Error details: ${getErrorMessage(lastError)}`);
+    }
     return cached?.value ?? null;
 };
 

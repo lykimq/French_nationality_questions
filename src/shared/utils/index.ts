@@ -8,4 +8,5 @@ export * from './idUtils';
 export * from './stringUtils';
 export * from './searchIndex';
 export * from './typeGuards';
+export * from './errorUtils';
 

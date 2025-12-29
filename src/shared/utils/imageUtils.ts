@@ -33,7 +33,7 @@ export const preloadImages = async (questionsData: FrenchQuestionsData | null | 
                     if (!imageSource) {
                         failedCount++;
                     }
-                } catch (error) {
+                } catch (error: unknown) {
                     failedCount++;
                     logger.error(`Error preloading image: ${path}`, error);
                 }
@@ -45,7 +45,7 @@ export const preloadImages = async (questionsData: FrenchQuestionsData | null | 
         if (failedCount > 0) {
             logger.warn(`Failed to load ${failedCount} images during preloading.`);
         }
-    } catch (error) {
+    } catch (error: unknown) {
         logger.error('Error during image preloading:', error);
     }
 };

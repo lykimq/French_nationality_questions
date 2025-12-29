@@ -1,5 +1,6 @@
 import { DATA_FILES } from '../config/dataConfig';
 import { createLogger } from './logger';
+import { getErrorMessage } from './errorUtils';
 import { loadJsonCollection } from '../services/dataService';
 
 const logger = createLogger('dataUtils');
@@ -12,9 +13,9 @@ export const preloadAllData = async () => {
     try {
         const subcategoryData = await loadSubcategoryData();
         return { subcategoryData };
-    } catch (error) {
+    } catch (error: unknown) {
         logger.error('Error during data preloading:', error);
-        throw error;
+        return { subcategoryData: {} };
     }
 };
 
