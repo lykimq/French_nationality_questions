@@ -2,53 +2,6 @@ import type { ImageSourcePropType } from 'react-native';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 
 /**
- * Data file configuration and mappings.
- */
-
-export const DATA_FILES = {
-    /**
-     * Livret du Citoyen data (1053 questions).
-     */
-    SUBCATEGORIES: {
-        DIRECTORY: 'knowledge/new_livret/',
-        FILES: [
-            'administration_locale.json',
-            'arts_culture_sports.json',
-            'ddhc.json',
-            'democratie_politique.json',
-            'droits_devoirs.json',
-            'france_europe_monde.json',
-            'geographie_sites.json',
-            'principes_valeurs.json',
-            'reperes_historiques.json',
-            'vie_personnelle_integration.json'
-        ] as const
-    },
-    FORMATION: {
-        DIRECTORY: 'knowledge/formation/',
-        FILES: [
-            'principes_et_valeurs.json',
-            'histoire_geographie_et_culture.json',
-            'droits_et_devoirs.json',
-            'system_et_politique.json',
-            'vivre_dans_la_societe_francaise.json'
-        ] as const
-    },
-    TEST_CIVIC: {
-        DIRECTORY: 'test_civic/',
-        FILES: [
-            'principes_et_valeurs.json',
-            'system_et_politique.json',
-            'droits_et_devoirs.json',
-            'histoire_geographie_et_culture.json',
-            'hist_geo_part1.json',
-            'hist_geo_part2.json',
-            'vivre_dans_la_societe_francaise.json'
-        ] as const
-    }
-};
-
-/**
  * Maps Firebase paths to local requires (static requires for React Native, offline fallback).
  */
 export const LOCAL_DATA_MAP: Record<string, FrenchQuestionsData | Record<string, unknown>> = {
@@ -62,13 +15,11 @@ export const LOCAL_DATA_MAP: Record<string, FrenchQuestionsData | Record<string,
     'knowledge/new_livret/principes_valeurs.json': require('../../data/knowledge/new_livret/principes_valeurs.json'),
     'knowledge/new_livret/reperes_historiques.json': require('../../data/knowledge/new_livret/reperes_historiques.json'),
     'knowledge/new_livret/vie_personnelle_integration.json': require('../../data/knowledge/new_livret/vie_personnelle_integration.json'),
-    // Formation data
     'knowledge/formation/principes_et_valeurs.json': require('../../data/knowledge/formation/principes_et_valeurs.json'),
     'knowledge/formation/histoire_geographie_et_culture.json': require('../../data/knowledge/formation/histoire_geographie_et_culture.json'),
     'knowledge/formation/droits_et_devoirs.json': require('../../data/knowledge/formation/droits_et_devoirs.json'),
     'knowledge/formation/system_et_politique.json': require('../../data/knowledge/formation/system_et_politique.json'),
     'knowledge/formation/vivre_dans_la_societe_francaise.json': require('../../data/knowledge/formation/vivre_dans_la_societe_francaise.json'),
-    // Test civic data
     'test_civic/principes_et_valeurs.json': require('../../data/test_civic/principes_et_valeurs.json'),
     'test_civic/system_et_politique.json': require('../../data/test_civic/system_et_politique.json'),
     'test_civic/droits_et_devoirs.json': require('../../data/test_civic/droits_et_devoirs.json'),
@@ -98,3 +49,4 @@ export const LOCAL_IMAGE_MAP: Record<string, ImageSourcePropType> = {
     'pics/territories.png': require('../../data/knowledge/pics/territories.png'),
     'pics/urgence_number.png': require('../../data/knowledge/pics/urgence_number.png'),
 };
+

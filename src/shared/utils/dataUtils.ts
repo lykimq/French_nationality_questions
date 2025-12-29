@@ -1,6 +1,5 @@
-import { DATA_FILES } from '../config/dataConfig';
+import { DATA_FILES } from '../config';
 import { createLogger } from './logger';
-import { getErrorMessage } from './errorUtils';
 import { loadJsonCollection } from '../services/dataService';
 
 const logger = createLogger('dataUtils');

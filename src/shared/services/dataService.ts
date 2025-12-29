@@ -1,7 +1,7 @@
 import { ref, getDownloadURL } from 'firebase/storage';
 import type { ImageSourcePropType } from 'react-native';
 import { storage } from '../../config/firebaseConfig';
-import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from '../config/dataConfig';
+import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from '../config';
 import { validateDataStructure } from '../utils/dataValidation';
 import { createLogger } from '../utils/logger';
 import { LRUCache } from '../utils/lruCache';

@@ -1,7 +1,7 @@
 import { createLogger } from '../../shared/utils/logger';
 import { extractNumericId, isValidId } from '../../shared/utils/idUtils';
 import { sanitizeString, sanitizeStringArray, isNonEmptyString } from '../../shared/utils/stringUtils';
-import { DATA_FILES } from '../../shared/config/dataConfig';
+import { DATA_FILES } from '../../shared/config';
 import { loadJsonCollection } from '../../shared/services/dataService';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 import type { CivicExamTopic, CivicExamSubTopic } from '../types';
