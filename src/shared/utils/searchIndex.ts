@@ -1,4 +1,4 @@
-import { normalizeForSearch } from './textNormalization';
+import { normalizeForSearch } from './stringUtils';
 
 // Split text into tokens with a minimum length
 export const tokenize = (text: string, minLength: number = 2): string[] => {

@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { FormattedText } from '../../shared/components';
 import { formatExplanation } from '../../shared/utils/questionUtils';
-import { normalizeForComparison } from '../../shared/utils/textNormalization';
+import { normalizeForComparison } from '../../shared/utils/stringUtils';
 import { sharedStyles } from '../../shared/utils';
 import { useFirebaseImage } from '../../shared/hooks/useFirebaseImage';
 import type { FormationQuestion } from '../types';

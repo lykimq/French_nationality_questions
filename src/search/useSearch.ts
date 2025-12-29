@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useData } from '../shared/contexts/DataContext';
 import { buildQuestionTokens, tokenize, scoreTokens, textContainsQuery } from '../shared/utils/searchIndex';
 import { extractNumericId } from '../shared/utils/idUtils';
-import { normalizeForSearch } from '../shared/utils/textNormalization';
+import { normalizeForSearch } from '../shared/utils/stringUtils';
 
 // Define the search result question type
 export interface SearchResultQuestion {

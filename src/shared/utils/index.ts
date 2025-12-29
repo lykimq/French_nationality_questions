@@ -7,6 +7,5 @@ export * from './alertUtils';
 export * from './logger';
 export * from './idUtils';
 export * from './stringUtils';
-export * from './textNormalization';
 export * from './searchIndex';
 

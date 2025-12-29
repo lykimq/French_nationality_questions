@@ -1,20 +1,11 @@
 /**
- * String sanitization and type conversion utilities.
- * Provides safe, consistent ways to handle string data from various sources.
+ * String utilities for type conversion, sanitization, validation, and normalization.
  */
 
+// ==================== TYPE CONVERSION ====================
+
 /**
- * Safely converts any value to a string.
- * Handles null, undefined, objects, and primitives.
- * 
- * @param value - The value to convert
- * @param defaultValue - The default value if conversion fails
- * @returns A string representation of the value
- * 
- * @example
- * ensureString("hello") // "hello"
- * ensureString(null, "default") // "default"
- * ensureString({toString: () => "obj"}) // "obj"
+ * Converts any value to a string. Handles null, undefined, objects, and primitives.
  */
 export const ensureString = (value: unknown, defaultValue: string = ''): string => {
     if (typeof value === 'string') {
@@ -30,70 +21,7 @@ export const ensureString = (value: unknown, defaultValue: string = ''): string 
 };
 
 /**
- * Sanitizes a string by trimming whitespace.
- * Returns empty string for non-string inputs.
- * 
- * @param value - The value to sanitize
- * @returns Trimmed string or empty string
- * 
- * @example
- * sanitizeString("  hello  ") // "hello"
- * sanitizeString(null) // ""
- * sanitizeString(123) // ""
- */
-export const sanitizeString = (value: unknown): string => {
-    if (typeof value !== 'string') {
-        return '';
-    }
-    return value.trim();
-};
-
-/**
- * Sanitizes an array of strings.
- * Filters out non-strings and empty strings, trims all valid strings.
- * 
- * @param arr - The array to sanitize
- * @returns Array of sanitized strings
- * 
- * @example
- * sanitizeStringArray(["hello", "  ", null, "world"]) // ["hello", "world"]
- * sanitizeStringArray(null) // []
- */
-export const sanitizeStringArray = (arr: unknown): string[] => {
-    if (!Array.isArray(arr)) {
-        return [];
-    }
-    return arr
-        .filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
-        .map(item => item.trim());
-};
-
-/**
- * Checks if a value is a non-empty string.
- * 
- * @param value - The value to check
- * @returns True if value is a non-empty string
- * 
- * @example
- * isNonEmptyString("hello") // true
- * isNonEmptyString("") // false
- * isNonEmptyString(null) // false
- */
-export const isNonEmptyString = (value: unknown): value is string => {
-    return typeof value === 'string' && value.trim().length > 0;
-};
-
-/**
- * Safely extracts a string property from an object.
- * 
- * @param obj - The object to extract from
- * @param key - The property key
- * @param defaultValue - The default value if extraction fails
- * @returns The extracted string or default value
- * 
- * @example
- * getStringProperty({name: "John"}, "name") // "John"
- * getStringProperty({}, "name", "Unknown") // "Unknown"
+ * Extracts a string property from an object.
  */
 export const getStringProperty = (
     obj: unknown,
@@ -107,18 +35,84 @@ export const getStringProperty = (
     return ensureString(value, defaultValue);
 };
 
+// ==================== SANITIZATION ====================
+
+/**
+ * Trims whitespace from a string. Returns empty string for non-string inputs.
+ */
+export const sanitizeString = (value: unknown): string => {
+    if (typeof value !== 'string') {
+        return '';
+    }
+    return value.trim();
+};
+
+/**
+ * Sanitizes an array of strings. Filters out non-strings and empty strings, trims valid strings.
+ */
+export const sanitizeStringArray = (arr: unknown): string[] => {
+    if (!Array.isArray(arr)) {
+        return [];
+    }
+    return arr
+        .filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
+        .map(item => item.trim());
+};
+
+// ==================== VALIDATION ====================
+
+/**
+ * Checks if a value is a non-empty string.
+ */
+export const isNonEmptyString = (value: unknown): value is string => {
+    return typeof value === 'string' && value.trim().length > 0;
+};
+
 /**
  * Validates that a string meets minimum length requirements.
- * 
- * @param value - The string to validate
- * @param minLength - Minimum required length
- * @returns True if string meets length requirement
- * 
- * @example
- * isValidLength("hello", 3) // true
- * isValidLength("hi", 3) // false
  */
 export const isValidLength = (value: string, minLength: number = 1): boolean => {
     return typeof value === 'string' && value.trim().length >= minLength;
 };
 
+// ==================== TEXT NORMALIZATION ====================
+
+/**
+ * Normalizes text for search: lowercase, removes accents, trims whitespace.
+ * Preserves spaces and punctuation.
+ */
+export const normalizeForSearch = (text: string): string => {
+    if (!text) return '';
+    return text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+};
+
+/**
+ * Normalizes text for strict comparison: lowercase, removes all non-alphanumeric characters.
+ * Used for deduplication and exact matching.
+ */
+export const normalizeForComparison = (text: string): string => 
+    (text || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+// ==================== COMPARISON HELPERS ====================
+
+/**
+ * Checks if two texts are similar after normalization.
+ */
+export const areSimilarTexts = (text1: string, text2: string): boolean => {
+    const norm1 = normalizeForComparison(text1);
+    const norm2 = normalizeForComparison(text2);
+    return norm1.length > 0 && norm1 === norm2;
+};
+
+/**
+ * Checks if one text contains another after normalization.
+ */
+export const containsNormalized = (haystack: string, needle: string): boolean => {
+    const normHaystack = normalizeForComparison(haystack);
+    const normNeedle = normalizeForComparison(needle);
+    return normNeedle.length > 0 && normHaystack.includes(normNeedle);
+};
