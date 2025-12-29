@@ -62,18 +62,16 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        let isActive = true;
-
         const loadInitialData = async () => {
             try {
-                if (!isActive) return;
+                if (!isMountedRef.current) return;
 
                 setIsDataLoading(true);
                 setDataLoadingError(null);
 
                 const { subcategoryData } = await preloadAllData();
 
-                if (!isActive) return;
+                if (!isMountedRef.current) return;
 
                 if (subcategoryData && Object.keys(subcategoryData).length > 0) {
                     const validatedData: Record<string, FrenchCategory> = {};
@@ -86,17 +84,21 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
                     if (Object.keys(validatedData).length > 0) {
                         await processLivretData(validatedData);
                     } else {
-                        setDataLoadingError('Failed to load question data. Invalid data structure.');
+                        if (isMountedRef.current) {
+                            setDataLoadingError('Failed to load question data. Invalid data structure.');
+                        }
                     }
                 } else {
-                    setDataLoadingError('Failed to load question data. Please check your connection or Firebase configuration.');
+                    if (isMountedRef.current) {
+                        setDataLoadingError('Failed to load question data. Please check your connection or Firebase configuration.');
+                    }
                 }
 
-                if (isActive) {
+                if (isMountedRef.current) {
                     setIsDataLoading(false);
                 }
             } catch (error) {
-                if (isActive) {
+                if (isMountedRef.current) {
                     setDataLoadingError(error instanceof Error ? error.message : 'Unknown error loading data');
                     setIsDataLoading(false);
                 }
@@ -104,10 +106,6 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
         };
 
         loadInitialData();
-
-        return () => {
-            isActive = false;
-        };
     }, [processLivretData]);
 
     useEffect(() => {
