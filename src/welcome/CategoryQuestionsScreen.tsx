@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { View, TouchableOpacity, StatusBar, Switch, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -7,6 +7,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, Question } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
+import { sortQuestionsById } from '../shared/utils/questionUtils';
 import QuestionSlideView from './QuestionSlideView';
 import { FormattedText } from '../shared/components';
 
@@ -22,6 +23,11 @@ const CategoryQuestionsScreen = () => {
 
     const category = questionsData.categories.find(c => c.id === categoryId);
 
+    const sortedQuestions = useMemo(() => {
+        if (!category?.questions) return [];
+        return sortQuestionsById(category.questions);
+    }, [category?.questions]);
+
     if (!category) {
         return (
             <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -31,7 +37,7 @@ const CategoryQuestionsScreen = () => {
     }
 
     const displayTitle = category.title;
-    const questionsCount = `${category.questions.length} questions`;
+    const questionsCount = `${sortedQuestions.length} questions`;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -52,7 +58,7 @@ const CategoryQuestionsScreen = () => {
                 </View>
             </SafeAreaView>
 
-            <QuestionSlideView questions={category.questions as Question[]} />
+            <QuestionSlideView questions={sortedQuestions as Question[]} />
         </View>
     );
 };

@@ -16,7 +16,10 @@ const HomeScreen = () => {
     const { theme, themeMode } = useTheme();
     const { questionsData } = useData();
 
-    const categories = questionsData?.categories || [];
+    const categories = React.useMemo(() => {
+        const cats = questionsData?.categories || [];
+        return [...cats].sort((a, b) => a.id.localeCompare(b.id));
+    }, [questionsData?.categories]);
 
     const navigateToCategory = (categoryId: string) => {
         navigation.navigate('CategoryQuestions', { categoryId });

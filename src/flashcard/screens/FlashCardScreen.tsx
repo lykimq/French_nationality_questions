@@ -19,6 +19,7 @@ import { FormattedText, QuestionListModal, type QuestionListItem } from '../../s
 import { FlashCard } from '../components';
 import { useFlashCard } from '../hooks';
 import { loadFlashCardData, getCategoryById } from '../utils';
+import { sortQuestionsById } from '../../shared/utils/questionUtils';
 import type { FormationCategory } from '../types';
 import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
 
@@ -55,7 +56,7 @@ const FlashCardScreen: React.FC = () => {
     }));
 
     const categoryIdRef = useRef<string>(categoryId);
-    const loadingPromiseRef = useRef<Promise<void> | null>(null);
+    const loadingPromiseRef = useRef<Promise<{ [key: string]: FormationCategory } | null> | null>(null);
 
     const loadCategoryData = useCallback(async () => {
         if (globalFlashCardDataCache) {
@@ -128,7 +129,15 @@ const FlashCardScreen: React.FC = () => {
         if (!dataState.data || !categoryId) {
             return null;
         }
-        return getCategoryById(dataState.data, categoryId);
+        const cat = getCategoryById(dataState.data, categoryId);
+        if (!cat) {
+            return null;
+        }
+        const sortedQuestions = sortQuestionsById(cat.questions);
+        return {
+            ...cat,
+            questions: sortedQuestions,
+        };
     }, [dataState.data, categoryId]);
 
     const isLoading = dataState.loading;

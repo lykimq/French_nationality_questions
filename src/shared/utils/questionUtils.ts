@@ -12,6 +12,24 @@ export const getQuestionText = (question: string | null | undefined): string => 
 
 export const getExplanationText = (explanation: string | null | undefined): string => explanation ?? '';
 
+/**
+ * Sorts questions by their numeric ID in ascending order.
+ * Handles both string IDs (e.g., "formation_1", "livret_1") and numeric IDs.
+ * 
+ * @param questions - Array of questions to sort
+ * @returns New sorted array (does not mutate original)
+ * 
+ * @example
+ * const sorted = sortQuestionsById(questions);
+ */
+export const sortQuestionsById = <T extends { id: number | string }>(questions: readonly T[]): T[] => {
+    return [...questions].sort((a, b) => {
+        const aNum = typeof a.id === 'number' ? a.id : (extractNumericId(a.id) ?? 0);
+        const bNum = typeof b.id === 'number' ? b.id : (extractNumericId(b.id) ?? 0);
+        return aNum - bNum;
+    });
+};
+
 export const formatExplanation = (text: string): string => {
     if (!text) return '';
 

@@ -5,7 +5,6 @@ import {
     ScrollView,
     ActivityIndicator,
     StatusBar,
-    TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -13,7 +12,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcons } from '../../shared/contexts/IconContext';
 import { FormattedText } from '../../shared/components';
 import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
@@ -33,7 +31,6 @@ const CATEGORY_ICON_KEYS: { [key: string]: string } = {
 const CategorySelectionScreen: React.FC = () => {
     const navigation = useNavigation<CategorySelectionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { getJsonIconName, getJsonIconColor } = useIcons();
     const [categories, setCategories] = useState<FormationCategory[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -49,7 +46,8 @@ const CategorySelectionScreen: React.FC = () => {
             const data = await loadFlashCardData();
             if (data) {
                 const allCategories = getAllCategories(data);
-                setCategories(allCategories);
+                const sortedCategories = [...allCategories].sort((a, b) => a.id.localeCompare(b.id));
+                setCategories(sortedCategories);
             } else {
                 setError('Impossible de charger les données');
             }

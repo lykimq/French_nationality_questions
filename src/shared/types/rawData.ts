@@ -45,13 +45,3 @@ export interface RawDataStructure {
     readonly subcategories?: readonly RawCategory[];
     readonly questions?: readonly RawQuestion[];
 }
-
-
-
-
-
-
-
-
-
-
