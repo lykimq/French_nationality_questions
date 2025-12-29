@@ -3,6 +3,7 @@ import { storage } from '../../config/firebaseConfig';
 import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from '../config/dataConfig';
 import { validateDataStructure } from '../utils/dataValidation';
 import { createLogger } from '../utils/logger';
+import { LRUCache } from '../utils/lruCache';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 
 const logger = createLogger('DataService');
@@ -12,14 +13,15 @@ type CacheEntry<T> = {
     fetchedAt: number;
 };
 
-type ResourceCache<T> = Map<string, CacheEntry<T>>;
-
 const DEFAULT_TTL_MS = 5 * 60 * 1000; // 5 minutes
 const DEFAULT_RETRY_COUNT = 2;
 const DEFAULT_RETRY_DELAY_MS = 300;
 
-const dataCache: ResourceCache<FrenchQuestionsData | Record<string, unknown>> = new Map();
-const imageCache: ResourceCache<{ uri: string }> = new Map();
+const DATA_CACHE_MAX_SIZE = 50;
+const IMAGE_CACHE_MAX_SIZE = 100;
+
+const dataCache = new LRUCache<FrenchQuestionsData | Record<string, unknown>>(DATA_CACHE_MAX_SIZE);
+const imageCache = new LRUCache<{ uri: string }>(IMAGE_CACHE_MAX_SIZE);
 const failedDataCache: Map<string, number> = new Map();
 const failedImageCache: Map<string, number> = new Map();
 
@@ -244,5 +246,53 @@ export const getCachedImage = (imagePath: string): { uri: string } | null => {
     if (localImage) return localImage as any;
     const filename = imagePath.replace(/^.*[\\/]/, '');
     return imageCache.get(filename)?.value ?? null;
+};
+
+export const getCacheStats = () => {
+    return {
+        dataCache: {
+            size: dataCache.size,
+            maxSize: dataCache.maxSizeLimit,
+            usagePercent: Math.round((dataCache.size / dataCache.maxSizeLimit) * 100)
+        },
+        imageCache: {
+            size: imageCache.size,
+            maxSize: imageCache.maxSizeLimit,
+            usagePercent: Math.round((imageCache.size / imageCache.maxSizeLimit) * 100)
+        }
+    };
+};
+
+const cleanupStaleEntries = () => {
+    const dataRemoved = dataCache.cleanupStaleEntries(DEFAULT_TTL_MS, now);
+    const imageRemoved = imageCache.cleanupStaleEntries(DEFAULT_TTL_MS, now);
+    
+    if (dataRemoved > 0 || imageRemoved > 0) {
+        logger.debug(`Cleaned up stale cache entries: ${dataRemoved} data, ${imageRemoved} images`);
+    }
+    
+    return { dataRemoved, imageRemoved };
+};
+
+let cleanupIntervalId: NodeJS.Timeout | null = null;
+
+export const startCacheCleanup = (intervalMs: number = 10 * 60 * 1000) => {
+    if (cleanupIntervalId) {
+        clearInterval(cleanupIntervalId);
+    }
+    
+    cleanupIntervalId = setInterval(() => {
+        cleanupStaleEntries();
+    }, intervalMs);
+    
+    logger.debug(`Started periodic cache cleanup with interval: ${intervalMs}ms`);
+};
+
+export const stopCacheCleanup = () => {
+    if (cleanupIntervalId) {
+        clearInterval(cleanupIntervalId);
+        cleanupIntervalId = null;
+        logger.debug('Stopped periodic cache cleanup');
+    }
 };
 
