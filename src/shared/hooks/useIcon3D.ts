@@ -6,6 +6,17 @@ export interface Icon3DConfig {
     variant: Icon3DVariant;
 }
 
+/**
+ * Hook providing convenience helpers for Icon3D components.
+ * 
+ * This hook wraps useIcons() to provide combined helpers that return
+ * complete icon configurations (name + variant) in a single call.
+ * 
+ * For direct access to individual icon functions (getIconName, getIconVariant, etc.),
+ * use useIcons() directly from IconContext.
+ * 
+ * @returns Object containing getIcon and getJsonIcon helpers
+ */
 export const useIcon3D = () => {
     const { getIconName, getIconVariant, getJsonIconName, getJsonIconColor, getJsonIconVariant } = useIcons();
 
@@ -27,11 +38,6 @@ export const useIcon3D = () => {
     return {
         getIcon,
         getJsonIcon,
-        getIconName,
-        getIconVariant,
-        getJsonIconName,
-        getJsonIconColor,
-        getJsonIconVariant,
     };
 };
 
