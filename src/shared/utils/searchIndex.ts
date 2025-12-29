@@ -1,6 +1,9 @@
 import { normalizeForSearch } from './stringUtils';
 
-// Split text into tokens with a minimum length
+/**
+ * Splits text into tokens (words) by whitespace/delimiters, filtering short tokens.
+ * Performance: O(n) - efficient for typical search text lengths (< 1000 chars).
+ */
 export const tokenize = (text: string, minLength: number = 2): string[] => {
     if (!text) return [];
     const normalized = normalizeForSearch(text);
@@ -59,7 +62,11 @@ export const tokenMatches = (queryToken: string, targetToken: string): { matched
     return { matched: false, score: 0 };
 };
 
-// Enhanced scoring helper: counts matching tokens with relevance scoring
+/**
+ * Scores token matches between query and target with relevance weighting.
+ * Complexity: O(n*m) where n=query tokens, m=target tokens.
+ * Suitable for typical search queries (< 100 tokens total). For larger datasets, consider optimization.
+ */
 export const scoreTokens = (
     queryTokens: string[],
     targetTokens: string[]

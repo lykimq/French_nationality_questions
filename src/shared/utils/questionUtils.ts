@@ -253,7 +253,9 @@ export const safeParseDate = (dateValue: unknown): Date | undefined => {
 
 // ==================== ARRAY UTILITIES ====================
 
-// Apply memory limits to arrays to prevent unbounded growth
+/**
+ * Limits array to last N items to prevent unbounded growth.
+ */
 export const applyMemoryLimits = <T>(array: T[], limit: number): T[] => {
     if (limit <= 0) return [];
     return array.slice(-limit);

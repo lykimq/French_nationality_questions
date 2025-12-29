@@ -1,11 +1,9 @@
 /**
- * Shared types for raw/unvalidated data structures from JSON files.
- * These types represent the shape of data before validation and processing.
+ * Raw/unvalidated data types from JSON files.
  */
 
 /**
- * Raw question data as it appears in JSON files.
- * Fields are optional because JSON may have missing or malformed data.
+ * Raw question data from JSON (optional fields).
  */
 export interface RawQuestion {
     readonly id?: number | string;
@@ -15,8 +13,7 @@ export interface RawQuestion {
 }
 
 /**
- * Raw category data as it appears in JSON files.
- * Used for both main categories and subcategories.
+ * Raw category data from JSON.
  */
 export interface RawCategory {
     readonly id?: string;
@@ -27,17 +24,14 @@ export interface RawCategory {
 }
 
 /**
- * Raw questions data structure containing categories.
- * This is the top-level structure for question data files.
+ * Top-level raw questions data structure.
  */
 export interface RawQuestionsData {
     readonly categories?: readonly RawCategory[];
 }
 
 /**
- * Raw data structure that can represent either:
- * - A category with subcategories (metadata structure)
- * - A collection of questions (question list structure)
+ * Raw data structure: category with subcategories or question list.
  */
 export interface RawDataStructure {
     readonly id?: string;

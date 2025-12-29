@@ -2,14 +2,12 @@ import type { ImageSourcePropType } from 'react-native';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 
 /**
- * Configuration for data files and their mappings.
- * Centrally manages the file structure used throughout the app.
+ * Data file configuration and mappings.
  */
 
 export const DATA_FILES = {
     /**
-     * Unified data source from Livret du Citoyen.
-     * Total: 1053 questions with explanations across all categories.
+     * Livret du Citoyen data (1053 questions).
      */
     SUBCATEGORIES: {
         DIRECTORY: 'knowledge/new_livret/',
@@ -51,15 +49,7 @@ export const DATA_FILES = {
 };
 
 /**
- * Maps Firebase data paths to local require statements.
- * 
- * This mapping is necessary because:
- * 1. React Native's 'require' must be static (cannot use dynamic paths)
- * 2. Provides offline fallback when Firebase is unavailable
- * 3. Enables faster initial load from bundled assets
- * 
- * Each entry maps a Firebase Storage path to its corresponding local asset.
- * The paths must match exactly with the Firebase Storage structure.
+ * Maps Firebase paths to local requires (static requires for React Native, offline fallback).
  */
 export const LOCAL_DATA_MAP: Record<string, FrenchQuestionsData | Record<string, unknown>> = {
     'knowledge/new_livret/administration_locale.json': require('../../data/knowledge/new_livret/administration_locale.json'),
@@ -89,12 +79,7 @@ export const LOCAL_DATA_MAP: Record<string, FrenchQuestionsData | Record<string,
 };
 
 /**
- * Maps image paths to local require statements.
- * 
- * Similar to LOCAL_DATA_MAP, this provides:
- * 1. Static require statements for React Native bundler
- * 2. Offline image access
- * 3. Immediate image availability without network requests
+ * Maps image paths to local requires (static requires, offline access).
  */
 export const LOCAL_IMAGE_MAP: Record<string, ImageSourcePropType> = {
     'pics/card.png': require('../../data/knowledge/pics/card.png'),

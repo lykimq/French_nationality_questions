@@ -1,11 +1,11 @@
 /**
- * String utilities for type conversion, sanitization, validation, and normalization.
+ * String utilities for conversion, sanitization, and normalization.
  */
 
 // ==================== TYPE CONVERSION ====================
 
 /**
- * Converts any value to a string. Handles null, undefined, objects, and primitives.
+ * Converts value to string, handles null/undefined/objects.
  */
 export const ensureString = (value: unknown, defaultValue: string = ''): string => {
     if (typeof value === 'string') {
@@ -21,7 +21,7 @@ export const ensureString = (value: unknown, defaultValue: string = ''): string 
 };
 
 /**
- * Extracts a string property from an object.
+ * Extracts string property from object.
  */
 export const getStringProperty = (
     obj: unknown,
@@ -38,7 +38,7 @@ export const getStringProperty = (
 // ==================== SANITIZATION ====================
 
 /**
- * Trims whitespace from a string. Returns empty string for non-string inputs.
+ * Trims string, returns empty for non-strings.
  */
 export const sanitizeString = (value: unknown): string => {
     if (typeof value !== 'string') {
@@ -48,7 +48,7 @@ export const sanitizeString = (value: unknown): string => {
 };
 
 /**
- * Sanitizes an array of strings. Filters out non-strings and empty strings, trims valid strings.
+ * Sanitizes string array: filters non-strings/empty, trims valid strings.
  */
 export const sanitizeStringArray = (arr: unknown): string[] => {
     if (!Array.isArray(arr)) {
@@ -62,14 +62,14 @@ export const sanitizeStringArray = (arr: unknown): string[] => {
 // ==================== VALIDATION ====================
 
 /**
- * Checks if a value is a non-empty string.
+ * Checks if value is non-empty string.
  */
 export const isNonEmptyString = (value: unknown): value is string => {
     return typeof value === 'string' && value.trim().length > 0;
 };
 
 /**
- * Validates that a string meets minimum length requirements.
+ * Validates string meets minimum length.
  */
 export const isValidLength = (value: string, minLength: number = 1): boolean => {
     return typeof value === 'string' && value.trim().length >= minLength;
@@ -78,8 +78,7 @@ export const isValidLength = (value: string, minLength: number = 1): boolean => 
 // ==================== TEXT NORMALIZATION ====================
 
 /**
- * Normalizes text for search: lowercase, removes accents, trims whitespace.
- * Preserves spaces and punctuation.
+ * Normalizes text for search: lowercase, removes accents, trims.
  */
 export const normalizeForSearch = (text: string): string => {
     if (!text) return '';
@@ -91,8 +90,7 @@ export const normalizeForSearch = (text: string): string => {
 };
 
 /**
- * Normalizes text for strict comparison: lowercase, removes all non-alphanumeric characters.
- * Used for deduplication and exact matching.
+ * Normalizes text for comparison: lowercase, removes non-alphanumeric.
  */
 export const normalizeForComparison = (text: string): string => 
     (text || '').toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -100,7 +98,7 @@ export const normalizeForComparison = (text: string): string =>
 // ==================== COMPARISON HELPERS ====================
 
 /**
- * Checks if two texts are similar after normalization.
+ * Checks if texts are similar after normalization.
  */
 export const areSimilarTexts = (text1: string, text2: string): boolean => {
     const norm1 = normalizeForComparison(text1);
@@ -109,7 +107,7 @@ export const areSimilarTexts = (text1: string, text2: string): boolean => {
 };
 
 /**
- * Checks if one text contains another after normalization.
+ * Checks if text contains another after normalization.
  */
 export const containsNormalized = (haystack: string, needle: string): boolean => {
     const normHaystack = normalizeForComparison(haystack);

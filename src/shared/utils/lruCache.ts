@@ -1,11 +1,5 @@
 /**
- * LRU (Least Recently Used) Cache implementation with TTL support.
- * 
- * Features:
- * - Maximum size limit with automatic eviction of least recently used entries
- * - TTL (Time To Live) support via CacheEntry structure
- * - O(1) get and set operations
- * - Maintains insertion order for LRU tracking
+ * LRU cache with TTL support and automatic eviction.
  */
 
 type CacheEntry<T> = {

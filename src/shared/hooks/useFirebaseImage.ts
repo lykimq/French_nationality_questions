@@ -12,7 +12,7 @@ interface UseFirebaseImageResult {
 }
 
 /**
- * Hook to handle Firebase image loading with caching support
+ * Hook for Firebase image loading with caching.
  */
 export const useFirebaseImage = (imagePath: string | null | undefined): UseFirebaseImageResult => {
     const [imageSource, setImageSource] = useState<ImageSourcePropType | null>(null);
