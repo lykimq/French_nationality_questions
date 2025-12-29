@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext, useEffect, useCallback, useRef } from 'react';
 import { preloadAllData, preloadImages } from '../utils';
 import { createLogger } from '../utils/logger';
+import { isFrenchCategory } from '../utils/typeGuards';
 import type {
     FrenchCategory,
     FrenchQuestionsData,
@@ -24,18 +25,6 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     const [dataLoadingError, setDataLoadingError] = useState<string | null>(null);
 
     const isMountedRef = useRef(true);
-
-    const isFrenchCategory = (obj: unknown): obj is FrenchCategory => {
-        if (!obj || typeof obj !== 'object') return false;
-        const category = obj as Record<string, unknown>;
-        return (
-            typeof category.id === 'string' &&
-            typeof category.title === 'string' &&
-            typeof category.icon === 'string' &&
-            typeof category.description === 'string' &&
-            Array.isArray(category.questions)
-        );
-    };
 
     const processLivretData = useCallback(async (subcategoryData: Record<string, FrenchCategory>) => {
         try {

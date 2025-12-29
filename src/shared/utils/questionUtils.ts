@@ -1,65 +1,13 @@
 import type { Question } from '../../welcome/types';
 import type { TestQuestion } from '../../welcome/types';
-import type { FrenchQuestionsData, FrenchCategory, FrenchQuestion } from '../../types/questionsData';
-import type { RawQuestion, RawCategory, RawQuestionsData } from '../types';
+import type { FrenchQuestionsData, FrenchQuestion } from '../../types/questionsData';
+import type { RawQuestion, RawQuestionsData } from '../types';
 import { createLogger } from './logger';
 import { extractNumericId } from './idUtils';
 import { ensureString } from './stringUtils';
+import { isProcessableCategory, isProcessableQuestion, isRawQuestion, isQuestion, isFrenchCategory } from './typeGuards';
 
 const logger = createLogger('QuestionUtils');
-
-// ==================== TYPE GUARDS ====================
-
-const isRawCategory = (category: unknown): category is RawCategory => {
-    if (!category || typeof category !== 'object') return false;
-    const cat = category as Record<string, unknown>;
-    return (
-        (cat.id === undefined || typeof cat.id === 'string') &&
-        (cat.title === undefined || typeof cat.title === 'string') &&
-        (cat.questions === undefined || Array.isArray(cat.questions))
-    );
-};
-
-const isFrenchCategory = (category: unknown): category is FrenchCategory => {
-    if (!category || typeof category !== 'object') return false;
-    const cat = category as Record<string, unknown>;
-    return (
-        typeof cat.id === 'string' &&
-        typeof cat.title === 'string' &&
-        Array.isArray(cat.questions)
-    );
-};
-
-const isRawQuestion = (question: unknown): question is RawQuestion => {
-    if (!question || typeof question !== 'object') return false;
-    const q = question as Record<string, unknown>;
-    return (
-        (q.id === undefined || typeof q.id === 'number' || typeof q.id === 'string') &&
-        (q.question === undefined || typeof q.question === 'string' || (typeof q.question === 'object' && q.question !== null)) &&
-        (q.explanation === undefined || typeof q.explanation === 'string' || (typeof q.explanation === 'object' && q.explanation !== null))
-    );
-};
-
-const isQuestion = (question: unknown): question is Question => {
-    if (!question || typeof question !== 'object') return false;
-    const q = question as Record<string, unknown>;
-    return (
-        (typeof q.id === 'number' || typeof q.id === 'string') &&
-        typeof q.question === 'string'
-    );
-};
-
-type ProcessableCategory = RawCategory | FrenchCategory;
-
-const isProcessableCategory = (category: unknown): category is ProcessableCategory => {
-    return isRawCategory(category) || isFrenchCategory(category);
-};
-
-type ProcessableQuestion = RawQuestion | Question | FrenchQuestion;
-
-const isProcessableQuestion = (question: unknown): question is ProcessableQuestion => {
-    return isRawQuestion(question) || isQuestion(question);
-};
 
 /**
  * Sorts questions by their numeric ID in ascending order.
