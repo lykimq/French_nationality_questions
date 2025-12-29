@@ -97,15 +97,16 @@ export const formatExplanation = (text: string): string => {
         return '. \n\n';
     });
     
-    // Add newlines after exclamation and question marks
-    formatted = formatted
-        .replace(/\! /g, '! \n\n')
-        .replace(/\? /g, '? \n\n')
-        .replace(/\[(.*?)\]/g, '\n→ $1 ←\n')
-        .replace(/\n\n+/g, '\n\n');
+    // Add newlines after exclamation and question marks (combined for efficiency)
+    formatted = formatted.replace(/([!?]) /g, '$1 \n\n');
     
-    // Clean up: remove any newlines that might have been added right after numbered items
-    formatted = formatted.replace(/(\d+\.\s)\n\n+/g, '$1');
+    // Format bracketed content
+    formatted = formatted.replace(/\[(.*?)\]/g, '\n→ $1 ←\n');
+    
+    // Clean up multiple newlines and numbered list formatting in one pass
+    formatted = formatted
+        .replace(/(\d+\.\s)\n\n+/g, '$1')
+        .replace(/\n\n+/g, '\n\n');
     
     return formatted.trim();
 };
