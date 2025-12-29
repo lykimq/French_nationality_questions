@@ -1,3 +1,6 @@
+import type { ImageSourcePropType } from 'react-native';
+import type { FrenchQuestionsData } from '../../types/questionsData';
+
 /**
  * Configuration for data files and their mappings.
  * Centrally manages the file structure used throughout the app.
@@ -58,7 +61,7 @@ export const DATA_FILES = {
  * Each entry maps a Firebase Storage path to its corresponding local asset.
  * The paths must match exactly with the Firebase Storage structure.
  */
-export const LOCAL_DATA_MAP: Record<string, any> = {
+export const LOCAL_DATA_MAP: Record<string, FrenchQuestionsData | Record<string, unknown>> = {
     'knowledge/new_livret/administration_locale.json': require('../../data/knowledge/new_livret/administration_locale.json'),
     'knowledge/new_livret/arts_culture_sports.json': require('../../data/knowledge/new_livret/arts_culture_sports.json'),
     'knowledge/new_livret/ddhc.json': require('../../data/knowledge/new_livret/ddhc.json'),
@@ -93,7 +96,7 @@ export const LOCAL_DATA_MAP: Record<string, any> = {
  * 2. Offline image access
  * 3. Immediate image availability without network requests
  */
-export const LOCAL_IMAGE_MAP: Record<string, any> = {
+export const LOCAL_IMAGE_MAP: Record<string, ImageSourcePropType> = {
     'pics/card.png': require('../../data/knowledge/pics/card.png'),
     'pics/chart_ecole.png': require('../../data/knowledge/pics/chart_ecole.png'),
     'pics/child.png': require('../../data/knowledge/pics/child.png'),

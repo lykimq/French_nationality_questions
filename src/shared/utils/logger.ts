@@ -10,9 +10,14 @@ export enum LogLevel {
 
 let globalLogLevel: LogLevel = IS_DEV ? LogLevel.DEBUG : LogLevel.WARN;
 
-const getSentry = (): any => {
+type SentryType = {
+    captureException: (error: Error, options?: unknown) => void;
+    captureMessage: (message: string, options?: unknown) => void;
+} | null;
+
+const getSentry = (): SentryType => {
     try {
-        return require('../../config/sentryConfig').Sentry;
+        return require('../../config/sentryConfig').Sentry as SentryType;
     } catch {
         return null;
     }
@@ -33,25 +38,25 @@ class Logger {
         return level >= globalLogLevel;
     }
 
-    info(message: string, ...args: any[]): void {
+    info(message: string, ...args: unknown[]): void {
         if (this.shouldLog(LogLevel.INFO)) {
             console.log(`ℹ️ ${this.formatMessage(message)}`, ...args);
         }
     }
 
-    debug(message: string, ...args: any[]): void {
+    debug(message: string, ...args: unknown[]): void {
         if (this.shouldLog(LogLevel.DEBUG)) {
             console.debug(`🔍 ${this.formatMessage(message)}`, ...args);
         }
     }
 
-    warn(message: string, ...args: any[]): void {
+    warn(message: string, ...args: unknown[]): void {
         if (this.shouldLog(LogLevel.WARN)) {
             console.warn(`⚠️ ${this.formatMessage(message)}`, ...args);
         }
     }
 
-    error(message: string, ...args: any[]): void {
+    error(message: string, ...args: unknown[]): void {
         if (this.shouldLog(LogLevel.ERROR)) {
             console.error(`❌ ${this.formatMessage(message)}`, ...args);
         }

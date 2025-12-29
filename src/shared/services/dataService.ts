@@ -1,4 +1,5 @@
 import { ref, getDownloadURL } from 'firebase/storage';
+import type { ImageSourcePropType } from 'react-native';
 import { storage } from '../../config/firebaseConfig';
 import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from '../config/dataConfig';
 import { validateDataStructure } from '../utils/dataValidation';
@@ -7,6 +8,14 @@ import { LRUCache } from '../utils/lruCache';
 import type { FrenchQuestionsData } from '../../types/questionsData';
 
 const logger = createLogger('DataService');
+
+interface HasStringId {
+    id: string;
+}
+
+const hasStringId = (obj: unknown): obj is HasStringId => {
+    return typeof obj === 'object' && obj !== null && 'id' in obj && typeof (obj as HasStringId).id === 'string';
+};
 
 type CacheEntry<T> = {
     value: T;
@@ -21,7 +30,7 @@ const DATA_CACHE_MAX_SIZE = 50;
 const IMAGE_CACHE_MAX_SIZE = 100;
 
 const dataCache = new LRUCache<FrenchQuestionsData | Record<string, unknown>>(DATA_CACHE_MAX_SIZE);
-const imageCache = new LRUCache<{ uri: string }>(IMAGE_CACHE_MAX_SIZE);
+const imageCache = new LRUCache<ImageSourcePropType>(IMAGE_CACHE_MAX_SIZE);
 const failedDataCache: Map<string, number> = new Map();
 const failedImageCache: Map<string, number> = new Map();
 
@@ -131,8 +140,8 @@ export const loadJsonCollection = async (
         const fallbackKey = filename.replace(keySuffixToRemove, '');
         const dataPath = `${directoryPrefix}${filename}`;
         const data = await loadJsonResource(dataPath, options);
-        const key = useIdAsKey && data && typeof data === 'object' && 'id' in data && typeof (data as any).id === 'string'
-            ? (data as any).id
+        const key = useIdAsKey && hasStringId(data)
+            ? data.id
             : fallbackKey;
 
         if (data) {
@@ -165,7 +174,7 @@ const fetchFirebaseImage = async (imagePath: string): Promise<string | null> => 
 export const loadImageResource = async (
     imagePath: string,
     options: LoadOptions = {}
-): Promise<{ uri: string } | null> => {
+): Promise<ImageSourcePropType | null> => {
     const ttlMs = options.ttlMs ?? DEFAULT_TTL_MS;
     const retryCount = options.retryCount ?? DEFAULT_RETRY_COUNT;
     const retryDelayMs = options.retryDelayMs ?? DEFAULT_RETRY_DELAY_MS;
@@ -180,7 +189,7 @@ export const loadImageResource = async (
     const failedAt = failedImageCache.get(imagePath);
     if (failedAt && !shouldRetry(failedAt, ttlMs)) {
         const localImage = LOCAL_IMAGE_MAP[imagePath];
-        if (localImage) return localImage as any;
+        if (localImage) return localImage;
         return cached?.value ?? null;
     }
 
@@ -198,9 +207,9 @@ export const loadImageResource = async (
 
     const localImage = LOCAL_IMAGE_MAP[imagePath];
     if (localImage) {
-        imageCache.set(imagePath, { value: localImage as any, fetchedAt: now() });
+        imageCache.set(imagePath, { value: localImage, fetchedAt: now() });
         failedImageCache.delete(imagePath);
-        return localImage as any;
+        return localImage;
     }
 
     const filename = imagePath.replace(/^.*[\\/]/, '');
@@ -237,13 +246,13 @@ export const invalidateImageCache = (imagePath?: string) => {
     }
 };
 
-export const getCachedImage = (imagePath: string): { uri: string } | null => {
+export const getCachedImage = (imagePath: string): ImageSourcePropType | null => {
     const cached = imageCache.get(imagePath);
     if (cached) {
         return cached.value;
     }
     const localImage = LOCAL_IMAGE_MAP[imagePath];
-    if (localImage) return localImage as any;
+    if (localImage) return localImage;
     const filename = imagePath.replace(/^.*[\\/]/, '');
     return imageCache.get(filename)?.value ?? null;
 };
