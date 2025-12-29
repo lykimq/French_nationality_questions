@@ -1,4 +1,3 @@
-import { getQuestionText, getExplanationText } from '../../shared/utils/questionUtils';
 import type { TestQuestion } from '../../types';
 import type { CivicExamQuestion } from '../types';
 
@@ -20,7 +19,7 @@ export interface CivicExamQuestionWithOptions extends CivicExamQuestion {
  * @returns The question text
  */
 export const getCivicExamQuestionText = (question: TestQuestion | null | undefined): string => 
-    getQuestionText(question?.question);
+    question?.question ?? '';
 
 /**
  * Extracts explanation text from a civic exam question
@@ -29,7 +28,7 @@ export const getCivicExamQuestionText = (question: TestQuestion | null | undefin
  * @returns The explanation text
  */
 export const getCivicExamExplanationText = (question: TestQuestion | null | undefined): string => 
-    getExplanationText(question?.explanation);
+    question?.explanation ?? '';
 
 /**
  * Gets the answer text from a question's options array by index

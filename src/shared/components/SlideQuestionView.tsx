@@ -9,7 +9,6 @@ import Icon3D from './Icon3D';
 import QuestionListModal, { type QuestionListItem } from './QuestionListModal';
 import { createLogger } from '../utils/logger';
 import { sharedStyles } from '../utils';
-import { getQuestionText } from '../utils/questionUtils';
 import type { Question } from '../../welcome/types';
 
 const logger = createLogger('SlideQuestionView');
@@ -145,7 +144,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
         return questions.map((q, index) => ({
             index,
             id: q.id,
-            questionText: getQuestionText(q.question),
+            questionText: q.question ?? '',
         }));
     }, [questions]);
 

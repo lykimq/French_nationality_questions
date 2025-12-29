@@ -8,10 +8,6 @@ import { ensureString } from './stringUtils';
 
 const logger = createLogger('QuestionUtils');
 
-export const getQuestionText = (question: string | null | undefined): string => question ?? '';
-
-export const getExplanationText = (explanation: string | null | undefined): string => explanation ?? '';
-
 /**
  * Sorts questions by their numeric ID in ascending order.
  * Handles both string IDs (e.g., "formation_1", "livret_1") and numeric IDs.

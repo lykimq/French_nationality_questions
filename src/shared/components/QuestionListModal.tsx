@@ -4,7 +4,6 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useIcon3D } from '../hooks';
 import FormattedText from './FormattedText';
 import Icon3D from './Icon3D';
-import { getQuestionText } from '../utils/questionUtils';
 
 export interface QuestionListItem {
     readonly index: number;

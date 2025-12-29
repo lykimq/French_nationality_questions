@@ -151,7 +151,7 @@ export interface SettingItemProps {
 // Image modal props
 export interface ImageModalProps {
     readonly visible: boolean;
-    readonly imageSource: ImageSourcePropType;
+    readonly imageSource: ImageSourcePropType | null;
     readonly onClose: () => void;
 }
 

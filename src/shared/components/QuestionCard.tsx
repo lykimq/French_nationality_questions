@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
-import { getQuestionText, getExplanationText, formatExplanation } from '../utils';
+import { formatExplanation } from '../utils';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
 import Icon3D from './Icon3D';
@@ -50,8 +50,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
     const closeImageModal = () => setIsImageModalVisible(false);
 
-    const questionText = getQuestionText(question);
-    const explanationText = getExplanationText(explanation);
+    const questionText = question ?? '';
+    const explanationText = explanation ?? '';
 
     return (
         <View style={[
