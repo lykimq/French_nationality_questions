@@ -62,7 +62,7 @@ const CivicExamQuestionScreen = () => {
 
     const { timeLeft, formattedTime } = useCountdownTimer({
         initialTime: CIVIC_EXAM_CONFIG.TIME_LIMIT_SECONDS,
-        isActive: isExamMode && !!currentSession,
+        isActive: !!currentSession,
         onTimeUp: handleTimeUp,
         autoStart: true,
     });
