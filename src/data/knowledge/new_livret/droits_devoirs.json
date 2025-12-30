@@ -85,7 +85,7 @@
         },
         {
             "id": "livret_14",
-            "question": "Que faites dans votre temps libre ?",
+            "question": "Que faites-vous dans votre temps libre ?",
             "explanation": "Dans mon temps libre, j'aime (activités de loisirs, par exemple : lire, faire du sport, voyager).",
             "image": null
         },
@@ -189,12 +189,6 @@
             "id": "livret_31",
             "question": "En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?",
             "explanation": "2001.",
-            "image": null
-        },
-        {
-            "id": "livret_32",
-            "question": "Quelle est la date de la loi permettant le mariage pour tous en France ?",
-            "explanation": "2013.",
             "image": null
         },
         {
@@ -375,6 +369,18 @@
             "id": "livret_62",
             "question": "Un citoyen doit-il participer à un jury d'assises s'il est tiré au sort ?",
             "explanation": "Oui, participer à un jury d'assises est un devoir civique pour tout citoyen français majeur inscrit sur les listes électorales et tiré au sort. Sauf motif grave reconnu par le tribunal (maladie, situation familiale exceptionnelle, etc.), on ne peut pas refuser de siéger comme juré. Les jurés participent au jugement des crimes avec les magistrats professionnels.",
+            "image": null
+        },
+        {
+            "id": "livret_63",
+            "question": "Tout citoyen peut-il créer une association ?",
+            "explanation": "Oui, la liberté d'association est garantie (loi de 1901). Les associations jouent un rôle majeur dans la solidarité et la vie culturelle.",
+            "image": null
+        },
+        {
+            "id": "livret_64",
+            "question": "Comment les citoyens manifestent-ils leur désaccord ?",
+            "explanation": "Les citoyens peuvent manifester leur désaccord en participant à des manifestations, en faisant grève, en signant des pétitions, en contactant leurs représentants élus, etc.",
             "image": null
         }
     ]

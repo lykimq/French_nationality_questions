@@ -115,7 +115,7 @@
         },
         {
             "id": "livret_19",
-            "question": "c’est quoi la presse Satirique ?",
+            "question": "Qu'est-ce que la presse satirique ?",
             "explanation": "La presse satirique est un type de presse qui utilise l'humour, l'ironie et l'exagération pour critiquer et se moquer des événements politiques, sociaux ou culturels. Elle vise souvent à dénoncer des abus, des injustices ou des comportements absurdes, tout en provoquant la réflexion. Les caricatures, les parodies et les jeux de mots sont des outils courants dans ce genre de presse.",
             "image": null
         },
@@ -187,8 +187,8 @@
         },
         {
             "id": "livret_31",
-            "question": "Quelle a été la réaction des autorités françaises ?",
-            "explanation": "Les autorités ont condamné fermement cet acte, renforcé la lutte contre l’extrémisme et organisé des hommages nationaux en mémoire de Samuel Paty.",
+            "question": "Quelle a été la réaction des autorités françaises après l'assassinat de Samuel Paty ?",
+            "explanation": "Les autorités ont condamné fermement cet acte, renforcé la lutte contre l'extrémisme et organisé des hommages nationaux en mémoire de Samuel Paty, professeur assassiné le 16 octobre 2020 pour avoir montré des caricatures lors d'un cours sur la liberté d'expression.",
             "image": null
         },
         {
@@ -247,8 +247,8 @@
         },
         {
             "id": "livret_41",
-            "question": "Pouvez-vous nommer quelques ministres actuels du gouvernement français avec leur nom ?",
-            "explanation": "Veuillez noter que ces informations peuvent ne pas être à jour comme tout comme les autres réponses, il est donc recommandé de les vérifier auprès d'une source officielle pour la période",
+            "question": "Pouvez-vous nommer quelques ministres du gouvernement français en 2025 ?",
+            "explanation": "Exemples de ministres du gouvernement en 2025 : Gérald Darmanin (Justice), Catherine Vautrin (Armées), Roland Lescure (Économie), Bruno Retailleau (Intérieur), Rachida Dati (Culture). La composition du gouvernement peut évoluer. Il est recommandé de vérifier auprès d'une source officielle pour les informations les plus récentes.",
             "image": null
         },
         {
@@ -278,7 +278,7 @@
         {
             "id": "livret_46",
             "question": "Quelle est la population de la France ?",
-            "explanation": "Selon les données de l'INSEE, la population française (métropole et outre-mer) est estimée à environ 68 millions d'habitants en 2024. La France est le deuxième pays le plus peuplé de l'Union européenne après l'Allemagne.",
+            "explanation": "Selon les données de l'INSEE, la population française (métropole et outre-mer) est estimée à environ 68 millions d'habitants en 2025. La France est le deuxième pays le plus peuplé de l'Union européenne après l'Allemagne.",
             "image": null
         },
         {
@@ -949,7 +949,7 @@
         },
         {
             "id": "livret_158",
-            "question": "C'est quoi l'espace Schengen ?",
+            "question": "Qu'est-ce que l'espace Schengen ?",
             "explanation": "L'espace Schengen est un ensemble de pays européens qui ont aboli les contrôles aux frontières internes entre eux. Cela permet la libre circulation des personnes à l'intérieur de cet espace, facilitant les voyages et les échanges. Il comprend la plupart des pays de l'UE (27 pays), ainsi que quelques pays non membres de l'UE : la Norvège, l'Islande, la Suisse et le Liechtenstein. L'espace Schengen a été créé par l'accord de Schengen signé en 1985.",
             "image": null
         },
@@ -975,6 +975,12 @@
             "id": "livret_162",
             "question": "Quelle est la devise officielle de l'Union européenne ?",
             "explanation": "La devise officielle de l'UE est 'Unie dans la diversité'.",
+            "image": null
+        },
+        {
+            "id": "livret_163",
+            "question": "Qu'est-ce que l'eurozone ?",
+            "explanation": "L'eurozone (ou zone euro) est l'ensemble des pays membres de l'Union européenne qui ont adopté l'euro comme monnaie officielle. La France fait partie de l'eurozone depuis la création de l'euro en 1999.",
             "image": null
         }
     ]

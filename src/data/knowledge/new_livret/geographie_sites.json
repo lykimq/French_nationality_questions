@@ -310,6 +310,30 @@
             "question": "Citez quelques grandes villes françaises.",
             "explanation": "Paris (la capitale), Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg.",
             "image": null
+        },
+        {
+            "id": "livret_52",
+            "question": "Quelle est la plus grande région forestière de France ?",
+            "explanation": "La Forêt des Landes, située dans la région Nouvelle-Aquitaine, est la plus grande forêt de France. Elle s'étend sur environ un million d'hectares.",
+            "image": null
+        },
+        {
+            "id": "livret_53",
+            "question": "Quelle région est connue comme le berceau de la Préhistoire en France ?",
+            "explanation": "Le Périgord, situé en Dordogne (région Nouvelle-Aquitaine), dans le sud-ouest de la France, est connu comme le berceau de la Préhistoire. Cette région abrite notamment la grotte de Lascaux, l'une des plus importantes grottes préhistoriques au monde, célèbre pour ses peintures rupestres datant d'environ 18 000 à 15 000 ans avant J.-C.",
+            "image": null
+        },
+        {
+            "id": "livret_54",
+            "question": "De quel côté se trouvent les mers et océans qui bordent la France ?",
+            "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine.\n\n- Au nord, la Manche sépare la France du Royaume-Uni.\n\n- Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.\n\n- Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
+            "image": null
+        },
+        {
+            "id": "livret_55",
+            "question": "Y a-t-il un désert dans le sud de la France ?",
+            "explanation": "Non, il n'existe pas de véritable désert dans le sud de la France. Cependant, on trouve des zones semi-arides comme la Crau (Bouches-du-Rhône), une plaine steppique située entre Arles et l'étang de Berre, caractérisée par un paysage sec et une végétation adaptée à la sécheresse.",
+            "image": null
         }
     ]
 }

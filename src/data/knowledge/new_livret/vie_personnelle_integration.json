@@ -724,6 +724,42 @@
             "question": "L'administration peut-elle refuser la nationalité française pour non-respect de l'égalité femmes-hommes ?",
             "explanation": "Oui, même si la personne est mariée à un(e) français(e), car l'égalité entre les femmes et les hommes est une valeur essentielle de la République.",
             "image": null
+        },
+        {
+            "id": "livret_122",
+            "question": "Où habitez-vous actuellement ?",
+            "explanation": "J'habite à (Ville, Département).",
+            "image": null
+        },
+        {
+            "id": "livret_123",
+            "question": "Avez-vous visité d'autres villes en France ? Lesquelles et qu'avez-vous appris de ces visites ?",
+            "explanation": "Oui, j'ai visité (noms des villes, par exemple : Lyon, Bordeaux, Marseille). Chaque visite m'a permis de découvrir la diversité culturelle et régionale de la France, renforçant mon appréciation pour le pays.",
+            "image": null
+        },
+        {
+            "id": "livret_124",
+            "question": "Vous habitez seul(e) ou en famille ?",
+            "explanation": "J'habite (seul(e) / en famille) à (ville ou région).",
+            "image": null
+        },
+        {
+            "id": "livret_125",
+            "question": "Où passez-vous habituellement vos vacances ?",
+            "explanation": "Nous passons nos vacances soit en explorant différentes régions de France pour découvrir sa beauté et sa diversité, soit en retournant dans notre pays d'origine pour rester connectés à nos racines et revoir notre famille.",
+            "image": null
+        },
+        {
+            "id": "livret_126",
+            "question": "Avez-vous mangé des spécialités locales lors de vos voyages en France ?",
+            "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
+            "image": null
+        },
+        {
+            "id": "livret_127",
+            "question": "Pratiquez-vous des activités ensemble ?",
+            "explanation": "Oui, nous aimons (activité, par exemple : randonner, cuisiner, visiter des musées) ensemble. Cela nous aide à renforcer notre lien.",
+            "image": null
         }
     ]
 }

@@ -184,6 +184,36 @@
             "question": "Comment intégrez-vous vos cultures ou traditions familiales dans votre vie en France ?",
             "explanation": "Nous intégrons nos traditions en (par exemple : célébrant des fêtes spécifiques, cuisinant des plats traditionnels), ce qui enrichit notre expérience culturelle en France.",
             "image": null
+        },
+        {
+            "id": "livret_32",
+            "question": "Citez un plat typique de votre région ?",
+            "explanation": "Provence-Alpes-Côte d'Azur : La ratatouille - Bretagne : Les crêpes - Normandie : Le camembert",
+            "image": null
+        },
+        {
+            "id": "livret_33",
+            "question": "Quel fromage est souvent associé à la région de Normandie ?",
+            "explanation": "Le Camembert.",
+            "image": null
+        },
+        {
+            "id": "livret_34",
+            "question": "Quelle est la région française réputée pour ses vignobles ?",
+            "explanation": "Plusieurs régions françaises sont réputées pour leurs vignobles, notamment la Bourgogne (Bourgogne-Franche-Comté), la région de Bordeaux (Nouvelle-Aquitaine), la Champagne, l'Alsace (Grand Est), la Vallée de la Loire et la Provence (Provence-Alpes-Côte d'Azur).",
+            "image": null
+        },
+        {
+            "id": "livret_35",
+            "question": "Quelle région française est connue pour la production de champagne ?",
+            "explanation": "La Champagne.",
+            "image": null
+        },
+        {
+            "id": "livret_36",
+            "question": "Quelle est la région française réputée pour ses fromages et ses volcans ?",
+            "explanation": "L'Auvergne.",
+            "image": null
         }
     ]
 }

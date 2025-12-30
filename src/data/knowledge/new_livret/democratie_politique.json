@@ -217,8 +217,8 @@
         },
         {
             "id": "livret_36",
-            "question": "Qui est aujourd'hui le président de la république ?",
-            "explanation": "C'est Emmanuel Macron.",
+            "question": "Qui est le président de la République en 2025 ?",
+            "explanation": "C'est Emmanuel Macron, élu en 2017 et réélu en 2022 pour un second mandat de 5 ans (jusqu'en 2027).",
             "image": null
         },
         {
@@ -229,14 +229,14 @@
         },
         {
             "id": "livret_38",
-            "question": "Qui est le premier ministre actuel ?",
-            "explanation": "C'est Gabriel Attal.",
+            "question": "Qui est le Premier ministre en 2025 ?",
+            "explanation": "C'est Sébastien Lecornu, nommé Premier ministre le 9 septembre 2025 par le Président Emmanuel Macron.",
             "image": null
         },
         {
             "id": "livret_39",
-            "question": "Qui était premier ministre avant lui/Elle ?",
-            "explanation": "C'était Elisabeth Borne.",
+            "question": "Qui était Premier ministre avant Gabriel Attal ?",
+            "explanation": "C'était Élisabeth Borne, qui a été Premier ministre de mai 2022 à janvier 2024.",
             "image": null
         },
         {
@@ -277,8 +277,8 @@
         },
         {
             "id": "livret_46",
-            "question": "Citez trois ministres du gouvernement actuel.",
-            "explanation": "- Gerald Darmanin.\n\n- Bruno Le Maire.\n\n- Eric Dupond-Moretti.",
+            "question": "Citez trois ministres du gouvernement en 2025.",
+            "explanation": "Exemples de ministres du gouvernement en 2025 : Gérald Darmanin (Justice), Catherine Vautrin (Armées), Roland Lescure (Économie), Bruno Retailleau (Intérieur), Rachida Dati (Culture). La composition du gouvernement peut évoluer.",
             "image": null
         },
         {
@@ -362,7 +362,7 @@
         {
             "id": "livret_60",
             "question": "Qui est le député (ou la députée) de votre département ?",
-            "explanation": "Cette information varie selon votre circonscription. Les députés sont élus pour 5 ans au suffrage universel direct. Pour connaître le député de votre circonscription, vous pouvez consulter le site de l'Assemblée nationale ou contacter votre mairie. Les dernières élections législatives ont eu lieu en 2024.",
+            "explanation": "Cette information varie selon votre circonscription. Les députés sont élus pour 5 ans au suffrage universel direct. Pour connaître le député de votre circonscription, vous pouvez consulter le site de l'Assemblée nationale ou contacter votre mairie. Les dernières élections législatives ont eu lieu en juin-juillet 2024.",
             "image": null
         },
         {
@@ -374,7 +374,7 @@
         {
             "id": "livret_62",
             "question": "Qui est le président de l'assemblée Nationale ?",
-            "explanation": "Le président de l'Assemblée nationale est élu par les députés pour la durée de la législature (5 ans). Depuis 2022, c'est Yaël Braun-Pivet. Cette fonction peut changer après chaque élection législative. Le président dirige les débats et représente l'Assemblée nationale.",
+            "explanation": "Le président de l'Assemblée nationale est élu par les députés pour la durée de la législature (5 ans). Depuis juillet 2024, c'est Yaël Braun-Pivet. Cette fonction peut changer après chaque élection législative. Le président dirige les débats et représente l'Assemblée nationale.",
             "image": null
         },
         {
@@ -427,8 +427,8 @@
         },
         {
             "id": "livret_71",
-            "question": "Qui est le président actuel du Sénat ?",
-            "explanation": "C’est Gérard Larcher.",
+            "question": "Qui est le président actuel du Sénat en 2025 ?",
+            "explanation": "C'est Gérard Larcher, président du Sénat depuis 2014 (réélu en 2017, 2020 et 2023).",
             "image": null
         },
         {
@@ -756,12 +756,6 @@
             "image": null
         },
         {
-            "id": "livret_126",
-            "question": "Qui occupe actuellement la fonction de président de la République ?",
-            "explanation": "Le président de la République actuel est Emmanuel Macron. Il est le huitième président de la Cinquième République.",
-            "image": null
-        },
-        {
             "id": "livret_128",
             "question": "Quelle est la durée du mandat présidentiel?",
             "explanation": "Le président de la République est élu pour un mandat de 5 ans",
@@ -918,12 +912,6 @@
             "image": null
         },
         {
-            "id": "livret_155",
-            "question": "Qui est le président du Séant actuel ?",
-            "explanation": "Gérard Larcher",
-            "image": null
-        },
-        {
             "id": "livret_156",
             "question": "Comment est élu le président du Sénat ?",
             "explanation": "Il est élu au scrutin secret par les sénateurs lors de chaque renouvellement partiel du Sénat, tous les 3 ans.",
@@ -961,8 +949,8 @@
         },
         {
             "id": "livret_162",
-            "question": "Qui est le président l’assemblée nationale actuel ?",
-            "explanation": "Yaël Braun-Pivet élue le Jeudi 18 juillet 2024.",
+            "question": "Qui est le président de l'Assemblée nationale en 2025 ?",
+            "explanation": "Yaël Braun-Pivet, élue présidente de l'Assemblée nationale le jeudi 18 juillet 2024, réélue pour la durée de la législature (jusqu'en 2027).",
             "image": null
         },
         {
@@ -2120,7 +2108,7 @@
         {
             "id": "livret_355",
             "question": "Qui est le chef de l'État et comment est-il élu ?",
-            "explanation": "Le Président de la République (actuellement Emmanuel Macron). Il est élu au suffrage universel direct pour un mandat de 5 ans (quinquennat).",
+            "explanation": "Le Président de la République (en 2025 : Emmanuel Macron, élu en 2017 et réélu en 2022). Il est élu au suffrage universel direct pour un mandat de 5 ans (quinquennat).",
             "image": null
         },
         {
@@ -2137,8 +2125,26 @@
         },
         {
             "id": "livret_358",
-            "question": "Qui était président de la république avant lui ?",
-            "explanation": "C'était François Hollande.",
+            "question": "Qui était président de la République avant Emmanuel Macron ?",
+            "explanation": "C'était François Hollande, président de la République de 2012 à 2017.",
+            "image": null
+        },
+        {
+            "id": "livret_359",
+            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
+            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
+            "image": null
+        },
+        {
+            "id": "livret_360",
+            "question": "Quel a été le fait marquant de la 5éme république ?",
+            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
+            "image": null
+        },
+        {
+            "id": "livret_361",
+            "question": "Qu'est-ce qu'une Monarchie ?",
+            "explanation": "La monarchie est un régime politique où le chef de l'État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l'exerce souvent à vie.",
             "image": null
         }
     ]

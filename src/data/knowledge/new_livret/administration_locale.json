@@ -8,7 +8,7 @@
         {
             "id": "livret_1",
             "question": "Combien y a-t-il de communes et qui les administre ?",
-            "explanation": "La France compte environ 35 000 communes (34 965 au 1er janvier 2021 selon les données officielles). Elles sont administrées par un maire et un conseil municipal, élus pour six ans. Les communes sont regroupées en intercommunalités (communautés de communes, métropoles, etc.).",
+            "explanation": "La France compte environ 35 000 communes (34 746 au 1er janvier 2024 selon les données officielles de l'INSEE). Elles sont administrées par un maire et un conseil municipal, élus pour six ans. Les communes sont regroupées en intercommunalités (communautés de communes, métropoles, etc.).",
             "image": null
         },
         {
@@ -31,230 +31,62 @@
         },
         {
             "id": "livret_5",
-            "question": "Combien y a-t-il de territoires d'Outre-mer ?",
-            "explanation": "La France compte 12 territoires d'outre-mer : 5 sont à la fois des départements et des régions (Guadeloupe, Guyane, Martinique, Mayotte et La Réunion), 7 sont des collectivités d'outre-mer (Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna).",
-            "image": null
-        },
-        {
-            "id": "livret_6",
             "question": "Qui représente l'État dans les départements et régions ?",
             "explanation": "Dans les départements et les régions de métropole et d'outre-mer, l'État est représenté par les préfets (ou par les hauts-commissaires dans certaines collectivités d'outre-mer).",
             "image": null
         },
         {
-            "id": "livret_7",
-            "question": "Où habitez-vous actuellement ?",
-            "explanation": "J’habite à (Ville, Département).",
-            "image": null
-        },
-        {
-            "id": "livret_8",
-            "question": "Avez-vous visité d'autres villes en France ? Lesquelles et qu'avez-vous appris de ces visites ?",
-            "explanation": "Oui, j'ai visité (noms des villes, par exemple : Lyon, Bordeaux, Marseille). Chaque visite m'a permis de découvrir la diversité culturelle et régionale de la France, renforçant mon appréciation pour le pays.",
-            "image": null
-        },
-        {
-            "id": "livret_9",
-            "question": "Vous habitez seul(e) ou en famille ?",
-            "explanation": "J’habite (seul(e) / en famille) à (ville ou région).",
-            "image": null
-        },
-        {
-            "id": "livret_10",
-            "question": "Où passez-vous habituellement vos vacances ?",
-            "explanation": "Nous passons nos vacances soit en explorant différentes régions de France pour découvrir sa beauté et sa diversité, soit en retournant dans notre pays d'origine pour rester connectés à nos racines et revoir notre famille.",
-            "image": null
-        },
-        {
-            "id": "livret_11",
+            "id": "livret_6",
             "question": "Quelles sont les 3 types de collectivités en France ?",
             "explanation": "- Les communes\n- Les départements\n- Les régions",
             "image": null
         },
         {
-            "id": "livret_12",
+            "id": "livret_7",
             "question": "Comment sont élus les conseillers départementaux ?",
             "explanation": "Les conseillers départementaux sont élus pour six ans au suffrage universel direct, au scrutin binominal majoritaire à deux tours. Chaque canton élit un binôme (un homme et une femme) de conseillers départementaux.",
             "image": null
         },
         {
-            "id": "livret_13",
-            "question": "Quelles sont les principales réformes de Napoléon sous le Consulat ?",
-            "explanation": "- Création des préfets pour administrer les départements.\n\n- Réforme de l'éducation avec les lycées.\n\n- Création du franc germinal (monnaie stable).\n\n- Adoption du Code civil (1804), qui influence encore le droit français.",
+            "id": "livret_8",
+            "question": "Pouvez-vous nommer des départements d'outre-mer (DOM) ?",
+            "explanation": "Les départements d'outre-mer (DOM) comprennent la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.",
             "image": null
         },
         {
-            "id": "livret_14",
-            "question": "Comment la France a-t-elle été impliquée dans la colonisation ?",
-            "explanation": "La France a été une des principales puissances coloniales, avec un empire s'étendant sur plusieurs continents, notamment en Afrique, en Asie et dans les Caraïbes. La colonisation a eu des répercussions durables sur ces régions et continue d'influencer les relations internationales et la politique française.",
-            "image": null
-        },
-        {
-            "id": "livret_15",
-            "question": "Citez un plat typique de votre région ?",
-            "explanation": "Provence-Alpes-Côte d'Azur : La ratatouille - Bretagne : Les crêpes - Normandie : Le camembert",
-            "image": null
-        },
-        {
-            "id": "livret_16",
-            "question": "Quel fromage est souvent associé à la région de Normandie ?",
-            "explanation": "Le Camembert.",
-            "image": null
-        },
-        {
-            "id": "livret_17",
-            "question": "Pouvez-vous nommer des départements d’outre-mer (DOM) ?",
-            "explanation": "Les départements d’outre-mer (DOM) comprennent la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.",
-            "image": null
-        },
-        {
-            "id": "livret_18",
+            "id": "livret_9",
             "question": "Quelles sont les collectivités d'outre- mer ?",
             "explanation": "Les collectivités d'outre-mer (COM) sont au nombre de 7 : Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna. Ces territoires ont plus d'autonomie que les départements d'outre-mer et peuvent avoir des règles spécifiques. La Nouvelle-Calédonie a un statut particulier avec une autonomie renforcée.",
             "image": null
         },
         {
-            "id": "livret_19",
-            "question": "Combien y a-t-il de collectivités et territoires d'Outre-mer (COM-TOM) ?",
+            "id": "livret_10",
+            "question": "Combien y a-t-il de collectivités et territoires d'Outre-mer ?",
             "explanation": "La France compte 12 territoires d'outre-mer au total : 5 départements et régions d'outre-mer (DROM) : Guadeloupe, Guyane, Martinique, Mayotte et La Réunion. 7 collectivités d'outre-mer (COM) : Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna. Les COM ont plus d'autonomie et peuvent avoir des règles spécifiques.",
             "image": null
         },
         {
-            "id": "livret_20",
-            "question": "Quelle est la région française réputée pour ses vignobles ?",
-            "explanation": "Plusieurs régions françaises sont réputées pour leurs vignobles, notamment la Bourgogne (Bourgogne-Franche-Comté), la région de Bordeaux (Nouvelle-Aquitaine), la Champagne, l'Alsace (Grand Est), la Vallée de la Loire et la Provence (Provence-Alpes-Côte d'Azur).",
-            "image": null
-        },
-        {
-            "id": "livret_21",
-            "question": "Quelle région française est connue pour la production de champagne ?",
-            "explanation": "La Champagne.",
-            "image": null
-        },
-        {
-            "id": "livret_22",
+            "id": "livret_11",
             "question": "Quelle est la première femme à avoir été élue maire d'une grande ville en France ?",
-            "explanation": "Catherine Trautmann a été la première femme élue maire d'une grande ville française (Strasbourg) en 1989. Elle a été réélue en 1995 et a exercé cette fonction jusqu'en 2001. Cette élection a marqué un tournant dans la représentation des femmes dans la vie politique locale française.",
+            "explanation": "Catherine Trautmann a été élue maire de Strasbourg en 1989, devenant ainsi la première femme à diriger une grande ville française (ville de plus de 200 000 habitants). Elle a été réélue en 1995 et a exercé cette fonction jusqu'en 2001. Cette élection a marqué un tournant dans la représentation des femmes dans la vie politique locale française.",
             "image": null
         },
         {
-            "id": "livret_23",
+            "id": "livret_12",
             "question": "Dans quelle région vous trouvez-vous ?",
             "explanation": "Indiquez la région où vous résidez actuellement. La France métropolitaine compte 13 régions : Île-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Hauts-de-France, Grand Est, Pays de la Loire, Normandie, Bretagne, Bourgogne-Franche-Comté, Centre-Val de Loire, et Corse. Il y a également 5 régions d'outre-mer.",
             "image": null
         },
         {
-            "id": "livret_24",
-            "question": "Quelle est la région française réputée pour ses fromages et ses volcans ?",
-            "explanation": "L'Auvergne.",
-            "image": null
-        },
-        {
-            "id": "livret_25",
-            "question": "Quelle région française est connue pour ses vignobles et sa production de vin ?",
-            "explanation": "Plusieurs régions françaises sont réputées pour leurs vignobles. La région de Bordeaux (Nouvelle-Aquitaine) est particulièrement célèbre pour ses vins, ainsi que la Bourgogne, la Champagne, l'Alsace, la Vallée de la Loire et la Provence.",
-            "image": null
-        },
-        {
-            "id": "livret_26",
-            "question": "Quelle est la plus grande région forestière de France ?",
-            "explanation": "La Forêt des Landes, située dans la région Nouvelle-Aquitaine, est la plus grande forêt de France. Elle s'étend sur environ un million d'hectares.",
-            "image": null
-        },
-        {
-            "id": "livret_27",
-            "question": "Quelle région est connue comme le berceau de la Préhistoire en France ?",
-            "explanation": "Le Périgord, situé en Dordogne (région Nouvelle-Aquitaine), dans le sud-ouest de la France, est connu comme le berceau de la Préhistoire. Cette région abrite notamment la grotte de Lascaux, l'une des plus importantes grottes préhistoriques au monde, célèbre pour ses peintures rupestres datant d'environ 18 000 à 15 000 ans avant J.-C.",
-            "image": null
-        },
-        {
-            "id": "livret_28",
-            "question": "De quel côté se trouvent les mers et océans qui bordent la France ?",
-            "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine.\n\n- Au nord, la Manche sépare la France du Royaume-Uni.\n\n- Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.\n\n- Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
-            "image": null
-        },
-        {
-            "id": "livret_29",
-            "question": "Qu'est-ce que l'eurozone ?",
-            "explanation": "L'eurozone (ou zone euro) est l'ensemble des pays membres de l'Union européenne qui ont adopté l'euro comme monnaie officielle. La France fait partie de l'eurozone depuis la création de l'euro en 1999.",
-            "image": null
-        },
-        {
-            "id": "livret_30",
+            "id": "livret_13",
             "question": "Quel est le rôle de la mairie (ou hôtel de ville) ?",
             "explanation": "La mairie est l'institution de proximité. Elle gère l'état civil (naissances, mariages, décès), les écoles maternelles et primaires, l'entretien de la voirie communale, les activités sportives et culturelles, ainsi que l'urbanisme et la vie locale.",
             "image": null
         },
         {
-            "id": "livret_31",
+            "id": "livret_14",
             "question": "Qui représente l'État dans un département ?",
             "explanation": "Le préfet représente l'État dans le département. Dans certaines collectivités d'outre-mer, c'est le haut-commissaire qui représente l'État.",
-            "image": null
-        },
-        {
-            "id": "livret_32",
-            "question": "Tout citoyen peut-il créer une association ?",
-            "explanation": "Oui, la liberté d'association est garantie (loi de 1901). Les associations jouent un rôle majeur dans la solidarité et la vie culturelle.",
-            "image": null
-        },
-        {
-            "id": "livret_33",
-            "question": "Comment manifestent ils leur désaccord ?",
-            "explanation": "En manifestant, en faisant grève etc…",
-            "image": null
-        },
-        {
-            "id": "livret_34",
-            "question": "Quand est-ce qu'a été instituée la 5éme république ?",
-            "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
-            "image": null
-        },
-        {
-            "id": "livret_35",
-            "question": "Quel a été le fait marquant de la 5éme république ?",
-            "explanation": "Elle a marqué la séparation définitive entre le pouvoir exécutif, législatif et judiciaire.",
-            "image": null
-        },
-        {
-            "id": "livret_38",
-            "question": "de quel côté se trouvent-ils ?",
-            "explanation": "- À l'ouest, l'Océan Atlantique borde la France métropolitaine. - Au nord, la Manche sépare la France du Royaume-Uni. - Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur. - Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.",
-            "image": null
-        },
-        {
-            "id": "livret_39",
-            "question": "Avez-vous manger des spécialités locales lors de vos voyages en France ?",
-            "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
-            "image": null
-        },
-        {
-            "id": "livret_40",
-            "question": "Quel été le rôle de la Bastille avant sa démolition ?",
-            "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
-            "image": null
-        },
-        {
-            "id": "livret_41",
-            "question": "– Qu’est-ce qu’une Monarchie ?",
-            "explanation": "La monarchie est un régime politique où le chef de l’État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l’exerce souvent à vie.",
-            "image": null
-        },
-        {
-            "id": "livret_44",
-            "question": "Pratiquez-vous des activités ensemble ?",
-            "explanation": "Oui, nous aimons (activité, par exemple : randonner, cuisiner, visiter des musées) ensemble. Cela nous aide à renforcer notre lien.",
-            "image": null
-        },
-        {
-            "id": "livret_45",
-            "question": "Y a-t-il un désert dans le sud de la France ?",
-            "explanation": "Non, il n'existe pas de véritable désert dans le sud de la France. Cependant, on trouve des zones semi-arides comme la Crau (Bouches-du-Rhône), une plaine steppique située entre Arles et l'étang de Berre, caractérisée par un paysage sec et une végétation adaptée à la sécheresse.",
-            "image": null
-        },
-        {
-            "id": "livret_46",
-            "question": "DOu se trouve le siège de cette association ?",
-            "explanation": "Le siège de l’église La Cité se trouve au 24 Rue Antoine-Julien Hénard, 75012 Paris.",
             "image": null
         }
     ]

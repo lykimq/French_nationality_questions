@@ -1156,6 +1156,24 @@
             "question": ": Que s'est-il passé en France durant la Seconde Guerre mondiale ?",
             "explanation": "La France a été envahie par l'Allemagne en 1940, entraînant une occupation jusqu'en 1944, des mouvements de résistance à travers le pays, et la collaboration du régime de Vichy, jusqu'à la libération par les Alliés.",
             "image": null
+        },
+        {
+            "id": "livret_198",
+            "question": "Quelles sont les principales réformes de Napoléon sous le Consulat ?",
+            "explanation": "- Création des préfets pour administrer les départements.\n\n- Réforme de l'éducation avec les lycées.\n\n- Création du franc germinal (monnaie stable).\n\n- Adoption du Code civil (1804), qui influence encore le droit français.",
+            "image": null
+        },
+        {
+            "id": "livret_199",
+            "question": "Comment la France a-t-elle été impliquée dans la colonisation ?",
+            "explanation": "La France a été une des principales puissances coloniales, avec un empire s'étendant sur plusieurs continents, notamment en Afrique, en Asie et dans les Caraïbes. La colonisation a eu des répercussions durables sur ces régions et continue d'influencer les relations internationales et la politique française.",
+            "image": null
+        },
+        {
+            "id": "livret_200",
+            "question": "Quel était le rôle de la Bastille avant sa démolition ?",
+            "explanation": "La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…",
+            "image": null
         }
     ]
 }
