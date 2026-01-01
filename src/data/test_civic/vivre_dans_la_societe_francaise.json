@@ -885,6 +885,32 @@
             "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
             "subTheme": "parental_authority_education",
             "questionType": "knowledge"
+        },
+        {
+            "id": "vsf_69",
+            "question": "En tant que citoyen européen résidant en France, avez-vous pu voter lors des élections européennes de juin 2024 ?",
+            "correctAnswer": "Oui, si vous étiez inscrit sur les listes électorales françaises.",
+            "incorrectAnswers": [
+                "Non, seuls les citoyens français peuvent voter aux élections européennes.",
+                "Oui, automatiquement sans inscription préalable.",
+                "Non, il faut résider en France depuis au moins 10 ans."
+            ],
+            "explanation": "Les citoyens de l'Union européenne résidant en France peuvent voter aux élections européennes et municipales s'ils sont inscrits sur les listes électorales. Les élections européennes de juin 2024 ont été marquées par une forte participation et ont précédé la dissolution de l'Assemblée nationale.",
+            "subTheme": "residence",
+            "questionType": "situational"
+        },
+        {
+            "id": "vsf_70",
+            "question": "Si vous deviez expliquer à un ami étranger ce qui s'est passé en France en 2024, que diriez-vous ?",
+            "correctAnswer": "Il y a eu des élections législatives anticipées après la dissolution, créant une Assemblée sans majorité absolue.",
+            "incorrectAnswers": [
+                "Le Président de la République a démissionné suite aux élections européennes.",
+                "La France a changé de Constitution pour devenir une VIe République.",
+                "Le droit à l'IVG a été supprimé de la législation française."
+            ],
+            "explanation": "En 2024, après la dissolution de l'Assemblée nationale en juin, des élections législatives ont eu lieu qui n'ont donné de majorité absolue à aucun camp. Par ailleurs, l'IVG a été inscrite dans la Constitution en mars 2024, renforçant ce droit. Ces événements marquent une période importante de la vie politique française.",
+            "subTheme": "residence",
+            "questionType": "situational"
         }
     ]
 }

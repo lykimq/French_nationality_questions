@@ -109,7 +109,7 @@
         },
         {
             "id": "livret_18",
-            "question": "Regardez-vous la télévision française ? Quels types de programmes ou chaînes préférezvous ?",
+            "question": "Regardez-vous la télévision française ? Quels types de programmes ou chaînes préférez-vous ?",
             "explanation": "Oui, je regarde la télévision française, en particulier les chaînes d'information comme France 24 et les programmes culturels sur Arte, pour améliorer mon français et comprendre la culture française.",
             "image": null
         },
@@ -122,7 +122,7 @@
         {
             "id": "livret_20",
             "question": "Que s’est-il passé en France le 13 novembre 2015 ?",
-            "explanation": "Le 13 novembre 2015, la France a été frappée par une série d’attentats terroristes à Paris et SaintDenis, faisant de nombreuses victimes.",
+            "explanation": "Le 13 novembre 2015, la France a été frappée par une série d'attentats terroristes à Paris et Saint-Denis, faisant de nombreuses victimes.",
             "image": null
         },
         {
@@ -223,7 +223,7 @@
         },
         {
             "id": "livret_37",
-            "question": "Que représente Le coq ?",
+            "question": "Que représente le coq ?",
             "explanation": "Le coq est un symbole national français. Il est souvent représenté sur les monuments, les édifices publics et les maillots des équipes sportives françaises. Le coq représente la fierté nationale, le courage et la vigilance.",
             "image": null
         },
@@ -259,8 +259,8 @@
         },
         {
             "id": "livret_43",
-            "question": "Pourquoi peut-il dissoudre l’Assemblée nationale ?",
-            "explanation": "Parce que l’Assemblée nationale est élue au suffrage universel direct, elle représente directement le peuple. Sa dissolution permet de redonner la parole aux citoyens en cas de crise politique.",
+            "question": "Pourquoi le Président de la République peut-il dissoudre l'Assemblée nationale ?",
+            "explanation": "Parce que l'Assemblée nationale est élue au suffrage universel direct, elle représente directement le peuple. La dissolution permet au Président de la République de redonner la parole aux citoyens en cas de crise politique, en organisant de nouvelles élections législatives.",
             "image": null
         },
         {

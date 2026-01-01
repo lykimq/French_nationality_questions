@@ -59,9 +59,9 @@
             "question": "Qu'est-ce que la présomption d'innocence ?",
             "correctAnswer": "Toute personne accusée est considérée innocente tant que sa culpabilité n'a pas été prouvée.",
             "incorrectAnswers": [
-                "Toute personne accusée est considérée innocente jusqu'à ce qu'elle soit jugée coupable par un tribunal.",
                 "Toute personne accusée est présumée innocente sauf en cas de flagrant délit.",
-                "Toute personne accusée est considérée innocente tant qu'elle n'a pas été condamnée en première instance."
+                "Toute personne accusée est considérée innocente tant qu'elle n'a pas été condamnée en première instance.",
+                "Toute personne accusée est présumée innocente uniquement si elle n'a pas d'antécédents judiciaires."
             ],
             "explanation": "La présomption d'innocence signifie que toute personne accusée est dite \"innocente\" tant que sa culpabilité n'a pas été prouvée. C'est un droit fondamental lié à la sûreté.",
             "subTheme": "fundamental_rights",
@@ -148,13 +148,13 @@
         {
             "id": "dd_12",
             "question": "La contraception est-elle accessible aux mineurs en France ?",
-            "correctAnswer": "Oui, de façon anonyme et gratuite sur demande du \"secret\".",
+            "correctAnswer": "Oui, de façon anonyme et gratuite sur demande du secret médical.",
             "incorrectAnswers": [
                 "Oui, mais uniquement pour les mineurs de plus de 16 ans.",
                 "Oui, mais uniquement la contraception d'urgence sans ordonnance.",
                 "Oui, mais uniquement avec une ordonnance médicale obligatoire."
             ],
-            "explanation": "Les consultations et prescriptions de contraception aux moins de 18 ans peuvent être anonymes et gratuites sur demande du \"secret\". La contraception d'urgence peut aussi être obtenue gratuitement.",
+            "explanation": "Les consultations et prescriptions de contraception aux moins de 18 ans peuvent être anonymes et gratuites sur demande du secret médical. La contraception d'urgence peut aussi être obtenue gratuitement.",
             "subTheme": "fundamental_rights",
             "questionType": "situational"
         },
@@ -228,7 +228,7 @@
             "question": "Comment peut-on mettre fin à un PACS ?",
             "correctAnswer": "Par un simple passage à la mairie.",
             "incorrectAnswers": [
-                "Par une déclaration conjointe des deux partenaires à la mairie.",
+                "Par une procédure judiciaire devant un tribunal.",
                 "Par un simple courrier recommandé à la mairie.",
                 "Par une procédure administrative en ligne uniquement."
             ],
@@ -397,9 +397,9 @@
             "question": "Où peut-on déposer une plainte en France ?",
             "correctAnswer": "Au commissariat de police ou à la brigade de gendarmerie.",
             "incorrectAnswers": [
-                "Au commissariat de police, à la gendarmerie ou par courrier au procureur uniquement.",
-                "Au commissariat de police ou à la gendarmerie, mais pas par courrier.",
-                "Uniquement au commissariat de police de son domicile."
+                "Uniquement au commissariat de police de son domicile.",
+                "Uniquement par courrier au procureur, pas en personne.",
+                "Uniquement via les plateformes de signalement en ligne."
             ],
             "explanation": "Vous pouvez vous rendre au commissariat de police ou à la brigade de gendarmerie la plus proche pour déposer une plainte contre quelqu'un ou contre X si vous ne connaissez pas l'identité du responsable.",
             "subTheme": "situational_rights",
@@ -589,12 +589,12 @@
         },
         {
             "id": "dd_46",
-            "question": "Quels sont les trois types de violence ?",
+            "question": "Quels sont les trois types de violence conjugale ou intrafamiliale ?",
             "correctAnswer": "Violence psychologique, violence physique et violence économique.",
             "incorrectAnswers": [
-                "Violence psychologique, violence physique et violence sexuelle.",
+                "Violence psychologique, violence physique et violence institutionnelle.",
                 "Violence psychologique, violence verbale et violence physique.",
-                "Violence physique, violence économique et violence institutionnelle."
+                "Violence physique, violence économique et violence sociale."
             ],
             "explanation": "Il existe trois types de violences : la violence psychologique (insultes, menaces), la violence physique (coups, gifles) et la violence économique (contrôle de l'argent du partenaire).",
             "subTheme": "situational_rights",
@@ -720,7 +720,7 @@
         {
             "id": "dd_56",
             "question": "Où peut-on porter plainte pour violence ?",
-            "correctAnswer": "Dans tous les commissariats ou gendarmeries, ou par courrier au procureur.",
+            "correctAnswer": "Dans tous les commissariats ou gendarmeries, par courrier au procureur, ou via les plateformes de signalement en ligne.",
             "incorrectAnswers": [
                 "Uniquement au commissariat de police de son domicile.",
                 "Uniquement par courrier recommandé au procureur.",
@@ -974,6 +974,58 @@
                 "Oui, mais uniquement pour des raisons économiques légitimes."
             ],
             "explanation": "La discrimination fondée sur l'origine, le sexe, la religion, l'âge ou l'orientation sexuelle est un délit sévèrement puni par la loi.",
+            "subTheme": "fundamental_rights",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "dd_76",
+            "question": "Quelle nouvelle loi sur l'immigration a été adoptée en janvier 2024 ?",
+            "correctAnswer": "Une loi partiellement censurée par le Conseil constitutionnel, durcissant certaines conditions.",
+            "incorrectAnswers": [
+                "Une loi facilitant l'obtention de la nationalité française.",
+                "Une loi ouvrant les frontières sans restrictions.",
+                "Une loi interdisant toute immigration en France."
+            ],
+            "explanation": "Le 26 janvier 2024, une nouvelle loi sur l'immigration a été promulguée. Cependant, le Conseil constitutionnel a censuré plus d'un tiers de ses articles, notamment ceux établissant des quotas migratoires et durcissant l'accès aux prestations sociales pour les étrangers. Les dispositions validées concernent principalement le renforcement des contrôles et l'éloignement des personnes en situation irrégulière.",
+            "subTheme": "fundamental_rights",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "dd_77",
+            "question": "Quel article de la Constitution a été modifié en mars 2024 concernant l'IVG ?",
+            "correctAnswer": "L'article 34, garantissant la liberté de recourir à l'IVG.",
+            "incorrectAnswers": [
+                "L'article 1, sur les principes de la République.",
+                "L'article 55, sur les traités internationaux.",
+                "L'article 89, sur la révision constitutionnelle."
+            ],
+            "explanation": "Le 4 mars 2024, le Congrès réuni à Versailles a adopté la révision constitutionnelle inscrivant à l'article 34 que \"la loi détermine les conditions dans lesquelles s'exerce la liberté garantie à la femme d'avoir recours à une interruption volontaire de grossesse\". La France est devenue le premier pays au monde à inscrire ce droit dans sa Constitution.",
+            "subTheme": "fundamental_rights",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "dd_78",
+            "question": "Quel a été le résultat du vote au Congrès pour inscrire l'IVG dans la Constitution en 2024 ?",
+            "correctAnswer": "780 voix pour, 72 contre (majorité des 3/5 largement dépassée).",
+            "incorrectAnswers": [
+                "Vote unanime sans opposition.",
+                "Majorité simple avec 51% des voix.",
+                "Échec du vote, nécessitant un référendum."
+            ],
+            "explanation": "Le 4 mars 2024, lors du Congrès à Versailles, 780 parlementaires ont voté pour l'inscription de l'IVG dans la Constitution contre 72 oppositions. Cette large majorité (plus de 90%) a dépassé la majorité des trois cinquièmes requise pour une révision constitutionnelle (soit 512 voix sur 853 votants).",
+            "subTheme": "fundamental_rights",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "dd_79",
+            "question": "Pourquoi la France a-t-elle décidé d'inscrire l'IVG dans la Constitution en 2024 ?",
+            "correctAnswer": "Pour protéger ce droit face aux risques de remise en cause, notamment après la décision américaine de 2022.",
+            "incorrectAnswers": [
+                "Parce que l'IVG n'était pas légale avant 2024.",
+                "Suite à une décision de la Cour européenne des droits de l'homme.",
+                "Pour respecter une directive de l'Union européenne."
+            ],
+            "explanation": "L'initiative de constitutionnaliser l'IVG est née notamment après la décision de la Cour suprême américaine en 2022 qui a supprimé la protection fédérale du droit à l'avortement. La France a voulu garantir ce droit au plus haut niveau juridique pour le protéger de toute tentative de remise en cause future. L'IVG était déjà légale depuis la loi Veil de 1975.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"
         }

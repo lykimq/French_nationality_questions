@@ -312,7 +312,31 @@
         {
             "id": "formation_52",
             "question": "Quel est un exemple de répartition des compétences entre l'État et les collectivités ?",
-            "explanation": "territoriales : l’école en France Le service public de l’Éducation est concerné par la décentralisation : l’État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l’administration centrale) :\n\n- définit les programmes scolaires ;\n\n- recrute, forme et gère les enseignants ;\n\n- valide les manuels scolaires ;\n\n- supervise les universités.\n\n- Les régions gèrent les lycées ;\n\n- Les départements gèrent les collèges ;\n\n- Les communes gèrent les écoles maternelles et primaires. Gérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine. ![](./pics/territories.png)",
+            "explanation": "territoriales : l'école en France Le service public de l'Éducation est concerné par la décentralisation : l'État a transféré certaines compétences aux collectivités territoriales.\n\n- L'État (l'administration centrale) :\n\n- définit les programmes scolaires ;\n\n- recrute, forme et gère les enseignants ;\n\n- valide les manuels scolaires ;\n\n- supervise les universités.\n\n- Les régions gèrent les lycées ;\n\n- Les départements gèrent les collèges ;\n\n- Les communes gèrent les écoles maternelles et primaires. Gérer un établissement scolaire réunit plusieurs compétences : construction et entretien des bâtiments, équipements et matériel, cantine. ![](./pics/territories.png)",
+            "image": null
+        },
+        {
+            "id": "formation_53",
+            "question": "Que s'est-il passé lors des élections législatives de juin-juillet 2024 ?",
+            "explanation": "En juin 2024, après la défaite de son parti aux élections européennes du 9 juin, le Président Emmanuel Macron a dissous l'Assemblée nationale et convoqué des élections législatives anticipées les 30 juin et 7 juillet 2024.\n\nCes élections ont abouti à une situation inédite sous la Ve République : aucune coalition n'a obtenu la majorité absolue (289 sièges sur 577). Le Nouveau Front Populaire (alliance de gauche : LFI, PS, EELV, PCF) est arrivé en tête avec environ 180 sièges, suivi du camp présidentiel (environ 160 sièges) et du Rassemblement National (environ 140 sièges).\n\nCette situation d'Assemblée \"sans majorité\" ou \"introuvable\" rend la gouvernance plus complexe, nécessitant des compromis entre les différents groupes politiques pour faire voter les lois.",
+            "image": null
+        },
+        {
+            "id": "formation_54",
+            "question": "Qu'est-ce que le Nouveau Front Populaire créé en 2024 ?",
+            "explanation": "Le Nouveau Front Populaire (NFP) est une alliance électorale de gauche formée rapidement en juin 2024, juste après l'annonce de la dissolution de l'Assemblée nationale par le Président Macron.\n\nCette coalition regroupe quatre partis de gauche :\n\n- La France Insoumise (LFI) ;\n\n- Le Parti Socialiste (PS) ;\n\n- Europe Écologie Les Verts (EELV) ;\n\n- Le Parti Communiste Français (PCF).\n\nLe NFP a remporté le plus grand nombre de sièges aux élections législatives de 2024, devenant ainsi le premier groupe à l'Assemblée nationale, mais sans majorité absolue.",
+            "image": null
+        },
+        {
+            "id": "formation_55",
+            "question": "Qui a été nommé Premier ministre après les élections législatives de 2024 ?",
+            "explanation": "Après les élections législatives de 2024 qui n'ont donné de majorité absolue à aucun camp, Michel Barnier a été nommé Premier ministre par le Président Emmanuel Macron le 5 septembre 2024.\n\nMichel Barnier est un homme politique français, membre des Républicains (LR), ancien ministre et ancien négociateur en chef du Brexit pour l'Union européenne. Sa nomination reflète la nécessité de trouver un compromis politique dans une Assemblée sans majorité claire.",
+            "image": null
+        },
+        {
+            "id": "formation_56",
+            "question": "Quel record de participation a été atteint lors des élections législatives de 2024 ?",
+            "explanation": "Le second tour des élections législatives de juillet 2024 a enregistré une participation de 66,63%, ce qui représente le taux de participation le plus élevé pour des élections législatives depuis 1997.\n\nCette forte mobilisation citoyenne témoigne de l'importance des enjeux politiques et de l'intérêt des Français pour ces élections anticipées, organisées dans un contexte de tensions politiques et de défis démocratiques.",
             "image": null
         }
     ]

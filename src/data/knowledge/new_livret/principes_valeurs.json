@@ -49,7 +49,7 @@
         },
         {
             "id": "livret_8",
-            "question": "Qu'est-ce que la Laïcité ?",
+            "question": "Qu'est-ce que la laïcité ?",
             "explanation": "La laïcité est un principe fondamental de la République française, établi par la loi du 9 décembre 1905 sur la séparation des Églises et de l'État. Elle sépare les affaires religieuses et publiques. L'État garantit la liberté religieuse (liberté de conscience, liberté de croire ou de ne pas croire, liberté de changer de religion) mais est neutre face aux religions. L'État ne reconnaît, ne salarie ni ne subventionne aucun culte.",
             "image": null
         },
@@ -91,7 +91,7 @@
         },
         {
             "id": "livret_15",
-            "question": "Pourquoi avez-vous choisis la France ? Pourquoi la France ?",
+            "question": "Pourquoi avez-vous choisi la France ?",
             "explanation": "J’ai choisi la France pour sa stabilité, ses valeurs démocratiques et son modèle social qui garantissent égalité et justice. Son dynamisme culturel et économique offre un cadre idéal pour s’épanouir. Ici, j’ai trouvé des opportunités, tissé des liens forts et construit mon avenir, faisant de la France ma véritable maison.",
             "image": null
         },
@@ -133,7 +133,7 @@
         },
         {
             "id": "livret_22",
-            "question": "– C’est quoi le Blasphème ?",
+            "question": "Qu'est-ce que le blasphème ?",
             "explanation": "Le blasphème désigne une parole, un acte ou un geste qui offense ou manque de respect à une religion, à ses croyances, ou à ses symboles sacrés, autrement dit, critiquer une idée une religion ou une croyance. Selon les cultures et les religions, ce qui est considéré comme blasphématoire peut varier. En France, il n'est pas interdit par la loi, car tout le monde a le droit de s'exprimer librement tout en restant dans la limite prévue par la loi.",
             "image": null
         },
@@ -313,7 +313,7 @@
         },
         {
             "id": "livret_52",
-            "question": "Quelle est L'hymne national française ?",
+            "question": "Quel est l'hymne national français ?",
             "explanation": "L'hymne national français est La Marseillaise. Il s'agit d'un chant révolutionnaire écrit par Claude Joseph Rouget de Lisle à Strasbourg en 1792, pendant la Révolution française. Il est devenu l'hymne officiel de la France en 1795, puis confirmé par la Constitution de la Ve République en 1958. La Marseillaise est un symbole de la lutte pour la liberté, l'égalité et la fraternité, ainsi que de la résistance et du patriotisme.",
             "image": null
         },
@@ -325,7 +325,7 @@
         },
         {
             "id": "livret_54",
-            "question": "C'est quoi la Constitution ?",
+            "question": "Qu'est-ce que la Constitution ?",
             "explanation": "La Constitution est le texte fondamental qui définit l’organisation et le fonctionnement de l’État. Elle fixe les règles du pouvoir, les droits des citoyens et les principes de la République. En France, la Constitution de la Ve République, adoptée en 1958, établit notamment la séparation des pouvoirs (exécutif, législatif, judiciaire) et garantit des droits comme la liberté d’expression et l’égalité devant la loi.",
             "image": null
         },

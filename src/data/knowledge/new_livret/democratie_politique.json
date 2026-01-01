@@ -127,7 +127,7 @@
         },
         {
             "id": "livret_21",
-            "question": "Quelles personnages de l'histoire de France vous ont le plus marqué et marqué l'histoire ?",
+            "question": "Quels personnages de l'histoire de France vous ont le plus marqué et ont marqué l'histoire ?",
             "explanation": "Charles de Gaulle, Napoléon, Jeanne d'Arc, Louis XIV, Victor Hugo, Marie Curie, Simone Veil…",
             "image": null
         },
@@ -223,14 +223,14 @@
         },
         {
             "id": "livret_37",
-            "question": "Qui était président de la république avant lui/Emmanuel Macron ?",
-            "explanation": "C'était François Hollande.",
+            "question": "Qui était président de la République avant Emmanuel Macron ?",
+            "explanation": "C'était François Hollande, président de la République de 2012 à 2017.",
             "image": null
         },
         {
             "id": "livret_38",
             "question": "Qui est le Premier ministre en 2025 ?",
-            "explanation": "C'est Sébastien Lecornu, nommé Premier ministre le 9 septembre 2025 par le Président Emmanuel Macron.",
+            "explanation": "C'est Gabriel Attal, nommé Premier ministre le 9 janvier 2024 par le Président Emmanuel Macron. Il est le plus jeune Premier ministre de la Ve République (né en 1989). Sous la présidence d'Emmanuel Macron, les Premiers ministres ont été : Édouard Philippe (2017-2020), Jean Castex (2020-2022), Élisabeth Borne (2022-2024), et Gabriel Attal (depuis janvier 2024).",
             "image": null
         },
         {
@@ -464,7 +464,7 @@
         {
             "id": "livret_77",
             "question": "Qui nomme les ministres ?",
-            "explanation": "C’est le premier ministre qui nomme les ministres et les secrétaires d’état.",
+            "explanation": "C'est le Président de la République qui nomme les ministres et les secrétaires d'État, sur proposition du Premier ministre. Le Premier ministre propose les noms, mais la nomination formelle est effectuée par le Président de la République.",
             "image": null
         },
         {
@@ -541,8 +541,8 @@
         },
         {
             "id": "livret_90",
-            "question": "Quel pays détient la présidence de l'union européenne cette année (2025) ?",
-            "explanation": "La présidence du Conseil de l'Union européenne est tournante et change tous les 6 mois selon un ordre prédéfini. Cette présidence organise les travaux du Conseil, fixe l'ordre du jour et représente le Conseil dans les relations avec les autres institutions européennes. Pour connaître le pays qui détient actuellement la présidence, consultez le site officiel de l'Union européenne.",
+            "question": "Comment fonctionne la présidence du Conseil de l'Union européenne ?",
+            "explanation": "La présidence du Conseil de l'Union européenne est tournante et change tous les 6 mois selon un ordre prédéfini. Chaque État membre de l'UE exerce la présidence à tour de rôle. Cette présidence organise les travaux du Conseil, fixe l'ordre du jour et représente le Conseil dans les relations avec les autres institutions européennes. Le pays qui détient la présidence change tous les 6 mois (janvier-juin et juillet-décembre).",
             "image": null
         },
         {
@@ -876,12 +876,6 @@
             "image": null
         },
         {
-            "id": "livret_149",
-            "question": "C'est quoi le suffrage universel ?",
-            "explanation": "Le suffrage universel est un système de vote où tous les citoyens adultes, sans distinction de sexe, de richesse ou de statut, ont le droit de participer aux élections. En France, il est utilisé pour élire les députés, le président de la République et d'autres représentants. Il peut être direct (le peuple vote directement pour les candidats) ou indirect (les électeurs désignent des représentants qui choisiront les élus).",
-            "image": null
-        },
-        {
             "id": "livret_150",
             "question": "En cas de désaccord entre le sénat et l’assemble, qui a le dernier mot ?",
             "explanation": "L’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres (AN et Sénat). Si l'Assemblée nationale adopte un texte de loi après un désaccord avec le Sénat, elle peut décider de l'adopter définitivement sans l'accord du Sénat. Toutefois, le Sénat peut proposer des modifications et renvoyer le texte à l'Assemblée nationale. En cas de blocage, c'est l'Assemblée nationale qui a le pouvoir d'imposer sa version.",
@@ -1015,13 +1009,13 @@
         },
         {
             "id": "livret_173",
-            "question": "C'est quoi l'article 49.3 ?",
+            "question": "Qu'est-ce que l'article 49.3 ?",
             "explanation": "L'article 49.3 de la constitution permet au gouvernement de faire passer une loi sans vote à l’Assemblée nationale. Les députés peuvent répondre en déposant une motion de censure. Si elle est votée, le gouvernement tombe. Sinon, la loi est adoptée automatiquement.",
             "image": null
         },
         {
             "id": "livret_174",
-            "question": "C'est quoi une motion de censure ?",
+            "question": "Qu'est-ce qu'une motion de censure ?",
             "explanation": "Une motion de censure est un vote organisé par l’Assemblée nationale pour exprimer un désaccord avec le gouvernement. Si la majorité des députés vote cette motion, le gouvernement doit démissionner.",
             "image": null
         },
@@ -1412,7 +1406,7 @@
         {
             "id": "livret_239",
             "question": "Qui est le président de l'Union européenne ?",
-            "explanation": "L'Union européenne n'a pas un \"président\" unique, mais plutôt plusieurs institutions. Cependant, la fonction la plus proche d'un \"président\" est celle du président de la Commission européenne. Actuellement, cette position est occupée par Ursula von der Leyen, qui a été élue en 2019.",
+            "explanation": "L'Union européenne n'a pas un \"président\" unique, mais plutôt plusieurs institutions. Cependant, la fonction la plus proche d'un \"président\" est celle du président de la Commission européenne. Actuellement, cette position est occupée par Ursula von der Leyen, qui a été élue en 2019 et réélue en 2024 pour un second mandat jusqu'en 2029.",
             "image": null
         },
         {
@@ -1716,12 +1710,6 @@
             "image": null
         },
         {
-            "id": "livret_290",
-            "question": "Qu'est-ce que la liberté d'association ?",
-            "explanation": "Le droit de s'organiser collectivement (association, syndicat) dans le respect de la loi.",
-            "image": null
-        },
-        {
             "id": "livret_291",
             "question": "Qu'est-ce qu'une liberté ?",
             "explanation": "Un droit garanti par la loi, limité par le respect des droits d'autrui et de l'ordre public.",
@@ -1771,7 +1759,7 @@
         },
         {
             "id": "livret_299",
-            "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle étée votée ?",
+            "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
             "explanation": "En 1905.",
             "image": null
         },
@@ -1885,13 +1873,13 @@
         },
         {
             "id": "livret_318",
-            "question": "Une personne, n'avant pas d'accès à internet, veut s'inscrite sur les listedes élctorales pour pouvoir voter aux prochaines élections politiques. À où peut-elle s'inscrite ?",
+            "question": "Une personne, n'ayant pas d'accès à internet, veut s'inscrire sur les listes électorales pour pouvoir voter aux prochaines élections politiques. Où peut-elle s'inscrire ?",
             "explanation": "En se rendant à la mairie avec une pièce d'identité et un justificatif de domicile.",
             "image": null
         },
         {
             "id": "livret_319",
-            "question": "À quel âge peut-on devenir éllecteur ?",
+            "question": "À quel âge peut-on devenir électeur ?",
             "explanation": "À 18 ans, en s'inscrivant sur les listes électorales.",
             "image": null
         },
@@ -2023,7 +2011,7 @@
         },
         {
             "id": "livret_341",
-            "question": "En quelle année la citoyenneté européen nea-t-elle ete créé ?",
+            "question": "En quelle année la citoyenneté européenne née-t-elle été créée ?",
             "explanation": "La citoyenneté européenne a été créée par le traité de Maastricht, signé en 1992 et entré en vigueur en 1993. Ce traité a fondé l'Union européenne et a établi la citoyenneté européenne, qui confère des droits supplémentaires aux citoyens des États membres.",
             "image": null
         },
@@ -2059,7 +2047,7 @@
         },
         {
             "id": "livret_347",
-            "question": "En quelle année letraité de Maastricht, qui marque la fondation de l'Union Européenne, a-t-il eté signé ?",
+            "question": "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?",
             "explanation": "Signé en 1992, entré en vigueur en 1993.",
             "image": null
         },
@@ -2124,12 +2112,6 @@
             "image": null
         },
         {
-            "id": "livret_358",
-            "question": "Qui était président de la République avant Emmanuel Macron ?",
-            "explanation": "C'était François Hollande, président de la République de 2012 à 2017.",
-            "image": null
-        },
-        {
             "id": "livret_359",
             "question": "Quand est-ce qu'a été instituée la 5éme république ?",
             "explanation": "La Vème République a été instituée par la Constitution du 4 octobre 1958.",
@@ -2145,6 +2127,30 @@
             "id": "livret_361",
             "question": "Qu'est-ce qu'une Monarchie ?",
             "explanation": "La monarchie est un régime politique où le chef de l'État, appelé roi ou reine, hérite du pouvoir de manière héréditaire et l'exerce souvent à vie.",
+            "image": null
+        },
+        {
+            "id": "livret_362",
+            "question": "Que s'est-il passé lors des élections législatives de juin-juillet 2024 ?",
+            "explanation": "En juin 2024, après la défaite de son parti aux élections européennes du 9 juin, le Président Emmanuel Macron a dissous l'Assemblée nationale et convoqué des élections législatives anticipées les 30 juin et 7 juillet 2024.\n\nCes élections ont abouti à une situation inédite sous la Ve République : aucune coalition n'a obtenu la majorité absolue (289 sièges sur 577). Le Nouveau Front Populaire (alliance de gauche : LFI, PS, EELV, PCF) est arrivé en tête avec environ 180 sièges, suivi du camp présidentiel (environ 160 sièges) et du Rassemblement National (environ 140 sièges).\n\nCette situation d'Assemblée \"sans majorité\" ou \"introuvable\" rend la gouvernance plus complexe, nécessitant des compromis entre les différents groupes politiques pour faire voter les lois. Le taux de participation a atteint 66,63% au second tour, le plus élevé depuis 1997.",
+            "image": null
+        },
+        {
+            "id": "livret_363",
+            "question": "Qu'est-ce que le Nouveau Front Populaire créé en 2024 ?",
+            "explanation": "Le Nouveau Front Populaire (NFP) est une alliance électorale de gauche formée rapidement en juin 2024, juste après l'annonce de la dissolution de l'Assemblée nationale par le Président Macron.\n\nCette coalition regroupe quatre partis de gauche : La France Insoumise (LFI), le Parti Socialiste (PS), Europe Écologie Les Verts (EELV) et le Parti Communiste Français (PCF).\n\nLe NFP a remporté le plus grand nombre de sièges aux élections législatives de 2024, devenant ainsi le premier groupe à l'Assemblée nationale, mais sans majorité absolue.",
+            "image": null
+        },
+        {
+            "id": "livret_364",
+            "question": "Qui a été nommé Premier ministre après les élections législatives de 2024 ?",
+            "explanation": "Après les élections législatives de 2024 qui n'ont donné de majorité absolue à aucun camp, Michel Barnier a été nommé Premier ministre par le Président Emmanuel Macron le 5 septembre 2024.\n\nMichel Barnier est un homme politique français, membre des Républicains (LR), ancien ministre et ancien négociateur en chef du Brexit pour l'Union européenne. Sa nomination reflète la nécessité de trouver un compromis politique dans une Assemblée sans majorité claire.",
+            "image": null
+        },
+        {
+            "id": "livret_365",
+            "question": "Pourquoi le Président a-t-il dissous l'Assemblée nationale en juin 2024 ?",
+            "explanation": "Le Président Emmanuel Macron a dissous l'Assemblée nationale le 9 juin 2024, le soir même des élections européennes, après la défaite de son parti (Renaissance) face au Rassemblement National qui est arrivé en tête avec environ 31% des voix.\n\nCette décision de dissolution, prévue par l'article 12 de la Constitution, visait à :\n\n- donner la parole aux citoyens après cette défaite électorale ;\n\n- tenter de clarifier la situation politique ;\n\n- chercher une nouvelle majorité parlementaire.\n\nCependant, le résultat des élections législatives anticipées n'a pas donné de majorité absolue à aucun camp, créant une situation politique complexe.",
             "image": null
         }
     ]

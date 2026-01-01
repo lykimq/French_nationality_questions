@@ -596,7 +596,7 @@
                 "25 États membres.",
                 "30 États membres."
             ],
-            "explanation": "L'UE compte 27 États membres depuis 2020, après le départ du Royaume-Uni (Brexit). C'est la première fois qu'un pays quitte l'UE.",
+            "explanation": "L'UE compte 27 États membres depuis le 31 janvier 2020, date effective du départ du Royaume-Uni (Brexit). C'est la première fois qu'un pays quitte l'UE.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
@@ -940,14 +940,14 @@
         },
         {
             "id": "sp_73",
-            "question": "Qui est le président de l'Union européenne ?",
-            "correctAnswer": "L'UE n'a pas un président unique, mais plusieurs institutions avec leurs présidents.",
+            "question": "L'Union européenne a-t-elle un président unique ?",
+            "correctAnswer": "Non, l'UE a plusieurs présidents pour différentes institutions (Commission, Conseil européen, Parlement).",
             "incorrectAnswers": [
-                "Le Président de la France, pays fondateur de l'UE.",
-                "Le Premier ministre du pays assurant la présidence tournante du Conseil.",
-                "Le chef d'État du pays le plus peuplé de l'Union européenne."
+                "Oui, le président de la Commission européenne dirige toute l'UE.",
+                "Oui, le président du Conseil européen est le chef de l'UE.",
+                "Oui, c'est le président du pays le plus peuplé qui dirige l'UE."
             ],
-            "explanation": "L'Union européenne n'a pas un 'président' unique. La fonction la plus proche est celle du président de la Commission européenne.",
+            "explanation": "L'Union européenne n'a pas un 'président' unique. Elle a plusieurs présidents : le président de la Commission européenne, le président du Conseil européen, et le président du Parlement européen. Chacun a des fonctions différentes.",
             "subTheme": "european_institutions",
             "questionType": "knowledge"
         },
@@ -962,6 +962,84 @@
             ],
             "explanation": "L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale, en favorisant la coopération économique et politique.",
             "subTheme": "european_institutions",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "sp_75",
+            "question": "Qu'est-ce qui s'est passé lors des élections législatives de juin-juillet 2024 ?",
+            "correctAnswer": "Le Nouveau Front Populaire est devenu la première force à l'Assemblée nationale, sans majorité absolue.",
+            "incorrectAnswers": [
+                "Le Rassemblement National a obtenu la majorité absolue.",
+                "Le camp présidentiel a renforcé sa majorité.",
+                "L'extrême gauche a obtenu tous les sièges."
+            ],
+            "explanation": "Les élections législatives de 2024, convoquées après la dissolution de l'Assemblée nationale par le Président Macron, ont abouti à un Parlement sans majorité absolue. Le Nouveau Front Populaire (alliance de gauche) est arrivé en tête avec environ 180 sièges, suivi du camp présidentiel et du Rassemblement National.",
+            "subTheme": "democracy_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "sp_76",
+            "question": "Pourquoi le Président Macron a-t-il dissout l'Assemblée nationale en juin 2024 ?",
+            "correctAnswer": "Suite à la défaite de son parti aux élections européennes de juin 2024.",
+            "incorrectAnswers": [
+                "Pour organiser un référendum sur la Constitution.",
+                "À cause d'une motion de censure adoptée.",
+                "Pour anticiper la fin de son mandat présidentiel."
+            ],
+            "explanation": "Après la victoire du Rassemblement National aux élections européennes du 9 juin 2024, le Président Macron a annoncé la dissolution de l'Assemblée nationale le soir même, provoquant des élections législatives anticipées pour les 30 juin et 7 juillet 2024.",
+            "subTheme": "democracy_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "sp_77",
+            "question": "Qui a été nommé Premier ministre après les élections législatives de 2024 ?",
+            "correctAnswer": "Michel Barnier, en septembre 2024.",
+            "incorrectAnswers": [
+                "Gabriel Attal, maintenu dans ses fonctions.",
+                "Jean-Luc Mélenchon, leader du NFP.",
+                "Jordan Bardella, président du RN."
+            ],
+            "explanation": "Après les élections législatives de 2024 qui n'ont donné de majorité absolue à aucun camp, Michel Barnier, ancien négociateur du Brexit pour l'UE et membre des Républicains, a été nommé Premier ministre par Emmanuel Macron le 5 septembre 2024.",
+            "subTheme": "organization_republic",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "sp_78",
+            "question": "Quelle a été une conséquence majeure de la dissolution de 2024 ?",
+            "correctAnswer": "La formation d'une Assemblée nationale sans majorité absolue (\"Assemblée introuvable\").",
+            "incorrectAnswers": [
+                "Une majorité renforcée pour le camp présidentiel.",
+                "L'abolition du Sénat.",
+                "Une nouvelle Constitution."
+            ],
+            "explanation": "La dissolution de 2024 a abouti à une situation politique inédite sous la Ve République : aucune coalition n'a obtenu la majorité absolue (289 sièges), créant une Assemblée dite \"introuvable\" ou \"hung parliament\", rendant la gouvernance plus complexe.",
+            "subTheme": "democracy_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "sp_79",
+            "question": "Quel record de participation a été atteint lors du second tour des législatives 2024 ?",
+            "correctAnswer": "66,63%, le plus haut taux depuis 1997.",
+            "incorrectAnswers": [
+                "45%, le plus bas taux de l'histoire.",
+                "80%, un record absolu.",
+                "55%, dans la moyenne habituelle."
+            ],
+            "explanation": "Le second tour des élections législatives de juillet 2024 a enregistré une participation de 66,63%, la plus élevée pour des législatives depuis 1997, témoignant de la forte mobilisation citoyenne face aux enjeux politiques.",
+            "subTheme": "democracy_vote",
+            "questionType": "knowledge"
+        },
+        {
+            "id": "sp_80",
+            "question": "Qu'est-ce que le \"Nouveau Front Populaire\" créé en 2024 ?",
+            "correctAnswer": "Une alliance électorale de gauche réunissant LFI, PS, EELV et PCF.",
+            "incorrectAnswers": [
+                "Un nouveau parti politique centriste.",
+                "Une alliance entre la droite et le centre.",
+                "Un mouvement social contre les réformes."
+            ],
+            "explanation": "Le Nouveau Front Populaire (NFP) est une alliance électorale de gauche formée en juin 2024 pour les élections législatives, regroupant La France Insoumise, le Parti Socialiste, Europe Écologie Les Verts et le Parti Communiste Français. Cette coalition s'est constituée rapidement après l'annonce de la dissolution.",
+            "subTheme": "democracy_vote",
             "questionType": "knowledge"
         }
     ]

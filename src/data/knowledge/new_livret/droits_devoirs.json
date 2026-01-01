@@ -254,13 +254,13 @@
         {
             "id": "livret_43",
             "question": "Pouvez-vous donner des exemples de départements français ?",
-            "explanation": "Parmi les départements français, on peut citer le Jura, Paris, l'Ardèche, la Loire, l'Isère, la HauteSavoie, le Nord, le Pas- de-Calais, et bien d'autres.",
+            "explanation": "Parmi les départements français, on peut citer le Jura, Paris, l'Ardèche, la Loire, l'Isère, la Haute-Savoie, le Nord, le Pas-de-Calais, et bien d'autres.",
             "image": null
         },
         {
             "id": "livret_44",
             "question": "Pouvez-vous nommer quelques régions françaises ?",
-            "explanation": "En France, on peut mentionner des régions telles que la Bourgogne-Franche-Comté, la Bretagne, la Normandie, la Corse, les Hauts-de-France, l'Auvergne-Rhône-Alpes, l'Île- de-France, les Pays de la Loire, le Centre-Val de Loire, le Grand Est, la Nouvelle-Aquitaine, l'Occitanie, ProvenceAlpes-Côte dʼAzur, ainsi que les régions d'outre-mer telles que la Guyane, la Guadeloupe, la Martinique, Mayotte et La Réunion.",
+            "explanation": "En France, on peut mentionner des régions telles que la Bourgogne-Franche-Comté, la Bretagne, la Normandie, la Corse, les Hauts-de-France, l'Auvergne-Rhône-Alpes, l'Île-de-France, les Pays de la Loire, le Centre-Val de Loire, le Grand Est, la Nouvelle-Aquitaine, l'Occitanie, Provence-Alpes-Côte d'Azur, ainsi que les régions d'outre-mer telles que la Guyane, la Guadeloupe, la Martinique, Mayotte et La Réunion.",
             "image": null
         },
         {
@@ -272,7 +272,7 @@
         {
             "id": "livret_46",
             "question": "Combien y a-t-il de départements et régions d’Outre-mer (DOM-ROM) ?",
-            "explanation": "Il y a 5 départements et régions d’Outre-mer (DROM) : Guadeloupe, Martinique, Guyane, Réunion, et Mayotte Ces territoires ont les mêmes lois que la France métropolitaine.",
+            "explanation": "Il y a 5 départements et régions d'Outre-mer (DROM) : Guadeloupe, Martinique, Guyane, Réunion, et Mayotte. Ces territoires ont les mêmes lois que la France métropolitaine.",
             "image": null
         },
         {
@@ -308,13 +308,13 @@
         {
             "id": "livret_52",
             "question": "Citez quelques villes françaises et leurs régions respectives.",
-            "explanation": "Paris - Île-de-France, Marseille - Provence-Alpes-Côte d'Azur, Lyon - Auvergne-Rhône-Alpes, Toulouse - Occitanie, Nice - Provence-Alpes-Côte d'Azur, Bordeaux - Nouvelle-Aquitaine, Lille - Hauts-deFrance, Nantes - Pays de la Loire, Strasbourg - Grand Est, Toulouse - Occitanie, Rennes - Bretagne, Dijon - Bourgogne-Franche-Comté",
+            "explanation": "Paris - Île-de-France, Marseille - Provence-Alpes-Côte d'Azur, Lyon - Auvergne-Rhône-Alpes, Toulouse - Occitanie, Nice - Provence-Alpes-Côte d'Azur, Bordeaux - Nouvelle-Aquitaine, Lille - Hauts-de-France, Nantes - Pays de la Loire, Strasbourg - Grand Est, Rennes - Bretagne, Dijon - Bourgogne-Franche-Comté",
             "image": null
         },
         {
             "id": "livret_53",
             "question": "Quelles sont les origines des principaux fleuves de France ?",
-            "explanation": "- La Loire : C'est le plus long fleuve de France, il prend sa source dans le Massif central, plus précisément dans le département de l'Allier, et se jette dans l'océan Atlantique.\n\n- La Seine : Elle prend sa source dans le plateau de Langres, en Haute-Marne, et traverse Paris avant de se jeter dans la Manche.\n\n- Le Rhône : Il prend sa source dans le massif du Mont Blanc en Suisse, traverse la région AuvergneRhône-Alpes et se jette dans la mer Méditerranée, dans le delta du Rhône.\n\n- La Garonne : Elle prend sa source dans les Pyrénées espagnoles et traverse le sud-ouest de la France avant de se jeter dans l'océan Atlantique, dans l'estuaire de la Gironde.\n\n- Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.",
+            "explanation": "- La Loire : C'est le plus long fleuve de France, il prend sa source dans le Massif central, plus précisément dans le département de l'Allier, et se jette dans l'océan Atlantique.\n\n- La Seine : Elle prend sa source dans le plateau de Langres, en Haute-Marne, et traverse Paris avant de se jeter dans la Manche.\n\n- Le Rhône : Il prend sa source dans le massif du Mont Blanc en Suisse, traverse la région Auvergne-Rhône-Alpes et se jette dans la mer Méditerranée, dans le delta du Rhône.\n\n- La Garonne : Elle prend sa source dans les Pyrénées espagnoles et traverse le sud-ouest de la France avant de se jeter dans l'océan Atlantique, dans l'estuaire de la Gironde.\n\n- Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.",
             "image": null
         },
         {
@@ -381,6 +381,18 @@
             "id": "livret_64",
             "question": "Comment les citoyens manifestent-ils leur désaccord ?",
             "explanation": "Les citoyens peuvent manifester leur désaccord en participant à des manifestations, en faisant grève, en signant des pétitions, en contactant leurs représentants élus, etc.",
+            "image": null
+        },
+        {
+            "id": "livret_65",
+            "question": "Qu'est-ce qui s'est passé concernant l'IVG dans la Constitution en mars 2024 ?",
+            "explanation": "Le 4 mars 2024, le Congrès réuni à Versailles a adopté une révision constitutionnelle inscrivant la liberté de recourir à l'IVG dans la Constitution française, à l'article 34.\n\nCette modification stipule que \"la loi détermine les conditions dans lesquelles s'exerce la liberté garantie à la femme d'avoir recours à une interruption volontaire de grossesse\".\n\nLe vote a été massif : 780 parlementaires ont voté pour contre 72 oppositions, dépassant largement la majorité des trois cinquièmes requise (512 voix sur 853 votants).\n\nLa France est ainsi devenue le premier pays au monde à inscrire ce droit dans sa Constitution. Cette décision historique vise à protéger ce droit fondamental face aux risques de remise en cause, notamment après la décision de la Cour suprême américaine en 2022 qui a supprimé la protection fédérale du droit à l'avortement aux États-Unis.",
+            "image": null
+        },
+        {
+            "id": "livret_66",
+            "question": "Quelle nouvelle loi sur l'immigration a été adoptée en janvier 2024 ?",
+            "explanation": "Le 26 janvier 2024, une nouvelle loi sur l'immigration a été promulguée en France. Cependant, cette loi a été partiellement censurée par le Conseil constitutionnel.\n\nLe Conseil constitutionnel a invalidé plus d'un tiers des articles de la loi, notamment ceux qui établissaient des quotas migratoires et durcissaient l'accès aux prestations sociales pour les étrangers en situation régulière.\n\nLes dispositions validées par le Conseil constitutionnel concernent principalement le renforcement des contrôles aux frontières et l'éloignement des personnes en situation irrégulière.\n\nCette censure partielle illustre le rôle du Conseil constitutionnel comme gardien de la Constitution et des droits fondamentaux, garantissant que les lois respectent les principes constitutionnels.",
             "image": null
         }
     ]

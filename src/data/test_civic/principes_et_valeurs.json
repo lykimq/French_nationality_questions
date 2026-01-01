@@ -43,14 +43,14 @@
         },
         {
             "id": "pv_4",
-            "question": "Quelle est la seule limite à la liberté en France ?",
+            "question": "Quelle est la limite fondamentale à la liberté en France ?",
             "correctAnswer": "Ne pas empêcher une autre personne d'exercer sa propre liberté.",
             "incorrectAnswers": [
-                "Respecter les lois et règlements en vigueur.",
-                "Respecter les traditions religieuses de la majorité.",
-                "Suivre les règles établies par les autorités locales."
+                "Respecter uniquement les traditions républicaines de la France.",
+                "Suivre les règles établies par la majorité de la population.",
+                "Obtenir l'autorisation des autorités locales pour toute expression publique."
             ],
-            "explanation": "En France, chaque personne peut penser, s'exprimer et vivre comme elle le souhaite. La seule limite est de ne pas empêcher une autre personne d'en faire autant.",
+            "explanation": "En France, chaque personne peut penser, s'exprimer et vivre comme elle le souhaite. La limite fondamentale est de ne pas empêcher une autre personne d'exercer sa propre liberté. Les libertés sont également encadrées par la loi pour protéger l'ordre public et les droits d'autrui (interdiction de l'incitation à la haine, diffamation, etc.).",
             "subTheme": "situational_principles",
             "questionType": "knowledge"
         },

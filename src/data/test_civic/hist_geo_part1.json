@@ -39,7 +39,7 @@
     },
     {
         "id": "hgp1_4",
-        "question": "Qui sont les trois grands rois qui ont construit la France (Mérovingiens, Carolingiens, Capétiens) ?",
+        "question": "Qui sont les trois grands rois fondateurs des dynasties Mérovingienne, Carolingienne et Capétienne ?",
         "correctAnswer": "Clovis, Charlemagne et Hugues Capet.",
         "incorrectAnswers": [
             "Clovis, Charlemagne et Louis XIV.",
@@ -108,7 +108,7 @@
         "correctAnswer": "La Révolution française et la réunion des États généraux.",
         "incorrectAnswers": [
             "La prise de la Bastille le 14 juillet 1789 uniquement.",
-            "L'adoption de la Déclaration des droits de l'homme le 26 août 1789 uniquement.",
+            "L'exécution de Louis XVI en 1793.",
             "Le Serment du Jeu de Paume le 20 juin 1789 uniquement."
         ],
         "explanation": "Le Tiers-État se proclame Assemblée nationale et met fin à l'absolutisme.",
@@ -159,7 +159,7 @@
         "question": "Quel changement la 1ère République apporte-t-elle aux droits des citoyens ?",
         "correctAnswer": "La séparation progressive entre l'Église et l'État.",
         "incorrectAnswers": [
-            "La séparation complète et définitive entre l'Église et l'État.",
+            "La séparation complète et définitive entre l'Église et l'État (loi de 1905).",
             "La liberté de culte et la fin de toute influence religieuse.",
             "La création d'une religion d'État républicaine."
         ],
@@ -598,14 +598,14 @@
     },
     {
         "id": "hgp1_47",
-        "question": "Quel président a dépénalisé l'avortement ?",
+        "question": "Quel président a fait voter la loi légalisant l'avortement (IVG) ?",
         "correctAnswer": "Valéry Giscard d'Estaing (1974-1981).",
         "incorrectAnswers": [
             "Valéry Giscard d'Estaing (1974-1980).",
             "Valéry Giscard d'Estaing (1974-1982).",
             "François Mitterrand (1981-1995)."
         ],
-        "explanation": "La loi Veil a été votée sous son mandat.",
+        "explanation": "La loi Veil a été votée en 1975 sous son mandat.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
@@ -618,7 +618,7 @@
             "François Mitterrand (1981-1996).",
             "Valéry Giscard d'Estaing (1974-1981)."
         ],
-        "explanation": "Il a aussi réalisé de grands travaux (Louvre, Bibliothèque).",
+        "explanation": "La loi portée par Robert Badinter a été votée en 1981. Il a aussi réalisé de grands travaux (Louvre, Bibliothèque).",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
     },
@@ -1119,14 +1119,14 @@
     },
     {
         "id": "hgp1_88",
-        "question": "Quelles sont les institutions de l'UE ?",
-        "correctAnswer": "La Commission, le Parlement, le Conseil.",
+        "question": "Quelles sont les principales institutions politiques de l'UE qui créent les lois ?",
+        "correctAnswer": "La Commission, le Parlement européen et le Conseil de l'Union européenne.",
         "incorrectAnswers": [
-            "La Commission, le Parlement, le Conseil et la Cour de justice.",
-            "La Commission, le Parlement, le Conseil et la Banque centrale.",
-            "La Commission, le Parlement, le Conseil et le Conseil européen uniquement."
+            "La Commission, le Parlement européen et la Cour de justice uniquement.",
+            "La Commission, le Parlement européen et la Banque centrale européenne uniquement.",
+            "Le Parlement européen, le Conseil de l'Union européenne et le Conseil européen uniquement."
         ],
-        "explanation": "Elles créent les lois européennes.",
+        "explanation": "Ces trois institutions participent à l'adoption des lois européennes.",
         "subTheme": "historical_periods",
         "questionType": "knowledge"
     },

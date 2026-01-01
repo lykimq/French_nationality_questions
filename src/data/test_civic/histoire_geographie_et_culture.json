@@ -24,7 +24,7 @@
                 "Les Mérovingiens, les Capétiens et les Valois.",
                 "Les Carolingiens, les Capétiens et les Valois."
             ],
-            "explanation": "Trois grandes dynasties royales se sont succédées : les Mérovingiens (Clovis), les Carolingiens (Charlemagne) et les Capétiens (Hugues Capet).",
+            "explanation": "Trois grandes dynasties royales se sont succédées : les Mérovingiens (Clovis), les Carolingiens (Charlemagne) et les Capétiens (Hugues Capet). Les Bourbons, qui ont régné plus tard, sont une branche de la dynastie capétienne.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
@@ -206,7 +206,7 @@
                 "La Déclaration des droits de l'homme.",
                 "Le Code pénal."
             ],
-            "explanation": "Le Code civil de 1804 garantit l'égalité devant la loi et règle la vie en société. Il est toujours en vigueur aujourd'hui.",
+            "explanation": "Le Code civil, promulgué le 21 mars 1804, garantit l'égalité devant la loi et règle la vie en société. Il est toujours en vigueur aujourd'hui.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
@@ -232,7 +232,7 @@
                 "En 1814, après la première abdication.",
                 "En 1821, à la mort de Napoléon."
             ],
-            "explanation": "Napoléon abdique définitivement le 7 juillet 1815 après la bataille de Waterloo. Le 1er Empire prend fin et la monarchie est rétablie.",
+            "explanation": "Napoléon abdique définitivement le 7 juillet 1815 après sa défaite à la bataille de Waterloo (18 juin 1815). Le 1er Empire prend fin et la monarchie est rétablie.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
@@ -480,19 +480,6 @@
                 "1905-1910."
             ],
             "explanation": "La Première Guerre mondiale a duré de 1914 à 1918. L'Armistice a été signé le 11 novembre 1918.",
-            "subTheme": "historical_periods",
-            "questionType": "knowledge"
-        },
-        {
-            "id": "hgc_38",
-            "question": "Quel événement a déclenché la Première Guerre mondiale ?",
-            "correctAnswer": "L'assassinat de l'archiduc François-Ferdinand à Sarajevo le 28 juin 1914.",
-            "incorrectAnswers": [
-                "L'invasion de la Pologne.",
-                "L'attaque de Pearl Harbor.",
-                "La Révolution russe."
-            ],
-            "explanation": "Le 28 juin 1914, l'assassinat à Sarajevo de l'archiduc François-Ferdinand, héritier de l'empire d'Autriche-Hongrie, déclenche le conflit.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },
@@ -791,7 +778,7 @@
                 "La Marne, la Dordogne et l'Oise uniquement.",
                 "Le Nil, l'Amazone et le Mississippi."
             ],
-            "explanation": "Les cinq principaux fleuves français sont la Seine, la Loire (le plus long avec 1012 km), le Rhône, la Garonne et le Rhin (fleuve frontalier).",
+            "explanation": "Les cinq principaux fleuves français sont la Seine (traverse Paris), la Loire (le plus long fleuve entièrement en France avec 1012 km), le Rhône (prend sa source en Suisse), la Garonne (prend sa source en Espagne) et le Rhin (fleuve frontalier avec l'Allemagne).",
             "subTheme": "territories_geography",
             "questionType": "knowledge"
         },
@@ -926,19 +913,6 @@
             "questionType": "knowledge"
         },
         {
-            "id": "hgc_72",
-            "question": "Où se trouve la Corse ?",
-            "correctAnswer": "Dans la mer Méditerranée, au sud-est de la France.",
-            "incorrectAnswers": [
-                "Dans l'océan Atlantique.",
-                "Dans la Manche.",
-                "Dans l'océan Indien."
-            ],
-            "explanation": "La Corse est une île française située dans la mer Méditerranée, au large de la côte sud-est de la France.",
-            "subTheme": "territories_geography",
-            "questionType": "knowledge"
-        },
-        {
             "id": "hgc_73",
             "question": "Combien y a-t-il de régions en France métropolitaine ?",
             "correctAnswer": "13 régions (12 + la Corse).",
@@ -973,7 +947,7 @@
                 "Un général de Napoléon.",
                 "Un philosophe des Lumières."
             ],
-            "explanation": "Molière est le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies comme L'Avare et Le Malade imaginaire.",
+            "explanation": "Molière (de son vrai nom Jean-Baptiste Poquelin) est le plus célèbre dramaturge français du XVIIe siècle, connu pour ses comédies comme L'Avare et Le Malade imaginaire.",
             "subTheme": "heritage",
             "questionType": "knowledge"
         },
@@ -1142,7 +1116,7 @@
                 "Un système de cryptage.",
                 "Un code vestimentaire de la cour."
             ],
-            "explanation": "Le Code Napoléon, ou Code civil des Français, a été établi sous Napoléon Bonaparte en 1804. Il régit toujours la vie civile en France.",
+            "explanation": "Le Code Napoléon, ou Code civil des Français, a été promulgué le 21 mars 1804 sous Napoléon Bonaparte. Il régit toujours la vie civile en France.",
             "subTheme": "historical_periods",
             "questionType": "knowledge"
         },

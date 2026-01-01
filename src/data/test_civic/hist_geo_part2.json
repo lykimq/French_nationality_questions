@@ -247,10 +247,10 @@
     },
     {
         "id": "hgp2_20",
-        "question": "Combien de pays ont une frontière terrestre avec la France Métropolitaine ?",
+        "question": "Combien de pays ont une frontière terrestre avec la France métropolitaine ?",
         "correctAnswer": "8 pays (Belgique, Luxembourg, Allemagne, Suisse, Italie, Espagne, Andorre, Monaco).",
         "incorrectAnswers": ["7 pays.", "9 pays.", "10 pays."],
-        "explanation": "La France est un carrefour européen.",
+        "explanation": "La France métropolitaine partage ses frontières avec 8 pays. La France est un carrefour européen.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
@@ -282,10 +282,10 @@
     },
     {
         "id": "hgp2_23",
-        "question": "Quelle est la population de la France (environ) ?",
+        "question": "Quelle est approximativement la population de la France ?",
         "correctAnswer": "68 millions d'habitants.",
         "incorrectAnswers": ["65 millions.", "70 millions.", "75 millions."],
-        "explanation": "C'est le 2ème pays le plus peuplé de l'UE.",
+        "explanation": "C'est le 2ème pays le plus peuplé de l'UE après l'Allemagne.",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
@@ -343,7 +343,7 @@
     },
     {
         "id": "hgp2_28",
-        "question": "Quelles sont les plus grandes métropoles après Paris ?",
+        "question": "Quelles sont les plus grandes métropoles françaises après Paris ?",
         "correctAnswer": "Lyon, Marseille, Lille, Bordeaux, Toulouse.",
         "incorrectAnswers": [
             "Lyon, Marseille, Lille, Bordeaux, Nantes.",
@@ -434,7 +434,7 @@
     },
     {
         "id": "hgp2_35",
-        "question": "Quelle est la puissance économique de la France ?",
+        "question": "Quel est approximativement le rang de la France parmi les puissances économiques mondiales ?",
         "correctAnswer": "7e puissance mondiale.",
         "incorrectAnswers": [
             "6e puissance mondiale.",
@@ -489,11 +489,11 @@
         "question": "Quel est le pays le plus peuplé d'Europe ?",
         "correctAnswer": "L'Allemagne.",
         "incorrectAnswers": [
-            "L'Allemagne, la France est le 1er.",
-            "L'Allemagne, la France est le 3ème.",
-            "L'Allemagne, la France est le 4ème."
+            "La France.",
+            "L'Italie.",
+            "L'Espagne."
         ],
-        "explanation": "La France est le 2ème.",
+        "explanation": "Selon les données de l'INSEE et d'Eurostat (2024-2025), l'Allemagne est le pays le plus peuplé d'Europe avec environ 83,6 millions d'habitants. La France occupe le 2ème rang avec environ 68,6 millions d'habitants (66,4 millions en métropole et 2,3 millions dans les DROM). Suivent l'Italie (58,9 millions), l'Espagne (49,1 millions) et la Pologne (36,5 millions).",
         "subTheme": "territories_geography",
         "questionType": "knowledge"
     },
@@ -612,7 +612,7 @@
     },
     {
         "id": "hgp2_49",
-        "question": "Quelle est la place démographique de la France dans le monde ?",
+        "question": "Quelle est approximativement la place démographique de la France dans le monde ?",
         "correctAnswer": "22e rang mondial (moins de 1% de la population mondiale).",
         "incorrectAnswers": [
             "20e rang mondial (moins de 1% de la population mondiale).",

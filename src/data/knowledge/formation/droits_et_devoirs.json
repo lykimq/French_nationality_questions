@@ -336,7 +336,19 @@
         {
             "id": "formation_56",
             "question": "Quels sont des exemples d'actions concrètes pour protéger l'environnement ?",
-            "explanation": "- trier ses déchets et réduire ses déchets plastiques ;\n\n- éviter le gaspillage des aliments et de l’énergie ;\n\n- privilégier les transports en commun et le vélo ;\n\n- respecter les espaces communs et ne pas y jeter de déchets ;\n\n- participer à des actions locales pour l’environnement (exemple : nettoyage collectif).",
+            "explanation": "- trier ses déchets et réduire ses déchets plastiques ;\n\n- éviter le gaspillage des aliments et de l'énergie ;\n\n- privilégier les transports en commun et le vélo ;\n\n- respecter les espaces communs et ne pas y jeter de déchets ;\n\n- participer à des actions locales pour l'environnement (exemple : nettoyage collectif).",
+            "image": null
+        },
+        {
+            "id": "formation_57",
+            "question": "Qu'est-ce qui s'est passé concernant l'IVG dans la Constitution en 2024 ?",
+            "explanation": "Le 4 mars 2024, le Congrès réuni à Versailles a adopté une révision constitutionnelle inscrivant la liberté de recourir à l'IVG dans la Constitution française, à l'article 34.\n\nCette modification stipule que \"la loi détermine les conditions dans lesquelles s'exerce la liberté garantie à la femme d'avoir recours à une interruption volontaire de grossesse\".\n\nLe vote a été massif : 780 parlementaires ont voté pour contre 72 oppositions, dépassant largement la majorité des trois cinquièmes requise (512 voix sur 853 votants).\n\nLa France est ainsi devenue le premier pays au monde à inscrire ce droit dans sa Constitution. Cette décision historique vise à protéger ce droit fondamental face aux risques de remise en cause, notamment après la décision de la Cour suprême américaine en 2022 qui a supprimé la protection fédérale du droit à l'avortement aux États-Unis.",
+            "image": null
+        },
+        {
+            "id": "formation_58",
+            "question": "Quelle nouvelle loi sur l'immigration a été adoptée en 2024 ?",
+            "explanation": "Le 26 janvier 2024, une nouvelle loi sur l'immigration a été promulguée en France. Cependant, cette loi a été partiellement censurée par le Conseil constitutionnel.\n\nLe Conseil constitutionnel a invalidé plus d'un tiers des articles de la loi, notamment ceux qui :\n\n- établissaient des quotas migratoires ;\n\n- durcissaient l'accès aux prestations sociales pour les étrangers en situation régulière ;\n\n- modifiaient les conditions d'accès à certaines aides.\n\nLes dispositions validées par le Conseil constitutionnel concernent principalement :\n\n- le renforcement des contrôles aux frontières ;\n\n- l'éloignement des personnes en situation irrégulière ;\n\n- certaines mesures de lutte contre l'immigration clandestine.\n\nCette censure partielle illustre le rôle du Conseil constitutionnel comme gardien de la Constitution et des droits fondamentaux, garantissant que les lois respectent les principes constitutionnels.",
             "image": null
         }
     ]
