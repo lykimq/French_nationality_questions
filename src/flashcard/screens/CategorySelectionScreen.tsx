@@ -108,6 +108,7 @@ const CategorySelectionScreen: React.FC = () => {
                         message="Les cartes flash sont un outil d'apprentissage actif qui vous permet de réviser les questions de manière interactive. Retournez les cartes pour révéler les réponses et testez votre mémoire. Cette méthode est efficace pour mémoriser les informations clés de l'entretien de naturalisation."
                         icon="school"
                         collapsible={true}
+                        storageKey="flashcard_info"
                     />
                     {categories.map((category) => {
                         const iconKey = CATEGORY_ICON_KEYS[category.id] || 'book';

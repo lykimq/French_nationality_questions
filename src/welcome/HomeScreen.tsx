@@ -53,6 +53,7 @@ const HomeScreen = () => {
                             message="Cette application est un outil de préparation pour l'entretien de naturalisation française. Elle n'est pas l'examen officiel et ne remplace pas la préparation officielle fournie par les autorités françaises. Les questions et réponses sont basées sur des sources publiques et peuvent évoluer."
                             icon="information-circle"
                             collapsible={true}
+                            storageKey="home_disclaimer"
                         />
                         <InfoBanner
                             type="info"
@@ -60,6 +61,7 @@ const HomeScreen = () => {
                             message="Parcourez les questions par catégorie pour vous familiariser avec les différents thèmes de l'entretien de naturalisation. Chaque catégorie contient des questions avec des explications détaillées pour vous aider à comprendre les concepts clés."
                             icon="book"
                             collapsible={true}
+                            storageKey="home_info"
                         />
                         {categories.map((category: FrenchCategory) => {
                             return (

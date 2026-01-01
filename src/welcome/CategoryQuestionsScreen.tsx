@@ -68,6 +68,7 @@ const CategoryQuestionsScreen = () => {
                         icon="book"
                         dismissible={true}
                         collapsible={true}
+                        storageKey={`category_${categoryId}_info`}
                         onDismiss={() => setShowInfoBanner(false)}
                     />
                 </View>

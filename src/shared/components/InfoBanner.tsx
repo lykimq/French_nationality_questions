@@ -1,8 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../contexts/ThemeContext';
 import { FormattedText, Icon3D } from './';
+import { createLogger } from '../utils/logger';
+
+const logger = createLogger('InfoBanner');
+
+const STORAGE_PREFIX = 'info_banner_collapsed_';
 
 export interface InfoBannerProps {
     type?: 'info' | 'warning' | 'disclaimer';
@@ -13,6 +19,7 @@ export interface InfoBannerProps {
     dismissible?: boolean;
     collapsible?: boolean;
     defaultCollapsed?: boolean;
+    storageKey?: string;
     style?: object;
 }
 
@@ -25,23 +32,60 @@ const InfoBanner: React.FC<InfoBannerProps> = ({
     dismissible = false,
     collapsible = false,
     defaultCollapsed = false,
+    storageKey,
     style,
 }) => {
     const { theme } = useTheme();
     const [isCollapsed, setIsCollapsed] = useState(defaultCollapsed);
+    const [isLoadingState, setIsLoadingState] = useState(!!storageKey);
     const animatedHeight = useRef(new Animated.Value(defaultCollapsed ? 0 : 1)).current;
     const [contentHeight, setContentHeight] = useState(0);
 
     useEffect(() => {
-        Animated.timing(animatedHeight, {
-            toValue: isCollapsed ? 0 : 1,
-            duration: 250,
-            useNativeDriver: false,
-        }).start();
-    }, [isCollapsed, animatedHeight]);
+        if (storageKey && collapsible) {
+            const loadCollapsedState = async () => {
+                try {
+                    const storageKeyFull = `${STORAGE_PREFIX}${storageKey}`;
+                    const savedState = await AsyncStorage.getItem(storageKeyFull);
+                    if (savedState !== null) {
+                        const isCollapsedSaved = savedState === 'true';
+                        setIsCollapsed(isCollapsedSaved);
+                        animatedHeight.setValue(isCollapsedSaved ? 0 : 1);
+                    }
+                } catch (error) {
+                    logger.error('Failed to load collapsed state:', error);
+                } finally {
+                    setIsLoadingState(false);
+                }
+            };
+            loadCollapsedState();
+        } else {
+            setIsLoadingState(false);
+        }
+    }, [storageKey, collapsible, animatedHeight]);
 
-    const toggleCollapse = () => {
-        setIsCollapsed(!isCollapsed);
+    useEffect(() => {
+        if (!isLoadingState) {
+            Animated.timing(animatedHeight, {
+                toValue: isCollapsed ? 0 : 1,
+                duration: 250,
+                useNativeDriver: false,
+            }).start();
+        }
+    }, [isCollapsed, animatedHeight, isLoadingState]);
+
+    const toggleCollapse = async () => {
+        const newCollapsedState = !isCollapsed;
+        setIsCollapsed(newCollapsedState);
+
+        if (storageKey && collapsible) {
+            try {
+                const storageKeyFull = `${STORAGE_PREFIX}${storageKey}`;
+                await AsyncStorage.setItem(storageKeyFull, String(newCollapsedState));
+            } catch (error) {
+                logger.error('Failed to save collapsed state:', error);
+            }
+        }
     };
 
     const handleContentLayout = (event: any) => {
