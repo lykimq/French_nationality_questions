@@ -27,7 +27,7 @@ const AppTabs = () => {
     const { getIconName, getIconVariant } = useIcons();
 
     if (isDataLoading || dataLoadingError) {
-        return <DataLoadingScreen error={dataLoadingError} />;
+        return <DataLoadingScreen error={dataLoadingError} isLoading={isDataLoading} />;
     }
 
     const renderTabIcon = (iconKey: 'home' | 'search' | 'settings', focused: boolean, color: string) => {

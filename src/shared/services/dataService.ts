@@ -170,7 +170,7 @@ export const invalidateDataCache = (dataPath?: string) => {
 
 const fetchFirebaseImage = async (imagePath: string): Promise<string | null> => {
     if (!storage) return null;
-    const imageRef = ref(storage, `French_questions/assets/${imagePath}`);
+    const imageRef = ref(storage, `French_questions/pics/${imagePath}`);
     const downloadURL = await getDownloadURL(imageRef);
     return downloadURL;
 };

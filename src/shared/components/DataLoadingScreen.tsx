@@ -48,18 +48,16 @@ const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry, i
                 ) : (
                     <>
                         <FormattedText style={[styles.loadingTitle, { color: theme.colors.text }]}>
-                            Chargement des données
+                            Chargement de l'application
                         </FormattedText>
                         <FormattedText style={[styles.loadingSubtext, { color: theme.colors.textMuted }]}>
-                            Téléchargement des questions depuis Firebase Storage...
+                            Préparation des questions et des ressources...
                         </FormattedText>
-                        {isLoading && (
-                            <ActivityIndicator
-                                size="large"
-                                color={theme.colors.primary}
-                                style={styles.spinner}
-                            />
-                        )}
+                        <ActivityIndicator
+                            size="large"
+                            color={theme.colors.primary}
+                            style={styles.spinner}
+                        />
                     </>
                 )}
             </View>
