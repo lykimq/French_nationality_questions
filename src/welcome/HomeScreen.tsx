@@ -7,7 +7,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText } from '../shared/components';
+import { FormattedText, InfoBanner } from '../shared/components';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
@@ -47,6 +47,20 @@ const HomeScreen = () => {
             >
                 {categories.length > 0 ? (
                     <>
+                        <InfoBanner
+                            type="disclaimer"
+                            title="Application de préparation"
+                            message="Cette application est un outil de préparation pour l'entretien de naturalisation française. Elle n'est pas l'examen officiel et ne remplace pas la préparation officielle fournie par les autorités françaises. Les questions et réponses sont basées sur des sources publiques et peuvent évoluer."
+                            icon="information-circle"
+                            collapsible={true}
+                        />
+                        <InfoBanner
+                            type="info"
+                            title="À propos de cette section"
+                            message="Parcourez les questions par catégorie pour vous familiariser avec les différents thèmes de l'entretien de naturalisation. Chaque catégorie contient des questions avec des explications détaillées pour vous aider à comprendre les concepts clés."
+                            icon="book"
+                            collapsible={true}
+                        />
                         {categories.map((category: FrenchCategory) => {
                             return (
                                 <CategoryCard

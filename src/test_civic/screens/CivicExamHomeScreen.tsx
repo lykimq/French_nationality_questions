@@ -13,7 +13,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useIcon3D } from '../../shared/hooks';
 import { useCivicExam } from '../contexts/CivicExamContext';
-import { FormattedText, Icon3D } from '../../shared/components';
+import { FormattedText, Icon3D, InfoBanner } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList } from '../types';
@@ -93,6 +93,20 @@ const CivicExamHomeScreen = () => {
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
                 >
+                    <InfoBanner
+                        type="disclaimer"
+                        title="Application de préparation"
+                        message="Cette application est un outil de préparation et ne constitue pas l'examen officiel de naturalisation. Les examens pratiques simulés vous aident à vous préparer, mais le format, les questions et les conditions de l'examen réel peuvent différer. Consultez toujours les sources officielles pour les informations les plus récentes."
+                        icon="warning"
+                        collapsible={true}
+                    />
+                    <InfoBanner
+                        type="info"
+                        title="À propos de cette section"
+                        message="Cette section propose deux modes : l'examen pratique (simulation complète avec timer) et le mode pratique (apprentissage sans contrainte de temps). Utilisez ces outils pour vous familiariser avec le format des questions et évaluer votre niveau de préparation."
+                        icon="document-text"
+                        collapsible={true}
+                    />
                     <View style={[styles.infoCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
                         <Icon3D
                             name="school"
