@@ -89,9 +89,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.lykimq_uyen.French_nationality_questions'
+    namespace 'com.lykimq_uyen.naturalisation_france'
     defaultConfig {
-        applicationId 'com.lykimq_uyen.French_nationality_questions'
+        applicationId 'com.lykimq_uyen.naturalisation_france'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -106,25 +106,15 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        release {
-            def keystorePropertiesFile = rootProject.file('gradle.properties')
-            def keystoreProperties = new Properties()
-            if (keystorePropertiesFile.exists()) {
-                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-            }
-            
-            storeFile file('my-release-key.keystore')
-            storePassword keystoreProperties['MYAPP_RELEASE_STORE_PASSWORD'] ?: System.getenv('MYAPP_RELEASE_STORE_PASSWORD') ?: ''
-            keyAlias keystoreProperties['MYAPP_RELEASE_KEY_ALIAS'] ?: System.getenv('MYAPP_RELEASE_KEY_ALIAS') ?: 'my-key-alias'
-            keyPassword keystoreProperties['MYAPP_RELEASE_KEY_PASSWORD'] ?: System.getenv('MYAPP_RELEASE_KEY_PASSWORD') ?: ''
-        }
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
         }
         release {
-            signingConfig signingConfigs.release
+            // Caution! In production, you need to generate your own keystore file.
+            // see https://reactnative.dev/docs/signed-apk-android.
+            signingConfig signingConfigs.debug
             def enableShrinkResources = findProperty('android.enableShrinkResourcesInReleaseBuilds') ?: 'false'
             shrinkResources enableShrinkResources.toBoolean()
             minifyEnabled enableMinifyInReleaseBuilds

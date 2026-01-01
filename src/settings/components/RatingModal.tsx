@@ -3,8 +3,10 @@ import { StyleSheet, View, TouchableOpacity, Modal, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../shared/contexts/ThemeContext';   
 import { FormattedText } from '../../shared/components';
-import { sharedStyles } from '../../shared/utils';
+import { sharedStyles, saveRating, openStoreReview, createLogger } from '../../shared/utils';
 import { settingsStyles } from './settingsStyles';
+
+const logger = createLogger('RatingModal');
 
 interface RatingModalProps {
     visible: boolean;
@@ -15,7 +17,7 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
     const { theme } = useTheme();
     const [selectedRating, setSelectedRating] = useState(0);
 
-    const handleRatingSubmit = () => {
+    const handleRatingSubmit = async () => {
         if (selectedRating === 0) {
             Alert.alert(
                 'Attention',
@@ -24,33 +26,60 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
             return;
         }
 
-        onClose();
+        try {
+            await saveRating(selectedRating);
+            setSelectedRating(0);
+            onClose();
 
-        if (selectedRating >= 4) {
+            if (selectedRating >= 4) {
+                setTimeout(() => {
+                    Alert.alert(
+                        'Merci!',
+                        'Merci pour votre excellente évaluation! Souhaitez-vous laisser un avis sur le store?',
+                        [
+                            {
+                                text: 'Plus tard',
+                                style: 'cancel',
+                            },
+                            {
+                                text: 'Oui',
+                                onPress: async () => {
+                                    try {
+                                        const opened = await openStoreReview();
+                                        if (!opened) {
+                                            Alert.alert(
+                                                'Information',
+                                                'L\'application n\'est peut-être pas encore publiée sur le store. Votre évaluation a été enregistrée avec succès!'
+                                            );
+                                        }
+                                    } catch (error) {
+                                        logger.error('Error opening store review:', error);
+                                        Alert.alert(
+                                            'Information',
+                                            'Votre évaluation a été enregistrée avec succès! Vous pourrez laisser un avis sur le store une fois l\'application publiée.'
+                                        );
+                                    }
+                                },
+                            },
+                        ]
+                    );
+                }, 300);
+            } else {
+                setTimeout(() => {
+                    Alert.alert(
+                        'Merci pour votre retour',
+                        'Nous sommes désolés que l\'application ne réponde pas entièrement à vos attentes. Votre avis nous aide à l\'améliorer!'
+                    );
+                }, 300);
+            }
+        } catch (error) {
+            logger.error('Error saving rating:', error);
             Alert.alert(
-                'Merci!',
-                'Merci pour votre excellente évaluation! Souhaitez-vous laisser un avis sur le store?',
-                [
-                    {
-                        text: 'Plus tard',
-                        style: 'cancel',
-                    },
-                    {
-                        text: 'Oui',
-                        onPress: () => {
-                            Alert.alert('Info', 'Redirection vers le store... (Fonctionnalité à implémenter)');
-                        },
-                    },
-                ]
+                'Erreur',
+                'Une erreur est survenue lors de l\'enregistrement de votre évaluation. Veuillez réessayer.'
             );
-        } else {
-            Alert.alert(
-                'Merci pour votre retour',
-                'Nous sommes désolés que l\'application ne réponde pas entièrement à vos attentes. Votre avis nous aide à l\'améliorer!'
-            );
+            setSelectedRating(0);
         }
-
-        setSelectedRating(0);
     };
 
     const handleClose = () => {

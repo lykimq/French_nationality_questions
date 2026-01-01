@@ -1,4 +1,4 @@
-package com.lykimq_uyen.French_nationality_questions
+package com.lykimq_uyen.naturalisation_france
 
 import android.app.Application
 import android.content.res.Configuration

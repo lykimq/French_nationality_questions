@@ -7,7 +7,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
-    <string>French_nationality_questions</string>
+    <string>Naturalisation France - Test Civique Actualisé</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -27,13 +27,13 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>com.lykimq-uyen.French-nationality-questions</string>
+          <string>com.lykimq-uyen.naturalisation-france</string>
         </array>
       </dict>
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>exp+frenchnationalityquestions</string>
+          <string>exp+naturalisation-france</string>
         </array>
       </dict>
     </array>
