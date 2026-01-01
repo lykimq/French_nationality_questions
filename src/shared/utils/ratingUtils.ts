@@ -46,7 +46,7 @@ export const saveRating = async (rating: number): Promise<void> => {
         await AsyncStorage.setItem(STORAGE_KEYS.RATING_DATA, JSON.stringify(ratingData));
         await AsyncStorage.setItem(STORAGE_KEYS.HAS_RATED, 'true');
         await AsyncStorage.setItem(STORAGE_KEYS.RATING_VALUE, String(rating));
-        logger.info(`Rating saved: ${rating} stars`);
+        logger.debug(`Rating saved: ${rating} stars`);
     } catch (error) {
         logger.error('Failed to save rating:', error);
         throw error;
@@ -147,7 +147,7 @@ export const openStoreReview = async (): Promise<boolean> => {
         if (isAvailable) {
             try {
                 await StoreReview.requestReview();
-                logger.info('Store review requested successfully');
+                logger.debug('Store review requested successfully');
                 await markStoreReviewAsLeft();
                 return true;
             } catch (reviewError) {
@@ -156,7 +156,7 @@ export const openStoreReview = async (): Promise<boolean> => {
             }
         }
 
-        logger.info('Store review not available, using fallback');
+        logger.debug('Store review not available, using fallback');
         return await openStoreFallback();
     } catch (error) {
         logger.error('Failed to open store review:', error);

@@ -17,10 +17,10 @@ export const initializeSentry = () => {
     try {
         Sentry.init({
             dsn,
-            enableInExpoDevelopment: false,
             debug: false,
             environment: __DEV__ ? 'development' : 'production',
             tracesSampleRate: __DEV__ ? 1.0 : 0.1,
+            enabled: !__DEV__,
             beforeSend(event, hint) {
                 if (__DEV__) {
                     logger.debug('Sentry event captured:', event);
@@ -29,7 +29,7 @@ export const initializeSentry = () => {
             },
         });
 
-        logger.info('Sentry initialized successfully');
+        logger.debug('Sentry initialized successfully');
     } catch (error) {
         logger.error('Failed to initialize Sentry:', error);
     }

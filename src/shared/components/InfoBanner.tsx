@@ -3,7 +3,8 @@ import { View, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../contexts/ThemeContext';
-import { FormattedText, Icon3D } from './';
+import FormattedText from './FormattedText';
+import Icon3D from './Icon3D';
 import { createLogger } from '../utils/logger';
 
 const logger = createLogger('InfoBanner');
