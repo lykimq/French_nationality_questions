@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { useData } from '../shared/contexts/DataContext';
 import { buildQuestionTokens, tokenize, scoreTokens, textContainsQuery } from '../shared/utils/searchIndex';
 import { extractNumericId } from '../shared/utils/idUtils';
@@ -39,6 +39,7 @@ export const useSearch = () => {
     const [isSearching, setIsSearching] = useState(false);
     const [searchHistory, setSearchHistory] = useState<string[]>([]);
     const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>([]);
+    const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     // Advanced search filters
     const [filters, setFilters] = useState<SearchFilters>({
@@ -221,6 +222,10 @@ export const useSearch = () => {
 
     // Enhanced search function with advanced filters (optimized for performance)
     const performSearch = useCallback((query: string, appliedFilters: SearchFilters = filters) => {
+        if (searchTimeoutRef.current) {
+            clearTimeout(searchTimeoutRef.current);
+        }
+
         const trimmedQuery = query.trim();
         if (trimmedQuery === '') {
             setSearchResults([]);
@@ -231,7 +236,7 @@ export const useSearch = () => {
         setIsSearching(true);
 
         // Use setTimeout to make search asynchronous and non-blocking, allowing UI to update immediately
-        setTimeout(() => {
+        searchTimeoutRef.current = setTimeout(() => {
             const normalizedQuery = normalizeForSearch(trimmedQuery);
             const queryTokens = tokenize(normalizedQuery);
             
@@ -368,8 +373,16 @@ export const useSearch = () => {
             if (query.trim() && !searchHistory.includes(query.trim())) {
                 setSearchHistory(prev => [query.trim(), ...prev.slice(0, 9)]);
             }
-        }, 0);
+        }, 150);
     }, [allQuestions, filters, searchHistory, questionTokens]);
+
+    useEffect(() => {
+        return () => {
+            if (searchTimeoutRef.current) {
+                clearTimeout(searchTimeoutRef.current);
+            }
+        };
+    }, []);
 
     // Handle suggestions only (no automatic search)
     useEffect(() => {

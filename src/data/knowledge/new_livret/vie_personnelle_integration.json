@@ -14,7 +14,7 @@
         {
             "id": "livret_2",
             "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
-            "explanation": "- Indiquez votre fréquence (ex. une fois par an) et la raison principale (famille, fêtes).\n- Si vous y allez rarement, mentionnez les contraintes (travail, coût, distance).",
+            "explanation": "- Indiquez votre fréquence (ex une fois par an) et la raison principale (famille, fêtes).\n- Si vous y allez rarement, mentionnez les contraintes (travail, coût, distance).",
             "image": null
         },
         {
@@ -98,7 +98,7 @@
         {
             "id": "livret_17",
             "question": "Pendant combien de temps avez-vous étudié le français ?",
-            "explanation": "- Donnez une durée approximative (ex. plusieurs années) et précisez que vous continuez à progresser au quotidien.",
+            "explanation": "- Donnez une durée approximative (exemple: plusieurs années) et précisez que vous continuez à progresser au quotidien.",
             "image": null
         },
         {
@@ -146,7 +146,7 @@
         {
             "id": "livret_25",
             "question": "Depuis quand habitez-vous à cette adresse ?",
-            "explanation": "- Indiquez la durée (ex. trois ans) et la localisation (ville, département).",
+            "explanation": "- Indiquez la durée (exemple: trois ans) et la localisation (ville, département).",
             "image": null
         },
         {
@@ -362,7 +362,7 @@
         {
             "id": "livret_61",
             "question": "Quelle action peut réaliser le locataire d'un logement sans l'autorisation du propriété ?",
-            "explanation": "Seules les petites réparations ou l'entretien courant (ex. changer un joint, poser des étagères) sans modifier le logement.",
+            "explanation": "Seules les petites réparations ou l'entretien courant (exemple: changer un joint, poser des étagères) sans modifier le logement.",
             "image": null
         },
         {
