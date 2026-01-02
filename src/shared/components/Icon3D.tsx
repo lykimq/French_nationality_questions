@@ -26,10 +26,10 @@ const Icon3D: React.FC<Icon3DProps> = ({
         const isSmall = size < 20;
         const containerScale = isSmall ? 1.6 : 1.8;
         const iconElement = (
-            <Ionicons 
-                name={name as keyof typeof Ionicons.glyphMap} 
-                size={size} 
-                color={variant === 'glass' ? color + 'DD' : color} 
+            <Ionicons
+                name={name as keyof typeof Ionicons.glyphMap}
+                size={size}
+                color={variant === 'glass' ? color + 'DD' : color}
             />
         );
 
@@ -57,7 +57,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                             <View style={styles.gradientInner}>
                                 {iconElement}
                             </View>
-                            <View 
+                            <View
                                 style={[
                                     styles.gradientHighlight,
                                     {
@@ -65,7 +65,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                         height: size * 0.6,
                                         borderRadius: size * 0.3,
                                     },
-                                ]} 
+                                ]}
                             />
                         </LinearGradient>
                     </View>
@@ -98,7 +98,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                             ]}
                         >
                             {iconElement}
-                            <View 
+                            <View
                                 style={[
                                     styles.elevatedHighlight,
                                     {
@@ -106,7 +106,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                         height: size * 0.4,
                                         borderRadius: size * 0.4,
                                     },
-                                ]} 
+                                ]}
                             />
                         </View>
                     </View>
@@ -159,7 +159,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                 },
                             ]}
                         >
-                            <View 
+                            <View
                                 style={[
                                     styles.glassHighlight,
                                     {
@@ -167,7 +167,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                         height: size * 0.8,
                                         borderRadius: size * 0.4,
                                     },
-                                ]} 
+                                ]}
                             />
                             {iconElement}
                             <View style={styles.glassReflection} />

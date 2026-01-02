@@ -23,7 +23,7 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
-    
+
     const checkmarkIcon = getIcon('checkmarkCircle');
 
     const isWrong = showResult && isSelected && !isCorrect;
