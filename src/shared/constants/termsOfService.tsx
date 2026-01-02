@@ -25,7 +25,7 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
                 Acceptation des Conditions
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                En utilisant cette application ("l'Application"), vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application.
+                En téléchargeant, installant ou utilisant cette application ("l'Application"), vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application et demander un remboursement conformément aux politiques des stores d'applications.
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
@@ -62,6 +62,20 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
             </View>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
+                Achat et Paiement
+            </FormattedText>
+            <FormattedText style={[styles.p, { color: textColor }]}>
+                L'Application est disponible à l'achat via Google Play Store et Apple App Store. Le prix est indiqué sur chaque plateforme. Le paiement est géré par ces stores conformément à leurs conditions générales. Nous n'avons pas accès à vos informations de paiement.
+            </FormattedText>
+
+            <FormattedText style={[styles.h3, { color: textColor, marginTop: 16 }]}>
+                Remboursements
+            </FormattedText>
+            <FormattedText style={[styles.p, { color: textColor }]}>
+                Les demandes de remboursement sont gérées par Google Play Store ou Apple App Store selon leurs politiques respectives. Conformément au droit français et européen, vous disposez d'un droit de rétractation de 14 jours à compter de l'achat, sauf si vous avez expressément renoncé à ce droit lors de l'achat d'un contenu numérique.
+            </FormattedText>
+
+            <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
                 Utilisation de l'Application
             </FormattedText>
             <FormattedText style={[styles.h3, { color: textColor, marginTop: 16 }]}>
@@ -74,7 +88,7 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
                 <View style={styles.listItem}>
                     <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
                     <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Préparer votre entretien de naturalisation
+                        Préparer votre entretien de naturalisation française
                     </FormattedText>
                 </View>
                 <View style={styles.listItem}>
@@ -86,7 +100,7 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
                 <View style={styles.listItem}>
                     <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
                     <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Utiliser toutes les fonctionnalités éducatives disponibles
+                        Utiliser toutes les fonctionnalités éducatives disponibles à des fins personnelles
                     </FormattedText>
                 </View>
             </View>
@@ -95,31 +109,37 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
                 Utilisation Interdite
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Il est interdit de :
+                Il est strictement interdit de :
             </FormattedText>
             <View style={styles.list}>
                 <View style={styles.listItem}>
                     <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
                     <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Utiliser l'Application à des fins commerciales sans autorisation
+                        Utiliser l'Application à des fins commerciales, de revente ou de redistribution sans autorisation écrite
                     </FormattedText>
                 </View>
                 <View style={styles.listItem}>
                     <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
                     <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Copier, modifier ou distribuer le contenu de l'Application sans autorisation
+                        Copier, reproduire, modifier, adapter, traduire ou distribuer le contenu de l'Application
                     </FormattedText>
                 </View>
                 <View style={styles.listItem}>
                     <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
                     <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Tenter de contourner les mesures de sécurité
+                        Effectuer de l'ingénierie inverse, décompiler ou désassembler l'Application
                     </FormattedText>
                 </View>
                 <View style={styles.listItem}>
                     <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
                     <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Utiliser l'Application de manière à violer les lois applicables
+                        Tenter de contourner les mesures de sécurité ou d'accéder à des fonctionnalités non autorisées
+                    </FormattedText>
+                </View>
+                <View style={styles.listItem}>
+                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
+                    <FormattedText style={[styles.listText, { color: textColor }]}>
+                        Utiliser l'Application de manière à violer les lois françaises, européennes ou internationales
                     </FormattedText>
                 </View>
             </View>
@@ -128,36 +148,10 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
                 Propriété Intellectuelle
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Tous les contenus de l'Application, y compris mais sans s'y limiter :
+                L'Application et tous ses contenus (textes, questions, réponses, images, code source, conception, marques, logos) sont protégés par les lois françaises et internationales sur la propriété intellectuelle, notamment le Code de la propriété intellectuelle et les conventions internationales (Berne, OMPI).
             </FormattedText>
-            <View style={styles.list}>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Les textes, questions et réponses
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Les images et graphiques
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Le code source et la conception
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Les marques et logos
-                    </FormattedText>
-                </View>
-            </View>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                sont protégés par les lois sur la propriété intellectuelle et appartiennent à leurs propriétaires respectifs.
+                L'achat de l'Application vous accorde une licence d'utilisation personnelle, non exclusive, non transférable et révocable pour utiliser l'Application sur vos appareils personnels. Cette licence ne vous confère aucun droit de propriété sur l'Application ou son contenu.
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
@@ -221,7 +215,30 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
                 Limitation de Responsabilité
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Dans la mesure permise par la loi, nous ne serons pas responsables des dommages directs, indirects, accessoires ou consécutifs résultant de l'utilisation ou de l'impossibilité d'utiliser l'Application.
+                Conformément à la législation française et européenne, notre responsabilité est limitée aux dommages directs et prévisibles résultant d'un manquement à nos obligations. Nous ne pourrons être tenus responsables :
+            </FormattedText>
+            <View style={styles.list}>
+                <View style={styles.listItem}>
+                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
+                    <FormattedText style={[styles.listText, { color: textColor }]}>
+                        Des dommages indirects, accessoires ou consécutifs
+                    </FormattedText>
+                </View>
+                <View style={styles.listItem}>
+                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
+                    <FormattedText style={[styles.listText, { color: textColor }]}>
+                        De la perte de données ou de profits
+                    </FormattedText>
+                </View>
+                <View style={styles.listItem}>
+                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
+                    <FormattedText style={[styles.listText, { color: textColor }]}>
+                        Des échecs à l'entretien de naturalisation (l'Application est un outil d'aide, non une garantie)
+                    </FormattedText>
+                </View>
+            </View>
+            <FormattedText style={[styles.p, { color: textColor }]}>
+                Cette limitation ne s'applique pas en cas de faute lourde ou de dol, ni aux dommages corporels, conformément à la législation française.
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
@@ -266,17 +283,23 @@ export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Droit Applicable
+                Droit Applicable et Règlement des Litiges
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Ces conditions sont régies par les lois françaises. Tout litige sera soumis à la juridiction exclusive des tribunaux français.
+                Ces conditions sont régies par le droit français. Conformément à la législation européenne, les consommateurs résidant dans l'UE bénéficient des protections prévues par la directive 2011/83/UE et peuvent saisir les juridictions de leur pays de résidence.
+            </FormattedText>
+            <FormattedText style={[styles.p, { color: textColor }]}>
+                Conformément à l'article L.612-1 du Code de la consommation, vous pouvez recourir gratuitement à un médiateur de la consommation en cas de litige. La plateforme européenne de règlement en ligne des litiges est accessible à : https://ec.europa.eu/consumers/odr/
+            </FormattedText>
+            <FormattedText style={[styles.p, { color: textColor }]}>
+                À défaut d'accord amiable, tout litige relèvera de la compétence des tribunaux français, sous réserve des règles impératives de compétence applicables aux consommateurs.
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Contact
+                Contact et Support
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Pour toute question concernant ces conditions d'utilisation, vous pouvez nous contacter via les canaux de support de l'application.
+                Pour toute question concernant ces conditions d'utilisation, pour signaler un problème ou exercer vos droits, vous pouvez nous contacter à l'adresse suivante : lykimq@gmail.com
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
