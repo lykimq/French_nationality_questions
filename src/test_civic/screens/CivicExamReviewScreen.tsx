@@ -28,7 +28,6 @@ const CivicExamReviewScreen = () => {
     const navigation = useNavigation<CivicExamReviewScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { currentSession, finishExam } = useCivicExam();
-    const { isPremium, markFreeExamUsed } = usePremiumAccess();
 
     // Handle navigation when session is missing (useEffect to avoid render-time navigation)
     useEffect(() => {
@@ -40,9 +39,6 @@ const CivicExamReviewScreen = () => {
     const handleSubmit = async () => {
         try {
             const result = await finishExam();
-            if (!isPremium) {
-                await markFreeExamUsed();
-            }
             const serializedResult = serializeCivicExamResult(result);
             navigation.navigate('CivicExamResult', { result: serializedResult });
         } catch (error) {

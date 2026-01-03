@@ -29,13 +29,17 @@ const CivicExamInfoScreen = () => {
     const { theme, themeMode } = useTheme();
     const { getIcon } = useIcon3D();
     const { startExam } = useCivicExam();
-    const { isPremium, markFreeExamUsed } = usePremiumAccess();
+    const { isPremium, openPaywall } = usePremiumAccess();
 
     const arrowBackIcon = getIcon('arrowBack');
     const timeIcon = getIcon('time');
     const trophyIcon = getIcon('trophy');
 
     const handleStartExam = async () => {
+        if (!isPremium) {
+            openPaywall();
+            return;
+        }
         try {
             await startExam({
                 mode: 'civic_exam_naturalization',
@@ -46,9 +50,6 @@ const CivicExamInfoScreen = () => {
                 shuffleOptions: true,
                 showProgress: true,
             });
-            if (!isPremium) {
-                await markFreeExamUsed();
-            }
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
             logger.error('Error starting exam:', error);
@@ -153,14 +154,22 @@ const CivicExamInfoScreen = () => {
                     </View>
 
                     <TouchableOpacity
-                        style={[styles.startButton, { backgroundColor: theme.colors.primary }]}
+                        style={[
+                            styles.startButton,
+                            { backgroundColor: isPremium ? theme.colors.primary : theme.colors.textMuted }
+                        ]}
                         onPress={handleStartExam}
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
-                            Commencer l'examen
+                            {isPremium ? 'Commencer l\'examen' : 'Débloquez Premium pour continuer'}
                         </FormattedText>
                     </TouchableOpacity>
+                    {!isPremium && (
+                        <FormattedText style={[styles.premiumHint, { color: theme.colors.textSecondary }]}>
+                            Débloquez Premium pour accéder aux examens illimités.
+                        </FormattedText>
+                    )}
                 </ScrollView>
             </SafeAreaView>
         </View>
@@ -235,6 +244,11 @@ const styles = StyleSheet.create({
     startButtonText: {
         fontSize: 18,
         fontWeight: 'bold',
+    },
+    premiumHint: {
+        marginTop: 12,
+        textAlign: 'center',
+        fontSize: 13,
     },
 });
 

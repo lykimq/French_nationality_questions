@@ -28,7 +28,7 @@ const CivicExamHomeScreen = () => {
     const { theme, themeMode } = useTheme();
     const { getIcon } = useIcon3D();
     const { examProgress, isLoading, refreshProgress, pausedSession, resumeSession } = useCivicExam();
-    const { isPremium, hasUsedFreeExam, openPaywall, markFreeExamUsed } = usePremiumAccess();
+    const { isPremium, openPaywall } = usePremiumAccess();
 
     const arrowBackIcon = getIcon('arrowBack');
 
@@ -44,12 +44,9 @@ const CivicExamHomeScreen = () => {
         if (isPremium) {
             return true;
         }
-        if (hasUsedFreeExam) {
-            openPaywall();
-            return false;
-        }
-        return true;
-    }, [hasUsedFreeExam, isPremium, openPaywall]);
+        openPaywall();
+        return false;
+    }, [isPremium, openPaywall]);
 
     const handleStartExam = () => {
         if (!guardExamAccess()) {
@@ -84,7 +81,7 @@ const CivicExamHomeScreen = () => {
         );
     }
 
-    const examLocked = !isPremium && hasUsedFreeExam;
+    const examLocked = !isPremium;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -235,7 +232,7 @@ const CivicExamHomeScreen = () => {
 
                     {examLocked && (
                         <FormattedText style={[styles.lockedHint, { color: theme.colors.textSecondary }]}>
-                            L\'essai gratuit comprend une session. Débloquez Premium pour un accès illimité.
+                            Débloquez Premium pour accéder aux examens et pratiques illimités.
                         </FormattedText>
                     )}
                 </ScrollView>

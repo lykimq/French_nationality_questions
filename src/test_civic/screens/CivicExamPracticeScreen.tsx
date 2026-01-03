@@ -37,7 +37,7 @@ const CivicExamPracticeScreen = () => {
     const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { startExam } = useCivicExam();
-    const { isPremium, hasUsedFreeExam, openPaywall, markFreeExamUsed } = usePremiumAccess();
+    const { isPremium, openPaywall } = usePremiumAccess();
     const defaultTopics = React.useMemo<CivicExamTopic[]>(() => (
         isPremium ? [...ALL_TOPICS] : ['principles_values']
     ), [isPremium]);
@@ -78,12 +78,9 @@ const CivicExamPracticeScreen = () => {
         if (isPremium) {
             return true;
         }
-        if (hasUsedFreeExam) {
-            openPaywall();
-            return false;
-        }
-        return true;
-    }, [hasUsedFreeExam, isPremium, openPaywall]);
+        openPaywall();
+        return false;
+    }, [isPremium, openPaywall]);
 
     const handleStartPractice = async () => {
         if (selectedTopics.length === 0) {
@@ -109,9 +106,6 @@ const CivicExamPracticeScreen = () => {
                 showProgress: true,
                 selectedTopics,
             });
-            if (!isPremium) {
-                await markFreeExamUsed();
-            }
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
             logger.error('Error starting practice:', error);
@@ -226,12 +220,12 @@ const CivicExamPracticeScreen = () => {
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
-                            {isStarting ? 'Démarrage...' : (!isPremium && hasUsedFreeExam ? 'Débloquez Premium' : 'Commencer la pratique')}
+                            {isStarting ? 'Démarrage...' : (!isPremium ? 'Débloquez Premium' : 'Commencer la pratique')}
                         </FormattedText>
                     </TouchableOpacity>
                     {!isPremium && (
                         <FormattedText style={[styles.paywallHint, { color: theme.colors.textSecondary }]}>
-                            L\'essai gratuit comprend une session sur le thème "Principes et valeurs".
+                            Débloquez Premium pour accéder au mode pratique avec tous les thèmes.
                         </FormattedText>
                     )}
                 </ScrollView>

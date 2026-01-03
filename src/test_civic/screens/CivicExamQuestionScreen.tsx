@@ -42,7 +42,7 @@ const CivicExamQuestionScreen = () => {
         cancelExam,
         abandonPausedSession,
     } = useCivicExam();
-    const { isPremium, markFreeExamUsed } = usePremiumAccess();
+    const { isPremium } = usePremiumAccess();
 
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [answerSubmitted, setAnswerSubmitted] = useState(false);
@@ -53,10 +53,7 @@ const CivicExamQuestionScreen = () => {
 
     const handleCancelExam = useCallback(async () => {
         cancelExam();
-        if (!isPremium) {
-            await markFreeExamUsed();
-        }
-    }, [cancelExam, isPremium, markFreeExamUsed]);
+    }, [cancelExam]);
 
     const isExamMode = currentSession?.mode === 'civic_exam_naturalization';
     const isPracticeMode = currentSession?.isPracticeMode || false;
