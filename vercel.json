@@ -2,11 +2,7 @@
   "buildCommand": "",
   "outputDirectory": null,
   "framework": null,
-  "functions": {
-    "api/entitlement/*.js": {
-      "maxDuration": 10
-    }
-  },
+  "installCommand": "npm install --legacy-peer-deps",
   "headers": [
     {
       "source": "/api/(.*)",
