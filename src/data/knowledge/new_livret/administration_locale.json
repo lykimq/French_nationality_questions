@@ -1,0 +1,93 @@
+{
+    "theme": "Administration Locale et Territoriale",
+    "id": "administration_locale",
+    "title": "Administration locale et territoriale",
+    "icon": "office-building",
+    "description": "Organisation administrative : communes, départements, régions et leurs compétences.",
+    "questions": [
+        {
+            "id": "livret_1",
+            "question": "Combien y a-t-il de communes et qui les administre ?",
+            "explanation": "La France compte environ 35 000 communes (34 746 au 1er janvier 2024 selon les données officielles de l'INSEE). Elles sont administrées par un maire et un conseil municipal, élus pour six ans. Les communes sont regroupées en intercommunalités (communautés de communes, métropoles, etc.).",
+            "image": null
+        },
+        {
+            "id": "livret_2",
+            "question": "Quelles sont les compétences de la commune ?",
+            "explanation": "Les communes sont responsables notamment des écoles maternelles et primaires, des activités sportives et culturelles, de l'entretien de la voirie communale. Elles tiennent l'état civil, c'est-à-dire qu'elles enregistrent les naissances, les mariages, les décès.",
+            "image": null
+        },
+        {
+            "id": "livret_3",
+            "question": "Qui administre le département et quelles sont ses compétences ?",
+            "explanation": "Le conseil départemental administre les 101 départements. Il est responsable notamment des collèges, de la protection de l'enfance et de l'aide aux personnes âgées.",
+            "image": null
+        },
+        {
+            "id": "livret_4",
+            "question": "Quelles sont les compétences de la région ?",
+            "explanation": "Les 13 régions métropolitaines sont administrées par les conseils régionaux. Elles sont chargées notamment des transports publics, de la formation professionnelle, de la construction et de l'entretien des lycées.",
+            "image": null
+        },
+        {
+            "id": "livret_5",
+            "question": "Qui représente l'État dans les départements et régions ?",
+            "explanation": "Dans les départements et les régions de métropole et d'outre-mer, l'État est représenté par les préfets (ou par les hauts-commissaires dans certaines collectivités d'outre-mer).",
+            "image": null
+        },
+        {
+            "id": "livret_6",
+            "question": "Quelles sont les 3 types de collectivités en France ?",
+            "explanation": "- Les communes\n- Les départements\n- Les régions",
+            "image": null
+        },
+        {
+            "id": "livret_7",
+            "question": "Comment sont élus les conseillers départementaux ?",
+            "explanation": "Les conseillers départementaux sont élus pour six ans au suffrage universel direct, au scrutin binominal majoritaire à deux tours. Chaque canton élit un binôme (un homme et une femme) de conseillers départementaux.",
+            "image": null
+        },
+        {
+            "id": "livret_8",
+            "question": "Pouvez-vous nommer des départements d'outre-mer (DOM) ?",
+            "explanation": "Les départements d'outre-mer (DOM) comprennent la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.",
+            "image": null
+        },
+        {
+            "id": "livret_9",
+            "question": "Quelles sont les collectivités d'outre- mer ?",
+            "explanation": "Les collectivités d'outre-mer (COM) sont au nombre de 7 : Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna. Ces territoires ont plus d'autonomie que les départements d'outre-mer et peuvent avoir des règles spécifiques. La Nouvelle-Calédonie a un statut particulier avec une autonomie renforcée.",
+            "image": null
+        },
+        {
+            "id": "livret_10",
+            "question": "Combien y a-t-il de collectivités et territoires d'Outre-mer ?",
+            "explanation": "La France compte 12 territoires d'outre-mer au total : 5 départements et régions d'outre-mer (DROM) : Guadeloupe, Guyane, Martinique, Mayotte et La Réunion. 7 collectivités d'outre-mer (COM) : Nouvelle-Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Terres australes et antarctiques françaises et Wallis-et-Futuna. Les COM ont plus d'autonomie et peuvent avoir des règles spécifiques.",
+            "image": null
+        },
+        {
+            "id": "livret_11",
+            "question": "Quelle est la première femme à avoir été élue maire d'une grande ville en France ?",
+            "explanation": "Catherine Trautmann a été élue maire de Strasbourg en 1989, devenant ainsi la première femme à diriger une grande ville française (ville de plus de 200 000 habitants). Elle a été réélue en 1995 et a exercé cette fonction jusqu'en 2001. Cette élection a marqué un tournant dans la représentation des femmes dans la vie politique locale française.",
+            "image": null
+        },
+        {
+            "id": "livret_12",
+            "question": "Dans quelle région vous trouvez-vous ?",
+            "explanation": "Indiquez la région où vous résidez actuellement. La France métropolitaine compte 13 régions : Île-de-France, Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur, Occitanie, Nouvelle-Aquitaine, Hauts-de-France, Grand Est, Pays de la Loire, Normandie, Bretagne, Bourgogne-Franche-Comté, Centre-Val de Loire, et Corse. Il y a également 5 régions d'outre-mer.",
+            "image": null
+        },
+        {
+            "id": "livret_13",
+            "question": "Quel est le rôle de la mairie (ou hôtel de ville) ?",
+            "explanation": "La mairie est l'institution de proximité. Elle gère l'état civil (naissances, mariages, décès), les écoles maternelles et primaires, l'entretien de la voirie communale, les activités sportives et culturelles, ainsi que l'urbanisme et la vie locale.",
+            "image": null
+        },
+        {
+            "id": "livret_14",
+            "question": "Qui représente l'État dans un département ?",
+            "explanation": "Le préfet représente l'État dans le département. Dans certaines collectivités d'outre-mer, c'est le haut-commissaire qui représente l'État.",
+            "image": null
+        }
+    ]
+}

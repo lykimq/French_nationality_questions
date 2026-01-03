@@ -1,71 +1,12 @@
-import type { Language, MultiLangText } from './core';
-import type { SerializableTestResult } from './testing';
-
 // ==================== TAB NAVIGATION ====================
 
 // Bottom Tab Navigator types - immutable route definitions
 export type TabParamList = Readonly<{
     HomeTab: undefined;
     SearchTab: undefined;
-    TestTab: undefined;
+    CivicExamTab: undefined;
+    FlashCardTab: undefined;
     SettingsTab: undefined;
-}>;
-
-// ==================== HOME STACK NAVIGATION ====================
-
-// Question structure for navigation params - supports both string and MultiLangText
-export interface NavigationQuestion {
-    readonly id: number;
-    readonly question: string | MultiLangText;
-    readonly question_vi?: string;
-    readonly explanation?: string | MultiLangText;
-    readonly explanation_vi?: string;
-    readonly image?: string | null;
-}
-
-// Category structure for navigation params
-export interface NavigationCategory {
-    readonly id: string;
-    readonly title: string;
-    readonly title_vi?: string;
-    readonly description?: string;
-    readonly description_vi?: string;
-    readonly icon?: string;
-    readonly questions: readonly NavigationQuestion[];
-}
-
-// Home stack navigation parameters
-export type HomeStackParamList = Readonly<{
-    Home: undefined;
-    CategoryQuestions: {
-        readonly categoryId: string;
-        readonly language?: Language;
-    };
-    CategoryBasedQuestions: {
-        readonly categories: readonly NavigationCategory[];
-        readonly title: string;
-        readonly title_vi?: string;
-    };
-    QuestionDetail: {
-        readonly categoryId: string;
-        readonly questionId: number;
-        readonly language?: Language;
-    };
-}>;
-
-// ==================== TEST STACK NAVIGATION ====================
-
-// Test stack navigation parameters
-export type TestStackParamList = Readonly<{
-    Test: undefined;
-    SubcategoryTest: undefined;
-    Part1Test: undefined;
-    TestQuestion: undefined;
-    TestResult: {
-        readonly testResult: SerializableTestResult;
-    } | undefined;
-    Progress: undefined;
-    Review: undefined;
 }>;
 
 // ==================== UTILITY TYPES ====================

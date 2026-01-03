@@ -1,0 +1,765 @@
+{
+    "theme": "Vie Personnelle et Intégration",
+    "id": "vie_personnelle_integration",
+    "title": "Vie personnelle et intégration",
+    "icon": "user",
+    "description": "Vie quotidienne, intégration et critères d'assimilation pour la naturalisation.",
+    "questions": [
+        {
+            "id": "livret_1",
+            "question": "Pourquoi voulez-vous devenir Français ?",
+            "explanation": "Exprimez votre amour et votre attachement à la France :\n- Vous avez toujours aimé la culture, l’histoire et le peuple français\n- Vous souhaitez vous intégrer davantage à la société française\n- Vous souhaitez contribuer à la construction et au développement de la France\n\nProfitez des avantages de la nationalité française :\n- Liberté de circulation, de résidence et de travail dans l’UE\n- Droits à l’éducation, à la santé et à la sécurité sociale\n- Participation aux activités politiques et sociales",
+            "image": null
+        },
+        {
+            "id": "livret_2",
+            "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+            "explanation": "- Indiquez votre fréquence (ex une fois par an) et la raison principale (famille, fêtes).\n- Si vous y allez rarement, mentionnez les contraintes (travail, coût, distance).",
+            "image": null
+        },
+        {
+            "id": "livret_3",
+            "question": "Êtes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+            "explanation": "- Précisez votre statut (célibataire, marié(e), pacsé(e), en couple).\n- Si applicable, indiquez brièvement votre conjoint/partenaire (nationalité, situation professionnelle).",
+            "image": null
+        },
+        {
+            "id": "livret_4",
+            "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
+            "explanation": "- Mentionnez si vous vivez ensemble en France ; sinon, précisez où il/elle réside (travail, études, famille).",
+            "image": null
+        },
+        {
+            "id": "livret_5",
+            "question": "Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?",
+            "explanation": "- Citez 2-3 activités partagées (voyages, cuisine, sport, sorties culturelles) ou précisez que vous êtes célibataire.",
+            "image": null
+        },
+        {
+            "id": "livret_6",
+            "question": "Avez-vous des enfants ? Comptez-vous en avoir prochainement ?",
+            "explanation": "- Indiquez si vous avez des enfants (prénoms/âges) ou si vous n’en avez pas ; précisez vos intentions futures si besoin.",
+            "image": null
+        },
+        {
+            "id": "livret_7",
+            "question": "Qui s’occupe des enfants ? Qui s’occupe des tâches ménagères ?",
+            "explanation": "- Décrivez le partage : garde des enfants (si applicable) et répartition des tâches ménagères entre vous / conjoint / aide familiale.",
+            "image": null
+        },
+        {
+            "id": "livret_8",
+            "question": "Avez-vous vos liens personnels et familiaux en France ?",
+            "explanation": "- Mentionnez vos amis, collègues ou proches en France et la fréquence des rencontres (repas, fêtes, loisirs).\n- Si vous avez de la famille en France, précisez le lien (parents, frères/sœurs, cousins).",
+            "image": null
+        },
+        {
+            "id": "livret_9",
+            "question": "Quelle langue utilisez-vous au travail et à la maison ?",
+            "explanation": "- Indiquez la langue principale au travail (français/anglais) et celles parlées à la maison (français + langue maternelle).",
+            "image": null
+        },
+        {
+            "id": "livret_10",
+            "question": "Faites-vous partie d’une association ? Si oui, laquelle et depuis quand ?",
+            "explanation": "- Citez l’association (solidarité, sport, culture), votre rôle et depuis quand vous y participez.",
+            "image": null
+        },
+        {
+            "id": "livret_11",
+            "question": "Où se trouve le siège de cette association ?",
+            "explanation": "- Précisez la ville ou le quartier où elle est basée.",
+            "image": null
+        },
+        {
+            "id": "livret_12",
+            "question": "Pratiquez vous une religion ?",
+            "explanation": "- Indiquez si vous êtes croyant(e) ou non, en rappelant le respect de la laïcité.",
+            "image": null
+        },
+        {
+            "id": "livret_13",
+            "question": "Quels sont vos loisirs ?",
+            "explanation": "- Citez 2-3 loisirs (sport, musique, lecture, sorties culturelles) que vous pratiquez régulièrement.",
+            "image": null
+        },
+        {
+            "id": "livret_14",
+            "question": "Pourquoi êtes-vous venu en France la toute première fois ?",
+            "explanation": "- Indiquez l’année et le motif de votre première venue (stage, études, emploi, rapprochement familial).",
+            "image": null
+        },
+        {
+            "id": "livret_15",
+            "question": "Qu’avez-vous en France que vous n’avez pas dans votre pays d’origine ?",
+            "explanation": "- Mettez en avant ce que vous appréciez : stabilité, libertés, santé, culture, opportunités professionnelles.",
+            "image": null
+        },
+        {
+            "id": "livret_17",
+            "question": "Pendant combien de temps avez-vous étudié le français ?",
+            "explanation": "- Donnez une durée approximative (exemple: plusieurs années) et précisez que vous continuez à progresser au quotidien.",
+            "image": null
+        },
+        {
+            "id": "livret_18",
+            "question": "Utilisez vous la langue Française au travail ?",
+            "explanation": "- Précisez si le français est la langue principale au travail et si vous utilisez ponctuellement l’anglais ou une autre langue.",
+            "image": null
+        },
+        {
+            "id": "livret_19",
+            "question": "Parlez-vous d’autres langues ? Si oui, lesquelles ?",
+            "explanation": "- Listez vos langues (français, anglais, langue maternelle) et les contextes d’usage.",
+            "image": null
+        },
+        {
+            "id": "livret_20",
+            "question": "Quelle langue vous parait la plus facile ? Pourquoi ?",
+            "explanation": "- Indiquez la langue la plus facile pour vous et liez-la à votre usage quotidien (français, langue maternelle, etc.).",
+            "image": null
+        },
+        {
+            "id": "livret_21",
+            "question": "Envoyez vous de l’argent dans votre pays d’origine ? Si oui à qui ?",
+            "explanation": "- Indiquez si vous envoyez un soutien (montant/fréquence) et à qui (parents, proches).",
+            "image": null
+        },
+        {
+            "id": "livret_22",
+            "question": "Avez-vous de la famille proche ou lointaine dans votre pays d’origine ? Si oui comptez-vous les faire venir en France ?",
+            "explanation": "- Mentionnez qui vit encore au pays (parents, frères/sœurs) et si vous envisagez ou non une venue en France.",
+            "image": null
+        },
+        {
+            "id": "livret_23",
+            "question": "Ou passez vous vos vacances ?",
+            "explanation": "- Indiquez si vous privilégiez les vacances en France (découverte des régions) et/ou à l’étranger (famille, voyages).",
+            "image": null
+        },
+        {
+            "id": "livret_24",
+            "question": "Quelles sont les nationalités des personnes de votre entourage ?",
+            "explanation": "- Soulignez la diversité : majorité d’amis français et quelques amis d’autres nationalités.",
+            "image": null
+        },
+        {
+            "id": "livret_25",
+            "question": "Depuis quand habitez-vous à cette adresse ?",
+            "explanation": "- Indiquez la durée (exemple: trois ans) et la localisation (ville, département).",
+            "image": null
+        },
+        {
+            "id": "livret_26",
+            "question": "Où avez-vous appris le français ?",
+            "explanation": "- Précisez votre parcours : école/université/cours, puis pratique quotidienne en France.",
+            "image": null
+        },
+        {
+            "id": "livret_27",
+            "question": "Regardez-vous la télévision française ?",
+            "explanation": "- Indiquez oui/non et citez les types de programmes (info, culture, documentaires).",
+            "image": null
+        },
+        {
+            "id": "livret_28",
+            "question": "Écoutez-vous la radio en France ?",
+            "explanation": "- Indiquez oui/non et les formats écoutés (stations généralistes, podcasts, info/culture).",
+            "image": null
+        },
+        {
+            "id": "livret_29",
+            "question": "Lisez-vous la presse française ?",
+            "explanation": "- Indiquez oui/non et si vous lisez la presse en ligne ou papier pour suivre l’actualité.",
+            "image": null
+        },
+        {
+            "id": "livret_30",
+            "question": "Pourquoi avez-vous quitté votre pays d’origine ?",
+            "explanation": "- Expliquez brièvement (études, opportunité professionnelle, rapprochement familial) et le choix d’un cadre stable en France.",
+            "image": null
+        },
+        {
+            "id": "livret_31",
+            "question": "Quand êtes-vous arrivé(e) en France ?",
+            "explanation": "- Donnez l’année de votre arrivée et précisez que vous résidez en France depuis.",
+            "image": null
+        },
+        {
+            "id": "livret_32",
+            "question": "Avez-vous des proches de votre famille qui vivent en France ?",
+            "explanation": "- Indiquez si vous avez des proches (parents, frères/sœurs, cousins) en France et en quoi cela aide.",
+            "image": null
+        },
+        {
+            "id": "livret_33",
+            "question": "Êtes-vous marié(e) ? Depuis quand ?",
+            "explanation": "- Précisez votre statut (marié(e)/pacsé(e)/célibataire) et, si applicable, la date.",
+            "image": null
+        },
+        {
+            "id": "livret_34",
+            "question": "Vivez-vous ensemble ? Depuis combien de temps ?",
+            "explanation": "- Si vous avez un conjoint/partenaire, indiquez depuis quand vous vivez ensemble ; sinon, précisez que vous vivez seul(e).",
+            "image": null
+        },
+        {
+            "id": "livret_35",
+            "question": "Avez-vous d'autres membres de votre famille en France ?",
+            "explanation": "- Mentionnez si d’autres membres de la famille vivent en France et où se trouve le reste de la famille.",
+            "image": null
+        },
+        {
+            "id": "livret_36",
+            "question": "Passez-vous souvent du temps avec votre belle-famille ?",
+            "explanation": "- Précisez la fréquence des rencontres (repas, fêtes) ou indiquez si la distance limite les échanges.",
+            "image": null
+        },
+        {
+            "id": "livret_37",
+            "question": "Avez-vous des animaux de compagnie ?",
+            "explanation": "- Indiquez si vous avez un animal (chien, chat, etc.) ou non.",
+            "image": null
+        },
+        {
+            "id": "livret_38",
+            "question": "Pourquoi les autres membres de votre famille n’ont-ils pas demandé la nationalité ?",
+            "explanation": "- Expliquez que c’est un choix personnel, lié à leur situation et à leurs projets.",
+            "image": null
+        },
+        {
+            "id": "livret_39",
+            "question": "Comment célébrez-vous les fêtes en famille ?",
+            "explanation": "- Décrivez brièvement vos habitudes : repas familiaux, échanges de cadeaux, moments conviviaux.",
+            "image": null
+        },
+        {
+            "id": "livret_40",
+            "question": "Envisagez-vous d'avoir des enfants ? Si oui, combien ?",
+            "explanation": "- Indiquez si vous avez un projet d’enfants et, le cas échéant, combien.",
+            "image": null
+        },
+        {
+            "id": "livret_41",
+            "question": "Envisagez-vous de faire venir votre famille en France ?",
+            "explanation": "- Indiquez si vous avez ce projet et dans quelles conditions (opportunités, regroupement familial, études).",
+            "image": null
+        },
+        {
+            "id": "livret_42",
+            "question": "Quand la peine de mort a-t-elle été abolie en France ?",
+            "explanation": "La peine de mort a été abolie en France le 9 octobre 1981, sous la présidence de François Mitterrand, grâce à la loi portée par Robert Badinter, ministre de la Justice. Cette abolition est une avancée majeure pour les droits de l'homme en France. La dernière exécution avait eu lieu en 1977.",
+            "image": null
+        },
+        {
+            "id": "livret_43",
+            "question": "Où siège l’Assemblée nationale ?",
+            "explanation": "Au Palais Bourbon, à Paris.",
+            "image": null
+        },
+        {
+            "id": "livret_44",
+            "question": "Où siège la plus haute juridiction judiciaire en France?",
+            "explanation": "La Cour de cassation, plus haute juridiction de l'ordre judiciaire en France, siège au Palais de Justice de Paris, quai de l'Horloge. Elle vérifie que les lois sont bien appliquées par les tribunaux et les cours d'appel. Elle ne juge pas les faits mais vérifie l'application correcte du droit.",
+            "image": null
+        },
+        {
+            "id": "livret_45",
+            "question": "Où siège le Conseil d’État?",
+            "explanation": "Au Palais-Royal, à Paris.",
+            "image": null
+        },
+        {
+            "id": "livret_46",
+            "question": "Peut-on avoir une double nationalité en France ?",
+            "explanation": "Oui, la France autorise la double nationalité (ou plurinationalité). Un Français peut posséder une ou plusieurs autres nationalités en plus de la nationalité française, selon les accords entre pays et les législations des pays concernés. La France ne demande pas de renoncer à sa nationalité d'origine lors de la naturalisation, sauf si le pays d'origine l'exige.",
+            "image": null
+        },
+        {
+            "id": "livret_47",
+            "question": "Combien de temps dure le mandat des conseillers municipaux ?",
+            "explanation": "6 ans.",
+            "image": null
+        },
+        {
+            "id": "livret_48",
+            "question": "Comment Louis XVI (16) a-t-il été jugé ?",
+            "explanation": "Louis XVI a été jugé par la Convention nationale en décembre 1792-janvier 1793. Il a été reconnu coupable de trahison et de complot contre la Révolution française. Accusé de vouloir restaurer l'absolutisme avec l'aide de puissances étrangères, il a été condamné à mort et guillotiné le 21 janvier 1793, place de la Révolution (aujourd'hui place de la Concorde) à Paris.",
+            "image": null
+        },
+        {
+            "id": "livret_49",
+            "question": "Pourquoi la Terreur a-t-elle eu lieu ?",
+            "explanation": "La Terreur (1793-1794) a été instaurée par le gouvernement révolutionnaire pour éliminer les ennemis supposés de la Révolution et consolider l'autorité du gouvernement. Environ 16 000 à 17 000 personnes ont été exécutées sous l'autorité du Comité de salut public, dirigé par Maximilien Robespierre. La Terreur a pris fin le 27 juillet 1794 (9 thermidor an II) avec l'arrestation et l'exécution de Robespierre.",
+            "image": null
+        },
+        {
+            "id": "livret_50",
+            "question": "Comment Jean Moulin est-il mort ?",
+            "explanation": "Jean Moulin a été arrêté par la Gestapo le 21 juin 1943 à Caluire-et-Cuire, près de Lyon, après une trahison lors d'une réunion du Conseil national de la Résistance. Torturé par Klaus Barbie, chef de la Gestapo à Lyon, il est mort des suites de ses blessures durant son transfert vers l'Allemagne, le 8 juillet 1943, sans avoir révélé d'informations. Il repose au Panthéon depuis 1964.",
+            "image": null
+        },
+        {
+            "id": "livret_51",
+            "question": "Quand l'esclavage a-t-il été aboli en France ?",
+            "explanation": "L'esclavage a été définitivement aboli en France le 27 avril 1848, sous l'impulsion de Victor Schœlcher (1804-1893), ministre de la Marine sous la IIe République. Il y avait eu une première abolition en 1794 pendant la Révolution française, mais Napoléon Bonaparte l'avait rétabli en 1802. La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crimes contre l'humanité.",
+            "image": null
+        },
+        {
+            "id": "livret_52",
+            "question": "Qui était l'épouse de Louis XVI (16) ?",
+            "explanation": "Marie-Antoinette (1755-1793) était l'épouse de Louis XVI. Fille de l'impératrice Marie-Thérèse d'Autriche, elle est devenue reine de France en 1774. Elle a été guillotinée le 16 octobre 1793, neuf mois après son époux, après avoir été jugée par le Tribunal révolutionnaire.",
+            "image": null
+        },
+        {
+            "id": "livret_53",
+            "question": "Qui est à lʼorigine de la Tour Eiffel ?",
+            "explanation": "Gustave Eiffel.",
+            "image": null
+        },
+        {
+            "id": "livret_54",
+            "question": "Qui a construit le château de Versailles ?",
+            "explanation": "Louis XIV (14).",
+            "image": null
+        },
+        {
+            "id": "livret_55",
+            "question": "Pourquoi est-elle célèbre ?",
+            "explanation": "- Elle représente le savoir-faire français en ingénierie.\n\n- Elle attire plus de 6 millions de visiteurs par an.\n\n- Elle est un symbole mondial de la France et de Paris.",
+            "image": null
+        },
+        {
+            "id": "livret_56",
+            "question": "Comment est-elle souvent appelée?",
+            "explanation": "La tour Eiffel est souvent appelée La Grande Dame de Fer.",
+            "image": null
+        },
+        {
+            "id": "livret_57",
+            "question": "Qui est l'auteur du roman \"Madame Bovary\" ?",
+            "explanation": "Gustave Flaubert.",
+            "image": null
+        },
+        {
+            "id": "livret_58",
+            "question": "Qui est l'auteur de L'Étranger ?",
+            "explanation": "Albert Camus.",
+            "image": null
+        },
+        {
+            "id": "livret_59",
+            "question": "Qui est le créateur de la série de bandes dessinées Astérix ?",
+            "explanation": "René Goscinny et Albert Uderzo.",
+            "image": null
+        },
+        {
+            "id": "livret_60",
+            "question": "Où faut-il déclarer la naissance d'un enfant ?",
+            "explanation": "La naissance d'un enfant doit être déclarée à la mairie du lieu de naissance dans les 5 jours ouvrables suivant la naissance (le jour de la naissance n'est pas compté). Cette déclaration permet d'établir l'acte de naissance, document officiel essentiel. La déclaration peut être faite par le père, la mère, ou toute personne ayant assisté à l'accouchement.",
+            "image": null
+        },
+        {
+            "id": "livret_61",
+            "question": "Quelle action peut réaliser le locataire d'un logement sans l'autorisation du propriété ?",
+            "explanation": "Seules les petites réparations ou l'entretien courant (exemple: changer un joint, poser des étagères) sans modifier le logement.",
+            "image": null
+        },
+        {
+            "id": "livret_62",
+            "question": "Quel marriage est reconnu légalement ?",
+            "explanation": "Le mariage civil célébré en mairie est le seul reconnu par la loi française.",
+            "image": null
+        },
+        {
+            "id": "livret_63",
+            "question": "Qu'est-ce que le stationnement sur une place réservée aux personnes handicapées ?",
+            "explanation": "Est interdit sans carte mobilité inclusion ; c'est une infraction lourdement sanctionnée.",
+            "image": null
+        },
+        {
+            "id": "livret_64",
+            "question": "Si une machine à laver est cassée, que peut-on faire ?",
+            "explanation": "La faire réparer ou la remplacer ; si l'appareil appartient au bailleur et figurait dans le bail, le prévenir pour prise en charge.",
+            "image": null
+        },
+        {
+            "id": "livret_65",
+            "question": "Dans quel cas faut-il déclarer son enfant au service d'état civil ?",
+            "explanation": "À chaque naissance (et en cas de reconnaissance d'un enfant).",
+            "image": null
+        },
+        {
+            "id": "livret_66",
+            "question": "Quand faut-il déclarer son enfant au service d'état civil ?",
+            "explanation": "La déclaration de naissance doit être faite dans les 5 jours ouvrables suivant la naissance (le jour de la naissance n'est pas compté). Si le 5e jour est un samedi, un dimanche ou un jour férié, le délai est prolongé jusqu'au premier jour ouvrable suivant. Passé ce délai, une procédure judiciaire est nécessaire.",
+            "image": null
+        },
+        {
+            "id": "livret_67",
+            "question": "Quel numéro d'urgence permet d'appeler la police ?",
+            "explanation": "Le numéro d'urgence pour appeler la police (ou la gendarmerie) est le 17. Le 112 est le numéro d'urgence européen unique qui permet d'accéder aux services de secours (police, pompiers, SAMU) dans tous les pays de l'Union européenne. En France, on peut aussi composer le 18 pour les pompiers et le 15 pour le SAMU.",
+            "image": null
+        },
+        {
+            "id": "livret_68",
+            "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
+            "explanation": "Le numéro d'urgence pour appeler le SAMU (Service d'Aide Médicale Urgente) est le 15. Le 112 est le numéro d'urgence européen unique qui permet d'accéder aux services de secours dans tous les pays de l'Union européenne. En France, les autres numéros d'urgence sont : 17 pour la police/gendarmerie, 18 pour les pompiers.",
+            "image": null
+        },
+        {
+            "id": "livret_69",
+            "question": "Auprès de quelle institution les parents peuvent-ils inscrire leurs enfants à l'école publique ?",
+            "explanation": "L'inscription se fait d'abord en mairie puis auprès de l'école publique affectée ; l'accès est gratuit et obligatoire.",
+            "image": null
+        },
+        {
+            "id": "livret_70",
+            "question": "En cas de divorce, qui exerce l'autorité parentale ?",
+            "explanation": "En principe les deux parents conjointement, sauf décision contraire du juge.",
+            "image": null
+        },
+        {
+            "id": "livret_71",
+            "question": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
+            "explanation": "L'aide juridictionnelle, attribuée sous conditions de ressources.",
+            "image": null
+        },
+        {
+            "id": "livret_72",
+            "question": "Qui peut demander le divorce de personnes mariées ?",
+            "explanation": "L'un ou l'autre époux, ou les deux d'un commun accord (divorce par consentement mutuel).",
+            "image": null
+        },
+        {
+            "id": "livret_73",
+            "question": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
+            "explanation": "Auprès de l'Assurance Maladie (CPAM) via la carte Vitale.",
+            "image": null
+        },
+        {
+            "id": "livret_74",
+            "question": "Qu'est-ce que la contraception ?",
+            "explanation": "Est légale et accessible ; certains moyens sont remboursés, la confidentialité est garantie pour les mineurs dans certaines conditions.",
+            "image": null
+        },
+        {
+            "id": "livret_75",
+            "question": "Qu'est-ce que le principe de confidentialité dans le domaine de la santé ?",
+            "explanation": "Le secret médical : les informations de santé sont protégées et ne peuvent être divulguées sans accord du patient.",
+            "image": null
+        },
+        {
+            "id": "livret_76",
+            "question": "À quoi sert la carte Vitale ?",
+            "explanation": "Elle atteste des droits à l'Assurance Maladie et permet le remboursement électronique des soins.",
+            "image": null
+        },
+        {
+            "id": "livret_77",
+            "question": "À quoi sert une mutuelle santé ?",
+            "explanation": "À compléter les remboursements de l'Assurance Maladie pour réduire le reste à charge.",
+            "image": null
+        },
+        {
+            "id": "livret_78",
+            "question": "Qu'est-ce que l'inscription à l'Assurance maladie ?",
+            "explanation": "Obligatoire pour être couvert et remboursé des soins (affiliation à la Sécurité sociale).",
+            "image": null
+        },
+        {
+            "id": "livret_79",
+            "question": "L'avortement est-il possible en France ?",
+            "explanation": "Oui, l'IVG (Interruption Volontaire de Grossesse) est légale en France depuis la loi Veil du 17 janvier 1975. Elle est encadrée : délai de 14 semaines de grossesse (16 semaines depuis 2022), prise en charge médicale, et remboursement par la Sécurité sociale. En mars 2024, la France est devenue le premier pays à graver la liberté de recourir à l'IVG dans sa Constitution.",
+            "image": null
+        },
+        {
+            "id": "livret_80",
+            "question": "Qu'est-ce que travailler sans être déclaré ?",
+            "explanation": "Du travail dissimulé : c'est illégal et pénalement sanctionné.",
+            "image": null
+        },
+        {
+            "id": "livret_81",
+            "question": "Quelle est la première démarche à réaliser pour chercher un emploi ?",
+            "explanation": "La première démarche est de mettre à jour son CV et de s'inscrire auprès de France Travail (anciennement Pôle emploi) pour accéder aux offres d'emploi et aux droits liés au chômage. France Travail est le service public de l'emploi en France, créé en 2024 pour remplacer Pôle emploi. L'inscription permet aussi d'accéder à des formations et à un accompagnement personnalisé.",
+            "image": null
+        },
+        {
+            "id": "livret_82",
+            "question": "Quelle est la durée légale du temps de travail par semaine ?",
+            "explanation": "La durée légale du temps de travail est de 35 heures par semaine, instaurée par la loi Aubry adoptée en 1998 et mise en application progressivement jusqu'en 2000. Cette durée peut être dépassée avec des heures supplémentaires, qui sont rémunérées ou compensées par des repos. La durée maximale est de 48 heures par semaine en moyenne sur 12 semaines.",
+            "image": null
+        },
+        {
+            "id": "livret_83",
+            "question": "Qui peut demander un congé parental d'éducation ?",
+            "explanation": "Le père ou la mère salarié(e), sous conditions d'ancienneté, après une naissance ou adoption.",
+            "image": null
+        },
+        {
+            "id": "livret_84",
+            "question": "Une personne étrangère, en situation régulière, peut-elle créer son entreprise ?",
+            "explanation": "Oui, si son titre de séjour autorise le travail ou comporte la mention permettant l'activité indépendante.",
+            "image": null
+        },
+        {
+            "id": "livret_85",
+            "question": "Une femme peut-elle créé son entreprise ?",
+            "explanation": "Oui, sans restriction : l'entrepreneuriat est ouvert à toutes et tous.",
+            "image": null
+        },
+        {
+            "id": "livret_86",
+            "question": "Quels sont les textes qui définissent les règles au travail ?",
+            "explanation": "Principalement le Code du travail, complété par les conventions collectives et le contrat de travail.",
+            "image": null
+        },
+        {
+            "id": "livret_87",
+            "question": "Quelles sont les affaires traitées par le conseil de prud'homme ?",
+            "explanation": "Les litiges entre employeurs et salariés liés au contrat de travail (licenciement, salaires, conditions de travail...).",
+            "image": null
+        },
+        {
+            "id": "livret_88",
+            "question": "Qui a le droit de se syndiquer ?",
+            "explanation": "Tout salarié (secteur privé ou public) peut adhérer librement à un syndicat.",
+            "image": null
+        },
+        {
+            "id": "livret_89",
+            "question": "Est-il possible de licencer une femme enceinte ou en congé maternité, en raison de sa grossesse ?",
+            "explanation": "Non, le licenciement pour ce motif est interdit ; seules exceptions : faute grave non liée ou impossibilité de maintenir le contrat.",
+            "image": null
+        },
+        {
+            "id": "livret_90",
+            "question": "L'instruction des enfants est obligatoire de quel âge à quel âge ?",
+            "explanation": "L'instruction est obligatoire de 3 à 16 ans en France depuis la loi du 26 juillet 2019 \"pour une école de la confiance\". Avant cette loi, l'instruction était obligatoire de 6 à 16 ans. L'école maternelle est donc désormais obligatoire dès 3 ans. Les parents qui ne respectent pas cette obligation risquent jusqu'à 6 mois d'emprisonnement et 7 500 € d'amende.",
+            "image": null
+        },
+        {
+            "id": "livret_91",
+            "question": "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
+            "explanation": "Jusqu'à 6 mois d'emprisonnement et 7 500 € d'amende (article 227-17-1 du Code pénal).",
+            "image": null
+        },
+        {
+            "id": "livret_92",
+            "question": "Quelle est la définition de l'autorité parentale ?",
+            "explanation": "Ensemble de droits et devoirs pour protéger, éduquer et veiller aux intérêts de l'enfant jusqu'à sa majorité.",
+            "image": null
+        },
+        {
+            "id": "livret_93",
+            "question": "Quel motif d'absence est accepté par l'école ?",
+            "explanation": "Maladie (avec justificatif), événement familial grave, obligations civiques ou religieuses reconnues.",
+            "image": null
+        },
+        {
+            "id": "livret_94",
+            "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
+            "explanation": "Jusqu'à 16 ans révolus.",
+            "image": null
+        },
+        {
+            "id": "livret_95",
+            "question": "À quel âge commence l'instruction obligatoire des enfants ?",
+            "explanation": "Dès 3 ans.",
+            "image": null
+        },
+        {
+            "id": "livret_96",
+            "question": "Comment s'appellent les établissements scolaires que les élèves intègrent après l'école élémentaire ?",
+            "explanation": "Le collège (puis le lycée).",
+            "image": null
+        },
+        {
+            "id": "livret_97",
+            "question": "En tant que parent d'élève, que peut-on faire ?",
+            "explanation": "Rencontrer les enseignants, être représentant des parents, participer aux conseils d'école ou d'administration.",
+            "image": null
+        },
+        {
+            "id": "livret_98",
+            "question": "Quelle instruction est prévue pour les enfants qui ne parlent pas français ?",
+            "explanation": "Des dispositifs d'accueil et de soutien (UPE2A, cours de français langue étrangère) pour apprendre le français et suivre la scolarité.",
+            "image": null
+        },
+        {
+            "id": "livret_99",
+            "question": "S'agissant de l'accueil des enfants en situation de handicap à l'école, laquelle des propositions est vraie ?",
+            "explanation": "L'école publique accueille tous les enfants ; des aménagements et aides (AESH, adaptations) sont prévus selon les besoins.",
+            "image": null
+        },
+        {
+            "id": "livret_100",
+            "question": "Depuis le 1er juillet 2021, quelle est la durée du congé paternité ?",
+            "explanation": "Depuis le 1er juillet 2021, le congé paternité est de 28 jours (4 semaines) pour les pères salariés, dont 7 jours obligatoires (3 jours de naissance + 4 jours supplémentaires). Les 21 jours restants sont facultatifs. Ce congé est pris dans les 6 mois suivant la naissance et est indemnisé par la Sécurité sociale. Il peut être prolongé en cas de naissance multiple.",
+            "image": null
+        },
+        {
+            "id": "livret_101",
+            "question": "Est-ce possible de punir physiquement ses enfants ?",
+            "explanation": "Non, la loi interdit les violences éducatives ordinaires (VEO) depuis la loi du 10 juillet 2019. Cette loi, dite \"loi anti-fessée\", interdit toute forme de violence physique ou psychologique envers les enfants, y compris les châtiments corporels. La France a ainsi ratifié l'article 19 de la Convention internationale des droits de l'enfant. Les parents qui violent cette interdiction risquent des sanctions pénales.",
+            "image": null
+        },
+        {
+            "id": "livret_102",
+            "question": "Quels sont les trois principes de l'école publique ?",
+            "explanation": "Elle est gratuite, laïque et obligatoire.",
+            "image": null
+        },
+        {
+            "id": "livret_103",
+            "question": "Qu'est-ce que la mixité à l'école ?",
+            "explanation": "C'est le fait que les filles et les garçons suivent les mêmes enseignements dans les mêmes classes. C'est un vecteur d'égalité dès le plus jeune âge.",
+            "image": null
+        },
+        {
+            "id": "livret_104",
+            "question": "Quel est le rôle des parents dans l'éducation ?",
+            "explanation": "Les parents ont la responsabilité d'assurer l'éducation de leurs enfants, de veiller à leur santé, à leur sécurité et de leur transmettre les valeurs républicaines.",
+            "image": null
+        },
+        {
+            "id": "livret_105",
+            "question": "Avez-vous des enfants ? Quels sont leurs prénoms et leurs dates de naissance ?",
+            "explanation": "Oui, j’ai (Nombre) enfant(s). Ils s’appellent (Prénoms) et sont nés le (Dates de naissance). (Ou: Non, je n’ai pas d’enfant.)",
+            "image": null
+        },
+        {
+            "id": "livret_106",
+            "question": "Quelles sont vos activités en famille ?",
+            "explanation": "Nous aimons sortir ensemble, aller au parc, voir des amis, faire des repas en famille, etc.",
+            "image": null
+        },
+        {
+            "id": "livret_107",
+            "question": "Qui s'occupe principalement des enfants ?",
+            "explanation": "Nous nous partageons les responsabilités parentales autant que possible, en nous adaptant à nos horaires professionnels respectifs.",
+            "image": null
+        },
+        {
+            "id": "livret_108",
+            "question": "Comment votre partenaire et vous pensez-vous des décisions importantes pour la famille ?",
+            "explanation": "Nous prenons les décisions importantes ensemble, après avoir discuté de toutes les options et conséquences, pour nous assurer que nous agissons dans le meilleur intérêt de notre famille.",
+            "image": null
+        },
+        {
+            "id": "livret_109",
+            "question": "Envoyez-vous de l'argent à votre famille dans votre pays d'origine ?",
+            "explanation": "Oui/NON, j'envoie /ou pas occasionnellement de l'argent pour soutenir ma famille. Cela me permet de rester connecté à eux et de contribuer à leur bien-être.",
+            "image": null
+        },
+        {
+            "id": "livret_110",
+            "question": "Par qui est financée la Sécurité sociale ?",
+            "explanation": "La Sécurité sociale est financée principalement par les cotisations sociales prélevées sur les salaires (versées par les employeurs et les salariés) et par l'impôt, notamment la CSG (Contribution Sociale Généralisée) créée en 1991. Elle peut aussi recevoir des subventions de l'État. Le système illustre le principe de solidarité nationale et de fraternité républicaine.",
+            "image": null
+        },
+        {
+            "id": "livret_111",
+            "question": "Qui a le droit d'accéder aux emplois publics ?",
+            "explanation": "Tous les citoyens français sont égaux devant l'accès à l'emploi public, selon leurs capacités et par voie de concours.",
+            "image": null
+        },
+        {
+            "id": "livret_112",
+            "question": "Quelle est la durée légale du travail en France ?",
+            "explanation": "La durée légale du travail est de 35 heures par semaine, instaurée par la loi Aubry adoptée en 1998 et mise en application progressivement jusqu'en 2000. Cette durée peut être dépassée avec des heures supplémentaires, qui sont rémunérées ou compensées par des repos. La durée maximale est de 48 heures par semaine en moyenne sur 12 semaines.",
+            "image": null
+        },
+        {
+            "id": "livret_113",
+            "question": "Un employeur peut-il discriminer un candidat lors d'une embauche ?",
+            "explanation": "Non. La discrimination fondée sur l'origine, le sexe, la religion, l'âge ou l'orientation sexuelle est un délit sévèrement puni par la loi.",
+            "image": null
+        },
+        {
+            "id": "livret_114",
+            "question": "Qu'est-ce que l'assimilation à la communauté française ?",
+            "explanation": "L'assimilation à la communauté française est l'adhésion aux valeurs de la République (liberté, égalité, fraternité, laïcité), la maîtrise de la langue française (niveau B2 requis depuis janvier 2026, au lieu de B1 auparavant), une connaissance suffisante de l'histoire et de la culture de la France, et la réussite à l'examen civique (40 questions, 80% de bonnes réponses requises depuis janvier 2026). Le candidat doit également démontrer une stabilité professionnelle et financière.",
+            "image": null
+        },
+        {
+            "id": "livret_115",
+            "question": "Qui décide de l'octroi de la nationalité française ?",
+            "explanation": "C'est le ministre de l'Intérieur qui prend la décision finale d'octroyer ou non la nationalité française après enquête administrative. Depuis le 1er janvier 2026, les critères sont renforcés : niveau de français B2 (au lieu de B1) selon le CECRL, réussite à un examen civique écrit de 40 questions à choix multiples (80% de bonnes réponses requises, soit 32/40), et démonstration d'une stabilité financière et professionnelle en France. L'entretien en préfecture évalue également l'adhésion aux valeurs républicaines.",
+            "image": null
+        },
+        {
+            "id": "livret_116",
+            "question": "Quel est le but de l'entretien réglementaire en préfecture ?",
+            "explanation": "L'entretien en préfecture vise à évaluer le degré d'assimilation du candidat, sa connaissance de la société française, de ses principes et valeurs essentiels (liberté, égalité, fraternité, laïcité), ainsi que son adhésion à ceux-ci. Depuis le 1er janvier 2026, cet entretien s'accompagne d'un examen civique écrit de 40 questions à choix multiples (QCM) sur support numérique, d'une durée de 45 minutes maximum, portant sur l'histoire, la culture, les valeurs françaises et la vie en société. Le candidat doit obtenir au moins 32 bonnes réponses sur 40 (80%) pour réussir. Il doit également démontrer un niveau de français B2 et une stabilité professionnelle et financière.",
+            "image": null
+        },
+        {
+            "id": "livret_117",
+            "question": "Pourquoi voulez-vous devenir un citoyen français ou française?",
+            "explanation": "Dès mon arrivée en France, j'ai ressenti un profond attachement pour ce pays, bien au-delà d'un simple lieu de résidence : la France est devenue ma maison. Chaque jour, je me sens un peu plus français, non seulement par ma manière de vivre, mais aussi par mon adhésion totale aux valeurs de la République : liberté, égalité, fraternité. Ces principes ne sont pas de simples mots pour moi: ils sont le fondement d'une société juste et solidaire, dans laquelle je veux pleinement m'inscrire. Mon sentiment d'appartenance va bien au-delà d'une simple appréciation : il est ancré dans ma vie quotidienne. La France est le pays où j'ai construit (ou je compte construire) mon avenir, où j'ai tissé des liens solides, tant sur le plan personnel que professionnel. Mon entourage, mon travail, mes ambitions… tout se dessine ici. Je partage la culture française, son attachement à la démocratie, aux droits de l'homme, à la laïcité, qui permet à chacun de vivre librement, dans le respect des autres. La France est aussi un pays dont le rayonnement international me rend fier. Son histoire, sa place de leader dans des domaines d'excellence comme l'aéronautique, la recherche scientifique, le luxe ou encore la gastronomie témoignent de son dynamisme et de son influence dans le monde. Être citoyen français, c'est appartenir à une nation qui porte haut les valeurs de progrès et d'innovation, tout en défendant un modèle social protecteur et solidaire. Au-delà de ses réussites économiques et scientifiques, la France est un pays où la culture et l'art occupent une place centrale. J'ai une profonde admiration pour son patrimoine, sa littérature, son cinéma, sa musique… Cette richesse culturelle, qui traverse les siècles et continue d'inspirer le monde entier, me passionne et me nourrit au quotidien. Mais être français, c'est aussi un engagement. Ce n'est pas seulement un privilège, c'est une responsabilité. Obtenir la nationalité française me permettrait de renforcer encore mon implication dans la société, notamment en exerçant mon droit de vote. Pour moi, voter n'est pas juste un droit, c'est un devoir citoyen, une façon d'être acteur de la démocratie et de contribuer au futur de ce pays que j'aime. Aujourd'hui, je souhaite aller au bout de mon intégration et affirmer officiellement mon appartenance à cette nation qui m'a accueilli et dans laquelle je me reconnais pleinement. Devenir citoyen français, c'est l'aboutissement d'un parcours de vie, mais c'est surtout un engagement du cœur. (Note : Depuis janvier 2026, les candidats doivent également réussir un examen civique et démontrer un niveau de français B2 ainsi qu'une stabilité professionnelle et financière.)",
+            "image": null
+        },
+        {
+            "id": "livret_118",
+            "question": "Que changera pour vous le fait de devenir français ?",
+            "explanation": "Cela me donnera accès aux droits et devoirs des citoyens français, notamment le droit de vote, la protection de l'État, la possibilité de participer pleinement à la vie démocratique, et l'accès à tous les services publics. En contrepartie, je devrai respecter les obligations civiques comme le paiement des impôts, le respect des lois, et la participation à la défense nationale si nécessaire.",
+            "image": null
+        },
+        {
+            "id": "livret_119",
+            "question": "Quelle est la date de naissance de votre conjoint(e) ?",
+            "explanation": "Il/elle est né(e) le (JJ/MM/AAAA).",
+            "image": null
+        },
+        {
+            "id": "livret_120",
+            "question": "Quelle est la nationalité de votre conjoint(e) ?",
+            "explanation": "Il/elle est (Nationalité).",
+            "image": null
+        },
+        {
+            "id": "livret_121",
+            "question": "L'administration peut-elle refuser la nationalité française pour non-respect de l'égalité femmes-hommes ?",
+            "explanation": "Oui, même si la personne est mariée à un(e) français(e), car l'égalité entre les femmes et les hommes est une valeur essentielle de la République.",
+            "image": null
+        },
+        {
+            "id": "livret_122",
+            "question": "Où habitez-vous actuellement ?",
+            "explanation": "J'habite à (Ville, Département).",
+            "image": null
+        },
+        {
+            "id": "livret_123",
+            "question": "Avez-vous visité d'autres villes en France ? Lesquelles et qu'avez-vous appris de ces visites ?",
+            "explanation": "Oui, j'ai visité (noms des villes, par exemple : Lyon, Bordeaux, Marseille). Chaque visite m'a permis de découvrir la diversité culturelle et régionale de la France, renforçant mon appréciation pour le pays.",
+            "image": null
+        },
+        {
+            "id": "livret_124",
+            "question": "Vous habitez seul(e) ou en famille ?",
+            "explanation": "J'habite (seul(e) / en famille) à (ville ou région).",
+            "image": null
+        },
+        {
+            "id": "livret_125",
+            "question": "Où passez-vous habituellement vos vacances ?",
+            "explanation": "Nous passons nos vacances soit en explorant différentes régions de France pour découvrir sa beauté et sa diversité, soit en retournant dans notre pays d'origine pour rester connectés à nos racines et revoir notre famille.",
+            "image": null
+        },
+        {
+            "id": "livret_126",
+            "question": "Avez-vous mangé des spécialités locales lors de vos voyages en France ?",
+            "explanation": "Oui. Bœuf Bourguignon, Coq au vin, Ratatouille, Quiche Lorraine, Galettes Bretonnes, Steak Tartare, Aligot etc…",
+            "image": null
+        },
+        {
+            "id": "livret_127",
+            "question": "Pratiquez-vous des activités ensemble ?",
+            "explanation": "Oui, nous aimons (activité, par exemple : randonner, cuisiner, visiter des musées) ensemble. Cela nous aide à renforcer notre lien.",
+            "image": null
+        }
+    ]
+}

@@ -1,12 +1,21 @@
 {
   "expo": {
-    "name": "French_nationality_questions",
-    "slug": "French_nationality_questions",
+    "name": "Naturalisation France - Test Civique Actualisé",
+    "slug": "naturalisation-france",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "plugins": [
+      [
+        "@sentry/react-native",
+        {
+          "organization": "endlessgrace",
+          "project": "react-native"
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -14,7 +23,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.lykimq-uyen.French-nationality-questions"
+      "bundleIdentifier": "com.lykimq-uyen.naturalisation-france"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,10 +31,12 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.lykimq_uyen.French_nationality_questions"
+      "package": "com.lykimq_uyen.naturalisation_france",
+      "jsEngine": "hermes"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     }
   }
 }

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+android/
+ios/
+.expo/
+.expo-shared/
+dist/
+build/
+
+# Generated files
+*.log
+*.cache
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
