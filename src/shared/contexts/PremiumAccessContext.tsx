@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react';
-import { Platform } from 'react-native';
+import { Platform, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as RNIap from 'react-native-iap';
 import { PaywallModal } from '../components';
@@ -178,9 +178,16 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
         purchaseUpdateSubscription.current = RNIap.purchaseUpdatedListener(async (purchase) => {
             await finalizePurchase(purchase);
         });
-        purchaseErrorSubscription.current = RNIap.purchaseErrorListener((error) => {
+        purchaseErrorSubscription.current = RNIap.purchaseErrorListener((error: any) => {
             setPurchaseInProgress(false);
-            logger.warn('Purchase error:', error);
+            const errorCode = error?.code || error?.message || '';
+            const errorMessage = error?.message || String(error);
+            
+            if (errorCode === 'sku-not-found' || errorMessage.includes('SKU not found') || errorMessage.includes('not found')) {
+                logger.info('Purchase product not configured in store (expected in development)');
+            } else {
+                logger.warn('Purchase error:', error);
+            }
         });
 
         return () => {
@@ -228,8 +235,15 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
                 },
             };
             await RNIap.requestPurchase(request);
-        } catch (error) {
-            logger.warn('Purchase request failed:', error);
+        } catch (error: any) {
+            const errorMessage = error?.message || String(error);
+            const errorCode = error?.code || '';
+            
+            if (errorCode === 'sku-not-found' || errorMessage.includes('SKU not found') || errorMessage.includes('not found')) {
+                logger.info('Purchase product not configured in store (expected in development). Configure "premium_unlock" in Google Play Console / App Store Connect for production.');
+            } else {
+                logger.warn('Purchase request failed:', error);
+            }
             setPurchaseInProgress(false);
         }
     }, [ensureAccountToken, loadAccountIdentity]);
@@ -238,14 +252,32 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
         try {
             const purchases = await RNIap.getAvailablePurchases();
             if (!purchases.length) {
+                Alert.alert(
+                    'Aucun achat trouvé',
+                    'Aucun achat précédent n\'a été trouvé sur ce compte. Si vous avez déjà acheté la version Premium, assurez-vous d\'être connecté avec le même compte que lors de l\'achat.'
+                );
                 return;
             }
             const latest = purchases.find((purchase) => PRODUCT_IDS.includes(purchase.productId));
             if (latest) {
                 await finalizePurchase(latest);
+                Alert.alert(
+                    'Achat restauré',
+                    'Votre achat a été restauré avec succès. Vous avez maintenant accès à toutes les fonctionnalités Premium.'
+                );
+            } else {
+                Alert.alert(
+                    'Aucun achat Premium trouvé',
+                    'Aucun achat Premium n\'a été trouvé sur ce compte. Si vous avez déjà acheté la version Premium, assurez-vous d\'être connecté avec le même compte que lors de l\'achat.'
+                );
             }
-        } catch (error) {
+        } catch (error: any) {
             logger.warn('Restore purchase failed:', error);
+            const errorMessage = error?.message || String(error);
+            Alert.alert(
+                'Erreur',
+                `Impossible de restaurer les achats. ${errorMessage.includes('not configured') ? 'Le produit n\'est peut-être pas encore configuré dans le store.' : 'Veuillez réessayer plus tard.'}`
+            );
         }
     }, [finalizePurchase]);
 

@@ -47,7 +47,7 @@ const PaywallModal: React.FC = () => {
                         {BENEFITS.map((benefit) => (
                             <View key={benefit} style={[styles.benefitItem, { borderColor: theme.colors.border }]}>
                                 <Icon3D
-                                    name="check-circle"
+                                    name="checkmark-circle"
                                     size={20}
                                     color={theme.colors.primary}
                                     variant="flat"
