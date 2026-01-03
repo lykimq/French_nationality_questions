@@ -115,13 +115,19 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
         }
 
         const identity = await loadAccountIdentity();
+        
+        const purchaseAny = purchase as any;
+        const purchaseToken = purchaseAny.purchaseToken ?? null;
+        const receipt = purchaseAny.transactionReceipt ?? purchaseAny.transactionId ?? null;
+        
         const payload: EntitlementSyncPayload = {
             accountHash: identity.accountHash,
+            platform: Platform.OS,
             isPremium: true,
             hasUsedFreeExam: entitlement.hasUsedFreeExam,
-            purchaseToken: (purchase as RNIap.ProductPurchase).purchaseToken ?? null,
+            purchaseToken,
             productId: purchase.productId,
-            receipt: purchase.transactionReceipt ?? null,
+            receipt,
         };
 
         const remote = await syncRemoteEntitlement(payload);
@@ -146,16 +152,16 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
             try {
                 await RNIap.initConnection();
                 
-                if (Platform.OS === 'android' && typeof RNIap.flushFailedPurchasesCachedAsPendingAndroid === 'function') {
-                    await RNIap.flushFailedPurchasesCachedAsPendingAndroid();
-                }
-                
                 await new Promise((resolve) => setTimeout(resolve, 500));
                 
                 try {
                     const products = await RNIap.fetchProducts({ skus: PRODUCT_IDS, type: 'in-app' });
-                    if (mounted && products.length > 0) {
-                        setProductPrice(products[0]?.localizedPrice);
+                    if (mounted && products !== null && products.length > 0) {
+                        const firstProduct = products[0] as any;
+                        const price = firstProduct?.localizedPrice ?? firstProduct?.price ?? undefined;
+                        if (price) {
+                            setProductPrice(price);
+                        }
                     }
                 } catch (productError: any) {
                     const errorMessage = productError?.message || String(productError);
@@ -302,6 +308,7 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
         await updateEntitlementState(updated);
         await syncRemoteEntitlement({
             accountHash: identity.accountHash,
+            platform: Platform.OS,
             hasUsedFreeExam: true,
         });
     }, [entitlement, loadAccountIdentity, updateEntitlementState]);
