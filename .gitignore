@@ -102,6 +102,7 @@ yarn-error.*
 **/google-services.json
 **/GoogleService-Info.plist
 **/firebase.json
+*-firebase-adminsdk-*.json
 
 # Additional security - sensitive files
 *.secret
