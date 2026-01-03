@@ -10,21 +10,26 @@ function initFirebase() {
   const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
 
   if (!admin.apps.length) {
-    if (privateKey && clientEmail) {
-      admin.initializeApp({
-        credential: admin.credential.cert({
-          projectId: projectId,
-          privateKey: privateKey,
-          clientEmail: clientEmail,
-        }),
+    if (!privateKey || !clientEmail) {
+      console.error('Missing Firebase credentials:', {
+        hasProjectId: !!projectId,
+        hasPrivateKey: !!privateKey,
+        hasClientEmail: !!clientEmail,
       });
-    } else if (projectId) {
-      admin.initializeApp({
-        projectId: projectId,
-      });
-    } else {
-      throw new Error('Firebase configuration missing. Need EXPO_PUBLIC_FIREBASE_PROJECT_ID and either (EXPO_PUBLIC_FIREBASE_PRIVATE_KEY + EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL) or Application Default Credentials.');
+      throw new Error('Firebase Admin SDK requires EXPO_PUBLIC_FIREBASE_PRIVATE_KEY and EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL environment variables. Please set them in Vercel Dashboard → Settings → Environment Variables for Production environment.');
     }
+
+    if (!projectId) {
+      throw new Error('EXPO_PUBLIC_FIREBASE_PROJECT_ID environment variable is required.');
+    }
+
+    admin.initializeApp({
+      credential: admin.credential.cert({
+        projectId: projectId,
+        privateKey: privateKey,
+        clientEmail: clientEmail,
+      }),
+    });
   }
 
   db = admin.firestore();
@@ -44,6 +49,11 @@ module.exports = async function handler(req, res) {
 
   try {
     const firestore = initFirebase();
+    if (!firestore) {
+      return res.status(500).json({ 
+        error: 'Firebase not initialized. Check environment variables: EXPO_PUBLIC_FIREBASE_PROJECT_ID, EXPO_PUBLIC_FIREBASE_PRIVATE_KEY, EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL' 
+      });
+    }
     const docId = `${platform}_${accountHash}`;
     const docRef = firestore.collection('entitlements').doc(docId);
     const docSnap = await docRef.get();
