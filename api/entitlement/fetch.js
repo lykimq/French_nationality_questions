@@ -5,14 +5,26 @@ let db = null;
 function initFirebase() {
   if (db) return db;
 
+  const projectId = process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID;
+  const privateKey = process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+  const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
+
   if (!admin.apps.length) {
-    admin.initializeApp({
-      credential: admin.credential.cert({
-        projectId: process.env.FIREBASE_PROJECT_ID,
-        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-      }),
-    });
+    if (privateKey && clientEmail) {
+      admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId: projectId,
+          privateKey: privateKey,
+          clientEmail: clientEmail,
+        }),
+      });
+    } else if (projectId) {
+      admin.initializeApp({
+        projectId: projectId,
+      });
+    } else {
+      throw new Error('Firebase configuration missing. Need EXPO_PUBLIC_FIREBASE_PROJECT_ID and either (EXPO_PUBLIC_FIREBASE_PRIVATE_KEY + EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL) or Application Default Credentials.');
+    }
   }
 
   db = admin.firestore();
