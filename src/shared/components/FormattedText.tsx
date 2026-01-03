@@ -3,6 +3,8 @@ import { Text, StyleSheet } from 'react-native';
 import { useTextFormatting, getTextStyles } from '../contexts/TextFormattingContext';
 import { FormattedTextProps } from '../../types';
 
+const defaultTextFormattingSettings = { fontSize: 16 };
+
 /**
  * Strips fontSize from a style object to allow user formatting settings to take precedence.
  */
@@ -21,7 +23,13 @@ const FormattedText: React.FC<FormattedTextProps> = ({
     style,
     ...otherProps
 }) => {
-    const { settings } = useTextFormatting();
+    let settings;
+    try {
+        const context = useTextFormatting();
+        settings = context.settings;
+    } catch {
+        settings = defaultTextFormattingSettings;
+    }
     const formattedStyles = getTextStyles(settings);
 
     // Process styles to remove fontSize, allowing user settings to control font size

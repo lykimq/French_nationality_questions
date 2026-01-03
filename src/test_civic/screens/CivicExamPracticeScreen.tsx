@@ -74,7 +74,7 @@ const CivicExamPracticeScreen = () => {
         setSelectedTopics(isPremium ? [] : ['principles_values']);
     };
 
-    const guardPracticeAccess = React.useCallback(async (): Promise<boolean> => {
+    const guardPracticeAccess = React.useCallback((): boolean => {
         if (isPremium) {
             return true;
         }
@@ -82,9 +82,8 @@ const CivicExamPracticeScreen = () => {
             openPaywall();
             return false;
         }
-        await markFreeExamUsed();
         return true;
-    }, [hasUsedFreeExam, isPremium, markFreeExamUsed, openPaywall]);
+    }, [hasUsedFreeExam, isPremium, openPaywall]);
 
     const handleStartPractice = async () => {
         if (selectedTopics.length === 0) {
@@ -96,7 +95,7 @@ const CivicExamPracticeScreen = () => {
         }
 
         try {
-            if (!(await guardPracticeAccess())) {
+            if (!guardPracticeAccess()) {
                 return;
             }
             setIsStarting(true);
@@ -110,6 +109,9 @@ const CivicExamPracticeScreen = () => {
                 showProgress: true,
                 selectedTopics,
             });
+            if (!isPremium) {
+                await markFreeExamUsed();
+            }
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
             logger.error('Error starting practice:', error);

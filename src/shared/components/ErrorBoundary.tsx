@@ -4,6 +4,7 @@ import FormattedText from './FormattedText';
 import { useTheme } from '../contexts/ThemeContext';
 import { createLogger } from '../utils/logger';
 import { Sentry } from '../../config/sentryConfig';
+import { colorThemes } from '../../theme/colorThemes';
 
 const logger = createLogger('ErrorBoundary');
 
@@ -79,27 +80,33 @@ interface ErrorFallbackProps {
 }
 
 const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, onReset }) => {
-    const { theme } = useTheme();
+    let colors;
+    try {
+        const themeContext = useTheme();
+        colors = themeContext.theme.colors;
+    } catch {
+        colors = colorThemes.classic.light;
+    }
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <View style={[styles.content, { backgroundColor: theme.colors.card }]}>
-                <FormattedText style={[styles.title, { color: theme.colors.error }]}>
+        <View style={[styles.container, { backgroundColor: colors.background }]}>
+            <View style={[styles.content, { backgroundColor: colors.card }]}>
+                <FormattedText style={[styles.title, { color: colors.error }]}>
                     Une erreur s'est produite
                 </FormattedText>
-                <FormattedText style={[styles.message, { color: theme.colors.text }]}>
+                <FormattedText style={[styles.message, { color: colors.text }]}>
                     L'application a rencontré une erreur inattendue. Veuillez réessayer.
                 </FormattedText>
                 {__DEV__ && error && (
-                    <FormattedText style={[styles.errorDetails, { color: theme.colors.textMuted }]}>
+                    <FormattedText style={[styles.errorDetails, { color: colors.textMuted }]}>
                         {error.toString()}
                     </FormattedText>
                 )}
                 <TouchableOpacity
-                    style={[styles.button, { backgroundColor: theme.colors.primary }]}
+                    style={[styles.button, { backgroundColor: colors.primary }]}
                     onPress={onReset}
                 >
-                    <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
+                    <FormattedText style={[styles.buttonText, { color: colors.buttonText }]}>
                         Réessayer
                     </FormattedText>
                 </TouchableOpacity>

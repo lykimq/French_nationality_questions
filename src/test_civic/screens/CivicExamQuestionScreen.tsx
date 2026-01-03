@@ -25,6 +25,7 @@ import { CivicExamOptions } from '../components/CivicExamOptions';
 import { CivicExamFooter } from '../components/CivicExamFooter';
 import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
+import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamQuestionScreen');
 type CivicExamQuestionScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
@@ -41,6 +42,7 @@ const CivicExamQuestionScreen = () => {
         cancelExam,
         abandonPausedSession,
     } = useCivicExam();
+    const { isPremium, markFreeExamUsed } = usePremiumAccess();
 
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [answerSubmitted, setAnswerSubmitted] = useState(false);
@@ -48,6 +50,13 @@ const CivicExamQuestionScreen = () => {
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const previousQuestionIndexRef = useRef<number>(-1);
     const isNavigatingAwayRef = useRef<boolean>(false);
+
+    const handleCancelExam = useCallback(async () => {
+        cancelExam();
+        if (!isPremium) {
+            await markFreeExamUsed();
+        }
+    }, [cancelExam, isPremium, markFreeExamUsed]);
 
     const isExamMode = currentSession?.mode === 'civic_exam_naturalization';
     const isPracticeMode = currentSession?.isPracticeMode || false;
@@ -147,9 +156,9 @@ const CivicExamQuestionScreen = () => {
                                 {
                                     text: 'Pause',
                                     style: 'default',
-                                    onPress: () => {
+                                    onPress: async () => {
                                         isNavigatingAwayRef.current = true;
-                                        cancelExam();
+                                        await handleCancelExam();
                                         navigation.dispatch(
                                             CommonActions.reset({
                                                 index: 0,
@@ -174,9 +183,9 @@ const CivicExamQuestionScreen = () => {
                                 {
                                     text: 'Quitter',
                                     style: 'destructive',
-                                    onPress: () => {
+                                    onPress: async () => {
                                         isNavigatingAwayRef.current = true;
-                                        cancelExam();
+                                        await handleCancelExam();
                                         navigation.dispatch(
                                             CommonActions.reset({
                                                 index: 0,
@@ -268,9 +277,9 @@ const CivicExamQuestionScreen = () => {
                     {
                         text: 'Pause',
                         style: 'default',
-                        onPress: () => {
+                        onPress: async () => {
                             isNavigatingAwayRef.current = true;
-                            cancelExam();
+                            await handleCancelExam();
                             navigation.dispatch(
                                 CommonActions.reset({
                                     index: 0,
@@ -294,9 +303,9 @@ const CivicExamQuestionScreen = () => {
                     {
                         text: 'Quitter',
                         style: 'destructive',
-                        onPress: () => {
+                        onPress: async () => {
                             isNavigatingAwayRef.current = true;
-                            cancelExam();
+                            await handleCancelExam();
                             navigation.dispatch(
                                 CommonActions.reset({
                                     index: 0,

@@ -166,11 +166,6 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
         toggleTheme,
     }), [currentTheme, icons, themeMode, colorTheme, setThemeMode, setColorTheme, toggleTheme]);
 
-    // Don't render children until theme is loaded
-    if (isLoading) {
-        return null;
-    }
-
     return (
         <ThemeContext.Provider value={value}>
             <StatusBar style={themeMode === 'dark' ? 'light' : 'dark'} />

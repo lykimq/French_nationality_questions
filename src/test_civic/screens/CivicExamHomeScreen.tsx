@@ -40,7 +40,7 @@ const CivicExamHomeScreen = () => {
         }, [refreshProgress])
     );
 
-    const guardExamAccess = React.useCallback(async (): Promise<boolean> => {
+    const guardExamAccess = React.useCallback((): boolean => {
         if (isPremium) {
             return true;
         }
@@ -48,19 +48,18 @@ const CivicExamHomeScreen = () => {
             openPaywall();
             return false;
         }
-        await markFreeExamUsed();
         return true;
-    }, [hasUsedFreeExam, isPremium, markFreeExamUsed, openPaywall]);
+    }, [hasUsedFreeExam, isPremium, openPaywall]);
 
-    const handleStartExam = async () => {
-        if (!(await guardExamAccess())) {
+    const handleStartExam = () => {
+        if (!guardExamAccess()) {
             return;
         }
         navigation.navigate('CivicExamInfo');
     };
 
-    const handlePracticeMode = async () => {
-        if (!(await guardExamAccess())) {
+    const handlePracticeMode = () => {
+        if (!guardExamAccess()) {
             return;
         }
         navigation.navigate('CivicExamPractice');

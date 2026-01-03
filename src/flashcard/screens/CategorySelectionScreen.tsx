@@ -12,7 +12,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText, InfoBanner, PremiumGate } from '../../shared/components';
+import { FormattedText, InfoBanner } from '../../shared/components';
 import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
 import type { FormationCategory } from '../types';
@@ -123,33 +123,16 @@ const CategorySelectionScreen: React.FC = () => {
                         const questionCount = category.questions?.length || 0;
                         const isUnlocked = isPremium || category.id === FREE_FLASHCARD_CATEGORY;
 
-                        if (isUnlocked) {
-                            return (
-                                <CategoryCard
-                                    key={category.id}
-                                    title={category.title}
-                                    description={category.description}
-                                    icon={iconKey}
-                                    count={questionCount}
-                                    onPress={() => handleCategoryPress(category, true)}
-                                />
-                            );
-                        }
-
                         return (
-                            <PremiumGate
-                                key={`${category.id}_flashcard`}
-                                isLocked={true}
-                                hint="Les cartes flash complètes nécessitent la version Premium."
-                            >
-                                <CategoryCard
-                                    title={category.title}
-                                    description={category.description}
-                                    icon={iconKey}
-                                    count={questionCount}
-                                    onPress={() => handleCategoryPress(category, false)}
-                                />
-                            </PremiumGate>
+                            <CategoryCard
+                                key={category.id}
+                                title={category.title}
+                                description={category.description}
+                                icon={iconKey}
+                                count={questionCount}
+                                disabled={!isUnlocked}
+                                onPress={() => handleCategoryPress(category, isUnlocked)}
+                            />
                         );
                     })}
                 </ScrollView>

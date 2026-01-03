@@ -18,6 +18,7 @@ import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import type { CivicExamStackParamList } from '../types';
+import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamInfo');
 
@@ -28,6 +29,7 @@ const CivicExamInfoScreen = () => {
     const { theme, themeMode } = useTheme();
     const { getIcon } = useIcon3D();
     const { startExam } = useCivicExam();
+    const { isPremium, markFreeExamUsed } = usePremiumAccess();
 
     const arrowBackIcon = getIcon('arrowBack');
     const timeIcon = getIcon('time');
@@ -44,6 +46,9 @@ const CivicExamInfoScreen = () => {
                 shuffleOptions: true,
                 showProgress: true,
             });
+            if (!isPremium) {
+                await markFreeExamUsed();
+            }
             navigation.navigate('CivicExamQuestion');
         } catch (error) {
             logger.error('Error starting exam:', error);

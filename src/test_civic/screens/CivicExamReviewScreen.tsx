@@ -18,6 +18,7 @@ import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { serializeCivicExamResult } from '../utils/civicExamSerialization';
 import type { CivicExamStackParamList } from '../types';
+import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamReview');
 
@@ -27,6 +28,7 @@ const CivicExamReviewScreen = () => {
     const navigation = useNavigation<CivicExamReviewScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { currentSession, finishExam } = useCivicExam();
+    const { isPremium, markFreeExamUsed } = usePremiumAccess();
 
     // Handle navigation when session is missing (useEffect to avoid render-time navigation)
     useEffect(() => {
@@ -38,6 +40,9 @@ const CivicExamReviewScreen = () => {
     const handleSubmit = async () => {
         try {
             const result = await finishExam();
+            if (!isPremium) {
+                await markFreeExamUsed();
+            }
             const serializedResult = serializeCivicExamResult(result);
             navigation.navigate('CivicExamResult', { result: serializedResult });
         } catch (error) {

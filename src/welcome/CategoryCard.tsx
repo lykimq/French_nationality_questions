@@ -12,6 +12,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     icon,
     count,
     onPress,
+    disabled = false,
 }) => {
     const { theme } = useTheme();
     const { getJsonIconName, getJsonIconColor, getJsonIconVariant, getIconName, getIconVariant } = useIcons();
@@ -22,6 +23,9 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     const chevronIconName = getIconName('chevronForward');
     const chevronVariant = getIconVariant('chevronForward');
 
+    const opacity = disabled ? 0.5 : 1;
+    const grayedColor = disabled ? theme.colors.textMuted : iconColor;
+
     return (
         <Pressable
             style={({ pressed }) => [
@@ -29,34 +33,36 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 sharedStyles.mediumShadow,
                 {
                     backgroundColor: theme.colors.card,
-                    borderColor: iconColor + '20',
+                    borderColor: (disabled ? theme.colors.border : iconColor) + '20',
                     borderWidth: 1,
+                    opacity,
                 },
-                pressed && [styles.cardPressed, { backgroundColor: iconColor + '10' }]
+                pressed && !disabled && [styles.cardPressed, { backgroundColor: iconColor + '10' }]
             ]}
-            onPress={onPress}
-            android_ripple={{ color: iconColor + '20' }}
+            onPress={disabled ? undefined : onPress}
+            disabled={disabled}
+            android_ripple={disabled ? undefined : { color: iconColor + '20' }}
         >
             <Icon3D
                 name={mappedIconName}
                 size={28}
-                color={iconColor}
+                color={grayedColor}
                 variant={iconVariant}
                 backgroundColor={theme.colors.card}
             />
             <View style={styles.content}>
-                <FormattedText style={[styles.title, { color: theme.colors.text }]}>{title}</FormattedText>
-                <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]} numberOfLines={2}>
+                <FormattedText style={[styles.title, { color: disabled ? theme.colors.textMuted : theme.colors.text }]}>{title}</FormattedText>
+                <FormattedText style={[styles.description, { color: disabled ? theme.colors.textMuted : theme.colors.textSecondary }]} numberOfLines={2}>
                     {description}
                 </FormattedText>
-                <View style={[styles.countContainer, { backgroundColor: iconColor + '15' }]}>
-                    <FormattedText style={[styles.count, { color: iconColor }]}>{count} questions</FormattedText>
+                <View style={[styles.countContainer, { backgroundColor: (disabled ? theme.colors.border : iconColor) + '15' }]}>
+                    <FormattedText style={[styles.count, { color: disabled ? theme.colors.textMuted : iconColor }]}>{count} questions</FormattedText>
                 </View>
             </View>
             <Icon3D
                 name={chevronIconName}
                 size={20}
-                color={iconColor}
+                color={grayedColor}
                 variant={chevronVariant}
                 containerStyle={styles.arrowIcon}
             />
