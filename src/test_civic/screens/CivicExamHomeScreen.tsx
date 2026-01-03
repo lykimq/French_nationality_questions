@@ -211,17 +211,24 @@ const CivicExamHomeScreen = () => {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={[styles.secondaryButton, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}
+                        style={[
+                            styles.secondaryButton,
+                            {
+                                backgroundColor: examLocked ? theme.colors.textMuted + '20' : theme.colors.card,
+                                borderColor: examLocked ? theme.colors.textMuted : theme.colors.border,
+                                opacity: examLocked ? 0.6 : 1,
+                            }
+                        ]}
                         onPress={examLocked ? openPaywall : handlePracticeMode}
                         activeOpacity={0.8}
                     >
                         <Icon3D
                             name="book"
                             size={20}
-                            color={theme.colors.primary}
+                            color={examLocked ? theme.colors.textMuted : theme.colors.primary}
                             variant="elevated"
                         />
-                        <FormattedText style={[styles.buttonText, { color: theme.colors.primary }]}>
+                        <FormattedText style={[styles.buttonText, { color: examLocked ? theme.colors.textMuted : theme.colors.primary }]}>
                             {examLocked ? 'Accès Premium requis' : 'Mode pratique'}
                         </FormattedText>
                     </TouchableOpacity>
