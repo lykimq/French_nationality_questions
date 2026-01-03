@@ -33,7 +33,7 @@ const PaywallModal: React.FC = () => {
                             Version complète
                         </FormattedText>
                         <TouchableOpacity onPress={closePaywall} style={styles.closeButton} hitSlop={16}>
-                            <Icon3D name="close" size={20} color={theme.colors.text} variant="flat" />
+                            <Icon3D name="close" size={20} color={theme.colors.text} variant="glass" />
                         </TouchableOpacity>
                     </View>
                     <FormattedText style={[styles.price, { color: theme.colors.primary }]}>
@@ -50,7 +50,7 @@ const PaywallModal: React.FC = () => {
                                     name="checkmark-circle"
                                     size={20}
                                     color={theme.colors.primary}
-                                    variant="flat"
+                                    variant="elevated"
                                 />
                                 <FormattedText style={[styles.benefitText, { color: theme.colors.text }]}>
                                     {benefit}
