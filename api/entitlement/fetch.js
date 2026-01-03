@@ -6,33 +6,42 @@ function initFirebase() {
   if (db) return db;
 
   const projectId = process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID;
-  const privateKey = process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+  const privateKeyRaw = process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY;
   const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
 
-  if (!admin.apps.length) {
-    if (!privateKey || !clientEmail) {
-      console.error('Missing Firebase credentials:', {
-        hasProjectId: !!projectId,
-        hasPrivateKey: !!privateKey,
-        hasClientEmail: !!clientEmail,
-      });
-      throw new Error('Firebase Admin SDK requires EXPO_PUBLIC_FIREBASE_PRIVATE_KEY and EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL environment variables. Please set them in Vercel Dashboard → Settings → Environment Variables for Production environment.');
-    }
-
-    if (!projectId) {
-      throw new Error('EXPO_PUBLIC_FIREBASE_PROJECT_ID environment variable is required.');
-    }
-
-    admin.initializeApp({
-      credential: admin.credential.cert({
-        projectId: projectId,
-        privateKey: privateKey,
-        clientEmail: clientEmail,
-      }),
-    });
+  if (!projectId || projectId.trim() === '') {
+    throw new Error('EXPO_PUBLIC_FIREBASE_PROJECT_ID environment variable is required and cannot be empty.');
   }
 
-  db = admin.firestore();
+  if (!privateKeyRaw || privateKeyRaw.trim() === '') {
+    throw new Error('EXPO_PUBLIC_FIREBASE_PRIVATE_KEY environment variable is required.');
+  }
+
+  if (!clientEmail || clientEmail.trim() === '') {
+    throw new Error('EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL environment variable is required.');
+  }
+
+  const privateKey = privateKeyRaw.replace(/\\n/g, '\n');
+
+  let app;
+  if (!admin.apps.length) {
+    try {
+      app = admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId: projectId.trim(),
+          privateKey: privateKey,
+          clientEmail: clientEmail.trim(),
+        }),
+      });
+    } catch (initError) {
+      console.error('Failed to initialize Firebase Admin SDK:', initError);
+      throw initError;
+    }
+  } else {
+    app = admin.app();
+  }
+
+  db = app.firestore();
   return db;
 }
 
