@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -19,6 +19,7 @@ import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { TOPIC_DISPLAY_NAMES } from '../constants/civicExamConstants';
 import type { CivicExamStackParamList, CivicExamTopic } from '../types';
+import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamPractice');
 
@@ -36,10 +37,22 @@ const CivicExamPracticeScreen = () => {
     const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { startExam } = useCivicExam();
-    const [selectedTopics, setSelectedTopics] = useState<CivicExamTopic[]>(ALL_TOPICS);
+    const { isPremium, hasUsedFreeExam, openPaywall, markFreeExamUsed } = usePremiumAccess();
+    const defaultTopics = React.useMemo<CivicExamTopic[]>(() => (
+        isPremium ? [...ALL_TOPICS] : ['principles_values']
+    ), [isPremium]);
+    const [selectedTopics, setSelectedTopics] = useState<CivicExamTopic[]>(defaultTopics);
     const [isStarting, setIsStarting] = useState(false);
 
+    useEffect(() => {
+        setSelectedTopics(defaultTopics);
+    }, [defaultTopics]);
+
     const toggleTopic = (topicId: CivicExamTopic) => {
+        if (!isPremium && topicId !== 'principles_values') {
+            openPaywall();
+            return;
+        }
         setSelectedTopics(prev => {
             if (prev.includes(topicId)) {
                 return prev.filter(t => t !== topicId);
@@ -50,12 +63,28 @@ const CivicExamPracticeScreen = () => {
     };
 
     const selectAll = () => {
+        if (!isPremium) {
+            openPaywall();
+            return;
+        }
         setSelectedTopics(ALL_TOPICS);
     };
 
     const deselectAll = () => {
-        setSelectedTopics([]);
+        setSelectedTopics(isPremium ? [] : ['principles_values']);
     };
+
+    const guardPracticeAccess = React.useCallback(async (): Promise<boolean> => {
+        if (isPremium) {
+            return true;
+        }
+        if (hasUsedFreeExam) {
+            openPaywall();
+            return false;
+        }
+        await markFreeExamUsed();
+        return true;
+    }, [hasUsedFreeExam, isPremium, markFreeExamUsed, openPaywall]);
 
     const handleStartPractice = async () => {
         if (selectedTopics.length === 0) {
@@ -67,6 +96,9 @@ const CivicExamPracticeScreen = () => {
         }
 
         try {
+            if (!(await guardPracticeAccess())) {
+                return;
+            }
             setIsStarting(true);
             await startExam({
                 mode: 'civic_exam_practice',
@@ -142,6 +174,7 @@ const CivicExamPracticeScreen = () => {
                         {ALL_TOPICS.map((topicId) => {
                             const isSelected = selectedTopics.includes(topicId);
                             const topicInfo = TOPIC_DISPLAY_NAMES[topicId];
+                            const isDisabled = !isPremium && topicId !== 'principles_values';
                             return (
                                 <TouchableOpacity
                                     key={topicId}
@@ -150,6 +183,7 @@ const CivicExamPracticeScreen = () => {
                                         {
                                             backgroundColor: isSelected ? theme.colors.primary + '15' : theme.colors.card,
                                             borderColor: isSelected ? theme.colors.primary : theme.colors.border,
+                                            opacity: isDisabled ? 0.5 : 1,
                                         }
                                     ]}
                                     onPress={() => toggleTopic(topicId)}
@@ -165,6 +199,11 @@ const CivicExamPracticeScreen = () => {
                                             <FormattedText style={[styles.themeTitle, { color: theme.colors.text }]}>
                                                 {topicInfo}
                                             </FormattedText>
+                                            {!isPremium && topicId !== 'principles_values' && (
+                                                <FormattedText style={[styles.lockedLabel, { color: theme.colors.textSecondary }]}>
+                                                    Premium
+                                                </FormattedText>
+                                            )}
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -185,9 +224,14 @@ const CivicExamPracticeScreen = () => {
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
-                            {isStarting ? 'Démarrage...' : 'Commencer la pratique'}
+                            {isStarting ? 'Démarrage...' : (!isPremium && hasUsedFreeExam ? 'Débloquez Premium' : 'Commencer la pratique')}
                         </FormattedText>
                     </TouchableOpacity>
+                    {!isPremium && (
+                        <FormattedText style={[styles.paywallHint, { color: theme.colors.textSecondary }]}>
+                            L\'essai gratuit comprend une session sur le thème "Principes et valeurs".
+                        </FormattedText>
+                    )}
                 </ScrollView>
             </SafeAreaView>
         </View>
@@ -268,6 +312,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
     },
+    lockedLabel: {
+        fontSize: 12,
+        marginTop: 4,
+    },
     startButton: {
         borderRadius: 12,
         padding: 18,
@@ -276,6 +324,11 @@ const styles = StyleSheet.create({
     startButtonText: {
         fontSize: 18,
         fontWeight: 'bold',
+    },
+    paywallHint: {
+        marginTop: 12,
+        textAlign: 'center',
+        fontSize: 13,
     },
 });
 

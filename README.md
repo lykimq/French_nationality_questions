@@ -342,6 +342,7 @@ npm install
      - Get your Firebase config from [Firebase Console](https://console.firebase.google.com/)
      - Go to Project Settings > General > Your apps
      - Copy the values to your `.env` file
+   - (Optional but recommended) Add `EXPO_PUBLIC_ENTITLEMENT_URL` pointing to your Firebase Function that syncs premium entitlements.
    - **Important**: The `.env` file is gitignored and will not be committed to version control
 
 3. **Start development server**

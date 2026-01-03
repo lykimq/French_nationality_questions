@@ -7,14 +7,18 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText, InfoBanner } from '../shared/components';
+import { FormattedText, InfoBanner, PremiumGate } from '../shared/components';
+import { usePremiumAccess } from '../shared/contexts/PremiumAccessContext';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
+
+const FREE_CATEGORY_IDS = new Set(['administration_locale', 'arts_culture_sports']);
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { questionsData } = useData();
+    const { isPremium, openPaywall } = usePremiumAccess();
 
     const categories = React.useMemo(() => {
         const cats = questionsData?.categories || [];
@@ -64,15 +68,33 @@ const HomeScreen = () => {
                             storageKey="home_info"
                         />
                         {categories.map((category: FrenchCategory) => {
+                            const isUnlocked = isPremium || FREE_CATEGORY_IDS.has(category.id);
+                            if (isUnlocked) {
+                                return (
+                                    <CategoryCard
+                                        key={category.id}
+                                        title={category.title}
+                                        description={category.description}
+                                        icon={category.icon}
+                                        count={category.questions?.length || 0}
+                                        onPress={() => navigateToCategory(category.id)}
+                                    />
+                                );
+                            }
                             return (
-                                <CategoryCard
-                                    key={category.id}
-                                    title={category.title}
-                                    description={category.description}
-                                    icon={category.icon}
-                                    count={category.questions?.length || 0}
-                                    onPress={() => navigateToCategory(category.id)}
-                                />
+                                <PremiumGate
+                                    key={`${category.id}_locked`}
+                                    isLocked={true}
+                                    hint="Accès complet aux catégories avec la version Premium."
+                                >
+                                    <CategoryCard
+                                        title={category.title}
+                                        description={category.description}
+                                        icon={category.icon}
+                                        count={category.questions?.length || 0}
+                                        onPress={openPaywall}
+                                    />
+                                </PremiumGate>
                             );
                         })}
 

@@ -12,11 +12,12 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText, InfoBanner } from '../../shared/components';
+import { FormattedText, InfoBanner, PremiumGate } from '../../shared/components';
 import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
 import type { FormationCategory } from '../types';
 import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
+import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 type CategorySelectionScreenNavigationProp = NativeStackNavigationProp<FlashCardStackParamList>;
 
@@ -28,9 +29,12 @@ const CATEGORY_ICON_KEYS: { [key: string]: string } = {
     vivre_dans_la_societe_francaise: 'people',
 };
 
+const FREE_FLASHCARD_CATEGORY = 'droits_et_devoirs';
+
 const CategorySelectionScreen: React.FC = () => {
     const navigation = useNavigation<CategorySelectionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
+    const { isPremium, openPaywall } = usePremiumAccess();
     const [categories, setCategories] = useState<FormationCategory[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -58,7 +62,11 @@ const CategorySelectionScreen: React.FC = () => {
         }
     };
 
-    const handleCategoryPress = (category: FormationCategory) => {
+    const handleCategoryPress = (category: FormationCategory, isUnlocked: boolean) => {
+        if (!isUnlocked) {
+            openPaywall();
+            return;
+        }
         navigation.navigate('FlashCard', { categoryId: category.id });
     };
 
@@ -113,16 +121,35 @@ const CategorySelectionScreen: React.FC = () => {
                     {categories.map((category) => {
                         const iconKey = CATEGORY_ICON_KEYS[category.id] || 'book';
                         const questionCount = category.questions?.length || 0;
+                        const isUnlocked = isPremium || category.id === FREE_FLASHCARD_CATEGORY;
+
+                        if (isUnlocked) {
+                            return (
+                                <CategoryCard
+                                    key={category.id}
+                                    title={category.title}
+                                    description={category.description}
+                                    icon={iconKey}
+                                    count={questionCount}
+                                    onPress={() => handleCategoryPress(category, true)}
+                                />
+                            );
+                        }
 
                         return (
-                            <CategoryCard
-                                key={category.id}
-                                title={category.title}
-                                description={category.description}
-                                icon={iconKey}
-                                count={questionCount}
-                                onPress={() => handleCategoryPress(category)}
-                            />
+                            <PremiumGate
+                                key={`${category.id}_flashcard`}
+                                isLocked={true}
+                                hint="Les cartes flash complètes nécessitent la version Premium."
+                            >
+                                <CategoryCard
+                                    title={category.title}
+                                    description={category.description}
+                                    icon={iconKey}
+                                    count={questionCount}
+                                    onPress={() => handleCategoryPress(category, false)}
+                                />
+                            </PremiumGate>
                         );
                     })}
                 </ScrollView>

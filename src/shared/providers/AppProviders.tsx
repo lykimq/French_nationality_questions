@@ -5,6 +5,7 @@ import { IconProvider } from '../contexts/IconContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { TextFormattingProvider } from '../contexts/TextFormattingContext';
 import { CivicExamProvider } from '../../test_civic/contexts/CivicExamContext';
+import { PremiumAccessProvider } from '../contexts/PremiumAccessContext';
 import { startCacheCleanup, stopCacheCleanup } from '../services/dataService';
 
 interface AppProvidersProps {
@@ -23,11 +24,13 @@ const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
         <DataProvider>
             <IconProvider>
                 <ThemeProvider>
-                    <TextFormattingProvider>
-                        <CivicExamProvider>
-                            {children}
-                        </CivicExamProvider>
-                    </TextFormattingProvider>
+                    <PremiumAccessProvider>
+                        <TextFormattingProvider>
+                            <CivicExamProvider>
+                                {children}
+                            </CivicExamProvider>
+                        </TextFormattingProvider>
+                    </PremiumAccessProvider>
                 </ThemeProvider>
             </IconProvider>
         </DataProvider>
