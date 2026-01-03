@@ -1,25 +1,26 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
-import { createHash } from 'crypto';
+const admin = require('firebase-admin');
+const { createHash } = require('crypto');
 
 let db = null;
 
 function initFirebase() {
   if (db) return db;
 
-  const firebaseConfig = {
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  };
+  if (!admin.apps.length) {
+    admin.initializeApp({
+      credential: admin.credential.cert({
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+      }),
+    });
+  }
 
-  const app = initializeApp(firebaseConfig);
-  db = getFirestore(app);
+  db = admin.firestore();
   return db;
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -33,11 +34,11 @@ export default async function handler(req, res) {
   try {
     const firestore = initFirebase();
     const docId = `${platform}_${accountHash}`;
-    const docRef = doc(firestore, 'entitlements', docId);
-    const docSnap = await getDoc(docRef);
+    const docRef = firestore.collection('entitlements').doc(docId);
+    const docSnap = await docRef.get();
 
     const now = new Date().toISOString();
-    const existing = docSnap.exists() ? docSnap.data() : {};
+    const existing = docSnap.exists ? docSnap.data() : {};
 
     const updateData = {
       isPremium: isPremium !== undefined ? isPremium : (existing.isPremium || false),
@@ -47,7 +48,7 @@ export default async function handler(req, res) {
       accountHash,
     };
 
-    if (!docSnap.exists()) {
+    if (!docSnap.exists) {
       updateData.createdAt = now;
     }
 
@@ -63,7 +64,7 @@ export default async function handler(req, res) {
       });
     }
 
-    await setDoc(docRef, updateData, { merge: true });
+    await docRef.set(updateData, { merge: true });
 
     return res.status(200).json({
       isPremium: updateData.isPremium,
@@ -74,4 +75,4 @@ export default async function handler(req, res) {
     console.error('Error syncing entitlement:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }
-}
+};
