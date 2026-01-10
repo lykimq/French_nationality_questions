@@ -26,7 +26,7 @@ const AppInfoSettings: React.FC<AppInfoSettingsProps> = ({ onRateApp }) => {
     const shareApp = async () => {
         try {
             await Share.share({
-                message: 'Découvrez Naturalisation France - Test Civique Actualisé, l\'application complète pour préparer votre naturalisation française!',
+                message: 'Découvrez Naturalisation Test Civique, l\'application complète pour préparer votre naturalisation française!',
             });
         } catch (error) {
             // Silently handle share cancellation

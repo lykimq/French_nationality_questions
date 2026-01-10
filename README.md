@@ -1,4 +1,4 @@
-# Naturalisation France - Test Civique Actualisé
+# Naturalisation Test Civique
 
 A comprehensive React Native mobile application built with Expo for studying French citizenship questions. The app features customizable themes, interactive testing functionality, flash card study mode, advanced search capabilities, and detailed progress tracking.
 
