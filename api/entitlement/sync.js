@@ -7,30 +7,30 @@ function initFirebase() {
   if (db) return db;
 
   const projectId = process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID;
-  const privateKeyRaw = process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY;
-  const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
+  const privateKeyRaw = process.env.FIREBASE_PRIVATE_KEY;
+  const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
 
   const missingVars = [];
   const debugInfo = {};
-  
+
   if (!projectId || projectId.trim() === '') {
     missingVars.push('EXPO_PUBLIC_FIREBASE_PROJECT_ID');
   } else {
     debugInfo.EXPO_PUBLIC_FIREBASE_PROJECT_ID = `Set (length: ${projectId.length})`;
   }
-  
+
   if (!privateKeyRaw || privateKeyRaw.trim() === '') {
-    missingVars.push('EXPO_PUBLIC_FIREBASE_PRIVATE_KEY');
+    missingVars.push('FIREBASE_PRIVATE_KEY');
   } else {
     const keyLength = privateKeyRaw.length;
     const startsWith = privateKeyRaw.substring(0, 30);
-    debugInfo.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY = `Set (length: ${keyLength}, starts with: ${startsWith}...)`;
+    debugInfo.FIREBASE_PRIVATE_KEY = `Set (length: ${keyLength}, starts with: ${startsWith}...)`;
   }
-  
+
   if (!clientEmail || clientEmail.trim() === '') {
-    missingVars.push('EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL');
+    missingVars.push('FIREBASE_CLIENT_EMAIL');
   } else {
-    debugInfo.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL = `Set (length: ${clientEmail.length})`;
+    debugInfo.FIREBASE_CLIENT_EMAIL = `Set (length: ${clientEmail.length})`;
   }
 
   if (missingVars.length > 0) {
@@ -44,14 +44,14 @@ function initFirebase() {
       },
       allEnvKeys: Object.keys(process.env).filter(k => k.includes('FIREBASE')),
     });
-    const debugMsg = Object.keys(debugInfo).length > 0 
-      ? ` Debug: ${JSON.stringify(debugInfo)}` 
+    const debugMsg = Object.keys(debugInfo).length > 0
+      ? ` Debug: ${JSON.stringify(debugInfo)}`
       : '';
     throw new Error(`Missing required environment variables in Vercel: ${missingVars.join(', ')}.${debugMsg} Go to Vercel Dashboard → Settings → Environment Variables to add them.`);
   }
 
   let privateKey = privateKeyRaw.replace(/\\n/g, '\n');
-  
+
   if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
     privateKey = privateKey.slice(1, -1);
   }
@@ -133,7 +133,7 @@ module.exports = async function handler(req, res) {
     console.error('Error syncing entitlement:', error);
     const errorMessage = error?.message || String(error);
     const isMissingEnvVars = errorMessage.includes('Missing required environment variables');
-    return res.status(500).json({ 
+    return res.status(500).json({
       error: isMissingEnvVars ? 'Configuration error' : 'Internal server error',
       message: errorMessage,
       hint: isMissingEnvVars ? 'Add the missing environment variables in Vercel Dashboard → Settings → Environment Variables, then redeploy.' : undefined
