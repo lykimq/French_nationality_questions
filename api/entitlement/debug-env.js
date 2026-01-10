@@ -11,15 +11,26 @@ module.exports = async function handler(req, res) {
 
   if (privateKeyRaw) {
     try {
-      let key = privateKeyRaw.trim();
-      if (key.startsWith('"')) key = key.slice(1);
-      if (key.endsWith('"')) key = key.slice(0, -1);
-      key = key.replace(/\\n/g, '\n');
+      // Robust parsing: handle literal \n, then extract the PEM block via Regex
+      let key = privateKeyRaw.split(String.raw`\n`).join('\n');
+
+      const pemMatch = key.match(/-----BEGIN PRIVATE KEY-----[\s\S]+?-----END PRIVATE KEY-----/);
+      if (pemMatch) {
+        key = pemMatch[0];
+      } else {
+        key = key.trim();
+        if (key.startsWith('"')) key = key.slice(1);
+        if (key.endsWith('"')) key = key.slice(0, -1);
+      }
 
       if (!key.startsWith('-----BEGIN PRIVATE KEY-----')) {
         parseError = 'Missing BEGIN header after parsing';
-      } else if (!key.endsWith('-----END PRIVATE KEY-----') && !key.endsWith('-----END PRIVATE KEY-----\n')) {
-        parseError = 'Missing END footer after parsing';
+      } else if (!key.endsWith('-----END PRIVATE KEY-----')) {
+        if (key.endsWith('-----END PRIVATE KEY-----\n')) {
+          // valid, just has newline
+        } else {
+          parseError = 'Missing END footer after parsing';
+        }
       } else {
         parsedKey = key;
       }
@@ -41,6 +52,7 @@ module.exports = async function handler(req, res) {
       isEmpty: !privateKeyRaw || privateKeyRaw.trim() === '',
       length: privateKeyRaw ? privateKeyRaw.length : 0,
       firstChars: privateKeyRaw ? privateKeyRaw.substring(0, 50) : 'N/A',
+      lastChars: privateKeyRaw ? privateKeyRaw.substring(Math.max(0, privateKeyRaw.length - 50)) : 'N/A',
       hasQuotes: privateKeyRaw ? (privateKeyRaw.startsWith('"') && privateKeyRaw.endsWith('"')) : false,
       parsedValid: !!parsedKey,
       parseError: parseError || 'None',
