@@ -5,6 +5,29 @@ module.exports = async function handler(req, res) {
 
   const allEnvVars = Object.keys(process.env).filter(key => key.includes('FIREBASE'));
 
+  // Parse the private key using the same logic as fetch.js/sync.js
+  let parsedKey = null;
+  let parseError = null;
+
+  if (privateKeyRaw) {
+    try {
+      let key = privateKeyRaw.trim();
+      if (key.startsWith('"')) key = key.slice(1);
+      if (key.endsWith('"')) key = key.slice(0, -1);
+      key = key.replace(/\\n/g, '\n');
+
+      if (!key.startsWith('-----BEGIN PRIVATE KEY-----')) {
+        parseError = 'Missing BEGIN header after parsing';
+      } else if (!key.endsWith('-----END PRIVATE KEY-----') && !key.endsWith('-----END PRIVATE KEY-----\n')) {
+        parseError = 'Missing END footer after parsing';
+      } else {
+        parsedKey = key;
+      }
+    } catch (e) {
+      parseError = e.message;
+    }
+  }
+
   const debug = {
     availableFirebaseVars: allEnvVars,
     EXPO_PUBLIC_FIREBASE_PROJECT_ID: {
@@ -19,6 +42,8 @@ module.exports = async function handler(req, res) {
       length: privateKeyRaw ? privateKeyRaw.length : 0,
       firstChars: privateKeyRaw ? privateKeyRaw.substring(0, 50) : 'N/A',
       hasQuotes: privateKeyRaw ? (privateKeyRaw.startsWith('"') && privateKeyRaw.endsWith('"')) : false,
+      parsedValid: !!parsedKey,
+      parseError: parseError || 'None',
     },
     FIREBASE_CLIENT_EMAIL: {
       exists: !!clientEmail,
@@ -40,6 +65,7 @@ module.exports = async function handler(req, res) {
       !debug.EXPO_PUBLIC_FIREBASE_PROJECT_ID.isEmpty &&
       debug.FIREBASE_PRIVATE_KEY.exists &&
       !debug.FIREBASE_PRIVATE_KEY.isEmpty &&
+      debug.FIREBASE_PRIVATE_KEY.parsedValid &&
       debug.FIREBASE_CLIENT_EMAIL.exists &&
       !debug.FIREBASE_CLIENT_EMAIL.isEmpty,
   });
