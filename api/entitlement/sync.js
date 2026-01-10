@@ -40,7 +40,11 @@ function initFirebase() {
     throw new Error(`Missing required environment variables in Vercel: ${missingVars.join(', ')}.${debugMsg} Go to Vercel Dashboard → Settings → Environment Variables to add them.`);
   }
 
-  const privateKey = privateKeyRaw.replace(/\\n/g, '\n');
+  let privateKey = privateKeyRaw.replace(/\\n/g, '\n');
+  
+  if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
+    privateKey = privateKey.slice(1, -1);
+  }
 
   let app;
   if (!admin.apps.length) {
