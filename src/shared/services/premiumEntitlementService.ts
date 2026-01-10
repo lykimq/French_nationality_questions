@@ -122,7 +122,12 @@ const getEntitlementBaseUrl = (): string | null => {
     if (!url) {
         return null;
     }
-    return url.endsWith('/') ? url.slice(0, -1) : url;
+    let normalizedUrl = url.trim();
+    if (!normalizedUrl.startsWith('http://') && !normalizedUrl.startsWith('https://')) {
+        logger.warn('EXPO_PUBLIC_ENTITLEMENT_URL is missing protocol (http:// or https://), adding https://');
+        normalizedUrl = `https://${normalizedUrl}`;
+    }
+    return normalizedUrl.endsWith('/') ? normalizedUrl.slice(0, -1) : normalizedUrl;
 };
 
 const callEntitlementApi = async <T>(path: string, payload: Record<string, unknown>): Promise<T | null> => {
@@ -142,8 +147,18 @@ const callEntitlementApi = async <T>(path: string, payload: Record<string, unkno
         });
 
         if (!response.ok) {
-            const text = await response.text();
-            throw new Error(`Entitlement API error ${response.status}: ${text}`);
+            let errorDetails = '';
+            try {
+                const errorData = await response.json();
+                errorDetails = errorData.message || errorData.error || JSON.stringify(errorData);
+                if (errorData.hint) {
+                    errorDetails += ` (${errorData.hint})`;
+                }
+            } catch {
+                const text = await response.text();
+                errorDetails = text || `HTTP ${response.status}`;
+            }
+            throw new Error(`Entitlement API error ${response.status}: ${errorDetails}`);
         }
         const data = await response.json();
         return data as T;

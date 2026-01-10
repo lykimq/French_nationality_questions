@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useMemo, useRef, useState,
 import { Platform, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as RNIap from 'react-native-iap';
-import { PaywallModal } from '../components';
+import PaywallModal from '../components/premium/PaywallModal';
 import { createLogger } from '../utils/logger';
 import {
     buildEntitlementFromResponse,

@@ -10,16 +10,19 @@ function initFirebase() {
   const privateKeyRaw = process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY;
   const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
 
+  const missingVars = [];
   if (!projectId || projectId.trim() === '') {
-    throw new Error('EXPO_PUBLIC_FIREBASE_PROJECT_ID environment variable is required and cannot be empty.');
+    missingVars.push('EXPO_PUBLIC_FIREBASE_PROJECT_ID');
   }
-
   if (!privateKeyRaw || privateKeyRaw.trim() === '') {
-    throw new Error('EXPO_PUBLIC_FIREBASE_PRIVATE_KEY environment variable is required.');
+    missingVars.push('EXPO_PUBLIC_FIREBASE_PRIVATE_KEY');
+  }
+  if (!clientEmail || clientEmail.trim() === '') {
+    missingVars.push('EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL');
   }
 
-  if (!clientEmail || clientEmail.trim() === '') {
-    throw new Error('EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL environment variable is required.');
+  if (missingVars.length > 0) {
+    throw new Error(`Missing required environment variables in Vercel: ${missingVars.join(', ')}. Go to Vercel Dashboard → Settings → Environment Variables to add them.`);
   }
 
   const privateKey = privateKeyRaw.replace(/\\n/g, '\n');
@@ -99,6 +102,12 @@ module.exports = async function handler(req, res) {
     });
   } catch (error) {
     console.error('Error syncing entitlement:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    const errorMessage = error?.message || String(error);
+    const isMissingEnvVars = errorMessage.includes('Missing required environment variables');
+    return res.status(500).json({ 
+      error: isMissingEnvVars ? 'Configuration error' : 'Internal server error',
+      message: errorMessage,
+      hint: isMissingEnvVars ? 'Add the missing environment variables in Vercel Dashboard → Settings → Environment Variables, then redeploy.' : undefined
+    });
   }
 };
