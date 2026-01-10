@@ -1,9 +1,10 @@
-import React, { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback, lazy, Suspense } from 'react';
 import { Platform, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as RNIap from 'react-native-iap';
-import PaywallModal from '../components/premium/PaywallModal';
 import { createLogger } from '../utils/logger';
+
+const PaywallModal = lazy(() => import('../components/premium/PaywallModal'));
 import {
     buildEntitlementFromResponse,
     EntitlementSyncPayload,
@@ -343,7 +344,9 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
     return (
         <PremiumAccessContext.Provider value={value}>
             {children}
-            <PaywallModal />
+            <Suspense fallback={null}>
+                <PaywallModal />
+            </Suspense>
         </PremiumAccessContext.Provider>
     );
 };
