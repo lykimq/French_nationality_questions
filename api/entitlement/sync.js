@@ -57,6 +57,14 @@ function initFirebase() {
   }
   
   privateKey = privateKey.replace(/\\n/g, '\n');
+  
+  if (!privateKey.startsWith('-----BEGIN PRIVATE KEY-----')) {
+    throw new Error('Private key format invalid: must start with "-----BEGIN PRIVATE KEY-----"');
+  }
+  
+  if (!privateKey.endsWith('-----END PRIVATE KEY-----\n') && !privateKey.endsWith('-----END PRIVATE KEY-----')) {
+    throw new Error('Private key format invalid: must end with "-----END PRIVATE KEY-----"');
+  }
 
   let app;
   if (!admin.apps.length) {
@@ -69,7 +77,14 @@ function initFirebase() {
         }),
       });
     } catch (initError) {
-      console.error('Failed to initialize Firebase Admin SDK:', initError);
+      console.error('Failed to initialize Firebase Admin SDK:', {
+        error: initError.message,
+        projectId: projectId.trim(),
+        clientEmail: clientEmail.trim(),
+        privateKeyStart: privateKey.substring(0, 50),
+        privateKeyEnd: privateKey.substring(privateKey.length - 50),
+        privateKeyLength: privateKey.length,
+      });
       throw initError;
     }
   } else {
