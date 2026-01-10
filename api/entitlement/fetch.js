@@ -10,18 +10,33 @@ function initFirebase() {
   const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
 
   const missingVars = [];
+  const debugInfo = {};
+  
   if (!projectId || projectId.trim() === '') {
     missingVars.push('EXPO_PUBLIC_FIREBASE_PROJECT_ID');
+  } else {
+    debugInfo.EXPO_PUBLIC_FIREBASE_PROJECT_ID = `Set (length: ${projectId.length})`;
   }
+  
   if (!privateKeyRaw || privateKeyRaw.trim() === '') {
     missingVars.push('EXPO_PUBLIC_FIREBASE_PRIVATE_KEY');
+  } else {
+    const keyLength = privateKeyRaw.length;
+    const startsWith = privateKeyRaw.substring(0, 30);
+    debugInfo.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY = `Set (length: ${keyLength}, starts with: ${startsWith}...)`;
   }
+  
   if (!clientEmail || clientEmail.trim() === '') {
     missingVars.push('EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL');
+  } else {
+    debugInfo.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL = `Set (length: ${clientEmail.length})`;
   }
 
   if (missingVars.length > 0) {
-    throw new Error(`Missing required environment variables in Vercel: ${missingVars.join(', ')}. Go to Vercel Dashboard → Settings → Environment Variables to add them.`);
+    const debugMsg = Object.keys(debugInfo).length > 0 
+      ? ` Debug: ${JSON.stringify(debugInfo)}` 
+      : '';
+    throw new Error(`Missing required environment variables in Vercel: ${missingVars.join(', ')}.${debugMsg} Go to Vercel Dashboard → Settings → Environment Variables to add them.`);
   }
 
   const privateKey = privateKeyRaw.replace(/\\n/g, '\n');
