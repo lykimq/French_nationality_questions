@@ -34,6 +34,16 @@ function initFirebase() {
   }
 
   if (missingVars.length > 0) {
+    console.error('Environment variable check failed:', {
+      missing: missingVars,
+      found: debugInfo,
+      rawCheck: {
+        projectId: projectId ? `exists (${projectId.length} chars)` : 'undefined',
+        privateKey: privateKeyRaw ? `exists (${privateKeyRaw.length} chars, first 30: ${privateKeyRaw.substring(0, 30)})` : 'undefined',
+        clientEmail: clientEmail ? `exists (${clientEmail.length} chars)` : 'undefined',
+      },
+      allEnvKeys: Object.keys(process.env).filter(k => k.includes('FIREBASE')),
+    });
     const debugMsg = Object.keys(debugInfo).length > 0 
       ? ` Debug: ${JSON.stringify(debugInfo)}` 
       : '';
