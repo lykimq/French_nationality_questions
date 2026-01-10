@@ -49,27 +49,22 @@ function initFirebase() {
     throw new Error(`Missing required environment variables in Vercel: ${missingVars.join(', ')}.${debugMsg} Go to Vercel Dashboard → Settings → Environment Variables to add them.`);
   }
 
-  // Robust parsing: handle literal \n, then extract the PEM block via Regex
-  // This ignores surrounding quotes, commas, or other garbage
-  let privateKey = privateKeyRaw.split(String.raw`\n`).join('\n'); // converting literal \n to real newlines
+  let privateKey = privateKeyRaw.trim();
 
-  const pemMatch = privateKey.match(/-----BEGIN PRIVATE KEY-----[\s\S]+?-----END PRIVATE KEY-----/);
-
-  if (pemMatch) {
-    privateKey = pemMatch[0];
-  } else {
-    // Fallback or error if no PEM block found (will be caught by checking start/end)
-    privateKey = privateKey.trim();
-    if (privateKey.startsWith('"')) privateKey = privateKey.slice(1);
-    if (privateKey.endsWith('"')) privateKey = privateKey.slice(0, -1);
+  if (privateKey.startsWith('"')) {
+    privateKey = privateKey.slice(1);
   }
+  if (privateKey.endsWith('"')) {
+    privateKey = privateKey.slice(0, -1);
+  }
+
+  privateKey = privateKey.replace(/\\n/g, '\n');
 
   if (!privateKey.startsWith('-----BEGIN PRIVATE KEY-----')) {
     throw new Error('Private key format invalid: must start with "-----BEGIN PRIVATE KEY-----"');
   }
 
   if (!privateKey.endsWith('-----END PRIVATE KEY-----')) {
-    // Some editors adding a newline at the end of the file/string
     if (privateKey.endsWith('-----END PRIVATE KEY-----\n')) {
       privateKey = privateKey.trim();
     } else {
