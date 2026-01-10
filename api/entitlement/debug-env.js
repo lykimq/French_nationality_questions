@@ -3,7 +3,10 @@ module.exports = async function handler(req, res) {
   const privateKeyRaw = process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY;
   const clientEmail = process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL;
 
+  const allEnvVars = Object.keys(process.env).filter(key => key.includes('FIREBASE'));
+  
   const debug = {
+    availableFirebaseVars: allEnvVars,
     EXPO_PUBLIC_FIREBASE_PROJECT_ID: {
       exists: !!projectId,
       isEmpty: !projectId || projectId.trim() === '',
@@ -22,6 +25,11 @@ module.exports = async function handler(req, res) {
       isEmpty: !clientEmail || clientEmail.trim() === '',
       length: clientEmail ? clientEmail.length : 0,
       firstChars: clientEmail ? clientEmail.substring(0, 50) : 'N/A',
+    },
+    rawCheck: {
+      EXPO_PUBLIC_FIREBASE_PROJECT_ID: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID ? 'defined' : 'undefined',
+      EXPO_PUBLIC_FIREBASE_PRIVATE_KEY: process.env.EXPO_PUBLIC_FIREBASE_PRIVATE_KEY ? 'defined' : 'undefined',
+      EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL: process.env.EXPO_PUBLIC_FIREBASE_CLIENT_EMAIL ? 'defined' : 'undefined',
     },
   };
 
