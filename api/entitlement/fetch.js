@@ -51,8 +51,11 @@ function initFirebase() {
 
   let privateKey = privateKeyRaw.trim();
   
-  if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
-    privateKey = privateKey.slice(1, -1);
+  if (privateKey.startsWith('"')) {
+    privateKey = privateKey.slice(1);
+  }
+  if (privateKey.endsWith('"')) {
+    privateKey = privateKey.slice(0, -1);
   }
   
   privateKey = privateKey.replace(/\\n/g, '\n');
