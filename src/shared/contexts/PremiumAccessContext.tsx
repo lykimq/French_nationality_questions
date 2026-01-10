@@ -21,6 +21,8 @@ const logger = createLogger('PremiumAccessContext');
 const PRODUCT_IDS = ['premium_unlock'];
 const ACCOUNT_TOKEN_KEY = 'premium_app_account_token_v1';
 
+let globalIapInitialized = false;
+
 interface PremiumAccessContextValue {
     readonly isPremium: boolean;
     readonly hasUsedFreeExam: boolean;
@@ -72,6 +74,8 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
     const purchaseUpdateSubscription = useRef<RNIap.EventSubscription | null>(null);
     const purchaseErrorSubscription = useRef<RNIap.EventSubscription | null>(null);
     const accountIdentityRef = useRef<{ accountHash: string } | null>(null);
+    const finalizePurchaseRef = useRef<((purchase: RNIap.Purchase) => Promise<void>) | null>(null);
+    const refreshEntitlementRef = useRef<(() => Promise<void>) | null>(null);
 
     const loadAccountIdentity = useCallback(async () => {
         if (accountIdentityRef.current) {
@@ -148,10 +152,31 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
     }, [entitlement, loadAccountIdentity, updateEntitlementState]);
 
     useEffect(() => {
+        finalizePurchaseRef.current = finalizePurchase;
+    }, [finalizePurchase]);
+
+    useEffect(() => {
+        refreshEntitlementRef.current = refreshEntitlement;
+    }, [refreshEntitlement]);
+
+    useEffect(() => {
         let mounted = true;
+        
         const initIap = async () => {
+            if (globalIapInitialized) {
+                logger.info('IAP already initialized, skipping re-initialization');
+                if (mounted) {
+                    const refreshFn = refreshEntitlementRef.current;
+                    if (refreshFn) {
+                        refreshFn();
+                    }
+                }
+                return;
+            }
+            
             try {
                 await RNIap.initConnection();
+                globalIapInitialized = true;
                 
                 await new Promise((resolve) => setTimeout(resolve, 500));
                 
@@ -176,14 +201,19 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
                 logger.warn('Failed to initialize IAP connection:', error);
             } finally {
                 if (mounted) {
-                    refreshEntitlement();
+                    const refreshFn = refreshEntitlementRef.current;
+                    if (refreshFn) {
+                        refreshFn();
+                    }
                 }
             }
         };
         initIap();
 
         purchaseUpdateSubscription.current = RNIap.purchaseUpdatedListener(async (purchase) => {
-            await finalizePurchase(purchase);
+            if (finalizePurchaseRef.current) {
+                await finalizePurchaseRef.current(purchase);
+            }
         });
         purchaseErrorSubscription.current = RNIap.purchaseErrorListener((error: any) => {
             setPurchaseInProgress(false);
@@ -201,9 +231,10 @@ export const PremiumAccessProvider: React.FC<{ children: React.ReactNode }> = ({
             mounted = false;
             purchaseUpdateSubscription.current?.remove();
             purchaseErrorSubscription.current?.remove();
-            RNIap.endConnection();
+            purchaseUpdateSubscription.current = null;
+            purchaseErrorSubscription.current = null;
         };
-    }, [finalizePurchase, refreshEntitlement]);
+    }, []);
 
     const ensureAccountToken = useCallback(async () => {
         if (Platform.OS !== 'ios') {
