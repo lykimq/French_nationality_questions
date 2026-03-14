@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
-import type { BaseEntity, VisualEntity } from './core';
-import type { Question, CategoryType } from '../welcome/types';
+import type { Question } from '../welcome/types';
 import type { FrenchQuestionsData } from './questionsData';
 
 // ==================== COMPONENT BASE PATTERNS ====================
@@ -26,29 +25,6 @@ export interface VisualProps {
     readonly color?: string;
 }
 
-// ==================== STATE MANAGEMENT PROPS ====================
-
-// Props for components with loading states
-export interface LoadingStateProps {
-    readonly isLoading?: boolean;
-    readonly loadingText?: string;
-}
-
-// Props for components with error states
-export interface ErrorStateProps {
-    readonly error?: string | null;
-    readonly errorTitle?: string;
-    readonly errorSubtext?: string;
-}
-
-// Props for components with retry functionality
-export interface RetryableProps {
-    readonly onRetry?: () => void;
-}
-
-// Combined async component props
-export interface AsyncComponentProps extends LoadingStateProps, ErrorStateProps, RetryableProps { }
-
 // ==================== FORM & INPUT COMPONENTS ====================
 
 // Generic value component props - functional approach
@@ -60,9 +36,6 @@ export interface ValueComponentProps<T = string> {
 
 // Settings component props - extends value component
 export interface SettingsComponentProps<T = string> extends ValueComponentProps<T>, TitleProps { }
-
-// Settings component with value support - for icon selectors and similar components
-export interface SettingsComponentWithValueProps<T = string> extends ValueComponentProps<T>, TitleProps { }
 
 // Extended settings component with additional props
 export type ExtendedSettingsComponent<T = string, P extends Record<string, any> = {}> =
@@ -103,25 +76,6 @@ export interface QuestionSlideViewProps {
     readonly questions: readonly Question[];
 }
 
-// ==================== LOADING & DATA COMPONENTS ====================
-
-// Data loading screen props
-export interface DataLoadingScreenProps extends AsyncComponentProps {
-    readonly title?: string;
-    readonly subtitle?: string;
-}
-
-// ==================== FUNCTIONAL COMPONENT FACTORIES ====================
-
-// Type for creating components with consistent prop patterns
-export type ComponentFactory<P extends Record<string, any>> = (props: P) => React.ReactElement;
-
-// HOC props pattern
-export interface HOCProps<P extends Record<string, any> = {}> {
-    readonly wrappedComponent: ComponentFactory<P>;
-    readonly additionalProps?: Partial<P>;
-}
-
 // ==================== CONTEXT TYPES ====================
 
 // Data context type (provides questions data, not language switching)
@@ -154,14 +108,3 @@ export interface ImageModalProps {
     readonly imageSource: ImageSourcePropType | null;
     readonly onClose: () => void;
 }
-
-// ==================== UTILITY TYPES ====================
-
-// Extract component props type
-export type ComponentProps<T> = T extends ComponentFactory<infer P> ? P : never;
-
-// Make all props optional except specified keys
-export type PartialExcept<T, K extends keyof T> = Partial<T> & Pick<T, K>;
-
-// Make specific props required
-export type RequireProps<T, K extends keyof T> = T & Required<Pick<T, K>>;

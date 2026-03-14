@@ -5,7 +5,7 @@ import type { RawQuestion, RawQuestionsData } from '../types';
 import { createLogger } from './logger';
 import { extractNumericId } from './idUtils';
 import { ensureString } from './stringUtils';
-import { isProcessableCategory, isProcessableQuestion, isRawQuestion, isQuestion, isFrenchCategory } from './typeGuards';
+import { isProcessableCategory, isRawQuestion, isQuestion, isFrenchCategory } from './typeGuards';
 
 const logger = createLogger('QuestionUtils');
 

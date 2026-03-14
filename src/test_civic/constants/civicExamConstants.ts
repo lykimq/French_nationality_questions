@@ -113,43 +113,6 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTopic, {
     },
 };
 
-// ==================== CATEGORY TO TOPIC MAPPING ====================
-// Note: This mapping is deprecated and not used. Kept for reference only.
-// General knowledge questions use categoryId, not topics.
-
-export const CATEGORY_TO_TOPIC_MAP: Record<string, CivicExamTopic> = {
-    democracy: 'principles_values',
-    republic: 'institutional_political',
-    local_gov: 'institutional_political',
-    monarchy: 'history_geography_culture',
-    revolution: 'history_geography_culture',
-    wars: 'history_geography_culture',
-    geography: 'history_geography_culture',
-    culture: 'history_geography_culture',
-    arts: 'history_geography_culture',
-    personal: 'living_society',
-};
-
-// ==================== SUBTOPIC TO CATEGORY MAPPING ====================
-// Note: This mapping is deprecated and not used. Kept for reference only.
-
-export const SUBTOPIC_TO_CATEGORY_MAP: Partial<Record<CivicExamSubTopic, string[]>> = {
-    devise_symboles: ['democracy'],
-    laicite: ['democracy'],
-    democracy_vote: ['democracy', 'republic'],
-    organization_republic: ['republic', 'local_gov'],
-    european_institutions: ['republic'],
-    fundamental_rights: ['democracy'],
-    obligations_duties: ['democracy'],
-    historical_periods: ['monarchy', 'revolution', 'wars'],
-    territories_geography: ['geography'],
-    heritage: ['culture', 'arts'],
-    residence: ['personal'],
-    healthcare: ['personal'],
-    work: ['personal'],
-    parental_authority_education: ['personal'],
-};
-
 // ==================== EXAM CONFIGURATION ====================
 
 export const CIVIC_EXAM_CONFIG = {
@@ -170,24 +133,4 @@ export const TOPIC_DISPLAY_NAMES: Record<CivicExamTopic, string> = {
     living_society: 'Vivre dans la société française',
 };
 
-// ==================== SUBTOPIC DISPLAY NAMES ====================
-
-export const SUBTOPIC_DISPLAY_NAMES: Record<CivicExamSubTopic, string> = {
-    devise_symboles: 'Devise et symboles de la République',
-    laicite: 'Laïcité',
-    situational_principles: 'Mises en situation',
-    democracy_vote: 'Démocratie et droit de vote',
-    organization_republic: 'Organisation de la République française',
-    european_institutions: 'Institutions européennes',
-    fundamental_rights: 'Droits fondamentaux',
-    obligations_duties: 'Obligations et devoirs',
-    situational_rights: 'Mises en situation',
-    historical_periods: 'Principales périodes et personnages historiques',
-    territories_geography: 'Territoires et géographie',
-    heritage: 'Patrimoine français',
-    residence: "S'installer et résider en France",
-    healthcare: "L'accès aux soins",
-    work: 'Travailler en France',
-    parental_authority_education: "Autorité parentale et système éducatif",
-};
 

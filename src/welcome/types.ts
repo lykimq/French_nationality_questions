@@ -37,33 +37,6 @@ export interface CategoryWithSubcategories extends TitledEntity, VisualEntity {
 // Union type for all category types
 export type CategoryType = Category | CategoryWithSubcategories;
 
-// Category collections
-export type CategoryCollection = readonly Category[];
-
-// ==================== HISTORY DATA STRUCTURES ====================
-
-// Modern history category structure using composition
-export interface HistoryCategory extends Category {
-    readonly subcategories: readonly Category[];
-}
-
-// History subcategory is just a regular Category
-export type HistorySubcategory = Category;
-
-// ==================== TYPE GUARDS ====================
-
-// Functional type guards for runtime type checking
-export const isCategoryWithSubcategories = (category: CategoryType): category is CategoryWithSubcategories => {
-    return 'subcategories' in category;
-};
-
-// ==================== UTILITY TYPES ====================
-
-// Functional utility types for data transformation
-export type ExtractQuestions<T extends { questions: readonly any[] }> = T['questions'][number];
-export type ExtractCategories<T extends { categories: readonly any[] }> = T['categories'][number];
-
-
 // ==================== HOME STACK NAVIGATION ====================
 
 // Home stack navigation parameters
@@ -71,10 +44,6 @@ export type HomeStackParamList = Readonly<{
     Home: undefined;
     CategoryQuestions: {
         readonly categoryId: string;
-    };
-    QuestionDetail: {
-        readonly categoryId: string;
-        readonly questionId: number;
     };
 }>;
 

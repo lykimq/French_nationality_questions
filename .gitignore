@@ -119,3 +119,9 @@ ios/*.xcworkspace/xcuserdata/
 ios/*.xcodeproj/xcuserdata/
 ios/*.xcodeproj/project.xcworkspace/xcuserdata/
 .vercel
+
+# Android NDK/CMake build cache
+android/app/.cxx/
+
+# Sentry properties
+**/sentry.properties

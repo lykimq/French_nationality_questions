@@ -26,14 +26,6 @@ export const isValidId = (id: unknown): id is number => {
     return typeof id === 'number' && Number.isFinite(id) && id > 0;
 };
 
-/**
- * Extracts and validates numeric ID.
- */
-export const extractValidId = (rawId: unknown): number | undefined => {
-    const id = extractNumericId(rawId);
-    return id !== undefined && isValidId(id) ? id : undefined;
-};
-
 // ==================== ALERT UTILITIES ====================
 
 interface ConfirmationAlertOptions {

@@ -22,22 +22,4 @@ export interface FrenchQuestionsData {
     readonly categories: readonly FrenchCategory[];
 }
 
-// ==================== TYPE GUARDS ====================
-
-// Check if question data is French-only
-export const isFrenchQuestionsData = (_data: FrenchQuestionsData): true => {
-    return true;
-};
-
-// ==================== UTILITY TYPES ====================
-
-// Extract question type from data structure
-export type ExtractQuestionType<T> = T extends FrenchQuestionsData
-    ? FrenchQuestion
-    : never;
-
-// Extract category type from data structure
-export type ExtractCategoryType<T> = T extends FrenchQuestionsData
-    ? FrenchCategory
-    : never;
 

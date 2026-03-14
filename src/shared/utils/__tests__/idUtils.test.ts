@@ -6,7 +6,7 @@
  * into normalized numeric IDs, which is essential for question identification,
  * data processing, and preventing ID-related bugs.
  */
-import { extractNumericId, isValidId, extractValidId } from '../idUtils';
+import { extractNumericId, isValidId } from '../idUtils';
 
 describe('idUtils', () => {
   describe('extractNumericId', () => {
@@ -44,21 +44,6 @@ describe('idUtils', () => {
       expect(isValidId(Infinity)).toBe(false);
       expect(isValidId('1')).toBe(false);
       expect(isValidId(null)).toBe(false);
-    });
-  });
-
-  describe('extractValidId', () => {
-    it('should extract and validate numeric ID from valid input', () => {
-      expect(extractValidId(42)).toBe(42);
-      expect(extractValidId('formation_1')).toBe(1);
-      expect(extractValidId('livret_100')).toBe(100);
-    });
-
-    it('should return undefined for invalid inputs', () => {
-      expect(extractValidId(0)).toBeUndefined();
-      expect(extractValidId(-1)).toBeUndefined();
-      expect(extractValidId('no-number')).toBeUndefined();
-      expect(extractValidId(null)).toBeUndefined();
     });
   });
 });

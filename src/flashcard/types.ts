@@ -18,10 +18,3 @@ export interface FlashCardState {
     totalCards: number;
 }
 
-export interface FlashCardProgress {
-    categoryId: string;
-    currentIndex: number;
-    totalCards: number;
-    viewedCards: Set<number>;
-}
-

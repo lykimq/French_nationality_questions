@@ -19,13 +19,6 @@ export interface RatingData {
     hasLeftStoreReview: boolean;
 }
 
-export interface AppRatingState {
-    launchCount: number;
-    lastPromptDate: number | null;
-    hasRated: boolean;
-    ratingValue: number | null;
-}
-
 const APP_STORE_IDS = {
     ios: 'com.lykimq-uyen.naturalisation-france',
     android: 'com.lykimq_uyen.naturalisation_france',
@@ -205,29 +198,4 @@ const markStoreReviewAsLeft = async (): Promise<void> => {
     }
 };
 
-export const getAppRatingState = async (): Promise<AppRatingState> => {
-    try {
-        const [launchCount, lastPromptDate, hasRated, ratingValue] = await Promise.all([
-            getLaunchCount(),
-            AsyncStorage.getItem(STORAGE_KEYS.LAST_RATING_PROMPT),
-            hasUserRated(),
-            getUserRating(),
-        ]);
-
-        return {
-            launchCount,
-            lastPromptDate: lastPromptDate ? parseInt(lastPromptDate, 10) : null,
-            hasRated,
-            ratingValue,
-        };
-    } catch (error) {
-        logger.error('Failed to get app rating state:', error);
-        return {
-            launchCount: 0,
-            lastPromptDate: null,
-            hasRated: false,
-            ratingValue: null,
-        };
-    }
-};
 

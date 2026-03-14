@@ -1,4 +1,4 @@
-import type { FrenchCategory, FrenchQuestion } from '../../types/questionsData';
+import type { FrenchCategory } from '../../types/questionsData';
 import type { RawCategory, RawQuestion } from '../types';
 import type { Question } from '../../welcome/types';
 
@@ -64,25 +64,5 @@ export const isQuestion = (question: unknown): question is Question => {
         (typeof q.id === 'number' || typeof q.id === 'string') &&
         typeof q.question === 'string'
     );
-};
-
-/**
- * Type guard for FrenchQuestion.
- */
-export const isFrenchQuestion = (question: unknown): question is FrenchQuestion => {
-    if (!question || typeof question !== 'object') return false;
-    const q = question as Record<string, unknown>;
-    return (
-        (typeof q.id === 'number' || typeof q.id === 'string') &&
-        typeof q.question === 'string' &&
-        typeof q.explanation === 'string'
-    );
-};
-
-/**
- * Type guard for processable question (RawQuestion | Question | FrenchQuestion).
- */
-export const isProcessableQuestion = (question: unknown): question is RawQuestion | Question | FrenchQuestion => {
-    return isRawQuestion(question) || isQuestion(question) || isFrenchQuestion(question);
 };
 
