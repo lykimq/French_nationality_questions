@@ -1,7 +1,5 @@
 import { Alert } from 'react-native';
 
-// ==================== ID UTILITIES ====================
-
 /**
  * Extracts numeric ID from number or string.
  */
@@ -25,8 +23,6 @@ export const extractNumericId = (rawId: unknown): number | undefined => {
 export const isValidId = (id: unknown): id is number => {
     return typeof id === 'number' && Number.isFinite(id) && id > 0;
 };
-
-// ==================== ALERT UTILITIES ====================
 
 interface ConfirmationAlertOptions {
     title: string;

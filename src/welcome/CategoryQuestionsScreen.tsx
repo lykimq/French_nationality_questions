@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { View, TouchableOpacity, StatusBar, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
@@ -17,7 +17,7 @@ type CategoryQuestionsNavigationProp = NativeStackNavigationProp<HomeStackParamL
 const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const { categoryId } = route.params;
     const { questionsData } = useData();
 
@@ -41,8 +41,6 @@ const CategoryQuestionsScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
-
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <TouchableOpacity
@@ -69,9 +67,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    safeArea: {
-        // backgroundColor will be set dynamically
-    },
+    safeArea: {},
     header: {
         flexDirection: 'row',
         alignItems: 'center',

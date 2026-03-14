@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
     TouchableOpacity,
     Alert,
 } from 'react-native';
@@ -34,7 +33,7 @@ const ALL_TOPICS: CivicExamTopic[] = [
 
 const CivicExamPracticeScreen = () => {
     const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const { startExam } = useCivicExam();
     const [selectedTopics, setSelectedTopics] = useState<CivicExamTopic[]>([...ALL_TOPICS]);
     const [isStarting, setIsStarting] = useState(false);
@@ -92,7 +91,6 @@ const CivicExamPracticeScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>

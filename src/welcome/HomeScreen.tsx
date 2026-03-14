@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, StatusBar } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from './CategoryCard';
 import { useNavigation } from '@react-navigation/native';
@@ -13,7 +13,7 @@ type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const { questionsData } = useData();
 
     const categories = React.useMemo(() => {
@@ -27,8 +27,6 @@ const HomeScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
-
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
@@ -75,9 +73,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    safeArea: {
-        // backgroundColor will be set dynamically
-    },
+    safeArea: {},
     header: {
         paddingHorizontal: 20,
         paddingBottom: 15,

@@ -1,9 +1,6 @@
 import type { FrenchCategory } from '../../types/questionsData';
 import type { RawCategory, RawQuestion } from '../types';
 import type { Question } from '../../welcome/types';
-
-// ==================== CATEGORY TYPE GUARDS ====================
-
 /**
  * Type guard for RawCategory (optional fields).
  */
@@ -38,9 +35,6 @@ export const isFrenchCategory = (category: unknown): category is FrenchCategory 
 export const isProcessableCategory = (category: unknown): category is RawCategory | FrenchCategory => {
     return isRawCategory(category) || isFrenchCategory(category);
 };
-
-// ==================== QUESTION TYPE GUARDS ====================
-
 /**
  * Type guard for RawQuestion (optional fields).
  */

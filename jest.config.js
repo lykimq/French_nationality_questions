@@ -17,7 +17,6 @@ const projects = [
       '^@/(.*)$': '<rootDir>/src/$1',
       '^firebase/app$': '<rootDir>/src/__tests__/__mocks__/firebase-app.js',
       '^firebase/storage$': '<rootDir>/src/__tests__/__mocks__/firebase-storage.js',
-      '^react-native-nitro-modules$': '<rootDir>/src/__tests__/__mocks__/react-native-nitro-modules.js',
       '\\.(png|jpg|jpeg|gif|svg|webp)$': '<rootDir>/src/__tests__/__mocks__/fileMock.js',
     },
     transform: {
@@ -49,7 +48,6 @@ const projects = [
       '^@/(.*)$': '<rootDir>/src/$1',
       '^firebase/app$': '<rootDir>/src/__tests__/__mocks__/firebase-app.js',
       '^firebase/storage$': '<rootDir>/src/__tests__/__mocks__/firebase-storage.js',
-      '^react-native-nitro-modules$': '<rootDir>/src/__tests__/__mocks__/react-native-nitro-modules.js',
       '\\.(png|jpg|jpeg|gif|svg|webp)$': '<rootDir>/src/__tests__/__mocks__/fileMock.js',
     },
   },
@@ -72,7 +70,6 @@ const projects = [
       '^@/(.*)$': '<rootDir>/src/$1',
       '^firebase/app$': '<rootDir>/src/__tests__/__mocks__/firebase-app.js',
       '^firebase/storage$': '<rootDir>/src/__tests__/__mocks__/firebase-storage.js',
-      '^react-native-nitro-modules$': '<rootDir>/src/__tests__/__mocks__/react-native-nitro-modules.js',
       '\\.(png|jpg|jpeg|gif|svg|webp)$': '<rootDir>/src/__tests__/__mocks__/fileMock.js',
     },
   },

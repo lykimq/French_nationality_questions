@@ -4,7 +4,6 @@ import {
     View,
     TouchableOpacity,
     Animated,
-    StatusBar,
     ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -46,7 +45,7 @@ let globalFlashCardDataPromise: Promise<{ [key: string]: FormationCategory } | n
 const FlashCardScreen: React.FC = () => {
     const route = useRoute<FlashCardScreenRouteProp>();
     const navigation = useNavigation<FlashCardScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const { categoryId } = route.params;
 
     const [dataState, setDataState] = useState<CategoryDataState>(() => ({
@@ -365,7 +364,6 @@ const FlashCardScreen: React.FC = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View
                     style={[

@@ -30,8 +30,7 @@ export const buildQuestionTokens = (
     return map;
 };
 
-// Check if a query token matches a target token (exact, prefix, or contains)
-export const tokenMatches = (queryToken: string, targetToken: string): { matched: boolean; score: number } => {
+const tokenMatches = (queryToken: string, targetToken: string): { matched: boolean; score: number } => {
     if (!queryToken || !targetToken) return { matched: false, score: 0 };
     
     // Exact match - highest score

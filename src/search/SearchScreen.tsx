@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
     StyleSheet,
     View,
-    StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../shared/contexts/ThemeContext';
@@ -18,7 +17,7 @@ import {
 } from './components';
 
 const SearchScreen = () => {
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [suggestionsDismissed, setSuggestionsDismissed] = useState(false);
@@ -123,8 +122,6 @@ const SearchScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
-
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
@@ -192,9 +189,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    safeArea: {
-        // backgroundColor will be set dynamically
-    },
+    safeArea: {},
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',

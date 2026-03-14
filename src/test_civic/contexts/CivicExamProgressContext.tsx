@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo, useRef } from 'react';
 import { createLogger } from '../../shared/utils/logger';
+import { extractNumericId } from '../../shared/utils/idUtils';
 import {
     loadAllCivicExamData,
     saveCivicExamData,
@@ -95,11 +96,8 @@ export const CivicExamProgressProvider: React.FC<{ children: ReactNode }> = ({ c
 
         const updatedStatistics = updateExamStatistics(session, examStatistics, updatedProgress);
 
-        // Update state
         setExamProgress(updatedProgress);
         setExamStatistics(updatedStatistics);
-
-        // Save to storage
         await saveCivicExamData(updatedProgress, updatedStatistics);
 
         return {
@@ -149,8 +147,8 @@ export const CivicExamProgressProvider: React.FC<{ children: ReactNode }> = ({ c
 
         return allQuestions
             .filter(q => {
-                const numericId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
-                return !isNaN(numericId) && examProgress.incorrectQuestions.includes(numericId);
+                const numericId = extractNumericId(q.id);
+                return numericId !== undefined && examProgress.incorrectQuestions.includes(numericId);
             })
             .map(q => ({
                 ...q,

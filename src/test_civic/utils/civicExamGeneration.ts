@@ -21,9 +21,6 @@ import { shuffleQuestionOptions } from './civicExamQuestionUtils';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 
 const logger = createLogger('CivicExamGeneration');
-
-// ==================== QUESTION SELECTION ====================
-
 /**
  * Gets the numeric ID from a question if it exists and is valid.
  */
@@ -216,9 +213,6 @@ const selectQuestionsForTopic = (
     const uniqueMap = createUniqueQuestionMap(selectedQuestions);
     return Array.from(uniqueMap.values()).slice(0, distribution.total);
 };
-
-// ==================== MAIN GENERATION FUNCTION ====================
-
 export const generateCivicExamQuestions = (
     allQuestions: TestQuestion[],
     config: CivicExamConfig

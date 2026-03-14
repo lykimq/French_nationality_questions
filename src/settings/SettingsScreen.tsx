@@ -3,14 +3,12 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { FormattedText } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 
-// Import new components
 import TextFormattingSettings from './components/TextFormattingSettings';
 import ThemeSettings from './components/ThemeSettings';
 import AppInfoSettings from './components/AppInfoSettings';
@@ -20,7 +18,7 @@ import RatingModal from './components/RatingModal';
 import CollapsibleSection from './components/CollapsibleSection';
 
 const SettingsScreen = () => {
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const [showRatingModal, setShowRatingModal] = useState(false);
 
     const handleRateApp = () => {
@@ -33,8 +31,6 @@ const SettingsScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
-
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
@@ -101,9 +97,7 @@ const styles = StyleSheet.create({
     container: {
         ...sharedStyles.container,
     },
-    safeArea: {
-        // backgroundColor will be set dynamically
-    },
+    safeArea: {},
     header: {
         ...sharedStyles.header,
         paddingTop: 10,

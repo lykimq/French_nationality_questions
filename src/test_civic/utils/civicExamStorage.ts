@@ -9,8 +9,7 @@ import {
 
 const logger = createLogger('CivicExamStorage');
 
-// Storage keys for civic exam
-export const CIVIC_EXAM_STORAGE_KEYS = {
+const CIVIC_EXAM_STORAGE_KEYS = {
     CIVIC_EXAM_PROGRESS: 'civic_exam_progress',
     CIVIC_EXAM_STATISTICS: 'civic_exam_statistics',
 } as const;
@@ -36,7 +35,7 @@ const validateArray = <T>(value: unknown, validator: (item: unknown) => item is 
 };
 
 // Load civic exam progress from storage
-export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
+const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
     try {
         const progressData = await AsyncStorage.getItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS);
         if (!progressData) {
@@ -110,7 +109,7 @@ export const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
 };
 
 // Load civic exam statistics from storage
-export const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
+const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
     try {
         const statisticsData = await AsyncStorage.getItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS);
         if (!statisticsData) {

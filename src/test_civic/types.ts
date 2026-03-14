@@ -1,9 +1,6 @@
 import type { TestQuestion } from '../types';
 export type { TestQuestion };
 import type { TimestampedEntity } from '../types/core';
-
-// ==================== BASE TEST TYPES (used by civic exam) ====================
-
 export interface TestConfig {
     readonly questionCount: number;
     readonly timeLimit?: number;
@@ -59,9 +56,6 @@ export interface TestStatistics {
     masteredQuestions: number[];
     strugglingQuestions: number[];
 }
-
-// ==================== CIVIC EXAM TOPICS ====================
-
 export type CivicExamTopic =
     | 'principles_values'
     | 'institutional_political'
@@ -88,18 +82,12 @@ export type CivicExamSubTopic =
     | 'parental_authority_education';
 
 export type QuestionType = 'knowledge' | 'situational';
-
-// ==================== CIVIC EXAM CONFIGURATION ====================
-
 export interface CivicExamConfig extends TestConfig {
     readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
     readonly selectedTopics?: readonly CivicExamTopic[];
     readonly questionCount: 40; // Fixed at 40 for civic exam
     readonly timeLimit: 45; // Fixed at 45 minutes
 }
-
-// ==================== CIVIC EXAM SESSION ====================
-
 export interface CivicExamSession extends TestSession {
     readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
     readonly topics?: readonly CivicExamTopic[];
@@ -107,9 +95,6 @@ export interface CivicExamSession extends TestSession {
     readonly isPaused?: boolean;
     readonly pausedAt?: Date;
 }
-
-// ==================== CIVIC EXAM PROGRESS ====================
-
 export interface CivicExamProgress extends TimestampedEntity {
     totalExamsTaken: number;
     totalPracticeSessions: number;
@@ -135,9 +120,6 @@ export interface CivicExamStatistics extends TestStatistics {
         accuracy: number;
     }>;
 }
-
-// ==================== CIVIC EXAM RESULT ====================
-
 export interface CivicExamResult {
     readonly session: CivicExamSession;
     readonly statistics: CivicExamStatistics;
@@ -148,9 +130,6 @@ export interface CivicExamResult {
     readonly incorrectQuestions: readonly TestQuestion[];
     readonly timeSpent: number; // in seconds
 }
-
-// ==================== NAVIGATION ====================
-
 import type { SerializableCivicExamResult } from './utils/civicExamSerialization';
 
 export type CivicExamStackParamList = Readonly<{
@@ -165,9 +144,6 @@ export type CivicExamStackParamList = Readonly<{
 }>;
 
 export type { SerializableCivicExamResult };
-
-// ==================== QUESTION METADATA ====================
-
 export interface CivicExamQuestionMetadata {
     readonly topic: CivicExamTopic;
     readonly subTopic: CivicExamSubTopic;

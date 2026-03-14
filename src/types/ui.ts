@@ -2,9 +2,6 @@ import * as React from 'react';
 import { StyleProp, TextStyle, TextProps, ImageSourcePropType } from 'react-native';
 import type { Question } from '../welcome/types';
 import type { FrenchQuestionsData } from './questionsData';
-
-// ==================== COMPONENT BASE PATTERNS ====================
-
 // Base props for components with title and description
 export interface TitleProps {
     readonly title: string;
@@ -24,9 +21,6 @@ export interface VisualProps {
     readonly image?: string | null;
     readonly color?: string;
 }
-
-// ==================== FORM & INPUT COMPONENTS ====================
-
 // Generic value component props - functional approach
 export interface ValueComponentProps<T = string> {
     readonly value: T;
@@ -38,11 +32,8 @@ export interface ValueComponentProps<T = string> {
 export interface SettingsComponentProps<T = string> extends ValueComponentProps<T>, TitleProps { }
 
 // Extended settings component with additional props
-export type ExtendedSettingsComponent<T = string, P extends Record<string, any> = {}> =
+export type ExtendedSettingsComponent<T = string, P extends object = {}> =
     SettingsComponentProps<T> & Readonly<P>;
-
-// ==================== TEXT & FORMATTING ====================
-
 // Formatted text component props - extends TextProps for full type safety
 export interface FormattedTextProps extends TextProps {
     readonly children: React.ReactNode;
@@ -52,9 +43,6 @@ export interface FormattedTextProps extends TextProps {
 export interface TextFormattingSettings {
     readonly fontSize: number;
 }
-
-// ==================== QUESTION & CATEGORY COMPONENTS ====================
-
 // Question card component props
 export interface QuestionCardProps {
     readonly id: number | string;
@@ -73,9 +61,6 @@ export interface CategoryCardProps extends TitleProps, InteractiveProps, VisualP
 export interface QuestionSlideViewProps {
     readonly questions: readonly Question[];
 }
-
-// ==================== CONTEXT TYPES ====================
-
 // Data context type (provides questions data, not language switching)
 export interface DataContextType {
     readonly questionsData: FrenchQuestionsData;

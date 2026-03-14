@@ -1,9 +1,6 @@
 /**
  * String utilities for conversion, sanitization, and normalization.
  */
-
-// ==================== TYPE CONVERSION ====================
-
 /**
  * Converts value to string, handles null/undefined/objects.
  */
@@ -19,9 +16,6 @@ export const ensureString = (value: unknown, defaultValue: string = ''): string 
     }
     return defaultValue;
 };
-
-// ==================== SANITIZATION ====================
-
 /**
  * Trims string, returns empty for non-strings.
  */
@@ -43,18 +37,12 @@ export const sanitizeStringArray = (arr: unknown): string[] => {
         .filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
         .map(item => item.trim());
 };
-
-// ==================== VALIDATION ====================
-
 /**
  * Checks if value is non-empty string.
  */
 export const isNonEmptyString = (value: unknown): value is string => {
     return typeof value === 'string' && value.trim().length > 0;
 };
-
-// ==================== TEXT NORMALIZATION ====================
-
 /**
  * Normalizes text for search: lowercase, removes accents, trims.
  */

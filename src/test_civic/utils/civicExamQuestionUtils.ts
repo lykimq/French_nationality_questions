@@ -38,7 +38,7 @@ export const getCivicExamExplanationText = (question: TestQuestion | null | unde
  * @param fallbackText - Optional fallback text if answer is not found
  * @returns The answer text or fallback text
  */
-export const getAnswerTextFromOptions = (
+const getAnswerTextFromOptions = (
     question: CivicExamQuestionWithOptions | null | undefined,
     answerIndex: number | null | undefined,
     fallbackText: string = 'Aucune réponse'

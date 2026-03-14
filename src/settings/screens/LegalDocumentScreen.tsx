@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRoute, useNavigation } from '@react-navigation/native';
@@ -24,18 +23,21 @@ const DOCUMENT_TITLES = {
     terms: 'Conditions d\'Utilisation',
 } as const;
 
+type SettingsStackParamList = {
+    Settings: undefined;
+    LegalDocument: { type: 'privacy' | 'terms' };
+};
+
 const LegalDocumentScreen: React.FC = () => {
     const route = useRoute();
-    const navigation = useNavigation<NativeStackNavigationProp<any>>();
-    const { theme, themeMode } = useTheme();
+    const navigation = useNavigation<NativeStackNavigationProp<SettingsStackParamList>>();
+    const { theme } = useTheme();
 
     const { type } = (route.params as LegalDocumentScreenRouteParams) || { type: 'privacy' };
     const title = DOCUMENT_TITLES[type];
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} backgroundColor={theme.colors.headerBackground} />
-
             <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <BackButton onPress={() => navigation.goBack()} />
@@ -67,9 +69,7 @@ const styles = StyleSheet.create({
     container: {
         ...sharedStyles.container,
     },
-    safeArea: {
-        // backgroundColor will be set dynamically
-    },
+    safeArea: {},
     header: {
         ...sharedStyles.header,
         flexDirection: 'row',

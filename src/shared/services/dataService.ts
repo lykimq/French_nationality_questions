@@ -80,7 +80,7 @@ const fetchFirebaseJson = async (dataPath: string): Promise<FrenchQuestionsData 
 
 const shouldRetry = (failureTime: number, ttlMs: number) => now() - failureTime > ttlMs;
 
-export const loadJsonResource = async (
+const loadJsonResource = async (
     dataPath: string,
     options: LoadOptions = {}
 ): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {
@@ -231,16 +231,6 @@ export const loadImageResource = async (
         logger.error(`Error details: ${getErrorMessage(lastError)}`);
     }
     return cached?.value ?? null;
-};
-
-export const invalidateImageCache = (imagePath?: string) => {
-    if (imagePath) {
-        imageCache.delete(imagePath);
-        failedImageCache.delete(imagePath);
-    } else {
-        imageCache.clear();
-        failedImageCache.clear();
-    }
 };
 
 export const getCachedImage = (imagePath: string): ImageSourcePropType | null => {

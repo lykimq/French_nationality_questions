@@ -193,9 +193,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    buttonDisabled: {
-        // backgroundColor will be set dynamically
-    },
+    buttonDisabled: {},
     trackContainer: {
         flex: 1,
         marginHorizontal: 15,
@@ -211,12 +209,8 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         position: 'absolute',
     },
-    trackPressed: {
-        // backgroundColor will be set dynamically
-    },
-    trackFillPressed: {
-        // backgroundColor will be set dynamically
-    },
+    trackPressed: {},
+    trackFillPressed: {},
     thumb: {
         width: 20,
         height: 20,

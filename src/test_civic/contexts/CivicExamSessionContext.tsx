@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode, useCallback, useMemo, useEffect } from 'react';
 import { createLogger } from '../../shared/utils/logger';
+import { extractNumericId } from '../../shared/utils/idUtils';
 import { generateCivicExamQuestions } from '../utils/civicExamGeneration';
 import { calculateCivicExamScore, isCivicExamPassed } from '../utils/civicExamScoring';
 import type {
@@ -131,8 +132,8 @@ export const CivicExamSessionProvider: React.FC<{
         const questionIds = new Set<number>();
         const duplicateIds: number[] = [];
         questions.forEach(q => {
-            const questionId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
-            if (isNaN(questionId)) {
+            const questionId = extractNumericId(q.id);
+            if (questionId === undefined) {
                 logger.warn(`Question ${q.id} has invalid ID, skipping duplicate check`);
                 return;
             }
@@ -244,8 +245,8 @@ export const CivicExamSessionProvider: React.FC<{
             .map(a => a.questionId);
 
         const incorrectQuestions = currentSession.questions.filter(q => {
-            const questionId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
-            return !isNaN(questionId) && incorrectQuestionIds.includes(questionId);
+            const questionId = extractNumericId(q.id);
+            return questionId !== undefined && incorrectQuestionIds.includes(questionId);
         }) as CivicExamQuestion[];
 
         // Clear persisted active session once finished

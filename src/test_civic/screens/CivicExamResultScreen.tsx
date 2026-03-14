@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
     TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -32,7 +31,7 @@ type RouteParams = {
 const CivicExamResultScreen = () => {
     const navigation = useNavigation<CivicExamResultScreenNavigationProp>();
     const route = useRoute();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const serializedResult = (route.params as RouteParams)?.result;
     const result = serializedResult ? deserializeCivicExamResult(serializedResult) : null;
 
@@ -51,7 +50,6 @@ const CivicExamResultScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>

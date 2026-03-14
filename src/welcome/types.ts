@@ -1,7 +1,4 @@
 import type { TitledEntity, VisualEntity, CategorizableEntity } from '../types';
-
-// ==================== QUESTION DOMAIN ====================
-
 // Base entity for question IDs (numeric or prefixed string like "livret_1")
 export interface NumberEntity {
     readonly id: number | string;
@@ -21,9 +18,6 @@ export type TestQuestion = Question & CategorizableEntity & {
 
 // Question collections - using readonly arrays for immutability
 export type QuestionCollection = readonly Question[];
-
-// ==================== CATEGORY DOMAIN ====================
-
 // Base category structure
 export interface Category extends TitledEntity, VisualEntity {
     readonly questions: QuestionCollection;
@@ -36,9 +30,6 @@ export interface CategoryWithSubcategories extends TitledEntity, VisualEntity {
 
 // Union type for all category types
 export type CategoryType = Category | CategoryWithSubcategories;
-
-// ==================== HOME STACK NAVIGATION ====================
-
 // Home stack navigation parameters
 export type HomeStackParamList = Readonly<{
     Home: undefined;

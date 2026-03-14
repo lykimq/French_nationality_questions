@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
     TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -25,7 +24,7 @@ type CivicExamReviewScreenNavigationProp = NativeStackNavigationProp<CivicExamSt
 
 const CivicExamReviewScreen = () => {
     const navigation = useNavigation<CivicExamReviewScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const { currentSession, finishExam } = useCivicExam();
 
     // Handle navigation when session is missing (useEffect to avoid render-time navigation)
@@ -55,7 +54,6 @@ const CivicExamReviewScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>

@@ -3,9 +3,6 @@ import type { CivicExamTopic, CivicExamSubTopic, QuestionType, CivicExamQuestion
 import { createLogger } from '../../shared/utils/logger';
 
 const logger = createLogger('CivicExamUtils');
-
-// ==================== TOPIC MAPPING ====================
-
 /**
  * Gets the topic from a question.
  * 
@@ -74,9 +71,6 @@ export const getQuestionTypeFromQuestion = (question: TestQuestion): QuestionTyp
     // Default to knowledge if not specified
     return 'knowledge';
 };
-
-// ==================== QUESTION FILTERING ====================
-
 export const getQuestionsByTopic = (
     questions: TestQuestion[],
     topic: CivicExamTopic
@@ -116,17 +110,6 @@ export const filterKnowledgeQuestions = (questions: TestQuestion[]): TestQuestio
     });
 };
 
-export const filterSituationalQuestions = (questions: TestQuestion[]): TestQuestion[] => {
-    return questions.filter(q => {
-        const questionType = getQuestionTypeFromQuestion(q);
-        const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
-        return questionType === 'situational' && hasOptions;
-    });
-};
-
-/**
- * Filters questions by multiple themes.
- * 
 /**
  * Filters questions by multiple topics.
  * 
@@ -146,9 +129,6 @@ export const getQuestionsByTopics = (
         return questionTopic !== null && topics.includes(questionTopic);
     });
 };
-
-// ==================== QUESTION ENRICHMENT ====================
-
 /**
  * Enriches a question with required civic exam metadata.
  * Requires topic and subTopic to be present - questions without metadata

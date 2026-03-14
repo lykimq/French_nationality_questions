@@ -1,7 +1,4 @@
 import type { CivicExamTopic, CivicExamSubTopic } from '../types';
-
-// ==================== QUESTION DISTRIBUTION ====================
-
 export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTopic, {
     total: number;
     subTopics: Record<CivicExamSubTopic, number>;
@@ -112,9 +109,6 @@ export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTopic, {
         },
     },
 };
-
-// ==================== EXAM CONFIGURATION ====================
-
 export const CIVIC_EXAM_CONFIG = {
     TOTAL_QUESTIONS: 40,
     TIME_LIMIT_MINUTES: 45,
@@ -122,9 +116,6 @@ export const CIVIC_EXAM_CONFIG = {
     PASSING_SCORE: 32, // 80%
     PASSING_PERCENTAGE: 80,
 } as const;
-
-// ==================== TOPIC DISPLAY NAMES ====================
-
 export const TOPIC_DISPLAY_NAMES: Record<CivicExamTopic, string> = {
     principles_values: 'Principes et valeurs de la République',
     institutional_political: 'Système institutionnel et politique',

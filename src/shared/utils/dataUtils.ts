@@ -4,7 +4,7 @@ import { loadJsonCollection } from '../services/dataService';
 
 const logger = createLogger('dataUtils');
 
-export const loadSubcategoryData = async () => {
+const loadSubcategoryData = async () => {
     return loadJsonCollection(DATA_FILES.SUBCATEGORIES.FILES, DATA_FILES.SUBCATEGORIES.DIRECTORY);
 };
 

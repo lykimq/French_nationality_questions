@@ -6,7 +6,6 @@ import { createLogger } from '../utils/logger';
 import type { ThemeMode, ColorTheme, Theme, IconMapping } from '../../types';
 import { colorThemes, colorThemeInfo } from '../../theme/colorThemes';
 
-// Context interface
 interface ThemeContextType {
     theme: Theme & { icons: IconMapping };
     themeMode: ThemeMode;
@@ -16,10 +15,8 @@ interface ThemeContextType {
     toggleTheme: () => void;
 }
 
-// Create context
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// Custom hook to use theme
 export const useTheme = (): ThemeContextType => {
     const context = useContext(ThemeContext);
     if (!context) {
@@ -94,7 +91,6 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
         };
     }
 
-    // Load theme from storage on app start
     useEffect(() => {
         const loadTheme = async () => {
             try {
@@ -118,7 +114,6 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
         loadTheme();
     }, []);
 
-    // Save theme to storage when it changes
     const setThemeMode = React.useCallback(async (mode: ThemeMode) => {
         try {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, mode);
@@ -129,7 +124,6 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
         }
     }, []);
 
-    // Save color theme to storage when it changes
     const setColorTheme = React.useCallback(async (theme: ColorTheme) => {
         try {
             await AsyncStorage.setItem(COLOR_THEME_STORAGE_KEY, theme);
@@ -183,7 +177,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     );
 };
 
-// Export the colorThemeInfo for use in other components
 export { colorThemeInfo };
 
 export default ThemeProvider;

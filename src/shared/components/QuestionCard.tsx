@@ -121,14 +121,14 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                 <>
                                     <Image
                                         source={imageSource}
-                                        style={[styles.image, imageLoading && styles.hiddenImage]}
+                                        style={[styles.image, { backgroundColor: theme.colors.divider }, imageLoading && styles.hiddenImage]}
                                         resizeMode="contain"
                                     />
                                     <View style={styles.imageOverlay}>
                                         <Icon3D
                                             name={getIconName('expand')}
                                             size={20}
-                                            color="#FFFFFF"
+                                            color={theme.colors.buttonText}
                                             variant="default"
                                         />
                                     </View>
@@ -244,7 +244,6 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: 200,
-        backgroundColor: '#f5f5f5',
     },
     hiddenImage: {
         opacity: 0,

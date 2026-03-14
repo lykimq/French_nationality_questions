@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
     Alert,
     ActivityIndicator,
 } from 'react-native';
@@ -362,7 +361,6 @@ const CivicExamQuestionScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <ExamHeader

@@ -58,9 +58,6 @@ export const formatExplanation = (text: string): string => {
     
     return formatted.trim();
 };
-
-// ==================== QUESTION PROCESSING UTILITIES ====================
-
 const getBaseQuestionNumber = (question: RawQuestion | null | undefined): number | undefined => {
     if (question && question.id !== undefined) {
         return extractNumericId(question.id);
@@ -176,9 +173,6 @@ export const processAllQuestions = (
 
     return questions;
 };
-
-// ==================== DATE UTILITIES ====================
-
 // Helper function to safely parse dates
 export const safeParseDate = (dateValue: unknown): Date | undefined => {
     if (!dateValue) return undefined;
@@ -198,9 +192,6 @@ export const safeParseDate = (dateValue: unknown): Date | undefined => {
         return undefined;
     }
 };
-
-// ==================== ARRAY UTILITIES ====================
-
 /**
  * Limits array to last N items to prevent unbounded growth.
  */

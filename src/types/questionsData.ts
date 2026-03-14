@@ -1,7 +1,4 @@
 import type { Question } from '../welcome/types';
-
-// ==================== FRENCH QUESTIONS DATA STRUCTURES ====================
-
 // French question - simple string-based question
 export interface FrenchQuestion extends Omit<Question, 'question' | 'explanation'> {
     readonly question: string;

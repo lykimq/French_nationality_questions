@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    StatusBar,
     TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -24,7 +23,7 @@ type CivicExamHomeScreenNavigationProp = NativeStackNavigationProp<CivicExamStac
 
 const CivicExamHomeScreen = () => {
     const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const { getIcon } = useIcon3D();
     const { examProgress, isLoading, refreshProgress, pausedSession, resumeSession } = useCivicExam();
 
@@ -33,8 +32,6 @@ const CivicExamHomeScreen = () => {
     useFocusEffect(
         React.useCallback(() => {
             refreshProgress();
-            // Reload paused session when screen is focused
-            // This is handled by the session context's useEffect
         }, [refreshProgress])
     );
 
@@ -67,7 +64,6 @@ const CivicExamHomeScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
 
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>

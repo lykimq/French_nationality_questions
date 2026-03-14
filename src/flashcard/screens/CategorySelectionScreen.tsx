@@ -4,7 +4,6 @@ import {
     View,
     ScrollView,
     ActivityIndicator,
-    StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -86,7 +85,6 @@ const CategorySelectionScreen: React.FC = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <StatusBar barStyle={themeMode === 'dark' ? 'light-content' : 'dark-content'} />
             <SafeAreaView style={styles.safeArea} edges={['top']}>
                 <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
                     <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
