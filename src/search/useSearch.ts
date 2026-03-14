@@ -1,11 +1,8 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { useData } from '../shared/contexts/DataContext';
-import { usePremiumAccess } from '../shared/contexts/PremiumAccessContext';
 import { buildQuestionTokens, tokenize, scoreTokens, textContainsQuery } from '../shared/utils/searchIndex';
 import { extractNumericId } from '../shared/utils/idUtils';
 import { normalizeForSearch } from '../shared/utils/stringUtils';
-
-const FREE_CATEGORY_IDS = new Set(['administration_locale', 'arts_culture_sports']);
 
 // Define the search result question type
 export interface SearchResultQuestion {
@@ -37,7 +34,6 @@ export interface SearchSuggestion {
 
 export const useSearch = () => {
     const { questionsData } = useData();
-    const { isPremium } = usePremiumAccess();
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>([]);
     const [isSearching, setIsSearching] = useState(false);
@@ -53,16 +49,10 @@ export const useSearch = () => {
         searchIn: ['both'],
     });
 
-    // Create a comprehensive list of all questions, filtered by premium status
     const allQuestions = useMemo(() => {
         const questions: SearchResultQuestion[] = [];
 
         questionsData.categories.forEach(category => {
-            const isCategoryAccessible = isPremium || FREE_CATEGORY_IDS.has(category.id);
-            if (!isCategoryAccessible) {
-                return;
-            }
-
             category.questions.forEach(question => {
                 const normalizedId = extractNumericId(question.id) ?? 0;
 
@@ -79,7 +69,7 @@ export const useSearch = () => {
         });
 
         return questions;
-    }, [questionsData, isPremium]);
+    }, [questionsData]);
 
     const questionTokens = useMemo(() => buildQuestionTokens(allQuestions), [allQuestions]);
 
@@ -102,22 +92,6 @@ export const useSearch = () => {
 
         return Array.from(categories.values()).sort((a, b) => b.count - a.count);
     }, [allQuestions]);
-
-    // Clean up invalid category filters when premium status changes
-    useEffect(() => {
-        const availableCategoryIds = new Set(availableCategories.map(c => c.id));
-        
-        setFilters(prev => {
-            const invalidFilters = prev.categories.filter(catId => !availableCategoryIds.has(catId));
-            if (invalidFilters.length > 0) {
-                return {
-                    ...prev,
-                    categories: prev.categories.filter(catId => availableCategoryIds.has(catId))
-                };
-            }
-            return prev;
-        });
-    }, [isPremium, availableCategories]);
 
     // Generate search suggestions based on current query (optimized for accuracy and performance)
     const generateSuggestions = useCallback((query: string): SearchSuggestion[] => {

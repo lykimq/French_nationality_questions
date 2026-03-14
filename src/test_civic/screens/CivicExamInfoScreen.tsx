@@ -18,7 +18,6 @@ import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
 import type { CivicExamStackParamList } from '../types';
-import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamInfo');
 
@@ -29,17 +28,12 @@ const CivicExamInfoScreen = () => {
     const { theme, themeMode } = useTheme();
     const { getIcon } = useIcon3D();
     const { startExam } = useCivicExam();
-    const { isPremium, openPaywall } = usePremiumAccess();
 
     const arrowBackIcon = getIcon('arrowBack');
     const timeIcon = getIcon('time');
     const trophyIcon = getIcon('trophy');
 
     const handleStartExam = async () => {
-        if (!isPremium) {
-            openPaywall();
-            return;
-        }
         try {
             await startExam({
                 mode: 'civic_exam_naturalization',
@@ -156,20 +150,15 @@ const CivicExamInfoScreen = () => {
                     <TouchableOpacity
                         style={[
                             styles.startButton,
-                            { backgroundColor: isPremium ? theme.colors.primary : theme.colors.textMuted }
+                            { backgroundColor: theme.colors.primary }
                         ]}
                         onPress={handleStartExam}
                         activeOpacity={0.8}
                     >
                         <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
-                            {isPremium ? 'Commencer l\'examen' : 'Débloquez Premium pour continuer'}
+                            Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>
-                    {!isPremium && (
-                        <FormattedText style={[styles.premiumHint, { color: theme.colors.textSecondary }]}>
-                            Débloquez Premium pour accéder aux examens illimités.
-                        </FormattedText>
-                    )}
                 </ScrollView>
             </SafeAreaView>
         </View>
@@ -244,11 +233,6 @@ const styles = StyleSheet.create({
     startButtonText: {
         fontSize: 18,
         fontWeight: 'bold',
-    },
-    premiumHint: {
-        marginTop: 12,
-        textAlign: 'center',
-        fontSize: 13,
     },
 });
 

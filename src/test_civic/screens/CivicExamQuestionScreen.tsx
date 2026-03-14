@@ -25,7 +25,6 @@ import { CivicExamOptions } from '../components/CivicExamOptions';
 import { CivicExamFooter } from '../components/CivicExamFooter';
 import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
-import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamQuestionScreen');
 type CivicExamQuestionScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
@@ -42,7 +41,6 @@ const CivicExamQuestionScreen = () => {
         cancelExam,
         abandonPausedSession,
     } = useCivicExam();
-    const { isPremium } = usePremiumAccess();
 
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [answerSubmitted, setAnswerSubmitted] = useState(false);

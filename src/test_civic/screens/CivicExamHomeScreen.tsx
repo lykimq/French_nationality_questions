@@ -17,7 +17,6 @@ import { FormattedText, Icon3D, InfoBanner } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList } from '../types';
-import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamHomeScreen');
 
@@ -28,7 +27,6 @@ const CivicExamHomeScreen = () => {
     const { theme, themeMode } = useTheme();
     const { getIcon } = useIcon3D();
     const { examProgress, isLoading, refreshProgress, pausedSession, resumeSession } = useCivicExam();
-    const { isPremium, openPaywall } = usePremiumAccess();
 
     const arrowBackIcon = getIcon('arrowBack');
 
@@ -40,25 +38,11 @@ const CivicExamHomeScreen = () => {
         }, [refreshProgress])
     );
 
-    const guardExamAccess = React.useCallback((): boolean => {
-        if (isPremium) {
-            return true;
-        }
-        openPaywall();
-        return false;
-    }, [isPremium, openPaywall]);
-
     const handleStartExam = () => {
-        if (!guardExamAccess()) {
-            return;
-        }
         navigation.navigate('CivicExamInfo');
     };
 
     const handlePracticeMode = () => {
-        if (!guardExamAccess()) {
-            return;
-        }
         navigation.navigate('CivicExamPractice');
     };
 
@@ -80,8 +64,6 @@ const CivicExamHomeScreen = () => {
             </View>
         );
     }
-
-    const examLocked = !isPremium;
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
@@ -191,9 +173,9 @@ const CivicExamHomeScreen = () => {
                     <TouchableOpacity
                         style={[
                             styles.primaryButton,
-                            { backgroundColor: examLocked ? theme.colors.textMuted : theme.colors.primary },
+                            { backgroundColor: theme.colors.primary },
                         ]}
-                        onPress={examLocked ? openPaywall : handleStartExam}
+                        onPress={handleStartExam}
                         activeOpacity={0.8}
                     >
                         <Icon3D
@@ -203,7 +185,7 @@ const CivicExamHomeScreen = () => {
                             variant="gradient"
                         />
                         <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
-                            {examLocked ? 'Débloquez Premium pour continuer' : 'Commencer l\'examen'}
+                            Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>
 
@@ -211,30 +193,23 @@ const CivicExamHomeScreen = () => {
                         style={[
                             styles.secondaryButton,
                             {
-                                backgroundColor: examLocked ? theme.colors.textMuted + '20' : theme.colors.card,
-                                borderColor: examLocked ? theme.colors.textMuted : theme.colors.border,
-                                opacity: examLocked ? 0.6 : 1,
+                                backgroundColor: theme.colors.card,
+                                borderColor: theme.colors.border,
                             }
                         ]}
-                        onPress={examLocked ? openPaywall : handlePracticeMode}
+                        onPress={handlePracticeMode}
                         activeOpacity={0.8}
                     >
                         <Icon3D
                             name="book"
                             size={20}
-                            color={examLocked ? theme.colors.textMuted : theme.colors.primary}
+                            color={theme.colors.primary}
                             variant="elevated"
                         />
-                        <FormattedText style={[styles.buttonText, { color: examLocked ? theme.colors.textMuted : theme.colors.primary }]}>
-                            {examLocked ? 'Accès Premium requis' : 'Mode pratique'}
+                        <FormattedText style={[styles.buttonText, { color: theme.colors.primary }]}>
+                            Mode pratique
                         </FormattedText>
                     </TouchableOpacity>
-
-                    {examLocked && (
-                        <FormattedText style={[styles.lockedHint, { color: theme.colors.textSecondary }]}>
-                            Débloquez Premium pour accéder aux examens et pratiques illimités.
-                        </FormattedText>
-                    )}
                 </ScrollView>
             </SafeAreaView>
         </View>
@@ -342,11 +317,6 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         fontWeight: '600',
-    },
-    lockedHint: {
-        fontSize: 13,
-        textAlign: 'center',
-        marginTop: 8,
     },
     loadingText: {
         fontSize: 16,

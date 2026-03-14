@@ -7,7 +7,6 @@ export { default as SlideQuestionView } from './SlideQuestionView';
 export { default as Icon3D } from './Icon3D';
 export { default as QuestionListModal } from './QuestionListModal';
 export { default as InfoBanner } from './InfoBanner';
-export { PremiumGate, PaywallModal } from './premium';
 export { ErrorBoundary } from './ErrorBoundary';
 export type { Icon3DProps, Icon3DVariant } from './Icon3D';
 export type { QuestionListModalProps, QuestionListItem } from './QuestionListModal';

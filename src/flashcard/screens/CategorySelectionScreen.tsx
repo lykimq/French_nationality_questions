@@ -17,7 +17,6 @@ import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
 import type { FormationCategory } from '../types';
 import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
-import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 type CategorySelectionScreenNavigationProp = NativeStackNavigationProp<FlashCardStackParamList>;
 
@@ -29,12 +28,9 @@ const CATEGORY_ICON_KEYS: { [key: string]: string } = {
     vivre_dans_la_societe_francaise: 'people',
 };
 
-const FREE_FLASHCARD_CATEGORY = 'droits_et_devoirs';
-
 const CategorySelectionScreen: React.FC = () => {
     const navigation = useNavigation<CategorySelectionScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
-    const { isPremium, openPaywall } = usePremiumAccess();
     const [categories, setCategories] = useState<FormationCategory[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -62,11 +58,7 @@ const CategorySelectionScreen: React.FC = () => {
         }
     };
 
-    const handleCategoryPress = (category: FormationCategory, isUnlocked: boolean) => {
-        if (!isUnlocked) {
-            openPaywall();
-            return;
-        }
+    const handleCategoryPress = (category: FormationCategory) => {
         navigation.navigate('FlashCard', { categoryId: category.id });
     };
 
@@ -121,7 +113,6 @@ const CategorySelectionScreen: React.FC = () => {
                     {categories.map((category) => {
                         const iconKey = CATEGORY_ICON_KEYS[category.id] || 'book';
                         const questionCount = category.questions?.length || 0;
-                        const isUnlocked = isPremium || category.id === FREE_FLASHCARD_CATEGORY;
 
                         return (
                             <CategoryCard
@@ -130,8 +121,7 @@ const CategorySelectionScreen: React.FC = () => {
                                 description={category.description}
                                 icon={iconKey}
                                 count={questionCount}
-                                disabled={!isUnlocked}
-                                onPress={() => handleCategoryPress(category, isUnlocked)}
+                                onPress={() => handleCategoryPress(category)}
                             />
                         );
                     })}

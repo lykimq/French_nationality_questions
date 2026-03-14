@@ -37,6 +37,31 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/home/quyen/French_nationality_questions/android/app/.cxx/Debug/2r504k1g/arm64-v8a/CMakeFiles/cmake.verify_globs")
 endif()
 
+# react_codegen_SRCS at /home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/RNSentrySpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/quyen/French_nationality_questions/android/app/.cxx/Debug/2r504k1g/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/*.cpp")
+set(OLD_GLOB
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/ComponentDescriptors.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/EventEmitters.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/Props.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/RNSentrySpecJSI-generated.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/ShadowNodes.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/react/renderer/components/RNSentrySpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/quyen/French_nationality_questions/android/app/.cxx/Debug/2r504k1g/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at /home/quyen/French_nationality_questions/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/quyen/French_nationality_questions/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB
@@ -56,6 +81,31 @@ set(OLD_GLOB
   "/home/quyen/French_nationality_questions/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp"
   "/home/quyen/French_nationality_questions/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/States.cpp"
   "/home/quyen/French_nationality_questions/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/rngesturehandler_codegenJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/quyen/French_nationality_questions/android/app/.cxx/Debug/2r504k1g/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/NitroModulesSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/quyen/French_nationality_questions/android/app/.cxx/Debug/2r504k1g/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/*.cpp")
+set(OLD_GLOB
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/ComponentDescriptors.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/EventEmitters.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/NitroModulesSpecJSI-generated.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/Props.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/ShadowNodes.cpp"
+  "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/react/renderer/components/NitroModulesSpec/States.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

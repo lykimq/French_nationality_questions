@@ -1,7 +1,9 @@
 {
   "buildFiles": [
     "/home/quyen/French_nationality_questions/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/home/quyen/French_nationality_questions/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/home/quyen/French_nationality_questions/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/home/quyen/French_nationality_questions/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/home/quyen/French_nationality_questions/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
     "/home/quyen/French_nationality_questions/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
     "/home/quyen/French_nationality_questions/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
@@ -33,6 +35,16 @@
         "/home/quyen/.gradle/caches/8.14.3/transforms/3f070ff3b5e25a97fad1b7cc961e77af/transformed/react-android-0.81.5-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
         "/home/quyen/.gradle/caches/8.14.3/transforms/3f070ff3b5e25a97fad1b7cc961e77af/transformed/react-android-0.81.5-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
       ]
+    },
+    "react_codegen_NitroModulesSpec::@472a82f9c57d3d3b8644": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_NitroModulesSpec"
+    },
+    "react_codegen_RNSentrySpec::@b85314237d91cb2ada57": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNSentrySpec"
     },
     "react_codegen_rnasyncstorage::@1596841e19ec5b9eeffe": {
       "toolchain": "toolchain",

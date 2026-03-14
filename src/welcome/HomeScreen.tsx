@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, StatusBar, Switch } from 'react-native';
+import { StyleSheet, View, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from './CategoryCard';
 import { useNavigation } from '@react-navigation/native';
@@ -8,17 +8,13 @@ import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { FormattedText, InfoBanner } from '../shared/components';
-import { usePremiumAccess } from '../shared/contexts/PremiumAccessContext';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
-
-const FREE_CATEGORY_IDS = new Set(['administration_locale', 'arts_culture_sports']);
 
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
     const { theme, themeMode } = useTheme();
     const { questionsData } = useData();
-    const { isPremium, openPaywall } = usePremiumAccess();
 
     const categories = React.useMemo(() => {
         const cats = questionsData?.categories || [];
@@ -67,20 +63,16 @@ const HomeScreen = () => {
                             collapsible={true}
                             storageKey="home_info"
                         />
-                        {categories.map((category: FrenchCategory) => {
-                            const isUnlocked = isPremium || FREE_CATEGORY_IDS.has(category.id);
-                            return (
-                                <CategoryCard
-                                    key={category.id}
-                                    title={category.title}
-                                    description={category.description}
-                                    icon={category.icon}
-                                    count={category.questions?.length || 0}
-                                    disabled={!isUnlocked}
-                                    onPress={isUnlocked ? () => navigateToCategory(category.id) : openPaywall}
-                                />
-                            );
-                        })}
+                        {categories.map((category: FrenchCategory) => (
+                            <CategoryCard
+                                key={category.id}
+                                title={category.title}
+                                description={category.description}
+                                icon={category.icon}
+                                count={category.questions?.length || 0}
+                                onPress={() => navigateToCategory(category.id)}
+                            />
+                        ))}
 
                     </>
                 ) : (

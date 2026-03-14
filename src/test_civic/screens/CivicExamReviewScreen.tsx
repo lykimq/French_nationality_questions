@@ -18,7 +18,6 @@ import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { serializeCivicExamResult } from '../utils/civicExamSerialization';
 import type { CivicExamStackParamList } from '../types';
-import { usePremiumAccess } from '../../shared/contexts/PremiumAccessContext';
 
 const logger = createLogger('CivicExamReview');
 
