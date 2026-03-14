@@ -12,7 +12,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText, InfoBanner } from '../../shared/components';
+import { FormattedText } from '../../shared/components';
 import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
 import type { FormationCategory } from '../types';
@@ -102,14 +102,6 @@ const CategorySelectionScreen: React.FC = () => {
                     contentContainerStyle={styles.scrollContent}
                     showsVerticalScrollIndicator={true}
                 >
-                    <InfoBanner
-                        type="info"
-                        title="À propos des cartes flash"
-                        message="Les cartes flash sont un outil d'apprentissage actif qui vous permet de réviser les questions de manière interactive. Retournez les cartes pour révéler les réponses et testez votre mémoire. Cette méthode est efficace pour mémoriser les informations clés de l'entretien de naturalisation."
-                        icon="school"
-                        collapsible={true}
-                        storageKey="flashcard_info"
-                    />
                     {categories.map((category) => {
                         const iconKey = CATEGORY_ICON_KEYS[category.id] || 'book';
                         const questionCount = category.questions?.length || 0;

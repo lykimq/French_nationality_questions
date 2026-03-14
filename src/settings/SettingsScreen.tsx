@@ -14,6 +14,7 @@ import { sharedStyles } from '../shared/utils';
 import TextFormattingSettings from './components/TextFormattingSettings';
 import ThemeSettings from './components/ThemeSettings';
 import AppInfoSettings from './components/AppInfoSettings';
+import AboutAppSettings from './components/AboutAppSettings';
 import CivicExamSettings from './components/CivicExamSettings';
 import RatingModal from './components/RatingModal';
 import CollapsibleSection from './components/CollapsibleSection';
@@ -67,6 +68,15 @@ const SettingsScreen = () => {
 
                 {/* Civic Exam Statistics Section */}
                 <CivicExamSettings />
+
+                {/* About the App Section */}
+                <CollapsibleSection
+                    title="À propos de l'application"
+                    icon="help-circle"
+                    iconColor={theme.colors.primary}
+                >
+                    <AboutAppSettings />
+                </CollapsibleSection>
 
                 {/* App Info Section */}
                 <CollapsibleSection
