@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import SettingsScreen from '../settings/SettingsScreen';

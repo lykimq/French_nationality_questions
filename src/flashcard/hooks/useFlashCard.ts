@@ -1,4 +1,4 @@
-import { useReducer, useCallback, useMemo, useRef } from 'react';
+import { useReducer, useCallback, useMemo } from 'react';
 import type { FormationQuestion, FlashCardState } from '../types';
 
 interface UseFlashCardProps {

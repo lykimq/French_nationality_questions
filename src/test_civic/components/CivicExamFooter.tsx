@@ -41,7 +41,7 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
                 disabled={isNextDisabled}
                 activeOpacity={0.8}
             >
-                <FormattedText style={[styles.submitButtonText, { color: '#FFFFFF' }]}>
+                <FormattedText style={[styles.submitButtonText, { color: theme.colors.buttonText }]}>
                     {currentQuestionIndex < totalQuestions - 1
                         ? 'Question suivante'
                         : 'Voir les résultats'

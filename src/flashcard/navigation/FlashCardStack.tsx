@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { CategorySelectionScreen, FlashCardScreen } from '../screens';
 import { useTheme } from '../../shared/contexts/ThemeContext';

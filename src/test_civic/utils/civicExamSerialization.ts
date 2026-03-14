@@ -13,7 +13,7 @@ export interface SerializableCivicExamResult {
         readonly score: number;
         readonly totalQuestions: number;
         readonly correctAnswers: number;
-        readonly themes?: readonly string[];
+        readonly topics?: readonly CivicExamTopic[];
         readonly isPracticeMode: boolean;
     };
     readonly statistics: CivicExamStatistics;

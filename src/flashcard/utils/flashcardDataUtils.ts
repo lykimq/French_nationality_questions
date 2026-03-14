@@ -11,7 +11,7 @@ export const loadFlashCardData = async (): Promise<{ [key: string]: FormationCat
             logger.error('Failed to load formation data');
             return null;
         }
-        return formationData;
+        return formationData as unknown as { [key: string]: FormationCategory };
     } catch (error) {
         logger.error('Error loading flashcard data:', error);
         return null;

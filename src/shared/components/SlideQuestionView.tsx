@@ -7,11 +7,8 @@ import QuestionCard from './QuestionCard';
 import FormattedText from './FormattedText';
 import Icon3D from './Icon3D';
 import QuestionListModal, { type QuestionListItem } from './QuestionListModal';
-import { createLogger } from '../utils/logger';
 import { sharedStyles } from '../utils';
 import type { Question } from '../../welcome/types';
-
-const logger = createLogger('SlideQuestionView');
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
@@ -21,7 +18,7 @@ export interface SlideQuestionViewProps {
     currentIndex: number;
     totalCount: number;
     title?: string;
-    questions?: Question[];
+    questions?: readonly Question[];
     onNext: () => void;
     onPrevious: () => void;
     onGoToIndex?: (index: number) => void;

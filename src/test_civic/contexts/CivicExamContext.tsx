@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
 import { createLogger } from '../../shared/utils/logger';
-import { useData } from '../../shared/contexts/DataContext';
 import { processAllQuestions } from '../../shared/utils/questionUtils';
 import { loadCivicExamQuestions } from '../utils/civicExamDataLoader';
 import { CivicExamSessionProvider, useCivicExamSession } from './CivicExamSessionContext';

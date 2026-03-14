@@ -1,9 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createLogger } from '../../shared/utils/logger';
 import { safeParseDate, applyMemoryLimits } from '../../shared/utils/questionUtils';
-import type { CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
+import type { CategoryPerformance, CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
 import {
-    DEFAULT_TOPIC_PERFORMANCE,
     createDefaultCivicExamProgress,
     createDefaultCivicExamStatistics,
 } from './civicExamDefaults';
@@ -136,7 +135,7 @@ export const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> =>
             return typeof id === 'number' && isFinite(id) && id > 0;
         };
 
-        const categoryPerformance: Record<string, any> = {};
+        const categoryPerformance: Record<string, CategoryPerformance> = {};
         if (typeof stats.categoryPerformance === 'object' && stats.categoryPerformance !== null) {
             const catPerf = stats.categoryPerformance as Record<string, unknown>;
             Object.keys(catPerf).forEach(categoryId => {
@@ -146,7 +145,7 @@ export const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> =>
                     categoryPerformance[categoryId] = {
                         ...perf,
                         lastAttempted: perf.lastAttempted ? safeParseDate(perf.lastAttempted) : undefined,
-                    };
+                    } as CategoryPerformance;
                 }
             });
         }

@@ -148,11 +148,14 @@ export const CivicExamProgressProvider: React.FC<{ children: ReactNode }> = ({ c
         }
 
         return allQuestions
-            .filter(q => examProgress.incorrectQuestions.includes(q.id))
+            .filter(q => {
+                const numericId = typeof q.id === 'number' ? q.id : parseInt(String(q.id), 10);
+                return !isNaN(numericId) && examProgress.incorrectQuestions.includes(numericId);
+            })
             .map(q => ({
                 ...q,
-                theme: 'principles_values' as const,
-                subTheme: 'devise_symboles' as const,
+                topic: 'principles_values' as const,
+                subTopic: 'devise_symboles' as const,
                 questionType: 'knowledge' as const,
             })) as CivicExamQuestion[];
     }, [examProgress.incorrectQuestions]);

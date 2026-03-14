@@ -20,7 +20,7 @@ export const CivicExamQuestionCard: React.FC<CivicExamQuestionCardProps> = ({
         <View style={[styles.questionCard, { backgroundColor: theme.colors.card }]}>
             <View style={styles.questionHeader}>
                 <View style={[styles.questionNumberBadge, { backgroundColor: theme.colors.primary }]}>
-                    <FormattedText style={[styles.questionNumber, { color: '#FFFFFF' }]}>
+                    <FormattedText style={[styles.questionNumber, { color: theme.colors.buttonText }]}>
                         {currentQuestionIndex + 1}
                     </FormattedText>
                 </View>

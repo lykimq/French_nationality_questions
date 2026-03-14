@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
+import { StyleProp, TextStyle, TextProps, ImageSourcePropType } from 'react-native';
 import type { Question } from '../welcome/types';
 import type { FrenchQuestionsData } from './questionsData';
 
@@ -43,11 +43,9 @@ export type ExtendedSettingsComponent<T = string, P extends Record<string, any> 
 
 // ==================== TEXT & FORMATTING ====================
 
-// Formatted text component props
-export interface FormattedTextProps {
+// Formatted text component props - extends TextProps for full type safety
+export interface FormattedTextProps extends TextProps {
     readonly children: React.ReactNode;
-    readonly style?: StyleProp<TextStyle>;
-    readonly [key: string]: any; // Allow other Text props to be passed through
 }
 
 // Text formatting settings

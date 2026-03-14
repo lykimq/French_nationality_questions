@@ -100,10 +100,9 @@ export const useSearch = () => {
         const suggestions: SearchSuggestion[] = [];
         const normalizedQuery = normalizeForSearch(query);
         const queryTokens = tokenize(normalizedQuery);
-        const firstToken = queryTokens[0] || normalizedQuery;
 
         // Score function for better relevance ranking
-        const scoreMatch = (text: string, query: string): number => {
+        const scoreMatch = (text: string): number => {
             const normalizedText = normalizeForSearch(text);
             // Exact prefix match - highest score
             if (normalizedText.startsWith(normalizedQuery)) {
@@ -136,7 +135,7 @@ export const useSearch = () => {
         const categorySuggestions: Array<{ text: string; type: 'category'; count: number; score: number }> = [];
         for (const cat of availableCategories) {
             if (!cat.title) continue;
-            const score = scoreMatch(cat.title, query);
+            const score = scoreMatch(cat.title);
             if (score > 0) {
                 categorySuggestions.push({
                     text: cat.title || cat.id || '',
@@ -170,7 +169,7 @@ export const useSearch = () => {
                 if (word.length < 2) continue; // Skip very short words
                 checkedCount++;
                 
-                const score = scoreMatch(word, normalizedQuery);
+                const score = scoreMatch(word);
                 if (score > 0) {
                     const existing = keywordMap.get(word);
                     if (existing) {

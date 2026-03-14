@@ -53,7 +53,6 @@ const CivicExamQuestionScreen = () => {
         cancelExam();
     }, [cancelExam]);
 
-    const isExamMode = currentSession?.mode === 'civic_exam_naturalization';
     const isPracticeMode = currentSession?.isPracticeMode || false;
 
     const handleTimeUp = useCallback(() => {
@@ -76,16 +75,6 @@ const CivicExamQuestionScreen = () => {
         correctAnswer?: number;
     }) | null;
 
-    useEffect(() => {
-        if (currentQuestion && currentSession) {
-            const options = currentQuestion.options || [];
-            const hasOptions = 'options' in currentQuestion &&
-                Array.isArray(currentQuestion.options) &&
-                currentQuestion.options.length > 0;
-
-        }
-    }, [currentQuestion, currentQuestionIndex, currentSession, isPracticeMode]);
-
     // Reset selected answer when question changes
     useEffect(() => {
         if (!currentQuestion || previousQuestionIndexRef.current === currentQuestionIndex) return;
@@ -107,7 +96,7 @@ const CivicExamQuestionScreen = () => {
     // Prevent back navigation without confirmation
     useFocusEffect(
         useCallback(() => {
-            const onBackPress = (e: { preventDefault: () => void; data: { action: any } }) => {
+            const onBackPress = (e: { preventDefault: () => void; data: { action: { type: string; payload?: { name?: string } } } }) => {
                 // Skip if we're already programmatically navigating away
                 if (isNavigatingAwayRef.current) {
                     return;

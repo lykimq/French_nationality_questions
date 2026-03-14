@@ -22,7 +22,7 @@ import {
     parseUserAnswerIndex,
     type CivicExamQuestionWithOptions,
 } from '../utils/civicExamQuestionUtils';
-import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
+import type { CivicExamStackParamList } from '../types';
 
 type CivicExamResultScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 type RouteParams = {
@@ -65,23 +65,23 @@ const CivicExamResultScreen = () => {
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
                 >
-                    <View style={[styles.resultCard, { backgroundColor: passed ? '#4CAF50' : theme.colors.error }]}>
+                    <View style={[styles.resultCard, { backgroundColor: passed ? theme.colors.success : theme.colors.error }]}>
                         <Icon3D
                             name={passed ? 'checkmark-circle' : 'close-circle'}
                             size={52}
-                            color="#FFFFFF"
+                            color={theme.colors.buttonText}
                             variant="neon"
                         />
-                        <FormattedText style={styles.resultTitle}>
+                        <FormattedText style={[styles.resultTitle, { color: theme.colors.buttonText }]}>
                             {passed ? 'Examen réussi !' : 'Examen échoué'}
                         </FormattedText>
-                        <FormattedText style={styles.resultScore}>
+                        <FormattedText style={[styles.resultScore, { color: theme.colors.buttonText }]}>
                             {score}%
                         </FormattedText>
-                        <FormattedText style={styles.resultDetails}>
+                        <FormattedText style={[styles.resultDetails, { color: theme.colors.buttonText }]}>
                             {correctAnswers} / {totalQuestions} bonnes réponses
                         </FormattedText>
-                        <FormattedText style={styles.resultThreshold}>
+                        <FormattedText style={[styles.resultThreshold, { color: theme.colors.buttonText }]}>
                             {(() => {
                                 const passingScore = Math.ceil((totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
                                 if (totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
@@ -125,9 +125,9 @@ const CivicExamResultScreen = () => {
                                             </View>
                                             
                                             <View style={styles.answerRow}>
-                                                <View style={[styles.answerLabel, { backgroundColor: '#4CAF50' + '20' }]}>
-                                                    <Icon3D name="checkmark-circle" size={14} color="#4CAF50" variant="default" />
-                                                    <FormattedText style={[styles.answerLabelText, { color: '#4CAF50' }]}>
+                                                <View style={[styles.answerLabel, { backgroundColor: theme.colors.success + '20' }]}>
+                                                    <Icon3D name="checkmark-circle" size={14} color={theme.colors.success} variant="default" />
+                                                    <FormattedText style={[styles.answerLabelText, { color: theme.colors.success }]}>
                                                         Bonne réponse:
                                                     </FormattedText>
                                                 </View>
@@ -149,7 +149,7 @@ const CivicExamResultScreen = () => {
                         onPress={() => navigation.navigate('CivicExamHome')}
                         activeOpacity={0.8}
                     >
-                        <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
+                        <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
                             Retour à l'accueil
                         </FormattedText>
                     </TouchableOpacity>
@@ -188,24 +188,20 @@ const styles = StyleSheet.create({
     resultTitle: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#FFFFFF',
         marginTop: 16,
         marginBottom: 8,
     },
     resultScore: {
         fontSize: 48,
         fontWeight: 'bold',
-        color: '#FFFFFF',
         marginBottom: 8,
     },
     resultDetails: {
         fontSize: 18,
-        color: '#FFFFFF',
         marginBottom: 8,
     },
     resultThreshold: {
         fontSize: 14,
-        color: '#FFFFFF',
         opacity: 0.9,
     },
     incorrectCard: {

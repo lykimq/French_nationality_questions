@@ -119,7 +119,7 @@ const CivicExamHomeScreen = () => {
                             </FormattedText>
                         </View>
                         <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
-                            <FormattedText style={[styles.statValue, { color: examProgress.bestScore >= 80 ? '#4CAF50' : theme.colors.primary }]}>
+                            <FormattedText style={[styles.statValue, { color: examProgress.bestScore >= 80 ? theme.colors.success : theme.colors.primary }]}>
                                 {examProgress.bestScore}%
                             </FormattedText>
                             <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
@@ -127,7 +127,7 @@ const CivicExamHomeScreen = () => {
                             </FormattedText>
                         </View>
                         <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
-                            <FormattedText style={[styles.statValue, { color: examProgress.passedExams > 0 ? '#4CAF50' : theme.colors.primary }]}>
+                            <FormattedText style={[styles.statValue, { color: examProgress.passedExams > 0 ? theme.colors.success : theme.colors.primary }]}>
                                 {examProgress.passedExams}
                             </FormattedText>
                             <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
@@ -138,17 +138,17 @@ const CivicExamHomeScreen = () => {
 
                     {pausedSession && (
                         <TouchableOpacity
-                            style={[styles.resumeButton, { backgroundColor: theme.colors.warning || '#FF9800', borderColor: theme.colors.border }]}
+                            style={[styles.resumeButton, { backgroundColor: theme.colors.warning, borderColor: theme.colors.border }]}
                             onPress={handleResumePractice}
                             activeOpacity={0.8}
                         >
                             <Icon3D
                                 name="play"
                                 size={20}
-                                color="#FFFFFF"
+                                color={theme.colors.buttonText}
                                 variant="gradient"
                             />
-                            <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
+                            <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
                                 Reprendre la pratique
                             </FormattedText>
                         </TouchableOpacity>
@@ -165,10 +165,10 @@ const CivicExamHomeScreen = () => {
                         <Icon3D
                             name="document-text"
                             size={20}
-                            color="#FFFFFF"
+                            color={theme.colors.buttonText}
                             variant="gradient"
                         />
-                        <FormattedText style={[styles.buttonText, { color: '#FFFFFF' }]}>
+                        <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
                             Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>

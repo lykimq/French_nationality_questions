@@ -36,12 +36,3 @@ const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
 
 export default AppProviders;
 
-// Start cache cleanup when providers mount and stop when the module is unloaded.
-startCacheCleanup();
-if (typeof module !== 'undefined') {
-    const hotModule = module as { hot?: { dispose: (cb: () => void) => void } };
-    hotModule.hot?.dispose(() => {
-        stopCacheCleanup();
-    });
-}
-

@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as StoreReview from 'expo-store-review';
-import { Linking, Platform, Alert } from 'react-native';
+import { Linking, Platform } from 'react-native';
 import { createLogger } from './logger';
 
 const logger = createLogger('RatingUtils');
@@ -66,16 +66,6 @@ export const hasUserRated = async (): Promise<boolean> => {
     } catch (error) {
         logger.error('Failed to check if user has rated:', error);
         return false;
-    }
-};
-
-export const getUserRating = async (): Promise<number | null> => {
-    try {
-        const rating = await AsyncStorage.getItem(STORAGE_KEYS.RATING_VALUE);
-        return rating ? parseInt(rating, 10) : null;
-    } catch (error) {
-        logger.error('Failed to get user rating:', error);
-        return null;
     }
 };
 

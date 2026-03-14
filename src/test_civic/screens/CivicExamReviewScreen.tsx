@@ -101,7 +101,7 @@ const CivicExamReviewScreen = () => {
                         onPress={handleSubmit}
                         activeOpacity={0.8}
                     >
-                        <FormattedText style={[styles.submitButtonText, { color: '#FFFFFF' }]}>
+                        <FormattedText style={[styles.submitButtonText, { color: theme.colors.buttonText }]}>
                             Soumettre l'examen
                         </FormattedText>
                     </TouchableOpacity>

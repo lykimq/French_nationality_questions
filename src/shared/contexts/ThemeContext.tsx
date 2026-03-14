@@ -42,7 +42,7 @@ const logger = createLogger('ThemeContext');
 const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
     const [themeMode, setThemeModeState] = useState<ThemeMode>('light');
     const [colorTheme, setColorThemeState] = useState<ColorTheme>('classic');
-    const [isLoading, setIsLoading] = useState(true);
+    const [, setIsLoading] = useState(true);
 
     // Get icons from IconContext with better error handling
     let icons: IconMapping;

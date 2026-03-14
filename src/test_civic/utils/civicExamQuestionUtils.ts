@@ -184,29 +184,4 @@ export const isOptionCorrect = (
     return correctAnswerIndex !== undefined && correctAnswerIndex === optionIndex;
 };
 
-/**
- * Gets answer information for a question including user answer and correct answer
- * 
- * @param question - The question with options
- * @param userAnswerIndex - The user's selected answer index
- * @returns Object containing user answer text and correct answer text
- */
-export const getQuestionAnswerInfo = (
-    question: CivicExamQuestionWithOptions | null | undefined,
-    userAnswerIndex: number | null | undefined,
-): {
-    userAnswerText: string;
-    correctAnswerText: string;
-    isCorrect: boolean;
-} => {
-    const userAnswerText = getUserAnswerText(question, userAnswerIndex);
-    const correctAnswerText = getCorrectAnswerText(question);
-    const isCorrect = isAnswerCorrect(question, userAnswerIndex);
-
-    return {
-        userAnswerText,
-        correctAnswerText,
-        isCorrect,
-    };
-};
 

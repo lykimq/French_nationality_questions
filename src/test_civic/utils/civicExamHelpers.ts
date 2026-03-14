@@ -1,8 +1,7 @@
 import type { CivicExamSession, CivicExamProgress, CivicExamStatistics, CivicExamQuestion } from '../types';
-import type { TestAnswer } from '../types';
 import { DEFAULT_TOPIC_PERFORMANCE } from './civicExamDefaults';
 
-export const updateTopicPerformance = (
+const updateTopicPerformance = (
     session: CivicExamSession,
     currentTopicPerformance: CivicExamProgress['topicPerformance']
 ): CivicExamProgress['topicPerformance'] => {

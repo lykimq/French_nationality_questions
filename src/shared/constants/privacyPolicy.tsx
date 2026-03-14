@@ -4,7 +4,7 @@ import { FormattedText } from '../components';
 import type { Theme } from '../../types';
 
 interface PrivacyPolicyProps {
-    theme: Theme & { icons: any };
+    theme: Theme;
 }
 
 export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ theme }) => {

@@ -9,9 +9,6 @@ import { useIcons } from '../contexts/IconContext';
 import { QuestionCardProps } from '../../types';
 import { sharedStyles } from '../utils';
 import { useFirebaseImage } from '../hooks/useFirebaseImage';
-import { createLogger } from '../utils/logger';
-
-const logger = createLogger('QuestionCard');
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,

@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { FormattedText, Icon3D } from '../../shared/components';
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcon3D } from '../../shared/hooks';
 
 interface OptionButtonProps {
     index: number;
@@ -22,37 +21,33 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
     onPress
 }) => {
     const { theme } = useTheme();
-    const { getIcon } = useIcon3D();
-
-    const checkmarkIcon = getIcon('checkmarkCircle');
-
     const isWrong = showResult && isSelected && !isCorrect;
     const highlightCorrect = showResult && isCorrect;
 
     const getBackgroundColor = () => {
         if (isSelected) {
-            if (highlightCorrect) return '#4CAF50' + '20';
-            if (isWrong) return '#F44336' + '20';
+            if (highlightCorrect) return theme.colors.success + '20';
+            if (isWrong) return theme.colors.error + '20';
             return theme.colors.primary + '20';
         }
-        if (highlightCorrect) return '#4CAF50' + '20';
+        if (highlightCorrect) return theme.colors.success + '20';
         return theme.colors.surface;
     };
 
     const getBorderColor = () => {
         if (isSelected) {
-            if (highlightCorrect) return '#4CAF50';
-            if (isWrong) return '#F44336';
+            if (highlightCorrect) return theme.colors.success;
+            if (isWrong) return theme.colors.error;
             return theme.colors.primary;
         }
-        if (highlightCorrect) return '#4CAF50';
+        if (highlightCorrect) return theme.colors.success;
         return theme.colors.border;
     };
 
     const getRadioColor = () => {
         if (isSelected || highlightCorrect) {
-            if (highlightCorrect) return '#4CAF50';
-            if (isWrong) return '#F44336';
+            if (highlightCorrect) return theme.colors.success;
+            if (isWrong) return theme.colors.error;
             return theme.colors.primary;
         }
         return theme.colors.border;
@@ -81,7 +76,7 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
                     }
                 ]}>
                     {(isSelected || highlightCorrect) && (
-                        <View style={[styles.optionRadioInner, { backgroundColor: '#FFFFFF' }]} />
+                        <View style={[styles.optionRadioInner, { backgroundColor: theme.colors.buttonText }]} />
                     )}
                 </View>
                 <FormattedText style={[styles.optionText, { color: theme.colors.text }]}>
@@ -91,7 +86,7 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
                     <Icon3D
                         name="checkmark-circle"
                         size={20}
-                        color="#4CAF50"
+                        color={theme.colors.success}
                         variant="elevated"
                     />
                 )}
@@ -99,7 +94,7 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
                     <Icon3D
                         name="close-circle"
                         size={20}
-                        color="#F44336"
+                        color={theme.colors.error}
                         variant="elevated"
                     />
                 )}

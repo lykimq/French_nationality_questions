@@ -68,7 +68,7 @@ const AboutAppSettings: React.FC = () => {
 
             <AboutItem
                 icon="school"
-                iconColor={theme.colors.warning || '#FF9800'}
+                iconColor={theme.colors.warning}
                 title="Cartes flash"
                 description="Outil d'apprentissage actif pour réviser les questions de manière interactive. Retournez les cartes pour tester votre mémoire."
             />

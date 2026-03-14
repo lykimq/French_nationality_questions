@@ -209,17 +209,4 @@ export const enrichQuestionsWithMetadata = (
     return validQuestions;
 };
 
-// ==================== VALIDATION ====================
-
-export const hasTopicMetadata = (question: TestQuestion): boolean => {
-    return 'topic' in question && question.topic !== undefined;
-};
-
-export const hasSubTopicMetadata = (question: TestQuestion): boolean => {
-    return 'subTopic' in question && question.subTopic !== undefined;
-};
-
-export const hasQuestionTypeMetadata = (question: TestQuestion): boolean => {
-    return 'questionType' in question && question.questionType !== undefined;
-};
 

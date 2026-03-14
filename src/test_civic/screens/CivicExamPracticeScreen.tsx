@@ -124,7 +124,7 @@ const CivicExamPracticeScreen = () => {
                             style={[styles.actionButton, { backgroundColor: theme.colors.primary }]}
                             onPress={selectAll}
                         >
-                            <FormattedText style={[styles.actionButtonText, { color: '#FFFFFF' }]}>
+                            <FormattedText style={[styles.actionButtonText, { color: theme.colors.buttonText }]}>
                                 Tout sélectionner
                             </FormattedText>
                         </TouchableOpacity>
@@ -184,7 +184,7 @@ const CivicExamPracticeScreen = () => {
                         disabled={selectedTopics.length === 0 || isStarting}
                         activeOpacity={0.8}
                     >
-                        <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
+                        <FormattedText style={[styles.startButtonText, { color: theme.colors.buttonText }]}>
                             {isStarting ? 'Démarrage...' : 'Commencer la pratique'}
                         </FormattedText>
                     </TouchableOpacity>

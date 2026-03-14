@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     StyleSheet,
     View,
@@ -155,7 +154,7 @@ const CivicExamInfoScreen = () => {
                         onPress={handleStartExam}
                         activeOpacity={0.8}
                     >
-                        <FormattedText style={[styles.startButtonText, { color: '#FFFFFF' }]}>
+                        <FormattedText style={[styles.startButtonText, { color: theme.colors.buttonText }]}>
                             Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>

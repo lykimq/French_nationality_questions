@@ -4,6 +4,7 @@ import {
     StyleSheet,
     TouchableOpacity,
     PanResponder,
+    type GestureResponderEvent,
     type PanResponderGestureState,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -53,10 +54,10 @@ const SliderSetting: React.FC<ExtendedSettingsComponent<number, SliderSettingAdd
         return Math.max(minimumValue, Math.min(maximumValue, steppedValue));
     };
 
-    const handlePositionChange = (_event: any, gestureState: PanResponderGestureState) => {
+    const handlePositionChange = (_event: GestureResponderEvent, gestureState: PanResponderGestureState) => {
         if (trackRef.current) {
-            trackRef.current.measure((x, y, width, height, pageX, pageY) => {
-                const touchX = gestureState.moveX - x;
+            trackRef.current.measure((_x, _y, width, _height, pageX, _pageY) => {
+                const touchX = gestureState.moveX - pageX;
                 const newValue = calculateValueFromPosition(touchX, width);
                 onValueChange(newValue);
             });

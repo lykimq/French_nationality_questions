@@ -81,16 +81,13 @@ export const CivicExamSessionProvider: React.FC<{
         }
 
         // Clear the paused flag and restore the session
+        const actualQuestionCount = pausedSession.questions.length;
         const resumedSession: CivicExamSession = {
             ...pausedSession,
             isPaused: false,
             pausedAt: undefined,
+            totalQuestions: actualQuestionCount,
         };
-
-        const actualQuestionCount = resumedSession.questions.length;
-        if (resumedSession.totalQuestions !== actualQuestionCount) {
-            resumedSession.totalQuestions = actualQuestionCount;
-        }
 
         setCurrentSession(resumedSession);
         const maxIndex = Math.max(0, actualQuestionCount - 1);

@@ -158,16 +158,6 @@ export const loadJsonCollection = async (
     return dataMap;
 };
 
-export const invalidateDataCache = (dataPath?: string) => {
-    if (dataPath) {
-        dataCache.delete(dataPath);
-        failedDataCache.delete(dataPath);
-    } else {
-        dataCache.clear();
-        failedDataCache.clear();
-    }
-};
-
 const fetchFirebaseImage = async (imagePath: string): Promise<string | null> => {
     if (!storage) return null;
     const imageRef = ref(storage, `French_questions/pics/${imagePath}`);
@@ -262,21 +252,6 @@ export const getCachedImage = (imagePath: string): ImageSourcePropType | null =>
     if (localImage) return localImage;
     const filename = imagePath.replace(/^.*[\\/]/, '');
     return imageCache.get(filename)?.value ?? null;
-};
-
-export const getCacheStats = () => {
-    return {
-        dataCache: {
-            size: dataCache.size,
-            maxSize: dataCache.maxSizeLimit,
-            usagePercent: Math.round((dataCache.size / dataCache.maxSizeLimit) * 100)
-        },
-        imageCache: {
-            size: imageCache.size,
-            maxSize: imageCache.maxSizeLimit,
-            usagePercent: Math.round((imageCache.size / imageCache.maxSizeLimit) * 100)
-        }
-    };
 };
 
 const cleanupStaleEntries = () => {

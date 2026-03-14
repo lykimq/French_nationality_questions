@@ -4,7 +4,7 @@ import { FormattedText } from '../components';
 import type { Theme } from '../../types';
 
 interface TermsOfServiceProps {
-    theme: Theme & { icons: any };
+    theme: Theme;
 }
 
 export const TermsOfService: React.FC<TermsOfServiceProps> = ({ theme }) => {

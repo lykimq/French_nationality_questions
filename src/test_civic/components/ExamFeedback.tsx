@@ -17,26 +17,26 @@ export const ExamFeedback: React.FC<ExamFeedbackProps> = ({
     return (
         <View style={[styles.feedbackContainer, { backgroundColor: theme.colors.card }]}>
             {isCorrect ? (
-                <View style={[styles.feedbackMessage, { backgroundColor: '#4CAF50' + '20', borderColor: '#4CAF50' }]}>
+                <View style={[styles.feedbackMessage, { backgroundColor: theme.colors.success + '20', borderColor: theme.colors.success }]}>
                     <Icon3D
                         name="checkmark-circle"
                         size={28}
-                        color="#4CAF50"
+                        color={theme.colors.success}
                         variant="elevated"
                     />
-                    <FormattedText style={[styles.feedbackText, { color: '#4CAF50' }]}>
+                    <FormattedText style={[styles.feedbackText, { color: theme.colors.success }]}>
                         Bonne réponse !
                     </FormattedText>
                 </View>
             ) : (
-                <View style={[styles.feedbackMessage, { backgroundColor: '#F44336' + '20', borderColor: '#F44336' }]}>
+                <View style={[styles.feedbackMessage, { backgroundColor: theme.colors.error + '20', borderColor: theme.colors.error }]}>
                     <Icon3D
                         name="close-circle"
                         size={28}
-                        color="#F44336"
+                        color={theme.colors.error}
                         variant="elevated"
                     />
-                    <FormattedText style={[styles.feedbackText, { color: '#F44336' }]}>
+                    <FormattedText style={[styles.feedbackText, { color: theme.colors.error }]}>
                         Mauvaise réponse
                     </FormattedText>
                 </View>

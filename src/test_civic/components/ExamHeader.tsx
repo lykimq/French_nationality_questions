@@ -64,10 +64,10 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
                     <Icon3D
                         name={timeIcon.name}
                         size={14}
-                        color="#FFFFFF"
+                        color={theme.colors.buttonText}
                         variant={timeIcon.variant}
                     />
-                    <FormattedText style={styles.timerText}>{formattedTime}</FormattedText>
+                    <FormattedText style={[styles.timerText, { color: theme.colors.buttonText }]}>{formattedTime}</FormattedText>
                 </View>
             </View>
             <View style={[styles.progressContainer, { backgroundColor: theme.colors.border }]}>
@@ -114,7 +114,6 @@ const styles = StyleSheet.create({
         gap: 6,
     },
     timerText: {
-        color: '#FFFFFF',
         fontSize: 14,
         fontWeight: 'bold',
     },

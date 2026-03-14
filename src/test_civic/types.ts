@@ -1,4 +1,5 @@
 import type { TestQuestion } from '../types';
+export type { TestQuestion };
 import type { TimestampedEntity } from '../types/core';
 
 // ==================== BASE TEST TYPES (used by civic exam) ====================
