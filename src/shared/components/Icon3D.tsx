@@ -201,10 +201,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    defaultContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     gradientContainer: {
         justifyContent: 'center',
         alignItems: 'center',

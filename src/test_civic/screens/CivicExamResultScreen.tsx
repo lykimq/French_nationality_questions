@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import {
     StyleSheet,
     View,
@@ -158,9 +158,7 @@ const CivicExamResultScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     header: {
         paddingHorizontal: 20,
         paddingVertical: 16,
@@ -246,11 +244,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
         lineHeight: 22,
         paddingLeft: 4,
-    },
-    moreText: {
-        fontSize: 14,
-        fontStyle: 'italic',
-        marginTop: 8,
     },
     footer: {
         padding: 20,

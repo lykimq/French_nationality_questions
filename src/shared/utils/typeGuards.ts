@@ -4,7 +4,7 @@ import type { Question } from '../../welcome/types';
 /**
  * Type guard for RawCategory (optional fields).
  */
-export const isRawCategory = (category: unknown): category is RawCategory => {
+const isRawCategory = (category: unknown): category is RawCategory => {
     if (!category || typeof category !== 'object') return false;
     const cat = category as Record<string, unknown>;
     return (

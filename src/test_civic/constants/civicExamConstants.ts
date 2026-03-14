@@ -116,6 +116,14 @@ export const CIVIC_EXAM_CONFIG = {
     PASSING_SCORE: 32, // 80%
     PASSING_PERCENTAGE: 80,
 } as const;
+export const ALL_TOPICS: readonly CivicExamTopic[] = [
+    'principles_values',
+    'institutional_political',
+    'rights_duties',
+    'history_geography_culture',
+    'living_society',
+] as const;
+
 export const TOPIC_DISPLAY_NAMES: Record<CivicExamTopic, string> = {
     principles_values: 'Principes et valeurs de la République',
     institutional_political: 'Système institutionnel et politique',

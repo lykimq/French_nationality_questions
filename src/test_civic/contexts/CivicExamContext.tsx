@@ -66,14 +66,6 @@ const CivicExamContextInternal: React.FC<{
         return progressContext.getIncorrectQuestions(allProcessedQuestions);
     }, [progressContext, allProcessedQuestions]);
 
-    const resumeSession = useCallback(async (): Promise<void> => {
-        await sessionContext.resumeSession();
-    }, [sessionContext]);
-
-    const abandonPausedSession = useCallback(async (): Promise<void> => {
-        await sessionContext.abandonPausedSession();
-    }, [sessionContext]);
-
     const contextValue = useMemo((): CivicExamContextType => ({
         currentSession: sessionContext.currentSession,
         isExamActive: sessionContext.isExamActive,
@@ -82,8 +74,8 @@ const CivicExamContextInternal: React.FC<{
         examProgress: progressContext.examProgress,
         examStatistics: progressContext.examStatistics,
         startExam,
-        resumeSession,
-        abandonPausedSession,
+        resumeSession: sessionContext.resumeSession,
+        abandonPausedSession: sessionContext.abandonPausedSession,
         submitAnswer: sessionContext.submitAnswer,
         goToNextQuestion: sessionContext.goToNextQuestion,
         finishExam,
@@ -99,8 +91,6 @@ const CivicExamContextInternal: React.FC<{
         sessionContext,
         progressContext,
         startExam,
-        resumeSession,
-        abandonPausedSession,
         finishExam,
         getIncorrectQuestions,
     ]);
@@ -122,9 +112,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
         });
     }, []);
 
-    const allProcessedQuestions = useMemo(() => {
-        return civicQuestions as TestQuestion[];
-    }, [civicQuestions]);
+    const allProcessedQuestions = civicQuestions as TestQuestion[];
 
     return (
         <CivicExamProgressProvider>

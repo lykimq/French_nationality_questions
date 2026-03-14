@@ -29,7 +29,7 @@ const CATEGORY_ICON_KEYS: { [key: string]: string } = {
 
 const CategorySelectionScreen: React.FC = () => {
     const navigation = useNavigation<CategorySelectionScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const [categories, setCategories] = useState<FormationCategory[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);

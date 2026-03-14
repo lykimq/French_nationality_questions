@@ -139,8 +139,7 @@ export const processAllQuestions = (
             if (isRawQuestion(question)) {
                 rawQuestion = question;
             } else if (isQuestion(question)) {
-                // Convert Question/FrenchQuestion to RawQuestion format
-                const q = question as Question | FrenchQuestion;
+                const q = question;
                 rawQuestion = {
                     id: q.id,
                     question: q.question,
@@ -149,11 +148,6 @@ export const processAllQuestions = (
                 };
             } else {
                 logger.warn(`Invalid question in category ${categoryId}`);
-                return;
-            }
-
-            if (!rawQuestion) {
-                logger.warn(`Failed to process question in category ${categoryId}`);
                 return;
             }
 
@@ -173,24 +167,19 @@ export const processAllQuestions = (
 
     return questions;
 };
-// Helper function to safely parse dates
 export const safeParseDate = (dateValue: unknown): Date | undefined => {
     if (!dateValue) return undefined;
 
-    try {
-        if (dateValue instanceof Date) {
-            return isNaN(dateValue.getTime()) ? undefined : dateValue;
-        }
-
-        if (typeof dateValue === 'string') {
-            const parsed = new Date(dateValue);
-            return isNaN(parsed.getTime()) ? undefined : parsed;
-        }
-
-        return undefined;
-    } catch {
-        return undefined;
+    if (dateValue instanceof Date) {
+        return isNaN(dateValue.getTime()) ? undefined : dateValue;
     }
+
+    if (typeof dateValue === 'string') {
+        const parsed = new Date(dateValue);
+        return isNaN(parsed.getTime()) ? undefined : parsed;
+    }
+
+    return undefined;
 };
 /**
  * Limits array to last N items to prevent unbounded growth.

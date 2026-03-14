@@ -42,23 +42,14 @@ const isFresh = (entry?: CacheEntry<unknown>, ttlMs: number = DEFAULT_TTL_MS) =>
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-export interface LoadOptions {
+interface LoadOptions {
     ttlMs?: number;
     retryCount?: number;
     retryDelayMs?: number;
 }
 
-const getLocalJsonData = async (dataPath: string): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {
-    try {
-        const localData = LOCAL_DATA_MAP[dataPath];
-        if (localData) {
-            return localData;
-        }
-        return null;
-    } catch (error: unknown) {
-        logger.error(`Failed to load local JSON data: ${dataPath}`, error);
-        return null;
-    }
+const getLocalJsonData = (dataPath: string): FrenchQuestionsData | Record<string, unknown> | null => {
+    return LOCAL_DATA_MAP[dataPath] ?? null;
 };
 
 const fetchFirebaseJson = async (dataPath: string): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {

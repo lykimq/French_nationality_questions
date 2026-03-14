@@ -1,6 +1,6 @@
 import type { RawQuestion, RawCategory, RawDataStructure } from '../types';
 
-export interface ValidationResult {
+interface ValidationResult {
     isValid: boolean;
     errors: string[];
     summary: {
@@ -37,7 +37,7 @@ const validateQuestion = (
         errors.push(`Question ${question.id || index} missing explanation`);
     }
 
-    if (question.image && question.image !== null) {
+    if (question.image) {
         summary.questionsWithImages++;
     }
 };

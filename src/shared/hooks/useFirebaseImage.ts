@@ -45,7 +45,7 @@ export const useFirebaseImage = (imagePath: string | null | undefined): UseFireb
                 }
 
                 // Load from Firebase
-                const source = imagePath ? await loadImageResource(imagePath) : null;
+                const source = await loadImageResource(imagePath);
                 if (isMounted) {
                     if (source) {
                         setImageSource(source);

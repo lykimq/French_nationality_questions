@@ -11,6 +11,7 @@ import {
     getQuestionsBySubTopic,
     filterKnowledgeQuestions,
     filterQuestionsWithOptions,
+    hasValidOptions,
     getQuestionsByTopics,
     enrichQuestionsWithMetadata,
     getTopicFromQuestion,
@@ -120,9 +121,8 @@ const selectQuestionsForSubTopic = (
         
         candidates.forEach(q => {
             const questionType = getQuestionTypeFromQuestion(q);
-            const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
             
-            if (hasOptions) {
+            if (hasValidOptions(q)) {
                 if (questionType === 'situational') {
                     situationalCandidates.push(q);
                 } else if (questionType === 'knowledge') {
@@ -171,11 +171,9 @@ const selectQuestionsForTopic = (
     const localUsedIds = new Set<number>();
     const topicQuestions = getQuestionsByTopic(availableQuestions, topic);
     
-    // Select questions for each sub-topic
     (Object.entries(distribution.subTopics) as [CivicExamSubTopic, number][]).forEach(
         ([subTopic, count]) => {
             if (count > 0) {
-                // Combine local and global used IDs to prevent duplicates
                 const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
                 const subTopicQuestions = selectQuestionsForSubTopic(
                     subTopic,
@@ -184,7 +182,6 @@ const selectQuestionsForTopic = (
                     isPracticeMode,
                     combinedUsedIds
                 );
-                // Track locally used IDs
                 trackUsedQuestionIds(subTopicQuestions, localUsedIds, ...(globalUsedIds ? [globalUsedIds] : []));
                 selectedQuestions.push(...subTopicQuestions);
             }
@@ -194,7 +191,6 @@ const selectQuestionsForTopic = (
     // If we don't have enough questions from sub-topics, fill from topic
     if (selectedQuestions.length < distribution.total) {
         const remaining = distribution.total - selectedQuestions.length;
-        // Combine local and global used IDs
         const combinedUsedIds = new Set([...localUsedIds, ...(globalUsedIds || [])]);
         const available = filterUnusedQuestions(topicQuestions, combinedUsedIds);
         
@@ -204,12 +200,10 @@ const selectQuestionsForTopic = (
             : available;
         
         const additional = selectRandomQuestions(filtered, remaining);
-        // Track additional questions
         trackUsedQuestionIds(additional, localUsedIds, ...(globalUsedIds ? [globalUsedIds] : []));
         selectedQuestions.push(...additional);
     }
     
-    // Remove duplicates using unique map
     const uniqueMap = createUniqueQuestionMap(selectedQuestions);
     return Array.from(uniqueMap.values()).slice(0, distribution.total);
 };

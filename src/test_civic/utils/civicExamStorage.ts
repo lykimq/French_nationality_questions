@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createLogger } from '../../shared/utils/logger';
 import { safeParseDate, applyMemoryLimits } from '../../shared/utils/questionUtils';
+import { isValidId } from '../../shared/utils/idUtils';
 import type { CategoryPerformance, CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
 import {
     createDefaultCivicExamProgress,
@@ -14,16 +15,12 @@ const CIVIC_EXAM_STORAGE_KEYS = {
     CIVIC_EXAM_STATISTICS: 'civic_exam_statistics',
 } as const;
 
-// Memory limits
 const MEMORY_LIMITS = {
     MAX_INCORRECT_QUESTIONS: 100,
     MAX_RECENT_SCORES: 10,
 } as const;
 
-// Default civic exam progress
 export const DEFAULT_CIVIC_EXAM_PROGRESS: CivicExamProgress = createDefaultCivicExamProgress();
-
-// Default civic exam statistics
 export const DEFAULT_CIVIC_EXAM_STATISTICS: CivicExamStatistics = createDefaultCivicExamStatistics();
 
 const validateNumber = (value: unknown, defaultValue: number = 0): number => {
@@ -34,7 +31,6 @@ const validateArray = <T>(value: unknown, validator: (item: unknown) => item is 
     return Array.isArray(value) ? value.filter(validator) : [];
 };
 
-// Load civic exam progress from storage
 const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
     try {
         const progressData = await AsyncStorage.getItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS);
@@ -65,10 +61,6 @@ const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
             };
         };
 
-        const validateQuestionId = (id: unknown): id is number => {
-            return typeof id === 'number' && isFinite(id) && id > 0;
-        };
-
         const validateScore = (score: unknown): score is number => {
             return typeof score === 'number' && isFinite(score) && score >= 0 && score <= 100;
         };
@@ -83,7 +75,7 @@ const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
             questionsAnswered: validateNumber(progress.questionsAnswered, 0),
             correctAnswersTotal: validateNumber(progress.correctAnswersTotal, 0),
             incorrectQuestions: applyMemoryLimits(
-                validateArray(progress.incorrectQuestions, validateQuestionId),
+                validateArray(progress.incorrectQuestions, isValidId),
                 MEMORY_LIMITS.MAX_INCORRECT_QUESTIONS
             ),
             recentScores: applyMemoryLimits(
@@ -108,7 +100,6 @@ const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
     }
 };
 
-// Load civic exam statistics from storage
 const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
     try {
         const statisticsData = await AsyncStorage.getItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS);
@@ -130,10 +121,6 @@ const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
 
         const stats = parsedStatistics as Record<string, unknown>;
 
-        const validateQuestionId = (id: unknown): id is number => {
-            return typeof id === 'number' && isFinite(id) && id > 0;
-        };
-
         const categoryPerformance: Record<string, CategoryPerformance> = {};
         if (typeof stats.categoryPerformance === 'object' && stats.categoryPerformance !== null) {
             const catPerf = stats.categoryPerformance as Record<string, unknown>;
@@ -153,11 +140,11 @@ const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
             ...DEFAULT_CIVIC_EXAM_STATISTICS,
             categoryPerformance,
             masteredQuestions: applyMemoryLimits(
-                validateArray(stats.masteredQuestions, validateQuestionId),
+                validateArray(stats.masteredQuestions, isValidId),
                 500
             ),
             strugglingQuestions: applyMemoryLimits(
-                validateArray(stats.strugglingQuestions, validateQuestionId),
+                validateArray(stats.strugglingQuestions, isValidId),
                 200
             ),
             topicBreakdown: {
@@ -173,7 +160,6 @@ const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
     }
 };
 
-// Save civic exam data to storage
 export const saveCivicExamData = async (
     progress: CivicExamProgress,
     statistics: CivicExamStatistics
@@ -189,25 +175,17 @@ export const saveCivicExamData = async (
     }
 };
 
-// Load all civic exam data
 export const loadAllCivicExamData = async (): Promise<{
     progress: CivicExamProgress;
     statistics: CivicExamStatistics;
 }> => {
-    try {
-        const [progress, statistics] = await Promise.all([
-            loadCivicExamProgress(),
-            loadCivicExamStatistics()
-        ]);
-
-        return { progress, statistics };
-    } catch (error) {
-        logger.error('Error loading civic exam data:', error);
-        throw error;
-    }
+    const [progress, statistics] = await Promise.all([
+        loadCivicExamProgress(),
+        loadCivicExamStatistics()
+    ]);
+    return { progress, statistics };
 };
 
-// Reset all civic exam data to defaults
 export const resetCivicExamData = async (): Promise<void> => {
     try {
         await Promise.all([

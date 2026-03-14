@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import {
     StyleSheet,
     View,
@@ -110,9 +110,7 @@ const CivicExamReviewScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     header: {
         paddingHorizontal: 20,
         paddingVertical: 16,

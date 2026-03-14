@@ -117,7 +117,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
                                     onLoad={() => {
                                         handleImageLoad();
                                     }}
-                                    onError={(error) => {
+                                    onError={() => {
                                         handleImageError();
                                     }}
                                 />

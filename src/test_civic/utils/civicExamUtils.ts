@@ -13,7 +13,6 @@ const logger = createLogger('CivicExamUtils');
  * @returns The topic if present, null otherwise
  */
 export const getTopicFromQuestion = (question: TestQuestion): CivicExamTopic | null => {
-    // Civic exam questions should always have explicit topic metadata
     if ('topic' in question && question.topic) {
         return question.topic as CivicExamTopic;
     }
@@ -42,7 +41,6 @@ export const getTopicFromQuestion = (question: TestQuestion): CivicExamTopic | n
  * @returns The subTopic if present, null otherwise
  */
 export const getSubTopicFromQuestion = (question: TestQuestion): CivicExamSubTopic | null => {
-    // Check if question has explicit subTopic metadata
     if ('subTopic' in question && question.subTopic) {
         return question.subTopic as CivicExamSubTopic;
     }
@@ -52,7 +50,6 @@ export const getSubTopicFromQuestion = (question: TestQuestion): CivicExamSubTop
 };
 
 export const getQuestionTypeFromQuestion = (question: TestQuestion): QuestionType => {
-    // Check if question has explicit questionType metadata
     if ('questionType' in question && question.questionType) {
         const questionType = question.questionType;
         // Normalize for safety (source data should already be normalized to "situational")
@@ -95,20 +92,14 @@ export const getQuestionsBySubTopic = (
     return questions.filter(q => getSubTopicFromQuestion(q) === subTopic);
 };
 
-export const filterQuestionsWithOptions = (questions: TestQuestion[]): TestQuestion[] => {
-    return questions.filter(q => {
-        const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
-        return hasOptions;
-    });
-};
+export const hasValidOptions = (question: TestQuestion): boolean =>
+    'options' in question && Array.isArray(question.options) && question.options.length > 0;
 
-export const filterKnowledgeQuestions = (questions: TestQuestion[]): TestQuestion[] => {
-    return questions.filter(q => {
-        const questionType = getQuestionTypeFromQuestion(q);
-        const hasOptions = 'options' in q && Array.isArray(q.options) && q.options.length > 0;
-        return questionType === 'knowledge' && hasOptions;
-    });
-};
+export const filterQuestionsWithOptions = (questions: TestQuestion[]): TestQuestion[] =>
+    questions.filter(hasValidOptions);
+
+export const filterKnowledgeQuestions = (questions: TestQuestion[]): TestQuestion[] =>
+    questions.filter(q => getQuestionTypeFromQuestion(q) === 'knowledge' && hasValidOptions(q));
 
 /**
  * Filters questions by multiple topics.
@@ -134,7 +125,7 @@ export const getQuestionsByTopics = (
  * Requires topic and subTopic to be present - questions without metadata
  * should not be used in civic exams.
  */
-export const enrichQuestionWithMetadata = (
+const enrichQuestionWithMetadata = (
     question: TestQuestion
 ): CivicExamQuestion => {
     const topic = getTopicFromQuestion(question);

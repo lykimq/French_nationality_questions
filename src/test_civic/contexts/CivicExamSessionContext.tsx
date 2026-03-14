@@ -81,7 +81,6 @@ export const CivicExamSessionProvider: React.FC<{
             throw new Error('No paused session to resume');
         }
 
-        // Clear the paused flag and restore the session
         const actualQuestionCount = pausedSession.questions.length;
         const resumedSession: CivicExamSession = {
             ...pausedSession,
@@ -95,15 +94,11 @@ export const CivicExamSessionProvider: React.FC<{
         const targetIndex = Math.min(resumedSession.answers.length, maxIndex);
         setCurrentQuestionIndex(targetIndex);
         
-        // Save the resumed session
         await saveSession(resumedSession);
-        
-        // Clear paused session
         setPausedSession(null);
     }, [pausedSession]);
 
     const abandonPausedSession = useCallback(async (): Promise<void> => {
-        // Clear paused session if it exists
         if (pausedSession) {
             await clearStoredSession();
             setPausedSession(null);
@@ -265,7 +260,6 @@ export const CivicExamSessionProvider: React.FC<{
 
     const cancelExam = useCallback(() => {
         if (currentSession?.isPracticeMode) {
-            // For practice mode, save the session with isPaused flag
             const paused: CivicExamSession = {
                 ...currentSession,
                 isPaused: true,
@@ -274,11 +268,9 @@ export const CivicExamSessionProvider: React.FC<{
             saveSession(paused);
             setPausedSession(paused);
         } else {
-            // For exam mode, clear everything
             clearStoredSession();
         }
 
-        // Reset local state
         setCurrentSession(null);
         setCurrentQuestionIndex(0);
     }, [currentSession]);

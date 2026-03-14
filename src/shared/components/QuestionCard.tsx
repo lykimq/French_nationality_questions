@@ -166,7 +166,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             )}
 
             {/* Add a clickable overlay to the unexpanded card if not always expanded */}
-            {!isExpanded && !alwaysExpanded && (
+            {!isExpanded && (
                 <Pressable
                     style={styles.overlay}
                     onPress={toggleExpand}

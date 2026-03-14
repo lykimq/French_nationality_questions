@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleProp, TextStyle, TextProps, ImageSourcePropType } from 'react-native';
+import { TextProps, ImageSourcePropType } from 'react-native';
 import type { Question } from '../welcome/types';
 import type { FrenchQuestionsData } from './questionsData';
 // Base props for components with title and description

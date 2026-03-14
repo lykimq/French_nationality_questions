@@ -81,7 +81,7 @@ export const incrementLaunchCount = async (): Promise<number> => {
     }
 };
 
-export const getLaunchCount = async (): Promise<number> => {
+const getLaunchCount = async (): Promise<number> => {
     try {
         const count = await AsyncStorage.getItem(STORAGE_KEYS.APP_LAUNCH_COUNT);
         return count ? parseInt(count, 10) : 0;

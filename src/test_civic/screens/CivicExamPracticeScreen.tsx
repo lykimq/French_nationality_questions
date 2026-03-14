@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -16,20 +16,12 @@ import { useCivicExam } from '../contexts/CivicExamContext';
 import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
-import { TOPIC_DISPLAY_NAMES } from '../constants/civicExamConstants';
+import { TOPIC_DISPLAY_NAMES, ALL_TOPICS } from '../constants/civicExamConstants';
 import type { CivicExamStackParamList, CivicExamTopic } from '../types';
 
 const logger = createLogger('CivicExamPractice');
 
 type CivicExamPracticeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
-
-const ALL_TOPICS: CivicExamTopic[] = [
-    'principles_values',
-    'institutional_political',
-    'rights_duties',
-    'history_geography_culture',
-    'living_society',
-];
 
 const CivicExamPracticeScreen = () => {
     const navigation = useNavigation<CivicExamPracticeScreenNavigationProp>();
@@ -193,9 +185,7 @@ const CivicExamPracticeScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     header: {
         flexDirection: 'row',
         alignItems: 'center',

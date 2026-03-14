@@ -44,4 +44,3 @@ if (missingFields.length > 0) {
 }
 
 export { storage };
-export default app;

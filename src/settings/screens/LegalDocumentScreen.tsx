@@ -66,9 +66,7 @@ const LegalDocumentScreen: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     safeArea: {},
     header: {
         ...sharedStyles.header,

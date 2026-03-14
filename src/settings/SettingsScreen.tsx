@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -94,9 +94,7 @@ const SettingsScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     safeArea: {},
     header: {
         ...sharedStyles.header,

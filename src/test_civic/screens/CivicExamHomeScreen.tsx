@@ -197,9 +197,7 @@ const CivicExamHomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     header: {
         flexDirection: 'row',
         alignItems: 'center',

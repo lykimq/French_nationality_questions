@@ -99,9 +99,7 @@ export const useSearch = () => {
 
         const suggestions: SearchSuggestion[] = [];
         const normalizedQuery = normalizeForSearch(query);
-        const queryTokens = tokenize(normalizedQuery);
 
-        // Score function for better relevance ranking
         const scoreMatch = (text: string): number => {
             const normalizedText = normalizeForSearch(text);
             // Exact prefix match - highest score

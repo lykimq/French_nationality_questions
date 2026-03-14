@@ -54,9 +54,6 @@ const FlashCardScreen: React.FC = () => {
         error: null,
     }));
 
-    const categoryIdRef = useRef<string>(categoryId);
-    const loadingPromiseRef = useRef<Promise<{ [key: string]: FormationCategory } | null> | null>(null);
-
     const loadCategoryData = useCallback(async () => {
         if (globalFlashCardDataCache) {
             setDataState({
@@ -111,15 +108,11 @@ const FlashCardScreen: React.FC = () => {
         })();
 
         globalFlashCardDataPromise = loadPromise;
-        loadingPromiseRef.current = loadPromise;
         await loadPromise;
     }, []);
 
     useFocusEffect(
         useCallback(() => {
-            if (categoryIdRef.current !== categoryId) {
-                categoryIdRef.current = categoryId;
-            }
             loadCategoryData();
         }, [categoryId, loadCategoryData])
     );

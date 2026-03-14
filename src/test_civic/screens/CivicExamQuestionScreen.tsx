@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import {
     StyleSheet,
     View,
@@ -30,7 +30,7 @@ type CivicExamQuestionScreenNavigationProp = NativeStackNavigationProp<CivicExam
 
 const CivicExamQuestionScreen = () => {
     const navigation = useNavigation<CivicExamQuestionScreenNavigationProp>();
-    const { theme, themeMode } = useTheme();
+    const { theme } = useTheme();
     const {
         currentSession,
         currentQuestionIndex,
@@ -48,11 +48,63 @@ const CivicExamQuestionScreen = () => {
     const previousQuestionIndexRef = useRef<number>(-1);
     const isNavigatingAwayRef = useRef<boolean>(false);
 
-    const handleCancelExam = useCallback(async () => {
-        cancelExam();
-    }, [cancelExam]);
-
     const isPracticeMode = currentSession?.isPracticeMode || false;
+
+    const navigateToHome = useCallback(() => {
+        isNavigatingAwayRef.current = true;
+        navigation.dispatch(
+            CommonActions.reset({
+                index: 0,
+                routes: [{ name: 'CivicExamHome' }],
+            })
+        );
+    }, [navigation]);
+
+    const showExitAlert = useCallback(() => {
+        if (isPracticeMode) {
+            Alert.alert(
+                'Mettre en pause',
+                'Voulez-vous mettre en pause votre pratique ? Vous pourrez reprendre plus tard.',
+                [
+                    { text: 'Continuer', style: 'cancel' },
+                    {
+                        text: 'Abandonner',
+                        style: 'destructive',
+                        onPress: async () => {
+                            await abandonPausedSession();
+                            navigateToHome();
+                        },
+                    },
+                    {
+                        text: 'Pause',
+                        style: 'default',
+                        onPress: () => {
+                            cancelExam();
+                            navigateToHome();
+                        },
+                    },
+                ],
+                { cancelable: true }
+            );
+        } else {
+            Alert.alert(
+                'Quitter l\'examen',
+                'Êtes-vous sûr de vouloir quitter l\'examen ? Votre progression sera perdue.',
+                [
+                    { text: 'Annuler', style: 'cancel' },
+                    {
+                        text: 'Quitter',
+                        style: 'destructive',
+                        onPress: () => {
+                            cancelExam();
+                            navigateToHome();
+                        },
+                    },
+                ],
+                { cancelable: true }
+            );
+        }
+    }, [isPracticeMode, abandonPausedSession, cancelExam, navigateToHome]);
 
     const handleTimeUp = useCallback(() => {
         Alert.alert(
@@ -74,7 +126,15 @@ const CivicExamQuestionScreen = () => {
         correctAnswer?: number;
     }) | null;
 
-    // Reset selected answer when question changes
+    const buildAnswerPayload = useCallback((answerIndex: number, isCorrect: boolean) => {
+        if (!currentQuestion) return null;
+        const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
+        const questionId = typeof currentQuestion.id === 'number'
+            ? currentQuestion.id
+            : parseInt(String(currentQuestion.id), 10);
+        return { questionId, isCorrect, userAnswer: answerIndex.toString(), timeSpent, timestamp: new Date() };
+    }, [currentQuestion, questionStartTime]);
+
     useEffect(() => {
         if (!currentQuestion || previousQuestionIndexRef.current === currentQuestionIndex) return;
 
@@ -85,7 +145,6 @@ const CivicExamQuestionScreen = () => {
         setQuestionStartTime(new Date());
     }, [currentQuestionIndex, currentQuestion]);
 
-    // Check if session is completed
     useEffect(() => {
         if (!currentSession || currentSession.isCompleted) {
             navigation.navigate('CivicExamHome');
@@ -111,76 +170,7 @@ const CivicExamQuestionScreen = () => {
                 
                 if (isBackAction) {
                     e.preventDefault();
-                    
-                    if (isPracticeMode) {
-                        Alert.alert(
-                            'Mettre en pause',
-                            'Voulez-vous mettre en pause votre pratique ? Vous pourrez reprendre plus tard.',
-                            [
-                                {
-                                    text: 'Continuer',
-                                    style: 'cancel',
-                                    onPress: () => {},
-                                },
-                                {
-                                    text: 'Abandonner',
-                                    style: 'destructive',
-                                    onPress: async () => {
-                                        isNavigatingAwayRef.current = true;
-                                        await abandonPausedSession();
-                                        navigation.dispatch(
-                                            CommonActions.reset({
-                                                index: 0,
-                                                routes: [{ name: 'CivicExamHome' }],
-                                            })
-                                        );
-                                    },
-                                },
-                                {
-                                    text: 'Pause',
-                                    style: 'default',
-                                    onPress: async () => {
-                                        isNavigatingAwayRef.current = true;
-                                        await handleCancelExam();
-                                        navigation.dispatch(
-                                            CommonActions.reset({
-                                                index: 0,
-                                                routes: [{ name: 'CivicExamHome' }],
-                                            })
-                                        );
-                                    },
-                                },
-                            ],
-                            { cancelable: true }
-                        );
-                    } else {
-                        Alert.alert(
-                            'Quitter l\'examen',
-                            'Êtes-vous sûr de vouloir quitter l\'examen ? Votre progression sera perdue.',
-                            [
-                                {
-                                    text: 'Annuler',
-                                    style: 'cancel',
-                                    onPress: () => {},
-                                },
-                                {
-                                    text: 'Quitter',
-                                    style: 'destructive',
-                                    onPress: async () => {
-                                        isNavigatingAwayRef.current = true;
-                                        await handleCancelExam();
-                                        navigation.dispatch(
-                                            CommonActions.reset({
-                                                index: 0,
-                                                routes: [{ name: 'CivicExamHome' }],
-                                            })
-                                        );
-                                    },
-                                },
-                            ],
-                            { cancelable: true }
-                        );
-                    }
+                    showExitAlert();
                 }
             };
 
@@ -191,7 +181,7 @@ const CivicExamQuestionScreen = () => {
                 // Reset flag when component loses focus
                 isNavigatingAwayRef.current = false;
             };
-        }, [navigation, isPracticeMode, cancelExam, currentSession])
+        }, [navigation, currentSession, showExitAlert])
     );
 
     const handleAnswerSelect = async (index: number) => {
@@ -205,15 +195,8 @@ const CivicExamQuestionScreen = () => {
             setAnswerSubmitted(true);
 
             try {
-                const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
-                const questionId = typeof currentQuestion.id === 'number' ? currentQuestion.id : parseInt(String(currentQuestion.id), 10);
-                await submitAnswer({
-                    questionId,
-                    isCorrect,
-                    userAnswer: index.toString(),
-                    timeSpent,
-                    timestamp: new Date(),
-                }, false);
+                const payload = buildAnswerPayload(index, isCorrect);
+                if (payload) await submitAnswer(payload, false);
             } catch (error) {
                 logger.error('Error submitting practice answer:', error);
             }
@@ -233,92 +216,15 @@ const CivicExamQuestionScreen = () => {
         }
     };
 
-    const handleExitPress = useCallback(() => {
-        if (isPracticeMode) {
-            Alert.alert(
-                'Mettre en pause',
-                'Voulez-vous mettre en pause votre pratique ? Vous pourrez reprendre plus tard.',
-                [
-                    {
-                        text: 'Continuer',
-                        style: 'cancel',
-                    },
-                    {
-                        text: 'Abandonner',
-                        style: 'destructive',
-                        onPress: async () => {
-                            isNavigatingAwayRef.current = true;
-                            await abandonPausedSession();
-                            navigation.dispatch(
-                                CommonActions.reset({
-                                    index: 0,
-                                    routes: [{ name: 'CivicExamHome' }],
-                                })
-                            );
-                        },
-                    },
-                    {
-                        text: 'Pause',
-                        style: 'default',
-                        onPress: async () => {
-                            isNavigatingAwayRef.current = true;
-                            await handleCancelExam();
-                            navigation.dispatch(
-                                CommonActions.reset({
-                                    index: 0,
-                                    routes: [{ name: 'CivicExamHome' }],
-                                })
-                            );
-                        },
-                    },
-                ],
-                { cancelable: true }
-            );
-        } else {
-            Alert.alert(
-                'Quitter l\'examen',
-                'Êtes-vous sûr de vouloir quitter l\'examen ? Votre progression sera perdue.',
-                [
-                    {
-                        text: 'Annuler',
-                        style: 'cancel',
-                    },
-                    {
-                        text: 'Quitter',
-                        style: 'destructive',
-                        onPress: async () => {
-                            isNavigatingAwayRef.current = true;
-                            await handleCancelExam();
-                            navigation.dispatch(
-                                CommonActions.reset({
-                                    index: 0,
-                                    routes: [{ name: 'CivicExamHome' }],
-                                })
-                            );
-                        },
-                    },
-                ],
-                { cancelable: true }
-            );
-        }
-    }, [isPracticeMode, cancelExam, navigation]);
 
     const handleSubmitAnswer = async () => {
         if (selectedAnswer === null || !currentQuestion || !currentSession) return;
 
         if (!isPracticeMode) {
             try {
-                const timeSpent = Math.floor((new Date().getTime() - questionStartTime.getTime()) / 1000);
                 const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswer);
-                const questionId = typeof currentQuestion.id === 'number' ? currentQuestion.id : parseInt(String(currentQuestion.id), 10);
-
-                await submitAnswer({
-                    questionId,
-                    isCorrect,
-                    userAnswer: selectedAnswer.toString(),
-                    timeSpent,
-                    timestamp: new Date(),
-                });
+                const payload = buildAnswerPayload(selectedAnswer, isCorrect);
+                if (payload) await submitAnswer(payload);
 
                 const actualQuestionCount = currentSession.questions.length;
                 if (currentQuestionIndex >= actualQuestionCount - 1) {
@@ -369,7 +275,7 @@ const CivicExamQuestionScreen = () => {
                     timeLeft={timeLeft}
                     formattedTime={formattedTime}
                     progress={progress}
-                    onExit={handleExitPress}
+                    onExit={showExitAlert}
                 />
 
                 <ScrollView
@@ -413,9 +319,7 @@ const CivicExamQuestionScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        ...sharedStyles.container,
-    },
+    container: sharedStyles.container,
     scrollView: {
         flex: 1,
     },

@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createLogger } from '../../shared/utils/logger';
+import { safeParseDate } from '../../shared/utils/questionUtils';
 import type { CivicExamSession, TestAnswer, TestQuestion } from '../types';
 
 const logger = createLogger('CivicExamSessionStorage');
@@ -28,19 +29,13 @@ const serializeSession = (session: CivicExamSession): string => {
     return JSON.stringify(payload);
 };
 
-const parseDate = (value: unknown): Date | undefined => {
-    if (typeof value !== 'string') return undefined;
-    const parsed = new Date(value);
-    return isNaN(parsed.getTime()) ? undefined : parsed;
-};
-
 const deserializeSession = (raw: string | null): CivicExamSession | null => {
     if (!raw) return null;
     try {
         const parsed = JSON.parse(raw) as StoredSession;
-        const startTime = parseDate(parsed.startTime);
+        const startTime = safeParseDate(parsed.startTime);
         if (!startTime) return null;
-        const endTime = parseDate(parsed.endTime);
+        const endTime = safeParseDate(parsed.endTime);
 
         const actualQuestionCount = parsed.questions?.length || 0;
         const storedTotalQuestions = parsed.totalQuestions || 0;
@@ -60,7 +55,7 @@ const deserializeSession = (raw: string | null): CivicExamSession | null => {
             totalQuestions: actualQuestionCount,
             answers: parsed.answers.map(a => ({
                 ...a,
-                timestamp: parseDate(a.timestamp) || new Date(),
+                timestamp: safeParseDate(a.timestamp) || new Date(),
             })),
         };
     } catch (error) {

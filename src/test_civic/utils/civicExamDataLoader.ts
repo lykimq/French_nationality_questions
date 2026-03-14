@@ -3,6 +3,7 @@ import { extractNumericId, isValidId } from '../../shared/utils/idUtils';
 import { sanitizeString, sanitizeStringArray, isNonEmptyString } from '../../shared/utils/stringUtils';
 import { DATA_FILES } from '../../shared/config';
 import { loadJsonCollection } from '../../shared/services/dataService';
+import { ALL_TOPICS } from '../constants/civicExamConstants';
 import type { CivicExamQuestionWithOptions } from './civicExamQuestionUtils';
 import type { CivicExamTopic, CivicExamSubTopic } from '../types';
 
@@ -33,14 +34,6 @@ interface CivicExamDataFile {
     questions?: CivicExamQuestionData[];
 }
 
-const VALID_TOPICS: readonly CivicExamTopic[] = [
-    'principles_values',
-    'institutional_political',
-    'rights_duties',
-    'history_geography_culture',
-    'living_society',
-] as const;
-
 const VALID_SUBTOPICS: readonly CivicExamSubTopic[] = [
     'devise_symboles',
     'laicite',
@@ -61,7 +54,7 @@ const VALID_SUBTOPICS: readonly CivicExamSubTopic[] = [
 ] as const;
 
 const isValidTopic = (value: string): value is CivicExamTopic => {
-    return VALID_TOPICS.includes(value as CivicExamTopic);
+    return ALL_TOPICS.includes(value as CivicExamTopic);
 };
 
 const isValidSubTopic = (value: string): value is CivicExamSubTopic => {
@@ -125,7 +118,7 @@ const validateQuestionData = (
 
     if (!hasValidTopic) {
         const themeStr = theme ? `"${theme}"` : 'undefined';
-        onInvalid?.(`Question ${questionId} has invalid topic: ${themeStr} (must be one of: ${VALID_TOPICS.join(', ')})`);
+        onInvalid?.(`Question ${questionId} has invalid topic: ${themeStr} (must be one of: ${ALL_TOPICS.join(', ')})`);
         return false;
     }
 
@@ -179,7 +172,6 @@ const resolveCorrectAnswerIndex = (correctAnswerText: string, options: string[])
         return undefined;
     }
     
-    // Find the index of the correct answer text in the options array
     const index = options.findIndex(opt => opt === correctAnswerText);
     return index >= 0 ? index : undefined;
 };
@@ -202,15 +194,10 @@ const transformCivicQuestion = (
     const correctAnswer = sanitizeString(q.correctAnswer);
     const incorrectAnswers = sanitizeStringArray(q.incorrectAnswers);
     
-    // Build options array and filter out empty strings
     const allOptions = [correctAnswer, ...incorrectAnswers];
     const options = allOptions.filter(opt => opt.length > 0);
-    
-    // Find the index of the correct answer in the filtered options array
-    // This ensures we get the actual index, even if some options were filtered out
     const correctAnswerIndex = resolveCorrectAnswerIndex(correctAnswer, options);
     
-    // Validate that we found the correct answer
     if (correctAnswerIndex === undefined) {
         logger.warn(
             `Question ${q.id}: Could not find correct answer "${correctAnswer}" in options array. ` +
