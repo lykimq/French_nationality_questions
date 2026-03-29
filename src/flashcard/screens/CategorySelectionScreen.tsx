@@ -122,6 +122,7 @@ const CategorySelectionScreen: React.FC = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingBottom: 80,
     },
     safeArea: {
         flex: 1,
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         padding: 20,
+        paddingBottom: 100,
     },
     loadingText: {
         fontSize: 16,

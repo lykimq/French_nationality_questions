@@ -185,6 +185,7 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingBottom: 80,
     },
     searchContainer: {
         paddingHorizontal: 20,

@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         padding: 12,
+        paddingBottom: 100,
     },
 });
 

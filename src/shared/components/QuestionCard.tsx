@@ -59,7 +59,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 borderColor: theme.colors.questionCardBorder,
                 borderWidth: 1,
             },
-            isExpanded && styles.cardExpanded
+            isExpanded && styles.cardExpanded,
+            isExpanded && { borderColor: theme.colors.primary + '40', elevation: 6 }
         ]}>
             <Pressable
                 style={({ pressed }) => [
@@ -154,9 +155,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
                     {explanationText !== "" && (
                         <View style={styles.explanationContainer}>
-                            <View style={styles.section}>
-                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary }]}>Explication:</FormattedText>
-                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text }]}>
+                            <View style={[styles.section, { borderLeftWidth: 3, borderLeftColor: theme.colors.primary + '40', paddingLeft: 12 }]}>
+                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary, fontSize: 14, letterSpacing: 0.5 }]}>EXPLICATION</FormattedText>
+                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text, lineHeight: 24 }]}>
                                     {formatExplanation(explanationText)}
                                 </FormattedText>
                             </View>

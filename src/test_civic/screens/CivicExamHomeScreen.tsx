@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     },
     contentContainer: {
         padding: 20,
-        paddingBottom: 40,
+        paddingBottom: 100,
     },
     infoCard: {
         borderRadius: 16,

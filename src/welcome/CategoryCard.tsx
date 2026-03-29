@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { useIcons } from '../shared/contexts/IconContext';
-import { FormattedText, Icon3D } from '../shared/components';
+import { FormattedText, Icon3D, ProgressBar } from '../shared/components';
 import { CategoryCardProps } from '../types';
 import { sharedStyles } from '../shared/utils';
 
@@ -58,6 +58,14 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 <View style={[styles.countContainer, { backgroundColor: (disabled ? theme.colors.border : iconColor) + '15' }]}>
                     <FormattedText style={[styles.count, { color: disabled ? theme.colors.textMuted : iconColor }]}>{count} questions</FormattedText>
                 </View>
+
+                {/* Question progress bar - Placeholder for now, can be linked to real data later */}
+                <ProgressBar 
+                    progress={count > 0 ? 0.3 : 0} 
+                    height={4} 
+                    color={iconColor} 
+                    containerStyle={styles.progressBar}
+                />
             </View>
             <Icon3D
                 name={chevronIconName}
@@ -104,6 +112,9 @@ const styles = StyleSheet.create({
     count: {
         fontSize: 12,
         fontWeight: '600',
+    },
+    progressBar: {
+        marginTop: 10,
     },
     arrowIcon: {
         marginLeft: 8,

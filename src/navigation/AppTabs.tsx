@@ -1,4 +1,4 @@
-
+import { View, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeStack from './HomeStack';
@@ -60,17 +60,25 @@ const AppTabs = () => {
                     marginTop: 4,
                 },
                 tabBarStyle: {
-                    backgroundColor: theme.colors.surface,
-                    borderTopColor: theme.colors.border,
-                    borderTopWidth: 1,
+                    position: 'absolute', // Floating effect
+                    bottom: 12,
+                    left: 12,
+                    right: 12,
+                    borderRadius: 24,
+                    backgroundColor: theme.colors.surface + 'F0', // Slight transparency
+                    borderTopWidth: 0,
                     paddingTop: 8,
-                    paddingBottom: 6,
+                    paddingBottom: 8,
                     height: 65,
-                    elevation: 8,
-                    shadowOpacity: 0.1,
-                    shadowRadius: 3,
-                    shadowOffset: { width: 0, height: -3 },
+                    elevation: 10,
+                    shadowOpacity: 0.15,
+                    shadowRadius: 10,
+                    shadowColor: '#000',
+                    shadowOffset: { width: 0, height: 4 },
                 },
+                tabBarBackground: () => (
+                    <View style={StyleSheet.absoluteFill} /> // Placeholder for potential blur
+                ),
             }}
         >
             <Tab.Screen

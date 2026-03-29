@@ -7,7 +7,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText, AppHeader, Icon3D } from '../shared/components';
+import { FormattedText, AppHeader, Icon3D, ProgressBar } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
@@ -62,6 +62,47 @@ const HomeScreen = () => {
                             </FormattedText>
                         </View>
                     </View>
+
+                    {/* Mastery Progress */}
+                    <View style={styles.masteryContainer}>
+                        <View style={sharedStyles.spaceBetween}>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                                Maîtrise Globale
+                            </FormattedText>
+                            <FormattedText style={[styles.statValue, { color: theme.colors.primary, fontSize: 14, marginTop: 0 }]}>
+                                32%
+                            </FormattedText>
+                        </View>
+                        <ProgressBar 
+                            progress={0.32} 
+                            height={8} 
+                            containerStyle={{ marginTop: 8 }} 
+                        />
+                    </View>
+                </View>
+
+                {/* Daily Goal Section */}
+                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.primary + '10', borderColor: theme.colors.primary + '30', padding: 16 }]}>
+                    <View style={sharedStyles.row}>
+                        <Icon3D name="flash" size={32} color={theme.colors.primary} variant="gradient" />
+                        <View style={{ marginLeft: 12, flex: 1 }}>
+                            <FormattedText style={[styles.statLabel, { fontWeight: 'bold', color: theme.colors.text }]}>
+                                Objectif du jour
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { fontSize: 12, color: theme.colors.textSecondary }]}>
+                                12 / 20 questions révisées
+                            </FormattedText>
+                        </View>
+                        <FormattedText style={[styles.statValue, { color: theme.colors.primary, fontSize: 16, marginTop: 0 }]}>
+                            60%
+                        </FormattedText>
+                    </View>
+                    <ProgressBar 
+                        progress={0.6} 
+                        height={4} 
+                        color={theme.colors.primary} 
+                        containerStyle={{ marginTop: 12 }} 
+                    />
                 </View>
 
                 <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginTop: 10 }]}>
@@ -134,11 +175,18 @@ const styles = StyleSheet.create({
     },
     statDivider: {
         width: 1,
-        height: 40,
+        height: 30,
         backgroundColor: 'rgba(0,0,0,0.1)',
+    },
+    masteryContainer: {
+        marginTop: 20,
+        paddingTop: 15,
+        borderTopWidth: 1,
+        borderTopColor: 'rgba(0,0,0,0.05)',
     },
     categoriesGrid: {
         marginTop: 10,
+        paddingBottom: 80, // Space for floating tab bar
     },
 });
 

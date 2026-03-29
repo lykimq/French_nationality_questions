@@ -7,6 +7,7 @@ export { default as SlideQuestionView } from './SlideQuestionView';
 export { default as Icon3D } from './Icon3D';
 export { default as QuestionListModal } from './QuestionListModal';
 export { default as AppHeader } from './AppHeader';
+export { default as ProgressBar } from './ProgressBar';
 export { ErrorBoundary } from './ErrorBoundary';
 export type { Icon3DProps } from './Icon3D';
 export type { QuestionListModalProps, QuestionListItem } from './QuestionListModal';
