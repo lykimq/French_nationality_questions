@@ -8,7 +8,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText, AppHeader, Icon3D, ProgressBar, StreakBadge, GlobalSearchBar } from '../shared/components';
+import { FormattedText, AppHeader, Icon3D, StreakBadge, GlobalSearchBar } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 import { useMastery } from '../shared/contexts/MasteryContext';
 import { getCategoryMasteryStats } from '../shared/utils/MasteryUtils';
@@ -19,10 +19,9 @@ const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
     const { theme } = useTheme();
     const { questionsData } = useData();
-    const { getGlobalMasteryPercentage, dailyStats, masteryMap } = useMastery();
+    const { getGlobalMasteryPercentage, masteryMap } = useMastery();
 
     const globalMastery = getGlobalMasteryPercentage();
-    const dailyProgress = dailyStats.goal > 0 ? dailyStats.count / dailyStats.goal : 0;
 
     const categories = React.useMemo(() => {
         const cats = questionsData?.categories || [];
@@ -98,43 +97,6 @@ const HomeScreen = () => {
                             </FormattedText>
                         </View>
                     </View>
-
-                    {/* Mastery Progress */}
-                    <View style={styles.masteryBarContainer}>
-                        <ProgressBar 
-                            progress={globalMastery / 100} 
-                            height={6} 
-                            color={theme.colors.primary}
-                        />
-                    </View>
-                </View>
-
-                {/* Daily Goal Section */}
-                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.primary + '08', borderColor: theme.colors.primary + '20', padding: 20 }]}>
-                    <View style={sharedStyles.spaceBetween}>
-                        <View style={sharedStyles.row}>
-                            <Icon3D name="flash" size={28} color={theme.colors.primary} variant="gradient" />
-                            <View style={{ marginLeft: 12 }}>
-                                <FormattedText style={{ fontWeight: 'bold', fontSize: 16, color: theme.colors.text }}>
-                                    Objectif quotidien
-                                </FormattedText>
-                                <FormattedText style={{ fontSize: 13, color: theme.colors.textSecondary }}>
-                                    {dailyStats.count} / {dailyStats.goal} questions révisées
-                                </FormattedText>
-                            </View>
-                        </View>
-                        <View style={[styles.percentBadge, { backgroundColor: theme.colors.primary }]}>
-                            <FormattedText style={{ color: '#FFF', fontWeight: 'bold', fontSize: 12 }}>
-                                {Math.round(dailyProgress * 100)}%
-                            </FormattedText>
-                        </View>
-                    </View>
-                    <ProgressBar 
-                        progress={dailyProgress} 
-                        height={6} 
-                        color={theme.colors.primary} 
-                        containerStyle={{ marginTop: 16 }} 
-                    />
                 </View>
 
                 {/* Recommended for You */}
@@ -250,17 +212,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 8,
-    },
-    masteryBarContainer: {
-        marginTop: 20,
-        paddingTop: 15,
-        borderTopWidth: 1,
-        borderTopColor: 'rgba(0,0,0,0.05)',
-    },
-    percentBadge: {
-        paddingHorizontal: 8,
-        paddingVertical: 4,
-        borderRadius: 12,
     },
     iconContainer: {
         width: 50,
