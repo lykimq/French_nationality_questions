@@ -140,7 +140,7 @@ const CivicExamInfoScreen = () => {
                             Important
                         </FormattedText>
                         <FormattedText style={[styles.warningText, { color: theme.colors.text }]}>
-                            • L'examen se déroule en français uniquement{'\n'}• Vous pouvez revenir en arrière pour modifier vos réponses{'\n'}• Le temps restant sera affiché en permanence{'\n'}• Vous pourrez réviser vos réponses avant de soumettre
+                            • L'examen se déroule en français uniquement{'\n'}• Une question à la fois : validez chaque réponse avant de passer à la suivante{'\n'}• Le temps restant est affiché en haut de l'écran (sous 5 min il passe au rouge){'\n'}• Après la dernière question, un écran de révision affiche le résumé avant l'envoi définitif
                         </FormattedText>
                     </View>
 

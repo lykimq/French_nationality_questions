@@ -23,6 +23,7 @@ import { CivicExamQuestionCard } from '../components/CivicExamQuestionCard';
 import { CivicExamOptions } from '../components/CivicExamOptions';
 import { CivicExamFooter } from '../components/CivicExamFooter';
 import { createLogger } from '../../shared/utils/logger';
+import { useCivicExamTabBarOverlap } from '../utils/civicExamTabBarInset';
 import type { CivicExamStackParamList, CivicExamQuestion } from '../types';
 
 const logger = createLogger('CivicExamQuestionScreen');
@@ -41,12 +42,15 @@ const CivicExamQuestionScreen = () => {
         abandonPausedSession,
     } = useCivicExam();
 
+    const tabBarOverlapPad = useCivicExamTabBarOverlap();
+
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [answerSubmitted, setAnswerSubmitted] = useState(false);
     const [answerIsCorrect, setAnswerIsCorrect] = useState<boolean | null>(null);
     const [questionStartTime, setQuestionStartTime] = useState<Date>(new Date());
     const previousQuestionIndexRef = useRef<number>(-1);
     const isNavigatingAwayRef = useRef<boolean>(false);
+    const prevTimedExamSessionIdRef = useRef<string | undefined>(undefined);
 
     const isPracticeMode = currentSession?.isPracticeMode || false;
 
@@ -114,12 +118,29 @@ const CivicExamQuestionScreen = () => {
         );
     }, [navigation]);
 
-    const { timeLeft, formattedTime } = useCountdownTimer({
+    const { timeLeft, formattedTime, resetTimer } = useCountdownTimer({
         initialTime: CIVIC_EXAM_CONFIG.TIME_LIMIT_SECONDS,
-        isActive: !!currentSession,
+        isActive: !!currentSession && !isPracticeMode,
         onTimeUp: handleTimeUp,
         autoStart: true,
     });
+
+    useEffect(() => {
+        if (!currentSession?.id) {
+            prevTimedExamSessionIdRef.current = undefined;
+            return;
+        }
+        if (currentSession.isPracticeMode) {
+            prevTimedExamSessionIdRef.current = undefined;
+            return;
+        }
+        const sessionId = currentSession.id;
+        const prevId = prevTimedExamSessionIdRef.current;
+        if (prevId !== undefined && prevId !== sessionId) {
+            resetTimer();
+        }
+        prevTimedExamSessionIdRef.current = sessionId;
+    }, [currentSession?.id, currentSession?.isPracticeMode, resetTimer]);
 
     const currentQuestion = getCurrentQuestion() as (CivicExamQuestion & {
         options?: string[];
@@ -264,24 +285,29 @@ const CivicExamQuestionScreen = () => {
         ? ((currentQuestionIndex + 1) / actualTotalQuestions) * 100
         : 0;
 
-
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
 
-            <SafeAreaView style={{ flex: 1 }} edges={['top']}>
+            <SafeAreaView style={{ flex: 1 }} edges={['top', 'bottom']}>
                 <ExamHeader
                     currentQuestionIndex={currentQuestionIndex}
                     totalQuestions={actualTotalQuestions}
                     timeLeft={timeLeft}
                     formattedTime={formattedTime}
                     progress={progress}
+                    isPracticeMode={isPracticeMode}
+                    answeredCount={currentSession.answers.length}
                     onExit={showExitAlert}
                 />
 
                 <ScrollView
                     style={styles.scrollView}
-                    contentContainerStyle={styles.contentContainer}
+                    contentContainerStyle={[
+                        styles.contentContainer,
+                        { paddingBottom: 32 + tabBarOverlapPad },
+                    ]}
                     showsVerticalScrollIndicator={false}
+                    keyboardShouldPersistTaps="handled"
                 >
                     <CivicExamQuestionCard
                         currentQuestion={currentQuestion}
@@ -312,6 +338,7 @@ const CivicExamQuestionScreen = () => {
                     totalQuestions={actualTotalQuestions}
                     onNextQuestion={handleNextQuestion}
                     onSubmitAnswer={handleSubmitAnswer}
+                    tabBarOverlapPad={tabBarOverlapPad}
                 />
             </SafeAreaView>
         </View>
@@ -325,7 +352,6 @@ const styles = StyleSheet.create({
     },
     contentContainer: {
         padding: 20,
-        paddingBottom: 100,
     },
     loadingText: {
         fontSize: 16,

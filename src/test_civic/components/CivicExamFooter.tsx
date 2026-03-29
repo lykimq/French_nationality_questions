@@ -11,6 +11,7 @@ interface CivicExamFooterProps {
     totalQuestions: number;
     onNextQuestion: () => void;
     onSubmitAnswer: () => void;
+    tabBarOverlapPad?: number;
 }
 
 export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
@@ -21,14 +22,38 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
     totalQuestions,
     onNextQuestion,
     onSubmitAnswer,
+    tabBarOverlapPad = 0,
 }) => {
     const { theme } = useTheme();
 
     const isNextDisabled = selectedAnswer === null && !(isPracticeMode && answerSubmitted);
     const showNext = isPracticeMode && answerSubmitted;
+    const isLast = currentQuestionIndex >= totalQuestions - 1;
+
+    const primaryLabel = (() => {
+        if (isPracticeMode) {
+            if (answerSubmitted) {
+                return isLast ? 'Voir les résultats' : 'Question suivante';
+            }
+            return 'Choisissez une réponse';
+        }
+        if (selectedAnswer === null) {
+            return 'Choisissez une réponse';
+        }
+        return isLast ? 'Voir la révision' : 'Valider et continuer';
+    })();
 
     return (
-        <View style={[styles.footer, { backgroundColor: theme.colors.card, borderTopColor: theme.colors.border }]}>
+        <View
+            style={[
+                styles.footer,
+                {
+                    backgroundColor: theme.colors.card,
+                    borderTopColor: theme.colors.border,
+                    paddingBottom: 12 + tabBarOverlapPad,
+                },
+            ]}
+        >
             <TouchableOpacity
                 style={[
                     styles.submitButton,
@@ -40,12 +65,12 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
                 onPress={showNext ? onNextQuestion : onSubmitAnswer}
                 disabled={isNextDisabled}
                 activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityState={{ disabled: isNextDisabled }}
+                accessibilityLabel={primaryLabel}
             >
                 <FormattedText style={[styles.submitButtonText, { color: theme.colors.buttonText }]}>
-                    {currentQuestionIndex < totalQuestions - 1
-                        ? 'Question suivante'
-                        : 'Voir les résultats'
-                    }
+                    {primaryLabel}
                 </FormattedText>
             </TouchableOpacity>
         </View>
@@ -54,13 +79,17 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
 
 const styles = StyleSheet.create({
     footer: {
-        padding: 20,
+        paddingHorizontal: 20,
+        paddingTop: 16,
+        paddingBottom: 12,
         borderTopWidth: 1,
     },
     submitButton: {
         borderRadius: 12,
         padding: 16,
         alignItems: 'center',
+        minHeight: 52,
+        justifyContent: 'center',
     },
     submitButtonText: {
         fontSize: 16,

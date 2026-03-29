@@ -29,7 +29,7 @@ export const CivicExamOptions: React.FC<CivicExamOptionsProps> = ({
 
     if (!hasOptions) {
         return (
-            <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card }]}>
+            <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
                 <FormattedText style={[styles.optionsTitle, { color: theme.colors.text }]}>
                     Choisissez votre réponse:
                 </FormattedText>
@@ -41,9 +41,9 @@ export const CivicExamOptions: React.FC<CivicExamOptionsProps> = ({
     }
 
     return (
-        <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card }]}>
+        <View style={[styles.optionsContainer, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
             <FormattedText style={[styles.optionsTitle, { color: theme.colors.text }]}>
-                Choisissez votre réponse:
+                Une seule réponse est correcte
             </FormattedText>
             {options.map((option, index) => (
                 <OptionButton
@@ -62,9 +62,10 @@ export const CivicExamOptions: React.FC<CivicExamOptionsProps> = ({
 
 const styles = StyleSheet.create({
     optionsContainer: {
-        borderRadius: 12,
+        borderRadius: 16,
         padding: 16,
         marginBottom: 20,
+        borderWidth: 1,
     },
     optionsTitle: {
         fontSize: 16,

@@ -42,16 +42,16 @@ export const ExamFeedback: React.FC<ExamFeedbackProps> = ({
                 </View>
             )}
 
-            {!isCorrect && explanation && (
+            {explanation ? (
                 <View style={styles.explanationTextContainer}>
                     <FormattedText style={[styles.explanationTitle, { color: theme.colors.text }]}>
-                        Explication:
+                        {isCorrect ? 'Pour aller plus loin' : 'Explication'}
                     </FormattedText>
                     <FormattedText style={[styles.explanationText, { color: theme.colors.textSecondary }]}>
                         {explanation}
                     </FormattedText>
                 </View>
-            )}
+            ) : null}
         </View>
     );
 };

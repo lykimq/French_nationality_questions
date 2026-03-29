@@ -22,6 +22,7 @@ import {
     type CivicExamQuestionWithOptions,
 } from '../utils/civicExamQuestionUtils';
 import type { CivicExamStackParamList } from '../types';
+import { useCivicExamFooterBottomPad } from '../utils/civicExamTabBarInset';
 
 type CivicExamResultScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
 type RouteParams = {
@@ -32,6 +33,7 @@ const CivicExamResultScreen = () => {
     const navigation = useNavigation<CivicExamResultScreenNavigationProp>();
     const route = useRoute();
     const { theme } = useTheme();
+    const footerBottomPad = useCivicExamFooterBottomPad(true);
     const serializedResult = (route.params as RouteParams)?.result;
     const result = serializedResult ? deserializeCivicExamResult(serializedResult) : null;
 
@@ -61,7 +63,7 @@ const CivicExamResultScreen = () => {
                 <ScrollView
                     style={styles.scrollView}
                     contentContainerStyle={styles.contentContainer}
-                    showsVerticalScrollIndicator={false}
+                    showsVerticalScrollIndicator={true}
                 >
                     <View style={[styles.resultCard, { backgroundColor: passed ? theme.colors.success : theme.colors.error }]}>
                         <Icon3D
@@ -104,7 +106,10 @@ const CivicExamResultScreen = () => {
                                 const correctAnswerText = getCorrectAnswerText(civicQuestion);
                                 
                                 return (
-                                    <View key={question.id} style={styles.incorrectItem}>
+                                    <View
+                                        key={question.id}
+                                        style={[styles.incorrectItem, { borderBottomColor: theme.colors.border }]}
+                                    >
                                         <FormattedText style={[styles.incorrectQuestion, { color: theme.colors.text }]}>
                                             {getCivicExamQuestionText(question)}
                                         </FormattedText>
@@ -141,13 +146,35 @@ const CivicExamResultScreen = () => {
                     )}
                 </ScrollView>
 
-                <View style={[styles.footer, { backgroundColor: theme.colors.card, borderTopColor: theme.colors.border }]}>
+                <View
+                    style={[
+                        styles.footer,
+                        {
+                            backgroundColor: theme.colors.card,
+                            borderTopColor: theme.colors.border,
+                            paddingBottom: 20 + footerBottomPad,
+                        },
+                    ]}
+                >
                     <TouchableOpacity
                         style={[styles.button, { backgroundColor: theme.colors.primary }]}
-                        onPress={() => navigation.navigate('CivicExamHome')}
+                        onPress={() => navigation.navigate('CivicExamInfo')}
                         activeOpacity={0.8}
+                        accessibilityRole="button"
+                        accessibilityLabel="Recommencer un examen blanc"
                     >
                         <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
+                            Nouvel examen blanc
+                        </FormattedText>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={[styles.buttonSecondary, { borderColor: theme.colors.primary }]}
+                        onPress={() => navigation.navigate('CivicExamHome')}
+                        activeOpacity={0.8}
+                        accessibilityRole="button"
+                        accessibilityLabel="Retour à l'accueil de l'examen civique"
+                    >
+                        <FormattedText style={[styles.buttonSecondaryText, { color: theme.colors.primary }]}>
                             Retour à l'accueil
                         </FormattedText>
                     </TouchableOpacity>
@@ -212,8 +239,7 @@ const styles = StyleSheet.create({
     incorrectItem: {
         marginBottom: 16,
         paddingBottom: 16,
-        borderBottomWidth: 1,
-        borderBottomColor: 'rgba(0,0,0,0.1)',
+        borderBottomWidth: StyleSheet.hairlineWidth,
     },
     incorrectQuestion: {
         fontSize: 15,
@@ -246,7 +272,9 @@ const styles = StyleSheet.create({
         paddingLeft: 4,
     },
     footer: {
-        padding: 20,
+        paddingHorizontal: 20,
+        paddingTop: 20,
+        gap: 12,
         borderTopWidth: 1,
     },
     button: {
@@ -257,6 +285,16 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 18,
         fontWeight: 'bold',
+    },
+    buttonSecondary: {
+        borderRadius: 12,
+        padding: 16,
+        alignItems: 'center',
+        borderWidth: 2,
+    },
+    buttonSecondaryText: {
+        fontSize: 16,
+        fontWeight: '700',
     },
 });
 

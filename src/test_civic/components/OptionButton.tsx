@@ -12,6 +12,8 @@ interface OptionButtonProps {
     onPress: (index: number) => void;
 }
 
+const OPTION_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 export const OptionButton: React.FC<OptionButtonProps> = ({
     index,
     option,
@@ -21,6 +23,7 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
     onPress
 }) => {
     const { theme } = useTheme();
+    const letter = OPTION_LETTERS[index] ?? String(index + 1);
     const isWrong = showResult && isSelected && !isCorrect;
     const highlightCorrect = showResult && isCorrect;
 
@@ -44,14 +47,20 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
         return theme.colors.border;
     };
 
-    const getRadioColor = () => {
-        if (isSelected || highlightCorrect) {
-            if (highlightCorrect) return theme.colors.success;
-            if (isWrong) return theme.colors.error;
-            return theme.colors.primary;
+    const letterFill = () => {
+        if (showResult && highlightCorrect) {
+            return { bg: theme.colors.success, fg: theme.colors.buttonText };
         }
-        return theme.colors.border;
+        if (showResult && isWrong) {
+            return { bg: theme.colors.error, fg: theme.colors.buttonText };
+        }
+        if (isSelected) {
+            return { bg: theme.colors.primary, fg: theme.colors.buttonText };
+        }
+        return { bg: theme.colors.surface, fg: theme.colors.text };
     };
+
+    const { bg: letterBg, fg: letterFg } = letterFill();
 
     return (
         <TouchableOpacity
@@ -66,18 +75,15 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
             onPress={() => !showResult && onPress(index)}
             disabled={showResult}
             activeOpacity={0.7}
+            accessibilityRole="radio"
+            accessibilityState={{ checked: isSelected, disabled: showResult }}
+            accessibilityLabel={`Réponse ${letter}. ${option}`}
         >
             <View style={styles.optionContent}>
-                <View style={[
-                    styles.optionRadio,
-                    {
-                        borderColor: getRadioColor(),
-                        backgroundColor: (isSelected || highlightCorrect) ? getRadioColor() : 'transparent',
-                    }
-                ]}>
-                    {(isSelected || highlightCorrect) && (
-                        <View style={[styles.optionRadioInner, { backgroundColor: theme.colors.buttonText }]} />
-                    )}
+                <View style={[styles.letterBadge, { borderColor: getBorderColor(), backgroundColor: letterBg }]}>
+                    <FormattedText style={[styles.letterBadgeText, { color: letterFg }]}>
+                        {letter}
+                    </FormattedText>
                 </View>
                 <FormattedText style={[styles.optionText, { color: theme.colors.text }]}>
                     {option}
@@ -105,9 +111,9 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
 
 const styles = StyleSheet.create({
     optionButton: {
-        borderRadius: 8,
-        padding: 16,
-        marginBottom: 12,
+        borderRadius: 12,
+        padding: 14,
+        marginBottom: 10,
         borderWidth: 2,
     },
     optionContent: {
@@ -115,18 +121,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         gap: 12,
     },
-    optionRadio: {
-        width: 24,
-        height: 24,
-        borderRadius: 12,
-        borderWidth: 2,
+    letterBadge: {
+        width: 32,
+        height: 32,
+        borderRadius: 8,
+        borderWidth: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    optionRadioInner: {
-        width: 12,
-        height: 12,
-        borderRadius: 6,
+    letterBadgeText: {
+        fontSize: 15,
+        fontWeight: '800',
     },
     optionText: {
         flex: 1,

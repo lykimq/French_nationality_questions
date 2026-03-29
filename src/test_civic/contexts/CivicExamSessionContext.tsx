@@ -184,7 +184,14 @@ export const CivicExamSessionProvider: React.FC<{
             throw new Error(`No current question found at index: ${currentQuestionIndex}`);
         }
 
-        if (answer.questionId !== currentQuestion.id) {
+        const expectedQId = extractNumericId(currentQuestion.id);
+        const answerQId = extractNumericId(answer.questionId);
+        const idsMatch =
+            answer.questionId === currentQuestion.id ||
+            (expectedQId !== undefined &&
+                answerQId !== undefined &&
+                expectedQId === answerQId);
+        if (!idsMatch) {
             throw new Error(
                 `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
             );

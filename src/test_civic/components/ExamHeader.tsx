@@ -11,6 +11,8 @@ interface ExamHeaderProps {
     timeLeft: number;
     formattedTime: string;
     progress: number;
+    isPracticeMode: boolean;
+    answeredCount: number;
     onExit?: () => void;
 }
 
@@ -20,6 +22,8 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
     timeLeft,
     formattedTime,
     progress,
+    isPracticeMode,
+    answeredCount,
     onExit
 }) => {
     const { theme } = useTheme();
@@ -30,8 +34,10 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
 
     const passingScore = Math.ceil((totalQuestions * CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE) / 100);
     const passingText = totalQuestions === CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS
-        ? `Passage: ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS}`
-        : `Passage: ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`;
+        ? `Réussite : ${CIVIC_EXAM_CONFIG.PASSING_SCORE}/${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} minimum`
+        : `Réussite : ${passingScore}/${totalQuestions} (${CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%)`;
+
+    const timerUrgent = !isPracticeMode && timeLeft < 300;
 
     return (
         <View style={styles.header}>
@@ -54,28 +60,41 @@ export const ExamHeader: React.FC<ExamHeaderProps> = ({
                 )}
                 <View style={styles.questionCounter}>
                     <FormattedText style={[styles.questionCounterText, { color: theme.colors.text }]}>
-                        {currentQuestionIndex + 1} / {totalQuestions}
+                        Question {currentQuestionIndex + 1} sur {totalQuestions}
                     </FormattedText>
                 </View>
-                <View style={[
-                    styles.timer,
-                    { backgroundColor: timeLeft < 300 ? theme.colors.error : theme.colors.primary }
-                ]}>
-                    <Icon3D
-                        name={timeIcon.name}
-                        size={14}
-                        color={theme.colors.buttonText}
-                        variant={timeIcon.variant}
-                    />
-                    <FormattedText style={[styles.timerText, { color: theme.colors.buttonText }]}>{formattedTime}</FormattedText>
-                </View>
+                {isPracticeMode ? (
+                    <View style={[styles.practicePill, { backgroundColor: theme.colors.primary + '22', borderColor: theme.colors.primary }]}>
+                        <FormattedText style={[styles.practicePillText, { color: theme.colors.primary }]}>
+                            Pratique
+                        </FormattedText>
+                    </View>
+                ) : (
+                    <View style={[
+                        styles.timer,
+                        { backgroundColor: timerUrgent ? theme.colors.error : theme.colors.primary }
+                    ]}>
+                        <Icon3D
+                            name={timeIcon.name}
+                            size={14}
+                            color={theme.colors.buttonText}
+                            variant={timeIcon.variant}
+                        />
+                        <FormattedText style={[styles.timerText, { color: theme.colors.buttonText }]}>{formattedTime}</FormattedText>
+                    </View>
+                )}
             </View>
             <View style={[styles.progressContainer, { backgroundColor: theme.colors.border }]}>
                 <View style={[styles.progressBar, { width: `${progress}%`, backgroundColor: theme.colors.primary }]} />
             </View>
-            <FormattedText style={[styles.passingInfo, { color: theme.colors.text }]}>
+            <FormattedText style={[styles.passingInfo, { color: theme.colors.textSecondary }]}>
                 {passingText}
             </FormattedText>
+            {!isPracticeMode && (
+                <FormattedText style={[styles.answeredHint, { color: theme.colors.textMuted }]}>
+                    {answeredCount} réponse{answeredCount !== 1 ? 's' : ''} enregistrée{answeredCount !== 1 ? 's' : ''}
+                </FormattedText>
+            )}
         </View>
     );
 };
@@ -105,6 +124,16 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
     },
+    practicePill: {
+        paddingHorizontal: 12,
+        paddingVertical: 6,
+        borderRadius: 20,
+        borderWidth: 1,
+    },
+    practicePillText: {
+        fontSize: 13,
+        fontWeight: '700',
+    },
     timer: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -118,17 +147,23 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     progressContainer: {
-        height: 4,
-        borderRadius: 2,
+        height: 6,
+        borderRadius: 3,
         marginBottom: 8,
         overflow: 'hidden',
     },
     progressBar: {
         height: '100%',
-        borderRadius: 2,
+        borderRadius: 3,
     },
     passingInfo: {
         fontSize: 12,
         textAlign: 'center',
+        lineHeight: 18,
+    },
+    answeredHint: {
+        fontSize: 11,
+        textAlign: 'center',
+        marginTop: 4,
     },
 });

@@ -16,6 +16,7 @@ import { FormattedText } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import { serializeCivicExamResult } from '../utils/civicExamSerialization';
+import { useCivicExamFooterBottomPad } from '../utils/civicExamTabBarInset';
 import type { CivicExamStackParamList } from '../types';
 
 const logger = createLogger('CivicExamReview');
@@ -26,6 +27,7 @@ const CivicExamReviewScreen = () => {
     const navigation = useNavigation<CivicExamReviewScreenNavigationProp>();
     const { theme } = useTheme();
     const { currentSession, finishExam } = useCivicExam();
+    const footerBottomPad = useCivicExamFooterBottomPad(true);
 
     // Handle navigation when session is missing (useEffect to avoid render-time navigation)
     useEffect(() => {
@@ -88,12 +90,21 @@ const CivicExamReviewScreen = () => {
                     <View style={[styles.infoCard, { backgroundColor: theme.colors.card }]}>
                         <Ionicons name="information-circle" size={24} color={theme.colors.primary} />
                         <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                            Vous pouvez revenir en arrière pour modifier vos réponses avant de soumettre.
+                            Vérifiez le nombre de questions répondues. La soumission est définitive : vous ne pourrez plus modifier vos réponses après validation.
                         </FormattedText>
                     </View>
                 </ScrollView>
 
-                <View style={[styles.footer, { backgroundColor: theme.colors.card, borderTopColor: theme.colors.border }]}>
+                <View
+                    style={[
+                        styles.footer,
+                        {
+                            backgroundColor: theme.colors.card,
+                            borderTopColor: theme.colors.border,
+                            paddingBottom: 20 + footerBottomPad,
+                        },
+                    ]}
+                >
                     <TouchableOpacity
                         style={[styles.submitButton, { backgroundColor: theme.colors.primary }]}
                         onPress={handleSubmit}
@@ -160,7 +171,8 @@ const styles = StyleSheet.create({
         lineHeight: 22,
     },
     footer: {
-        padding: 20,
+        paddingHorizontal: 20,
+        paddingTop: 20,
         borderTopWidth: 1,
     },
     submitButton: {
