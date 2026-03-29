@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useCallback, useMemo, useLayoutEffect } from 'react';
 import {
     StyleSheet,
     View,
@@ -133,9 +133,9 @@ const FlashCardScreen: React.FC = () => {
             const allQuestions = Object.values(dataState.data).flatMap(cat => cat.questions);
             const prioritizedIds = prioritizeQuestions(allQuestions, masteryMap);
             
-            // Take the top 30 questions for the recommended session
+            // Take the top 20 questions for the recommended session
             const recommendedQuestions = prioritizedIds
-                .slice(0, 30)
+                .slice(0, 20)
                 .map(id => allQuestions.find(q => q.id === id))
                 .filter((q): q is any => q !== undefined);
 
@@ -157,7 +157,7 @@ const FlashCardScreen: React.FC = () => {
             ...cat,
             questions: sortedQuestions,
         };
-    }, [dataState.data, categoryId, masteryMap]);
+    }, [dataState.data, categoryId]);
 
     const isLoading = dataState.loading;
     const error = category ? null : (dataState.error || 'Catégorie non trouvée');
@@ -165,9 +165,18 @@ const FlashCardScreen: React.FC = () => {
     const translateX = useRef(new Animated.Value(0)).current;
     const opacity = useRef(new Animated.Value(1)).current;
     const [isAnimating, setIsAnimating] = useState(false);
+    const isAnimatingRef = useRef(false);
+
+    const setAnimating = useCallback((val: boolean) => {
+        isAnimatingRef.current = val;
+        setIsAnimating(val);
+    }, []);
+
     const [isQuestionListVisible, setIsQuestionListVisible] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const prevQuestionIdRef = useRef<number | null>(null);
+
+    const { updateMastery } = useMastery();
 
     const {
         state,
@@ -183,56 +192,87 @@ const FlashCardScreen: React.FC = () => {
         key: categoryId,
     });
 
-    const { updateMastery } = useMastery();
-
     const currentQuestionId = currentQuestion?.id ?? null;
-    if (currentQuestionId !== prevQuestionIdRef.current && !isAnimating) {
-        prevQuestionIdRef.current = currentQuestionId;
+
+    // Reset state and position whenever the question changes (safety)
+    useLayoutEffect(() => {
+        setAnimating(false);
         translateX.setValue(0);
         opacity.setValue(1);
-    }
+    }, [currentQuestionId, setAnimating, translateX, opacity]);
 
     const animateTransition = useCallback(
         (direction: 'left' | 'right', callback: () => void, rating?: PerformanceRating) => {
-            if (isAnimating) return;
+            if (isAnimatingRef.current) return;
 
-            setIsAnimating(true);
+            setAnimating(true);
 
-            // If a rating is provided, update mastery
-            if (rating !== undefined && currentQuestion) {
-                updateMastery(currentQuestion.id, rating);
+            // If the card is flipped, flip it back to the front during transition
+            if (state.isFlipped) {
+                flipCard();
             }
 
             Animated.parallel([
                 Animated.timing(translateX, {
                     toValue: direction === 'left' ? -SCREEN_WIDTH * 1.5 : SCREEN_WIDTH * 1.5,
-                    duration: 250,
+                    duration: 150,
                     useNativeDriver: true,
                 }),
                 Animated.timing(opacity, {
                     toValue: 0,
-                    duration: 250,
+                    duration: 150,
                     useNativeDriver: true,
                 }),
             ]).start(() => {
-                if (hasNext || direction === 'right') { // Allow 'right' for previous card
-                    callback();
-                    setIsAnimating(false);
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => {
-                            translateX.setValue(0);
-                            opacity.setValue(1);
-                        });
+                translateX.stopAnimation();
+                opacity.stopAnimation();
+
+                const finishTransition = () => {
+                    if (rating !== undefined && currentQuestion) {
+                        updateMastery(currentQuestion.id, rating);
+                    }
+
+                    setAnimating(false);
+
+                    if (hasNext || (direction === 'right' && !hasNext)) {
+                        if (direction === 'left' && !hasNext) {
+                            setShowSuccess(true);
+                        } else {
+                            callback();
+                        }
+                    } else {
+                        setShowSuccess(true);
+                    }
+                };
+
+                // After useNativeDriver animations, setValue alone can fail to sync to the native
+                // view until the next gesture. A zero-duration timing commits the reset reliably.
+                requestAnimationFrame(() => {
+                    Animated.parallel([
+                        Animated.timing(translateX, {
+                            toValue: 0,
+                            duration: 1,
+                            useNativeDriver: true,
+                        }),
+                        Animated.timing(opacity, {
+                            toValue: 1,
+                            duration: 1,
+                            useNativeDriver: true,
+                        }),
+                    ]).start(() => {
+                        finishTransition();
                     });
-                } else {
-                    // Last card completed
-                    setShowSuccess(true);
-                    setIsAnimating(false);
-                }
+                });
             });
         },
-        [isAnimating, translateX, opacity, currentQuestion, updateMastery, hasNext]
+        [translateX, opacity, currentQuestion, updateMastery, hasNext, state.isFlipped, flipCard, setAnimating]
     );
+
+    const handleRate = useCallback((rating: PerformanceRating) => {
+        if (isAnimating) return;
+        animateTransition('left', nextCard, rating);
+    }, [isAnimating, animateTransition, nextCard]);
+
 
     const handleNextPress = useCallback(() => {
         if (hasNext) animateTransition('left', nextCard);
@@ -264,15 +304,18 @@ const FlashCardScreen: React.FC = () => {
     const progress = state.totalCards > 0 ? (state.currentIndex + 1) / state.totalCards : 0;
 
     const panGesture = Gesture.Pan()
-        .activeOffsetX([-10, 10])
-        .failOffsetY([-20, 20])
+        .activeOffsetX([-20, 20]) // Increased threshold to avoid intercepting taps
+        .failOffsetY([-30, 30]) // More room for scroll interactions
+        .minPointers(1)
+        .maxPointers(1)
+        .shouldCancelWhenOutside(false)
         .onUpdate((event) => {
-            if (!isAnimating) {
+            if (!isAnimatingRef.current) {
                 translateX.setValue(event.translationX);
             }
         })
         .onEnd((event) => {
-            if (isAnimating) return;
+            if (isAnimatingRef.current) return;
 
             const { translationX, velocityX } = event;
             const shouldNavigate =
@@ -557,6 +600,7 @@ const FlashCardScreen: React.FC = () => {
                                 question={currentQuestion}
                                 isFlipped={state.isFlipped}
                                 onFlip={flipCard}
+                                onRate={handleRate}
                             />
                         </Animated.View>
                     </View>

@@ -33,7 +33,15 @@ export type CategoryType = Category | CategoryWithSubcategories;
 // Home stack navigation parameters
 export type HomeStackParamList = Readonly<{
     Home: undefined;
+    CategoryDetail: {
+        readonly categoryId: string;
+    };
     CategoryQuestions: {
+        readonly categoryId: string;
+        readonly initialIndex?: number;
+    };
+    QuestionSearch: undefined;
+    FlashCard: {
         readonly categoryId: string;
     };
 }>;

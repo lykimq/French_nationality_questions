@@ -8,9 +8,10 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText, AppHeader, Icon3D, ProgressBar } from '../shared/components';
+import { FormattedText, AppHeader, Icon3D, ProgressBar, StreakBadge, GlobalSearchBar } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 import { useMastery } from '../shared/contexts/MasteryContext';
+import { getCategoryMasteryStats } from '../shared/utils/MasteryUtils';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
@@ -18,7 +19,7 @@ const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
     const { theme } = useTheme();
     const { questionsData } = useData();
-    const { getGlobalMasteryPercentage, dailyStats } = useMastery();
+    const { getGlobalMasteryPercentage, dailyStats, masteryMap } = useMastery();
 
     const globalMastery = getGlobalMasteryPercentage();
     const dailyProgress = dailyStats.goal > 0 ? dailyStats.count / dailyStats.goal : 0;
@@ -30,11 +31,15 @@ const HomeScreen = () => {
 
     const navigateToCategory = (categoryId: string) => {
         if (categoryId === 'recommended') {
-            // Navigate directly to FlashCard for the next-gen experience
             navigation.navigate('FlashCard' as any, { categoryId });
         } else {
-            navigation.navigate('CategoryQuestions', { categoryId });
+            // New navigation flow: Home -> Detail -> FlashCard
+            navigation.navigate('CategoryDetail' as any, { categoryId });
         }
+    };
+
+    const navigateToSearch = () => {
+        navigation.navigate('QuestionSearch' as any);
     };
 
     return (
@@ -43,6 +48,7 @@ const HomeScreen = () => {
                 title="Mon Parcours"
                 subtitle="Préparez votre entretien de naturalisation"
                 showTricolore={true}
+                rightAction={<StreakBadge streak={1} />} // Placeholder streak value
             />
 
             <ScrollView
@@ -50,109 +56,136 @@ const HomeScreen = () => {
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
-                {/* Stats Overview Section */}
-                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+                {/* Global Search Bar */}
+                <GlobalSearchBar onPress={navigateToSearch} />
+
+                {/* Stats Overview */}
+                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border, paddingVertical: 20 }]}>
                     <View style={styles.statsRow}>
                         <View style={styles.statItem}>
-                            <Icon3D name="school" size={24} color={theme.colors.primary} variant="gradient" />
+                            <View style={[styles.statIconContainer, { backgroundColor: theme.colors.primary + '15' }]}>
+                                <Icon3D name="school" size={24} color={theme.colors.primary} variant="gradient" />
+                            </View>
                             <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
                                 {categories.length}
                             </FormattedText>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
                                 Thématiques
                             </FormattedText>
                         </View>
                         <View style={styles.statDivider} />
                         <View style={styles.statItem}>
-                            <Icon3D name="document-text" size={24} color={theme.colors.primary} variant="gradient" />
+                            <View style={[styles.statIconContainer, { backgroundColor: '#4CAF5015' }]}>
+                                <Icon3D name="document-text" size={24} color="#4CAF50" variant="gradient" />
+                            </View>
                             <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
                                 {categories.reduce((acc, cat) => acc + (cat.questions?.length || 0), 0)}
                             </FormattedText>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
                                 Questions
+                            </FormattedText>
+                        </View>
+                        <View style={styles.statDivider} />
+                        <View style={styles.statItem}>
+                            <View style={[styles.statIconContainer, { backgroundColor: '#FF980015' }]}>
+                                <Icon3D name="medal" size={24} color="#FF9800" variant="gradient" />
+                            </View>
+                            <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
+                                {globalMastery}%
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                                Maîtrise
                             </FormattedText>
                         </View>
                     </View>
 
                     {/* Mastery Progress */}
-                    <View style={styles.masteryContainer}>
-                        <View style={sharedStyles.spaceBetween}>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
-                                Maîtrise Globale
-                            </FormattedText>
-                            <FormattedText style={[styles.statValue, { color: theme.colors.primary, fontSize: 14, marginTop: 0 }]}>
-                                {globalMastery}%
-                            </FormattedText>
-                        </View>
+                    <View style={styles.masteryBarContainer}>
                         <ProgressBar 
                             progress={globalMastery / 100} 
-                            height={8} 
-                            containerStyle={{ marginTop: 8 }} 
+                            height={6} 
+                            color={theme.colors.primary}
                         />
                     </View>
                 </View>
 
                 {/* Daily Goal Section */}
-                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.primary + '10', borderColor: theme.colors.primary + '30', padding: 16 }]}>
-                    <View style={sharedStyles.row}>
-                        <Icon3D name="flash" size={32} color={theme.colors.primary} variant="gradient" />
-                        <View style={{ marginLeft: 12, flex: 1 }}>
-                            <FormattedText style={[styles.statLabel, { fontWeight: 'bold', color: theme.colors.text }]}>
-                                Objectif du jour
-                            </FormattedText>
-                            <FormattedText style={[styles.statLabel, { fontSize: 12, color: theme.colors.textSecondary }]}>
-                                {dailyStats.count} / {dailyStats.goal} questions révisées
+                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.primary + '08', borderColor: theme.colors.primary + '20', padding: 20 }]}>
+                    <View style={sharedStyles.spaceBetween}>
+                        <View style={sharedStyles.row}>
+                            <Icon3D name="flash" size={28} color={theme.colors.primary} variant="gradient" />
+                            <View style={{ marginLeft: 12 }}>
+                                <FormattedText style={{ fontWeight: 'bold', fontSize: 16, color: theme.colors.text }}>
+                                    Objectif quotidien
+                                </FormattedText>
+                                <FormattedText style={{ fontSize: 13, color: theme.colors.textSecondary }}>
+                                    {dailyStats.count} / {dailyStats.goal} questions révisées
+                                </FormattedText>
+                            </View>
+                        </View>
+                        <View style={[styles.percentBadge, { backgroundColor: theme.colors.primary }]}>
+                            <FormattedText style={{ color: '#FFF', fontWeight: 'bold', fontSize: 12 }}>
+                                {Math.round(dailyProgress * 100)}%
                             </FormattedText>
                         </View>
-                        <FormattedText style={[styles.statValue, { color: theme.colors.primary, fontSize: 16, marginTop: 0 }]}>
-                            {Math.round(dailyProgress * 100)}%
-                        </FormattedText>
                     </View>
                     <ProgressBar 
                         progress={dailyProgress} 
-                        height={4} 
+                        height={6} 
                         color={theme.colors.primary} 
-                        containerStyle={{ marginTop: 12 }} 
+                        containerStyle={{ marginTop: 16 }} 
                     />
                 </View>
 
                 {/* Recommended for You */}
                 <TouchableOpacity 
-                    style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.primary, borderWidth: 2 }]}
+                    style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.primary, borderWidth: 1.5, padding: 16 }]}
                     onPress={() => navigateToCategory('recommended')}
+                    activeOpacity={0.9}
                 >
                     <View style={sharedStyles.row}>
-                        <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '20' }]}>
-                            <Ionicons name="sparkles" size={28} color={theme.colors.primary} />
+                        <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '15' }]}>
+                            <Ionicons name="sparkles" size={26} color={theme.colors.primary} />
                         </View>
                         <View style={{ flex: 1, marginLeft: 15 }}>
-                            <FormattedText style={[styles.statLabel, { fontWeight: 'bold', fontSize: 16, color: theme.colors.text }]}>
+                            <FormattedText style={{ fontWeight: 'bold', fontSize: 17, color: theme.colors.text }}>
                                 Recommandé pour vous
                             </FormattedText>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
-                                Session personnalisée basée sur votre progression
+                            <FormattedText style={{ color: theme.colors.textSecondary, fontSize: 14, marginTop: 2 }}>
+                                Session de 20 questions personnalisées
                             </FormattedText>
                         </View>
-                        <Ionicons name="chevron-forward" size={24} color={theme.colors.primary} />
+                        <Ionicons name="chevron-forward" size={22} color={theme.colors.primary} />
                     </View>
                 </TouchableOpacity>
 
-                <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginTop: 25 }]}>
-                    Catégories d'apprentissage
-                </FormattedText>
+                <View style={[sharedStyles.spaceBetween, { marginTop: 25, marginBottom: 15 }]}>
+                    <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginBottom: 0 }]}>
+                        Catégories
+                    </FormattedText>
+                    <TouchableOpacity>
+                        <FormattedText style={{ color: theme.colors.primary, fontWeight: '500' }}>
+                            Voir tout
+                        </FormattedText>
+                    </TouchableOpacity>
+                </View>
 
                 {categories.length > 0 ? (
                     <View style={styles.categoriesGrid}>
-                        {categories.map((category: FrenchCategory) => (
-                            <CategoryCard
-                                key={category.id}
-                                title={category.title}
-                                description={category.description}
-                                icon={category.icon}
-                                count={category.questions?.length || 0}
-                                onPress={() => navigateToCategory(category.id)}
-                            />
-                        ))}
+                        {categories.map((category: FrenchCategory) => {
+                            const stats = getCategoryMasteryStats(category.questions || [], masteryMap);
+                            return (
+                                <CategoryCard
+                                    key={category.id}
+                                    title={category.title}
+                                    description={category.description}
+                                    icon={category.icon}
+                                    count={category.questions?.length || 0}
+                                    progress={stats.percentage / 100}
+                                    onPress={() => navigateToCategory(category.id)}
+                                />
+                            );
+                        })}
                     </View>
                 ) : (
                     <View style={styles.emptyContainer}>
@@ -210,11 +243,24 @@ const styles = StyleSheet.create({
         height: 30,
         backgroundColor: 'rgba(0,0,0,0.1)',
     },
-    masteryContainer: {
+    statIconContainer: {
+        width: 48,
+        height: 48,
+        borderRadius: 24,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 8,
+    },
+    masteryBarContainer: {
         marginTop: 20,
         paddingTop: 15,
         borderTopWidth: 1,
         borderTopColor: 'rgba(0,0,0,0.05)',
+    },
+    percentBadge: {
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        borderRadius: 12,
     },
     iconContainer: {
         width: 50,

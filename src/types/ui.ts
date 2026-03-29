@@ -55,11 +55,13 @@ export interface QuestionCardProps {
 // Category card component props
 export interface CategoryCardProps extends TitleProps, InteractiveProps, VisualProps {
     readonly count: number;
+    readonly progress?: number;
 }
 
 // Question slide view props
 export interface QuestionSlideViewProps {
     readonly questions: readonly Question[];
+    readonly initialIndex?: number;
 }
 // Data context type (provides questions data, not language switching)
 export interface DataContextType {

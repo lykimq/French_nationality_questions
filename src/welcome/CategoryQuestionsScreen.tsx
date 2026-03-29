@@ -18,7 +18,7 @@ const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
     const { theme } = useTheme();
-    const { categoryId } = route.params;
+    const { categoryId, initialIndex = 0 } = route.params;
     const { questionsData } = useData();
 
     const category = questionsData.categories.find(c => c.id === categoryId);
@@ -56,7 +56,10 @@ const CategoryQuestionsScreen = () => {
                 </View>
             </SafeAreaView>
 
-            <QuestionSlideView questions={sortedQuestions as Question[]} />
+            <QuestionSlideView 
+                questions={sortedQuestions as Question[]} 
+                initialIndex={initialIndex}
+            />
         </View>
     );
 };

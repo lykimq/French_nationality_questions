@@ -8,6 +8,8 @@ export { default as Icon3D } from './Icon3D';
 export { default as QuestionListModal } from './QuestionListModal';
 export { default as AppHeader } from './AppHeader';
 export { default as ProgressBar } from './ProgressBar';
+export { default as StreakBadge } from './StreakBadge';
+export { default as GlobalSearchBar } from './GlobalSearchBar';
 export { ErrorBoundary } from './ErrorBoundary';
 export type { Icon3DProps } from './Icon3D';
 export type { QuestionListModalProps, QuestionListItem } from './QuestionListModal';

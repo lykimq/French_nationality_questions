@@ -11,6 +11,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     description,
     icon,
     count,
+    progress,
     onPress,
     disabled = false,
 }) => {
@@ -59,13 +60,15 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                     <FormattedText style={[styles.count, { color: disabled ? theme.colors.textMuted : iconColor }]}>{count} questions</FormattedText>
                 </View>
 
-                {/* Question progress bar - Placeholder for now, can be linked to real data later */}
-                <ProgressBar 
-                    progress={count > 0 ? 0.3 : 0} 
-                    height={4} 
-                    color={iconColor} 
-                    containerStyle={styles.progressBar}
-                />
+                {/* Question progress bar - now using real data */}
+                {progress !== undefined && (
+                    <ProgressBar 
+                        progress={progress} 
+                        height={4} 
+                        color={iconColor} 
+                        containerStyle={styles.progressBar}
+                    />
+                )}
             </View>
             <Icon3D
                 name={chevronIconName}

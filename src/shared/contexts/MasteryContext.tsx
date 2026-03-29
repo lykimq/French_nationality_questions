@@ -99,7 +99,7 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ child
         }
     }, []);
 
-    const updateMastery = async (questionId: number, rating: PerformanceRating) => {
+    const updateMastery = useCallback(async (questionId: number, rating: PerformanceRating) => {
         setState(prev => {
             const currentMastery = prev.masteryMap[questionId] || createInitialMastery(questionId);
             const updatedMastery = calculateNextReview(currentMastery, rating);
@@ -132,7 +132,7 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ child
             saveData(newState);
             return newState;
         });
-    };
+    }, [saveData]);
 
     const resetProgress = async () => {
         const initialState: MasteryState = {

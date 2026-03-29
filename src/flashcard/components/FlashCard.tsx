@@ -7,7 +7,7 @@ import { formatExplanation } from '../../shared/utils/questionUtils';
 import { normalizeForComparison } from '../../shared/utils/stringUtils';
 import { sharedStyles } from '../../shared/utils';
 import { useFirebaseImage } from '../../shared/hooks/useFirebaseImage';
-import { PerformanceRating } from '../../shared/utils/MasteryUtils';
+import { PerformanceRating, predictNextReview, createInitialMastery } from '../../shared/utils/MasteryUtils';
 import { useMastery } from '../../shared/contexts/MasteryContext';
 import type { FormationQuestion } from '../types';
 
@@ -19,18 +19,27 @@ interface FlashCardProps {
     question: FormationQuestion;
     isFlipped: boolean;
     onFlip: () => void;
+    onRate: (rating: PerformanceRating) => void;
 }
 
-const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) => {
+const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRate }) => {
     const { theme } = useTheme();
-    const { updateMastery } = useMastery();
+    const { masteryMap } = useMastery();
+    const [selectedRating, setSelectedRating] = React.useState<PerformanceRating | null>(null);
 
     const handleRate = useCallback((rating: PerformanceRating) => {
-        updateMastery(question.id, rating);
-        // We don't automatically navigate here, the parent screen handles navigation 
-        // after the swipe or the button press finishes. 
-        // But if it's a manual press, we still want to record it.
-    }, [question.id, updateMastery]);
+        setSelectedRating(rating);
+        onRate(rating);
+    }, [onRate]);
+
+    const currentMastery = React.useMemo(() => 
+        masteryMap[question.id] || createInitialMastery(question.id),
+        [masteryMap, question.id]
+    );
+
+    const getIntervalLabel = (rating: PerformanceRating) => {
+        return predictNextReview(currentMastery, rating);
+    };
 
     useEffect(() => {
         // Reset scroll position when question changes
@@ -62,15 +71,19 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
         if (animationRef.current) {
             animationRef.current.stop();
         }
+        const target = isFlipped ? 1 : 0;
         const anim = Animated.spring(flipAnimation, {
-            toValue: isFlipped ? 1 : 0,
+            toValue: target,
             friction: 8,
             tension: 10,
             useNativeDriver: true,
         });
         animationRef.current = anim;
-        anim.start(() => {
+        anim.start((result) => {
             animationRef.current = null;
+            if (result.finished) {
+                flipAnimation.setValue(target);
+            }
         });
     }, [isFlipped, flipAnimation]);
 
@@ -123,11 +136,12 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
     explanationText = formatExplanation(explanationText);
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container} collapsable={false}>
             {/* Front Card */}
             <View
                 style={styles.cardContainer}
                 pointerEvents={isFlipped ? 'none' : 'auto'}
+                collapsable={false}
             >
                 <TouchableOpacity
                     activeOpacity={0.9}
@@ -179,6 +193,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
             <View
                 style={styles.cardContainer}
                 pointerEvents={isFlipped ? 'auto' : 'none'}
+                collapsable={false}
             >
                 <Animated.View
                     style={[
@@ -275,37 +290,48 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
 
                                 {/* Rating Buttons (SRS) */}
                                 <View style={sharedStyles.ratingContainer}>
-                                    <TouchableOpacity 
-                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.error, backgroundColor: theme.colors.error + '10' }]}
-                                        onPress={() => handleRate(PerformanceRating.AGAIN)}
-                                    >
-                                        <Ionicons name="close-circle" size={20} color={theme.colors.error} />
-                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.error }]}>Encore</FormattedText>
-                                    </TouchableOpacity>
-                                    
-                                    <TouchableOpacity 
-                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.warning, backgroundColor: theme.colors.warning + '10' }]}
-                                        onPress={() => handleRate(PerformanceRating.HARD)}
-                                    >
-                                        <Ionicons name="help-circle" size={20} color={theme.colors.warning} />
-                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.warning }]}>Difficile</FormattedText>
-                                    </TouchableOpacity>
-
-                                    <TouchableOpacity 
-                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.primary, backgroundColor: theme.colors.primary + '10' }]}
-                                        onPress={() => handleRate(PerformanceRating.GOOD)}
-                                    >
-                                        <Ionicons name="checkmark-circle" size={20} color={theme.colors.primary} />
-                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.primary }]}>Bien</FormattedText>
-                                    </TouchableOpacity>
-
-                                    <TouchableOpacity 
-                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.success, backgroundColor: theme.colors.success + '10' }]}
-                                        onPress={() => handleRate(PerformanceRating.EASY)}
-                                    >
-                                        <Ionicons name="flash" size={20} color={theme.colors.success} />
-                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.success }]}>Facile</FormattedText>
-                                    </TouchableOpacity>
+                                    {[
+                                        { rating: PerformanceRating.AGAIN, label: 'Encore', color: theme.colors.error, icon: 'close-circle' },
+                                        { rating: PerformanceRating.HARD, label: 'Difficile', color: theme.colors.warning, icon: 'help-circle' },
+                                        { rating: PerformanceRating.GOOD, label: 'Bien', color: theme.colors.primary, icon: 'checkmark-circle' },
+                                        { rating: PerformanceRating.EASY, label: 'Facile', color: theme.colors.success, icon: 'flash' }
+                                    ].map((item) => {
+                                        const isSelected = selectedRating === item.rating;
+                                        return (
+                                            <TouchableOpacity 
+                                                key={item.rating}
+                                                style={[
+                                                    sharedStyles.ratingButton, 
+                                                    { 
+                                                        borderColor: item.color, 
+                                                        backgroundColor: isSelected ? item.color : item.color + '10' 
+                                                    }
+                                                ]}
+                                                onPress={() => handleRate(item.rating)}
+                                                disabled={selectedRating !== null}
+                                            >
+                                                <Ionicons 
+                                                    name={item.icon as any} 
+                                                    size={18} 
+                                                    color={isSelected ? '#FFF' : item.color} 
+                                                />
+                                                <FormattedText style={[
+                                                    sharedStyles.ratingButtonText, 
+                                                    { color: isSelected ? '#FFF' : item.color, fontSize: 10 }
+                                                ]}>
+                                                    {item.label}
+                                                </FormattedText>
+                                                <FormattedText style={{ 
+                                                    fontSize: 9, 
+                                                    color: isSelected ? '#FFF' : theme.colors.textMuted,
+                                                    fontWeight: 'bold',
+                                                    marginTop: 2
+                                                }}>
+                                                    {getIntervalLabel(item.rating)}
+                                                </FormattedText>
+                                            </TouchableOpacity>
+                                        );
+                                    })}
                                 </View>
                             </ScrollView>
                         </View>

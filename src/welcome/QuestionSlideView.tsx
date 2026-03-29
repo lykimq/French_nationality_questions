@@ -5,9 +5,9 @@ import { QuestionSlideViewProps } from '../types';
 import { SlideQuestionView } from '../shared/components';
 import { FormattedText } from '../shared/components';
 
-const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions }) => {
+const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, initialIndex = 0 }) => {
     const { theme } = useTheme();
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
     const handleNext = useCallback(() => {
         if (currentIndex < questions.length - 1) {

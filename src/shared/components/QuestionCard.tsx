@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { formatExplanation } from '../utils';
 import ImageModal from './ImageModal';
 import FormattedText from './FormattedText';
@@ -155,9 +156,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
                     {explanationText !== "" && (
                         <View style={styles.explanationContainer}>
-                            <View style={[styles.section, { borderLeftWidth: 3, borderLeftColor: theme.colors.primary + '40', paddingLeft: 12 }]}>
-                                <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary, fontSize: 14, letterSpacing: 0.5 }]}>EXPLICATION</FormattedText>
-                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text, lineHeight: 24 }]}>
+                            <View style={[styles.section, { borderLeftWidth: 4, borderLeftColor: theme.colors.primary, backgroundColor: theme.colors.primary + '08', padding: 16, borderRadius: 8 }]}>
+                                <View style={sharedStyles.row}>
+                                    <Ionicons name="information-circle" size={18} color={theme.colors.primary} style={{ marginRight: 6 }} />
+                                    <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary, fontSize: 13, letterSpacing: 1, fontWeight: '800' }]}>EXPLICATION</FormattedText>
+                                </View>
+                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text, lineHeight: 24, marginTop: 8 }]}>
                                     {formatExplanation(explanationText)}
                                 </FormattedText>
                             </View>
