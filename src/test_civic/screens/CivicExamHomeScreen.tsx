@@ -12,7 +12,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useIcon3D } from '../../shared/hooks';
 import { useCivicExam } from '../contexts/CivicExamContext';
-import { FormattedText, Icon3D } from '../../shared/components';
+import { FormattedText, Icon3D, AppHeader } from '../../shared/components';
 import { sharedStyles } from '../../shared/utils';
 import { createLogger } from '../../shared/utils/logger';
 import type { CivicExamStackParamList } from '../types';
@@ -64,25 +64,14 @@ const CivicExamHomeScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+            <AppHeader
+                title="Examen Civique"
+                showBackButton={true}
+                onBackPress={() => navigation.goBack()}
+                showTricolore={true}
+            />
 
-            <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <TouchableOpacity
-                        onPress={() => navigation.goBack()}
-                        style={styles.backButton}
-                    >
-                        <Icon3D
-                            name={arrowBackIcon.name}
-                            size={20}
-                            color={theme.colors.headerText}
-                            variant={arrowBackIcon.variant}
-                        />
-                    </TouchableOpacity>
-                    <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        Examen Civique
-                    </FormattedText>
-                    <View style={styles.headerSpacer} />
-                </View>
+            <SafeAreaView style={{ flex: 1 }} edges={[]}>
 
                 <ScrollView
                     style={styles.scrollView}

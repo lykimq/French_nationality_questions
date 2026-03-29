@@ -7,7 +7,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText } from '../shared/components';
+import { FormattedText, AppHeader, Icon3D } from '../shared/components';
+import { sharedStyles } from '../shared/utils';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
@@ -27,24 +28,48 @@ const HomeScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
-                        Questions de Naturalisation
-                    </FormattedText>
-                    <FormattedText style={[styles.subtitle, { color: theme.colors.headerText + 'B3' }]}>
-                        Préparez votre entretien de naturalisation
-                    </FormattedText>
-                </View>
-            </SafeAreaView>
+            <AppHeader
+                title="Mon Parcours"
+                subtitle="Préparez votre entretien de naturalisation"
+                showTricolore={true}
+            />
 
             <ScrollView
                 style={[styles.scrollView, { backgroundColor: theme.colors.background }]}
                 contentContainerStyle={styles.contentContainer}
                 showsVerticalScrollIndicator={false}
             >
+                {/* Stats Overview Section */}
+                <View style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+                    <View style={styles.statsRow}>
+                        <View style={styles.statItem}>
+                            <Icon3D name="school" size={24} color={theme.colors.primary} variant="gradient" />
+                            <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
+                                {categories.length}
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
+                                Thématiques
+                            </FormattedText>
+                        </View>
+                        <View style={styles.statDivider} />
+                        <View style={styles.statItem}>
+                            <Icon3D name="document-text" size={24} color={theme.colors.primary} variant="gradient" />
+                            <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
+                                {categories.reduce((acc, cat) => acc + (cat.questions?.length || 0), 0)}
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textMuted }]}>
+                                Questions
+                            </FormattedText>
+                        </View>
+                    </View>
+                </View>
+
+                <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginTop: 10 }]}>
+                    Catégories d'apprentissage
+                </FormattedText>
+
                 {categories.length > 0 ? (
-                    <>
+                    <View style={styles.categoriesGrid}>
                         {categories.map((category: FrenchCategory) => (
                             <CategoryCard
                                 key={category.id}
@@ -55,8 +80,7 @@ const HomeScreen = () => {
                                 onPress={() => navigateToCategory(category.id)}
                             />
                         ))}
-
-                    </>
+                    </View>
                 ) : (
                     <View style={styles.emptyContainer}>
                         <FormattedText style={[styles.emptyText, { color: theme.colors.textMuted }]}>
@@ -72,20 +96,6 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    safeArea: {},
-    header: {
-        paddingHorizontal: 20,
-        paddingBottom: 15,
-        paddingTop: 10,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
-    subtitle: {
-        fontSize: 16,
-        marginTop: 5,
     },
     scrollView: {
         flex: 1,
@@ -103,6 +113,32 @@ const styles = StyleSheet.create({
     emptyText: {
         fontSize: 16,
         textAlign: 'center',
+    },
+    statsRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    statItem: {
+        alignItems: 'center',
+        flex: 1,
+    },
+    statValue: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: 8,
+    },
+    statLabel: {
+        fontSize: 12,
+        marginTop: 2,
+    },
+    statDivider: {
+        width: 1,
+        height: 40,
+        backgroundColor: 'rgba(0,0,0,0.1)',
+    },
+    categoriesGrid: {
+        marginTop: 10,
     },
 });
 

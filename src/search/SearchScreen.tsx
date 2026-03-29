@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText } from '../shared/components';
+import { FormattedText, AppHeader } from '../shared/components';
 import { useSearch, SearchSuggestion } from './useSearch';
 import {
     SearchBar,
@@ -122,13 +122,10 @@ const SearchScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
-                        Rechercher
-                    </FormattedText>
-                </View>
-            </SafeAreaView>
+            <AppHeader
+                title="Rechercher"
+                showTricolore={true}
+            />
 
             <View style={[styles.searchContainer, { backgroundColor: theme.colors.background }]}>
                 <SearchBar
@@ -188,19 +185,6 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    safeArea: {},
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingTop: 10,
-        paddingHorizontal: 20,
-        paddingBottom: 15,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
     },
     searchContainer: {
         paddingHorizontal: 20,

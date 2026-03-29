@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText } from '../shared/components';
+import { FormattedText, AppHeader } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 
 import TextFormattingSettings from './components/TextFormattingSettings';
@@ -31,13 +31,12 @@ const SettingsScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>
-                        Paramètres
-                    </FormattedText>
-                </View>
-            </SafeAreaView>
+            <AppHeader
+                title="Paramètres"
+                showTricolore={true}
+            />
+
+            <SafeAreaView style={styles.safeArea} edges={[]}>
 
             <ScrollView 
                 style={[styles.scrollView, { backgroundColor: theme.colors.background }]}
@@ -89,21 +88,15 @@ const SettingsScreen = () => {
                 visible={showRatingModal}
                 onClose={handleCloseRatingModal}
             />
+            </SafeAreaView>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: sharedStyles.container,
-    safeArea: {},
-    header: {
-        ...sharedStyles.header,
-        paddingTop: 10,
-        paddingBottom: 12,
-    },
-    title: {
-        fontSize: 22,
-        fontWeight: 'bold',
+    safeArea: {
+        flex: 1,
     },
     scrollView: {
         flex: 1,

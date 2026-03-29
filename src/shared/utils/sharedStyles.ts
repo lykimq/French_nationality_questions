@@ -155,6 +155,48 @@ export const sharedStyles = StyleSheet.create({
         padding: 8,
     },
 
+    // New Header Styles
+    headerContainer: {
+        paddingHorizontal: 20,
+        paddingBottom: 16,
+        paddingTop: 8,
+    },
+    headerTopAccent: {
+        height: 3,
+        flexDirection: 'row',
+        width: '100%',
+    },
+    accentBlue: { flex: 1, backgroundColor: '#002395' }, // French Blue
+    accentWhite: { flex: 1, backgroundColor: '#FFFFFF' }, // French White
+    accentRed: { flex: 1, backgroundColor: '#ED2939' }, // French Red
+
+    headerTitleRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: 12,
+    },
+    headerTextContainer: {
+        flex: 1,
+    },
+    headerSubtitle: {
+        fontSize: 14,
+        marginTop: 4,
+        opacity: 0.8,
+    },
+
+    // Premium Card Styles
+    premiumCard: {
+        borderRadius: 20,
+        padding: 24,
+        marginBottom: 20,
+        borderWidth: 1,
+        elevation: 4,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.1,
+        shadowRadius: 12,
+    },
+
     section: {
         borderRadius: 10,
         marginHorizontal: 15,

@@ -11,7 +11,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText } from '../../shared/components';
+import { FormattedText, AppHeader } from '../../shared/components';
 import CategoryCard from '../../welcome/CategoryCard';
 import { loadFlashCardData, getAllCategories } from '../utils';
 import type { FormationCategory } from '../types';
@@ -85,15 +85,13 @@ const CategorySelectionScreen: React.FC = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView style={styles.safeArea} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
-                        Cartes Flash
-                    </FormattedText>
-                    <FormattedText style={[styles.headerSubtitle, { color: theme.colors.headerText + 'B3' }]}>
-                        Choisissez une catégorie
-                    </FormattedText>
-                </View>
+            <AppHeader
+                title="Cartes Flash"
+                subtitle="Choisissez une catégorie"
+                showTricolore={true}
+            />
+
+            <SafeAreaView style={styles.safeArea} edges={[]}>
 
                 <ScrollView
                     style={styles.scrollView}
@@ -127,20 +125,6 @@ const styles = StyleSheet.create({
     },
     safeArea: {
         flex: 1,
-    },
-    header: {
-        paddingHorizontal: 20,
-        paddingVertical: 16,
-        borderBottomWidth: 1,
-        borderBottomColor: 'rgba(0,0,0,0.1)',
-    },
-    headerTitle: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 4,
-    },
-    headerSubtitle: {
-        fontSize: 14,
     },
     scrollView: {
         flex: 1,
