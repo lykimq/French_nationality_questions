@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoryCard from './CategoryCard';
 import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, FrenchCategory } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { FormattedText, AppHeader, Icon3D, ProgressBar } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
+import { useMastery } from '../shared/contexts/MasteryContext';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
@@ -16,6 +18,10 @@ const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
     const { theme } = useTheme();
     const { questionsData } = useData();
+    const { getGlobalMasteryPercentage, dailyStats } = useMastery();
+
+    const globalMastery = getGlobalMasteryPercentage();
+    const dailyProgress = dailyStats.goal > 0 ? dailyStats.count / dailyStats.goal : 0;
 
     const categories = React.useMemo(() => {
         const cats = questionsData?.categories || [];
@@ -23,7 +29,12 @@ const HomeScreen = () => {
     }, [questionsData?.categories]);
 
     const navigateToCategory = (categoryId: string) => {
-        navigation.navigate('CategoryQuestions', { categoryId });
+        if (categoryId === 'recommended') {
+            // Navigate directly to FlashCard for the next-gen experience
+            navigation.navigate('FlashCard' as any, { categoryId });
+        } else {
+            navigation.navigate('CategoryQuestions', { categoryId });
+        }
     };
 
     return (
@@ -70,11 +81,11 @@ const HomeScreen = () => {
                                 Maîtrise Globale
                             </FormattedText>
                             <FormattedText style={[styles.statValue, { color: theme.colors.primary, fontSize: 14, marginTop: 0 }]}>
-                                32%
+                                {globalMastery}%
                             </FormattedText>
                         </View>
                         <ProgressBar 
-                            progress={0.32} 
+                            progress={globalMastery / 100} 
                             height={8} 
                             containerStyle={{ marginTop: 8 }} 
                         />
@@ -90,22 +101,43 @@ const HomeScreen = () => {
                                 Objectif du jour
                             </FormattedText>
                             <FormattedText style={[styles.statLabel, { fontSize: 12, color: theme.colors.textSecondary }]}>
-                                12 / 20 questions révisées
+                                {dailyStats.count} / {dailyStats.goal} questions révisées
                             </FormattedText>
                         </View>
                         <FormattedText style={[styles.statValue, { color: theme.colors.primary, fontSize: 16, marginTop: 0 }]}>
-                            60%
+                            {Math.round(dailyProgress * 100)}%
                         </FormattedText>
                     </View>
                     <ProgressBar 
-                        progress={0.6} 
+                        progress={dailyProgress} 
                         height={4} 
                         color={theme.colors.primary} 
                         containerStyle={{ marginTop: 12 }} 
                     />
                 </View>
 
-                <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginTop: 10 }]}>
+                {/* Recommended for You */}
+                <TouchableOpacity 
+                    style={[sharedStyles.premiumCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.primary, borderWidth: 2 }]}
+                    onPress={() => navigateToCategory('recommended')}
+                >
+                    <View style={sharedStyles.row}>
+                        <View style={[styles.iconContainer, { backgroundColor: theme.colors.primary + '20' }]}>
+                            <Ionicons name="sparkles" size={28} color={theme.colors.primary} />
+                        </View>
+                        <View style={{ flex: 1, marginLeft: 15 }}>
+                            <FormattedText style={[styles.statLabel, { fontWeight: 'bold', fontSize: 16, color: theme.colors.text }]}>
+                                Recommandé pour vous
+                            </FormattedText>
+                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                                Session personnalisée basée sur votre progression
+                            </FormattedText>
+                        </View>
+                        <Ionicons name="chevron-forward" size={24} color={theme.colors.primary} />
+                    </View>
+                </TouchableOpacity>
+
+                <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginTop: 25 }]}>
                     Catégories d'apprentissage
                 </FormattedText>
 
@@ -183,6 +215,13 @@ const styles = StyleSheet.create({
         paddingTop: 15,
         borderTopWidth: 1,
         borderTopColor: 'rgba(0,0,0,0.05)',
+    },
+    iconContainer: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     categoriesGrid: {
         marginTop: 10,

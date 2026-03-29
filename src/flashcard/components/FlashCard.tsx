@@ -7,6 +7,8 @@ import { formatExplanation } from '../../shared/utils/questionUtils';
 import { normalizeForComparison } from '../../shared/utils/stringUtils';
 import { sharedStyles } from '../../shared/utils';
 import { useFirebaseImage } from '../../shared/hooks/useFirebaseImage';
+import { PerformanceRating } from '../../shared/utils/MasteryUtils';
+import { useMastery } from '../../shared/contexts/MasteryContext';
 import type { FormationQuestion } from '../types';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
@@ -21,6 +23,14 @@ interface FlashCardProps {
 
 const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) => {
     const { theme } = useTheme();
+    const { updateMastery } = useMastery();
+
+    const handleRate = useCallback((rating: PerformanceRating) => {
+        updateMastery(question.id, rating);
+        // We don't automatically navigate here, the parent screen handles navigation 
+        // after the swipe or the button press finishes. 
+        // But if it's a manual press, we still want to record it.
+    }, [question.id, updateMastery]);
 
     useEffect(() => {
         // Reset scroll position when question changes
@@ -176,10 +186,18 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                         styles.backCard,
                         {
                             backgroundColor: theme.colors.card,
-                            borderColor: theme.colors.border,
+                            borderColor: isFlipped ? theme.colors.success : theme.colors.border,
+                            borderWidth: isFlipped ? 2 : 1,
                             transform: [{ rotateY: backInterpolate }],
                             opacity: backOpacity,
                         },
+                        isFlipped && {
+                            shadowColor: theme.colors.success,
+                            shadowOffset: { width: 0, height: 0 },
+                            shadowOpacity: 0.5,
+                            shadowRadius: 15,
+                            elevation: 8,
+                        }
                     ]}
                 >
                     <View style={styles.backCardContent}>
@@ -254,6 +272,41 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip }) =>
                                         </FormattedText>
                                     </View>
                                 </Pressable>
+
+                                {/* Rating Buttons (SRS) */}
+                                <View style={sharedStyles.ratingContainer}>
+                                    <TouchableOpacity 
+                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.error, backgroundColor: theme.colors.error + '10' }]}
+                                        onPress={() => handleRate(PerformanceRating.AGAIN)}
+                                    >
+                                        <Ionicons name="close-circle" size={20} color={theme.colors.error} />
+                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.error }]}>Encore</FormattedText>
+                                    </TouchableOpacity>
+                                    
+                                    <TouchableOpacity 
+                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.warning, backgroundColor: theme.colors.warning + '10' }]}
+                                        onPress={() => handleRate(PerformanceRating.HARD)}
+                                    >
+                                        <Ionicons name="help-circle" size={20} color={theme.colors.warning} />
+                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.warning }]}>Difficile</FormattedText>
+                                    </TouchableOpacity>
+
+                                    <TouchableOpacity 
+                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.primary, backgroundColor: theme.colors.primary + '10' }]}
+                                        onPress={() => handleRate(PerformanceRating.GOOD)}
+                                    >
+                                        <Ionicons name="checkmark-circle" size={20} color={theme.colors.primary} />
+                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.primary }]}>Bien</FormattedText>
+                                    </TouchableOpacity>
+
+                                    <TouchableOpacity 
+                                        style={[sharedStyles.ratingButton, { borderColor: theme.colors.success, backgroundColor: theme.colors.success + '10' }]}
+                                        onPress={() => handleRate(PerformanceRating.EASY)}
+                                    >
+                                        <Ionicons name="flash" size={20} color={theme.colors.success} />
+                                        <FormattedText style={[sharedStyles.ratingButtonText, { color: theme.colors.success }]}>Facile</FormattedText>
+                                    </TouchableOpacity>
+                                </View>
                             </ScrollView>
                         </View>
 
