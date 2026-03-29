@@ -88,6 +88,9 @@ const HomeScreen = () => {
                             <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
                                 Thématiques
                             </FormattedText>
+                            <FormattedText style={[styles.statHint, { color: theme.colors.textMuted }]}>
+                                rubriques du livret
+                            </FormattedText>
                         </View>
                         <View style={[styles.statDivider, { backgroundColor: theme.colors.border }]} />
                         <View style={styles.statItem}>
