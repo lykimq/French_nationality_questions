@@ -7,7 +7,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, Question } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
-import { getCategoryMasteryStats, MasteryLevel } from '../shared/utils/MasteryUtils';
+import { getCategoryMasteryStats, getMasteryForQuestionId, MasteryLevel } from '../shared/utils/MasteryUtils';
+import { sortQuestionsById } from '../shared/utils/questionUtils';
 import { useMastery } from '../shared/contexts/MasteryContext';
 import { FormattedText, AppHeader, Icon3D, ProgressBar } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
@@ -28,9 +29,14 @@ const CategoryDetailScreen = () => {
         [questionsData.categories, categoryId]
     );
 
-    const stats = useMemo(() => 
-        getCategoryMasteryStats(category?.questions || [], masteryMap),
-        [category?.questions, masteryMap]
+    const sortedQuestions = useMemo(
+        () => sortQuestionsById(category?.questions || []),
+        [category?.questions]
+    );
+
+    const stats = useMemo(
+        () => getCategoryMasteryStats(sortedQuestions, masteryMap),
+        [sortedQuestions, masteryMap]
     );
 
     if (!category) {
@@ -41,12 +47,12 @@ const CategoryDetailScreen = () => {
         );
     }
 
-    const startFlashcards = () => {
-        navigation.navigate('CategoryQuestions', { categoryId });
+    const startTraining = () => {
+        navigation.navigate('FlashCard', { categoryId });
     };
 
     const renderQuestionItem = ({ item, index }: { item: Question, index: number }) => {
-        const mastery = masteryMap[typeof item.id === 'string' ? parseInt(item.id, 10) : item.id];
+        const mastery = getMasteryForQuestionId(masteryMap, item.id);
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
         const isLearning = mastery?.level && mastery.level !== MasteryLevel.NEW && !isMastered;
 
@@ -100,11 +106,15 @@ const CategoryDetailScreen = () => {
                         <View style={styles.statsIconsRow}>
                             <View style={styles.miniStat}>
                                 <Ionicons name="checkmark-circle" size={16} color="#4CAF50" />
-                                <FormattedText style={styles.miniStatText}>{stats.mastered}</FormattedText>
+                                <FormattedText style={[styles.miniStatText, { color: theme.colors.text }]}>
+                                    {stats.mastered}
+                                </FormattedText>
                             </View>
                             <View style={styles.miniStat}>
                                 <Ionicons name="time" size={16} color="#FF9800" />
-                                <FormattedText style={styles.miniStatText}>{stats.learning}</FormattedText>
+                                <FormattedText style={[styles.miniStatText, { color: theme.colors.text }]}>
+                                    {stats.learning}
+                                </FormattedText>
                             </View>
                         </View>
                     </View>
@@ -119,7 +129,7 @@ const CategoryDetailScreen = () => {
                 {/* Primary Action */}
                 <TouchableOpacity 
                     style={[sharedStyles.primaryButton, { backgroundColor: theme.colors.primary, marginBottom: 20 }]}
-                    onPress={startFlashcards}
+                    onPress={startTraining}
                 >
                     <Ionicons name="play" size={20} color="#FFF" style={{ marginRight: 8 }} />
                     <FormattedText style={{ color: '#FFF', fontWeight: 'bold', fontSize: 16 }}>
@@ -127,12 +137,19 @@ const CategoryDetailScreen = () => {
                     </FormattedText>
                 </TouchableOpacity>
 
-                <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginBottom: 12 }]}>
+                <FormattedText style={[sharedStyles.sectionTitle, { color: theme.colors.text, marginBottom: 8 }]}>
                     Liste des questions
+                </FormattedText>
+                <FormattedText
+                    style={[styles.listHint, { color: theme.colors.textMuted }]}
+                    numberOfLines={4}
+                >
+                    Les icônes suivent votre maîtrise lorsque vous vous évaluez sur les cartes (bouton ci-dessus ou
+                    onglet Entraînement). Touchez une ligne pour lire la réponse sans noter.
                 </FormattedText>
 
                 <FlatList
-                    data={category.questions}
+                    data={sortedQuestions}
                     renderItem={renderQuestionItem}
                     keyExtractor={(item) => item.id.toString()}
                     showsVerticalScrollIndicator={false}
@@ -192,6 +209,11 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 15,
         lineHeight: 20,
+    },
+    listHint: {
+        fontSize: 12,
+        lineHeight: 16,
+        marginBottom: 12,
     },
 });
 

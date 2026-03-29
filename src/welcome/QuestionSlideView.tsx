@@ -1,13 +1,20 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTheme } from '../shared/contexts/ThemeContext';
+import { useMastery } from '../shared/contexts/MasteryContext';
+import { getMasteryForQuestionId, MasteryLevel } from '../shared/utils/MasteryUtils';
 import { QuestionSlideViewProps } from '../types';
 import { SlideQuestionView } from '../shared/components';
 import { FormattedText } from '../shared/components';
 
 const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, initialIndex = 0 }) => {
     const { theme } = useTheme();
+    const { masteryMap } = useMastery();
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
+
+    useEffect(() => {
+        setCurrentIndex(initialIndex);
+    }, [initialIndex]);
 
     const handleNext = useCallback(() => {
         if (currentIndex < questions.length - 1) {
@@ -36,6 +43,10 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, initia
     }
 
     const currentQuestion = questions[currentIndex];
+    const mastery = currentQuestion
+        ? getMasteryForQuestionId(masteryMap, currentQuestion.id)
+        : undefined;
+    const masteryLevel: MasteryLevel | undefined = mastery?.level;
 
     return (
         <SlideQuestionView
@@ -48,6 +59,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({ questions, initia
             onGoToIndex={handleGoToIndex}
             hasNext={currentIndex < questions.length - 1}
             hasPrevious={currentIndex > 0}
+            masteryLevel={masteryLevel}
         />
     );
 };

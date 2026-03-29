@@ -18,7 +18,7 @@ export enum PerformanceRating {
 }
 
 export interface QuestionMastery {
-    id: number;
+    id: number | string;
     level: MasteryLevel;
     lastReview?: number; // timestamp
     nextReview?: number; // timestamp
@@ -112,9 +112,20 @@ export const predictNextReview = (
 };
 
 /**
+ * Resolves stored mastery for a question id. Keys match AsyncStorage (string keys, e.g. "livret_12").
+ */
+export const getMasteryForQuestionId = (
+    masteryMap: Record<number, QuestionMastery>,
+    rawId: number | string
+): QuestionMastery | undefined => {
+    const map = masteryMap as unknown as Record<string, QuestionMastery | undefined>;
+    return map[String(rawId)];
+};
+
+/**
  * Initial mastery state for a new question.
  */
-export const createInitialMastery = (questionId: number): QuestionMastery => ({
+export const createInitialMastery = (questionId: number | string): QuestionMastery => ({
     id: questionId,
     level: MasteryLevel.NEW,
     interval: 0,
@@ -126,14 +137,14 @@ export const createInitialMastery = (questionId: number): QuestionMastery => ({
  * Prioritizes questions for a review session.
  */
 export const prioritizeQuestions = (
-    questions: { id: number }[],
+    questions: { id: number | string }[],
     masteryMap: Record<number, QuestionMastery>
-): number[] => {
+): (number | string)[] => {
     const now = Date.now();
     
     return questions
         .map(q => {
-            const mastery = masteryMap[q.id] || createInitialMastery(q.id);
+            const mastery = getMasteryForQuestionId(masteryMap, q.id) ?? createInitialMastery(q.id);
             let priority = 0;
 
             if (mastery.level === MasteryLevel.NEW) {
@@ -168,8 +179,7 @@ export const getCategoryMasteryStats = (
     let newCount = 0;
 
     questions.forEach(q => {
-        const id = typeof q.id === 'string' ? parseInt(q.id, 10) : q.id;
-        const mastery = masteryMap[id];
+        const mastery = getMasteryForQuestionId(masteryMap, q.id);
         
         if (!mastery || mastery.level === MasteryLevel.NEW) {
             newCount++;

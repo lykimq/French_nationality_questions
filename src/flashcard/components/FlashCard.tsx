@@ -7,7 +7,7 @@ import { formatExplanation } from '../../shared/utils/questionUtils';
 import { normalizeForComparison } from '../../shared/utils/stringUtils';
 import { sharedStyles } from '../../shared/utils';
 import { useFirebaseImage } from '../../shared/hooks/useFirebaseImage';
-import { PerformanceRating, predictNextReview, createInitialMastery } from '../../shared/utils/MasteryUtils';
+import { PerformanceRating, predictNextReview, createInitialMastery, getMasteryForQuestionId } from '../../shared/utils/MasteryUtils';
 import { useMastery } from '../../shared/contexts/MasteryContext';
 import type { FormationQuestion } from '../types';
 
@@ -32,8 +32,9 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
         onRate(rating);
     }, [onRate]);
 
-    const currentMastery = React.useMemo(() => 
-        masteryMap[question.id] || createInitialMastery(question.id),
+    const currentMastery = React.useMemo(
+        () =>
+            getMasteryForQuestionId(masteryMap, question.id) ?? createInitialMastery(question.id),
         [masteryMap, question.id]
     );
 

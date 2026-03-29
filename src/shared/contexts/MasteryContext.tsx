@@ -5,7 +5,8 @@ import {
     MasteryLevel, 
     PerformanceRating, 
     calculateNextReview, 
-    createInitialMastery 
+    createInitialMastery,
+    getMasteryForQuestionId,
 } from '../utils/MasteryUtils';
 import { RECOMMENDED_SESSION_QUESTION_COUNT } from '../constants/learningSession';
 
@@ -23,9 +24,9 @@ interface MasteryState {
 }
 
 interface MasteryContextProps extends MasteryState {
-    updateMastery: (questionId: number, rating: PerformanceRating) => Promise<void>;
+    updateMastery: (questionId: number | string, rating: PerformanceRating) => Promise<void>;
     resetProgress: () => Promise<void>;
-    getQuestionsByLevel: (level: MasteryLevel) => number[];
+    getQuestionsByLevel: (level: MasteryLevel) => (number | string)[];
 }
 
 const MasteryContext = createContext<MasteryContextProps | undefined>(undefined);
@@ -99,14 +100,15 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ child
         }
     }, []);
 
-    const updateMastery = useCallback(async (questionId: number, rating: PerformanceRating) => {
+    const updateMastery = useCallback(async (questionId: number | string, rating: PerformanceRating) => {
         setState(prev => {
-            const currentMastery = prev.masteryMap[questionId] || createInitialMastery(questionId);
+            const currentMastery =
+                getMasteryForQuestionId(prev.masteryMap, questionId) ?? createInitialMastery(questionId);
             const updatedMastery = calculateNextReview(currentMastery, rating);
             
             const newMap = {
                 ...prev.masteryMap,
-                [questionId]: updatedMastery,
+                [String(questionId)]: updatedMastery,
             };
 
             const today = new Date().toISOString().split('T')[0];
@@ -149,7 +151,7 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ child
         await saveData(initialState);
     };
 
-    const getQuestionsByLevel = (level: MasteryLevel): number[] => {
+    const getQuestionsByLevel = (level: MasteryLevel): (number | string)[] => {
         return Object.values(state.masteryMap)
             .filter(m => m.level === level)
             .map(m => m.id);

@@ -8,7 +8,8 @@ import { HomeStackParamList, Question } from '../types';
 import { useData } from '../shared/contexts/DataContext';
 import { useTheme } from '../shared/contexts/ThemeContext';
 import { useMastery } from '../shared/contexts/MasteryContext';
-import { MasteryLevel } from '../shared/utils/MasteryUtils';
+import { getMasteryForQuestionId, MasteryLevel } from '../shared/utils/MasteryUtils';
+import { sortQuestionsById } from '../shared/utils/questionUtils';
 import { FormattedText, AppHeader } from '../shared/components';
 import { sharedStyles } from '../shared/utils';
 
@@ -63,14 +64,23 @@ const QuestionSearchScreen = () => {
     }, [searchQuery]);
 
     const renderItem = ({ item }: { item: SearchResult }) => {
-        const id = typeof item.id === 'string' ? parseInt(item.id, 10) : item.id;
-        const mastery = masteryMap[id];
+        const mastery = getMasteryForQuestionId(masteryMap, item.id);
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
+
+        const openQuestion = () => {
+            const cat = questionsData.categories.find((c) => c.id === item.categoryId);
+            const sorted = sortQuestionsById(cat?.questions || []);
+            const idx = sorted.findIndex((q) => String(q.id) === String(item.id));
+            navigation.navigate('CategoryQuestions', {
+                categoryId: item.categoryId,
+                initialIndex: idx >= 0 ? idx : 0,
+            });
+        };
 
         return (
             <TouchableOpacity 
                 style={[styles.resultItem, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}
-                onPress={() => navigation.navigate('CategoryQuestions', { categoryId: item.categoryId, initialIndex: 0 })} // For now navigate to start of category, refinement could jump to index
+                onPress={openQuestion}
             >
                 <View style={styles.resultHeader}>
                     <FormattedText style={[styles.categoryTag, { color: theme.colors.primary, backgroundColor: theme.colors.primary + '15' }]}>

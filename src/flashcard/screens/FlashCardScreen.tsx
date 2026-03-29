@@ -14,6 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Dimensions } from 'react-native';
 
 import { useTheme } from '../../shared/contexts/ThemeContext';
+import { useData } from '../../shared/contexts/DataContext';
 import { FormattedText, QuestionListModal, type QuestionListItem } from '../../shared/components';
 import { FlashCard } from '../components';
 import { useFlashCard } from '../hooks';
@@ -123,20 +124,24 @@ const FlashCardScreen: React.FC = () => {
     );
 
     const { masteryMap } = useMastery();
+    const { questionsData } = useData();
 
     const category = useMemo(() => {
-        if (!dataState.data || !categoryId) {
+        if (!categoryId) {
             return null;
         }
 
         if (categoryId === 'recommended') {
+            if (!dataState.data) {
+                return null;
+            }
             // Flatten all questions from all categories
             const allQuestions = Object.values(dataState.data).flatMap(cat => cat.questions);
             const prioritizedIds = prioritizeQuestions(allQuestions, masteryMap);
             
             const recommendedQuestions = prioritizedIds
                 .slice(0, RECOMMENDED_SESSION_QUESTION_COUNT)
-                .map(id => allQuestions.find(q => q.id === id))
+                .map((id) => allQuestions.find((q) => String(q.id) === String(id)))
                 .filter((q): q is any => q !== undefined);
 
             return {
@@ -148,16 +153,28 @@ const FlashCardScreen: React.FC = () => {
             };
         }
 
-        const cat = getCategoryById(dataState.data, categoryId);
-        if (!cat) {
-            return null;
+        const formationCat = dataState.data ? getCategoryById(dataState.data, categoryId) : null;
+        if (formationCat) {
+            const sortedQuestions = sortQuestionsById(formationCat.questions);
+            return {
+                ...formationCat,
+                questions: sortedQuestions,
+            };
         }
-        const sortedQuestions = sortQuestionsById(cat.questions);
-        return {
-            ...cat,
-            questions: sortedQuestions,
-        };
-    }, [dataState.data, categoryId]);
+
+        const livret = questionsData?.categories?.find((c) => c.id === categoryId);
+        if (livret?.questions?.length) {
+            const sortedQuestions = sortQuestionsById(livret.questions);
+            return {
+                id: livret.id,
+                title: livret.title,
+                description: livret.description ?? '',
+                questions: sortedQuestions,
+            } as FormationCategory;
+        }
+
+        return null;
+    }, [dataState.data, categoryId, masteryMap, questionsData?.categories]);
 
     const isLoading = dataState.loading;
     const error = category ? null : (dataState.error || 'Catégorie non trouvée');
@@ -415,7 +432,7 @@ const FlashCardScreen: React.FC = () => {
         );
     }
 
-    if (isLoading) {
+    if (isLoading && !category) {
         return (
             <View
                 style={[

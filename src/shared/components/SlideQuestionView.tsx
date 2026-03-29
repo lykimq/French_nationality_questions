@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react';
 import { View, Animated, Dimensions, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 import { useIcon3D } from '../hooks';
 import QuestionCard from './QuestionCard';
@@ -8,6 +9,7 @@ import FormattedText from './FormattedText';
 import Icon3D from './Icon3D';
 import QuestionListModal, { type QuestionListItem } from './QuestionListModal';
 import type { Question } from '../../welcome/types';
+import { MasteryLevel } from '../utils/MasteryUtils';
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
@@ -23,6 +25,8 @@ export interface SlideQuestionViewProps {
     onGoToIndex?: (index: number) => void;
     hasNext: boolean;
     hasPrevious: boolean;
+    /** SRS level from Entraînement; undefined if not yet tracked */
+    masteryLevel?: MasteryLevel;
 }
 
 const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
@@ -35,7 +39,8 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     onPrevious,
     onGoToIndex,
     hasNext,
-    hasPrevious
+    hasPrevious,
+    masteryLevel,
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
@@ -177,6 +182,12 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
 
     if (!question) return null;
 
+    const isMastered = masteryLevel === MasteryLevel.MASTERED;
+    const isLearning =
+        masteryLevel !== undefined &&
+        masteryLevel !== MasteryLevel.NEW &&
+        !isMastered;
+
     return (
         <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
             {/* Navigation Bar */}
@@ -199,9 +210,25 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                             {title}
                         </FormattedText>
                     )}
-                    <FormattedText style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}>
-                        {currentIndex + 1} / {totalCount}
-                    </FormattedText>
+                    <View style={styles.pageRow}>
+                        <FormattedText style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}>
+                            {currentIndex + 1} / {totalCount}
+                        </FormattedText>
+                        {isMastered && (
+                            <Ionicons name="checkmark-circle" size={18} color="#4CAF50" style={styles.masteryIcon} />
+                        )}
+                        {isLearning && (
+                            <Ionicons name="time" size={18} color="#FF9800" style={styles.masteryIcon} />
+                        )}
+                        {!isMastered && !isLearning && (
+                            <Ionicons
+                                name="ellipse-outline"
+                                size={18}
+                                color={theme.colors.textMuted}
+                                style={styles.masteryIcon}
+                            />
+                        )}
+                    </View>
                     {totalCount > 1 && (
                         <TouchableOpacity
                             style={[styles.jumpButton, { backgroundColor: theme.colors.primary + '20' }]}
@@ -317,6 +344,15 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '500',
         textAlign: 'center',
+    },
+    pageRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 6,
+    },
+    masteryIcon: {
+        marginTop: 1,
     },
     content: {
         flex: 1,
