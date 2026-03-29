@@ -18,103 +18,35 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ theme }) => {
             </FormattedText>
 
             <FormattedText style={[styles.meta, { color: theme.colors.textMuted }]}>
-                Dernière mise à jour : 14 mars 2026
+                Dernière mise à jour : 29 mars 2026
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 24 }]}>
-                Introduction
+                Confidentialité Totale
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Naturalisation Test Civique est une application gratuite de préparation à l'entretien de naturalisation française, développée par un développeur indépendant basé en France. Nous respectons votre vie privée conformément au RGPD et à la loi Informatique et Libertés.
+                Naturalisation Test Civique respecte votre vie privée. L'application est conçue pour fonctionner de manière anonyme.
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Données stockées sur votre appareil
+                Données Locales
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Toutes vos données restent sur votre téléphone. Rien n'est envoyé à nos serveurs.
-            </FormattedText>
-            <View style={styles.list}>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Préférences d'affichage (thème, taille du texte)
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Progression et scores des exercices
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Historique de recherche
-                    </FormattedText>
-                </View>
-            </View>
-
-            <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Ce que nous ne collectons pas
-            </FormattedText>
-            <FormattedText style={[styles.p, { color: textColor }]}>
-                Nous ne collectons aucune donnée personnelle : ni nom, ni email, ni téléphone, ni localisation.
+                Toutes vos données (scores, progression, préférences) sont stockées exclusivement sur votre appareil. Aucune donnée personnelle n'est collectée ou transmise à nos serveurs.
             </FormattedText>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Services tiers
+                Services Tiers
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                L'application utilise deux services externes :
+                L'application utilise Firebase (Google) pour le contenu des questions et Sentry pour le suivi technique des erreurs (données anonymes uniquement).
             </FormattedText>
-            <View style={styles.list}>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Firebase Storage (Google) — pour charger les questions et images. Aucune donnée personnelle n'est transmise.
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Sentry — pour détecter les bugs. Seules des informations techniques anonymes sont collectées (type d'appareil, version du système).
-                    </FormattedText>
-                </View>
-            </View>
 
             <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Vos droits (RGPD)
+                Vos Droits
             </FormattedText>
             <FormattedText style={[styles.p, { color: textColor }]}>
-                Vous pouvez à tout moment :
-            </FormattedText>
-            <View style={styles.list}>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Consulter vos données dans les paramètres de l'application
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Supprimer vos données en désinstallant l'application
-                    </FormattedText>
-                </View>
-                <View style={styles.listItem}>
-                    <Text style={[styles.bullet, { color: primaryColor }]}>• </Text>
-                    <FormattedText style={[styles.listText, { color: textColor }]}>
-                        Contacter la CNIL (cnil.fr) pour toute réclamation
-                    </FormattedText>
-                </View>
-            </View>
-
-            <FormattedText style={[styles.h2, { color: textColor, marginTop: 20 }]}>
-                Contact
-            </FormattedText>
-            <FormattedText style={[styles.p, { color: textColor }]}>
-                Pour toute question : lykimq@gmail.com
+                Vous restez maître de vos données. Pour supprimer toute trace d'utilisation, il vous suffit de désinstaller l'application.
             </FormattedText>
         </View>
     );
