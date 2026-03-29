@@ -22,6 +22,7 @@ import { sortQuestionsById } from '../../shared/utils/questionUtils';
 import { useMastery } from '../../shared/contexts/MasteryContext';
 import { PerformanceRating, prioritizeQuestions } from '../../shared/utils/MasteryUtils';
 import { sharedStyles } from '../../shared/utils';
+import { RECOMMENDED_SESSION_QUESTION_COUNT } from '../../shared/constants/learningSession';
 import { Icon3D } from '../../shared/components';
 import type { FormationCategory } from '../types';
 import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
@@ -133,9 +134,8 @@ const FlashCardScreen: React.FC = () => {
             const allQuestions = Object.values(dataState.data).flatMap(cat => cat.questions);
             const prioritizedIds = prioritizeQuestions(allQuestions, masteryMap);
             
-            // Take the top 20 questions for the recommended session
             const recommendedQuestions = prioritizedIds
-                .slice(0, 20)
+                .slice(0, RECOMMENDED_SESSION_QUESTION_COUNT)
                 .map(id => allQuestions.find(q => q.id === id))
                 .filter((q): q is any => q !== undefined);
 

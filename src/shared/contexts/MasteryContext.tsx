@@ -7,6 +7,7 @@ import {
     calculateNextReview, 
     createInitialMastery 
 } from '../utils/MasteryUtils';
+import { RECOMMENDED_SESSION_QUESTION_COUNT } from '../constants/learningSession';
 
 interface DailyStats {
     date: string; // YYYY-MM-DD
@@ -25,13 +26,12 @@ interface MasteryContextProps extends MasteryState {
     updateMastery: (questionId: number, rating: PerformanceRating) => Promise<void>;
     resetProgress: () => Promise<void>;
     getQuestionsByLevel: (level: MasteryLevel) => number[];
-    getGlobalMasteryPercentage: () => number;
 }
 
 const MasteryContext = createContext<MasteryContextProps | undefined>(undefined);
 
 const STORAGE_KEY = '@mastery_data_v1';
-const DAILY_GOAL_DEFAULT = 20;
+const DAILY_GOAL_DEFAULT = RECOMMENDED_SESSION_QUESTION_COUNT;
 
 export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [state, setState] = useState<MasteryState>({
@@ -155,20 +155,6 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ child
             .map(m => m.id);
     };
 
-    const getGlobalMasteryPercentage = (): number => {
-        const masterys = Object.values(state.masteryMap);
-        if (masterys.length === 0) return 0;
-        
-        const totalScore = masterys.reduce((acc, m) => {
-            if (m.level === MasteryLevel.MASTERED) return acc + 1;
-            if (m.level === MasteryLevel.REVIEW) return acc + 0.5;
-            if (m.level === MasteryLevel.LEARNING) return acc + 0.2;
-            return acc;
-        }, 0);
-        
-        return Math.round((totalScore / masterys.length) * 100);
-    };
-
     return (
         <MasteryContext.Provider 
             value={{ 
@@ -176,7 +162,6 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({ child
                 updateMastery, 
                 resetProgress, 
                 getQuestionsByLevel, 
-                getGlobalMasteryPercentage 
             }}
         >
             {children}
