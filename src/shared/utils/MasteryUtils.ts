@@ -4,17 +4,17 @@
  */
 
 export enum MasteryLevel {
-    NEW = 'NEW',
-    LEARNING = 'LEARNING',
-    REVIEW = 'REVIEW',
-    MASTERED = 'MASTERED',
+    NEW = "NEW",
+    LEARNING = "LEARNING",
+    REVIEW = "REVIEW",
+    MASTERED = "MASTERED",
 }
 
 export enum PerformanceRating {
     AGAIN = 0, // Did not know it at all
-    HARD = 1,  // Struggled to remember
-    GOOD = 2,  // Correct, but took some effort
-    EASY = 3,  // Instant recall
+    HARD = 1, // Struggled to remember
+    GOOD = 2, // Correct, but took some effort
+    EASY = 3, // Instant recall
 }
 
 export interface QuestionMastery {
@@ -46,13 +46,13 @@ export const calculateNextReview = (
 
     if (rating === PerformanceRating.AGAIN) {
         // Lapser: reset interval but keep ease factor (minus a penalty)
-        interval = 0; 
+        interval = 0;
         streak = 0;
         level = MasteryLevel.LEARNING;
         easeFactor = Math.max(MIN_EASE_FACTOR, easeFactor - 0.2);
     } else {
         streak += 1;
-        
+
         // Calculate new interval based on rating
         if (interval === 0) {
             // New or lapsed question
@@ -61,9 +61,12 @@ export const calculateNextReview = (
             else if (rating === PerformanceRating.EASY) interval = 4;
         } else {
             // Review session
-            const multi = rating === PerformanceRating.HARD ? 1.2 : 
-                          rating === PerformanceRating.GOOD ? easeFactor :
-                          easeFactor * 1.3; // Easy bonus
+            const multi =
+                rating === PerformanceRating.HARD
+                    ? 1.2
+                    : rating === PerformanceRating.GOOD
+                      ? easeFactor
+                      : easeFactor * 1.3; // Easy bonus
             interval = Math.max(interval + 1, Math.round(interval * multi));
         }
 
@@ -101,13 +104,13 @@ export const predictNextReview = (
 ): string => {
     const next = calculateNextReview(current, rating);
     const interval = next.interval;
-    
-    if (interval === 0) return '<10m';
+
+    if (interval === 0) return "<10m";
     if (interval < 30) return `${interval}j`;
-    
+
     const months = Math.floor(interval / 30);
     if (months < 12) return `${months}m`;
-    
+
     return `${Math.floor(months / 12)}a`;
 };
 
@@ -118,14 +121,19 @@ export const getMasteryForQuestionId = (
     masteryMap: Record<number, QuestionMastery>,
     rawId: number | string
 ): QuestionMastery | undefined => {
-    const map = masteryMap as unknown as Record<string, QuestionMastery | undefined>;
+    const map = masteryMap as unknown as Record<
+        string,
+        QuestionMastery | undefined
+    >;
     return map[String(rawId)];
 };
 
 /**
  * Initial mastery state for a new question.
  */
-export const createInitialMastery = (questionId: number | string): QuestionMastery => ({
+export const createInitialMastery = (
+    questionId: number | string
+): QuestionMastery => ({
     id: questionId,
     level: MasteryLevel.NEW,
     interval: 0,
@@ -141,17 +149,20 @@ export const prioritizeQuestions = (
     masteryMap: Record<number, QuestionMastery>
 ): (number | string)[] => {
     const now = Date.now();
-    
+
     return questions
-        .map(q => {
-            const mastery = getMasteryForQuestionId(masteryMap, q.id) ?? createInitialMastery(q.id);
+        .map((q) => {
+            const mastery =
+                getMasteryForQuestionId(masteryMap, q.id) ??
+                createInitialMastery(q.id);
             let priority = 0;
 
             if (mastery.level === MasteryLevel.NEW) {
                 priority = 50; // New questions have baseline priority
             } else if (mastery.nextReview && mastery.nextReview <= now) {
                 // Overdue questions: priority increases with how overdue they are
-                const overdueDays = (now - mastery.nextReview) / (24 * 60 * 60 * 1000);
+                const overdueDays =
+                    (now - mastery.nextReview) / (24 * 60 * 60 * 1000);
                 priority = 100 + overdueDays * 10;
             } else if (mastery.level === MasteryLevel.LEARNING) {
                 priority = 80; // Currently learning, keep it fresh
@@ -160,7 +171,7 @@ export const prioritizeQuestions = (
             return { id: q.id, priority };
         })
         .sort((a, b) => b.priority - a.priority)
-        .map(item => item.id);
+        .map((item) => item.id);
 };
 
 /**
@@ -171,16 +182,23 @@ export const getCategoryMasteryStats = (
     masteryMap: Record<number, QuestionMastery>
 ) => {
     const total = questions.length;
-    if (total === 0) return { total: 0, mastered: 0, learning: 0, newCount: 0, percentage: 0 };
+    if (total === 0)
+        return {
+            total: 0,
+            mastered: 0,
+            learning: 0,
+            newCount: 0,
+            percentage: 0,
+        };
 
     let mastered = 0;
     let learning = 0;
     let reviewCount = 0;
     let newCount = 0;
 
-    questions.forEach(q => {
+    questions.forEach((q) => {
         const mastery = getMasteryForQuestionId(masteryMap, q.id);
-        
+
         if (!mastery || mastery.level === MasteryLevel.NEW) {
             newCount++;
         } else if (mastery.level === MasteryLevel.MASTERED) {
@@ -192,7 +210,7 @@ export const getCategoryMasteryStats = (
         }
     });
 
-    const totalScore = mastered + (reviewCount * 0.5) + (learning * 0.2);
+    const totalScore = mastered + reviewCount * 0.5 + learning * 0.2;
     const percentage = Math.round((totalScore / total) * 100);
 
     return {
@@ -200,6 +218,6 @@ export const getCategoryMasteryStats = (
         mastered,
         learning: learning + reviewCount,
         newCount,
-        percentage
+        percentage,
     };
 };

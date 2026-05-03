@@ -78,7 +78,7 @@ Elle interdit le port de signes religieux ostensibles dans les établissements s
 
 19. Quels sont les droits et devoirs du citoyen Français ?
 
-Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété.   Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.
+Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété. Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.
 
 20. Qu'est-ce que la Loi Veil ?
 
@@ -226,13 +226,13 @@ Le Revenu de Solidarité Active, aide financière pour les personnes sans ressou
 
 56. En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?
 
-2001.
+57.
 
-57. Quelle est la date de la loi permettant le mariage pour tous en France ?
+58. Quelle est la date de la loi permettant le mariage pour tous en France ?
 
-2013.
+59.
 
-58. Quel animal représente la France ?
+60. Quel animal représente la France ?
 
 Le coq gaulois est un symbole emblématique de la France, souvent utilisé lors d'événements sportifs. Il incarne la fierté, la bravoure et l'esprit combatif des Français. Il est fréquemment visible sur les maillots des équipes nationales, notamment lors des compétitions internationales telles que la Coupe du Monde ou les Jeux Olympiques. Le coq est aussi une référence historique et culturelle, évoquant la tradition et l’identité nationale.
 
@@ -314,7 +314,7 @@ Paris - Île-de-France, Marseille - Provence-Alpes-Côte d'Azur, Lyon - Auvergne
 
 78. Quelles sont les origines des principaux fleuves de France ?
 
-- La Loire : C'est le plus long fleuve de France, il prend sa source dans le Massif central, plus précisément dans le département de l'Allier, et se jette dans l'océan Atlantique. - La Seine : Elle prend sa source dans le plateau de Langres, en Haute-Marne, et traverse Paris avant de se jeter dans la Manche. - Le Rhône : Il prend sa source dans le massif du Mont Blanc en Suisse, traverse la région AuvergneRhône-Alpes et se jette dans la mer Méditerranée, dans le delta du Rhône. - La Garonne : Elle prend sa source dans les Pyrénées espagnoles et traverse le sud-ouest de la France avant de se jeter dans l'océan Atlantique, dans l'estuaire de la Gironde.  - Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.
+- La Loire : C'est le plus long fleuve de France, il prend sa source dans le Massif central, plus précisément dans le département de l'Allier, et se jette dans l'océan Atlantique. - La Seine : Elle prend sa source dans le plateau de Langres, en Haute-Marne, et traverse Paris avant de se jeter dans la Manche. - Le Rhône : Il prend sa source dans le massif du Mont Blanc en Suisse, traverse la région AuvergneRhône-Alpes et se jette dans la mer Méditerranée, dans le delta du Rhône. - La Garonne : Elle prend sa source dans les Pyrénées espagnoles et traverse le sud-ouest de la France avant de se jeter dans l'océan Atlantique, dans l'estuaire de la Gironde. - Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.
 
 79. Pourquoi l'Union européenne a-t-elle été créée ?
 
@@ -343,7 +343,6 @@ L'expression de la volonté générale. Elle doit être la même pour tous.
 85. Art 13. Pourquoi l'impôt est-il nécessaire ?
 
 Pour l'entretien de la force publique et les dépenses d'administration. Il doit être réparti également en raison des facultés de chacun.
-
 
 # Histoire, géographie et culture
 
@@ -715,7 +714,7 @@ Le régime de Napoléon III, également connu sous le nom de Second Empire, s'es
 
 176. Combien y a-t-il eu de Napoléon et quelle est la différence entre eux ?
 
-Il y a eu trois Napoléon qui ont régné en France : 1. Napoléon Ier (Napoléon Bonaparte) – 1804-1815 - Premier empereur des Français (sacré en 1804). - Grand stratège militaire, il conquiert une grande partie de l’Europe. - Défait en 1814, revient au pouvoir en 1815 (les Cent-Jours) mais perd à Waterloo, ce qui marque sa chute définitive. 2. Napoléon II (1815, mais ne règne pas réellement) - Fils de Napoléon Ier et Marie-Louise d’Autriche. - Désigné empereur après l’abdication de son père en 1815, mais il n’a jamais régné (resté en Autriche sous contrôle autrichien). - Mort jeune, surnommé "L'Aiglon".  3. Napoléon III (1852-1870) - Neveu de Napoléon Ier. - Élu président de la République en 1848, il prend le pouvoir par un coup d’État en 1851. - Se proclame empereur en 1852 et instaure le Second Empire. - Renversé en 1870 après la défaite contre la Prusse (bataille de Sedan).
+Il y a eu trois Napoléon qui ont régné en France : 1. Napoléon Ier (Napoléon Bonaparte) – 1804-1815 - Premier empereur des Français (sacré en 1804). - Grand stratège militaire, il conquiert une grande partie de l’Europe. - Défait en 1814, revient au pouvoir en 1815 (les Cent-Jours) mais perd à Waterloo, ce qui marque sa chute définitive. 2. Napoléon II (1815, mais ne règne pas réellement) - Fils de Napoléon Ier et Marie-Louise d’Autriche. - Désigné empereur après l’abdication de son père en 1815, mais il n’a jamais régné (resté en Autriche sous contrôle autrichien). - Mort jeune, surnommé "L'Aiglon". 3. Napoléon III (1852-1870) - Neveu de Napoléon Ier. - Élu président de la République en 1848, il prend le pouvoir par un coup d’État en 1851. - Se proclame empereur en 1852 et instaure le Second Empire. - Renversé en 1870 après la défaite contre la Prusse (bataille de Sedan).
 
 177. Qui est Charles de Gaulle ?
 
@@ -739,11 +738,11 @@ L’événement de la Révolution française qui m’a le plus marqué est la pr
 
 182. Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?
 
-Elle a été adoptée le 26 Aout 1789.    Déclaration des droits de l'homme et du citoyen du 26 août 1789.    Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous.    En conséquence, l'Assemblée Nationale reconnaît et déclare, en  présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen.    - Art 1er: Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune.    - Art 2: Le but de toute association politique est la conservation des droits naturels et imprescriptibles de l'Homme. Ces droits sont la liberté, la propriété, la sûreté, et la résistance à l'oppression.   - Art 3: Le principe de toute Souveraineté réside essentiellement dans la Nation. Nul corps, nul individu ne peut exercer d'autorité qui n'en émane expressément.    - Art 4: La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui : ainsi, l'exercice des droits naturels de chaque homme n'a de bornes que celles qui assurent aux autres Membres de la Société la jouissance de ces mêmes droits. Ces bornes ne peuvent être déterminées que par la Loi.   - Art 5: La Loi n'a le droit de défendre que les actions nuisibles à la Société. Tout ce qui n'est pas défendu par la Loi ne peut être empêché, et nul ne peut être contraint à faire ce qu'elle n'ordonne pas.   - Art 6: La Loi est l'expression de la volonté générale. Tous les Citoyens ont droit de concourir personnellement, ou par leurs Représentants, à sa formation. Elle doit être la même pour tous, soit qu'elle protège, soit qu'elle punisse. Tous les Citoyens étant égaux à ses yeux sont également admissibles à toutes dignités, places et emplois publics, selon leur capacité, et sans autre distinction que celle de leurs vertus et de leurs talents.   - Art 7: Nul homme ne peut être accusé, arrêté ni détenu que dans les cas déterminés par la Loi, et selon les formes qu'elle a prescrites. Ceux quisollicitent, expédient, exécutent ou font exécuter des ordres arbitraires, doivent être punis ; mais tout citoyen appelé ou saisi en vertu de la Loi doit obéir à l'instant : ilse rend coupable par la résistance.    - Art 8: La Loi ne doit établir que des peines strictement et évidemment nécessaires, et nul ne peut être puni qu'en vertu d'une Loi établie et promulguée antérieurement au délit, et légalement appliquée.   - Art 9: Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable, s'il est jugé indispensable de l'arrêter, toute rigueur qui ne serait pas nécessaire pour s'assurer de sa personne doit être sévèrement réprimée par la loi.   - Art 10: Nul ne doit être inquiété pour ses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public établi par la Loi.    - Art 11: La libre communication des pensées et des opinions est un des droits les plus précieux de l'Homme : tout Citoyen peut donc parler, écrire, imprimer librement, sauf à répondre à l'abus de cette liberté dans les cas déterminés par la Loi.   - Art 12: La garantie des droits de l'Homme et du Citoyen nécessite une force publique : cette force est donc instituée pour l'avantage de tous, et non pour l'utilité particulière de ceux auxquels elle est confiée.   - Art 13: Pour l'entretien de la force publique, et pour les dépenses d'administration, une contribution commune est indispensable : elle doit être également répartie entre tous les citoyens, en raison de leurs facultés.   - Art 14: Tous les Citoyens ont le droit de constater, par eux-mêmes ou par leurs représentants, la nécessité de la contribution publique, de la consentir librement d'en suivre l'emploi, et d'en déterminer la quotité, l'assiette, le recouvrement et la durée.   - Art 15: La Société a le droit de demander compte à tout Agent public de son administration.   - Art 16: Toute Société dans laquelle la garantie des Droits n'est pas assurée, ni la séparation des Pouvoirs déterminée, n'a point de Constitution.   - Art 17: La propriété étant un droit inviolable et sacré, nul ne peut en être privé, si ce n'est lorsque la nécessité publique, légalement constatée, l'exige évidemment, et sous la condition d'une juste et préalable indemnité.
+Elle a été adoptée le 26 Aout 1789. Déclaration des droits de l'homme et du citoyen du 26 août 1789. Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous. En conséquence, l'Assemblée Nationale reconnaît et déclare, en présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen. - Art 1er: Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune. - Art 2: Le but de toute association politique est la conservation des droits naturels et imprescriptibles de l'Homme. Ces droits sont la liberté, la propriété, la sûreté, et la résistance à l'oppression. - Art 3: Le principe de toute Souveraineté réside essentiellement dans la Nation. Nul corps, nul individu ne peut exercer d'autorité qui n'en émane expressément. - Art 4: La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui : ainsi, l'exercice des droits naturels de chaque homme n'a de bornes que celles qui assurent aux autres Membres de la Société la jouissance de ces mêmes droits. Ces bornes ne peuvent être déterminées que par la Loi. - Art 5: La Loi n'a le droit de défendre que les actions nuisibles à la Société. Tout ce qui n'est pas défendu par la Loi ne peut être empêché, et nul ne peut être contraint à faire ce qu'elle n'ordonne pas. - Art 6: La Loi est l'expression de la volonté générale. Tous les Citoyens ont droit de concourir personnellement, ou par leurs Représentants, à sa formation. Elle doit être la même pour tous, soit qu'elle protège, soit qu'elle punisse. Tous les Citoyens étant égaux à ses yeux sont également admissibles à toutes dignités, places et emplois publics, selon leur capacité, et sans autre distinction que celle de leurs vertus et de leurs talents. - Art 7: Nul homme ne peut être accusé, arrêté ni détenu que dans les cas déterminés par la Loi, et selon les formes qu'elle a prescrites. Ceux quisollicitent, expédient, exécutent ou font exécuter des ordres arbitraires, doivent être punis ; mais tout citoyen appelé ou saisi en vertu de la Loi doit obéir à l'instant : ilse rend coupable par la résistance. - Art 8: La Loi ne doit établir que des peines strictement et évidemment nécessaires, et nul ne peut être puni qu'en vertu d'une Loi établie et promulguée antérieurement au délit, et légalement appliquée. - Art 9: Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable, s'il est jugé indispensable de l'arrêter, toute rigueur qui ne serait pas nécessaire pour s'assurer de sa personne doit être sévèrement réprimée par la loi. - Art 10: Nul ne doit être inquiété pour ses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public établi par la Loi. - Art 11: La libre communication des pensées et des opinions est un des droits les plus précieux de l'Homme : tout Citoyen peut donc parler, écrire, imprimer librement, sauf à répondre à l'abus de cette liberté dans les cas déterminés par la Loi. - Art 12: La garantie des droits de l'Homme et du Citoyen nécessite une force publique : cette force est donc instituée pour l'avantage de tous, et non pour l'utilité particulière de ceux auxquels elle est confiée. - Art 13: Pour l'entretien de la force publique, et pour les dépenses d'administration, une contribution commune est indispensable : elle doit être également répartie entre tous les citoyens, en raison de leurs facultés. - Art 14: Tous les Citoyens ont le droit de constater, par eux-mêmes ou par leurs représentants, la nécessité de la contribution publique, de la consentir librement d'en suivre l'emploi, et d'en déterminer la quotité, l'assiette, le recouvrement et la durée. - Art 15: La Société a le droit de demander compte à tout Agent public de son administration. - Art 16: Toute Société dans laquelle la garantie des Droits n'est pas assurée, ni la séparation des Pouvoirs déterminée, n'a point de Constitution. - Art 17: La propriété étant un droit inviolable et sacré, nul ne peut en être privé, si ce n'est lorsque la nécessité publique, légalement constatée, l'exige évidemment, et sous la condition d'une juste et préalable indemnité.
 
 183. Quelles sont les dates des deux dernières guerres mondiales ?
 
-- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18).    - La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945
+- La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18). - La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945
 
 184. Qu'est-ce que la guerre de 100 ans ?
 
@@ -783,7 +782,7 @@ L'acquisition de la nationalité française par filiation.
 
 193. Qui sont les principales figures de la Révolution ?
 
-- Louis XVI (1754-1793) : Roi de France exécuté en 1793. - Marie-Antoinette (1755-1793) : Reine de France, guillotinée. - Mirabeau (1749-1791) : Orateur influent du début de la Révolution. - Robespierre (1758-1794) : Chef des Jacobins, instigateur de la Terreur. - Danton (1759-1794) : Révolutionnaire modéré, exécuté sous la Terreur.  - Marat (1743-1793) : Journaliste radical, assassiné dans son bain. - Napoléon Bonaparte (1769-1821) : Met fin à la Révolution et devient empereur en 1804.
+- Louis XVI (1754-1793) : Roi de France exécuté en 1793. - Marie-Antoinette (1755-1793) : Reine de France, guillotinée. - Mirabeau (1749-1791) : Orateur influent du début de la Révolution. - Robespierre (1758-1794) : Chef des Jacobins, instigateur de la Terreur. - Danton (1759-1794) : Révolutionnaire modéré, exécuté sous la Terreur. - Marat (1743-1793) : Journaliste radical, assassiné dans son bain. - Napoléon Bonaparte (1769-1821) : Met fin à la Révolution et devient empereur en 1804.
 
 194. Quel monarque régnait en France au début de la Révolution Française ?
 
@@ -819,7 +818,7 @@ La guerre a commencé le 28 juillet 1914 avec la déclaration de guerre de l’A
 
 202. Quelles sont les principales batailles de la Première Guerre mondiale ?
 
-- Bataille de la Marne (6-12 septembre 1914) : Première grande bataille où les Français et les Britanniques stoppent l’avancée allemande vers Paris. - Bataille de Verdun (21 février - 18 décembre 1916) : Bataille d'usure entre la France et l’Allemagne, symbole de la résistance française. - Bataille de la Somme (1er juillet - 18 novembre 1916) : Offensive conjointe francobritannique pour percer le front allemand, très meurtrière. - Bataille du Chemin des Dames (16 avril - 24 octobre 1917) : Offensive française sous le commandement du général Nivelle, marquée par un échec et des mutineries. - Bataille de Passchendaele (31 juillet - 10 novembre 1917) : Offensive britannique marquée par des combats dans des conditions extrêmes de boue et de pluie. - Bataille de Caporetto (24 octobre - 19 novembre 1917): majeure italienne face aux Austro-Hongrois et Allemands.  - Seconde bataille de la Marne (15 juillet - 6 août 1918) : Dernière grande offensive allemande stoppée par les Alliés, tournant de la guerre.
+- Bataille de la Marne (6-12 septembre 1914) : Première grande bataille où les Français et les Britanniques stoppent l’avancée allemande vers Paris. - Bataille de Verdun (21 février - 18 décembre 1916) : Bataille d'usure entre la France et l’Allemagne, symbole de la résistance française. - Bataille de la Somme (1er juillet - 18 novembre 1916) : Offensive conjointe francobritannique pour percer le front allemand, très meurtrière. - Bataille du Chemin des Dames (16 avril - 24 octobre 1917) : Offensive française sous le commandement du général Nivelle, marquée par un échec et des mutineries. - Bataille de Passchendaele (31 juillet - 10 novembre 1917) : Offensive britannique marquée par des combats dans des conditions extrêmes de boue et de pluie. - Bataille de Caporetto (24 octobre - 19 novembre 1917): majeure italienne face aux Austro-Hongrois et Allemands. - Seconde bataille de la Marne (15 juillet - 6 août 1918) : Dernière grande offensive allemande stoppée par les Alliés, tournant de la guerre.
 
 203. Quelle est la date exacte du début et de la fin de la Seconde Guerre mondiale ?
 
@@ -851,7 +850,7 @@ La chute de l'Empire Napoléonien a commencé avec la désastreuse campagne de R
 
 210. Quelle est l'histoire derrière la construction du Château de Versailles ?
 
-Le Château de Versailles, construit sous Louis XIV (14), est un symbole de la monarchie absolue de l'Ancien Régime. Il a servi de résidence royale et de centre du pouvoir jusqu'à la Révolution  Française, et est reconnu pour son architecture et ses jardins somptueux.
+Le Château de Versailles, construit sous Louis XIV (14), est un symbole de la monarchie absolue de l'Ancien Régime. Il a servi de résidence royale et de centre du pouvoir jusqu'à la Révolution Française, et est reconnu pour son architecture et ses jardins somptueux.
 
 211. : Que s'est-il passé en France durant la Seconde Guerre mondiale ?
 
@@ -961,7 +960,6 @@ La libre communication des pensées et des opinions.
 
 Oui, c'est un droit inviolable et sacré (sauf nécessité publique et avec indemnité).
 
-
 # Principes et valeurs de la République
 
 ## Devise et symboles de la République
@@ -996,7 +994,7 @@ Bleu, Blanc, Rouge. Le blanc est la couleur historique de la monarchie (Bourbon)
 
 245. Quels sont les symboles de la république Française ?
 
-- Le Drapeau Tricolore.  - La marseillaise.  - Marianne.  - Le bonnet Phrygien.  - La devise "Liberté, égalité, Fraternité".  - La fleur de Lys.  - Le 14 Juillet.
+- Le Drapeau Tricolore. - La marseillaise. - Marianne. - Le bonnet Phrygien. - La devise "Liberté, égalité, Fraternité". - La fleur de Lys. - Le 14 Juillet.
 
 246. Qui est Marianne ?
 
@@ -1004,7 +1002,7 @@ C'est une figure allégorique de la République. Elle porte le bonnet phrygien (
 
 247. Quelles sont les couleurs du drapeau Français ?
 
-Bleu, Blanc, Rouge  - Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime.  - Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France.  - Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.
+Bleu, Blanc, Rouge - Bleu : Cette couleur symbolise la monarchie française. Elle était la couleur du manteau royal fleurdelisé sous l'Ancien Régime. - Blanc : Le blanc représente la royauté française. C'était la couleur de la dynastie des Bourbons qui régnait sur la France. - Rouge : Le rouge est la couleur traditionnelle de la ville de Paris. Il symbolise le peuple français, notamment depuis la Révolution française de 1789.
 
 248. Quel est l'hymne national français ?
 
@@ -1132,7 +1130,6 @@ En France, il est permis de porter des signes religieux dans les espaces publics
 
 Oui, mais pas dans les écoles, les collèges et les lycées publics.
 
-
 # Système institutionnel et politique
 
 ## Démocratie et droit de vote
@@ -1203,9 +1200,9 @@ Une république n'a pas de roi, mais cela ne signifie pas que c’est une démoc
 
 295. En quelle année le droit de vote des femmes a-t-il été introduit en France ?
 
-1944.
+296.
 
-296. En quelle année le droit de vote des hommes a-t-il été introduit en France ?
+297. En quelle année le droit de vote des hommes a-t-il été introduit en France ?
 
 Le droit de vote des hommes a été introduit en 1848, pendant la Deuxième République, avec le suffrage universel masculin.
 
@@ -1219,7 +1216,7 @@ En France, on trouve les élections présidentielles (5ans), législatives (5ans
 
 299. Quelles sont les prochaines élections ?
 
-Les prochaines élections en France sont les suivantes : - Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes. - Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat. - Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans. - Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen.  Ils peuvent avoir d’autres élections en fonction de l’actualité.
+Les prochaines élections en France sont les suivantes : - Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes. - Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat. - Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans. - Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen. Ils peuvent avoir d’autres élections en fonction de l’actualité.
 
 300. Quel est l’âge légal pour voter en France ?
 
@@ -1239,7 +1236,7 @@ La démocratie est une forme de gouvernement dans laquelle la souveraineté appa
 
 304. Êtes-vous d'accord avec le principe de la démocratie ?
 
-Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles  j'ai choisi de vivre en France.
+Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles j'ai choisi de vivre en France.
 
 ## Organisation de la République française
 
@@ -1301,15 +1298,15 @@ C'était Elisabeth Borne.
 
 319. Citez dans l'ordre les présidents de la cinquième république.
 
-- Charles de Gaulle.  - George Pompidou.  - Valérie Giscard d'Estaing.  - François Mitterrand.  - Jacques Chirac.  - Nicolas Sarkozy.  - François Hollande.  - Emmanuel Macron.
+- Charles de Gaulle. - George Pompidou. - Valérie Giscard d'Estaing. - François Mitterrand. - Jacques Chirac. - Nicolas Sarkozy. - François Hollande. - Emmanuel Macron.
 
 320. Citez trois anciens premiers ministres Français de la cinquième république.
 
-- Edouard Philippe.  - Manuel Valls.  - François Fillon.
+- Edouard Philippe. - Manuel Valls. - François Fillon.
 
 321. Citez trois ministres du gouvernement actuel.
 
-- Gerald Darmanin.  - Bruno Le Maire.  - Eric Dupond-Moretti.
+- Gerald Darmanin. - Bruno Le Maire. - Eric Dupond-Moretti.
 
 322. Pour combien de temps est élu le président de la république ?
 
@@ -1317,7 +1314,7 @@ Le président est élu pour un mandat de 5 ans.
 
 323. Qu'est-ce que le parlement ?
 
-Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres:   - La chambre haute (le Sénat).  - La chambre basse (l’Assemblée nationale).
+Le Parlement est une assemblée élue représentant le peuple. Il comprend deux chambres: - La chambre haute (le Sénat). - La chambre basse (l’Assemblée nationale).
 
 324. Quel est le rôle exact du parlement ?
 
@@ -1425,7 +1422,7 @@ Diriger le gouvernement et mettre en œuvre la politique nationale.
 
 350. De quoi est composé le parlement français ?
 
-Le parlement français est composé de deux chambres (bicaméral), c'est-à-dire: - Le Sénat, appelée « chambre haute », avec 348 sénateurs,  - L’Assemblée nationale, dite « chambre basse », avec 577 députés.
+Le parlement français est composé de deux chambres (bicaméral), c'est-à-dire: - Le Sénat, appelée « chambre haute », avec 348 sénateurs, - L’Assemblée nationale, dite « chambre basse », avec 577 députés.
 
 351. Qu'est-ce que le Sénat en France ?
 
@@ -1533,7 +1530,7 @@ Non, le Sénat ne peut pas déposer de motion de censure contre le gouvernement.
 
 377. L'article 49.3 s'applique-t-il devant l'Assemblée nationale et le Sénat ?
 
-L'article 49.3 de la Constitution ne peut être utilisé que devant l'Assemblée nationale. Il permet au Premier ministre d’engager la responsabilité du gouvernement sur un texte de loi, ce qui entraîne son adoption sans vote, sauf si une motion de censure est déposée et adoptée par 289 députés (majorité absolue). Le Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa  responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement. Cependant, le Sénat peut débattre et voter des lois, mais son opposition ne bloque pas définitivement un texte, puisque l’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres.
+L'article 49.3 de la Constitution ne peut être utilisé que devant l'Assemblée nationale. Il permet au Premier ministre d’engager la responsabilité du gouvernement sur un texte de loi, ce qui entraîne son adoption sans vote, sauf si une motion de censure est déposée et adoptée par 289 députés (majorité absolue). Le Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement. Cependant, le Sénat peut débattre et voter des lois, mais son opposition ne bloque pas définitivement un texte, puisque l’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres.
 
 378. Le président de la République représente quel pouvoir ?
 
@@ -1569,7 +1566,7 @@ Huit (8) présidents élus depuis 1958.
 
 386. Quels étaient les pouvoirs sous la Première République ?
 
-- La Convention nationale (1792-1795), qui gouvernait et adoptait les lois.  - Le Comité de salut public (1793-1794), dirigé par Robespierre, qui a exercé un pouvoir fort pendant la Terreur. - Le Directoire (1795-1799), un gouvernement plus modéré avec cinq directeurs.
+- La Convention nationale (1792-1795), qui gouvernait et adoptait les lois. - Le Comité de salut public (1793-1794), dirigé par Robespierre, qui a exercé un pouvoir fort pendant la Terreur. - Le Directoire (1795-1799), un gouvernement plus modéré avec cinq directeurs.
 
 387. Qui est élu premier président de la République ?
 
@@ -1614,7 +1611,6 @@ Parce que l’Assemblée nationale est élue au suffrage universel direct, elle 
 397. Où siège l’Assemblée nationale ?
 
 Au Palais Bourbon, à Paris.
-
 
 # Vivre dans la société française
 
@@ -1894,7 +1890,7 @@ Nous sommes dans la cinquième république.
 
 466. Quand sont les dates des républiques précédentes?
 
-- La première république : 1792-1804  - La deuxième république : 1848 – 1852  - La troisième république : 1870 – 1940  - La quatrième république : 1946-1958  - La cinquième république : 1958 – aujourd'hui.
+- La première république : 1792-1804 - La deuxième république : 1848 – 1852 - La troisième république : 1870 – 1940 - La quatrième république : 1946-1958 - La cinquième république : 1958 – aujourd'hui.
 
 467. Qui a instauré la cinquième république ?
 
@@ -1910,7 +1906,7 @@ Il se trouve au Palais de l’Élysée.
 
 470. Citez les différentes institutions politiques en France ?
 
-- Le pouvoir exécutif.  - Le pouvoir législatif.  - Le pouvoir judiciaire.
+- Le pouvoir exécutif. - Le pouvoir législatif. - Le pouvoir judiciaire.
 
 471. Comment sont élus les députés ?
 
@@ -1922,7 +1918,7 @@ Les députés sont élus pour un mandat de cinq ans.
 
 473. Qui constitue le gouvernement ?
 
-- Le premier ministre.  - Les ministres.  - Les secrétaires d’état.
+- Le premier ministre. - Les ministres. - Les secrétaires d’état.
 
 474. Pour combien d'année est son mandat ?
 
@@ -1950,7 +1946,7 @@ C'est Claude Joseph Rouget de Lisle.
 
 480. Connaissez vous le premier couplet de la Marseillaise ?
 
-Allons enfants de la Patrie, Le jour de gloire est arrivé !  Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes !  Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !
+Allons enfants de la Patrie, Le jour de gloire est arrivé ! Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes ! Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !
 
 481. À quelle occasion la Marseillaise a-t-elle été écrite ?
 
@@ -2046,7 +2042,7 @@ La république est un mode d'organisation d'un pays dans lequel le pouvoir est e
 
 504. Quels sont les différents types de Républiques
 
-- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil). - République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie). - République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie). - République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).
+- République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil). - République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie). - République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie). - République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine, Corée du Nord).
 
 505. Où se situe le siège de la Présidence de la République ?
 
@@ -2110,7 +2106,7 @@ Le maire est élu au suffrage indirect. Cela signifie que ce ne sont pas directe
 
 520. Comment est élu le conseil municipal ?
 
-- Lors des élections municipales, les habitants de la commune votent pour élire les conseillers municipaux. Ces élections ont lieu tous les 6 ans. - Le mode de scrutin dépend de la taille de la commune (majoritaire pour les petites communes, proportionnel pour les grandes).  - Une fois élus, les conseillers municipaux se réunissent lors de leur première séance. - Ils votent pour choisir le maire parmi eux. - L’élection se fait à bulletin secret et le maire doit obtenir la majorité absolue (plus de la moitié des voix).
+- Lors des élections municipales, les habitants de la commune votent pour élire les conseillers municipaux. Ces élections ont lieu tous les 6 ans. - Le mode de scrutin dépend de la taille de la commune (majoritaire pour les petites communes, proportionnel pour les grandes). - Une fois élus, les conseillers municipaux se réunissent lors de leur première séance. - Ils votent pour choisir le maire parmi eux. - L’élection se fait à bulletin secret et le maire doit obtenir la majorité absolue (plus de la moitié des voix).
 
 521. Comment sont élus les adjoints aux maires :
 
@@ -2194,11 +2190,11 @@ La Cinquième République se distingue notamment par : - Le président est élu 
 
 541. En quelle année a été adoptée la Ve République en France ?
 
-1958.
+542.
 
-542. À quelles dates ont été établies les cinq Républiques françaises ?
+543. À quelles dates ont été établies les cinq Républiques françaises ?
 
-- Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie. - Deuxième République : instaurée le 24 février 1848 par le gouvernement provisoire à la suite de la Révolution de 1848.  - Troisième République : proclamée le 4 septembre 1870 par Léon Gambetta et d'autres républicains après la défaite de Napoléon III. - Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération. - Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.
+- Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie. - Deuxième République : instaurée le 24 février 1848 par le gouvernement provisoire à la suite de la Révolution de 1848. - Troisième République : proclamée le 4 septembre 1870 par Léon Gambetta et d'autres républicains après la défaite de Napoléon III. - Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération. - Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.
 
 543. Qui est Léon Blum ?
 
@@ -2214,7 +2210,7 @@ François Mitterrand fut le président de la République française de 1981 à 1
 
 546. Quels pays font partie de l'Union européenne mais pas de la zone euro ?
 
-Certaines nations membres de l'Union européenne n'ont pas adopté l'euro comme monnaie officielle. Ces pays continuent à utiliser leur propre monnaie nationale. Voici quelques exemples : - Suède (utilise la couronne suédoise) - Danemark (utilise la couronne danoise) - Pologne (utilise le złoty) - Hongrie (utilise le forint) - République tchèque (utilise la couronne tchèque) - Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro.  Fin de la seconde édition
+Certaines nations membres de l'Union européenne n'ont pas adopté l'euro comme monnaie officielle. Ces pays continuent à utiliser leur propre monnaie nationale. Voici quelques exemples : - Suède (utilise la couronne suédoise) - Danemark (utilise la couronne danoise) - Pologne (utilise le złoty) - Hongrie (utilise le forint) - République tchèque (utilise la couronne tchèque) - Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro. Fin de la seconde édition
 
 547. Combien y a-t-il de communes et qui les administre ?
 
@@ -2378,7 +2374,7 @@ En 1848.
 
 587. Qui est Victor Hugo ?
 
-Grand écrivain du XIXe siècle (*Les Misérables*), engagé contre la misère et la peine de mort.
+Grand écrivain du XIXe siècle (_Les Misérables_), engagé contre la misère et la peine de mort.
 
 588. Quand la IIIe République s'est-elle installée et qu'a fait Jules Ferry ?
 
@@ -2486,7 +2482,7 @@ Louis XIV est le plus connu principalement pour la durée de son règne qui fut 
 
 614. Quel évènement Historique de la France vous a-t-il le plus marqué ?
 
-- Sport: L’événement historique qui m’a le plus marqué est la victoire de la France lors de la Coupe du monde de football en 1998. C’était un moment très fort, car il a uni toute la population dans la joie et la fierté. Cette victoire symbolisait aussi une France diverse, rassemblée autour de valeurs communes comme le sport, l’effort collectif et le vivre-ensemble. Pour moi, cela montre une image positive et solidaire du pays.   - Chairlie Hebdo: L’événement de Charlie Hebdo en 2015 m’a beaucoup marqué car il représente la défense de la liberté d’expression, une valeur fondamentale en France. Malgré l’attaque terroriste contre le journal, les Français se sont rassemblés pour protéger cette liberté essentielle, montrant la force de la démocratie et de la solidarité dans le pays.   - Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.
+- Sport: L’événement historique qui m’a le plus marqué est la victoire de la France lors de la Coupe du monde de football en 1998. C’était un moment très fort, car il a uni toute la population dans la joie et la fierté. Cette victoire symbolisait aussi une France diverse, rassemblée autour de valeurs communes comme le sport, l’effort collectif et le vivre-ensemble. Pour moi, cela montre une image positive et solidaire du pays. - Chairlie Hebdo: L’événement de Charlie Hebdo en 2015 m’a beaucoup marqué car il représente la défense de la liberté d’expression, une valeur fondamentale en France. Malgré l’attaque terroriste contre le journal, les Français se sont rassemblés pour protéger cette liberté essentielle, montrant la force de la démocratie et de la solidarité dans le pays. - Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.
 
 615. Quel été le rôle de la Bastille avant sa démolition ?
 
@@ -2894,9 +2890,9 @@ Cela dépend des goûts et de l'actualité du cinéma, mais par exemple : Le der
 
 716. En quelle année le TGV (Train à Grande Vitesse) a-t-il été inauguré ?
 
-1981.
+717.
 
-717. Quelle est la capacité du Stade de France ?
+718. Quelle est la capacité du Stade de France ?
 
 Environ 80 000 spectateurs.
 
@@ -2954,9 +2950,9 @@ Le Centre National de la Recherche Scientifique, une organisation gouvernemental
 
 731. En quelle année la France a-t-elle adopté l'euro comme monnaie ?
 
-2002.
+732.
 
-732. Comment la France a-t-elle influencé la cuisine mondiale ?
+733. Comment la France a-t-elle influencé la cuisine mondiale ?
 
 La France a grandement influencé la cuisine mondiale par ses techniques culinaires, ses écoles de cuisine, son système de restaurants et ses innovations gastronomiques. Des chefs comme Paul Bocuse, Alain Ducasse et Joël Robuchon ont également contribué à faire connaître la cuisine française dans le monde entier.
 
@@ -3190,11 +3186,11 @@ C'est un mouvement culturel, philosophique, littéraire et intellectuel qui éme
 
 790. Quel grand évènement sportif Français connaissez-vous ?
 
-- Vous pouvez citer une épreuve cycliste comme le Tour de France.    - Une épreuve de tennis comme le tournoi de Roland Garros.   - Une compétition de course automobile comme les 24h du Mans.    - Une course comme le Marathon de Paris.
+- Vous pouvez citer une épreuve cycliste comme le Tour de France. - Une épreuve de tennis comme le tournoi de Roland Garros. - Une compétition de course automobile comme les 24h du Mans. - Une course comme le Marathon de Paris.
 
 791. Connaissez-vous des sportifs Français(e)s ?
 
-- Dans le football : Michel Platini, Zinedine Zidane.    - Dans le cyclisme : Richard Virenque.    - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.    - Dans le judo : Teddy Riner.
+- Dans le football : Michel Platini, Zinedine Zidane. - Dans le cyclisme : Richard Virenque. - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah. - Dans le judo : Teddy Riner.
 
 792. Vivez-vous en appartement ou en maison ?
 
@@ -3214,7 +3210,7 @@ Léonard de Vinci, et elle est exposée au musée du Louvre.
 
 796. Pourquoi voulez-vous devenir Français ?
 
-Je suis venu en France pour la première fois en 2009 pour effectuer un stage de master à Bordeaux, que j’ai suivi pendant cinq mois. Après l’obtention de mon diplôme, j’ai poursuivi un doctorat à l’Université Grenoble-Alpes. Même lorsque je vivais à Pékin, mes professeurs étaient français, et j’avais régulièrement l’occasion de venir en France pour mes études. Après mon doctorat, j’ai eu la chance de travailler à Paris, à l’ENS, pendant trois ans. Depuis, je cherche et trouve des emplois en France, et je travaille encore aujourd’hui dans un environnement français.   Au fil des années, je me suis habitué à la culture française, à la langue, et j’ai découvert avec plaisir la gastronomie locale : j’aime le fromage, le vin, et voyager en France ainsi qu’en Europe. J’apprécie beaucoup la liberté d’expression, la facilité de voyager entre les pays, et le mode de vie français.   Je souhaite devenir Français car je me sens pleinement intégré dans cette société. J’admire profondément les valeurs de la République française, notamment la liberté, l’égalité, et la fraternité. La France, en tant que troisième économie mondiale et leader dans plusieurs secteurs comme l’aéronautique, l’agroalimentaire et le luxe, représente pour moi un pays où je peux construire un projet personnel et professionnel solide.    Aujourd’hui, je me sens plus Français que jamais et je n’ai plus aucune autre alternative, car la France est devenue ma maison, mon pays d’adoption où je veux m’investir pleinement.
+Je suis venu en France pour la première fois en 2009 pour effectuer un stage de master à Bordeaux, que j’ai suivi pendant cinq mois. Après l’obtention de mon diplôme, j’ai poursuivi un doctorat à l’Université Grenoble-Alpes. Même lorsque je vivais à Pékin, mes professeurs étaient français, et j’avais régulièrement l’occasion de venir en France pour mes études. Après mon doctorat, j’ai eu la chance de travailler à Paris, à l’ENS, pendant trois ans. Depuis, je cherche et trouve des emplois en France, et je travaille encore aujourd’hui dans un environnement français. Au fil des années, je me suis habitué à la culture française, à la langue, et j’ai découvert avec plaisir la gastronomie locale : j’aime le fromage, le vin, et voyager en France ainsi qu’en Europe. J’apprécie beaucoup la liberté d’expression, la facilité de voyager entre les pays, et le mode de vie français. Je souhaite devenir Français car je me sens pleinement intégré dans cette société. J’admire profondément les valeurs de la République française, notamment la liberté, l’égalité, et la fraternité. La France, en tant que troisième économie mondiale et leader dans plusieurs secteurs comme l’aéronautique, l’agroalimentaire et le luxe, représente pour moi un pays où je peux construire un projet personnel et professionnel solide. Aujourd’hui, je me sens plus Français que jamais et je n’ai plus aucune autre alternative, car la France est devenue ma maison, mon pays d’adoption où je veux m’investir pleinement.
 
 797. À quelle fréquence rentrez-vous dans votre pays d'origine ?
 
@@ -3536,7 +3532,7 @@ Oui/NON, j'envoie /ou pas occasionnellement de l'argent pour soutenir ma famille
 
 875. Quelles sont les chaînes de montagnes qui séparent la France de ses voisins ?
 
-- - - France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.
+-   -   - France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.
 
 876. Avez-vous des enfants ? Comptez-vous en avoir prochainement ?
 
@@ -3573,4 +3569,3 @@ Oui/Non, nous envisageons d'avoir des enfants. Nous aimerions avoir (nombre d'en
 884. Envisagez-vous de faire venir votre famille en France ?
 
 Si les circonstances le permettent, j'aimerais faire venir (membres de la famille) en France pour leur offrir de meilleures opportunités ou simplement pour les réunir et passer du temps ensemble.
-

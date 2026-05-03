@@ -1,16 +1,23 @@
-import React, { createContext, useState, useContext, useEffect, useCallback, useRef } from 'react';
-import { preloadAllData, preloadImages } from '../utils';
-import { createLogger } from '../utils/logger';
-import { isFrenchCategory } from '../utils/typeGuards';
-import { getErrorMessage } from '../utils/errorUtils';
+import React, {
+    createContext,
+    useState,
+    useContext,
+    useEffect,
+    useCallback,
+    useRef,
+} from "react";
+import { preloadAllData, preloadImages } from "../utils";
+import { createLogger } from "../utils/logger";
+import { isFrenchCategory } from "../utils/typeGuards";
+import { getErrorMessage } from "../utils/errorUtils";
 import type {
     FrenchCategory,
     FrenchQuestionsData,
     DataContextType,
     DataProviderProps,
-} from '../../types';
+} from "../../types";
 
-const logger = createLogger('DataContext');
+const logger = createLogger("DataContext");
 
 const DataContext = createContext<DataContextType>({
     questionsData: { categories: [] } as FrenchQuestionsData,
@@ -19,37 +26,49 @@ const DataContext = createContext<DataContextType>({
 });
 
 export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
-    const [questionsData, setQuestionsData] = useState<FrenchQuestionsData>(
-        { categories: [] } as FrenchQuestionsData
-    );
+    const [questionsData, setQuestionsData] = useState<FrenchQuestionsData>({
+        categories: [],
+    } as FrenchQuestionsData);
     const [isDataLoading, setIsDataLoading] = useState(true);
-    const [dataLoadingError, setDataLoadingError] = useState<string | null>(null);
+    const [dataLoadingError, setDataLoadingError] = useState<string | null>(
+        null
+    );
 
     const isMountedRef = useRef(true);
 
-    const processLivretData = useCallback(async (subcategoryData: Record<string, FrenchCategory>) => {
-        try {
-            const categories = Object.values(subcategoryData) as FrenchCategory[];
+    const processLivretData = useCallback(
+        async (subcategoryData: Record<string, FrenchCategory>) => {
+            try {
+                const categories = Object.values(
+                    subcategoryData
+                ) as FrenchCategory[];
 
-            if (!categories.length) {
-                throw new Error('Invalid data structure: no categories available');
+                if (!categories.length) {
+                    throw new Error(
+                        "Invalid data structure: no categories available"
+                    );
+                }
+
+                const frenchData: FrenchQuestionsData = { categories };
+
+                if (isMountedRef.current) {
+                    setQuestionsData(frenchData);
+
+                    preloadImages(frenchData).catch((error) => {
+                        logger.warn(
+                            "Unexpected error during image preloading (non-critical):",
+                            error
+                        );
+                    });
+                }
+            } catch (error: unknown) {
+                if (isMountedRef.current) {
+                    throw error;
+                }
             }
-
-            const frenchData: FrenchQuestionsData = { categories };
-
-            if (isMountedRef.current) {
-                setQuestionsData(frenchData);
-
-                preloadImages(frenchData).catch((error) => {
-                    logger.warn('Unexpected error during image preloading (non-critical):', error);
-                });
-            }
-        } catch (error: unknown) {
-            if (isMountedRef.current) {
-                throw error;
-            }
-        }
-    }, []);
+        },
+        []
+    );
 
     useEffect(() => {
         const loadInitialData = async () => {
@@ -63,24 +82,33 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
 
                 if (!isMountedRef.current) return;
 
-                if (subcategoryData && Object.keys(subcategoryData).length > 0) {
+                if (
+                    subcategoryData &&
+                    Object.keys(subcategoryData).length > 0
+                ) {
                     const validatedData: Record<string, FrenchCategory> = {};
-                    for (const [key, value] of Object.entries(subcategoryData)) {
+                    for (const [key, value] of Object.entries(
+                        subcategoryData
+                    )) {
                         if (isFrenchCategory(value)) {
                             validatedData[key] = value;
                         }
                     }
-                    
+
                     if (Object.keys(validatedData).length > 0) {
                         await processLivretData(validatedData);
                     } else {
                         if (isMountedRef.current) {
-                            setDataLoadingError('Failed to load question data. Invalid data structure.');
+                            setDataLoadingError(
+                                "Failed to load question data. Invalid data structure."
+                            );
                         }
                     }
                 } else {
                     if (isMountedRef.current) {
-                        setDataLoadingError('Failed to load question data. Please check your connection or Firebase configuration.');
+                        setDataLoadingError(
+                            "Failed to load question data. Please check your connection or Firebase configuration."
+                        );
                     }
                 }
 
@@ -105,11 +133,13 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     }, []);
 
     return (
-        <DataContext.Provider value={{
-            questionsData,
-            isDataLoading,
-            dataLoadingError,
-        }}>
+        <DataContext.Provider
+            value={{
+                questionsData,
+                isDataLoading,
+                dataLoadingError,
+            }}
+        >
             {children}
         </DataContext.Provider>
     );
@@ -118,10 +148,9 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
 export const useData = () => {
     const context = useContext(DataContext);
     if (!context) {
-        throw new Error('useData must be used within a DataProvider');
+        throw new Error("useData must be used within a DataProvider");
     }
     return context;
 };
 
 export default DataContext;
-

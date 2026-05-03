@@ -1,30 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import {
-    StyleSheet,
-    View,
-    ScrollView,
-    ActivityIndicator,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Ionicons } from '@expo/vector-icons';
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View, ScrollView, ActivityIndicator } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Ionicons } from "@expo/vector-icons";
 
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText, AppHeader } from '../../shared/components';
-import CategoryCard from '../../welcome/CategoryCard';
-import { loadFlashCardData, getAllCategories } from '../utils';
-import type { FormationCategory } from '../types';
-import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { FormattedText, AppHeader } from "../../shared/components";
+import CategoryCard from "../../welcome/CategoryCard";
+import { loadFlashCardData, getAllCategories } from "../utils";
+import type { FormationCategory } from "../types";
+import type { FlashCardStackParamList } from "../navigation/FlashCardStack";
 
-type CategorySelectionScreenNavigationProp = NativeStackNavigationProp<FlashCardStackParamList>;
+type CategorySelectionScreenNavigationProp =
+    NativeStackNavigationProp<FlashCardStackParamList>;
 
 const CATEGORY_ICON_KEYS: { [key: string]: string } = {
-    principes_et_valeurs: 'flag',
-    histoire_geographie_et_culture: 'map',
-    droits_et_devoirs: 'shield',
-    system_et_politique: 'business',
-    vivre_dans_la_societe_francaise: 'people',
+    principes_et_valeurs: "flag",
+    histoire_geographie_et_culture: "map",
+    droits_et_devoirs: "shield",
+    system_et_politique: "business",
+    vivre_dans_la_societe_francaise: "people",
 };
 
 const CategorySelectionScreen: React.FC = () => {
@@ -45,27 +41,43 @@ const CategorySelectionScreen: React.FC = () => {
             const data = await loadFlashCardData();
             if (data) {
                 const allCategories = getAllCategories(data);
-                const sortedCategories = [...allCategories].sort((a, b) => a.id.localeCompare(b.id));
+                const sortedCategories = [...allCategories].sort((a, b) =>
+                    a.id.localeCompare(b.id)
+                );
                 setCategories(sortedCategories);
             } else {
-                setError('Impossible de charger les données');
+                setError("Impossible de charger les données");
             }
         } catch (err) {
-            setError('Erreur lors du chargement des données');
+            setError("Erreur lors du chargement des données");
         } finally {
             setIsLoading(false);
         }
     };
 
     const handleCategoryPress = (category: FormationCategory) => {
-        navigation.navigate('FlashCard', { categoryId: category.id });
+        navigation.navigate("FlashCard", { categoryId: category.id });
     };
 
     if (isLoading) {
         return (
-            <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
+            <View
+                style={[
+                    styles.container,
+                    {
+                        backgroundColor: theme.colors.background,
+                        justifyContent: "center",
+                        alignItems: "center",
+                    },
+                ]}
+            >
                 <ActivityIndicator size="large" color={theme.colors.primary} />
-                <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted, marginTop: 16 }]}>
+                <FormattedText
+                    style={[
+                        styles.loadingText,
+                        { color: theme.colors.textMuted, marginTop: 16 },
+                    ]}
+                >
                     Chargement...
                 </FormattedText>
             </View>
@@ -74,9 +86,32 @@ const CategorySelectionScreen: React.FC = () => {
 
     if (error) {
         return (
-            <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center', padding: 20 }]}>
-                <Ionicons name="alert-circle" size={48} color={theme.colors.error} />
-                <FormattedText style={[styles.errorText, { color: theme.colors.text, marginTop: 16, textAlign: 'center' }]}>
+            <View
+                style={[
+                    styles.container,
+                    {
+                        backgroundColor: theme.colors.background,
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: 20,
+                    },
+                ]}
+            >
+                <Ionicons
+                    name="alert-circle"
+                    size={48}
+                    color={theme.colors.error}
+                />
+                <FormattedText
+                    style={[
+                        styles.errorText,
+                        {
+                            color: theme.colors.text,
+                            marginTop: 16,
+                            textAlign: "center",
+                        },
+                    ]}
+                >
                     {error}
                 </FormattedText>
             </View>
@@ -84,7 +119,12 @@ const CategorySelectionScreen: React.FC = () => {
     }
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
             <AppHeader
                 title="Cartes Flash"
                 subtitle="Choisissez une catégorie"
@@ -92,14 +132,14 @@ const CategorySelectionScreen: React.FC = () => {
             />
 
             <SafeAreaView style={styles.safeArea} edges={[]}>
-
                 <ScrollView
                     style={styles.scrollView}
                     contentContainerStyle={styles.scrollContent}
                     showsVerticalScrollIndicator={true}
                 >
                     {categories.map((category) => {
-                        const iconKey = CATEGORY_ICON_KEYS[category.id] || 'book';
+                        const iconKey =
+                            CATEGORY_ICON_KEYS[category.id] || "book";
                         const questionCount = category.questions?.length || 0;
 
                         return (
@@ -143,4 +183,3 @@ const styles = StyleSheet.create({
 });
 
 export default CategorySelectionScreen;
-

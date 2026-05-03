@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { TextProps, ImageSourcePropType } from 'react-native';
-import type { Question } from '../welcome/types';
-import type { FrenchQuestionsData } from './questionsData';
+import * as React from "react";
+import { TextProps, ImageSourcePropType } from "react-native";
+import type { Question } from "../welcome/types";
+import type { FrenchQuestionsData } from "./questionsData";
 // Base props for components with title and description
 export interface TitleProps {
     readonly title: string;
@@ -29,11 +29,14 @@ export interface ValueComponentProps<T = string> {
 }
 
 // Settings component props - extends value component
-export interface SettingsComponentProps<T = string> extends ValueComponentProps<T>, TitleProps { }
+export interface SettingsComponentProps<T = string>
+    extends ValueComponentProps<T>, TitleProps {}
 
 // Extended settings component with additional props
-export type ExtendedSettingsComponent<T = string, P extends object = {}> =
-    SettingsComponentProps<T> & Readonly<P>;
+export type ExtendedSettingsComponent<
+    T = string,
+    P extends object = {},
+> = SettingsComponentProps<T> & Readonly<P>;
 // Formatted text component props - extends TextProps for full type safety
 export interface FormattedTextProps extends TextProps {
     readonly children: React.ReactNode;
@@ -53,7 +56,8 @@ export interface QuestionCardProps {
 }
 
 // Category card component props
-export interface CategoryCardProps extends TitleProps, InteractiveProps, VisualProps {
+export interface CategoryCardProps
+    extends TitleProps, InteractiveProps, VisualProps {
     readonly count: number;
     readonly progress?: number;
 }

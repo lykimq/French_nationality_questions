@@ -1,11 +1,14 @@
-import { DATA_FILES } from '../config';
-import { createLogger } from './logger';
-import { loadJsonCollection } from '../services/dataService';
+import { DATA_FILES } from "../config";
+import { createLogger } from "./logger";
+import { loadJsonCollection } from "../services/dataService";
 
-const logger = createLogger('dataUtils');
+const logger = createLogger("dataUtils");
 
 const loadSubcategoryData = async () => {
-    return loadJsonCollection(DATA_FILES.SUBCATEGORIES.FILES, DATA_FILES.SUBCATEGORIES.DIRECTORY);
+    return loadJsonCollection(
+        DATA_FILES.SUBCATEGORIES.FILES,
+        DATA_FILES.SUBCATEGORIES.DIRECTORY
+    );
 };
 
 export const preloadAllData = async () => {
@@ -13,11 +16,16 @@ export const preloadAllData = async () => {
         const subcategoryData = await loadSubcategoryData();
         return { subcategoryData };
     } catch (error: unknown) {
-        logger.error('Error during data preloading:', error);
+        logger.error("Error during data preloading:", error);
         return { subcategoryData: {} };
     }
 };
 
 export const loadFormationData = async () => {
-    return loadJsonCollection(DATA_FILES.FORMATION.FILES, DATA_FILES.FORMATION.DIRECTORY, '.json', true);
+    return loadJsonCollection(
+        DATA_FILES.FORMATION.FILES,
+        DATA_FILES.FORMATION.DIRECTORY,
+        ".json",
+        true
+    );
 };

@@ -1,8 +1,14 @@
-import React from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcons } from '../../shared/contexts/IconContext';
-import { Icon3D } from '../../shared/components';
+import React from "react";
+import {
+    StyleSheet,
+    View,
+    TextInput,
+    TouchableOpacity,
+    ActivityIndicator,
+} from "react-native";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useIcons } from "../../shared/contexts/IconContext";
+import { Icon3D } from "../../shared/components";
 
 export interface SearchBarProps {
     searchQuery: string;
@@ -26,7 +32,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     const { theme } = useTheme();
     const { getIconName } = useIcons();
 
-    const searchIconName = getIconName('search');
+    const searchIconName = getIconName("search");
 
     const handleSubmitEditing = () => {
         if (searchQuery.trim()) {
@@ -35,7 +41,15 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     };
 
     return (
-        <View style={[styles.searchBar, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+        <View
+            style={[
+                styles.searchBar,
+                {
+                    backgroundColor: theme.colors.card,
+                    borderColor: theme.colors.border,
+                },
+            ]}
+        >
             <TouchableOpacity
                 onPress={onSearch}
                 disabled={!searchQuery.trim() || isSearching}
@@ -44,7 +58,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 <Icon3D
                     name={searchIconName}
                     size={16}
-                    color={searchQuery.trim() && !isSearching ? theme.colors.primary : theme.colors.textMuted}
+                    color={
+                        searchQuery.trim() && !isSearching
+                            ? theme.colors.primary
+                            : theme.colors.textMuted
+                    }
                     variant="default"
                 />
             </TouchableOpacity>
@@ -61,23 +79,32 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             />
             <TouchableOpacity
                 onPress={onToggleAdvanced}
-                style={[styles.advancedButton, showAdvanced && { backgroundColor: theme.colors.primary + '20' }]}
+                style={[
+                    styles.advancedButton,
+                    showAdvanced && {
+                        backgroundColor: theme.colors.primary + "20",
+                    },
+                ]}
             >
                 <Icon3D
                     name="options"
                     size={16}
-                    color={showAdvanced ? theme.colors.primary : theme.colors.textMuted}
+                    color={
+                        showAdvanced
+                            ? theme.colors.primary
+                            : theme.colors.textMuted
+                    }
                     variant="default"
                 />
             </TouchableOpacity>
-            {isSearching && searchQuery !== '' && (
+            {isSearching && searchQuery !== "" && (
                 <ActivityIndicator
                     size="small"
                     color={theme.colors.primary}
                     style={styles.searchIndicator}
                 />
             )}
-            {searchQuery !== '' && (
+            {searchQuery !== "" && (
                 <TouchableOpacity onPress={onClear} style={styles.clearButton}>
                     <Icon3D
                         name="close-circle"
@@ -93,13 +120,13 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
 const styles = StyleSheet.create({
     searchBar: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: 15,
         paddingVertical: 12,
         borderRadius: 25,
         borderWidth: 1,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.1,
         shadowRadius: 2,

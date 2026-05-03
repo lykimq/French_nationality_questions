@@ -13,7 +13,7 @@ export class LRUCache<T> {
 
     constructor(maxSize: number = 100) {
         if (maxSize <= 0) {
-            throw new Error('LRU cache maxSize must be greater than 0');
+            throw new Error("LRU cache maxSize must be greater than 0");
         }
         this.cache = new Map();
         this.maxSize = maxSize;
@@ -60,21 +60,23 @@ export class LRUCache<T> {
         return this.maxSize;
     }
 
-    cleanupStaleEntries(ttlMs: number, now: () => number = () => Date.now()): number {
+    cleanupStaleEntries(
+        ttlMs: number,
+        now: () => number = () => Date.now()
+    ): number {
         const currentTime = now();
         const keysToDelete: string[] = [];
-        
+
         for (const [key, entry] of this.cache.entries()) {
             if (currentTime - entry.fetchedAt >= ttlMs) {
                 keysToDelete.push(key);
             }
         }
-        
+
         for (const key of keysToDelete) {
             this.cache.delete(key);
         }
-        
+
         return keysToDelete.length;
     }
 }
-

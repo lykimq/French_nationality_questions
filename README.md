@@ -1,85 +1,103 @@
-# Naturalisation Test Civique
+# 🇫🇷 Naturalisation Test Civique
 
-A React Native / Expo mobile app for preparing the French citizenship test (test civique de naturalisation).
+A modern React Native / Expo mobile application designed to help you prepare for the French citizenship test (_test civique de naturalisation_). Study smarter, practice harder, and track your progress toward becoming a French citizen.
 
-## Features
+---
 
-- Browse questions by category (history, geography, culture, etc.)
-- Civic exam simulation -- practice mode and full naturalization mode (40 questions, 45 min)
-- Flash card study mode with flip animation
-- Advanced search with filters, suggestions, and history
-- Progress tracking with detailed statistics
-- Customizable themes, icons, and text formatting
-- Offline-capable with Firebase integration and local caching
-- Cross-platform: iOS, Android, and Web
+## ✨ Features
 
-## Tech Stack
+### 📖 Learning & Discovery
 
-- React Native 0.81 / Expo 54
-- TypeScript
-- React Navigation (bottom tabs + stack)
-- Firebase (Storage)
-- AsyncStorage for local persistence
+- **Category Browsing**: Explore questions by theme: history, geography, culture, politics, and more.
+- **Flash Card Mode**: Interactive study cards with smooth flip animations for active recall.
+- **Detailed Explanations**: Understand the "why" behind every answer with context-rich explanations.
 
-## Getting Started
+### ✍️ Exam Simulation
+
+- **Practice Mode**: Tailor your study sessions with specific categories and question counts.
+- **Naturalization Mode**: Simulate the real thing—40 questions in 45 minutes, matching official exam distribution.
+- **Answer Review**: Review all your answers before finalizing your test.
+
+### 🛠️ Advanced Tools
+
+- **Smart Search**: Find questions quickly with real-time suggestions, history, and advanced filters (category, images, etc.).
+- **Progress Tracking**: Visualize your performance with detailed statistics and pass-rate history.
+- **Customization**: Personalize your experience with multiple color themes, 3D icons, and text formatting options.
+
+### 🌐 Technical Excellence
+
+- **Offline First**: Works seamlessly offline with local caching and Firebase integration.
+- **Cross-Platform**: Optimized for iOS, Android, and the Web.
+- **Modern Stack**: Built with React Native 0.81, Expo 54, and TypeScript.
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js v20+
-- npm or yarn
-- Expo CLI
+- **Node.js**: v20 or higher
+- **npm**: v10 or higher
+- **Expo CLI**: Installed via `npm install -g expo-cli`
 
-### Install and Run
+### Installation
 
-```bash
-npm install
+1. **Clone and Setup**:
 
-cp .env.example .env   # then fill in Firebase credentials
+    ```bash
+    make setup
+    ```
 
-npm start              # or: npx expo start
+    _This will install dependencies and create your `.env` file from the template._
+
+2. **Configure Firebase**:
+   Open `.env` and fill in your Firebase credentials.
+
+3. **Run the App**:
+    ```bash
+    make run
+    ```
+    _Alternatively, use `make android`, `make ios`, or `make web` for platform-specific targets._
+
+---
+
+## 📂 Project Structure
+
+```text
+.
+├── assets              # Static assets (images, icons, splash screen)
+├── docs                # Technical documentation and architecture
+├── src                 # Application source code
+│   ├── config          # Global configurations (Firebase, Sentry, Icons)
+│   ├── data            # Static question data and knowledge base
+│   ├── flashcard       # Flash card study feature
+│   ├── navigation      # Tab and Stack navigation definitions
+│   ├── search          # Advanced search feature
+│   ├── settings        # User preferences and app info
+│   ├── shared          # Reusable components, hooks, contexts, and utils
+│   ├── test_civic      # Core exam simulation engine
+│   ├── theme           # Design system and color palettes
+│   └── welcome         # Landing and category browsing screens
+├── Makefile            # Project automation commands
+├── App.tsx             # Application entry point
+└── package.json        # Dependencies and scripts
 ```
 
-Platform-specific:
+For a deeper dive into the system design, check out [Project Architecture](docs/project-architecture.md).
 
-```bash
-npm run android
-npm run ios
-npm run web
-```
+---
 
-### Firebase Setup
+## 🧪 Development
 
-1. Create a Firebase project with Storage enabled.
-2. Copy your config values from the Firebase Console into `.env`.
+| Command       | Description                         |
+| :------------ | :---------------------------------- |
+| `make test`   | Run all unit and integration tests  |
+| `make lint`   | Run TypeScript type checking        |
+| `make format` | Format source code with Prettier    |
+| `make clean`  | Wipe `node_modules` and start fresh |
 
-## Testing
+---
 
-```bash
-npm test               # run all tests
-npm run test:watch     # watch mode
-npm run test:coverage  # with coverage report
-```
+## ⚖️ License
 
-## Project Structure
-
-```
-src/
-+-- config/          # Firebase and icon configuration
-+-- navigation/      # AppNavigator, tabs, stacks
-+-- shared/          # Reusable components, contexts, hooks, services, utils
-+-- welcome/         # Home and category screens
-+-- search/          # Search feature
-+-- test_civic/      # Civic exam feature
-+-- flashcard/       # Flash card feature
-+-- settings/        # Settings screens
-+-- theme/           # Color theme definitions
-+-- types/           # TypeScript type definitions
-+-- data/            # Static question data (JSON) and knowledge base
-```
-
-See [docs/project-architecture.md](docs/project-architecture.md) for the full architecture reference.
-
-
-## License
-
-Private -- all rights reserved.
+Private — All Rights Reserved.

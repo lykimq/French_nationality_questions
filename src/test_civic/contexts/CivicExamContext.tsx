@@ -1,9 +1,23 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useMemo } from 'react';
-import { createLogger } from '../../shared/utils/logger';
-import { processAllQuestions } from '../../shared/utils/questionUtils';
-import { loadCivicExamQuestions } from '../utils/civicExamDataLoader';
-import { CivicExamSessionProvider, useCivicExamSession } from './CivicExamSessionContext';
-import { CivicExamProgressProvider, useCivicExamProgress } from './CivicExamProgressContext';
+import React, {
+    createContext,
+    useContext,
+    useState,
+    useEffect,
+    ReactNode,
+    useCallback,
+    useMemo,
+} from "react";
+import { createLogger } from "../../shared/utils/logger";
+import { processAllQuestions } from "../../shared/utils/questionUtils";
+import { loadCivicExamQuestions } from "../utils/civicExamDataLoader";
+import {
+    CivicExamSessionProvider,
+    useCivicExamSession,
+} from "./CivicExamSessionContext";
+import {
+    CivicExamProgressProvider,
+    useCivicExamProgress,
+} from "./CivicExamProgressContext";
 import type {
     CivicExamConfig,
     CivicExamQuestion,
@@ -12,11 +26,11 @@ import type {
     CivicExamProgress,
     CivicExamStatistics,
     TestAnswer,
-} from '../types';
-import type { CivicExamQuestionWithOptions } from '../utils/civicExamQuestionUtils';
-import type { TestQuestion } from '../../types';
+} from "../types";
+import type { CivicExamQuestionWithOptions } from "../utils/civicExamQuestionUtils";
+import type { TestQuestion } from "../../types";
 
-const logger = createLogger('CivicExamContext');
+const logger = createLogger("CivicExamContext");
 
 interface CivicExamContextType {
     currentSession: CivicExamSession | null;
@@ -41,59 +55,70 @@ interface CivicExamContextType {
     isLoading: boolean;
 }
 
-const CivicExamContext = createContext<CivicExamContextType | undefined>(undefined);
+const CivicExamContext = createContext<CivicExamContextType | undefined>(
+    undefined
+);
 
-const CivicExamContextInternal: React.FC<{ 
+const CivicExamContextInternal: React.FC<{
     children: ReactNode;
     allProcessedQuestions: ReturnType<typeof processAllQuestions>;
 }> = ({ children, allProcessedQuestions }) => {
     const sessionContext = useCivicExamSession();
     const progressContext = useCivicExamProgress();
 
-    const startExam = useCallback(async (config: CivicExamConfig): Promise<void> => {
-        await sessionContext.startExam(config, allProcessedQuestions);
-    }, [sessionContext, allProcessedQuestions]);
+    const startExam = useCallback(
+        async (config: CivicExamConfig): Promise<void> => {
+            await sessionContext.startExam(config, allProcessedQuestions);
+        },
+        [sessionContext, allProcessedQuestions]
+    );
 
     const finishExam = useCallback(async (): Promise<CivicExamResult> => {
         const result = sessionContext.finishExam();
         if (sessionContext.currentSession) {
-            return await progressContext.updateProgressFromSession(sessionContext.currentSession, result);
+            return await progressContext.updateProgressFromSession(
+                sessionContext.currentSession,
+                result
+            );
         }
-        throw new Error('Cannot finish exam: no active session');
+        throw new Error("Cannot finish exam: no active session");
     }, [sessionContext, progressContext]);
 
     const getIncorrectQuestions = useCallback((): CivicExamQuestion[] => {
         return progressContext.getIncorrectQuestions(allProcessedQuestions);
     }, [progressContext, allProcessedQuestions]);
 
-    const contextValue = useMemo((): CivicExamContextType => ({
-        currentSession: sessionContext.currentSession,
-        isExamActive: sessionContext.isExamActive,
-        currentQuestionIndex: sessionContext.currentQuestionIndex,
-        pausedSession: sessionContext.pausedSession,
-        examProgress: progressContext.examProgress,
-        examStatistics: progressContext.examStatistics,
-        startExam,
-        resumeSession: sessionContext.resumeSession,
-        abandonPausedSession: sessionContext.abandonPausedSession,
-        submitAnswer: sessionContext.submitAnswer,
-        goToNextQuestion: sessionContext.goToNextQuestion,
-        finishExam,
-        cancelExam: sessionContext.cancelExam,
-        getCurrentQuestion: sessionContext.getCurrentQuestion,
-        getNextQuestion: sessionContext.getNextQuestion,
-        getPreviousQuestion: sessionContext.getPreviousQuestion,
-        getIncorrectQuestions,
-        refreshProgress: progressContext.refreshProgress,
-        resetProgress: progressContext.resetProgress,
-        isLoading: progressContext.isLoading,
-    }), [
-        sessionContext,
-        progressContext,
-        startExam,
-        finishExam,
-        getIncorrectQuestions,
-    ]);
+    const contextValue = useMemo(
+        (): CivicExamContextType => ({
+            currentSession: sessionContext.currentSession,
+            isExamActive: sessionContext.isExamActive,
+            currentQuestionIndex: sessionContext.currentQuestionIndex,
+            pausedSession: sessionContext.pausedSession,
+            examProgress: progressContext.examProgress,
+            examStatistics: progressContext.examStatistics,
+            startExam,
+            resumeSession: sessionContext.resumeSession,
+            abandonPausedSession: sessionContext.abandonPausedSession,
+            submitAnswer: sessionContext.submitAnswer,
+            goToNextQuestion: sessionContext.goToNextQuestion,
+            finishExam,
+            cancelExam: sessionContext.cancelExam,
+            getCurrentQuestion: sessionContext.getCurrentQuestion,
+            getNextQuestion: sessionContext.getNextQuestion,
+            getPreviousQuestion: sessionContext.getPreviousQuestion,
+            getIncorrectQuestions,
+            refreshProgress: progressContext.refreshProgress,
+            resetProgress: progressContext.resetProgress,
+            isLoading: progressContext.isLoading,
+        }),
+        [
+            sessionContext,
+            progressContext,
+            startExam,
+            finishExam,
+            getIncorrectQuestions,
+        ]
+    );
 
     return (
         <CivicExamContext.Provider value={contextValue}>
@@ -102,22 +127,32 @@ const CivicExamContextInternal: React.FC<{
     );
 };
 
-export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [civicQuestions, setCivicQuestions] = useState<CivicExamQuestionWithOptions[]>([]);
+export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({
+    children,
+}) => {
+    const [civicQuestions, setCivicQuestions] = useState<
+        CivicExamQuestionWithOptions[]
+    >([]);
 
     useEffect(() => {
-        loadCivicExamQuestions().then(setCivicQuestions).catch((error) => {
-            logger.warn('Could not load civic exam questions:', error);
-            setCivicQuestions([]);
-        });
+        loadCivicExamQuestions()
+            .then(setCivicQuestions)
+            .catch((error) => {
+                logger.warn("Could not load civic exam questions:", error);
+                setCivicQuestions([]);
+            });
     }, []);
 
     const allProcessedQuestions = civicQuestions as TestQuestion[];
 
     return (
         <CivicExamProgressProvider>
-            <CivicExamSessionProvider allProcessedQuestions={allProcessedQuestions}>
-                <CivicExamContextInternal allProcessedQuestions={allProcessedQuestions}>
+            <CivicExamSessionProvider
+                allProcessedQuestions={allProcessedQuestions}
+            >
+                <CivicExamContextInternal
+                    allProcessedQuestions={allProcessedQuestions}
+                >
                     {children}
                 </CivicExamContextInternal>
             </CivicExamSessionProvider>
@@ -128,7 +163,7 @@ export const CivicExamProvider: React.FC<{ children: ReactNode }> = ({ children 
 export const useCivicExam = (): CivicExamContextType => {
     const context = useContext(CivicExamContext);
     if (!context) {
-        throw new Error('useCivicExam must be used within a CivicExamProvider');
+        throw new Error("useCivicExam must be used within a CivicExamProvider");
     }
     return context;
 };

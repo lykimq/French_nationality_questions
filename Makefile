@@ -1,4 +1,4 @@
-.PHONY: help setup install android ios web start dev \
+.PHONY: help setup install android ios web run start dev \
        test clean clean-android clean-ios clean-all \
        devices lint
 
@@ -21,15 +21,8 @@ install: ## Install dependencies
 # Run
 # ------------------------------------------------------------------
 
-android: ## Build & run on connected Android device
-	@adb devices | grep -q 'device$$' || (echo "No Android device found. Connect via USB or adb pair." && exit 1)
-	npx expo run:android
-
-ios: ## Build & run on iOS simulator
-	npx expo run:ios
-
-web: ## Start the web version
-	npx expo start --web
+run: ## Start Expo dev server (alias for start)
+	npx expo start
 
 start: ## Start Expo dev server (development build)
 	npx expo start
@@ -39,6 +32,16 @@ dev: ## Start Expo dev server (alias for start)
 
 start-go: ## Start Expo with Expo Go support
 	npx expo start --go
+
+android: ## Build & run on connected Android device
+	@adb devices | grep -q 'device$$' || (echo "No Android device found. Connect via USB or adb pair." && exit 1)
+	npx expo run:android
+
+ios: ## Build & run on iOS simulator
+	npx expo run:ios
+
+web: ## Start the web version
+	npx expo start --web
 
 # ------------------------------------------------------------------
 # Test

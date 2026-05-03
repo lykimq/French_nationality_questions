@@ -1,6 +1,9 @@
-import type { Question } from '../welcome/types';
+import type { Question } from "../welcome/types";
 // French question - simple string-based question
-export interface FrenchQuestion extends Omit<Question, 'question' | 'explanation'> {
+export interface FrenchQuestion extends Omit<
+    Question,
+    "question" | "explanation"
+> {
     readonly question: string;
     readonly explanation: string;
 }
@@ -18,5 +21,3 @@ export interface FrenchCategory {
 export interface FrenchQuestionsData {
     readonly categories: readonly FrenchCategory[];
 }
-
-

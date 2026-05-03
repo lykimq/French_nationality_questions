@@ -1,2 +1,1 @@
-export * from './useFlashCard';
-
+export * from "./useFlashCard";

@@ -1,7 +1,6 @@
-
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CategorySelectionScreen, FlashCardScreen } from '../screens';
-import { useTheme } from '../../shared/contexts/ThemeContext';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { CategorySelectionScreen, FlashCardScreen } from "../screens";
+import { useTheme } from "../../shared/contexts/ThemeContext";
 
 export type FlashCardStackParamList = {
     CategorySelection: undefined;
@@ -24,13 +23,9 @@ const FlashCardStack = () => {
                 name="CategorySelection"
                 component={CategorySelectionScreen}
             />
-            <Stack.Screen
-                name="FlashCard"
-                component={FlashCardScreen}
-            />
+            <Stack.Screen name="FlashCard" component={FlashCardScreen} />
         </Stack.Navigator>
     );
 };
 
 export default FlashCardStack;
-

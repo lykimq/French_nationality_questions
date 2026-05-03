@@ -1,24 +1,24 @@
-import { View, StyleSheet } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, StyleSheet } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeStack from './HomeStack';
-import SearchScreen from '../search/SearchScreen';
-import CivicExamStack from '../test_civic/navigation/CivicExamStack';
-import FlashCardStack from '../flashcard/navigation/FlashCardStack';
-import SettingsStack from './SettingsStack';
-import { DataLoadingScreen, Icon3D } from '../shared/components';
-import { useData } from '../shared/contexts/DataContext';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import { useIcons } from '../shared/contexts/IconContext';
-import type { TabBarIconProps } from '../types';
+import HomeStack from "./HomeStack";
+import SearchScreen from "../search/SearchScreen";
+import CivicExamStack from "../test_civic/navigation/CivicExamStack";
+import FlashCardStack from "../flashcard/navigation/FlashCardStack";
+import SettingsStack from "./SettingsStack";
+import { DataLoadingScreen, Icon3D } from "../shared/components";
+import { useData } from "../shared/contexts/DataContext";
+import { useTheme } from "../shared/contexts/ThemeContext";
+import { useIcons } from "../shared/contexts/IconContext";
+import type { TabBarIconProps } from "../types";
 
 const Tab = createBottomTabNavigator();
 
 const tabLabels = {
-    home: 'Accueil',
-    search: 'Rechercher',
-    flashcard: 'Cartes Flash',
-    settings: 'Paramètres'
+    home: "Accueil",
+    search: "Rechercher",
+    flashcard: "Cartes Flash",
+    settings: "Paramètres",
 };
 
 const AppTabs = () => {
@@ -27,19 +27,28 @@ const AppTabs = () => {
     const { getIconName, getIconVariant } = useIcons();
 
     if (isDataLoading || dataLoadingError) {
-        return <DataLoadingScreen error={dataLoadingError} isLoading={isDataLoading} />;
+        return (
+            <DataLoadingScreen
+                error={dataLoadingError}
+                isLoading={isDataLoading}
+            />
+        );
     }
 
-    const renderTabIcon = (iconKey: 'home' | 'search' | 'settings', focused: boolean, color: string) => {
+    const renderTabIcon = (
+        iconKey: "home" | "search" | "settings",
+        focused: boolean,
+        color: string
+    ) => {
         const iconName = getIconName(iconKey);
         const variant = getIconVariant(iconKey);
-        
+
         return (
             <Icon3D
                 name={iconName}
                 size={18}
                 color={color}
-                variant={focused ? variant : 'default'}
+                variant={focused ? variant : "default"}
             />
         );
     };
@@ -53,19 +62,19 @@ const AppTabs = () => {
                 tabBarInactiveTintColor: theme.colors.textMuted,
                 tabBarLabelStyle: {
                     fontSize: 11,
-                    fontWeight: '500',
+                    fontWeight: "500",
                     marginTop: 2,
                 },
                 tabBarIconStyle: {
                     marginTop: 4,
                 },
                 tabBarStyle: {
-                    position: 'absolute', // Floating effect
+                    position: "absolute", // Floating effect
                     bottom: 12,
                     left: 12,
                     right: 12,
                     borderRadius: 24,
-                    backgroundColor: theme.colors.surface + 'F0', // Slight transparency
+                    backgroundColor: theme.colors.surface + "F0", // Slight transparency
                     borderTopWidth: 0,
                     paddingTop: 8,
                     paddingBottom: 8,
@@ -73,7 +82,7 @@ const AppTabs = () => {
                     elevation: 10,
                     shadowOpacity: 0.15,
                     shadowRadius: 10,
-                    shadowColor: '#000',
+                    shadowColor: "#000",
                     shadowOffset: { width: 0, height: 4 },
                 },
                 tabBarBackground: () => (
@@ -86,8 +95,8 @@ const AppTabs = () => {
                 component={HomeStack}
                 options={{
                     title: tabLabels.home,
-                    tabBarIcon: ({ focused, color }: TabBarIconProps) => 
-                        renderTabIcon('home', focused, color),
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) =>
+                        renderTabIcon("home", focused, color),
                 }}
             />
             <Tab.Screen
@@ -95,21 +104,21 @@ const AppTabs = () => {
                 component={SearchScreen}
                 options={{
                     title: tabLabels.search,
-                    tabBarIcon: ({ focused, color }: TabBarIconProps) => 
-                        renderTabIcon('search', focused, color),
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) =>
+                        renderTabIcon("search", focused, color),
                 }}
             />
             <Tab.Screen
                 name="CivicExamTab"
                 component={CivicExamStack}
                 options={{
-                    title: 'Examen Civique',
+                    title: "Examen Civique",
                     tabBarIcon: ({ focused, color }: TabBarIconProps) => (
                         <Icon3D
                             name="document-text"
                             size={18}
                             color={color}
-                            variant={focused ? 'gradient' : 'default'}
+                            variant={focused ? "gradient" : "default"}
                         />
                     ),
                 }}
@@ -124,7 +133,7 @@ const AppTabs = () => {
                             name="school"
                             size={18}
                             color={color}
-                            variant={focused ? 'gradient' : 'default'}
+                            variant={focused ? "gradient" : "default"}
                         />
                     ),
                 }}
@@ -134,8 +143,8 @@ const AppTabs = () => {
                 component={SettingsStack}
                 options={{
                     title: tabLabels.settings,
-                    tabBarIcon: ({ focused, color }: TabBarIconProps) => 
-                        renderTabIcon('settings', focused, color),
+                    tabBarIcon: ({ focused, color }: TabBarIconProps) =>
+                        renderTabIcon("settings", focused, color),
                 }}
             />
         </Tab.Navigator>

@@ -1,15 +1,14 @@
+import { Platform, StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-import { Platform, StatusBar } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-
-import AppTabs from './AppTabs';
-import { useRatingPrompt } from '../shared/hooks';
-import RatingModal from '../settings/components/RatingModal';
+import AppTabs from "./AppTabs";
+import { useRatingPrompt } from "../shared/hooks";
+import RatingModal from "../settings/components/RatingModal";
 
 // Set StatusBar for Android
-if (Platform.OS === 'android') {
+if (Platform.OS === "android") {
     StatusBar.setTranslucent(true);
-    StatusBar.setBackgroundColor('transparent');
+    StatusBar.setBackgroundColor("transparent");
 }
 
 const AppNavigator = () => {

@@ -1,15 +1,22 @@
-import React, { useMemo, useState } from 'react';
-import { StyleSheet, View, Pressable, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { formatExplanation } from '../utils';
-import ImageModal from './ImageModal';
-import FormattedText from './FormattedText';
-import Icon3D from './Icon3D';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcons } from '../contexts/IconContext';
-import { QuestionCardProps } from '../../types';
-import { sharedStyles } from '../utils';
-import { useFirebaseImage } from '../hooks/useFirebaseImage';
+import React, { useMemo, useState } from "react";
+import {
+    StyleSheet,
+    View,
+    Pressable,
+    Image,
+    ActivityIndicator,
+    TouchableOpacity,
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { formatExplanation } from "../utils";
+import ImageModal from "./ImageModal";
+import FormattedText from "./FormattedText";
+import Icon3D from "./Icon3D";
+import { useTheme } from "../contexts/ThemeContext";
+import { useIcons } from "../contexts/IconContext";
+import { QuestionCardProps } from "../../types";
+import { sharedStyles } from "../utils";
+import { useFirebaseImage } from "../hooks/useFirebaseImage";
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -23,7 +30,11 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     const { theme } = useTheme();
     const { getIconName, getIconVariant } = useIcons();
 
-    const { imageSource, isLoading: imageLoading, error: imageError } = useFirebaseImage(image);
+    const {
+        imageSource,
+        isLoading: imageLoading,
+        error: imageError,
+    } = useFirebaseImage(image);
     const isExpanded = alwaysExpanded ? true : expanded;
 
     const toggleExpand = () => {
@@ -33,7 +44,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     };
 
     const displayId = useMemo(() => {
-        if (typeof id === 'string') {
+        if (typeof id === "string") {
             const numeric = id.match(/\d+/);
             return numeric ? numeric[0] : id;
         }
@@ -48,29 +59,42 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
     const closeImageModal = () => setIsImageModalVisible(false);
 
-    const questionText = question ?? '';
-    const explanationText = explanation ?? '';
+    const questionText = question ?? "";
+    const explanationText = explanation ?? "";
 
     return (
-        <View style={[
-            styles.card,
-            sharedStyles.mediumShadow,
-            {
-                backgroundColor: theme.colors.card,
-                borderColor: theme.colors.questionCardBorder,
-                borderWidth: 1,
-            },
-            isExpanded && styles.cardExpanded,
-            isExpanded && { borderColor: theme.colors.primary + '40', elevation: 6 }
-        ]}>
+        <View
+            style={[
+                styles.card,
+                sharedStyles.mediumShadow,
+                {
+                    backgroundColor: theme.colors.card,
+                    borderColor: theme.colors.questionCardBorder,
+                    borderWidth: 1,
+                },
+                isExpanded && styles.cardExpanded,
+                isExpanded && {
+                    borderColor: theme.colors.primary + "40",
+                    elevation: 6,
+                },
+            ]}
+        >
             <Pressable
                 style={({ pressed }) => [
                     styles.header,
                     { backgroundColor: theme.colors.questionCardBackground },
-                    pressed && !alwaysExpanded && [styles.headerPressed, { backgroundColor: theme.colors.primary + '10' }]
+                    pressed &&
+                        !alwaysExpanded && [
+                            styles.headerPressed,
+                            { backgroundColor: theme.colors.primary + "10" },
+                        ],
                 ]}
                 onPress={toggleExpand}
-                android_ripple={!alwaysExpanded ? { color: theme.colors.primary + '20' } : undefined}
+                android_ripple={
+                    !alwaysExpanded
+                        ? { color: theme.colors.primary + "20" }
+                        : undefined
+                }
                 disabled={alwaysExpanded}
             >
                 <View style={styles.idWrapper}>
@@ -82,39 +106,81 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         backgroundColor={theme.colors.card}
                         containerStyle={styles.idIconContainer}
                     />
-                    <FormattedText style={[styles.id, { color: theme.colors.buttonText }]}>{displayId}</FormattedText>
+                    <FormattedText
+                        style={[styles.id, { color: theme.colors.buttonText }]}
+                    >
+                        {displayId}
+                    </FormattedText>
                 </View>
                 <View style={styles.questionContainer}>
-                    <FormattedText style={[styles.question, { color: theme.colors.text }]} numberOfLines={isExpanded ? 0 : 2}>
+                    <FormattedText
+                        style={[styles.question, { color: theme.colors.text }]}
+                        numberOfLines={isExpanded ? 0 : 2}
+                    >
                         {questionText}
                     </FormattedText>
                 </View>
                 {!alwaysExpanded && (
                     <View style={styles.iconContainer}>
                         <Icon3D
-                            name={isExpanded ? getIconName('chevronUp') : getIconName('chevronDown')}
+                            name={
+                                isExpanded
+                                    ? getIconName("chevronUp")
+                                    : getIconName("chevronDown")
+                            }
                             size={20}
                             color={theme.colors.primary}
-                            variant={isExpanded ? getIconVariant('chevronUp') : getIconVariant('chevronDown')}
+                            variant={
+                                isExpanded
+                                    ? getIconVariant("chevronUp")
+                                    : getIconVariant("chevronDown")
+                            }
                         />
                     </View>
                 )}
             </Pressable>
 
             {isExpanded && (
-                <View style={[styles.expandedContent, { backgroundColor: theme.colors.questionCardBackground }]}>
+                <View
+                    style={[
+                        styles.expandedContent,
+                        {
+                            backgroundColor:
+                                theme.colors.questionCardBackground,
+                        },
+                    ]}
+                >
                     {/* Display image if available */}
                     {image && !imageError && (
                         <TouchableOpacity
-                            style={[styles.imageContainer, { borderColor: theme.colors.border }]}
+                            style={[
+                                styles.imageContainer,
+                                { borderColor: theme.colors.border },
+                            ]}
                             onPress={handleImagePress}
                             activeOpacity={0.9}
                             disabled={imageLoading}
                         >
                             {imageLoading && (
-                                <View style={[styles.imageLoading, { backgroundColor: theme.colors.surface }]}>
-                                    <ActivityIndicator size="large" color={theme.colors.primary} />
-                                    <FormattedText style={[styles.loadingText, { color: theme.colors.text }]}>
+                                <View
+                                    style={[
+                                        styles.imageLoading,
+                                        {
+                                            backgroundColor:
+                                                theme.colors.surface,
+                                        },
+                                    ]}
+                                >
+                                    <ActivityIndicator
+                                        size="large"
+                                        color={theme.colors.primary}
+                                    />
+                                    <FormattedText
+                                        style={[
+                                            styles.loadingText,
+                                            { color: theme.colors.text },
+                                        ]}
+                                    >
                                         Chargement de l'image...
                                     </FormattedText>
                                 </View>
@@ -123,12 +189,19 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                 <>
                                     <Image
                                         source={imageSource}
-                                        style={[styles.image, { backgroundColor: theme.colors.divider }, imageLoading && styles.hiddenImage]}
+                                        style={[
+                                            styles.image,
+                                            {
+                                                backgroundColor:
+                                                    theme.colors.divider,
+                                            },
+                                            imageLoading && styles.hiddenImage,
+                                        ]}
                                         resizeMode="contain"
                                     />
                                     <View style={styles.imageOverlay}>
                                         <Icon3D
-                                            name={getIconName('expand')}
+                                            name={getIconName("expand")}
                                             size={20}
                                             color={theme.colors.buttonText}
                                             variant="default"
@@ -141,14 +214,24 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
                     {/* Display fallback if image fails to load */}
                     {image && imageError && (
-                        <View style={[styles.imageFallback, { backgroundColor: theme.colors.surface }]}>
+                        <View
+                            style={[
+                                styles.imageFallback,
+                                { backgroundColor: theme.colors.surface },
+                            ]}
+                        >
                             <Icon3D
-                                name={getIconName('image')}
+                                name={getIconName("image")}
                                 size={32}
                                 color={theme.colors.textMuted}
-                                variant={getIconVariant('image')}
+                                variant={getIconVariant("image")}
                             />
-                            <FormattedText style={[styles.imageFallbackText, { color: theme.colors.textMuted }]}>
+                            <FormattedText
+                                style={[
+                                    styles.imageFallbackText,
+                                    { color: theme.colors.textMuted },
+                                ]}
+                            >
                                 Image non disponible
                             </FormattedText>
                         </View>
@@ -156,12 +239,51 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
                     {explanationText !== "" && (
                         <View style={styles.explanationContainer}>
-                            <View style={[styles.section, { borderLeftWidth: 4, borderLeftColor: theme.colors.primary, backgroundColor: theme.colors.primary + '08', padding: 16, borderRadius: 8 }]}>
+                            <View
+                                style={[
+                                    styles.section,
+                                    {
+                                        borderLeftWidth: 4,
+                                        borderLeftColor: theme.colors.primary,
+                                        backgroundColor:
+                                            theme.colors.primary + "08",
+                                        padding: 16,
+                                        borderRadius: 8,
+                                    },
+                                ]}
+                            >
                                 <View style={sharedStyles.row}>
-                                    <Ionicons name="information-circle" size={18} color={theme.colors.primary} style={{ marginRight: 6 }} />
-                                    <FormattedText style={[styles.sectionTitle, { color: theme.colors.primary, fontSize: 13, letterSpacing: 1, fontWeight: '800' }]}>EXPLICATION</FormattedText>
+                                    <Ionicons
+                                        name="information-circle"
+                                        size={18}
+                                        color={theme.colors.primary}
+                                        style={{ marginRight: 6 }}
+                                    />
+                                    <FormattedText
+                                        style={[
+                                            styles.sectionTitle,
+                                            {
+                                                color: theme.colors.primary,
+                                                fontSize: 13,
+                                                letterSpacing: 1,
+                                                fontWeight: "800",
+                                            },
+                                        ]}
+                                    >
+                                        EXPLICATION
+                                    </FormattedText>
                                 </View>
-                                <FormattedText style={[styles.sectionContent, styles.explanationText, { color: theme.colors.text, lineHeight: 24, marginTop: 8 }]}>
+                                <FormattedText
+                                    style={[
+                                        styles.sectionContent,
+                                        styles.explanationText,
+                                        {
+                                            color: theme.colors.text,
+                                            lineHeight: 24,
+                                            marginTop: 8,
+                                        },
+                                    ]}
+                                >
                                     {formatExplanation(explanationText)}
                                 </FormattedText>
                             </View>
@@ -175,13 +297,16 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 <Pressable
                     style={styles.overlay}
                     onPress={toggleExpand}
-                    android_ripple={{ color: theme.colors.primary + '20', borderless: true }}
+                    android_ripple={{
+                        color: theme.colors.primary + "20",
+                        borderless: true,
+                    }}
                 />
             )}
 
             {/* Image Modal */}
             <ImageModal
-                key={image || 'no-image'}
+                key={image || "no-image"}
                 visible={isImageModalVisible}
                 imageSource={imageSource}
                 onClose={closeImageModal}
@@ -211,17 +336,17 @@ const styles = StyleSheet.create({
     idWrapper: {
         width: 40,
         height: 40,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginRight: 12,
     },
     idIconContainer: {
-        position: 'absolute',
+        position: "absolute",
     },
     id: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: "center",
     },
     questionContainer: {
         flex: 1,
@@ -229,7 +354,7 @@ const styles = StyleSheet.create({
     },
     question: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
         lineHeight: 22,
     },
     iconContainer: {
@@ -241,31 +366,31 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
         borderRadius: 8,
-        overflow: 'hidden',
+        overflow: "hidden",
         marginBottom: 16,
         borderWidth: 1,
-        position: 'relative',
+        position: "relative",
     },
     image: {
-        width: '100%',
+        width: "100%",
         height: 200,
     },
     hiddenImage: {
         opacity: 0,
     },
     imageOverlay: {
-        position: 'absolute',
+        position: "absolute",
         top: 8,
         right: 8,
-        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
         borderRadius: 20,
         padding: 8,
     },
     imageLoading: {
-        width: '100%',
+        width: "100%",
         height: 200,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         borderRadius: 8,
     },
     loadingText: {
@@ -273,17 +398,17 @@ const styles = StyleSheet.create({
         fontSize: 14,
     },
     imageFallback: {
-        width: '100%',
+        width: "100%",
         height: 120,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginBottom: 16,
         borderRadius: 8,
     },
     imageFallbackText: {
         marginTop: 8,
         fontSize: 14,
-        textAlign: 'center',
+        textAlign: "center",
     },
     explanationContainer: {
         marginBottom: 8,
@@ -293,7 +418,7 @@ const styles = StyleSheet.create({
     },
     sectionTitle: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
         marginBottom: 8,
     },
     sectionContent: {
@@ -301,7 +426,7 @@ const styles = StyleSheet.create({
         lineHeight: 20,
     },
     explanationText: {
-        textAlign: 'justify',
+        textAlign: "justify",
     },
     overlay: {
         ...StyleSheet.absoluteFillObject,

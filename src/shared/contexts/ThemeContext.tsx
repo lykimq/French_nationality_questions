@@ -1,10 +1,16 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useIcons } from './IconContext';
-import { createLogger } from '../utils/logger';
-import type { ThemeMode, ColorTheme, Theme, IconMapping } from '../../types';
-import { colorThemes, colorThemeInfo } from '../../theme/colorThemes';
+import React, {
+    createContext,
+    useContext,
+    useState,
+    useEffect,
+    ReactNode,
+} from "react";
+import { StatusBar } from "expo-status-bar";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useIcons } from "./IconContext";
+import { createLogger } from "../utils/logger";
+import type { ThemeMode, ColorTheme, Theme, IconMapping } from "../../types";
+import { colorThemes, colorThemeInfo } from "../../theme/colorThemes";
 
 interface ThemeContextType {
     theme: Theme & { icons: IconMapping };
@@ -20,7 +26,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const useTheme = (): ThemeContextType => {
     const context = useContext(ThemeContext);
     if (!context) {
-        throw new Error('useTheme must be used within a ThemeProvider');
+        throw new Error("useTheme must be used within a ThemeProvider");
     }
     return context;
 };
@@ -30,15 +36,15 @@ interface ThemeProviderProps {
     children: ReactNode;
 }
 
-const THEME_STORAGE_KEY = '@french_app_theme';
-const COLOR_THEME_STORAGE_KEY = '@french_app_color_theme';
+const THEME_STORAGE_KEY = "@french_app_theme";
+const COLOR_THEME_STORAGE_KEY = "@french_app_color_theme";
 
-const logger = createLogger('ThemeContext');
+const logger = createLogger("ThemeContext");
 
 // Internal theme provider that requires IconContext
 const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
-    const [themeMode, setThemeModeState] = useState<ThemeMode>('light');
-    const [colorTheme, setColorThemeState] = useState<ColorTheme>('classic');
+    const [themeMode, setThemeModeState] = useState<ThemeMode>("light");
+    const [colorTheme, setColorThemeState] = useState<ColorTheme>("classic");
     const [, setIsLoading] = useState(true);
 
     // Get icons from IconContext with better error handling
@@ -50,62 +56,71 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
     } catch (error) {
         // Provide fallback icons to prevent runtime errors
         icons = {
-            home: 'home',
-            search: 'search',
-            settings: 'settings',
-            categories: 'grid',
-            chevronDown: 'chevron-down',
-            chevronUp: 'chevron-up',
-            chevronForward: 'chevron-forward',
-            chevronBack: 'chevron-back',
-            close: 'close',
-            textFormat: 'text',
-            share: 'share-social',
-            star: 'star',
-            info: 'information-circle',
-            refresh: 'refresh',
-            sun: 'sunny',
-            moon: 'moon',
-            palette: 'color-palette',
-            image: 'image',
-            expand: 'expand',
-            collapse: 'contract',
-            analytics: 'analytics',
-            helpCircle: 'help-circle',
-            time: 'time',
-            checkmark: 'checkmark',
-            checkmarkCircle: 'checkmark-circle',
-            play: 'play',
-            trophy: 'trophy',
-            eye: 'eye',
-            bulb: 'bulb',
-            alertCircle: 'alert-circle',
-            trendingUp: 'trending-up',
-            shuffle: 'shuffle',
-            bug: 'bug',
-            grid: 'grid',
-            flash: 'flash',
-            people: 'people',
-            chatbox: 'chatbox',
-            arrowBack: 'arrow-back',
+            home: "home",
+            search: "search",
+            settings: "settings",
+            categories: "grid",
+            chevronDown: "chevron-down",
+            chevronUp: "chevron-up",
+            chevronForward: "chevron-forward",
+            chevronBack: "chevron-back",
+            close: "close",
+            textFormat: "text",
+            share: "share-social",
+            star: "star",
+            info: "information-circle",
+            refresh: "refresh",
+            sun: "sunny",
+            moon: "moon",
+            palette: "color-palette",
+            image: "image",
+            expand: "expand",
+            collapse: "contract",
+            analytics: "analytics",
+            helpCircle: "help-circle",
+            time: "time",
+            checkmark: "checkmark",
+            checkmarkCircle: "checkmark-circle",
+            play: "play",
+            trophy: "trophy",
+            eye: "eye",
+            bulb: "bulb",
+            alertCircle: "alert-circle",
+            trendingUp: "trending-up",
+            shuffle: "shuffle",
+            bug: "bug",
+            grid: "grid",
+            flash: "flash",
+            people: "people",
+            chatbox: "chatbox",
+            arrowBack: "arrow-back",
         };
     }
 
     useEffect(() => {
         const loadTheme = async () => {
             try {
-                const savedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
-                const savedColorTheme = await AsyncStorage.getItem(COLOR_THEME_STORAGE_KEY);
+                const savedTheme =
+                    await AsyncStorage.getItem(THEME_STORAGE_KEY);
+                const savedColorTheme = await AsyncStorage.getItem(
+                    COLOR_THEME_STORAGE_KEY
+                );
 
-                if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
+                if (
+                    savedTheme &&
+                    (savedTheme === "light" || savedTheme === "dark")
+                ) {
                     setThemeModeState(savedTheme);
                 }
 
-                if (savedColorTheme && Object.keys(colorThemes).includes(savedColorTheme)) {
+                if (
+                    savedColorTheme &&
+                    Object.keys(colorThemes).includes(savedColorTheme)
+                ) {
                     setColorThemeState(savedColorTheme as ColorTheme);
                 }
             } catch (error) {
-                logger.error('Error loading theme:', error);
+                logger.error("Error loading theme:", error);
             } finally {
                 setIsLoading(false);
             }
@@ -119,7 +134,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, mode);
             setThemeModeState(mode);
         } catch (error) {
-            logger.error('Error saving theme:', error);
+            logger.error("Error saving theme:", error);
             setThemeModeState(mode);
         }
     }, []);
@@ -129,13 +144,13 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
             await AsyncStorage.setItem(COLOR_THEME_STORAGE_KEY, theme);
             setColorThemeState(theme);
         } catch (error) {
-            logger.error('Error saving color theme:', error);
+            logger.error("Error saving color theme:", error);
             setColorThemeState(theme);
         }
     }, []);
 
     const toggleTheme = React.useCallback(() => {
-        const newMode = themeMode === 'light' ? 'dark' : 'light';
+        const newMode = themeMode === "light" ? "dark" : "light";
         setThemeMode(newMode);
     }, [themeMode, setThemeMode]);
 
@@ -148,21 +163,32 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
         };
     }, [themeMode, colorTheme]);
 
-    const value: ThemeContextType = React.useMemo(() => ({
-        theme: {
-            ...currentTheme,
-            icons, // Include icons from IconContext
-        },
-        themeMode,
-        colorTheme,
-        setThemeMode,
-        setColorTheme,
-        toggleTheme,
-    }), [currentTheme, icons, themeMode, colorTheme, setThemeMode, setColorTheme, toggleTheme]);
+    const value: ThemeContextType = React.useMemo(
+        () => ({
+            theme: {
+                ...currentTheme,
+                icons, // Include icons from IconContext
+            },
+            themeMode,
+            colorTheme,
+            setThemeMode,
+            setColorTheme,
+            toggleTheme,
+        }),
+        [
+            currentTheme,
+            icons,
+            themeMode,
+            colorTheme,
+            setThemeMode,
+            setColorTheme,
+            toggleTheme,
+        ]
+    );
 
     return (
         <ThemeContext.Provider value={value}>
-            <StatusBar style={themeMode === 'dark' ? 'light' : 'dark'} />
+            <StatusBar style={themeMode === "dark" ? "light" : "dark"} />
             {children}
         </ThemeContext.Provider>
     );
@@ -170,11 +196,7 @@ const ThemeProviderInternal: React.FC<ThemeProviderProps> = ({ children }) => {
 
 // Wrapper that ensures IconContext is available
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-    return (
-        <ThemeProviderInternal>
-            {children}
-        </ThemeProviderInternal>
-    );
+    return <ThemeProviderInternal>{children}</ThemeProviderInternal>;
 };
 
 export { colorThemeInfo };

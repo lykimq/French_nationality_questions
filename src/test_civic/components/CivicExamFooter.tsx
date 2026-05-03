@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { FormattedText } from '../../shared/components';
-import { useTheme } from '../../shared/contexts/ThemeContext';
+import React from "react";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { FormattedText } from "../../shared/components";
+import { useTheme } from "../../shared/contexts/ThemeContext";
 
 interface CivicExamFooterProps {
     selectedAnswer: number | null;
@@ -26,21 +26,22 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
 }) => {
     const { theme } = useTheme();
 
-    const isNextDisabled = selectedAnswer === null && !(isPracticeMode && answerSubmitted);
+    const isNextDisabled =
+        selectedAnswer === null && !(isPracticeMode && answerSubmitted);
     const showNext = isPracticeMode && answerSubmitted;
     const isLast = currentQuestionIndex >= totalQuestions - 1;
 
     const primaryLabel = (() => {
         if (isPracticeMode) {
             if (answerSubmitted) {
-                return isLast ? 'Voir les résultats' : 'Question suivante';
+                return isLast ? "Voir les résultats" : "Question suivante";
             }
-            return 'Choisissez une réponse';
+            return "Choisissez une réponse";
         }
         if (selectedAnswer === null) {
-            return 'Choisissez une réponse';
+            return "Choisissez une réponse";
         }
-        return isLast ? 'Voir la révision' : 'Valider et continuer';
+        return isLast ? "Voir la révision" : "Valider et continuer";
     })();
 
     return (
@@ -58,9 +59,11 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
                 style={[
                     styles.submitButton,
                     {
-                        backgroundColor: !isNextDisabled ? theme.colors.primary : theme.colors.textMuted,
+                        backgroundColor: !isNextDisabled
+                            ? theme.colors.primary
+                            : theme.colors.textMuted,
                         opacity: !isNextDisabled ? 1 : 0.5,
-                    }
+                    },
                 ]}
                 onPress={showNext ? onNextQuestion : onSubmitAnswer}
                 disabled={isNextDisabled}
@@ -69,7 +72,12 @@ export const CivicExamFooter: React.FC<CivicExamFooterProps> = ({
                 accessibilityState={{ disabled: isNextDisabled }}
                 accessibilityLabel={primaryLabel}
             >
-                <FormattedText style={[styles.submitButtonText, { color: theme.colors.buttonText }]}>
+                <FormattedText
+                    style={[
+                        styles.submitButtonText,
+                        { color: theme.colors.buttonText },
+                    ]}
+                >
                     {primaryLabel}
                 </FormattedText>
             </TouchableOpacity>
@@ -87,12 +95,12 @@ const styles = StyleSheet.create({
     submitButton: {
         borderRadius: 12,
         padding: 16,
-        alignItems: 'center',
+        alignItems: "center",
         minHeight: 52,
-        justifyContent: 'center',
+        justifyContent: "center",
     },
     submitButtonText: {
         fontSize: 16,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
 });

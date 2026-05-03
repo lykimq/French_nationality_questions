@@ -578,11 +578,7 @@
             "id": "dd_45",
             "question": "À partir de quel âge peut-on être juré aux assises ?",
             "correctAnswer": "23 ans.",
-            "incorrectAnswers": [
-                "21 ans.",
-                "24 ans.",
-                "22 ans."
-            ],
+            "incorrectAnswers": ["21 ans.", "24 ans.", "22 ans."],
             "explanation": "Tout citoyen français âgé de plus de 23 ans, qui a tous ses droits civiques et qui est inscrit sur les listes électorales, peut être tiré au sort pour être juré lors d'un procès d'assises.",
             "subTheme": "obligations_duties",
             "questionType": "knowledge"
@@ -877,11 +873,7 @@
             "id": "dd_68",
             "question": "En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?",
             "correctAnswer": "2001.",
-            "incorrectAnswers": [
-                "2000.",
-                "2002.",
-                "1998."
-            ],
+            "incorrectAnswers": ["2000.", "2002.", "1998."],
             "explanation": "La loi Taubira de 2001 reconnaît la traite et l'esclavage comme crime contre l'humanité.",
             "subTheme": "fundamental_rights",
             "questionType": "knowledge"

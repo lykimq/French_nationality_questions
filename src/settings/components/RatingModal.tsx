@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, TouchableOpacity, Modal, Alert } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../shared/contexts/ThemeContext';   
-import { FormattedText } from '../../shared/components';
-import { sharedStyles, saveRating, openStoreReview, createLogger } from '../../shared/utils';
-import { settingsStyles } from './settingsStyles';
+import React, { useState } from "react";
+import { StyleSheet, View, TouchableOpacity, Modal, Alert } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { FormattedText } from "../../shared/components";
+import {
+    sharedStyles,
+    saveRating,
+    openStoreReview,
+    createLogger,
+} from "../../shared/utils";
+import { settingsStyles } from "./settingsStyles";
 
-const logger = createLogger('RatingModal');
+const logger = createLogger("RatingModal");
 
 interface RatingModalProps {
     visible: boolean;
@@ -20,8 +25,8 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
     const handleRatingSubmit = async () => {
         if (selectedRating === 0) {
             Alert.alert(
-                'Attention',
-                'Veuillez sélectionner une note avant de continuer.'
+                "Attention",
+                "Veuillez sélectionner une note avant de continuer."
             );
             return;
         }
@@ -34,29 +39,32 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
             if (selectedRating >= 4) {
                 setTimeout(() => {
                     Alert.alert(
-                        'Merci!',
-                        'Merci pour votre excellente évaluation! Souhaitez-vous laisser un avis sur le store?',
+                        "Merci!",
+                        "Merci pour votre excellente évaluation! Souhaitez-vous laisser un avis sur le store?",
                         [
                             {
-                                text: 'Plus tard',
-                                style: 'cancel',
+                                text: "Plus tard",
+                                style: "cancel",
                             },
                             {
-                                text: 'Oui',
+                                text: "Oui",
                                 onPress: async () => {
                                     try {
                                         const opened = await openStoreReview();
                                         if (!opened) {
                                             Alert.alert(
-                                                'Information',
-                                                'L\'application n\'est peut-être pas encore publiée sur le store. Votre évaluation a été enregistrée avec succès!'
+                                                "Information",
+                                                "L'application n'est peut-être pas encore publiée sur le store. Votre évaluation a été enregistrée avec succès!"
                                             );
                                         }
                                     } catch (error) {
-                                        logger.error('Error opening store review:', error);
+                                        logger.error(
+                                            "Error opening store review:",
+                                            error
+                                        );
                                         Alert.alert(
-                                            'Information',
-                                            'Votre évaluation a été enregistrée avec succès! Vous pourrez laisser un avis sur le store une fois l\'application publiée.'
+                                            "Information",
+                                            "Votre évaluation a été enregistrée avec succès! Vous pourrez laisser un avis sur le store une fois l'application publiée."
                                         );
                                     }
                                 },
@@ -67,16 +75,16 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
             } else {
                 setTimeout(() => {
                     Alert.alert(
-                        'Merci pour votre retour',
-                        'Nous sommes désolés que l\'application ne réponde pas entièrement à vos attentes. Votre avis nous aide à l\'améliorer!'
+                        "Merci pour votre retour",
+                        "Nous sommes désolés que l'application ne réponde pas entièrement à vos attentes. Votre avis nous aide à l'améliorer!"
                     );
                 }, 300);
             }
         } catch (error) {
-            logger.error('Error saving rating:', error);
+            logger.error("Error saving rating:", error);
             Alert.alert(
-                'Erreur',
-                'Une erreur est survenue lors de l\'enregistrement de votre évaluation. Veuillez réessayer.'
+                "Erreur",
+                "Une erreur est survenue lors de l'enregistrement de votre évaluation. Veuillez réessayer."
             );
             setSelectedRating(0);
         }
@@ -97,9 +105,13 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
                     style={styles.starButton}
                 >
                     <Ionicons
-                        name={i <= selectedRating ? 'star' : 'star-outline'}
+                        name={i <= selectedRating ? "star" : "star-outline"}
                         size={40}
-                        color={i <= selectedRating ? '#FFD700' : theme.colors.textMuted}
+                        color={
+                            i <= selectedRating
+                                ? "#FFD700"
+                                : theme.colors.textMuted
+                        }
                     />
                 </TouchableOpacity>
             );
@@ -115,34 +127,65 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
             onRequestClose={handleClose}
         >
             <View style={sharedStyles.modalOverlay}>
-                <View style={[settingsStyles.modalContainer, { backgroundColor: theme.colors.card }]}>
-                    <FormattedText style={[settingsStyles.modalTitle, { color: theme.colors.text }]}>
+                <View
+                    style={[
+                        settingsStyles.modalContainer,
+                        { backgroundColor: theme.colors.card },
+                    ]}
+                >
+                    <FormattedText
+                        style={[
+                            settingsStyles.modalTitle,
+                            { color: theme.colors.text },
+                        ]}
+                    >
                         Évaluez cette application
                     </FormattedText>
 
-                    <FormattedText style={[settingsStyles.modalSubtitle, { color: theme.colors.textMuted }]}>
+                    <FormattedText
+                        style={[
+                            settingsStyles.modalSubtitle,
+                            { color: theme.colors.textMuted },
+                        ]}
+                    >
                         Votre avis nous aide à améliorer l'application
                     </FormattedText>
 
-                    <View style={styles.starsContainer}>
-                        {renderStars()}
-                    </View>
+                    <View style={styles.starsContainer}>{renderStars()}</View>
 
                     <View style={styles.modalButtons}>
                         <TouchableOpacity
-                            style={[settingsStyles.modalButton, styles.cancelButton, { backgroundColor: theme.colors.background }]}
+                            style={[
+                                settingsStyles.modalButton,
+                                styles.cancelButton,
+                                { backgroundColor: theme.colors.background },
+                            ]}
                             onPress={handleClose}
                         >
-                            <FormattedText style={[settingsStyles.modalButtonText, { color: theme.colors.text }]}>
+                            <FormattedText
+                                style={[
+                                    settingsStyles.modalButtonText,
+                                    { color: theme.colors.text },
+                                ]}
+                            >
                                 Annuler
                             </FormattedText>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={[settingsStyles.modalButton, styles.submitButton, { backgroundColor: theme.colors.primary }]}
+                            style={[
+                                settingsStyles.modalButton,
+                                styles.submitButton,
+                                { backgroundColor: theme.colors.primary },
+                            ]}
                             onPress={handleRatingSubmit}
                         >
-                            <FormattedText style={[settingsStyles.modalButtonText, { color: theme.colors.buttonText }]}>
+                            <FormattedText
+                                style={[
+                                    settingsStyles.modalButtonText,
+                                    { color: theme.colors.buttonText },
+                                ]}
+                            >
                                 Envoyer
                             </FormattedText>
                         </TouchableOpacity>
@@ -155,8 +198,8 @@ const RatingModal: React.FC<RatingModalProps> = ({ visible, onClose }) => {
 
 const styles = StyleSheet.create({
     starsContainer: {
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flexDirection: "row",
+        justifyContent: "center",
         marginBottom: 30,
     },
     starButton: {
@@ -164,17 +207,17 @@ const styles = StyleSheet.create({
         marginHorizontal: 2,
     },
     modalButtons: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '100%',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
     },
     cancelButton: {
         borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.1)',
+        borderColor: "rgba(0,0,0,0.1)",
     },
     submitButton: {
         elevation: 2,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.2,
         shadowRadius: 2,

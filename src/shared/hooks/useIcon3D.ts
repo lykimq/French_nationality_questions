@@ -1,5 +1,5 @@
-import { useIcons } from '../contexts/IconContext';
-import type { IconMapping, Icon3DVariant } from '../../types';
+import { useIcons } from "../contexts/IconContext";
+import type { IconMapping, Icon3DVariant } from "../../types";
 
 export interface Icon3DConfig {
     name: string;
@@ -10,7 +10,13 @@ export interface Icon3DConfig {
  * Hook providing Icon3D helpers (wraps useIcons for combined configs).
  */
 export const useIcon3D = () => {
-    const { getIconName, getIconVariant, getJsonIconName, getJsonIconColor, getJsonIconVariant } = useIcons();
+    const {
+        getIconName,
+        getIconVariant,
+        getJsonIconName,
+        getJsonIconColor,
+        getJsonIconVariant,
+    } = useIcons();
 
     const getIcon = (iconKey: keyof IconMapping): Icon3DConfig => {
         return {
@@ -34,4 +40,3 @@ export const useIcon3D = () => {
 };
 
 export default useIcon3D;
-

@@ -1,24 +1,21 @@
-import React from 'react';
-import { View } from 'react-native';
-import { useTextFormatting } from '../../shared/contexts/TextFormattingContext';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import SliderSetting from './SliderSetting';
-import SettingItem from './SettingItem';
-import { showConfirmationAlert } from '../../shared/utils';
+import React from "react";
+import { View } from "react-native";
+import { useTextFormatting } from "../../shared/contexts/TextFormattingContext";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import SliderSetting from "./SliderSetting";
+import SettingItem from "./SettingItem";
+import { showConfirmationAlert } from "../../shared/utils";
 
 const TextFormattingSettings: React.FC = () => {
     const { theme } = useTheme();
-    const {
-        settings,
-        updateFontSize,
-        resetToDefaults
-    } = useTextFormatting();
+    const { settings, updateFontSize, resetToDefaults } = useTextFormatting();
 
     const handleResetTextSettings = () => {
         showConfirmationAlert({
-            title: 'Réinitialisation',
-            message: 'Réinitialiser tous les paramètres de texte aux valeurs par défaut ?',
-            confirmText: 'Réinitialiser',
+            title: "Réinitialisation",
+            message:
+                "Réinitialiser tous les paramètres de texte aux valeurs par défaut ?",
+            confirmText: "Réinitialiser",
             onConfirm: resetToDefaults,
         });
     };

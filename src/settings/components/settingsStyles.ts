@@ -1,9 +1,9 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const settingsStyles = StyleSheet.create({
     settingItem: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingVertical: 12,
         paddingHorizontal: 16,
         borderBottomWidth: 1,
@@ -15,24 +15,24 @@ export const settingsStyles = StyleSheet.create({
     modalContainer: {
         borderRadius: 20,
         padding: 30,
-        alignItems: 'center',
+        alignItems: "center",
         minWidth: 300,
         maxWidth: 350,
         elevation: 10,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 5 },
         shadowOpacity: 0.25,
         shadowRadius: 10,
     },
     modalTitle: {
         fontSize: 20,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 8,
-        textAlign: 'center',
+        textAlign: "center",
     },
     modalSubtitle: {
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: "center",
         marginBottom: 30,
         lineHeight: 22,
     },
@@ -41,12 +41,11 @@ export const settingsStyles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 20,
         borderRadius: 10,
-        alignItems: 'center',
+        alignItems: "center",
         marginHorizontal: 5,
     },
     modalButtonText: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
     },
 });
-

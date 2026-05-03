@@ -1,20 +1,35 @@
-import React, { createContext, useContext, useState, ReactNode, useCallback, useMemo, useEffect } from 'react';
-import { createLogger } from '../../shared/utils/logger';
-import { extractNumericId } from '../../shared/utils/idUtils';
-import { generateCivicExamQuestions } from '../utils/civicExamGeneration';
-import { calculateCivicExamScore, isCivicExamPassed } from '../utils/civicExamScoring';
+import React, {
+    createContext,
+    useContext,
+    useState,
+    ReactNode,
+    useCallback,
+    useMemo,
+    useEffect,
+} from "react";
+import { createLogger } from "../../shared/utils/logger";
+import { extractNumericId } from "../../shared/utils/idUtils";
+import { generateCivicExamQuestions } from "../utils/civicExamGeneration";
+import {
+    calculateCivicExamScore,
+    isCivicExamPassed,
+} from "../utils/civicExamScoring";
 import type {
     CivicExamConfig,
     CivicExamSession,
     CivicExamQuestion,
     CivicExamResult,
     TestAnswer,
-} from '../types';
-import type { TestQuestion } from '../../types';
-import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
-import { loadStoredSession, saveSession, clearStoredSession } from '../utils/civicExamSessionStorage';
+} from "../types";
+import type { TestQuestion } from "../../types";
+import { CIVIC_EXAM_CONFIG } from "../constants/civicExamConstants";
+import {
+    loadStoredSession,
+    saveSession,
+    clearStoredSession,
+} from "../utils/civicExamSessionStorage";
 
-const logger = createLogger('CivicExamSessionContext');
+const logger = createLogger("CivicExamSessionContext");
 
 interface CivicExamSessionContextType {
     currentSession: CivicExamSession | null;
@@ -22,12 +37,17 @@ interface CivicExamSessionContextType {
     currentQuestionIndex: number;
     pausedSession: CivicExamSession | null;
 
-    startExam: (config: CivicExamConfig, allQuestions: readonly TestQuestion[]) => Promise<void>;
+    startExam: (
+        config: CivicExamConfig,
+        allQuestions: readonly TestQuestion[]
+    ) => Promise<void>;
     resumeSession: () => Promise<void>;
     abandonPausedSession: () => Promise<void>;
     submitAnswer: (answer: TestAnswer, autoAdvance?: boolean) => Promise<void>;
     goToNextQuestion: () => void;
-    finishExam: () => Omit<CivicExamResult, 'statistics'> & { session: CivicExamSession };
+    finishExam: () => Omit<CivicExamResult, "statistics"> & {
+        session: CivicExamSession;
+    };
     cancelExam: () => void;
 
     getCurrentQuestion: () => CivicExamQuestion | null;
@@ -35,19 +55,24 @@ interface CivicExamSessionContextType {
     getPreviousQuestion: () => CivicExamQuestion | null;
 }
 
-const CivicExamSessionContext = createContext<CivicExamSessionContextType | undefined>(undefined);
+const CivicExamSessionContext = createContext<
+    CivicExamSessionContextType | undefined
+>(undefined);
 
 export const CivicExamSessionProvider: React.FC<{
     children: ReactNode;
     allProcessedQuestions: readonly TestQuestion[];
 }> = ({ children, allProcessedQuestions }) => {
-    const [currentSession, setCurrentSession] = useState<CivicExamSession | null>(null);
+    const [currentSession, setCurrentSession] =
+        useState<CivicExamSession | null>(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [pausedSession, setPausedSession] = useState<CivicExamSession | null>(null);
+    const [pausedSession, setPausedSession] = useState<CivicExamSession | null>(
+        null
+    );
 
     useEffect(() => {
         loadStoredSession()
-            .then(session => {
+            .then((session) => {
                 if (session) {
                     if (session.isPaused) {
                         // Store paused session separately, don't auto-resume
@@ -60,7 +85,7 @@ export const CivicExamSessionProvider: React.FC<{
                     if (session.totalQuestions !== actualQuestionCount) {
                         logger.warn(
                             `Session totalQuestions (${session.totalQuestions}) doesn't match questions.length (${actualQuestionCount}). ` +
-                            `Fixing mismatch.`
+                                `Fixing mismatch.`
                         );
                         session = {
                             ...session,
@@ -69,16 +94,24 @@ export const CivicExamSessionProvider: React.FC<{
                     }
                     setCurrentSession(session);
                     const maxIndex = Math.max(0, actualQuestionCount - 1);
-                    const targetIndex = Math.min(session.answers.length, maxIndex);
+                    const targetIndex = Math.min(
+                        session.answers.length,
+                        maxIndex
+                    );
                     setCurrentQuestionIndex(targetIndex);
                 }
             })
-            .catch(error => logger.error('Failed to hydrate stored civic exam session', error));
+            .catch((error) =>
+                logger.error(
+                    "Failed to hydrate stored civic exam session",
+                    error
+                )
+            );
     }, []);
 
     const resumeSession = useCallback(async (): Promise<void> => {
         if (!pausedSession) {
-            throw new Error('No paused session to resume');
+            throw new Error("No paused session to resume");
         }
 
         const actualQuestionCount = pausedSession.questions.length;
@@ -93,7 +126,7 @@ export const CivicExamSessionProvider: React.FC<{
         const maxIndex = Math.max(0, actualQuestionCount - 1);
         const targetIndex = Math.min(resumedSession.answers.length, maxIndex);
         setCurrentQuestionIndex(targetIndex);
-        
+
         await saveSession(resumedSession);
         setPausedSession(null);
     }, [pausedSession]);
@@ -111,127 +144,164 @@ export const CivicExamSessionProvider: React.FC<{
         }
     }, [pausedSession, currentSession]);
 
-    const startExam = useCallback(async (config: CivicExamConfig, allQuestions: readonly TestQuestion[]): Promise<void> => {
-        // If there's a paused session and we're starting a new practice session, clear it
-        if (pausedSession && config.mode === 'civic_exam_practice') {
-            await clearStoredSession();
-            setPausedSession(null);
-        }
-
-        const questions = generateCivicExamQuestions([...allQuestions], config);
-
-        if (questions.length === 0) {
-            throw new Error('No questions available for this exam configuration');
-        }
-
-        const questionIds = new Set<number>();
-        const duplicateIds: number[] = [];
-        questions.forEach(q => {
-            const questionId = extractNumericId(q.id);
-            if (questionId === undefined) {
-                logger.warn(`Question ${q.id} has invalid ID, skipping duplicate check`);
-                return;
+    const startExam = useCallback(
+        async (
+            config: CivicExamConfig,
+            allQuestions: readonly TestQuestion[]
+        ): Promise<void> => {
+            // If there's a paused session and we're starting a new practice session, clear it
+            if (pausedSession && config.mode === "civic_exam_practice") {
+                await clearStoredSession();
+                setPausedSession(null);
             }
-            if (questionIds.has(questionId)) {
-                duplicateIds.push(questionId);
-            } else {
-                questionIds.add(questionId);
+
+            const questions = generateCivicExamQuestions(
+                [...allQuestions],
+                config
+            );
+
+            if (questions.length === 0) {
+                throw new Error(
+                    "No questions available for this exam configuration"
+                );
             }
-        });
 
-        if (duplicateIds.length > 0) {
-            throw new Error(
-                `Cannot start exam: Found ${duplicateIds.length} duplicate question(s) with IDs: ${duplicateIds.join(', ')}. ` +
-                `This is a critical error and should not occur.`
-            );
-        }
+            const questionIds = new Set<number>();
+            const duplicateIds: number[] = [];
+            questions.forEach((q) => {
+                const questionId = extractNumericId(q.id);
+                if (questionId === undefined) {
+                    logger.warn(
+                        `Question ${q.id} has invalid ID, skipping duplicate check`
+                    );
+                    return;
+                }
+                if (questionIds.has(questionId)) {
+                    duplicateIds.push(questionId);
+                } else {
+                    questionIds.add(questionId);
+                }
+            });
 
-        const isPracticeMode = config.mode === 'civic_exam_practice';
+            if (duplicateIds.length > 0) {
+                throw new Error(
+                    `Cannot start exam: Found ${duplicateIds.length} duplicate question(s) with IDs: ${duplicateIds.join(", ")}. ` +
+                        `This is a critical error and should not occur.`
+                );
+            }
 
-        if (!isPracticeMode && questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS) {
-            throw new Error(
-                `Cannot start exam: Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, but only ${questions.length} are available. Please ensure all themes have sufficient questions.`
-            );
-        }
+            const isPracticeMode = config.mode === "civic_exam_practice";
 
-        const actualQuestionCount = questions.length;
-        const newSession: CivicExamSession = {
-            id: Date.now().toString(),
-            mode: config.mode,
-            questions,
-            answers: [],
-            startTime: new Date(),
-            isCompleted: false,
-            score: 0,
-            totalQuestions: actualQuestionCount,
-            correctAnswers: 0,
-            topics: config.selectedTopics,
-            isPracticeMode,
-        };
+            if (
+                !isPracticeMode &&
+                questions.length !== CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS
+            ) {
+                throw new Error(
+                    `Cannot start exam: Expected ${CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions, but only ${questions.length} are available. Please ensure all themes have sufficient questions.`
+                );
+            }
 
-        setCurrentSession(newSession);
-        setCurrentQuestionIndex(0);
-        await saveSession(newSession);
-    }, [pausedSession]);
+            const actualQuestionCount = questions.length;
+            const newSession: CivicExamSession = {
+                id: Date.now().toString(),
+                mode: config.mode,
+                questions,
+                answers: [],
+                startTime: new Date(),
+                isCompleted: false,
+                score: 0,
+                totalQuestions: actualQuestionCount,
+                correctAnswers: 0,
+                topics: config.selectedTopics,
+                isPracticeMode,
+            };
 
-    const submitAnswer = useCallback(async (answer: TestAnswer, autoAdvance: boolean = true): Promise<void> => {
-        if (!currentSession) {
-            throw new Error('No active exam session');
-        }
+            setCurrentSession(newSession);
+            setCurrentQuestionIndex(0);
+            await saveSession(newSession);
+        },
+        [pausedSession]
+    );
 
-        const currentQuestion = currentSession.questions[currentQuestionIndex];
-        if (!currentQuestion) {
-            throw new Error(`No current question found at index: ${currentQuestionIndex}`);
-        }
+    const submitAnswer = useCallback(
+        async (
+            answer: TestAnswer,
+            autoAdvance: boolean = true
+        ): Promise<void> => {
+            if (!currentSession) {
+                throw new Error("No active exam session");
+            }
 
-        const expectedQId = extractNumericId(currentQuestion.id);
-        const answerQId = extractNumericId(answer.questionId);
-        const idsMatch =
-            answer.questionId === currentQuestion.id ||
-            (expectedQId !== undefined &&
-                answerQId !== undefined &&
-                expectedQId === answerQId);
-        if (!idsMatch) {
-            throw new Error(
-                `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
-            );
-        }
+            const currentQuestion =
+                currentSession.questions[currentQuestionIndex];
+            if (!currentQuestion) {
+                throw new Error(
+                    `No current question found at index: ${currentQuestionIndex}`
+                );
+            }
 
-        const updatedSession: CivicExamSession = {
-            ...currentSession,
-            answers: [...currentSession.answers, answer],
-            totalQuestions: currentSession.questions.length,
-        };
+            const expectedQId = extractNumericId(currentQuestion.id);
+            const answerQId = extractNumericId(answer.questionId);
+            const idsMatch =
+                answer.questionId === currentQuestion.id ||
+                (expectedQId !== undefined &&
+                    answerQId !== undefined &&
+                    expectedQId === answerQId);
+            if (!idsMatch) {
+                throw new Error(
+                    `Answer question ID mismatch! Expected ${currentQuestion.id}, got ${answer.questionId}`
+                );
+            }
 
-        setCurrentSession(updatedSession);
-        await saveSession(updatedSession);
+            const updatedSession: CivicExamSession = {
+                ...currentSession,
+                answers: [...currentSession.answers, answer],
+                totalQuestions: currentSession.questions.length,
+            };
 
-        if (autoAdvance && currentQuestionIndex < currentSession.questions.length - 1) {
-            setCurrentQuestionIndex(prev => prev + 1);
-        }
-    }, [currentSession, currentQuestionIndex]);
+            setCurrentSession(updatedSession);
+            await saveSession(updatedSession);
+
+            if (
+                autoAdvance &&
+                currentQuestionIndex < currentSession.questions.length - 1
+            ) {
+                setCurrentQuestionIndex((prev) => prev + 1);
+            }
+        },
+        [currentSession, currentQuestionIndex]
+    );
 
     const goToNextQuestion = useCallback((): void => {
         if (!currentSession) {
             return;
         }
         if (currentQuestionIndex < currentSession.questions.length - 1) {
-            setCurrentQuestionIndex(prev => prev + 1);
+            setCurrentQuestionIndex((prev) => prev + 1);
         }
     }, [currentSession, currentQuestionIndex]);
 
-    const finishExam = useCallback((): Omit<CivicExamResult, 'statistics'> & { session: CivicExamSession } => {
+    const finishExam = useCallback((): Omit<CivicExamResult, "statistics"> & {
+        session: CivicExamSession;
+    } => {
         if (!currentSession) {
-            throw new Error('No active exam session');
+            throw new Error("No active exam session");
         }
 
         const actualQuestionCount = currentSession.questions.length;
-        const correctAnswers = currentSession.answers.filter((answer: TestAnswer) => answer.isCorrect).length;
-        const score = calculateCivicExamScore(correctAnswers, actualQuestionCount);
+        const correctAnswers = currentSession.answers.filter(
+            (answer: TestAnswer) => answer.isCorrect
+        ).length;
+        const score = calculateCivicExamScore(
+            correctAnswers,
+            actualQuestionCount
+        );
         const passed = isCivicExamPassed(score);
 
         const endTime = new Date();
-        const timeSpent = Math.floor((endTime.getTime() - currentSession.startTime.getTime()) / 1000);
+        const timeSpent = Math.floor(
+            (endTime.getTime() - currentSession.startTime.getTime()) / 1000
+        );
 
         const finishedSession: CivicExamSession = {
             ...currentSession,
@@ -243,12 +313,15 @@ export const CivicExamSessionProvider: React.FC<{
         };
 
         const incorrectQuestionIds = currentSession.answers
-            .filter(a => !a.isCorrect)
-            .map(a => a.questionId);
+            .filter((a) => !a.isCorrect)
+            .map((a) => a.questionId);
 
-        const incorrectQuestions = currentSession.questions.filter(q => {
+        const incorrectQuestions = currentSession.questions.filter((q) => {
             const questionId = extractNumericId(q.id);
-            return questionId !== undefined && incorrectQuestionIds.includes(questionId);
+            return (
+                questionId !== undefined &&
+                incorrectQuestionIds.includes(questionId)
+            );
         }) as CivicExamQuestion[];
 
         // Clear persisted active session once finished
@@ -291,16 +364,22 @@ export const CivicExamSessionProvider: React.FC<{
         if (currentSession.totalQuestions !== actualQuestionCount) {
             logger.warn(
                 `Session inconsistency: totalQuestions=${currentSession.totalQuestions}, ` +
-                `questions.length=${actualQuestionCount}. Using questions.length as source of truth.`
+                    `questions.length=${actualQuestionCount}. Using questions.length as source of truth.`
             );
         }
 
-        if (currentQuestionIndex < 0 || currentQuestionIndex >= actualQuestionCount) {
+        if (
+            currentQuestionIndex < 0 ||
+            currentQuestionIndex >= actualQuestionCount
+        ) {
             logger.warn(
                 `Invalid question index: ${currentQuestionIndex}, questions length: ${actualQuestionCount}, ` +
-                `totalQuestions: ${currentSession.totalQuestions}. Resetting to valid index.`
+                    `totalQuestions: ${currentSession.totalQuestions}. Resetting to valid index.`
             );
-            const validIndex = Math.max(0, Math.min(currentQuestionIndex, actualQuestionCount - 1));
+            const validIndex = Math.max(
+                0,
+                Math.min(currentQuestionIndex, actualQuestionCount - 1)
+            );
             setCurrentQuestionIndex(validIndex);
             return currentSession.questions[validIndex] as CivicExamQuestion;
         }
@@ -309,21 +388,24 @@ export const CivicExamSessionProvider: React.FC<{
         if (!question) {
             logger.error(
                 `Question is null at index ${currentQuestionIndex}, ` +
-                `questions.length=${actualQuestionCount}, totalQuestions=${currentSession.totalQuestions}`
+                    `questions.length=${actualQuestionCount}, totalQuestions=${currentSession.totalQuestions}`
             );
             return null;
         }
 
-        const questionWithOptions = question as CivicExamQuestion & { options?: string[] };
+        const questionWithOptions = question as CivicExamQuestion & {
+            options?: string[];
+        };
         if (currentSession.isPracticeMode) {
-            const hasOptions = 'options' in questionWithOptions &&
+            const hasOptions =
+                "options" in questionWithOptions &&
                 Array.isArray(questionWithOptions.options) &&
                 questionWithOptions.options.length > 0;
             if (!hasOptions) {
                 logger.warn(
                     `Question at index ${currentQuestionIndex} (ID: ${question.id}) has no options in practice mode. ` +
-                    `Options: ${JSON.stringify(questionWithOptions.options)}, ` +
-                    `Question type: ${'questionType' in question ? question.questionType : 'unknown'}`
+                        `Options: ${JSON.stringify(questionWithOptions.options)}, ` +
+                        `Question type: ${"questionType" in question ? question.questionType : "unknown"}`
                 );
             }
         }
@@ -332,49 +414,59 @@ export const CivicExamSessionProvider: React.FC<{
     }, [currentSession, currentQuestionIndex]);
 
     const getNextQuestion = useCallback((): CivicExamQuestion | null => {
-        if (!currentSession || currentQuestionIndex + 1 >= currentSession.questions.length) {
+        if (
+            !currentSession ||
+            currentQuestionIndex + 1 >= currentSession.questions.length
+        ) {
             return null;
         }
-        return currentSession.questions[currentQuestionIndex + 1] as CivicExamQuestion;
+        return currentSession.questions[
+            currentQuestionIndex + 1
+        ] as CivicExamQuestion;
     }, [currentSession, currentQuestionIndex]);
 
     const getPreviousQuestion = useCallback((): CivicExamQuestion | null => {
         if (!currentSession || currentQuestionIndex <= 0) {
             return null;
         }
-        return currentSession.questions[currentQuestionIndex - 1] as CivicExamQuestion;
+        return currentSession.questions[
+            currentQuestionIndex - 1
+        ] as CivicExamQuestion;
     }, [currentSession, currentQuestionIndex]);
 
-    const contextValue = useMemo((): CivicExamSessionContextType => ({
-        currentSession,
-        isExamActive: currentSession !== null,
-        currentQuestionIndex,
-        pausedSession,
-        startExam,
-        resumeSession,
-        abandonPausedSession,
-        submitAnswer,
-        goToNextQuestion,
-        finishExam,
-        cancelExam,
-        getCurrentQuestion,
-        getNextQuestion,
-        getPreviousQuestion,
-    }), [
-        currentSession,
-        currentQuestionIndex,
-        pausedSession,
-        startExam,
-        resumeSession,
-        abandonPausedSession,
-        submitAnswer,
-        goToNextQuestion,
-        finishExam,
-        cancelExam,
-        getCurrentQuestion,
-        getNextQuestion,
-        getPreviousQuestion,
-    ]);
+    const contextValue = useMemo(
+        (): CivicExamSessionContextType => ({
+            currentSession,
+            isExamActive: currentSession !== null,
+            currentQuestionIndex,
+            pausedSession,
+            startExam,
+            resumeSession,
+            abandonPausedSession,
+            submitAnswer,
+            goToNextQuestion,
+            finishExam,
+            cancelExam,
+            getCurrentQuestion,
+            getNextQuestion,
+            getPreviousQuestion,
+        }),
+        [
+            currentSession,
+            currentQuestionIndex,
+            pausedSession,
+            startExam,
+            resumeSession,
+            abandonPausedSession,
+            submitAnswer,
+            goToNextQuestion,
+            finishExam,
+            cancelExam,
+            getCurrentQuestion,
+            getNextQuestion,
+            getPreviousQuestion,
+        ]
+    );
 
     return (
         <CivicExamSessionContext.Provider value={contextValue}>
@@ -386,8 +478,9 @@ export const CivicExamSessionProvider: React.FC<{
 export const useCivicExamSession = (): CivicExamSessionContextType => {
     const context = useContext(CivicExamSessionContext);
     if (!context) {
-        throw new Error('useCivicExamSession must be used within a CivicExamSessionProvider');
+        throw new Error(
+            "useCivicExamSession must be used within a CivicExamSessionProvider"
+        );
     }
     return context;
 };
-

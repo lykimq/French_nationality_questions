@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import type { ImageSourcePropType } from 'react-native';
-import { loadImageResource, getCachedImage } from '../services/dataService';
-import { createLogger } from '../utils/logger';
+import { useState, useEffect } from "react";
+import type { ImageSourcePropType } from "react-native";
+import { loadImageResource, getCachedImage } from "../services/dataService";
+import { createLogger } from "../utils/logger";
 
-const logger = createLogger('useFirebaseImage');
+const logger = createLogger("useFirebaseImage");
 
 interface UseFirebaseImageResult {
     imageSource: ImageSourcePropType | null;
@@ -14,8 +14,12 @@ interface UseFirebaseImageResult {
 /**
  * Hook for Firebase image loading with caching.
  */
-export const useFirebaseImage = (imagePath: string | null | undefined): UseFirebaseImageResult => {
-    const [imageSource, setImageSource] = useState<ImageSourcePropType | null>(null);
+export const useFirebaseImage = (
+    imagePath: string | null | undefined
+): UseFirebaseImageResult => {
+    const [imageSource, setImageSource] = useState<ImageSourcePropType | null>(
+        null
+    );
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
 

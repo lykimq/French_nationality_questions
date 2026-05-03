@@ -1,10 +1,10 @@
-import React from 'react';
-import { View, Pressable, StyleSheet } from 'react-native';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import { useIcons } from '../shared/contexts/IconContext';
-import { FormattedText, Icon3D, ProgressBar } from '../shared/components';
-import { CategoryCardProps } from '../types';
-import { sharedStyles } from '../shared/utils';
+import React from "react";
+import { View, Pressable, StyleSheet } from "react-native";
+import { useTheme } from "../shared/contexts/ThemeContext";
+import { useIcons } from "../shared/contexts/IconContext";
+import { FormattedText, Icon3D, ProgressBar } from "../shared/components";
+import { CategoryCardProps } from "../types";
+import { sharedStyles } from "../shared/utils";
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
     title,
@@ -16,13 +16,19 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     disabled = false,
 }) => {
     const { theme } = useTheme();
-    const { getJsonIconName, getJsonIconColor, getJsonIconVariant, getIconName, getIconVariant } = useIcons();
+    const {
+        getJsonIconName,
+        getJsonIconColor,
+        getJsonIconVariant,
+        getIconName,
+        getIconVariant,
+    } = useIcons();
 
-    const mappedIconName = getJsonIconName(icon || 'default');
-    const iconColor = getJsonIconColor(icon || 'default');
-    const iconVariant = getJsonIconVariant(icon || 'default');
-    const chevronIconName = getIconName('chevronForward');
-    const chevronVariant = getIconVariant('chevronForward');
+    const mappedIconName = getJsonIconName(icon || "default");
+    const iconColor = getJsonIconColor(icon || "default");
+    const iconVariant = getJsonIconVariant(icon || "default");
+    const chevronIconName = getIconName("chevronForward");
+    const chevronVariant = getIconVariant("chevronForward");
 
     const opacity = disabled ? 0.5 : 1;
     const grayedColor = disabled ? theme.colors.textMuted : iconColor;
@@ -34,15 +40,20 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 sharedStyles.mediumShadow,
                 {
                     backgroundColor: theme.colors.card,
-                    borderColor: (disabled ? theme.colors.border : iconColor) + '20',
+                    borderColor:
+                        (disabled ? theme.colors.border : iconColor) + "20",
                     borderWidth: 1,
                     opacity,
                 },
-                pressed && !disabled && [styles.cardPressed, { backgroundColor: iconColor + '10' }]
+                pressed &&
+                    !disabled && [
+                        styles.cardPressed,
+                        { backgroundColor: iconColor + "10" },
+                    ],
             ]}
             onPress={disabled ? undefined : onPress}
             disabled={disabled}
-            android_ripple={disabled ? undefined : { color: iconColor + '20' }}
+            android_ripple={disabled ? undefined : { color: iconColor + "20" }}
         >
             <Icon3D
                 name={mappedIconName}
@@ -52,20 +63,61 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 backgroundColor={theme.colors.card}
             />
             <View style={styles.content}>
-                <FormattedText style={[styles.title, { color: disabled ? theme.colors.textMuted : theme.colors.text }]}>{title}</FormattedText>
-                <FormattedText style={[styles.description, { color: disabled ? theme.colors.textMuted : theme.colors.textSecondary }]} numberOfLines={2}>
+                <FormattedText
+                    style={[
+                        styles.title,
+                        {
+                            color: disabled
+                                ? theme.colors.textMuted
+                                : theme.colors.text,
+                        },
+                    ]}
+                >
+                    {title}
+                </FormattedText>
+                <FormattedText
+                    style={[
+                        styles.description,
+                        {
+                            color: disabled
+                                ? theme.colors.textMuted
+                                : theme.colors.textSecondary,
+                        },
+                    ]}
+                    numberOfLines={2}
+                >
                     {description}
                 </FormattedText>
-                <View style={[styles.countContainer, { backgroundColor: (disabled ? theme.colors.border : iconColor) + '15' }]}>
-                    <FormattedText style={[styles.count, { color: disabled ? theme.colors.textMuted : iconColor }]}>{count} questions</FormattedText>
+                <View
+                    style={[
+                        styles.countContainer,
+                        {
+                            backgroundColor:
+                                (disabled ? theme.colors.border : iconColor) +
+                                "15",
+                        },
+                    ]}
+                >
+                    <FormattedText
+                        style={[
+                            styles.count,
+                            {
+                                color: disabled
+                                    ? theme.colors.textMuted
+                                    : iconColor,
+                            },
+                        ]}
+                    >
+                        {count} questions
+                    </FormattedText>
                 </View>
 
                 {/* Question progress bar - now using real data */}
                 {progress !== undefined && (
-                    <ProgressBar 
-                        progress={progress} 
-                        height={4} 
-                        color={iconColor} 
+                    <ProgressBar
+                        progress={progress}
+                        height={4}
+                        color={iconColor}
                         containerStyle={styles.progressBar}
                     />
                 )}
@@ -85,21 +137,20 @@ export default CategoryCard;
 
 const styles = StyleSheet.create({
     card: {
-        flexDirection: 'row',
+        flexDirection: "row",
         borderRadius: 12,
         padding: 16,
         marginBottom: 15,
-        alignItems: 'center',
+        alignItems: "center",
     },
-    cardPressed: {
-    },
+    cardPressed: {},
     content: {
         flex: 1,
         marginLeft: 12,
     },
     title: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 2,
     },
     description: {
@@ -107,14 +158,14 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     countContainer: {
-        alignSelf: 'flex-start',
+        alignSelf: "flex-start",
         paddingVertical: 4,
         paddingHorizontal: 8,
         borderRadius: 12,
     },
     count: {
         fontSize: 12,
-        fontWeight: '600',
+        fontWeight: "600",
     },
     progressBar: {
         marginTop: 10,

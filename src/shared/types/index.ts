@@ -3,4 +3,4 @@
  * Re-export commonly used types for convenience.
  */
 
-export * from './rawData';
+export * from "./rawData";

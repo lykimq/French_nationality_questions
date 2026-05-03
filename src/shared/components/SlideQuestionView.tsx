@@ -1,16 +1,29 @@
-import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react';
-import { View, Animated, Dimensions, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcon3D } from '../hooks';
-import QuestionCard from './QuestionCard';
-import FormattedText from './FormattedText';
-import Icon3D from './Icon3D';
-import QuestionListModal, { type QuestionListItem } from './QuestionListModal';
-import type { Question } from '../../welcome/types';
-import { MasteryLevel } from '../utils/MasteryUtils';
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
+import React, {
+    useRef,
+    useEffect,
+    useState,
+    useCallback,
+    useMemo,
+} from "react";
+import {
+    View,
+    Animated,
+    Dimensions,
+    StyleSheet,
+    ScrollView,
+    TouchableOpacity,
+} from "react-native";
+import { Gesture, GestureDetector } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../contexts/ThemeContext";
+import { useIcon3D } from "../hooks";
+import QuestionCard from "./QuestionCard";
+import FormattedText from "./FormattedText";
+import Icon3D from "./Icon3D";
+import QuestionListModal, { type QuestionListItem } from "./QuestionListModal";
+import type { Question } from "../../welcome/types";
+import { MasteryLevel } from "../utils/MasteryUtils";
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
 
@@ -50,8 +63,8 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     const [isAnimating, setIsAnimating] = useState(false);
     const [isQuestionListVisible, setIsQuestionListVisible] = useState(false);
 
-    const chevronBackIcon = getIcon('chevronBack');
-    const chevronForwardIcon = getIcon('chevronForward');
+    const chevronBackIcon = getIcon("chevronBack");
+    const chevronForwardIcon = getIcon("chevronForward");
 
     // Track the question ID to detect changes for animation reset
     const prevQuestionIdRef = useRef<string | number | null>(null);
@@ -78,50 +91,57 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
         }
     }, [question?.id, isAnimating, handleScrollReset, translateX, opacity]);
 
-    const animateTransition = useCallback((direction: 'left' | 'right', callback: () => void) => {
-        if (isAnimating) return;
+    const animateTransition = useCallback(
+        (direction: "left" | "right", callback: () => void) => {
+            if (isAnimating) return;
 
-        setIsAnimating(true);
+            setIsAnimating(true);
 
-        Animated.parallel([
-            Animated.timing(translateX, {
-                toValue: direction === 'left' ? -SCREEN_WIDTH : SCREEN_WIDTH,
-                duration: 200,
-                useNativeDriver: true,
-            }),
-            Animated.timing(opacity, {
-                toValue: 0,
-                duration: 200,
-                useNativeDriver: true,
-            })
-        ]).start(() => {
-            callback();
-        });
-    }, [isAnimating, translateX, opacity]);
+            Animated.parallel([
+                Animated.timing(translateX, {
+                    toValue:
+                        direction === "left" ? -SCREEN_WIDTH : SCREEN_WIDTH,
+                    duration: 200,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(opacity, {
+                    toValue: 0,
+                    duration: 200,
+                    useNativeDriver: true,
+                }),
+            ]).start(() => {
+                callback();
+            });
+        },
+        [isAnimating, translateX, opacity]
+    );
 
     const handleNextPress = useCallback(() => {
-        if (hasNext) animateTransition('left', onNext);
+        if (hasNext) animateTransition("left", onNext);
     }, [hasNext, animateTransition, onNext]);
 
     const handlePreviousPress = useCallback(() => {
-        if (hasPrevious) animateTransition('right', onPrevious);
+        if (hasPrevious) animateTransition("right", onPrevious);
     }, [hasPrevious, animateTransition, onPrevious]);
 
-    const handleQuestionSelect = useCallback((index: number) => {
-        if (onGoToIndex && index >= 0 && index < totalCount) {
-            const direction = index > currentIndex ? 'left' : 'right';
-            animateTransition(direction, () => {
-                onGoToIndex(index);
-                setIsQuestionListVisible(false);
-            });
-        }
-    }, [currentIndex, totalCount, onGoToIndex, animateTransition]);
+    const handleQuestionSelect = useCallback(
+        (index: number) => {
+            if (onGoToIndex && index >= 0 && index < totalCount) {
+                const direction = index > currentIndex ? "left" : "right";
+                animateTransition(direction, () => {
+                    onGoToIndex(index);
+                    setIsQuestionListVisible(false);
+                });
+            }
+        },
+        [currentIndex, totalCount, onGoToIndex, animateTransition]
+    );
 
     const questionListData: QuestionListItem[] = useMemo(() => {
         return questions.map((q, index) => ({
             index,
             id: q.id,
-            questionText: q.question ?? '',
+            questionText: q.question ?? "",
         }));
     }, [questions]);
 
@@ -139,7 +159,9 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
             if (isAnimating) return;
 
             const { translationX, velocityX } = event;
-            const shouldNavigate = Math.abs(translationX) > SWIPE_THRESHOLD || Math.abs(velocityX) > VELOCITY_THRESHOLD;
+            const shouldNavigate =
+                Math.abs(translationX) > SWIPE_THRESHOLD ||
+                Math.abs(velocityX) > VELOCITY_THRESHOLD;
 
             if (shouldNavigate) {
                 if (translationX > 0 && hasPrevious) {
@@ -159,7 +181,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                             useNativeDriver: true,
                             tension: 50,
                             friction: 8,
-                        })
+                        }),
                     ]).start();
                 }
             } else {
@@ -175,7 +197,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                         useNativeDriver: true,
                         tension: 50,
                         friction: 8,
-                    })
+                    }),
                 ]).start();
             }
         });
@@ -189,9 +211,22 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
         !isMastered;
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
             {/* Navigation Bar */}
-            <View style={[styles.navigationBar, { backgroundColor: theme.colors.card, borderBottomColor: theme.colors.divider }]}>
+            <View
+                style={[
+                    styles.navigationBar,
+                    {
+                        backgroundColor: theme.colors.card,
+                        borderBottomColor: theme.colors.divider,
+                    },
+                ]}
+            >
                 <TouchableOpacity
                     style={styles.navButton}
                     onPress={handlePreviousPress}
@@ -200,25 +235,51 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     <Icon3D
                         name={chevronBackIcon.name}
                         size={20}
-                        color={!hasPrevious ? theme.colors.textMuted : theme.colors.primary}
-                        variant={hasPrevious ? chevronBackIcon.variant : 'default'}
+                        color={
+                            !hasPrevious
+                                ? theme.colors.textMuted
+                                : theme.colors.primary
+                        }
+                        variant={
+                            hasPrevious ? chevronBackIcon.variant : "default"
+                        }
                     />
                 </TouchableOpacity>
                 <View style={styles.navigationInfo}>
                     {title && (
-                        <FormattedText style={[styles.categoryTitle, { color: theme.colors.text }]}>
+                        <FormattedText
+                            style={[
+                                styles.categoryTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             {title}
                         </FormattedText>
                     )}
                     <View style={styles.pageRow}>
-                        <FormattedText style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}>
+                        <FormattedText
+                            style={[
+                                styles.pageIndicator,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
                             {currentIndex + 1} / {totalCount}
                         </FormattedText>
                         {isMastered && (
-                            <Ionicons name="checkmark-circle" size={18} color="#4CAF50" style={styles.masteryIcon} />
+                            <Ionicons
+                                name="checkmark-circle"
+                                size={18}
+                                color="#4CAF50"
+                                style={styles.masteryIcon}
+                            />
                         )}
                         {isLearning && (
-                            <Ionicons name="time" size={18} color="#FF9800" style={styles.masteryIcon} />
+                            <Ionicons
+                                name="time"
+                                size={18}
+                                color="#FF9800"
+                                style={styles.masteryIcon}
+                            />
                         )}
                         {!isMastered && !isLearning && (
                             <Ionicons
@@ -231,10 +292,21 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     </View>
                     {totalCount > 1 && (
                         <TouchableOpacity
-                            style={[styles.jumpButton, { backgroundColor: theme.colors.primary + '20' }]}
+                            style={[
+                                styles.jumpButton,
+                                {
+                                    backgroundColor:
+                                        theme.colors.primary + "20",
+                                },
+                            ]}
                             onPress={() => setIsQuestionListVisible(true)}
                         >
-                            <FormattedText style={[styles.jumpButtonText, { color: theme.colors.primary }]}>
+                            <FormattedText
+                                style={[
+                                    styles.jumpButtonText,
+                                    { color: theme.colors.primary },
+                                ]}
+                            >
                                 Liste des questions
                             </FormattedText>
                         </TouchableOpacity>
@@ -248,23 +320,39 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                     <Icon3D
                         name={chevronForwardIcon.name}
                         size={20}
-                        color={!hasNext ? theme.colors.textMuted : theme.colors.primary}
-                        variant={hasNext ? chevronForwardIcon.variant : 'default'}
+                        color={
+                            !hasNext
+                                ? theme.colors.textMuted
+                                : theme.colors.primary
+                        }
+                        variant={
+                            hasNext ? chevronForwardIcon.variant : "default"
+                        }
                     />
                 </TouchableOpacity>
             </View>
 
             {/* Progress Bar */}
             {totalCount > 1 && (
-                <View style={[styles.progressBarContainer, { backgroundColor: theme.colors.card }]}>
-                    <View style={[styles.progressBarBackground, { backgroundColor: theme.colors.divider }]}>
+                <View
+                    style={[
+                        styles.progressBarContainer,
+                        { backgroundColor: theme.colors.card },
+                    ]}
+                >
+                    <View
+                        style={[
+                            styles.progressBarBackground,
+                            { backgroundColor: theme.colors.divider },
+                        ]}
+                    >
                         <Animated.View
                             style={[
                                 styles.progressBarFill,
                                 {
                                     width: `${progress * 100}%`,
                                     backgroundColor: theme.colors.primary,
-                                }
+                                },
                             ]}
                         />
                     </View>
@@ -278,8 +366,8 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                         styles.content,
                         {
                             transform: [{ translateX }],
-                            opacity: opacity
-                        }
+                            opacity: opacity,
+                        },
                     ]}
                 >
                     <ScrollView
@@ -293,7 +381,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                             key={question.id}
                             id={question.id}
                             question={question.question}
-                            explanation={question.explanation || ''}
+                            explanation={question.explanation || ""}
                             image={question.image || null}
                             alwaysExpanded={true}
                         />
@@ -319,9 +407,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     navigationBar: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderBottomWidth: 1,
@@ -332,23 +420,23 @@ const styles = StyleSheet.create({
     },
     navigationInfo: {
         flex: 1,
-        alignItems: 'center',
+        alignItems: "center",
     },
     categoryTitle: {
         fontSize: 16,
-        fontWeight: '600',
-        textAlign: 'center',
+        fontWeight: "600",
+        textAlign: "center",
         marginBottom: 2,
     },
     pageIndicator: {
         fontSize: 14,
-        fontWeight: '500',
-        textAlign: 'center',
+        fontWeight: "500",
+        textAlign: "center",
     },
     pageRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
         gap: 6,
     },
     masteryIcon: {
@@ -374,10 +462,10 @@ const styles = StyleSheet.create({
     progressBarBackground: {
         height: 4,
         borderRadius: 2,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
     progressBarFill: {
-        height: '100%',
+        height: "100%",
         borderRadius: 2,
     },
     jumpButton: {
@@ -385,11 +473,11 @@ const styles = StyleSheet.create({
         paddingVertical: 4,
         paddingHorizontal: 12,
         borderRadius: 6,
-        alignSelf: 'center',
+        alignSelf: "center",
     },
     jumpButtonText: {
         fontSize: 12,
-        fontWeight: '500',
+        fontWeight: "500",
     },
 });
 

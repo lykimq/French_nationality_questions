@@ -1,7 +1,7 @@
-import React from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
-import { FormattedText } from '../../shared/components';
-import { useTheme } from '../../shared/contexts/ThemeContext';
+import React from "react";
+import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
+import { FormattedText } from "../../shared/components";
+import { useTheme } from "../../shared/contexts/ThemeContext";
 
 interface SearchHistoryProps {
     history: string[];
@@ -21,13 +21,25 @@ export const SearchHistory: React.FC<SearchHistoryProps> = ({
     }
 
     return (
-        <View style={[styles.historyContainer, { backgroundColor: theme.colors.background }]}>
+        <View
+            style={[
+                styles.historyContainer,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
             <View style={styles.historyHeader}>
-                <FormattedText style={[styles.historyTitle, { color: theme.colors.text }]}>
+                <FormattedText
+                    style={[styles.historyTitle, { color: theme.colors.text }]}
+                >
                     Recherches récentes:
                 </FormattedText>
                 <TouchableOpacity onPress={onClearHistory}>
-                    <FormattedText style={[styles.clearHistoryText, { color: theme.colors.primary }]}>
+                    <FormattedText
+                        style={[
+                            styles.clearHistoryText,
+                            { color: theme.colors.primary },
+                        ]}
+                    >
                         Effacer
                     </FormattedText>
                 </TouchableOpacity>
@@ -36,10 +48,21 @@ export const SearchHistory: React.FC<SearchHistoryProps> = ({
                 {history.map((item, index) => (
                     <TouchableOpacity
                         key={index}
-                        style={[styles.historyItem, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}
+                        style={[
+                            styles.historyItem,
+                            {
+                                backgroundColor: theme.colors.card,
+                                borderColor: theme.colors.border,
+                            },
+                        ]}
                         onPress={() => onSelectQuery(item)}
                     >
-                        <FormattedText style={[styles.historyText, { color: theme.colors.text }]}>
+                        <FormattedText
+                            style={[
+                                styles.historyText,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             {item}
                         </FormattedText>
                     </TouchableOpacity>
@@ -55,14 +78,14 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
     },
     historyHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         marginBottom: 10,
     },
     historyTitle: {
         fontSize: 14,
-        fontWeight: '600',
+        fontWeight: "600",
     },
     historyItem: {
         paddingVertical: 8,
@@ -76,7 +99,6 @@ const styles = StyleSheet.create({
     },
     clearHistoryText: {
         fontSize: 14,
-        fontWeight: '600',
+        fontWeight: "600",
     },
 });
-

@@ -1,41 +1,59 @@
-import React, { useState, useRef, useCallback, useMemo, useLayoutEffect } from 'react';
+import React, {
+    useState,
+    useRef,
+    useCallback,
+    useMemo,
+    useLayoutEffect,
+} from "react";
 import {
     StyleSheet,
     View,
     TouchableOpacity,
     Animated,
     ActivityIndicator,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons';
-import { Dimensions } from 'react-native';
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import {
+    useRoute,
+    useNavigation,
+    useFocusEffect,
+} from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Gesture, GestureDetector } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
+import { Dimensions } from "react-native";
 
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useData } from '../../shared/contexts/DataContext';
-import { FormattedText, QuestionListModal, type QuestionListItem } from '../../shared/components';
-import { FlashCard } from '../components';
-import { useFlashCard } from '../hooks';
-import { loadFlashCardData, getCategoryById } from '../utils';
-import { sortQuestionsById } from '../../shared/utils/questionUtils';
-import { useMastery } from '../../shared/contexts/MasteryContext';
-import { PerformanceRating, prioritizeQuestions } from '../../shared/utils/MasteryUtils';
-import { sharedStyles } from '../../shared/utils';
-import { RECOMMENDED_SESSION_QUESTION_COUNT } from '../../shared/constants/learningSession';
-import { Icon3D } from '../../shared/components';
-import type { FormationCategory } from '../types';
-import type { FlashCardStackParamList } from '../navigation/FlashCardStack';
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useData } from "../../shared/contexts/DataContext";
+import {
+    FormattedText,
+    QuestionListModal,
+    type QuestionListItem,
+} from "../../shared/components";
+import { FlashCard } from "../components";
+import { useFlashCard } from "../hooks";
+import { loadFlashCardData, getCategoryById } from "../utils";
+import { sortQuestionsById } from "../../shared/utils/questionUtils";
+import { useMastery } from "../../shared/contexts/MasteryContext";
+import {
+    PerformanceRating,
+    prioritizeQuestions,
+} from "../../shared/utils/MasteryUtils";
+import { sharedStyles } from "../../shared/utils";
+import { RECOMMENDED_SESSION_QUESTION_COUNT } from "../../shared/constants/learningSession";
+import { Icon3D } from "../../shared/components";
+import type { FormationCategory } from "../types";
+import type { FlashCardStackParamList } from "../navigation/FlashCardStack";
 
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
 const VELOCITY_THRESHOLD = 400;
 
-type FlashCardScreenNavigationProp = NativeStackNavigationProp<FlashCardStackParamList>;
+type FlashCardScreenNavigationProp =
+    NativeStackNavigationProp<FlashCardStackParamList>;
 type FlashCardScreenRouteProp = {
     key: string;
-    name: 'FlashCard';
+    name: "FlashCard";
     params: { categoryId: string };
 };
 
@@ -45,8 +63,11 @@ type CategoryDataState = {
     error: string | null;
 };
 
-let globalFlashCardDataCache: { [key: string]: FormationCategory } | null = null;
-let globalFlashCardDataPromise: Promise<{ [key: string]: FormationCategory } | null> | null = null;
+let globalFlashCardDataCache: { [key: string]: FormationCategory } | null =
+    null;
+let globalFlashCardDataPromise: Promise<{
+    [key: string]: FormationCategory;
+} | null> | null = null;
 
 const FlashCardScreen: React.FC = () => {
     const route = useRoute<FlashCardScreenRouteProp>();
@@ -77,13 +98,13 @@ const FlashCardScreen: React.FC = () => {
                 setDataState({
                     data,
                     loading: false,
-                    error: data ? null : 'Impossible de charger les données',
+                    error: data ? null : "Impossible de charger les données",
                 });
             } catch (err) {
                 setDataState({
                     data: null,
                     loading: false,
-                    error: 'Erreur lors du chargement des données',
+                    error: "Erreur lors du chargement des données",
                 });
             }
             return;
@@ -91,7 +112,9 @@ const FlashCardScreen: React.FC = () => {
 
         setDataState((prev) => ({ ...prev, loading: true, error: null }));
 
-        const loadPromise = (async (): Promise<{ [key: string]: FormationCategory } | null> => {
+        const loadPromise = (async (): Promise<{
+            [key: string]: FormationCategory;
+        } | null> => {
             try {
                 const data = await loadFlashCardData();
                 globalFlashCardDataCache = data;
@@ -99,7 +122,7 @@ const FlashCardScreen: React.FC = () => {
                 setDataState({
                     data,
                     loading: false,
-                    error: data ? null : 'Impossible de charger les données',
+                    error: data ? null : "Impossible de charger les données",
                 });
                 return data;
             } catch (err) {
@@ -107,7 +130,7 @@ const FlashCardScreen: React.FC = () => {
                 setDataState({
                     data: null,
                     loading: false,
-                    error: 'Erreur lors du chargement des données',
+                    error: "Erreur lors du chargement des données",
                 });
                 return null;
             }
@@ -131,29 +154,39 @@ const FlashCardScreen: React.FC = () => {
             return null;
         }
 
-        if (categoryId === 'recommended') {
+        if (categoryId === "recommended") {
             if (!dataState.data) {
                 return null;
             }
             // Flatten all questions from all categories
-            const allQuestions = Object.values(dataState.data).flatMap(cat => cat.questions);
-            const prioritizedIds = prioritizeQuestions(allQuestions, masteryMap);
-            
+            const allQuestions = Object.values(dataState.data).flatMap(
+                (cat) => cat.questions
+            );
+            const prioritizedIds = prioritizeQuestions(
+                allQuestions,
+                masteryMap
+            );
+
             const recommendedQuestions = prioritizedIds
                 .slice(0, RECOMMENDED_SESSION_QUESTION_COUNT)
-                .map((id) => allQuestions.find((q) => String(q.id) === String(id)))
+                .map((id) =>
+                    allQuestions.find((q) => String(q.id) === String(id))
+                )
                 .filter((q): q is any => q !== undefined);
 
             return {
-                id: 'recommended',
-                title: 'Session Recommandée',
-                description: 'Pratique personnalisée basée sur votre progression',
+                id: "recommended",
+                title: "Session Recommandée",
+                description:
+                    "Pratique personnalisée basée sur votre progression",
                 questions: recommendedQuestions,
-                icon: 'sparkles'
+                icon: "sparkles",
             };
         }
 
-        const formationCat = dataState.data ? getCategoryById(dataState.data, categoryId) : null;
+        const formationCat = dataState.data
+            ? getCategoryById(dataState.data, categoryId)
+            : null;
         if (formationCat) {
             const sortedQuestions = sortQuestionsById(formationCat.questions);
             return {
@@ -162,13 +195,15 @@ const FlashCardScreen: React.FC = () => {
             };
         }
 
-        const livret = questionsData?.categories?.find((c) => c.id === categoryId);
+        const livret = questionsData?.categories?.find(
+            (c) => c.id === categoryId
+        );
         if (livret?.questions?.length) {
             const sortedQuestions = sortQuestionsById(livret.questions);
             return {
                 id: livret.id,
                 title: livret.title,
-                description: livret.description ?? '',
+                description: livret.description ?? "",
                 questions: sortedQuestions,
             } as FormationCategory;
         }
@@ -177,7 +212,7 @@ const FlashCardScreen: React.FC = () => {
     }, [dataState.data, categoryId, masteryMap, questionsData?.categories]);
 
     const isLoading = dataState.loading;
-    const error = category ? null : (dataState.error || 'Catégorie non trouvée');
+    const error = category ? null : dataState.error || "Catégorie non trouvée";
 
     const translateX = useRef(new Animated.Value(0)).current;
     const opacity = useRef(new Animated.Value(1)).current;
@@ -219,7 +254,11 @@ const FlashCardScreen: React.FC = () => {
     }, [currentQuestionId, setAnimating, translateX, opacity]);
 
     const animateTransition = useCallback(
-        (direction: 'left' | 'right', callback: () => void, rating?: PerformanceRating) => {
+        (
+            direction: "left" | "right",
+            callback: () => void,
+            rating?: PerformanceRating
+        ) => {
             if (isAnimatingRef.current) return;
 
             setAnimating(true);
@@ -231,7 +270,10 @@ const FlashCardScreen: React.FC = () => {
 
             Animated.parallel([
                 Animated.timing(translateX, {
-                    toValue: direction === 'left' ? -SCREEN_WIDTH * 1.5 : SCREEN_WIDTH * 1.5,
+                    toValue:
+                        direction === "left"
+                            ? -SCREEN_WIDTH * 1.5
+                            : SCREEN_WIDTH * 1.5,
                     duration: 150,
                     useNativeDriver: true,
                 }),
@@ -251,8 +293,8 @@ const FlashCardScreen: React.FC = () => {
 
                     setAnimating(false);
 
-                    if (hasNext || (direction === 'right' && !hasNext)) {
-                        if (direction === 'left' && !hasNext) {
+                    if (hasNext || (direction === "right" && !hasNext)) {
+                        if (direction === "left" && !hasNext) {
                             setShowSuccess(true);
                         } else {
                             callback();
@@ -282,32 +324,46 @@ const FlashCardScreen: React.FC = () => {
                 });
             });
         },
-        [translateX, opacity, currentQuestion, updateMastery, hasNext, state.isFlipped, flipCard, setAnimating]
+        [
+            translateX,
+            opacity,
+            currentQuestion,
+            updateMastery,
+            hasNext,
+            state.isFlipped,
+            flipCard,
+            setAnimating,
+        ]
     );
 
-    const handleRate = useCallback((rating: PerformanceRating) => {
-        if (isAnimating) return;
-        animateTransition('left', nextCard, rating);
-    }, [isAnimating, animateTransition, nextCard]);
-
+    const handleRate = useCallback(
+        (rating: PerformanceRating) => {
+            if (isAnimating) return;
+            animateTransition("left", nextCard, rating);
+        },
+        [isAnimating, animateTransition, nextCard]
+    );
 
     const handleNextPress = useCallback(() => {
-        if (hasNext) animateTransition('left', nextCard);
+        if (hasNext) animateTransition("left", nextCard);
     }, [hasNext, animateTransition, nextCard]);
 
     const handlePreviousPress = useCallback(() => {
-        if (hasPrevious) animateTransition('right', previousCard);
+        if (hasPrevious) animateTransition("right", previousCard);
     }, [hasPrevious, animateTransition, previousCard]);
 
-    const handleQuestionSelect = useCallback((index: number) => {
-        if (index >= 0 && index < state.totalCards) {
-            const direction = index > state.currentIndex ? 'left' : 'right';
-            animateTransition(direction, () => {
-                goToCard(index);
-                setIsQuestionListVisible(false);
-            });
-        }
-    }, [state.currentIndex, state.totalCards, animateTransition, goToCard]);
+    const handleQuestionSelect = useCallback(
+        (index: number) => {
+            if (index >= 0 && index < state.totalCards) {
+                const direction = index > state.currentIndex ? "left" : "right";
+                animateTransition(direction, () => {
+                    goToCard(index);
+                    setIsQuestionListVisible(false);
+                });
+            }
+        },
+        [state.currentIndex, state.totalCards, animateTransition, goToCard]
+    );
 
     const questionListData: QuestionListItem[] = useMemo(() => {
         if (!category?.questions) return [];
@@ -318,7 +374,8 @@ const FlashCardScreen: React.FC = () => {
         }));
     }, [category?.questions]);
 
-    const progress = state.totalCards > 0 ? (state.currentIndex + 1) / state.totalCards : 0;
+    const progress =
+        state.totalCards > 0 ? (state.currentIndex + 1) / state.totalCards : 0;
 
     const panGesture = Gesture.Pan()
         .activeOffsetX([-20, 20]) // Increased threshold to avoid intercepting taps
@@ -346,11 +403,15 @@ const FlashCardScreen: React.FC = () => {
                         // Deep swipe right = previous card
                         handlePreviousPress();
                     } else {
-                        animateTransition('right', nextCard, PerformanceRating.EASY);
+                        animateTransition(
+                            "right",
+                            nextCard,
+                            PerformanceRating.EASY
+                        );
                     }
                 } else if (translationX < 0) {
                     // Swipe Left = Review (HARD)
-                    animateTransition('left', nextCard, PerformanceRating.HARD);
+                    animateTransition("left", nextCard, PerformanceRating.HARD);
                 }
             } else {
                 Animated.parallel([
@@ -373,20 +434,20 @@ const FlashCardScreen: React.FC = () => {
     // Interpolations for advanced swipe effects
     const rotate = translateX.interpolate({
         inputRange: [-SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2],
-        outputRange: ['-10deg', '0deg', '10deg'],
-        extrapolate: 'clamp',
+        outputRange: ["-10deg", "0deg", "10deg"],
+        extrapolate: "clamp",
     });
 
     const masteredOpacity = translateX.interpolate({
         inputRange: [0, SWIPE_THRESHOLD],
         outputRange: [0, 1],
-        extrapolate: 'clamp',
+        extrapolate: "clamp",
     });
 
     const reviewOpacity = translateX.interpolate({
         inputRange: [-SWIPE_THRESHOLD, 0],
         outputRange: [1, 0],
-        extrapolate: 'clamp',
+        extrapolate: "clamp",
     });
 
     if (showSuccess) {
@@ -396,17 +457,26 @@ const FlashCardScreen: React.FC = () => {
                     styles.container,
                     {
                         backgroundColor: theme.colors.background,
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        justifyContent: "center",
+                        alignItems: "center",
                         padding: 20,
                     },
                 ]}
             >
-                <Icon3D name="checkmark-circle" size={100} color={theme.colors.success} variant="gradient" />
+                <Icon3D
+                    name="checkmark-circle"
+                    size={100}
+                    color={theme.colors.success}
+                    variant="gradient"
+                />
                 <FormattedText
                     style={[
                         styles.categoryTitle,
-                        { color: theme.colors.text, fontSize: 24, marginTop: 24 },
+                        {
+                            color: theme.colors.text,
+                            fontSize: 24,
+                            marginTop: 24,
+                        },
                     ]}
                 >
                     Félicitations !
@@ -414,17 +484,37 @@ const FlashCardScreen: React.FC = () => {
                 <FormattedText
                     style={[
                         styles.pageIndicator,
-                        { color: theme.colors.textSecondary, marginTop: 8, textAlign: 'center' },
+                        {
+                            color: theme.colors.textSecondary,
+                            marginTop: 8,
+                            textAlign: "center",
+                        },
                     ]}
                 >
-                    Vous avez terminé cette session. Votre progression a été enregistrée.
+                    Vous avez terminé cette session. Votre progression a été
+                    enregistrée.
                 </FormattedText>
-                
+
                 <TouchableOpacity
-                    style={[styles.backButton, { backgroundColor: theme.colors.primary, marginTop: 40, width: '100%' }]}
+                    style={[
+                        styles.backButton,
+                        {
+                            backgroundColor: theme.colors.primary,
+                            marginTop: 40,
+                            width: "100%",
+                        },
+                    ]}
                     onPress={() => navigation.goBack()}
                 >
-                    <FormattedText style={[styles.backButtonText, { color: theme.colors.buttonText, textAlign: 'center' }]}>
+                    <FormattedText
+                        style={[
+                            styles.backButtonText,
+                            {
+                                color: theme.colors.buttonText,
+                                textAlign: "center",
+                            },
+                        ]}
+                    >
                         Continuer
                     </FormattedText>
                 </TouchableOpacity>
@@ -439,8 +529,8 @@ const FlashCardScreen: React.FC = () => {
                     styles.container,
                     {
                         backgroundColor: theme.colors.background,
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        justifyContent: "center",
+                        alignItems: "center",
                     },
                 ]}
             >
@@ -464,26 +554,45 @@ const FlashCardScreen: React.FC = () => {
                     styles.container,
                     {
                         backgroundColor: theme.colors.background,
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        justifyContent: "center",
+                        alignItems: "center",
                         padding: 20,
                     },
                 ]}
             >
-                <Ionicons name="alert-circle" size={48} color={theme.colors.error} />
+                <Ionicons
+                    name="alert-circle"
+                    size={48}
+                    color={theme.colors.error}
+                />
                 <FormattedText
                     style={[
                         styles.errorText,
-                        { color: theme.colors.text, marginTop: 16, textAlign: 'center' },
+                        {
+                            color: theme.colors.text,
+                            marginTop: 16,
+                            textAlign: "center",
+                        },
                     ]}
                 >
-                    {error || 'Catégorie non trouvée'}
+                    {error || "Catégorie non trouvée"}
                 </FormattedText>
                 <TouchableOpacity
-                    style={[styles.backButton, { backgroundColor: theme.colors.primary, marginTop: 20 }]}
+                    style={[
+                        styles.backButton,
+                        {
+                            backgroundColor: theme.colors.primary,
+                            marginTop: 20,
+                        },
+                    ]}
                     onPress={() => navigation.goBack()}
                 >
-                    <FormattedText style={[styles.backButtonText, { color: theme.colors.buttonText }]}>
+                    <FormattedText
+                        style={[
+                            styles.backButtonText,
+                            { color: theme.colors.buttonText },
+                        ]}
+                    >
                         Retour
                     </FormattedText>
                 </TouchableOpacity>
@@ -498,12 +607,14 @@ const FlashCardScreen: React.FC = () => {
                     styles.container,
                     {
                         backgroundColor: theme.colors.background,
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        justifyContent: "center",
+                        alignItems: "center",
                     },
                 ]}
             >
-                <FormattedText style={[styles.errorText, { color: theme.colors.text }]}>
+                <FormattedText
+                    style={[styles.errorText, { color: theme.colors.text }]}
+                >
                     Aucune question disponible
                 </FormattedText>
             </View>
@@ -511,8 +622,13 @@ const FlashCardScreen: React.FC = () => {
     }
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView style={styles.safeArea} edges={['top']}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <SafeAreaView style={styles.safeArea} edges={["top"]}>
                 <View
                     style={[
                         styles.navigationBar,
@@ -526,26 +642,47 @@ const FlashCardScreen: React.FC = () => {
                         style={styles.navButton}
                         onPress={() => navigation.goBack()}
                     >
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.primary} />
+                        <Ionicons
+                            name="arrow-back"
+                            size={24}
+                            color={theme.colors.primary}
+                        />
                     </TouchableOpacity>
                     <View style={styles.navigationInfo}>
                         <FormattedText
-                            style={[styles.categoryTitle, { color: theme.colors.text }]}
+                            style={[
+                                styles.categoryTitle,
+                                { color: theme.colors.text },
+                            ]}
                             numberOfLines={1}
                         >
                             {category.title}
                         </FormattedText>
                         <FormattedText
-                            style={[styles.pageIndicator, { color: theme.colors.textSecondary }]}
+                            style={[
+                                styles.pageIndicator,
+                                { color: theme.colors.textSecondary },
+                            ]}
                         >
                             {state.currentIndex + 1} / {state.totalCards}
                         </FormattedText>
                         {state.totalCards > 1 && (
                             <TouchableOpacity
-                                style={[styles.jumpButton, { backgroundColor: theme.colors.primary + '20' }]}
+                                style={[
+                                    styles.jumpButton,
+                                    {
+                                        backgroundColor:
+                                            theme.colors.primary + "20",
+                                    },
+                                ]}
                                 onPress={() => setIsQuestionListVisible(true)}
                             >
-                                <FormattedText style={[styles.jumpButtonText, { color: theme.colors.primary }]}>
+                                <FormattedText
+                                    style={[
+                                        styles.jumpButtonText,
+                                        { color: theme.colors.primary },
+                                    ]}
+                                >
                                     Liste des questions
                                 </FormattedText>
                             </TouchableOpacity>
@@ -559,22 +696,36 @@ const FlashCardScreen: React.FC = () => {
                         <Ionicons
                             name="chevron-forward"
                             size={24}
-                            color={!hasNext ? theme.colors.textMuted : theme.colors.primary}
+                            color={
+                                !hasNext
+                                    ? theme.colors.textMuted
+                                    : theme.colors.primary
+                            }
                         />
                     </TouchableOpacity>
                 </View>
 
                 {/* Progress Bar */}
                 {state.totalCards > 1 && (
-                    <View style={[styles.progressBarContainer, { backgroundColor: theme.colors.card }]}>
-                        <View style={[styles.progressBarBackground, { backgroundColor: theme.colors.divider }]}>
+                    <View
+                        style={[
+                            styles.progressBarContainer,
+                            { backgroundColor: theme.colors.card },
+                        ]}
+                    >
+                        <View
+                            style={[
+                                styles.progressBarBackground,
+                                { backgroundColor: theme.colors.divider },
+                            ]}
+                        >
                             <Animated.View
                                 style={[
                                     styles.progressBarFill,
                                     {
                                         width: `${progress * 100}%`,
                                         backgroundColor: theme.colors.primary,
-                                    }
+                                    },
                                 ]}
                             />
                         </View>
@@ -587,29 +738,44 @@ const FlashCardScreen: React.FC = () => {
                             style={[
                                 styles.cardContainer,
                                 {
-                                    transform: [
-                                        { translateX },
-                                        { rotate }
-                                    ],
+                                    transform: [{ translateX }, { rotate }],
                                     opacity: opacity,
                                 },
                             ]}
                         >
                             {/* Visual Stamps */}
-                            <Animated.View style={[
-                                sharedStyles.stampContainer, 
-                                sharedStyles.masteredStamp, 
-                                { opacity: masteredOpacity }
-                            ]}>
-                                <FormattedText style={[sharedStyles.stampText, { color: '#4CAF50' }]}>Savoir</FormattedText>
+                            <Animated.View
+                                style={[
+                                    sharedStyles.stampContainer,
+                                    sharedStyles.masteredStamp,
+                                    { opacity: masteredOpacity },
+                                ]}
+                            >
+                                <FormattedText
+                                    style={[
+                                        sharedStyles.stampText,
+                                        { color: "#4CAF50" },
+                                    ]}
+                                >
+                                    Savoir
+                                </FormattedText>
                             </Animated.View>
 
-                            <Animated.View style={[
-                                sharedStyles.stampContainer, 
-                                sharedStyles.reviewStamp, 
-                                { opacity: reviewOpacity }
-                            ]}>
-                                <FormattedText style={[sharedStyles.stampText, { color: '#FF5722' }]}>À revoir</FormattedText>
+                            <Animated.View
+                                style={[
+                                    sharedStyles.stampContainer,
+                                    sharedStyles.reviewStamp,
+                                    { opacity: reviewOpacity },
+                                ]}
+                            >
+                                <FormattedText
+                                    style={[
+                                        sharedStyles.stampText,
+                                        { color: "#FF5722" },
+                                    ]}
+                                >
+                                    À revoir
+                                </FormattedText>
                             </Animated.View>
 
                             <FlashCard
@@ -633,14 +799,21 @@ const FlashCardScreen: React.FC = () => {
                     ]}
                 >
                     <TouchableOpacity
-                        style={[styles.footerButton, !hasPrevious && styles.footerButtonDisabled]}
+                        style={[
+                            styles.footerButton,
+                            !hasPrevious && styles.footerButtonDisabled,
+                        ]}
                         onPress={handlePreviousPress}
                         disabled={!hasPrevious}
                     >
                         <Ionicons
                             name="chevron-back"
                             size={20}
-                            color={!hasPrevious ? theme.colors.textMuted : theme.colors.primary}
+                            color={
+                                !hasPrevious
+                                    ? theme.colors.textMuted
+                                    : theme.colors.primary
+                            }
                         />
                         <FormattedText
                             style={[
@@ -657,7 +830,10 @@ const FlashCardScreen: React.FC = () => {
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                        style={[styles.footerButton, !hasNext && styles.footerButtonDisabled]}
+                        style={[
+                            styles.footerButton,
+                            !hasNext && styles.footerButtonDisabled,
+                        ]}
                         onPress={handleNextPress}
                         disabled={!hasNext}
                     >
@@ -665,7 +841,9 @@ const FlashCardScreen: React.FC = () => {
                             style={[
                                 styles.footerButtonText,
                                 {
-                                    color: !hasNext ? theme.colors.textMuted : theme.colors.primary,
+                                    color: !hasNext
+                                        ? theme.colors.textMuted
+                                        : theme.colors.primary,
                                 },
                             ]}
                         >
@@ -674,7 +852,11 @@ const FlashCardScreen: React.FC = () => {
                         <Ionicons
                             name="chevron-forward"
                             size={20}
-                            color={!hasNext ? theme.colors.textMuted : theme.colors.primary}
+                            color={
+                                !hasNext
+                                    ? theme.colors.textMuted
+                                    : theme.colors.primary
+                            }
                         />
                     </TouchableOpacity>
                 </View>
@@ -702,9 +884,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     navigationBar: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         paddingVertical: 12,
         paddingHorizontal: 16,
         borderBottomWidth: 1,
@@ -715,30 +897,30 @@ const styles = StyleSheet.create({
     },
     navigationInfo: {
         flex: 1,
-        alignItems: 'center',
+        alignItems: "center",
         marginHorizontal: 16,
     },
     categoryTitle: {
         fontSize: 16,
-        fontWeight: '600',
-        textAlign: 'center',
+        fontWeight: "600",
+        textAlign: "center",
         marginBottom: 2,
     },
     pageIndicator: {
         fontSize: 14,
-        fontWeight: '500',
-        textAlign: 'center',
+        fontWeight: "500",
+        textAlign: "center",
     },
     jumpButton: {
         marginTop: 6,
         paddingVertical: 4,
         paddingHorizontal: 12,
         borderRadius: 6,
-        alignSelf: 'center',
+        alignSelf: "center",
     },
     jumpButtonText: {
         fontSize: 12,
-        fontWeight: '500',
+        fontWeight: "500",
     },
     progressBarContainer: {
         paddingHorizontal: 20,
@@ -748,34 +930,34 @@ const styles = StyleSheet.create({
     progressBarBackground: {
         height: 4,
         borderRadius: 2,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
     progressBarFill: {
-        height: '100%',
+        height: "100%",
         borderRadius: 2,
     },
     content: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     cardContainer: {
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center",
         paddingHorizontal: 20,
     },
     footer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         paddingVertical: 12,
         paddingHorizontal: 20,
         borderTopWidth: 1,
     },
     footerButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingVertical: 8,
         paddingHorizontal: 16,
         gap: 8,
@@ -785,7 +967,7 @@ const styles = StyleSheet.create({
     },
     footerButtonText: {
         fontSize: 16,
-        fontWeight: '500',
+        fontWeight: "500",
     },
     loadingText: {
         fontSize: 16,
@@ -800,9 +982,8 @@ const styles = StyleSheet.create({
     },
     backButtonText: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
     },
 });
 
 export default FlashCardScreen;
-

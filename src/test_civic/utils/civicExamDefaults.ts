@@ -1,14 +1,33 @@
-import type { CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
+import type {
+    CivicExamProgress,
+    CivicExamStatistics,
+    CivicExamTopic,
+} from "../types";
 
-export const DEFAULT_TOPIC_PERFORMANCE: Record<CivicExamTopic, {
-    questionsAttempted: number;
-    correctAnswers: number;
-    accuracy: number;
-}> = {
-    principles_values: { questionsAttempted: 0, correctAnswers: 0, accuracy: 0 },
-    institutional_political: { questionsAttempted: 0, correctAnswers: 0, accuracy: 0 },
+export const DEFAULT_TOPIC_PERFORMANCE: Record<
+    CivicExamTopic,
+    {
+        questionsAttempted: number;
+        correctAnswers: number;
+        accuracy: number;
+    }
+> = {
+    principles_values: {
+        questionsAttempted: 0,
+        correctAnswers: 0,
+        accuracy: 0,
+    },
+    institutional_political: {
+        questionsAttempted: 0,
+        correctAnswers: 0,
+        accuracy: 0,
+    },
     rights_duties: { questionsAttempted: 0, correctAnswers: 0, accuracy: 0 },
-    history_geography_culture: { questionsAttempted: 0, correctAnswers: 0, accuracy: 0 },
+    history_geography_culture: {
+        questionsAttempted: 0,
+        correctAnswers: 0,
+        accuracy: 0,
+    },
     living_society: { questionsAttempted: 0, correctAnswers: 0, accuracy: 0 },
 };
 
@@ -35,9 +54,8 @@ export const createDefaultCivicExamStatistics = (): CivicExamStatistics => ({
         fastestTime: 5,
         slowestTime: 120,
     },
-    improvementTrend: 'stable',
+    improvementTrend: "stable",
     masteredQuestions: [],
     strugglingQuestions: [],
     topicBreakdown: { ...DEFAULT_TOPIC_PERFORMANCE },
 });
-

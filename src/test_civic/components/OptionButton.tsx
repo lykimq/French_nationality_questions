@@ -1,7 +1,7 @@
-import React from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { FormattedText, Icon3D } from '../../shared/components';
-import { useTheme } from '../../shared/contexts/ThemeContext';
+import React from "react";
+import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { FormattedText, Icon3D } from "../../shared/components";
+import { useTheme } from "../../shared/contexts/ThemeContext";
 
 interface OptionButtonProps {
     index: number;
@@ -12,7 +12,7 @@ interface OptionButtonProps {
     onPress: (index: number) => void;
 }
 
-const OPTION_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const OPTION_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export const OptionButton: React.FC<OptionButtonProps> = ({
     index,
@@ -20,7 +20,7 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
     isSelected,
     isCorrect,
     showResult,
-    onPress
+    onPress,
 }) => {
     const { theme } = useTheme();
     const letter = OPTION_LETTERS[index] ?? String(index + 1);
@@ -29,11 +29,11 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
 
     const getBackgroundColor = () => {
         if (isSelected) {
-            if (highlightCorrect) return theme.colors.success + '20';
-            if (isWrong) return theme.colors.error + '20';
-            return theme.colors.primary + '20';
+            if (highlightCorrect) return theme.colors.success + "20";
+            if (isWrong) return theme.colors.error + "20";
+            return theme.colors.primary + "20";
         }
-        if (highlightCorrect) return theme.colors.success + '20';
+        if (highlightCorrect) return theme.colors.success + "20";
         return theme.colors.surface;
     };
 
@@ -69,8 +69,8 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
                 {
                     backgroundColor: getBackgroundColor(),
                     borderColor: getBorderColor(),
-                    borderWidth: (showResult && (isCorrect || isWrong)) ? 2 : 1,
-                }
+                    borderWidth: showResult && (isCorrect || isWrong) ? 2 : 1,
+                },
             ]}
             onPress={() => !showResult && onPress(index)}
             disabled={showResult}
@@ -80,12 +80,24 @@ export const OptionButton: React.FC<OptionButtonProps> = ({
             accessibilityLabel={`Réponse ${letter}. ${option}`}
         >
             <View style={styles.optionContent}>
-                <View style={[styles.letterBadge, { borderColor: getBorderColor(), backgroundColor: letterBg }]}>
-                    <FormattedText style={[styles.letterBadgeText, { color: letterFg }]}>
+                <View
+                    style={[
+                        styles.letterBadge,
+                        {
+                            borderColor: getBorderColor(),
+                            backgroundColor: letterBg,
+                        },
+                    ]}
+                >
+                    <FormattedText
+                        style={[styles.letterBadgeText, { color: letterFg }]}
+                    >
                         {letter}
                     </FormattedText>
                 </View>
-                <FormattedText style={[styles.optionText, { color: theme.colors.text }]}>
+                <FormattedText
+                    style={[styles.optionText, { color: theme.colors.text }]}
+                >
                     {option}
                 </FormattedText>
                 {showResult && isCorrect && (
@@ -117,8 +129,8 @@ const styles = StyleSheet.create({
         borderWidth: 2,
     },
     optionContent: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         gap: 12,
     },
     letterBadge: {
@@ -126,12 +138,12 @@ const styles = StyleSheet.create({
         height: 32,
         borderRadius: 8,
         borderWidth: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     letterBadgeText: {
         fontSize: 15,
-        fontWeight: '800',
+        fontWeight: "800",
     },
     optionText: {
         flex: 1,

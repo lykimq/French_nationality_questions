@@ -1,6 +1,5 @@
-import type { TestQuestion } from '../../types';
-import type { CivicExamQuestion } from '../types';
-
+import type { TestQuestion } from "../../types";
+import type { CivicExamQuestion } from "../types";
 
 /**
  * Civic exam question with options and correct answer
@@ -14,25 +13,27 @@ export interface CivicExamQuestionWithOptions extends CivicExamQuestion {
 
 /**
  * Extracts question text from a civic exam question
- * 
+ *
  * @param question - The question object
  * @returns The question text
  */
-export const getCivicExamQuestionText = (question: TestQuestion | null | undefined): string => 
-    question?.question ?? '';
+export const getCivicExamQuestionText = (
+    question: TestQuestion | null | undefined
+): string => question?.question ?? "";
 
 /**
  * Extracts explanation text from a civic exam question
- * 
+ *
  * @param question - The question object
  * @returns The explanation text
  */
-export const getCivicExamExplanationText = (question: TestQuestion | null | undefined): string => 
-    question?.explanation ?? '';
+export const getCivicExamExplanationText = (
+    question: TestQuestion | null | undefined
+): string => question?.explanation ?? "";
 
 /**
  * Gets the answer text from a question's options array by index
- * 
+ *
  * @param question - The question with options
  * @param answerIndex - The index of the answer in the options array
  * @param fallbackText - Optional fallback text if answer is not found
@@ -41,7 +42,7 @@ export const getCivicExamExplanationText = (question: TestQuestion | null | unde
 const getAnswerTextFromOptions = (
     question: CivicExamQuestionWithOptions | null | undefined,
     answerIndex: number | null | undefined,
-    fallbackText: string = 'Aucune réponse'
+    fallbackText: string = "Aucune réponse"
 ): string => {
     if (!question || answerIndex === null || answerIndex === undefined) {
         return fallbackText;
@@ -56,12 +57,12 @@ const getAnswerTextFromOptions = (
         return options[answerIndex];
     }
 
-    return 'Réponse invalide';
+    return "Réponse invalide";
 };
 
 /**
  * Gets the user's answer text from a question and answer index
- * 
+ *
  * @param question - The question with options
  * @param userAnswerIndex - The index of the user's answer
  * @returns The user's answer text
@@ -70,31 +71,33 @@ export const getUserAnswerText = (
     question: CivicExamQuestionWithOptions | null | undefined,
     userAnswerIndex: number | null | undefined
 ): string => {
-    const fallbackText = 'Aucune réponse';
+    const fallbackText = "Aucune réponse";
     return getAnswerTextFromOptions(question, userAnswerIndex, fallbackText);
 };
 
 /**
  * Gets the correct answer text from a question
- * 
+ *
  * @param question - The question with options and correctAnswer
  * @returns The correct answer text
  */
 export const getCorrectAnswerText = (
     question: CivicExamQuestionWithOptions | null | undefined
 ): string => {
-    const fallbackText = 'Aucune réponse';
+    const fallbackText = "Aucune réponse";
     const correctAnswerIndex = question?.correctAnswer;
     return getAnswerTextFromOptions(question, correctAnswerIndex, fallbackText);
 };
 
 /**
  * Parses user answer string to index number
- * 
+ *
  * @param userAnswer - The user answer as a string
  * @returns The answer index or null if invalid
  */
-export const parseUserAnswerIndex = (userAnswer: string | null | undefined): number | null => {
+export const parseUserAnswerIndex = (
+    userAnswer: string | null | undefined
+): number | null => {
     if (!userAnswer) return null;
     const parsed = parseInt(userAnswer, 10);
     return isNaN(parsed) ? null : parsed;
@@ -102,7 +105,7 @@ export const parseUserAnswerIndex = (userAnswer: string | null | undefined): num
 
 /**
  * Shuffles the options array and updates the correctAnswer index accordingly.
- * 
+ *
  * @param question - The question with options and correctAnswer
  * @returns A new question object with shuffled options and updated correctAnswer index
  */
@@ -114,7 +117,11 @@ export const shuffleQuestionOptions = (
     }
 
     const correctAnswerIndex = question.correctAnswer;
-    if (correctAnswerIndex === undefined || correctAnswerIndex < 0 || correctAnswerIndex >= question.options.length) {
+    if (
+        correctAnswerIndex === undefined ||
+        correctAnswerIndex < 0 ||
+        correctAnswerIndex >= question.options.length
+    ) {
         return question;
     }
 
@@ -131,8 +138,10 @@ export const shuffleQuestionOptions = (
     }
 
     // Find new index of correct answer after shuffle by matching text
-    const newCorrectAnswerIndex = options.findIndex(opt => opt === correctAnswerText);
-    
+    const newCorrectAnswerIndex = options.findIndex(
+        (opt) => opt === correctAnswerText
+    );
+
     if (newCorrectAnswerIndex === -1) {
         return question;
     }
@@ -146,7 +155,7 @@ export const shuffleQuestionOptions = (
 
 /**
  * Checks if a user's answer index matches the correct answer index.
- * 
+ *
  * @param question - The question with correctAnswer
  * @param userAnswerIndex - The user's selected answer index
  * @returns true if the answer is correct, false otherwise
@@ -155,17 +164,24 @@ export const isAnswerCorrect = (
     question: CivicExamQuestionWithOptions | null | undefined,
     userAnswerIndex: number | null | undefined
 ): boolean => {
-    if (!question || userAnswerIndex === null || userAnswerIndex === undefined) {
+    if (
+        !question ||
+        userAnswerIndex === null ||
+        userAnswerIndex === undefined
+    ) {
         return false;
     }
 
     const correctAnswerIndex = question.correctAnswer;
-    return correctAnswerIndex !== undefined && correctAnswerIndex === userAnswerIndex;
+    return (
+        correctAnswerIndex !== undefined &&
+        correctAnswerIndex === userAnswerIndex
+    );
 };
 
 /**
  * Checks if an option at a given index is the correct answer.
- * 
+ *
  * @param question - The question with correctAnswer
  * @param optionIndex - The index of the option to check
  * @returns true if the option is the correct answer, false otherwise
@@ -179,7 +195,7 @@ export const isOptionCorrect = (
     }
 
     const correctAnswerIndex = question.correctAnswer;
-    return correctAnswerIndex !== undefined && correctAnswerIndex === optionIndex;
+    return (
+        correctAnswerIndex !== undefined && correctAnswerIndex === optionIndex
+    );
 };
-
-

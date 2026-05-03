@@ -1,8 +1,13 @@
-import React from 'react';
-import { View, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native';
-import { useTheme } from '../contexts/ThemeContext';
-import FormattedText from './FormattedText';
-import { sharedStyles } from '../utils';
+import React from "react";
+import {
+    View,
+    ActivityIndicator,
+    TouchableOpacity,
+    StyleSheet,
+} from "react-native";
+import { useTheme } from "../contexts/ThemeContext";
+import FormattedText from "./FormattedText";
+import { sharedStyles } from "../utils";
 
 interface DataLoadingScreenProps {
     error?: string | null;
@@ -10,36 +15,67 @@ interface DataLoadingScreenProps {
     isLoading?: boolean;
 }
 
-const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry, isLoading }) => {
+const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({
+    error,
+    onRetry,
+    isLoading,
+}) => {
     const { theme } = useTheme();
 
     return (
-        <View style={[sharedStyles.centeredContainer, { backgroundColor: theme.colors.background }]}>
-            <View style={[
-                styles.loadingContainer,
-                sharedStyles.mediumShadow,
-                { backgroundColor: theme.colors.card }
-            ]}>
+        <View
+            style={[
+                sharedStyles.centeredContainer,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <View
+                style={[
+                    styles.loadingContainer,
+                    sharedStyles.mediumShadow,
+                    { backgroundColor: theme.colors.card },
+                ]}
+            >
                 {error ? (
                     <>
-                        <FormattedText style={[styles.errorTitle, { color: theme.colors.error }]}>
+                        <FormattedText
+                            style={[
+                                styles.errorTitle,
+                                { color: theme.colors.error },
+                            ]}
+                        >
                             Erreur de chargement
                         </FormattedText>
-                        <FormattedText style={[styles.errorMessage, { color: theme.colors.text }]}>
+                        <FormattedText
+                            style={[
+                                styles.errorMessage,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             {error}
                         </FormattedText>
-                        <FormattedText style={[styles.errorSubtext, { color: theme.colors.textMuted }]}>
+                        <FormattedText
+                            style={[
+                                styles.errorSubtext,
+                                { color: theme.colors.textMuted },
+                            ]}
+                        >
                             Vérifiez votre connexion internet et réessayez.
                         </FormattedText>
                         {onRetry && (
                             <TouchableOpacity
                                 style={[
                                     styles.retryButtonContainer,
-                                    { backgroundColor: theme.colors.primary }
+                                    { backgroundColor: theme.colors.primary },
                                 ]}
                                 onPress={onRetry}
                             >
-                                <FormattedText style={[styles.retryButton, { color: theme.colors.buttonText }]}>
+                                <FormattedText
+                                    style={[
+                                        styles.retryButton,
+                                        { color: theme.colors.buttonText },
+                                    ]}
+                                >
                                     Réessayer
                                 </FormattedText>
                             </TouchableOpacity>
@@ -47,10 +83,20 @@ const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry, i
                     </>
                 ) : (
                     <>
-                        <FormattedText style={[styles.loadingTitle, { color: theme.colors.text }]}>
+                        <FormattedText
+                            style={[
+                                styles.loadingTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             Chargement de l'application
                         </FormattedText>
-                        <FormattedText style={[styles.loadingSubtext, { color: theme.colors.textMuted }]}>
+                        <FormattedText
+                            style={[
+                                styles.loadingSubtext,
+                                { color: theme.colors.textMuted },
+                            ]}
+                        >
                             Préparation des questions et des ressources...
                         </FormattedText>
                         <ActivityIndicator
@@ -67,10 +113,10 @@ const DataLoadingScreen: React.FC<DataLoadingScreenProps> = ({ error, onRetry, i
 
 const styles = StyleSheet.create({
     loadingContainer: {
-        alignItems: 'center',
+        alignItems: "center",
         padding: 32,
         borderRadius: 16,
-        minWidth: '80%',
+        minWidth: "80%",
     },
     spinner: {
         marginTop: 16,
@@ -78,31 +124,31 @@ const styles = StyleSheet.create({
     },
     loadingTitle: {
         fontSize: 18,
-        fontWeight: '600',
+        fontWeight: "600",
         marginBottom: 8,
-        textAlign: 'center',
+        textAlign: "center",
     },
     loadingSubtext: {
         fontSize: 14,
-        textAlign: 'center',
+        textAlign: "center",
         lineHeight: 20,
     },
     errorTitle: {
         fontSize: 18,
-        fontWeight: '600',
+        fontWeight: "600",
         marginTop: 16,
         marginBottom: 8,
-        textAlign: 'center',
+        textAlign: "center",
     },
     errorMessage: {
         fontSize: 14,
-        textAlign: 'center',
+        textAlign: "center",
         marginBottom: 8,
         lineHeight: 20,
     },
     errorSubtext: {
         fontSize: 12,
-        textAlign: 'center',
+        textAlign: "center",
         lineHeight: 18,
         marginBottom: 16,
     },
@@ -110,12 +156,12 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 24,
         borderRadius: 8,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
     retryButton: {
         fontSize: 16,
-        fontWeight: '600',
-        textAlign: 'center',
+        fontWeight: "600",
+        textAlign: "center",
     },
 });
 

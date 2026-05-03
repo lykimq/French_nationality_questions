@@ -1,5 +1,10 @@
-import { useRef, useCallback } from 'react';
-import { Animated, PanResponder, GestureResponderEvent, PanResponderGestureState } from 'react-native';
+import { useRef, useCallback } from "react";
+import {
+    Animated,
+    PanResponder,
+    GestureResponderEvent,
+    PanResponderGestureState,
+} from "react-native";
 
 interface UsePanZoomOptions {
     onGestureGrant?: () => void;
@@ -48,7 +53,11 @@ export const usePanZoom = (options: UsePanZoomOptions = {}) => {
             onStartShouldSetPanResponder: () => true,
             onMoveShouldSetPanResponder: (evt, panGestureState) => {
                 // Allow movement for pan when zoomed
-                return gestureState.current.isZoomed && (Math.abs(panGestureState.dx) > 2 || Math.abs(panGestureState.dy) > 2);
+                return (
+                    gestureState.current.isZoomed &&
+                    (Math.abs(panGestureState.dx) > 2 ||
+                        Math.abs(panGestureState.dy) > 2)
+                );
             },
             onPanResponderGrant: (evt: GestureResponderEvent) => {
                 if (onGestureGrant) onGestureGrant();
@@ -108,8 +117,10 @@ export const usePanZoom = (options: UsePanZoomOptions = {}) => {
                     } else {
                         // Single tap - prepare for potential pan
                         gestureState.current.lastTap = now;
-                        gestureState.current.initialX = gestureState.current.offsetX;
-                        gestureState.current.initialY = gestureState.current.offsetY;
+                        gestureState.current.initialX =
+                            gestureState.current.offsetX;
+                        gestureState.current.initialY =
+                            gestureState.current.offsetY;
 
                         // Set up for panning if zoomed
                         if (gestureState.current.isZoomed) {
@@ -121,7 +132,10 @@ export const usePanZoom = (options: UsePanZoomOptions = {}) => {
                     }
                 }
             },
-            onPanResponderMove: (evt: GestureResponderEvent, panGestureState: PanResponderGestureState) => {
+            onPanResponderMove: (
+                evt: GestureResponderEvent,
+                panGestureState: PanResponderGestureState
+            ) => {
                 const touches = evt.nativeEvent.touches;
 
                 if (touches.length === 1 && gestureState.current.isZoomed) {
@@ -129,14 +143,23 @@ export const usePanZoom = (options: UsePanZoomOptions = {}) => {
                     const maxTranslate = 100 * gestureState.current.scale;
 
                     // Constrain translation
-                    const newX = Math.max(-maxTranslate, Math.min(maxTranslate, panGestureState.dx));
-                    const newY = Math.max(-maxTranslate, Math.min(maxTranslate, panGestureState.dy));
+                    const newX = Math.max(
+                        -maxTranslate,
+                        Math.min(maxTranslate, panGestureState.dx)
+                    );
+                    const newY = Math.max(
+                        -maxTranslate,
+                        Math.min(maxTranslate, panGestureState.dy)
+                    );
 
                     translateX.setValue(newX);
                     translateY.setValue(newY);
                 }
             },
-            onPanResponderRelease: (evt: GestureResponderEvent, panGestureState: PanResponderGestureState) => {
+            onPanResponderRelease: (
+                evt: GestureResponderEvent,
+                panGestureState: PanResponderGestureState
+            ) => {
                 const touches = evt.nativeEvent.touches;
 
                 if (gestureState.current.isZoomed && touches.length === 0) {
@@ -146,8 +169,14 @@ export const usePanZoom = (options: UsePanZoomOptions = {}) => {
 
                     // Constrain final position
                     const maxTranslate = 100 * gestureState.current.scale;
-                    gestureState.current.offsetX = Math.max(-maxTranslate, Math.min(maxTranslate, gestureState.current.offsetX));
-                    gestureState.current.offsetY = Math.max(-maxTranslate, Math.min(maxTranslate, gestureState.current.offsetY));
+                    gestureState.current.offsetX = Math.max(
+                        -maxTranslate,
+                        Math.min(maxTranslate, gestureState.current.offsetX)
+                    );
+                    gestureState.current.offsetY = Math.max(
+                        -maxTranslate,
+                        Math.min(maxTranslate, gestureState.current.offsetY)
+                    );
 
                     translateX.flattenOffset();
                     translateY.flattenOffset();
@@ -162,6 +191,6 @@ export const usePanZoom = (options: UsePanZoomOptions = {}) => {
         translateY,
         panResponder,
         reset,
-        isZoomed: gestureState.current.isZoomed
+        isZoomed: gestureState.current.isZoomed,
     };
 };

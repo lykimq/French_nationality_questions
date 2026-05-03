@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
-import { incrementLaunchCount, shouldPromptForRating, markRatingPromptShown } from '../utils/ratingUtils';
-import { createLogger } from '../utils/logger';
+import { useEffect, useState } from "react";
+import {
+    incrementLaunchCount,
+    shouldPromptForRating,
+    markRatingPromptShown,
+} from "../utils/ratingUtils";
+import { createLogger } from "../utils/logger";
 
-const logger = createLogger('useRatingPrompt');
+const logger = createLogger("useRatingPrompt");
 
 export const useRatingPrompt = () => {
     const [shouldShowPrompt, setShouldShowPrompt] = useState(false);
@@ -13,14 +17,14 @@ export const useRatingPrompt = () => {
         const checkAndPrompt = async () => {
             try {
                 await incrementLaunchCount();
-                
+
                 const shouldPrompt = await shouldPromptForRating();
                 if (shouldPrompt && isMounted) {
                     setShouldShowPrompt(true);
                     await markRatingPromptShown();
                 }
             } catch (error) {
-                logger.error('Failed to check rating prompt:', error);
+                logger.error("Failed to check rating prompt:", error);
             }
         };
 
@@ -40,4 +44,3 @@ export const useRatingPrompt = () => {
         dismissPrompt,
     };
 };
-

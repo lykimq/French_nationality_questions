@@ -1,8 +1,11 @@
-import type { CivicExamTopic, CivicExamSubTopic } from '../types';
-export const CIVIC_EXAM_DISTRIBUTION: Record<CivicExamTopic, {
-    total: number;
-    subTopics: Record<CivicExamSubTopic, number>;
-}> = {
+import type { CivicExamTopic, CivicExamSubTopic } from "../types";
+export const CIVIC_EXAM_DISTRIBUTION: Record<
+    CivicExamTopic,
+    {
+        total: number;
+        subTopics: Record<CivicExamSubTopic, number>;
+    }
+> = {
     principles_values: {
         total: 11,
         subTopics: {
@@ -117,19 +120,17 @@ export const CIVIC_EXAM_CONFIG = {
     PASSING_PERCENTAGE: 80,
 } as const;
 export const ALL_TOPICS: readonly CivicExamTopic[] = [
-    'principles_values',
-    'institutional_political',
-    'rights_duties',
-    'history_geography_culture',
-    'living_society',
+    "principles_values",
+    "institutional_political",
+    "rights_duties",
+    "history_geography_culture",
+    "living_society",
 ] as const;
 
 export const TOPIC_DISPLAY_NAMES: Record<CivicExamTopic, string> = {
-    principles_values: 'Principes et valeurs de la République',
-    institutional_political: 'Système institutionnel et politique',
-    rights_duties: 'Droits et devoirs',
-    history_geography_culture: 'Histoire, géographie et culture',
-    living_society: 'Vivre dans la société française',
+    principles_values: "Principes et valeurs de la République",
+    institutional_political: "Système institutionnel et politique",
+    rights_duties: "Droits et devoirs",
+    history_geography_culture: "Histoire, géographie et culture",
+    living_society: "Vivre dans la société française",
 };
-
-

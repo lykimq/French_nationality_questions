@@ -56,7 +56,6 @@ Un Français est une personne qui appartient à la nation française par sa cult
 
 - Porter l’esprit républicain, qui repose sur la laïcité, l’égalité des chances et la fraternité Un citoyen ne se définit pas uniquement par ses droits, mais par son rôle dans la société. Il participe activement à faire vivre la démocratie et à construire le pays pour les générations futures.
 
-
 13. Parlez-moi de votre entourage ?
 
 Mon entourage reflète la diversité et l’ouverture de la France. J’ai la chance d’avoir des proches français, comme mon frère et mon cousin, qui ont obtenu la nationalité française. Au quotidien, je suis entouré d’amis et de collègues de différents horizons, ce qui m’a permis de m’intégrer pleinement et d’adhérer aux valeurs de vivre-ensemble et de fraternité qui font la force de ce pays. (Il s’agit d’une réponse type comme les autres questions, vous pouvez vous en inspirer en fonction de votre situation).
@@ -209,7 +208,6 @@ Depuis 1945, le système de sécurité sociale, financé par les entreprises et 
 
 - L'État garantit la liberté religieuse, permettant à chacun de croire ou de ne pas croire et de choisir sa religion librement.
 
-
 50. Quand la France est devenue laïque ?
 
 09 décembre 1905
@@ -246,7 +244,6 @@ En France, il est permis de porter des signes religieux dans les espaces publics
 
 - L’influence des Lumières, qui ont diffusé des idées de liberté, d’égalité et de souveraineté populaire.
 
-
 57. Quelle est l'année de début de la Révolution Française ?
 
 La Révolution Française, marquant une transformation profonde de la société et du gouvernement en France, a débuté en 1789. Elle est célèbre pour ses idéaux de liberté, d'égalité et de fraternité et a conduit à la chute de la monarchie absolue.
@@ -260,7 +257,6 @@ La Révolution Française, marquant une transformation profonde de la société 
 - Lois Jules Ferry (1881-1882) instaurant l'école gratuite, laïque et obligatoire.
 
 - Séparation de l’Église et de l’État (1905).
-
 
 59. Qu'est-ce que la Déclaration des Droits de l'Homme et du Citoyen ?
 
@@ -314,7 +310,6 @@ Signé en 1598 par Henri IV, le traité de Nantes a mis fin aux guerres de relig
 
 - Michel Houellebecq : Soumission
 
-
 71. Qui est Simone de Beauvoir ?
 
 Simone de Beauvoir était une philosophe, écrivaine et militante féministe française. Elle est l'autrice de Le Deuxième Sexe, un ouvrage fondamental sur les inégalités de genre et l'émancipation des femmes.
@@ -330,15 +325,19 @@ Voltaire (1694-1778)
 - Philosophe des Lumières, connu pour son esprit critique, sa défense de la liberté civile et de la séparation de l'Église et de l'État.
 
 Jean-Jacques Rousseau (1712-1778)
+
 - Philosophe, écrivain et compositeur, ses idées ont influencé la Révolution française, l'éducation moderne et la théorie politique.
 
 Victor Hugo (1802-1885)
+
 - Écrivain, poète et dramaturge, auteur de chefs-d'œuvre comme Les Misérables et Notre- Dame de Paris. Il est aussi connu pour son engagement politique et social.
 
 Émile Zola (1840-1902)
+
 - Écrivain et journaliste, figure majeure du naturalisme dans la littérature. Il est également connu pour son intervention dans l'Affaire Dreyfus avec son fameux article J'accuse...!.
 
 Marie Curie (1867-1934)
+
 - Physicienne et chimiste, pionnière dans le domaine de la radioactivité, elle est la première femme à recevoir le Prix Nobel et la seule personne à en avoir reçu deux dans deux domaines scientifiques différents (Physique et Chimie).
 
 74. Qu'ont en commun les pays européens ?
@@ -473,7 +472,7 @@ La Laïcité.
 
 32. Quels sont les droits et devoirs du citoyen Français ?
 
-Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété.   Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.
+Tous les citoyens ont le droit de voter, de circuler, de s’exprimer de croire ou de ne pas croire en une religion, de créer des associations, de disposer de leur corps ainsi que le droit à la propriété. Pour les devoirs, tous les citoyens doivent respecter la loi, les droits des autres citoyens et l’environnement. Ils doivent également payer les taxes et les impôts et défendre la patrie si cette dernière est menacée.
 
 33. Quels sont les symboles de la république Française ?
 
@@ -531,7 +530,6 @@ Nous sommes dans la cinquième république.
 
 - La cinquième république : 1958 – aujourd'hui.
 
-
 42. Qui a instauré la cinquième république ?
 
 C'est le général Charles de Gaule.
@@ -558,7 +556,6 @@ Il se trouve au Palais de l’Élysée.
 
 - Emmanuel Macron.
 
-
 45. Citez trois anciens premiers ministres Français de la cinquième république.
 
 - Edouard Philippe.
@@ -567,7 +564,6 @@ Il se trouve au Palais de l’Élysée.
 
 - François Fillon.
 
-
 46. Citez trois ministres du gouvernement actuel.
 
 - Gerald Darmanin.
@@ -575,7 +571,6 @@ Il se trouve au Palais de l’Élysée.
 - Bruno Le Maire.
 
 - Eric Dupond-Moretti.
-
 
 47. Pour combien de temps est élu le président de la république ?
 
@@ -601,7 +596,6 @@ Le Parlement est une assemblée élue représentant le peuple. Il comprend deux 
 
 - La chambre basse (l’Assemblée nationale).
 
-
 52. Quel est le rôle exact du parlement ?
 
 Le Parlement en France discute, modifie et vote les lois. Il détient le pouvoir législatif.
@@ -613,7 +607,6 @@ Le Parlement en France discute, modifie et vote les lois. Il détient le pouvoir
 - Le pouvoir législatif.
 
 - Le pouvoir judiciaire.
-
 
 54. Qu'est-ce que le pouvoir Exécutif et quel est son rôle ?
 
@@ -650,7 +643,6 @@ En 2025, la députée de Boulogne-Billancourt (92100), située dans les Hauts-de
 - Les ministres.
 
 - Les secrétaires d’état.
-
 
 62. Qui est le président de l'assemblée Nationale ?
 
@@ -734,7 +726,7 @@ C'est Claude Joseph Rouget de Lisle.
 
 82. Connaissez vous le premier couplet de la Marseillaise ?
 
-Allons enfants de la Patrie, Le jour de gloire est arrivé !  Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes !  Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !
+Allons enfants de la Patrie, Le jour de gloire est arrivé ! Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes ! Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !
 
 83. À quelle occasion la Marseillaise a-t-elle été écrite ?
 
@@ -855,6 +847,7 @@ Le système éducatif français est reconnu pour sa rigueur, son accessibilité 
 112. Pouvez-vous citer trois sujets d'actualité récents en France qui vous ont particulièrement marqué ?
 
 Trois sujets qui m'ont marqué sont :
+
 - Utilisation de l’article 49.3 pour le budget 2025 : Début février 2025, le gouvernement a fait appel à l’article 49.3 pour faire adopter le budget de l’année.
 - Réduction des tarifs de l’électricité : Depuis le 1ᵉʳ février 2025, une baisse de 15 % des prix de l’électricité a été appliquée, apportant un soulagement à de nombreux foyers français.
 - Projet de rénovation du Louvre : Le célèbre musée parisien a annoncé une initiative majeure visant à moderniser ses infrastructures et à améliorer l’accueil des visiteurs, tout en renforçant la préservation de ses collections. La réponse est à développer en fonction de l’actualité en France.
@@ -916,7 +909,7 @@ La république est un mode d'organisation d'un pays dans lequel le pouvoir est e
 - République présidentielle → Le président a beaucoup de pouvoirs, il est à la fois chef de l’État et chef du gouvernement (ex : États-Unis, Brésil).
 - République parlementaire → Le pouvoir est surtout entre les mains du parlement et du Premier ministre, le président a un rôle limité (ex : Allemagne, Italie).
 - République semi-présidentielle → Le président partage le pouvoir avec un Premier ministre et un parlement (ex : France, Russie).
-- République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine,  Corée du Nord).
+- République autoritaire → Il y a un président, mais pas de démocratie réelle (ex : Chine, Corée du Nord).
 
 126. Qui occupe actuellement la fonction de président de la République ?
 
@@ -945,6 +938,7 @@ La Constitution de la Cinquième République a été adoptée en 1958, marquant 
 132. Pouvez-vous citer les présidents de la Cinquième République dans l’ordre ?
 
 Les présidents de la Cinquième République sont :
+
 - Charles De Gaulle : 1959 - 1969
 - Georges Pompidou : 1969- 1974
 - Valéry Giscard d'Estaing : 1974-1981
@@ -964,9 +958,9 @@ Le président gouverne en dirigeant l'exécutif, en prenant des décisions polit
 
 135. En quelle année le droit de vote des femmes a-t-il été introduit en France ?
 
-1944.
+136.
 
-136. En quelle année le droit de vote des hommes a-t-il été introduit en France ?
+137. En quelle année le droit de vote des hommes a-t-il été introduit en France ?
 
 Le droit de vote des hommes a été introduit en 1848, pendant la Deuxième République, avec le suffrage universel masculin.
 
@@ -999,14 +993,16 @@ En France, on trouve les élections présidentielles (5ans), législatives (5ans
 143. Quelles sont les prochaines élections ?
 
 Les prochaines élections en France sont les suivantes :
+
 - Élections municipales : Prévu en mars 2026, ces élections permettront de désigner les maires et les conseils municipaux des communes.
 - Élections sénatoriales : Elles auront lieu en 2027, pour renouveler une partie du Sénat.
 - Élections présidentielles : Prévue en 2027, cette élection déterminera le président de la République pour un mandat de 5 ans.
-- Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen.  Ils peuvent avoir d’autres élections en fonction de l’actualité.
+- Élections européennes : Elles se dérouleront en 2029, pour élire les représentants français au Parlement européen. Ils peuvent avoir d’autres élections en fonction de l’actualité.
 
 144. Quelles sont les principales institutions de la République française ?
 
 Les institutions comprennent :
+
 - Le pouvoir exécutif : Ce pouvoir est détenu par le président de la République et le gouvernement dirigé par le Premier ministre. Ils sont responsables de l’application des lois et de la gestion de la politique nationale et internationale. Le président nomme le Premier ministre, préside le Conseil des ministres, et peut proposer des référendums ou dissoudre l’Assemblée nationale.
 - Le pouvoir législatif : Ce pouvoir est exercé par le Parlement, composé de deux chambres, chambre basse « l’Assemblée nationale » et la chambre haute « du Sénat ». Leur mission est de voter les lois et de contrôler le gouvernement. Les députés de l’Assemblée nationale sont élus au suffrage direct pour cinq ans, tandis que les sénateurs sont élus au suffrage indirect pour six ans. L'Assemblée a une prépondérance en cas de désaccord entre les deux chambres.
 - Le pouvoir judiciaire : Ce pouvoir est indépendant et exercé par les juges et magistrats. Son rôle est de garantir le respect des lois et de trancher les litiges, protégeant ainsi les droits des citoyens. Le Conseil constitutionnel veille, quant à lui, à la conformité des lois à la Constitution.
@@ -1018,6 +1014,7 @@ Le gouvernement est l'organe exécutif chargé de mettre en œuvre les lois et d
 146. De quoi est composé le parlement français ?
 
 Le parlement français est composé de deux chambres (bicaméral), c'est-à-dire:
+
 - Le Sénat, appelée « chambre haute », avec 348 sénateurs,
 - L’Assemblée nationale, dite « chambre basse », avec 577 députés.
 
@@ -1141,13 +1138,14 @@ Non, le Sénat ne peut pas déposer de motion de censure contre le gouvernement.
 
 L'article 49.3 de la Constitution ne peut être utilisé que devant l'Assemblée nationale. Il permet au Premier ministre d’engager la responsabilité du gouvernement sur un texte de loi, ce qui entraîne son adoption sans vote, sauf si une motion de censure est déposée et adoptée par 289 députés (majorité absolue).
 
-Le Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa  responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement.
+Le Sénat n'est pas concerné par l'article 49.3 : le gouvernement ne peut pas y engager sa responsabilité, car les sénateurs ne peuvent pas renverser le gouvernement.
 
 Cependant, le Sénat peut débattre et voter des lois, mais son opposition ne bloque pas définitivement un texte, puisque l’Assemblée nationale a le dernier mot en cas de désaccord entre les deux chambres.
 
 177. Quelles sont les conditions pour adopter une motion de censure ?
 
 Pour qu'une motion de censure soit adoptée à l’Assemblée nationale, elle doit respecter plusieurs conditions notamment :
+
 - Être déposée par au moins 1/10ᵉ des députés (soit 58 sur 577).
 - Être votée à la majorité absolue des députés, soit au moins 289 voix sur 577. Si elle est adoptée, le gouvernement doit démissionner immédiatement.
 
@@ -1299,7 +1297,6 @@ Elle a été proclamée le 21 septembre 1792 après la chute de la monarchie. La
 
 - Le Directoire (1795-1799), un gouvernement plus modéré avec cinq directeurs.
 
-
 206. Quand la Première République prend-elle fin?
 
 Le 2 décembre 1804, Napoléon Bonaparte se fait sacrer Empereur des Français, mettant fin à la Première République et établissant le Premier Empire.
@@ -1315,7 +1312,6 @@ Elle est proclamée le 24 février 1848, après la révolution de février qui e
 - Abolition définitive de l'esclavage dans les colonies françaises (27 avril 1848, sous l'impulsion de Victor Schœlcher).
 
 - Création des Ateliers nationaux pour fournir du travail aux ouvriers (abandonnés après peu de temps).
-
 
 209. Qui est élu premier président de la République ?
 
@@ -1353,7 +1349,6 @@ Un régime parlementaire, où le président de la République a peu de pouvoirs.
 
 - Reconstruction économique après la guerre.
 
-
 218. Pourquoi la Quatrième République prend-elle fin ?
 
 L’instabilité politique (plus de 20 gouvernements en 12 ans) et la crise de la guerre d’Algérie mènent au retour du général de Gaulle, qui propose une nouvelle Constitution en 1958, donnant naissance à la Cinquième République.
@@ -1366,7 +1361,6 @@ L’instabilité politique (plus de 20 gouvernements en 12 ans) et la crise de l
 
 - Wilhelm II : Empereur d’Allemagne.
 
-
 220. Quels sont les principaux personnages de la Seconde Guerre mondiale ?
 
 - Charles de Gaulle : Chef de la France libre et futur président.
@@ -1378,7 +1372,6 @@ L’instabilité politique (plus de 20 gouvernements en 12 ans) et la crise de l
 - Franklin D. Roosevelt : Président des États-Unis.
 
 - Joseph Staline : Dirigeant de l’URSS.
-
 
 221. Qu'est-ce que la Convention nationale ?
 
@@ -1410,7 +1403,7 @@ Le régime de Napoléon III, également connu sous le nom de Second Empire, s'es
 
 - Désigné empereur après l’abdication de son père en 1815, mais il n’a jamais régné (resté en Autriche sous contrôle autrichien).
 
-- Mort jeune, surnommé "L'Aiglon".  3. Napoléon III (1852-1870)
+- Mort jeune, surnommé "L'Aiglon". 3. Napoléon III (1852-1870)
 
 - Neveu de Napoléon Ier.
 
@@ -1419,7 +1412,6 @@ Le régime de Napoléon III, également connu sous le nom de Second Empire, s'es
 - Se proclame empereur en 1852 et instaure le Second Empire.
 
 - Renversé en 1870 après la défaite contre la Prusse (bataille de Sedan).
-
 
 226. Quels sont les moments clés de la Cinquième République ?
 
@@ -1449,7 +1441,6 @@ Le régime de Napoléon III, également connu sous le nom de Second Empire, s'es
 
 - Le Sénat ne peut pas bloquer définitivement une loi, contrairement à l’Assemblée nationale.
 
-
 228. Qui était le président de la France lors des événements de Mai 68 ?
 
 Charles de Gaulle.
@@ -1464,9 +1455,9 @@ Charles de Gaulle, chef de la France Libre.
 
 231. En quelle année a été adoptée la Ve République en France ?
 
-1958.
+232.
 
-232. À quelles dates ont été établies les cinq Républiques françaises ?
+233. À quelles dates ont été établies les cinq Républiques françaises ?
 
 - Première République : fondée le 21 septembre 1792 par la Convention nationale après la chute de la monarchie.
 
@@ -1477,7 +1468,6 @@ Charles de Gaulle, chef de la France Libre.
 - Quatrième République : établie le 27 octobre 1946 par l’Assemblée constituante issue de la Libération.
 
 - Cinquième République : fondée le 4 octobre 1958 sous l'impulsion de Charles de Gaulle et adoptée par référendum.
-
 
 233. Qui est Léon Blum ?
 
@@ -1521,8 +1511,7 @@ L'Union européenne n'a pas un "président" unique, mais plutôt plusieurs insti
 
 - République tchèque (utilise la couronne tchèque)
 
-- Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro.  Fin de la seconde édition
-
+- Roumanie (utilise le leu roumain) Ces pays font partie de l'UE, mais ont choisi de ne pas adopter l'euro, en respectant les critères d'entrée dans la zone euro. Fin de la seconde édition
 
 # Droits et Devoirs du Citoyen
 
@@ -1648,13 +1637,13 @@ Le Revenu de Solidarité Active, aide financière pour les personnes sans ressou
 
 31. En quelle année la loi Taubira reconnaissant la traite et l'esclavage comme crime contre l'humanité a-t-elle été adoptée ?
 
-2001.
+32.
 
-32. Quelle est la date de la loi permettant le mariage pour tous en France ?
+33. Quelle est la date de la loi permettant le mariage pour tous en France ?
 
-2013.
+34.
 
-33. Quel animal représente la France ?
+35. Quel animal représente la France ?
 
 Le coq gaulois est un symbole emblématique de la France, souvent utilisé lors d'événements sportifs. Il incarne la fierté, la bravoure et l'esprit combatif des Français. Il est fréquemment visible sur les maillots des équipes nationales, notamment lors des compétitions internationales telles que la Coupe du Monde ou les Jeux Olympiques. Le coq est aussi une référence historique et culturelle, évoquant la tradition et l’identité nationale.
 
@@ -1746,7 +1735,6 @@ Paris - Île-de-France, Marseille - Provence-Alpes-Côte d'Azur, Lyon - Auvergne
 
 - Le Rhin : Bien qu'il soit principalement un fleuve frontalier, il prend sa source dans les Alpes suisses et marque la frontière entre la France et l'Allemagne avant de se jeter dans la mer du Nord.
 
-
 54. Pourquoi l'Union européenne a-t-elle été créée ?
 
 L'Union européenne a été créée pour promouvoir la paix, la stabilité et la prospérité en Europe après la Seconde Guerre mondiale. Son objectif principal est de favoriser la coopération économique et politique entre les pays membres afin d'éviter les conflits, d'assurer un marché commun et d'améliorer la vie des citoyens européens par des politiques communes en matière d'économie, d'environnement, de droits humains, et de sécurité.
@@ -1813,7 +1801,6 @@ Les conseillers départementaux sont élus pour six ans au suffrage universel di
 
 - Adoption du Code civil (1804), qui influence encore le droit français.
 
-
 14. Comment la France a-t-elle été impliquée dans la colonisation ?
 
 La France a été une des principales puissances coloniales, avec un empire s'étendant sur plusieurs continents, notamment en Afrique, en Asie et dans les Caraïbes. La colonisation a eu des répercussions durables sur ces régions et continue d'influencer les relations internationales et la politique française.
@@ -1849,7 +1836,6 @@ Les collectivités d’outre-mer comprennent la Polynésie française, Saint-Bar
 - Wallis-et-Futuna
 
 - Nouvelle-Calédonie (statut spécial) Ces territoires ont plus d’autonomie et des règles spécifiques.
-
 
 20. Quelle est la région française réputée pour ses vignobles ?
 
@@ -1892,7 +1878,6 @@ La région connue comme le berceau de la Préhistoire en France est le Périgord
 - Au sud, la Mer Méditerranée borde la France, principalement sur la côte d'Azur.
 
 - Au nord-est, la Mer du Nord touche la région des Hauts-de-France, près de Dunkerque.
-
 
 29. Qu'est-ce que l'eurozone ?
 
@@ -1954,7 +1939,7 @@ En **1848**.
 
 14. Qui est Victor Hugo ?
 
-Grand écrivain du XIXe siècle (*Les Misérables*), engagé contre la misère et la peine de mort.
+Grand écrivain du XIXe siècle (_Les Misérables_), engagé contre la misère et la peine de mort.
 
 15. Quand la IIIe République s'est-elle installée et qu'a fait Jules Ferry ?
 
@@ -2132,17 +2117,17 @@ L’événement de la Révolution française qui m’a le plus marqué est la pr
 
 - Mai 68: L’événement de Mai 68 m’a marqué car c’est un moment important de contestation sociale et culturelle en France. Les mouvements étudiants et ouvriers ont remis en question les traditions et les autorités pour faire avancer les droits et la liberté. Cela montre l’importance de la lutte pour le changement et le progrès dans la société française.
 
-
 58. Quel été le rôle de la Bastille avant sa démolition ?
 
 La prison de la Bastille servait de prison d'état dans laquelle ont été emprisonnés plusieurs célébrités de l'époque tel que Voltaire, Sade etc…
 
 59. Quand est-ce qu'a été adoptée la déclaration des droits de l'homme et du citoyen ?
 
-Elle a été adoptée le 26 Aout 1789.    
-- Déclaration des droits de l'homme et du citoyen du 26 août 1789.    
-- Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous.    
-- En conséquence, l'Assemblée Nationale reconnaît et déclare, en  présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen.
+Elle a été adoptée le 26 Aout 1789.
+
+- Déclaration des droits de l'homme et du citoyen du 26 août 1789.
+- Les Représentants du Peuple Français, constitués en Assemblée Nationale, considérant que l'ignorance, l'oubli ou le mépris des droits de l'Homme sont les seules causes des malheurs publics et de la corruption des Gouvernements, ont résolu d'exposer, dans une Déclaration solennelle, les droits naturels, inaliénables et sacrés de l'Homme, afin que cette Déclaration, constamment présente à tous les Membres du corps social, leur rappelle sans cesse leurs droits et leurs devoirs ; afin que leurs actes du pouvoir législatif, et ceux du pouvoir exécutif, pouvant être à chaque instant comparés avec le but de toute institution politique, en soient plus respectés ; afin que les réclamations des citoyens, fondées désormais sur des principes simples et incontestables, tournent toujours au maintien de la Constitution et au bonheur de tous.
+- En conséquence, l'Assemblée Nationale reconnaît et déclare, en présence et sous les auspices de l'Etre suprême, les droits suivants de l'Homme et du Citoyen.
 
 - Art 1er: Les hommes naissent et demeurent libres et égaux en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune.
 
@@ -2178,7 +2163,6 @@ Elle a été adoptée le 26 Aout 1789.
 
 - Art 17: La propriété étant un droit inviolable et sacré, nul ne peut en être privé, si ce n'est lorsque la nécessité publique, légalement constatée, l'exige évidemment, et sous la condition d'une juste et préalable indemnité.
 
-
 60. Qui a instauré le code civil en France ?
 
 Le Code Civil en France a été instauré par Napoléon Bonaparte.
@@ -2188,7 +2172,6 @@ Le Code Civil en France a été instauré par Napoléon Bonaparte.
 - La première guerre mondiale a eu lieu du 28 juillet 1914 au 11 Novembre 1918 (connue sous le nom de la guerre 14 – 18).
 
 - La deuxième guerre mondiale a eu lieu du 01 Septembre 1939 au 02 Septembre 1945
-
 
 62. Connaissez vous Jean Moulin ? pourquoi est-il connu ?
 
@@ -2276,7 +2259,6 @@ L’ouverture des États généraux a eu lieu le 5 mai 1789 à Versailles. C’�
 
 - Le Tiers-État (98 % de la population)
 
-
 82. Qui sont les principales figures de la Révolution ?
 
 - Louis XVI (1754-1793) : Roi de France exécuté en 1793.
@@ -2292,7 +2274,6 @@ L’ouverture des États généraux a eu lieu le 5 mai 1789 à Versailles. C’�
 - Marat (1743-1793) : Journaliste radical, assassiné dans son bain.
 
 - Napoléon Bonaparte (1769-1821) : Met fin à la Révolution et devient empereur en 1804.
-
 
 83. Quel monarque régnait en France au début de la Révolution Française ?
 
@@ -2336,13 +2317,11 @@ Il met en place le Consulat (1799-1804), où il gouverne avec deux autres consul
 
 - Pétain fuit en Allemagne, puis en Suisse. Il est arrêté en 1945.
 
-
 92. Quelles sont les dates de la Première et la seconde Guerre Mondiale ?
 
 - La Première Guerre Mondiale, un conflit mondial d'une ampleur sans précédent, s'est déroulée du 28 Juillet 1914 au 11 Novembre 1918, impliquant de nombreux pays et causant des pertes humaines et matérielles massives.
 
 - La Seconde Guerre Mondiale, qui a eu des répercussions profondes sur le monde, s'est étendue du 1er Septembre 1939 au 2 Septembre 1945. Ce conflit mondial a vu s'affronter les puissances de l'Axe et les Alliés et a entraîné d'importantes transformations géopolitiques.
-
 
 93. Quelle est la date exacte du début et de la fin de la Première Guerre mondiale ?
 
@@ -2356,13 +2335,11 @@ La guerre a commencé le 28 juillet 1914 avec la déclaration de guerre de l’A
 
 - L’attentat de Sarajevo (28 juin 1914), où l’archiduc François-Ferdinand d’Autriche a été assassiné.
 
-
 95. Quels sont les traités mettant fin à la guerre ?
 
 - Traité de Versailles (28 juin 1919) : Imposant de lourdes sanctions à l’Allemagne.
 
 - Traité de Saint-Germain (1919) : Dissolution de l’Empire austro-hongrois.
-
 
 96. Quelles sont les conséquences de la Première Guerre mondiale?
 
@@ -2371,7 +2348,6 @@ La guerre a commencé le 28 juillet 1914 avec la déclaration de guerre de l’A
 - Chute des Empires allemand, russe, austro-hongrois et ottoman.
 
 - Création de la Société des Nations (SDN).
-
 
 97. Quelles sont les principales batailles de la Première Guerre mondiale ?
 
@@ -2388,7 +2364,6 @@ La guerre a commencé le 28 juillet 1914 avec la déclaration de guerre de l’A
 - Bataille de Caporetto (24 octobre - 19 novembre 1917): majeure italienne face aux Austro-Hongrois et Allemands.
 
 - Seconde bataille de la Marne (15 juillet - 6 août 1918) : Dernière grande offensive allemande stoppée par les Alliés, tournant de la guerre.
-
 
 98. Que commémore-t-on le 11 novembre en France ?
 
@@ -2410,13 +2385,11 @@ La guerre a commencé le 1er septembre 1939 avec l’invasion de la Pologne par 
 
 - Débarquement de Normandie (6 juin 1944) : Libération de la France.
 
-
 102. Quels sont les principaux traités mettant fin au conflit ?
 
 - Conférence de Yalta (février 1945) : Définition du partage de l’Europe après-guerre.
 
 - Traité de San Francisco (1951) : Paix entre le Japon et les Alliés.
-
 
 103. Quelles sont les conséquences de la guerre ?
 
@@ -2425,7 +2398,6 @@ La guerre a commencé le 1er septembre 1939 avec l’invasion de la Pologne par 
 - Création de l’ONU (1945) pour garantir la paix.
 
 - Début de la Guerre froide entre États-Unis et URSS.
-
 
 104. Qui était Jean Moulin ?
 
@@ -2446,7 +2418,6 @@ Il incarne l’unité et le courage de la Résistance face à l’occupation naz
 - Le 8 mai 1945 marque la capitulation de l'Allemagne nazie face aux Alliés. C'est la fin de la guerre en Europe, appelée la Victoire en Europe (VE Day).
 
 - Le 2 septembre 1945 correspond à la capitulation du Japon, qui met officiellement fin à la Seconde Guerre mondiale dans le monde entier.
-
 
 108. Qu'est-ce que le Traité de Versailles ?
 
@@ -2474,10 +2445,9 @@ La France a joué un rôle crucial dans la création de l'Union européenne, not
 
 - 1794 (et non 1792) : Première abolition sous la Révolution française (par la Convention). Mais Napoléon Bonaparte la rétablit en 1802.
 
-
 114. Quelle est l'histoire derrière la construction du Château de Versailles ?
 
-Le Château de Versailles, construit sous Louis XIV (14), est un symbole de la monarchie absolue de l'Ancien Régime. Il a servi de résidence royale et de centre du pouvoir jusqu'à la Révolution  Française, et est reconnu pour son architecture et ses jardins somptueux.
+Le Château de Versailles, construit sous Louis XIV (14), est un symbole de la monarchie absolue de l'Ancien Régime. Il a servi de résidence royale et de centre du pouvoir jusqu'à la Révolution Française, et est reconnu pour son architecture et ses jardins somptueux.
 
 115. : Que s'est-il passé en France durant la Seconde Guerre mondiale ?
 
@@ -2745,7 +2715,6 @@ La France a remporté 64 médailles au total.
 
 - 22 médailles de bronze
 
-
 34. Citez quelques champions français aux Jeux Olympiques de Paris 2024 ?
 
 - Léon Marchand (Natation) : 4 médailles d'or, 1 médaille de bronze.
@@ -2755,7 +2724,6 @@ La France a remporté 64 médailles au total.
 - Pauline Ferrand-Prévot (VTT) : 1 médaille d'or.
 
 - Les athlètes français en canoë-kayak ont également décroché plusieurs médailles.
-
 
 35. Que pensez-vous des Jeux Olympiques de Paris 2024 ?
 
@@ -2811,7 +2779,7 @@ La démocratie est une forme de gouvernement dans laquelle la souveraineté appa
 
 48. Êtes-vous d'accord avec le principe de la démocratie ?
 
-Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles  j'ai choisi de vivre en France.
+Je suis tout à fait d'accord avec la démocratie, d'ailleurs, c'est l'une des raisons pour lesquelles j'ai choisi de vivre en France.
 
 49. En quelle année la France est devenue démocratique ?
 
@@ -2971,9 +2939,9 @@ Cela dépend des goûts et de l'actualité du cinéma, mais par exemple : Le der
 
 88. En quelle année le TGV (Train à Grande Vitesse) a-t-il été inauguré ?
 
-1981.
+89.
 
-89. Quelle est la capacité du Stade de France ?
+90. Quelle est la capacité du Stade de France ?
 
 Environ 80 000 spectateurs.
 
@@ -3035,9 +3003,9 @@ Le Centre National de la Recherche Scientifique, une organisation gouvernemental
 
 104. En quelle année la France a-t-elle adopté l'euro comme monnaie ?
 
-2002.
+105.
 
-105. Comment la France a-t-elle influencé la cuisine mondiale ?
+106. Comment la France a-t-elle influencé la cuisine mondiale ?
 
 La France a grandement influencé la cuisine mondiale par ses techniques culinaires, ses écoles de cuisine, son système de restaurants et ses innovations gastronomiques. Des chefs comme Paul Bocuse, Alain Ducasse et Joël Robuchon ont également contribué à faire connaître la cuisine française dans le monde entier.
 
@@ -3088,7 +3056,6 @@ L'aéroport Charles-de-Gaulle.
 117. Quelles sont les chaînes de montagnes qui séparent la France de ses voisins ?
 
 - France - Espagne : Les Pyrénées. France - Italie : Les Alpes. France - Suisse : Le Jura et les Alpes.
-
 
 118. Quelle est la ville d'origine de la tarte Tatin ?
 
@@ -3205,7 +3172,6 @@ Guyane : Frontière avec le Brésil et le Suriname, Saint-Martin : Frontière av
 - Suisse
 
 - Liechtenstein Ces pays ont signé des accords avec l'UE pour permettre la libre circulation des personnes à l'intérieur de l'Espace Schengen, même s'ils ne sont pas membres de l'Union européenne.
-
 
 145. Quel est le nom du satellite européen de navigation ?
 
@@ -3453,7 +3419,6 @@ C'est un mouvement culturel, philosophique, littéraire et intellectuel qui éme
 
 - Une course comme le Marathon de Paris.
 
-
 12. Connaissez-vous des sportifs Français(e)s ?
 
 - Dans le football : Michel Platini, Zinedine Zidane.
@@ -3463,7 +3428,6 @@ C'est un mouvement culturel, philosophique, littéraire et intellectuel qui éme
 - Dans le tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah.
 
 - Dans le judo : Teddy Riner.
-
 
 13. Vivez-vous en appartement ou en maison ?
 
@@ -3490,14 +3454,17 @@ Claude Monet.
 Non, mais je connais leur importance pour la France. / Oui, j’ai visité (nom du territoire) et découvert sa culture.
 
 # Vie Personnelle et Intégration
+
 1. Pourquoi voulez-vous devenir Français ?
 
 Exprimez votre amour et votre attachement à la France :
+
 - Vous avez toujours aimé la culture, l’histoire et le peuple français
 - Vous souhaitez vous intégrer davantage à la société française
 - Vous souhaitez contribuer à la construction et au développement de la France
 
 Profitez des avantages de la nationalité française :
+
 - Liberté de circulation, de résidence et de travail dans l’UE
 - Droits à l’éducation, à la santé et à la sécurité sociale
 - Participation aux activités politiques et sociales
@@ -3724,7 +3691,6 @@ Louis XIV (14).
 - Elle attire plus de 6 millions de visiteurs par an.
 
 - Elle est un symbole mondial de la France et de Paris.
-
 
 56. Comment est-elle souvent appelée?
 

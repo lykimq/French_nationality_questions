@@ -1,10 +1,16 @@
-import React from 'react';
-import { StyleSheet, View, TouchableOpacity, ViewStyle, TextStyle } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { FormattedText, Icon3D } from './';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcon3D } from '../hooks';
-import { sharedStyles } from '../utils';
+import React from "react";
+import {
+    StyleSheet,
+    View,
+    TouchableOpacity,
+    ViewStyle,
+    TextStyle,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { FormattedText, Icon3D } from "./";
+import { useTheme } from "../contexts/ThemeContext";
+import { useIcon3D } from "../hooks";
+import { sharedStyles } from "../utils";
 
 interface AppHeaderProps {
     title: string;
@@ -29,10 +35,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
-    const arrowBackIcon = getIcon('arrowBack');
+    const arrowBackIcon = getIcon("arrowBack");
 
     return (
-        <SafeAreaView edges={['top']} style={{ backgroundColor: theme.colors.headerBackground }}>
+        <SafeAreaView
+            edges={["top"]}
+            style={{ backgroundColor: theme.colors.headerBackground }}
+        >
             {showTricolore && (
                 <View style={sharedStyles.headerTopAccent}>
                     <View style={sharedStyles.accentBlue} />
@@ -40,7 +49,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({
                     <View style={sharedStyles.accentRed} />
                 </View>
             )}
-            <View style={[sharedStyles.headerContainer, { backgroundColor: theme.colors.headerBackground }, containerStyle]}>
+            <View
+                style={[
+                    sharedStyles.headerContainer,
+                    { backgroundColor: theme.colors.headerBackground },
+                    containerStyle,
+                ]}
+            >
                 <View style={sharedStyles.headerTitleRow}>
                     {showBackButton && (
                         <TouchableOpacity
@@ -56,23 +71,23 @@ const AppHeader: React.FC<AppHeaderProps> = ({
                             />
                         </TouchableOpacity>
                     )}
-                    
+
                     <View style={sharedStyles.headerTextContainer}>
-                        <FormattedText 
+                        <FormattedText
                             style={[
-                                styles.titleText, 
+                                styles.titleText,
                                 { color: theme.colors.headerText },
-                                titleStyle
+                                titleStyle,
                             ]}
                             numberOfLines={1}
                         >
                             {title}
                         </FormattedText>
                         {subtitle && (
-                            <FormattedText 
+                            <FormattedText
                                 style={[
-                                    sharedStyles.headerSubtitle, 
-                                    { color: theme.colors.headerText + 'B3' }
+                                    sharedStyles.headerSubtitle,
+                                    { color: theme.colors.headerText + "B3" },
                                 ]}
                                 numberOfLines={1}
                             >
@@ -86,9 +101,11 @@ const AppHeader: React.FC<AppHeaderProps> = ({
                             {rightAction}
                         </View>
                     )}
-                    
+
                     {/* Spacer to center title if back button is present but no right action */}
-                    {showBackButton && !rightAction && <View style={styles.spacer} />}
+                    {showBackButton && !rightAction && (
+                        <View style={styles.spacer} />
+                    )}
                 </View>
             </View>
         </SafeAreaView>
@@ -103,7 +120,7 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 22,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
     rightActionContainer: {
         marginLeft: 12,

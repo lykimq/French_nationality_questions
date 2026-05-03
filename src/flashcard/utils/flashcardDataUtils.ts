@@ -1,19 +1,21 @@
-import { loadFormationData } from '../../shared/utils/dataUtils';
-import { createLogger } from '../../shared/utils/logger';
-import type { FormationCategory } from '../types';
+import { loadFormationData } from "../../shared/utils/dataUtils";
+import { createLogger } from "../../shared/utils/logger";
+import type { FormationCategory } from "../types";
 
-const logger = createLogger('flashcardDataUtils');
+const logger = createLogger("flashcardDataUtils");
 
-export const loadFlashCardData = async (): Promise<{ [key: string]: FormationCategory } | null> => {
+export const loadFlashCardData = async (): Promise<{
+    [key: string]: FormationCategory;
+} | null> => {
     try {
         const formationData = await loadFormationData();
         if (!formationData || Object.keys(formationData).length === 0) {
-            logger.error('Failed to load formation data');
+            logger.error("Failed to load formation data");
             return null;
         }
         return formationData as unknown as { [key: string]: FormationCategory };
     } catch (error) {
-        logger.error('Error loading flashcard data:', error);
+        logger.error("Error loading flashcard data:", error);
         return null;
     }
 };
@@ -36,4 +38,3 @@ export const getAllCategories = (
     }
     return Object.values(categories);
 };
-

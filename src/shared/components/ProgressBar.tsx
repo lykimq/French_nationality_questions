@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { View, StyleSheet, Animated, ViewStyle } from 'react-native';
-import { useTheme } from '../contexts/ThemeContext';
+import React, { useEffect, useRef } from "react";
+import { View, StyleSheet, Animated, ViewStyle } from "react-native";
+import { useTheme } from "../contexts/ThemeContext";
 
 interface ProgressBarProps {
     progress: number; // 0 to 1
@@ -34,26 +34,26 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     const bgColor = backgroundColor || theme.colors.divider;
 
     return (
-        <View 
+        <View
             style={[
-                styles.container, 
-                { height, backgroundColor: bgColor, borderRadius: height / 2 }, 
-                containerStyle
+                styles.container,
+                { height, backgroundColor: bgColor, borderRadius: height / 2 },
+                containerStyle,
             ]}
         >
-            <Animated.View 
+            <Animated.View
                 style={[
-                    styles.fill, 
-                    { 
-                        height, 
-                        backgroundColor: barColor, 
+                    styles.fill,
+                    {
+                        height,
+                        backgroundColor: barColor,
                         borderRadius: height / 2,
                         width: animatedWidth.interpolate({
                             inputRange: [0, 1],
-                            outputRange: ['0%', '100%'],
+                            outputRange: ["0%", "100%"],
                         }),
-                    }
-                ]} 
+                    },
+                ]}
             />
         </View>
     );
@@ -61,11 +61,11 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
-        overflow: 'hidden',
+        width: "100%",
+        overflow: "hidden",
     },
     fill: {
-        width: '0%',
+        width: "0%",
     },
 });
 

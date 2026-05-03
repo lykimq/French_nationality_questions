@@ -17,4 +17,3 @@ export interface FlashCardState {
     currentIndex: number;
     totalCards: number;
 }
-

@@ -1,27 +1,23 @@
-import { useEffect } from 'react';
-import {
-    StyleSheet,
-    View,
-    ScrollView,
-    TouchableOpacity,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Ionicons } from '@expo/vector-icons';
+import { useEffect } from "react";
+import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Ionicons } from "@expo/vector-icons";
 
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useCivicExam } from '../contexts/CivicExamContext';
-import { FormattedText } from '../../shared/components';
-import { sharedStyles } from '../../shared/utils';
-import { createLogger } from '../../shared/utils/logger';
-import { serializeCivicExamResult } from '../utils/civicExamSerialization';
-import { useCivicExamFooterBottomPad } from '../utils/civicExamTabBarInset';
-import type { CivicExamStackParamList } from '../types';
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useCivicExam } from "../contexts/CivicExamContext";
+import { FormattedText } from "../../shared/components";
+import { sharedStyles } from "../../shared/utils";
+import { createLogger } from "../../shared/utils/logger";
+import { serializeCivicExamResult } from "../utils/civicExamSerialization";
+import { useCivicExamFooterBottomPad } from "../utils/civicExamTabBarInset";
+import type { CivicExamStackParamList } from "../types";
 
-const logger = createLogger('CivicExamReview');
+const logger = createLogger("CivicExamReview");
 
-type CivicExamReviewScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
+type CivicExamReviewScreenNavigationProp =
+    NativeStackNavigationProp<CivicExamStackParamList>;
 
 const CivicExamReviewScreen = () => {
     const navigation = useNavigation<CivicExamReviewScreenNavigationProp>();
@@ -32,7 +28,7 @@ const CivicExamReviewScreen = () => {
     // Handle navigation when session is missing (useEffect to avoid render-time navigation)
     useEffect(() => {
         if (!currentSession) {
-            navigation.navigate('CivicExamHome');
+            navigation.navigate("CivicExamHome");
         }
     }, [currentSession, navigation]);
 
@@ -40,9 +36,11 @@ const CivicExamReviewScreen = () => {
         try {
             const result = await finishExam();
             const serializedResult = serializeCivicExamResult(result);
-            navigation.navigate('CivicExamResult', { result: serializedResult });
+            navigation.navigate("CivicExamResult", {
+                result: serializedResult,
+            });
         } catch (error) {
-            logger.error('Error finishing exam:', error);
+            logger.error("Error finishing exam:", error);
         }
     };
 
@@ -55,11 +53,25 @@ const CivicExamReviewScreen = () => {
     const unansweredCount = actualQuestionCount - answeredCount;
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-
-            <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
-                    <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <SafeAreaView style={{ flex: 1 }} edges={["top"]}>
+                <View
+                    style={[
+                        styles.header,
+                        { backgroundColor: theme.colors.headerBackground },
+                    ]}
+                >
+                    <FormattedText
+                        style={[
+                            styles.headerTitle,
+                            { color: theme.colors.headerText },
+                        ]}
+                    >
                         Révision
                     </FormattedText>
                 </View>
@@ -69,28 +81,66 @@ const CivicExamReviewScreen = () => {
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
                 >
-                    <View style={[styles.summaryCard, { backgroundColor: theme.colors.card }]}>
-                        <FormattedText style={[styles.summaryTitle, { color: theme.colors.text }]}>
+                    <View
+                        style={[
+                            styles.summaryCard,
+                            { backgroundColor: theme.colors.card },
+                        ]}
+                    >
+                        <FormattedText
+                            style={[
+                                styles.summaryTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             Résumé
                         </FormattedText>
                         <View style={styles.summaryRow}>
-                            <FormattedText style={[styles.summaryText, { color: theme.colors.text }]}>
-                                Questions répondues: {answeredCount} / {actualQuestionCount}
+                            <FormattedText
+                                style={[
+                                    styles.summaryText,
+                                    { color: theme.colors.text },
+                                ]}
+                            >
+                                Questions répondues: {answeredCount} /{" "}
+                                {actualQuestionCount}
                             </FormattedText>
                         </View>
                         {unansweredCount > 0 && (
                             <View style={styles.summaryRow}>
-                                <FormattedText style={[styles.warningText, { color: theme.colors.warning }]}>
-                                    {unansweredCount} question(s) non répondue(s)
+                                <FormattedText
+                                    style={[
+                                        styles.warningText,
+                                        { color: theme.colors.warning },
+                                    ]}
+                                >
+                                    {unansweredCount} question(s) non
+                                    répondue(s)
                                 </FormattedText>
                             </View>
                         )}
                     </View>
 
-                    <View style={[styles.infoCard, { backgroundColor: theme.colors.card }]}>
-                        <Ionicons name="information-circle" size={24} color={theme.colors.primary} />
-                        <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                            Vérifiez le nombre de questions répondues. La soumission est définitive : vous ne pourrez plus modifier vos réponses après validation.
+                    <View
+                        style={[
+                            styles.infoCard,
+                            { backgroundColor: theme.colors.card },
+                        ]}
+                    >
+                        <Ionicons
+                            name="information-circle"
+                            size={24}
+                            color={theme.colors.primary}
+                        />
+                        <FormattedText
+                            style={[
+                                styles.infoText,
+                                { color: theme.colors.text },
+                            ]}
+                        >
+                            Vérifiez le nombre de questions répondues. La
+                            soumission est définitive : vous ne pourrez plus
+                            modifier vos réponses après validation.
                         </FormattedText>
                     </View>
                 </ScrollView>
@@ -106,11 +156,19 @@ const CivicExamReviewScreen = () => {
                     ]}
                 >
                     <TouchableOpacity
-                        style={[styles.submitButton, { backgroundColor: theme.colors.primary }]}
+                        style={[
+                            styles.submitButton,
+                            { backgroundColor: theme.colors.primary },
+                        ]}
                         onPress={handleSubmit}
                         activeOpacity={0.8}
                     >
-                        <FormattedText style={[styles.submitButtonText, { color: theme.colors.buttonText }]}>
+                        <FormattedText
+                            style={[
+                                styles.submitButtonText,
+                                { color: theme.colors.buttonText },
+                            ]}
+                        >
                             Soumettre l'examen
                         </FormattedText>
                     </TouchableOpacity>
@@ -125,11 +183,11 @@ const styles = StyleSheet.create({
     header: {
         paddingHorizontal: 20,
         paddingVertical: 16,
-        alignItems: 'center',
+        alignItems: "center",
     },
     headerTitle: {
         fontSize: 20,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
     scrollView: {
         flex: 1,
@@ -145,7 +203,7 @@ const styles = StyleSheet.create({
     },
     summaryTitle: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 16,
     },
     summaryRow: {
@@ -156,14 +214,14 @@ const styles = StyleSheet.create({
     },
     warningText: {
         fontSize: 15,
-        fontWeight: '600',
+        fontWeight: "600",
     },
     infoCard: {
-        flexDirection: 'row',
+        flexDirection: "row",
         borderRadius: 12,
         padding: 16,
         gap: 12,
-        alignItems: 'flex-start',
+        alignItems: "flex-start",
     },
     infoText: {
         flex: 1,
@@ -178,13 +236,12 @@ const styles = StyleSheet.create({
     submitButton: {
         borderRadius: 12,
         padding: 18,
-        alignItems: 'center',
+        alignItems: "center",
     },
     submitButtonText: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
 });
 
 export default CivicExamReviewScreen;
-

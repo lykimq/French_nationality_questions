@@ -1,8 +1,16 @@
 // Light or dark mode selection
-export type ThemeMode = 'light' | 'dark';
+export type ThemeMode = "light" | "dark";
 
 // Available color theme schemes
-export type ColorTheme = 'classic' | 'ocean' | 'sunset' | 'forest' | 'lavender' | 'coral' | 'midnight' | 'neon';
+export type ColorTheme =
+    | "classic"
+    | "ocean"
+    | "sunset"
+    | "forest"
+    | "lavender"
+    | "coral"
+    | "midnight"
+    | "neon";
 
 // Complete color palette for UI components
 // Used by ThemeContext to provide colors throughout the app
@@ -64,7 +72,12 @@ export interface Theme {
 
 // Visual style variants for 3D icon rendering
 // Used by Icon3D component to apply different visual effects
-export type Icon3DVariant = 'default' | 'gradient' | 'elevated' | 'neon' | 'glass';
+export type Icon3DVariant =
+    | "default"
+    | "gradient"
+    | "elevated"
+    | "neon"
+    | "glass";
 
 // Icon name mapping for UI elements (navigation, actions, features)
 // Maps icon keys to Ionicons names, used by IconContext to provide icons throughout the app

@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, StyleSheet, Animated } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../contexts/ThemeContext';
-import FormattedText from './FormattedText';
+import React from "react";
+import { View, StyleSheet, Animated } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../contexts/ThemeContext";
+import FormattedText from "./FormattedText";
 
 interface StreakBadgeProps {
     streak: number;
@@ -32,14 +32,16 @@ const StreakBadge: React.FC<StreakBadgeProps> = ({ streak }) => {
     if (streak === 0) return null;
 
     return (
-        <Animated.View style={[
-            styles.container, 
-            { 
-                backgroundColor: theme.colors.primary + '15',
-                borderColor: theme.colors.primary + '30',
-                transform: [{ scale: scaleAnim }]
-            }
-        ]}>
+        <Animated.View
+            style={[
+                styles.container,
+                {
+                    backgroundColor: theme.colors.primary + "15",
+                    borderColor: theme.colors.primary + "30",
+                    transform: [{ scale: scaleAnim }],
+                },
+            ]}
+        >
             <Ionicons name="flame" size={20} color="#FF9800" />
             <FormattedText style={[styles.text, { color: theme.colors.text }]}>
                 {streak}
@@ -50,8 +52,8 @@ const StreakBadge: React.FC<StreakBadgeProps> = ({ streak }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: 12,
         paddingVertical: 6,
         borderRadius: 20,
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 14,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
 });
 

@@ -1,52 +1,54 @@
-import type { ImageSourcePropType } from 'react-native';
-import type { FrenchQuestionsData } from '../../types/questionsData';
+import type { ImageSourcePropType } from "react-native";
+import type { FrenchQuestionsData } from "../../types/questionsData";
 
 /**
  * Maps Firebase paths to local requires (static requires for React Native, offline fallback).
  */
-export const LOCAL_DATA_MAP: Record<string, FrenchQuestionsData | Record<string, unknown>> = {
-    'knowledge/new_livret/administration_locale.json': require('../../data/knowledge/new_livret/administration_locale.json'),
-    'knowledge/new_livret/arts_culture_sports.json': require('../../data/knowledge/new_livret/arts_culture_sports.json'),
-    'knowledge/new_livret/ddhc.json': require('../../data/knowledge/new_livret/ddhc.json'),
-    'knowledge/new_livret/democratie_politique.json': require('../../data/knowledge/new_livret/democratie_politique.json'),
-    'knowledge/new_livret/droits_devoirs.json': require('../../data/knowledge/new_livret/droits_devoirs.json'),
-    'knowledge/new_livret/france_europe_monde.json': require('../../data/knowledge/new_livret/france_europe_monde.json'),
-    'knowledge/new_livret/geographie_sites.json': require('../../data/knowledge/new_livret/geographie_sites.json'),
-    'knowledge/new_livret/principes_valeurs.json': require('../../data/knowledge/new_livret/principes_valeurs.json'),
-    'knowledge/new_livret/reperes_historiques.json': require('../../data/knowledge/new_livret/reperes_historiques.json'),
-    'knowledge/new_livret/vie_personnelle_integration.json': require('../../data/knowledge/new_livret/vie_personnelle_integration.json'),
-    'knowledge/formation/principes_et_valeurs.json': require('../../data/knowledge/formation/principes_et_valeurs.json'),
-    'knowledge/formation/histoire_geographie_et_culture.json': require('../../data/knowledge/formation/histoire_geographie_et_culture.json'),
-    'knowledge/formation/droits_et_devoirs.json': require('../../data/knowledge/formation/droits_et_devoirs.json'),
-    'knowledge/formation/system_et_politique.json': require('../../data/knowledge/formation/system_et_politique.json'),
-    'knowledge/formation/vivre_dans_la_societe_francaise.json': require('../../data/knowledge/formation/vivre_dans_la_societe_francaise.json'),
-    'test_civic/principes_et_valeurs.json': require('../../data/test_civic/principes_et_valeurs.json'),
-    'test_civic/system_et_politique.json': require('../../data/test_civic/system_et_politique.json'),
-    'test_civic/droits_et_devoirs.json': require('../../data/test_civic/droits_et_devoirs.json'),
-    'test_civic/histoire_geographie_et_culture.json': require('../../data/test_civic/histoire_geographie_et_culture.json'),
-    'test_civic/hist_geo_part1.json': require('../../data/test_civic/hist_geo_part1.json'),
-    'test_civic/hist_geo_part2.json': require('../../data/test_civic/hist_geo_part2.json'),
-    'test_civic/vivre_dans_la_societe_francaise.json': require('../../data/test_civic/vivre_dans_la_societe_francaise.json'),
+export const LOCAL_DATA_MAP: Record<
+    string,
+    FrenchQuestionsData | Record<string, unknown>
+> = {
+    "knowledge/new_livret/administration_locale.json": require("../../data/knowledge/new_livret/administration_locale.json"),
+    "knowledge/new_livret/arts_culture_sports.json": require("../../data/knowledge/new_livret/arts_culture_sports.json"),
+    "knowledge/new_livret/ddhc.json": require("../../data/knowledge/new_livret/ddhc.json"),
+    "knowledge/new_livret/democratie_politique.json": require("../../data/knowledge/new_livret/democratie_politique.json"),
+    "knowledge/new_livret/droits_devoirs.json": require("../../data/knowledge/new_livret/droits_devoirs.json"),
+    "knowledge/new_livret/france_europe_monde.json": require("../../data/knowledge/new_livret/france_europe_monde.json"),
+    "knowledge/new_livret/geographie_sites.json": require("../../data/knowledge/new_livret/geographie_sites.json"),
+    "knowledge/new_livret/principes_valeurs.json": require("../../data/knowledge/new_livret/principes_valeurs.json"),
+    "knowledge/new_livret/reperes_historiques.json": require("../../data/knowledge/new_livret/reperes_historiques.json"),
+    "knowledge/new_livret/vie_personnelle_integration.json": require("../../data/knowledge/new_livret/vie_personnelle_integration.json"),
+    "knowledge/formation/principes_et_valeurs.json": require("../../data/knowledge/formation/principes_et_valeurs.json"),
+    "knowledge/formation/histoire_geographie_et_culture.json": require("../../data/knowledge/formation/histoire_geographie_et_culture.json"),
+    "knowledge/formation/droits_et_devoirs.json": require("../../data/knowledge/formation/droits_et_devoirs.json"),
+    "knowledge/formation/system_et_politique.json": require("../../data/knowledge/formation/system_et_politique.json"),
+    "knowledge/formation/vivre_dans_la_societe_francaise.json": require("../../data/knowledge/formation/vivre_dans_la_societe_francaise.json"),
+    "test_civic/principes_et_valeurs.json": require("../../data/test_civic/principes_et_valeurs.json"),
+    "test_civic/system_et_politique.json": require("../../data/test_civic/system_et_politique.json"),
+    "test_civic/droits_et_devoirs.json": require("../../data/test_civic/droits_et_devoirs.json"),
+    "test_civic/histoire_geographie_et_culture.json": require("../../data/test_civic/histoire_geographie_et_culture.json"),
+    "test_civic/hist_geo_part1.json": require("../../data/test_civic/hist_geo_part1.json"),
+    "test_civic/hist_geo_part2.json": require("../../data/test_civic/hist_geo_part2.json"),
+    "test_civic/vivre_dans_la_societe_francaise.json": require("../../data/test_civic/vivre_dans_la_societe_francaise.json"),
 };
 
 /**
  * Maps image paths to local requires (static requires, offline access).
  */
 export const LOCAL_IMAGE_MAP: Record<string, ImageSourcePropType> = {
-    'pics/card.png': require('../../data/knowledge/pics/card.png'),
-    'pics/chart_ecole.png': require('../../data/knowledge/pics/chart_ecole.png'),
-    'pics/child.png': require('../../data/knowledge/pics/child.png'),
-    'pics/earth.png': require('../../data/knowledge/pics/earth.png'),
-    'pics/euro.png': require('../../data/knowledge/pics/euro.png'),
-    'pics/food.png': require('../../data/knowledge/pics/food.png'),
-    'pics/judiciaire.png': require('../../data/knowledge/pics/judiciaire.png'),
-    'pics/lecole.png': require('../../data/knowledge/pics/lecole.png'),
-    'pics/parcours_dune_loi.png': require('../../data/knowledge/pics/parcours_dune_loi.png'),
-    'pics/parent.png': require('../../data/knowledge/pics/parent.png'),
-    'pics/politiques.png': require('../../data/knowledge/pics/politiques.png'),
-    'pics/porte.png': require('../../data/knowledge/pics/porte.png'),
-    'pics/region.png': require('../../data/knowledge/pics/region.png'),
-    'pics/territories.png': require('../../data/knowledge/pics/territories.png'),
-    'pics/urgence_number.png': require('../../data/knowledge/pics/urgence_number.png'),
+    "pics/card.png": require("../../data/knowledge/pics/card.png"),
+    "pics/chart_ecole.png": require("../../data/knowledge/pics/chart_ecole.png"),
+    "pics/child.png": require("../../data/knowledge/pics/child.png"),
+    "pics/earth.png": require("../../data/knowledge/pics/earth.png"),
+    "pics/euro.png": require("../../data/knowledge/pics/euro.png"),
+    "pics/food.png": require("../../data/knowledge/pics/food.png"),
+    "pics/judiciaire.png": require("../../data/knowledge/pics/judiciaire.png"),
+    "pics/lecole.png": require("../../data/knowledge/pics/lecole.png"),
+    "pics/parcours_dune_loi.png": require("../../data/knowledge/pics/parcours_dune_loi.png"),
+    "pics/parent.png": require("../../data/knowledge/pics/parent.png"),
+    "pics/politiques.png": require("../../data/knowledge/pics/politiques.png"),
+    "pics/porte.png": require("../../data/knowledge/pics/porte.png"),
+    "pics/region.png": require("../../data/knowledge/pics/region.png"),
+    "pics/territories.png": require("../../data/knowledge/pics/territories.png"),
+    "pics/urgence_number.png": require("../../data/knowledge/pics/urgence_number.png"),
 };
-

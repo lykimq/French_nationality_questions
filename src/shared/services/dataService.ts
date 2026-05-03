@@ -1,21 +1,26 @@
-import { ref, getDownloadURL } from 'firebase/storage';
-import type { ImageSourcePropType } from 'react-native';
-import { storage } from '../../config/firebaseConfig';
-import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from '../config';
-import { validateDataStructure } from '../utils/dataValidation';
-import { createLogger } from '../utils/logger';
-import { LRUCache } from '../utils/lruCache';
-import { getErrorMessage } from '../utils/errorUtils';
-import type { FrenchQuestionsData } from '../../types/questionsData';
+import { ref, getDownloadURL } from "firebase/storage";
+import type { ImageSourcePropType } from "react-native";
+import { storage } from "../../config/firebaseConfig";
+import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from "../config";
+import { validateDataStructure } from "../utils/dataValidation";
+import { createLogger } from "../utils/logger";
+import { LRUCache } from "../utils/lruCache";
+import { getErrorMessage } from "../utils/errorUtils";
+import type { FrenchQuestionsData } from "../../types/questionsData";
 
-const logger = createLogger('DataService');
+const logger = createLogger("DataService");
 
 interface HasStringId {
     id: string;
 }
 
 const hasStringId = (obj: unknown): obj is HasStringId => {
-    return typeof obj === 'object' && obj !== null && 'id' in obj && typeof (obj as HasStringId).id === 'string';
+    return (
+        typeof obj === "object" &&
+        obj !== null &&
+        "id" in obj &&
+        typeof (obj as HasStringId).id === "string"
+    );
 };
 
 type CacheEntry<T> = {
@@ -30,17 +35,21 @@ const DEFAULT_RETRY_DELAY_MS = 300;
 const DATA_CACHE_MAX_SIZE = 50;
 const IMAGE_CACHE_MAX_SIZE = 100;
 
-const dataCache = new LRUCache<FrenchQuestionsData | Record<string, unknown>>(DATA_CACHE_MAX_SIZE);
+const dataCache = new LRUCache<FrenchQuestionsData | Record<string, unknown>>(
+    DATA_CACHE_MAX_SIZE
+);
 const imageCache = new LRUCache<ImageSourcePropType>(IMAGE_CACHE_MAX_SIZE);
 const failedDataCache: Map<string, number> = new Map();
 const failedImageCache: Map<string, number> = new Map();
 
 const now = () => Date.now();
 
-const isFresh = (entry?: CacheEntry<unknown>, ttlMs: number = DEFAULT_TTL_MS) =>
-    entry ? now() - entry.fetchedAt < ttlMs : false;
+const isFresh = (
+    entry?: CacheEntry<unknown>,
+    ttlMs: number = DEFAULT_TTL_MS
+) => (entry ? now() - entry.fetchedAt < ttlMs : false);
 
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 interface LoadOptions {
     ttlMs?: number;
@@ -48,11 +57,15 @@ interface LoadOptions {
     retryDelayMs?: number;
 }
 
-const getLocalJsonData = (dataPath: string): FrenchQuestionsData | Record<string, unknown> | null => {
+const getLocalJsonData = (
+    dataPath: string
+): FrenchQuestionsData | Record<string, unknown> | null => {
     return LOCAL_DATA_MAP[dataPath] ?? null;
 };
 
-const fetchFirebaseJson = async (dataPath: string): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {
+const fetchFirebaseJson = async (
+    dataPath: string
+): Promise<FrenchQuestionsData | Record<string, unknown> | null> => {
     if (!storage) return null;
     const dataRef = ref(storage, `French_questions/data/${dataPath}`);
     const downloadURL = await getDownloadURL(dataRef);
@@ -64,12 +77,16 @@ const fetchFirebaseJson = async (dataPath: string): Promise<FrenchQuestionsData 
     const validationResult = validateDataStructure(jsonData, dataPath);
 
     if (!validationResult.isValid) {
-        logger.error(`Data validation failed for ${dataPath}:`, validationResult.errors);
+        logger.error(
+            `Data validation failed for ${dataPath}:`,
+            validationResult.errors
+        );
     }
     return jsonData;
 };
 
-const shouldRetry = (failureTime: number, ttlMs: number) => now() - failureTime > ttlMs;
+const shouldRetry = (failureTime: number, ttlMs: number) =>
+    now() - failureTime > ttlMs;
 
 const loadJsonResource = async (
     dataPath: string,
@@ -125,31 +142,36 @@ const loadJsonResource = async (
 
 export const loadJsonCollection = async (
     files: readonly string[],
-    directoryPrefix: string = '',
-    keySuffixToRemove: string = '.json',
+    directoryPrefix: string = "",
+    keySuffixToRemove: string = ".json",
     useIdAsKey: boolean = false,
     options: LoadOptions = {}
 ): Promise<Record<string, FrenchQuestionsData | Record<string, unknown>>> => {
-    const dataMap: Record<string, FrenchQuestionsData | Record<string, unknown>> = {};
-    await Promise.all(files.map(async (filename) => {
-        const fallbackKey = filename.replace(keySuffixToRemove, '');
-        const dataPath = `${directoryPrefix}${filename}`;
-        const data = await loadJsonResource(dataPath, options);
-        const key = useIdAsKey && hasStringId(data)
-            ? data.id
-            : fallbackKey;
+    const dataMap: Record<
+        string,
+        FrenchQuestionsData | Record<string, unknown>
+    > = {};
+    await Promise.all(
+        files.map(async (filename) => {
+            const fallbackKey = filename.replace(keySuffixToRemove, "");
+            const dataPath = `${directoryPrefix}${filename}`;
+            const data = await loadJsonResource(dataPath, options);
+            const key = useIdAsKey && hasStringId(data) ? data.id : fallbackKey;
 
-        if (data) {
-            dataMap[key] = data;
-        } else {
-            logger.warn(`Failed to load collection item: ${key}`);
-        }
-    }));
+            if (data) {
+                dataMap[key] = data;
+            } else {
+                logger.warn(`Failed to load collection item: ${key}`);
+            }
+        })
+    );
 
     return dataMap;
 };
 
-const fetchFirebaseImage = async (imagePath: string): Promise<string | null> => {
+const fetchFirebaseImage = async (
+    imagePath: string
+): Promise<string | null> => {
     if (!storage) return null;
     const imageRef = ref(storage, `French_questions/pics/${imagePath}`);
     const downloadURL = await getDownloadURL(imageRef);
@@ -178,14 +200,14 @@ export const loadImageResource = async (
         return cached?.value ?? null;
     }
 
-    if (imagePath.startsWith('https://')) {
+    if (imagePath.startsWith("https://")) {
         const value = { uri: imagePath };
         imageCache.set(imagePath, { value, fetchedAt: now() });
         failedImageCache.delete(imagePath);
         return value;
     }
-    
-    if (imagePath.startsWith('http://')) {
+
+    if (imagePath.startsWith("http://")) {
         logger.warn(`Blocked insecure HTTP image URL: ${imagePath}`);
         return null;
     }
@@ -197,7 +219,7 @@ export const loadImageResource = async (
         return localImage;
     }
 
-    const filename = imagePath.replace(/^.*[\\/]/, '');
+    const filename = imagePath.replace(/^.*[\\/]/, "");
     let lastError: unknown;
     for (let attempt = 0; attempt <= retryCount; attempt++) {
         try {
@@ -224,25 +246,29 @@ export const loadImageResource = async (
     return cached?.value ?? null;
 };
 
-export const getCachedImage = (imagePath: string): ImageSourcePropType | null => {
+export const getCachedImage = (
+    imagePath: string
+): ImageSourcePropType | null => {
     const cached = imageCache.get(imagePath);
     if (cached) {
         return cached.value;
     }
     const localImage = LOCAL_IMAGE_MAP[imagePath];
     if (localImage) return localImage;
-    const filename = imagePath.replace(/^.*[\\/]/, '');
+    const filename = imagePath.replace(/^.*[\\/]/, "");
     return imageCache.get(filename)?.value ?? null;
 };
 
 const cleanupStaleEntries = () => {
     const dataRemoved = dataCache.cleanupStaleEntries(DEFAULT_TTL_MS, now);
     const imageRemoved = imageCache.cleanupStaleEntries(DEFAULT_TTL_MS, now);
-    
+
     if (dataRemoved > 0 || imageRemoved > 0) {
-        logger.debug(`Cleaned up stale cache entries: ${dataRemoved} data, ${imageRemoved} images`);
+        logger.debug(
+            `Cleaned up stale cache entries: ${dataRemoved} data, ${imageRemoved} images`
+        );
     }
-    
+
     return { dataRemoved, imageRemoved };
 };
 
@@ -252,19 +278,20 @@ export const startCacheCleanup = (intervalMs: number = 10 * 60 * 1000) => {
     if (cleanupIntervalId) {
         clearInterval(cleanupIntervalId);
     }
-    
+
     cleanupIntervalId = setInterval(() => {
         cleanupStaleEntries();
     }, intervalMs);
-    
-    logger.debug(`Started periodic cache cleanup with interval: ${intervalMs}ms`);
+
+    logger.debug(
+        `Started periodic cache cleanup with interval: ${intervalMs}ms`
+    );
 };
 
 export const stopCacheCleanup = () => {
     if (cleanupIntervalId) {
         clearInterval(cleanupIntervalId);
         cleanupIntervalId = null;
-        logger.debug('Stopped periodic cache cleanup');
+        logger.debug("Stopped periodic cache cleanup");
     }
 };
-

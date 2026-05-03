@@ -17,7 +17,7 @@ type SentryType = {
 
 const getSentry = (): SentryType => {
     try {
-        return require('../../config/sentryConfig').Sentry as SentryType;
+        return require("../../config/sentryConfig").Sentry as SentryType;
     } catch {
         return null;
     }
@@ -26,8 +26,8 @@ const getSentry = (): SentryType => {
 class Logger {
     private prefix: string;
 
-    constructor(prefix: string = '') {
-        this.prefix = prefix ? `[${prefix}] ` : '';
+    constructor(prefix: string = "") {
+        this.prefix = prefix ? `[${prefix}] ` : "";
     }
 
     private formatMessage(message: string): string {
@@ -68,7 +68,7 @@ class Logger {
                 if (firstArg instanceof Error) {
                     Sentry.captureException(firstArg, {
                         tags: {
-                            logger: this.prefix || 'default',
+                            logger: this.prefix || "default",
                         },
                         extra: {
                             message: this.formatMessage(message),
@@ -77,9 +77,9 @@ class Logger {
                     });
                 } else if (message) {
                     Sentry.captureMessage(this.formatMessage(message), {
-                        level: 'error',
+                        level: "error",
                         tags: {
-                            logger: this.prefix || 'default',
+                            logger: this.prefix || "default",
                         },
                         extra: {
                             args,

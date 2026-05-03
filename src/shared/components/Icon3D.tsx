@@ -1,9 +1,14 @@
-import React from 'react';
-import { View, StyleSheet, ViewStyle } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import React from "react";
+import { View, StyleSheet, ViewStyle } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
-export type Icon3DVariant = 'default' | 'gradient' | 'elevated' | 'neon' | 'glass';
+export type Icon3DVariant =
+    | "default"
+    | "gradient"
+    | "elevated"
+    | "neon"
+    | "glass";
 
 export interface Icon3DProps {
     name: string;
@@ -17,8 +22,8 @@ export interface Icon3DProps {
 const Icon3D: React.FC<Icon3DProps> = ({
     name,
     size = 24,
-    color = '#007AFF',
-    variant = 'default',
+    color = "#007AFF",
+    variant = "default",
     containerStyle,
     backgroundColor,
 }) => {
@@ -29,12 +34,12 @@ const Icon3D: React.FC<Icon3DProps> = ({
             <Ionicons
                 name={name as keyof typeof Ionicons.glyphMap}
                 size={size}
-                color={variant === 'glass' ? color + 'DD' : color}
+                color={variant === "glass" ? color + "DD" : color}
             />
         );
 
         switch (variant) {
-            case 'gradient':
+            case "gradient":
                 return (
                     <View style={[styles.iconContainer, containerStyle]}>
                         <LinearGradient
@@ -71,7 +76,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                     </View>
                 );
 
-            case 'elevated':
+            case "elevated":
                 return (
                     <View style={[styles.iconContainer, containerStyle]}>
                         <View
@@ -81,7 +86,10 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                     width: size * containerScale,
                                     height: size * containerScale,
                                     borderRadius: size * (containerScale / 2),
-                                    backgroundColor: adjustColorBrightness(color, -80),
+                                    backgroundColor: adjustColorBrightness(
+                                        color,
+                                        -80
+                                    ),
                                 },
                             ]}
                         />
@@ -92,8 +100,9 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                     width: size * containerScale,
                                     height: size * containerScale,
                                     borderRadius: size * (containerScale / 2),
-                                    backgroundColor: backgroundColor || color + '20',
-                                    borderColor: color + '40',
+                                    backgroundColor:
+                                        backgroundColor || color + "20",
+                                    borderColor: color + "40",
                                 },
                             ]}
                         >
@@ -112,7 +121,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                     </View>
                 );
 
-            case 'neon':
+            case "neon":
                 return (
                     <View style={[styles.iconContainer, containerStyle]}>
                         <View
@@ -121,8 +130,9 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                 {
                                     width: size * (containerScale + 0.2),
                                     height: size * (containerScale + 0.2),
-                                    borderRadius: size * (containerScale + 0.2) / 2,
-                                    backgroundColor: color + '20',
+                                    borderRadius:
+                                        (size * (containerScale + 0.2)) / 2,
+                                    backgroundColor: color + "20",
                                     shadowColor: color,
                                 },
                             ]}
@@ -134,7 +144,8 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                     width: size * containerScale,
                                     height: size * containerScale,
                                     borderRadius: size * (containerScale / 2),
-                                    backgroundColor: backgroundColor || '#000000',
+                                    backgroundColor:
+                                        backgroundColor || "#000000",
                                     borderColor: color,
                                 },
                             ]}
@@ -144,7 +155,7 @@ const Icon3D: React.FC<Icon3DProps> = ({
                     </View>
                 );
 
-            case 'glass':
+            case "glass":
                 return (
                     <View style={[styles.iconContainer, containerStyle]}>
                         <View
@@ -154,8 +165,9 @@ const Icon3D: React.FC<Icon3DProps> = ({
                                     width: size * containerScale,
                                     height: size * containerScale,
                                     borderRadius: size * (containerScale / 2),
-                                    backgroundColor: backgroundColor || color + '15',
-                                    borderColor: color + '30',
+                                    backgroundColor:
+                                        backgroundColor || color + "15",
+                                    borderColor: color + "30",
                                 },
                             ]}
                         >
@@ -188,102 +200,101 @@ const Icon3D: React.FC<Icon3DProps> = ({
 };
 
 const adjustColorBrightness = (color: string, percent: number): string => {
-    const num = parseInt(color.replace('#', ''), 16);
+    const num = parseInt(color.replace("#", ""), 16);
     const amt = Math.round(2.55 * percent);
     const R = Math.max(0, Math.min(255, (num >> 16) + amt));
-    const G = Math.max(0, Math.min(255, (num >> 8 & 0x00FF) + amt));
-    const B = Math.max(0, Math.min(255, (num & 0x0000FF) + amt));
+    const G = Math.max(0, Math.min(255, ((num >> 8) & 0x00ff) + amt));
+    const B = Math.max(0, Math.min(255, (num & 0x0000ff) + amt));
     return `#${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)}`;
 };
 
 const styles = StyleSheet.create({
     iconContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     gradientContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        shadowColor: '#000',
+        justifyContent: "center",
+        alignItems: "center",
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
         shadowRadius: 6,
         elevation: 8,
     },
     gradientInner: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         zIndex: 2,
     },
     gradientHighlight: {
-        position: 'absolute',
-        top: '15%',
-        left: '15%',
-        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        position: "absolute",
+        top: "15%",
+        left: "15%",
+        backgroundColor: "rgba(255, 255, 255, 0.3)",
         zIndex: 1,
     },
     elevatedContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         borderWidth: 2,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 6 },
         shadowOpacity: 0.25,
         shadowRadius: 8,
         elevation: 10,
     },
     elevatedShadow: {
-        position: 'absolute',
+        position: "absolute",
         bottom: -6,
         opacity: 0.2,
     },
     elevatedHighlight: {
-        position: 'absolute',
-        top: '20%',
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        position: "absolute",
+        top: "20%",
+        backgroundColor: "rgba(255, 255, 255, 0.2)",
     },
     neonContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         borderWidth: 2,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 0.8,
         shadowRadius: 15,
         elevation: 12,
     },
     neonGlow: {
-        position: 'absolute',
+        position: "absolute",
         shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 0.6,
         shadowRadius: 20,
         elevation: 0,
     },
     glassContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         borderWidth: 1.5,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.15,
         shadowRadius: 8,
         elevation: 6,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
     glassHighlight: {
-        position: 'absolute',
-        top: '10%',
-        backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        position: "absolute",
+        top: "10%",
+        backgroundColor: "rgba(255, 255, 255, 0.4)",
     },
     glassReflection: {
-        position: 'absolute',
+        position: "absolute",
         bottom: 0,
         left: 0,
         right: 0,
-        height: '40%',
-        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+        height: "40%",
+        backgroundColor: "rgba(255, 255, 255, 0.05)",
     },
 });
 
 export default Icon3D;
-

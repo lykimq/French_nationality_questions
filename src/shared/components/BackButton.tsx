@@ -1,8 +1,13 @@
-import React from 'react';
-import { TouchableOpacity, StyleSheet, StyleProp, ViewStyle } from 'react-native';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcons } from '../contexts/IconContext';
-import Icon3D from './Icon3D';
+import React from "react";
+import {
+    TouchableOpacity,
+    StyleSheet,
+    StyleProp,
+    ViewStyle,
+} from "react-native";
+import { useTheme } from "../contexts/ThemeContext";
+import { useIcons } from "../contexts/IconContext";
+import Icon3D from "./Icon3D";
 
 interface BackButtonProps {
     onPress: () => void;
@@ -22,9 +27,9 @@ const BackButton: React.FC<BackButtonProps> = ({
     const { theme } = useTheme();
     const { getIconName, getIconVariant } = useIcons();
 
-    const defaultIconName = iconName || getIconName('arrowBack');
+    const defaultIconName = iconName || getIconName("arrowBack");
     const defaultIconColor = iconColor || theme.colors.headerText;
-    const iconVariant = getIconVariant('arrowBack');
+    const iconVariant = getIconVariant("arrowBack");
 
     return (
         <TouchableOpacity

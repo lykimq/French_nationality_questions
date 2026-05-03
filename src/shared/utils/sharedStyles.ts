@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const sharedStyles = StyleSheet.create({
     card: {
@@ -25,8 +25,8 @@ export const sharedStyles = StyleSheet.create({
         width: 36,
         height: 36,
         borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginRight: 15,
     },
 
@@ -34,23 +34,23 @@ export const sharedStyles = StyleSheet.create({
         width: 60,
         height: 60,
         borderRadius: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginRight: 16,
     },
 
     modalOverlay: {
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        justifyContent: 'center',
-        alignItems: 'center',
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        justifyContent: "center",
+        alignItems: "center",
         padding: 20,
     },
 
     modalHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
         paddingHorizontal: 20,
         paddingVertical: 16,
         borderBottomWidth: 1,
@@ -58,7 +58,7 @@ export const sharedStyles = StyleSheet.create({
 
     modalTitle: {
         fontSize: 18,
-        fontWeight: '600',
+        fontWeight: "600",
     },
 
     closeButton: {
@@ -71,13 +71,13 @@ export const sharedStyles = StyleSheet.create({
 
     centeredContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
 
     sectionTitle: {
         fontSize: 18,
-        fontWeight: '600',
+        fontWeight: "600",
         marginBottom: 16,
     },
 
@@ -87,36 +87,36 @@ export const sharedStyles = StyleSheet.create({
     },
 
     primaryButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
         paddingVertical: 16,
         borderRadius: 12,
     },
 
     secondaryButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
         paddingVertical: 16,
         borderRadius: 12,
         borderWidth: 1,
     },
 
     row: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
     },
 
     spaceBetween: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
 
     lightShadow: {
         elevation: 1,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.1,
         shadowRadius: 2,
@@ -124,7 +124,7 @@ export const sharedStyles = StyleSheet.create({
 
     mediumShadow: {
         elevation: 2,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
@@ -132,23 +132,23 @@ export const sharedStyles = StyleSheet.create({
 
     heavyShadow: {
         elevation: 3,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.15,
         shadowRadius: 6,
     },
 
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
         paddingHorizontal: 20,
         paddingVertical: 16,
     },
 
     headerTitle: {
         fontSize: 20,
-        fontWeight: '600',
+        fontWeight: "600",
     },
 
     backButton: {
@@ -163,17 +163,17 @@ export const sharedStyles = StyleSheet.create({
     },
     headerTopAccent: {
         height: 3,
-        flexDirection: 'row',
-        width: '100%',
+        flexDirection: "row",
+        width: "100%",
     },
-    accentBlue: { flex: 1, backgroundColor: '#002395' }, // French Blue
-    accentWhite: { flex: 1, backgroundColor: '#FFFFFF' }, // French White
-    accentRed: { flex: 1, backgroundColor: '#ED2939' }, // French Red
+    accentBlue: { flex: 1, backgroundColor: "#002395" }, // French Blue
+    accentWhite: { flex: 1, backgroundColor: "#FFFFFF" }, // French White
+    accentRed: { flex: 1, backgroundColor: "#ED2939" }, // French Red
 
     headerTitleRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
         marginTop: 12,
     },
     headerTextContainer: {
@@ -202,31 +202,31 @@ export const sharedStyles = StyleSheet.create({
         marginHorizontal: 15,
         marginTop: 20,
         marginBottom: 5,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
 
     progressBar: {
         height: 4,
-        backgroundColor: '#E0E0E0',
+        backgroundColor: "#E0E0E0",
         borderRadius: 2,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
 
     progressBarFill: {
-        height: '100%',
+        height: "100%",
         borderRadius: 2,
     },
 
     optionHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
         marginBottom: 16,
     },
 
     optionLeft: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         flex: 1,
     },
 
@@ -236,7 +236,7 @@ export const sharedStyles = StyleSheet.create({
 
     optionTitle: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
         marginBottom: 4,
     },
 
@@ -247,37 +247,37 @@ export const sharedStyles = StyleSheet.create({
 
     // Mastery Stamps
     stampContainer: {
-        position: 'absolute',
+        position: "absolute",
         top: 50,
         zIndex: 10,
         paddingHorizontal: 20,
         paddingVertical: 10,
         borderRadius: 12,
         borderWidth: 4,
-        transform: [{ rotate: '-15deg' }],
+        transform: [{ rotate: "-15deg" }],
     },
     stampText: {
         fontSize: 32,
-        fontWeight: '900',
-        textTransform: 'uppercase',
+        fontWeight: "900",
+        textTransform: "uppercase",
         letterSpacing: 2,
     },
     masteredStamp: {
-        borderColor: '#4CAF50',
+        borderColor: "#4CAF50",
         right: 40,
-        transform: [{ rotate: '15deg' }],
+        transform: [{ rotate: "15deg" }],
     },
     reviewStamp: {
-        borderColor: '#FF5722',
+        borderColor: "#FF5722",
         left: 40,
-        transform: [{ rotate: '-15deg' }],
+        transform: [{ rotate: "-15deg" }],
     },
 
     // Rating Buttons
     ratingContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '100%',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
         marginTop: 20,
         gap: 8,
     },
@@ -285,18 +285,20 @@ export const sharedStyles = StyleSheet.create({
         flex: 1,
         paddingVertical: 10,
         borderRadius: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: "center",
+        justifyContent: "center",
         borderWidth: 1,
     },
     ratingButtonText: {
         fontSize: 12,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginTop: 4,
     },
 });
 
-export const getCardContainerStyle = (theme: { colors: { card: string; divider: string } }) => ({
+export const getCardContainerStyle = (theme: {
+    colors: { card: string; divider: string };
+}) => ({
     backgroundColor: theme.colors.card,
     borderBottomColor: theme.colors.divider,
 });

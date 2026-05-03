@@ -1,18 +1,26 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createLogger } from '../../shared/utils/logger';
-import { safeParseDate, applyMemoryLimits } from '../../shared/utils/questionUtils';
-import { isValidId } from '../../shared/utils/idUtils';
-import type { CategoryPerformance, CivicExamProgress, CivicExamStatistics, CivicExamTopic } from '../types';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createLogger } from "../../shared/utils/logger";
+import {
+    safeParseDate,
+    applyMemoryLimits,
+} from "../../shared/utils/questionUtils";
+import { isValidId } from "../../shared/utils/idUtils";
+import type {
+    CategoryPerformance,
+    CivicExamProgress,
+    CivicExamStatistics,
+    CivicExamTopic,
+} from "../types";
 import {
     createDefaultCivicExamProgress,
     createDefaultCivicExamStatistics,
-} from './civicExamDefaults';
+} from "./civicExamDefaults";
 
-const logger = createLogger('CivicExamStorage');
+const logger = createLogger("CivicExamStorage");
 
 const CIVIC_EXAM_STORAGE_KEYS = {
-    CIVIC_EXAM_PROGRESS: 'civic_exam_progress',
-    CIVIC_EXAM_STATISTICS: 'civic_exam_statistics',
+    CIVIC_EXAM_PROGRESS: "civic_exam_progress",
+    CIVIC_EXAM_STATISTICS: "civic_exam_statistics",
 } as const;
 
 const MEMORY_LIMITS = {
@@ -20,20 +28,29 @@ const MEMORY_LIMITS = {
     MAX_RECENT_SCORES: 10,
 } as const;
 
-export const DEFAULT_CIVIC_EXAM_PROGRESS: CivicExamProgress = createDefaultCivicExamProgress();
-export const DEFAULT_CIVIC_EXAM_STATISTICS: CivicExamStatistics = createDefaultCivicExamStatistics();
+export const DEFAULT_CIVIC_EXAM_PROGRESS: CivicExamProgress =
+    createDefaultCivicExamProgress();
+export const DEFAULT_CIVIC_EXAM_STATISTICS: CivicExamStatistics =
+    createDefaultCivicExamStatistics();
 
 const validateNumber = (value: unknown, defaultValue: number = 0): number => {
-    return typeof value === 'number' && isFinite(value) && value >= 0 ? value : defaultValue;
+    return typeof value === "number" && isFinite(value) && value >= 0
+        ? value
+        : defaultValue;
 };
 
-const validateArray = <T>(value: unknown, validator: (item: unknown) => item is T): T[] => {
+const validateArray = <T>(
+    value: unknown,
+    validator: (item: unknown) => item is T
+): T[] => {
     return Array.isArray(value) ? value.filter(validator) : [];
 };
 
 const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
     try {
-        const progressData = await AsyncStorage.getItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS);
+        const progressData = await AsyncStorage.getItem(
+            CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS
+        );
         if (!progressData) {
             return DEFAULT_CIVIC_EXAM_PROGRESS;
         }
@@ -42,38 +59,58 @@ const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
         try {
             parsedProgress = JSON.parse(progressData);
         } catch (parseError) {
-            logger.error('Failed to parse progress data:', parseError);
+            logger.error("Failed to parse progress data:", parseError);
             return DEFAULT_CIVIC_EXAM_PROGRESS;
         }
 
-        if (typeof parsedProgress !== 'object' || parsedProgress === null) {
+        if (typeof parsedProgress !== "object" || parsedProgress === null) {
             return DEFAULT_CIVIC_EXAM_PROGRESS;
         }
 
         const progress = parsedProgress as Record<string, unknown>;
 
         const loadTopicPerformance = (topic: CivicExamTopic) => {
-            const topicData = (progress.topicPerformance as Record<string, unknown>)?.[topic] as Record<string, unknown> | undefined;
+            const topicData = (
+                progress.topicPerformance as Record<string, unknown>
+            )?.[topic] as Record<string, unknown> | undefined;
             return {
-                questionsAttempted: validateNumber(topicData?.questionsAttempted, 0),
+                questionsAttempted: validateNumber(
+                    topicData?.questionsAttempted,
+                    0
+                ),
                 correctAnswers: validateNumber(topicData?.correctAnswers, 0),
                 accuracy: validateNumber(topicData?.accuracy, 0),
             };
         };
 
         const validateScore = (score: unknown): score is number => {
-            return typeof score === 'number' && isFinite(score) && score >= 0 && score <= 100;
+            return (
+                typeof score === "number" &&
+                isFinite(score) &&
+                score >= 0 &&
+                score <= 100
+            );
         };
 
         const loadedProgress: CivicExamProgress = {
             totalExamsTaken: validateNumber(progress.totalExamsTaken, 0),
-            totalPracticeSessions: validateNumber(progress.totalPracticeSessions, 0),
-            averageScore: validateScore(progress.averageScore) ? progress.averageScore : 0,
-            bestScore: validateScore(progress.bestScore) ? progress.bestScore : 0,
+            totalPracticeSessions: validateNumber(
+                progress.totalPracticeSessions,
+                0
+            ),
+            averageScore: validateScore(progress.averageScore)
+                ? progress.averageScore
+                : 0,
+            bestScore: validateScore(progress.bestScore)
+                ? progress.bestScore
+                : 0,
             passedExams: validateNumber(progress.passedExams, 0),
             failedExams: validateNumber(progress.failedExams, 0),
             questionsAnswered: validateNumber(progress.questionsAnswered, 0),
-            correctAnswersTotal: validateNumber(progress.correctAnswersTotal, 0),
+            correctAnswersTotal: validateNumber(
+                progress.correctAnswersTotal,
+                0
+            ),
             incorrectQuestions: applyMemoryLimits(
                 validateArray(progress.incorrectQuestions, isValidId),
                 MEMORY_LIMITS.MAX_INCORRECT_QUESTIONS
@@ -83,26 +120,36 @@ const loadCivicExamProgress = async (): Promise<CivicExamProgress> => {
                 MEMORY_LIMITS.MAX_RECENT_SCORES
             ),
             topicPerformance: {
-                principles_values: loadTopicPerformance('principles_values'),
-                institutional_political: loadTopicPerformance('institutional_political'),
-                rights_duties: loadTopicPerformance('rights_duties'),
-                history_geography_culture: loadTopicPerformance('history_geography_culture'),
-                living_society: loadTopicPerformance('living_society'),
+                principles_values: loadTopicPerformance("principles_values"),
+                institutional_political: loadTopicPerformance(
+                    "institutional_political"
+                ),
+                rights_duties: loadTopicPerformance("rights_duties"),
+                history_geography_culture: loadTopicPerformance(
+                    "history_geography_culture"
+                ),
+                living_society: loadTopicPerformance("living_society"),
             },
-            createdAt: progress.createdAt ? safeParseDate(progress.createdAt) : new Date(),
-            updatedAt: progress.updatedAt ? safeParseDate(progress.updatedAt) : new Date(),
+            createdAt: progress.createdAt
+                ? safeParseDate(progress.createdAt)
+                : new Date(),
+            updatedAt: progress.updatedAt
+                ? safeParseDate(progress.updatedAt)
+                : new Date(),
         };
 
         return loadedProgress;
     } catch (error) {
-        logger.error('Error loading civic exam progress:', error);
+        logger.error("Error loading civic exam progress:", error);
         return DEFAULT_CIVIC_EXAM_PROGRESS;
     }
 };
 
 const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
     try {
-        const statisticsData = await AsyncStorage.getItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS);
+        const statisticsData = await AsyncStorage.getItem(
+            CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS
+        );
         if (!statisticsData) {
             return DEFAULT_CIVIC_EXAM_STATISTICS;
         }
@@ -111,26 +158,34 @@ const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
         try {
             parsedStatistics = JSON.parse(statisticsData);
         } catch (parseError) {
-            logger.error('Failed to parse statistics data:', parseError);
+            logger.error("Failed to parse statistics data:", parseError);
             return DEFAULT_CIVIC_EXAM_STATISTICS;
         }
 
-        if (typeof parsedStatistics !== 'object' || parsedStatistics === null) {
+        if (typeof parsedStatistics !== "object" || parsedStatistics === null) {
             return DEFAULT_CIVIC_EXAM_STATISTICS;
         }
 
         const stats = parsedStatistics as Record<string, unknown>;
 
         const categoryPerformance: Record<string, CategoryPerformance> = {};
-        if (typeof stats.categoryPerformance === 'object' && stats.categoryPerformance !== null) {
-            const catPerf = stats.categoryPerformance as Record<string, unknown>;
-            Object.keys(catPerf).forEach(categoryId => {
+        if (
+            typeof stats.categoryPerformance === "object" &&
+            stats.categoryPerformance !== null
+        ) {
+            const catPerf = stats.categoryPerformance as Record<
+                string,
+                unknown
+            >;
+            Object.keys(catPerf).forEach((categoryId) => {
                 const catData = catPerf[categoryId];
-                if (typeof catData === 'object' && catData !== null) {
+                if (typeof catData === "object" && catData !== null) {
                     const perf = catData as Record<string, unknown>;
                     categoryPerformance[categoryId] = {
                         ...perf,
-                        lastAttempted: perf.lastAttempted ? safeParseDate(perf.lastAttempted) : undefined,
+                        lastAttempted: perf.lastAttempted
+                            ? safeParseDate(perf.lastAttempted)
+                            : undefined,
                     } as CategoryPerformance;
                 }
             });
@@ -149,13 +204,14 @@ const loadCivicExamStatistics = async (): Promise<CivicExamStatistics> => {
             ),
             topicBreakdown: {
                 ...DEFAULT_CIVIC_EXAM_STATISTICS.topicBreakdown,
-                ...(typeof stats.topicBreakdown === 'object' && stats.topicBreakdown !== null
+                ...(typeof stats.topicBreakdown === "object" &&
+                stats.topicBreakdown !== null
                     ? stats.topicBreakdown
                     : {}),
             },
         };
     } catch (error) {
-        logger.error('Error loading civic exam statistics:', error);
+        logger.error("Error loading civic exam statistics:", error);
         return DEFAULT_CIVIC_EXAM_STATISTICS;
     }
 };
@@ -166,11 +222,17 @@ export const saveCivicExamData = async (
 ): Promise<void> => {
     try {
         await Promise.all([
-            AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS, JSON.stringify(progress)),
-            AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS, JSON.stringify(statistics))
+            AsyncStorage.setItem(
+                CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS,
+                JSON.stringify(progress)
+            ),
+            AsyncStorage.setItem(
+                CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS,
+                JSON.stringify(statistics)
+            ),
         ]);
     } catch (error) {
-        logger.error('Error saving civic exam data:', error);
+        logger.error("Error saving civic exam data:", error);
         throw error;
     }
 };
@@ -181,7 +243,7 @@ export const loadAllCivicExamData = async (): Promise<{
 }> => {
     const [progress, statistics] = await Promise.all([
         loadCivicExamProgress(),
-        loadCivicExamStatistics()
+        loadCivicExamStatistics(),
     ]);
     return { progress, statistics };
 };
@@ -189,20 +251,29 @@ export const loadAllCivicExamData = async (): Promise<{
 export const resetCivicExamData = async (): Promise<void> => {
     try {
         await Promise.all([
-            AsyncStorage.removeItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS),
-            AsyncStorage.removeItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS)
+            AsyncStorage.removeItem(
+                CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS
+            ),
+            AsyncStorage.removeItem(
+                CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS
+            ),
         ]);
 
         const freshProgress = createDefaultCivicExamProgress();
         const freshStatistics = createDefaultCivicExamStatistics();
 
         await Promise.all([
-            AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS, JSON.stringify(freshProgress)),
-            AsyncStorage.setItem(CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS, JSON.stringify(freshStatistics))
+            AsyncStorage.setItem(
+                CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_PROGRESS,
+                JSON.stringify(freshProgress)
+            ),
+            AsyncStorage.setItem(
+                CIVIC_EXAM_STORAGE_KEYS.CIVIC_EXAM_STATISTICS,
+                JSON.stringify(freshStatistics)
+            ),
         ]);
     } catch (error) {
-        logger.error('Error resetting civic exam data:', error);
+        logger.error("Error resetting civic exam data:", error);
         throw error;
     }
 };
-

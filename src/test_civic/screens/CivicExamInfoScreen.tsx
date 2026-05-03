@@ -1,25 +1,21 @@
-import {
-    StyleSheet,
-    View,
-    ScrollView,
-    TouchableOpacity,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcon3D } from '../../shared/hooks';
-import { useCivicExam } from '../contexts/CivicExamContext';
-import { FormattedText, Icon3D } from '../../shared/components';
-import { sharedStyles } from '../../shared/utils';
-import { createLogger } from '../../shared/utils/logger';
-import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
-import type { CivicExamStackParamList } from '../types';
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useIcon3D } from "../../shared/hooks";
+import { useCivicExam } from "../contexts/CivicExamContext";
+import { FormattedText, Icon3D } from "../../shared/components";
+import { sharedStyles } from "../../shared/utils";
+import { createLogger } from "../../shared/utils/logger";
+import { CIVIC_EXAM_CONFIG } from "../constants/civicExamConstants";
+import type { CivicExamStackParamList } from "../types";
 
-const logger = createLogger('CivicExamInfo');
+const logger = createLogger("CivicExamInfo");
 
-type CivicExamInfoScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
+type CivicExamInfoScreenNavigationProp =
+    NativeStackNavigationProp<CivicExamStackParamList>;
 
 const CivicExamInfoScreen = () => {
     const navigation = useNavigation<CivicExamInfoScreenNavigationProp>();
@@ -27,14 +23,14 @@ const CivicExamInfoScreen = () => {
     const { getIcon } = useIcon3D();
     const { startExam } = useCivicExam();
 
-    const arrowBackIcon = getIcon('arrowBack');
-    const timeIcon = getIcon('time');
-    const trophyIcon = getIcon('trophy');
+    const arrowBackIcon = getIcon("arrowBack");
+    const timeIcon = getIcon("time");
+    const trophyIcon = getIcon("trophy");
 
     const handleStartExam = async () => {
         try {
             await startExam({
-                mode: 'civic_exam_naturalization',
+                mode: "civic_exam_naturalization",
                 questionCount: 40,
                 timeLimit: 45,
                 includeExplanations: false,
@@ -42,17 +38,26 @@ const CivicExamInfoScreen = () => {
                 shuffleOptions: true,
                 showProgress: true,
             });
-            navigation.navigate('CivicExamQuestion');
+            navigation.navigate("CivicExamQuestion");
         } catch (error) {
-            logger.error('Error starting exam:', error);
+            logger.error("Error starting exam:", error);
         }
     };
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-
-            <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <SafeAreaView style={{ flex: 1 }} edges={["top"]}>
+                <View
+                    style={[
+                        styles.header,
+                        { backgroundColor: theme.colors.headerBackground },
+                    ]}
+                >
                     <TouchableOpacity
                         onPress={() => navigation.goBack()}
                         style={styles.backButton}
@@ -64,7 +69,12 @@ const CivicExamInfoScreen = () => {
                             variant={arrowBackIcon.variant}
                         />
                     </TouchableOpacity>
-                    <FormattedText style={[styles.headerTitle, { color: theme.colors.headerText }]}>
+                    <FormattedText
+                        style={[
+                            styles.headerTitle,
+                            { color: theme.colors.headerText },
+                        ]}
+                    >
                         Informations sur l'examen
                     </FormattedText>
                     <View style={styles.headerSpacer} />
@@ -75,8 +85,18 @@ const CivicExamInfoScreen = () => {
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
                 >
-                    <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
-                        <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
+                    <View
+                        style={[
+                            styles.section,
+                            { backgroundColor: theme.colors.card },
+                        ]}
+                    >
+                        <FormattedText
+                            style={[
+                                styles.sectionTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             Modalités de l'examen
                         </FormattedText>
                         <View style={styles.infoRow}>
@@ -86,8 +106,14 @@ const CivicExamInfoScreen = () => {
                                 color={theme.colors.primary}
                                 variant="glass"
                             />
-                            <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                                {CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions à choix multiples
+                            <FormattedText
+                                style={[
+                                    styles.infoText,
+                                    { color: theme.colors.text },
+                                ]}
+                            >
+                                {CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} questions à
+                                choix multiples
                             </FormattedText>
                         </View>
                         <View style={styles.infoRow}>
@@ -97,8 +123,14 @@ const CivicExamInfoScreen = () => {
                                 color={theme.colors.primary}
                                 variant="glass"
                             />
-                            <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                                {CIVIC_EXAM_CONFIG.TIME_LIMIT_MINUTES} minutes maximum
+                            <FormattedText
+                                style={[
+                                    styles.infoText,
+                                    { color: theme.colors.text },
+                                ]}
+                            >
+                                {CIVIC_EXAM_CONFIG.TIME_LIMIT_MINUTES} minutes
+                                maximum
                             </FormattedText>
                         </View>
                         <View style={styles.infoRow}>
@@ -108,51 +140,121 @@ const CivicExamInfoScreen = () => {
                                 color={theme.colors.primary}
                                 variant="neon"
                             />
-                            <FormattedText style={[styles.infoText, { color: theme.colors.text }]}>
-                                {CIVIC_EXAM_CONFIG.PASSING_SCORE}/{CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} bonnes réponses ({CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}%) pour réussir
+                            <FormattedText
+                                style={[
+                                    styles.infoText,
+                                    { color: theme.colors.text },
+                                ]}
+                            >
+                                {CIVIC_EXAM_CONFIG.PASSING_SCORE}/
+                                {CIVIC_EXAM_CONFIG.TOTAL_QUESTIONS} bonnes
+                                réponses ({CIVIC_EXAM_CONFIG.PASSING_PERCENTAGE}
+                                %) pour réussir
                             </FormattedText>
                         </View>
                     </View>
 
-                    <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
-                        <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
+                    <View
+                        style={[
+                            styles.section,
+                            { backgroundColor: theme.colors.card },
+                        ]}
+                    >
+                        <FormattedText
+                            style={[
+                                styles.sectionTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             Thématiques
                         </FormattedText>
-                        <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
-                            • Principes et valeurs de la République (11 questions)
+                        <FormattedText
+                            style={[
+                                styles.themeItem,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
+                            • Principes et valeurs de la République (11
+                            questions)
                         </FormattedText>
-                        <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
+                        <FormattedText
+                            style={[
+                                styles.themeItem,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
                             • Système institutionnel et politique (6 questions)
                         </FormattedText>
-                        <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
+                        <FormattedText
+                            style={[
+                                styles.themeItem,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
                             • Droits et devoirs (11 questions)
                         </FormattedText>
-                        <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
+                        <FormattedText
+                            style={[
+                                styles.themeItem,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
                             • Histoire, géographie et culture (8 questions)
                         </FormattedText>
-                        <FormattedText style={[styles.themeItem, { color: theme.colors.textSecondary }]}>
+                        <FormattedText
+                            style={[
+                                styles.themeItem,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
                             • Vivre dans la société française (4 questions)
                         </FormattedText>
                     </View>
 
-                    <View style={[styles.section, { backgroundColor: theme.colors.card }]}>
-                        <FormattedText style={[styles.sectionTitle, { color: theme.colors.text }]}>
+                    <View
+                        style={[
+                            styles.section,
+                            { backgroundColor: theme.colors.card },
+                        ]}
+                    >
+                        <FormattedText
+                            style={[
+                                styles.sectionTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             Important
                         </FormattedText>
-                        <FormattedText style={[styles.warningText, { color: theme.colors.text }]}>
-                            • L'examen se déroule en français uniquement{'\n'}• Une question à la fois : validez chaque réponse avant de passer à la suivante{'\n'}• Le temps restant est affiché en haut de l'écran (sous 5 min il passe au rouge){'\n'}• Après la dernière question, un écran de révision affiche le résumé avant l'envoi définitif
+                        <FormattedText
+                            style={[
+                                styles.warningText,
+                                { color: theme.colors.text },
+                            ]}
+                        >
+                            • L'examen se déroule en français uniquement{"\n"}•
+                            Une question à la fois : validez chaque réponse
+                            avant de passer à la suivante{"\n"}• Le temps
+                            restant est affiché en haut de l'écran (sous 5 min
+                            il passe au rouge){"\n"}• Après la dernière
+                            question, un écran de révision affiche le résumé
+                            avant l'envoi définitif
                         </FormattedText>
                     </View>
 
                     <TouchableOpacity
                         style={[
                             styles.startButton,
-                            { backgroundColor: theme.colors.primary }
+                            { backgroundColor: theme.colors.primary },
                         ]}
                         onPress={handleStartExam}
                         activeOpacity={0.8}
                     >
-                        <FormattedText style={[styles.startButtonText, { color: theme.colors.buttonText }]}>
+                        <FormattedText
+                            style={[
+                                styles.startButtonText,
+                                { color: theme.colors.buttonText },
+                            ]}
+                        >
                             Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>
@@ -165,8 +267,8 @@ const CivicExamInfoScreen = () => {
 const styles = StyleSheet.create({
     container: sharedStyles.container,
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: 20,
         paddingVertical: 16,
     },
@@ -176,8 +278,8 @@ const styles = StyleSheet.create({
     headerTitle: {
         flex: 1,
         fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
+        fontWeight: "bold",
+        textAlign: "center",
     },
     headerSpacer: {
         width: 40,
@@ -196,12 +298,12 @@ const styles = StyleSheet.create({
     },
     sectionTitle: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 16,
     },
     infoRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         marginBottom: 12,
         gap: 12,
     },
@@ -222,12 +324,12 @@ const styles = StyleSheet.create({
     startButton: {
         borderRadius: 12,
         padding: 18,
-        alignItems: 'center',
+        alignItems: "center",
         marginTop: 8,
     },
     startButtonText: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: "bold",
     },
 });
 

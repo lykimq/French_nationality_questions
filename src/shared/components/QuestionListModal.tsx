@@ -1,9 +1,15 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import { View, StyleSheet, Modal, FlatList, TouchableOpacity } from 'react-native';
-import { useTheme } from '../contexts/ThemeContext';
-import { useIcon3D } from '../hooks';
-import FormattedText from './FormattedText';
-import Icon3D from './Icon3D';
+import React, { useRef, useEffect, useCallback } from "react";
+import {
+    View,
+    StyleSheet,
+    Modal,
+    FlatList,
+    TouchableOpacity,
+} from "react-native";
+import { useTheme } from "../contexts/ThemeContext";
+import { useIcon3D } from "../hooks";
+import FormattedText from "./FormattedText";
+import Icon3D from "./Icon3D";
 
 export interface QuestionListItem {
     readonly index: number;
@@ -28,19 +34,22 @@ const QuestionListModal: React.FC<QuestionListModalProps> = ({
     currentIndex,
     totalCount,
     onSelectQuestion,
-    title = 'Liste des questions',
+    title = "Liste des questions",
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
     const questionListRef = useRef<FlatList>(null);
-    const closeIcon = getIcon('close');
+    const closeIcon = getIcon("close");
 
     useEffect(() => {
         if (visible && questionListRef.current && questions.length > 0) {
             const scrollTimeout = setTimeout(() => {
                 try {
                     questionListRef.current?.scrollToIndex({
-                        index: Math.max(0, Math.min(currentIndex, questions.length - 1)),
+                        index: Math.max(
+                            0,
+                            Math.min(currentIndex, questions.length - 1)
+                        ),
                         animated: true,
                         viewPosition: 0.5,
                     });
@@ -52,53 +61,81 @@ const QuestionListModal: React.FC<QuestionListModalProps> = ({
         }
     }, [visible, currentIndex, questions.length]);
 
-    const handleQuestionSelect = useCallback((index: number) => {
-        if (index >= 0 && index < totalCount) {
-            onSelectQuestion(index);
-        }
-    }, [totalCount, onSelectQuestion]);
+    const handleQuestionSelect = useCallback(
+        (index: number) => {
+            if (index >= 0 && index < totalCount) {
+                onSelectQuestion(index);
+            }
+        },
+        [totalCount, onSelectQuestion]
+    );
 
-    const renderQuestionItem = useCallback(({ item }: { item: QuestionListItem }) => {
-        const isSelected = item.index === currentIndex;
-        const questionNumber = item.index + 1;
-        const truncatedText = item.questionText.length > 60 
-            ? item.questionText.substring(0, 60) + '...' 
-            : item.questionText;
+    const renderQuestionItem = useCallback(
+        ({ item }: { item: QuestionListItem }) => {
+            const isSelected = item.index === currentIndex;
+            const questionNumber = item.index + 1;
+            const truncatedText =
+                item.questionText.length > 60
+                    ? item.questionText.substring(0, 60) + "..."
+                    : item.questionText;
 
-        return (
-            <TouchableOpacity
-                style={[
-                    styles.questionListItem,
-                    {
-                        backgroundColor: isSelected 
-                            ? theme.colors.primary + '20' 
-                            : theme.colors.background,
-                        borderLeftColor: isSelected 
-                            ? theme.colors.primary 
-                            : 'transparent',
-                    }
-                ]}
-                onPress={() => handleQuestionSelect(item.index)}
-                activeOpacity={0.7}
-            >
-                <View style={styles.questionListItemContent}>
-                    <View style={[styles.questionNumberBadge, { backgroundColor: isSelected ? theme.colors.primary : theme.colors.divider }]}>
-                        <FormattedText style={[styles.questionNumberText, { color: isSelected ? theme.colors.buttonText : theme.colors.text }]}>
-                            {questionNumber}
-                        </FormattedText>
-                    </View>
-                    <View style={styles.questionListItemText}>
-                        <FormattedText 
-                            style={[styles.questionListItemQuestion, { color: theme.colors.text }]}
-                            numberOfLines={2}
+            return (
+                <TouchableOpacity
+                    style={[
+                        styles.questionListItem,
+                        {
+                            backgroundColor: isSelected
+                                ? theme.colors.primary + "20"
+                                : theme.colors.background,
+                            borderLeftColor: isSelected
+                                ? theme.colors.primary
+                                : "transparent",
+                        },
+                    ]}
+                    onPress={() => handleQuestionSelect(item.index)}
+                    activeOpacity={0.7}
+                >
+                    <View style={styles.questionListItemContent}>
+                        <View
+                            style={[
+                                styles.questionNumberBadge,
+                                {
+                                    backgroundColor: isSelected
+                                        ? theme.colors.primary
+                                        : theme.colors.divider,
+                                },
+                            ]}
                         >
-                            {truncatedText}
-                        </FormattedText>
+                            <FormattedText
+                                style={[
+                                    styles.questionNumberText,
+                                    {
+                                        color: isSelected
+                                            ? theme.colors.buttonText
+                                            : theme.colors.text,
+                                    },
+                                ]}
+                            >
+                                {questionNumber}
+                            </FormattedText>
+                        </View>
+                        <View style={styles.questionListItemText}>
+                            <FormattedText
+                                style={[
+                                    styles.questionListItemQuestion,
+                                    { color: theme.colors.text },
+                                ]}
+                                numberOfLines={2}
+                            >
+                                {truncatedText}
+                            </FormattedText>
+                        </View>
                     </View>
-                </View>
-            </TouchableOpacity>
-        );
-    }, [currentIndex, theme, handleQuestionSelect]);
+                </TouchableOpacity>
+            );
+        },
+        [currentIndex, theme, handleQuestionSelect]
+    );
 
     return (
         <Modal
@@ -107,10 +144,30 @@ const QuestionListModal: React.FC<QuestionListModalProps> = ({
             animationType="slide"
             onRequestClose={onClose}
         >
-            <View style={[styles.modalContainer, { backgroundColor: 'rgba(0, 0, 0, 0.5)' }]}>
-                <View style={[styles.modalContent, { backgroundColor: theme.colors.card }]}>
-                    <View style={[styles.modalHeader, { borderBottomColor: theme.colors.divider }]}>
-                        <FormattedText style={[styles.modalTitle, { color: theme.colors.text }]}>
+            <View
+                style={[
+                    styles.modalContainer,
+                    { backgroundColor: "rgba(0, 0, 0, 0.5)" },
+                ]}
+            >
+                <View
+                    style={[
+                        styles.modalContent,
+                        { backgroundColor: theme.colors.card },
+                    ]}
+                >
+                    <View
+                        style={[
+                            styles.modalHeader,
+                            { borderBottomColor: theme.colors.divider },
+                        ]}
+                    >
+                        <FormattedText
+                            style={[
+                                styles.modalTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
                             {title} ({totalCount})
                         </FormattedText>
                         <TouchableOpacity
@@ -137,9 +194,14 @@ const QuestionListModal: React.FC<QuestionListModalProps> = ({
                             index,
                         })}
                         onScrollToIndexFailed={(info) => {
-                            const wait = new Promise(resolve => setTimeout(resolve, 500));
+                            const wait = new Promise((resolve) =>
+                                setTimeout(resolve, 500)
+                            );
                             wait.then(() => {
-                                questionListRef.current?.scrollToIndex({ index: info.index, animated: true });
+                                questionListRef.current?.scrollToIndex({
+                                    index: info.index,
+                                    animated: true,
+                                });
                             });
                         }}
                         renderItem={renderQuestionItem}
@@ -153,25 +215,25 @@ const QuestionListModal: React.FC<QuestionListModalProps> = ({
 const styles = StyleSheet.create({
     modalContainer: {
         flex: 1,
-        justifyContent: 'flex-end',
+        justifyContent: "flex-end",
     },
     modalContent: {
-        height: '80%',
+        height: "80%",
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
     modalHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         paddingHorizontal: 20,
         paddingVertical: 16,
         borderBottomWidth: 1,
     },
     modalTitle: {
         fontSize: 18,
-        fontWeight: '600',
+        fontWeight: "600",
     },
     closeButton: {
         padding: 4,
@@ -191,20 +253,20 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     questionListItemContent: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
     },
     questionNumberBadge: {
         width: 36,
         height: 36,
         borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginRight: 12,
     },
     questionNumberText: {
         fontSize: 14,
-        fontWeight: '600',
+        fontWeight: "600",
     },
     questionListItemText: {
         flex: 1,
@@ -216,4 +278,3 @@ const styles = StyleSheet.create({
 });
 
 export default QuestionListModal;
-

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
     Modal,
     View,
@@ -11,16 +11,20 @@ import {
     ActivityIndicator,
     GestureResponderEvent,
     Animated,
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../contexts/ThemeContext';
-import { usePanZoom } from '../hooks/usePanZoom';
-import FormattedText from './FormattedText';
-import type { ImageModalProps } from '../../types';
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../contexts/ThemeContext";
+import { usePanZoom } from "../hooks/usePanZoom";
+import FormattedText from "./FormattedText";
+import type { ImageModalProps } from "../../types";
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
+const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
-const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }) => {
+const ImageModal: React.FC<ImageModalProps> = ({
+    visible,
+    imageSource,
+    onClose,
+}) => {
     const { theme, themeMode } = useTheme();
     const [imageLoaded, setImageLoaded] = useState(false);
     const [showZoomHint, setShowZoomHint] = useState(false);
@@ -30,9 +34,9 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
         translateX,
         translateY,
         panResponder,
-        reset: resetPanZoom
+        reset: resetPanZoom,
     } = usePanZoom({
-        onGestureGrant: () => setShowZoomHint(false)
+        onGestureGrant: () => setShowZoomHint(false),
     });
 
     useEffect(() => {
@@ -69,20 +73,47 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
             onRequestClose={onClose}
             statusBarTranslucent={true}
         >
-            <StatusBar backgroundColor="rgba(0, 0, 0, 0.9)" barStyle="light-content" />
-                    <SafeAreaView style={styles.modalContainer}>
+            <StatusBar
+                backgroundColor="rgba(0, 0, 0, 0.9)"
+                barStyle="light-content"
+            />
+            <SafeAreaView style={styles.modalContainer}>
                 <View
-                    style={[styles.modalOverlay, { backgroundColor: themeMode === 'dark' ? 'rgba(0, 0, 0, 0.95)' : 'rgba(0, 0, 0, 0.85)' }]}
+                    style={[
+                        styles.modalOverlay,
+                        {
+                            backgroundColor:
+                                themeMode === "dark"
+                                    ? "rgba(0, 0, 0, 0.95)"
+                                    : "rgba(0, 0, 0, 0.85)",
+                        },
+                    ]}
                     onStartShouldSetResponder={() => true}
                     onResponderRelease={handleBackgroundPress}
                 >
-                    <TouchableOpacity style={[styles.closeButton, { backgroundColor: theme.colors.primary + '80' }]} onPress={onClose}>
+                    <TouchableOpacity
+                        style={[
+                            styles.closeButton,
+                            { backgroundColor: theme.colors.primary + "80" },
+                        ]}
+                        onPress={onClose}
+                    >
                         <Ionicons name="close" size={30} color="#FFFFFF" />
                     </TouchableOpacity>
 
                     {showZoomHint && (
-                        <View style={[styles.zoomHint, { backgroundColor: theme.colors.primary + 'CC' }]}>
-                            <FormattedText style={styles.zoomHintText}>Double-tap to zoom • Drag to pan when zoomed</FormattedText>
+                        <View
+                            style={[
+                                styles.zoomHint,
+                                {
+                                    backgroundColor:
+                                        theme.colors.primary + "CC",
+                                },
+                            ]}
+                        >
+                            <FormattedText style={styles.zoomHintText}>
+                                Double-tap to zoom • Drag to pan when zoomed
+                            </FormattedText>
                         </View>
                     )}
 
@@ -106,13 +137,16 @@ const ImageModal: React.FC<ImageModalProps> = ({ visible, imageSource, onClose }
                                             { translateX },
                                             { translateY },
                                         ],
-                                    }
+                                    },
                                 ]}
                             >
                                 <Image
                                     key={JSON.stringify(imageSource)}
                                     source={imageSource}
-                                    style={[styles.photo, !imageLoaded && styles.hiddenImage]}
+                                    style={[
+                                        styles.photo,
+                                        !imageLoaded && styles.hiddenImage,
+                                    ]}
                                     resizeMode="contain"
                                     onLoad={() => {
                                         handleImageLoad();
@@ -136,65 +170,65 @@ const styles = StyleSheet.create({
     },
     modalOverlay: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     closeButton: {
-        position: 'absolute',
+        position: "absolute",
         top: 50,
         right: 20,
         zIndex: 10,
         width: 44,
         height: 44,
         borderRadius: 22,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        justifyContent: 'center',
-        alignItems: 'center',
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        justifyContent: "center",
+        alignItems: "center",
     },
     photoContainer: {
         flex: 1,
         width: screenWidth,
         height: screenHeight,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         padding: 20,
     },
     photo: {
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
         maxWidth: screenWidth - 40,
         maxHeight: screenHeight - 200,
     },
     loadingIndicator: {
-        position: 'absolute',
+        position: "absolute",
         zIndex: 5,
     },
     hiddenImage: {
         opacity: 0,
     },
     zoomHint: {
-        position: 'absolute',
+        position: "absolute",
         top: 100,
         left: 20,
         right: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.7)",
         borderRadius: 8,
         padding: 12,
         zIndex: 15,
     },
     zoomHintText: {
-        color: '#FFFFFF',
+        color: "#FFFFFF",
         fontSize: 16,
-        fontWeight: 'bold',
-        textAlign: 'center',
+        fontWeight: "bold",
+        textAlign: "center",
     },
     imageWrapper: {
         width: screenWidth - 40,
         height: screenHeight - 200,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
 });
 

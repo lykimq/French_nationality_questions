@@ -1,6 +1,9 @@
-import { CIVIC_EXAM_CONFIG } from '../constants/civicExamConstants';
+import { CIVIC_EXAM_CONFIG } from "../constants/civicExamConstants";
 
-export const calculateCivicExamScore = (correctAnswers: number, totalQuestions: number): number => {
+export const calculateCivicExamScore = (
+    correctAnswers: number,
+    totalQuestions: number
+): number => {
     if (totalQuestions === 0) return 0;
     return Math.round((correctAnswers / totalQuestions) * 100);
 };
@@ -26,7 +29,7 @@ export const calculateCivicExamResult = (
 } => {
     const score = calculateCivicExamScore(correctAnswers, totalQuestions);
     const passed = isCivicExamPassed(score);
-    
+
     return {
         score,
         passed,
@@ -35,4 +38,3 @@ export const calculateCivicExamResult = (
         timeSpent,
     };
 };
-

@@ -1,15 +1,15 @@
-import * as Sentry from '@sentry/react-native';
-import { createLogger } from '../shared/utils/logger';
+import * as Sentry from "@sentry/react-native";
+import { createLogger } from "../shared/utils/logger";
 
-const logger = createLogger('SentryConfig');
+const logger = createLogger("SentryConfig");
 
 export const initializeSentry = () => {
     const dsn = process.env.EXPO_PUBLIC_SENTRY_DSN;
 
     if (!dsn) {
         logger.warn(
-            'Sentry DSN not configured. Crash reporting will be disabled.\n' +
-            'To enable: Add EXPO_PUBLIC_SENTRY_DSN to your .env file'
+            "Sentry DSN not configured. Crash reporting will be disabled.\n" +
+                "To enable: Add EXPO_PUBLIC_SENTRY_DSN to your .env file"
         );
         return;
     }
@@ -18,22 +18,21 @@ export const initializeSentry = () => {
         Sentry.init({
             dsn,
             debug: false,
-            environment: __DEV__ ? 'development' : 'production',
+            environment: __DEV__ ? "development" : "production",
             tracesSampleRate: __DEV__ ? 1.0 : 0.1,
             enabled: !__DEV__,
             beforeSend(event, hint) {
                 if (__DEV__) {
-                    logger.debug('Sentry event captured:', event);
+                    logger.debug("Sentry event captured:", event);
                 }
                 return event;
             },
         });
 
-        logger.debug('Sentry initialized successfully');
+        logger.debug("Sentry initialized successfully");
     } catch (error) {
-        logger.error('Failed to initialize Sentry:', error);
+        logger.error("Failed to initialize Sentry:", error);
     }
 };
 
 export { Sentry };
-

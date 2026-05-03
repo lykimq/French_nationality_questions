@@ -1,18 +1,24 @@
-import { useMemo } from 'react';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
-import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { HomeStackParamList, Question } from '../types';
-import { useData } from '../shared/contexts/DataContext';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import { sortQuestionsById } from '../shared/utils/questionUtils';
-import QuestionSlideView from './QuestionSlideView';
-import { FormattedText } from '../shared/components';
+import { useMemo } from "react";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Ionicons } from "@expo/vector-icons";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { HomeStackParamList, Question } from "../types";
+import { useData } from "../shared/contexts/DataContext";
+import { useTheme } from "../shared/contexts/ThemeContext";
+import { sortQuestionsById } from "../shared/utils/questionUtils";
+import QuestionSlideView from "./QuestionSlideView";
+import { FormattedText } from "../shared/components";
 
-type CategoryQuestionsRouteProp = RouteProp<HomeStackParamList, 'CategoryQuestions'>;
-type CategoryQuestionsNavigationProp = NativeStackNavigationProp<HomeStackParamList, 'CategoryQuestions'>;
+type CategoryQuestionsRouteProp = RouteProp<
+    HomeStackParamList,
+    "CategoryQuestions"
+>;
+type CategoryQuestionsNavigationProp = NativeStackNavigationProp<
+    HomeStackParamList,
+    "CategoryQuestions"
+>;
 
 const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
@@ -21,7 +27,7 @@ const CategoryQuestionsScreen = () => {
     const { categoryId, initialIndex = 0 } = route.params;
     const { questionsData } = useData();
 
-    const category = questionsData.categories.find(c => c.id === categoryId);
+    const category = questionsData.categories.find((c) => c.id === categoryId);
 
     const sortedQuestions = useMemo(() => {
         if (!category?.questions) return [];
@@ -30,8 +36,15 @@ const CategoryQuestionsScreen = () => {
 
     if (!category) {
         return (
-            <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-                <FormattedText style={{ color: theme.colors.text }}>Category not found</FormattedText>
+            <View
+                style={[
+                    styles.container,
+                    { backgroundColor: theme.colors.background },
+                ]}
+            >
+                <FormattedText style={{ color: theme.colors.text }}>
+                    Category not found
+                </FormattedText>
             </View>
         );
     }
@@ -40,24 +53,58 @@ const CategoryQuestionsScreen = () => {
     const questionsCount = `${sortedQuestions.length} questions`;
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.headerBackground }]} edges={['top']}>
-                <View style={[styles.header, { backgroundColor: theme.colors.headerBackground }]}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <SafeAreaView
+                style={[
+                    styles.safeArea,
+                    { backgroundColor: theme.colors.headerBackground },
+                ]}
+                edges={["top"]}
+            >
+                <View
+                    style={[
+                        styles.header,
+                        { backgroundColor: theme.colors.headerBackground },
+                    ]}
+                >
                     <TouchableOpacity
                         style={styles.backButton}
                         onPress={() => navigation.goBack()}
                     >
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+                        <Ionicons
+                            name="arrow-back"
+                            size={24}
+                            color={theme.colors.headerText}
+                        />
                     </TouchableOpacity>
                     <View style={styles.headerTextContainer}>
-                        <FormattedText style={[styles.title, { color: theme.colors.headerText }]}>{displayTitle}</FormattedText>
-                        <FormattedText style={[styles.count, { color: theme.colors.headerText + 'B3' }]}>{questionsCount}</FormattedText>
+                        <FormattedText
+                            style={[
+                                styles.title,
+                                { color: theme.colors.headerText },
+                            ]}
+                        >
+                            {displayTitle}
+                        </FormattedText>
+                        <FormattedText
+                            style={[
+                                styles.count,
+                                { color: theme.colors.headerText + "B3" },
+                            ]}
+                        >
+                            {questionsCount}
+                        </FormattedText>
                     </View>
                 </View>
             </SafeAreaView>
 
-            <QuestionSlideView 
-                questions={sortedQuestions as Question[]} 
+            <QuestionSlideView
+                questions={sortedQuestions as Question[]}
                 initialIndex={initialIndex}
             />
         </View>
@@ -72,8 +119,8 @@ const styles = StyleSheet.create({
     },
     safeArea: {},
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingTop: 10,
         paddingHorizontal: 20,
         paddingBottom: 15,
@@ -86,8 +133,8 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'left',
+        fontWeight: "bold",
+        textAlign: "left",
     },
     count: {
         fontSize: 14,

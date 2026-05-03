@@ -1,13 +1,13 @@
-import { Alert } from 'react-native';
+import { Alert } from "react-native";
 
 /**
  * Extracts numeric ID from number or string.
  */
 export const extractNumericId = (rawId: unknown): number | undefined => {
-    if (typeof rawId === 'number') {
+    if (typeof rawId === "number") {
         return Number.isFinite(rawId) ? rawId : undefined;
     }
-    if (typeof rawId === 'string') {
+    if (typeof rawId === "string") {
         const match = rawId.match(/(\d+)/);
         if (match) {
             const value = Number(match[1]);
@@ -21,7 +21,7 @@ export const extractNumericId = (rawId: unknown): number | undefined => {
  * Validates ID is positive finite number.
  */
 export const isValidId = (id: unknown): id is number => {
-    return typeof id === 'number' && Number.isFinite(id) && id > 0;
+    return typeof id === "number" && Number.isFinite(id) && id > 0;
 };
 
 interface ConfirmationAlertOptions {
@@ -36,29 +36,25 @@ interface ConfirmationAlertOptions {
 export const showConfirmationAlert = ({
     title,
     message,
-    confirmText = 'Confirmer',
-    cancelText = 'Annuler',
+    confirmText = "Confirmer",
+    cancelText = "Annuler",
     onConfirm,
     onCancel,
 }: ConfirmationAlertOptions) => {
-    Alert.alert(
-        title,
-        message,
-        [
-            {
-                text: cancelText,
-                style: 'cancel',
-                onPress: onCancel,
+    Alert.alert(title, message, [
+        {
+            text: cancelText,
+            style: "cancel",
+            onPress: onCancel,
+        },
+        {
+            text: confirmText,
+            style: "destructive",
+            onPress: async () => {
+                await onConfirm();
             },
-            {
-                text: confirmText,
-                style: 'destructive',
-                onPress: async () => {
-                    await onConfirm();
-                },
-            },
-        ]
-    );
+        },
+    ]);
 };
 
 interface SimpleAlertOptions {
@@ -71,19 +67,14 @@ interface SimpleAlertOptions {
 export const showSimpleAlert = ({
     title,
     message,
-    buttonText = 'OK',
+    buttonText = "OK",
     onPress,
 }: SimpleAlertOptions) => {
-    Alert.alert(
-        title,
-        message,
-        [
-            {
-                text: buttonText,
-                style: 'default',
-                onPress,
-            },
-        ]
-    );
+    Alert.alert(title, message, [
+        {
+            text: buttonText,
+            style: "default",
+            onPress,
+        },
+    ]);
 };
-

@@ -1,5 +1,5 @@
-import { useReducer, useCallback, useMemo } from 'react';
-import type { FormationQuestion, FlashCardState } from '../types';
+import { useReducer, useCallback, useMemo } from "react";
+import type { FormationQuestion, FlashCardState } from "../types";
 
 interface UseFlashCardProps {
     questions: readonly FormationQuestion[];
@@ -7,11 +7,11 @@ interface UseFlashCardProps {
 }
 
 type FlashCardAction =
-    | { type: 'NEXT' }
-    | { type: 'PREVIOUS' }
-    | { type: 'GO_TO'; index: number }
-    | { type: 'FLIP' }
-    | { type: 'RESET' };
+    | { type: "NEXT" }
+    | { type: "PREVIOUS" }
+    | { type: "GO_TO"; index: number }
+    | { type: "FLIP" }
+    | { type: "RESET" };
 
 interface FlashCardReducerState {
     currentIndex: number;
@@ -19,7 +19,9 @@ interface FlashCardReducerState {
     viewedCards: Set<number>;
 }
 
-const createInitialState = (questionsLength: number): FlashCardReducerState => ({
+const createInitialState = (
+    questionsLength: number
+): FlashCardReducerState => ({
     currentIndex: 0,
     isFlipped: false,
     viewedCards: questionsLength > 0 ? new Set([0]) : new Set(),
@@ -30,7 +32,7 @@ const flashCardReducer = (
     action: FlashCardAction
 ): FlashCardReducerState => {
     switch (action.type) {
-        case 'NEXT': {
+        case "NEXT": {
             const newIndex = state.currentIndex + 1;
             return {
                 ...state,
@@ -39,7 +41,7 @@ const flashCardReducer = (
                 viewedCards: new Set([...state.viewedCards, newIndex]),
             };
         }
-        case 'PREVIOUS': {
+        case "PREVIOUS": {
             const newIndex = state.currentIndex - 1;
             return {
                 ...state,
@@ -48,7 +50,7 @@ const flashCardReducer = (
                 viewedCards: new Set([...state.viewedCards, newIndex]),
             };
         }
-        case 'GO_TO': {
+        case "GO_TO": {
             return {
                 ...state,
                 currentIndex: action.index,
@@ -56,13 +58,13 @@ const flashCardReducer = (
                 viewedCards: new Set([...state.viewedCards, action.index]),
             };
         }
-        case 'FLIP': {
+        case "FLIP": {
             return {
                 ...state,
                 isFlipped: !state.isFlipped,
             };
         }
-        case 'RESET': {
+        case "RESET": {
             return {
                 ...state,
                 currentIndex: 0,
@@ -79,7 +81,7 @@ export const useFlashCard = ({ questions, key }: UseFlashCardProps) => {
     // Generate a stable key for questions array to detect changes
     const questionsKey = useMemo(() => {
         if (key) return key;
-        return questions.length > 0 ? questions.map(q => q.id).join(',') : '';
+        return questions.length > 0 ? questions.map((q) => q.id).join(",") : "";
     }, [questions, key]);
 
     // Create initial state based on questions length
@@ -91,7 +93,7 @@ export const useFlashCard = ({ questions, key }: UseFlashCardProps) => {
     const [state, dispatch] = useReducer(flashCardReducer, initialState);
 
     const totalCards = questions.length;
-    
+
     // Normalize index to handle edge cases
     const normalizedIndex = useMemo(() => {
         if (totalCards === 0) return 0;
@@ -107,29 +109,32 @@ export const useFlashCard = ({ questions, key }: UseFlashCardProps) => {
     const hasPrevious = normalizedIndex > 0;
 
     const flipCard = useCallback(() => {
-        dispatch({ type: 'FLIP' });
+        dispatch({ type: "FLIP" });
     }, []);
 
     const nextCard = useCallback(() => {
         if (hasNext) {
-            dispatch({ type: 'NEXT' });
+            dispatch({ type: "NEXT" });
         }
     }, [hasNext]);
 
     const previousCard = useCallback(() => {
         if (hasPrevious) {
-            dispatch({ type: 'PREVIOUS' });
+            dispatch({ type: "PREVIOUS" });
         }
     }, [hasPrevious]);
 
-    const goToCard = useCallback((index: number) => {
-        if (index >= 0 && index < totalCards) {
-            dispatch({ type: 'GO_TO', index });
-        }
-    }, [totalCards]);
+    const goToCard = useCallback(
+        (index: number) => {
+            if (index >= 0 && index < totalCards) {
+                dispatch({ type: "GO_TO", index });
+            }
+        },
+        [totalCards]
+    );
 
     const reset = useCallback(() => {
-        dispatch({ type: 'RESET' });
+        dispatch({ type: "RESET" });
     }, []);
 
     const flashCardState: FlashCardState = useMemo(
@@ -154,4 +159,3 @@ export const useFlashCard = ({ questions, key }: UseFlashCardProps) => {
         reset,
     };
 };
-

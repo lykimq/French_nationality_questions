@@ -1,33 +1,35 @@
-import React from 'react';
-import {
-    StyleSheet,
-    View,
-    ScrollView,
-    TouchableOpacity,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import React from "react";
+import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcon3D } from '../../shared/hooks';
-import { useCivicExam } from '../contexts/CivicExamContext';
-import { FormattedText, Icon3D, AppHeader } from '../../shared/components';
-import { sharedStyles } from '../../shared/utils';
-import { createLogger } from '../../shared/utils/logger';
-import type { CivicExamStackParamList } from '../types';
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useIcon3D } from "../../shared/hooks";
+import { useCivicExam } from "../contexts/CivicExamContext";
+import { FormattedText, Icon3D, AppHeader } from "../../shared/components";
+import { sharedStyles } from "../../shared/utils";
+import { createLogger } from "../../shared/utils/logger";
+import type { CivicExamStackParamList } from "../types";
 
-const logger = createLogger('CivicExamHomeScreen');
+const logger = createLogger("CivicExamHomeScreen");
 
-type CivicExamHomeScreenNavigationProp = NativeStackNavigationProp<CivicExamStackParamList>;
+type CivicExamHomeScreenNavigationProp =
+    NativeStackNavigationProp<CivicExamStackParamList>;
 
 const CivicExamHomeScreen = () => {
     const navigation = useNavigation<CivicExamHomeScreenNavigationProp>();
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
-    const { examProgress, isLoading, refreshProgress, pausedSession, resumeSession } = useCivicExam();
+    const {
+        examProgress,
+        isLoading,
+        refreshProgress,
+        pausedSession,
+        resumeSession,
+    } = useCivicExam();
 
-    const arrowBackIcon = getIcon('arrowBack');
+    const arrowBackIcon = getIcon("arrowBack");
 
     useFocusEffect(
         React.useCallback(() => {
@@ -36,26 +38,40 @@ const CivicExamHomeScreen = () => {
     );
 
     const handleStartExam = () => {
-        navigation.navigate('CivicExamInfo');
+        navigation.navigate("CivicExamInfo");
     };
 
     const handlePracticeMode = () => {
-        navigation.navigate('CivicExamPractice');
+        navigation.navigate("CivicExamPractice");
     };
 
     const handleResumePractice = async () => {
         try {
             await resumeSession();
-            navigation.navigate('CivicExamQuestion');
+            navigation.navigate("CivicExamQuestion");
         } catch (error) {
-            logger.error('Error resuming practice:', error);
+            logger.error("Error resuming practice:", error);
         }
     };
 
     if (isLoading) {
         return (
-            <View style={[styles.container, { backgroundColor: theme.colors.background, justifyContent: 'center', alignItems: 'center' }]}>
-                <FormattedText style={[styles.loadingText, { color: theme.colors.textMuted }]}>
+            <View
+                style={[
+                    styles.container,
+                    {
+                        backgroundColor: theme.colors.background,
+                        justifyContent: "center",
+                        alignItems: "center",
+                    },
+                ]}
+            >
+                <FormattedText
+                    style={[
+                        styles.loadingText,
+                        { color: theme.colors.textMuted },
+                    ]}
+                >
                     Chargement...
                 </FormattedText>
             </View>
@@ -63,7 +79,12 @@ const CivicExamHomeScreen = () => {
     }
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
             <AppHeader
                 title="Examen Civique"
                 showBackButton={true}
@@ -72,13 +93,20 @@ const CivicExamHomeScreen = () => {
             />
 
             <SafeAreaView style={{ flex: 1 }} edges={[]}>
-
                 <ScrollView
                     style={styles.scrollView}
                     contentContainerStyle={styles.contentContainer}
                     showsVerticalScrollIndicator={false}
                 >
-                    <View style={[styles.infoCard, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}>
+                    <View
+                        style={[
+                            styles.infoCard,
+                            {
+                                backgroundColor: theme.colors.card,
+                                borderColor: theme.colors.border,
+                            },
+                        ]}
+                    >
                         <Icon3D
                             name="school"
                             size={40}
@@ -86,36 +114,99 @@ const CivicExamHomeScreen = () => {
                             variant="gradient"
                             containerStyle={styles.icon}
                         />
-                        <FormattedText style={[styles.title, { color: theme.colors.text }]}>
+                        <FormattedText
+                            style={[styles.title, { color: theme.colors.text }]}
+                        >
                             Examen Civique pour la Naturalisation
                         </FormattedText>
-                        <FormattedText style={[styles.description, { color: theme.colors.textSecondary }]}>
+                        <FormattedText
+                            style={[
+                                styles.description,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
                             40 questions • 45 minutes • 80% pour réussir
                         </FormattedText>
                     </View>
 
                     <View style={styles.statsContainer}>
-                        <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
-                            <FormattedText style={[styles.statValue, { color: theme.colors.primary }]}>
-                                {examProgress.totalExamsTaken + examProgress.totalPracticeSessions}
+                        <View
+                            style={[
+                                styles.statCard,
+                                { backgroundColor: theme.colors.card },
+                            ]}
+                        >
+                            <FormattedText
+                                style={[
+                                    styles.statValue,
+                                    { color: theme.colors.primary },
+                                ]}
+                            >
+                                {examProgress.totalExamsTaken +
+                                    examProgress.totalPracticeSessions}
                             </FormattedText>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                            <FormattedText
+                                style={[
+                                    styles.statLabel,
+                                    { color: theme.colors.textSecondary },
+                                ]}
+                            >
                                 Tests passés
                             </FormattedText>
                         </View>
-                        <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
-                            <FormattedText style={[styles.statValue, { color: examProgress.bestScore >= 80 ? theme.colors.success : theme.colors.primary }]}>
+                        <View
+                            style={[
+                                styles.statCard,
+                                { backgroundColor: theme.colors.card },
+                            ]}
+                        >
+                            <FormattedText
+                                style={[
+                                    styles.statValue,
+                                    {
+                                        color:
+                                            examProgress.bestScore >= 80
+                                                ? theme.colors.success
+                                                : theme.colors.primary,
+                                    },
+                                ]}
+                            >
                                 {examProgress.bestScore}%
                             </FormattedText>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                            <FormattedText
+                                style={[
+                                    styles.statLabel,
+                                    { color: theme.colors.textSecondary },
+                                ]}
+                            >
                                 Meilleur score
                             </FormattedText>
                         </View>
-                        <View style={[styles.statCard, { backgroundColor: theme.colors.card }]}>
-                            <FormattedText style={[styles.statValue, { color: examProgress.passedExams > 0 ? theme.colors.success : theme.colors.primary }]}>
+                        <View
+                            style={[
+                                styles.statCard,
+                                { backgroundColor: theme.colors.card },
+                            ]}
+                        >
+                            <FormattedText
+                                style={[
+                                    styles.statValue,
+                                    {
+                                        color:
+                                            examProgress.passedExams > 0
+                                                ? theme.colors.success
+                                                : theme.colors.primary,
+                                    },
+                                ]}
+                            >
                                 {examProgress.passedExams}
                             </FormattedText>
-                            <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                            <FormattedText
+                                style={[
+                                    styles.statLabel,
+                                    { color: theme.colors.textSecondary },
+                                ]}
+                            >
                                 Réussis
                             </FormattedText>
                         </View>
@@ -123,7 +214,13 @@ const CivicExamHomeScreen = () => {
 
                     {pausedSession && (
                         <TouchableOpacity
-                            style={[styles.resumeButton, { backgroundColor: theme.colors.warning, borderColor: theme.colors.border }]}
+                            style={[
+                                styles.resumeButton,
+                                {
+                                    backgroundColor: theme.colors.warning,
+                                    borderColor: theme.colors.border,
+                                },
+                            ]}
                             onPress={handleResumePractice}
                             activeOpacity={0.8}
                         >
@@ -133,7 +230,12 @@ const CivicExamHomeScreen = () => {
                                 color={theme.colors.buttonText}
                                 variant="gradient"
                             />
-                            <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
+                            <FormattedText
+                                style={[
+                                    styles.buttonText,
+                                    { color: theme.colors.buttonText },
+                                ]}
+                            >
                                 Reprendre la pratique
                             </FormattedText>
                         </TouchableOpacity>
@@ -153,7 +255,12 @@ const CivicExamHomeScreen = () => {
                             color={theme.colors.buttonText}
                             variant="gradient"
                         />
-                        <FormattedText style={[styles.buttonText, { color: theme.colors.buttonText }]}>
+                        <FormattedText
+                            style={[
+                                styles.buttonText,
+                                { color: theme.colors.buttonText },
+                            ]}
+                        >
                             Commencer l'examen
                         </FormattedText>
                     </TouchableOpacity>
@@ -164,7 +271,7 @@ const CivicExamHomeScreen = () => {
                             {
                                 backgroundColor: theme.colors.card,
                                 borderColor: theme.colors.border,
-                            }
+                            },
                         ]}
                         onPress={handlePracticeMode}
                         activeOpacity={0.8}
@@ -175,7 +282,12 @@ const CivicExamHomeScreen = () => {
                             color={theme.colors.primary}
                             variant="elevated"
                         />
-                        <FormattedText style={[styles.buttonText, { color: theme.colors.primary }]}>
+                        <FormattedText
+                            style={[
+                                styles.buttonText,
+                                { color: theme.colors.primary },
+                            ]}
+                        >
                             Mode pratique
                         </FormattedText>
                     </TouchableOpacity>
@@ -188,8 +300,8 @@ const CivicExamHomeScreen = () => {
 const styles = StyleSheet.create({
     container: sharedStyles.container,
     header: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: 20,
         paddingVertical: 16,
     },
@@ -199,8 +311,8 @@ const styles = StyleSheet.create({
     headerTitle: {
         flex: 1,
         fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
+        fontWeight: "bold",
+        textAlign: "center",
     },
     headerSpacer: {
         width: 40,
@@ -215,7 +327,7 @@ const styles = StyleSheet.create({
     infoCard: {
         borderRadius: 16,
         padding: 24,
-        alignItems: 'center',
+        alignItems: "center",
         marginBottom: 24,
         borderWidth: 1,
     },
@@ -224,17 +336,17 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 22,
-        fontWeight: 'bold',
-        textAlign: 'center',
+        fontWeight: "bold",
+        textAlign: "center",
         marginBottom: 8,
     },
     description: {
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: "center",
     },
     statsContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        justifyContent: "space-between",
         marginBottom: 24,
         gap: 12,
     },
@@ -242,39 +354,39 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 12,
         padding: 16,
-        alignItems: 'center',
+        alignItems: "center",
     },
     statValue: {
         fontSize: 24,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 4,
     },
     statLabel: {
         fontSize: 12,
-        textAlign: 'center',
+        textAlign: "center",
     },
     primaryButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
         borderRadius: 12,
         padding: 16,
         marginBottom: 12,
         gap: 12,
     },
     secondaryButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
         borderRadius: 12,
         padding: 16,
         borderWidth: 2,
         gap: 12,
     },
     resumeButton: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
         borderRadius: 12,
         padding: 16,
         marginBottom: 12,
@@ -283,7 +395,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
     },
     loadingText: {
         fontSize: 16,

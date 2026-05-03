@@ -1,17 +1,32 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import { StyleSheet, View, TouchableOpacity, Pressable, Animated, Dimensions, ScrollView, Image, ActivityIndicator } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText } from '../../shared/components';
-import { formatExplanation } from '../../shared/utils/questionUtils';
-import { normalizeForComparison } from '../../shared/utils/stringUtils';
-import { sharedStyles } from '../../shared/utils';
-import { useFirebaseImage } from '../../shared/hooks/useFirebaseImage';
-import { PerformanceRating, predictNextReview, createInitialMastery, getMasteryForQuestionId } from '../../shared/utils/MasteryUtils';
-import { useMastery } from '../../shared/contexts/MasteryContext';
-import type { FormationQuestion } from '../types';
+import React, { useRef, useEffect, useCallback } from "react";
+import {
+    StyleSheet,
+    View,
+    TouchableOpacity,
+    Pressable,
+    Animated,
+    Dimensions,
+    ScrollView,
+    Image,
+    ActivityIndicator,
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { FormattedText } from "../../shared/components";
+import { formatExplanation } from "../../shared/utils/questionUtils";
+import { normalizeForComparison } from "../../shared/utils/stringUtils";
+import { sharedStyles } from "../../shared/utils";
+import { useFirebaseImage } from "../../shared/hooks/useFirebaseImage";
+import {
+    PerformanceRating,
+    predictNextReview,
+    createInitialMastery,
+    getMasteryForQuestionId,
+} from "../../shared/utils/MasteryUtils";
+import { useMastery } from "../../shared/contexts/MasteryContext";
+import type { FormationQuestion } from "../types";
 
-const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 const CARD_PADDING = 20;
 const CARD_HEIGHT = Math.min(SCREEN_HEIGHT * 0.6, 600);
 
@@ -22,19 +37,29 @@ interface FlashCardProps {
     onRate: (rating: PerformanceRating) => void;
 }
 
-const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRate }) => {
+const FlashCard: React.FC<FlashCardProps> = ({
+    question,
+    isFlipped,
+    onFlip,
+    onRate,
+}) => {
     const { theme } = useTheme();
     const { masteryMap } = useMastery();
-    const [selectedRating, setSelectedRating] = React.useState<PerformanceRating | null>(null);
+    const [selectedRating, setSelectedRating] =
+        React.useState<PerformanceRating | null>(null);
 
-    const handleRate = useCallback((rating: PerformanceRating) => {
-        setSelectedRating(rating);
-        onRate(rating);
-    }, [onRate]);
+    const handleRate = useCallback(
+        (rating: PerformanceRating) => {
+            setSelectedRating(rating);
+            onRate(rating);
+        },
+        [onRate]
+    );
 
     const currentMastery = React.useMemo(
         () =>
-            getMasteryForQuestionId(masteryMap, question.id) ?? createInitialMastery(question.id),
+            getMasteryForQuestionId(masteryMap, question.id) ??
+            createInitialMastery(question.id),
         [masteryMap, question.id]
     );
 
@@ -50,7 +75,11 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
     const flipAnimation = useRef(new Animated.Value(0)).current;
     const prevQuestionIdRef = useRef<number | null>(null);
     const animationRef = useRef<Animated.CompositeAnimation | null>(null);
-    const { imageSource, isLoading: imageLoading, error: imageError } = useFirebaseImage(question.image);
+    const {
+        imageSource,
+        isLoading: imageLoading,
+        error: imageError,
+    } = useFirebaseImage(question.image);
     const scrollViewRef = useRef<ScrollView>(null);
 
     const resetAnimation = useCallback(() => {
@@ -90,12 +119,12 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
 
     const frontInterpolate = flipAnimation.interpolate({
         inputRange: [0, 1],
-        outputRange: ['0deg', '180deg'],
+        outputRange: ["0deg", "180deg"],
     });
 
     const backInterpolate = flipAnimation.interpolate({
         inputRange: [0, 1],
-        outputRange: ['180deg', '360deg'],
+        outputRange: ["180deg", "360deg"],
     });
 
     const frontOpacity = flipAnimation.interpolate({
@@ -108,29 +137,34 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
         outputRange: [0, 0, 1, 1],
     });
 
-    const questionText = question.question || '';
+    const questionText = question.question || "";
     // Remove markdown image links from explanation if image is displayed separately
-    let explanationText = question.explanation || '';
+    let explanationText = question.explanation || "";
 
     // Remove markdown image syntax (e.g., ![](path) or ![alt](path))
     if (question.image) {
-        explanationText = explanationText.replace(/!\[([^\]]*)\]\([^)]+\)/g, '').trim();
+        explanationText = explanationText
+            .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
+            .trim();
     }
 
     // Robust Deduplication Logic
     const normalizedQuestion = normalizeForComparison(questionText);
 
     // Split by newline to check the first paragraph/line
-    const lines = explanationText.split('\n');
+    const lines = explanationText.split("\n");
     if (lines.length > 0) {
         const firstLine = lines[0];
         const normalizedFirstLine = normalizeForComparison(firstLine);
 
         // If the first line is substantially similar to the question (contains it or is contained by it)
         // or effectively equal, remove it.
-        if (normalizedFirstLine.length > 0 &&
-            (normalizedFirstLine.includes(normalizedQuestion) || normalizedQuestion.includes(normalizedFirstLine))) {
-            explanationText = lines.slice(1).join('\n').trim();
+        if (
+            normalizedFirstLine.length > 0 &&
+            (normalizedFirstLine.includes(normalizedQuestion) ||
+                normalizedQuestion.includes(normalizedFirstLine))
+        ) {
+            explanationText = lines.slice(1).join("\n").trim();
         }
     }
 
@@ -141,7 +175,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
             {/* Front Card */}
             <View
                 style={styles.cardContainer}
-                pointerEvents={isFlipped ? 'none' : 'auto'}
+                pointerEvents={isFlipped ? "none" : "auto"}
                 collapsable={false}
             >
                 <TouchableOpacity
@@ -162,17 +196,35 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                         ]}
                     >
                         <View style={styles.cardContent}>
-                            <View style={[styles.badge, { backgroundColor: theme.colors.primary + '15' }]}>
+                            <View
+                                style={[
+                                    styles.badge,
+                                    {
+                                        backgroundColor:
+                                            theme.colors.primary + "15",
+                                    },
+                                ]}
+                            >
                                 <Ionicons
                                     name="help-circle"
                                     size={20}
                                     color={theme.colors.primary}
                                 />
-                                <FormattedText style={[styles.badgeText, { color: theme.colors.primary }]}>
+                                <FormattedText
+                                    style={[
+                                        styles.badgeText,
+                                        { color: theme.colors.primary },
+                                    ]}
+                                >
                                     Question
                                 </FormattedText>
                             </View>
-                            <FormattedText style={[styles.frontQuestionText, { color: theme.colors.text }]}>
+                            <FormattedText
+                                style={[
+                                    styles.frontQuestionText,
+                                    { color: theme.colors.text },
+                                ]}
+                            >
                                 {questionText}
                             </FormattedText>
                             <View style={styles.flipHint}>
@@ -181,7 +233,12 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                                     size={20}
                                     color={theme.colors.textMuted}
                                 />
-                                <FormattedText style={[styles.flipHintText, { color: theme.colors.textMuted }]}>
+                                <FormattedText
+                                    style={[
+                                        styles.flipHintText,
+                                        { color: theme.colors.textMuted },
+                                    ]}
+                                >
                                     Appuyez pour voir la réponse
                                 </FormattedText>
                             </View>
@@ -193,7 +250,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
             {/* Back Card */}
             <View
                 style={styles.cardContainer}
-                pointerEvents={isFlipped ? 'auto' : 'none'}
+                pointerEvents={isFlipped ? "auto" : "none"}
                 collapsable={false}
             >
                 <Animated.View
@@ -202,7 +259,9 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                         styles.backCard,
                         {
                             backgroundColor: theme.colors.card,
-                            borderColor: isFlipped ? theme.colors.success : theme.colors.border,
+                            borderColor: isFlipped
+                                ? theme.colors.success
+                                : theme.colors.border,
                             borderWidth: isFlipped ? 2 : 1,
                             transform: [{ rotateY: backInterpolate }],
                             opacity: backOpacity,
@@ -213,19 +272,34 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                             shadowOpacity: 0.5,
                             shadowRadius: 15,
                             elevation: 8,
-                        }
+                        },
                     ]}
                 >
                     <View style={styles.backCardContent}>
-
-                        <Pressable onPress={onFlip} style={styles.headerPressable}>
-                            <View style={[styles.badge, { backgroundColor: theme.colors.success + '15' }]}>
+                        <Pressable
+                            onPress={onFlip}
+                            style={styles.headerPressable}
+                        >
+                            <View
+                                style={[
+                                    styles.badge,
+                                    {
+                                        backgroundColor:
+                                            theme.colors.success + "15",
+                                    },
+                                ]}
+                            >
                                 <Ionicons
                                     name="checkmark-circle"
                                     size={20}
                                     color={theme.colors.success}
                                 />
-                                <FormattedText style={[styles.badgeText, { color: theme.colors.success }]}>
+                                <FormattedText
+                                    style={[
+                                        styles.badgeText,
+                                        { color: theme.colors.success },
+                                    ]}
+                                >
                                     Réponse
                                 </FormattedText>
                             </View>
@@ -235,7 +309,9 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                             <ScrollView
                                 ref={scrollViewRef}
                                 style={styles.explanationScrollView}
-                                contentContainerStyle={styles.explanationScrollContent}
+                                contentContainerStyle={
+                                    styles.explanationScrollContent
+                                }
                                 showsVerticalScrollIndicator={false}
                                 showsHorizontalScrollIndicator={false}
                                 persistentScrollbar={false}
@@ -246,43 +322,107 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                                 removeClippedSubviews={false}
                                 scrollEventThrottle={16}
                             >
-                                <Pressable onPress={onFlip} style={styles.contentPressable}>
+                                <Pressable
+                                    onPress={onFlip}
+                                    style={styles.contentPressable}
+                                >
                                     {/* Question Context */}
-                                    <View style={styles.explanationTextContainer}>
-                                        <FormattedText style={[styles.contextQuestionText, { color: theme.colors.primary }]}>
+                                    <View
+                                        style={styles.explanationTextContainer}
+                                    >
+                                        <FormattedText
+                                            style={[
+                                                styles.contextQuestionText,
+                                                { color: theme.colors.primary },
+                                            ]}
+                                        >
                                             {questionText}
                                         </FormattedText>
-                                        <View style={[styles.separator, { backgroundColor: theme.colors.border }]} />
+                                        <View
+                                            style={[
+                                                styles.separator,
+                                                {
+                                                    backgroundColor:
+                                                        theme.colors.border,
+                                                },
+                                            ]}
+                                        />
                                     </View>
 
                                     {/* Display image if available */}
                                     {question.image && (
                                         <>
                                             {imageLoading && (
-                                                <View style={[styles.imageLoading, { backgroundColor: theme.colors.surface }]}>
-                                                    <ActivityIndicator size="large" color={theme.colors.primary} />
-                                                </View>
-                                            )}
-                                            {!imageLoading && imageSource && !imageError && (
-                                                <View style={[styles.imageContainer, { borderColor: theme.colors.border }]}>
-                                                    <Image
-                                                        source={imageSource}
-                                                        style={styles.image}
-                                                        resizeMode="contain"
+                                                <View
+                                                    style={[
+                                                        styles.imageLoading,
+                                                        {
+                                                            backgroundColor:
+                                                                theme.colors
+                                                                    .surface,
+                                                        },
+                                                    ]}
+                                                >
+                                                    <ActivityIndicator
+                                                        size="large"
+                                                        color={
+                                                            theme.colors.primary
+                                                        }
                                                     />
                                                 </View>
                                             )}
+                                            {!imageLoading &&
+                                                imageSource &&
+                                                !imageError && (
+                                                    <View
+                                                        style={[
+                                                            styles.imageContainer,
+                                                            {
+                                                                borderColor:
+                                                                    theme.colors
+                                                                        .border,
+                                                            },
+                                                        ]}
+                                                    >
+                                                        <Image
+                                                            source={imageSource}
+                                                            style={styles.image}
+                                                            resizeMode="contain"
+                                                        />
+                                                    </View>
+                                                )}
                                             {!imageLoading && imageError && (
-                                                <View style={[styles.imageFallback, { backgroundColor: theme.colors.surface }]}>
-                                                    <Ionicons name="image-outline" size={32} color={theme.colors.textMuted} />
+                                                <View
+                                                    style={[
+                                                        styles.imageFallback,
+                                                        {
+                                                            backgroundColor:
+                                                                theme.colors
+                                                                    .surface,
+                                                        },
+                                                    ]}
+                                                >
+                                                    <Ionicons
+                                                        name="image-outline"
+                                                        size={32}
+                                                        color={
+                                                            theme.colors
+                                                                .textMuted
+                                                        }
+                                                    />
                                                 </View>
                                             )}
                                         </>
                                     )}
 
-                                    <View style={styles.explanationTextContainer}>
+                                    <View
+                                        style={styles.explanationTextContainer}
+                                    >
                                         <FormattedText
-                                            style={[styles.explanationText, { color: theme.colors.text }]}
+                                            style={[
+                                                styles.explanationText,
+                                                { color: theme.colors.text },
+                                            ]}
                                         >
                                             {explanationText}
                                         </FormattedText>
@@ -292,43 +432,90 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                                 {/* Rating Buttons (SRS) */}
                                 <View style={sharedStyles.ratingContainer}>
                                     {[
-                                        { rating: PerformanceRating.AGAIN, label: 'Encore', color: theme.colors.error, icon: 'close-circle' },
-                                        { rating: PerformanceRating.HARD, label: 'Difficile', color: theme.colors.warning, icon: 'help-circle' },
-                                        { rating: PerformanceRating.GOOD, label: 'Bien', color: theme.colors.primary, icon: 'checkmark-circle' },
-                                        { rating: PerformanceRating.EASY, label: 'Facile', color: theme.colors.success, icon: 'flash' }
+                                        {
+                                            rating: PerformanceRating.AGAIN,
+                                            label: "Encore",
+                                            color: theme.colors.error,
+                                            icon: "close-circle",
+                                        },
+                                        {
+                                            rating: PerformanceRating.HARD,
+                                            label: "Difficile",
+                                            color: theme.colors.warning,
+                                            icon: "help-circle",
+                                        },
+                                        {
+                                            rating: PerformanceRating.GOOD,
+                                            label: "Bien",
+                                            color: theme.colors.primary,
+                                            icon: "checkmark-circle",
+                                        },
+                                        {
+                                            rating: PerformanceRating.EASY,
+                                            label: "Facile",
+                                            color: theme.colors.success,
+                                            icon: "flash",
+                                        },
                                     ].map((item) => {
-                                        const isSelected = selectedRating === item.rating;
+                                        const isSelected =
+                                            selectedRating === item.rating;
                                         return (
-                                            <TouchableOpacity 
+                                            <TouchableOpacity
                                                 key={item.rating}
                                                 style={[
-                                                    sharedStyles.ratingButton, 
-                                                    { 
-                                                        borderColor: item.color, 
-                                                        backgroundColor: isSelected ? item.color : item.color + '10' 
-                                                    }
+                                                    sharedStyles.ratingButton,
+                                                    {
+                                                        borderColor: item.color,
+                                                        backgroundColor:
+                                                            isSelected
+                                                                ? item.color
+                                                                : item.color +
+                                                                  "10",
+                                                    },
                                                 ]}
-                                                onPress={() => handleRate(item.rating)}
-                                                disabled={selectedRating !== null}
+                                                onPress={() =>
+                                                    handleRate(item.rating)
+                                                }
+                                                disabled={
+                                                    selectedRating !== null
+                                                }
                                             >
-                                                <Ionicons 
-                                                    name={item.icon as any} 
-                                                    size={18} 
-                                                    color={isSelected ? '#FFF' : item.color} 
+                                                <Ionicons
+                                                    name={item.icon as any}
+                                                    size={18}
+                                                    color={
+                                                        isSelected
+                                                            ? "#FFF"
+                                                            : item.color
+                                                    }
                                                 />
-                                                <FormattedText style={[
-                                                    sharedStyles.ratingButtonText, 
-                                                    { color: isSelected ? '#FFF' : item.color, fontSize: 10 }
-                                                ]}>
+                                                <FormattedText
+                                                    style={[
+                                                        sharedStyles.ratingButtonText,
+                                                        {
+                                                            color: isSelected
+                                                                ? "#FFF"
+                                                                : item.color,
+                                                            fontSize: 10,
+                                                        },
+                                                    ]}
+                                                >
                                                     {item.label}
                                                 </FormattedText>
-                                                <FormattedText style={{ 
-                                                    fontSize: 9, 
-                                                    color: isSelected ? '#FFF' : theme.colors.textMuted,
-                                                    fontWeight: 'bold',
-                                                    marginTop: 2
-                                                }}>
-                                                    {getIntervalLabel(item.rating)}
+                                                <FormattedText
+                                                    style={{
+                                                        fontSize: 9,
+                                                        color: isSelected
+                                                            ? "#FFF"
+                                                            : theme.colors
+                                                                  .textMuted,
+                                                        fontWeight: "bold",
+                                                        marginTop: 2,
+                                                    }}
+                                                >
+                                                    {getIntervalLabel(
+                                                        item.rating
+                                                    )}
                                                 </FormattedText>
                                             </TouchableOpacity>
                                         );
@@ -347,7 +534,12 @@ const FlashCard: React.FC<FlashCardProps> = ({ question, isFlipped, onFlip, onRa
                                 size={20}
                                 color={theme.colors.textMuted}
                             />
-                            <FormattedText style={[styles.flipHintText, { color: theme.colors.textMuted }]}>
+                            <FormattedText
+                                style={[
+                                    styles.flipHintText,
+                                    { color: theme.colors.textMuted },
+                                ]}
+                            >
                                 Appuyez pour voir la question
                             </FormattedText>
                         </TouchableOpacity>
@@ -362,153 +554,152 @@ const styles = StyleSheet.create({
     container: {
         width: SCREEN_WIDTH - CARD_PADDING * 2,
         height: CARD_HEIGHT,
-        alignSelf: 'center',
+        alignSelf: "center",
     },
     cardContainer: {
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
+        position: "absolute",
+        width: "100%",
+        height: "100%",
     },
     cardTouchable: {
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
     },
     card: {
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
+        position: "absolute",
+        width: "100%",
+        height: "100%",
         borderRadius: 16,
         borderWidth: 1,
         padding: 24,
         ...sharedStyles.mediumShadow,
-        backfaceVisibility: 'hidden',
+        backfaceVisibility: "hidden",
     },
     frontCard: {
-        justifyContent: 'center',
+        justifyContent: "center",
     },
     backCard: {
-        justifyContent: 'flex-start',
+        justifyContent: "flex-start",
     },
     cardContent: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
     backCardContent: {
         flex: 1,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        width: '100%',
+        justifyContent: "flex-start",
+        alignItems: "center",
+        width: "100%",
     },
     badge: {
         paddingHorizontal: 16,
         paddingVertical: 8,
         borderRadius: 20,
         marginBottom: 20,
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         gap: 8,
     },
     badgeText: {
         fontSize: 14,
-        fontWeight: '700',
-        textTransform: 'uppercase',
+        fontWeight: "700",
+        textTransform: "uppercase",
         letterSpacing: 1,
     },
     frontQuestionText: {
         fontSize: 22,
-        fontWeight: '700',
-        textAlign: 'center',
+        fontWeight: "700",
+        textAlign: "center",
         lineHeight: 32,
         marginBottom: 24,
     },
     contextQuestionText: {
         fontSize: 16,
-        fontWeight: '700',
+        fontWeight: "700",
         lineHeight: 24,
         marginBottom: 12,
         opacity: 0.9,
     },
     separator: {
         height: 1,
-        width: '100%',
+        width: "100%",
         marginBottom: 16,
         opacity: 0.2,
     },
     scrollContainer: {
         flex: 1,
-        width: '100%',
-        position: 'relative',
+        width: "100%",
+        position: "relative",
     },
     explanationScrollView: {
         flex: 1,
-        width: '100%',
+        width: "100%",
     },
     explanationScrollContent: {
         paddingBottom: 16,
         flexGrow: 1,
     },
     headerPressable: {
-        width: '100%',
-        alignItems: 'center',
+        width: "100%",
+        alignItems: "center",
         marginBottom: 8,
     },
     contentPressable: {
         flex: 1,
     },
     explanationTextContainer: {
-        width: '100%',
+        width: "100%",
         flexShrink: 0,
     },
     explanationText: {
-        fontFamily: 'San Francisco',
+        fontFamily: "San Francisco",
         fontSize: 17, // Slightly larger for better readability
         lineHeight: 28, // ~1.6x line height
-        color: '#2c3e50', // Dark grey/blue instead of pure black for softer contrast
+        color: "#2c3e50", // Dark grey/blue instead of pure black for softer contrast
         flexShrink: 0,
         marginBottom: 8,
     },
     imageContainer: {
         borderRadius: 12,
-        overflow: 'hidden',
+        overflow: "hidden",
         marginBottom: 16,
         borderWidth: 1,
-        backgroundColor: '#f5f5f5',
+        backgroundColor: "#f5f5f5",
     },
     image: {
-        width: '100%',
+        width: "100%",
         height: 200,
     },
     hiddenImage: {
         opacity: 0,
     },
     imageLoading: {
-        width: '100%',
+        width: "100%",
         height: 200,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         borderRadius: 12,
     },
     imageFallback: {
-        width: '100%',
+        width: "100%",
         height: 120,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         marginBottom: 16,
         borderRadius: 12,
     },
     flipHint: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         marginTop: 16,
         gap: 8,
         opacity: 0.7,
     },
     flipHintText: {
         fontSize: 13,
-        fontWeight: '500',
+        fontWeight: "500",
     },
 });
 
 export default FlashCard;
-

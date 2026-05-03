@@ -1,19 +1,30 @@
-import React, { useMemo, useState, useEffect } from 'react';
-import { View, StyleSheet, TextInput, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { HomeStackParamList, Question } from '../types';
-import { useData } from '../shared/contexts/DataContext';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import { useMastery } from '../shared/contexts/MasteryContext';
-import { getMasteryForQuestionId, MasteryLevel } from '../shared/utils/MasteryUtils';
-import { sortQuestionsById } from '../shared/utils/questionUtils';
-import { FormattedText, AppHeader } from '../shared/components';
-import { sharedStyles } from '../shared/utils';
+import React, { useMemo, useState, useEffect } from "react";
+import {
+    View,
+    StyleSheet,
+    TextInput,
+    FlatList,
+    TouchableOpacity,
+    ActivityIndicator,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { HomeStackParamList, Question } from "../types";
+import { useData } from "../shared/contexts/DataContext";
+import { useTheme } from "../shared/contexts/ThemeContext";
+import { useMastery } from "../shared/contexts/MasteryContext";
+import {
+    getMasteryForQuestionId,
+    MasteryLevel,
+} from "../shared/utils/MasteryUtils";
+import { sortQuestionsById } from "../shared/utils/questionUtils";
+import { FormattedText, AppHeader } from "../shared/components";
+import { sharedStyles } from "../shared/utils";
 
-type QuestionSearchNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
+type QuestionSearchNavigationProp =
+    NativeStackNavigationProp<HomeStackParamList>;
 
 interface SearchResult extends Question {
     categoryTitle: string;
@@ -25,21 +36,21 @@ const QuestionSearchScreen = () => {
     const { theme } = useTheme();
     const { questionsData, isDataLoading } = useData();
     const { masteryMap } = useMastery();
-    
-    const [searchQuery, setSearchQuery] = useState('');
+
+    const [searchQuery, setSearchQuery] = useState("");
     const [isSearching, setIsSearching] = useState(false);
 
     const allQuestions = useMemo(() => {
         if (!questionsData?.categories) return [];
-        
+
         const results: SearchResult[] = [];
-        questionsData.categories.forEach(cat => {
+        questionsData.categories.forEach((cat) => {
             if (cat.questions) {
-                cat.questions.forEach(q => {
+                cat.questions.forEach((q) => {
                     results.push({
                         ...q,
                         categoryId: cat.id,
-                        categoryTitle: cat.title
+                        categoryTitle: cat.title,
                     });
                 });
             }
@@ -50,11 +61,15 @@ const QuestionSearchScreen = () => {
     const filteredQuestions = useMemo(() => {
         const query = searchQuery.toLowerCase().trim();
         if (!query) return [];
-        
-        return allQuestions.filter(q => 
-            q.question.toLowerCase().includes(query) || 
-            (q.explanation && q.explanation.toLowerCase().includes(query))
-        ).slice(0, 50); // Limit results for performance
+
+        return allQuestions
+            .filter(
+                (q) =>
+                    q.question.toLowerCase().includes(query) ||
+                    (q.explanation &&
+                        q.explanation.toLowerCase().includes(query))
+            )
+            .slice(0, 50); // Limit results for performance
     }, [allQuestions, searchQuery]);
 
     useEffect(() => {
@@ -68,27 +83,54 @@ const QuestionSearchScreen = () => {
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
         const openQuestion = () => {
-            const cat = questionsData.categories.find((c) => c.id === item.categoryId);
+            const cat = questionsData.categories.find(
+                (c) => c.id === item.categoryId
+            );
             const sorted = sortQuestionsById(cat?.questions || []);
-            const idx = sorted.findIndex((q) => String(q.id) === String(item.id));
-            navigation.navigate('CategoryQuestions', {
+            const idx = sorted.findIndex(
+                (q) => String(q.id) === String(item.id)
+            );
+            navigation.navigate("CategoryQuestions", {
                 categoryId: item.categoryId,
                 initialIndex: idx >= 0 ? idx : 0,
             });
         };
 
         return (
-            <TouchableOpacity 
-                style={[styles.resultItem, { backgroundColor: theme.colors.card, borderColor: theme.colors.border }]}
+            <TouchableOpacity
+                style={[
+                    styles.resultItem,
+                    {
+                        backgroundColor: theme.colors.card,
+                        borderColor: theme.colors.border,
+                    },
+                ]}
                 onPress={openQuestion}
             >
                 <View style={styles.resultHeader}>
-                    <FormattedText style={[styles.categoryTag, { color: theme.colors.primary, backgroundColor: theme.colors.primary + '15' }]}>
+                    <FormattedText
+                        style={[
+                            styles.categoryTag,
+                            {
+                                color: theme.colors.primary,
+                                backgroundColor: theme.colors.primary + "15",
+                            },
+                        ]}
+                    >
                         {item.categoryTitle}
                     </FormattedText>
-                    {isMastered && <Ionicons name="checkmark-circle" size={16} color="#4CAF50" />}
+                    {isMastered && (
+                        <Ionicons
+                            name="checkmark-circle"
+                            size={16}
+                            color="#4CAF50"
+                        />
+                    )}
                 </View>
-                <FormattedText style={[styles.questionText, { color: theme.colors.text }]} numberOfLines={3}>
+                <FormattedText
+                    style={[styles.questionText, { color: theme.colors.text }]}
+                    numberOfLines={3}
+                >
                     {item.question}
                 </FormattedText>
             </TouchableOpacity>
@@ -96,18 +138,52 @@ const QuestionSearchScreen = () => {
     };
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <SafeAreaView edges={['top']} style={{ backgroundColor: theme.colors.headerBackground }}>
-                <View style={[styles.searchHeader, { backgroundColor: theme.colors.headerBackground }]}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <Ionicons name="arrow-back" size={24} color={theme.colors.headerText} />
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <SafeAreaView
+                edges={["top"]}
+                style={{ backgroundColor: theme.colors.headerBackground }}
+            >
+                <View
+                    style={[
+                        styles.searchHeader,
+                        { backgroundColor: theme.colors.headerBackground },
+                    ]}
+                >
+                    <TouchableOpacity
+                        onPress={() => navigation.goBack()}
+                        style={styles.backButton}
+                    >
+                        <Ionicons
+                            name="arrow-back"
+                            size={24}
+                            color={theme.colors.headerText}
+                        />
                     </TouchableOpacity>
-                    <View style={[styles.inputContainer, { backgroundColor: theme.colors.card + '30' }]}>
-                        <Ionicons name="search" size={20} color={theme.colors.headerText + 'B3'} />
+                    <View
+                        style={[
+                            styles.inputContainer,
+                            { backgroundColor: theme.colors.card + "30" },
+                        ]}
+                    >
+                        <Ionicons
+                            name="search"
+                            size={20}
+                            color={theme.colors.headerText + "B3"}
+                        />
                         <TextInput
-                            style={[styles.input, { color: theme.colors.headerText }]}
+                            style={[
+                                styles.input,
+                                { color: theme.colors.headerText },
+                            ]}
                             placeholder="Rechercher une question..."
-                            placeholderTextColor={theme.colors.headerText + '80'}
+                            placeholderTextColor={
+                                theme.colors.headerText + "80"
+                            }
                             value={searchQuery}
                             onChangeText={setSearchQuery}
                             autoFocus={true}
@@ -119,7 +195,10 @@ const QuestionSearchScreen = () => {
 
             {isDataLoading || (isSearching && searchQuery) ? (
                 <View style={styles.centerContainer}>
-                    <ActivityIndicator size="large" color={theme.colors.primary} />
+                    <ActivityIndicator
+                        size="large"
+                        color={theme.colors.primary}
+                    />
                 </View>
             ) : filteredQuestions.length > 0 ? (
                 <FlatList
@@ -129,17 +208,35 @@ const QuestionSearchScreen = () => {
                     contentContainerStyle={styles.listContent}
                     showsVerticalScrollIndicator={false}
                 />
-            ) : searchQuery.trim() !== '' ? (
+            ) : searchQuery.trim() !== "" ? (
                 <View style={styles.centerContainer}>
-                    <Ionicons name="search-outline" size={64} color={theme.colors.textMuted} />
-                    <FormattedText style={[styles.emptyText, { color: theme.colors.textMuted }]}>
+                    <Ionicons
+                        name="search-outline"
+                        size={64}
+                        color={theme.colors.textMuted}
+                    />
+                    <FormattedText
+                        style={[
+                            styles.emptyText,
+                            { color: theme.colors.textMuted },
+                        ]}
+                    >
                         Aucun résultat pour "{searchQuery}"
                     </FormattedText>
                 </View>
             ) : (
                 <View style={styles.centerContainer}>
-                    <Ionicons name="bulb-outline" size={64} color={theme.colors.textMuted} />
-                    <FormattedText style={[styles.emptyText, { color: theme.colors.textMuted }]}>
+                    <Ionicons
+                        name="bulb-outline"
+                        size={64}
+                        color={theme.colors.textMuted}
+                    />
+                    <FormattedText
+                        style={[
+                            styles.emptyText,
+                            { color: theme.colors.textMuted },
+                        ]}
+                    >
                         Saisissez un mot-clé pour rechercher
                     </FormattedText>
                 </View>
@@ -153,8 +250,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     searchHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: 16,
         paddingBottom: 12,
         paddingTop: 8,
@@ -165,8 +262,8 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         paddingHorizontal: 12,
         height: 44,
         borderRadius: 22,
@@ -179,8 +276,8 @@ const styles = StyleSheet.create({
     },
     centerContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         padding: 40,
     },
     listContent: {
@@ -198,18 +295,18 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
     },
     resultHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         marginBottom: 8,
     },
     categoryTag: {
         fontSize: 11,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         paddingHorizontal: 8,
         paddingVertical: 2,
         borderRadius: 4,
-        overflow: 'hidden',
+        overflow: "hidden",
     },
     questionText: {
         fontSize: 15,
@@ -218,7 +315,7 @@ const styles = StyleSheet.create({
     emptyText: {
         marginTop: 16,
         fontSize: 16,
-        textAlign: 'center',
+        textAlign: "center",
     },
 });
 

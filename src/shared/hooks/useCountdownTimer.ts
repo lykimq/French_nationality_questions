@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export interface UseCountdownTimerOptions {
     initialTime: number;
@@ -68,7 +68,7 @@ export const useCountdownTimer = ({
                 return;
             }
 
-            setTimeLeft(prev => {
+            setTimeLeft((prev) => {
                 if (!isMountedRef.current) {
                     return prev;
                 }
@@ -121,7 +121,7 @@ export const useCountdownTimer = ({
     const formatTime = useCallback((seconds: number): string => {
         const mins = Math.floor(seconds / 60);
         const secs = seconds % 60;
-        return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
     }, []);
 
     return {
@@ -134,4 +134,3 @@ export const useCountdownTimer = ({
         isRunning,
     };
 };
-

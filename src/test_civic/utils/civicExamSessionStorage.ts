@@ -1,14 +1,17 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createLogger } from '../../shared/utils/logger';
-import { safeParseDate } from '../../shared/utils/questionUtils';
-import type { CivicExamSession, TestAnswer, TestQuestion } from '../types';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createLogger } from "../../shared/utils/logger";
+import { safeParseDate } from "../../shared/utils/questionUtils";
+import type { CivicExamSession, TestAnswer, TestQuestion } from "../types";
 
-const logger = createLogger('CivicExamSessionStorage');
+const logger = createLogger("CivicExamSessionStorage");
 
-const SESSION_KEY = 'civic_exam_active_session';
+const SESSION_KEY = "civic_exam_active_session";
 
-type StoredAnswer = Omit<TestAnswer, 'timestamp'> & { timestamp: string };
-type StoredSession = Omit<CivicExamSession, 'startTime' | 'endTime' | 'questions' | 'answers'> & {
+type StoredAnswer = Omit<TestAnswer, "timestamp"> & { timestamp: string };
+type StoredSession = Omit<
+    CivicExamSession,
+    "startTime" | "endTime" | "questions" | "answers"
+> & {
     startTime: string;
     endTime?: string;
     questions: TestQuestion[];
@@ -21,7 +24,7 @@ const serializeSession = (session: CivicExamSession): string => {
         startTime: session.startTime.toISOString(),
         endTime: session.endTime ? session.endTime.toISOString() : undefined,
         questions: session.questions as TestQuestion[],
-        answers: session.answers.map(answer => ({
+        answers: session.answers.map((answer) => ({
             ...answer,
             timestamp: answer.timestamp.toISOString(),
         })),
@@ -39,11 +42,11 @@ const deserializeSession = (raw: string | null): CivicExamSession | null => {
 
         const actualQuestionCount = parsed.questions?.length || 0;
         const storedTotalQuestions = parsed.totalQuestions || 0;
-        
+
         if (actualQuestionCount !== storedTotalQuestions) {
             logger.warn(
                 `Deserialized session has mismatch: totalQuestions=${storedTotalQuestions}, ` +
-                `questions.length=${actualQuestionCount}. Fixing to use questions.length.`
+                    `questions.length=${actualQuestionCount}. Fixing to use questions.length.`
             );
         }
 
@@ -53,13 +56,13 @@ const deserializeSession = (raw: string | null): CivicExamSession | null => {
             endTime,
             questions: parsed.questions || [],
             totalQuestions: actualQuestionCount,
-            answers: parsed.answers.map(a => ({
+            answers: parsed.answers.map((a) => ({
                 ...a,
                 timestamp: safeParseDate(a.timestamp) || new Date(),
             })),
         };
     } catch (error) {
-        logger.error('Failed to deserialize civic exam session:', error);
+        logger.error("Failed to deserialize civic exam session:", error);
         return null;
     }
 };
@@ -69,12 +72,14 @@ export const loadStoredSession = async (): Promise<CivicExamSession | null> => {
         const raw = await AsyncStorage.getItem(SESSION_KEY);
         return deserializeSession(raw);
     } catch (error) {
-        logger.error('Error loading stored civic exam session:', error);
+        logger.error("Error loading stored civic exam session:", error);
         return null;
     }
 };
 
-export const saveSession = async (session: CivicExamSession | null): Promise<void> => {
+export const saveSession = async (
+    session: CivicExamSession | null
+): Promise<void> => {
     try {
         if (!session) {
             await AsyncStorage.removeItem(SESSION_KEY);
@@ -83,7 +88,7 @@ export const saveSession = async (session: CivicExamSession | null): Promise<voi
         const payload = serializeSession(session);
         await AsyncStorage.setItem(SESSION_KEY, payload);
     } catch (error) {
-        logger.error('Error saving civic exam session:', error);
+        logger.error("Error saving civic exam session:", error);
     }
 };
 
@@ -91,7 +96,6 @@ export const clearStoredSession = async (): Promise<void> => {
     try {
         await AsyncStorage.removeItem(SESSION_KEY);
     } catch (error) {
-        logger.error('Error clearing civic exam session:', error);
+        logger.error("Error clearing civic exam session:", error);
     }
 };
-

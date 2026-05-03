@@ -1,10 +1,12 @@
-import { createLogger } from './logger';
-import { loadImageResource } from '../services/dataService';
-import type { FrenchQuestionsData } from '../../types/questionsData';
+import { createLogger } from "./logger";
+import { loadImageResource } from "../services/dataService";
+import type { FrenchQuestionsData } from "../../types/questionsData";
 
-const logger = createLogger('ImageUtils');
+const logger = createLogger("ImageUtils");
 
-export const preloadImages = async (questionsData: FrenchQuestionsData | null | undefined): Promise<void> => {
+export const preloadImages = async (
+    questionsData: FrenchQuestionsData | null | undefined
+): Promise<void> => {
     try {
         const imagePaths: string[] = [];
 
@@ -43,9 +45,11 @@ export const preloadImages = async (questionsData: FrenchQuestionsData | null | 
         }
 
         if (failedCount > 0) {
-            logger.warn(`Failed to load ${failedCount} images during preloading.`);
+            logger.warn(
+                `Failed to load ${failedCount} images during preloading.`
+            );
         }
     } catch (error: unknown) {
-        logger.error('Error during image preloading:', error);
+        logger.error("Error during image preloading:", error);
     }
 };

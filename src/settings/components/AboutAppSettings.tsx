@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { FormattedText, Icon3D } from '../../shared/components';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { FormattedText, Icon3D } from "../../shared/components";
 
 interface AboutItemProps {
     icon: string;
@@ -10,11 +10,18 @@ interface AboutItemProps {
     description: string;
 }
 
-const AboutItem: React.FC<AboutItemProps> = ({ icon, iconColor, title, description }) => {
+const AboutItem: React.FC<AboutItemProps> = ({
+    icon,
+    iconColor,
+    title,
+    description,
+}) => {
     const { theme } = useTheme();
 
     return (
-        <View style={[styles.item, { borderBottomColor: theme.colors.divider }]}>
+        <View
+            style={[styles.item, { borderBottomColor: theme.colors.divider }]}
+        >
             <Icon3D
                 name={icon}
                 size={18}
@@ -23,10 +30,17 @@ const AboutItem: React.FC<AboutItemProps> = ({ icon, iconColor, title, descripti
                 containerStyle={styles.itemIcon}
             />
             <View style={styles.itemTextContainer}>
-                <FormattedText style={[styles.itemTitle, { color: theme.colors.text }]}>
+                <FormattedText
+                    style={[styles.itemTitle, { color: theme.colors.text }]}
+                >
                     {title}
                 </FormattedText>
-                <FormattedText style={[styles.itemDescription, { color: theme.colors.textSecondary }]}>
+                <FormattedText
+                    style={[
+                        styles.itemDescription,
+                        { color: theme.colors.textSecondary },
+                    ]}
+                >
                     {description}
                 </FormattedText>
             </View>
@@ -39,7 +53,15 @@ const AboutAppSettings: React.FC = () => {
 
     return (
         <View>
-            <View style={[styles.disclaimerCard, { backgroundColor: theme.colors.primary + '10', borderColor: theme.colors.primary + '30' }]}>
+            <View
+                style={[
+                    styles.disclaimerCard,
+                    {
+                        backgroundColor: theme.colors.primary + "10",
+                        borderColor: theme.colors.primary + "30",
+                    },
+                ]}
+            >
                 <Icon3D
                     name="information-circle"
                     size={18}
@@ -47,8 +69,18 @@ const AboutAppSettings: React.FC = () => {
                     variant="default"
                     containerStyle={styles.disclaimerIcon}
                 />
-                <FormattedText style={[styles.disclaimerText, { color: theme.colors.text }]}>
-                    Cette application est un outil de préparation pour l'entretien de naturalisation française. Elle n'est pas l'examen officiel et ne remplace pas la préparation officielle fournie par les autorités françaises. Les questions et réponses sont basées sur des sources publiques et peuvent évoluer.
+                <FormattedText
+                    style={[
+                        styles.disclaimerText,
+                        { color: theme.colors.text },
+                    ]}
+                >
+                    Cette application est un outil de préparation pour
+                    l'entretien de naturalisation française. Elle n'est pas
+                    l'examen officiel et ne remplace pas la préparation
+                    officielle fournie par les autorités françaises. Les
+                    questions et réponses sont basées sur des sources publiques
+                    et peuvent évoluer.
                 </FormattedText>
             </View>
 
@@ -85,8 +117,8 @@ const AboutAppSettings: React.FC = () => {
 
 const styles = StyleSheet.create({
     disclaimerCard: {
-        flexDirection: 'row',
-        alignItems: 'flex-start',
+        flexDirection: "row",
+        alignItems: "flex-start",
         borderRadius: 10,
         padding: 14,
         marginHorizontal: 16,
@@ -104,8 +136,8 @@ const styles = StyleSheet.create({
         lineHeight: 19,
     },
     item: {
-        flexDirection: 'row',
-        alignItems: 'flex-start',
+        flexDirection: "row",
+        alignItems: "flex-start",
         paddingVertical: 14,
         paddingHorizontal: 16,
         borderBottomWidth: 1,
@@ -119,7 +151,7 @@ const styles = StyleSheet.create({
     },
     itemTitle: {
         fontSize: 15,
-        fontWeight: '600',
+        fontWeight: "600",
         marginBottom: 4,
     },
     itemDescription: {

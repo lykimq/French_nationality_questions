@@ -1,9 +1,9 @@
-import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import { QuestionCard, FormattedText, Icon3D } from '../../shared/components';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcon3D } from '../../shared/hooks';
-import type { SearchResultQuestion } from '../useSearch';
+import React from "react";
+import { StyleSheet, View, ScrollView } from "react-native";
+import { QuestionCard, FormattedText, Icon3D } from "../../shared/components";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useIcon3D } from "../../shared/hooks";
+import type { SearchResultQuestion } from "../useSearch";
 
 interface SearchResultsProps {
     results: SearchResultQuestion[];
@@ -17,10 +17,10 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
 
-    const searchIcon = getIcon('search') || { name: 'search' };
-    const imageIcon = getIcon('image') || { name: 'image' };
+    const searchIcon = getIcon("search") || { name: "search" };
+    const imageIcon = getIcon("image") || { name: "image" };
 
-    if (searchQuery === '') {
+    if (searchQuery === "") {
         return (
             <View style={styles.noResults}>
                 <Icon3D
@@ -29,10 +29,20 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
                     color={theme.colors.textMuted}
                     variant="glass"
                 />
-                <FormattedText style={[styles.noResultsText, { color: theme.colors.textSecondary }]}>
+                <FormattedText
+                    style={[
+                        styles.noResultsText,
+                        { color: theme.colors.textSecondary },
+                    ]}
+                >
                     Tapez votre question pour commencer la recherche
                 </FormattedText>
-                <FormattedText style={[styles.searchHintText, { color: theme.colors.textMuted }]}>
+                <FormattedText
+                    style={[
+                        styles.searchHintText,
+                        { color: theme.colors.textMuted },
+                    ]}
+                >
                     Utilisez la recherche avancée pour des filtres plus précis
                 </FormattedText>
             </View>
@@ -48,11 +58,22 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
                     color={theme.colors.textMuted}
                     variant="glass"
                 />
-                <FormattedText style={[styles.noResultsText, { color: theme.colors.textSecondary }]}>
+                <FormattedText
+                    style={[
+                        styles.noResultsText,
+                        { color: theme.colors.textSecondary },
+                    ]}
+                >
                     Aucune question trouvée pour votre recherche
                 </FormattedText>
-                <FormattedText style={[styles.searchHintText, { color: theme.colors.textMuted }]}>
-                    Essayez d'ajuster vos filtres ou d'utiliser d'autres mots-clés
+                <FormattedText
+                    style={[
+                        styles.searchHintText,
+                        { color: theme.colors.textMuted },
+                    ]}
+                >
+                    Essayez d'ajuster vos filtres ou d'utiliser d'autres
+                    mots-clés
                 </FormattedText>
             </View>
         );
@@ -60,23 +81,43 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
 
     return (
         <ScrollView
-            style={[styles.scrollView, { backgroundColor: theme.colors.background }]}
+            style={[
+                styles.scrollView,
+                { backgroundColor: theme.colors.background },
+            ]}
             contentContainerStyle={styles.contentContainer}
             showsVerticalScrollIndicator={false}
         >
             <View style={styles.resultsHeader}>
-                <FormattedText style={[styles.resultsTitle, { color: theme.colors.text }]}>
-                    {`${results.length} résultat${results.length > 1 ? 's' : ''} trouvé${results.length > 1 ? 's' : ''}`}
+                <FormattedText
+                    style={[styles.resultsTitle, { color: theme.colors.text }]}
+                >
+                    {`${results.length} résultat${results.length > 1 ? "s" : ""} trouvé${results.length > 1 ? "s" : ""}`}
                 </FormattedText>
-                <FormattedText style={[styles.sortedByText, { color: theme.colors.textMuted }]}>
+                <FormattedText
+                    style={[
+                        styles.sortedByText,
+                        { color: theme.colors.textMuted },
+                    ]}
+                >
                     Trié par pertinence
                 </FormattedText>
             </View>
             {results.map((result) => (
-                <View key={`${result.categoryId}-${result.id}`} style={styles.resultItem}>
+                <View
+                    key={`${result.categoryId}-${result.id}`}
+                    style={styles.resultItem}
+                >
                     <View style={styles.categoryLabel}>
-                        <FormattedText style={[styles.categoryLabelText, { color: theme.colors.primary }]}>
-                            {result.categoryTitle || result.categoryId || 'Sans catégorie'}
+                        <FormattedText
+                            style={[
+                                styles.categoryLabelText,
+                                { color: theme.colors.primary },
+                            ]}
+                        >
+                            {result.categoryTitle ||
+                                result.categoryId ||
+                                "Sans catégorie"}
                         </FormattedText>
                         {result.hasImage && (
                             <Icon3D
@@ -113,7 +154,7 @@ const styles = StyleSheet.create({
     },
     resultsTitle: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 4,
     },
     sortedByText: {
@@ -123,15 +164,15 @@ const styles = StyleSheet.create({
         marginBottom: 16,
     },
     categoryLabel: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: "row",
+        alignItems: "center",
         marginBottom: 8,
         gap: 6,
     },
     categoryLabelText: {
         fontSize: 13,
-        fontWeight: '600',
-        textTransform: 'uppercase',
+        fontWeight: "600",
+        textTransform: "uppercase",
         letterSpacing: 0.5,
     },
     imageIcon: {
@@ -139,21 +180,21 @@ const styles = StyleSheet.create({
     },
     noResults: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         paddingHorizontal: 40,
         paddingVertical: 60,
     },
     noResultsText: {
         fontSize: 18,
-        fontWeight: '600',
-        textAlign: 'center',
+        fontWeight: "600",
+        textAlign: "center",
         marginTop: 20,
         marginBottom: 8,
     },
     searchHintText: {
         fontSize: 14,
-        textAlign: 'center',
+        textAlign: "center",
         lineHeight: 20,
     },
 });

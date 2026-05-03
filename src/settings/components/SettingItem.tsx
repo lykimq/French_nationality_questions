@@ -1,11 +1,11 @@
-import React from 'react';
-import { View, Switch, TouchableOpacity, StyleSheet } from 'react-native';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useIcons } from '../../shared/contexts/IconContext';
-import { FormattedText, Icon3D } from '../../shared/components';
-import { settingsStyles } from './settingsStyles';
-import { getCardContainerStyle } from '../../shared/utils';
-import type { SettingItemProps } from '../../types';
+import React from "react";
+import { View, Switch, TouchableOpacity, StyleSheet } from "react-native";
+import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useIcons } from "../../shared/contexts/IconContext";
+import { FormattedText, Icon3D } from "../../shared/components";
+import { settingsStyles } from "./settingsStyles";
+import { getCardContainerStyle } from "../../shared/utils";
+import type { SettingItemProps } from "../../types";
 
 const SettingItem: React.FC<SettingItemProps> = ({
     title,
@@ -20,8 +20,8 @@ const SettingItem: React.FC<SettingItemProps> = ({
     const { theme } = useTheme();
     const { getIconName, getIconVariant } = useIcons();
 
-    const chevronIconName = getIconName('chevronForward');
-    const chevronVariant = getIconVariant('chevronForward');
+    const chevronIconName = getIconName("chevronForward");
+    const chevronVariant = getIconVariant("chevronForward");
 
     return (
         <TouchableOpacity
@@ -37,11 +37,21 @@ const SettingItem: React.FC<SettingItemProps> = ({
                 backgroundColor={theme.colors.card}
             />
             <View style={styles.textContainer}>
-                <FormattedText style={[settingsStyles.settingTitle, { color: theme.colors.text }]}>
+                <FormattedText
+                    style={[
+                        settingsStyles.settingTitle,
+                        { color: theme.colors.text },
+                    ]}
+                >
                     {title}
                 </FormattedText>
                 {subtitle && (
-                    <FormattedText style={[styles.subtitle, { color: theme.colors.textMuted }]}>
+                    <FormattedText
+                        style={[
+                            styles.subtitle,
+                            { color: theme.colors.textMuted },
+                        ]}
+                    >
                         {subtitle}
                     </FormattedText>
                 )}
@@ -51,7 +61,10 @@ const SettingItem: React.FC<SettingItemProps> = ({
                     value={value}
                     onValueChange={onValueChange}
                     thumbColor={theme.colors.switchThumb}
-                    trackColor={{ false: theme.colors.switchTrack, true: theme.colors.success }}
+                    trackColor={{
+                        false: theme.colors.switchTrack,
+                        true: theme.colors.success,
+                    }}
                 />
             )}
             {!isSwitch && (

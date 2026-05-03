@@ -1,6 +1,6 @@
-import type { TestQuestion } from '../types';
+import type { TestQuestion } from "../types";
 export type { TestQuestion };
-import type { TimestampedEntity } from '../types/core';
+import type { TimestampedEntity } from "../types/core";
 export interface TestConfig {
     readonly questionCount: number;
     readonly timeLimit?: number;
@@ -47,7 +47,7 @@ export interface TimeStatistics {
     slowestTime: number;
 }
 
-export type ImprovementTrend = 'improving' | 'stable' | 'declining';
+export type ImprovementTrend = "improving" | "stable" | "declining";
 
 export interface TestStatistics {
     categoryPerformance: Record<string, CategoryPerformance>;
@@ -57,39 +57,39 @@ export interface TestStatistics {
     strugglingQuestions: number[];
 }
 export type CivicExamTopic =
-    | 'principles_values'
-    | 'institutional_political'
-    | 'rights_duties'
-    | 'history_geography_culture'
-    | 'living_society';
+    | "principles_values"
+    | "institutional_political"
+    | "rights_duties"
+    | "history_geography_culture"
+    | "living_society";
 
 export type CivicExamSubTopic =
-    | 'devise_symboles'
-    | 'laicite'
-    | 'situational_principles'
-    | 'democracy_vote'
-    | 'organization_republic'
-    | 'european_institutions'
-    | 'fundamental_rights'
-    | 'obligations_duties'
-    | 'situational_rights'
-    | 'historical_periods'
-    | 'territories_geography'
-    | 'heritage'
-    | 'residence'
-    | 'healthcare'
-    | 'work'
-    | 'parental_authority_education';
+    | "devise_symboles"
+    | "laicite"
+    | "situational_principles"
+    | "democracy_vote"
+    | "organization_republic"
+    | "european_institutions"
+    | "fundamental_rights"
+    | "obligations_duties"
+    | "situational_rights"
+    | "historical_periods"
+    | "territories_geography"
+    | "heritage"
+    | "residence"
+    | "healthcare"
+    | "work"
+    | "parental_authority_education";
 
-export type QuestionType = 'knowledge' | 'situational';
+export type QuestionType = "knowledge" | "situational";
 export interface CivicExamConfig extends TestConfig {
-    readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
+    readonly mode: "civic_exam_naturalization" | "civic_exam_practice";
     readonly selectedTopics?: readonly CivicExamTopic[];
     readonly questionCount: 40; // Fixed at 40 for civic exam
     readonly timeLimit: 45; // Fixed at 45 minutes
 }
 export interface CivicExamSession extends TestSession {
-    readonly mode: 'civic_exam_naturalization' | 'civic_exam_practice';
+    readonly mode: "civic_exam_naturalization" | "civic_exam_practice";
     readonly topics?: readonly CivicExamTopic[];
     readonly isPracticeMode: boolean;
     readonly isPaused?: boolean;
@@ -106,19 +106,25 @@ export interface CivicExamProgress extends TimestampedEntity {
     correctAnswersTotal: number;
     incorrectQuestions: number[];
     recentScores: number[];
-    topicPerformance: Record<CivicExamTopic, {
-        questionsAttempted: number;
-        correctAnswers: number;
-        accuracy: number;
-    }>;
+    topicPerformance: Record<
+        CivicExamTopic,
+        {
+            questionsAttempted: number;
+            correctAnswers: number;
+            accuracy: number;
+        }
+    >;
 }
 
 export interface CivicExamStatistics extends TestStatistics {
-    topicBreakdown: Record<CivicExamTopic, {
-        questionsAttempted: number;
-        correctAnswers: number;
-        accuracy: number;
-    }>;
+    topicBreakdown: Record<
+        CivicExamTopic,
+        {
+            questionsAttempted: number;
+            correctAnswers: number;
+            accuracy: number;
+        }
+    >;
 }
 export interface CivicExamResult {
     readonly session: CivicExamSession;
@@ -130,7 +136,7 @@ export interface CivicExamResult {
     readonly incorrectQuestions: readonly TestQuestion[];
     readonly timeSpent: number; // in seconds
 }
-import type { SerializableCivicExamResult } from './utils/civicExamSerialization';
+import type { SerializableCivicExamResult } from "./utils/civicExamSerialization";
 
 export type CivicExamStackParamList = Readonly<{
     CivicExamHome: undefined;
@@ -138,9 +144,11 @@ export type CivicExamStackParamList = Readonly<{
     CivicExamPractice: undefined;
     CivicExamQuestion: undefined;
     CivicExamReview: undefined;
-    CivicExamResult: {
-        readonly result: SerializableCivicExamResult;
-    } | undefined;
+    CivicExamResult:
+        | {
+              readonly result: SerializableCivicExamResult;
+          }
+        | undefined;
 }>;
 
 export type { SerializableCivicExamResult };
@@ -151,4 +159,3 @@ export interface CivicExamQuestionMetadata {
 }
 
 export type CivicExamQuestion = TestQuestion & CivicExamQuestionMetadata;
-

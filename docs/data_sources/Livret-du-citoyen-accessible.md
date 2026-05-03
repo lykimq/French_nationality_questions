@@ -106,7 +106,7 @@ Il existe aussi des règles collectives, qui portent sur la vie en société et 
 
 Comment pouvez-vous给您 renseigner sur les lois et les règles en vigueur ?
 
-- Toutes les lois, souvent regroupées en codes, sont disponibles sur internet : www.legifrance.gouv.fr  
+- Toutes les lois, souvent regroupées en codes, sont disponibles sur internet : www.legifrance.gouv.fr
 - Le site www.vie-publicque.fr presente les principales règles ainsi que le fonctionnement des institutions.
 
 Pourquoi les élèves des écoles, collèges et lycées n'ont-ils pas le droit de porter des signes religieux trop visibles dans les établissements scolaires?
@@ -141,7 +141,7 @@ Tous les citoyens ont accès, de façon égale, aux employés dans l'administrat
 
 # Les devoirs
 
-# $\diamond$  Respecter la loi
+# $\diamond$ Respecter la loi
 
 En effet, « nul n'est censé ignorer la loi ». Elle s'applique à tous.
 
@@ -151,7 +151,7 @@ Tous les citoyens doivent participer à la hauteur de leurs moyens au financemen
 
 Ils participent au financement de la protection sociale par les cotisations prélevées sur leur salaire. Déclarer ses revenus et payer ses impôts est obligatoire.
 
-# $\diamond$  Contribuer à la Défense nationale
+# $\diamond$ Contribuer à la Défense nationale
 
 En cas de guerre, tout citoyen peut être appelé dans l'armée à participer à la défense du pays. À partir de 16 ans, les Françaises et les Français doivent se faire recenser à la mairie pour participer à la « Journée défense et citoyennete »
 
@@ -177,8 +177,8 @@ Nos institutions sont fondées sur la séparation des pouvoirs exécutif et lég
 
 # Les principales institutions de l'Etat
 
-- Le Président de la République est élu au suffrage universel pour cinq ans. Il nomme le Gouvernement, dirigé par le Premier ministre, issu de la majorité aux élections législatives.  
-- Le Parlement, composé de l'Assemblée nationale et du Sénéat, vote les bois et contrôle le Gouvernement. Les députés à l'Assemblée nationale sont élus tous les cinq ans lors des élections législatives. Les sénéuteurs sont élus au suffrage universel indirect pour un mandat de 6 ans.  
+- Le Président de la République est élu au suffrage universel pour cinq ans. Il nomme le Gouvernement, dirigé par le Premier ministre, issu de la majorité aux élections législatives.
+- Le Parlement, composé de l'Assemblée nationale et du Sénéat, vote les bois et contrôle le Gouvernement. Les députés à l'Assemblée nationale sont élus tous les cinq ans lors des élections législatives. Les sénéuteurs sont élus au suffrage universel indirect pour un mandat de 6 ans.
 - La justice est rendue par les juges. Elle règle les litiges entre les particuliers ou les entreprises, et entre les citoyens et l'administration. Elle sanctionne les infractions aux règles de droit par des peines prévues par la loi (ex.: emprisonnement, amende...) ou les textes réglementaires.
 
 # Citoyens
@@ -245,7 +245,7 @@ Au niveau local, trois collectivités exercent des compétences en application d
 
 # La commune
 
-La France compte 34 965 communes au  $1^{\mathrm{er}}$  janvier 2021.
+La France compte 34 965 communes au $1^{\mathrm{er}}$ janvier 2021.
 
 Elles sont administrées par un maire et un conseil municipal.
 
@@ -313,11 +313,11 @@ Jeanne d'Arc gravure 1858
 
 # MOYEN-ÄGE
 
-$5^{\mathrm{e}}$  siecle
+$5^{\mathrm{e}}$ siecle
 
-$15^{\mathrm{e}}$  sycle
+$15^{\mathrm{e}}$ sycle
 
-$16^{\mathrm{e}}$  sycle
+$16^{\mathrm{e}}$ sycle
 
 Clovis (466-511) unifie les royaumes de différents peuples francs. C'est une étape importante dans la construction de l'unité du territoire français. Il adopte la religion chrétienne.
 
@@ -344,9 +344,9 @@ Voltaire gravure
 
 ÉPOQUE MODERNE
 
-$17^{\mathrm{e}}$  sycle
+$17^{\mathrm{e}}$ sycle
 
-$18^{\mathrm{e}}$  sycle
+$18^{\mathrm{e}}$ sycle
 
 Révolution française
 
@@ -402,7 +402,7 @@ Victor Hugo gravure
 
 © Fotolia - Juuliji
 
-$19^{\mathrm{e}}$  siecle
+$19^{\mathrm{e}}$ siecle
 
 # Naissance de la IIIe République (1875)
 
@@ -437,7 +437,7 @@ Le débarquement des allies en Normandie, le 6 juin 1944, est une étapé décis
 
 1939-1945
 
-$20^{\circ}$  siecle
+$20^{\circ}$ siecle
 
 # Le régime de Vichy (1940-1944)
 
@@ -471,7 +471,7 @@ débute en Asie et s'étend à l'Afrique. Ce processus a donné lieu à des guer
 
 # Mai 68
 
-Le mouvement social est initiaé par des étudiants. Il s'étend aux salariés et au monde ouvrier. Ces grèves et ces manifestations sont parmi les plus importantes du  $20^{\text{e}}$  siècle.
+Le mouvement social est initiaé par des étudiants. Il s'étend aux salariés et au monde ouvrier. Ces grèves et ces manifestations sont parmi les plus importantes du $20^{\text{e}}$ siècle.
 
 L'âge de la majorité est fixé à 18 ans (1974)
 
@@ -588,7 +588,7 @@ La France est membre de nombreuses organisations internationales. Elle est membr
 
 # La langue française
 
-Le français est parlé couramment par 200 millions de personnes dans le monde. Les Français ne représentent que  $1\%$  de la population mondiale mais les personnes qui parlent français sont réparties dans 70 pays.
+Le français est parlé couramment par 200 millions de personnes dans le monde. Les Français ne représentent que $1\%$ de la population mondiale mais les personnes qui parlent français sont réparties dans 70 pays.
 
 # DANS L'EUROPE ET DANS LE MONDE
 
@@ -643,9 +643,9 @@ Le Mont-Saint-Michel est un ilot rocheux situé en Normandie dans une baie, sur 
 
 ![](images/ab0606468b15f216aa2a2e2dbaffaaa2ab9f94de575b9795517316ea3e5447c5.jpg)
 
-La France est parcours de   
-des fleuves importants: la   
-Loire,la Seine,la Garonne,   
+La France est parcours de  
+des fleuves importants: la  
+Loire,la Seine,la Garonne,  
 le Rhone,le Rhin.
 
 La Loire est le plus long fleuve français.

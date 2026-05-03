@@ -1,12 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
-import {
-    StyleSheet,
-    View,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useTheme } from '../shared/contexts/ThemeContext';
-import { FormattedText, AppHeader } from '../shared/components';
-import { useSearch, SearchSuggestion } from './useSearch';
+import { useState, useEffect, useRef } from "react";
+import { StyleSheet, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTheme } from "../shared/contexts/ThemeContext";
+import { FormattedText, AppHeader } from "../shared/components";
+import { useSearch, SearchSuggestion } from "./useSearch";
 import {
     SearchBar,
     SearchSuggestions,
@@ -14,14 +11,16 @@ import {
     SearchHistory,
     SearchResults,
     SearchStats,
-} from './components';
+} from "./components";
 
 const SearchScreen = () => {
     const { theme } = useTheme();
     const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [suggestionsDismissed, setSuggestionsDismissed] = useState(false);
-    const [pendingSelection, setPendingSelection] = useState<string | null>(null);
+    const [pendingSelection, setPendingSelection] = useState<string | null>(
+        null
+    );
     const selectionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const {
@@ -36,7 +35,7 @@ const SearchScreen = () => {
         availableCategories,
         getSearchStats,
         performSearch,
-        isSearching
+        isSearching,
     } = useSearch();
 
     useEffect(() => {
@@ -59,14 +58,14 @@ const SearchScreen = () => {
     }, []);
 
     const clearSearch = () => {
-        setSearchQuery('');
+        setSearchQuery("");
         setShowSuggestions(false);
         setSuggestionsDismissed(false);
         setPendingSelection(null);
         if (selectionTimeoutRef.current) {
             clearTimeout(selectionTimeoutRef.current);
         }
-        performSearch('');
+        performSearch("");
     };
 
     const handleSearchChange = (query: string) => {
@@ -84,12 +83,11 @@ const SearchScreen = () => {
     const resetFilters = () => {
         setFilters({
             categories: [],
-            hasImage: 'all',
+            hasImage: "all",
             questionRange: { min: 1, max: 200 },
-            searchIn: ['both'],
+            searchIn: ["both"],
         });
     };
-
 
     const applySuggestion = (suggestion: SearchSuggestion) => {
         if (selectionTimeoutRef.current) {
@@ -117,17 +115,24 @@ const SearchScreen = () => {
         setSearchHistory([]);
     };
 
-    const { totalQuestions, mainQuestions, historyQuestions } = getSearchStats();
-
+    const { totalQuestions, mainQuestions, historyQuestions } =
+        getSearchStats();
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
-            <AppHeader
-                title="Rechercher"
-                showTricolore={true}
-            />
+        <View
+            style={[
+                styles.container,
+                { backgroundColor: theme.colors.background },
+            ]}
+        >
+            <AppHeader title="Rechercher" showTricolore={true} />
 
-            <View style={[styles.searchContainer, { backgroundColor: theme.colors.background }]}>
+            <View
+                style={[
+                    styles.searchContainer,
+                    { backgroundColor: theme.colors.background },
+                ]}
+            >
                 <SearchBar
                     searchQuery={searchQuery}
                     onSearchChange={handleSearchChange}
@@ -159,11 +164,14 @@ const SearchScreen = () => {
                     totalQuestions={totalQuestions}
                     mainQuestions={mainQuestions}
                     historyQuestions={historyQuestions}
-                    hasActiveFilters={filters.categories.length > 0 || filters.hasImage !== 'all'}
+                    hasActiveFilters={
+                        filters.categories.length > 0 ||
+                        filters.hasImage !== "all"
+                    }
                 />
             </View>
 
-            {searchQuery === '' && searchResults.length === 0 && (
+            {searchQuery === "" && searchResults.length === 0 && (
                 <SearchHistory
                     history={searchHistory}
                     onSelectQuery={(query) => {
@@ -174,10 +182,7 @@ const SearchScreen = () => {
                 />
             )}
 
-            <SearchResults
-                results={searchResults}
-                searchQuery={searchQuery}
-            />
+            <SearchResults results={searchResults} searchQuery={searchQuery} />
         </View>
     );
 };

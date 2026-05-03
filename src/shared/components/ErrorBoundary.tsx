@@ -1,12 +1,12 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import FormattedText from './FormattedText';
-import { useTheme } from '../contexts/ThemeContext';
-import { createLogger } from '../utils/logger';
-import { Sentry } from '../../config/sentryConfig';
-import { colorThemes } from '../../theme/colorThemes';
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
+import FormattedText from "./FormattedText";
+import { useTheme } from "../contexts/ThemeContext";
+import { createLogger } from "../utils/logger";
+import { Sentry } from "../../config/sentryConfig";
+import { colorThemes } from "../../theme/colorThemes";
 
-const logger = createLogger('ErrorBoundary');
+const logger = createLogger("ErrorBoundary");
 
 interface Props {
     children: ReactNode;
@@ -34,8 +34,8 @@ class ErrorBoundaryClass extends Component<Props, State> {
     }
 
     componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        logger.error('ErrorBoundary caught an error:', error, errorInfo);
-        
+        logger.error("ErrorBoundary caught an error:", error, errorInfo);
+
         Sentry.captureException(error, {
             contexts: {
                 react: {
@@ -46,7 +46,7 @@ class ErrorBoundaryClass extends Component<Props, State> {
                 errorBoundary: true,
             },
         });
-        
+
         this.setState({
             error,
             errorInfo,
@@ -67,7 +67,12 @@ class ErrorBoundaryClass extends Component<Props, State> {
                 return this.props.fallback;
             }
 
-            return <ErrorFallback error={this.state.error} onReset={this.handleReset} />;
+            return (
+                <ErrorFallback
+                    error={this.state.error}
+                    onReset={this.handleReset}
+                />
+            );
         }
 
         return this.props.children;
@@ -89,16 +94,24 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, onReset }) => {
     }
 
     return (
-        <View style={[styles.container, { backgroundColor: colors.background }]}>
+        <View
+            style={[styles.container, { backgroundColor: colors.background }]}
+        >
             <View style={[styles.content, { backgroundColor: colors.card }]}>
                 <FormattedText style={[styles.title, { color: colors.error }]}>
                     Une erreur s'est produite
                 </FormattedText>
                 <FormattedText style={[styles.message, { color: colors.text }]}>
-                    L'application a rencontré une erreur inattendue. Veuillez réessayer.
+                    L'application a rencontré une erreur inattendue. Veuillez
+                    réessayer.
                 </FormattedText>
                 {__DEV__ && error && (
-                    <FormattedText style={[styles.errorDetails, { color: colors.textMuted }]}>
+                    <FormattedText
+                        style={[
+                            styles.errorDetails,
+                            { color: colors.textMuted },
+                        ]}
+                    >
                         {error.toString()}
                     </FormattedText>
                 )}
@@ -106,7 +119,12 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, onReset }) => {
                     style={[styles.button, { backgroundColor: colors.primary }]}
                     onPress={onReset}
                 >
-                    <FormattedText style={[styles.buttonText, { color: colors.buttonText }]}>
+                    <FormattedText
+                        style={[
+                            styles.buttonText,
+                            { color: colors.buttonText },
+                        ]}
+                    >
                         Réessayer
                     </FormattedText>
                 </TouchableOpacity>
@@ -118,44 +136,45 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, onReset }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         padding: 20,
     },
     content: {
         padding: 24,
         borderRadius: 12,
         maxWidth: 400,
-        width: '100%',
+        width: "100%",
     },
     title: {
         fontSize: 24,
-        fontWeight: 'bold',
+        fontWeight: "bold",
         marginBottom: 12,
-        textAlign: 'center',
+        textAlign: "center",
     },
     message: {
         fontSize: 16,
         marginBottom: 20,
-        textAlign: 'center',
+        textAlign: "center",
     },
     errorDetails: {
         fontSize: 12,
         marginBottom: 20,
-        fontFamily: 'monospace',
+        fontFamily: "monospace",
     },
     button: {
         padding: 12,
         borderRadius: 8,
-        alignItems: 'center',
+        alignItems: "center",
     },
     buttonText: {
         fontSize: 16,
-        fontWeight: '600',
+        fontWeight: "600",
     },
 });
 
-export const ErrorBoundary: React.FC<Props> = (props) => <ErrorBoundaryClass {...props} />;
+export const ErrorBoundary: React.FC<Props> = (props) => (
+    <ErrorBoundaryClass {...props} />
+);
 
 export default ErrorBoundary;
-

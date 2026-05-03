@@ -1,42 +1,42 @@
 {
-  "expo": {
-    "name": "Naturalisation Test Civique",
-    "slug": "naturalisation-france",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "plugins": [
-      [
-        "@sentry/react-native",
-        {
-          "organization": "endlessgrace",
-          "project": "react-native"
+    "expo": {
+        "name": "Naturalisation Test Civique",
+        "slug": "naturalisation-france",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "newArchEnabled": true,
+        "plugins": [
+            [
+                "@sentry/react-native",
+                {
+                    "organization": "endlessgrace",
+                    "project": "react-native"
+                }
+            ]
+        ],
+        "splash": {
+            "image": "./assets/splash-icon.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "ios": {
+            "supportsTablet": true,
+            "bundleIdentifier": "com.lykimq-uyen.naturalisation-france"
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/icon.png",
+                "backgroundColor": "#ffffff"
+            },
+            "edgeToEdgeEnabled": true,
+            "package": "com.lykimq_uyen.naturalisation_france",
+            "jsEngine": "hermes"
+        },
+        "web": {
+            "favicon": "./assets/favicon.png",
+            "bundler": "metro"
         }
-      ]
-    ],
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.lykimq-uyen.naturalisation-france"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "package": "com.lykimq_uyen.naturalisation_france",
-      "jsEngine": "hermes"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
     }
-  }
 }
