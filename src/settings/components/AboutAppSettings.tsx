@@ -102,7 +102,7 @@ const AboutAppSettings: React.FC = () => {
                 icon="school"
                 iconColor={theme.colors.warning}
                 title="Cartes flash"
-                description="Outil d'apprentissage actif pour réviser les questions de manière interactive. Retournez les cartes pour tester votre mémoire."
+                description="Outil de révision interactive. Retournez les cartes pour voir la réponse et parcourez les questions à votre rythme."
             />
 
             <AboutItem

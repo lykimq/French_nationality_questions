@@ -295,3 +295,11 @@ export const stopCacheCleanup = () => {
         logger.debug("Stopped periodic cache cleanup");
     }
 };
+
+export const clearAllCaches = () => {
+    dataCache.clear();
+    imageCache.clear();
+    failedDataCache.clear();
+    failedImageCache.clear();
+    logger.info("Cleared all data and image caches");
+};

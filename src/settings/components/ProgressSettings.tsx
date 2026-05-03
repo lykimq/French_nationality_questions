@@ -6,6 +6,7 @@ import { useCivicExam } from "../../test_civic/contexts/CivicExamContext";
 import SettingItem from "./SettingItem";
 import CollapsibleSection from "./CollapsibleSection";
 import { showConfirmationAlert, showSimpleAlert } from "../../shared/utils";
+import { clearAllCaches } from "../../shared/services/dataService";
 
 const ProgressSettings: React.FC = () => {
     const { theme } = useTheme();
@@ -14,16 +15,16 @@ const ProgressSettings: React.FC = () => {
 
     const handleResetLearning = () => {
         showConfirmationAlert({
-            title: "Réinitialiser l'apprentissage",
+            title: "Réinitialiser la session",
             message:
-                "Voulez-vous supprimer toute votre progression d'apprentissage (badges orange) ? Vos réglages d'apparence seront conservés.",
+                "Voulez-vous supprimer votre progression de lecture ? Vos réglages d'apparence seront conservés.",
             confirmText: "Réinitialiser",
             onConfirm: async () => {
                 try {
                     await resetLearningProgress();
                     showSimpleAlert({
                         title: "Réinitialisé",
-                        message: "Votre progression d'apprentissage a été remise à zéro.",
+                        message: "Votre progression a été remise à zéro.",
                     });
                 } catch (error) {
                     showSimpleAlert({
@@ -58,15 +59,39 @@ const ProgressSettings: React.FC = () => {
         });
     };
 
+    const handleClearCache = () => {
+        showConfirmationAlert({
+            title: "Vider le cache",
+            message:
+                "Cela va forcer l'application à recharger les dernières données et images depuis le serveur. Continuer ?",
+            confirmText: "Vider le cache",
+            onConfirm: async () => {
+                try {
+                    clearAllCaches();
+                    showSimpleAlert({
+                        title: "Cache vidé",
+                        message: "Le cache a été vidé avec succès.",
+                    });
+                } catch (error) {
+                    showSimpleAlert({
+                        title: "Erreur",
+                        message: "Impossible de vider le cache.",
+                    });
+                }
+            },
+        });
+    };
+
     const handleResetEverything = () => {
         showConfirmationAlert({
             title: "TOUT RÉINITIALISER",
             message:
-                "ATTENTION : Cette action va supprimer TOUTE votre progression (apprentissage ET examens). C'est un nouveau départ complet.",
+                "ATTENTION : Cette action va supprimer TOUTE votre progression (lecture ET examens). C'est un nouveau départ complet.",
             confirmText: "Tout supprimer",
             onConfirm: async () => {
                 try {
                     await Promise.all([resetLearningProgress(), resetExamProgress()]);
+                    clearAllCaches();
                     showSimpleAlert({
                         title: "Nouveau départ !",
                         message: "Toutes vos données ont été supprimées.",
@@ -83,13 +108,20 @@ const ProgressSettings: React.FC = () => {
 
     return (
         <CollapsibleSection
-            title="Données et Progrès"
+            title="Données et Cache"
             icon={theme.icons.analytics}
             iconColor={theme.colors.error}
         >
             <SettingItem
-                title="Réinitialiser l'apprentissage"
-                subtitle="Effacer les badges orange et la maîtrise"
+                title="Vider le cache"
+                subtitle="Recharger les données depuis le serveur"
+                icon="refresh-outline"
+                iconColor={theme.colors.info}
+                onPress={handleClearCache}
+            />
+            <SettingItem
+                title="Réinitialiser la lecture"
+                subtitle="Remettre à zéro l'historique de lecture"
                 icon={theme.icons.refresh}
                 iconColor={theme.colors.warning}
                 onPress={handleResetLearning}
