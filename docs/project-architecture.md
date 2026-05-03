@@ -9,6 +9,7 @@ Welcome to the technical blueprint of the **Naturalisation Test Civique** applic
 The application uses a nested navigation strategy. The root is a **Bottom Tab Navigator** that hosts specialized **Stack Navigators** for each major feature area.
 
 ```mermaid
+%%{init: {'theme': 'neutral'}}%%
 graph TD
     %% Global Root
     App[App.tsx] --> Providers[AppProviders]
@@ -72,6 +73,7 @@ Our state management is handled through a hierarchy of **React Context Providers
 The app uses a multi-layered approach to data retrieval, prioritizing speed and reliability.
 
 ```mermaid
+%%{init: {'theme': 'neutral'}}%%
 graph LR
     subgraph Sources [Data Sources]
         JSON[(JSON Files)]
