@@ -12,6 +12,7 @@ import AboutAppSettings from "./components/AboutAppSettings";
 import CivicExamSettings from "./components/CivicExamSettings";
 import RatingModal from "./components/RatingModal";
 import CollapsibleSection from "./components/CollapsibleSection";
+import ProgressSettings from "./components/ProgressSettings";
 
 const SettingsScreen = () => {
     const { theme } = useTheme();
@@ -63,6 +64,9 @@ const SettingsScreen = () => {
 
                     {/* Civic Exam Statistics Section */}
                     <CivicExamSettings />
+
+                    {/* Progress & Data Section */}
+                    <ProgressSettings />
 
                     {/* About the App Section */}
                     <CollapsibleSection

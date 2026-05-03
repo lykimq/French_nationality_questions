@@ -2,7 +2,7 @@ import React from "react";
 import { View, Pressable, StyleSheet } from "react-native";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { useIcons } from "../shared/contexts/IconContext";
-import { FormattedText, Icon3D, ProgressBar } from "../shared/components";
+import { FormattedText, Icon3D } from "../shared/components";
 import { CategoryCardProps } from "../types";
 import { sharedStyles } from "../shared/utils";
 
@@ -111,16 +111,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                         {count} questions
                     </FormattedText>
                 </View>
-
-                {/* Question progress bar - now using real data */}
-                {progress !== undefined && (
-                    <ProgressBar
-                        progress={progress}
-                        height={4}
-                        color={iconColor}
-                        containerStyle={styles.progressBar}
-                    />
-                )}
             </View>
             <Icon3D
                 name={chevronIconName}

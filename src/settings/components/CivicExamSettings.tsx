@@ -3,36 +3,12 @@ import { useTheme } from "../../shared/contexts/ThemeContext";
 import { useCivicExam } from "../../test_civic/contexts/CivicExamContext";
 import SettingItem from "./SettingItem";
 import CollapsibleSection from "./CollapsibleSection";
-import { showConfirmationAlert, showSimpleAlert } from "../../shared/utils";
+import { FormattedText } from "../../shared/components";
+import { View, StyleSheet } from "react-native";
 
 const CivicExamSettings: React.FC = () => {
     const { theme } = useTheme();
-    const { examProgress, resetProgress } = useCivicExam();
-
-    const handleResetStatistics = () => {
-        showConfirmationAlert({
-            title: "Réinitialiser les statistiques",
-            message:
-                "Êtes-vous sûr de vouloir réinitialiser toutes les statistiques de l'examen civique ? Cette action est irréversible et supprimera tous vos scores, progrès et statistiques.",
-            confirmText: "Réinitialiser",
-            onConfirm: async () => {
-                try {
-                    await resetProgress();
-                    showSimpleAlert({
-                        title: "Réinitialisation réussie",
-                        message:
-                            "Toutes les statistiques ont été réinitialisées.",
-                    });
-                } catch (error) {
-                    showSimpleAlert({
-                        title: "Erreur",
-                        message:
-                            "Une erreur est survenue lors de la réinitialisation.",
-                    });
-                }
-            },
-        });
-    };
+    const { examProgress } = useCivicExam();
 
     const hasStatistics =
         examProgress.totalExamsTaken > 0 ||
@@ -49,14 +25,52 @@ const CivicExamSettings: React.FC = () => {
             icon={theme.icons.analytics}
             iconColor={theme.colors.warning}
         >
-            <SettingItem
-                title="Réinitialiser les statistiques"
-                icon={theme.icons.refresh}
-                iconColor={theme.colors.error}
-                onPress={handleResetStatistics}
-            />
+            <View style={styles.statsContainer}>
+                <View style={styles.statRow}>
+                    <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                        Examens terminés
+                    </FormattedText>
+                    <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
+                        {examProgress.totalExamsTaken}
+                    </FormattedText>
+                </View>
+                <View style={styles.statRow}>
+                    <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                        Meilleur score
+                    </FormattedText>
+                    <FormattedText style={[styles.statValue, { color: theme.colors.success }]}>
+                        {examProgress.bestScore}/20
+                    </FormattedText>
+                </View>
+                <View style={styles.statRow}>
+                    <FormattedText style={[styles.statLabel, { color: theme.colors.textSecondary }]}>
+                        Sessions d'entraînement
+                    </FormattedText>
+                    <FormattedText style={[styles.statValue, { color: theme.colors.text }]}>
+                        {examProgress.totalPracticeSessions}
+                    </FormattedText>
+                </View>
+            </View>
         </CollapsibleSection>
     );
 };
+
+const styles = StyleSheet.create({
+    statsContainer: {
+        paddingVertical: 8,
+    },
+    statRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingVertical: 8,
+    },
+    statLabel: {
+        fontSize: 14,
+    },
+    statValue: {
+        fontSize: 14,
+        fontWeight: "bold",
+    },
+});
 
 export default CivicExamSettings;

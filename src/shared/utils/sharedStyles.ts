@@ -245,55 +245,6 @@ export const sharedStyles = StyleSheet.create({
         lineHeight: 20,
     },
 
-    // Mastery Stamps
-    stampContainer: {
-        position: "absolute",
-        top: 50,
-        zIndex: 10,
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        borderRadius: 12,
-        borderWidth: 4,
-        transform: [{ rotate: "-15deg" }],
-    },
-    stampText: {
-        fontSize: 32,
-        fontWeight: "900",
-        textTransform: "uppercase",
-        letterSpacing: 2,
-    },
-    masteredStamp: {
-        borderColor: "#4CAF50",
-        right: 40,
-        transform: [{ rotate: "15deg" }],
-    },
-    reviewStamp: {
-        borderColor: "#FF5722",
-        left: 40,
-        transform: [{ rotate: "-15deg" }],
-    },
-
-    // Rating Buttons
-    ratingContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        width: "100%",
-        marginTop: 20,
-        gap: 8,
-    },
-    ratingButton: {
-        flex: 1,
-        paddingVertical: 10,
-        borderRadius: 10,
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 1,
-    },
-    ratingButtonText: {
-        fontSize: 12,
-        fontWeight: "bold",
-        marginTop: 4,
-    },
 });
 
 export const getCardContainerStyle = (theme: {

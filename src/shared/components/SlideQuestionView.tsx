@@ -38,8 +38,6 @@ export interface SlideQuestionViewProps {
     onGoToIndex?: (index: number) => void;
     hasNext: boolean;
     hasPrevious: boolean;
-    /** SRS level from Entraînement; undefined if not yet tracked */
-    masteryLevel?: MasteryLevel;
 }
 
 const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
@@ -53,7 +51,6 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     onGoToIndex,
     hasNext,
     hasPrevious,
-    masteryLevel,
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
@@ -204,11 +201,6 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
 
     if (!question) return null;
 
-    const isMastered = masteryLevel === MasteryLevel.MASTERED;
-    const isLearning =
-        masteryLevel !== undefined &&
-        masteryLevel !== MasteryLevel.NEW &&
-        !isMastered;
 
     return (
         <View
@@ -265,30 +257,6 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                         >
                             {currentIndex + 1} / {totalCount}
                         </FormattedText>
-                        {isMastered && (
-                            <Ionicons
-                                name="checkmark-circle"
-                                size={18}
-                                color="#4CAF50"
-                                style={styles.masteryIcon}
-                            />
-                        )}
-                        {isLearning && (
-                            <Ionicons
-                                name="time"
-                                size={18}
-                                color="#FF9800"
-                                style={styles.masteryIcon}
-                            />
-                        )}
-                        {!isMastered && !isLearning && (
-                            <Ionicons
-                                name="ellipse-outline"
-                                size={18}
-                                color={theme.colors.textMuted}
-                                style={styles.masteryIcon}
-                            />
-                        )}
                     </View>
                     {totalCount > 1 && (
                         <TouchableOpacity

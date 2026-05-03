@@ -36,7 +36,6 @@ import { loadFlashCardData, getCategoryById } from "../utils";
 import { sortQuestionsById } from "../../shared/utils/questionUtils";
 import { useMastery } from "../../shared/contexts/MasteryContext";
 import {
-    PerformanceRating,
     prioritizeQuestions,
 } from "../../shared/utils/MasteryUtils";
 import { sharedStyles } from "../../shared/utils";
@@ -256,8 +255,7 @@ const FlashCardScreen: React.FC = () => {
     const animateTransition = useCallback(
         (
             direction: "left" | "right",
-            callback: () => void,
-            rating?: PerformanceRating
+            callback: () => void
         ) => {
             if (isAnimatingRef.current) return;
 
@@ -287,9 +285,6 @@ const FlashCardScreen: React.FC = () => {
                 opacity.stopAnimation();
 
                 const finishTransition = () => {
-                    if (rating !== undefined && currentQuestion) {
-                        updateMastery(currentQuestion.id, rating);
-                    }
 
                     setAnimating(false);
 
@@ -336,13 +331,6 @@ const FlashCardScreen: React.FC = () => {
         ]
     );
 
-    const handleRate = useCallback(
-        (rating: PerformanceRating) => {
-            if (isAnimating) return;
-            animateTransition("left", nextCard, rating);
-        },
-        [isAnimating, animateTransition, nextCard]
-    );
 
     const handleNextPress = useCallback(() => {
         if (hasNext) animateTransition("left", nextCard);
@@ -398,20 +386,25 @@ const FlashCardScreen: React.FC = () => {
 
             if (shouldNavigate) {
                 if (translationX > 0) {
-                    // Swipe Right = Mastered (EASY)
-                    if (hasPrevious && translationX > SWIPE_THRESHOLD * 2) {
-                        // Deep swipe right = previous card
+                    // Swipe Right = Previous Card
+                    if (hasPrevious) {
                         handlePreviousPress();
                     } else {
-                        animateTransition(
-                            "right",
-                            nextCard,
-                            PerformanceRating.EASY
-                        );
+                        // Return to center
+                        Animated.parallel([
+                            Animated.spring(translateX, {
+                                toValue: 0,
+                                useNativeDriver: true,
+                            }),
+                            Animated.spring(opacity, {
+                                toValue: 1,
+                                useNativeDriver: true,
+                            }),
+                        ]).start();
                     }
                 } else if (translationX < 0) {
-                    // Swipe Left = Review (HARD)
-                    animateTransition("left", nextCard, PerformanceRating.HARD);
+                    // Swipe Left = Next Card
+                    handleNextPress();
                 }
             } else {
                 Animated.parallel([
@@ -743,47 +736,11 @@ const FlashCardScreen: React.FC = () => {
                                 },
                             ]}
                         >
-                            {/* Visual Stamps */}
-                            <Animated.View
-                                style={[
-                                    sharedStyles.stampContainer,
-                                    sharedStyles.masteredStamp,
-                                    { opacity: masteredOpacity },
-                                ]}
-                            >
-                                <FormattedText
-                                    style={[
-                                        sharedStyles.stampText,
-                                        { color: "#4CAF50" },
-                                    ]}
-                                >
-                                    Savoir
-                                </FormattedText>
-                            </Animated.View>
-
-                            <Animated.View
-                                style={[
-                                    sharedStyles.stampContainer,
-                                    sharedStyles.reviewStamp,
-                                    { opacity: reviewOpacity },
-                                ]}
-                            >
-                                <FormattedText
-                                    style={[
-                                        sharedStyles.stampText,
-                                        { color: "#FF5722" },
-                                    ]}
-                                >
-                                    À revoir
-                                </FormattedText>
-                            </Animated.View>
-
                             <FlashCard
                                 key={`card-${currentQuestion.id}-${state.currentIndex}`}
                                 question={currentQuestion}
                                 isFlipped={state.isFlipped}
                                 onFlip={flipCard}
-                                onRate={handleRate}
                             />
                         </Animated.View>
                     </View>

@@ -11,13 +11,9 @@ import {
     FormattedText,
     AppHeader,
     Icon3D,
-    StreakBadge,
     GlobalSearchBar,
 } from "../shared/components";
 import { sharedStyles } from "../shared/utils";
-import { useMastery } from "../shared/contexts/MasteryContext";
-import { getCategoryMasteryStats } from "../shared/utils/MasteryUtils";
-import { RECOMMENDED_SESSION_QUESTION_COUNT } from "../shared/constants/learningSession";
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
@@ -25,7 +21,6 @@ const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
     const { theme } = useTheme();
     const { questionsData } = useData();
-    const { masteryMap, totalStreak } = useMastery();
     const scrollRef = React.useRef<ScrollView>(null);
     const categoriesSectionOffsetY = React.useRef(0);
 
@@ -39,10 +34,6 @@ const HomeScreen = () => {
         [categories]
     );
 
-    const catalogMastery = React.useMemo(
-        () => getCategoryMasteryStats(catalogQuestions, masteryMap),
-        [catalogQuestions, masteryMap]
-    );
 
     const scrollToCategories = () => {
         if (categories.length === 0) return;
@@ -74,11 +65,6 @@ const HomeScreen = () => {
                 title="Mon Parcours"
                 subtitle="Préparez votre entretien de naturalisation"
                 showTricolore={true}
-                rightAction={
-                    totalStreak > 0 ? (
-                        <StreakBadge streak={totalStreak} />
-                    ) : undefined
-                }
             />
 
             <ScrollView
@@ -93,7 +79,7 @@ const HomeScreen = () => {
                 {/* Global Search Bar */}
                 <GlobalSearchBar onPress={navigateToSearch} />
 
-                {/* Stats: programme scope vs. your progression (same model as category cards) */}
+                {/* Stats: programme scope */}
                 <View
                     style={[
                         sharedStyles.premiumCard,
@@ -138,14 +124,6 @@ const HomeScreen = () => {
                             >
                                 Thématiques
                             </FormattedText>
-                            <FormattedText
-                                style={[
-                                    styles.statHint,
-                                    { color: theme.colors.textMuted },
-                                ]}
-                            >
-                                rubriques du livret
-                            </FormattedText>
                         </View>
                         <View
                             style={[
@@ -183,121 +161,10 @@ const HomeScreen = () => {
                             >
                                 Questions
                             </FormattedText>
-                            <FormattedText
-                                style={[
-                                    styles.statHint,
-                                    { color: theme.colors.textMuted },
-                                ]}
-                            >
-                                contenu du programme
-                            </FormattedText>
-                        </View>
-                        <View
-                            style={[
-                                styles.statDivider,
-                                { backgroundColor: theme.colors.border },
-                            ]}
-                        />
-                        <View style={styles.statItem}>
-                            <View
-                                style={[
-                                    styles.statIconContainer,
-                                    { backgroundColor: "#FF980015" },
-                                ]}
-                            >
-                                <Icon3D
-                                    name="medal"
-                                    size={24}
-                                    color="#FF9800"
-                                    variant="gradient"
-                                />
-                            </View>
-                            <FormattedText
-                                style={[
-                                    styles.statValue,
-                                    { color: theme.colors.text },
-                                ]}
-                            >
-                                {catalogMastery.percentage}%
-                            </FormattedText>
-                            <FormattedText
-                                style={[
-                                    styles.statLabel,
-                                    { color: theme.colors.textSecondary },
-                                ]}
-                            >
-                                Votre progression
-                            </FormattedText>
-                            <FormattedText
-                                style={[
-                                    styles.statHint,
-                                    { color: theme.colors.textMuted },
-                                ]}
-                            >
-                                sur tout le parcours
-                            </FormattedText>
                         </View>
                     </View>
                 </View>
 
-                {/* Recommended for You */}
-                <TouchableOpacity
-                    style={[
-                        sharedStyles.premiumCard,
-                        {
-                            backgroundColor: theme.colors.card,
-                            borderColor: theme.colors.primary,
-                            borderWidth: 1.5,
-                            padding: 16,
-                        },
-                    ]}
-                    onPress={() => navigateToCategory("recommended")}
-                    activeOpacity={0.9}
-                >
-                    <View style={sharedStyles.row}>
-                        <View
-                            style={[
-                                styles.iconContainer,
-                                {
-                                    backgroundColor:
-                                        theme.colors.primary + "15",
-                                },
-                            ]}
-                        >
-                            <Ionicons
-                                name="sparkles"
-                                size={26}
-                                color={theme.colors.primary}
-                            />
-                        </View>
-                        <View style={{ flex: 1, marginLeft: 15 }}>
-                            <FormattedText
-                                style={{
-                                    fontWeight: "bold",
-                                    fontSize: 17,
-                                    color: theme.colors.text,
-                                }}
-                            >
-                                Recommandé pour vous
-                            </FormattedText>
-                            <FormattedText
-                                style={{
-                                    color: theme.colors.textSecondary,
-                                    fontSize: 14,
-                                    marginTop: 2,
-                                }}
-                            >
-                                Session de {RECOMMENDED_SESSION_QUESTION_COUNT}{" "}
-                                questions personnalisées
-                            </FormattedText>
-                        </View>
-                        <Ionicons
-                            name="chevron-forward"
-                            size={22}
-                            color={theme.colors.primary}
-                        />
-                    </View>
-                </TouchableOpacity>
 
                 <View
                     style={[
@@ -337,25 +204,16 @@ const HomeScreen = () => {
 
                 {categories.length > 0 ? (
                     <View style={styles.categoriesGrid}>
-                        {categories.map((category: FrenchCategory) => {
-                            const stats = getCategoryMasteryStats(
-                                category.questions || [],
-                                masteryMap
-                            );
-                            return (
-                                <CategoryCard
-                                    key={category.id}
-                                    title={category.title}
-                                    description={category.description}
-                                    icon={category.icon}
-                                    count={category.questions?.length || 0}
-                                    progress={stats.percentage / 100}
-                                    onPress={() =>
-                                        navigateToCategory(category.id)
-                                    }
-                                />
-                            );
-                        })}
+                        {categories.map((category: FrenchCategory) => (
+                            <CategoryCard
+                                key={category.id}
+                                title={category.title}
+                                description={category.description}
+                                icon={category.icon}
+                                count={category.questions?.length || 0}
+                                onPress={() => navigateToCategory(category.id)}
+                            />
+                        ))}
                     </View>
                 ) : (
                     <View style={styles.emptyContainer}>

@@ -18,9 +18,6 @@ import { normalizeForComparison } from "../../shared/utils/stringUtils";
 import { sharedStyles } from "../../shared/utils";
 import { useFirebaseImage } from "../../shared/hooks/useFirebaseImage";
 import {
-    PerformanceRating,
-    predictNextReview,
-    createInitialMastery,
     getMasteryForQuestionId,
 } from "../../shared/utils/MasteryUtils";
 import { useMastery } from "../../shared/contexts/MasteryContext";
@@ -34,38 +31,15 @@ interface FlashCardProps {
     question: FormationQuestion;
     isFlipped: boolean;
     onFlip: () => void;
-    onRate: (rating: PerformanceRating) => void;
 }
 
 const FlashCard: React.FC<FlashCardProps> = ({
     question,
     isFlipped,
     onFlip,
-    onRate,
 }) => {
     const { theme } = useTheme();
     const { masteryMap } = useMastery();
-    const [selectedRating, setSelectedRating] =
-        React.useState<PerformanceRating | null>(null);
-
-    const handleRate = useCallback(
-        (rating: PerformanceRating) => {
-            setSelectedRating(rating);
-            onRate(rating);
-        },
-        [onRate]
-    );
-
-    const currentMastery = React.useMemo(
-        () =>
-            getMasteryForQuestionId(masteryMap, question.id) ??
-            createInitialMastery(question.id),
-        [masteryMap, question.id]
-    );
-
-    const getIntervalLabel = (rating: PerformanceRating) => {
-        return predictNextReview(currentMastery, rating);
-    };
 
     useEffect(() => {
         // Reset scroll position when question changes
@@ -429,98 +403,6 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                     </View>
                                 </Pressable>
 
-                                {/* Rating Buttons (SRS) */}
-                                <View style={sharedStyles.ratingContainer}>
-                                    {[
-                                        {
-                                            rating: PerformanceRating.AGAIN,
-                                            label: "Encore",
-                                            color: theme.colors.error,
-                                            icon: "close-circle",
-                                        },
-                                        {
-                                            rating: PerformanceRating.HARD,
-                                            label: "Difficile",
-                                            color: theme.colors.warning,
-                                            icon: "help-circle",
-                                        },
-                                        {
-                                            rating: PerformanceRating.GOOD,
-                                            label: "Bien",
-                                            color: theme.colors.primary,
-                                            icon: "checkmark-circle",
-                                        },
-                                        {
-                                            rating: PerformanceRating.EASY,
-                                            label: "Facile",
-                                            color: theme.colors.success,
-                                            icon: "flash",
-                                        },
-                                    ].map((item) => {
-                                        const isSelected =
-                                            selectedRating === item.rating;
-                                        return (
-                                            <TouchableOpacity
-                                                key={item.rating}
-                                                style={[
-                                                    sharedStyles.ratingButton,
-                                                    {
-                                                        borderColor: item.color,
-                                                        backgroundColor:
-                                                            isSelected
-                                                                ? item.color
-                                                                : item.color +
-                                                                  "10",
-                                                    },
-                                                ]}
-                                                onPress={() =>
-                                                    handleRate(item.rating)
-                                                }
-                                                disabled={
-                                                    selectedRating !== null
-                                                }
-                                            >
-                                                <Ionicons
-                                                    name={item.icon as any}
-                                                    size={18}
-                                                    color={
-                                                        isSelected
-                                                            ? "#FFF"
-                                                            : item.color
-                                                    }
-                                                />
-                                                <FormattedText
-                                                    style={[
-                                                        sharedStyles.ratingButtonText,
-                                                        {
-                                                            color: isSelected
-                                                                ? "#FFF"
-                                                                : item.color,
-                                                            fontSize: 10,
-                                                        },
-                                                    ]}
-                                                >
-                                                    {item.label}
-                                                </FormattedText>
-                                                <FormattedText
-                                                    style={{
-                                                        fontSize: 9,
-                                                        color: isSelected
-                                                            ? "#FFF"
-                                                            : theme.colors
-                                                                  .textMuted,
-                                                        fontWeight: "bold",
-                                                        marginTop: 2,
-                                                    }}
-                                                >
-                                                    {getIntervalLabel(
-                                                        item.rating
-                                                    )}
-                                                </FormattedText>
-                                            </TouchableOpacity>
-                                        );
-                                    })}
-                                </View>
                             </ScrollView>
                         </View>
 
