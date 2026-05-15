@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { FormattedText } from "../../shared/components";
+import { FormattedText, SpeakButton } from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
 import { TOPIC_DISPLAY_NAMES } from "../constants/civicExamConstants";
 import { getTopicFromQuestion } from "../utils/civicExamUtils";
@@ -19,6 +19,7 @@ export const CivicExamQuestionCard: React.FC<CivicExamQuestionCardProps> = ({
     const { theme } = useTheme();
     const topic = getTopicFromQuestion(currentQuestion);
     const topicLabel = topic ? TOPIC_DISPLAY_NAMES[topic] : null;
+    const questionText = getCivicExamQuestionText(currentQuestion);
 
     return (
         <View
@@ -68,11 +69,21 @@ export const CivicExamQuestionCard: React.FC<CivicExamQuestionCardProps> = ({
                     </View>
                 ) : null}
             </View>
-            <FormattedText
-                style={[styles.questionText, { color: theme.colors.text }]}
-            >
-                {getCivicExamQuestionText(currentQuestion)}
-            </FormattedText>
+            <View style={styles.questionTextRow}>
+                <FormattedText
+                    style={[
+                        styles.questionText,
+                        styles.questionTextFlex,
+                        { color: theme.colors.text },
+                    ]}
+                >
+                    {questionText}
+                </FormattedText>
+                <SpeakButton
+                    text={questionText}
+                    accessibilityLabel="Écouter la question"
+                />
+            </View>
         </View>
     );
 };
@@ -114,9 +125,17 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         lineHeight: 18,
     },
+    questionTextRow: {
+        flexDirection: "row",
+        alignItems: "flex-start",
+        gap: 8,
+    },
     questionText: {
         fontSize: 18,
         fontWeight: "600",
         lineHeight: 26,
+    },
+    questionTextFlex: {
+        flex: 1,
     },
 });

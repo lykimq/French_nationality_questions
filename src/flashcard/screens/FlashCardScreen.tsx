@@ -24,6 +24,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
 
 import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useStopSpeechOnChange } from "../../shared/contexts/SpeechContext";
 import { useData } from "../../shared/contexts/DataContext";
 import {
     FormattedText,
@@ -244,6 +245,8 @@ const FlashCardScreen: React.FC = () => {
     });
 
     const currentQuestionId = currentQuestion?.id ?? null;
+
+    useStopSpeechOnChange(currentQuestionId);
 
     // Reset state and position whenever the question changes (safety)
     useLayoutEffect(() => {

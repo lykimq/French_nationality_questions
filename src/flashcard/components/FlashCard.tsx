@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../shared/contexts/ThemeContext";
-import { FormattedText } from "../../shared/components";
+import { FormattedText, SpeakButton } from "../../shared/components";
 import { formatExplanation } from "../../shared/utils/questionUtils";
 import { normalizeForComparison } from "../../shared/utils/stringUtils";
 import { sharedStyles } from "../../shared/utils";
@@ -193,14 +193,23 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                     Question
                                 </FormattedText>
                             </View>
-                            <FormattedText
-                                style={[
-                                    styles.frontQuestionText,
-                                    { color: theme.colors.text },
-                                ]}
-                            >
-                                {questionText}
-                            </FormattedText>
+                            <View style={styles.questionTextRow}>
+                                <FormattedText
+                                    style={[
+                                        styles.frontQuestionText,
+                                        styles.questionTextFlex,
+                                        { color: theme.colors.text },
+                                    ]}
+                                >
+                                    {questionText}
+                                </FormattedText>
+                                {questionText !== "" && (
+                                    <SpeakButton
+                                        text={questionText}
+                                        accessibilityLabel="Écouter la question"
+                                    />
+                                )}
+                            </View>
                             <View style={styles.flipHint}>
                                 <Ionicons
                                     name="refresh"
@@ -392,14 +401,26 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                     <View
                                         style={styles.explanationTextContainer}
                                     >
-                                        <FormattedText
-                                            style={[
-                                                styles.explanationText,
-                                                { color: theme.colors.text },
-                                            ]}
-                                        >
-                                            {explanationText}
-                                        </FormattedText>
+                                        <View style={styles.explanationHeader}>
+                                            <FormattedText
+                                                style={[
+                                                    styles.explanationText,
+                                                    styles.questionTextFlex,
+                                                    {
+                                                        color: theme.colors
+                                                            .text,
+                                                    },
+                                                ]}
+                                            >
+                                                {explanationText}
+                                            </FormattedText>
+                                            {explanationText !== "" && (
+                                                <SpeakButton
+                                                    text={explanationText}
+                                                    accessibilityLabel="Écouter l'explication"
+                                                />
+                                            )}
+                                        </View>
                                     </View>
                                 </Pressable>
 
@@ -489,12 +510,26 @@ const styles = StyleSheet.create({
         textTransform: "uppercase",
         letterSpacing: 1,
     },
+    questionTextRow: {
+        flexDirection: "row",
+        alignItems: "flex-start",
+        width: "100%",
+        marginBottom: 24,
+        gap: 8,
+    },
+    questionTextFlex: {
+        flex: 1,
+    },
+    explanationHeader: {
+        flexDirection: "row",
+        alignItems: "flex-start",
+        gap: 8,
+    },
     frontQuestionText: {
         fontSize: 22,
         fontWeight: "700",
         textAlign: "center",
         lineHeight: 32,
-        marginBottom: 24,
     },
     contextQuestionText: {
         fontSize: 16,

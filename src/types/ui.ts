@@ -46,6 +46,11 @@ export interface FormattedTextProps extends TextProps {
 export interface TextFormattingSettings {
     readonly fontSize: number;
 }
+
+export interface SpeechSettings {
+    readonly selectedVoiceId: string | null;
+    readonly rate: number;
+}
 // Question card component props
 export interface QuestionCardProps {
     readonly id: number | string;

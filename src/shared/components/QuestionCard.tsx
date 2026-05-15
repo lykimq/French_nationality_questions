@@ -11,6 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { formatExplanation } from "../utils";
 import ImageModal from "./ImageModal";
 import FormattedText from "./FormattedText";
+import SpeakButton from "./SpeakButton";
 import Icon3D from "./Icon3D";
 import { useTheme } from "../contexts/ThemeContext";
 import { useIcons } from "../contexts/IconContext";
@@ -79,66 +80,86 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 },
             ]}
         >
-            <Pressable
-                style={({ pressed }) => [
+            <View
+                style={[
                     styles.header,
                     { backgroundColor: theme.colors.questionCardBackground },
-                    pressed &&
-                        !alwaysExpanded && [
-                            styles.headerPressed,
-                            { backgroundColor: theme.colors.primary + "10" },
-                        ],
                 ]}
-                onPress={toggleExpand}
-                android_ripple={
-                    !alwaysExpanded
-                        ? { color: theme.colors.primary + "20" }
-                        : undefined
-                }
-                disabled={alwaysExpanded}
             >
-                <View style={styles.idWrapper}>
-                    <Icon3D
-                        name="ellipse"
-                        size={28}
-                        color={theme.colors.primary}
-                        variant="glass"
-                        backgroundColor={theme.colors.card}
-                        containerStyle={styles.idIconContainer}
-                    />
-                    <FormattedText
-                        style={[styles.id, { color: theme.colors.buttonText }]}
-                    >
-                        {displayId}
-                    </FormattedText>
-                </View>
-                <View style={styles.questionContainer}>
-                    <FormattedText
-                        style={[styles.question, { color: theme.colors.text }]}
-                        numberOfLines={isExpanded ? 0 : 2}
-                    >
-                        {questionText}
-                    </FormattedText>
-                </View>
-                {!alwaysExpanded && (
-                    <View style={styles.iconContainer}>
+                <Pressable
+                    style={({ pressed }) => [
+                        styles.headerPressable,
+                        pressed &&
+                            !alwaysExpanded && [
+                                styles.headerPressed,
+                                { backgroundColor: theme.colors.primary + "10" },
+                            ],
+                    ]}
+                    onPress={toggleExpand}
+                    android_ripple={
+                        !alwaysExpanded
+                            ? { color: theme.colors.primary + "20" }
+                            : undefined
+                    }
+                    disabled={alwaysExpanded}
+                >
+                    <View style={styles.idWrapper}>
                         <Icon3D
-                            name={
-                                isExpanded
-                                    ? getIconName("chevronUp")
-                                    : getIconName("chevronDown")
-                            }
-                            size={20}
+                            name="ellipse"
+                            size={28}
                             color={theme.colors.primary}
-                            variant={
-                                isExpanded
-                                    ? getIconVariant("chevronUp")
-                                    : getIconVariant("chevronDown")
-                            }
+                            variant="glass"
+                            backgroundColor={theme.colors.card}
+                            containerStyle={styles.idIconContainer}
                         />
+                        <FormattedText
+                            style={[
+                                styles.id,
+                                { color: theme.colors.buttonText },
+                            ]}
+                        >
+                            {displayId}
+                        </FormattedText>
                     </View>
+                    <View style={styles.questionContainer}>
+                        <FormattedText
+                            style={[
+                                styles.question,
+                                styles.questionTextFlex,
+                                { color: theme.colors.text },
+                            ]}
+                            numberOfLines={isExpanded ? 0 : 2}
+                        >
+                            {questionText}
+                        </FormattedText>
+                    </View>
+                    {!alwaysExpanded && (
+                        <View style={styles.iconContainer}>
+                            <Icon3D
+                                name={
+                                    isExpanded
+                                        ? getIconName("chevronUp")
+                                        : getIconName("chevronDown")
+                                }
+                                size={20}
+                                color={theme.colors.primary}
+                                variant={
+                                    isExpanded
+                                        ? getIconVariant("chevronUp")
+                                        : getIconVariant("chevronDown")
+                                }
+                            />
+                        </View>
+                    )}
+                </Pressable>
+                {questionText !== "" && (
+                    <SpeakButton
+                        text={questionText}
+                        accessibilityLabel="Écouter la question"
+                        style={styles.speakButton}
+                    />
                 )}
-            </Pressable>
+            </View>
 
             {isExpanded && (
                 <View
@@ -252,26 +273,32 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                                     },
                                 ]}
                             >
-                                <View style={sharedStyles.row}>
-                                    <Ionicons
-                                        name="information-circle"
-                                        size={18}
-                                        color={theme.colors.primary}
-                                        style={{ marginRight: 6 }}
+                                <View style={styles.explanationHeader}>
+                                    <View style={sharedStyles.row}>
+                                        <Ionicons
+                                            name="information-circle"
+                                            size={18}
+                                            color={theme.colors.primary}
+                                            style={{ marginRight: 6 }}
+                                        />
+                                        <FormattedText
+                                            style={[
+                                                styles.sectionTitle,
+                                                {
+                                                    color: theme.colors.primary,
+                                                    fontSize: 13,
+                                                    letterSpacing: 1,
+                                                    fontWeight: "800",
+                                                },
+                                            ]}
+                                        >
+                                            EXPLICATION
+                                        </FormattedText>
+                                    </View>
+                                    <SpeakButton
+                                        text={explanationText}
+                                        accessibilityLabel="Écouter l'explication"
                                     />
-                                    <FormattedText
-                                        style={[
-                                            styles.sectionTitle,
-                                            {
-                                                color: theme.colors.primary,
-                                                fontSize: 13,
-                                                letterSpacing: 1,
-                                                fontWeight: "800",
-                                            },
-                                        ]}
-                                    >
-                                        EXPLICATION
-                                    </FormattedText>
                                 </View>
                                 <FormattedText
                                     style={[
@@ -328,6 +355,13 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
     },
     header: {
+        flexDirection: "row",
+        alignItems: "flex-start",
+    },
+    headerPressable: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "flex-start",
         ...sharedStyles.spaceBetween,
     },
     headerPressed: {
@@ -352,10 +386,23 @@ const styles = StyleSheet.create({
         flex: 1,
         marginRight: 8,
     },
+    speakButton: {
+        marginTop: 2,
+        marginLeft: 4,
+    },
+    explanationHeader: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 8,
+    },
     question: {
         fontSize: 16,
         fontWeight: "600",
         lineHeight: 22,
+    },
+    questionTextFlex: {
+        flex: 1,
     },
     iconContainer: {
         padding: 4,

@@ -4,6 +4,27 @@ jest.setTimeout(10000);
 
 require("./jest.setup.shared");
 
+jest.mock("expo-speech", () => ({
+    speak: jest.fn(),
+    stop: jest.fn(() => Promise.resolve()),
+    getAvailableVoicesAsync: jest.fn(() =>
+        Promise.resolve([
+            {
+                identifier: "fr-test-female",
+                language: "fr-FR",
+                name: "Amélie",
+                quality: "Default",
+            },
+            {
+                identifier: "fr-test-male",
+                language: "fr-FR",
+                name: "Thomas",
+                quality: "Default",
+            },
+        ])
+    ),
+}));
+
 jest.mock("@sentry/react-native", () => ({
     init: jest.fn(),
     captureException: jest.fn(),

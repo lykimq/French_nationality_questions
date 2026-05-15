@@ -16,6 +16,7 @@ import {
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../contexts/ThemeContext";
+import { useStopSpeechOnChange } from "../contexts/SpeechContext";
 import { useIcon3D } from "../hooks";
 import QuestionCard from "./QuestionCard";
 import FormattedText from "./FormattedText";
@@ -62,6 +63,8 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
 
     const chevronBackIcon = getIcon("chevronBack");
     const chevronForwardIcon = getIcon("chevronForward");
+
+    useStopSpeechOnChange(question?.id ?? null);
 
     // Track the question ID to detect changes for animation reset
     const prevQuestionIdRef = useRef<string | number | null>(null);

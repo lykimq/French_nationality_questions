@@ -13,6 +13,7 @@ import CivicExamSettings from "./components/CivicExamSettings";
 import RatingModal from "./components/RatingModal";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ProgressSettings from "./components/ProgressSettings";
+import AudioSettings from "./components/AudioSettings";
 
 const SettingsScreen = () => {
     const { theme } = useTheme();
@@ -60,6 +61,14 @@ const SettingsScreen = () => {
                         iconColor={theme.colors.accent}
                     >
                         <TextFormattingSettings />
+                    </CollapsibleSection>
+
+                    <CollapsibleSection
+                        title="Synthèse vocale"
+                        icon="volume-high"
+                        iconColor={theme.colors.info}
+                    >
+                        <AudioSettings />
                     </CollapsibleSection>
 
                     {/* Civic Exam Statistics Section */}

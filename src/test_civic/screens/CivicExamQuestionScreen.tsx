@@ -15,6 +15,7 @@ import {
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useStopSpeechOnChange } from "../../shared/contexts/SpeechContext";
 import { useCivicExam } from "../contexts/CivicExamContext";
 import { FormattedText } from "../../shared/components";
 import { sharedStyles } from "../../shared/utils";
@@ -165,6 +166,8 @@ const CivicExamQuestionScreen = () => {
               correctAnswer?: number;
           })
         | null;
+
+    useStopSpeechOnChange(currentQuestion?.id ?? currentQuestionIndex);
 
     const buildAnswerPayload = useCallback(
         (answerIndex: number, isCorrect: boolean) => {
