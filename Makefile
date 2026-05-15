@@ -1,4 +1,4 @@
-.PHONY: help setup install android android-fast android-run ios web run start dev \
+.PHONY: help setup install android android-fast android-run apk ios web run start dev \
        test clean clean-android clean-ios clean-all \
        devices lint format
 
@@ -36,8 +36,32 @@ android-run: ## Run on connected Android device
 	@adb devices | grep -q 'device$$' || (echo "No Android device found. Connect via USB or adb pair." && exit 1)
 	npx expo run:android
 
+apk: ## Release APK with Firebase config for Cloud TTS -> dist/naturalisation-france.apk
+	@test -f .env || (echo "Missing .env – run: make setup" && exit 1)
+	@test -n "$(PROJECT_ID)" || (echo "Set EXPO_PUBLIC_FIREBASE_PROJECT_ID in .env" && exit 1)
+	@if grep -qE '^EXPO_PUBLIC_USE_FUNCTIONS_EMULATOR=true' .env 2>/dev/null; then \
+		echo "Unset EXPO_PUBLIC_USE_FUNCTIONS_EMULATOR in .env for a release APK."; exit 1; \
+	fi
+	@for key in EXPO_PUBLIC_FIREBASE_API_KEY EXPO_PUBLIC_FIREBASE_PROJECT_ID \
+		EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID EXPO_PUBLIC_FIREBASE_MOBILE_SDK_APP_ID; do \
+		val=$$(grep -E "^$$key=" .env | cut -d= -f2- | tr -d '"' | tr -d "'" | xargs); \
+		if [ -z "$$val" ] || echo "$$val" | grep -qiE 'your-|placeholder|here$$'; then \
+			echo "Set $$key in .env (see .env.example)."; exit 1; \
+		fi; \
+	done
+	@test -f android/gradle.properties && test -f android/app/my-release-key.keystore || ( \
+		echo "Release signing missing (android/gradle.properties + my-release-key.keystore)."; exit 1; \
+	)
+	@$(MAKE) cloud-tts
+	@set -a && . ./.env && set +a && \
+		export NODE_ENV=production SENTRY_DISABLE_AUTO_UPLOAD=true && \
+		cd android && ./gradlew assembleRelease
+	@mkdir -p dist
+	@cp android/app/build/outputs/apk/release/app-release.apk dist/naturalisation-france.apk
+	@echo "APK: dist/naturalisation-france.apk  (install: adb install -r dist/naturalisation-france.apk)"
+
 # ------------------------------------------------------------------
-# Cloud TTS (internal — used by `make android`)
+# Cloud TTS (internal - used by `make android` / `make apk`)
 # ------------------------------------------------------------------
 
 functions-install:
