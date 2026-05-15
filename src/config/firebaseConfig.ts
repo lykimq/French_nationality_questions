@@ -1,8 +1,16 @@
 import { initializeApp, FirebaseApp } from "firebase/app";
 import { getStorage, FirebaseStorage } from "firebase/storage";
+import {
+    getFunctions,
+    connectFunctionsEmulator,
+    type Functions,
+} from "firebase/functions";
 import { createLogger } from "../shared/utils/logger";
 
 const logger = createLogger("FirebaseConfig");
+
+const FUNCTIONS_REGION =
+    process.env.EXPO_PUBLIC_FIREBASE_FUNCTIONS_REGION ?? "europe-west1";
 
 // Firebase configuration from environment variables
 // Credentials must be in .env file with EXPO_PUBLIC_ prefix (never commit to git)
@@ -25,6 +33,7 @@ const missingFields = requiredFields.filter((field) => !firebaseConfig[field]);
 
 let app: FirebaseApp | null = null;
 let storage: FirebaseStorage | null = null;
+let functions: Functions | null = null;
 
 if (missingFields.length > 0) {
     const platform = typeof window !== "undefined" ? "Web" : "Native";
@@ -41,9 +50,24 @@ if (missingFields.length > 0) {
     try {
         app = initializeApp(firebaseConfig);
         storage = getStorage(app);
+        functions = getFunctions(app, FUNCTIONS_REGION);
+
+        if (
+            __DEV__ &&
+            process.env.EXPO_PUBLIC_USE_FUNCTIONS_EMULATOR === "true"
+        ) {
+            connectFunctionsEmulator(functions, "localhost", 5001);
+            logger.info("Firebase Functions emulator connected.");
+        }
     } catch (error) {
         logger.error("Failed to initialize Firebase:", error);
     }
 }
+
+export const isFirebaseConfigured = (): boolean => app !== null;
+
+export const getFirebaseApp = (): FirebaseApp | null => app;
+
+export const getFirebaseFunctions = (): Functions | null => functions;
 
 export { storage };

@@ -14,6 +14,8 @@ jest.mock("../../contexts/SpeechContext", () => ({
         hasFrenchVoices: true,
         isVoicesLoading: false,
         isSpeechReady: true,
+        isCloudSpeechEnabled: true,
+        settings: { speechEngine: "cloud", selectedVoiceId: "fr-FR-Neural2-A", rate: 0.95 },
     }),
 }));
 

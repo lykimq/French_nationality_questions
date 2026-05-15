@@ -98,11 +98,19 @@ yarn-error.*
 
 # @end expo-cli
 
-# Firebase configuration files (contains sensitive API keys)
+# Firebase (mobile SDK config and secrets — not firebase.json at repo root)
 **/google-services.json
 **/GoogleService-Info.plist
-**/firebase.json
 *-firebase-adminsdk-*.json
+.firebaserc
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# Firebase Functions (commit functions/src, package.json, tsconfig.json, README)
+functions/lib/
+functions/.env
+functions/.env.*
 
 # Additional security - sensitive files
 *.secret

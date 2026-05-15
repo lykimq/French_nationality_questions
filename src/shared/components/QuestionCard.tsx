@@ -360,9 +360,8 @@ const styles = StyleSheet.create({
     },
     headerPressable: {
         flex: 1,
-        flexDirection: "row",
-        alignItems: "flex-start",
         ...sharedStyles.spaceBetween,
+        alignItems: "flex-start",
     },
     headerPressed: {
         borderRadius: 8,

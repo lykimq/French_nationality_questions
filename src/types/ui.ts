@@ -47,7 +47,10 @@ export interface TextFormattingSettings {
     readonly fontSize: number;
 }
 
+export type SpeechEngine = "cloud" | "device";
+
 export interface SpeechSettings {
+    readonly speechEngine: SpeechEngine;
     readonly selectedVoiceId: string | null;
     readonly rate: number;
 }

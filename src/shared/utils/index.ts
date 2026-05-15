@@ -11,3 +11,4 @@ export * from "./typeGuards";
 export * from "./errorUtils";
 export * from "./ratingUtils";
 export * from "./speechUtils";
+export * from "./cloudSpeechUtils";

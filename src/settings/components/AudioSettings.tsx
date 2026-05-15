@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet, Switch } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../shared/contexts/ThemeContext";
 import { useSpeech } from "../../shared/contexts/SpeechContext";
@@ -7,6 +7,7 @@ import { FormattedText } from "../../shared/components";
 import SettingItem from "./SettingItem";
 import { getVoiceGenderLabel } from "../../shared/utils/speechUtils";
 import { getCardContainerStyle } from "../../shared/utils";
+import type { SpeechEngine } from "../../types";
 
 const AudioSettings: React.FC = () => {
     const { theme } = useTheme();
@@ -15,12 +16,59 @@ const AudioSettings: React.FC = () => {
         availableVoices,
         isVoicesLoading,
         hasFrenchVoices,
+        isCloudSpeechEnabled,
+        setSpeechEngine,
         setSelectedVoiceId,
         previewVoice,
     } = useSpeech();
 
+    const useCloudEngine = settings.speechEngine === "cloud";
+
+    const handleEngineToggle = (enabled: boolean) => {
+        const engine: SpeechEngine = enabled ? "cloud" : "device";
+        setSpeechEngine(engine);
+    };
+
     return (
         <View>
+            {isCloudSpeechEnabled && (
+                <View
+                    style={[
+                        styles.engineRow,
+                        getCardContainerStyle(theme),
+                    ]}
+                >
+                    <View style={styles.engineText}>
+                        <FormattedText
+                            style={[
+                                styles.engineTitle,
+                                { color: theme.colors.text },
+                            ]}
+                        >
+                            Voix naturelle (Google Cloud)
+                        </FormattedText>
+                        <FormattedText
+                            style={[
+                                styles.engineSubtitle,
+                                { color: theme.colors.textSecondary },
+                            ]}
+                        >
+                            Qualité plus naturelle via Internet. Retombe sur
+                            la voix du téléphone si hors ligne.
+                        </FormattedText>
+                    </View>
+                    <Switch
+                        value={useCloudEngine}
+                        onValueChange={handleEngineToggle}
+                        trackColor={{
+                            false: theme.colors.switchTrack,
+                            true: theme.colors.primary,
+                        }}
+                        thumbColor={theme.colors.switchThumb}
+                    />
+                </View>
+            )}
+
             {isVoicesLoading ? (
                 <FormattedText
                     style={[
@@ -28,7 +76,7 @@ const AudioSettings: React.FC = () => {
                         { color: theme.colors.textSecondary },
                     ]}
                 >
-                    Chargement des voix françaises...
+                    Chargement des voix...
                 </FormattedText>
             ) : !hasFrenchVoices ? (
                 <FormattedText
@@ -37,9 +85,9 @@ const AudioSettings: React.FC = () => {
                         { color: theme.colors.textSecondary },
                     ]}
                 >
-                    Aucune voix française détectée. Sur Android, installez le
-                    pack de langue française dans les paramètres système de
-                    synthèse vocale.
+                    {useCloudEngine
+                        ? "La synthèse cloud n'est pas disponible. Vérifiez la configuration Firebase et le déploiement de la fonction."
+                        : "Aucune voix française détectée sur cet appareil. Installez le pack français dans les paramètres système de synthèse vocale."}
                 </FormattedText>
             ) : (
                 <>
@@ -93,19 +141,6 @@ const AudioSettings: React.FC = () => {
                             </TouchableOpacity>
                         );
                     })}
-
-                    {availableVoices.length < 4 && (
-                        <FormattedText
-                            style={[
-                                styles.note,
-                                { color: theme.colors.textMuted },
-                            ]}
-                        >
-                            {availableVoices.length} voix disponible
-                            {availableVoices.length > 1 ? "s" : ""} sur cet
-                            appareil.
-                        </FormattedText>
-                    )}
                 </>
             )}
 
@@ -113,21 +148,41 @@ const AudioSettings: React.FC = () => {
                 title="Écouter un exemple"
                 icon="volume-high"
                 iconColor={theme.colors.primary}
-                onPress={() => void previewVoice()}
+                onPress={() => previewVoice()}
             />
 
             <FormattedText
                 style={[styles.note, { color: theme.colors.textMuted }]}
             >
-                La lecture utilise la synthèse vocale de votre téléphone
-                (gratuite, hors ligne). Sur iPhone, désactivez le mode silencieux
-                pour entendre le son.
+                {useCloudEngine
+                    ? "La voix cloud utilise Google Text-to-Speech (quota gratuit limité). L'audio est mis en cache sur l'appareil. Sur iPhone, désactivez le mode silencieux."
+                    : "La lecture utilise la synthèse vocale du téléphone (gratuite, hors ligne). Sur iPhone, désactivez le mode silencieux."}
             </FormattedText>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
+    engineRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        padding: 14,
+        marginBottom: 12,
+        borderRadius: 12,
+        gap: 12,
+    },
+    engineText: {
+        flex: 1,
+    },
+    engineTitle: {
+        fontSize: 15,
+        fontWeight: "600",
+    },
+    engineSubtitle: {
+        fontSize: 13,
+        lineHeight: 18,
+        marginTop: 4,
+    },
     voiceRow: {
         flexDirection: "row",
         alignItems: "center",

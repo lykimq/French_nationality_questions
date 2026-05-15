@@ -4,5 +4,6 @@
         "strict": true,
         "typeRoots": ["./node_modules/@types", "./src/types"]
     },
-    "include": ["src/**/*", "App.tsx", "index.ts"]
+    "include": ["src/**/*", "App.tsx", "index.ts"],
+    "exclude": ["functions", "functions/**", "node_modules"]
 }
