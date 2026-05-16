@@ -10,8 +10,6 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { HomeStackParamList } from "../types";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { useMastery } from "../shared/contexts/MasteryContext";
 import {
@@ -22,15 +20,11 @@ import {
     getMasteryForQuestionId,
     MasteryLevel,
 } from "../shared/utils/MasteryUtils";
-import { openSearchResult } from "../shared/utils/searchNavigation";
 import type { SearchResultQuestion } from "../shared/utils/searchQuestions";
-import { FormattedText, QuestionListRow } from "../shared/components";
-
-type QuestionSearchNavigationProp =
-    NativeStackNavigationProp<HomeStackParamList>;
+import { FormattedText, QuestionCard } from "../shared/components";
 
 const QuestionSearchScreen = () => {
-    const navigation = useNavigation<QuestionSearchNavigationProp>();
+    const navigation = useNavigation();
     const { theme } = useTheme();
     const { masteryMap } = useMastery();
     const {
@@ -38,46 +32,41 @@ const QuestionSearchScreen = () => {
         setSearchQuery,
         results: filteredQuestions,
         isSearching,
-        questionsData,
     } = useQuestionSearch(SEARCH_LIVE_OPTIONS);
 
     const renderItem = ({ item }: { item: SearchResultQuestion }) => {
         const mastery = getMasteryForQuestionId(masteryMap, item.rawQuestionId);
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
-        const openQuestion = () => {
-            openSearchResult(navigation, item, questionsData, "homeStack");
-        };
-
         return (
-            <QuestionListRow
-                number={item.id}
-                question={item.question}
-                borderBottomColor={theme.colors.divider}
-                onPress={openQuestion}
-                header={
-                    <View style={styles.resultHeader}>
-                        <FormattedText
-                            style={[
-                                styles.categoryTag,
-                                {
-                                    color: theme.colors.primary,
-                                    backgroundColor: theme.colors.primary + "15",
-                                },
-                            ]}
-                        >
-                            {item.categoryTitle}
-                        </FormattedText>
-                        {isMastered && (
-                            <Ionicons
-                                name="checkmark-circle"
-                                size={16}
-                                color="#4CAF50"
-                            />
-                        )}
-                    </View>
-                }
-            />
+            <View style={styles.resultItem}>
+                <View style={styles.resultHeader}>
+                    <FormattedText
+                        style={[
+                            styles.categoryTag,
+                            {
+                                color: theme.colors.primary,
+                                backgroundColor: theme.colors.primary + "15",
+                            },
+                        ]}
+                    >
+                        {item.categoryTitle}
+                    </FormattedText>
+                    {isMastered && (
+                        <Ionicons
+                            name="checkmark-circle"
+                            size={16}
+                            color="#4CAF50"
+                        />
+                    )}
+                </View>
+                <QuestionCard
+                    id={item.rawQuestionId}
+                    question={item.question}
+                    explanation={item.explanation}
+                    image={item.image}
+                />
+            </View>
         );
     };
 
@@ -228,11 +217,14 @@ const styles = StyleSheet.create({
         padding: 16,
         paddingBottom: 40,
     },
+    resultItem: {
+        marginBottom: 16,
+    },
     resultHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 6,
+        marginBottom: 8,
     },
     categoryTag: {
         fontSize: 11,

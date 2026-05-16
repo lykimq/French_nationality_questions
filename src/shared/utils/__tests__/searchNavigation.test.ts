@@ -112,11 +112,19 @@ describe("searchNavigation", () => {
         );
 
         expect(tabNavigate).toHaveBeenCalledWith("HomeTab", {
-            screen: "CategoryQuestions",
-            params: {
-                categoryId: "cat-a",
-                questionId: "livret_2",
-                initialIndex: 1,
+            state: {
+                routes: [
+                    { name: "Home" },
+                    {
+                        name: "CategoryQuestions",
+                        params: {
+                            categoryId: "cat-a",
+                            questionId: "livret_2",
+                            initialIndex: 1,
+                        },
+                    },
+                ],
+                index: 1,
             },
         });
     });

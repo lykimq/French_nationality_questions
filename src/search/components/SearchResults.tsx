@@ -1,21 +1,18 @@
 import React, { useCallback } from "react";
 import { StyleSheet, View, FlatList, ListRenderItem } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import {
     FormattedText,
     Icon3D,
-    QuestionListRow,
+    QuestionCard,
 } from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
-import { useData } from "../../shared/contexts/DataContext";
 import { useMastery } from "../../shared/contexts/MasteryContext";
 import { useIcon3D } from "../../shared/hooks";
 import {
     getMasteryForQuestionId,
     MasteryLevel,
 } from "../../shared/utils/MasteryUtils";
-import { openSearchResult } from "../../shared/utils/searchNavigation";
 import type { SearchResultQuestion } from "../../shared/utils/searchQuestions";
 
 interface SearchResultsProps {
@@ -29,8 +26,6 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     searchQuery,
     totalMatchCount = 0,
 }) => {
-    const navigation = useNavigation();
-    const { questionsData } = useData();
     const { masteryMap } = useMastery();
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
@@ -41,13 +36,6 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     const hasMoreResults =
         totalMatchCount > 0 && totalMatchCount > displayedCount;
 
-    const handleOpenResult = useCallback(
-        (item: SearchResultQuestion) => {
-            openSearchResult(navigation, item, questionsData, "tabRoot");
-        },
-        [navigation, questionsData]
-    );
-
     const renderResult: ListRenderItem<SearchResultQuestion> = useCallback(
         ({ item: result }) => {
             const mastery = getMasteryForQuestionId(
@@ -57,51 +45,45 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
             const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
             return (
-                <QuestionListRow
-                    number={result.id}
-                    question={result.question}
-                    borderBottomColor={theme.colors.divider}
-                    onPress={() => handleOpenResult(result)}
-                    header={
-                        <View style={styles.categoryLabel}>
-                            <FormattedText
-                                style={[
-                                    styles.categoryLabelText,
-                                    { color: theme.colors.primary },
-                                ]}
-                            >
-                                {result.categoryTitle ||
-                                    result.categoryId ||
-                                    "Sans catégorie"}
-                            </FormattedText>
-                            {result.hasImage && (
-                                <Icon3D
-                                    name={imageIcon.name}
-                                    size={10}
-                                    color={theme.colors.primary}
-                                    variant="default"
-                                    containerStyle={styles.imageIcon}
-                                />
-                            )}
-                            {isMastered && (
-                                <Ionicons
-                                    name="checkmark-circle"
-                                    size={16}
-                                    color="#4CAF50"
-                                />
-                            )}
-                        </View>
-                    }
-                />
+                <View style={styles.resultItem}>
+                    <View style={styles.categoryLabel}>
+                        <FormattedText
+                            style={[
+                                styles.categoryLabelText,
+                                { color: theme.colors.primary },
+                            ]}
+                        >
+                            {result.categoryTitle ||
+                                result.categoryId ||
+                                "Sans catégorie"}
+                        </FormattedText>
+                        {result.hasImage && (
+                            <Icon3D
+                                name={imageIcon.name}
+                                size={10}
+                                color={theme.colors.primary}
+                                variant="default"
+                                containerStyle={styles.imageIcon}
+                            />
+                        )}
+                        {isMastered && (
+                            <Ionicons
+                                name="checkmark-circle"
+                                size={16}
+                                color="#4CAF50"
+                            />
+                        )}
+                    </View>
+                    <QuestionCard
+                        id={result.rawQuestionId}
+                        question={result.question}
+                        explanation={result.explanation}
+                        image={result.image}
+                    />
+                </View>
             );
         },
-        [
-            theme.colors.divider,
-            theme.colors.primary,
-            imageIcon.name,
-            masteryMap,
-            handleOpenResult,
-        ]
+        [theme.colors.primary, imageIcon.name, masteryMap]
     );
 
     const keyExtractor = useCallback(
@@ -185,7 +167,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
             >
                 {hasMoreResults
                     ? "Affinez votre recherche pour voir plus de résultats"
-                    : "Trié par pertinence"}
+                    : "Appuyez sur une question pour afficher la réponse"}
             </FormattedText>
         </View>
     );
@@ -230,10 +212,13 @@ const styles = StyleSheet.create({
     sortedByText: {
         fontSize: 13,
     },
+    resultItem: {
+        marginBottom: 16,
+    },
     categoryLabel: {
         flexDirection: "row",
         alignItems: "center",
-        marginBottom: 6,
+        marginBottom: 8,
         gap: 6,
     },
     categoryLabelText: {

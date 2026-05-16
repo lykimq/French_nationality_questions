@@ -124,7 +124,12 @@ export const openSearchResult = (
     }
 
     tabNavigation?.navigate("HomeTab", {
-        screen: "CategoryQuestions",
-        params,
+        state: {
+            routes: [
+                { name: "Home" },
+                { name: "CategoryQuestions", params },
+            ],
+            index: 1,
+        },
     });
 };
