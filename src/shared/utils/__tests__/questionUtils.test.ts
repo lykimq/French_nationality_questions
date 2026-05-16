@@ -11,6 +11,8 @@
  */
 import {
     sortQuestionsById,
+    findQuestionIndexById,
+    resolveQuestionIndex,
     processQuestionData,
     formatExplanation,
     safeParseDate,
@@ -127,6 +129,40 @@ describe("questionUtils", () => {
             expect(result.id).toBe("invalid");
             expect(result.question).toBe("Invalid question data");
             expect(result.explanation).toBe("No explanation available");
+        });
+    });
+
+    describe("resolveQuestionIndex", () => {
+        it("prefers question id over initial index", () => {
+            const questions = [
+                { id: "rh_l_1", question: "One" },
+                { id: "rh_l_2", question: "Two" },
+            ];
+
+            expect(
+                resolveQuestionIndex(questions, {
+                    questionId: "rh_l_2",
+                    initialIndex: 0,
+                })
+            ).toBe(1);
+        });
+    });
+
+    describe("findQuestionIndexById", () => {
+        it("returns the sorted index for a matching question id", () => {
+            const questions = [
+                { id: "rh_l_10", question: "Ten" },
+                { id: "rh_l_2", question: "Two" },
+                { id: "rh_l_1", question: "One" },
+            ];
+
+            expect(findQuestionIndexById(questions, "rh_l_2")).toBe(1);
+        });
+
+        it("returns -1 when the question id is not found", () => {
+            const questions = [{ id: "rh_l_1", question: "One" }];
+
+            expect(findQuestionIndexById(questions, "missing")).toBe(-1);
         });
     });
 

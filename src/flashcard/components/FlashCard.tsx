@@ -10,11 +10,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../shared/contexts/ThemeContext";
-import {
-    FormattedText,
-    QuestionImage,
-    SpeakButton,
-} from "../../shared/components";
+import { FormattedText, SpeakButton } from "../../shared/components";
 import { formatExplanation } from "../../shared/utils/questionUtils";
 import { normalizeForComparison } from "../../shared/utils/stringUtils";
 import { sharedStyles } from "../../shared/utils";
@@ -108,10 +104,8 @@ const FlashCard: React.FC<FlashCardProps> = ({
     });
 
     const questionText = question.question || "";
-    // Remove markdown image links from explanation if image is displayed separately
     let explanationText = question.explanation || "";
 
-    // Remove markdown image syntax (e.g., ![](path) or ![alt](path))
     if (question.image) {
         explanationText = explanationText
             .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
@@ -305,7 +299,6 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                     onPress={onFlip}
                                     style={styles.contentPressable}
                                 >
-                                    {/* Question Context */}
                                     <View
                                         style={styles.explanationTextContainer}
                                     >
@@ -327,18 +320,7 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                             ]}
                                         />
                                     </View>
-                                </Pressable>
 
-                                <QuestionImage
-                                    image={question.image}
-                                    enableFullscreen
-                                    containerStyle={styles.flashcardImage}
-                                />
-
-                                <Pressable
-                                    onPress={onFlip}
-                                    style={styles.contentPressable}
-                                >
                                     <View
                                         style={styles.explanationTextContainer}
                                     >
@@ -503,7 +485,7 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     contentPressable: {
-        flex: 1,
+        width: "100%",
     },
     explanationTextContainer: {
         width: "100%",
@@ -516,9 +498,6 @@ const styles = StyleSheet.create({
         color: "#2c3e50", // Dark grey/blue instead of pure black for softer contrast
         flexShrink: 0,
         marginBottom: 8,
-    },
-    flashcardImage: {
-        borderRadius: 12,
     },
     flipHint: {
         flexDirection: "row",

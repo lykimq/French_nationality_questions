@@ -7,7 +7,10 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HomeStackParamList, Question } from "../types";
 import { useData } from "../shared/contexts/DataContext";
 import { useTheme } from "../shared/contexts/ThemeContext";
-import { sortQuestionsById } from "../shared/utils/questionUtils";
+import {
+    resolveQuestionIndex,
+    sortQuestionsById,
+} from "../shared/utils/questionUtils";
 import QuestionSlideView from "./QuestionSlideView";
 import { FormattedText } from "../shared/components";
 
@@ -24,7 +27,7 @@ const CategoryQuestionsScreen = () => {
     const route = useRoute<CategoryQuestionsRouteProp>();
     const navigation = useNavigation<CategoryQuestionsNavigationProp>();
     const { theme } = useTheme();
-    const { categoryId, initialIndex = 0 } = route.params;
+    const { categoryId, initialIndex = 0, questionId } = route.params;
     const { questionsData } = useData();
 
     const category = questionsData.categories.find((c) => c.id === categoryId);
@@ -33,6 +36,17 @@ const CategoryQuestionsScreen = () => {
         if (!category?.questions) return [];
         return sortQuestionsById(category.questions);
     }, [category?.questions]);
+
+    const activeIndex = useMemo(
+        () =>
+            resolveQuestionIndex(sortedQuestions, {
+                questionId,
+                initialIndex,
+            }),
+        [sortedQuestions, questionId, initialIndex]
+    );
+
+    const slideViewKey = `${categoryId}-${String(questionId)}`;
 
     if (!category) {
         return (
@@ -104,8 +118,10 @@ const CategoryQuestionsScreen = () => {
             </SafeAreaView>
 
             <QuestionSlideView
+                key={slideViewKey}
                 questions={sortedQuestions as Question[]}
-                initialIndex={initialIndex}
+                initialIndex={activeIndex}
+                focusQuestionId={questionId}
             />
         </View>
     );

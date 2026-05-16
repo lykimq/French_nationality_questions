@@ -3,6 +3,7 @@ import React, {
     useRef,
     useCallback,
     useMemo,
+    useEffect,
     useLayoutEffect,
 } from "react";
 import {
@@ -40,7 +41,10 @@ import {
     setFlashCardDataCache,
     setFlashCardDataLoadPromise,
 } from "../utils/flashCardDataCache";
-import { sortQuestionsById } from "../../shared/utils/questionUtils";
+import {
+    findQuestionIndexById,
+    sortQuestionsById,
+} from "../../shared/utils/questionUtils";
 import { useMastery } from "../../shared/contexts/MasteryContext";
 import {
     prioritizeQuestions,
@@ -60,7 +64,7 @@ type FlashCardScreenNavigationProp =
 type FlashCardScreenRouteProp = {
     key: string;
     name: "FlashCard";
-    params: { categoryId: string };
+    params: { categoryId: string; questionId?: string | number };
 };
 
 type CategoryDataState = {
@@ -73,7 +77,7 @@ const FlashCardScreen: React.FC = () => {
     const route = useRoute<FlashCardScreenRouteProp>();
     const navigation = useNavigation<FlashCardScreenNavigationProp>();
     const { theme } = useTheme();
-    const { categoryId } = route.params;
+    const { categoryId, questionId: routeQuestionId } = route.params;
 
     const [dataState, setDataState] = useState<CategoryDataState>(() => {
         const cached = getFlashCardDataCache();
@@ -252,6 +256,24 @@ const FlashCardScreen: React.FC = () => {
     const currentQuestionId = currentQuestion?.id ?? null;
 
     useStopSpeechOnChange(currentQuestionId);
+
+    useEffect(() => {
+        if (
+            routeQuestionId == null ||
+            routeQuestionId === "" ||
+            !category?.questions?.length
+        ) {
+            return;
+        }
+
+        const targetIndex = findQuestionIndexById(
+            category.questions,
+            routeQuestionId
+        );
+        if (targetIndex >= 0) {
+            goToCard(targetIndex);
+        }
+    }, [routeQuestionId, category?.questions, goToCard]);
 
     // Reset state and position whenever the question changes (safety)
     useLayoutEffect(() => {

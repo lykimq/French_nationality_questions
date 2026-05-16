@@ -39,6 +39,41 @@ export const sortQuestionsById = <T extends { id: number | string }>(
     });
 };
 
+export const findQuestionIndexById = <T extends { id: number | string }>(
+    questions: readonly T[],
+    questionId: string | number | null | undefined
+): number => {
+    if (questionId == null || questionId === "") {
+        return -1;
+    }
+    return sortQuestionsById(questions).findIndex(
+        (q) => String(q.id) === String(questionId)
+    );
+};
+
+export const resolveQuestionIndex = <T extends { id: number | string }>(
+    questions: readonly T[],
+    options: {
+        questionId?: string | number | null;
+        initialIndex?: number;
+    } = {}
+): number => {
+    const { questionId, initialIndex = 0 } = options;
+
+    if (questions.length === 0) {
+        return 0;
+    }
+
+    if (questionId != null && questionId !== "") {
+        const indexFromId = findQuestionIndexById(questions, questionId);
+        if (indexFromId >= 0) {
+            return indexFromId;
+        }
+    }
+
+    return Math.max(0, Math.min(initialIndex, questions.length - 1));
+};
+
 export const formatExplanation = (text: string): string => {
     if (!text) return "";
 

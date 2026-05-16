@@ -74,6 +74,7 @@ export interface CategoryCardProps
 export interface QuestionSlideViewProps {
     readonly questions: readonly Question[];
     readonly initialIndex?: number;
+    readonly focusQuestionId?: string | number | null;
 }
 // Data context type (provides questions data, not language switching)
 export interface DataContextType {

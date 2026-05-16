@@ -4,7 +4,7 @@ import { useTheme } from "../../shared/contexts/ThemeContext";
 
 export type FlashCardStackParamList = {
     CategorySelection: undefined;
-    FlashCard: { categoryId: string };
+    FlashCard: { categoryId: string; questionId?: string | number };
 };
 
 const Stack = createNativeStackNavigator<FlashCardStackParamList>();

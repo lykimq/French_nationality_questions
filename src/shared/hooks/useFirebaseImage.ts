@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import type { ImageSourcePropType } from "react-native";
 import { loadImageResource, getCachedImage } from "../services/dataService";
+import { resolveImagePath } from "../utils/imagePathUtils";
 import { createLogger } from "../utils/logger";
 
 const logger = createLogger("useFirebaseImage");
@@ -17,6 +18,7 @@ interface UseFirebaseImageResult {
 export const useFirebaseImage = (
     imagePath: string | null | undefined
 ): UseFirebaseImageResult => {
+    const resolvedPath = resolveImagePath(imagePath);
     const [imageSource, setImageSource] = useState<ImageSourcePropType | null>(
         null
     );
@@ -27,7 +29,7 @@ export const useFirebaseImage = (
         let isMounted = true;
 
         const loadImage = async () => {
-            if (!imagePath) {
+            if (!resolvedPath) {
                 setImageSource(null);
                 setIsLoading(false);
                 setError(false);
@@ -39,7 +41,7 @@ export const useFirebaseImage = (
 
             try {
                 // Try cache first
-                const cachedSource = getCachedImage(imagePath);
+                const cachedSource = getCachedImage(resolvedPath);
                 if (cachedSource) {
                     if (isMounted) {
                         setImageSource(cachedSource);
@@ -48,8 +50,7 @@ export const useFirebaseImage = (
                     return;
                 }
 
-                // Load from Firebase
-                const source = await loadImageResource(imagePath);
+                const source = await loadImageResource(resolvedPath);
                 if (isMounted) {
                     if (source) {
                         setImageSource(source);
@@ -59,7 +60,7 @@ export const useFirebaseImage = (
                     setIsLoading(false);
                 }
             } catch (error: unknown) {
-                logger.error(`Error loading image: ${imagePath}`, error);
+                logger.error(`Error loading image: ${resolvedPath}`, error);
                 if (isMounted) {
                     setError(true);
                     setIsLoading(false);
@@ -72,7 +73,7 @@ export const useFirebaseImage = (
         return () => {
             isMounted = false;
         };
-    }, [imagePath]);
+    }, [resolvedPath]);
 
     return { imageSource, isLoading, error };
 };

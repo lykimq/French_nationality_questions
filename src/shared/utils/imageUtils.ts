@@ -2,7 +2,11 @@ import { createLogger } from "./logger";
 import { loadImageResource } from "../services/dataService";
 import type { FrenchQuestionsData } from "../../types/questionsData";
 
+import { resolveImagePath } from "./imagePathUtils";
+
 const logger = createLogger("ImageUtils");
+
+export { resolveImagePath, getQuestionImagePath } from "./imagePathUtils";
 
 export const preloadImages = async (
     questionsData: FrenchQuestionsData | null | undefined
@@ -15,7 +19,10 @@ export const preloadImages = async (
                 if (category.questions) {
                     category.questions.forEach((question) => {
                         if (question.image) {
-                            imagePaths.push(question.image);
+                            const resolved = resolveImagePath(question.image);
+                            if (resolved) {
+                                imagePaths.push(resolved);
+                            }
                         }
                     });
                 }

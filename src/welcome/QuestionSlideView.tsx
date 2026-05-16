@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useMemo, useLayoutEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { useMastery } from "../shared/contexts/MasteryContext";
@@ -6,6 +6,7 @@ import {
     getMasteryForQuestionId,
     MasteryLevel,
 } from "../shared/utils/MasteryUtils";
+import { resolveQuestionIndex } from "../shared/utils/questionUtils";
 import { QuestionSlideViewProps } from "../types";
 import { SlideQuestionView } from "../shared/components";
 import { FormattedText } from "../shared/components";
@@ -13,14 +14,25 @@ import { FormattedText } from "../shared/components";
 const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({
     questions,
     initialIndex = 0,
+    focusQuestionId = null,
 }) => {
     const { theme } = useTheme();
     const { masteryMap } = useMastery();
-    const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
-    useEffect(() => {
-        setCurrentIndex(initialIndex);
-    }, [initialIndex]);
+    const resolvedIndex = useMemo(
+        () =>
+            resolveQuestionIndex(questions, {
+                questionId: focusQuestionId,
+                initialIndex,
+            }),
+        [questions, focusQuestionId, initialIndex]
+    );
+
+    const [currentIndex, setCurrentIndex] = useState(resolvedIndex);
+
+    useLayoutEffect(() => {
+        setCurrentIndex(resolvedIndex);
+    }, [resolvedIndex]);
 
     const handleNext = useCallback(() => {
         if (currentIndex < questions.length - 1) {
@@ -66,6 +78,7 @@ const QuestionSlideView: React.FC<QuestionSlideViewProps> = ({
 
     return (
         <SlideQuestionView
+            key={String(currentQuestion?.id ?? currentIndex)}
             question={currentQuestion}
             currentIndex={currentIndex}
             totalCount={questions.length}

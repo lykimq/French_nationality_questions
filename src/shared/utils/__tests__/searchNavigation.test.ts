@@ -1,6 +1,7 @@
 import {
     getSearchResultNavigationTarget,
     openSearchResult,
+    buildCategoryQuestionsParams,
     type SearchResultNavigator,
 } from "../searchNavigation";
 import type { SearchResultQuestion } from "../searchQuestions";
@@ -22,8 +23,9 @@ const livretItem: SearchResultQuestion = {
 const formationItem: SearchResultQuestion = {
     ...livretItem,
     questionKey: "formation-1",
+    rawQuestionId: "hgc_f_2",
     contentSource: "formation",
-    categoryId: "principes",
+    categoryId: "histoire",
 };
 
 const questionsData: FrenchQuestionsData = {
@@ -41,6 +43,13 @@ const questionsData: FrenchQuestionsData = {
                     image: null,
                     categoryId: "cat-a",
                 },
+                {
+                    id: "livret_2",
+                    question: "Q2",
+                    explanation: "E2",
+                    image: null,
+                    categoryId: "cat-a",
+                },
             ],
         },
     ],
@@ -49,9 +58,11 @@ const questionsData: FrenchQuestionsData = {
 describe("searchNavigation", () => {
     it("getSearchResultNavigationTarget maps content sources", () => {
         expect(getSearchResultNavigationTarget(livretItem).type).toBe("livret");
-        expect(getSearchResultNavigationTarget(formationItem).type).toBe(
-            "formation"
-        );
+        expect(getSearchResultNavigationTarget(formationItem)).toEqual({
+            type: "formation",
+            categoryId: "histoire",
+            rawQuestionId: "hgc_f_2",
+        });
         expect(
             getSearchResultNavigationTarget({
                 ...livretItem,
@@ -60,22 +71,61 @@ describe("searchNavigation", () => {
         ).toBe("test_civic");
     });
 
-    it("openSearchResult navigates from home stack for livret", () => {
-        const navigate = jest.fn();
-        const navigation = { navigate, getParent: jest.fn() };
-
-        openSearchResult(navigation, livretItem, questionsData, "homeStack");
-
-        expect(navigate).toHaveBeenCalledWith("CategoryQuestions", {
+    it("buildCategoryQuestionsParams resolves index by question id", () => {
+        expect(
+            buildCategoryQuestionsParams(questionsData, "cat-a", "livret_2")
+        ).toEqual({
             categoryId: "cat-a",
-            initialIndex: 0,
+            questionId: "livret_2",
+            initialIndex: 1,
         });
     });
 
-    it("openSearchResult navigates to FlashCard tab for formation", () => {
+    it("openSearchResult pushes CategoryQuestions from home stack for livret", () => {
+        const push = jest.fn();
+        const navigate = jest.fn();
+        const navigation = { navigate, push, getParent: jest.fn() };
+
+        openSearchResult(navigation, livretItem, questionsData, "homeStack");
+
+        expect(push).toHaveBeenCalledWith("CategoryQuestions", {
+            categoryId: "cat-a",
+            questionId: "livret_1",
+            initialIndex: 0,
+        });
+        expect(navigate).not.toHaveBeenCalled();
+    });
+
+    it("openSearchResult opens the selected livret question from search tab", () => {
         const tabNavigate = jest.fn();
         const navigation = {
             navigate: jest.fn(),
+            push: jest.fn(),
+            getParent: () => ({ navigate: tabNavigate }),
+        };
+
+        openSearchResult(
+            navigation as SearchResultNavigator,
+            { ...livretItem, rawQuestionId: "livret_2" },
+            questionsData,
+            "tabRoot"
+        );
+
+        expect(tabNavigate).toHaveBeenCalledWith("HomeTab", {
+            screen: "CategoryQuestions",
+            params: {
+                categoryId: "cat-a",
+                questionId: "livret_2",
+                initialIndex: 1,
+            },
+        });
+    });
+
+    it("openSearchResult navigates to FlashCard with question id for formation", () => {
+        const tabNavigate = jest.fn();
+        const navigation = {
+            navigate: jest.fn(),
+            push: jest.fn(),
             getParent: () => ({ navigate: tabNavigate }),
         };
 
@@ -88,29 +138,9 @@ describe("searchNavigation", () => {
 
         expect(tabNavigate).toHaveBeenCalledWith("FlashCardTab", {
             screen: "FlashCard",
-            params: { categoryId: "principes" },
-        });
-    });
-
-    it("openSearchResult navigates to HomeTab from search tab for livret", () => {
-        const tabNavigate = jest.fn();
-        const navigation = {
-            navigate: jest.fn(),
-            getParent: () => ({ navigate: tabNavigate }),
-        };
-
-        openSearchResult(
-            navigation as SearchResultNavigator,
-            livretItem,
-            questionsData,
-            "tabRoot"
-        );
-
-        expect(tabNavigate).toHaveBeenCalledWith("HomeTab", {
-            screen: "CategoryQuestions",
             params: {
-                categoryId: "cat-a",
-                initialIndex: 0,
+                categoryId: "histoire",
+                questionId: "hgc_f_2",
             },
         });
     });

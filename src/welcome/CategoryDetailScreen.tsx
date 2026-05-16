@@ -79,6 +79,7 @@ const CategoryDetailScreen = () => {
                     navigation.navigate("CategoryQuestions", {
                         categoryId,
                         initialIndex: index,
+                        questionId: item.id,
                     })
                 }
             >

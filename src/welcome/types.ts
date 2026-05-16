@@ -41,6 +41,7 @@ export type HomeStackParamList = Readonly<{
     CategoryQuestions: {
         readonly categoryId: string;
         readonly initialIndex?: number;
+        readonly questionId: string | number;
     };
     QuestionSearch: undefined;
 }>;

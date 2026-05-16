@@ -3,6 +3,7 @@ import type { ImageSourcePropType } from "react-native";
 import { storage } from "../../config/firebaseConfig";
 import { LOCAL_DATA_MAP, LOCAL_IMAGE_MAP } from "../config";
 import { validateDataStructure } from "../utils/dataValidation";
+import { resolveImagePath } from "../utils/imagePathUtils";
 import { createLogger } from "../utils/logger";
 import { LRUCache } from "../utils/lruCache";
 import { getErrorMessage } from "../utils/errorUtils";
@@ -188,46 +189,48 @@ export const loadImageResource = async (
 
     if (!imagePath) return null;
 
-    const cached = imageCache.get(imagePath);
+    const resolvedPath = resolveImagePath(imagePath) ?? imagePath;
+
+    const cached = imageCache.get(resolvedPath);
     if (isFresh(cached, ttlMs)) {
         return cached!.value;
     }
 
-    const failedAt = failedImageCache.get(imagePath);
+    const failedAt = failedImageCache.get(resolvedPath);
     if (failedAt && !shouldRetry(failedAt, ttlMs)) {
-        const localImage = LOCAL_IMAGE_MAP[imagePath];
+        const localImage = LOCAL_IMAGE_MAP[resolvedPath];
         if (localImage) return localImage;
         return cached?.value ?? null;
     }
 
-    if (imagePath.startsWith("https://")) {
-        const value = { uri: imagePath };
-        imageCache.set(imagePath, { value, fetchedAt: now() });
-        failedImageCache.delete(imagePath);
+    if (resolvedPath.startsWith("https://")) {
+        const value = { uri: resolvedPath };
+        imageCache.set(resolvedPath, { value, fetchedAt: now() });
+        failedImageCache.delete(resolvedPath);
         return value;
     }
 
-    if (imagePath.startsWith("http://")) {
-        logger.warn(`Blocked insecure HTTP image URL: ${imagePath}`);
+    if (resolvedPath.startsWith("http://")) {
+        logger.warn(`Blocked insecure HTTP image URL: ${resolvedPath}`);
         return null;
     }
 
-    const localImage = LOCAL_IMAGE_MAP[imagePath];
+    const localImage = LOCAL_IMAGE_MAP[resolvedPath];
     if (localImage) {
-        imageCache.set(imagePath, { value: localImage, fetchedAt: now() });
-        failedImageCache.delete(imagePath);
+        imageCache.set(resolvedPath, { value: localImage, fetchedAt: now() });
+        failedImageCache.delete(resolvedPath);
         return localImage;
     }
 
-    const filename = imagePath.replace(/^.*[\\/]/, "");
+    const filename = resolvedPath.replace(/^.*[\\/]/, "");
     let lastError: unknown;
     for (let attempt = 0; attempt <= retryCount; attempt++) {
         try {
             const firebaseUrl = await fetchFirebaseImage(filename);
             if (firebaseUrl) {
                 const value = { uri: firebaseUrl };
-                imageCache.set(imagePath, { value, fetchedAt: now() });
-                failedImageCache.delete(imagePath);
+                imageCache.set(resolvedPath, { value, fetchedAt: now() });
+                failedImageCache.delete(resolvedPath);
                 return value;
             }
         } catch (error: unknown) {
@@ -238,8 +241,8 @@ export const loadImageResource = async (
         }
     }
 
-    failedImageCache.set(imagePath, now());
-    logger.error(`Failed to load image: ${imagePath}`, lastError);
+    failedImageCache.set(resolvedPath, now());
+    logger.error(`Failed to load image: ${resolvedPath}`, lastError);
     if (lastError) {
         logger.error(`Error details: ${getErrorMessage(lastError)}`);
     }
@@ -249,13 +252,14 @@ export const loadImageResource = async (
 export const getCachedImage = (
     imagePath: string
 ): ImageSourcePropType | null => {
-    const cached = imageCache.get(imagePath);
+    const resolvedPath = resolveImagePath(imagePath) ?? imagePath;
+    const cached = imageCache.get(resolvedPath);
     if (cached) {
         return cached.value;
     }
-    const localImage = LOCAL_IMAGE_MAP[imagePath];
+    const localImage = LOCAL_IMAGE_MAP[resolvedPath];
     if (localImage) return localImage;
-    const filename = imagePath.replace(/^.*[\\/]/, "");
+    const filename = resolvedPath.replace(/^.*[\\/]/, "");
     return imageCache.get(filename)?.value ?? null;
 };
 

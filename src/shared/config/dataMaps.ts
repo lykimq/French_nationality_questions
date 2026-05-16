@@ -49,6 +49,8 @@ export const LOCAL_IMAGE_MAP: Record<string, ImageSourcePropType> = {
     "pics/politiques.png": require("../../data/knowledge/pics/politiques.png"),
     "pics/porte.png": require("../../data/knowledge/pics/porte.png"),
     "pics/region.png": require("../../data/knowledge/pics/region.png"),
+    "pics/regime_1789_1958.png": require("../../data/knowledge/pics/regime_1789_1958.png"),
+    "pics/Construction_de_la_France_Chronologie.png": require("../../data/knowledge/pics/Construction_de_la_France_Chronologie.png"),
     "pics/territories.png": require("../../data/knowledge/pics/territories.png"),
     "pics/urgence_number.png": require("../../data/knowledge/pics/urgence_number.png"),
 };
