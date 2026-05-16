@@ -50,14 +50,20 @@ export const isNonEmptyString = (value: unknown): value is string => {
     return typeof value === "string" && value.trim().length > 0;
 };
 /**
+ * Lowercases and removes diacritics (é → e).
+ */
+export const stripAccents = (text: string): string =>
+    (text || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+/**
  * Normalizes text for search: lowercase, removes accents, unifies punctuation, trims.
  */
 export const normalizeForSearch = (text: string): string => {
     if (!text) return "";
-    return text
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
+    return stripAccents(text)
         .replace(/[\u2018\u2019\u201A\u2032\u2035']/g, "'")
         .replace(/[\u201C\u201D\u201E\u2033\u2036"]/g, " ")
         .replace(/[«»]/g, " ")
@@ -71,4 +77,4 @@ export const normalizeForSearch = (text: string): string => {
  * Normalizes text for comparison: lowercase, removes non-alphanumeric.
  */
 export const normalizeForComparison = (text: string): string =>
-    (text || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    stripAccents(text).replace(/[^a-z0-9]/g, "");

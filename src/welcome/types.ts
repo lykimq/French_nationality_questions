@@ -43,7 +43,4 @@ export type HomeStackParamList = Readonly<{
         readonly initialIndex?: number;
     };
     QuestionSearch: undefined;
-    FlashCard: {
-        readonly categoryId: string;
-    };
 }>;

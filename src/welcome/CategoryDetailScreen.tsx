@@ -19,7 +19,7 @@ import {
     AppHeader,
     Icon3D,
 } from "../shared/components";
-import { sharedStyles } from "../shared/utils";
+import { sharedStyles, navigateToFlashCardCategory } from "../shared/utils";
 
 type CategoryDetailRouteProp = RouteProp<HomeStackParamList, "CategoryDetail">;
 type CategoryDetailNavigationProp =
@@ -59,7 +59,7 @@ const CategoryDetailScreen = () => {
     }
 
     const startTraining = () => {
-        navigation.navigate("FlashCard", { categoryId });
+        navigateToFlashCardCategory(navigation, categoryId);
     };
 
     const renderQuestionItem = ({

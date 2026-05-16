@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "../shared/contexts/ThemeContext";
-import { FormattedText, AppHeader } from "../shared/components";
+import { useRatingPrompt } from "../shared/hooks";
+import { AppHeader } from "../shared/components";
 import { sharedStyles } from "../shared/utils";
 
 import TextFormattingSettings from "./components/TextFormattingSettings";
@@ -10,22 +10,13 @@ import ThemeSettings from "./components/ThemeSettings";
 import AppInfoSettings from "./components/AppInfoSettings";
 import AboutAppSettings from "./components/AboutAppSettings";
 import CivicExamSettings from "./components/CivicExamSettings";
-import RatingModal from "./components/RatingModal";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ProgressSettings from "./components/ProgressSettings";
 import AudioSettings from "./components/AudioSettings";
 
 const SettingsScreen = () => {
     const { theme } = useTheme();
-    const [showRatingModal, setShowRatingModal] = useState(false);
-
-    const handleRateApp = () => {
-        setShowRatingModal(true);
-    };
-
-    const handleCloseRatingModal = () => {
-        setShowRatingModal(false);
-    };
+    const { openRatingModal } = useRatingPrompt();
 
     return (
         <View
@@ -45,7 +36,6 @@ const SettingsScreen = () => {
                     contentContainerStyle={styles.scrollContent}
                     showsVerticalScrollIndicator={false}
                 >
-                    {/* Theme Section */}
                     <CollapsibleSection
                         title="Apparence"
                         icon={theme.icons.palette}
@@ -54,7 +44,6 @@ const SettingsScreen = () => {
                         <ThemeSettings />
                     </CollapsibleSection>
 
-                    {/* Text Formatting Section */}
                     <CollapsibleSection
                         title="Formatage du texte"
                         icon={theme.icons.textFormat}
@@ -71,13 +60,10 @@ const SettingsScreen = () => {
                         <AudioSettings />
                     </CollapsibleSection>
 
-                    {/* Civic Exam Statistics Section */}
                     <CivicExamSettings />
 
-                    {/* Progress & Data Section */}
                     <ProgressSettings />
 
-                    {/* About the App Section */}
                     <CollapsibleSection
                         title="À propos de l'application"
                         icon="help-circle"
@@ -86,21 +72,14 @@ const SettingsScreen = () => {
                         <AboutAppSettings />
                     </CollapsibleSection>
 
-                    {/* App Info Section */}
                     <CollapsibleSection
                         title="Autres options"
                         icon={theme.icons.info}
                         iconColor={theme.colors.info}
                     >
-                        <AppInfoSettings onRateApp={handleRateApp} />
+                        <AppInfoSettings onRateApp={openRatingModal} />
                     </CollapsibleSection>
                 </ScrollView>
-
-                {/* Rating Modal */}
-                <RatingModal
-                    visible={showRatingModal}
-                    onClose={handleCloseRatingModal}
-                />
             </SafeAreaView>
         </View>
     );
@@ -115,7 +94,6 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     scrollContent: {
-        padding: 12,
         paddingBottom: 100,
     },
 });

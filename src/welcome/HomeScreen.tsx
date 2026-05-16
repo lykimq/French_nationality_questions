@@ -13,7 +13,7 @@ import {
     Icon3D,
     GlobalSearchBar,
 } from "../shared/components";
-import { sharedStyles } from "../shared/utils";
+import { sharedStyles, navigateToFlashCardCategory } from "../shared/utils";
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<HomeStackParamList>;
 
@@ -43,7 +43,7 @@ const HomeScreen = () => {
 
     const navigateToCategory = (categoryId: string) => {
         if (categoryId === "recommended") {
-            navigation.navigate("FlashCard", { categoryId });
+            navigateToFlashCardCategory(navigation, categoryId);
         } else {
             navigation.navigate("CategoryDetail", { categoryId });
         }

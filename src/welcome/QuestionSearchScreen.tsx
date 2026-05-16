@@ -19,8 +19,7 @@ import {
     getMasteryForQuestionId,
     MasteryLevel,
 } from "../shared/utils/MasteryUtils";
-import { sortQuestionsById } from "../shared/utils/questionUtils";
-import { getSearchResultNavigationTarget } from "../shared/utils/searchNavigation";
+import { openSearchResult } from "../shared/utils/searchNavigation";
 import type { SearchResultQuestion } from "../shared/utils/searchQuestions";
 import { FormattedText, AppHeader } from "../shared/components";
 
@@ -44,31 +43,7 @@ const QuestionSearchScreen = () => {
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
         const openQuestion = () => {
-            const target = getSearchResultNavigationTarget(item);
-
-            if (target.type === "formation") {
-                navigation.navigate("FlashCard", {
-                    categoryId: target.categoryId,
-                });
-                return;
-            }
-
-            if (target.type === "test_civic") {
-                navigation.getParent()?.navigate("CivicExamTab" as never);
-                return;
-            }
-
-            const cat = questionsData.categories.find(
-                (c) => c.id === target.categoryId
-            );
-            const sorted = sortQuestionsById(cat?.questions || []);
-            const idx = sorted.findIndex(
-                (q) => String(q.id) === String(target.rawQuestionId)
-            );
-            navigation.navigate("CategoryQuestions", {
-                categoryId: target.categoryId,
-                initialIndex: idx >= 0 ? idx : 0,
-            });
+            openSearchResult(navigation, item, questionsData, "homeStack");
         };
 
         return (

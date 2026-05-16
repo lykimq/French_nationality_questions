@@ -2,6 +2,10 @@ import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { useSearchCatalog } from "./useSearchCatalog";
 import { useDebouncedValue } from "./useDebouncedValue";
 import {
+    loadSearchHistory,
+    persistSearchHistory,
+} from "../utils/searchHistoryStorage";
+import {
     createDefaultSearchFilters,
     generateSearchSuggestions,
     searchQuestions,
@@ -51,6 +55,7 @@ export const useQuestionSearch = (options: UseQuestionSearchOptions = {}) => {
         createDefaultSearchFilters(catalog.idRange)
     );
     const suggestionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const historyLoadedRef = useRef(false);
 
     const debouncedQuery = useDebouncedValue(searchQuery.trim(), debounceMs);
     const isSearching = searchQuery.trim() !== debouncedQuery;
@@ -67,6 +72,34 @@ export const useQuestionSearch = (options: UseQuestionSearchOptions = {}) => {
             },
         }));
     }, [catalog.idRange.max, catalog.idRange.min, features.filters]);
+
+    useEffect(() => {
+        if (!features.history) {
+            historyLoadedRef.current = false;
+            return;
+        }
+
+        let cancelled = false;
+        historyLoadedRef.current = false;
+
+        void loadSearchHistory().then((stored) => {
+            if (!cancelled) {
+                setSearchHistory(stored);
+                historyLoadedRef.current = true;
+            }
+        });
+
+        return () => {
+            cancelled = true;
+        };
+    }, [features.history]);
+
+    useEffect(() => {
+        if (!features.history || !historyLoadedRef.current) {
+            return;
+        }
+        void persistSearchHistory(searchHistory);
+    }, [searchHistory, features.history]);
 
     const effectiveFilters = features.filters ? filters : defaultFilters;
 

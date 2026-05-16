@@ -69,8 +69,6 @@ if (missingFields.length > 0) {
 
 export const isFirebaseConfigured = (): boolean => app !== null;
 
-export const getFirebaseApp = (): FirebaseApp | null => app;
-
 export const getFirebaseFunctions = (): Functions | null => functions;
 
 export { storage };

@@ -13,7 +13,7 @@
             "id": "hgc_f_2",
             "question": "Quels régimes politiques se sont succédé de 1789 à 1958 ?",
             "explanation": "À partir de 1789, la France connaît plusieurs régimes politiques. Les principales périodes sont les suivantes :\n\n- 1789-1791 : Révolution française et transitions politiques. La Déclaration des droits de l’homme et du citoyen est publiée en 1789 ;\n\n- 1791-1792 : Monarchie constitutionnelle ;\n\n- 1792-1799 : 1re République ;\n\n- 1799-1804 : Consulat ;\n\n- 1804-1814 : 1er Empire. Napoléon promulgue le Code civil ;\n\n- 1814-1830 : Restauration de la monarchie ;\n\n- 1830-1848 : Monarchie de Juillet ;\n\n- 1848-1851 : 2e République ;\n\n- 1852-1870 : 2nd Empire ;\n\n- 1870-1940 : 3e République. En 1871, insurrection de la Commune de Paris ;\n\n- 1940-1944 : Régime de Vichy. En parallèle, la France libre puis le Comité français de libération nationale ;\n\n- 1944-1946 : Gouvernement provisoire de la République française ;\n\n- 1946-1958 : 4e République. La Sécurité sociale est créée. La Constitution garantit pour la première fois l’égalité entre les femmes et les hommes.",
-            "image": null
+            "image": "pics/regimes_politiques.png"
         },
         {
             "id": "hgc_f_3",
@@ -25,7 +25,7 @@
             "id": "hgc_f_4",
             "question": "Quels sont les principaux repères de cette période ?",
             "explanation": "Conquise par Jules César en 52 av J.-C., la Gaule est une province romaine jusqu’au Ve siècle. Elle est ensuite envahie par plusieurs peuples barbares, dont les Francs, qui donneront leur nom à la France.\n\nEntre le Ve et le XVIe siècle, la France se construit en tant que nation : peu à peu, elle définit son territoire, acquiert son nom et voit émerger un sentiment d’appartenance.\n\nTrois grandes dynasties royales se succèdent pendant ces 1 000 ans d’histoire, incarnées par trois rois :\n\n- La dynastie des Mérovingiens. Roi des Francs, Clovis fonde la dynastie mérovingienne à la fin du Ve siècle et se convertit au christianisme en 496 ;\n\n- La dynastie des Carolingiens. Le roi carolingien Charlemagne est couronné empereur en 800. Après sa mort, son empire est partagé entre ses héritiers en trois royaumes. L’un de ces royaumes deviendra la France ;\n \n- La dynastie des Capétiens. Sacré roi en 987, Hugues Capet fonde la dynastie des Capétiens, une dynastie longue et stable, qui consolide peu à peu la monarchie.\n\nPlus tard, à partir de 1337, la guerre de Cent Ans, bien que longue et meurtrière, contribue à éveiller un sentiment d’unité nationale.\n\nAu XVIe siècle, pendant la période de la Renaissance, la France devient un État centralisé et puissant, qui atteindra son apogée sous l’Ancien Régime.\n\nPersonnages clés : Les rois Clovis, Charlemagne et Hugues Capet, qui incarnent des étapes majeures de la construction de la France et l’affirmation d’une nation.",
-            "image": null
+            "image": "pics/Construction_de_la_France.png"
         },
         {
             "id": "hgc_f_5",

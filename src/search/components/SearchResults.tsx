@@ -1,8 +1,23 @@
 import React, { useCallback } from "react";
-import { StyleSheet, View, FlatList, ListRenderItem } from "react-native";
+import {
+    StyleSheet,
+    View,
+    FlatList,
+    ListRenderItem,
+    TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
 import { QuestionCard, FormattedText, Icon3D } from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
+import { useData } from "../../shared/contexts/DataContext";
+import { useMastery } from "../../shared/contexts/MasteryContext";
 import { useIcon3D } from "../../shared/hooks";
+import {
+    getMasteryForQuestionId,
+    MasteryLevel,
+} from "../../shared/utils/MasteryUtils";
+import { openSearchResult } from "../../shared/utils/searchNavigation";
 import type { SearchResultQuestion } from "../../shared/utils/searchQuestions";
 
 interface SearchResultsProps {
@@ -16,6 +31,9 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     searchQuery,
     totalMatchCount = 0,
 }) => {
+    const navigation = useNavigation();
+    const { questionsData } = useData();
+    const { masteryMap } = useMastery();
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
 
@@ -25,39 +43,70 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     const hasMoreResults =
         totalMatchCount > 0 && totalMatchCount > displayedCount;
 
+    const handleOpenResult = useCallback(
+        (item: SearchResultQuestion) => {
+            openSearchResult(navigation, item, questionsData, "tabRoot");
+        },
+        [navigation, questionsData]
+    );
+
     const renderResult: ListRenderItem<SearchResultQuestion> = useCallback(
-        ({ item: result }) => (
-            <View style={styles.resultItem}>
-                <View style={styles.categoryLabel}>
-                    <FormattedText
-                        style={[
-                            styles.categoryLabelText,
-                            { color: theme.colors.primary },
-                        ]}
-                    >
-                        {result.categoryTitle ||
-                            result.categoryId ||
-                            "Sans catégorie"}
-                    </FormattedText>
-                    {result.hasImage && (
-                        <Icon3D
-                            name={imageIcon.name}
-                            size={10}
-                            color={theme.colors.primary}
-                            variant="default"
-                            containerStyle={styles.imageIcon}
-                        />
-                    )}
-                </View>
-                <QuestionCard
-                    id={result.id}
-                    question={result.question}
-                    explanation={result.explanation}
-                    image={result.image}
-                />
-            </View>
-        ),
-        [theme.colors.primary, imageIcon.name]
+        ({ item: result }) => {
+            const mastery = getMasteryForQuestionId(
+                masteryMap,
+                result.rawQuestionId
+            );
+            const isMastered = mastery?.level === MasteryLevel.MASTERED;
+
+            return (
+                <TouchableOpacity
+                    style={styles.resultItem}
+                    onPress={() => handleOpenResult(result)}
+                    activeOpacity={0.7}
+                >
+                    <View style={styles.categoryLabel}>
+                        <FormattedText
+                            style={[
+                                styles.categoryLabelText,
+                                { color: theme.colors.primary },
+                            ]}
+                        >
+                            {result.categoryTitle ||
+                                result.categoryId ||
+                                "Sans catégorie"}
+                        </FormattedText>
+                        {result.hasImage && (
+                            <Icon3D
+                                name={imageIcon.name}
+                                size={10}
+                                color={theme.colors.primary}
+                                variant="default"
+                                containerStyle={styles.imageIcon}
+                            />
+                        )}
+                        {isMastered && (
+                            <Ionicons
+                                name="checkmark-circle"
+                                size={16}
+                                color="#4CAF50"
+                            />
+                        )}
+                    </View>
+                    <QuestionCard
+                        id={result.id}
+                        question={result.question}
+                        explanation={result.explanation}
+                        image={result.image}
+                    />
+                </TouchableOpacity>
+            );
+        },
+        [
+            theme.colors.primary,
+            imageIcon.name,
+            masteryMap,
+            handleOpenResult,
+        ]
     );
 
     const keyExtractor = useCallback(
@@ -162,6 +211,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
             maxToRenderPerBatch={6}
             windowSize={7}
             removeClippedSubviews
+            keyboardShouldPersistTaps="handled"
         />
     );
 };

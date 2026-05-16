@@ -5,6 +5,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { initializeSentry } from "./src/config/sentryConfig";
 import AppNavigator from "./src/navigation/AppNavigator";
 import AppProviders from "./src/shared/providers/AppProviders";
+import { RatingPromptProvider } from "./src/shared/contexts/RatingPromptContext";
 import { ErrorBoundary } from "./src/shared/components";
 
 initializeSentry();
@@ -15,7 +16,9 @@ export default function App() {
             <GestureHandlerRootView style={styles.container}>
                 <SafeAreaProvider>
                     <AppProviders>
-                        <AppNavigator />
+                        <RatingPromptProvider>
+                            <AppNavigator />
+                        </RatingPromptProvider>
                     </AppProviders>
                 </SafeAreaProvider>
             </GestureHandlerRootView>

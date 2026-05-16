@@ -1,4 +1,5 @@
 import { Platform } from "react-native";
+import { stripAccents } from "./stringUtils";
 
 export interface SpeechVoiceInput {
     identifier: string;
@@ -63,15 +64,9 @@ export const DEFAULT_SPEECH_RATE = 0.95;
 export const isFrenchVoice = (voice: SpeechVoiceInput): boolean =>
     (voice.language ?? "").toLowerCase().startsWith("fr");
 
-const normalizeKey = (value: string): string =>
-    value
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-
 export const classifyVoiceGender = (voice: SpeechVoiceInput): VoiceGender => {
-    const identifier = normalizeKey(voice.identifier ?? "");
-    const name = normalizeKey(voice.name ?? "");
+    const identifier = stripAccents(voice.identifier ?? "");
+    const name = stripAccents(voice.name ?? "");
     const combined = `${identifier} ${name}`;
 
     if (
