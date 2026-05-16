@@ -10,6 +10,7 @@ import { useTheme } from "../contexts/ThemeContext";
 import { useIcon3D } from "../hooks";
 import FormattedText from "./FormattedText";
 import Icon3D from "./Icon3D";
+import QuestionNumberBadge from "./QuestionNumberBadge";
 
 export interface QuestionListItem {
     readonly index: number;
@@ -96,29 +97,12 @@ const QuestionListModal: React.FC<QuestionListModalProps> = ({
                     activeOpacity={0.7}
                 >
                     <View style={styles.questionListItemContent}>
-                        <View
-                            style={[
-                                styles.questionNumberBadge,
-                                {
-                                    backgroundColor: isSelected
-                                        ? theme.colors.primary
-                                        : theme.colors.divider,
-                                },
-                            ]}
-                        >
-                            <FormattedText
-                                style={[
-                                    styles.questionNumberText,
-                                    {
-                                        color: isSelected
-                                            ? theme.colors.buttonText
-                                            : theme.colors.text,
-                                    },
-                                ]}
-                            >
-                                {questionNumber}
-                            </FormattedText>
-                        </View>
+                        <QuestionNumberBadge
+                            value={questionNumber}
+                            variant="modal"
+                            selected={isSelected}
+                            style={styles.questionNumberBadge}
+                        />
                         <View style={styles.questionListItemText}>
                             <FormattedText
                                 style={[
@@ -257,16 +241,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     questionNumberBadge: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: "center",
-        alignItems: "center",
         marginRight: 12,
-    },
-    questionNumberText: {
-        fontSize: 14,
-        fontWeight: "600",
     },
     questionListItemText: {
         flex: 1,

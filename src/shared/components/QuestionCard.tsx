@@ -5,6 +5,7 @@ import { formatExplanation } from "../utils";
 import FormattedText from "./FormattedText";
 import SpeakButton from "./SpeakButton";
 import Icon3D from "./Icon3D";
+import QuestionNumberBadge from "./QuestionNumberBadge";
 import QuestionImage from "./QuestionImage";
 import { useTheme } from "../contexts/ThemeContext";
 import { useIcons } from "../contexts/IconContext";
@@ -80,24 +81,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                     }
                     disabled={alwaysExpanded}
                 >
-                    <View style={styles.idWrapper}>
-                        <Icon3D
-                            name="ellipse"
-                            size={28}
-                            color={theme.colors.primary}
-                            variant="glass"
-                            backgroundColor={theme.colors.card}
-                            containerStyle={styles.idIconContainer}
-                        />
-                        <FormattedText
-                            style={[
-                                styles.id,
-                                { color: theme.colors.buttonText },
-                            ]}
-                        >
-                            {displayId}
-                        </FormattedText>
-                    </View>
+                    <QuestionNumberBadge
+                        value={displayId}
+                        style={styles.idBadge}
+                    />
                     <View style={styles.questionContainer}>
                         <FormattedText
                             style={[
@@ -256,20 +243,8 @@ const styles = StyleSheet.create({
     headerPressed: {
         borderRadius: 8,
     },
-    idWrapper: {
-        width: 40,
-        height: 40,
-        justifyContent: "center",
-        alignItems: "center",
+    idBadge: {
         marginRight: 12,
-    },
-    idIconContainer: {
-        position: "absolute",
-    },
-    id: {
-        fontWeight: "bold",
-        fontSize: 16,
-        textAlign: "center",
     },
     questionContainer: {
         flex: 1,

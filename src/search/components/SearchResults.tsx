@@ -1,14 +1,12 @@
 import React, { useCallback } from "react";
-import {
-    StyleSheet,
-    View,
-    FlatList,
-    ListRenderItem,
-    TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View, FlatList, ListRenderItem } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import { QuestionCard, FormattedText, Icon3D } from "../../shared/components";
+import {
+    FormattedText,
+    Icon3D,
+    QuestionListRow,
+} from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
 import { useData } from "../../shared/contexts/DataContext";
 import { useMastery } from "../../shared/contexts/MasteryContext";
@@ -59,49 +57,46 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
             const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
             return (
-                <TouchableOpacity
-                    style={styles.resultItem}
+                <QuestionListRow
+                    number={result.id}
+                    question={result.question}
+                    borderBottomColor={theme.colors.divider}
                     onPress={() => handleOpenResult(result)}
-                    activeOpacity={0.7}
-                >
-                    <View style={styles.categoryLabel}>
-                        <FormattedText
-                            style={[
-                                styles.categoryLabelText,
-                                { color: theme.colors.primary },
-                            ]}
-                        >
-                            {result.categoryTitle ||
-                                result.categoryId ||
-                                "Sans catégorie"}
-                        </FormattedText>
-                        {result.hasImage && (
-                            <Icon3D
-                                name={imageIcon.name}
-                                size={10}
-                                color={theme.colors.primary}
-                                variant="default"
-                                containerStyle={styles.imageIcon}
-                            />
-                        )}
-                        {isMastered && (
-                            <Ionicons
-                                name="checkmark-circle"
-                                size={16}
-                                color="#4CAF50"
-                            />
-                        )}
-                    </View>
-                    <QuestionCard
-                        id={result.id}
-                        question={result.question}
-                        explanation={result.explanation}
-                        image={result.image}
-                    />
-                </TouchableOpacity>
+                    header={
+                        <View style={styles.categoryLabel}>
+                            <FormattedText
+                                style={[
+                                    styles.categoryLabelText,
+                                    { color: theme.colors.primary },
+                                ]}
+                            >
+                                {result.categoryTitle ||
+                                    result.categoryId ||
+                                    "Sans catégorie"}
+                            </FormattedText>
+                            {result.hasImage && (
+                                <Icon3D
+                                    name={imageIcon.name}
+                                    size={10}
+                                    color={theme.colors.primary}
+                                    variant="default"
+                                    containerStyle={styles.imageIcon}
+                                />
+                            )}
+                            {isMastered && (
+                                <Ionicons
+                                    name="checkmark-circle"
+                                    size={16}
+                                    color="#4CAF50"
+                                />
+                            )}
+                        </View>
+                    }
+                />
             );
         },
         [
+            theme.colors.divider,
             theme.colors.primary,
             imageIcon.name,
             masteryMap,
@@ -235,13 +230,10 @@ const styles = StyleSheet.create({
     sortedByText: {
         fontSize: 13,
     },
-    resultItem: {
-        marginBottom: 16,
-    },
     categoryLabel: {
         flexDirection: "row",
         alignItems: "center",
-        marginBottom: 8,
+        marginBottom: 6,
         gap: 6,
     },
     categoryLabelText: {

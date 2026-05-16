@@ -5,6 +5,13 @@ export { default as ImageModal } from "./ImageModal";
 export { default as QuestionImage } from "./QuestionImage";
 export { default as BackButton } from "./BackButton";
 export { default as QuestionCard } from "./QuestionCard";
+export { default as QuestionNumberBadge } from "./QuestionNumberBadge";
+export type {
+    QuestionNumberBadgeProps,
+    QuestionNumberBadgeVariant,
+} from "./QuestionNumberBadge";
+export { default as QuestionListRow } from "./QuestionListRow";
+export type { QuestionListRowProps } from "./QuestionListRow";
 export { default as SlideQuestionView } from "./SlideQuestionView";
 export { default as Icon3D } from "./Icon3D";
 export { default as QuestionListModal } from "./QuestionListModal";

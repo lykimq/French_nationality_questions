@@ -1,12 +1,5 @@
-import React, { useMemo, useState } from "react";
-import {
-    View,
-    StyleSheet,
-    ScrollView,
-    TouchableOpacity,
-    FlatList,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import React, { useMemo } from "react";
+import { View, StyleSheet, TouchableOpacity, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -17,7 +10,7 @@ import { sortQuestionsById } from "../shared/utils/questionUtils";
 import {
     FormattedText,
     AppHeader,
-    Icon3D,
+    QuestionListRow,
 } from "../shared/components";
 import { sharedStyles, navigateToFlashCardCategory } from "../shared/utils";
 
@@ -69,12 +62,13 @@ const CategoryDetailScreen = () => {
         item: Question;
         index: number;
     }) => {
+        const questionNumber = index + 1;
+
         return (
-            <TouchableOpacity
-                style={[
-                    styles.questionItem,
-                    { borderBottomColor: theme.colors.divider },
-                ]}
+            <QuestionListRow
+                number={questionNumber}
+                question={item.question}
+                borderBottomColor={theme.colors.divider}
                 onPress={() =>
                     navigation.navigate("CategoryQuestions", {
                         categoryId,
@@ -82,35 +76,7 @@ const CategoryDetailScreen = () => {
                         questionId: item.id,
                     })
                 }
-            >
-                <View
-                    style={[
-                        styles.questionIdBadge,
-                        { backgroundColor: theme.colors.primary + "10" },
-                    ]}
-                >
-                    <FormattedText
-                        style={{
-                            color: theme.colors.primary,
-                            fontWeight: "bold",
-                            fontSize: 12,
-                        }}
-                    >
-                        {index + 1}
-                    </FormattedText>
-                </View>
-                <FormattedText
-                    style={[styles.questionText, { color: theme.colors.text }]}
-                    numberOfLines={2}
-                >
-                    {item.question}
-                </FormattedText>
-                <Ionicons
-                    name="chevron-forward"
-                    size={20}
-                    color={theme.colors.textMuted}
-                />
-            </TouchableOpacity>
+            />
         );
     };
 
@@ -209,25 +175,6 @@ const styles = StyleSheet.create({
     miniStatText: {
         fontSize: 14,
         fontWeight: "600",
-    },
-    questionItem: {
-        flexDirection: "row",
-        alignItems: "center",
-        paddingVertical: 15,
-        borderBottomWidth: 1,
-        gap: 15,
-    },
-    questionIdBadge: {
-        width: 28,
-        height: 28,
-        borderRadius: 14,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    questionText: {
-        flex: 1,
-        fontSize: 15,
-        lineHeight: 20,
     },
     listHint: {
         fontSize: 12,

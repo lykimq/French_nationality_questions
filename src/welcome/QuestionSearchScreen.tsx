@@ -21,7 +21,7 @@ import {
 } from "../shared/utils/MasteryUtils";
 import { openSearchResult } from "../shared/utils/searchNavigation";
 import type { SearchResultQuestion } from "../shared/utils/searchQuestions";
-import { FormattedText, AppHeader } from "../shared/components";
+import { FormattedText, QuestionListRow } from "../shared/components";
 
 type QuestionSearchNavigationProp =
     NativeStackNavigationProp<HomeStackParamList>;
@@ -47,43 +47,34 @@ const QuestionSearchScreen = () => {
         };
 
         return (
-            <TouchableOpacity
-                style={[
-                    styles.resultItem,
-                    {
-                        backgroundColor: theme.colors.card,
-                        borderColor: theme.colors.border,
-                    },
-                ]}
+            <QuestionListRow
+                number={item.id}
+                question={item.question}
+                borderBottomColor={theme.colors.divider}
                 onPress={openQuestion}
-            >
-                <View style={styles.resultHeader}>
-                    <FormattedText
-                        style={[
-                            styles.categoryTag,
-                            {
-                                color: theme.colors.primary,
-                                backgroundColor: theme.colors.primary + "15",
-                            },
-                        ]}
-                    >
-                        {item.categoryTitle}
-                    </FormattedText>
-                    {isMastered && (
-                        <Ionicons
-                            name="checkmark-circle"
-                            size={16}
-                            color="#4CAF50"
-                        />
-                    )}
-                </View>
-                <FormattedText
-                    style={[styles.questionText, { color: theme.colors.text }]}
-                    numberOfLines={3}
-                >
-                    {item.question}
-                </FormattedText>
-            </TouchableOpacity>
+                header={
+                    <View style={styles.resultHeader}>
+                        <FormattedText
+                            style={[
+                                styles.categoryTag,
+                                {
+                                    color: theme.colors.primary,
+                                    backgroundColor: theme.colors.primary + "15",
+                                },
+                            ]}
+                        >
+                            {item.categoryTitle}
+                        </FormattedText>
+                        {isMastered && (
+                            <Ionicons
+                                name="checkmark-circle"
+                                size={16}
+                                color="#4CAF50"
+                            />
+                        )}
+                    </View>
+                }
+            />
         );
     };
 
@@ -234,21 +225,11 @@ const styles = StyleSheet.create({
         padding: 16,
         paddingBottom: 40,
     },
-    resultItem: {
-        borderRadius: 12,
-        padding: 16,
-        marginBottom: 12,
-        borderWidth: 1,
-        elevation: 2,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-    },
     resultHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 8,
+        marginBottom: 6,
     },
     categoryTag: {
         fontSize: 11,
@@ -257,10 +238,6 @@ const styles = StyleSheet.create({
         paddingVertical: 2,
         borderRadius: 4,
         overflow: "hidden",
-    },
-    questionText: {
-        fontSize: 15,
-        lineHeight: 22,
     },
     emptyText: {
         marginTop: 16,
