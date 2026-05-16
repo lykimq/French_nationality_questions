@@ -3,7 +3,7 @@ import { StyleSheet, View, FlatList, ListRenderItem } from "react-native";
 import { QuestionCard, FormattedText, Icon3D } from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
 import { useIcon3D } from "../../shared/hooks";
-import type { SearchResultQuestion } from "../useSearch";
+import type { SearchResultQuestion } from "../../shared/utils/searchQuestions";
 
 interface SearchResultsProps {
     results: SearchResultQuestion[];

@@ -77,20 +77,38 @@ export const isQuestionRangeFilterActive = (
 ): boolean =>
     range.min > catalogRange.min || range.max < catalogRange.max;
 
-const FORMATION_CATEGORY_IDS = new Set(
-    DATA_FILES.FORMATION.FILES.map((file) => file.replace(/\.json$/, ""))
-);
-
-export const isFormationCategoryId = (categoryId: string): boolean =>
-    FORMATION_CATEGORY_IDS.has(categoryId);
-
-export const isTestCivicCategoryId = (categoryId: string): boolean =>
-    categoryId.startsWith("test_civic__");
+export interface BuildSearchCatalogOptions {
+    includeLocalLivret?: boolean;
+    includeFormation?: boolean;
+    includeTestCivic?: boolean;
+}
 
 type DataBundleConfig = {
     DIRECTORY: string;
     FILES: readonly string[];
 };
+
+const LOCAL_SEARCH_BUNDLES: ReadonlyArray<{
+    bundle: DataBundleConfig;
+    source: SearchContentSource;
+    optionKey: keyof BuildSearchCatalogOptions;
+}> = [
+    {
+        bundle: DATA_FILES.SUBCATEGORIES,
+        source: "livret",
+        optionKey: "includeLocalLivret",
+    },
+    {
+        bundle: DATA_FILES.FORMATION,
+        source: "formation",
+        optionKey: "includeFormation",
+    },
+    {
+        bundle: DATA_FILES.TEST_CIVIC,
+        source: "test_civic",
+        optionKey: "includeTestCivic",
+    },
+];
 
 const getCategoryRegistryKey = (
     contentSource: SearchContentSource,
@@ -194,38 +212,6 @@ const loadCategoriesFromBundle = (
     return categories;
 };
 
-export const loadLivretCategoriesForSearch = (): FrenchCategory[] =>
-    loadCategoriesFromBundle(DATA_FILES.SUBCATEGORIES, "livret");
-
-/** @deprecated Use loadAllLocalCategoriesForSearch */
-export const loadFormationCategoriesForSearch = (): FrenchCategory[] =>
-    loadCategoriesFromBundle(DATA_FILES.FORMATION, "formation");
-
-export const loadTestCivicCategoriesForSearch = (): FrenchCategory[] =>
-    loadCategoriesFromBundle(DATA_FILES.TEST_CIVIC, "test_civic");
-
-export const loadAllLocalCategoriesForSearch = (): Array<{
-    category: FrenchCategory;
-    contentSource: SearchContentSource;
-}> => {
-    const entries: Array<{
-        category: FrenchCategory;
-        contentSource: SearchContentSource;
-    }> = [];
-
-    loadLivretCategoriesForSearch().forEach((category) => {
-        entries.push({ category, contentSource: "livret" });
-    });
-    loadFormationCategoriesForSearch().forEach((category) => {
-        entries.push({ category, contentSource: "formation" });
-    });
-    loadTestCivicCategoriesForSearch().forEach((category) => {
-        entries.push({ category, contentSource: "test_civic" });
-    });
-
-    return entries;
-};
-
 const appendCategoryQuestions = (
     allQuestions: SearchResultQuestion[],
     category: FrenchCategory,
@@ -258,23 +244,15 @@ const appendCategoryQuestions = (
     });
 };
 
-export interface BuildSearchCatalogOptions {
-    /** Bundled livret JSON (default true). */
-    includeLocalLivret?: boolean;
-    /** Bundled formation JSON (default true). */
-    includeFormation?: boolean;
-    /** Bundled civic exam JSON (default true). */
-    includeTestCivic?: boolean;
-}
+const isBundleIncluded = (
+    options: BuildSearchCatalogOptions,
+    optionKey: keyof BuildSearchCatalogOptions
+): boolean => options[optionKey] !== false;
 
 export const buildSearchCatalog = (
     questionsData: FrenchQuestionsData = { categories: [] },
     options: BuildSearchCatalogOptions = {}
 ): SearchCatalog => {
-    const includeLocalLivret = options.includeLocalLivret !== false;
-    const includeFormation = options.includeFormation !== false;
-    const includeTestCivic = options.includeTestCivic !== false;
-
     const allQuestions: SearchResultQuestion[] = [];
     const loadedCategoryKeys = new Set<string>();
     let minId = Number.POSITIVE_INFINITY;
@@ -306,21 +284,12 @@ export const buildSearchCatalog = (
         addCategory(category, "livret");
     });
 
-    if (includeLocalLivret) {
-        loadLivretCategoriesForSearch().forEach((category) => {
-            addCategory(category, "livret");
-        });
-    }
-
-    if (includeFormation) {
-        loadFormationCategoriesForSearch().forEach((category) => {
-            addCategory(category, "formation");
-        });
-    }
-
-    if (includeTestCivic) {
-        loadTestCivicCategoriesForSearch().forEach((category) => {
-            addCategory(category, "test_civic");
+    for (const { bundle, source, optionKey } of LOCAL_SEARCH_BUNDLES) {
+        if (!isBundleIncluded(options, optionKey)) {
+            continue;
+        }
+        loadCategoriesFromBundle(bundle, source).forEach((category) => {
+            addCategory(category, source);
         });
     }
 
@@ -386,9 +355,9 @@ const scoreQuestionMatch = (
         if (questionMatch.matched) {
             matchScore += questionMatch.score;
             matches.push(
-                                questionMatch.score >= 80
-                                    ? "question_exact"
-                                    : "question_partial"
+                questionMatch.score >= 80
+                    ? "question_exact"
+                    : "question_partial"
             );
         }
 

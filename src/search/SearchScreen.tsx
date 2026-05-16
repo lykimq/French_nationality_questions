@@ -3,7 +3,8 @@ import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { FormattedText, AppHeader } from "../shared/components";
-import { useSearch, SearchSuggestion } from "./useSearch";
+import { useSearch } from "./useSearch";
+import type { SearchSuggestion } from "../shared/utils/searchQuestions";
 import {
     SearchBar,
     SearchSuggestions,

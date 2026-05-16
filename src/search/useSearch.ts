@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
-import { useData } from "../shared/contexts/DataContext";
+import { useSearchCatalog } from "../shared/hooks/useSearchCatalog";
 import {
-    buildSearchCatalog,
     createDefaultSearchFilters,
     generateSearchSuggestions,
     searchQuestions,
@@ -12,8 +11,11 @@ import {
 
 export type { SearchFilters, SearchResultQuestion, SearchSuggestion };
 
+const SEARCH_DEBOUNCE_MS = 150;
+const SUGGESTIONS_DEBOUNCE_MS = 120;
+
 export const useSearch = () => {
-    const { questionsData } = useData();
+    const { catalog, questionsData } = useSearchCatalog();
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>(
         []
@@ -24,17 +26,11 @@ export const useSearch = () => {
     const [searchSuggestions, setSearchSuggestions] = useState<
         SearchSuggestion[]
     >([]);
-    const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const suggestionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-    const catalog = useMemo(
-        () => buildSearchCatalog(questionsData),
-        [questionsData]
-    );
-
     const [filters, setFilters] = useState<SearchFilters>(() =>
         createDefaultSearchFilters(catalog.idRange)
     );
+    const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const suggestionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         setFilters((prev) => ({
@@ -110,10 +106,6 @@ export const useSearch = () => {
             appliedFilters: SearchFilters = filters,
             options?: { recordHistory?: boolean }
         ) => {
-            if (searchTimeoutRef.current) {
-                clearTimeout(searchTimeoutRef.current);
-            }
-
             const trimmedQuery = query.trim();
             if (trimmedQuery === "") {
                 setSearchResults([]);
@@ -123,11 +115,7 @@ export const useSearch = () => {
             }
 
             setIsSearching(true);
-            const recordHistory = options?.recordHistory ?? true;
-
-            searchTimeoutRef.current = setTimeout(() => {
-                runSearch(trimmedQuery, appliedFilters, recordHistory);
-            }, 150);
+            runSearch(trimmedQuery, appliedFilters, options?.recordHistory ?? true);
         },
         [filters, runSearch]
     );
@@ -162,7 +150,7 @@ export const useSearch = () => {
         setIsSearching(true);
         searchTimeoutRef.current = setTimeout(() => {
             runSearch(trimmed, filters, false);
-        }, 150);
+        }, SEARCH_DEBOUNCE_MS);
 
         return () => {
             if (searchTimeoutRef.current) {
@@ -189,7 +177,7 @@ export const useSearch = () => {
                     availableCategories
                 )
             );
-        }, 120);
+        }, SUGGESTIONS_DEBOUNCE_MS);
 
         return () => {
             if (suggestionsTimeoutRef.current) {
@@ -224,6 +212,5 @@ export const useSearch = () => {
         performSearch,
         resetFilters,
         isSearching,
-        catalogIdRange: catalog.idRange,
     };
 };

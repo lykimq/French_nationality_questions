@@ -8,6 +8,7 @@ export * from "./idUtils";
 export * from "./stringUtils";
 export * from "./searchIndex";
 export * from "./searchQuestions";
+export * from "./searchNavigation";
 export * from "./typeGuards";
 export * from "./errorUtils";
 export * from "./ratingUtils";

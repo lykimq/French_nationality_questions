@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React from "react";
 import {
     View,
     StyleSheet,
@@ -12,23 +12,17 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HomeStackParamList } from "../types";
-import { useData } from "../shared/contexts/DataContext";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { useMastery } from "../shared/contexts/MasteryContext";
+import { useLiveSearchResults } from "../shared/hooks/useLiveSearchResults";
 import {
     getMasteryForQuestionId,
     MasteryLevel,
 } from "../shared/utils/MasteryUtils";
 import { sortQuestionsById } from "../shared/utils/questionUtils";
+import { getSearchResultNavigationTarget } from "../shared/utils/searchNavigation";
+import type { SearchResultQuestion } from "../shared/utils/searchQuestions";
 import { FormattedText, AppHeader } from "../shared/components";
-import {
-    buildSearchCatalog,
-    createDefaultSearchFilters,
-    isFormationCategoryId,
-    isTestCivicCategoryId,
-    searchQuestions,
-    type SearchResultQuestion,
-} from "../shared/utils/searchQuestions";
 
 type QuestionSearchNavigationProp =
     NativeStackNavigationProp<HomeStackParamList>;
@@ -36,66 +30,43 @@ type QuestionSearchNavigationProp =
 const QuestionSearchScreen = () => {
     const navigation = useNavigation<QuestionSearchNavigationProp>();
     const { theme } = useTheme();
-    const { questionsData, isDataLoading } = useData();
     const { masteryMap } = useMastery();
-
-    const [searchQuery, setSearchQuery] = useState("");
-    const [isSearching, setIsSearching] = useState(false);
-    const [debouncedQuery, setDebouncedQuery] = useState("");
-
-    const catalog = useMemo(
-        () => buildSearchCatalog(questionsData),
-        [questionsData]
-    );
-
-    const defaultFilters = useMemo(
-        () => createDefaultSearchFilters(catalog.idRange),
-        [catalog.idRange]
-    );
-
-    useEffect(() => {
-        setIsSearching(true);
-        const timer = setTimeout(() => {
-            setDebouncedQuery(searchQuery.trim());
-            setIsSearching(false);
-        }, 200);
-        return () => clearTimeout(timer);
-    }, [searchQuery]);
-
-    const filteredQuestions = useMemo(() => {
-        if (!debouncedQuery) return [];
-        return searchQuestions(catalog, debouncedQuery, defaultFilters).results;
-    }, [catalog, debouncedQuery, defaultFilters]);
+    const {
+        searchQuery,
+        setSearchQuery,
+        results: filteredQuestions,
+        isSearching,
+        questionsData,
+    } = useLiveSearchResults();
 
     const renderItem = ({ item }: { item: SearchResultQuestion }) => {
         const mastery = getMasteryForQuestionId(masteryMap, item.rawQuestionId);
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
         const openQuestion = () => {
-            if (isFormationCategoryId(item.categoryId)) {
+            const target = getSearchResultNavigationTarget(item);
+
+            if (target.type === "formation") {
                 navigation.navigate("FlashCard", {
-                    categoryId: item.categoryId,
+                    categoryId: target.categoryId,
                 });
                 return;
             }
 
-            if (
-                isTestCivicCategoryId(item.categoryId) ||
-                item.contentSource === "test_civic"
-            ) {
+            if (target.type === "test_civic") {
                 navigation.getParent()?.navigate("CivicExamTab" as never);
                 return;
             }
 
             const cat = questionsData.categories.find(
-                (c) => c.id === item.categoryId
+                (c) => c.id === target.categoryId
             );
             const sorted = sortQuestionsById(cat?.questions || []);
             const idx = sorted.findIndex(
-                (q) => String(q.id) === String(item.rawQuestionId)
+                (q) => String(q.id) === String(target.rawQuestionId)
             );
             navigation.navigate("CategoryQuestions", {
-                categoryId: item.categoryId,
+                categoryId: target.categoryId,
                 initialIndex: idx >= 0 ? idx : 0,
             });
         };
@@ -197,7 +168,7 @@ const QuestionSearchScreen = () => {
                 </View>
             </SafeAreaView>
 
-            {isDataLoading || (isSearching && searchQuery) ? (
+            {isSearching && searchQuery ? (
                 <View style={styles.centerContainer}>
                     <ActivityIndicator
                         size="large"

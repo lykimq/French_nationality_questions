@@ -3,7 +3,7 @@ import { StyleSheet, View, Pressable } from "react-native";
 import { FormattedText, Icon3D } from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
 import { useIcon3D } from "../../shared/hooks";
-import type { SearchSuggestion } from "../useSearch";
+import type { SearchSuggestion } from "../../shared/utils/searchQuestions";
 
 interface SearchSuggestionsProps {
     suggestions: SearchSuggestion[];
