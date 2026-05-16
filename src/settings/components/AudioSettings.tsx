@@ -53,8 +53,9 @@ const AudioSettings: React.FC = () => {
                                 { color: theme.colors.textSecondary },
                             ]}
                         >
-                            Qualité plus naturelle via Internet. Retombe sur
-                            la voix du téléphone si hors ligne.
+                            Qualité plus naturelle via Internet. En cas
+                            d&apos;erreur ou de limite, la voix du téléphone
+                            est utilisée pour cette lecture.
                         </FormattedText>
                     </View>
                     <Switch

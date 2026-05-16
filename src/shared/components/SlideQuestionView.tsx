@@ -39,6 +39,7 @@ export interface SlideQuestionViewProps {
     onGoToIndex?: (index: number) => void;
     hasNext: boolean;
     hasPrevious: boolean;
+    masteryLevel?: MasteryLevel;
 }
 
 const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
@@ -52,6 +53,7 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
     onGoToIndex,
     hasNext,
     hasPrevious,
+    masteryLevel,
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
@@ -260,6 +262,14 @@ const SlideQuestionView: React.FC<SlideQuestionViewProps> = ({
                         >
                             {currentIndex + 1} / {totalCount}
                         </FormattedText>
+                        {masteryLevel === MasteryLevel.MASTERED && (
+                            <Ionicons
+                                name="checkmark-circle"
+                                size={16}
+                                color="#4CAF50"
+                                style={styles.masteryIcon}
+                            />
+                        )}
                     </View>
                     {totalCount > 1 && (
                         <TouchableOpacity

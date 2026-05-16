@@ -39,11 +39,17 @@ const STORAGE_KEY = "@speech_settings";
 const VOICE_LOAD_TIMEOUT_MS = 5000;
 const VOICE_RETRY_DELAY_MS = 1000;
 
+const getDefaultSpeechEngine = (): SpeechEngine => {
+    if (!isCloudSpeechAvailable()) {
+        return "device";
+    }
+    return __DEV__ ? "cloud" : "device";
+};
+
 const defaultSettings: SpeechSettings = {
-    speechEngine: isCloudSpeechAvailable() ? "cloud" : "device",
-    selectedVoiceId: isCloudSpeechAvailable()
-        ? DEFAULT_CLOUD_VOICE_ID
-        : null,
+    speechEngine: getDefaultSpeechEngine(),
+    selectedVoiceId:
+        getDefaultSpeechEngine() === "cloud" ? DEFAULT_CLOUD_VOICE_ID : null,
     rate: DEFAULT_SPEECH_RATE,
 };
 
@@ -76,7 +82,7 @@ const parseStoredSettings = (raw: unknown): SpeechSettings => {
             legacy.rate <= 2
         ) {
             return {
-                speechEngine: isCloudSpeechAvailable() ? "cloud" : "device",
+                speechEngine: getDefaultSpeechEngine(),
                 selectedVoiceId:
                     typeof legacy.selectedVoiceId === "string"
                         ? legacy.selectedVoiceId
