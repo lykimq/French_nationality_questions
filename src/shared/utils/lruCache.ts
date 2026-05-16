@@ -56,6 +56,15 @@ export class LRUCache<T> {
         return this.cache.size;
     }
 
+    evictOldestKey(): string | undefined {
+        const firstKey = this.cache.keys().next().value;
+        if (firstKey === undefined) {
+            return undefined;
+        }
+        this.cache.delete(firstKey);
+        return firstKey;
+    }
+
     get maxSizeLimit(): number {
         return this.maxSize;
     }

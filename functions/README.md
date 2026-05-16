@@ -20,7 +20,7 @@ From the **repository root**:
 | `make android` | Enable APIs, configure deploy IAM, deploy the function, build and run on Android |
 | `make android-fast` | Build and run on Android only (skip function deploy) |
 
-Fill in `.env` before the first `make android`. Keep `EXPO_PUBLIC_USE_FUNCTIONS_EMULATOR` unset or `false`.
+Fill in `.env` before the first `make android`. Configure Firebase Storage rules in the Firebase Console (not in this repo). Keep `EXPO_PUBLIC_USE_FUNCTIONS_EMULATOR` unset or `false`.
 
 In the app, turn on **Voix naturelle (Google Cloud)** under audio settings.
 
@@ -28,3 +28,15 @@ In the app, turn on **Voix naturelle (Google Cloud)** under audio settings.
 
 - Entry point: `functions/src/index.ts`
 - Build: `functions/package.json` (`npm run build` runs automatically via `make android`)
+
+## Security (TTS callable)
+
+- **Rate limit:** 30 requests per minute per client IP (always on).
+- **App Check (optional):** Set `FUNCTIONS_ENFORCE_APP_CHECK=true` when deploying, then configure App Check in Firebase Console and in the app `.env` (see root `.env.example`). Leave unset/`false` until App Check is registered for your Android/iOS apps.
+- Deploy with enforcement:
+
+  ```bash
+  FUNCTIONS_ENFORCE_APP_CHECK=true firebase deploy --only functions:synthesizeFrenchSpeech
+  ```
+
+- Run function unit tests: `npm test` (from `functions/`).

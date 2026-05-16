@@ -34,6 +34,12 @@ import {
 import { FlashCard } from "../components";
 import { useFlashCard } from "../hooks";
 import { loadFlashCardData, getCategoryById } from "../utils";
+import {
+    getFlashCardDataCache,
+    getFlashCardDataLoadPromise,
+    setFlashCardDataCache,
+    setFlashCardDataLoadPromise,
+} from "../utils/flashCardDataCache";
 import { sortQuestionsById } from "../../shared/utils/questionUtils";
 import { useMastery } from "../../shared/contexts/MasteryContext";
 import {
@@ -42,7 +48,7 @@ import {
 import { sharedStyles } from "../../shared/utils";
 import { RECOMMENDED_SESSION_QUESTION_COUNT } from "../../shared/constants/learningSession";
 import { Icon3D } from "../../shared/components";
-import type { FormationCategory } from "../types";
+import type { FormationCategory, FormationQuestion } from "../types";
 import type { FlashCardStackParamList } from "../navigation/FlashCardStack";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
@@ -63,38 +69,37 @@ type CategoryDataState = {
     error: string | null;
 };
 
-let globalFlashCardDataCache: { [key: string]: FormationCategory } | null =
-    null;
-let globalFlashCardDataPromise: Promise<{
-    [key: string]: FormationCategory;
-} | null> | null = null;
-
 const FlashCardScreen: React.FC = () => {
     const route = useRoute<FlashCardScreenRouteProp>();
     const navigation = useNavigation<FlashCardScreenNavigationProp>();
     const { theme } = useTheme();
     const { categoryId } = route.params;
 
-    const [dataState, setDataState] = useState<CategoryDataState>(() => ({
-        data: globalFlashCardDataCache,
-        loading: globalFlashCardDataCache === null,
-        error: null,
-    }));
+    const [dataState, setDataState] = useState<CategoryDataState>(() => {
+        const cached = getFlashCardDataCache();
+        return {
+            data: cached,
+            loading: cached === null,
+            error: null,
+        };
+    });
 
     const loadCategoryData = useCallback(async () => {
-        if (globalFlashCardDataCache) {
+        const cached = getFlashCardDataCache();
+        if (cached) {
             setDataState({
-                data: globalFlashCardDataCache,
+                data: cached,
                 loading: false,
                 error: null,
             });
             return;
         }
 
-        if (globalFlashCardDataPromise) {
+        const inFlight = getFlashCardDataLoadPromise();
+        if (inFlight) {
             try {
-                const data = await globalFlashCardDataPromise;
-                globalFlashCardDataCache = data;
+                const data = await inFlight;
+                setFlashCardDataCache(data);
                 setDataState({
                     data,
                     loading: false,
@@ -117,8 +122,8 @@ const FlashCardScreen: React.FC = () => {
         } | null> => {
             try {
                 const data = await loadFlashCardData();
-                globalFlashCardDataCache = data;
-                globalFlashCardDataPromise = null;
+                setFlashCardDataCache(data);
+                setFlashCardDataLoadPromise(null);
                 setDataState({
                     data,
                     loading: false,
@@ -126,7 +131,7 @@ const FlashCardScreen: React.FC = () => {
                 });
                 return data;
             } catch (err) {
-                globalFlashCardDataPromise = null;
+                setFlashCardDataLoadPromise(null);
                 setDataState({
                     data: null,
                     loading: false,
@@ -136,7 +141,7 @@ const FlashCardScreen: React.FC = () => {
             }
         })();
 
-        globalFlashCardDataPromise = loadPromise;
+        setFlashCardDataLoadPromise(loadPromise);
         await loadPromise;
     }, []);
 
@@ -172,7 +177,7 @@ const FlashCardScreen: React.FC = () => {
                 .map((id) =>
                     allQuestions.find((q) => String(q.id) === String(id))
                 )
-                .filter((q): q is any => q !== undefined);
+                .filter((q): q is FormationQuestion => q !== undefined);
 
             return {
                 id: "recommended",
@@ -358,7 +363,7 @@ const FlashCardScreen: React.FC = () => {
 
     const questionListData: QuestionListItem[] = useMemo(() => {
         if (!category?.questions) return [];
-        return category.questions.map((q: any, index: number) => ({
+        return category.questions.map((q, index) => ({
             index,
             id: q.id,
             questionText: q.question,

@@ -43,15 +43,14 @@ const HomeScreen = () => {
 
     const navigateToCategory = (categoryId: string) => {
         if (categoryId === "recommended") {
-            navigation.navigate("FlashCard" as any, { categoryId });
+            navigation.navigate("FlashCard", { categoryId });
         } else {
-            // New navigation flow: Home -> Detail -> FlashCard
-            navigation.navigate("CategoryDetail" as any, { categoryId });
+            navigation.navigate("CategoryDetail", { categoryId });
         }
     };
 
     const navigateToSearch = () => {
-        navigation.navigate("QuestionSearch" as any);
+        navigation.navigate("QuestionSearch");
     };
 
     return (

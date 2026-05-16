@@ -6,6 +6,7 @@ import type {
     CivicExamQuestion,
 } from "../types";
 import { createLogger } from "../../shared/utils/logger";
+import { normalizeCivicQuestionType } from "./civicQuestionTypeUtils";
 
 const logger = createLogger("CivicExamUtils");
 /**
@@ -63,20 +64,12 @@ export const getQuestionTypeFromQuestion = (
 ): QuestionType => {
     if ("questionType" in question && question.questionType) {
         const questionType = question.questionType;
-        // Normalize for safety (source data should already be normalized to "situational")
         if (typeof questionType === "string") {
-            const normalized = questionType.toLowerCase().trim();
-            if (normalized === "situation" || normalized === "situational") {
-                return "situational";
-            }
-            if (normalized === "knowledge") {
-                return "knowledge";
-            }
+            return normalizeCivicQuestionType(questionType);
         }
         return questionType as QuestionType;
     }
 
-    // Default to knowledge if not specified
     return "knowledge";
 };
 export const getQuestionsByTopic = (

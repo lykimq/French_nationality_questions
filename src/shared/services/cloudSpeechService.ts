@@ -6,13 +6,16 @@ import { createLogger } from "../utils/logger";
 import { getFirebaseFunctions, isFirebaseConfigured } from "../../config/firebaseConfig";
 import { resolveCloudVoiceId } from "../utils/cloudSpeechUtils";
 import { formatCallableError } from "../utils/callableErrorUtils";
+import { LRUCache } from "../utils/lruCache";
 
 const logger = createLogger("CloudSpeechService");
 
 const CACHE_DIR = `${FileSystem.cacheDirectory ?? ""}speech-cache/`;
+const SPEECH_CACHE_MAX_FILES = 100;
 
 let currentSound: Audio.Sound | null = null;
 let cacheDirReady = false;
+const speechFileIndex = new LRUCache<string>(SPEECH_CACHE_MAX_FILES);
 
 interface SynthesizeResponse {
     audioBase64: string;
@@ -37,15 +40,46 @@ const buildCacheKey = async (text: string, voiceId: string): Promise<string> => 
     return digest;
 };
 
+const cacheFileUri = (key: string): string => `${CACHE_DIR}${key}.mp3`;
+
+const evictOldestSpeechFile = async (): Promise<void> => {
+    const evictedKey = speechFileIndex.evictOldestKey();
+    if (!evictedKey) {
+        return;
+    }
+    try {
+        await FileSystem.deleteAsync(cacheFileUri(evictedKey), {
+            idempotent: true,
+        });
+    } catch (error) {
+        logger.warn("Failed to evict speech cache file:", error);
+    }
+};
+
+const touchSpeechCacheIndex = (key: string, uri: string): void => {
+    speechFileIndex.set(key, { value: uri, fetchedAt: Date.now() });
+};
+
+const registerSpeechCacheFile = async (key: string, uri: string): Promise<void> => {
+    if (!speechFileIndex.has(key) && speechFileIndex.size >= SPEECH_CACHE_MAX_FILES) {
+        await evictOldestSpeechFile();
+    }
+    touchSpeechCacheIndex(key, uri);
+};
+
 const getCachedFileUri = async (
     text: string,
     voiceId: string
 ): Promise<string | null> => {
     await ensureCacheDir();
     const key = await buildCacheKey(text, voiceId);
-    const uri = `${CACHE_DIR}${key}.mp3`;
+    const uri = cacheFileUri(key);
     const info = await FileSystem.getInfoAsync(uri);
-    return info.exists ? uri : null;
+    if (info.exists) {
+        touchSpeechCacheIndex(key, uri);
+        return uri;
+    }
+    return null;
 };
 
 const writeCachedAudio = async (
@@ -55,10 +89,11 @@ const writeCachedAudio = async (
 ): Promise<string> => {
     await ensureCacheDir();
     const key = await buildCacheKey(text, voiceId);
-    const uri = `${CACHE_DIR}${key}.mp3`;
+    const uri = cacheFileUri(key);
     await FileSystem.writeAsStringAsync(uri, audioBase64, {
         encoding: FileSystem.EncodingType.Base64,
     });
+    await registerSpeechCacheFile(key, uri);
     return uri;
 };
 
@@ -159,5 +194,6 @@ export const clearCloudSpeechCache = async (): Promise<void> => {
     if (info.exists) {
         await FileSystem.deleteAsync(CACHE_DIR, { idempotent: true });
     }
+    speechFileIndex.clear();
     cacheDirReady = false;
 };

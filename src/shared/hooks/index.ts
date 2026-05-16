@@ -1,5 +1,6 @@
 export * from "./useDebouncedValue";
 export * from "./useSearchCatalog";
+export * from "./useQuestionSearch";
 export * from "./useLiveSearchResults";
 export * from "./useCountdownTimer";
 export * from "./usePanZoom";

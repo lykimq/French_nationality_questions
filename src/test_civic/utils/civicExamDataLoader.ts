@@ -9,6 +9,10 @@ import { DATA_FILES } from "../../shared/config";
 import { loadJsonCollection } from "../../shared/services/dataService";
 import { ALL_TOPICS } from "../constants/civicExamConstants";
 import type { CivicExamQuestionWithOptions } from "./civicExamQuestionUtils";
+import {
+    isValidCivicQuestionTypeRaw,
+    normalizeCivicQuestionType,
+} from "./civicQuestionTypeUtils";
 import type { CivicExamTopic, CivicExamSubTopic } from "../types";
 
 const logger = createLogger("CivicExamDataLoader");
@@ -65,16 +69,6 @@ const isValidSubTopic = (value: string): value is CivicExamSubTopic => {
     return VALID_SUBTOPICS.includes(value as CivicExamSubTopic);
 };
 
-const normalizeQuestionType = (
-    questionType: string
-): "knowledge" | "situational" => {
-    const normalized = questionType.toLowerCase().trim();
-    if (normalized === "situation" || normalized === "situational") {
-        return "situational";
-    }
-    return "knowledge";
-};
-
 const validateQuestionData = (
     q: unknown,
     defaultTopic?: CivicExamTopic,
@@ -113,12 +107,9 @@ const validateQuestionData = (
 
     const questionType =
         typeof question.questionType === "string"
-            ? question.questionType.toLowerCase().trim()
+            ? question.questionType
             : "";
-    const hasValidQuestionType =
-        questionType === "knowledge" ||
-        questionType === "situational" ||
-        questionType === "situation";
+    const hasValidQuestionType = isValidCivicQuestionTypeRaw(questionType);
 
     if (!hasValidQuestionType) {
         onInvalid?.(
@@ -221,7 +212,7 @@ const transformCivicQuestion = (
     const topic = q.theme && isValidTopic(q.theme) ? q.theme : defaultTopic;
     // Transform JSON property 'subTheme' to TypeScript property 'subTopic'
     const subTopic = q.subTheme as CivicExamSubTopic;
-    const questionType = normalizeQuestionType(q.questionType);
+    const questionType = normalizeCivicQuestionType(q.questionType);
 
     // Build options array from correctAnswer + incorrectAnswers
     const correctAnswer = sanitizeString(q.correctAnswer);

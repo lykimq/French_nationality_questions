@@ -6,6 +6,7 @@ import {
     type Functions,
 } from "firebase/functions";
 import { createLogger } from "../shared/utils/logger";
+import { initializeAppCheckIfConfigured } from "./appCheckConfig";
 
 const logger = createLogger("FirebaseConfig");
 
@@ -59,6 +60,8 @@ if (missingFields.length > 0) {
             connectFunctionsEmulator(functions, "localhost", 5001);
             logger.info("Firebase Functions emulator connected.");
         }
+
+        initializeAppCheckIfConfigured(app);
     } catch (error) {
         logger.error("Failed to initialize Firebase:", error);
     }

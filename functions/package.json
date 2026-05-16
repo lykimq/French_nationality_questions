@@ -10,6 +10,7 @@
         "build:watch": "tsc --watch",
         "serve": "npm run build && firebase emulators:start --only functions",
         "deploy": "firebase deploy --only functions:synthesizeFrenchSpeech",
+        "test": "jest",
         "logs": "firebase functions:log"
     },
     "dependencies": {
@@ -18,7 +19,10 @@
         "firebase-functions": "^6.3.0"
     },
     "devDependencies": {
+        "@types/jest": "^29.5.14",
         "@types/node": "^22.10.0",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.4.6",
         "typescript": "^5.9.2"
     }
 }

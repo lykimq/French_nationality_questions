@@ -6,7 +6,7 @@ import { useCivicExam } from "../../test_civic/contexts/CivicExamContext";
 import SettingItem from "./SettingItem";
 import CollapsibleSection from "./CollapsibleSection";
 import { showConfirmationAlert, showSimpleAlert } from "../../shared/utils";
-import { clearAllCaches } from "../../shared/services/dataService";
+import { clearApplicationCaches } from "../../shared/services/applicationCache";
 
 const ProgressSettings: React.FC = () => {
     const { theme } = useTheme();
@@ -67,7 +67,7 @@ const ProgressSettings: React.FC = () => {
             confirmText: "Vider le cache",
             onConfirm: async () => {
                 try {
-                    clearAllCaches();
+                    await clearApplicationCaches();
                     showSimpleAlert({
                         title: "Cache vidé",
                         message: "Le cache a été vidé avec succès.",
@@ -91,7 +91,7 @@ const ProgressSettings: React.FC = () => {
             onConfirm: async () => {
                 try {
                     await Promise.all([resetLearningProgress(), resetExamProgress()]);
-                    clearAllCaches();
+                    await clearApplicationCaches();
                     showSimpleAlert({
                         title: "Nouveau départ !",
                         message: "Toutes vos données ont été supprimées.",

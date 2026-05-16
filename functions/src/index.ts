@@ -1,10 +1,17 @@
 import { onCall, HttpsError } from "firebase-functions/v2/https";
-import { setGlobalOptions } from "firebase-functions/v2";
+import { setGlobalOptions, https } from "firebase-functions/v2";
 import { logger } from "firebase-functions/v2";
 import { TextToSpeechClient } from "@google-cloud/text-to-speech";
 import type { google } from "@google-cloud/text-to-speech/build/protos/protos";
+import {
+    assertWithinRateLimit,
+    resolveClientKey,
+} from "./rateLimit";
 
 setGlobalOptions({ region: "europe-west1", maxInstances: 20 });
+
+const ENFORCE_APP_CHECK =
+    process.env.FUNCTIONS_ENFORCE_APP_CHECK === "true";
 
 const MAX_TEXT_LENGTH = 5000;
 const MIN_TEXT_LENGTH = 1;
@@ -83,10 +90,18 @@ export const synthesizeFrenchSpeech = onCall(
     {
         cors: true,
         invoker: "public",
+        enforceAppCheck: ENFORCE_APP_CHECK,
         timeoutSeconds: 60,
         memory: "256MiB",
     },
     async (request) => {
+        const rawRequest = request.rawRequest as https.Request | undefined;
+        const clientKey = resolveClientKey(
+            rawRequest?.ip,
+            rawRequest?.headers["x-forwarded-for"] as string | undefined
+        );
+        assertWithinRateLimit(clientKey);
+
         const data = (request.data ?? {}) as SynthesizeRequest;
         const text =
             typeof data.text === "string" ? data.text.trim() : "";

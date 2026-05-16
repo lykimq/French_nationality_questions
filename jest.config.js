@@ -17,7 +17,12 @@ const projects = [
         preset: "ts-jest",
         testEnvironment: "node",
         testMatch: ["**/__tests__/**/*.test.ts", "**/*.test.ts"],
-        testPathIgnorePatterns: ["/node_modules/", "/test-utils", "/e2e"],
+        testPathIgnorePatterns: [
+            "/node_modules/",
+            "/test-utils",
+            "/e2e",
+            "<rootDir>/functions/",
+        ],
         setupFilesAfterEnv: ["<rootDir>/jest.setup.unit.js"],
         moduleNameMapper: sharedModuleNameMapper,
         transform: {
@@ -38,7 +43,12 @@ const projects = [
         setupFiles: ["<rootDir>/jest.setup.globals.js"],
         setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
         testMatch: ["**/__tests__/**/*.test.tsx", "**/*.test.tsx"],
-        testPathIgnorePatterns: ["/node_modules/", "/test-utils", "/e2e"],
+        testPathIgnorePatterns: [
+            "/node_modules/",
+            "/test-utils",
+            "/e2e",
+            "<rootDir>/functions/",
+        ],
         moduleNameMapper: sharedModuleNameMapper,
     },
     {
