@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import React, { useCallback } from "react";
+import { StyleSheet, View, FlatList, ListRenderItem } from "react-native";
 import { QuestionCard, FormattedText, Icon3D } from "../../shared/components";
 import { useTheme } from "../../shared/contexts/ThemeContext";
 import { useIcon3D } from "../../shared/hooks";
@@ -8,17 +8,63 @@ import type { SearchResultQuestion } from "../useSearch";
 interface SearchResultsProps {
     results: SearchResultQuestion[];
     searchQuery: string;
+    totalMatchCount?: number;
 }
 
 export const SearchResults: React.FC<SearchResultsProps> = ({
     results,
     searchQuery,
+    totalMatchCount = 0,
 }) => {
     const { theme } = useTheme();
     const { getIcon } = useIcon3D();
 
     const searchIcon = getIcon("search") || { name: "search" };
     const imageIcon = getIcon("image") || { name: "image" };
+    const displayedCount = results.length;
+    const hasMoreResults =
+        totalMatchCount > 0 && totalMatchCount > displayedCount;
+
+    const renderResult: ListRenderItem<SearchResultQuestion> = useCallback(
+        ({ item: result }) => (
+            <View style={styles.resultItem}>
+                <View style={styles.categoryLabel}>
+                    <FormattedText
+                        style={[
+                            styles.categoryLabelText,
+                            { color: theme.colors.primary },
+                        ]}
+                    >
+                        {result.categoryTitle ||
+                            result.categoryId ||
+                            "Sans catégorie"}
+                    </FormattedText>
+                    {result.hasImage && (
+                        <Icon3D
+                            name={imageIcon.name}
+                            size={10}
+                            color={theme.colors.primary}
+                            variant="default"
+                            containerStyle={styles.imageIcon}
+                        />
+                    )}
+                </View>
+                <QuestionCard
+                    id={result.id}
+                    question={result.question}
+                    explanation={result.explanation}
+                    image={result.image}
+                />
+            </View>
+        ),
+        [theme.colors.primary, imageIcon.name]
+    );
+
+    const keyExtractor = useCallback(
+        (result: SearchResultQuestion) =>
+            `${result.categoryId}-${result.id}`,
+        []
+    );
 
     if (searchQuery === "") {
         return (
@@ -79,65 +125,45 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
         );
     }
 
+    const listHeader = (
+        <View style={styles.resultsHeader}>
+            <FormattedText
+                style={[styles.resultsTitle, { color: theme.colors.text }]}
+            >
+                {hasMoreResults
+                    ? `${displayedCount} sur ${totalMatchCount} résultats`
+                    : `${displayedCount} résultat${displayedCount > 1 ? "s" : ""} trouvé${displayedCount > 1 ? "s" : ""}`}
+            </FormattedText>
+            <FormattedText
+                style={[
+                    styles.sortedByText,
+                    { color: theme.colors.textMuted },
+                ]}
+            >
+                {hasMoreResults
+                    ? "Affinez votre recherche pour voir plus de résultats"
+                    : "Trié par pertinence"}
+            </FormattedText>
+        </View>
+    );
+
     return (
-        <ScrollView
+        <FlatList
             style={[
                 styles.scrollView,
                 { backgroundColor: theme.colors.background },
             ]}
             contentContainerStyle={styles.contentContainer}
+            data={results}
+            keyExtractor={keyExtractor}
+            renderItem={renderResult}
+            ListHeaderComponent={listHeader}
             showsVerticalScrollIndicator={false}
-        >
-            <View style={styles.resultsHeader}>
-                <FormattedText
-                    style={[styles.resultsTitle, { color: theme.colors.text }]}
-                >
-                    {`${results.length} résultat${results.length > 1 ? "s" : ""} trouvé${results.length > 1 ? "s" : ""}`}
-                </FormattedText>
-                <FormattedText
-                    style={[
-                        styles.sortedByText,
-                        { color: theme.colors.textMuted },
-                    ]}
-                >
-                    Trié par pertinence
-                </FormattedText>
-            </View>
-            {results.map((result) => (
-                <View
-                    key={`${result.categoryId}-${result.id}`}
-                    style={styles.resultItem}
-                >
-                    <View style={styles.categoryLabel}>
-                        <FormattedText
-                            style={[
-                                styles.categoryLabelText,
-                                { color: theme.colors.primary },
-                            ]}
-                        >
-                            {result.categoryTitle ||
-                                result.categoryId ||
-                                "Sans catégorie"}
-                        </FormattedText>
-                        {result.hasImage && (
-                            <Icon3D
-                                name={imageIcon.name}
-                                size={10}
-                                color={theme.colors.primary}
-                                variant="default"
-                                containerStyle={styles.imageIcon}
-                            />
-                        )}
-                    </View>
-                    <QuestionCard
-                        id={result.id}
-                        question={result.question}
-                        explanation={result.explanation}
-                        image={result.image}
-                    />
-                </View>
-            ))}
-        </ScrollView>
+            initialNumToRender={8}
+            maxToRenderPerBatch={6}
+            windowSize={7}
+            removeClippedSubviews
+        />
     );
 };
 

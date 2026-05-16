@@ -27,6 +27,7 @@ const SearchScreen = () => {
         searchQuery,
         setSearchQuery,
         searchResults,
+        totalMatchCount,
         searchSuggestions,
         filters,
         setFilters,
@@ -182,7 +183,11 @@ const SearchScreen = () => {
                 />
             )}
 
-            <SearchResults results={searchResults} searchQuery={searchQuery} />
+            <SearchResults
+                results={searchResults}
+                searchQuery={searchQuery}
+                totalMatchCount={totalMatchCount}
+            />
         </View>
     );
 };

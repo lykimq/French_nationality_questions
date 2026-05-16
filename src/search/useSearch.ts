@@ -37,18 +37,23 @@ export interface SearchSuggestion {
     count?: number;
 }
 
+/** Cap rendered results to avoid Android OOM when broad queries match most of the catalog. */
+const MAX_SEARCH_RESULTS = 50;
+
 export const useSearch = () => {
     const { questionsData } = useData();
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState<SearchResultQuestion[]>(
         []
     );
+    const [totalMatchCount, setTotalMatchCount] = useState(0);
     const [isSearching, setIsSearching] = useState(false);
     const [searchHistory, setSearchHistory] = useState<string[]>([]);
     const [searchSuggestions, setSearchSuggestions] = useState<
         SearchSuggestion[]
     >([]);
     const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const suggestionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     // Advanced search filters
     const [filters, setFilters] = useState<SearchFilters>({
@@ -261,6 +266,7 @@ export const useSearch = () => {
             const trimmedQuery = query.trim();
             if (trimmedQuery === "") {
                 setSearchResults([]);
+                setTotalMatchCount(0);
                 setIsSearching(false);
                 return;
             }
@@ -278,6 +284,7 @@ export const useSearch = () => {
                     !/^\d+$/.test(normalizedQuery)
                 ) {
                     setSearchResults([]);
+                    setTotalMatchCount(0);
                     setIsSearching(false);
                     return;
                 }
@@ -333,6 +340,7 @@ export const useSearch = () => {
                                 matches: ["ID"],
                             },
                         ]);
+                        setTotalMatchCount(1);
                         setIsSearching(false);
                         if (
                             query.trim() &&
@@ -406,7 +414,6 @@ export const useSearch = () => {
                                         : "explanation_partial"
                                 );
                             } else if (matchScore === 0) {
-                                // Token-based matching for explanation (only if no phrase match)
                                 const explanationTokens =
                                     tokenize(explanationText);
                                 const explanationTokenScore = scoreTokens(
@@ -461,7 +468,8 @@ export const useSearch = () => {
                         return a.id - b.id;
                     });
 
-                setSearchResults(results);
+                setTotalMatchCount(results.length);
+                setSearchResults(results.slice(0, MAX_SEARCH_RESULTS));
                 setIsSearching(false);
 
                 // Add to search history
@@ -481,19 +489,34 @@ export const useSearch = () => {
             if (searchTimeoutRef.current) {
                 clearTimeout(searchTimeoutRef.current);
             }
+            if (suggestionsTimeoutRef.current) {
+                clearTimeout(suggestionsTimeoutRef.current);
+            }
         };
     }, []);
 
     // Handle suggestions only (no automatic search)
     useEffect(() => {
+        if (suggestionsTimeoutRef.current) {
+            clearTimeout(suggestionsTimeoutRef.current);
+        }
+
         const queryLength = searchQuery.length;
 
-        // Show suggestions for queries of length 2-6
-        if (queryLength >= 2 && queryLength <= 6) {
-            setSearchSuggestions(generateSuggestions(searchQuery));
-        } else {
+        if (queryLength < 2 || queryLength > 6) {
             setSearchSuggestions([]);
+            return;
         }
+
+        suggestionsTimeoutRef.current = setTimeout(() => {
+            setSearchSuggestions(generateSuggestions(searchQuery));
+        }, 120);
+
+        return () => {
+            if (suggestionsTimeoutRef.current) {
+                clearTimeout(suggestionsTimeoutRef.current);
+            }
+        };
     }, [searchQuery, generateSuggestions]);
 
     const getSearchStats = useCallback(() => {
@@ -511,6 +534,7 @@ export const useSearch = () => {
         searchQuery,
         setSearchQuery,
         searchResults,
+        totalMatchCount,
         searchSuggestions,
         filters,
         setFilters,

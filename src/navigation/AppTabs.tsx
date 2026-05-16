@@ -104,6 +104,7 @@ const AppTabs = () => {
                 component={SearchScreen}
                 options={{
                     title: tabLabels.search,
+                    lazy: true,
                     tabBarIcon: ({ focused, color }: TabBarIconProps) =>
                         renderTabIcon("search", focused, color),
                 }}
