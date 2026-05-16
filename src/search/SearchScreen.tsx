@@ -36,14 +36,13 @@ const SearchScreen = () => {
         availableCategories,
         getSearchStats,
         performSearch,
+        resetFilters,
         isSearching,
     } = useSearch();
 
     useEffect(() => {
-        // Show suggestions when query length is 2-6, we have suggestions, and the user has not dismissed them
         const shouldShowSuggestions =
             searchQuery.length >= 2 &&
-            searchQuery.length <= 6 &&
             searchSuggestions.length > 0 &&
             !suggestionsDismissed;
 
@@ -81,14 +80,6 @@ const SearchScreen = () => {
         setShowAdvancedSearch(!showAdvancedSearch);
     };
 
-    const resetFilters = () => {
-        setFilters({
-            categories: [],
-            hasImage: "all",
-            questionRange: { min: 1, max: 200 },
-            searchIn: ["both"],
-        });
-    };
 
     const applySuggestion = (suggestion: SearchSuggestion) => {
         if (selectionTimeoutRef.current) {
@@ -106,7 +97,9 @@ const SearchScreen = () => {
 
     const handleSearch = () => {
         if (searchQuery.trim()) {
-            performSearch(searchQuery.trim());
+            performSearch(searchQuery.trim(), undefined, {
+                recordHistory: true,
+            });
             setSuggestionsDismissed(true);
             setShowSuggestions(false);
         }
@@ -177,7 +170,7 @@ const SearchScreen = () => {
                     history={searchHistory}
                     onSelectQuery={(query) => {
                         setSearchQuery(query);
-                        performSearch(query);
+                        performSearch(query, undefined, { recordHistory: true });
                     }}
                     onClearHistory={clearSearchHistory}
                 />

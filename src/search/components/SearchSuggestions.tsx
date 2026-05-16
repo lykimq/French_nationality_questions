@@ -33,6 +33,8 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
                 return categoriesIcon?.name || "folder";
             case "id":
                 return helpIcon?.name || "help-circle";
+            case "question":
+                return helpIcon?.name || "help-circle";
             default:
                 return searchIcon?.name || "search";
         }
@@ -80,6 +82,7 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
                             styles.suggestionText,
                             { color: theme.colors.text },
                         ]}
+                        numberOfLines={suggestion.type === "question" ? 2 : 1}
                     >
                         {suggestion.text || ""}
                     </FormattedText>

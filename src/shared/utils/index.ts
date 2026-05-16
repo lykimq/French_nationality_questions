@@ -7,6 +7,7 @@ export * from "./logger";
 export * from "./idUtils";
 export * from "./stringUtils";
 export * from "./searchIndex";
+export * from "./searchQuestions";
 export * from "./typeGuards";
 export * from "./errorUtils";
 export * from "./ratingUtils";

@@ -12,23 +12,30 @@ export const tokenize = (text: string, minLength: number = 2): string[] => {
         .filter((token) => token.length >= minLength);
 };
 
+export const getQuestionSearchKey = (
+    contentSource: string,
+    categoryId: string,
+    questionId: string | number
+): string =>
+    `${contentSource}:${categoryId}:${String(questionId)}`;
+
 // Build a reusable token index for questions to avoid repeated string work
 export const buildQuestionTokens = (
     questions: Array<{
-        id: number;
+        questionKey: string;
         question: string;
         explanation?: string | null;
         categoryTitle?: string;
     }>,
     minLength: number = 2
-): Map<number, string[]> => {
-    const map = new Map<number, string[]>();
+): Map<string, string[]> => {
+    const map = new Map<string, string[]>();
     questions.forEach((q) => {
         const tokens = tokenize(
             `${q.question} ${q.explanation || ""} ${q.categoryTitle || ""}`,
             minLength
         );
-        map.set(q.id, tokens);
+        map.set(q.questionKey, tokens);
     });
     return map;
 };
@@ -121,14 +128,13 @@ export const textContainsQuery = (
 
     // Exact phrase match - highest score
     if (normalizedText === normalizedQuery) {
-        return { matched: true, score: 100 };
+        return { matched: true, score: 1000 };
     }
 
     // Phrase contains query - high score
     if (normalizedText.includes(normalizedQuery)) {
         const position = normalizedText.indexOf(normalizedQuery);
-        // Higher score if match is at the beginning
-        const positionScore = position === 0 ? 50 : 30;
+        const positionScore = position === 0 ? 200 : 80;
         return { matched: true, score: positionScore };
     }
 

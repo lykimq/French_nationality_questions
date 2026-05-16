@@ -11,7 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { HomeStackParamList, Question } from "../types";
+import { HomeStackParamList } from "../types";
 import { useData } from "../shared/contexts/DataContext";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { useMastery } from "../shared/contexts/MasteryContext";
@@ -21,15 +21,17 @@ import {
 } from "../shared/utils/MasteryUtils";
 import { sortQuestionsById } from "../shared/utils/questionUtils";
 import { FormattedText, AppHeader } from "../shared/components";
-import { sharedStyles } from "../shared/utils";
+import {
+    buildSearchCatalog,
+    createDefaultSearchFilters,
+    isFormationCategoryId,
+    isTestCivicCategoryId,
+    searchQuestions,
+    type SearchResultQuestion,
+} from "../shared/utils/searchQuestions";
 
 type QuestionSearchNavigationProp =
     NativeStackNavigationProp<HomeStackParamList>;
-
-interface SearchResult extends Question {
-    categoryTitle: string;
-    categoryId: string;
-}
 
 const QuestionSearchScreen = () => {
     const navigation = useNavigation<QuestionSearchNavigationProp>();
@@ -39,56 +41,58 @@ const QuestionSearchScreen = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
     const [isSearching, setIsSearching] = useState(false);
+    const [debouncedQuery, setDebouncedQuery] = useState("");
 
-    const allQuestions = useMemo(() => {
-        if (!questionsData?.categories) return [];
+    const catalog = useMemo(
+        () => buildSearchCatalog(questionsData),
+        [questionsData]
+    );
 
-        const results: SearchResult[] = [];
-        questionsData.categories.forEach((cat) => {
-            if (cat.questions) {
-                cat.questions.forEach((q) => {
-                    results.push({
-                        ...q,
-                        categoryId: cat.id,
-                        categoryTitle: cat.title,
-                    });
-                });
-            }
-        });
-        return results;
-    }, [questionsData]);
-
-    const filteredQuestions = useMemo(() => {
-        const query = searchQuery.toLowerCase().trim();
-        if (!query) return [];
-
-        return allQuestions
-            .filter(
-                (q) =>
-                    q.question.toLowerCase().includes(query) ||
-                    (q.explanation &&
-                        q.explanation.toLowerCase().includes(query))
-            )
-            .slice(0, 50); // Limit results for performance
-    }, [allQuestions, searchQuery]);
+    const defaultFilters = useMemo(
+        () => createDefaultSearchFilters(catalog.idRange),
+        [catalog.idRange]
+    );
 
     useEffect(() => {
         setIsSearching(true);
-        const timer = setTimeout(() => setIsSearching(false), 300);
+        const timer = setTimeout(() => {
+            setDebouncedQuery(searchQuery.trim());
+            setIsSearching(false);
+        }, 200);
         return () => clearTimeout(timer);
     }, [searchQuery]);
 
-    const renderItem = ({ item }: { item: SearchResult }) => {
-        const mastery = getMasteryForQuestionId(masteryMap, item.id);
+    const filteredQuestions = useMemo(() => {
+        if (!debouncedQuery) return [];
+        return searchQuestions(catalog, debouncedQuery, defaultFilters).results;
+    }, [catalog, debouncedQuery, defaultFilters]);
+
+    const renderItem = ({ item }: { item: SearchResultQuestion }) => {
+        const mastery = getMasteryForQuestionId(masteryMap, item.rawQuestionId);
         const isMastered = mastery?.level === MasteryLevel.MASTERED;
 
         const openQuestion = () => {
+            if (isFormationCategoryId(item.categoryId)) {
+                navigation.navigate("FlashCard", {
+                    categoryId: item.categoryId,
+                });
+                return;
+            }
+
+            if (
+                isTestCivicCategoryId(item.categoryId) ||
+                item.contentSource === "test_civic"
+            ) {
+                navigation.getParent()?.navigate("CivicExamTab" as never);
+                return;
+            }
+
             const cat = questionsData.categories.find(
                 (c) => c.id === item.categoryId
             );
             const sorted = sortQuestionsById(cat?.questions || []);
             const idx = sorted.findIndex(
-                (q) => String(q.id) === String(item.id)
+                (q) => String(q.id) === String(item.rawQuestionId)
             );
             navigation.navigate("CategoryQuestions", {
                 categoryId: item.categoryId,
@@ -204,7 +208,7 @@ const QuestionSearchScreen = () => {
                 <FlatList
                     data={filteredQuestions}
                     renderItem={renderItem}
-                    keyExtractor={(item) => `${item.categoryId}-${item.id}`}
+                    keyExtractor={(item) => item.questionKey}
                     contentContainerStyle={styles.listContent}
                     showsVerticalScrollIndicator={false}
                 />

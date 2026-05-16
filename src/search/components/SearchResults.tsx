@@ -61,8 +61,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
     );
 
     const keyExtractor = useCallback(
-        (result: SearchResultQuestion) =>
-            `${result.categoryId}-${result.id}`,
+        (result: SearchResultQuestion) => result.questionKey,
         []
     );
 
