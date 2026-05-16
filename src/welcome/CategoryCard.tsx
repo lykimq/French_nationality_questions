@@ -11,7 +11,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     description,
     icon,
     count,
-    progress,
     onPress,
     disabled = false,
 }) => {
@@ -156,9 +155,6 @@ const styles = StyleSheet.create({
     count: {
         fontSize: 12,
         fontWeight: "600",
-    },
-    progressBar: {
-        marginTop: 10,
     },
     arrowIcon: {
         marginLeft: 8,

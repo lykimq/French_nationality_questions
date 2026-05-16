@@ -14,7 +14,10 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HomeStackParamList } from "../types";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { useMastery } from "../shared/contexts/MasteryContext";
-import { useLiveSearchResults } from "../shared/hooks/useLiveSearchResults";
+import {
+    useQuestionSearch,
+    SEARCH_LIVE_OPTIONS,
+} from "../shared/hooks";
 import {
     getMasteryForQuestionId,
     MasteryLevel,
@@ -36,7 +39,7 @@ const QuestionSearchScreen = () => {
         results: filteredQuestions,
         isSearching,
         questionsData,
-    } = useLiveSearchResults();
+    } = useQuestionSearch(SEARCH_LIVE_OPTIONS);
 
     const renderItem = ({ item }: { item: SearchResultQuestion }) => {
         const mastery = getMasteryForQuestionId(masteryMap, item.rawQuestionId);

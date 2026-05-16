@@ -135,12 +135,14 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         },
                     ]}
                 >
-                    <QuestionImage
-                        image={image}
-                        enableFullscreen
-                        showExpandOverlay
-                        showLoadingText
-                    />
+                    {image ? (
+                        <QuestionImage
+                            image={image}
+                            enableFullscreen
+                            showExpandOverlay
+                            showLoadingText
+                        />
+                    ) : null}
 
                     {explanationText !== "" && (
                         <View style={styles.explanationContainer}>

@@ -154,33 +154,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 10,
     },
-    progressTitle: {
-        fontSize: 14,
-        fontWeight: "600",
-    },
-    progressValue: {
-        fontSize: 22,
-        fontWeight: "bold",
-        marginTop: 2,
-    },
-    statsIconsRow: {
-        flexDirection: "row",
-        gap: 12,
-    },
-    miniStat: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 4,
-    },
-    miniStatText: {
-        fontSize: 14,
-        fontWeight: "600",
-    },
-    listHint: {
-        fontSize: 12,
-        lineHeight: 16,
-        marginBottom: 12,
-    },
 });
 
 export default CategoryDetailScreen;

@@ -95,26 +95,6 @@ export const calculateNextReview = (
 };
 
 /**
- * Predicts the next review interval without updating the state.
- * Returns a formatted string (e.g. "<10m", "2j", "1m").
- */
-export const predictNextReview = (
-    current: QuestionMastery,
-    rating: PerformanceRating
-): string => {
-    const next = calculateNextReview(current, rating);
-    const interval = next.interval;
-
-    if (interval === 0) return "<10m";
-    if (interval < 30) return `${interval}j`;
-
-    const months = Math.floor(interval / 30);
-    if (months < 12) return `${months}m`;
-
-    return `${Math.floor(months / 12)}a`;
-};
-
-/**
  * Resolves stored mastery for a question id. Keys match AsyncStorage (string keys, e.g. "livret_12").
  */
 export const getMasteryForQuestionId = (
@@ -172,52 +152,4 @@ export const prioritizeQuestions = (
         })
         .sort((a, b) => b.priority - a.priority)
         .map((item) => item.id);
-};
-
-/**
- * Calculates mastery statistics for a given set of questions.
- */
-export const getCategoryMasteryStats = (
-    questions: readonly { id: number | string }[],
-    masteryMap: Record<number, QuestionMastery>
-) => {
-    const total = questions.length;
-    if (total === 0)
-        return {
-            total: 0,
-            mastered: 0,
-            learning: 0,
-            newCount: 0,
-            percentage: 0,
-        };
-
-    let mastered = 0;
-    let learning = 0;
-    let reviewCount = 0;
-    let newCount = 0;
-
-    questions.forEach((q) => {
-        const mastery = getMasteryForQuestionId(masteryMap, q.id);
-
-        if (!mastery || mastery.level === MasteryLevel.NEW) {
-            newCount++;
-        } else if (mastery.level === MasteryLevel.MASTERED) {
-            mastered++;
-        } else if (mastery.level === MasteryLevel.REVIEW) {
-            reviewCount++;
-        } else {
-            learning++;
-        }
-    });
-
-    const totalScore = mastered + reviewCount * 0.5 + learning * 0.2;
-    const percentage = Math.round((totalScore / total) * 100);
-
-    return {
-        total,
-        mastered,
-        learning: learning + reviewCount,
-        newCount,
-        percentage,
-    };
 };

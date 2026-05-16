@@ -67,7 +67,6 @@ export interface QuestionCardProps {
 export interface CategoryCardProps
     extends TitleProps, InteractiveProps, VisualProps {
     readonly count: number;
-    readonly progress?: number;
 }
 
 // Question slide view props

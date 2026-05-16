@@ -271,12 +271,6 @@ const styles = StyleSheet.create({
         marginTop: 2,
         textAlign: "center",
     },
-    statHint: {
-        fontSize: 10,
-        marginTop: 4,
-        textAlign: "center",
-        paddingHorizontal: 4,
-    },
     statDivider: {
         width: 1,
         height: 30,
@@ -289,13 +283,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 8,
-    },
-    iconContainer: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
-        justifyContent: "center",
-        alignItems: "center",
     },
     categoriesGrid: {
         marginTop: 10,

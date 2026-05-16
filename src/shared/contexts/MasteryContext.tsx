@@ -35,7 +35,6 @@ interface MasteryContextProps extends MasteryState {
         rating: PerformanceRating
     ) => Promise<void>;
     resetProgress: () => Promise<void>;
-    getQuestionsByLevel: (level: MasteryLevel) => (number | string)[];
 }
 
 const MasteryContext = createContext<MasteryContextProps | undefined>(
@@ -173,19 +172,12 @@ export const MasteryProvider: React.FC<{ children: React.ReactNode }> = ({
         await saveData(initialState);
     };
 
-    const getQuestionsByLevel = (level: MasteryLevel): (number | string)[] => {
-        return Object.values(state.masteryMap)
-            .filter((m) => m.level === level)
-            .map((m) => m.id);
-    };
-
     return (
         <MasteryContext.Provider
             value={{
                 ...state,
                 updateMastery,
                 resetProgress,
-                getQuestionsByLevel,
             }}
         >
             {children}

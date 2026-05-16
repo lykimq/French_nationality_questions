@@ -16,29 +16,29 @@ import {
 
 export type { SearchFilters, SearchResultQuestion, SearchSuggestion };
 
-export interface UseQuestionSearchFeatures {
-    filters?: boolean;
-    history?: boolean;
-    suggestions?: boolean;
-}
+export type {
+    UseQuestionSearchFeatures,
+    UseQuestionSearchOptions,
+} from "./searchHookConfig";
 
-export interface UseQuestionSearchOptions {
-    debounceMs?: number;
-    suggestionsDebounceMs?: number;
-    features?: UseQuestionSearchFeatures;
-}
+export {
+    DEFAULT_SEARCH_FEATURES,
+    SEARCH_TAB_OPTIONS,
+    SEARCH_LIVE_OPTIONS,
+    mergeSearchOptions,
+} from "./searchHookConfig";
 
-const DEFAULT_FEATURES: Required<UseQuestionSearchFeatures> = {
-    filters: false,
-    history: false,
-    suggestions: false,
-};
+import {
+    DEFAULT_SEARCH_FEATURES,
+    type UseQuestionSearchFeatures,
+    type UseQuestionSearchOptions,
+} from "./searchHookConfig";
 
 const SUGGESTIONS_DEBOUNCE_MS = 120;
 
 export const useQuestionSearch = (options: UseQuestionSearchOptions = {}) => {
     const features: Required<UseQuestionSearchFeatures> = {
-        ...DEFAULT_FEATURES,
+        ...DEFAULT_SEARCH_FEATURES,
         ...options.features,
     };
     const debounceMs = options.debounceMs ?? 200;

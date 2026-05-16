@@ -3,8 +3,12 @@ import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "../shared/contexts/ThemeContext";
 import { FormattedText, AppHeader } from "../shared/components";
-import { useSearch } from "./useSearch";
+import {
+    useQuestionSearch,
+    SEARCH_TAB_OPTIONS,
+} from "../shared/hooks";
 import type { SearchSuggestion } from "../shared/utils/searchQuestions";
+import { clearStoredSearchHistory } from "../shared/utils/searchHistoryStorage";
 import {
     SearchBar,
     SearchSuggestions,
@@ -39,7 +43,7 @@ const SearchScreen = () => {
         performSearch,
         resetFilters,
         isSearching,
-    } = useSearch();
+    } = useQuestionSearch(SEARCH_TAB_OPTIONS);
 
     useEffect(() => {
         const shouldShowSuggestions =
@@ -108,6 +112,7 @@ const SearchScreen = () => {
 
     const clearSearchHistory = () => {
         setSearchHistory([]);
+        void clearStoredSearchHistory();
     };
 
     const { totalQuestions, mainQuestions, historyQuestions } =
