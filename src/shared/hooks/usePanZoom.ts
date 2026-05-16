@@ -1,10 +1,16 @@
 import { useRef, useCallback } from "react";
+import { Animated } from "react-native";
 import {
-    Animated,
-    PanResponder,
-    GestureResponderEvent,
-    PanResponderGestureState,
-} from "react-native";
+    State,
+    type PanGestureHandlerGestureEvent,
+    type PinchGestureHandlerGestureEvent,
+} from "react-native-gesture-handler";
+import {
+    DEFAULT_MAX_SCALE,
+    DEFAULT_MIN_SCALE,
+    isZoomedIn,
+    scaleFromPinchGesture,
+} from "../utils/zoomUtils";
 
 interface UsePanZoomOptions {
     onGestureGrant?: () => void;
@@ -13,184 +19,193 @@ interface UsePanZoomOptions {
 }
 
 export const usePanZoom = (options: UsePanZoomOptions = {}) => {
-    const { onGestureGrant, maxScale = 2.5, minScale = 1 } = options;
+    const {
+        onGestureGrant,
+        maxScale = DEFAULT_MAX_SCALE,
+        minScale = DEFAULT_MIN_SCALE,
+    } = options;
 
-    // Animation values for zoom and pan
     const scale = useRef(new Animated.Value(1)).current;
     const translateX = useRef(new Animated.Value(0)).current;
     const translateY = useRef(new Animated.Value(0)).current;
+    const pinchRef = useRef(null);
+    const panRef = useRef(null);
 
-    // Gesture state tracking
     const gestureState = useRef({
         scale: 1,
-        lastScale: 1,
         offsetX: 0,
         offsetY: 0,
         isZoomed: false,
-        initialX: 0,
-        initialY: 0,
-        lastTap: 0,
+        pinchStartScale: 1,
+        panStartX: 0,
+        panStartY: 0,
     });
 
+    const optionsRef = useRef({ onGestureGrant, maxScale, minScale });
+    optionsRef.current = { onGestureGrant, maxScale, minScale };
+
+    const animateToScale = useCallback(
+        (targetScale: number, resetPan: boolean) => {
+            const { maxScale: max, minScale: min } = optionsRef.current;
+            const clamped = Math.max(min, Math.min(max, targetScale));
+            gestureState.current.scale = clamped;
+            gestureState.current.isZoomed = isZoomedIn(clamped);
+
+            if (resetPan || !isZoomedIn(clamped)) {
+                gestureState.current.offsetX = 0;
+                gestureState.current.offsetY = 0;
+
+                Animated.parallel([
+                    Animated.spring(scale, {
+                        toValue: clamped,
+                        useNativeDriver: true,
+                        tension: 100,
+                        friction: 8,
+                    }),
+                    Animated.spring(translateX, {
+                        toValue: 0,
+                        useNativeDriver: true,
+                        tension: 100,
+                        friction: 8,
+                    }),
+                    Animated.spring(translateY, {
+                        toValue: 0,
+                        useNativeDriver: true,
+                        tension: 100,
+                        friction: 8,
+                    }),
+                ]).start();
+            } else {
+                Animated.spring(scale, {
+                    toValue: clamped,
+                    useNativeDriver: true,
+                    tension: 100,
+                    friction: 8,
+                }).start();
+            }
+        },
+        [scale, translateX, translateY]
+    );
+
     const reset = useCallback(() => {
-        scale.setValue(1);
-        translateX.setValue(0);
-        translateY.setValue(0);
         gestureState.current = {
             scale: 1,
-            lastScale: 1,
             offsetX: 0,
             offsetY: 0,
             isZoomed: false,
-            initialX: 0,
-            initialY: 0,
-            lastTap: 0,
+            pinchStartScale: 1,
+            panStartX: 0,
+            panStartY: 0,
         };
+        scale.setValue(1);
+        translateX.setValue(0);
+        translateY.setValue(0);
     }, [scale, translateX, translateY]);
 
-    const panResponder = useRef(
-        PanResponder.create({
-            onStartShouldSetPanResponder: () => true,
-            onMoveShouldSetPanResponder: (evt, panGestureState) => {
-                // Allow movement for pan when zoomed
-                return (
-                    gestureState.current.isZoomed &&
-                    (Math.abs(panGestureState.dx) > 2 ||
-                        Math.abs(panGestureState.dy) > 2)
+    const clampTranslation = useCallback((value: number, currentScale: number) => {
+        const maxTranslate = 100 * currentScale;
+        return Math.max(-maxTranslate, Math.min(maxTranslate, value));
+    }, []);
+
+    const onPinchGestureEvent = useCallback(
+        (event: PinchGestureHandlerGestureEvent) => {
+            const { maxScale: max, minScale: min } = optionsRef.current;
+            const newScale = scaleFromPinchGesture(
+                gestureState.current.pinchStartScale,
+                event.nativeEvent.scale,
+                min,
+                max
+            );
+            gestureState.current.scale = newScale;
+            gestureState.current.isZoomed = isZoomedIn(newScale);
+            scale.setValue(newScale);
+        },
+        [scale]
+    );
+
+    const onPinchHandlerStateChange = useCallback(
+        (event: PinchGestureHandlerGestureEvent) => {
+            const { state } = event.nativeEvent;
+
+            if (state === State.BEGAN) {
+                optionsRef.current.onGestureGrant?.();
+                gestureState.current.pinchStartScale = gestureState.current.scale;
+            }
+
+            if (state === State.END || state === State.CANCELLED) {
+                if (!isZoomedIn(gestureState.current.scale)) {
+                    animateToScale(optionsRef.current.minScale, true);
+                }
+            }
+        },
+        [animateToScale]
+    );
+
+    const onPanGestureEvent = useCallback(
+        (event: PanGestureHandlerGestureEvent) => {
+            if (!gestureState.current.isZoomed) {
+                return;
+            }
+
+            const currentScale = gestureState.current.scale;
+            const { translationX, translationY } = event.nativeEvent;
+
+            translateX.setValue(
+                clampTranslation(
+                    gestureState.current.panStartX + translationX,
+                    currentScale
+                )
+            );
+            translateY.setValue(
+                clampTranslation(
+                    gestureState.current.panStartY + translationY,
+                    currentScale
+                )
+            );
+        },
+        [clampTranslation, translateX, translateY]
+    );
+
+    const onPanHandlerStateChange = useCallback(
+        (event: PanGestureHandlerGestureEvent) => {
+            const { state, translationX, translationY } = event.nativeEvent;
+
+            if (state === State.BEGAN) {
+                optionsRef.current.onGestureGrant?.();
+                gestureState.current.panStartX = gestureState.current.offsetX;
+                gestureState.current.panStartY = gestureState.current.offsetY;
+            }
+
+            if (
+                (state === State.END || state === State.CANCELLED) &&
+                gestureState.current.isZoomed
+            ) {
+                const currentScale = gestureState.current.scale;
+                gestureState.current.offsetX = clampTranslation(
+                    gestureState.current.panStartX + translationX,
+                    currentScale
                 );
-            },
-            onPanResponderGrant: (evt: GestureResponderEvent) => {
-                if (onGestureGrant) onGestureGrant();
-
-                const touches = evt.nativeEvent.touches;
-
-                if (touches.length === 1) {
-                    // Single touch - check for double-tap or pan
-                    const now = Date.now();
-                    const timeSinceLastTap = now - gestureState.current.lastTap;
-
-                    if (timeSinceLastTap < 300) {
-                        // Double-tap detected - toggle zoom
-                        const currentScale = gestureState.current.scale;
-                        const targetScale = currentScale <= 1.1 ? maxScale : 1;
-
-                        gestureState.current.scale = targetScale;
-                        gestureState.current.lastScale = targetScale;
-                        gestureState.current.isZoomed = targetScale > 1.1;
-
-                        if (targetScale <= 1.1) {
-                            // Zoom out - reset position
-                            gestureState.current.offsetX = 0;
-                            gestureState.current.offsetY = 0;
-
-                            Animated.parallel([
-                                Animated.spring(scale, {
-                                    toValue: 1,
-                                    useNativeDriver: true,
-                                    tension: 100,
-                                    friction: 8,
-                                }),
-                                Animated.spring(translateX, {
-                                    toValue: 0,
-                                    useNativeDriver: true,
-                                    tension: 100,
-                                    friction: 8,
-                                }),
-                                Animated.spring(translateY, {
-                                    toValue: 0,
-                                    useNativeDriver: true,
-                                    tension: 100,
-                                    friction: 8,
-                                }),
-                            ]).start();
-                        } else {
-                            // Zoom in
-                            Animated.spring(scale, {
-                                toValue: targetScale,
-                                useNativeDriver: true,
-                                tension: 100,
-                                friction: 8,
-                            }).start();
-                        }
-
-                        gestureState.current.lastTap = 0; // Reset to prevent triple-tap
-                    } else {
-                        // Single tap - prepare for potential pan
-                        gestureState.current.lastTap = now;
-                        gestureState.current.initialX =
-                            gestureState.current.offsetX;
-                        gestureState.current.initialY =
-                            gestureState.current.offsetY;
-
-                        // Set up for panning if zoomed
-                        if (gestureState.current.isZoomed) {
-                            translateX.setOffset(gestureState.current.offsetX);
-                            translateY.setOffset(gestureState.current.offsetY);
-                            translateX.setValue(0);
-                            translateY.setValue(0);
-                        }
-                    }
-                }
-            },
-            onPanResponderMove: (
-                evt: GestureResponderEvent,
-                panGestureState: PanResponderGestureState
-            ) => {
-                const touches = evt.nativeEvent.touches;
-
-                if (touches.length === 1 && gestureState.current.isZoomed) {
-                    // Handle pan when zoomed
-                    const maxTranslate = 100 * gestureState.current.scale;
-
-                    // Constrain translation
-                    const newX = Math.max(
-                        -maxTranslate,
-                        Math.min(maxTranslate, panGestureState.dx)
-                    );
-                    const newY = Math.max(
-                        -maxTranslate,
-                        Math.min(maxTranslate, panGestureState.dy)
-                    );
-
-                    translateX.setValue(newX);
-                    translateY.setValue(newY);
-                }
-            },
-            onPanResponderRelease: (
-                evt: GestureResponderEvent,
-                panGestureState: PanResponderGestureState
-            ) => {
-                const touches = evt.nativeEvent.touches;
-
-                if (gestureState.current.isZoomed && touches.length === 0) {
-                    // Pan gesture ended
-                    gestureState.current.offsetX += panGestureState.dx;
-                    gestureState.current.offsetY += panGestureState.dy;
-
-                    // Constrain final position
-                    const maxTranslate = 100 * gestureState.current.scale;
-                    gestureState.current.offsetX = Math.max(
-                        -maxTranslate,
-                        Math.min(maxTranslate, gestureState.current.offsetX)
-                    );
-                    gestureState.current.offsetY = Math.max(
-                        -maxTranslate,
-                        Math.min(maxTranslate, gestureState.current.offsetY)
-                    );
-
-                    translateX.flattenOffset();
-                    translateY.flattenOffset();
-                }
-            },
-        })
-    ).current;
+                gestureState.current.offsetY = clampTranslation(
+                    gestureState.current.panStartY + translationY,
+                    currentScale
+                );
+                translateX.setValue(gestureState.current.offsetX);
+                translateY.setValue(gestureState.current.offsetY);
+            }
+        },
+        [clampTranslation, translateX, translateY]
+    );
 
     return {
         scale,
         translateX,
         translateY,
-        panResponder,
+        pinchRef,
+        panRef,
+        onPinchGestureEvent,
+        onPinchHandlerStateChange,
+        onPanGestureEvent,
+        onPanHandlerStateChange,
         reset,
-        isZoomed: gestureState.current.isZoomed,
     };
 };

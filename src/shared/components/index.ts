@@ -2,6 +2,7 @@ export { default as FormattedText } from "./FormattedText";
 export { default as SpeakButton } from "./SpeakButton";
 export { default as DataLoadingScreen } from "./DataLoadingScreen";
 export { default as ImageModal } from "./ImageModal";
+export { default as QuestionImage } from "./QuestionImage";
 export { default as BackButton } from "./BackButton";
 export { default as QuestionCard } from "./QuestionCard";
 export { default as SlideQuestionView } from "./SlideQuestionView";

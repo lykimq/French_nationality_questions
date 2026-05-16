@@ -7,16 +7,17 @@ import {
     Animated,
     Dimensions,
     ScrollView,
-    Image,
-    ActivityIndicator,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../shared/contexts/ThemeContext";
-import { FormattedText, SpeakButton } from "../../shared/components";
+import {
+    FormattedText,
+    QuestionImage,
+    SpeakButton,
+} from "../../shared/components";
 import { formatExplanation } from "../../shared/utils/questionUtils";
 import { normalizeForComparison } from "../../shared/utils/stringUtils";
 import { sharedStyles } from "../../shared/utils";
-import { useFirebaseImage } from "../../shared/hooks/useFirebaseImage";
 import {
     getMasteryForQuestionId,
 } from "../../shared/utils/MasteryUtils";
@@ -49,11 +50,6 @@ const FlashCard: React.FC<FlashCardProps> = ({
     const flipAnimation = useRef(new Animated.Value(0)).current;
     const prevQuestionIdRef = useRef<number | null>(null);
     const animationRef = useRef<Animated.CompositeAnimation | null>(null);
-    const {
-        imageSource,
-        isLoading: imageLoading,
-        error: imageError,
-    } = useFirebaseImage(question.image);
     const scrollViewRef = useRef<ScrollView>(null);
 
     const resetAnimation = useCallback(() => {
@@ -331,73 +327,18 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                             ]}
                                         />
                                     </View>
+                                </Pressable>
 
-                                    {/* Display image if available */}
-                                    {question.image && (
-                                        <>
-                                            {imageLoading && (
-                                                <View
-                                                    style={[
-                                                        styles.imageLoading,
-                                                        {
-                                                            backgroundColor:
-                                                                theme.colors
-                                                                    .surface,
-                                                        },
-                                                    ]}
-                                                >
-                                                    <ActivityIndicator
-                                                        size="large"
-                                                        color={
-                                                            theme.colors.primary
-                                                        }
-                                                    />
-                                                </View>
-                                            )}
-                                            {!imageLoading &&
-                                                imageSource &&
-                                                !imageError && (
-                                                    <View
-                                                        style={[
-                                                            styles.imageContainer,
-                                                            {
-                                                                borderColor:
-                                                                    theme.colors
-                                                                        .border,
-                                                            },
-                                                        ]}
-                                                    >
-                                                        <Image
-                                                            source={imageSource}
-                                                            style={styles.image}
-                                                            resizeMode="contain"
-                                                        />
-                                                    </View>
-                                                )}
-                                            {!imageLoading && imageError && (
-                                                <View
-                                                    style={[
-                                                        styles.imageFallback,
-                                                        {
-                                                            backgroundColor:
-                                                                theme.colors
-                                                                    .surface,
-                                                        },
-                                                    ]}
-                                                >
-                                                    <Ionicons
-                                                        name="image-outline"
-                                                        size={32}
-                                                        color={
-                                                            theme.colors
-                                                                .textMuted
-                                                        }
-                                                    />
-                                                </View>
-                                            )}
-                                        </>
-                                    )}
+                                <QuestionImage
+                                    image={question.image}
+                                    enableFullscreen
+                                    containerStyle={styles.flashcardImage}
+                                />
 
+                                <Pressable
+                                    onPress={onFlip}
+                                    style={styles.contentPressable}
+                                >
                                     <View
                                         style={styles.explanationTextContainer}
                                     >
@@ -423,7 +364,6 @@ const FlashCard: React.FC<FlashCardProps> = ({
                                         </View>
                                     </View>
                                 </Pressable>
-
                             </ScrollView>
                         </View>
 
@@ -577,33 +517,7 @@ const styles = StyleSheet.create({
         flexShrink: 0,
         marginBottom: 8,
     },
-    imageContainer: {
-        borderRadius: 12,
-        overflow: "hidden",
-        marginBottom: 16,
-        borderWidth: 1,
-        backgroundColor: "#f5f5f5",
-    },
-    image: {
-        width: "100%",
-        height: 200,
-    },
-    hiddenImage: {
-        opacity: 0,
-    },
-    imageLoading: {
-        width: "100%",
-        height: 200,
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: 12,
-    },
-    imageFallback: {
-        width: "100%",
-        height: 120,
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: 16,
+    flashcardImage: {
         borderRadius: 12,
     },
     flipHint: {

@@ -1,23 +1,15 @@
 import React, { useMemo, useState } from "react";
-import {
-    StyleSheet,
-    View,
-    Pressable,
-    Image,
-    ActivityIndicator,
-    TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { formatExplanation } from "../utils";
-import ImageModal from "./ImageModal";
 import FormattedText from "./FormattedText";
 import SpeakButton from "./SpeakButton";
 import Icon3D from "./Icon3D";
+import QuestionImage from "./QuestionImage";
 import { useTheme } from "../contexts/ThemeContext";
 import { useIcons } from "../contexts/IconContext";
 import { QuestionCardProps } from "../../types";
 import { sharedStyles } from "../utils";
-import { useFirebaseImage } from "../hooks/useFirebaseImage";
 
 const QuestionCard: React.FC<QuestionCardProps> = ({
     id,
@@ -27,15 +19,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     alwaysExpanded = false,
 }) => {
     const [expanded, setExpanded] = useState(alwaysExpanded);
-    const [isImageModalVisible, setIsImageModalVisible] = useState(false);
     const { theme } = useTheme();
     const { getIconName, getIconVariant } = useIcons();
-
-    const {
-        imageSource,
-        isLoading: imageLoading,
-        error: imageError,
-    } = useFirebaseImage(image);
     const isExpanded = alwaysExpanded ? true : expanded;
 
     const toggleExpand = () => {
@@ -51,14 +36,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         }
         return String(id);
     }, [id]);
-
-    const handleImagePress = () => {
-        if (imageSource && !imageError && !imageLoading) {
-            setIsImageModalVisible(true);
-        }
-    };
-
-    const closeImageModal = () => setIsImageModalVisible(false);
 
     const questionText = question ?? "";
     const explanationText = explanation ?? "";
@@ -171,92 +148,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                         },
                     ]}
                 >
-                    {/* Display image if available */}
-                    {image && !imageError && (
-                        <TouchableOpacity
-                            style={[
-                                styles.imageContainer,
-                                { borderColor: theme.colors.border },
-                            ]}
-                            onPress={handleImagePress}
-                            activeOpacity={0.9}
-                            disabled={imageLoading}
-                        >
-                            {imageLoading && (
-                                <View
-                                    style={[
-                                        styles.imageLoading,
-                                        {
-                                            backgroundColor:
-                                                theme.colors.surface,
-                                        },
-                                    ]}
-                                >
-                                    <ActivityIndicator
-                                        size="large"
-                                        color={theme.colors.primary}
-                                    />
-                                    <FormattedText
-                                        style={[
-                                            styles.loadingText,
-                                            { color: theme.colors.text },
-                                        ]}
-                                    >
-                                        Chargement de l'image...
-                                    </FormattedText>
-                                </View>
-                            )}
-                            {imageSource && (
-                                <>
-                                    <Image
-                                        source={imageSource}
-                                        style={[
-                                            styles.image,
-                                            {
-                                                backgroundColor:
-                                                    theme.colors.divider,
-                                            },
-                                            imageLoading && styles.hiddenImage,
-                                        ]}
-                                        resizeMode="contain"
-                                    />
-                                    <View style={styles.imageOverlay}>
-                                        <Icon3D
-                                            name={getIconName("expand")}
-                                            size={20}
-                                            color={theme.colors.buttonText}
-                                            variant="default"
-                                        />
-                                    </View>
-                                </>
-                            )}
-                        </TouchableOpacity>
-                    )}
-
-                    {/* Display fallback if image fails to load */}
-                    {image && imageError && (
-                        <View
-                            style={[
-                                styles.imageFallback,
-                                { backgroundColor: theme.colors.surface },
-                            ]}
-                        >
-                            <Icon3D
-                                name={getIconName("image")}
-                                size={32}
-                                color={theme.colors.textMuted}
-                                variant={getIconVariant("image")}
-                            />
-                            <FormattedText
-                                style={[
-                                    styles.imageFallbackText,
-                                    { color: theme.colors.textMuted },
-                                ]}
-                            >
-                                Image non disponible
-                            </FormattedText>
-                        </View>
-                    )}
+                    <QuestionImage
+                        image={image}
+                        enableFullscreen
+                        showExpandOverlay
+                        showLoadingText
+                    />
 
                     {explanationText !== "" && (
                         <View style={styles.explanationContainer}>
@@ -331,13 +228,6 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                 />
             )}
 
-            {/* Image Modal */}
-            <ImageModal
-                key={image || "no-image"}
-                visible={isImageModalVisible}
-                imageSource={imageSource}
-                onClose={closeImageModal}
-            />
         </View>
     );
 };
@@ -409,52 +299,6 @@ const styles = StyleSheet.create({
     expandedContent: {
         marginTop: 8,
         paddingTop: 20,
-    },
-    imageContainer: {
-        borderRadius: 8,
-        overflow: "hidden",
-        marginBottom: 16,
-        borderWidth: 1,
-        position: "relative",
-    },
-    image: {
-        width: "100%",
-        height: 200,
-    },
-    hiddenImage: {
-        opacity: 0,
-    },
-    imageOverlay: {
-        position: "absolute",
-        top: 8,
-        right: 8,
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
-        borderRadius: 20,
-        padding: 8,
-    },
-    imageLoading: {
-        width: "100%",
-        height: 200,
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: 8,
-    },
-    loadingText: {
-        marginTop: 8,
-        fontSize: 14,
-    },
-    imageFallback: {
-        width: "100%",
-        height: 120,
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: 16,
-        borderRadius: 8,
-    },
-    imageFallbackText: {
-        marginTop: 8,
-        fontSize: 14,
-        textAlign: "center",
     },
     explanationContainer: {
         marginBottom: 8,

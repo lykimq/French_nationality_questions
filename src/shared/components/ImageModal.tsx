@@ -9,10 +9,14 @@ import {
     SafeAreaView,
     StatusBar,
     ActivityIndicator,
-    GestureResponderEvent,
     Animated,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import {
+    GestureHandlerRootView,
+    PinchGestureHandler,
+    PanGestureHandler,
+} from "react-native-gesture-handler";
 import { useTheme } from "../contexts/ThemeContext";
 import { usePanZoom } from "../hooks/usePanZoom";
 import FormattedText from "./FormattedText";
@@ -33,7 +37,12 @@ const ImageModal: React.FC<ImageModalProps> = ({
         scale,
         translateX,
         translateY,
-        panResponder,
+        pinchRef,
+        panRef,
+        onPinchGestureEvent,
+        onPinchHandlerStateChange,
+        onPanGestureEvent,
+        onPanHandlerStateChange,
         reset: resetPanZoom,
     } = usePanZoom({
         onGestureGrant: () => setShowZoomHint(false),
@@ -49,20 +58,6 @@ const ImageModal: React.FC<ImageModalProps> = ({
         }
     }, [visible, imageSource, resetPanZoom]);
 
-    const handleImageLoad = () => {
-        setImageLoaded(true);
-    };
-
-    const handleImageError = () => {
-        setImageLoaded(true);
-    };
-
-    const handleBackgroundPress = (event: GestureResponderEvent) => {
-        if (event.target === event.currentTarget) {
-            onClose();
-        }
-    };
-
     if (!visible) return null;
 
     return (
@@ -73,98 +68,140 @@ const ImageModal: React.FC<ImageModalProps> = ({
             onRequestClose={onClose}
             statusBarTranslucent={true}
         >
-            <StatusBar
-                backgroundColor="rgba(0, 0, 0, 0.9)"
-                barStyle="light-content"
-            />
-            <SafeAreaView style={styles.modalContainer}>
-                <View
-                    style={[
-                        styles.modalOverlay,
-                        {
-                            backgroundColor:
-                                themeMode === "dark"
-                                    ? "rgba(0, 0, 0, 0.95)"
-                                    : "rgba(0, 0, 0, 0.85)",
-                        },
-                    ]}
-                    onStartShouldSetResponder={() => true}
-                    onResponderRelease={handleBackgroundPress}
-                >
-                    <TouchableOpacity
+            <GestureHandlerRootView style={styles.gestureRoot}>
+                <StatusBar
+                    backgroundColor="rgba(0, 0, 0, 0.9)"
+                    barStyle="light-content"
+                />
+                <SafeAreaView style={styles.modalContainer}>
+                    <View
                         style={[
-                            styles.closeButton,
-                            { backgroundColor: theme.colors.primary + "80" },
+                            styles.modalOverlay,
+                            {
+                                backgroundColor:
+                                    themeMode === "dark"
+                                        ? "rgba(0, 0, 0, 0.95)"
+                                        : "rgba(0, 0, 0, 0.85)",
+                            },
                         ]}
-                        onPress={onClose}
+                        pointerEvents="box-none"
                     >
-                        <Ionicons name="close" size={30} color="#FFFFFF" />
-                    </TouchableOpacity>
-
-                    {showZoomHint && (
-                        <View
+                        <TouchableOpacity
                             style={[
-                                styles.zoomHint,
+                                styles.closeButton,
                                 {
                                     backgroundColor:
-                                        theme.colors.primary + "CC",
+                                        theme.colors.primary + "80",
                                 },
                             ]}
+                            onPress={onClose}
+                            accessibilityLabel="Fermer l'image"
                         >
-                            <FormattedText style={styles.zoomHintText}>
-                                Double-tap to zoom • Drag to pan when zoomed
-                            </FormattedText>
-                        </View>
-                    )}
+                            <Ionicons name="close" size={30} color="#FFFFFF" />
+                        </TouchableOpacity>
 
-                    <View style={styles.photoContainer}>
-                        {!imageLoaded && (
-                            <ActivityIndicator
-                                size="large"
-                                color={theme.colors.primary}
-                                style={styles.loadingIndicator}
-                            />
-                        )}
-
-                        {imageSource && (
-                            <Animated.View
-                                {...panResponder.panHandlers}
+                        {showZoomHint && (
+                            <View
                                 style={[
-                                    styles.imageWrapper,
+                                    styles.zoomHint,
                                     {
-                                        transform: [
-                                            { scale },
-                                            { translateX },
-                                            { translateY },
-                                        ],
+                                        backgroundColor:
+                                            theme.colors.primary + "CC",
                                     },
                                 ]}
+                                pointerEvents="none"
                             >
-                                <Image
-                                    key={JSON.stringify(imageSource)}
-                                    source={imageSource}
-                                    style={[
-                                        styles.photo,
-                                        !imageLoaded && styles.hiddenImage,
-                                    ]}
-                                    resizeMode="contain"
-                                    onLoad={() => {
-                                        handleImageLoad();
-                                    }}
-                                    onError={() => {
-                                        handleImageError();
-                                    }}
-                                />
-                            </Animated.View>
+                                <FormattedText style={styles.zoomHintText}>
+                                    Écartez ou rapprochez deux doigts pour
+                                    zoomer
+                                </FormattedText>
+                            </View>
                         )}
+
+                        <View
+                            style={styles.photoContainer}
+                            pointerEvents="box-none"
+                        >
+                            {!imageLoaded && (
+                                <ActivityIndicator
+                                    size="large"
+                                    color={theme.colors.primary}
+                                    style={styles.loadingIndicator}
+                                />
+                            )}
+
+                            {imageSource && (
+                                <PanGestureHandler
+                                    ref={panRef}
+                                    simultaneousHandlers={pinchRef}
+                                    onGestureEvent={onPanGestureEvent}
+                                    onHandlerStateChange={
+                                        onPanHandlerStateChange
+                                    }
+                                    minPointers={1}
+                                    maxPointers={1}
+                                    avgTouches
+                                >
+                                    <Animated.View
+                                        style={styles.gestureWrapper}
+                                        collapsable={false}
+                                    >
+                                        <PinchGestureHandler
+                                            ref={pinchRef}
+                                            simultaneousHandlers={panRef}
+                                            onGestureEvent={onPinchGestureEvent}
+                                            onHandlerStateChange={
+                                                onPinchHandlerStateChange
+                                            }
+                                        >
+                                            <Animated.View
+                                                style={[
+                                                    styles.imageWrapper,
+                                                    {
+                                                        transform: [
+                                                            { scale },
+                                                            { translateX },
+                                                            { translateY },
+                                                        ],
+                                                    },
+                                                ]}
+                                                collapsable={false}
+                                            >
+                                                <Image
+                                                    key={JSON.stringify(
+                                                        imageSource
+                                                    )}
+                                                    source={imageSource}
+                                                    style={[
+                                                        styles.photo,
+                                                        !imageLoaded &&
+                                                            styles.hiddenImage,
+                                                    ]}
+                                                    resizeMode="contain"
+                                                    onLoad={() =>
+                                                        setImageLoaded(true)
+                                                    }
+                                                    onError={() =>
+                                                        setImageLoaded(true)
+                                                    }
+                                                />
+                                            </Animated.View>
+                                        </PinchGestureHandler>
+                                    </Animated.View>
+                                </PanGestureHandler>
+                            )}
+                        </View>
                     </View>
-                </View>
-            </SafeAreaView>
+                </SafeAreaView>
+            </GestureHandlerRootView>
         </Modal>
     );
 };
 
 const styles = StyleSheet.create({
+    gestureRoot: {
+        flex: 1,
+    },
     modalContainer: {
         flex: 1,
     },
@@ -192,6 +229,13 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 20,
+    },
+    gestureWrapper: {
+        flex: 1,
+        width: screenWidth - 40,
+        height: screenHeight - 200,
+        justifyContent: "center",
+        alignItems: "center",
     },
     photo: {
         width: "100%",
