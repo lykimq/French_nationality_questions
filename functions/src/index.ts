@@ -20,8 +20,8 @@ const ALLOWED_VOICES = new Set([
     "fr-FR-Standard-D",
 ]);
 
-const DEFAULT_VOICE = "fr-FR-Neural2-A";
-const FALLBACK_VOICES = ["fr-FR-Neural2-A", "fr-FR-Standard-A"] as const;
+const DEFAULT_VOICE = "fr-FR-Neural2-B";
+const FALLBACK_VOICES = ["fr-FR-Neural2-B", "fr-FR-Standard-B"] as const;
 
 const ttsClient = new TextToSpeechClient();
 

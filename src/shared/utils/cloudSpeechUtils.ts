@@ -31,7 +31,7 @@ export const CLOUD_FRENCH_VOICES: readonly CloudFrenchVoice[] = [
     },
 ] as const;
 
-export const DEFAULT_CLOUD_VOICE_ID = CLOUD_FRENCH_VOICES[0].identifier;
+export const DEFAULT_CLOUD_VOICE_ID = "fr-FR-Neural2-B";
 
 export const isAllowedCloudVoiceId = (voiceId: string): boolean =>
     CLOUD_FRENCH_VOICES.some((voice) => voice.identifier === voiceId);
